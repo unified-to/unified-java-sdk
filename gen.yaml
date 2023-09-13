@@ -10,9 +10,9 @@ generation:
 java:
   version: 0.0.1
   artifactID: Unified-to
-  companyEmail: info@mycompany.com
-  companyName: My Company
-  companyURL: www.mycompany.com
+  companyEmail: hello@unified.to
+  companyName: Unified API Inc.
+  companyURL: www.unified.to
   githubURL: github.com/owner/repo
   groupID: UnifiedAPI
   maxMethodParams: 0
