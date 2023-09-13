@@ -9,12 +9,12 @@ generation:
   tagNamespacingDisabled: false
 java:
   version: 0.0.1
-  artifactID: Unified-to
+  artifactID: unifiedto
   companyEmail: hello@unified.to
   companyName: Unified API Inc.
   companyURL: www.unified.to
-  githubURL: https://github.com/unified-to/unified-java-sdk/
-  groupID: UnifiedAPI
+  githubURL: github.com/unified-to/unified-java-sdk
+  groupID: com.unifiedapi
   maxMethodParams: 0
   ossrhURL: https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/
   projectName: Unified-java-sdk
