@@ -13,7 +13,7 @@ java:
   companyEmail: hello@unified.to
   companyName: Unified API Inc.
   companyURL: www.unified.to
-  githubURL: github.com/owner/repo
+  githubURL: https://github.com/unified-to/unified-java-sdk/
   groupID: UnifiedAPI
   maxMethodParams: 0
   ossrhURL: https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/
