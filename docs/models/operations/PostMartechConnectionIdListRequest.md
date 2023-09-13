@@ -1,0 +1,9 @@
+# PostMartechConnectionIdListRequest
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `marketingList`                                                                              | [com.unifiedapi.unifiedto.models.shared.MarketingList](../../models/shared/MarketingList.md) | :heavy_minus_sign:                                                                           | Mailing List                                                                                 |
+| `connectionId`                                                                               | *String*                                                                                     | :heavy_check_mark:                                                                           | ID of the connection                                                                         |

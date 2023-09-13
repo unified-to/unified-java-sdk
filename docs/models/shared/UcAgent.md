@@ -1,0 +1,16 @@
+# UcAgent
+
+Represents an agent
+
+
+## Fields
+
+| Field                                                                           | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `createdAt`                                                                     | [LocalDate](https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html) | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `emails`                                                                        | List<[UcEmail](../../models/shared/UcEmail.md)>                                 | :heavy_minus_sign:                                                              | An array of email addresses for this agent                                      |
+| `id`                                                                            | *String*                                                                        | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `name`                                                                          | *String*                                                                        | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `raw`                                                                           | [PropertyUcAgentRaw](../../models/shared/PropertyUcAgentRaw.md)                 | :heavy_check_mark:                                                              | The raw data returned by the integration for this agent                         |
+| `telephones`                                                                    | List<[UcTelephone](../../models/shared/UcTelephone.md)>                         | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `updatedAt`                                                                     | [LocalDate](https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html) | :heavy_minus_sign:                                                              | N/A                                                                             |

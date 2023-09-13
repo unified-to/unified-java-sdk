@@ -1,0 +1,10 @@
+# PatchTicketingConnectionIdAgentIdRequest
+
+
+## Fields
+
+| Field                                                                                          | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ticketingAgent`                                                                               | [com.unifiedapi.unifiedto.models.shared.TicketingAgent](../../models/shared/TicketingAgent.md) | :heavy_minus_sign:                                                                             | N/A                                                                                            |
+| `connectionId`                                                                                 | *String*                                                                                       | :heavy_check_mark:                                                                             | ID of the connection                                                                           |
+| `id`                                                                                           | *String*                                                                                       | :heavy_check_mark:                                                                             | ID of the Agent                                                                                |

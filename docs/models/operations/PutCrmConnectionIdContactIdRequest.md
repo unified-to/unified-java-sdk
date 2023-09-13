@@ -1,0 +1,10 @@
+# PutCrmConnectionIdContactIdRequest
+
+
+## Fields
+
+| Field                                                                                    | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `crmContact`                                                                             | [com.unifiedapi.unifiedto.models.shared.CrmContact](../../models/shared/CrmContact.md)   | :heavy_minus_sign:                                                                       | A contact represents a person that optionally is associated with a deal and/or a company |
+| `connectionId`                                                                           | *String*                                                                                 | :heavy_check_mark:                                                                       | ID of the connection                                                                     |
+| `id`                                                                                     | *String*                                                                                 | :heavy_check_mark:                                                                       | ID of the Contact                                                                        |

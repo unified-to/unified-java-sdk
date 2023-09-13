@@ -1,0 +1,18 @@
+# UcContact
+
+A contact represents a person that optionally is associated with a call
+
+
+## Fields
+
+| Field                                                                           | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `company`                                                                       | *String*                                                                        | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `createdAt`                                                                     | [LocalDate](https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html) | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `emails`                                                                        | List<[UcEmail](../../models/shared/UcEmail.md)>                                 | :heavy_minus_sign:                                                              | An array of email addresses for this contact                                    |
+| `id`                                                                            | *String*                                                                        | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `name`                                                                          | *String*                                                                        | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `raw`                                                                           | [PropertyUcContactRaw](../../models/shared/PropertyUcContactRaw.md)             | :heavy_minus_sign:                                                              | The raw data returned by the integration for this contact                       |
+| `telephones`                                                                    | List<[UcTelephone](../../models/shared/UcTelephone.md)>                         | :heavy_minus_sign:                                                              | An array of telephones for this contact                                         |
+| `title`                                                                         | *String*                                                                        | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `updatedAt`                                                                     | [LocalDate](https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html) | :heavy_minus_sign:                                                              | N/A                                                                             |

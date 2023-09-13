@@ -1,0 +1,18 @@
+# User
+
+The User object represents you on the system. A user can belong to multiple workspaces (ie. organizations).
+
+
+## Fields
+
+| Field                                                                           | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `createdAt`                                                                     | [LocalDate](https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html) | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `email`                                                                         | *String*                                                                        | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `environment`                                                                   | *String*                                                                        | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `id`                                                                            | *String*                                                                        | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `meta`                                                                          | [PropertyUserMeta](../../models/shared/PropertyUserMeta.md)                     | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `name`                                                                          | *String*                                                                        | :heavy_check_mark:                                                              | N/A                                                                             |
+| `updatedAt`                                                                     | [LocalDate](https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html) | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `workspaceId`                                                                   | *String*                                                                        | :heavy_check_mark:                                                              | N/A                                                                             |
+| `workspaceIds`                                                                  | List<*String*>                                                                  | :heavy_check_mark:                                                              | A list of all of the user's workspaces                                          |
