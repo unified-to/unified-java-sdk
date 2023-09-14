@@ -71,7 +71,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdEmployeeRequest;
 import com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdEmployeeResponse;
 import com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdEmployeeSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -85,7 +85,7 @@ public class Application {
                 order = "itaque";
                 query = "possimus";
                 sort = "tenetur";
-                updatedGte = LocalDate.parse("2022-05-09");
+                updatedGte = OffsetDateTime.parse("2022-05-09T09:55:23.335Z");
             }};            
 
             GetHrisConnectionIdEmployeeResponse res = sdk.employee.getHrisConnectionIdEmployee(req, new GetHrisConnectionIdEmployeeSecurity("eligendi") {{
@@ -188,7 +188,7 @@ import com.unifiedapi.unifiedto.models.shared.HrisTelephone;
 import com.unifiedapi.unifiedto.models.shared.HrisTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -208,8 +208,8 @@ public class Application {
                         region = "numquam";
                         regionCode = "fugit";
                     }};;
-                    createdAt = LocalDate.parse("2022-03-28");
-                    dateOfBirth = LocalDate.parse("2021-02-25");
+                    createdAt = OffsetDateTime.parse("2022-03-28T22:52:01.301Z");
+                    dateOfBirth = OffsetDateTime.parse("2021-02-25T01:43:39.041Z");
                     department = "commodi";
                     division = "possimus";
                     emails = new com.unifiedapi.unifiedto.models.shared.HrisEmail[]{{
@@ -222,7 +222,7 @@ public class Application {
                     employmentStatus = HrisEmployeeEmploymentStatus.INACTIVE;
                     employmentType = HrisEmployeeEmploymentType.PART_TIME;
                     gender = HrisEmployeeGender.MALE;
-                    hiredAt = LocalDate.parse("2022-03-31");
+                    hiredAt = OffsetDateTime.parse("2022-03-31T01:51:07.320Z");
                     id = "9f7ac2f7-2f88-4500-9049-11608207888e";
                     location = "minus";
                     managerId = "autem";
@@ -235,9 +235,9 @@ public class Application {
                             type = HrisTelephoneType.OTHER;
                         }}),
                     }};
-                    terminatedAt = LocalDate.parse("2022-05-26");
+                    terminatedAt = OffsetDateTime.parse("2022-05-26T09:41:25.866Z");
                     title = "Dr.";
-                    updatedAt = LocalDate.parse("2022-05-26");
+                    updatedAt = OffsetDateTime.parse("2022-05-26T13:56:22.903Z");
                 }};;
             }};            
 
@@ -292,7 +292,7 @@ import com.unifiedapi.unifiedto.models.shared.HrisTelephone;
 import com.unifiedapi.unifiedto.models.shared.HrisTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -312,8 +312,8 @@ public class Application {
                         region = "eos";
                         regionCode = "id";
                     }};;
-                    createdAt = LocalDate.parse("2022-02-24");
-                    dateOfBirth = LocalDate.parse("2022-07-13");
+                    createdAt = OffsetDateTime.parse("2022-02-24T06:24:23.863Z");
+                    dateOfBirth = OffsetDateTime.parse("2022-07-13T00:51:44.607Z");
                     department = "reprehenderit";
                     division = "eligendi";
                     emails = new com.unifiedapi.unifiedto.models.shared.HrisEmail[]{{
@@ -326,7 +326,7 @@ public class Application {
                     employmentStatus = HrisEmployeeEmploymentStatus.ACTIVE;
                     employmentType = HrisEmployeeEmploymentType.VOLUNTEER;
                     gender = HrisEmployeeGender.FEMALE;
-                    hiredAt = LocalDate.parse("2022-03-30");
+                    hiredAt = OffsetDateTime.parse("2022-03-30T18:08:41.740Z");
                     id = "9b2ad32d-afe8-41a8-8f44-44573fecd473";
                     location = "nemo";
                     managerId = "nesciunt";
@@ -339,9 +339,9 @@ public class Application {
                             type = HrisTelephoneType.FAX;
                         }}),
                     }};
-                    terminatedAt = LocalDate.parse("2022-05-25");
+                    terminatedAt = OffsetDateTime.parse("2022-05-25T12:43:26.283Z");
                     title = "Miss";
-                    updatedAt = LocalDate.parse("2022-03-12");
+                    updatedAt = OffsetDateTime.parse("2022-03-12T10:56:20.875Z");
                 }};;
             }};            
 
@@ -396,7 +396,7 @@ import com.unifiedapi.unifiedto.models.shared.HrisTelephone;
 import com.unifiedapi.unifiedto.models.shared.HrisTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -416,8 +416,8 @@ public class Application {
                         region = "voluptatibus";
                         regionCode = "omnis";
                     }};;
-                    createdAt = LocalDate.parse("2022-06-13");
-                    dateOfBirth = LocalDate.parse("2022-05-22");
+                    createdAt = OffsetDateTime.parse("2022-06-13T04:43:14.355Z");
+                    dateOfBirth = OffsetDateTime.parse("2022-05-22T07:23:57.099Z");
                     department = "vero";
                     division = "nisi";
                     emails = new com.unifiedapi.unifiedto.models.shared.HrisEmail[]{{
@@ -430,7 +430,7 @@ public class Application {
                     employmentStatus = HrisEmployeeEmploymentStatus.INACTIVE;
                     employmentType = HrisEmployeeEmploymentType.CASUAL;
                     gender = HrisEmployeeGender.NON_BINARY;
-                    hiredAt = LocalDate.parse("2022-02-23");
+                    hiredAt = OffsetDateTime.parse("2022-02-23T11:47:01.732Z");
                     id = "751c9fe8-f750-42bf-9c34-50841f176445";
                     location = "ex";
                     managerId = "amet";
@@ -443,9 +443,9 @@ public class Application {
                             type = HrisTelephoneType.OTHER;
                         }}),
                     }};
-                    terminatedAt = LocalDate.parse("2022-12-02");
+                    terminatedAt = OffsetDateTime.parse("2022-12-02T17:23:21.944Z");
                     title = "Dr.";
-                    updatedAt = LocalDate.parse("2022-03-16");
+                    updatedAt = OffsetDateTime.parse("2022-03-16T15:46:27.474Z");
                 }};;
             }};            
 

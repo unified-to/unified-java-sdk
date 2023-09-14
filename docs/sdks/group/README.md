@@ -71,7 +71,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdGroupRequest;
 import com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdGroupResponse;
 import com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdGroupSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -85,7 +85,7 @@ public class Application {
                 order = "ut";
                 query = "quidem";
                 sort = "doloribus";
-                updatedGte = LocalDate.parse("2022-11-25");
+                updatedGte = OffsetDateTime.parse("2022-11-25T00:27:09.327Z");
             }};            
 
             GetHrisConnectionIdGroupResponse res = sdk.group.getHrisConnectionIdGroup(req, new GetHrisConnectionIdGroupSecurity("tempore") {{
@@ -180,7 +180,7 @@ import com.unifiedapi.unifiedto.models.operations.PatchHrisConnectionIdGroupIdSe
 import com.unifiedapi.unifiedto.models.shared.HrisGroup;
 import com.unifiedapi.unifiedto.models.shared.HrisGroupType;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisGroupRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -190,7 +190,7 @@ public class Application {
 
             PatchHrisConnectionIdGroupIdRequest req = new PatchHrisConnectionIdGroupIdRequest("voluptate", "alias") {{
                 hrisGroup = new HrisGroup() {{
-                    createdAt = LocalDate.parse("2022-02-28");
+                    createdAt = OffsetDateTime.parse("2022-02-28T06:13:48.877Z");
                     description = "incidunt";
                     employeeIds = new String[]{{
                         add("ea"),
@@ -204,7 +204,7 @@ public class Application {
                     parentId = "distinctio";
                     raw = new PropertyHrisGroupRaw();;
                     type = HrisGroupType.DIVISION;
-                    updatedAt = LocalDate.parse("2022-07-13");
+                    updatedAt = OffsetDateTime.parse("2022-07-13T21:36:37.401Z");
                 }};;
             }};            
 
@@ -251,7 +251,7 @@ import com.unifiedapi.unifiedto.models.operations.PostHrisConnectionIdGroupSecur
 import com.unifiedapi.unifiedto.models.shared.HrisGroup;
 import com.unifiedapi.unifiedto.models.shared.HrisGroupType;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisGroupRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -261,7 +261,7 @@ public class Application {
 
             PostHrisConnectionIdGroupRequest req = new PostHrisConnectionIdGroupRequest("provident") {{
                 hrisGroup = new HrisGroup() {{
-                    createdAt = LocalDate.parse("2020-08-15");
+                    createdAt = OffsetDateTime.parse("2020-08-15T09:08:43.801Z");
                     description = "impedit";
                     employeeIds = new String[]{{
                         add("minima"),
@@ -275,7 +275,7 @@ public class Application {
                     parentId = "amet";
                     raw = new PropertyHrisGroupRaw();;
                     type = HrisGroupType.BUSINESS_UNIT;
-                    updatedAt = LocalDate.parse("2021-06-16");
+                    updatedAt = OffsetDateTime.parse("2021-06-16T21:24:14.090Z");
                 }};;
             }};            
 
@@ -322,7 +322,7 @@ import com.unifiedapi.unifiedto.models.operations.PutHrisConnectionIdGroupIdSecu
 import com.unifiedapi.unifiedto.models.shared.HrisGroup;
 import com.unifiedapi.unifiedto.models.shared.HrisGroupType;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisGroupRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -332,7 +332,7 @@ public class Application {
 
             PutHrisConnectionIdGroupIdRequest req = new PutHrisConnectionIdGroupIdRequest("dolores", "ut") {{
                 hrisGroup = new HrisGroup() {{
-                    createdAt = LocalDate.parse("2022-04-23");
+                    createdAt = OffsetDateTime.parse("2022-04-23T21:52:29.427Z");
                     description = "voluptate";
                     employeeIds = new String[]{{
                         add("aliquid"),
@@ -346,7 +346,7 @@ public class Application {
                     parentId = "quisquam";
                     raw = new PropertyHrisGroupRaw();;
                     type = HrisGroupType.DEPARTMENT;
-                    updatedAt = LocalDate.parse("2022-11-30");
+                    updatedAt = OffsetDateTime.parse("2022-11-30T06:52:52.452Z");
                 }};;
             }};            
 

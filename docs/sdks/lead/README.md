@@ -71,7 +71,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdLeadRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdLeadResponse;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdLeadSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -85,7 +85,7 @@ public class Application {
                 order = "sunt";
                 query = "fuga";
                 sort = "nulla";
-                updatedGte = LocalDate.parse("2022-11-13");
+                updatedGte = OffsetDateTime.parse("2022-11-13T12:43:09.656Z");
             }};            
 
             GetCrmConnectionIdLeadResponse res = sdk.lead.getCrmConnectionIdLead(req, new GetCrmConnectionIdLeadSecurity("ad") {{
@@ -184,7 +184,7 @@ import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmLeadAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmLeadRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -207,7 +207,7 @@ public class Application {
                     }};;
                     companyId = "ex";
                     contactId = "quis";
-                    createdAt = LocalDate.parse("2022-11-29");
+                    createdAt = OffsetDateTime.parse("2022-11-29T18:23:49.046Z");
                     creatorUserId = "officiis";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail() {{
@@ -224,7 +224,7 @@ public class Application {
                             type = CrmTelephoneType.OTHER;
                         }}),
                     }};
-                    updatedAt = LocalDate.parse("2022-12-31");
+                    updatedAt = OffsetDateTime.parse("2022-12-31T00:00:29.963Z");
                     userId = "doloribus";
                 }};;
             }};            
@@ -276,7 +276,7 @@ import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmLeadAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmLeadRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -299,7 +299,7 @@ public class Application {
                     }};;
                     companyId = "autem";
                     contactId = "voluptates";
-                    createdAt = LocalDate.parse("2021-10-29");
+                    createdAt = OffsetDateTime.parse("2021-10-29T09:01:04.013Z");
                     creatorUserId = "modi";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail() {{
@@ -316,7 +316,7 @@ public class Application {
                             type = CrmTelephoneType.MOBILE;
                         }}),
                     }};
-                    updatedAt = LocalDate.parse("2021-05-18");
+                    updatedAt = OffsetDateTime.parse("2021-05-18T02:30:42.135Z");
                     userId = "explicabo";
                 }};;
             }};            
@@ -368,7 +368,7 @@ import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmLeadAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmLeadRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -391,7 +391,7 @@ public class Application {
                     }};;
                     companyId = "sapiente";
                     contactId = "eius";
-                    createdAt = LocalDate.parse("2022-11-26");
+                    createdAt = OffsetDateTime.parse("2022-11-26T20:23:45.440Z");
                     creatorUserId = "inventore";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail() {{
@@ -408,7 +408,7 @@ public class Application {
                             type = CrmTelephoneType.HOME;
                         }}),
                     }};
-                    updatedAt = LocalDate.parse("2022-02-02");
+                    updatedAt = OffsetDateTime.parse("2022-02-02T22:39:59.097Z");
                     userId = "ipsa";
                 }};;
             }};            

@@ -4,11 +4,14 @@
 
 package com.unifiedapi.unifiedto.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.LocalDate;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.unifiedapi.unifiedto.utils.DateTimeDeserializer;
+import com.unifiedapi.unifiedto.utils.DateTimeSerializer;
+import java.time.OffsetDateTime;
 
 /**
  * PropertyConnectionAuth - An authentication object that represents a specific authorized user's connection to an integration.
@@ -106,11 +109,12 @@ public class PropertyConnectionAuth {
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expiry_date")
-    public LocalDate expiryDate;
+    public OffsetDateTime expiryDate;
 
-    public PropertyConnectionAuth withExpiryDate(LocalDate expiryDate) {
+    public PropertyConnectionAuth withExpiryDate(OffsetDateTime expiryDate) {
         this.expiryDate = expiryDate;
         return this;
     }

@@ -6,7 +6,7 @@ package com.unifiedapi.unifiedto.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 
 public class GetCrmConnectionIdEventRequest {
@@ -101,9 +101,9 @@ public class GetCrmConnectionIdEventRequest {
      * Return only results whose updated date is equal or greater to this value
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
-    public LocalDate updatedGte;
+    public OffsetDateTime updatedGte;
 
-    public GetCrmConnectionIdEventRequest withUpdatedGte(LocalDate updatedGte) {
+    public GetCrmConnectionIdEventRequest withUpdatedGte(OffsetDateTime updatedGte) {
         this.updatedGte = updatedGte;
         return this;
     }

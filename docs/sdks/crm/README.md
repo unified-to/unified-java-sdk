@@ -823,7 +823,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanyResponse;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanySecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -839,7 +839,7 @@ public class Application {
                 order = "quia";
                 query = "magnam";
                 sort = "reprehenderit";
-                updatedGte = LocalDate.parse("2021-05-06");
+                updatedGte = OffsetDateTime.parse("2021-05-06T01:52:02.683Z");
             }};            
 
             GetCrmConnectionIdCompanyResponse res = sdk.crm.getCrmConnectionIdCompany(req, new GetCrmConnectionIdCompanySecurity("corrupti") {{
@@ -931,7 +931,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactResponse;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -947,7 +947,7 @@ public class Application {
                 order = "molestias";
                 query = "dolore";
                 sort = "sunt";
-                updatedGte = LocalDate.parse("2022-05-21");
+                updatedGte = OffsetDateTime.parse("2022-05-21T12:17:59.359Z");
             }};            
 
             GetCrmConnectionIdContactResponse res = sdk.crm.getCrmConnectionIdContact(req, new GetCrmConnectionIdContactSecurity("odit") {{
@@ -1039,7 +1039,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdDealRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdDealResponse;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdDealSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1055,7 +1055,7 @@ public class Application {
                 order = "nisi";
                 query = "tenetur";
                 sort = "quis";
-                updatedGte = LocalDate.parse("2021-11-25");
+                updatedGte = OffsetDateTime.parse("2021-11-25T16:54:25.224Z");
             }};            
 
             GetCrmConnectionIdDealResponse res = sdk.crm.getCrmConnectionIdDeal(req, new GetCrmConnectionIdDealSecurity("suscipit") {{
@@ -1147,7 +1147,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdEventRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdEventResponse;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdEventSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1164,7 +1164,7 @@ public class Application {
                 order = "repellat";
                 query = "repudiandae";
                 sort = "architecto";
-                updatedGte = LocalDate.parse("2022-02-18");
+                updatedGte = OffsetDateTime.parse("2022-02-18T12:04:35.830Z");
             }};            
 
             GetCrmConnectionIdEventResponse res = sdk.crm.getCrmConnectionIdEvent(req, new GetCrmConnectionIdEventSecurity("harum") {{
@@ -1256,7 +1256,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileResponse;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1273,7 +1273,7 @@ public class Application {
                 order = "praesentium";
                 query = "error";
                 sort = "non";
-                updatedGte = LocalDate.parse("2022-05-09");
+                updatedGte = OffsetDateTime.parse("2022-05-09T02:28:59.420Z");
             }};            
 
             GetCrmConnectionIdFileResponse res = sdk.crm.getCrmConnectionIdFile(req, new GetCrmConnectionIdFileSecurity("accusamus") {{
@@ -1365,7 +1365,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdLeadRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdLeadResponse;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdLeadSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1379,7 +1379,7 @@ public class Application {
                 order = "deserunt";
                 query = "aliquid";
                 sort = "excepturi";
-                updatedGte = LocalDate.parse("2022-09-23");
+                updatedGte = OffsetDateTime.parse("2022-09-23T02:35:04.203Z");
             }};            
 
             GetCrmConnectionIdLeadResponse res = sdk.crm.getCrmConnectionIdLead(req, new GetCrmConnectionIdLeadSecurity("possimus") {{
@@ -1471,7 +1471,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineResponse;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1485,7 +1485,7 @@ public class Application {
                 order = "minus";
                 query = "quo";
                 sort = "quos";
-                updatedGte = LocalDate.parse("2021-05-28");
+                updatedGte = OffsetDateTime.parse("2021-05-28T02:28:57.203Z");
             }};            
 
             GetCrmConnectionIdPipelineResponse res = sdk.crm.getCrmConnectionIdPipeline(req, new GetCrmConnectionIdPipelineSecurity("iste") {{
@@ -1577,7 +1577,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdTeamRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdTeamResponse;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdTeamSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1591,7 +1591,7 @@ public class Application {
                 order = "at";
                 query = "possimus";
                 sort = "neque";
-                updatedGte = LocalDate.parse("2021-09-22");
+                updatedGte = OffsetDateTime.parse("2021-09-22T18:52:21.045Z");
             }};            
 
             GetCrmConnectionIdTeamResponse res = sdk.crm.getCrmConnectionIdTeam(req, new GetCrmConnectionIdTeamSecurity("sapiente") {{
@@ -1683,7 +1683,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdUserRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdUserResponse;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdUserSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1697,7 +1697,7 @@ public class Application {
                 order = "ad";
                 query = "aliquam";
                 sort = "quisquam";
-                updatedGte = LocalDate.parse("2022-09-04");
+                updatedGte = OffsetDateTime.parse("2022-09-04T09:51:46.699Z");
             }};            
 
             GetCrmConnectionIdUserResponse res = sdk.crm.getCrmConnectionIdUser(req, new GetCrmConnectionIdUserSecurity("maiores") {{
@@ -1796,7 +1796,7 @@ import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmCompanyAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmCompanyRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1817,7 +1817,7 @@ public class Application {
                         region = "autem";
                         regionCode = "quidem";
                     }};;
-                    createdAt = LocalDate.parse("2021-06-09");
+                    createdAt = OffsetDateTime.parse("2021-06-09T17:30:04.825Z");
                     dealIds = new String[]{{
                         add("deserunt"),
                     }};
@@ -1839,7 +1839,7 @@ public class Application {
                             type = CrmTelephoneType.FAX;
                         }}),
                     }};
-                    updatedAt = LocalDate.parse("2021-11-11");
+                    updatedAt = OffsetDateTime.parse("2021-11-11T02:45:00.085Z");
                     websites = new String[]{{
                         add("occaecati"),
                     }};
@@ -1942,7 +1942,7 @@ import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1966,7 +1966,7 @@ public class Application {
                     companyIds = new String[]{{
                         add("reprehenderit"),
                     }};
-                    createdAt = LocalDate.parse("2021-12-30");
+                    createdAt = OffsetDateTime.parse("2021-12-30T06:04:09.758Z");
                     dealIds = new String[]{{
                         add("nihil"),
                     }};
@@ -1986,7 +1986,7 @@ public class Application {
                         }}),
                     }};
                     title = "Mrs.";
-                    updatedAt = LocalDate.parse("2022-07-21");
+                    updatedAt = OffsetDateTime.parse("2022-07-21T20:56:24.947Z");
                 }};;
             }};            
 
@@ -2130,7 +2130,7 @@ import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdDealIdResp
 import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdDealIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmDeal;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmDealRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -2141,8 +2141,8 @@ public class Application {
             PatchCrmConnectionIdDealIdRequest req = new PatchCrmConnectionIdDealIdRequest("impedit", "eius") {{
                 crmDeal = new CrmDeal() {{
                     amount = 5283.2d;
-                    closedAt = LocalDate.parse("2022-02-16");
-                    createdAt = LocalDate.parse("2022-01-01");
+                    closedAt = OffsetDateTime.parse("2022-02-16T08:36:08.999Z");
+                    createdAt = OffsetDateTime.parse("2022-01-01T01:16:49.496Z");
                     currency = "aspernatur";
                     id = "132af031-02d5-414f-8cc6-f18bf9621a6a";
                     lostReason = "dolore";
@@ -2155,7 +2155,7 @@ public class Application {
                     tags = new String[]{{
                         add("officiis"),
                     }};
-                    updatedAt = LocalDate.parse("2022-04-19");
+                    updatedAt = OffsetDateTime.parse("2022-04-19T18:40:34.391Z");
                     wonReason = "itaque";
                 }};;
             }};            
@@ -2208,7 +2208,7 @@ import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventMeeting;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventNote;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTask;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -2228,7 +2228,7 @@ public class Application {
                     contactIds = new String[]{{
                         add("facilis"),
                     }};
-                    createdAt = LocalDate.parse("2022-09-19");
+                    createdAt = OffsetDateTime.parse("2022-09-19T00:24:09.398Z");
                     dealIds = new String[]{{
                         add("quaerat"),
                     }};
@@ -2246,8 +2246,8 @@ public class Application {
                     id = "b91c8d97-5e0e-4841-9d8f-84f144f3e07e";
                     meeting = new PropertyCrmEventMeeting() {{
                         description = "facere";
-                        endAt = LocalDate.parse("2020-09-10");
-                        startAt = LocalDate.parse("2022-04-28");
+                        endAt = OffsetDateTime.parse("2020-09-10T21:26:41.283Z");
+                        startAt = OffsetDateTime.parse("2022-04-28T13:38:24.038Z");
                         title = "Miss";
                     }};;
                     note = new PropertyCrmEventNote() {{
@@ -2260,7 +2260,7 @@ public class Application {
                         status = "omnis";
                     }};;
                     type = CrmEventType.NOTE;
-                    updatedAt = LocalDate.parse("2022-05-11");
+                    updatedAt = OffsetDateTime.parse("2022-05-11T09:02:32.338Z");
                 }};;
             }};            
 
@@ -2453,7 +2453,7 @@ import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdFileIdResp
 import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdFileIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmFile;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmFileRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -2467,7 +2467,7 @@ public class Application {
                     activityId = "repellendus";
                     companyId = "nesciunt";
                     contactId = "ipsa";
-                    createdAt = LocalDate.parse("2022-06-02");
+                    createdAt = OffsetDateTime.parse("2022-06-02T06:52:03.773Z");
                     dealId = "esse";
                     description = "accusantium";
                     fileName = "distinctio";
@@ -2477,7 +2477,7 @@ public class Application {
                     id = "4fa87cf5-35a6-4fae-94eb-f60c321f023b";
                     leadId = "in";
                     raw = new PropertyCrmFileRaw();;
-                    updatedAt = LocalDate.parse("2022-03-01");
+                    updatedAt = OffsetDateTime.parse("2022-03-01T11:57:51.552Z");
                     userId = "ratione";
                 }};;
             }};            
@@ -2529,7 +2529,7 @@ import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmLeadAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmLeadRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -2552,7 +2552,7 @@ public class Application {
                     }};;
                     companyId = "alias";
                     contactId = "impedit";
-                    createdAt = LocalDate.parse("2022-08-03");
+                    createdAt = OffsetDateTime.parse("2022-08-03T05:21:55.275Z");
                     creatorUserId = "labore";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail() {{
@@ -2569,7 +2569,7 @@ public class Application {
                             type = CrmTelephoneType.MOBILE;
                         }}),
                     }};
-                    updatedAt = LocalDate.parse("2022-09-09");
+                    updatedAt = OffsetDateTime.parse("2022-09-09T12:14:58.711Z");
                     userId = "ipsum";
                 }};;
             }};            
@@ -2616,7 +2616,7 @@ import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdPipelineId
 import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdPipelineIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmPipeline;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmPipelineRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -2627,13 +2627,13 @@ public class Application {
             PatchCrmConnectionIdPipelineIdRequest req = new PatchCrmConnectionIdPipelineIdRequest("laudantium", "rerum") {{
                 crmPipeline = new CrmPipeline() {{
                     active = false;
-                    createdAt = LocalDate.parse("2022-09-21");
+                    createdAt = OffsetDateTime.parse("2022-09-21T22:35:10.419Z");
                     dealProbability = false;
                     displayOrder = 3194.19d;
                     id = "317747dc-915a-4d2c-af5d-d6723dc0f5ae";
                     name = "Dixie Doyle";
                     raw = new PropertyCrmPipelineRaw();;
-                    updatedAt = LocalDate.parse("2022-01-03");
+                    updatedAt = OffsetDateTime.parse("2022-01-03T11:57:21.616Z");
                 }};;
             }};            
 
@@ -2679,7 +2679,7 @@ import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdTeamIdResp
 import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdTeamIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmTeam;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmTeamRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -2689,12 +2689,12 @@ public class Application {
 
             PatchCrmConnectionIdTeamIdRequest req = new PatchCrmConnectionIdTeamIdRequest("perferendis", "laudantium") {{
                 crmTeam = new CrmTeam() {{
-                    createdAt = LocalDate.parse("2022-06-15");
+                    createdAt = OffsetDateTime.parse("2022-06-15T09:26:04.551Z");
                     description = "molestiae";
                     id = "56143f5a-6c98-4b55-9540-80d40bcacc6c";
                     name = "Ismael Hudson";
                     raw = new PropertyCrmTeamRaw();;
-                    updatedAt = LocalDate.parse("2022-04-18");
+                    updatedAt = OffsetDateTime.parse("2022-04-18T03:31:13.393Z");
                     userIds = new String[]{{
                         add("necessitatibus"),
                     }};
@@ -2748,7 +2748,7 @@ import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.CrmUser;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmUserAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmUserRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -2769,7 +2769,7 @@ public class Application {
                         region = "nobis";
                         regionCode = "tempora";
                     }};;
-                    createdAt = LocalDate.parse("2022-09-27");
+                    createdAt = OffsetDateTime.parse("2022-09-27T16:08:58.380Z");
                     currency = "expedita";
                     department = "aperiam";
                     division = "voluptates";
@@ -2792,7 +2792,7 @@ public class Application {
                     }};
                     timezone = "unde";
                     title = "Miss";
-                    updatedAt = LocalDate.parse("2020-10-21");
+                    updatedAt = OffsetDateTime.parse("2020-10-21T07:18:08.779Z");
                 }};;
             }};            
 
@@ -2843,7 +2843,7 @@ import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmCompanyAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmCompanyRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -2864,7 +2864,7 @@ public class Application {
                         region = "earum";
                         regionCode = "doloremque";
                     }};;
-                    createdAt = LocalDate.parse("2022-12-31");
+                    createdAt = OffsetDateTime.parse("2022-12-31T20:46:54.246Z");
                     dealIds = new String[]{{
                         add("doloremque"),
                     }};
@@ -2886,7 +2886,7 @@ public class Application {
                             type = CrmTelephoneType.MOBILE;
                         }}),
                     }};
-                    updatedAt = LocalDate.parse("2022-10-01");
+                    updatedAt = OffsetDateTime.parse("2022-10-01T15:23:25.886Z");
                     websites = new String[]{{
                         add("optio"),
                     }};
@@ -2940,7 +2940,7 @@ import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -2964,7 +2964,7 @@ public class Application {
                     companyIds = new String[]{{
                         add("magni"),
                     }};
-                    createdAt = LocalDate.parse("2021-04-19");
+                    createdAt = OffsetDateTime.parse("2021-04-19T15:00:10.201Z");
                     dealIds = new String[]{{
                         add("a"),
                     }};
@@ -2984,7 +2984,7 @@ public class Application {
                         }}),
                     }};
                     title = "Miss";
-                    updatedAt = LocalDate.parse("2022-07-04");
+                    updatedAt = OffsetDateTime.parse("2022-07-04T05:47:00.578Z");
                 }};;
             }};            
 
@@ -3030,7 +3030,7 @@ import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdDealRespons
 import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdDealSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmDeal;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmDealRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -3041,8 +3041,8 @@ public class Application {
             PostCrmConnectionIdDealRequest req = new PostCrmConnectionIdDealRequest("sunt") {{
                 crmDeal = new CrmDeal() {{
                     amount = 5658.45d;
-                    closedAt = LocalDate.parse("2022-07-31");
-                    createdAt = LocalDate.parse("2022-04-10");
+                    closedAt = OffsetDateTime.parse("2022-07-31T14:45:14.723Z");
+                    createdAt = OffsetDateTime.parse("2022-04-10T02:34:04.729Z");
                     currency = "molestias";
                     id = "e3c8db03-408d-46d3-a4ff-d455906d1263";
                     lostReason = "quibusdam";
@@ -3055,7 +3055,7 @@ public class Application {
                     tags = new String[]{{
                         add("excepturi"),
                     }};
-                    updatedAt = LocalDate.parse("2021-05-06");
+                    updatedAt = OffsetDateTime.parse("2021-05-06T19:16:47.821Z");
                     wonReason = "dicta";
                 }};;
             }};            
@@ -3108,7 +3108,7 @@ import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventMeeting;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventNote;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTask;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -3128,7 +3128,7 @@ public class Application {
                     contactIds = new String[]{{
                         add("sequi"),
                     }};
-                    createdAt = LocalDate.parse("2022-02-21");
+                    createdAt = OffsetDateTime.parse("2022-02-21T11:15:33.619Z");
                     dealIds = new String[]{{
                         add("adipisci"),
                     }};
@@ -3146,8 +3146,8 @@ public class Application {
                     id = "21657650-6641-4870-99d2-1f9ad030c4ec";
                     meeting = new PropertyCrmEventMeeting() {{
                         description = "maxime";
-                        endAt = LocalDate.parse("2022-11-22");
-                        startAt = LocalDate.parse("2022-12-25");
+                        endAt = OffsetDateTime.parse("2022-11-22T20:02:33.919Z");
+                        startAt = OffsetDateTime.parse("2022-12-25T09:16:06.861Z");
                         title = "Ms.";
                     }};;
                     note = new PropertyCrmEventNote() {{
@@ -3160,7 +3160,7 @@ public class Application {
                         status = "facilis";
                     }};;
                     type = CrmEventType.TASK;
-                    updatedAt = LocalDate.parse("2022-12-26");
+                    updatedAt = OffsetDateTime.parse("2022-12-26T13:28:32.312Z");
                 }};;
             }};            
 
@@ -3206,7 +3206,7 @@ import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdFileRespons
 import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdFileSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmFile;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmFileRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -3220,7 +3220,7 @@ public class Application {
                     activityId = "quaerat";
                     companyId = "corporis";
                     contactId = "accusamus";
-                    createdAt = LocalDate.parse("2022-01-16");
+                    createdAt = OffsetDateTime.parse("2022-01-16T03:15:23.830Z");
                     dealId = "esse";
                     description = "neque";
                     fileName = "quidem";
@@ -3230,7 +3230,7 @@ public class Application {
                     id = "5e320a31-9f4b-4adf-947c-9a867bc42426";
                     leadId = "eum";
                     raw = new PropertyCrmFileRaw();;
-                    updatedAt = LocalDate.parse("2022-09-05");
+                    updatedAt = OffsetDateTime.parse("2022-09-05T22:14:53.060Z");
                     userId = "quos";
                 }};;
             }};            
@@ -3282,7 +3282,7 @@ import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmLeadAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmLeadRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -3305,7 +3305,7 @@ public class Application {
                     }};;
                     companyId = "occaecati";
                     contactId = "ipsum";
-                    createdAt = LocalDate.parse("2020-08-20");
+                    createdAt = OffsetDateTime.parse("2020-08-20T00:05:02.582Z");
                     creatorUserId = "quasi";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail() {{
@@ -3322,7 +3322,7 @@ public class Application {
                             type = CrmTelephoneType.MOBILE;
                         }}),
                     }};
-                    updatedAt = LocalDate.parse("2020-02-19");
+                    updatedAt = OffsetDateTime.parse("2020-02-19T05:19:30.502Z");
                     userId = "consectetur";
                 }};;
             }};            
@@ -3369,7 +3369,7 @@ import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdPipelineRes
 import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdPipelineSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmPipeline;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmPipelineRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -3380,13 +3380,13 @@ public class Application {
             PostCrmConnectionIdPipelineRequest req = new PostCrmConnectionIdPipelineRequest("voluptatibus") {{
                 crmPipeline = new CrmPipeline() {{
                     active = false;
-                    createdAt = LocalDate.parse("2020-07-05");
+                    createdAt = OffsetDateTime.parse("2020-07-05T23:42:20.771Z");
                     dealProbability = false;
                     displayOrder = 6077.42d;
                     id = "f7f079af-4d35-4724-8db0-f4d281187d56";
                     name = "Joel Gutkowski";
                     raw = new PropertyCrmPipelineRaw();;
-                    updatedAt = LocalDate.parse("2020-06-20");
+                    updatedAt = OffsetDateTime.parse("2020-06-20T11:05:09.885Z");
                 }};;
             }};            
 
@@ -3432,7 +3432,7 @@ import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdTeamRespons
 import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdTeamSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmTeam;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmTeamRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -3442,12 +3442,12 @@ public class Application {
 
             PostCrmConnectionIdTeamRequest req = new PostCrmConnectionIdTeamRequest("enim") {{
                 crmTeam = new CrmTeam() {{
-                    createdAt = LocalDate.parse("2021-10-20");
+                    createdAt = OffsetDateTime.parse("2021-10-20T07:20:04.641Z");
                     description = "quae";
                     id = "65e628bd-fc20-432b-ac87-9923b7e13584";
                     name = "Roland Nolan Sr.";
                     raw = new PropertyCrmTeamRaw();;
-                    updatedAt = LocalDate.parse("2021-10-18");
+                    updatedAt = OffsetDateTime.parse("2021-10-18T11:31:00.082Z");
                     userIds = new String[]{{
                         add("praesentium"),
                     }};
@@ -3501,7 +3501,7 @@ import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.CrmUser;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmUserAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmUserRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -3522,7 +3522,7 @@ public class Application {
                         region = "exercitationem";
                         regionCode = "amet";
                     }};;
-                    createdAt = LocalDate.parse("2022-07-19");
+                    createdAt = OffsetDateTime.parse("2022-07-19T04:55:29.262Z");
                     currency = "pariatur";
                     department = "minus";
                     division = "a";
@@ -3545,7 +3545,7 @@ public class Application {
                     }};
                     timezone = "expedita";
                     title = "Mr.";
-                    updatedAt = LocalDate.parse("2022-07-06");
+                    updatedAt = OffsetDateTime.parse("2022-07-06T22:32:03.724Z");
                 }};;
             }};            
 
@@ -3596,7 +3596,7 @@ import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmCompanyAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmCompanyRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -3617,7 +3617,7 @@ public class Application {
                         region = "facilis";
                         regionCode = "aliquam";
                     }};;
-                    createdAt = LocalDate.parse("2022-04-26");
+                    createdAt = OffsetDateTime.parse("2022-04-26T23:17:59.840Z");
                     dealIds = new String[]{{
                         add("natus"),
                     }};
@@ -3639,7 +3639,7 @@ public class Application {
                             type = CrmTelephoneType.WORK;
                         }}),
                     }};
-                    updatedAt = LocalDate.parse("2022-11-24");
+                    updatedAt = OffsetDateTime.parse("2022-11-24T01:49:22.777Z");
                     websites = new String[]{{
                         add("suscipit"),
                     }};
@@ -3742,7 +3742,7 @@ import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -3766,7 +3766,7 @@ public class Application {
                     companyIds = new String[]{{
                         add("consequatur"),
                     }};
-                    createdAt = LocalDate.parse("2021-05-28");
+                    createdAt = OffsetDateTime.parse("2021-05-28T08:36:40.882Z");
                     dealIds = new String[]{{
                         add("velit"),
                     }};
@@ -3786,7 +3786,7 @@ public class Application {
                         }}),
                     }};
                     title = "Ms.";
-                    updatedAt = LocalDate.parse("2022-11-14");
+                    updatedAt = OffsetDateTime.parse("2022-11-14T16:32:12.833Z");
                 }};;
             }};            
 
@@ -3930,7 +3930,7 @@ import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdDealIdRespon
 import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdDealIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmDeal;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmDealRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -3941,8 +3941,8 @@ public class Application {
             PutCrmConnectionIdDealIdRequest req = new PutCrmConnectionIdDealIdRequest("rerum", "assumenda") {{
                 crmDeal = new CrmDeal() {{
                     amount = 1763.33d;
-                    closedAt = LocalDate.parse("2022-01-22");
-                    createdAt = LocalDate.parse("2020-11-02");
+                    closedAt = OffsetDateTime.parse("2022-01-22T06:20:19.804Z");
+                    createdAt = OffsetDateTime.parse("2020-11-02T10:58:44.985Z");
                     currency = "ab";
                     id = "4db6be5a-6859-498e-a2ae-20da16fc2b27";
                     lostReason = "ab";
@@ -3955,7 +3955,7 @@ public class Application {
                     tags = new String[]{{
                         add("nemo"),
                     }};
-                    updatedAt = LocalDate.parse("2022-01-27");
+                    updatedAt = OffsetDateTime.parse("2022-01-27T23:00:05.341Z");
                     wonReason = "omnis";
                 }};;
             }};            
@@ -4008,7 +4008,7 @@ import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventMeeting;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventNote;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTask;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -4028,7 +4028,7 @@ public class Application {
                     contactIds = new String[]{{
                         add("consequuntur"),
                     }};
-                    createdAt = LocalDate.parse("2022-09-28");
+                    createdAt = OffsetDateTime.parse("2022-09-28T00:11:15.137Z");
                     dealIds = new String[]{{
                         add("commodi"),
                     }};
@@ -4046,8 +4046,8 @@ public class Application {
                     id = "2407084f-7ab3-47ce-b022-25194db55410";
                     meeting = new PropertyCrmEventMeeting() {{
                         description = "similique";
-                        endAt = LocalDate.parse("2020-09-04");
-                        startAt = LocalDate.parse("2022-08-06");
+                        endAt = OffsetDateTime.parse("2020-09-04T05:22:03.669Z");
+                        startAt = OffsetDateTime.parse("2022-08-06T03:50:10.911Z");
                         title = "Ms.";
                     }};;
                     note = new PropertyCrmEventNote() {{
@@ -4060,7 +4060,7 @@ public class Application {
                         status = "quo";
                     }};;
                     type = CrmEventType.TASK;
-                    updatedAt = LocalDate.parse("2020-07-22");
+                    updatedAt = OffsetDateTime.parse("2020-07-22T15:07:27.879Z");
                 }};;
             }};            
 
@@ -4253,7 +4253,7 @@ import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdFileIdRespon
 import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdFileIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmFile;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmFileRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -4267,7 +4267,7 @@ public class Application {
                     activityId = "amet";
                     companyId = "adipisci";
                     contactId = "minus";
-                    createdAt = LocalDate.parse("2021-02-11");
+                    createdAt = OffsetDateTime.parse("2021-02-11T02:50:29.169Z");
                     dealId = "fuga";
                     description = "consectetur";
                     fileName = "labore";
@@ -4277,7 +4277,7 @@ public class Application {
                     id = "1bf407ee-4fcf-40c4-ab78-f15626398a0d";
                     leadId = "impedit";
                     raw = new PropertyCrmFileRaw();;
-                    updatedAt = LocalDate.parse("2022-08-10");
+                    updatedAt = OffsetDateTime.parse("2022-08-10T17:05:42.553Z");
                     userId = "nisi";
                 }};;
             }};            
@@ -4329,7 +4329,7 @@ import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmLeadAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmLeadRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -4352,7 +4352,7 @@ public class Application {
                     }};;
                     companyId = "alias";
                     contactId = "quidem";
-                    createdAt = LocalDate.parse("2021-05-12");
+                    createdAt = OffsetDateTime.parse("2021-05-12T15:02:04.341Z");
                     creatorUserId = "ipsam";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail() {{
@@ -4369,7 +4369,7 @@ public class Application {
                             type = CrmTelephoneType.FAX;
                         }}),
                     }};
-                    updatedAt = LocalDate.parse("2021-10-29");
+                    updatedAt = OffsetDateTime.parse("2021-10-29T05:51:45.592Z");
                     userId = "voluptatibus";
                 }};;
             }};            
@@ -4416,7 +4416,7 @@ import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdPipelineIdRe
 import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdPipelineIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmPipeline;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmPipelineRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -4427,13 +4427,13 @@ public class Application {
             PutCrmConnectionIdPipelineIdRequest req = new PutCrmConnectionIdPipelineIdRequest("dolorum", "soluta") {{
                 crmPipeline = new CrmPipeline() {{
                     active = false;
-                    createdAt = LocalDate.parse("2022-02-06");
+                    createdAt = OffsetDateTime.parse("2022-02-06T14:06:29.385Z");
                     dealProbability = false;
                     displayOrder = 9669.56d;
                     id = "662550a2-8382-4ac4-83af-d2315bba6501";
                     name = "Ms. Eva Upton";
                     raw = new PropertyCrmPipelineRaw();;
-                    updatedAt = LocalDate.parse("2022-04-22");
+                    updatedAt = OffsetDateTime.parse("2022-04-22T04:13:53.635Z");
                 }};;
             }};            
 
@@ -4479,7 +4479,7 @@ import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdTeamIdRespon
 import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdTeamIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmTeam;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmTeamRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -4489,12 +4489,12 @@ public class Application {
 
             PutCrmConnectionIdTeamIdRequest req = new PutCrmConnectionIdTeamIdRequest("eum", "deserunt") {{
                 crmTeam = new CrmTeam() {{
-                    createdAt = LocalDate.parse("2021-11-26");
+                    createdAt = OffsetDateTime.parse("2021-11-26T05:34:17.860Z");
                     description = "molestias";
                     id = "1bc8bdef-3612-4b63-8205-fda840774a68";
                     name = "Perry Pacocha";
                     raw = new PropertyCrmTeamRaw();;
-                    updatedAt = LocalDate.parse("2022-12-06");
+                    updatedAt = OffsetDateTime.parse("2022-12-06T20:26:48.917Z");
                     userIds = new String[]{{
                         add("molestias"),
                     }};
@@ -4548,7 +4548,7 @@ import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.CrmUser;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmUserAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmUserRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -4569,7 +4569,7 @@ public class Application {
                         region = "numquam";
                         regionCode = "non";
                     }};;
-                    createdAt = LocalDate.parse("2022-06-12");
+                    createdAt = OffsetDateTime.parse("2022-06-12T02:34:20.393Z");
                     currency = "dolores";
                     department = "enim";
                     division = "nihil";
@@ -4592,7 +4592,7 @@ public class Application {
                     }};
                     timezone = "laboriosam";
                     title = "Miss";
-                    updatedAt = LocalDate.parse("2022-06-18");
+                    updatedAt = OffsetDateTime.parse("2022-06-18T07:26:14.155Z");
                 }};;
             }};            
 

@@ -71,7 +71,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateResponse;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -85,7 +85,7 @@ public class Application {
                 order = "ab";
                 query = "error";
                 sort = "possimus";
-                updatedGte = LocalDate.parse("2021-01-15");
+                updatedGte = OffsetDateTime.parse("2021-01-15T12:05:30.894Z");
             }};            
 
             GetAtsConnectionIdCandidateResponse res = sdk.candidate.getAtsConnectionIdCandidate(req, new GetAtsConnectionIdCandidateSecurity("laborum") {{
@@ -184,7 +184,7 @@ import com.unifiedapi.unifiedto.models.shared.AtsTelephone;
 import com.unifiedapi.unifiedto.models.shared.AtsTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -205,7 +205,7 @@ public class Application {
                         regionCode = "veritatis";
                     }};;
                     companyName = "rerum";
-                    createdAt = LocalDate.parse("2021-09-24");
+                    createdAt = OffsetDateTime.parse("2021-09-24T14:32:36.483Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
                         add(new AtsEmail("debitis") {{
                             email = "Vesta68@gmail.com";
@@ -227,7 +227,7 @@ public class Application {
                         }}),
                     }};
                     title = "Miss";
-                    updatedAt = LocalDate.parse("2021-08-19");
+                    updatedAt = OffsetDateTime.parse("2021-08-19T05:33:23.931Z");
                 }};;
             }};            
 
@@ -278,7 +278,7 @@ import com.unifiedapi.unifiedto.models.shared.AtsTelephone;
 import com.unifiedapi.unifiedto.models.shared.AtsTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -299,7 +299,7 @@ public class Application {
                         regionCode = "consequuntur";
                     }};;
                     companyName = "voluptatem";
-                    createdAt = LocalDate.parse("2022-02-08");
+                    createdAt = OffsetDateTime.parse("2022-02-08T01:44:39.255Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
                         add(new AtsEmail("doloribus") {{
                             email = "Gladys_Swaniawski69@gmail.com";
@@ -321,7 +321,7 @@ public class Application {
                         }}),
                     }};
                     title = "Mrs.";
-                    updatedAt = LocalDate.parse("2021-05-25");
+                    updatedAt = OffsetDateTime.parse("2021-05-25T00:50:01.296Z");
                 }};;
             }};            
 
@@ -372,7 +372,7 @@ import com.unifiedapi.unifiedto.models.shared.AtsTelephone;
 import com.unifiedapi.unifiedto.models.shared.AtsTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -393,7 +393,7 @@ public class Application {
                         regionCode = "deserunt";
                     }};;
                     companyName = "esse";
-                    createdAt = LocalDate.parse("2022-07-22");
+                    createdAt = OffsetDateTime.parse("2022-07-22T17:24:54.812Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
                         add(new AtsEmail("asperiores") {{
                             email = "Ethan_Marquardt94@hotmail.com";
@@ -415,7 +415,7 @@ public class Application {
                         }}),
                     }};
                     title = "Mr.";
-                    updatedAt = LocalDate.parse("2022-08-05");
+                    updatedAt = OffsetDateTime.parse("2022-08-05T11:21:49.286Z");
                 }};;
             }};            
 

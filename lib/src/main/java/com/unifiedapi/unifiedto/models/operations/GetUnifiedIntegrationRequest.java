@@ -5,7 +5,7 @@
 package com.unifiedapi.unifiedto.models.operations;
 
 import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 
 public class GetUnifiedIntegrationRequest {
@@ -75,9 +75,9 @@ public class GetUnifiedIntegrationRequest {
      * Return only results whose updated date is equal or greater to this value
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
-    public LocalDate updatedGte;
+    public OffsetDateTime updatedGte;
 
-    public GetUnifiedIntegrationRequest withUpdatedGte(LocalDate updatedGte) {
+    public GetUnifiedIntegrationRequest withUpdatedGte(OffsetDateTime updatedGte) {
         this.updatedGte = updatedGte;
         return this;
     }

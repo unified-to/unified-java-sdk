@@ -17,7 +17,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdCallRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdCallResponse;
 import com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdCallSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -33,7 +33,7 @@ public class Application {
                 order = "nostrum";
                 query = "fugiat";
                 sort = "expedita";
-                updatedGte = LocalDate.parse("2022-05-12");
+                updatedGte = OffsetDateTime.parse("2022-05-12T16:43:21.506Z");
             }};            
 
             GetUcConnectionIdCallResponse res = sdk.call.getUcConnectionIdCall(req, new GetUcConnectionIdCallSecurity("suscipit") {{

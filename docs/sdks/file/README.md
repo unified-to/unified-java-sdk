@@ -71,7 +71,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileResponse;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -88,7 +88,7 @@ public class Application {
                 order = "quia";
                 query = "ad";
                 sort = "velit";
-                updatedGte = LocalDate.parse("2022-05-29");
+                updatedGte = OffsetDateTime.parse("2022-05-29T13:47:24.605Z");
             }};            
 
             GetCrmConnectionIdFileResponse res = sdk.file.getCrmConnectionIdFile(req, new GetCrmConnectionIdFileSecurity("possimus") {{
@@ -182,7 +182,7 @@ import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdFileIdResp
 import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdFileIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmFile;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmFileRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -196,7 +196,7 @@ public class Application {
                     activityId = "repellat";
                     companyId = "iusto";
                     contactId = "culpa";
-                    createdAt = LocalDate.parse("2022-06-02");
+                    createdAt = OffsetDateTime.parse("2022-06-02T03:40:36.510Z");
                     dealId = "maxime";
                     description = "assumenda";
                     fileName = "nihil";
@@ -206,7 +206,7 @@ public class Application {
                     id = "2484da21-729f-42ac-81ef-5725f1169ac1";
                     leadId = "itaque";
                     raw = new PropertyCrmFileRaw();;
-                    updatedAt = LocalDate.parse("2022-11-21");
+                    updatedAt = OffsetDateTime.parse("2022-11-21T20:07:41.520Z");
                     userId = "temporibus";
                 }};;
             }};            
@@ -253,7 +253,7 @@ import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdFileRespons
 import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdFileSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmFile;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmFileRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -267,7 +267,7 @@ public class Application {
                     activityId = "aspernatur";
                     companyId = "neque";
                     contactId = "impedit";
-                    createdAt = LocalDate.parse("2022-10-18");
+                    createdAt = OffsetDateTime.parse("2022-10-18T10:23:54.378Z");
                     dealId = "saepe";
                     description = "amet";
                     fileName = "labore";
@@ -277,7 +277,7 @@ public class Application {
                     id = "fa4a197f-6de9-4221-91fe-1712099853e9";
                     leadId = "reiciendis";
                     raw = new PropertyCrmFileRaw();;
-                    updatedAt = LocalDate.parse("2022-09-26");
+                    updatedAt = OffsetDateTime.parse("2022-09-26T09:36:45.150Z");
                     userId = "adipisci";
                 }};;
             }};            
@@ -324,7 +324,7 @@ import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdFileIdRespon
 import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdFileIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmFile;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmFileRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -338,7 +338,7 @@ public class Application {
                     activityId = "dolore";
                     companyId = "numquam";
                     contactId = "dolor";
-                    createdAt = LocalDate.parse("2021-03-29");
+                    createdAt = OffsetDateTime.parse("2021-03-29T19:15:48.513Z");
                     dealId = "voluptates";
                     description = "quia";
                     fileName = "aspernatur";
@@ -348,7 +348,7 @@ public class Application {
                     id = "0443bc15-4188-4c2f-96e8-5da7832eabd6";
                     leadId = "et";
                     raw = new PropertyCrmFileRaw();;
-                    updatedAt = LocalDate.parse("2022-03-31");
+                    updatedAt = OffsetDateTime.parse("2022-03-31T21:45:44.451Z");
                     userId = "nesciunt";
                 }};;
             }};            

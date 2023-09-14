@@ -121,7 +121,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdUserRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdUserResponse;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdUserSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -135,7 +135,7 @@ public class Application {
                 order = "laborum";
                 query = "quae";
                 sort = "quae";
-                updatedGte = LocalDate.parse("2020-12-28");
+                updatedGte = OffsetDateTime.parse("2020-12-28T03:12:21.205Z");
             }};            
 
             GetCrmConnectionIdUserResponse res = sdk.user.getCrmConnectionIdUser(req, new GetCrmConnectionIdUserSecurity("modi") {{
@@ -324,7 +324,7 @@ import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.CrmUser;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmUserAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmUserRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -345,7 +345,7 @@ public class Application {
                         region = "quas";
                         regionCode = "nemo";
                     }};;
-                    createdAt = LocalDate.parse("2022-04-20");
+                    createdAt = OffsetDateTime.parse("2022-04-20T20:49:59.548Z");
                     currency = "nulla";
                     department = "tempore";
                     division = "magnam";
@@ -368,7 +368,7 @@ public class Application {
                     }};
                     timezone = "eaque";
                     title = "Dr.";
-                    updatedAt = LocalDate.parse("2022-12-07");
+                    updatedAt = OffsetDateTime.parse("2022-12-07T23:21:45.478Z");
                 }};;
             }};            
 
@@ -413,7 +413,7 @@ import com.unifiedapi.unifiedto.models.operations.PatchUnifiedUserResponse;
 import com.unifiedapi.unifiedto.models.operations.PatchUnifiedUserSecurity;
 import com.unifiedapi.unifiedto.models.shared.PropertyUserMeta;
 import com.unifiedapi.unifiedto.models.shared.User;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -424,12 +424,12 @@ public class Application {
             com.unifiedapi.unifiedto.models.shared.User req = new User("eius", "voluptatem",                 new String[]{{
                                 add("temporibus"),
                             }}) {{
-                createdAt = LocalDate.parse("2022-09-21");
+                createdAt = OffsetDateTime.parse("2022-09-21T03:55:20.085Z");
                 email = "Jayde.OConner59@yahoo.com";
                 environment = "neque";
                 id = "b94c3b9d-2488-4d79-9aa4-2fc405669f69";
                 meta = new PropertyUserMeta();;
-                updatedAt = LocalDate.parse("2022-11-17");
+                updatedAt = OffsetDateTime.parse("2022-11-17T20:11:39.177Z");
             }};            
 
             PatchUnifiedUserResponse res = sdk.user.patchUnifiedUser(req, new PatchUnifiedUserSecurity("doloremque") {{
@@ -479,7 +479,7 @@ import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.CrmUser;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmUserAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmUserRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -500,7 +500,7 @@ public class Application {
                         region = "quo";
                         regionCode = "ipsum";
                     }};;
-                    createdAt = LocalDate.parse("2022-10-25");
+                    createdAt = OffsetDateTime.parse("2022-10-25T12:21:13.083Z");
                     currency = "harum";
                     department = "magnam";
                     division = "illo";
@@ -523,7 +523,7 @@ public class Application {
                     }};
                     timezone = "ea";
                     title = "Mr.";
-                    updatedAt = LocalDate.parse("2022-01-24");
+                    updatedAt = OffsetDateTime.parse("2022-01-24T07:32:04.181Z");
                 }};;
             }};            
 
@@ -574,7 +574,7 @@ import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.CrmUser;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmUserAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmUserRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -595,7 +595,7 @@ public class Application {
                         region = "aliquam";
                         regionCode = "consectetur";
                     }};;
-                    createdAt = LocalDate.parse("2021-11-06");
+                    createdAt = OffsetDateTime.parse("2021-11-06T21:05:09.188Z");
                     currency = "quae";
                     department = "quam";
                     division = "dignissimos";
@@ -618,7 +618,7 @@ public class Application {
                     }};
                     timezone = "qui";
                     title = "Ms.";
-                    updatedAt = LocalDate.parse("2022-09-07");
+                    updatedAt = OffsetDateTime.parse("2022-09-07T14:23:57.015Z");
                 }};;
             }};            
 
@@ -663,7 +663,7 @@ import com.unifiedapi.unifiedto.models.operations.PutUnifiedUserResponse;
 import com.unifiedapi.unifiedto.models.operations.PutUnifiedUserSecurity;
 import com.unifiedapi.unifiedto.models.shared.PropertyUserMeta;
 import com.unifiedapi.unifiedto.models.shared.User;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -674,12 +674,12 @@ public class Application {
             com.unifiedapi.unifiedto.models.shared.User req = new User("ipsam", "beatae",                 new String[]{{
                                 add("repudiandae"),
                             }}) {{
-                createdAt = LocalDate.parse("2022-08-06");
+                createdAt = OffsetDateTime.parse("2022-08-06T08:21:34.426Z");
                 email = "Naomi38@hotmail.com";
                 environment = "deleniti";
                 id = "97d99a2d-3356-470e-93ee-6cf59f358aae";
                 meta = new PropertyUserMeta();;
-                updatedAt = LocalDate.parse("2021-06-03");
+                updatedAt = OffsetDateTime.parse("2021-06-03T20:58:52.600Z");
             }};            
 
             PutUnifiedUserResponse res = sdk.user.putUnifiedUser(req, new PutUnifiedUserSecurity("officia") {{

@@ -69,7 +69,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookResponse;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -84,7 +84,7 @@ public class Application {
                 offset = 2414.63d;
                 order = "inventore";
                 sort = "tempore";
-                updatedGte = LocalDate.parse("2021-07-03");
+                updatedGte = OffsetDateTime.parse("2021-07-03T04:57:46.664Z");
             }};            
 
             GetUnifiedWebhookResponse res = sdk.webhook.getUnifiedWebhook(req, new GetUnifiedWebhookSecurity("rerum") {{
@@ -180,7 +180,7 @@ import com.unifiedapi.unifiedto.models.operations.PostUnifiedWebhookConnectionId
 import com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents;
 import com.unifiedapi.unifiedto.models.shared.Webhook;
 import com.unifiedapi.unifiedto.models.shared.WebhookObjectType;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -192,15 +192,15 @@ public class Application {
                 webhook = new Webhook("molestias",                 new com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents[]{{
                                     add(PropertyWebhookEvents.UPDATED),
                                 }}, "nihil", "inventore", 4025.15d, WebhookObjectType.TICKETING_CUSTOMER, "deleniti") {{
-                    checkedAt = LocalDate.parse("2022-11-07");
-                    createdAt = LocalDate.parse("2020-08-22");
+                    checkedAt = OffsetDateTime.parse("2022-11-07T09:41:32.181Z");
+                    createdAt = OffsetDateTime.parse("2020-08-22T20:12:43.406Z");
                     environment = "sint";
                     id = "e0c7d9d3-23f1-4aa6-bed9-cf1c856bcba5";
                     includeRaw = false;
                     subscriptions = new String[]{{
                         add("inventore"),
                     }};
-                    updatedAt = LocalDate.parse("2020-01-22");
+                    updatedAt = OffsetDateTime.parse("2020-01-22T02:04:50.343Z");
                 }};;
                 events = new com.unifiedapi.unifiedto.models.operations.PostUnifiedWebhookConnectionIdObjectEvents[]{{
                     add(PostUnifiedWebhookConnectionIdObjectEvents.UPDATED),

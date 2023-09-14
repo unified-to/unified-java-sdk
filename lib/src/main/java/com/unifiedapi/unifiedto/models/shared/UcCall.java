@@ -4,11 +4,14 @@
 
 package com.unifiedapi.unifiedto.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.LocalDate;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.unifiedapi.unifiedto.utils.DateTimeDeserializer;
+import com.unifiedapi.unifiedto.utils.DateTimeSerializer;
+import java.time.OffsetDateTime;
 
 
 public class UcCall {
@@ -30,21 +33,23 @@ public class UcCall {
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
-    public LocalDate createdAt;
+    public OffsetDateTime createdAt;
 
-    public UcCall withCreatedAt(LocalDate createdAt) {
+    public UcCall withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("end_at")
-    public LocalDate endAt;
+    public OffsetDateTime endAt;
 
-    public UcCall withEndAt(LocalDate endAt) {
+    public UcCall withEndAt(OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
@@ -70,11 +75,12 @@ public class UcCall {
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("start_at")
-    public LocalDate startAt;
+    public OffsetDateTime startAt;
 
-    public UcCall withStartAt(LocalDate startAt) {
+    public UcCall withStartAt(OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
     }
@@ -92,11 +98,12 @@ public class UcCall {
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
-    public LocalDate updatedAt;
+    public OffsetDateTime updatedAt;
 
-    public UcCall withUpdatedAt(LocalDate updatedAt) {
+    public UcCall withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }

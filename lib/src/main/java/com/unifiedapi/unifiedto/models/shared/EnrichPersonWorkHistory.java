@@ -4,11 +4,14 @@
 
 package com.unifiedapi.unifiedto.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.LocalDate;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.unifiedapi.unifiedto.utils.DateTimeDeserializer;
+import com.unifiedapi.unifiedto.utils.DateTimeSerializer;
+import java.time.OffsetDateTime;
 
 
 public class EnrichPersonWorkHistory {
@@ -40,11 +43,12 @@ public class EnrichPersonWorkHistory {
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("end_at")
-    public LocalDate endAt;
+    public OffsetDateTime endAt;
 
-    public EnrichPersonWorkHistory withEndAt(LocalDate endAt) {
+    public EnrichPersonWorkHistory withEndAt(OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
@@ -59,11 +63,12 @@ public class EnrichPersonWorkHistory {
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("start_at")
-    public LocalDate startAt;
+    public OffsetDateTime startAt;
 
-    public EnrichPersonWorkHistory withStartAt(LocalDate startAt) {
+    public EnrichPersonWorkHistory withStartAt(OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
     }

@@ -71,7 +71,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineResponse;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -85,7 +85,7 @@ public class Application {
                 order = "quas";
                 query = "hic";
                 sort = "doloremque";
-                updatedGte = LocalDate.parse("2021-01-05");
+                updatedGte = OffsetDateTime.parse("2021-01-05T10:08:21.523Z");
             }};            
 
             GetCrmConnectionIdPipelineResponse res = sdk.pipeline.getCrmConnectionIdPipeline(req, new GetCrmConnectionIdPipelineSecurity("rem") {{
@@ -179,7 +179,7 @@ import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdPipelineId
 import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdPipelineIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmPipeline;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmPipelineRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -190,13 +190,13 @@ public class Application {
             PatchCrmConnectionIdPipelineIdRequest req = new PatchCrmConnectionIdPipelineIdRequest("beatae", "placeat") {{
                 crmPipeline = new CrmPipeline() {{
                     active = false;
-                    createdAt = LocalDate.parse("2022-10-12");
+                    createdAt = OffsetDateTime.parse("2022-10-12T04:27:21.437Z");
                     dealProbability = false;
                     displayOrder = 1551.08d;
                     id = "d9fbaf94-76a2-4ae8-9cc5-0c8a3512c737";
                     name = "Theodore Leffler";
                     raw = new PropertyCrmPipelineRaw();;
-                    updatedAt = LocalDate.parse("2022-07-05");
+                    updatedAt = OffsetDateTime.parse("2022-07-05T07:47:31.296Z");
                 }};;
             }};            
 
@@ -242,7 +242,7 @@ import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdPipelineRes
 import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdPipelineSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmPipeline;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmPipelineRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -253,13 +253,13 @@ public class Application {
             PostCrmConnectionIdPipelineRequest req = new PostCrmConnectionIdPipelineRequest("eaque") {{
                 crmPipeline = new CrmPipeline() {{
                     active = false;
-                    createdAt = LocalDate.parse("2022-12-31");
+                    createdAt = OffsetDateTime.parse("2022-12-31T22:43:49.219Z");
                     dealProbability = false;
                     displayOrder = 258.72d;
                     id = "e966ec73-6d43-4194-b98c-783c92398ed3";
                     name = "Allen O'Connell";
                     raw = new PropertyCrmPipelineRaw();;
-                    updatedAt = LocalDate.parse("2020-12-29");
+                    updatedAt = OffsetDateTime.parse("2020-12-29T00:25:34.871Z");
                 }};;
             }};            
 
@@ -305,7 +305,7 @@ import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdPipelineIdRe
 import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdPipelineIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmPipeline;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmPipelineRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -316,13 +316,13 @@ public class Application {
             PutCrmConnectionIdPipelineIdRequest req = new PutCrmConnectionIdPipelineIdRequest("placeat", "veniam") {{
                 crmPipeline = new CrmPipeline() {{
                     active = false;
-                    createdAt = LocalDate.parse("2021-02-08");
+                    createdAt = OffsetDateTime.parse("2021-02-08T05:06:00.074Z");
                     dealProbability = false;
                     displayOrder = 5484.03d;
                     id = "649a70cf-d5d6-4989-b720-6451077d19ea";
                     name = "Philip Schumm";
                     raw = new PropertyCrmPipelineRaw();;
-                    updatedAt = LocalDate.parse("2022-01-24");
+                    updatedAt = OffsetDateTime.parse("2022-01-24T10:39:05.897Z");
                 }};;
             }};            
 

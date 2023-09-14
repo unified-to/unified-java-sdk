@@ -4,11 +4,14 @@
 
 package com.unifiedapi.unifiedto.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.LocalDate;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.unifiedapi.unifiedto.utils.DateTimeDeserializer;
+import com.unifiedapi.unifiedto.utils.DateTimeSerializer;
+import java.time.OffsetDateTime;
 
 /**
  * UcAgent - Represents an agent
@@ -16,11 +19,12 @@ import java.time.LocalDate;
 
 public class UcAgent {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
-    public LocalDate createdAt;
+    public OffsetDateTime createdAt;
 
-    public UcAgent withCreatedAt(LocalDate createdAt) {
+    public UcAgent withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
@@ -76,11 +80,12 @@ public class UcAgent {
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
-    public LocalDate updatedAt;
+    public OffsetDateTime updatedAt;
 
-    public UcAgent withUpdatedAt(LocalDate updatedAt) {
+    public UcAgent withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }

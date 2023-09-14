@@ -71,7 +71,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobResponse;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -85,7 +85,7 @@ public class Application {
                 order = "atque";
                 query = "tempore";
                 sort = "asperiores";
-                updatedGte = LocalDate.parse("2022-05-06");
+                updatedGte = OffsetDateTime.parse("2022-05-06T09:37:57.408Z");
             }};            
 
             GetAtsConnectionIdJobResponse res = sdk.job.getAtsConnectionIdJob(req, new GetAtsConnectionIdJobSecurity("cupiditate") {{
@@ -185,7 +185,7 @@ import com.unifiedapi.unifiedto.models.shared.AtsJob;
 import com.unifiedapi.unifiedto.models.shared.AtsJobEmploymentType;
 import com.unifiedapi.unifiedto.models.shared.AtsJobStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsJobRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -207,7 +207,7 @@ public class Application {
                             regionCode = "dolor";
                         }}),
                     }};
-                    closedAt = LocalDate.parse("2022-04-19");
+                    closedAt = OffsetDateTime.parse("2022-04-19T12:44:04.907Z");
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(AtsCompensationType.EQUITY) {{
                             currency = "unde";
@@ -217,7 +217,7 @@ public class Application {
                             type = AtsCompensationType.BONUS;
                         }}),
                     }};
-                    createdAt = LocalDate.parse("2022-07-01");
+                    createdAt = OffsetDateTime.parse("2022-07-01T09:31:54.610Z");
                     departments = new String[]{{
                         add("mollitia"),
                     }};
@@ -238,7 +238,7 @@ public class Application {
                     }};
                     remote = false;
                     status = AtsJobStatus.ARCHIVED;
-                    updatedAt = LocalDate.parse("2020-08-10");
+                    updatedAt = OffsetDateTime.parse("2020-08-10T19:52:55.197Z");
                 }};;
             }};            
 
@@ -290,7 +290,7 @@ import com.unifiedapi.unifiedto.models.shared.AtsJob;
 import com.unifiedapi.unifiedto.models.shared.AtsJobEmploymentType;
 import com.unifiedapi.unifiedto.models.shared.AtsJobStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsJobRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -312,7 +312,7 @@ public class Application {
                             regionCode = "voluptatem";
                         }}),
                     }};
-                    closedAt = LocalDate.parse("2022-07-04");
+                    closedAt = OffsetDateTime.parse("2022-07-04T04:57:29.459Z");
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(AtsCompensationType.STOCK_OPTIONS) {{
                             currency = "libero";
@@ -322,7 +322,7 @@ public class Application {
                             type = AtsCompensationType.BONUS;
                         }}),
                     }};
-                    createdAt = LocalDate.parse("2021-05-17");
+                    createdAt = OffsetDateTime.parse("2021-05-17T02:42:52.909Z");
                     departments = new String[]{{
                         add("eius"),
                     }};
@@ -343,7 +343,7 @@ public class Application {
                     }};
                     remote = false;
                     status = AtsJobStatus.ARCHIVED;
-                    updatedAt = LocalDate.parse("2022-03-16");
+                    updatedAt = OffsetDateTime.parse("2022-03-16T18:13:20.175Z");
                 }};;
             }};            
 
@@ -395,7 +395,7 @@ import com.unifiedapi.unifiedto.models.shared.AtsJob;
 import com.unifiedapi.unifiedto.models.shared.AtsJobEmploymentType;
 import com.unifiedapi.unifiedto.models.shared.AtsJobStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsJobRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -417,7 +417,7 @@ public class Application {
                             regionCode = "consequatur";
                         }}),
                     }};
-                    closedAt = LocalDate.parse("2021-06-29");
+                    closedAt = OffsetDateTime.parse("2021-06-29T17:11:28.894Z");
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(AtsCompensationType.OTHER) {{
                             currency = "impedit";
@@ -427,7 +427,7 @@ public class Application {
                             type = AtsCompensationType.EQUITY;
                         }}),
                     }};
-                    createdAt = LocalDate.parse("2022-02-04");
+                    createdAt = OffsetDateTime.parse("2022-02-04T14:21:51.225Z");
                     departments = new String[]{{
                         add("cum"),
                     }};
@@ -448,7 +448,7 @@ public class Application {
                     }};
                     remote = false;
                     status = AtsJobStatus.OPEN;
-                    updatedAt = LocalDate.parse("2022-04-19");
+                    updatedAt = OffsetDateTime.parse("2022-04-19T16:52:53.258Z");
                 }};;
             }};            
 

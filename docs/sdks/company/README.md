@@ -124,7 +124,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanyResponse;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanySecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -140,7 +140,7 @@ public class Application {
                 order = "alias";
                 query = "nisi";
                 sort = "itaque";
-                updatedGte = LocalDate.parse("2022-04-30");
+                updatedGte = OffsetDateTime.parse("2022-04-30T01:11:05.137Z");
             }};            
 
             GetCrmConnectionIdCompanyResponse res = sdk.company.getCrmConnectionIdCompany(req, new GetCrmConnectionIdCompanySecurity("non") {{
@@ -291,7 +291,7 @@ import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmCompanyAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmCompanyRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -312,7 +312,7 @@ public class Application {
                         region = "vero";
                         regionCode = "consectetur";
                     }};;
-                    createdAt = LocalDate.parse("2022-12-02");
+                    createdAt = OffsetDateTime.parse("2022-12-02T07:11:00.455Z");
                     dealIds = new String[]{{
                         add("dolorem"),
                     }};
@@ -334,7 +334,7 @@ public class Application {
                             type = CrmTelephoneType.FAX;
                         }}),
                     }};
-                    updatedAt = LocalDate.parse("2022-08-01");
+                    updatedAt = OffsetDateTime.parse("2022-08-01T09:21:47.394Z");
                     websites = new String[]{{
                         add("esse"),
                     }};
@@ -437,7 +437,7 @@ import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmCompanyAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmCompanyRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -458,7 +458,7 @@ public class Application {
                         region = "officiis";
                         regionCode = "voluptatibus";
                     }};;
-                    createdAt = LocalDate.parse("2021-04-04");
+                    createdAt = OffsetDateTime.parse("2021-04-04T05:15:35.912Z");
                     dealIds = new String[]{{
                         add("alias"),
                     }};
@@ -480,7 +480,7 @@ public class Application {
                             type = CrmTelephoneType.OTHER;
                         }}),
                     }};
-                    updatedAt = LocalDate.parse("2022-09-25");
+                    updatedAt = OffsetDateTime.parse("2022-09-25T18:15:59.555Z");
                     websites = new String[]{{
                         add("corporis"),
                     }};
@@ -534,7 +534,7 @@ import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmCompanyAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmCompanyRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -555,7 +555,7 @@ public class Application {
                         region = "est";
                         regionCode = "impedit";
                     }};;
-                    createdAt = LocalDate.parse("2020-10-17");
+                    createdAt = OffsetDateTime.parse("2020-10-17T04:42:29.949Z");
                     dealIds = new String[]{{
                         add("vero"),
                     }};
@@ -577,7 +577,7 @@ public class Application {
                             type = CrmTelephoneType.MOBILE;
                         }}),
                     }};
-                    updatedAt = LocalDate.parse("2022-07-03");
+                    updatedAt = OffsetDateTime.parse("2022-07-03T11:09:14.391Z");
                     websites = new String[]{{
                         add("maiores"),
                     }};

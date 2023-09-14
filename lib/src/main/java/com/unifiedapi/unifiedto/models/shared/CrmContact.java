@@ -4,11 +4,14 @@
 
 package com.unifiedapi.unifiedto.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.LocalDate;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.unifiedapi.unifiedto.utils.DateTimeDeserializer;
+import com.unifiedapi.unifiedto.utils.DateTimeSerializer;
+import java.time.OffsetDateTime;
 
 /**
  * CrmContact - A contact represents a person that optionally is associated with a deal and/or a company
@@ -46,11 +49,12 @@ public class CrmContact {
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
-    public LocalDate createdAt;
+    public OffsetDateTime createdAt;
 
-    public CrmContact withCreatedAt(LocalDate createdAt) {
+    public CrmContact withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
@@ -131,11 +135,12 @@ public class CrmContact {
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
-    public LocalDate updatedAt;
+    public OffsetDateTime updatedAt;
 
-    public CrmContact withUpdatedAt(LocalDate updatedAt) {
+    public CrmContact withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }

@@ -73,7 +73,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdAgentRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdAgentResponse;
 import com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdAgentSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -88,7 +88,7 @@ public class Application {
                 order = "sequi";
                 query = "laudantium";
                 sort = "excepturi";
-                updatedGte = LocalDate.parse("2022-06-19");
+                updatedGte = OffsetDateTime.parse("2022-06-19T17:50:21.930Z");
             }};            
 
             GetUcConnectionIdAgentResponse res = sdk.uc.getUcConnectionIdAgent(req, new GetUcConnectionIdAgentSecurity("quasi") {{
@@ -131,7 +131,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdCallRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdCallResponse;
 import com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdCallSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -147,7 +147,7 @@ public class Application {
                 order = "recusandae";
                 query = "harum";
                 sort = "nisi";
-                updatedGte = LocalDate.parse("2021-09-25");
+                updatedGte = OffsetDateTime.parse("2021-09-25T09:29:30.405Z");
             }};            
 
             GetUcConnectionIdCallResponse res = sdk.uc.getUcConnectionIdCall(req, new GetUcConnectionIdCallSecurity("doloremque") {{
@@ -190,7 +190,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactResponse;
 import com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -205,7 +205,7 @@ public class Application {
                 order = "quidem";
                 query = "in";
                 sort = "at";
-                updatedGte = LocalDate.parse("2022-10-08");
+                updatedGte = OffsetDateTime.parse("2022-10-08T17:20:33.501Z");
             }};            
 
             GetUcConnectionIdContactResponse res = sdk.uc.getUcConnectionIdContact(req, new GetUcConnectionIdContactSecurity("mollitia") {{
@@ -303,7 +303,7 @@ import com.unifiedapi.unifiedto.models.shared.UcEmail;
 import com.unifiedapi.unifiedto.models.shared.UcEmailType;
 import com.unifiedapi.unifiedto.models.shared.UcTelephone;
 import com.unifiedapi.unifiedto.models.shared.UcTelephoneType;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -314,7 +314,7 @@ public class Application {
             PatchUcConnectionIdContactIdRequest req = new PatchUcConnectionIdContactIdRequest("aperiam", "hic") {{
                 ucContact = new UcContact() {{
                     company = "Strosin - Waelchi";
-                    createdAt = LocalDate.parse("2022-12-21");
+                    createdAt = OffsetDateTime.parse("2022-12-21T06:06:10.373Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
                         add(new UcEmail("beatae") {{
                             email = "Adrian_Jacobs@hotmail.com";
@@ -331,7 +331,7 @@ public class Application {
                         }}),
                     }};
                     title = "Ms.";
-                    updatedAt = LocalDate.parse("2020-05-12");
+                    updatedAt = OffsetDateTime.parse("2020-05-12T18:58:16.853Z");
                 }};;
             }};            
 
@@ -381,7 +381,7 @@ import com.unifiedapi.unifiedto.models.shared.UcEmail;
 import com.unifiedapi.unifiedto.models.shared.UcEmailType;
 import com.unifiedapi.unifiedto.models.shared.UcTelephone;
 import com.unifiedapi.unifiedto.models.shared.UcTelephoneType;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -392,7 +392,7 @@ public class Application {
             PostUcConnectionIdContactRequest req = new PostUcConnectionIdContactRequest("accusantium") {{
                 ucContact = new UcContact() {{
                     company = "Steuber LLC";
-                    createdAt = LocalDate.parse("2022-02-23");
+                    createdAt = OffsetDateTime.parse("2022-02-23T12:38:44.024Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
                         add(new UcEmail("quasi") {{
                             email = "Cordia_Hansen88@hotmail.com";
@@ -409,7 +409,7 @@ public class Application {
                         }}),
                     }};
                     title = "Mrs.";
-                    updatedAt = LocalDate.parse("2022-08-18");
+                    updatedAt = OffsetDateTime.parse("2022-08-18T07:25:19.857Z");
                 }};;
             }};            
 
@@ -459,7 +459,7 @@ import com.unifiedapi.unifiedto.models.shared.UcEmail;
 import com.unifiedapi.unifiedto.models.shared.UcEmailType;
 import com.unifiedapi.unifiedto.models.shared.UcTelephone;
 import com.unifiedapi.unifiedto.models.shared.UcTelephoneType;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -470,7 +470,7 @@ public class Application {
             PutUcConnectionIdContactIdRequest req = new PutUcConnectionIdContactIdRequest("ullam", "nihil") {{
                 ucContact = new UcContact() {{
                     company = "Goyette Group";
-                    createdAt = LocalDate.parse("2022-06-23");
+                    createdAt = OffsetDateTime.parse("2022-06-23T13:42:21.221Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
                         add(new UcEmail("est") {{
                             email = "Braxton.Conroy@hotmail.com";
@@ -487,7 +487,7 @@ public class Application {
                         }}),
                     }};
                     title = "Ms.";
-                    updatedAt = LocalDate.parse("2022-05-17");
+                    updatedAt = OffsetDateTime.parse("2022-05-17T16:43:04.719Z");
                 }};;
             }};            
 

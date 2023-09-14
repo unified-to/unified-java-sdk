@@ -21,7 +21,7 @@ import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationCategorie
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationResponse;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -39,7 +39,7 @@ public class Application {
                 order = "deleniti";
                 sort = "dignissimos";
                 summary = false;
-                updatedGte = LocalDate.parse("2022-02-26");
+                updatedGte = OffsetDateTime.parse("2022-02-26T21:44:20.533Z");
             }};            
 
             GetUnifiedIntegrationResponse res = sdk.integration.getUnifiedIntegration(req, new GetUnifiedIntegrationSecurity("adipisci") {{

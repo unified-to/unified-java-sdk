@@ -5,7 +5,7 @@
 package com.unifiedapi.unifiedto.models.operations;
 
 import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 
 public class GetUnifiedApicallRequest {
@@ -24,9 +24,9 @@ public class GetUnifiedApicallRequest {
      * Return only results whose updated date is equal or less to this value
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_lte")
-    public LocalDate createdLte;
+    public OffsetDateTime createdLte;
 
-    public GetUnifiedApicallRequest withCreatedLte(LocalDate createdLte) {
+    public GetUnifiedApicallRequest withCreatedLte(OffsetDateTime createdLte) {
         this.createdLte = createdLte;
         return this;
     }
@@ -108,9 +108,9 @@ public class GetUnifiedApicallRequest {
      * Return only results whose updated date is equal or greater to this value
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
-    public LocalDate updatedGte;
+    public OffsetDateTime updatedGte;
 
-    public GetUnifiedApicallRequest withUpdatedGte(LocalDate updatedGte) {
+    public GetUnifiedApicallRequest withUpdatedGte(OffsetDateTime updatedGte) {
         this.updatedGte = updatedGte;
         return this;
     }

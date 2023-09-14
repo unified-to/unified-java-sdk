@@ -72,7 +72,7 @@ import com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionCategories
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionResponse;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -90,7 +90,7 @@ public class Application {
                 offset = 7573.64d;
                 order = "sint";
                 sort = "enim";
-                updatedGte = LocalDate.parse("2021-01-11");
+                updatedGte = OffsetDateTime.parse("2021-01-11T05:39:31.724Z");
             }};            
 
             GetUnifiedConnectionResponse res = sdk.connection.getUnifiedConnection(req, new GetUnifiedConnectionSecurity("quas") {{
@@ -187,7 +187,7 @@ import com.unifiedapi.unifiedto.models.shared.PropertyConnectionAuth;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions;
 import com.unifiedapi.unifiedto.models.shared.PropertyPropertyConnectionAuthMeta;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -214,7 +214,7 @@ public class Application {
                             add("impedit"),
                         }};
                         expiresIn = 7412.38d;
-                        expiryDate = LocalDate.parse("2022-10-06");
+                        expiryDate = OffsetDateTime.parse("2022-10-06T03:01:15.693Z");
                         key = "saepe";
                         meta = new PropertyPropertyConnectionAuthMeta();;
                         name = "Anthony Hayes";
@@ -228,12 +228,12 @@ public class Application {
                         tokenUrl = "non";
                     }};;
                     authAwsArn = "magnam";
-                    createdAt = LocalDate.parse("2022-07-19");
+                    createdAt = OffsetDateTime.parse("2022-07-19T17:25:50.426Z");
                     environment = "asperiores";
                     externalXref = "veniam";
                     id = "2d82d351-3bb6-4f48-b656-bcdb35ff2e4b";
                     isPaused = false;
-                    updatedAt = LocalDate.parse("2022-07-24");
+                    updatedAt = OffsetDateTime.parse("2022-07-24T02:47:29.895Z");
                     workspaceId = "nostrum";
                 }};;
             }};            
@@ -282,7 +282,7 @@ import com.unifiedapi.unifiedto.models.shared.PropertyConnectionAuth;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions;
 import com.unifiedapi.unifiedto.models.shared.PropertyPropertyConnectionAuthMeta;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -308,7 +308,7 @@ public class Application {
                         add("porro"),
                     }};
                     expiresIn = 1114.96d;
-                    expiryDate = LocalDate.parse("2022-07-17");
+                    expiryDate = OffsetDateTime.parse("2022-07-17T11:25:26.149Z");
                     key = "fugiat";
                     meta = new PropertyPropertyConnectionAuthMeta();;
                     name = "Nicole Halvorson";
@@ -322,12 +322,12 @@ public class Application {
                     tokenUrl = "accusamus";
                 }};;
                 authAwsArn = "saepe";
-                createdAt = LocalDate.parse("2022-05-02");
+                createdAt = OffsetDateTime.parse("2022-05-02T04:00:18.906Z");
                 environment = "eos";
                 externalXref = "reiciendis";
                 id = "f785fc37-814d-44c9-8e0c-2bb89eb75dad";
                 isPaused = false;
-                updatedAt = LocalDate.parse("2022-10-14");
+                updatedAt = OffsetDateTime.parse("2022-10-14T22:48:07.675Z");
                 workspaceId = "commodi";
             }};            
 
@@ -376,7 +376,7 @@ import com.unifiedapi.unifiedto.models.shared.PropertyConnectionAuth;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions;
 import com.unifiedapi.unifiedto.models.shared.PropertyPropertyConnectionAuthMeta;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -403,7 +403,7 @@ public class Application {
                             add("dicta"),
                         }};
                         expiresIn = 5149.22d;
-                        expiryDate = LocalDate.parse("2022-01-23");
+                        expiryDate = OffsetDateTime.parse("2022-01-23T11:30:38.329Z");
                         key = "iusto";
                         meta = new PropertyPropertyConnectionAuthMeta();;
                         name = "Shelly Pagac";
@@ -417,12 +417,12 @@ public class Application {
                         tokenUrl = "facilis";
                     }};;
                     authAwsArn = "corrupti";
-                    createdAt = LocalDate.parse("2022-06-05");
+                    createdAt = OffsetDateTime.parse("2022-06-05T10:57:17.595Z");
                     environment = "accusamus";
                     externalXref = "eos";
                     id = "810331f3-981d-44c7-80b6-07f3c93c73b9";
                     isPaused = false;
-                    updatedAt = LocalDate.parse("2021-01-30");
+                    updatedAt = OffsetDateTime.parse("2021-01-30T14:43:38.066Z");
                     workspaceId = "amet";
                 }};;
             }};            

@@ -126,7 +126,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListRequest;
 import com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListResponse;
 import com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -140,7 +140,7 @@ public class Application {
                 order = "laudantium";
                 query = "nemo";
                 sort = "ab";
-                updatedGte = LocalDate.parse("2021-10-07");
+                updatedGte = OffsetDateTime.parse("2021-10-07T22:54:11.070Z");
             }};            
 
             GetMartechConnectionIdListResponse res = sdk.martech.getMartechConnectionIdList(req, new GetMartechConnectionIdListSecurity("culpa") {{
@@ -232,7 +232,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListIdMemberRequest;
 import com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListIdMemberResponse;
 import com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListIdMemberSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -246,7 +246,7 @@ public class Application {
                 order = "animi";
                 query = "officia";
                 sort = "eveniet";
-                updatedGte = LocalDate.parse("2022-10-06");
+                updatedGte = OffsetDateTime.parse("2022-10-06T15:41:50.283Z");
             }};            
 
             GetMartechConnectionIdListIdMemberResponse res = sdk.martech.getMartechConnectionIdListIdMember(req, new GetMartechConnectionIdListIdMemberSecurity("hic") {{
@@ -340,7 +340,7 @@ import com.unifiedapi.unifiedto.models.operations.PatchMartechConnectionIdListId
 import com.unifiedapi.unifiedto.models.operations.PatchMartechConnectionIdListIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.MarketingList;
 import com.unifiedapi.unifiedto.models.shared.PropertyMarketingListRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -354,7 +354,7 @@ public class Application {
                     id = "b9de4032-ba26-4fd3-a8ba-9216bcb41583";
                     name = "Marianne Koelpin";
                     raw = new PropertyMarketingListRaw();;
-                    updatedAt = LocalDate.parse("2022-11-23");
+                    updatedAt = OffsetDateTime.parse("2022-11-23T18:10:33.380Z");
                 }};;
             }};            
 
@@ -402,7 +402,7 @@ import com.unifiedapi.unifiedto.models.shared.MarketingEmail;
 import com.unifiedapi.unifiedto.models.shared.MarketingEmailType;
 import com.unifiedapi.unifiedto.models.shared.MarketingMember;
 import com.unifiedapi.unifiedto.models.shared.PropertyMarketingMemberRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -412,7 +412,7 @@ public class Application {
 
             PatchMartechConnectionIdListIdMemberIdRequest req = new PatchMartechConnectionIdListIdMemberIdRequest("quia", "ratione", "veritatis") {{
                 marketingMember = new MarketingMember() {{
-                    createdAt = LocalDate.parse("2022-10-22");
+                    createdAt = OffsetDateTime.parse("2022-10-22T18:09:50.221Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.MarketingEmail[]{{
                         add(new MarketingEmail("rerum") {{
                             email = "Royal26@hotmail.com";
@@ -428,7 +428,7 @@ public class Application {
                     tags = new String[]{{
                         add("reprehenderit"),
                     }};
-                    updatedAt = LocalDate.parse("2022-08-28");
+                    updatedAt = OffsetDateTime.parse("2022-08-28T20:03:47.661Z");
                 }};;
             }};            
 
@@ -474,7 +474,7 @@ import com.unifiedapi.unifiedto.models.operations.PostMartechConnectionIdListRes
 import com.unifiedapi.unifiedto.models.operations.PostMartechConnectionIdListSecurity;
 import com.unifiedapi.unifiedto.models.shared.MarketingList;
 import com.unifiedapi.unifiedto.models.shared.PropertyMarketingListRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -488,7 +488,7 @@ public class Application {
                     id = "81e8aa25-7ddc-4191-aebd-e64bfcc5469d";
                     name = "Maria Bradtke";
                     raw = new PropertyMarketingListRaw();;
-                    updatedAt = LocalDate.parse("2021-01-01");
+                    updatedAt = OffsetDateTime.parse("2021-01-01T22:35:27.825Z");
                 }};;
             }};            
 
@@ -536,7 +536,7 @@ import com.unifiedapi.unifiedto.models.shared.MarketingEmail;
 import com.unifiedapi.unifiedto.models.shared.MarketingEmailType;
 import com.unifiedapi.unifiedto.models.shared.MarketingMember;
 import com.unifiedapi.unifiedto.models.shared.PropertyMarketingMemberRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -546,7 +546,7 @@ public class Application {
 
             PostMartechConnectionIdListIdMemberRequest req = new PostMartechConnectionIdListIdMemberRequest("iste", "ex") {{
                 marketingMember = new MarketingMember() {{
-                    createdAt = LocalDate.parse("2022-12-20");
+                    createdAt = OffsetDateTime.parse("2022-12-20T02:54:13.052Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.MarketingEmail[]{{
                         add(new MarketingEmail("animi") {{
                             email = "Montana.Terry69@yahoo.com";
@@ -562,7 +562,7 @@ public class Application {
                     tags = new String[]{{
                         add("fuga"),
                     }};
-                    updatedAt = LocalDate.parse("2022-08-02");
+                    updatedAt = OffsetDateTime.parse("2022-08-02T17:10:52.899Z");
                 }};;
             }};            
 
@@ -608,7 +608,7 @@ import com.unifiedapi.unifiedto.models.operations.PutMartechConnectionIdListIdRe
 import com.unifiedapi.unifiedto.models.operations.PutMartechConnectionIdListIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.MarketingList;
 import com.unifiedapi.unifiedto.models.shared.PropertyMarketingListRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -622,7 +622,7 @@ public class Application {
                     id = "67ca84ad-99b4-41d6-9243-531870cf68b0";
                     name = "Kristine Shields";
                     raw = new PropertyMarketingListRaw();;
-                    updatedAt = LocalDate.parse("2022-04-20");
+                    updatedAt = OffsetDateTime.parse("2022-04-20T01:03:40.880Z");
                 }};;
             }};            
 
@@ -670,7 +670,7 @@ import com.unifiedapi.unifiedto.models.shared.MarketingEmail;
 import com.unifiedapi.unifiedto.models.shared.MarketingEmailType;
 import com.unifiedapi.unifiedto.models.shared.MarketingMember;
 import com.unifiedapi.unifiedto.models.shared.PropertyMarketingMemberRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -680,7 +680,7 @@ public class Application {
 
             PutMartechConnectionIdListIdMemberIdRequest req = new PutMartechConnectionIdListIdMemberIdRequest("ut", "nesciunt", "facere") {{
                 marketingMember = new MarketingMember() {{
-                    createdAt = LocalDate.parse("2022-01-13");
+                    createdAt = OffsetDateTime.parse("2022-01-13T21:44:45.202Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.MarketingEmail[]{{
                         add(new MarketingEmail("consequatur") {{
                             email = "Orie65@gmail.com";
@@ -696,7 +696,7 @@ public class Application {
                     tags = new String[]{{
                         add("quos"),
                     }};
-                    updatedAt = LocalDate.parse("2020-09-03");
+                    updatedAt = OffsetDateTime.parse("2020-09-03T01:50:13.755Z");
                 }};;
             }};            
 

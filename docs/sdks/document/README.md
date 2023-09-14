@@ -71,7 +71,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardResponse;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -88,7 +88,7 @@ public class Application {
                 order = "dignissimos";
                 query = "corporis";
                 sort = "perferendis";
-                updatedGte = LocalDate.parse("2022-10-09");
+                updatedGte = OffsetDateTime.parse("2022-10-09T03:32:00.669Z");
             }};            
 
             GetAtsConnectionIdScorecardResponse res = sdk.document.getAtsConnectionIdScorecard(req, new GetAtsConnectionIdScorecardSecurity("corporis") {{
@@ -183,7 +183,7 @@ import com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdScorecardI
 import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
 import com.unifiedapi.unifiedto.models.shared.AtsScorecardRecommendation;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsScorecardRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -195,13 +195,13 @@ public class Application {
                 atsScorecard = new AtsScorecard(                new PropertyAtsScorecardRaw();) {{
                     applicationId = "ipsam";
                     candidateId = "dicta";
-                    createdAt = LocalDate.parse("2021-06-26");
+                    createdAt = OffsetDateTime.parse("2021-06-26T09:56:08.753Z");
                     id = "b084c319-7e19-43a2-8546-7f94874c2d5c";
                     interviewId = "porro";
                     interviewerId = "labore";
                     jobId = "perspiciatis";
                     recommendation = AtsScorecardRecommendation.NO;
-                    updatedAt = LocalDate.parse("2022-10-25");
+                    updatedAt = OffsetDateTime.parse("2022-10-25T00:47:10.185Z");
                 }};;
             }};            
 
@@ -248,7 +248,7 @@ import com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdScorecardSe
 import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
 import com.unifiedapi.unifiedto.models.shared.AtsScorecardRecommendation;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsScorecardRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -260,13 +260,13 @@ public class Application {
                 atsScorecard = new AtsScorecard(                new PropertyAtsScorecardRaw();) {{
                     applicationId = "saepe";
                     candidateId = "iure";
-                    createdAt = LocalDate.parse("2022-04-06");
+                    createdAt = OffsetDateTime.parse("2022-04-06T09:55:55.525Z");
                     id = "d8fe5d00-b979-4ef2-8387-320590ccc109";
                     interviewId = "ea";
                     interviewerId = "eius";
                     jobId = "aperiam";
                     recommendation = AtsScorecardRecommendation.DEFINITELY_NO;
-                    updatedAt = LocalDate.parse("2022-11-21");
+                    updatedAt = OffsetDateTime.parse("2022-11-21T23:04:12.814Z");
                 }};;
             }};            
 
@@ -313,7 +313,7 @@ import com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdScorecardIdS
 import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
 import com.unifiedapi.unifiedto.models.shared.AtsScorecardRecommendation;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsScorecardRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -325,13 +325,13 @@ public class Application {
                 atsScorecard = new AtsScorecard(                new PropertyAtsScorecardRaw();) {{
                     applicationId = "debitis";
                     candidateId = "quis";
-                    createdAt = LocalDate.parse("2022-09-21");
+                    createdAt = OffsetDateTime.parse("2022-09-21T17:49:03.932Z");
                     id = "4f65fe72-dc40-477d-8cc3-f408efc15ceb";
                     interviewId = "dolore";
                     interviewerId = "illum";
                     jobId = "ea";
                     recommendation = AtsScorecardRecommendation.STRONG_YES;
-                    updatedAt = LocalDate.parse("2022-02-12");
+                    updatedAt = OffsetDateTime.parse("2022-02-12T13:11:34.622Z");
                 }};;
             }};            
 

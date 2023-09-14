@@ -71,7 +71,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdApplicationResponse;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdApplicationSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -87,7 +87,7 @@ public class Application {
                 order = "provident";
                 query = "necessitatibus";
                 sort = "sint";
-                updatedGte = LocalDate.parse("2022-07-22");
+                updatedGte = OffsetDateTime.parse("2022-07-22T03:36:34.615Z");
             }};            
 
             GetAtsConnectionIdApplicationResponse res = sdk.application.getAtsConnectionIdApplication(req, new GetAtsConnectionIdApplicationSecurity("debitis") {{
@@ -182,7 +182,7 @@ import com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdApplicatio
 import com.unifiedapi.unifiedto.models.shared.AtsApplication;
 import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsApplicationRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -192,17 +192,17 @@ public class Application {
 
             PatchAtsConnectionIdApplicationIdRequest req = new PatchAtsConnectionIdApplicationIdRequest("in", "illum") {{
                 atsApplication = new AtsApplication() {{
-                    appliedAt = LocalDate.parse("2020-11-26");
+                    appliedAt = OffsetDateTime.parse("2020-11-26T01:41:04.216Z");
                     candidateId = "dicta";
-                    createdAt = LocalDate.parse("2022-03-27");
+                    createdAt = OffsetDateTime.parse("2022-03-27T00:52:20.281Z");
                     id = "d66ae395-efb9-4ba8-8f3a-66997074ba44";
                     jobId = "suscipit";
                     raw = new PropertyAtsApplicationRaw();;
-                    rejectedAt = LocalDate.parse("2021-07-03");
+                    rejectedAt = OffsetDateTime.parse("2021-07-03T02:32:39.849Z");
                     rejectedReason = "eum";
                     source = "vero";
                     status = AtsApplicationStatus.REVIEWING;
-                    updatedAt = LocalDate.parse("2022-09-14");
+                    updatedAt = OffsetDateTime.parse("2022-09-14T03:02:47.808Z");
                 }};;
             }};            
 
@@ -249,7 +249,7 @@ import com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdApplication
 import com.unifiedapi.unifiedto.models.shared.AtsApplication;
 import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsApplicationRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -259,17 +259,17 @@ public class Application {
 
             PostAtsConnectionIdApplicationRequest req = new PostAtsConnectionIdApplicationRequest("excepturi") {{
                 atsApplication = new AtsApplication() {{
-                    appliedAt = LocalDate.parse("2022-05-30");
+                    appliedAt = OffsetDateTime.parse("2022-05-30T07:57:16.138Z");
                     candidateId = "quos";
-                    createdAt = LocalDate.parse("2022-12-07");
+                    createdAt = OffsetDateTime.parse("2022-12-07T10:53:17.121Z");
                     id = "afa563e2-516f-4e4c-8b71-1e5b7fd2ed02";
                     jobId = "praesentium";
                     raw = new PropertyAtsApplicationRaw();;
-                    rejectedAt = LocalDate.parse("2022-09-01");
+                    rejectedAt = OffsetDateTime.parse("2022-09-01T04:49:52.515Z");
                     rejectedReason = "sunt";
                     source = "quo";
                     status = AtsApplicationStatus.HIRED;
-                    updatedAt = LocalDate.parse("2020-07-30");
+                    updatedAt = OffsetDateTime.parse("2020-07-30T23:39:27.609Z");
                 }};;
             }};            
 
@@ -316,7 +316,7 @@ import com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdApplicationI
 import com.unifiedapi.unifiedto.models.shared.AtsApplication;
 import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsApplicationRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -326,17 +326,17 @@ public class Application {
 
             PutAtsConnectionIdApplicationIdRequest req = new PutAtsConnectionIdApplicationIdRequest("excepturi", "odit") {{
                 atsApplication = new AtsApplication() {{
-                    appliedAt = LocalDate.parse("2022-12-19");
+                    appliedAt = OffsetDateTime.parse("2022-12-19T20:58:17.857Z");
                     candidateId = "ab";
-                    createdAt = LocalDate.parse("2020-11-28");
+                    createdAt = OffsetDateTime.parse("2020-11-28T07:34:18.392Z");
                     id = "576b0d5f-0d30-4c5f-bb25-87053202c73d";
                     jobId = "nostrum";
                     raw = new PropertyAtsApplicationRaw();;
-                    rejectedAt = LocalDate.parse("2020-03-20");
+                    rejectedAt = OffsetDateTime.parse("2020-03-20T18:01:24.992Z");
                     rejectedReason = "omnis";
                     source = "facilis";
                     status = AtsApplicationStatus.BACKGROUND_CHECK;
-                    updatedAt = LocalDate.parse("2022-03-20");
+                    updatedAt = OffsetDateTime.parse("2022-03-20T23:16:34.777Z");
                 }};;
             }};            
 

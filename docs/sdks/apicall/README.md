@@ -18,7 +18,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallResponse;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -28,7 +28,7 @@ public class Application {
 
             GetUnifiedApicallRequest req = new GetUnifiedApicallRequest() {{
                 connectionId = "modi";
-                createdLte = LocalDate.parse("2022-08-08");
+                createdLte = OffsetDateTime.parse("2022-08-08T19:05:24.174Z");
                 env = "cupiditate";
                 error = false;
                 externalXref = "quos";
@@ -37,7 +37,7 @@ public class Application {
                 offset = 8289.4d;
                 order = "ipsam";
                 sort = "alias";
-                updatedGte = LocalDate.parse("2022-04-28");
+                updatedGte = OffsetDateTime.parse("2022-04-28T14:19:37.294Z");
             }};            
 
             GetUnifiedApicallResponse res = sdk.apicall.getUnifiedApicall(req, new GetUnifiedApicallSecurity("excepturi") {{

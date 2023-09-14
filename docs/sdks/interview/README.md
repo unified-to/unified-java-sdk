@@ -71,7 +71,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdInterviewRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdInterviewResponse;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdInterviewSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -86,7 +86,7 @@ public class Application {
                 order = "non";
                 query = "facere";
                 sort = "repellat";
-                updatedGte = LocalDate.parse("2022-04-22");
+                updatedGte = OffsetDateTime.parse("2022-04-22T16:39:49.741Z");
             }};            
 
             GetAtsConnectionIdInterviewResponse res = sdk.interview.getAtsConnectionIdInterview(req, new GetAtsConnectionIdInterviewSecurity("ea") {{
@@ -181,7 +181,7 @@ import com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdInterviewI
 import com.unifiedapi.unifiedto.models.shared.AtsInterview;
 import com.unifiedapi.unifiedto.models.shared.AtsInterviewStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsInterviewRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -193,16 +193,16 @@ public class Application {
                 atsInterview = new AtsInterview() {{
                     applicationId = "eaque";
                     candidateId = "reiciendis";
-                    createdAt = LocalDate.parse("2022-11-02");
-                    endAt = LocalDate.parse("2022-06-16");
+                    createdAt = OffsetDateTime.parse("2022-11-02T23:08:48.799Z");
+                    endAt = OffsetDateTime.parse("2022-06-16T03:37:31.369Z");
                     externalEventXref = "nobis";
                     id = "b438d85b-2605-491d-b45e-3c2059c9c3f5";
                     jobId = "autem";
                     location = "esse";
                     raw = new PropertyAtsInterviewRaw();;
-                    startAt = LocalDate.parse("2022-11-09");
+                    startAt = OffsetDateTime.parse("2022-11-09T08:30:53.107Z");
                     status = AtsInterviewStatus.COMPLETE;
-                    updatedAt = LocalDate.parse("2022-08-21");
+                    updatedAt = OffsetDateTime.parse("2022-08-21T17:48:50.289Z");
                     userIds = new String[]{{
                         add("consequuntur"),
                     }};
@@ -252,7 +252,7 @@ import com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdInterviewSe
 import com.unifiedapi.unifiedto.models.shared.AtsInterview;
 import com.unifiedapi.unifiedto.models.shared.AtsInterviewStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsInterviewRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -264,16 +264,16 @@ public class Application {
                 atsInterview = new AtsInterview() {{
                     applicationId = "quis";
                     candidateId = "nobis";
-                    createdAt = LocalDate.parse("2022-03-03");
-                    endAt = LocalDate.parse("2022-11-02");
+                    createdAt = OffsetDateTime.parse("2022-03-03T13:46:47.659Z");
+                    endAt = OffsetDateTime.parse("2022-11-02T13:26:31.816Z");
                     externalEventXref = "delectus";
                     id = "cdace1f0-1216-4ce2-a39e-8f25cd0d19d9";
                     jobId = "nostrum";
                     location = "sint";
                     raw = new PropertyAtsInterviewRaw();;
-                    startAt = LocalDate.parse("2022-02-05");
+                    startAt = OffsetDateTime.parse("2022-02-05T02:07:11.321Z");
                     status = AtsInterviewStatus.SCHEDULED;
-                    updatedAt = LocalDate.parse("2021-03-14");
+                    updatedAt = OffsetDateTime.parse("2021-03-14T15:36:36.235Z");
                     userIds = new String[]{{
                         add("velit"),
                     }};
@@ -323,7 +323,7 @@ import com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdInterviewIdS
 import com.unifiedapi.unifiedto.models.shared.AtsInterview;
 import com.unifiedapi.unifiedto.models.shared.AtsInterviewStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsInterviewRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -335,16 +335,16 @@ public class Application {
                 atsInterview = new AtsInterview() {{
                     applicationId = "commodi";
                     candidateId = "impedit";
-                    createdAt = LocalDate.parse("2021-04-27");
-                    endAt = LocalDate.parse("2022-05-17");
+                    createdAt = OffsetDateTime.parse("2021-04-27T21:49:48.563Z");
+                    endAt = OffsetDateTime.parse("2022-05-17T19:06:35.400Z");
                     externalEventXref = "delectus";
                     id = "7aa2b241-1369-45d1-a669-8fcc4596217c";
                     jobId = "dolores";
                     location = "molestias";
                     raw = new PropertyAtsInterviewRaw();;
-                    startAt = LocalDate.parse("2022-07-12");
+                    startAt = OffsetDateTime.parse("2022-07-12T06:49:58.900Z");
                     status = AtsInterviewStatus.AWAITING_FEEDBACK;
-                    updatedAt = LocalDate.parse("2022-07-26");
+                    updatedAt = OffsetDateTime.parse("2022-07-26T20:35:59.823Z");
                     userIds = new String[]{{
                         add("consectetur"),
                     }};

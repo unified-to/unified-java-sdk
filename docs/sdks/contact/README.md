@@ -230,7 +230,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactResponse;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -246,7 +246,7 @@ public class Application {
                 order = "delectus";
                 query = "non";
                 sort = "distinctio";
-                updatedGte = LocalDate.parse("2022-08-26");
+                updatedGte = OffsetDateTime.parse("2022-08-26T06:03:44.896Z");
             }};            
 
             GetCrmConnectionIdContactResponse res = sdk.contact.getCrmConnectionIdContact(req, new GetCrmConnectionIdContactSecurity("labore") {{
@@ -338,7 +338,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactResponse;
 import com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -353,7 +353,7 @@ public class Application {
                 order = "aperiam";
                 query = "odit";
                 sort = "deleniti";
-                updatedGte = LocalDate.parse("2022-07-19");
+                updatedGte = OffsetDateTime.parse("2022-07-19T18:04:50.511Z");
             }};            
 
             GetUcConnectionIdContactResponse res = sdk.contact.getUcConnectionIdContact(req, new GetUcConnectionIdContactSecurity("similique") {{
@@ -452,7 +452,7 @@ import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -476,7 +476,7 @@ public class Application {
                     companyIds = new String[]{{
                         add("possimus"),
                     }};
-                    createdAt = LocalDate.parse("2022-10-08");
+                    createdAt = OffsetDateTime.parse("2022-10-08T00:54:40.246Z");
                     dealIds = new String[]{{
                         add("nesciunt"),
                     }};
@@ -496,7 +496,7 @@ public class Application {
                         }}),
                     }};
                     title = "Miss";
-                    updatedAt = LocalDate.parse("2022-08-13");
+                    updatedAt = OffsetDateTime.parse("2022-08-13T05:20:10.013Z");
                 }};;
             }};            
 
@@ -644,7 +644,7 @@ import com.unifiedapi.unifiedto.models.shared.UcEmail;
 import com.unifiedapi.unifiedto.models.shared.UcEmailType;
 import com.unifiedapi.unifiedto.models.shared.UcTelephone;
 import com.unifiedapi.unifiedto.models.shared.UcTelephoneType;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -655,7 +655,7 @@ public class Application {
             PatchUcConnectionIdContactIdRequest req = new PatchUcConnectionIdContactIdRequest("laborum", "natus") {{
                 ucContact = new UcContact() {{
                     company = "Baumbach, Huel and Prohaska";
-                    createdAt = LocalDate.parse("2020-04-05");
+                    createdAt = OffsetDateTime.parse("2020-04-05T22:53:14.639Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
                         add(new UcEmail("voluptatibus") {{
                             email = "Judson_Crona@gmail.com";
@@ -672,7 +672,7 @@ public class Application {
                         }}),
                     }};
                     title = "Mrs.";
-                    updatedAt = LocalDate.parse("2022-08-16");
+                    updatedAt = OffsetDateTime.parse("2022-08-16T23:55:48.181Z");
                 }};;
             }};            
 
@@ -723,7 +723,7 @@ import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -747,7 +747,7 @@ public class Application {
                     companyIds = new String[]{{
                         add("nesciunt"),
                     }};
-                    createdAt = LocalDate.parse("2022-11-07");
+                    createdAt = OffsetDateTime.parse("2022-11-07T07:50:11.644Z");
                     dealIds = new String[]{{
                         add("repellat"),
                     }};
@@ -767,7 +767,7 @@ public class Application {
                         }}),
                     }};
                     title = "Mrs.";
-                    updatedAt = LocalDate.parse("2021-08-03");
+                    updatedAt = OffsetDateTime.parse("2021-08-03T07:41:11.908Z");
                 }};;
             }};            
 
@@ -817,7 +817,7 @@ import com.unifiedapi.unifiedto.models.shared.UcEmail;
 import com.unifiedapi.unifiedto.models.shared.UcEmailType;
 import com.unifiedapi.unifiedto.models.shared.UcTelephone;
 import com.unifiedapi.unifiedto.models.shared.UcTelephoneType;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -828,7 +828,7 @@ public class Application {
             PostUcConnectionIdContactRequest req = new PostUcConnectionIdContactRequest("sit") {{
                 ucContact = new UcContact() {{
                     company = "Nader - Cronin";
-                    createdAt = LocalDate.parse("2022-05-10");
+                    createdAt = OffsetDateTime.parse("2022-05-10T16:07:37.512Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
                         add(new UcEmail("doloribus") {{
                             email = "Estefania_Schmidt78@gmail.com";
@@ -845,7 +845,7 @@ public class Application {
                         }}),
                     }};
                     title = "Miss";
-                    updatedAt = LocalDate.parse("2022-05-28");
+                    updatedAt = OffsetDateTime.parse("2022-05-28T18:04:13.681Z");
                 }};;
             }};            
 
@@ -896,7 +896,7 @@ import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -920,7 +920,7 @@ public class Application {
                     companyIds = new String[]{{
                         add("distinctio"),
                     }};
-                    createdAt = LocalDate.parse("2022-01-11");
+                    createdAt = OffsetDateTime.parse("2022-01-11T21:57:18.174Z");
                     dealIds = new String[]{{
                         add("facere"),
                     }};
@@ -940,7 +940,7 @@ public class Application {
                         }}),
                     }};
                     title = "Mr.";
-                    updatedAt = LocalDate.parse("2021-06-08");
+                    updatedAt = OffsetDateTime.parse("2021-06-08T05:02:10.598Z");
                 }};;
             }};            
 
@@ -1088,7 +1088,7 @@ import com.unifiedapi.unifiedto.models.shared.UcEmail;
 import com.unifiedapi.unifiedto.models.shared.UcEmailType;
 import com.unifiedapi.unifiedto.models.shared.UcTelephone;
 import com.unifiedapi.unifiedto.models.shared.UcTelephoneType;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1099,7 +1099,7 @@ public class Application {
             PutUcConnectionIdContactIdRequest req = new PutUcConnectionIdContactIdRequest("a", "maiores") {{
                 ucContact = new UcContact() {{
                     company = "Wunsch - Abbott";
-                    createdAt = LocalDate.parse("2021-06-06");
+                    createdAt = OffsetDateTime.parse("2021-06-06T21:58:33.426Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
                         add(new UcEmail("in") {{
                             email = "Geoffrey.Wehner26@gmail.com";
@@ -1116,7 +1116,7 @@ public class Application {
                         }}),
                     }};
                     title = "Dr.";
-                    updatedAt = LocalDate.parse("2022-07-06");
+                    updatedAt = OffsetDateTime.parse("2022-07-06T22:48:19.114Z");
                 }};;
             }};            
 

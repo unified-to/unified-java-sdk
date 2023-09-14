@@ -71,7 +71,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdTeamRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdTeamResponse;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdTeamSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -85,7 +85,7 @@ public class Application {
                 order = "minus";
                 query = "sunt";
                 sort = "sint";
-                updatedGte = LocalDate.parse("2022-09-12");
+                updatedGte = OffsetDateTime.parse("2022-09-12T23:16:28.730Z");
             }};            
 
             GetCrmConnectionIdTeamResponse res = sdk.team.getCrmConnectionIdTeam(req, new GetCrmConnectionIdTeamSecurity("veniam") {{
@@ -179,7 +179,7 @@ import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdTeamIdResp
 import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdTeamIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmTeam;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmTeamRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -189,12 +189,12 @@ public class Application {
 
             PatchCrmConnectionIdTeamIdRequest req = new PatchCrmConnectionIdTeamIdRequest("unde", "ullam") {{
                 crmTeam = new CrmTeam() {{
-                    createdAt = LocalDate.parse("2022-03-09");
+                    createdAt = OffsetDateTime.parse("2022-03-09T20:21:42.716Z");
                     description = "cumque";
                     id = "c185ea49-01c7-4c43-ad2d-aa784aba3d23";
                     name = "Silvia Stoltenberg";
                     raw = new PropertyCrmTeamRaw();;
-                    updatedAt = LocalDate.parse("2022-06-26");
+                    updatedAt = OffsetDateTime.parse("2022-06-26T09:34:15.976Z");
                     userIds = new String[]{{
                         add("beatae"),
                     }};
@@ -243,7 +243,7 @@ import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdTeamRespons
 import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdTeamSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmTeam;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmTeamRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -253,12 +253,12 @@ public class Application {
 
             PostCrmConnectionIdTeamRequest req = new PostCrmConnectionIdTeamRequest("laborum") {{
                 crmTeam = new CrmTeam() {{
-                    createdAt = LocalDate.parse("2022-11-20");
+                    createdAt = OffsetDateTime.parse("2022-11-20T18:43:12.895Z");
                     description = "veniam";
                     id = "382bd7ed-5650-4762-9c58-f4d7396564c2";
                     name = "Lee Batz Jr.";
                     raw = new PropertyCrmTeamRaw();;
-                    updatedAt = LocalDate.parse("2021-10-14");
+                    updatedAt = OffsetDateTime.parse("2021-10-14T00:11:30.228Z");
                     userIds = new String[]{{
                         add("commodi"),
                     }};
@@ -307,7 +307,7 @@ import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdTeamIdRespon
 import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdTeamIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmTeam;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmTeamRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -317,12 +317,12 @@ public class Application {
 
             PutCrmConnectionIdTeamIdRequest req = new PutCrmConnectionIdTeamIdRequest("illum", "aspernatur") {{
                 crmTeam = new CrmTeam() {{
-                    createdAt = LocalDate.parse("2022-05-09");
+                    createdAt = OffsetDateTime.parse("2022-05-09T21:33:40.745Z");
                     description = "dignissimos";
                     id = "dbb8f532-d892-4cf7-812c-b512c878240b";
                     name = "Lewis Goodwin";
                     raw = new PropertyCrmTeamRaw();;
-                    updatedAt = LocalDate.parse("2021-12-30");
+                    updatedAt = OffsetDateTime.parse("2021-12-30T15:49:38.515Z");
                     userIds = new String[]{{
                         add("hic"),
                     }};

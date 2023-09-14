@@ -71,7 +71,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListRequest;
 import com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListResponse;
 import com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -85,7 +85,7 @@ public class Application {
                 order = "rerum";
                 query = "cum";
                 sort = "est";
-                updatedGte = LocalDate.parse("2022-12-08");
+                updatedGte = OffsetDateTime.parse("2022-12-08T11:45:26.358Z");
             }};            
 
             GetMartechConnectionIdListResponse res = sdk.list.getMartechConnectionIdList(req, new GetMartechConnectionIdListSecurity("qui") {{
@@ -179,7 +179,7 @@ import com.unifiedapi.unifiedto.models.operations.PatchMartechConnectionIdListId
 import com.unifiedapi.unifiedto.models.operations.PatchMartechConnectionIdListIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.MarketingList;
 import com.unifiedapi.unifiedto.models.shared.PropertyMarketingListRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -193,7 +193,7 @@ public class Application {
                     id = "cf152558-daa9-45be-acd0-2756c354aa43";
                     name = "Celia Gutkowski";
                     raw = new PropertyMarketingListRaw();;
-                    updatedAt = LocalDate.parse("2022-07-16");
+                    updatedAt = OffsetDateTime.parse("2022-07-16T18:39:49.107Z");
                 }};;
             }};            
 
@@ -239,7 +239,7 @@ import com.unifiedapi.unifiedto.models.operations.PostMartechConnectionIdListRes
 import com.unifiedapi.unifiedto.models.operations.PostMartechConnectionIdListSecurity;
 import com.unifiedapi.unifiedto.models.shared.MarketingList;
 import com.unifiedapi.unifiedto.models.shared.PropertyMarketingListRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -253,7 +253,7 @@ public class Application {
                     id = "5208c23e-9802-4d82-b0d4-5eb4a8b674ee";
                     name = "Rosalie Windler IV";
                     raw = new PropertyMarketingListRaw();;
-                    updatedAt = LocalDate.parse("2020-07-11");
+                    updatedAt = OffsetDateTime.parse("2020-07-11T18:38:06.473Z");
                 }};;
             }};            
 
@@ -299,7 +299,7 @@ import com.unifiedapi.unifiedto.models.operations.PutMartechConnectionIdListIdRe
 import com.unifiedapi.unifiedto.models.operations.PutMartechConnectionIdListIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.MarketingList;
 import com.unifiedapi.unifiedto.models.shared.PropertyMarketingListRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -313,7 +313,7 @@ public class Application {
                     id = "87e32e04-b3d3-4ed0-8567-0ef42bd3c9f1";
                     name = "Mrs. Colin Harris";
                     raw = new PropertyMarketingListRaw();;
-                    updatedAt = LocalDate.parse("2022-03-14");
+                    updatedAt = OffsetDateTime.parse("2022-03-14T11:41:30.046Z");
                 }};;
             }};            
 

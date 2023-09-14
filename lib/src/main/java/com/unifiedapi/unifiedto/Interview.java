@@ -11,7 +11,7 @@ import com.unifiedapi.unifiedto.utils.JSON;
 import com.unifiedapi.unifiedto.utils.SerializedBody;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import org.apache.http.NameValuePair;
 
 public class Interview {

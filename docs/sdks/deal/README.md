@@ -71,7 +71,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdDealRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdDealResponse;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdDealSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -87,7 +87,7 @@ public class Application {
                 order = "expedita";
                 query = "iusto";
                 sort = "esse";
-                updatedGte = LocalDate.parse("2022-05-11");
+                updatedGte = OffsetDateTime.parse("2022-05-11T04:37:28.493Z");
             }};            
 
             GetCrmConnectionIdDealResponse res = sdk.deal.getCrmConnectionIdDeal(req, new GetCrmConnectionIdDealSecurity("quod") {{
@@ -181,7 +181,7 @@ import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdDealIdResp
 import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdDealIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmDeal;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmDealRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -192,8 +192,8 @@ public class Application {
             PatchCrmConnectionIdDealIdRequest req = new PatchCrmConnectionIdDealIdRequest("dolore", "nam") {{
                 crmDeal = new CrmDeal() {{
                     amount = 6380.85d;
-                    closedAt = LocalDate.parse("2021-03-31");
-                    createdAt = LocalDate.parse("2022-02-05");
+                    closedAt = OffsetDateTime.parse("2021-03-31T07:19:57.193Z");
+                    createdAt = OffsetDateTime.parse("2022-02-05T22:18:34.745Z");
                     currency = "enim";
                     id = "06ef890a-54b4-475f-96f5-6d385a3c4ac6";
                     lostReason = "adipisci";
@@ -206,7 +206,7 @@ public class Application {
                     tags = new String[]{{
                         add("fugiat"),
                     }};
-                    updatedAt = LocalDate.parse("2021-02-02");
+                    updatedAt = OffsetDateTime.parse("2021-02-02T03:05:58.880Z");
                     wonReason = "natus";
                 }};;
             }};            
@@ -253,7 +253,7 @@ import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdDealRespons
 import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdDealSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmDeal;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmDealRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -264,8 +264,8 @@ public class Application {
             PostCrmConnectionIdDealRequest req = new PostCrmConnectionIdDealRequest("repellendus") {{
                 crmDeal = new CrmDeal() {{
                     amount = 7063.71d;
-                    closedAt = LocalDate.parse("2022-06-02");
-                    createdAt = LocalDate.parse("2022-12-18");
+                    closedAt = OffsetDateTime.parse("2022-06-02T07:38:36.555Z");
+                    createdAt = OffsetDateTime.parse("2022-12-18T03:53:36.869Z");
                     currency = "maiores";
                     id = "63bbf817-837b-401a-bdd7-88624189eb44";
                     lostReason = "blanditiis";
@@ -278,7 +278,7 @@ public class Application {
                     tags = new String[]{{
                         add("possimus"),
                     }};
-                    updatedAt = LocalDate.parse("2021-01-06");
+                    updatedAt = OffsetDateTime.parse("2021-01-06T15:53:40.796Z");
                     wonReason = "quasi";
                 }};;
             }};            
@@ -325,7 +325,7 @@ import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdDealIdRespon
 import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdDealIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmDeal;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmDealRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -336,8 +336,8 @@ public class Application {
             PutCrmConnectionIdDealIdRequest req = new PutCrmConnectionIdDealIdRequest("nemo", "nobis") {{
                 crmDeal = new CrmDeal() {{
                     amount = 8926.4d;
-                    closedAt = LocalDate.parse("2022-12-01");
-                    createdAt = LocalDate.parse("2022-11-01");
+                    closedAt = OffsetDateTime.parse("2022-12-01T04:19:12.078Z");
+                    createdAt = OffsetDateTime.parse("2022-11-01T14:22:00.104Z");
                     currency = "itaque";
                     id = "ab9cd7e5-224a-46a0-a123-b7847ec59e1f";
                     lostReason = "autem";
@@ -350,7 +350,7 @@ public class Application {
                     tags = new String[]{{
                         add("libero"),
                     }};
-                    updatedAt = LocalDate.parse("2022-02-25");
+                    updatedAt = OffsetDateTime.parse("2022-02-25T11:39:14.701Z");
                     wonReason = "iusto";
                 }};;
             }};            

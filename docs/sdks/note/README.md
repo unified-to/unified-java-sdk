@@ -71,7 +71,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNotesTicketIdRequest;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNotesTicketIdResponse;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNotesTicketIdSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -85,7 +85,7 @@ public class Application {
                 order = "laborum";
                 query = "sint";
                 sort = "incidunt";
-                updatedGte = LocalDate.parse("2022-08-05");
+                updatedGte = OffsetDateTime.parse("2022-08-05T18:58:20.416Z");
             }};            
 
             GetTicketingConnectionIdNotesTicketIdResponse res = sdk.note.getTicketingConnectionIdNotesTicketId(req, new GetTicketingConnectionIdNotesTicketIdSecurity("aperiam") {{
@@ -179,7 +179,7 @@ import com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdNote
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdNotesTicketIdIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.PropertyTicketingNoteRaw;
 import com.unifiedapi.unifiedto.models.shared.TicketingNote;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -190,7 +190,7 @@ public class Application {
             PatchTicketingConnectionIdNotesTicketIdIdRequest req = new PatchTicketingConnectionIdNotesTicketIdIdRequest("debitis", "animi", "aliquam") {{
                 ticketingNote = new TicketingNote(                new PropertyTicketingNoteRaw();) {{
                     agentId = "quasi";
-                    createdAt = LocalDate.parse("2022-09-13");
+                    createdAt = OffsetDateTime.parse("2022-09-13T00:32:30.813Z");
                     customerId = "hic";
                     description = "labore";
                     id = "65e85156-fff7-43fd-b54f-dd5ea9543398";
@@ -240,7 +240,7 @@ import com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdNotes
 import com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdNotesTicketIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.PropertyTicketingNoteRaw;
 import com.unifiedapi.unifiedto.models.shared.TicketingNote;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -251,7 +251,7 @@ public class Application {
             PostTicketingConnectionIdNotesTicketIdRequest req = new PostTicketingConnectionIdNotesTicketIdRequest("sapiente", "soluta") {{
                 ticketingNote = new TicketingNote(                new PropertyTicketingNoteRaw();) {{
                     agentId = "eius";
-                    createdAt = LocalDate.parse("2022-04-27");
+                    createdAt = OffsetDateTime.parse("2022-04-27T23:12:45.343Z");
                     customerId = "deleniti";
                     description = "assumenda";
                     id = "63388e4d-8039-4ea5-b9b1-8a244fd61903";
@@ -301,7 +301,7 @@ import com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdNotesT
 import com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdNotesTicketIdIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.PropertyTicketingNoteRaw;
 import com.unifiedapi.unifiedto.models.shared.TicketingNote;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -312,7 +312,7 @@ public class Application {
             PutTicketingConnectionIdNotesTicketIdIdRequest req = new PutTicketingConnectionIdNotesTicketIdIdRequest("dolorum", "maxime", "assumenda") {{
                 ticketingNote = new TicketingNote(                new PropertyTicketingNoteRaw();) {{
                     agentId = "velit";
-                    createdAt = LocalDate.parse("2021-03-06");
+                    createdAt = OffsetDateTime.parse("2021-03-06T22:25:48.428Z");
                     customerId = "quibusdam";
                     description = "doloremque";
                     id = "dc671dc7-f1e3-4af1-9920-c90d1b4901f2";

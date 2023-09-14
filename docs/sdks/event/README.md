@@ -227,7 +227,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdEventRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdEventResponse;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdEventSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -244,7 +244,7 @@ public class Application {
                 order = "distinctio";
                 query = "numquam";
                 sort = "fugit";
-                updatedGte = LocalDate.parse("2022-05-15");
+                updatedGte = OffsetDateTime.parse("2022-05-15T00:58:22.386Z");
             }};            
 
             GetCrmConnectionIdEventResponse res = sdk.event.getCrmConnectionIdEvent(req, new GetCrmConnectionIdEventSecurity("facilis") {{
@@ -344,7 +344,7 @@ import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventMeeting;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventNote;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTask;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -364,7 +364,7 @@ public class Application {
                     contactIds = new String[]{{
                         add("distinctio"),
                     }};
-                    createdAt = LocalDate.parse("2020-05-31");
+                    createdAt = OffsetDateTime.parse("2020-05-31T22:16:13.970Z");
                     dealIds = new String[]{{
                         add("totam"),
                     }};
@@ -382,8 +382,8 @@ public class Application {
                     id = "6c48252d-7771-4e7f-9074-009ef8d29de1";
                     meeting = new PropertyCrmEventMeeting() {{
                         description = "facere";
-                        endAt = LocalDate.parse("2021-07-03");
-                        startAt = LocalDate.parse("2022-05-30");
+                        endAt = OffsetDateTime.parse("2021-07-03T23:45:27.582Z");
+                        startAt = OffsetDateTime.parse("2022-05-30T04:54:36.719Z");
                         title = "Ms.";
                     }};;
                     note = new PropertyCrmEventNote() {{
@@ -396,7 +396,7 @@ public class Application {
                         status = "ullam";
                     }};;
                     type = CrmEventType.TASK;
-                    updatedAt = LocalDate.parse("2021-01-07");
+                    updatedAt = OffsetDateTime.parse("2021-01-07T10:12:49.638Z");
                 }};;
             }};            
 
@@ -595,7 +595,7 @@ import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventMeeting;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventNote;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTask;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -615,7 +615,7 @@ public class Application {
                     contactIds = new String[]{{
                         add("laboriosam"),
                     }};
-                    createdAt = LocalDate.parse("2022-06-01");
+                    createdAt = OffsetDateTime.parse("2022-06-01T17:36:22.824Z");
                     dealIds = new String[]{{
                         add("veritatis"),
                     }};
@@ -633,8 +633,8 @@ public class Application {
                     id = "0b64ff8a-e170-4ef0-bb5f-37e4aa868555";
                     meeting = new PropertyCrmEventMeeting() {{
                         description = "iste";
-                        endAt = LocalDate.parse("2022-07-31");
-                        startAt = LocalDate.parse("2022-10-20");
+                        endAt = OffsetDateTime.parse("2022-07-31T20:18:02.398Z");
+                        startAt = OffsetDateTime.parse("2022-10-20T06:45:40.369Z");
                         title = "Mr.";
                     }};;
                     note = new PropertyCrmEventNote() {{
@@ -647,7 +647,7 @@ public class Application {
                         status = "autem";
                     }};;
                     type = CrmEventType.TASK;
-                    updatedAt = LocalDate.parse("2022-03-19");
+                    updatedAt = OffsetDateTime.parse("2022-03-19T13:47:36.994Z");
                 }};;
             }};            
 
@@ -699,7 +699,7 @@ import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventMeeting;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventNote;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTask;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -719,7 +719,7 @@ public class Application {
                     contactIds = new String[]{{
                         add("tenetur"),
                     }};
-                    createdAt = LocalDate.parse("2021-12-12");
+                    createdAt = OffsetDateTime.parse("2021-12-12T02:41:48.224Z");
                     dealIds = new String[]{{
                         add("a"),
                     }};
@@ -737,8 +737,8 @@ public class Application {
                     id = "b9a9f748-46e2-4c33-89db-0536d9e75ca0";
                     meeting = new PropertyCrmEventMeeting() {{
                         description = "sit";
-                        endAt = LocalDate.parse("2022-01-23");
-                        startAt = LocalDate.parse("2022-10-15");
+                        endAt = OffsetDateTime.parse("2022-01-23T09:14:18.952Z");
+                        startAt = OffsetDateTime.parse("2022-10-15T17:00:49.512Z");
                         title = "Miss";
                     }};;
                     note = new PropertyCrmEventNote() {{
@@ -751,7 +751,7 @@ public class Application {
                         status = "est";
                     }};;
                     type = CrmEventType.TASK;
-                    updatedAt = LocalDate.parse("2021-01-13");
+                    updatedAt = OffsetDateTime.parse("2021-01-13T14:20:15.635Z");
                 }};;
             }};            
 

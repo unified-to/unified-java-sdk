@@ -291,7 +291,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdApplicationResponse;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdApplicationSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -307,7 +307,7 @@ public class Application {
                 order = "dolorem";
                 query = "dolorem";
                 sort = "dolor";
-                updatedGte = LocalDate.parse("2022-10-13");
+                updatedGte = OffsetDateTime.parse("2022-10-13T03:45:19.154Z");
             }};            
 
             GetAtsConnectionIdApplicationResponse res = sdk.ats.getAtsConnectionIdApplication(req, new GetAtsConnectionIdApplicationSecurity("hic") {{
@@ -399,7 +399,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateResponse;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -413,7 +413,7 @@ public class Application {
                 order = "dolorum";
                 query = "numquam";
                 sort = "veritatis";
-                updatedGte = LocalDate.parse("2022-12-11");
+                updatedGte = OffsetDateTime.parse("2022-12-11T09:46:30.457Z");
             }};            
 
             GetAtsConnectionIdCandidateResponse res = sdk.ats.getAtsConnectionIdCandidate(req, new GetAtsConnectionIdCandidateSecurity("iure") {{
@@ -505,7 +505,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdInterviewRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdInterviewResponse;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdInterviewSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -520,7 +520,7 @@ public class Application {
                 order = "eos";
                 query = "atque";
                 sort = "sit";
-                updatedGte = LocalDate.parse("2022-10-19");
+                updatedGte = OffsetDateTime.parse("2022-10-19T08:40:45.996Z");
             }};            
 
             GetAtsConnectionIdInterviewResponse res = sdk.ats.getAtsConnectionIdInterview(req, new GetAtsConnectionIdInterviewSecurity("soluta") {{
@@ -612,7 +612,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobResponse;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -626,7 +626,7 @@ public class Application {
                 order = "necessitatibus";
                 query = "distinctio";
                 sort = "asperiores";
-                updatedGte = LocalDate.parse("2022-10-13");
+                updatedGte = OffsetDateTime.parse("2022-10-13T19:58:56.024Z");
             }};            
 
             GetAtsConnectionIdJobResponse res = sdk.ats.getAtsConnectionIdJob(req, new GetAtsConnectionIdJobSecurity("voluptate") {{
@@ -718,7 +718,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardResponse;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -735,7 +735,7 @@ public class Application {
                 order = "saepe";
                 query = "suscipit";
                 sort = "deserunt";
-                updatedGte = LocalDate.parse("2022-05-08");
+                updatedGte = OffsetDateTime.parse("2022-05-08T23:33:14.875Z");
             }};            
 
             GetAtsConnectionIdScorecardResponse res = sdk.ats.getAtsConnectionIdScorecard(req, new GetAtsConnectionIdScorecardSecurity("repellendus") {{
@@ -830,7 +830,7 @@ import com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdApplicatio
 import com.unifiedapi.unifiedto.models.shared.AtsApplication;
 import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsApplicationRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -840,17 +840,17 @@ public class Application {
 
             PatchAtsConnectionIdApplicationIdRequest req = new PatchAtsConnectionIdApplicationIdRequest("at", "quaerat") {{
                 atsApplication = new AtsApplication() {{
-                    appliedAt = LocalDate.parse("2022-07-29");
+                    appliedAt = OffsetDateTime.parse("2022-07-29T17:02:39.743Z");
                     candidateId = "quod";
-                    createdAt = LocalDate.parse("2022-06-11");
+                    createdAt = OffsetDateTime.parse("2022-06-11T17:29:13.872Z");
                     id = "af7a73cf-3be4-453f-870b-326b5a73429c";
                     jobId = "pariatur";
                     raw = new PropertyAtsApplicationRaw();;
-                    rejectedAt = LocalDate.parse("2022-10-07");
+                    rejectedAt = OffsetDateTime.parse("2022-10-07T04:50:29.805Z");
                     rejectedReason = "laborum";
                     source = "totam";
                     status = AtsApplicationStatus.SUBMITTED;
-                    updatedAt = LocalDate.parse("2022-10-29");
+                    updatedAt = OffsetDateTime.parse("2022-10-29T03:47:52.981Z");
                 }};;
             }};            
 
@@ -901,7 +901,7 @@ import com.unifiedapi.unifiedto.models.shared.AtsTelephone;
 import com.unifiedapi.unifiedto.models.shared.AtsTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -922,7 +922,7 @@ public class Application {
                         regionCode = "cumque";
                     }};;
                     companyName = "soluta";
-                    createdAt = LocalDate.parse("2022-10-25");
+                    createdAt = OffsetDateTime.parse("2022-10-25T09:42:54.177Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
                         add(new AtsEmail("aperiam") {{
                             email = "Cydney_Boehm73@hotmail.com";
@@ -944,7 +944,7 @@ public class Application {
                         }}),
                     }};
                     title = "Dr.";
-                    updatedAt = LocalDate.parse("2022-09-16");
+                    updatedAt = OffsetDateTime.parse("2022-09-16T01:08:31.616Z");
                 }};;
             }};            
 
@@ -991,7 +991,7 @@ import com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdInterviewI
 import com.unifiedapi.unifiedto.models.shared.AtsInterview;
 import com.unifiedapi.unifiedto.models.shared.AtsInterviewStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsInterviewRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1003,16 +1003,16 @@ public class Application {
                 atsInterview = new AtsInterview() {{
                     applicationId = "natus";
                     candidateId = "impedit";
-                    createdAt = LocalDate.parse("2022-01-10");
-                    endAt = LocalDate.parse("2022-02-20");
+                    createdAt = OffsetDateTime.parse("2022-01-10T09:29:38.619Z");
+                    endAt = OffsetDateTime.parse("2022-02-20T06:09:58.619Z");
                     externalEventXref = "fugit";
                     id = "cff7c70a-4562-46d4-b681-3f16d9f5fce6";
                     jobId = "impedit";
                     location = "corporis";
                     raw = new PropertyAtsInterviewRaw();;
-                    startAt = LocalDate.parse("2022-08-08");
+                    startAt = OffsetDateTime.parse("2022-08-08T04:23:21.555Z");
                     status = AtsInterviewStatus.SCHEDULED;
-                    updatedAt = LocalDate.parse("2022-08-05");
+                    updatedAt = OffsetDateTime.parse("2022-08-05T08:34:01.942Z");
                     userIds = new String[]{{
                         add("quo"),
                     }};
@@ -1067,7 +1067,7 @@ import com.unifiedapi.unifiedto.models.shared.AtsJob;
 import com.unifiedapi.unifiedto.models.shared.AtsJobEmploymentType;
 import com.unifiedapi.unifiedto.models.shared.AtsJobStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsJobRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1089,7 +1089,7 @@ public class Application {
                             regionCode = "velit";
                         }}),
                     }};
-                    closedAt = LocalDate.parse("2022-07-31");
+                    closedAt = OffsetDateTime.parse("2022-07-31T12:04:26.954Z");
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(AtsCompensationType.EQUITY) {{
                             currency = "nobis";
@@ -1099,7 +1099,7 @@ public class Application {
                             type = AtsCompensationType.BONUS;
                         }}),
                     }};
-                    createdAt = LocalDate.parse("2022-09-24");
+                    createdAt = OffsetDateTime.parse("2022-09-24T07:55:38.504Z");
                     departments = new String[]{{
                         add("numquam"),
                     }};
@@ -1120,7 +1120,7 @@ public class Application {
                     }};
                     remote = false;
                     status = AtsJobStatus.DRAFT;
-                    updatedAt = LocalDate.parse("2022-11-13");
+                    updatedAt = OffsetDateTime.parse("2022-11-13T03:35:18.820Z");
                 }};;
             }};            
 
@@ -1167,7 +1167,7 @@ import com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdScorecardI
 import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
 import com.unifiedapi.unifiedto.models.shared.AtsScorecardRecommendation;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsScorecardRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1179,13 +1179,13 @@ public class Application {
                 atsScorecard = new AtsScorecard(                new PropertyAtsScorecardRaw();) {{
                     applicationId = "inventore";
                     candidateId = "nihil";
-                    createdAt = LocalDate.parse("2021-03-27");
+                    createdAt = OffsetDateTime.parse("2021-03-27T14:55:59.726Z");
                     id = "4796f2a7-0c68-4828-aaa4-82562f222e98";
                     interviewId = "et";
                     interviewerId = "esse";
                     jobId = "eveniet";
                     recommendation = AtsScorecardRecommendation.STRONG_YES;
-                    updatedAt = LocalDate.parse("2022-07-17");
+                    updatedAt = OffsetDateTime.parse("2022-07-17T14:37:45.086Z");
                 }};;
             }};            
 
@@ -1232,7 +1232,7 @@ import com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdApplication
 import com.unifiedapi.unifiedto.models.shared.AtsApplication;
 import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsApplicationRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1242,17 +1242,17 @@ public class Application {
 
             PostAtsConnectionIdApplicationRequest req = new PostAtsConnectionIdApplicationRequest("nam") {{
                 atsApplication = new AtsApplication() {{
-                    appliedAt = LocalDate.parse("2021-10-21");
+                    appliedAt = OffsetDateTime.parse("2021-10-21T01:36:51.257Z");
                     candidateId = "quasi";
-                    createdAt = LocalDate.parse("2021-09-21");
+                    createdAt = OffsetDateTime.parse("2021-09-21T04:40:52.923Z");
                     id = "b7b95bc0-ab3c-420c-8f37-89fd871f99dd";
                     jobId = "quia";
                     raw = new PropertyAtsApplicationRaw();;
-                    rejectedAt = LocalDate.parse("2020-01-10");
+                    rejectedAt = OffsetDateTime.parse("2020-01-10T06:57:07.831Z");
                     rejectedReason = "facere";
                     source = "veritatis";
                     status = AtsApplicationStatus.REVIEWING;
-                    updatedAt = LocalDate.parse("2022-05-16");
+                    updatedAt = OffsetDateTime.parse("2022-05-16T10:50:58.442Z");
                 }};;
             }};            
 
@@ -1303,7 +1303,7 @@ import com.unifiedapi.unifiedto.models.shared.AtsTelephone;
 import com.unifiedapi.unifiedto.models.shared.AtsTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1324,7 +1324,7 @@ public class Application {
                         regionCode = "aut";
                     }};;
                     companyName = "voluptatum";
-                    createdAt = LocalDate.parse("2022-02-26");
+                    createdAt = OffsetDateTime.parse("2022-02-26T10:39:59.909Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
                         add(new AtsEmail("quasi") {{
                             email = "Kailyn.Ward60@yahoo.com";
@@ -1346,7 +1346,7 @@ public class Application {
                         }}),
                     }};
                     title = "Ms.";
-                    updatedAt = LocalDate.parse("2021-01-08");
+                    updatedAt = OffsetDateTime.parse("2021-01-08T17:32:26.674Z");
                 }};;
             }};            
 
@@ -1393,7 +1393,7 @@ import com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdInterviewSe
 import com.unifiedapi.unifiedto.models.shared.AtsInterview;
 import com.unifiedapi.unifiedto.models.shared.AtsInterviewStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsInterviewRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1405,16 +1405,16 @@ public class Application {
                 atsInterview = new AtsInterview() {{
                     applicationId = "quaerat";
                     candidateId = "porro";
-                    createdAt = LocalDate.parse("2022-02-19");
-                    endAt = LocalDate.parse("2022-10-04");
+                    createdAt = OffsetDateTime.parse("2022-02-19T04:53:13.708Z");
+                    endAt = OffsetDateTime.parse("2022-10-04T21:10:21.697Z");
                     externalEventXref = "fuga";
                     id = "a63aae8d-6786-44db-b675-fd5e60b375ed";
                     jobId = "numquam";
                     location = "doloribus";
                     raw = new PropertyAtsInterviewRaw();;
-                    startAt = LocalDate.parse("2022-01-12");
+                    startAt = OffsetDateTime.parse("2022-01-12T07:48:28.322Z");
                     status = AtsInterviewStatus.COMPLETE;
-                    updatedAt = LocalDate.parse("2020-04-23");
+                    updatedAt = OffsetDateTime.parse("2020-04-23T16:59:51.275Z");
                     userIds = new String[]{{
                         add("dolore"),
                     }};
@@ -1469,7 +1469,7 @@ import com.unifiedapi.unifiedto.models.shared.AtsJob;
 import com.unifiedapi.unifiedto.models.shared.AtsJobEmploymentType;
 import com.unifiedapi.unifiedto.models.shared.AtsJobStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsJobRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1491,7 +1491,7 @@ public class Application {
                             regionCode = "vitae";
                         }}),
                     }};
-                    closedAt = LocalDate.parse("2021-02-08");
+                    closedAt = OffsetDateTime.parse("2021-02-08T22:01:14.035Z");
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(AtsCompensationType.BONUS) {{
                             currency = "tempora";
@@ -1501,7 +1501,7 @@ public class Application {
                             type = AtsCompensationType.BONUS;
                         }}),
                     }};
-                    createdAt = LocalDate.parse("2021-08-22");
+                    createdAt = OffsetDateTime.parse("2021-08-22T12:22:32.426Z");
                     departments = new String[]{{
                         add("adipisci"),
                     }};
@@ -1522,7 +1522,7 @@ public class Application {
                     }};
                     remote = false;
                     status = AtsJobStatus.ARCHIVED;
-                    updatedAt = LocalDate.parse("2022-01-15");
+                    updatedAt = OffsetDateTime.parse("2022-01-15T12:09:02.064Z");
                 }};;
             }};            
 
@@ -1569,7 +1569,7 @@ import com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdScorecardSe
 import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
 import com.unifiedapi.unifiedto.models.shared.AtsScorecardRecommendation;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsScorecardRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1581,13 +1581,13 @@ public class Application {
                 atsScorecard = new AtsScorecard(                new PropertyAtsScorecardRaw();) {{
                     applicationId = "reiciendis";
                     candidateId = "perferendis";
-                    createdAt = LocalDate.parse("2021-01-15");
+                    createdAt = OffsetDateTime.parse("2021-01-15T21:52:35.790Z");
                     id = "4294e369-8f44-47f6-83e8-b445e80ca55e";
                     interviewId = "reiciendis";
                     interviewerId = "nulla";
                     jobId = "magni";
                     recommendation = AtsScorecardRecommendation.DEFINITELY_NO;
-                    updatedAt = LocalDate.parse("2022-03-29");
+                    updatedAt = OffsetDateTime.parse("2022-03-29T06:16:27.485Z");
                 }};;
             }};            
 
@@ -1634,7 +1634,7 @@ import com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdApplicationI
 import com.unifiedapi.unifiedto.models.shared.AtsApplication;
 import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsApplicationRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1644,17 +1644,17 @@ public class Application {
 
             PutAtsConnectionIdApplicationIdRequest req = new PutAtsConnectionIdApplicationIdRequest("in", "officiis") {{
                 atsApplication = new AtsApplication() {{
-                    appliedAt = LocalDate.parse("2022-06-27");
+                    appliedAt = OffsetDateTime.parse("2022-06-27T22:55:23.952Z");
                     candidateId = "exercitationem";
-                    createdAt = LocalDate.parse("2021-07-09");
+                    createdAt = OffsetDateTime.parse("2021-07-09T17:29:28.492Z");
                     id = "6a89fbe3-a5aa-48e4-824d-0ab4075088e5";
                     jobId = "et";
                     raw = new PropertyAtsApplicationRaw();;
-                    rejectedAt = LocalDate.parse("2022-03-10");
+                    rejectedAt = OffsetDateTime.parse("2022-03-10T15:53:25.215Z");
                     rejectedReason = "sed";
                     source = "sit";
                     status = AtsApplicationStatus.SECOND_INTERVIEW;
-                    updatedAt = LocalDate.parse("2022-02-04");
+                    updatedAt = OffsetDateTime.parse("2022-02-04T05:56:04.733Z");
                 }};;
             }};            
 
@@ -1705,7 +1705,7 @@ import com.unifiedapi.unifiedto.models.shared.AtsTelephone;
 import com.unifiedapi.unifiedto.models.shared.AtsTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1726,7 +1726,7 @@ public class Application {
                         regionCode = "reiciendis";
                     }};;
                     companyName = "provident";
-                    createdAt = LocalDate.parse("2020-02-11");
+                    createdAt = OffsetDateTime.parse("2020-02-11T18:23:46.078Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
                         add(new AtsEmail("praesentium") {{
                             email = "Agustin.Orn81@hotmail.com";
@@ -1748,7 +1748,7 @@ public class Application {
                         }}),
                     }};
                     title = "Dr.";
-                    updatedAt = LocalDate.parse("2022-12-18");
+                    updatedAt = OffsetDateTime.parse("2022-12-18T20:20:36.419Z");
                 }};;
             }};            
 
@@ -1795,7 +1795,7 @@ import com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdInterviewIdS
 import com.unifiedapi.unifiedto.models.shared.AtsInterview;
 import com.unifiedapi.unifiedto.models.shared.AtsInterviewStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsInterviewRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1807,16 +1807,16 @@ public class Application {
                 atsInterview = new AtsInterview() {{
                     applicationId = "laboriosam";
                     candidateId = "velit";
-                    createdAt = LocalDate.parse("2021-04-24");
-                    endAt = LocalDate.parse("2022-02-04");
+                    createdAt = OffsetDateTime.parse("2021-04-24T18:03:33.752Z");
+                    endAt = OffsetDateTime.parse("2022-02-04T04:20:12.809Z");
                     externalEventXref = "consequuntur";
                     id = "9e973e92-2a57-4a15-be3e-060807e2b6e3";
                     jobId = "laborum";
                     location = "distinctio";
                     raw = new PropertyAtsInterviewRaw();;
-                    startAt = LocalDate.parse("2021-12-15");
+                    startAt = OffsetDateTime.parse("2021-12-15T04:55:40.282Z");
                     status = AtsInterviewStatus.SCHEDULED;
-                    updatedAt = LocalDate.parse("2022-01-01");
+                    updatedAt = OffsetDateTime.parse("2022-01-01T17:51:02.411Z");
                     userIds = new String[]{{
                         add("alias"),
                     }};
@@ -1871,7 +1871,7 @@ import com.unifiedapi.unifiedto.models.shared.AtsJob;
 import com.unifiedapi.unifiedto.models.shared.AtsJobEmploymentType;
 import com.unifiedapi.unifiedto.models.shared.AtsJobStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsJobRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1893,7 +1893,7 @@ public class Application {
                             regionCode = "molestiae";
                         }}),
                     }};
-                    closedAt = LocalDate.parse("2022-09-19");
+                    closedAt = OffsetDateTime.parse("2022-09-19T08:09:35.938Z");
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(AtsCompensationType.BONUS) {{
                             currency = "culpa";
@@ -1903,7 +1903,7 @@ public class Application {
                             type = AtsCompensationType.STOCK_OPTIONS;
                         }}),
                     }};
-                    createdAt = LocalDate.parse("2021-08-19");
+                    createdAt = OffsetDateTime.parse("2021-08-19T02:39:25.517Z");
                     departments = new String[]{{
                         add("provident"),
                     }};
@@ -1924,7 +1924,7 @@ public class Application {
                     }};
                     remote = false;
                     status = AtsJobStatus.PENDING;
-                    updatedAt = LocalDate.parse("2021-04-05");
+                    updatedAt = OffsetDateTime.parse("2021-04-05T02:38:00.020Z");
                 }};;
             }};            
 
@@ -1971,7 +1971,7 @@ import com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdScorecardIdS
 import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
 import com.unifiedapi.unifiedto.models.shared.AtsScorecardRecommendation;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsScorecardRaw;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1983,13 +1983,13 @@ public class Application {
                 atsScorecard = new AtsScorecard(                new PropertyAtsScorecardRaw();) {{
                     applicationId = "eum";
                     candidateId = "dicta";
-                    createdAt = LocalDate.parse("2022-11-22");
+                    createdAt = OffsetDateTime.parse("2022-11-22T22:38:36.599Z");
                     id = "99ebfd0e-9fe6-4c63-aca3-aed011799631";
                     interviewId = "magni";
                     interviewerId = "doloribus";
                     jobId = "nulla";
                     recommendation = AtsScorecardRecommendation.STRONG_YES;
-                    updatedAt = LocalDate.parse("2022-09-24");
+                    updatedAt = OffsetDateTime.parse("2022-09-24T01:02:47.291Z");
                 }};;
             }};            
 

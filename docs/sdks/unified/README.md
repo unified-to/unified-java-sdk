@@ -180,7 +180,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallResponse;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -190,7 +190,7 @@ public class Application {
 
             GetUnifiedApicallRequest req = new GetUnifiedApicallRequest() {{
                 connectionId = "nihil";
-                createdLte = LocalDate.parse("2022-07-03");
+                createdLte = OffsetDateTime.parse("2022-07-03T21:15:21.218Z");
                 env = "tenetur";
                 error = false;
                 externalXref = "eaque";
@@ -199,7 +199,7 @@ public class Application {
                 offset = 1700.97d;
                 order = "laudantium";
                 sort = "repudiandae";
-                updatedGte = LocalDate.parse("2020-08-25");
+                updatedGte = OffsetDateTime.parse("2020-08-25T12:42:19.724Z");
             }};            
 
             GetUnifiedApicallResponse res = sdk.unified.getUnifiedApicall(req, new GetUnifiedApicallSecurity("atque") {{
@@ -292,7 +292,7 @@ import com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionCategories
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionResponse;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -310,7 +310,7 @@ public class Application {
                 offset = 4131.3d;
                 order = "a";
                 sort = "aliquid";
-                updatedGte = LocalDate.parse("2022-03-31");
+                updatedGte = OffsetDateTime.parse("2022-03-31T18:36:20.568Z");
             }};            
 
             GetUnifiedConnectionResponse res = sdk.unified.getUnifiedConnection(req, new GetUnifiedConnectionSecurity("perspiciatis") {{
@@ -403,7 +403,7 @@ import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationCategorie
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationResponse;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -421,7 +421,7 @@ public class Application {
                 order = "quod";
                 sort = "laboriosam";
                 summary = false;
-                updatedGte = LocalDate.parse("2022-02-13");
+                updatedGte = OffsetDateTime.parse("2022-02-13T18:05:25.054Z");
             }};            
 
             GetUnifiedIntegrationResponse res = sdk.unified.getUnifiedIntegration(req, new GetUnifiedIntegrationSecurity("praesentium") {{
@@ -714,7 +714,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookResponse;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -729,7 +729,7 @@ public class Application {
                 offset = 8534.53d;
                 order = "voluptatibus";
                 sort = "iste";
-                updatedGte = LocalDate.parse("2022-12-08");
+                updatedGte = OffsetDateTime.parse("2022-12-08T15:30:54.485Z");
             }};            
 
             GetUnifiedWebhookResponse res = sdk.unified.getUnifiedWebhook(req, new GetUnifiedWebhookSecurity("pariatur") {{
@@ -826,7 +826,7 @@ import com.unifiedapi.unifiedto.models.shared.PropertyConnectionAuth;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions;
 import com.unifiedapi.unifiedto.models.shared.PropertyPropertyConnectionAuthMeta;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -853,7 +853,7 @@ public class Application {
                             add("minus"),
                         }};
                         expiresIn = 5737.28d;
-                        expiryDate = LocalDate.parse("2022-10-08");
+                        expiryDate = OffsetDateTime.parse("2022-10-08T03:33:36.166Z");
                         key = "ullam";
                         meta = new PropertyPropertyConnectionAuthMeta();;
                         name = "Peggy Kilback";
@@ -867,12 +867,12 @@ public class Application {
                         tokenUrl = "quia";
                     }};;
                     authAwsArn = "dicta";
-                    createdAt = LocalDate.parse("2021-11-22");
+                    createdAt = OffsetDateTime.parse("2021-11-22T05:00:45.946Z");
                     environment = "velit";
                     externalXref = "ratione";
                     id = "a56d6918-0ff6-40eb-9a66-58e69a4b843d";
                     isPaused = false;
-                    updatedAt = LocalDate.parse("2022-06-25");
+                    updatedAt = OffsetDateTime.parse("2022-06-25T06:33:30.748Z");
                     workspaceId = "explicabo";
                 }};;
             }};            
@@ -918,7 +918,7 @@ import com.unifiedapi.unifiedto.models.operations.PatchUnifiedUserResponse;
 import com.unifiedapi.unifiedto.models.operations.PatchUnifiedUserSecurity;
 import com.unifiedapi.unifiedto.models.shared.PropertyUserMeta;
 import com.unifiedapi.unifiedto.models.shared.User;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -929,12 +929,12 @@ public class Application {
             com.unifiedapi.unifiedto.models.shared.User req = new User("harum", "itaque",                 new String[]{{
                                 add("porro"),
                             }}) {{
-                createdAt = LocalDate.parse("2022-09-04");
+                createdAt = OffsetDateTime.parse("2022-09-04T21:09:32.258Z");
                 email = "Haleigh.Lockman1@hotmail.com";
                 environment = "nisi";
                 id = "59468ce3-04d8-4849-bf82-14c337f96bb0";
                 meta = new PropertyUserMeta();;
-                updatedAt = LocalDate.parse("2021-09-21");
+                updatedAt = OffsetDateTime.parse("2021-09-21T09:19:07.430Z");
             }};            
 
             PatchUnifiedUserResponse res = sdk.unified.patchUnifiedUser(req, new PatchUnifiedUserSecurity("omnis") {{
@@ -981,7 +981,7 @@ import com.unifiedapi.unifiedto.models.shared.PropertyConnectionAuth;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions;
 import com.unifiedapi.unifiedto.models.shared.PropertyPropertyConnectionAuthMeta;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1007,7 +1007,7 @@ public class Application {
                         add("deserunt"),
                     }};
                     expiresIn = 6213.54d;
-                    expiryDate = LocalDate.parse("2021-09-02");
+                    expiryDate = OffsetDateTime.parse("2021-09-02T17:56:52.098Z");
                     key = "rem";
                     meta = new PropertyPropertyConnectionAuthMeta();;
                     name = "Dr. Wesley Russel";
@@ -1021,12 +1021,12 @@ public class Application {
                     tokenUrl = "explicabo";
                 }};;
                 authAwsArn = "recusandae";
-                createdAt = LocalDate.parse("2022-01-15");
+                createdAt = OffsetDateTime.parse("2022-01-15T02:25:17.319Z");
                 environment = "aspernatur";
                 externalXref = "ea";
                 id = "1fb0c58d-27b5-4199-ab5b-4b50eef712b7";
                 isPaused = false;
-                updatedAt = LocalDate.parse("2022-01-03");
+                updatedAt = OffsetDateTime.parse("2022-01-03T08:18:14.300Z");
                 workspaceId = "similique";
             }};            
 
@@ -1074,7 +1074,7 @@ import com.unifiedapi.unifiedto.models.operations.PostUnifiedWebhookConnectionId
 import com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents;
 import com.unifiedapi.unifiedto.models.shared.Webhook;
 import com.unifiedapi.unifiedto.models.shared.WebhookObjectType;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1086,15 +1086,15 @@ public class Application {
                 webhook = new Webhook("tempora",                 new com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents[]{{
                                     add(PropertyWebhookEvents.UPDATED),
                                 }}, "soluta", "inventore", 4958.07d, WebhookObjectType.ATS_INTERVIEW, "sit") {{
-                    checkedAt = LocalDate.parse("2022-06-22");
-                    createdAt = LocalDate.parse("2021-04-22");
+                    checkedAt = OffsetDateTime.parse("2022-06-22T19:43:24.907Z");
+                    createdAt = OffsetDateTime.parse("2021-04-22T02:27:30.544Z");
                     environment = "necessitatibus";
                     id = "ebef897f-3dd0-4ccd-b3f1-1b3e4e080aa1";
                     includeRaw = false;
                     subscriptions = new String[]{{
                         add("ipsa"),
                     }};
-                    updatedAt = LocalDate.parse("2022-11-25");
+                    updatedAt = OffsetDateTime.parse("2022-11-25T00:50:44.199Z");
                 }};;
                 events = new com.unifiedapi.unifiedto.models.operations.PostUnifiedWebhookConnectionIdObjectEvents[]{{
                     add(PostUnifiedWebhookConnectionIdObjectEvents.CREATED),
@@ -1146,7 +1146,7 @@ import com.unifiedapi.unifiedto.models.shared.PropertyConnectionAuth;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions;
 import com.unifiedapi.unifiedto.models.shared.PropertyPropertyConnectionAuthMeta;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1173,7 +1173,7 @@ public class Application {
                             add("consequuntur"),
                         }};
                         expiresIn = 8062.61d;
-                        expiryDate = LocalDate.parse("2022-03-26");
+                        expiryDate = OffsetDateTime.parse("2022-03-26T22:18:03.848Z");
                         key = "laudantium";
                         meta = new PropertyPropertyConnectionAuthMeta();;
                         name = "Harry Stiedemann DVM";
@@ -1187,12 +1187,12 @@ public class Application {
                         tokenUrl = "incidunt";
                     }};;
                     authAwsArn = "maiores";
-                    createdAt = LocalDate.parse("2022-05-30");
+                    createdAt = OffsetDateTime.parse("2022-05-30T02:37:49.056Z");
                     environment = "eius";
                     externalXref = "iure";
                     id = "07bf375b-4428-4282-9fdb-2f69e59267c7";
                     isPaused = false;
-                    updatedAt = LocalDate.parse("2022-03-23");
+                    updatedAt = OffsetDateTime.parse("2022-03-23T05:21:51.303Z");
                     workspaceId = "optio";
                 }};;
             }};            
@@ -1238,7 +1238,7 @@ import com.unifiedapi.unifiedto.models.operations.PutUnifiedUserResponse;
 import com.unifiedapi.unifiedto.models.operations.PutUnifiedUserSecurity;
 import com.unifiedapi.unifiedto.models.shared.PropertyUserMeta;
 import com.unifiedapi.unifiedto.models.shared.User;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1249,12 +1249,12 @@ public class Application {
             com.unifiedapi.unifiedto.models.shared.User req = new User("pariatur", "sequi",                 new String[]{{
                                 add("quo"),
                             }}) {{
-                createdAt = LocalDate.parse("2022-02-21");
+                createdAt = OffsetDateTime.parse("2022-02-21T08:11:19.907Z");
                 email = "Eusebio.Lehner22@gmail.com";
                 environment = "ipsam";
                 id = "8a82c808-fe27-451a-a047-c0449e143f96";
                 meta = new PropertyUserMeta();;
-                updatedAt = LocalDate.parse("2022-06-07");
+                updatedAt = OffsetDateTime.parse("2022-06-07T18:23:59.146Z");
             }};            
 
             PutUnifiedUserResponse res = sdk.unified.putUnifiedUser(req, new PutUnifiedUserSecurity("distinctio") {{

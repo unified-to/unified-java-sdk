@@ -236,7 +236,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdAgentRequest;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdAgentResponse;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdAgentSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -250,7 +250,7 @@ public class Application {
                 order = "modi";
                 query = "enim";
                 sort = "mollitia";
-                updatedGte = LocalDate.parse("2022-07-11");
+                updatedGte = OffsetDateTime.parse("2022-07-11T16:09:38.035Z");
             }};            
 
             GetTicketingConnectionIdAgentResponse res = sdk.ticketing.getTicketingConnectionIdAgent(req, new GetTicketingConnectionIdAgentSecurity("delectus") {{
@@ -342,7 +342,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdCustomerRequest;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdCustomerResponse;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdCustomerSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -356,7 +356,7 @@ public class Application {
                 order = "earum";
                 query = "eum";
                 sort = "temporibus";
-                updatedGte = LocalDate.parse("2022-12-16");
+                updatedGte = OffsetDateTime.parse("2022-12-16T17:44:20.053Z");
             }};            
 
             GetTicketingConnectionIdCustomerResponse res = sdk.ticketing.getTicketingConnectionIdCustomer(req, new GetTicketingConnectionIdCustomerSecurity("debitis") {{
@@ -448,7 +448,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNotesTicketIdRequest;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNotesTicketIdResponse;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNotesTicketIdSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -462,7 +462,7 @@ public class Application {
                 order = "quisquam";
                 query = "vel";
                 sort = "cum";
-                updatedGte = LocalDate.parse("2022-10-05");
+                updatedGte = OffsetDateTime.parse("2022-10-05T15:02:38.158Z");
             }};            
 
             GetTicketingConnectionIdNotesTicketIdResponse res = sdk.ticketing.getTicketingConnectionIdNotesTicketId(req, new GetTicketingConnectionIdNotesTicketIdSecurity("quasi") {{
@@ -554,7 +554,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdTicketRequest;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdTicketResponse;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdTicketSecurity;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -570,7 +570,7 @@ public class Application {
                 order = "nihil";
                 query = "velit";
                 sort = "aut";
-                updatedGte = LocalDate.parse("2022-09-18");
+                updatedGte = OffsetDateTime.parse("2022-09-18T23:02:08.405Z");
             }};            
 
             GetTicketingConnectionIdTicketResponse res = sdk.ticketing.getTicketingConnectionIdTicket(req, new GetTicketingConnectionIdTicketSecurity("libero") {{
@@ -668,7 +668,7 @@ import com.unifiedapi.unifiedto.models.shared.TicketingEmail;
 import com.unifiedapi.unifiedto.models.shared.TicketingEmailType;
 import com.unifiedapi.unifiedto.models.shared.TicketingTelephone;
 import com.unifiedapi.unifiedto.models.shared.TicketingTelephoneType;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -678,7 +678,7 @@ public class Application {
 
             PatchTicketingConnectionIdAgentIdRequest req = new PatchTicketingConnectionIdAgentIdRequest("eos", "mollitia") {{
                 ticketingAgent = new TicketingAgent(                new PropertyTicketingAgentRaw();) {{
-                    createdAt = LocalDate.parse("2022-10-05");
+                    createdAt = OffsetDateTime.parse("2022-10-05T05:48:13.723Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
                         add(new TicketingEmail("voluptates") {{
                             email = "Reilly.Hickle@hotmail.com";
@@ -693,7 +693,7 @@ public class Application {
                             type = TicketingTelephoneType.WORK;
                         }}),
                     }};
-                    updatedAt = LocalDate.parse("2022-04-30");
+                    updatedAt = OffsetDateTime.parse("2022-04-30T02:52:44.803Z");
                 }};;
             }};            
 
@@ -743,7 +743,7 @@ import com.unifiedapi.unifiedto.models.shared.TicketingEmail;
 import com.unifiedapi.unifiedto.models.shared.TicketingEmailType;
 import com.unifiedapi.unifiedto.models.shared.TicketingTelephone;
 import com.unifiedapi.unifiedto.models.shared.TicketingTelephoneType;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -753,7 +753,7 @@ public class Application {
 
             PatchTicketingConnectionIdCustomerIdRequest req = new PatchTicketingConnectionIdCustomerIdRequest("quaerat", "cum") {{
                 ticketingCustomer = new TicketingCustomer(                new PropertyTicketingCustomerRaw();) {{
-                    createdAt = LocalDate.parse("2022-02-26");
+                    createdAt = OffsetDateTime.parse("2022-02-26T22:50:05.214Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
                         add(new TicketingEmail("voluptates") {{
                             email = "Kameron.Rice@hotmail.com";
@@ -771,7 +771,7 @@ public class Application {
                             type = TicketingTelephoneType.HOME;
                         }}),
                     }};
-                    updatedAt = LocalDate.parse("2022-10-31");
+                    updatedAt = OffsetDateTime.parse("2022-10-31T03:54:06.792Z");
                 }};;
             }};            
 
@@ -817,7 +817,7 @@ import com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdNote
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdNotesTicketIdIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.PropertyTicketingNoteRaw;
 import com.unifiedapi.unifiedto.models.shared.TicketingNote;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -828,7 +828,7 @@ public class Application {
             PatchTicketingConnectionIdNotesTicketIdIdRequest req = new PatchTicketingConnectionIdNotesTicketIdIdRequest("ratione", "aut", "doloribus") {{
                 ticketingNote = new TicketingNote(                new PropertyTicketingNoteRaw();) {{
                     agentId = "fugiat";
-                    createdAt = LocalDate.parse("2021-11-09");
+                    createdAt = OffsetDateTime.parse("2021-11-09T08:33:23.404Z");
                     customerId = "eum";
                     description = "commodi";
                     id = "489d7b78-673e-413a-92a6-b99249459448";
@@ -879,7 +879,7 @@ import com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdTick
 import com.unifiedapi.unifiedto.models.shared.PropertyTicketingTicketRaw;
 import com.unifiedapi.unifiedto.models.shared.TicketingTicket;
 import com.unifiedapi.unifiedto.models.shared.TicketingTicketStatus;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -890,8 +890,8 @@ public class Application {
             PatchTicketingConnectionIdTicketIdRequest req = new PatchTicketingConnectionIdTicketIdRequest("veniam", "cumque") {{
                 ticketingTicket = new TicketingTicket(                new PropertyTicketingTicketRaw();) {{
                     category = "praesentium";
-                    closedAt = LocalDate.parse("2022-10-09");
-                    createdAt = LocalDate.parse("2022-08-09");
+                    closedAt = OffsetDateTime.parse("2022-10-09T06:46:19.392Z");
+                    createdAt = OffsetDateTime.parse("2022-08-09T09:58:48.813Z");
                     customerId = "ex";
                     description = "tempore";
                     id = "86b3cdf6-415b-4044-9f9d-f13f4eedbe78";
@@ -903,7 +903,7 @@ public class Application {
                     tags = new String[]{{
                         add("molestias"),
                     }};
-                    updatedAt = LocalDate.parse("2022-08-17");
+                    updatedAt = OffsetDateTime.parse("2022-08-17T19:41:16.359Z");
                 }};;
             }};            
 
@@ -953,7 +953,7 @@ import com.unifiedapi.unifiedto.models.shared.TicketingEmail;
 import com.unifiedapi.unifiedto.models.shared.TicketingEmailType;
 import com.unifiedapi.unifiedto.models.shared.TicketingTelephone;
 import com.unifiedapi.unifiedto.models.shared.TicketingTelephoneType;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -963,7 +963,7 @@ public class Application {
 
             PostTicketingConnectionIdAgentRequest req = new PostTicketingConnectionIdAgentRequest("molestias") {{
                 ticketingAgent = new TicketingAgent(                new PropertyTicketingAgentRaw();) {{
-                    createdAt = LocalDate.parse("2022-02-07");
+                    createdAt = OffsetDateTime.parse("2022-02-07T02:19:08.180Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
                         add(new TicketingEmail("impedit") {{
                             email = "Isom85@yahoo.com";
@@ -978,7 +978,7 @@ public class Application {
                             type = TicketingTelephoneType.FAX;
                         }}),
                     }};
-                    updatedAt = LocalDate.parse("2022-02-14");
+                    updatedAt = OffsetDateTime.parse("2022-02-14T03:36:13.961Z");
                 }};;
             }};            
 
@@ -1028,7 +1028,7 @@ import com.unifiedapi.unifiedto.models.shared.TicketingEmail;
 import com.unifiedapi.unifiedto.models.shared.TicketingEmailType;
 import com.unifiedapi.unifiedto.models.shared.TicketingTelephone;
 import com.unifiedapi.unifiedto.models.shared.TicketingTelephoneType;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1038,7 +1038,7 @@ public class Application {
 
             PostTicketingConnectionIdCustomerRequest req = new PostTicketingConnectionIdCustomerRequest("labore") {{
                 ticketingCustomer = new TicketingCustomer(                new PropertyTicketingCustomerRaw();) {{
-                    createdAt = LocalDate.parse("2022-11-16");
+                    createdAt = OffsetDateTime.parse("2022-11-16T05:32:39.067Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
                         add(new TicketingEmail("ducimus") {{
                             email = "Erwin.Von@gmail.com";
@@ -1056,7 +1056,7 @@ public class Application {
                             type = TicketingTelephoneType.OTHER;
                         }}),
                     }};
-                    updatedAt = LocalDate.parse("2022-11-25");
+                    updatedAt = OffsetDateTime.parse("2022-11-25T09:02:40.870Z");
                 }};;
             }};            
 
@@ -1102,7 +1102,7 @@ import com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdNotes
 import com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdNotesTicketIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.PropertyTicketingNoteRaw;
 import com.unifiedapi.unifiedto.models.shared.TicketingNote;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1113,7 +1113,7 @@ public class Application {
             PostTicketingConnectionIdNotesTicketIdRequest req = new PostTicketingConnectionIdNotesTicketIdRequest("possimus", "dicta") {{
                 ticketingNote = new TicketingNote(                new PropertyTicketingNoteRaw();) {{
                     agentId = "delectus";
-                    createdAt = LocalDate.parse("2022-08-27");
+                    createdAt = OffsetDateTime.parse("2022-08-27T14:10:10.425Z");
                     customerId = "quis";
                     description = "quos";
                     id = "c99c722d-2bc0-4f94-887d-9caae042dd7c";
@@ -1164,7 +1164,7 @@ import com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdTicke
 import com.unifiedapi.unifiedto.models.shared.PropertyTicketingTicketRaw;
 import com.unifiedapi.unifiedto.models.shared.TicketingTicket;
 import com.unifiedapi.unifiedto.models.shared.TicketingTicketStatus;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1175,8 +1175,8 @@ public class Application {
             PostTicketingConnectionIdTicketRequest req = new PostTicketingConnectionIdTicketRequest("placeat") {{
                 ticketingTicket = new TicketingTicket(                new PropertyTicketingTicketRaw();) {{
                     category = "occaecati";
-                    closedAt = LocalDate.parse("2022-06-20");
-                    createdAt = LocalDate.parse("2021-01-04");
+                    closedAt = OffsetDateTime.parse("2022-06-20T06:30:28.991Z");
+                    createdAt = OffsetDateTime.parse("2021-01-04T15:32:56.107Z");
                     customerId = "culpa";
                     description = "beatae";
                     id = "cfe9e15d-f903-4907-b378-31983d42e54a";
@@ -1188,7 +1188,7 @@ public class Application {
                     tags = new String[]{{
                         add("quis"),
                     }};
-                    updatedAt = LocalDate.parse("2022-01-13");
+                    updatedAt = OffsetDateTime.parse("2022-01-13T15:37:23.994Z");
                 }};;
             }};            
 
@@ -1238,7 +1238,7 @@ import com.unifiedapi.unifiedto.models.shared.TicketingEmail;
 import com.unifiedapi.unifiedto.models.shared.TicketingEmailType;
 import com.unifiedapi.unifiedto.models.shared.TicketingTelephone;
 import com.unifiedapi.unifiedto.models.shared.TicketingTelephoneType;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1248,7 +1248,7 @@ public class Application {
 
             PutTicketingConnectionIdAgentIdRequest req = new PutTicketingConnectionIdAgentIdRequest("ipsam", "consequatur") {{
                 ticketingAgent = new TicketingAgent(                new PropertyTicketingAgentRaw();) {{
-                    createdAt = LocalDate.parse("2022-10-14");
+                    createdAt = OffsetDateTime.parse("2022-10-14T22:29:24.016Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
                         add(new TicketingEmail("quibusdam") {{
                             email = "Prudence46@gmail.com";
@@ -1263,7 +1263,7 @@ public class Application {
                             type = TicketingTelephoneType.WORK;
                         }}),
                     }};
-                    updatedAt = LocalDate.parse("2022-08-14");
+                    updatedAt = OffsetDateTime.parse("2022-08-14T23:27:19.674Z");
                 }};;
             }};            
 
@@ -1313,7 +1313,7 @@ import com.unifiedapi.unifiedto.models.shared.TicketingEmail;
 import com.unifiedapi.unifiedto.models.shared.TicketingEmailType;
 import com.unifiedapi.unifiedto.models.shared.TicketingTelephone;
 import com.unifiedapi.unifiedto.models.shared.TicketingTelephoneType;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1323,7 +1323,7 @@ public class Application {
 
             PutTicketingConnectionIdCustomerIdRequest req = new PutTicketingConnectionIdCustomerIdRequest("alias", "libero") {{
                 ticketingCustomer = new TicketingCustomer(                new PropertyTicketingCustomerRaw();) {{
-                    createdAt = LocalDate.parse("2020-12-14");
+                    createdAt = OffsetDateTime.parse("2020-12-14T05:42:01.818Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
                         add(new TicketingEmail("tempora") {{
                             email = "London_Ziemann84@yahoo.com";
@@ -1341,7 +1341,7 @@ public class Application {
                             type = TicketingTelephoneType.WORK;
                         }}),
                     }};
-                    updatedAt = LocalDate.parse("2022-01-13");
+                    updatedAt = OffsetDateTime.parse("2022-01-13T12:22:34.951Z");
                 }};;
             }};            
 
@@ -1387,7 +1387,7 @@ import com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdNotesT
 import com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdNotesTicketIdIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.PropertyTicketingNoteRaw;
 import com.unifiedapi.unifiedto.models.shared.TicketingNote;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1398,7 +1398,7 @@ public class Application {
             PutTicketingConnectionIdNotesTicketIdIdRequest req = new PutTicketingConnectionIdNotesTicketIdIdRequest("omnis", "ea", "ipsam") {{
                 ticketingNote = new TicketingNote(                new PropertyTicketingNoteRaw();) {{
                     agentId = "soluta";
-                    createdAt = LocalDate.parse("2022-11-20");
+                    createdAt = OffsetDateTime.parse("2022-11-20T14:46:06.247Z");
                     customerId = "beatae";
                     description = "pariatur";
                     id = "08cf88ec-9f7b-499a-950a-656ed333bb0c";
@@ -1449,7 +1449,7 @@ import com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdTicket
 import com.unifiedapi.unifiedto.models.shared.PropertyTicketingTicketRaw;
 import com.unifiedapi.unifiedto.models.shared.TicketingTicket;
 import com.unifiedapi.unifiedto.models.shared.TicketingTicketStatus;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -1460,8 +1460,8 @@ public class Application {
             PutTicketingConnectionIdTicketIdRequest req = new PutTicketingConnectionIdTicketIdRequest("est", "fuga") {{
                 ticketingTicket = new TicketingTicket(                new PropertyTicketingTicketRaw();) {{
                     category = "autem";
-                    closedAt = LocalDate.parse("2022-09-26");
-                    createdAt = LocalDate.parse("2022-10-25");
+                    closedAt = OffsetDateTime.parse("2022-09-26T02:09:07.707Z");
+                    createdAt = OffsetDateTime.parse("2022-10-25T16:38:48.040Z");
                     customerId = "officia";
                     description = "cupiditate";
                     id = "86eb7e14-ca56-4408-9150-097019a48f88";
@@ -1473,7 +1473,7 @@ public class Application {
                     tags = new String[]{{
                         add("hic"),
                     }};
-                    updatedAt = LocalDate.parse("2022-12-16");
+                    updatedAt = OffsetDateTime.parse("2022-12-16T23:15:16.093Z");
                 }};;
             }};            
 
