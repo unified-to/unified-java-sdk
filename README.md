@@ -12,7 +12,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.1.2'
+implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.1.3'
 ```
 <!-- End SDK Installation -->
 
@@ -413,12 +413,12 @@ public class Application {
 
 ### [Note](docs/sdks/note/README.md)
 
-* [deleteTicketingConnectionIdNotesTicketIdId](docs/sdks/note/README.md#deleteticketingconnectionidnotesticketidid) - Remove a note
-* [getTicketingConnectionIdNotesTicketId](docs/sdks/note/README.md#getticketingconnectionidnotesticketid) - List all notes
-* [getTicketingConnectionIdNotesTicketIdId](docs/sdks/note/README.md#getticketingconnectionidnotesticketidid) - Retrieve a note
-* [patchTicketingConnectionIdNotesTicketIdId](docs/sdks/note/README.md#patchticketingconnectionidnotesticketidid) - Update a note
-* [postTicketingConnectionIdNotesTicketId](docs/sdks/note/README.md#postticketingconnectionidnotesticketid) - Create a note
-* [putTicketingConnectionIdNotesTicketIdId](docs/sdks/note/README.md#putticketingconnectionidnotesticketidid) - Update a note
+* [deleteTicketingConnectionIdNoteTicketIdId](docs/sdks/note/README.md#deleteticketingconnectionidnoteticketidid) - Remove a note
+* [getTicketingConnectionIdNoteTicketId](docs/sdks/note/README.md#getticketingconnectionidnoteticketid) - List all notes
+* [getTicketingConnectionIdNoteTicketIdId](docs/sdks/note/README.md#getticketingconnectionidnoteticketidid) - Retrieve a note
+* [patchTicketingConnectionIdNoteTicketIdId](docs/sdks/note/README.md#patchticketingconnectionidnoteticketidid) - Update a note
+* [postTicketingConnectionIdNoteTicketId](docs/sdks/note/README.md#postticketingconnectionidnoteticketid) - Create a note
+* [putTicketingConnectionIdNoteTicketIdId](docs/sdks/note/README.md#putticketingconnectionidnoteticketidid) - Update a note
 
 ### [Passthrough](docs/sdks/passthrough/README.md)
 
@@ -463,27 +463,27 @@ public class Application {
 
 * [deleteTicketingConnectionIdAgentId](docs/sdks/ticketing/README.md#deleteticketingconnectionidagentid) - Remove a agent
 * [deleteTicketingConnectionIdCustomerId](docs/sdks/ticketing/README.md#deleteticketingconnectionidcustomerid) - Remove a customer
-* [deleteTicketingConnectionIdNotesTicketIdId](docs/sdks/ticketing/README.md#deleteticketingconnectionidnotesticketidid) - Remove a note
+* [deleteTicketingConnectionIdNoteTicketIdId](docs/sdks/ticketing/README.md#deleteticketingconnectionidnoteticketidid) - Remove a note
 * [deleteTicketingConnectionIdTicketId](docs/sdks/ticketing/README.md#deleteticketingconnectionidticketid) - Remove a ticket
 * [getTicketingConnectionIdAgent](docs/sdks/ticketing/README.md#getticketingconnectionidagent) - List all agents
 * [getTicketingConnectionIdAgentId](docs/sdks/ticketing/README.md#getticketingconnectionidagentid) - Retrieve a agent
 * [getTicketingConnectionIdCustomer](docs/sdks/ticketing/README.md#getticketingconnectionidcustomer) - List all customers
 * [getTicketingConnectionIdCustomerId](docs/sdks/ticketing/README.md#getticketingconnectionidcustomerid) - Retrieve a customer
-* [getTicketingConnectionIdNotesTicketId](docs/sdks/ticketing/README.md#getticketingconnectionidnotesticketid) - List all notes
-* [getTicketingConnectionIdNotesTicketIdId](docs/sdks/ticketing/README.md#getticketingconnectionidnotesticketidid) - Retrieve a note
+* [getTicketingConnectionIdNoteTicketId](docs/sdks/ticketing/README.md#getticketingconnectionidnoteticketid) - List all notes
+* [getTicketingConnectionIdNoteTicketIdId](docs/sdks/ticketing/README.md#getticketingconnectionidnoteticketidid) - Retrieve a note
 * [getTicketingConnectionIdTicket](docs/sdks/ticketing/README.md#getticketingconnectionidticket) - List all tickets
 * [getTicketingConnectionIdTicketId](docs/sdks/ticketing/README.md#getticketingconnectionidticketid) - Retrieve a ticket
 * [patchTicketingConnectionIdAgentId](docs/sdks/ticketing/README.md#patchticketingconnectionidagentid) - Update a agent
 * [patchTicketingConnectionIdCustomerId](docs/sdks/ticketing/README.md#patchticketingconnectionidcustomerid) - Update a customer
-* [patchTicketingConnectionIdNotesTicketIdId](docs/sdks/ticketing/README.md#patchticketingconnectionidnotesticketidid) - Update a note
+* [patchTicketingConnectionIdNoteTicketIdId](docs/sdks/ticketing/README.md#patchticketingconnectionidnoteticketidid) - Update a note
 * [patchTicketingConnectionIdTicketId](docs/sdks/ticketing/README.md#patchticketingconnectionidticketid) - Update a ticket
 * [postTicketingConnectionIdAgent](docs/sdks/ticketing/README.md#postticketingconnectionidagent) - Create a agent
 * [postTicketingConnectionIdCustomer](docs/sdks/ticketing/README.md#postticketingconnectionidcustomer) - Create a customer
-* [postTicketingConnectionIdNotesTicketId](docs/sdks/ticketing/README.md#postticketingconnectionidnotesticketid) - Create a note
+* [postTicketingConnectionIdNoteTicketId](docs/sdks/ticketing/README.md#postticketingconnectionidnoteticketid) - Create a note
 * [postTicketingConnectionIdTicket](docs/sdks/ticketing/README.md#postticketingconnectionidticket) - Create a ticket
 * [putTicketingConnectionIdAgentId](docs/sdks/ticketing/README.md#putticketingconnectionidagentid) - Update a agent
 * [putTicketingConnectionIdCustomerId](docs/sdks/ticketing/README.md#putticketingconnectionidcustomerid) - Update a customer
-* [putTicketingConnectionIdNotesTicketIdId](docs/sdks/ticketing/README.md#putticketingconnectionidnotesticketidid) - Update a note
+* [putTicketingConnectionIdNoteTicketIdId](docs/sdks/ticketing/README.md#putticketingconnectionidnoteticketidid) - Update a note
 * [putTicketingConnectionIdTicketId](docs/sdks/ticketing/README.md#putticketingconnectionidticketid) - Update a ticket
 
 ### [Uc](docs/sdks/uc/README.md)

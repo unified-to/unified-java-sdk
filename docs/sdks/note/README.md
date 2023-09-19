@@ -2,14 +2,14 @@
 
 ### Available Operations
 
-* [deleteTicketingConnectionIdNotesTicketIdId](#deleteticketingconnectionidnotesticketidid) - Remove a note
-* [getTicketingConnectionIdNotesTicketId](#getticketingconnectionidnotesticketid) - List all notes
-* [getTicketingConnectionIdNotesTicketIdId](#getticketingconnectionidnotesticketidid) - Retrieve a note
-* [patchTicketingConnectionIdNotesTicketIdId](#patchticketingconnectionidnotesticketidid) - Update a note
-* [postTicketingConnectionIdNotesTicketId](#postticketingconnectionidnotesticketid) - Create a note
-* [putTicketingConnectionIdNotesTicketIdId](#putticketingconnectionidnotesticketidid) - Update a note
+* [deleteTicketingConnectionIdNoteTicketIdId](#deleteticketingconnectionidnoteticketidid) - Remove a note
+* [getTicketingConnectionIdNoteTicketId](#getticketingconnectionidnoteticketid) - List all notes
+* [getTicketingConnectionIdNoteTicketIdId](#getticketingconnectionidnoteticketidid) - Retrieve a note
+* [patchTicketingConnectionIdNoteTicketIdId](#patchticketingconnectionidnoteticketidid) - Update a note
+* [postTicketingConnectionIdNoteTicketId](#postticketingconnectionidnoteticketid) - Create a note
+* [putTicketingConnectionIdNoteTicketIdId](#putticketingconnectionidnoteticketidid) - Update a note
 
-## deleteTicketingConnectionIdNotesTicketIdId
+## deleteTicketingConnectionIdNoteTicketIdId
 
 Remove a note
 
@@ -19,9 +19,9 @@ Remove a note
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdNotesTicketIdIdRequest;
-import com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdNotesTicketIdIdResponse;
-import com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdNotesTicketIdIdSecurity;
+import com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdNoteTicketIdIdRequest;
+import com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdNoteTicketIdIdResponse;
+import com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdNoteTicketIdIdSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -29,9 +29,9 @@ public class Application {
             UnifiedTo sdk = UnifiedTo.builder()
                 .build();
 
-            DeleteTicketingConnectionIdNotesTicketIdIdRequest req = new DeleteTicketingConnectionIdNotesTicketIdIdRequest("nisi", "quis", "perferendis");            
+            DeleteTicketingConnectionIdNoteTicketIdIdRequest req = new DeleteTicketingConnectionIdNoteTicketIdIdRequest("nisi", "quis", "perferendis");            
 
-            DeleteTicketingConnectionIdNotesTicketIdIdResponse res = sdk.note.deleteTicketingConnectionIdNotesTicketIdId(req, new DeleteTicketingConnectionIdNotesTicketIdIdSecurity("itaque") {{
+            DeleteTicketingConnectionIdNoteTicketIdIdResponse res = sdk.note.deleteTicketingConnectionIdNoteTicketIdId(req, new DeleteTicketingConnectionIdNoteTicketIdIdSecurity("itaque") {{
                 jwt = "";
             }});
 
@@ -47,18 +47,18 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdNotesTicketIdIdRequest](../../models/operations/DeleteTicketingConnectionIdNotesTicketIdIdRequest.md)   | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdNotesTicketIdIdSecurity](../../models/operations/DeleteTicketingConnectionIdNotesTicketIdIdSecurity.md) | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
+| Parameter                                                                                                                                                                    | Type                                                                                                                                                                         | Required                                                                                                                                                                     | Description                                                                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdNoteTicketIdIdRequest](../../models/operations/DeleteTicketingConnectionIdNoteTicketIdIdRequest.md)   | :heavy_check_mark:                                                                                                                                                           | The request object to use for the request.                                                                                                                                   |
+| `security`                                                                                                                                                                   | [com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdNoteTicketIdIdSecurity](../../models/operations/DeleteTicketingConnectionIdNoteTicketIdIdSecurity.md) | :heavy_check_mark:                                                                                                                                                           | The security requirements to use for the request.                                                                                                                            |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdNotesTicketIdIdResponse](../../models/operations/DeleteTicketingConnectionIdNotesTicketIdIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdNoteTicketIdIdResponse](../../models/operations/DeleteTicketingConnectionIdNoteTicketIdIdResponse.md)**
 
 
-## getTicketingConnectionIdNotesTicketId
+## getTicketingConnectionIdNoteTicketId
 
 List all notes
 
@@ -68,9 +68,9 @@ List all notes
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNotesTicketIdRequest;
-import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNotesTicketIdResponse;
-import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNotesTicketIdSecurity;
+import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNoteTicketIdRequest;
+import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNoteTicketIdResponse;
+import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNoteTicketIdSecurity;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -79,7 +79,7 @@ public class Application {
             UnifiedTo sdk = UnifiedTo.builder()
                 .build();
 
-            GetTicketingConnectionIdNotesTicketIdRequest req = new GetTicketingConnectionIdNotesTicketIdRequest("facere", "asperiores") {{
+            GetTicketingConnectionIdNoteTicketIdRequest req = new GetTicketingConnectionIdNoteTicketIdRequest("facere", "asperiores") {{
                 limit = 1869.67d;
                 offset = 1794.45d;
                 order = "laborum";
@@ -88,7 +88,7 @@ public class Application {
                 updatedGte = OffsetDateTime.parse("2022-08-05T18:58:20.416Z");
             }};            
 
-            GetTicketingConnectionIdNotesTicketIdResponse res = sdk.note.getTicketingConnectionIdNotesTicketId(req, new GetTicketingConnectionIdNotesTicketIdSecurity("aperiam") {{
+            GetTicketingConnectionIdNoteTicketIdResponse res = sdk.note.getTicketingConnectionIdNoteTicketId(req, new GetTicketingConnectionIdNoteTicketIdSecurity("aperiam") {{
                 jwt = "";
             }});
 
@@ -104,18 +104,18 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                            | Type                                                                                                                                                                 | Required                                                                                                                                                             | Description                                                                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNotesTicketIdRequest](../../models/operations/GetTicketingConnectionIdNotesTicketIdRequest.md)   | :heavy_check_mark:                                                                                                                                                   | The request object to use for the request.                                                                                                                           |
-| `security`                                                                                                                                                           | [com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNotesTicketIdSecurity](../../models/operations/GetTicketingConnectionIdNotesTicketIdSecurity.md) | :heavy_check_mark:                                                                                                                                                   | The security requirements to use for the request.                                                                                                                    |
+| Parameter                                                                                                                                                          | Type                                                                                                                                                               | Required                                                                                                                                                           | Description                                                                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNoteTicketIdRequest](../../models/operations/GetTicketingConnectionIdNoteTicketIdRequest.md)   | :heavy_check_mark:                                                                                                                                                 | The request object to use for the request.                                                                                                                         |
+| `security`                                                                                                                                                         | [com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNoteTicketIdSecurity](../../models/operations/GetTicketingConnectionIdNoteTicketIdSecurity.md) | :heavy_check_mark:                                                                                                                                                 | The security requirements to use for the request.                                                                                                                  |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNotesTicketIdResponse](../../models/operations/GetTicketingConnectionIdNotesTicketIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNoteTicketIdResponse](../../models/operations/GetTicketingConnectionIdNoteTicketIdResponse.md)**
 
 
-## getTicketingConnectionIdNotesTicketIdId
+## getTicketingConnectionIdNoteTicketIdId
 
 Retrieve a note
 
@@ -125,9 +125,9 @@ Retrieve a note
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNotesTicketIdIdRequest;
-import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNotesTicketIdIdResponse;
-import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNotesTicketIdIdSecurity;
+import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNoteTicketIdIdRequest;
+import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNoteTicketIdIdResponse;
+import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNoteTicketIdIdSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -135,131 +135,9 @@ public class Application {
             UnifiedTo sdk = UnifiedTo.builder()
                 .build();
 
-            GetTicketingConnectionIdNotesTicketIdIdRequest req = new GetTicketingConnectionIdNotesTicketIdIdRequest("itaque", "quo", "perspiciatis");            
+            GetTicketingConnectionIdNoteTicketIdIdRequest req = new GetTicketingConnectionIdNoteTicketIdIdRequest("itaque", "quo", "perspiciatis");            
 
-            GetTicketingConnectionIdNotesTicketIdIdResponse res = sdk.note.getTicketingConnectionIdNotesTicketIdId(req, new GetTicketingConnectionIdNotesTicketIdIdSecurity("accusantium") {{
-                jwt = "";
-            }});
-
-            if (res.ticketingNote != null) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                                                | Type                                                                                                                                                                     | Required                                                                                                                                                                 | Description                                                                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNotesTicketIdIdRequest](../../models/operations/GetTicketingConnectionIdNotesTicketIdIdRequest.md)   | :heavy_check_mark:                                                                                                                                                       | The request object to use for the request.                                                                                                                               |
-| `security`                                                                                                                                                               | [com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNotesTicketIdIdSecurity](../../models/operations/GetTicketingConnectionIdNotesTicketIdIdSecurity.md) | :heavy_check_mark:                                                                                                                                                       | The security requirements to use for the request.                                                                                                                        |
-
-
-### Response
-
-**[com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNotesTicketIdIdResponse](../../models/operations/GetTicketingConnectionIdNotesTicketIdIdResponse.md)**
-
-
-## patchTicketingConnectionIdNotesTicketIdId
-
-Update a note
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdNotesTicketIdIdRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdNotesTicketIdIdResponse;
-import com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdNotesTicketIdIdSecurity;
-import com.unifiedapi.unifiedto.models.shared.PropertyTicketingNoteRaw;
-import com.unifiedapi.unifiedto.models.shared.TicketingNote;
-import java.time.OffsetDateTime;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .build();
-
-            PatchTicketingConnectionIdNotesTicketIdIdRequest req = new PatchTicketingConnectionIdNotesTicketIdIdRequest("debitis", "animi", "aliquam") {{
-                ticketingNote = new TicketingNote(                new PropertyTicketingNoteRaw();) {{
-                    agentId = "quasi";
-                    createdAt = OffsetDateTime.parse("2022-09-13T00:32:30.813Z");
-                    customerId = "hic";
-                    description = "labore";
-                    id = "65e85156-fff7-43fd-b54f-dd5ea9543398";
-                    updatedAt = "illum";
-                }};;
-            }};            
-
-            PatchTicketingConnectionIdNotesTicketIdIdResponse res = sdk.note.patchTicketingConnectionIdNotesTicketIdId(req, new PatchTicketingConnectionIdNotesTicketIdIdSecurity("laborum") {{
-                jwt = "";
-            }});
-
-            if (res.ticketingNote != null) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                                                    | Type                                                                                                                                                                         | Required                                                                                                                                                                     | Description                                                                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdNotesTicketIdIdRequest](../../models/operations/PatchTicketingConnectionIdNotesTicketIdIdRequest.md)   | :heavy_check_mark:                                                                                                                                                           | The request object to use for the request.                                                                                                                                   |
-| `security`                                                                                                                                                                   | [com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdNotesTicketIdIdSecurity](../../models/operations/PatchTicketingConnectionIdNotesTicketIdIdSecurity.md) | :heavy_check_mark:                                                                                                                                                           | The security requirements to use for the request.                                                                                                                            |
-
-
-### Response
-
-**[com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdNotesTicketIdIdResponse](../../models/operations/PatchTicketingConnectionIdNotesTicketIdIdResponse.md)**
-
-
-## postTicketingConnectionIdNotesTicketId
-
-Create a note
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdNotesTicketIdRequest;
-import com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdNotesTicketIdResponse;
-import com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdNotesTicketIdSecurity;
-import com.unifiedapi.unifiedto.models.shared.PropertyTicketingNoteRaw;
-import com.unifiedapi.unifiedto.models.shared.TicketingNote;
-import java.time.OffsetDateTime;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .build();
-
-            PostTicketingConnectionIdNotesTicketIdRequest req = new PostTicketingConnectionIdNotesTicketIdRequest("sapiente", "soluta") {{
-                ticketingNote = new TicketingNote(                new PropertyTicketingNoteRaw();) {{
-                    agentId = "eius";
-                    createdAt = OffsetDateTime.parse("2022-04-27T23:12:45.343Z");
-                    customerId = "deleniti";
-                    description = "assumenda";
-                    id = "63388e4d-8039-4ea5-b9b1-8a244fd61903";
-                    updatedAt = "iste";
-                }};;
-            }};            
-
-            PostTicketingConnectionIdNotesTicketIdResponse res = sdk.note.postTicketingConnectionIdNotesTicketId(req, new PostTicketingConnectionIdNotesTicketIdSecurity("nulla") {{
+            GetTicketingConnectionIdNoteTicketIdIdResponse res = sdk.note.getTicketingConnectionIdNoteTicketIdId(req, new GetTicketingConnectionIdNoteTicketIdIdSecurity("accusantium") {{
                 jwt = "";
             }});
 
@@ -277,16 +155,16 @@ public class Application {
 
 | Parameter                                                                                                                                                              | Type                                                                                                                                                                   | Required                                                                                                                                                               | Description                                                                                                                                                            |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdNotesTicketIdRequest](../../models/operations/PostTicketingConnectionIdNotesTicketIdRequest.md)   | :heavy_check_mark:                                                                                                                                                     | The request object to use for the request.                                                                                                                             |
-| `security`                                                                                                                                                             | [com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdNotesTicketIdSecurity](../../models/operations/PostTicketingConnectionIdNotesTicketIdSecurity.md) | :heavy_check_mark:                                                                                                                                                     | The security requirements to use for the request.                                                                                                                      |
+| `request`                                                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNoteTicketIdIdRequest](../../models/operations/GetTicketingConnectionIdNoteTicketIdIdRequest.md)   | :heavy_check_mark:                                                                                                                                                     | The request object to use for the request.                                                                                                                             |
+| `security`                                                                                                                                                             | [com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNoteTicketIdIdSecurity](../../models/operations/GetTicketingConnectionIdNoteTicketIdIdSecurity.md) | :heavy_check_mark:                                                                                                                                                     | The security requirements to use for the request.                                                                                                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdNotesTicketIdResponse](../../models/operations/PostTicketingConnectionIdNotesTicketIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdNoteTicketIdIdResponse](../../models/operations/GetTicketingConnectionIdNoteTicketIdIdResponse.md)**
 
 
-## putTicketingConnectionIdNotesTicketIdId
+## patchTicketingConnectionIdNoteTicketIdId
 
 Update a note
 
@@ -296,9 +174,9 @@ Update a note
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdNotesTicketIdIdRequest;
-import com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdNotesTicketIdIdResponse;
-import com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdNotesTicketIdIdSecurity;
+import com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdNoteTicketIdIdRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdNoteTicketIdIdResponse;
+import com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdNoteTicketIdIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.PropertyTicketingNoteRaw;
 import com.unifiedapi.unifiedto.models.shared.TicketingNote;
 import java.time.OffsetDateTime;
@@ -309,18 +187,18 @@ public class Application {
             UnifiedTo sdk = UnifiedTo.builder()
                 .build();
 
-            PutTicketingConnectionIdNotesTicketIdIdRequest req = new PutTicketingConnectionIdNotesTicketIdIdRequest("dolorum", "maxime", "assumenda") {{
+            PatchTicketingConnectionIdNoteTicketIdIdRequest req = new PatchTicketingConnectionIdNoteTicketIdIdRequest("debitis", "animi", "aliquam") {{
                 ticketingNote = new TicketingNote(                new PropertyTicketingNoteRaw();) {{
-                    agentId = "velit";
-                    createdAt = OffsetDateTime.parse("2021-03-06T22:25:48.428Z");
-                    customerId = "quibusdam";
-                    description = "doloremque";
-                    id = "dc671dc7-f1e3-4af1-9920-c90d1b4901f2";
-                    updatedAt = "harum";
+                    agentId = "quasi";
+                    createdAt = OffsetDateTime.parse("2022-09-13T00:32:30.813Z");
+                    customerId = "hic";
+                    description = "labore";
+                    id = "65e85156-fff7-43fd-b54f-dd5ea9543398";
+                    updatedAt = "illum";
                 }};;
             }};            
 
-            PutTicketingConnectionIdNotesTicketIdIdResponse res = sdk.note.putTicketingConnectionIdNotesTicketIdId(req, new PutTicketingConnectionIdNotesTicketIdIdSecurity("quibusdam") {{
+            PatchTicketingConnectionIdNoteTicketIdIdResponse res = sdk.note.patchTicketingConnectionIdNoteTicketIdId(req, new PatchTicketingConnectionIdNoteTicketIdIdSecurity("laborum") {{
                 jwt = "";
             }});
 
@@ -336,13 +214,135 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                                | Type                                                                                                                                                                     | Required                                                                                                                                                                 | Description                                                                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdNotesTicketIdIdRequest](../../models/operations/PutTicketingConnectionIdNotesTicketIdIdRequest.md)   | :heavy_check_mark:                                                                                                                                                       | The request object to use for the request.                                                                                                                               |
-| `security`                                                                                                                                                               | [com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdNotesTicketIdIdSecurity](../../models/operations/PutTicketingConnectionIdNotesTicketIdIdSecurity.md) | :heavy_check_mark:                                                                                                                                                       | The security requirements to use for the request.                                                                                                                        |
+| Parameter                                                                                                                                                                  | Type                                                                                                                                                                       | Required                                                                                                                                                                   | Description                                                                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdNoteTicketIdIdRequest](../../models/operations/PatchTicketingConnectionIdNoteTicketIdIdRequest.md)   | :heavy_check_mark:                                                                                                                                                         | The request object to use for the request.                                                                                                                                 |
+| `security`                                                                                                                                                                 | [com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdNoteTicketIdIdSecurity](../../models/operations/PatchTicketingConnectionIdNoteTicketIdIdSecurity.md) | :heavy_check_mark:                                                                                                                                                         | The security requirements to use for the request.                                                                                                                          |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdNotesTicketIdIdResponse](../../models/operations/PutTicketingConnectionIdNotesTicketIdIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdNoteTicketIdIdResponse](../../models/operations/PatchTicketingConnectionIdNoteTicketIdIdResponse.md)**
+
+
+## postTicketingConnectionIdNoteTicketId
+
+Create a note
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdNoteTicketIdRequest;
+import com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdNoteTicketIdResponse;
+import com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdNoteTicketIdSecurity;
+import com.unifiedapi.unifiedto.models.shared.PropertyTicketingNoteRaw;
+import com.unifiedapi.unifiedto.models.shared.TicketingNote;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .build();
+
+            PostTicketingConnectionIdNoteTicketIdRequest req = new PostTicketingConnectionIdNoteTicketIdRequest("sapiente", "soluta") {{
+                ticketingNote = new TicketingNote(                new PropertyTicketingNoteRaw();) {{
+                    agentId = "eius";
+                    createdAt = OffsetDateTime.parse("2022-04-27T23:12:45.343Z");
+                    customerId = "deleniti";
+                    description = "assumenda";
+                    id = "63388e4d-8039-4ea5-b9b1-8a244fd61903";
+                    updatedAt = "iste";
+                }};;
+            }};            
+
+            PostTicketingConnectionIdNoteTicketIdResponse res = sdk.note.postTicketingConnectionIdNoteTicketId(req, new PostTicketingConnectionIdNoteTicketIdSecurity("nulla") {{
+                jwt = "";
+            }});
+
+            if (res.ticketingNote != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                            | Type                                                                                                                                                                 | Required                                                                                                                                                             | Description                                                                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdNoteTicketIdRequest](../../models/operations/PostTicketingConnectionIdNoteTicketIdRequest.md)   | :heavy_check_mark:                                                                                                                                                   | The request object to use for the request.                                                                                                                           |
+| `security`                                                                                                                                                           | [com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdNoteTicketIdSecurity](../../models/operations/PostTicketingConnectionIdNoteTicketIdSecurity.md) | :heavy_check_mark:                                                                                                                                                   | The security requirements to use for the request.                                                                                                                    |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdNoteTicketIdResponse](../../models/operations/PostTicketingConnectionIdNoteTicketIdResponse.md)**
+
+
+## putTicketingConnectionIdNoteTicketIdId
+
+Update a note
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdNoteTicketIdIdRequest;
+import com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdNoteTicketIdIdResponse;
+import com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdNoteTicketIdIdSecurity;
+import com.unifiedapi.unifiedto.models.shared.PropertyTicketingNoteRaw;
+import com.unifiedapi.unifiedto.models.shared.TicketingNote;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .build();
+
+            PutTicketingConnectionIdNoteTicketIdIdRequest req = new PutTicketingConnectionIdNoteTicketIdIdRequest("dolorum", "maxime", "assumenda") {{
+                ticketingNote = new TicketingNote(                new PropertyTicketingNoteRaw();) {{
+                    agentId = "velit";
+                    createdAt = OffsetDateTime.parse("2021-03-06T22:25:48.428Z");
+                    customerId = "quibusdam";
+                    description = "doloremque";
+                    id = "dc671dc7-f1e3-4af1-9920-c90d1b4901f2";
+                    updatedAt = "harum";
+                }};;
+            }};            
+
+            PutTicketingConnectionIdNoteTicketIdIdResponse res = sdk.note.putTicketingConnectionIdNoteTicketIdId(req, new PutTicketingConnectionIdNoteTicketIdIdSecurity("quibusdam") {{
+                jwt = "";
+            }});
+
+            if (res.ticketingNote != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                              | Type                                                                                                                                                                   | Required                                                                                                                                                               | Description                                                                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdNoteTicketIdIdRequest](../../models/operations/PutTicketingConnectionIdNoteTicketIdIdRequest.md)   | :heavy_check_mark:                                                                                                                                                     | The request object to use for the request.                                                                                                                             |
+| `security`                                                                                                                                                             | [com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdNoteTicketIdIdSecurity](../../models/operations/PutTicketingConnectionIdNoteTicketIdIdSecurity.md) | :heavy_check_mark:                                                                                                                                                     | The security requirements to use for the request.                                                                                                                      |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdNoteTicketIdIdResponse](../../models/operations/PutTicketingConnectionIdNoteTicketIdIdResponse.md)**
 
