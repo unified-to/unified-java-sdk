@@ -25,11 +25,10 @@ public class Team {
     /**
      * Remove a team
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdTeamIdResponse deleteCrmConnectionIdTeamId(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdTeamIdRequest request, com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdTeamIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdTeamIdResponse deleteCrmConnectionIdTeamId(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdTeamIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdTeamIdRequest.class, baseUrl, "/crm/{connection_id}/team/{id}", request, null);
         
@@ -40,7 +39,7 @@ public class Team {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -64,11 +63,10 @@ public class Team {
     /**
      * List all teams
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdTeamResponse getCrmConnectionIdTeam(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdTeamRequest request, com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdTeamSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdTeamResponse getCrmConnectionIdTeam(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdTeamRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdTeamRequest.class, baseUrl, "/crm/{connection_id}/team", request, null);
         
@@ -85,7 +83,7 @@ public class Team {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -110,11 +108,10 @@ public class Team {
     /**
      * Retrieve a team
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdTeamIdResponse getCrmConnectionIdTeamId(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdTeamIdRequest request, com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdTeamIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdTeamIdResponse getCrmConnectionIdTeamId(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdTeamIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdTeamIdRequest.class, baseUrl, "/crm/{connection_id}/team/{id}", request, null);
         
@@ -125,7 +122,7 @@ public class Team {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -150,11 +147,10 @@ public class Team {
     /**
      * Update a team
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdTeamIdResponse patchCrmConnectionIdTeamId(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdTeamIdRequest request, com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdTeamIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdTeamIdResponse patchCrmConnectionIdTeamId(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdTeamIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdTeamIdRequest.class, baseUrl, "/crm/{connection_id}/team/{id}", request, null);
         
@@ -167,7 +163,7 @@ public class Team {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -192,11 +188,10 @@ public class Team {
     /**
      * Create a team
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdTeamResponse postCrmConnectionIdTeam(com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdTeamRequest request, com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdTeamSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdTeamResponse postCrmConnectionIdTeam(com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdTeamRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdTeamRequest.class, baseUrl, "/crm/{connection_id}/team", request, null);
         
@@ -209,7 +204,7 @@ public class Team {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -234,11 +229,10 @@ public class Team {
     /**
      * Update a team
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdTeamIdResponse putCrmConnectionIdTeamId(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdTeamIdRequest request, com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdTeamIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdTeamIdResponse putCrmConnectionIdTeamId(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdTeamIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdTeamIdRequest.class, baseUrl, "/crm/{connection_id}/team/{id}", request, null);
         
@@ -251,7 +245,7 @@ public class Team {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

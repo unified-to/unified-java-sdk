@@ -25,11 +25,10 @@ public class Candidate {
     /**
      * Remove a candidate
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdCandidateIdResponse deleteAtsConnectionIdCandidateId(com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdCandidateIdRequest request, com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdCandidateIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdCandidateIdResponse deleteAtsConnectionIdCandidateId(com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdCandidateIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdCandidateIdRequest.class, baseUrl, "/ats/{connection_id}/candidate/{id}", request, null);
         
@@ -40,7 +39,7 @@ public class Candidate {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -64,11 +63,10 @@ public class Candidate {
     /**
      * List all candidates
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateResponse getAtsConnectionIdCandidate(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateRequest request, com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateResponse getAtsConnectionIdCandidate(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateRequest.class, baseUrl, "/ats/{connection_id}/candidate", request, null);
         
@@ -85,7 +83,7 @@ public class Candidate {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -110,11 +108,10 @@ public class Candidate {
     /**
      * Retrieve a candidate
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateIdResponse getAtsConnectionIdCandidateId(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateIdRequest request, com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateIdResponse getAtsConnectionIdCandidateId(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateIdRequest.class, baseUrl, "/ats/{connection_id}/candidate/{id}", request, null);
         
@@ -125,7 +122,7 @@ public class Candidate {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -150,11 +147,10 @@ public class Candidate {
     /**
      * Update a candidate
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdCandidateIdResponse patchAtsConnectionIdCandidateId(com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdCandidateIdRequest request, com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdCandidateIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdCandidateIdResponse patchAtsConnectionIdCandidateId(com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdCandidateIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdCandidateIdRequest.class, baseUrl, "/ats/{connection_id}/candidate/{id}", request, null);
         
@@ -167,7 +163,7 @@ public class Candidate {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -192,11 +188,10 @@ public class Candidate {
     /**
      * Create a candidate
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdCandidateResponse postAtsConnectionIdCandidate(com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdCandidateRequest request, com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdCandidateSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdCandidateResponse postAtsConnectionIdCandidate(com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdCandidateRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdCandidateRequest.class, baseUrl, "/ats/{connection_id}/candidate", request, null);
         
@@ -209,7 +204,7 @@ public class Candidate {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -234,11 +229,10 @@ public class Candidate {
     /**
      * Update a candidate
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdCandidateIdResponse putAtsConnectionIdCandidateId(com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdCandidateIdRequest request, com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdCandidateIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdCandidateIdResponse putAtsConnectionIdCandidateId(com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdCandidateIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdCandidateIdRequest.class, baseUrl, "/ats/{connection_id}/candidate/{id}", request, null);
         
@@ -251,7 +245,7 @@ public class Candidate {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

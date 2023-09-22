@@ -22,19 +22,20 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdAgentIdRequest;
 import com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdAgentIdResponse;
-import com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdAgentIdSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("corrupti") {{
+                    jwt = "";
+                }})
                 .build();
 
-            DeleteTicketingConnectionIdAgentIdRequest req = new DeleteTicketingConnectionIdAgentIdRequest("quibusdam", "unde");            
+            DeleteTicketingConnectionIdAgentIdRequest req = new DeleteTicketingConnectionIdAgentIdRequest("illum", "vel");            
 
-            DeleteTicketingConnectionIdAgentIdResponse res = sdk.agent.deleteTicketingConnectionIdAgentId(req, new DeleteTicketingConnectionIdAgentIdSecurity("nulla") {{
-                jwt = "";
-            }});
+            DeleteTicketingConnectionIdAgentIdResponse res = sdk.agent.deleteTicketingConnectionIdAgentId(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -48,10 +49,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                      | Type                                                                                                                                                           | Required                                                                                                                                                       | Description                                                                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdAgentIdRequest](../../models/operations/DeleteTicketingConnectionIdAgentIdRequest.md)   | :heavy_check_mark:                                                                                                                                             | The request object to use for the request.                                                                                                                     |
-| `security`                                                                                                                                                     | [com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdAgentIdSecurity](../../models/operations/DeleteTicketingConnectionIdAgentIdSecurity.md) | :heavy_check_mark:                                                                                                                                             | The security requirements to use for the request.                                                                                                              |
+| Parameter                                                                                                                                                    | Type                                                                                                                                                         | Required                                                                                                                                                     | Description                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdAgentIdRequest](../../models/operations/DeleteTicketingConnectionIdAgentIdRequest.md) | :heavy_check_mark:                                                                                                                                           | The request object to use for the request.                                                                                                                   |
 
 
 ### Response
@@ -71,27 +71,28 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdAgentRequest;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdAgentResponse;
-import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdAgentSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("error") {{
+                    jwt = "";
+                }})
                 .build();
 
-            GetTicketingConnectionIdAgentRequest req = new GetTicketingConnectionIdAgentRequest("corrupti") {{
-                limit = 8472.52d;
-                offset = 4236.55d;
-                order = "error";
-                query = "deserunt";
-                sort = "suscipit";
-                updatedGte = OffsetDateTime.parse("2022-09-14T09:35:47.986Z");
+            GetTicketingConnectionIdAgentRequest req = new GetTicketingConnectionIdAgentRequest("deserunt") {{
+                limit = 3843.82d;
+                offset = 4375.87d;
+                order = "magnam";
+                query = "debitis";
+                sort = "ipsa";
+                updatedGte = OffsetDateTime.parse("2022-03-08T10:35:32.561Z");
             }};            
 
-            GetTicketingConnectionIdAgentResponse res = sdk.agent.getTicketingConnectionIdAgent(req, new GetTicketingConnectionIdAgentSecurity("debitis") {{
-                jwt = "";
-            }});
+            GetTicketingConnectionIdAgentResponse res = sdk.agent.getTicketingConnectionIdAgent(req);
 
             if (res.ticketingAgents != null) {
                 // handle response
@@ -105,10 +106,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdAgentRequest](../../models/operations/GetTicketingConnectionIdAgentRequest.md)   | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
-| `security`                                                                                                                                           | [com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdAgentSecurity](../../models/operations/GetTicketingConnectionIdAgentSecurity.md) | :heavy_check_mark:                                                                                                                                   | The security requirements to use for the request.                                                                                                    |
+| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdAgentRequest](../../models/operations/GetTicketingConnectionIdAgentRequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
 
 
 ### Response
@@ -128,19 +128,20 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdAgentIdRequest;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdAgentIdResponse;
-import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdAgentIdSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("suscipit") {{
+                    jwt = "";
+                }})
                 .build();
 
-            GetTicketingConnectionIdAgentIdRequest req = new GetTicketingConnectionIdAgentIdRequest("ipsa", "delectus");            
+            GetTicketingConnectionIdAgentIdRequest req = new GetTicketingConnectionIdAgentIdRequest("molestiae", "minus");            
 
-            GetTicketingConnectionIdAgentIdResponse res = sdk.agent.getTicketingConnectionIdAgentId(req, new GetTicketingConnectionIdAgentIdSecurity("tempora") {{
-                jwt = "";
-            }});
+            GetTicketingConnectionIdAgentIdResponse res = sdk.agent.getTicketingConnectionIdAgentId(req);
 
             if (res.ticketingAgent != null) {
                 // handle response
@@ -154,10 +155,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                | Type                                                                                                                                                     | Required                                                                                                                                                 | Description                                                                                                                                              |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdAgentIdRequest](../../models/operations/GetTicketingConnectionIdAgentIdRequest.md)   | :heavy_check_mark:                                                                                                                                       | The request object to use for the request.                                                                                                               |
-| `security`                                                                                                                                               | [com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdAgentIdSecurity](../../models/operations/GetTicketingConnectionIdAgentIdSecurity.md) | :heavy_check_mark:                                                                                                                                       | The security requirements to use for the request.                                                                                                        |
+| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdAgentIdRequest](../../models/operations/GetTicketingConnectionIdAgentIdRequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
 
 
 ### Response
@@ -177,28 +177,29 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdAgentRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdAgentResponse;
-import com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdAgentSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("placeat") {{
+                    jwt = "";
+                }})
                 .build();
 
-            GetUcConnectionIdAgentRequest req = new GetUcConnectionIdAgentRequest("suscipit") {{
-                contactId = "molestiae";
-                limit = 7917.25d;
-                offset = 8121.69d;
-                order = "voluptatum";
-                query = "iusto";
-                sort = "excepturi";
-                updatedGte = OffsetDateTime.parse("2022-01-28T03:46:24.500Z");
+            GetUcConnectionIdAgentRequest req = new GetUcConnectionIdAgentRequest("voluptatum") {{
+                contactId = "iusto";
+                limit = 5680.45d;
+                offset = 3927.85d;
+                order = "recusandae";
+                query = "temporibus";
+                sort = "ab";
+                updatedGte = OffsetDateTime.parse("2022-11-30T04:44:49.578Z");
             }};            
 
-            GetUcConnectionIdAgentResponse res = sdk.agent.getUcConnectionIdAgent(req, new GetUcConnectionIdAgentSecurity("temporibus") {{
-                jwt = "";
-            }});
+            GetUcConnectionIdAgentResponse res = sdk.agent.getUcConnectionIdAgent(req);
 
             if (res.ucAgents != null) {
                 // handle response
@@ -212,10 +213,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdAgentRequest](../../models/operations/GetUcConnectionIdAgentRequest.md)   | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `security`                                                                                                                             | [com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdAgentSecurity](../../models/operations/GetUcConnectionIdAgentSecurity.md) | :heavy_check_mark:                                                                                                                     | The security requirements to use for the request.                                                                                      |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdAgentRequest](../../models/operations/GetUcConnectionIdAgentRequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
 
 
 ### Response
@@ -235,8 +235,8 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdAgentIdRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdAgentIdResponse;
-import com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdAgentIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.PropertyTicketingAgentRaw;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TicketingAgent;
 import com.unifiedapi.unifiedto.models.shared.TicketingEmail;
 import com.unifiedapi.unifiedto.models.shared.TicketingEmailType;
@@ -248,32 +248,33 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("deserunt") {{
+                    jwt = "";
+                }})
                 .build();
 
-            PatchTicketingConnectionIdAgentIdRequest req = new PatchTicketingConnectionIdAgentIdRequest("ab", "quis") {{
+            PatchTicketingConnectionIdAgentIdRequest req = new PatchTicketingConnectionIdAgentIdRequest("perferendis", "ipsam") {{
                 ticketingAgent = new TicketingAgent(                new PropertyTicketingAgentRaw();) {{
-                    createdAt = OffsetDateTime.parse("2022-05-09T10:00:51.349Z");
+                    createdAt = OffsetDateTime.parse("2020-02-17T21:57:45.117Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
-                        add(new TicketingEmail("at") {{
-                            email = "Freeda_Sipes14@gmail.com";
+                        add(new TicketingEmail("quod") {{
+                            email = "Brooke_Strosin47@hotmail.com";
                             type = TicketingEmailType.OTHER;
                         }}),
                     }};
-                    id = "f7cc78ca-1ba9-428f-8816-742cb7392059";
-                    name = "Sheryl Fadel";
+                    id = "78ca1ba9-28fc-4816-b42c-b73920592939";
+                    name = "May Turcotte";
                     telephones = new com.unifiedapi.unifiedto.models.shared.TicketingTelephone[]{{
-                        add(new TicketingTelephone("fuga") {{
-                            telephone = "hic";
-                            type = TicketingTelephoneType.MOBILE;
+                        add(new TicketingTelephone("iure") {{
+                            telephone = "corporis";
+                            type = TicketingTelephoneType.FAX;
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-08-22T18:42:38.160Z");
+                    updatedAt = OffsetDateTime.parse("2020-11-28T02:15:07.561Z");
                 }};;
             }};            
 
-            PatchTicketingConnectionIdAgentIdResponse res = sdk.agent.patchTicketingConnectionIdAgentId(req, new PatchTicketingConnectionIdAgentIdSecurity("iste") {{
-                jwt = "";
-            }});
+            PatchTicketingConnectionIdAgentIdResponse res = sdk.agent.patchTicketingConnectionIdAgentId(req);
 
             if (res.ticketingAgent != null) {
                 // handle response
@@ -287,10 +288,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                    | Type                                                                                                                                                         | Required                                                                                                                                                     | Description                                                                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdAgentIdRequest](../../models/operations/PatchTicketingConnectionIdAgentIdRequest.md)   | :heavy_check_mark:                                                                                                                                           | The request object to use for the request.                                                                                                                   |
-| `security`                                                                                                                                                   | [com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdAgentIdSecurity](../../models/operations/PatchTicketingConnectionIdAgentIdSecurity.md) | :heavy_check_mark:                                                                                                                                           | The security requirements to use for the request.                                                                                                            |
+| Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdAgentIdRequest](../../models/operations/PatchTicketingConnectionIdAgentIdRequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
 
 
 ### Response
@@ -310,8 +310,8 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdAgentRequest;
 import com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdAgentResponse;
-import com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdAgentSecurity;
 import com.unifiedapi.unifiedto.models.shared.PropertyTicketingAgentRaw;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TicketingAgent;
 import com.unifiedapi.unifiedto.models.shared.TicketingEmail;
 import com.unifiedapi.unifiedto.models.shared.TicketingEmailType;
@@ -323,32 +323,33 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("architecto") {{
+                    jwt = "";
+                }})
                 .build();
 
-            PostTicketingConnectionIdAgentRequest req = new PostTicketingConnectionIdAgentRequest("iure") {{
+            PostTicketingConnectionIdAgentRequest req = new PostTicketingConnectionIdAgentRequest("ipsa") {{
                 ticketingAgent = new TicketingAgent(                new PropertyTicketingAgentRaw();) {{
-                    createdAt = OffsetDateTime.parse("2020-11-28T02:15:07.561Z");
+                    createdAt = OffsetDateTime.parse("2020-12-31T21:22:14.646Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
-                        add(new TicketingEmail("dolorem") {{
-                            email = "Andy_Wisozk67@gmail.com";
+                        add(new TicketingEmail("nobis") {{
+                            email = "Marcos35@yahoo.com";
                             type = TicketingEmailType.WORK;
                         }}),
                     }};
-                    id = "52c59559-07af-4f1a-ba2f-a9467739251a";
-                    name = "Bill Conn";
+                    id = "5955907a-ff1a-43a2-ba94-67739251aa52";
+                    name = "Jimmy Wiegand";
                     telephones = new com.unifiedapi.unifiedto.models.shared.TicketingTelephone[]{{
-                        add(new TicketingTelephone("id") {{
-                            telephone = "tenetur";
-                            type = TicketingTelephoneType.HOME;
+                        add(new TicketingTelephone("quasi") {{
+                            telephone = "possimus";
+                            type = TicketingTelephoneType.WORK;
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-12-17T03:20:13.120Z");
+                    updatedAt = OffsetDateTime.parse("2021-04-29T07:12:18.684Z");
                 }};;
             }};            
 
-            PostTicketingConnectionIdAgentResponse res = sdk.agent.postTicketingConnectionIdAgent(req, new PostTicketingConnectionIdAgentSecurity("quasi") {{
-                jwt = "";
-            }});
+            PostTicketingConnectionIdAgentResponse res = sdk.agent.postTicketingConnectionIdAgent(req);
 
             if (res.ticketingAgent != null) {
                 // handle response
@@ -362,10 +363,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdAgentRequest](../../models/operations/PostTicketingConnectionIdAgentRequest.md)   | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
-| `security`                                                                                                                                             | [com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdAgentSecurity](../../models/operations/PostTicketingConnectionIdAgentSecurity.md) | :heavy_check_mark:                                                                                                                                     | The security requirements to use for the request.                                                                                                      |
+| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdAgentRequest](../../models/operations/PostTicketingConnectionIdAgentRequest.md) | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
 
 
 ### Response
@@ -385,8 +385,8 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdAgentIdRequest;
 import com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdAgentIdResponse;
-import com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdAgentIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.PropertyTicketingAgentRaw;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TicketingAgent;
 import com.unifiedapi.unifiedto.models.shared.TicketingEmail;
 import com.unifiedapi.unifiedto.models.shared.TicketingEmailType;
@@ -398,32 +398,33 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("laborum") {{
+                    jwt = "";
+                }})
                 .build();
 
-            PutTicketingConnectionIdAgentIdRequest req = new PutTicketingConnectionIdAgentIdRequest("error", "temporibus") {{
+            PutTicketingConnectionIdAgentIdRequest req = new PutTicketingConnectionIdAgentIdRequest("quasi", "reiciendis") {{
                 ticketingAgent = new TicketingAgent(                new PropertyTicketingAgentRaw();) {{
-                    createdAt = OffsetDateTime.parse("2022-10-22T20:21:20.741Z");
+                    createdAt = OffsetDateTime.parse("2020-05-14T09:04:32.205Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
-                        add(new TicketingEmail("ipsa") {{
-                            email = "Weston_Thiel@hotmail.com";
-                            type = TicketingEmailType.OTHER;
+                        add(new TicketingEmail("cum") {{
+                            email = "John60@yahoo.com";
+                            type = TicketingEmailType.HOME;
                         }}),
                     }};
-                    id = "97b0074f-1547-41b5-a6e1-3b99d488e1e9";
-                    name = "Patti Gottlieb MD";
+                    id = "0074f154-71b5-4e6e-93b9-9d488e1e91e4";
+                    name = "Elizabeth Orn";
                     telephones = new com.unifiedapi.unifiedto.models.shared.TicketingTelephone[]{{
-                        add(new TicketingTelephone("deserunt") {{
-                            telephone = "quibusdam";
-                            type = TicketingTelephoneType.WORK;
+                        add(new TicketingTelephone("quibusdam") {{
+                            telephone = "deserunt";
+                            type = TicketingTelephoneType.FAX;
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-04-26T18:54:54.344Z");
+                    updatedAt = OffsetDateTime.parse("2022-09-26T08:57:48.803Z");
                 }};;
             }};            
 
-            PutTicketingConnectionIdAgentIdResponse res = sdk.agent.putTicketingConnectionIdAgentId(req, new PutTicketingConnectionIdAgentIdSecurity("labore") {{
-                jwt = "";
-            }});
+            PutTicketingConnectionIdAgentIdResponse res = sdk.agent.putTicketingConnectionIdAgentId(req);
 
             if (res.ticketingAgent != null) {
                 // handle response
@@ -437,10 +438,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                | Type                                                                                                                                                     | Required                                                                                                                                                 | Description                                                                                                                                              |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdAgentIdRequest](../../models/operations/PutTicketingConnectionIdAgentIdRequest.md)   | :heavy_check_mark:                                                                                                                                       | The request object to use for the request.                                                                                                               |
-| `security`                                                                                                                                               | [com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdAgentIdSecurity](../../models/operations/PutTicketingConnectionIdAgentIdSecurity.md) | :heavy_check_mark:                                                                                                                                       | The security requirements to use for the request.                                                                                                        |
+| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdAgentIdRequest](../../models/operations/PutTicketingConnectionIdAgentIdRequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
 
 
 ### Response

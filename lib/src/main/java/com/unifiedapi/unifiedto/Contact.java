@@ -25,11 +25,10 @@ public class Contact {
     /**
      * Remove a contact
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdContactIdResponse deleteCrmConnectionIdContactId(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdContactIdRequest request, com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdContactIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdContactIdResponse deleteCrmConnectionIdContactId(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdContactIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdContactIdRequest.class, baseUrl, "/crm/{connection_id}/contact/{id}", request, null);
         
@@ -40,7 +39,7 @@ public class Contact {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -64,11 +63,10 @@ public class Contact {
     /**
      * Remove company association from a contact
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdContactIdCompanyCompanyIdResponse deleteCrmConnectionIdContactIdCompanyCompanyId(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdContactIdCompanyCompanyIdRequest request, com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdContactIdCompanyCompanyIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdContactIdCompanyCompanyIdResponse deleteCrmConnectionIdContactIdCompanyCompanyId(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdContactIdCompanyCompanyIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdContactIdCompanyCompanyIdRequest.class, baseUrl, "/crm/{connection_id}/contact/{id}/company/{company_id}", request, null);
         
@@ -79,7 +77,7 @@ public class Contact {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -104,11 +102,10 @@ public class Contact {
     /**
      * Remove deal association from a contact
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdContactIdDealDealIdResponse deleteCrmConnectionIdContactIdDealDealId(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdContactIdDealDealIdRequest request, com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdContactIdDealDealIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdContactIdDealDealIdResponse deleteCrmConnectionIdContactIdDealDealId(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdContactIdDealDealIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdContactIdDealDealIdRequest.class, baseUrl, "/crm/{connection_id}/contact/{id}/deal/{deal_id}", request, null);
         
@@ -119,7 +116,7 @@ public class Contact {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -144,11 +141,10 @@ public class Contact {
     /**
      * Remove a contact
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.DeleteUcConnectionIdContactIdResponse deleteUcConnectionIdContactId(com.unifiedapi.unifiedto.models.operations.DeleteUcConnectionIdContactIdRequest request, com.unifiedapi.unifiedto.models.operations.DeleteUcConnectionIdContactIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.DeleteUcConnectionIdContactIdResponse deleteUcConnectionIdContactId(com.unifiedapi.unifiedto.models.operations.DeleteUcConnectionIdContactIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeleteUcConnectionIdContactIdRequest.class, baseUrl, "/uc/{connection_id}/contact/{id}", request, null);
         
@@ -159,7 +155,7 @@ public class Contact {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -183,11 +179,10 @@ public class Contact {
     /**
      * List all contacts
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactResponse getCrmConnectionIdContact(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactRequest request, com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactResponse getCrmConnectionIdContact(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactRequest.class, baseUrl, "/crm/{connection_id}/contact", request, null);
         
@@ -204,7 +199,7 @@ public class Contact {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -229,11 +224,10 @@ public class Contact {
     /**
      * Retrieve a contact
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactIdResponse getCrmConnectionIdContactId(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactIdRequest request, com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactIdResponse getCrmConnectionIdContactId(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactIdRequest.class, baseUrl, "/crm/{connection_id}/contact/{id}", request, null);
         
@@ -244,7 +238,7 @@ public class Contact {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -269,11 +263,10 @@ public class Contact {
     /**
      * List all contacts
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactResponse getUcConnectionIdContact(com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactRequest request, com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactResponse getUcConnectionIdContact(com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactRequest.class, baseUrl, "/uc/{connection_id}/contact", request, null);
         
@@ -290,7 +283,7 @@ public class Contact {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -315,11 +308,10 @@ public class Contact {
     /**
      * Retrieve a contact
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactIdResponse getUcConnectionIdContactId(com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactIdRequest request, com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactIdResponse getUcConnectionIdContactId(com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactIdRequest.class, baseUrl, "/uc/{connection_id}/contact/{id}", request, null);
         
@@ -330,7 +322,7 @@ public class Contact {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -355,11 +347,10 @@ public class Contact {
     /**
      * Update a contact
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdContactIdResponse patchCrmConnectionIdContactId(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdContactIdRequest request, com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdContactIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdContactIdResponse patchCrmConnectionIdContactId(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdContactIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdContactIdRequest.class, baseUrl, "/crm/{connection_id}/contact/{id}", request, null);
         
@@ -372,7 +363,7 @@ public class Contact {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -397,11 +388,10 @@ public class Contact {
     /**
      * Associate a company with a contact
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdContactIdCompanyCompanyIdResponse patchCrmConnectionIdContactIdCompanyCompanyId(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdContactIdCompanyCompanyIdRequest request, com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdContactIdCompanyCompanyIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdContactIdCompanyCompanyIdResponse patchCrmConnectionIdContactIdCompanyCompanyId(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdContactIdCompanyCompanyIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdContactIdCompanyCompanyIdRequest.class, baseUrl, "/crm/{connection_id}/contact/{id}/company/{company_id}", request, null);
         
@@ -412,7 +402,7 @@ public class Contact {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -437,11 +427,10 @@ public class Contact {
     /**
      * Associate a deal with a contact
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdContactIdDealDealIdResponse patchCrmConnectionIdContactIdDealDealId(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdContactIdDealDealIdRequest request, com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdContactIdDealDealIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdContactIdDealDealIdResponse patchCrmConnectionIdContactIdDealDealId(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdContactIdDealDealIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdContactIdDealDealIdRequest.class, baseUrl, "/crm/{connection_id}/contact/{id}/deal/{deal_id}", request, null);
         
@@ -452,7 +441,7 @@ public class Contact {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -477,11 +466,10 @@ public class Contact {
     /**
      * Update a contact
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchUcConnectionIdContactIdResponse patchUcConnectionIdContactId(com.unifiedapi.unifiedto.models.operations.PatchUcConnectionIdContactIdRequest request, com.unifiedapi.unifiedto.models.operations.PatchUcConnectionIdContactIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchUcConnectionIdContactIdResponse patchUcConnectionIdContactId(com.unifiedapi.unifiedto.models.operations.PatchUcConnectionIdContactIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchUcConnectionIdContactIdRequest.class, baseUrl, "/uc/{connection_id}/contact/{id}", request, null);
         
@@ -494,7 +482,7 @@ public class Contact {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -519,11 +507,10 @@ public class Contact {
     /**
      * Create a contact
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdContactResponse postCrmConnectionIdContact(com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdContactRequest request, com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdContactSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdContactResponse postCrmConnectionIdContact(com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdContactRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdContactRequest.class, baseUrl, "/crm/{connection_id}/contact", request, null);
         
@@ -536,7 +523,7 @@ public class Contact {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -561,11 +548,10 @@ public class Contact {
     /**
      * Create a contact
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PostUcConnectionIdContactResponse postUcConnectionIdContact(com.unifiedapi.unifiedto.models.operations.PostUcConnectionIdContactRequest request, com.unifiedapi.unifiedto.models.operations.PostUcConnectionIdContactSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PostUcConnectionIdContactResponse postUcConnectionIdContact(com.unifiedapi.unifiedto.models.operations.PostUcConnectionIdContactRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PostUcConnectionIdContactRequest.class, baseUrl, "/uc/{connection_id}/contact", request, null);
         
@@ -578,7 +564,7 @@ public class Contact {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -603,11 +589,10 @@ public class Contact {
     /**
      * Update a contact
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdContactIdResponse putCrmConnectionIdContactId(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdContactIdRequest request, com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdContactIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdContactIdResponse putCrmConnectionIdContactId(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdContactIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdContactIdRequest.class, baseUrl, "/crm/{connection_id}/contact/{id}", request, null);
         
@@ -620,7 +605,7 @@ public class Contact {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -645,11 +630,10 @@ public class Contact {
     /**
      * Associate a company with a contact
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdContactIdCompanyCompanyIdResponse putCrmConnectionIdContactIdCompanyCompanyId(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdContactIdCompanyCompanyIdRequest request, com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdContactIdCompanyCompanyIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdContactIdCompanyCompanyIdResponse putCrmConnectionIdContactIdCompanyCompanyId(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdContactIdCompanyCompanyIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdContactIdCompanyCompanyIdRequest.class, baseUrl, "/crm/{connection_id}/contact/{id}/company/{company_id}", request, null);
         
@@ -660,7 +644,7 @@ public class Contact {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -685,11 +669,10 @@ public class Contact {
     /**
      * Associate a deal with a contact
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdContactIdDealDealIdResponse putCrmConnectionIdContactIdDealDealId(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdContactIdDealDealIdRequest request, com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdContactIdDealDealIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdContactIdDealDealIdResponse putCrmConnectionIdContactIdDealDealId(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdContactIdDealDealIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdContactIdDealDealIdRequest.class, baseUrl, "/crm/{connection_id}/contact/{id}/deal/{deal_id}", request, null);
         
@@ -700,7 +683,7 @@ public class Contact {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -725,11 +708,10 @@ public class Contact {
     /**
      * Update a contact
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutUcConnectionIdContactIdResponse putUcConnectionIdContactId(com.unifiedapi.unifiedto.models.operations.PutUcConnectionIdContactIdRequest request, com.unifiedapi.unifiedto.models.operations.PutUcConnectionIdContactIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PutUcConnectionIdContactIdResponse putUcConnectionIdContactId(com.unifiedapi.unifiedto.models.operations.PutUcConnectionIdContactIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutUcConnectionIdContactIdRequest.class, baseUrl, "/uc/{connection_id}/contact/{id}", request, null);
         
@@ -742,7 +724,7 @@ public class Contact {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

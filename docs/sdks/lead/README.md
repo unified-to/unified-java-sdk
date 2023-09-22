@@ -21,19 +21,20 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdLeadIdRequest;
 import com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdLeadIdResponse;
-import com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdLeadIdSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("ratione") {{
+                    jwt = "";
+                }})
                 .build();
 
-            DeleteCrmConnectionIdLeadIdRequest req = new DeleteCrmConnectionIdLeadIdRequest("sapiente", "recusandae");            
+            DeleteCrmConnectionIdLeadIdRequest req = new DeleteCrmConnectionIdLeadIdRequest("molestias", "odio");            
 
-            DeleteCrmConnectionIdLeadIdResponse res = sdk.lead.deleteCrmConnectionIdLeadId(req, new DeleteCrmConnectionIdLeadIdSecurity("perspiciatis") {{
-                jwt = "";
-            }});
+            DeleteCrmConnectionIdLeadIdResponse res = sdk.lead.deleteCrmConnectionIdLeadId(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -47,10 +48,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdLeadIdRequest](../../models/operations/DeleteCrmConnectionIdLeadIdRequest.md)   | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
-| `security`                                                                                                                                       | [com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdLeadIdSecurity](../../models/operations/DeleteCrmConnectionIdLeadIdSecurity.md) | :heavy_check_mark:                                                                                                                               | The security requirements to use for the request.                                                                                                |
+| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdLeadIdRequest](../../models/operations/DeleteCrmConnectionIdLeadIdRequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
 
 
 ### Response
@@ -70,27 +70,28 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdLeadRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdLeadResponse;
-import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdLeadSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("non") {{
+                    jwt = "";
+                }})
                 .build();
 
-            GetCrmConnectionIdLeadRequest req = new GetCrmConnectionIdLeadRequest("natus") {{
-                limit = 4403.3d;
-                offset = 2088.26d;
-                order = "sunt";
-                query = "fuga";
-                sort = "nulla";
-                updatedGte = OffsetDateTime.parse("2022-11-13T12:43:09.656Z");
+            GetCrmConnectionIdLeadRequest req = new GetCrmConnectionIdLeadRequest("magni") {{
+                limit = 5768.7d;
+                offset = 101.8d;
+                order = "illum";
+                query = "adipisci";
+                sort = "dolorem";
+                updatedGte = OffsetDateTime.parse("2022-08-30T00:40:49.036Z");
             }};            
 
-            GetCrmConnectionIdLeadResponse res = sdk.lead.getCrmConnectionIdLead(req, new GetCrmConnectionIdLeadSecurity("ad") {{
-                jwt = "";
-            }});
+            GetCrmConnectionIdLeadResponse res = sdk.lead.getCrmConnectionIdLead(req);
 
             if (res.crmLeads != null) {
                 // handle response
@@ -104,10 +105,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdLeadRequest](../../models/operations/GetCrmConnectionIdLeadRequest.md)   | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `security`                                                                                                                             | [com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdLeadSecurity](../../models/operations/GetCrmConnectionIdLeadSecurity.md) | :heavy_check_mark:                                                                                                                     | The security requirements to use for the request.                                                                                      |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdLeadRequest](../../models/operations/GetCrmConnectionIdLeadRequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
 
 
 ### Response
@@ -127,19 +127,20 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdLeadIdRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdLeadIdResponse;
-import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdLeadIdSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("eum") {{
+                    jwt = "";
+                }})
                 .build();
 
-            GetCrmConnectionIdLeadIdRequest req = new GetCrmConnectionIdLeadIdRequest("fugiat", "quas");            
+            GetCrmConnectionIdLeadIdRequest req = new GetCrmConnectionIdLeadIdRequest("et", "officiis");            
 
-            GetCrmConnectionIdLeadIdResponse res = sdk.lead.getCrmConnectionIdLeadId(req, new GetCrmConnectionIdLeadIdSecurity("quis") {{
-                jwt = "";
-            }});
+            GetCrmConnectionIdLeadIdResponse res = sdk.lead.getCrmConnectionIdLeadId(req);
 
             if (res.crmLead != null) {
                 // handle response
@@ -153,10 +154,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdLeadIdRequest](../../models/operations/GetCrmConnectionIdLeadIdRequest.md)   | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
-| `security`                                                                                                                                 | [com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdLeadIdSecurity](../../models/operations/GetCrmConnectionIdLeadIdSecurity.md) | :heavy_check_mark:                                                                                                                         | The security requirements to use for the request.                                                                                          |
+| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdLeadIdRequest](../../models/operations/GetCrmConnectionIdLeadIdRequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
 
 
 ### Response
@@ -176,7 +176,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdLeadIdRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdLeadIdResponse;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdLeadIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmEmail;
 import com.unifiedapi.unifiedto.models.shared.CrmEmailType;
 import com.unifiedapi.unifiedto.models.shared.CrmLead;
@@ -184,54 +183,56 @@ import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmLeadAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmLeadRaw;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("quo") {{
+                    jwt = "";
+                }})
                 .build();
 
-            PatchCrmConnectionIdLeadIdRequest req = new PatchCrmConnectionIdLeadIdRequest("fuga", "eveniet") {{
+            PatchCrmConnectionIdLeadIdRequest req = new PatchCrmConnectionIdLeadIdRequest("culpa", "architecto") {{
                 crmLead = new CrmLead() {{
                     active = false;
                     address = new PropertyCrmLeadAddress() {{
-                        address1 = "consequuntur";
-                        address2 = "illum";
-                        city = "Plantation";
-                        country = "Kazakhstan";
-                        countryCode = "AL";
-                        postalCode = "61542-1508";
-                        region = "adipisci";
-                        regionCode = "dolorem";
+                        address1 = "iure";
+                        address2 = "eveniet";
+                        city = "Los Angeles";
+                        country = "Namibia";
+                        countryCode = "ET";
+                        postalCode = "06843";
+                        region = "accusamus";
+                        regionCode = "officiis";
                     }};;
-                    companyId = "ex";
-                    contactId = "quis";
-                    createdAt = OffsetDateTime.parse("2022-11-29T18:23:49.046Z");
-                    creatorUserId = "officiis";
+                    companyId = "necessitatibus";
+                    contactId = "nam";
+                    createdAt = OffsetDateTime.parse("2022-12-01T06:48:28.686Z");
+                    creatorUserId = "molestias";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail() {{
-                            email = "Lottie_Boyle@hotmail.com";
+                            email = "Dina.Senger@hotmail.com";
                             type = CrmEmailType.OTHER;
                         }}),
                     }};
-                    id = "89451bd7-6eee-4b51-8c4d-a1fad35512f0";
-                    name = "Janis Greenholt";
+                    id = "ad35512f-06d4-4e5b-b2f0-f548568a0424";
+                    name = "Michael Barrows PhD";
                     raw = new PropertyCrmLeadRaw();;
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("consequuntur") {{
-                            telephone = "nam";
-                            type = CrmTelephoneType.OTHER;
+                        add(new CrmTelephone("tempore") {{
+                            telephone = "autem";
+                            type = CrmTelephoneType.MOBILE;
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-12-31T00:00:29.963Z");
-                    userId = "doloribus";
+                    updatedAt = OffsetDateTime.parse("2022-06-18T17:15:11.201Z");
+                    userId = "ratione";
                 }};;
             }};            
 
-            PatchCrmConnectionIdLeadIdResponse res = sdk.lead.patchCrmConnectionIdLeadId(req, new PatchCrmConnectionIdLeadIdSecurity("nemo") {{
-                jwt = "";
-            }});
+            PatchCrmConnectionIdLeadIdResponse res = sdk.lead.patchCrmConnectionIdLeadId(req);
 
             if (res.crmLead != null) {
                 // handle response
@@ -245,10 +246,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdLeadIdRequest](../../models/operations/PatchCrmConnectionIdLeadIdRequest.md)   | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
-| `security`                                                                                                                                     | [com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdLeadIdSecurity](../../models/operations/PatchCrmConnectionIdLeadIdSecurity.md) | :heavy_check_mark:                                                                                                                             | The security requirements to use for the request.                                                                                              |
+| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdLeadIdRequest](../../models/operations/PatchCrmConnectionIdLeadIdRequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
 
 
 ### Response
@@ -268,7 +268,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdLeadRequest;
 import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdLeadResponse;
-import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdLeadSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmEmail;
 import com.unifiedapi.unifiedto.models.shared.CrmEmailType;
 import com.unifiedapi.unifiedto.models.shared.CrmLead;
@@ -276,54 +275,56 @@ import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmLeadAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmLeadRaw;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("aliquam") {{
+                    jwt = "";
+                }})
                 .build();
 
-            PostCrmConnectionIdLeadRequest req = new PostCrmConnectionIdLeadRequest("dolore") {{
+            PostCrmConnectionIdLeadRequest req = new PostCrmConnectionIdLeadRequest("ea") {{
                 crmLead = new CrmLead() {{
                     active = false;
                     address = new PropertyCrmLeadAddress() {{
-                        address1 = "corrupti";
-                        address2 = "exercitationem";
-                        city = "Johnsonchester";
-                        country = "Albania";
-                        countryCode = "FI";
-                        postalCode = "29006";
-                        region = "architecto";
-                        regionCode = "quibusdam";
+                        address1 = "aliquam";
+                        address2 = "corporis";
+                        city = "Bartlett";
+                        country = "Czech Republic";
+                        countryCode = "AG";
+                        postalCode = "39776-3778";
+                        region = "a";
+                        regionCode = "tenetur";
                     }};;
-                    companyId = "autem";
-                    contactId = "voluptates";
-                    createdAt = OffsetDateTime.parse("2021-10-29T09:01:04.013Z");
-                    creatorUserId = "modi";
+                    companyId = "ipsam";
+                    contactId = "quod";
+                    createdAt = OffsetDateTime.parse("2022-12-02T09:14:46.880Z");
+                    creatorUserId = "illo";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail() {{
-                            email = "Elmo35@gmail.com";
-                            type = CrmEmailType.OTHER;
+                            email = "Sonia88@hotmail.com";
+                            type = CrmEmailType.HOME;
                         }}),
                     }};
-                    id = "03084fbb-a5cc-4eff-9cb0-1fe51e528a45";
-                    name = "Miss Roosevelt Luettgen";
+                    id = "28a45ac8-2b85-4f8b-82ca-ba8da4127dd5";
+                    name = "Gabriel Weissnat";
                     raw = new PropertyCrmLeadRaw();;
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("corrupti") {{
-                            telephone = "ullam";
-                            type = CrmTelephoneType.MOBILE;
+                        add(new CrmTelephone("inventore") {{
+                            telephone = "esse";
+                            type = CrmTelephoneType.WORK;
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-05-18T02:30:42.135Z");
-                    userId = "explicabo";
+                    updatedAt = OffsetDateTime.parse("2021-09-05T10:47:22.933Z");
+                    userId = "et";
                 }};;
             }};            
 
-            PostCrmConnectionIdLeadResponse res = sdk.lead.postCrmConnectionIdLead(req, new PostCrmConnectionIdLeadSecurity("placeat") {{
-                jwt = "";
-            }});
+            PostCrmConnectionIdLeadResponse res = sdk.lead.postCrmConnectionIdLead(req);
 
             if (res.crmLead != null) {
                 // handle response
@@ -337,10 +338,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdLeadRequest](../../models/operations/PostCrmConnectionIdLeadRequest.md)   | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
-| `security`                                                                                                                               | [com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdLeadSecurity](../../models/operations/PostCrmConnectionIdLeadSecurity.md) | :heavy_check_mark:                                                                                                                       | The security requirements to use for the request.                                                                                        |
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdLeadRequest](../../models/operations/PostCrmConnectionIdLeadRequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
 
 
 ### Response
@@ -360,7 +360,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdLeadIdRequest;
 import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdLeadIdResponse;
-import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdLeadIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmEmail;
 import com.unifiedapi.unifiedto.models.shared.CrmEmailType;
 import com.unifiedapi.unifiedto.models.shared.CrmLead;
@@ -368,54 +367,56 @@ import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmLeadAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmLeadRaw;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("distinctio") {{
+                    jwt = "";
+                }})
                 .build();
 
-            PutCrmConnectionIdLeadIdRequest req = new PutCrmConnectionIdLeadIdRequest("animi", "expedita") {{
+            PutCrmConnectionIdLeadIdRequest req = new PutCrmConnectionIdLeadIdRequest("porro", "nihil") {{
                 crmLead = new CrmLead() {{
                     active = false;
                     address = new PropertyCrmLeadAddress() {{
-                        address1 = "laborum";
-                        address2 = "atque";
-                        city = "Peabody";
-                        country = "French Guiana";
-                        countryCode = "BG";
-                        postalCode = "48836";
-                        region = "iure";
-                        regionCode = "hic";
+                        address1 = "numquam";
+                        address2 = "rerum";
+                        city = "Gracefield";
+                        country = "Tonga";
+                        countryCode = "SE";
+                        postalCode = "42944-7253";
+                        region = "totam";
+                        regionCode = "soluta";
                     }};;
-                    companyId = "sapiente";
-                    contactId = "eius";
-                    createdAt = OffsetDateTime.parse("2022-11-26T20:23:45.440Z");
-                    creatorUserId = "inventore";
+                    companyId = "quibusdam";
+                    contactId = "iure";
+                    createdAt = OffsetDateTime.parse("2022-03-01T06:49:32.137Z");
+                    creatorUserId = "hic";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail() {{
-                            email = "Maia_Bosco46@yahoo.com";
+                            email = "Donna86@gmail.com";
                             type = CrmEmailType.WORK;
                         }}),
                     }};
-                    id = "b86cecc7-4f77-4b48-88bd-6a6f0441d2c3";
-                    name = "Morris Bahringer V";
+                    id = "c3b80809-4373-4e06-8459-bebbad02f258";
+                    name = "Melody Schmidt III";
                     raw = new PropertyCrmLeadRaw();;
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("molestiae") {{
-                            telephone = "quaerat";
+                        add(new CrmTelephone("minima") {{
+                            telephone = "eos";
                             type = CrmTelephoneType.HOME;
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-02-02T22:39:59.097Z");
-                    userId = "ipsa";
+                    updatedAt = OffsetDateTime.parse("2021-04-25T07:52:46.758Z");
+                    userId = "fuga";
                 }};;
             }};            
 
-            PutCrmConnectionIdLeadIdResponse res = sdk.lead.putCrmConnectionIdLeadId(req, new PutCrmConnectionIdLeadIdSecurity("laboriosam") {{
-                jwt = "";
-            }});
+            PutCrmConnectionIdLeadIdResponse res = sdk.lead.putCrmConnectionIdLeadId(req);
 
             if (res.crmLead != null) {
                 // handle response
@@ -429,10 +430,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdLeadIdRequest](../../models/operations/PutCrmConnectionIdLeadIdRequest.md)   | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
-| `security`                                                                                                                                 | [com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdLeadIdSecurity](../../models/operations/PutCrmConnectionIdLeadIdSecurity.md) | :heavy_check_mark:                                                                                                                         | The security requirements to use for the request.                                                                                          |
+| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdLeadIdRequest](../../models/operations/PutCrmConnectionIdLeadIdRequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
 
 
 ### Response

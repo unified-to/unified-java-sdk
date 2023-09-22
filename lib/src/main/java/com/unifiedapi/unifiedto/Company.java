@@ -25,11 +25,10 @@ public class Company {
     /**
      * Remove a company
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdCompanyIdResponse deleteCrmConnectionIdCompanyId(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdCompanyIdRequest request, com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdCompanyIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdCompanyIdResponse deleteCrmConnectionIdCompanyId(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdCompanyIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdCompanyIdRequest.class, baseUrl, "/crm/{connection_id}/company/{id}", request, null);
         
@@ -40,7 +39,7 @@ public class Company {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -64,11 +63,10 @@ public class Company {
     /**
      * Remove deal association from a company
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdCompanyIdDealDealIdResponse deleteCrmConnectionIdCompanyIdDealDealId(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdCompanyIdDealDealIdRequest request, com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdCompanyIdDealDealIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdCompanyIdDealDealIdResponse deleteCrmConnectionIdCompanyIdDealDealId(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdCompanyIdDealDealIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdCompanyIdDealDealIdRequest.class, baseUrl, "/crm/{connection_id}/company/{id}/deal/{deal_id}", request, null);
         
@@ -79,7 +77,7 @@ public class Company {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -104,11 +102,10 @@ public class Company {
     /**
      * List all companies
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanyResponse getCrmConnectionIdCompany(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanyRequest request, com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanySecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanyResponse getCrmConnectionIdCompany(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanyRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanyRequest.class, baseUrl, "/crm/{connection_id}/company", request, null);
         
@@ -125,7 +122,7 @@ public class Company {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -150,11 +147,10 @@ public class Company {
     /**
      * Retrieve a company
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanyIdResponse getCrmConnectionIdCompanyId(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanyIdRequest request, com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanyIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanyIdResponse getCrmConnectionIdCompanyId(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanyIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanyIdRequest.class, baseUrl, "/crm/{connection_id}/company/{id}", request, null);
         
@@ -165,7 +161,7 @@ public class Company {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -190,11 +186,10 @@ public class Company {
     /**
      * Retrieve enrichment information for a company
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdCompanyResponse getEnrichConnectionIdCompany(com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdCompanyRequest request, com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdCompanySecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdCompanyResponse getEnrichConnectionIdCompany(com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdCompanyRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdCompanyRequest.class, baseUrl, "/enrich/{connection_id}/company", request, null);
         
@@ -211,7 +206,7 @@ public class Company {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -236,11 +231,10 @@ public class Company {
     /**
      * Update a company
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdCompanyIdResponse patchCrmConnectionIdCompanyId(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdCompanyIdRequest request, com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdCompanyIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdCompanyIdResponse patchCrmConnectionIdCompanyId(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdCompanyIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdCompanyIdRequest.class, baseUrl, "/crm/{connection_id}/company/{id}", request, null);
         
@@ -253,7 +247,7 @@ public class Company {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -278,11 +272,10 @@ public class Company {
     /**
      * Associate a deal with a company
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdCompanyIdDealDealIdResponse patchCrmConnectionIdCompanyIdDealDealId(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdCompanyIdDealDealIdRequest request, com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdCompanyIdDealDealIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdCompanyIdDealDealIdResponse patchCrmConnectionIdCompanyIdDealDealId(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdCompanyIdDealDealIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdCompanyIdDealDealIdRequest.class, baseUrl, "/crm/{connection_id}/company/{id}/deal/{deal_id}", request, null);
         
@@ -293,7 +286,7 @@ public class Company {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -318,11 +311,10 @@ public class Company {
     /**
      * Create a company
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdCompanyResponse postCrmConnectionIdCompany(com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdCompanyRequest request, com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdCompanySecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdCompanyResponse postCrmConnectionIdCompany(com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdCompanyRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdCompanyRequest.class, baseUrl, "/crm/{connection_id}/company", request, null);
         
@@ -335,7 +327,7 @@ public class Company {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -360,11 +352,10 @@ public class Company {
     /**
      * Update a company
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdCompanyIdResponse putCrmConnectionIdCompanyId(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdCompanyIdRequest request, com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdCompanyIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdCompanyIdResponse putCrmConnectionIdCompanyId(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdCompanyIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdCompanyIdRequest.class, baseUrl, "/crm/{connection_id}/company/{id}", request, null);
         
@@ -377,7 +368,7 @@ public class Company {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -402,11 +393,10 @@ public class Company {
     /**
      * Associate a deal with a company
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdCompanyIdDealDealIdResponse putCrmConnectionIdCompanyIdDealDealId(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdCompanyIdDealDealIdRequest request, com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdCompanyIdDealDealIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdCompanyIdDealDealIdResponse putCrmConnectionIdCompanyIdDealDealId(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdCompanyIdDealDealIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdCompanyIdDealDealIdRequest.class, baseUrl, "/crm/{connection_id}/company/{id}/deal/{deal_id}", request, null);
         
@@ -417,7 +407,7 @@ public class Company {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

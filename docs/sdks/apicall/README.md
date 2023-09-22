@@ -17,32 +17,33 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallResponse;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("qui") {{
+                    jwt = "";
+                }})
                 .build();
 
             GetUnifiedApicallRequest req = new GetUnifiedApicallRequest() {{
-                connectionId = "modi";
-                createdLte = OffsetDateTime.parse("2022-08-08T19:05:24.174Z");
-                env = "cupiditate";
+                connectionId = "aliquid";
+                createdLte = OffsetDateTime.parse("2021-11-23T10:34:02.904Z");
+                env = "perferendis";
                 error = false;
-                externalXref = "quos";
-                integrationType = "perferendis";
-                limit = 1649.4d;
-                offset = 8289.4d;
-                order = "ipsam";
-                sort = "alias";
-                updatedGte = OffsetDateTime.parse("2022-04-28T14:19:37.294Z");
+                externalXref = "magni";
+                integrationType = "assumenda";
+                limit = 3698.08d;
+                offset = 46.95d;
+                order = "fugit";
+                sort = "dolorum";
+                updatedGte = OffsetDateTime.parse("2022-06-17T21:27:36.672Z");
             }};            
 
-            GetUnifiedApicallResponse res = sdk.apicall.getUnifiedApicall(req, new GetUnifiedApicallSecurity("excepturi") {{
-                jwt = "";
-            }});
+            GetUnifiedApicallResponse res = sdk.apicall.getUnifiedApicall(req);
 
             if (res.apiCalls != null) {
                 // handle response
@@ -56,10 +57,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallRequest](../../models/operations/GetUnifiedApicallRequest.md)   | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `security`                                                                                                                   | [com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallSecurity](../../models/operations/GetUnifiedApicallSecurity.md) | :heavy_check_mark:                                                                                                           | The security requirements to use for the request.                                                                            |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallRequest](../../models/operations/GetUnifiedApicallRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response
@@ -79,19 +79,20 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallIdRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallIdResponse;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallIdSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("facilis") {{
+                    jwt = "";
+                }})
                 .build();
 
-            GetUnifiedApicallIdRequest req = new GetUnifiedApicallIdRequest("tempora");            
+            GetUnifiedApicallIdRequest req = new GetUnifiedApicallIdRequest("tempore");            
 
-            GetUnifiedApicallIdResponse res = sdk.apicall.getUnifiedApicallId(req, new GetUnifiedApicallIdSecurity("facilis") {{
-                jwt = "";
-            }});
+            GetUnifiedApicallIdResponse res = sdk.apicall.getUnifiedApicallId(req);
 
             if (res.apiCall != null) {
                 // handle response
@@ -105,10 +106,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallIdRequest](../../models/operations/GetUnifiedApicallIdRequest.md)   | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `security`                                                                                                                       | [com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallIdSecurity](../../models/operations/GetUnifiedApicallIdSecurity.md) | :heavy_check_mark:                                                                                                               | The security requirements to use for the request.                                                                                |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallIdRequest](../../models/operations/GetUnifiedApicallIdRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
 
 
 ### Response

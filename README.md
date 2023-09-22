@@ -12,33 +12,32 @@
 ### Gradle
 
 ```groovy
-implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.1.4'
+implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.2.0'
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```java
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdAgentIdRequest;
 import com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdAgentIdResponse;
-import com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdAgentIdSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("quibusdam") {{
+                    jwt = "";
+                }})
                 .build();
 
-            DeleteTicketingConnectionIdAgentIdRequest req = new DeleteTicketingConnectionIdAgentIdRequest("corrupti", "provident");            
+            DeleteTicketingConnectionIdAgentIdRequest req = new DeleteTicketingConnectionIdAgentIdRequest("unde", "nulla");            
 
-            DeleteTicketingConnectionIdAgentIdResponse res = sdk.agent.deleteTicketingConnectionIdAgentId(req, new DeleteTicketingConnectionIdAgentIdSecurity("distinctio") {{
-                jwt = "";
-            }});
+            DeleteTicketingConnectionIdAgentIdResponse res = sdk.agent.deleteTicketingConnectionIdAgentId(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -542,6 +541,18 @@ public class Application {
 * [getUnifiedWebhookId](docs/sdks/webhook/README.md#getunifiedwebhookid) - Retrieve webhook by its ID
 * [postUnifiedWebhookConnectionIdObject](docs/sdks/webhook/README.md#postunifiedwebhookconnectionidobject) - Create webhook subscription
 <!-- End SDK Available Operations -->
+
+
+
+<!-- Start Dev Containers -->
+
+
+
+<!-- End Dev Containers -->
+
+<!-- Placeholder for Future Speakeasy SDK Sections -->
+
+
 
 ### Maturity
 

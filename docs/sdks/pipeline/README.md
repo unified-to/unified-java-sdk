@@ -21,19 +21,20 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdPipelineIdRequest;
 import com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdPipelineIdResponse;
-import com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdPipelineIdSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("culpa") {{
+                    jwt = "";
+                }})
                 .build();
 
-            DeleteCrmConnectionIdPipelineIdRequest req = new DeleteCrmConnectionIdPipelineIdRequest("modi", "sequi");            
+            DeleteCrmConnectionIdPipelineIdRequest req = new DeleteCrmConnectionIdPipelineIdRequest("tenetur", "molestias");            
 
-            DeleteCrmConnectionIdPipelineIdResponse res = sdk.pipeline.deleteCrmConnectionIdPipelineId(req, new DeleteCrmConnectionIdPipelineIdSecurity("nisi") {{
-                jwt = "";
-            }});
+            DeleteCrmConnectionIdPipelineIdResponse res = sdk.pipeline.deleteCrmConnectionIdPipelineId(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -47,10 +48,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                | Type                                                                                                                                                     | Required                                                                                                                                                 | Description                                                                                                                                              |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdPipelineIdRequest](../../models/operations/DeleteCrmConnectionIdPipelineIdRequest.md)   | :heavy_check_mark:                                                                                                                                       | The request object to use for the request.                                                                                                               |
-| `security`                                                                                                                                               | [com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdPipelineIdSecurity](../../models/operations/DeleteCrmConnectionIdPipelineIdSecurity.md) | :heavy_check_mark:                                                                                                                                       | The security requirements to use for the request.                                                                                                        |
+| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdPipelineIdRequest](../../models/operations/DeleteCrmConnectionIdPipelineIdRequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
 
 
 ### Response
@@ -70,27 +70,28 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineResponse;
-import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("magnam") {{
+                    jwt = "";
+                }})
                 .build();
 
-            GetCrmConnectionIdPipelineRequest req = new GetCrmConnectionIdPipelineRequest("autem") {{
-                limit = 2725.62d;
-                offset = 6534.92d;
-                order = "quas";
-                query = "hic";
-                sort = "doloremque";
-                updatedGte = OffsetDateTime.parse("2021-01-05T10:08:21.523Z");
+            GetCrmConnectionIdPipelineRequest req = new GetCrmConnectionIdPipelineRequest("voluptate") {{
+                limit = 3969.05d;
+                offset = 6426.52d;
+                order = "qui";
+                query = "animi";
+                sort = "vero";
+                updatedGte = OffsetDateTime.parse("2021-05-09T10:10:01.467Z");
             }};            
 
-            GetCrmConnectionIdPipelineResponse res = sdk.pipeline.getCrmConnectionIdPipeline(req, new GetCrmConnectionIdPipelineSecurity("rem") {{
-                jwt = "";
-            }});
+            GetCrmConnectionIdPipelineResponse res = sdk.pipeline.getCrmConnectionIdPipeline(req);
 
             if (res.crmPipelines != null) {
                 // handle response
@@ -104,10 +105,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineRequest](../../models/operations/GetCrmConnectionIdPipelineRequest.md)   | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
-| `security`                                                                                                                                     | [com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineSecurity](../../models/operations/GetCrmConnectionIdPipelineSecurity.md) | :heavy_check_mark:                                                                                                                             | The security requirements to use for the request.                                                                                              |
+| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineRequest](../../models/operations/GetCrmConnectionIdPipelineRequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
 
 
 ### Response
@@ -127,19 +127,20 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineIdRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineIdResponse;
-import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineIdSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("optio") {{
+                    jwt = "";
+                }})
                 .build();
 
-            GetCrmConnectionIdPipelineIdRequest req = new GetCrmConnectionIdPipelineIdRequest("quod", "commodi");            
+            GetCrmConnectionIdPipelineIdRequest req = new GetCrmConnectionIdPipelineIdRequest("quo", "ullam");            
 
-            GetCrmConnectionIdPipelineIdResponse res = sdk.pipeline.getCrmConnectionIdPipelineId(req, new GetCrmConnectionIdPipelineIdSecurity("natus") {{
-                jwt = "";
-            }});
+            GetCrmConnectionIdPipelineIdResponse res = sdk.pipeline.getCrmConnectionIdPipelineId(req);
 
             if (res.crmPipeline != null) {
                 // handle response
@@ -153,10 +154,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineIdRequest](../../models/operations/GetCrmConnectionIdPipelineIdRequest.md)   | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
-| `security`                                                                                                                                         | [com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineIdSecurity](../../models/operations/GetCrmConnectionIdPipelineIdSecurity.md) | :heavy_check_mark:                                                                                                                                 | The security requirements to use for the request.                                                                                                  |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineIdRequest](../../models/operations/GetCrmConnectionIdPipelineIdRequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
 
 
 ### Response
@@ -176,33 +176,34 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdPipelineIdRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdPipelineIdResponse;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdPipelineIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmPipeline;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmPipelineRaw;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("ipsa") {{
+                    jwt = "";
+                }})
                 .build();
 
-            PatchCrmConnectionIdPipelineIdRequest req = new PatchCrmConnectionIdPipelineIdRequest("beatae", "placeat") {{
+            PatchCrmConnectionIdPipelineIdRequest req = new PatchCrmConnectionIdPipelineIdRequest("placeat", "quas") {{
                 crmPipeline = new CrmPipeline() {{
                     active = false;
-                    createdAt = OffsetDateTime.parse("2022-10-12T04:27:21.437Z");
+                    createdAt = OffsetDateTime.parse("2022-07-13T10:33:44.013Z");
                     dealProbability = false;
-                    displayOrder = 1551.08d;
-                    id = "d9fbaf94-76a2-4ae8-9cc5-0c8a3512c737";
-                    name = "Theodore Leffler";
+                    displayOrder = 3455.88d;
+                    id = "12c73784-8930-4750-a00e-966ec736d431";
+                    name = "Calvin Donnelly";
                     raw = new PropertyCrmPipelineRaw();;
-                    updatedAt = OffsetDateTime.parse("2022-07-05T07:47:31.296Z");
+                    updatedAt = OffsetDateTime.parse("2021-07-31T07:27:36.168Z");
                 }};;
             }};            
 
-            PatchCrmConnectionIdPipelineIdResponse res = sdk.pipeline.patchCrmConnectionIdPipelineId(req, new PatchCrmConnectionIdPipelineIdSecurity("minima") {{
-                jwt = "";
-            }});
+            PatchCrmConnectionIdPipelineIdResponse res = sdk.pipeline.patchCrmConnectionIdPipelineId(req);
 
             if (res.crmPipeline != null) {
                 // handle response
@@ -216,10 +217,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdPipelineIdRequest](../../models/operations/PatchCrmConnectionIdPipelineIdRequest.md)   | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
-| `security`                                                                                                                                             | [com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdPipelineIdSecurity](../../models/operations/PatchCrmConnectionIdPipelineIdSecurity.md) | :heavy_check_mark:                                                                                                                                     | The security requirements to use for the request.                                                                                                      |
+| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdPipelineIdRequest](../../models/operations/PatchCrmConnectionIdPipelineIdRequest.md) | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
 
 
 ### Response
@@ -239,33 +239,34 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdPipelineRequest;
 import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdPipelineResponse;
-import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdPipelineSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmPipeline;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmPipelineRaw;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("atque") {{
+                    jwt = "";
+                }})
                 .build();
 
-            PostCrmConnectionIdPipelineRequest req = new PostCrmConnectionIdPipelineRequest("eaque") {{
+            PostCrmConnectionIdPipelineRequest req = new PostCrmConnectionIdPipelineRequest("dolor") {{
                 crmPipeline = new CrmPipeline() {{
                     active = false;
-                    createdAt = OffsetDateTime.parse("2022-12-31T22:43:49.219Z");
+                    createdAt = OffsetDateTime.parse("2021-04-01T21:30:28.639Z");
                     dealProbability = false;
-                    displayOrder = 258.72d;
-                    id = "e966ec73-6d43-4194-b98c-783c92398ed3";
-                    name = "Allen O'Connell";
+                    displayOrder = 1577.51d;
+                    id = "398ed3d3-ab7c-4a3c-9ca8-649a70cfd5d6";
+                    name = "Sidney Moore";
                     raw = new PropertyCrmPipelineRaw();;
-                    updatedAt = OffsetDateTime.parse("2020-12-29T00:25:34.871Z");
+                    updatedAt = OffsetDateTime.parse("2022-12-21T22:06:02.543Z");
                 }};;
             }};            
 
-            PostCrmConnectionIdPipelineResponse res = sdk.pipeline.postCrmConnectionIdPipeline(req, new PostCrmConnectionIdPipelineSecurity("non") {{
-                jwt = "";
-            }});
+            PostCrmConnectionIdPipelineResponse res = sdk.pipeline.postCrmConnectionIdPipeline(req);
 
             if (res.crmPipeline != null) {
                 // handle response
@@ -279,10 +280,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdPipelineRequest](../../models/operations/PostCrmConnectionIdPipelineRequest.md)   | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
-| `security`                                                                                                                                       | [com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdPipelineSecurity](../../models/operations/PostCrmConnectionIdPipelineSecurity.md) | :heavy_check_mark:                                                                                                                               | The security requirements to use for the request.                                                                                                |
+| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdPipelineRequest](../../models/operations/PostCrmConnectionIdPipelineRequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
 
 
 ### Response
@@ -302,33 +302,34 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdPipelineIdRequest;
 import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdPipelineIdResponse;
-import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdPipelineIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmPipeline;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmPipelineRaw;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("voluptas") {{
+                    jwt = "";
+                }})
                 .build();
 
-            PutCrmConnectionIdPipelineIdRequest req = new PutCrmConnectionIdPipelineIdRequest("placeat", "veniam") {{
+            PutCrmConnectionIdPipelineIdRequest req = new PutCrmConnectionIdPipelineIdRequest("magnam", "ad") {{
                 crmPipeline = new CrmPipeline() {{
                     active = false;
-                    createdAt = OffsetDateTime.parse("2021-02-08T05:06:00.074Z");
+                    createdAt = OffsetDateTime.parse("2022-12-11T13:51:05.168Z");
                     dealProbability = false;
-                    displayOrder = 5484.03d;
-                    id = "649a70cf-d5d6-4989-b720-6451077d19ea";
-                    name = "Philip Schumm";
+                    displayOrder = 4377.85d;
+                    id = "7d19ea83-d492-4ed1-8b8a-2c1954545e95";
+                    name = "Mable Runte IV";
                     raw = new PropertyCrmPipelineRaw();;
-                    updatedAt = OffsetDateTime.parse("2022-01-24T10:39:05.897Z");
+                    updatedAt = OffsetDateTime.parse("2022-02-02T02:12:59.696Z");
                 }};;
             }};            
 
-            PutCrmConnectionIdPipelineIdResponse res = sdk.pipeline.putCrmConnectionIdPipelineId(req, new PutCrmConnectionIdPipelineIdSecurity("quibusdam") {{
-                jwt = "";
-            }});
+            PutCrmConnectionIdPipelineIdResponse res = sdk.pipeline.putCrmConnectionIdPipelineId(req);
 
             if (res.crmPipeline != null) {
                 // handle response
@@ -342,10 +343,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdPipelineIdRequest](../../models/operations/PutCrmConnectionIdPipelineIdRequest.md)   | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
-| `security`                                                                                                                                         | [com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdPipelineIdSecurity](../../models/operations/PutCrmConnectionIdPipelineIdSecurity.md) | :heavy_check_mark:                                                                                                                                 | The security requirements to use for the request.                                                                                                  |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdPipelineIdRequest](../../models/operations/PutCrmConnectionIdPipelineIdRequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
 
 
 ### Response

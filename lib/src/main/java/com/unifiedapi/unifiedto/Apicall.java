@@ -24,11 +24,10 @@ public class Apicall {
     /**
      * Returns API Calls
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallResponse getUnifiedApicall(com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallRequest request, com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallResponse getUnifiedApicall(com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(baseUrl, "/unified/apicall");
         
@@ -45,7 +44,7 @@ public class Apicall {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -70,11 +69,10 @@ public class Apicall {
     /**
      * Retrieve specific API Call by its ID
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallIdResponse getUnifiedApicallId(com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallIdRequest request, com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallIdResponse getUnifiedApicallId(com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallIdRequest.class, baseUrl, "/unified/apicall/{id}", request, null);
         
@@ -85,7 +83,7 @@ public class Apicall {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

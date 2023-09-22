@@ -21,19 +21,20 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdFileIdRequest;
 import com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdFileIdResponse;
-import com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdFileIdSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("voluptate") {{
+                    jwt = "";
+                }})
                 .build();
 
-            DeleteCrmConnectionIdFileIdRequest req = new DeleteCrmConnectionIdFileIdRequest("hic", "corrupti");            
+            DeleteCrmConnectionIdFileIdRequest req = new DeleteCrmConnectionIdFileIdRequest("cupiditate", "maxime");            
 
-            DeleteCrmConnectionIdFileIdResponse res = sdk.file.deleteCrmConnectionIdFileId(req, new DeleteCrmConnectionIdFileIdSecurity("soluta") {{
-                jwt = "";
-            }});
+            DeleteCrmConnectionIdFileIdResponse res = sdk.file.deleteCrmConnectionIdFileId(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -47,10 +48,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdFileIdRequest](../../models/operations/DeleteCrmConnectionIdFileIdRequest.md)   | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
-| `security`                                                                                                                                       | [com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdFileIdSecurity](../../models/operations/DeleteCrmConnectionIdFileIdSecurity.md) | :heavy_check_mark:                                                                                                                               | The security requirements to use for the request.                                                                                                |
+| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdFileIdRequest](../../models/operations/DeleteCrmConnectionIdFileIdRequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
 
 
 ### Response
@@ -70,30 +70,31 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileResponse;
-import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("assumenda") {{
+                    jwt = "";
+                }})
                 .build();
 
-            GetCrmConnectionIdFileRequest req = new GetCrmConnectionIdFileRequest("earum") {{
-                companyId = "praesentium";
-                contactId = "explicabo";
-                dealId = "odit";
-                limit = 731.97d;
-                offset = 1037.6d;
-                order = "quia";
-                query = "ad";
-                sort = "velit";
-                updatedGte = OffsetDateTime.parse("2022-05-29T13:47:24.605Z");
+            GetCrmConnectionIdFileRequest req = new GetCrmConnectionIdFileRequest("nihil") {{
+                companyId = "sed";
+                contactId = "optio";
+                dealId = "nulla";
+                limit = 1664.81d;
+                offset = 2657.08d;
+                order = "voluptatum";
+                query = "dolore";
+                sort = "possimus";
+                updatedGte = OffsetDateTime.parse("2022-08-24T06:24:18.561Z");
             }};            
 
-            GetCrmConnectionIdFileResponse res = sdk.file.getCrmConnectionIdFile(req, new GetCrmConnectionIdFileSecurity("possimus") {{
-                jwt = "";
-            }});
+            GetCrmConnectionIdFileResponse res = sdk.file.getCrmConnectionIdFile(req);
 
             if (res.crmFiles != null) {
                 // handle response
@@ -107,10 +108,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileRequest](../../models/operations/GetCrmConnectionIdFileRequest.md)   | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `security`                                                                                                                             | [com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileSecurity](../../models/operations/GetCrmConnectionIdFileSecurity.md) | :heavy_check_mark:                                                                                                                     | The security requirements to use for the request.                                                                                      |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileRequest](../../models/operations/GetCrmConnectionIdFileRequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
 
 
 ### Response
@@ -130,19 +130,20 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileIdRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileIdResponse;
-import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileIdSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("sunt") {{
+                    jwt = "";
+                }})
                 .build();
 
-            GetCrmConnectionIdFileIdRequest req = new GetCrmConnectionIdFileIdRequest("iste", "blanditiis");            
+            GetCrmConnectionIdFileIdRequest req = new GetCrmConnectionIdFileIdRequest("quam", "eos");            
 
-            GetCrmConnectionIdFileIdResponse res = sdk.file.getCrmConnectionIdFileId(req, new GetCrmConnectionIdFileIdSecurity("consectetur") {{
-                jwt = "";
-            }});
+            GetCrmConnectionIdFileIdResponse res = sdk.file.getCrmConnectionIdFileId(req);
 
             if (res.crmFile != null) {
                 // handle response
@@ -156,10 +157,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileIdRequest](../../models/operations/GetCrmConnectionIdFileIdRequest.md)   | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
-| `security`                                                                                                                                 | [com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileIdSecurity](../../models/operations/GetCrmConnectionIdFileIdSecurity.md) | :heavy_check_mark:                                                                                                                         | The security requirements to use for the request.                                                                                          |
+| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileIdRequest](../../models/operations/GetCrmConnectionIdFileIdRequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
 
 
 ### Response
@@ -179,41 +179,42 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdFileIdRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdFileIdResponse;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdFileIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmFile;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmFileRaw;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("omnis") {{
+                    jwt = "";
+                }})
                 .build();
 
-            PatchCrmConnectionIdFileIdRequest req = new PatchCrmConnectionIdFileIdRequest("totam", "dignissimos") {{
+            PatchCrmConnectionIdFileIdRequest req = new PatchCrmConnectionIdFileIdRequest("reiciendis", "qui") {{
                 crmFile = new CrmFile() {{
                     active = false;
-                    activityId = "repellat";
-                    companyId = "iusto";
-                    contactId = "culpa";
-                    createdAt = OffsetDateTime.parse("2022-06-02T03:40:36.510Z");
-                    dealId = "maxime";
-                    description = "assumenda";
+                    activityId = "similique";
+                    companyId = "eligendi";
+                    contactId = "numquam";
+                    createdAt = OffsetDateTime.parse("2022-02-06T14:13:06.817Z");
+                    dealId = "tenetur";
+                    description = "exercitationem";
                     fileName = "nihil";
-                    fileSize = 1520.52d;
-                    fileType = "optio";
-                    fileUrl = "nulla";
-                    id = "2484da21-729f-42ac-81ef-5725f1169ac1";
-                    leadId = "itaque";
+                    fileSize = 1547.23d;
+                    fileType = "quis";
+                    fileUrl = "maiores";
+                    id = "1169ac1e-41d8-4a23-823e-34f2dfa4a197";
+                    leadId = "a";
                     raw = new PropertyCrmFileRaw();;
-                    updatedAt = OffsetDateTime.parse("2022-11-21T20:07:41.520Z");
-                    userId = "temporibus";
+                    updatedAt = OffsetDateTime.parse("2022-02-21T13:21:02.813Z");
+                    userId = "recusandae";
                 }};;
             }};            
 
-            PatchCrmConnectionIdFileIdResponse res = sdk.file.patchCrmConnectionIdFileId(req, new PatchCrmConnectionIdFileIdSecurity("voluptatum") {{
-                jwt = "";
-            }});
+            PatchCrmConnectionIdFileIdResponse res = sdk.file.patchCrmConnectionIdFileId(req);
 
             if (res.crmFile != null) {
                 // handle response
@@ -227,10 +228,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdFileIdRequest](../../models/operations/PatchCrmConnectionIdFileIdRequest.md)   | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
-| `security`                                                                                                                                     | [com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdFileIdSecurity](../../models/operations/PatchCrmConnectionIdFileIdSecurity.md) | :heavy_check_mark:                                                                                                                             | The security requirements to use for the request.                                                                                              |
+| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdFileIdRequest](../../models/operations/PatchCrmConnectionIdFileIdRequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
 
 
 ### Response
@@ -250,41 +250,42 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdFileRequest;
 import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdFileResponse;
-import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdFileSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmFile;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmFileRaw;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("iste") {{
+                    jwt = "";
+                }})
                 .build();
 
-            PostCrmConnectionIdFileRequest req = new PostCrmConnectionIdFileRequest("deserunt") {{
+            PostCrmConnectionIdFileRequest req = new PostCrmConnectionIdFileRequest("aspernatur") {{
                 crmFile = new CrmFile() {{
                     active = false;
                     activityId = "aspernatur";
-                    companyId = "neque";
-                    contactId = "impedit";
-                    createdAt = OffsetDateTime.parse("2022-10-18T10:23:54.378Z");
+                    companyId = "et";
+                    contactId = "ipsam";
+                    createdAt = OffsetDateTime.parse("2022-01-15T00:47:03.305Z");
                     dealId = "saepe";
-                    description = "amet";
-                    fileName = "labore";
-                    fileSize = 9984.45d;
-                    fileType = "eos";
-                    fileUrl = "quibusdam";
-                    id = "fa4a197f-6de9-4221-91fe-1712099853e9";
-                    leadId = "reiciendis";
+                    description = "sunt";
+                    fileName = "in";
+                    fileSize = 991.63d;
+                    fileType = "sed";
+                    fileUrl = "voluptatem";
+                    id = "99853e9f-543d-4854-839e-e224460443bc";
+                    leadId = "architecto";
                     raw = new PropertyCrmFileRaw();;
-                    updatedAt = OffsetDateTime.parse("2022-09-26T09:36:45.150Z");
-                    userId = "adipisci";
+                    updatedAt = OffsetDateTime.parse("2022-09-13T19:18:04.626Z");
+                    userId = "vitae";
                 }};;
             }};            
 
-            PostCrmConnectionIdFileResponse res = sdk.file.postCrmConnectionIdFile(req, new PostCrmConnectionIdFileSecurity("pariatur") {{
-                jwt = "";
-            }});
+            PostCrmConnectionIdFileResponse res = sdk.file.postCrmConnectionIdFile(req);
 
             if (res.crmFile != null) {
                 // handle response
@@ -298,10 +299,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdFileRequest](../../models/operations/PostCrmConnectionIdFileRequest.md)   | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
-| `security`                                                                                                                               | [com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdFileSecurity](../../models/operations/PostCrmConnectionIdFileSecurity.md) | :heavy_check_mark:                                                                                                                       | The security requirements to use for the request.                                                                                        |
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdFileRequest](../../models/operations/PostCrmConnectionIdFileRequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
 
 
 ### Response
@@ -321,41 +321,42 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdFileIdRequest;
 import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdFileIdResponse;
-import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdFileIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmFile;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmFileRaw;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("quos") {{
+                    jwt = "";
+                }})
                 .build();
 
-            PutCrmConnectionIdFileIdRequest req = new PutCrmConnectionIdFileIdRequest("praesentium", "nemo") {{
+            PutCrmConnectionIdFileIdRequest req = new PutCrmConnectionIdFileIdRequest("atque", "quisquam") {{
                 crmFile = new CrmFile() {{
                     active = false;
-                    activityId = "dolore";
-                    companyId = "numquam";
-                    contactId = "dolor";
-                    createdAt = OffsetDateTime.parse("2021-03-29T19:15:48.513Z");
-                    dealId = "voluptates";
-                    description = "quia";
-                    fileName = "aspernatur";
-                    fileSize = 2805.9d;
-                    fileType = "non";
-                    fileUrl = "laboriosam";
-                    id = "0443bc15-4188-4c2f-96e8-5da7832eabd6";
-                    leadId = "et";
+                    activityId = "sunt";
+                    companyId = "asperiores";
+                    contactId = "corporis";
+                    createdAt = OffsetDateTime.parse("2022-02-13T03:11:51.104Z");
+                    dealId = "totam";
+                    description = "ipsam";
+                    fileName = "at";
+                    fileSize = 6325.09d;
+                    fileType = "nihil";
+                    fileUrl = "laudantium";
+                    id = "32eabd61-7c3b-40d5-9a44-bf01bad8706d";
+                    leadId = "incidunt";
                     raw = new PropertyCrmFileRaw();;
-                    updatedAt = OffsetDateTime.parse("2022-03-31T21:45:44.451Z");
-                    userId = "nesciunt";
+                    updatedAt = OffsetDateTime.parse("2022-12-30T03:44:43.178Z");
+                    userId = "laudantium";
                 }};;
             }};            
 
-            PutCrmConnectionIdFileIdResponse res = sdk.file.putCrmConnectionIdFileId(req, new PutCrmConnectionIdFileIdSecurity("harum") {{
-                jwt = "";
-            }});
+            PutCrmConnectionIdFileIdResponse res = sdk.file.putCrmConnectionIdFileId(req);
 
             if (res.crmFile != null) {
                 // handle response
@@ -369,10 +370,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdFileIdRequest](../../models/operations/PutCrmConnectionIdFileIdRequest.md)   | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
-| `security`                                                                                                                                 | [com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdFileIdSecurity](../../models/operations/PutCrmConnectionIdFileIdSecurity.md) | :heavy_check_mark:                                                                                                                         | The security requirements to use for the request.                                                                                          |
+| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdFileIdRequest](../../models/operations/PutCrmConnectionIdFileIdRequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
 
 
 ### Response

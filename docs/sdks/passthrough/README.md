@@ -20,19 +20,20 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.DeletePassthroughConnectionIdPathRequest;
 import com.unifiedapi.unifiedto.models.operations.DeletePassthroughConnectionIdPathResponse;
-import com.unifiedapi.unifiedto.models.operations.DeletePassthroughConnectionIdPathSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("dolorum") {{
+                    jwt = "";
+                }})
                 .build();
 
-            DeletePassthroughConnectionIdPathRequest req = new DeletePassthroughConnectionIdPathRequest("totam", "provident");            
+            DeletePassthroughConnectionIdPathRequest req = new DeletePassthroughConnectionIdPathRequest("provident", "incidunt");            
 
-            DeletePassthroughConnectionIdPathResponse res = sdk.passthrough.deletePassthroughConnectionIdPath(req, new DeletePassthroughConnectionIdPathSecurity("maxime") {{
-                jwt = "";
-            }});
+            DeletePassthroughConnectionIdPathResponse res = sdk.passthrough.deletePassthroughConnectionIdPath(req);
 
             if (res.undefined != null) {
                 // handle response
@@ -46,10 +47,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                    | Type                                                                                                                                                         | Required                                                                                                                                                     | Description                                                                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.DeletePassthroughConnectionIdPathRequest](../../models/operations/DeletePassthroughConnectionIdPathRequest.md)   | :heavy_check_mark:                                                                                                                                           | The request object to use for the request.                                                                                                                   |
-| `security`                                                                                                                                                   | [com.unifiedapi.unifiedto.models.operations.DeletePassthroughConnectionIdPathSecurity](../../models/operations/DeletePassthroughConnectionIdPathSecurity.md) | :heavy_check_mark:                                                                                                                                           | The security requirements to use for the request.                                                                                                            |
+| Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.DeletePassthroughConnectionIdPathRequest](../../models/operations/DeletePassthroughConnectionIdPathRequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
 
 
 ### Response
@@ -69,19 +69,20 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetPassthroughConnectionIdPathRequest;
 import com.unifiedapi.unifiedto.models.operations.GetPassthroughConnectionIdPathResponse;
-import com.unifiedapi.unifiedto.models.operations.GetPassthroughConnectionIdPathSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("maiores") {{
+                    jwt = "";
+                }})
                 .build();
 
-            GetPassthroughConnectionIdPathRequest req = new GetPassthroughConnectionIdPathRequest("totam", "id");            
+            GetPassthroughConnectionIdPathRequest req = new GetPassthroughConnectionIdPathRequest("ea", "modi");            
 
-            GetPassthroughConnectionIdPathResponse res = sdk.passthrough.getPassthroughConnectionIdPath(req, new GetPassthroughConnectionIdPathSecurity("neque") {{
-                jwt = "";
-            }});
+            GetPassthroughConnectionIdPathResponse res = sdk.passthrough.getPassthroughConnectionIdPath(req);
 
             if (res.undefined != null) {
                 // handle response
@@ -95,10 +96,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.GetPassthroughConnectionIdPathRequest](../../models/operations/GetPassthroughConnectionIdPathRequest.md)   | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
-| `security`                                                                                                                                             | [com.unifiedapi.unifiedto.models.operations.GetPassthroughConnectionIdPathSecurity](../../models/operations/GetPassthroughConnectionIdPathSecurity.md) | :heavy_check_mark:                                                                                                                                     | The security requirements to use for the request.                                                                                                      |
+| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.GetPassthroughConnectionIdPathRequest](../../models/operations/GetPassthroughConnectionIdPathRequest.md) | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
 
 
 ### Response
@@ -118,22 +118,23 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchPassthroughConnectionIdPathRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchPassthroughConnectionIdPathResponse;
-import com.unifiedapi.unifiedto.models.operations.PatchPassthroughConnectionIdPathSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.Undefined;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("sequi") {{
+                    jwt = "";
+                }})
                 .build();
 
-            PatchPassthroughConnectionIdPathRequest req = new PatchPassthroughConnectionIdPathRequest("dolores", "vel") {{
+            PatchPassthroughConnectionIdPathRequest req = new PatchPassthroughConnectionIdPathRequest("nisi", "autem") {{
                 undefined = new Undefined();;
             }};            
 
-            PatchPassthroughConnectionIdPathResponse res = sdk.passthrough.patchPassthroughConnectionIdPath(req, new PatchPassthroughConnectionIdPathSecurity("ipsum") {{
-                jwt = "";
-            }});
+            PatchPassthroughConnectionIdPathResponse res = sdk.passthrough.patchPassthroughConnectionIdPath(req);
 
             if (res.undefined != null) {
                 // handle response
@@ -147,10 +148,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.PatchPassthroughConnectionIdPathRequest](../../models/operations/PatchPassthroughConnectionIdPathRequest.md)   | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
-| `security`                                                                                                                                                 | [com.unifiedapi.unifiedto.models.operations.PatchPassthroughConnectionIdPathSecurity](../../models/operations/PatchPassthroughConnectionIdPathSecurity.md) | :heavy_check_mark:                                                                                                                                         | The security requirements to use for the request.                                                                                                          |
+| Parameter                                                                                                                                                | Type                                                                                                                                                     | Required                                                                                                                                                 | Description                                                                                                                                              |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.PatchPassthroughConnectionIdPathRequest](../../models/operations/PatchPassthroughConnectionIdPathRequest.md) | :heavy_check_mark:                                                                                                                                       | The request object to use for the request.                                                                                                               |
 
 
 ### Response
@@ -170,22 +170,23 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PostPassthroughConnectionIdPathRequest;
 import com.unifiedapi.unifiedto.models.operations.PostPassthroughConnectionIdPathResponse;
-import com.unifiedapi.unifiedto.models.operations.PostPassthroughConnectionIdPathSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.Undefined;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("tempora") {{
+                    jwt = "";
+                }})
                 .build();
 
-            PostPassthroughConnectionIdPathRequest req = new PostPassthroughConnectionIdPathRequest("occaecati", "pariatur") {{
+            PostPassthroughConnectionIdPathRequest req = new PostPassthroughConnectionIdPathRequest("mollitia", "quas") {{
                 undefined = new Undefined();;
             }};            
 
-            PostPassthroughConnectionIdPathResponse res = sdk.passthrough.postPassthroughConnectionIdPath(req, new PostPassthroughConnectionIdPathSecurity("similique") {{
-                jwt = "";
-            }});
+            PostPassthroughConnectionIdPathResponse res = sdk.passthrough.postPassthroughConnectionIdPath(req);
 
             if (res.undefined != null) {
                 // handle response
@@ -199,10 +200,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                | Type                                                                                                                                                     | Required                                                                                                                                                 | Description                                                                                                                                              |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.PostPassthroughConnectionIdPathRequest](../../models/operations/PostPassthroughConnectionIdPathRequest.md)   | :heavy_check_mark:                                                                                                                                       | The request object to use for the request.                                                                                                               |
-| `security`                                                                                                                                               | [com.unifiedapi.unifiedto.models.operations.PostPassthroughConnectionIdPathSecurity](../../models/operations/PostPassthroughConnectionIdPathSecurity.md) | :heavy_check_mark:                                                                                                                                       | The security requirements to use for the request.                                                                                                        |
+| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.PostPassthroughConnectionIdPathRequest](../../models/operations/PostPassthroughConnectionIdPathRequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
 
 
 ### Response
@@ -222,22 +222,23 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PutPassthroughConnectionIdPathRequest;
 import com.unifiedapi.unifiedto.models.operations.PutPassthroughConnectionIdPathResponse;
-import com.unifiedapi.unifiedto.models.operations.PutPassthroughConnectionIdPathSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.Undefined;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("hic") {{
+                    jwt = "";
+                }})
                 .build();
 
-            PutPassthroughConnectionIdPathRequest req = new PutPassthroughConnectionIdPathRequest("quis", "facilis") {{
+            PutPassthroughConnectionIdPathRequest req = new PutPassthroughConnectionIdPathRequest("doloremque", "id") {{
                 undefined = new Undefined();;
             }};            
 
-            PutPassthroughConnectionIdPathResponse res = sdk.passthrough.putPassthroughConnectionIdPath(req, new PutPassthroughConnectionIdPathSecurity("in") {{
-                jwt = "";
-            }});
+            PutPassthroughConnectionIdPathResponse res = sdk.passthrough.putPassthroughConnectionIdPath(req);
 
             if (res.undefined != null) {
                 // handle response
@@ -251,10 +252,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.PutPassthroughConnectionIdPathRequest](../../models/operations/PutPassthroughConnectionIdPathRequest.md)   | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
-| `security`                                                                                                                                             | [com.unifiedapi.unifiedto.models.operations.PutPassthroughConnectionIdPathSecurity](../../models/operations/PutPassthroughConnectionIdPathSecurity.md) | :heavy_check_mark:                                                                                                                                     | The security requirements to use for the request.                                                                                                      |
+| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.PutPassthroughConnectionIdPathRequest](../../models/operations/PutPassthroughConnectionIdPathRequest.md) | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
 
 
 ### Response

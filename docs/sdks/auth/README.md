@@ -18,25 +18,29 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeResponse;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("vel") {{
+                    jwt = "";
+                }})
                 .build();
 
-            GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest req = new GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest("molestiae", "dicta") {{
-                env = "iusto";
-                externalXref = "esse";
-                failureRedirect = "praesentium";
-                lang = "maiores";
+            GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest req = new GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest("architecto", "fugiat") {{
+                env = "doloremque";
+                externalXref = "dicta";
+                failureRedirect = "odio";
+                lang = "tempora";
                 redirect = false;
                 scopes = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes[]{{
-                    add(GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes.ATS_JOB_WRITE),
+                    add(GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes.CRM_TEAM_READ),
                 }};
-                state = "vel";
-                subdomain = "architecto";
-                successRedirect = "fugiat";
+                state = "ex";
+                subdomain = "consectetur";
+                successRedirect = "aliquid";
             }};            
 
             GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeResponse res = sdk.auth.getUnifiedIntegrationAuthWorkspaceIdIntegrationType(req);
@@ -75,19 +79,23 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("ipsa") {{
+                    jwt = "";
+                }})
                 .build();
 
-            GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest req = new GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest("doloremque", "dicta") {{
-                env = "odio";
-                failureRedirect = "tempora";
+            GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest req = new GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest("laborum", "sunt") {{
+                env = "nostrum";
+                failureRedirect = "fugiat";
                 redirect = false;
-                state = "esse";
-                successRedirect = "ex";
+                state = "expedita";
+                successRedirect = "aliquid";
             }};            
 
             GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeResponse res = sdk.auth.getUnifiedIntegrationLoginWorkspaceIdIntegrationType(req);

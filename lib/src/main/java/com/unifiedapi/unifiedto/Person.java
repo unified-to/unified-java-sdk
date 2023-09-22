@@ -24,11 +24,10 @@ public class Person {
     /**
      * Retrieve enrichment information for a person
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdPersonResponse getEnrichConnectionIdPerson(com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdPersonRequest request, com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdPersonSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdPersonResponse getEnrichConnectionIdPerson(com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdPersonRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdPersonRequest.class, baseUrl, "/enrich/{connection_id}/person", request, null);
         
@@ -45,7 +44,7 @@ public class Person {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

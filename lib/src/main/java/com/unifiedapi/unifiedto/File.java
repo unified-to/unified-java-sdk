@@ -25,11 +25,10 @@ public class File {
     /**
      * Remove a file
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdFileIdResponse deleteCrmConnectionIdFileId(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdFileIdRequest request, com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdFileIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdFileIdResponse deleteCrmConnectionIdFileId(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdFileIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdFileIdRequest.class, baseUrl, "/crm/{connection_id}/file/{id}", request, null);
         
@@ -40,7 +39,7 @@ public class File {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -64,11 +63,10 @@ public class File {
     /**
      * List all files
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileResponse getCrmConnectionIdFile(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileRequest request, com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileResponse getCrmConnectionIdFile(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileRequest.class, baseUrl, "/crm/{connection_id}/file", request, null);
         
@@ -85,7 +83,7 @@ public class File {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -110,11 +108,10 @@ public class File {
     /**
      * Retrieve a file
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileIdResponse getCrmConnectionIdFileId(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileIdRequest request, com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileIdResponse getCrmConnectionIdFileId(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileIdRequest.class, baseUrl, "/crm/{connection_id}/file/{id}", request, null);
         
@@ -125,7 +122,7 @@ public class File {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -150,11 +147,10 @@ public class File {
     /**
      * Update a file
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdFileIdResponse patchCrmConnectionIdFileId(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdFileIdRequest request, com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdFileIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdFileIdResponse patchCrmConnectionIdFileId(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdFileIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdFileIdRequest.class, baseUrl, "/crm/{connection_id}/file/{id}", request, null);
         
@@ -167,7 +163,7 @@ public class File {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -192,11 +188,10 @@ public class File {
     /**
      * Create a file
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdFileResponse postCrmConnectionIdFile(com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdFileRequest request, com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdFileSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdFileResponse postCrmConnectionIdFile(com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdFileRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdFileRequest.class, baseUrl, "/crm/{connection_id}/file", request, null);
         
@@ -209,7 +204,7 @@ public class File {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -234,11 +229,10 @@ public class File {
     /**
      * Update a file
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdFileIdResponse putCrmConnectionIdFileId(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdFileIdRequest request, com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdFileIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdFileIdResponse putCrmConnectionIdFileId(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdFileIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdFileIdRequest.class, baseUrl, "/crm/{connection_id}/file/{id}", request, null);
         
@@ -251,7 +245,7 @@ public class File {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

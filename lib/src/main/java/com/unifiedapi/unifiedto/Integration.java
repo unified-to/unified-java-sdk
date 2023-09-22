@@ -24,11 +24,10 @@ public class Integration {
     /**
      * Returns all integrations
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationResponse getUnifiedIntegration(com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationRequest request, com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationResponse getUnifiedIntegration(com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(baseUrl, "/unified/integration");
         
@@ -45,7 +44,7 @@ public class Integration {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -91,7 +90,8 @@ public class Integration {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.defaultClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -114,11 +114,10 @@ public class Integration {
     /**
      * Retrieve an integration
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationIntegrationTypeResponse getUnifiedIntegrationIntegrationType(com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationIntegrationTypeRequest request, com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationIntegrationTypeSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationIntegrationTypeResponse getUnifiedIntegrationIntegrationType(com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationIntegrationTypeRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationIntegrationTypeRequest.class, baseUrl, "/unified/integration/{integration_type}", request, null);
         
@@ -129,7 +128,7 @@ public class Integration {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -175,7 +174,8 @@ public class Integration {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.defaultClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");

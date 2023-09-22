@@ -21,19 +21,20 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdCandidateIdRequest;
 import com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdCandidateIdResponse;
-import com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdCandidateIdSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("voluptates") {{
+                    jwt = "";
+                }})
                 .build();
 
-            DeleteAtsConnectionIdCandidateIdRequest req = new DeleteAtsConnectionIdCandidateIdRequest("aliquid", "perferendis");            
+            DeleteAtsConnectionIdCandidateIdRequest req = new DeleteAtsConnectionIdCandidateIdRequest("mollitia", "laborum");            
 
-            DeleteAtsConnectionIdCandidateIdResponse res = sdk.candidate.deleteAtsConnectionIdCandidateId(req, new DeleteAtsConnectionIdCandidateIdSecurity("eum") {{
-                jwt = "";
-            }});
+            DeleteAtsConnectionIdCandidateIdResponse res = sdk.candidate.deleteAtsConnectionIdCandidateId(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -47,10 +48,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdCandidateIdRequest](../../models/operations/DeleteAtsConnectionIdCandidateIdRequest.md)   | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
-| `security`                                                                                                                                                 | [com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdCandidateIdSecurity](../../models/operations/DeleteAtsConnectionIdCandidateIdSecurity.md) | :heavy_check_mark:                                                                                                                                         | The security requirements to use for the request.                                                                                                          |
+| Parameter                                                                                                                                                | Type                                                                                                                                                     | Required                                                                                                                                                 | Description                                                                                                                                              |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdCandidateIdRequest](../../models/operations/DeleteAtsConnectionIdCandidateIdRequest.md) | :heavy_check_mark:                                                                                                                                       | The request object to use for the request.                                                                                                               |
 
 
 ### Response
@@ -70,27 +70,28 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateResponse;
-import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("libero") {{
+                    jwt = "";
+                }})
                 .build();
 
-            GetAtsConnectionIdCandidateRequest req = new GetAtsConnectionIdCandidateRequest("voluptas") {{
-                limit = 6145.28d;
-                offset = 6616.07d;
-                order = "ab";
-                query = "error";
-                sort = "possimus";
-                updatedGte = OffsetDateTime.parse("2021-01-15T12:05:30.894Z");
+            GetAtsConnectionIdCandidateRequest req = new GetAtsConnectionIdCandidateRequest("ad") {{
+                limit = 5369.23d;
+                offset = 3162.2d;
+                order = "vitae";
+                query = "repellendus";
+                sort = "ex";
+                updatedGte = OffsetDateTime.parse("2021-10-14T02:46:55.259Z");
             }};            
 
-            GetAtsConnectionIdCandidateResponse res = sdk.candidate.getAtsConnectionIdCandidate(req, new GetAtsConnectionIdCandidateSecurity("laborum") {{
-                jwt = "";
-            }});
+            GetAtsConnectionIdCandidateResponse res = sdk.candidate.getAtsConnectionIdCandidate(req);
 
             if (res.atsCandidates != null) {
                 // handle response
@@ -104,10 +105,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateRequest](../../models/operations/GetAtsConnectionIdCandidateRequest.md)   | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
-| `security`                                                                                                                                       | [com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateSecurity](../../models/operations/GetAtsConnectionIdCandidateSecurity.md) | :heavy_check_mark:                                                                                                                               | The security requirements to use for the request.                                                                                                |
+| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateRequest](../../models/operations/GetAtsConnectionIdCandidateRequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
 
 
 ### Response
@@ -127,19 +127,20 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateIdRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateIdResponse;
-import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateIdSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("ut") {{
+                    jwt = "";
+                }})
                 .build();
 
-            GetAtsConnectionIdCandidateIdRequest req = new GetAtsConnectionIdCandidateIdRequest("libero", "ad");            
+            GetAtsConnectionIdCandidateIdRequest req = new GetAtsConnectionIdCandidateIdRequest("ad", "expedita");            
 
-            GetAtsConnectionIdCandidateIdResponse res = sdk.candidate.getAtsConnectionIdCandidateId(req, new GetAtsConnectionIdCandidateIdSecurity("deleniti") {{
-                jwt = "";
-            }});
+            GetAtsConnectionIdCandidateIdResponse res = sdk.candidate.getAtsConnectionIdCandidateId(req);
 
             if (res.atsCandidate != null) {
                 // handle response
@@ -153,10 +154,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateIdRequest](../../models/operations/GetAtsConnectionIdCandidateIdRequest.md)   | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
-| `security`                                                                                                                                           | [com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateIdSecurity](../../models/operations/GetAtsConnectionIdCandidateIdSecurity.md) | :heavy_check_mark:                                                                                                                                   | The security requirements to use for the request.                                                                                                    |
+| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateIdRequest](../../models/operations/GetAtsConnectionIdCandidateIdRequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
 
 
 ### Response
@@ -176,7 +176,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdCandidateIdRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdCandidateIdResponse;
-import com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdCandidateIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.AtsCandidate;
 import com.unifiedapi.unifiedto.models.shared.AtsEmail;
 import com.unifiedapi.unifiedto.models.shared.AtsEmailType;
@@ -184,56 +183,58 @@ import com.unifiedapi.unifiedto.models.shared.AtsTelephone;
 import com.unifiedapi.unifiedto.models.shared.AtsTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateRaw;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("voluptatem") {{
+                    jwt = "";
+                }})
                 .build();
 
-            PatchAtsConnectionIdCandidateIdRequest req = new PatchAtsConnectionIdCandidateIdRequest("enim", "vitae") {{
+            PatchAtsConnectionIdCandidateIdRequest req = new PatchAtsConnectionIdCandidateIdRequest("molestias", "cum") {{
                 atsCandidate = new AtsCandidate() {{
                     address = new PropertyAtsCandidateAddress() {{
-                        address1 = "repellendus";
-                        address2 = "ex";
-                        city = "Jakubowskiboro";
-                        country = "Germany";
-                        countryCode = "PK";
-                        postalCode = "57315";
-                        region = "omnis";
-                        regionCode = "veritatis";
+                        address1 = "aliquid";
+                        address2 = "beatae";
+                        city = "Lemuelton";
+                        country = "Philippines";
+                        countryCode = "NL";
+                        postalCode = "09816-8800";
+                        region = "deleniti";
+                        regionCode = "earum";
                     }};;
-                    companyName = "rerum";
-                    createdAt = OffsetDateTime.parse("2021-09-24T14:32:36.483Z");
+                    companyName = "ex";
+                    createdAt = OffsetDateTime.parse("2021-06-06T00:26:53.355Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
-                        add(new AtsEmail("debitis") {{
-                            email = "Vesta68@gmail.com";
-                            type = AtsEmailType.OTHER;
+                        add(new AtsEmail("illum") {{
+                            email = "Freda35@hotmail.com";
+                            type = AtsEmailType.WORK;
                         }}),
                     }};
-                    externalId = "voluptatem";
-                    id = "08e6f8c5-f350-4d8c-9b5a-341814301042";
-                    imageUrl = "ab";
-                    name = "Eric Fadel";
+                    externalId = "totam";
+                    id = "cdb5a341-8143-4010-8218-13d5208ece7e";
+                    imageUrl = "sed";
+                    name = "Robin Ratke";
                     raw = new PropertyAtsCandidateRaw();;
                     tags = new String[]{{
-                        add("consequuntur"),
+                        add("voluptatum"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.AtsTelephone[]{{
-                        add(new AtsTelephone("eveniet") {{
-                            telephone = "ipsa";
-                            type = AtsTelephoneType.OTHER;
+                        add(new AtsTelephone("ab") {{
+                            telephone = "magnam";
+                            type = AtsTelephoneType.HOME;
                         }}),
                     }};
                     title = "Miss";
-                    updatedAt = OffsetDateTime.parse("2021-08-19T05:33:23.931Z");
+                    updatedAt = OffsetDateTime.parse("2022-04-01T21:03:01.050Z");
                 }};;
             }};            
 
-            PatchAtsConnectionIdCandidateIdResponse res = sdk.candidate.patchAtsConnectionIdCandidateId(req, new PatchAtsConnectionIdCandidateIdSecurity("necessitatibus") {{
-                jwt = "";
-            }});
+            PatchAtsConnectionIdCandidateIdResponse res = sdk.candidate.patchAtsConnectionIdCandidateId(req);
 
             if (res.atsCandidate != null) {
                 // handle response
@@ -247,10 +248,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                | Type                                                                                                                                                     | Required                                                                                                                                                 | Description                                                                                                                                              |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdCandidateIdRequest](../../models/operations/PatchAtsConnectionIdCandidateIdRequest.md)   | :heavy_check_mark:                                                                                                                                       | The request object to use for the request.                                                                                                               |
-| `security`                                                                                                                                               | [com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdCandidateIdSecurity](../../models/operations/PatchAtsConnectionIdCandidateIdSecurity.md) | :heavy_check_mark:                                                                                                                                       | The security requirements to use for the request.                                                                                                        |
+| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdCandidateIdRequest](../../models/operations/PatchAtsConnectionIdCandidateIdRequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
 
 
 ### Response
@@ -270,7 +270,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdCandidateRequest;
 import com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdCandidateResponse;
-import com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdCandidateSecurity;
 import com.unifiedapi.unifiedto.models.shared.AtsCandidate;
 import com.unifiedapi.unifiedto.models.shared.AtsEmail;
 import com.unifiedapi.unifiedto.models.shared.AtsEmailType;
@@ -278,56 +277,58 @@ import com.unifiedapi.unifiedto.models.shared.AtsTelephone;
 import com.unifiedapi.unifiedto.models.shared.AtsTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateRaw;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("laboriosam") {{
+                    jwt = "";
+                }})
                 .build();
 
-            PostAtsConnectionIdCandidateRequest req = new PostAtsConnectionIdCandidateRequest("sed") {{
+            PostAtsConnectionIdCandidateRequest req = new PostAtsConnectionIdCandidateRequest("recusandae") {{
                 atsCandidate = new AtsCandidate() {{
                     address = new PropertyAtsCandidateAddress() {{
-                        address1 = "veniam";
-                        address2 = "nesciunt";
-                        city = "Kemmerview";
-                        country = "Madagascar";
-                        countryCode = "GA";
-                        postalCode = "07473";
-                        region = "recusandae";
-                        regionCode = "consequuntur";
+                        address1 = "consequuntur";
+                        address2 = "voluptatem";
+                        city = "Fort Austin";
+                        country = "Hong Kong";
+                        countryCode = "TG";
+                        postalCode = "66199-7534";
+                        region = "blanditiis";
+                        regionCode = "officia";
                     }};;
-                    companyName = "voluptatem";
-                    createdAt = OffsetDateTime.parse("2022-02-08T01:44:39.255Z");
+                    companyName = "voluptas";
+                    createdAt = OffsetDateTime.parse("2022-08-20T19:22:19.746Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
-                        add(new AtsEmail("doloribus") {{
-                            email = "Gladys_Swaniawski69@gmail.com";
-                            type = AtsEmailType.WORK;
+                        add(new AtsEmail("laudantium") {{
+                            email = "Devin.Cole@yahoo.com";
+                            type = AtsEmailType.OTHER;
                         }}),
                     }};
-                    externalId = "repudiandae";
-                    id = "c9578a64-5842-473a-8418-d162309fb092";
-                    imageUrl = "occaecati";
-                    name = "Ernest Bode";
+                    externalId = "incidunt";
+                    id = "18d16230-9fb0-4929-921a-efb9f58c4d86";
+                    imageUrl = "itaque";
+                    name = "Deanna Wehner";
                     raw = new PropertyAtsCandidateRaw();;
                     tags = new String[]{{
-                        add("voluptatibus"),
+                        add("vero"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.AtsTelephone[]{{
-                        add(new AtsTelephone("delectus") {{
-                            telephone = "distinctio";
-                            type = AtsTelephoneType.FAX;
+                        add(new AtsTelephone("vel") {{
+                            telephone = "voluptatem";
+                            type = AtsTelephoneType.HOME;
                         }}),
                     }};
-                    title = "Mrs.";
-                    updatedAt = OffsetDateTime.parse("2021-05-25T00:50:01.296Z");
+                    title = "Mr.";
+                    updatedAt = OffsetDateTime.parse("2022-10-02T14:16:44.513Z");
                 }};;
             }};            
 
-            PostAtsConnectionIdCandidateResponse res = sdk.candidate.postAtsConnectionIdCandidate(req, new PostAtsConnectionIdCandidateSecurity("magnam") {{
-                jwt = "";
-            }});
+            PostAtsConnectionIdCandidateResponse res = sdk.candidate.postAtsConnectionIdCandidate(req);
 
             if (res.atsCandidate != null) {
                 // handle response
@@ -341,10 +342,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdCandidateRequest](../../models/operations/PostAtsConnectionIdCandidateRequest.md)   | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
-| `security`                                                                                                                                         | [com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdCandidateSecurity](../../models/operations/PostAtsConnectionIdCandidateSecurity.md) | :heavy_check_mark:                                                                                                                                 | The security requirements to use for the request.                                                                                                  |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdCandidateRequest](../../models/operations/PostAtsConnectionIdCandidateRequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
 
 
 ### Response
@@ -364,7 +364,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdCandidateIdRequest;
 import com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdCandidateIdResponse;
-import com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdCandidateIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.AtsCandidate;
 import com.unifiedapi.unifiedto.models.shared.AtsEmail;
 import com.unifiedapi.unifiedto.models.shared.AtsEmailType;
@@ -372,56 +371,58 @@ import com.unifiedapi.unifiedto.models.shared.AtsTelephone;
 import com.unifiedapi.unifiedto.models.shared.AtsTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateRaw;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("maiores") {{
+                    jwt = "";
+                }})
                 .build();
 
-            PutAtsConnectionIdCandidateIdRequest req = new PutAtsConnectionIdCandidateIdRequest("temporibus", "quos") {{
+            PutAtsConnectionIdCandidateIdRequest req = new PutAtsConnectionIdCandidateIdRequest("enim", "sint") {{
                 atsCandidate = new AtsCandidate() {{
                     address = new PropertyAtsCandidateAddress() {{
-                        address1 = "commodi";
-                        address2 = "itaque";
-                        city = "Jovanshire";
-                        country = "Estonia";
-                        countryCode = "PM";
-                        postalCode = "03400-2935";
-                        region = "nulla";
-                        regionCode = "deserunt";
+                        address1 = "nulla";
+                        address2 = "deserunt";
+                        city = "Franzport";
+                        country = "Norway";
+                        countryCode = "GL";
+                        postalCode = "87999-4389";
+                        region = "quae";
+                        regionCode = "minus";
                     }};;
-                    companyName = "esse";
-                    createdAt = OffsetDateTime.parse("2022-07-22T17:24:54.812Z");
+                    companyName = "fuga";
+                    createdAt = OffsetDateTime.parse("2022-07-16T07:39:08.844Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
-                        add(new AtsEmail("asperiores") {{
-                            email = "Ethan_Marquardt94@hotmail.com";
+                        add(new AtsEmail("nam") {{
+                            email = "Kallie.Emmerich74@gmail.com";
                             type = AtsEmailType.OTHER;
                         }}),
                     }};
-                    externalId = "ex";
-                    id = "6ef1caa3-383c-42be-b477-373c8d72f64d";
-                    imageUrl = "inventore";
-                    name = "Wm Brakus";
+                    externalId = "dolore";
+                    id = "77373c8d-72f6-44d1-9b1f-2c4310661e96";
+                    imageUrl = "velit";
+                    name = "Miss Katrina Weber";
                     raw = new PropertyAtsCandidateRaw();;
                     tags = new String[]{{
-                        add("porro"),
+                        add("iste"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.AtsTelephone[]{{
-                        add(new AtsTelephone("illo") {{
-                            telephone = "aliquam";
-                            type = AtsTelephoneType.HOME;
+                        add(new AtsTelephone("nisi") {{
+                            telephone = "itaque";
+                            type = AtsTelephoneType.WORK;
                         }}),
                     }};
-                    title = "Mr.";
-                    updatedAt = OffsetDateTime.parse("2022-08-05T11:21:49.286Z");
+                    title = "Dr.";
+                    updatedAt = OffsetDateTime.parse("2022-04-30T01:11:05.137Z");
                 }};;
             }};            
 
-            PutAtsConnectionIdCandidateIdResponse res = sdk.candidate.putAtsConnectionIdCandidateId(req, new PutAtsConnectionIdCandidateIdSecurity("beatae") {{
-                jwt = "";
-            }});
+            PutAtsConnectionIdCandidateIdResponse res = sdk.candidate.putAtsConnectionIdCandidateId(req);
 
             if (res.atsCandidate != null) {
                 // handle response
@@ -435,10 +436,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdCandidateIdRequest](../../models/operations/PutAtsConnectionIdCandidateIdRequest.md)   | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
-| `security`                                                                                                                                           | [com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdCandidateIdSecurity](../../models/operations/PutAtsConnectionIdCandidateIdSecurity.md) | :heavy_check_mark:                                                                                                                                   | The security requirements to use for the request.                                                                                                    |
+| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdCandidateIdRequest](../../models/operations/PutAtsConnectionIdCandidateIdRequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
 
 
 ### Response

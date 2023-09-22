@@ -36,19 +36,20 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.DeleteUnifiedConnectionIdRequest;
 import com.unifiedapi.unifiedto.models.operations.DeleteUnifiedConnectionIdResponse;
-import com.unifiedapi.unifiedto.models.operations.DeleteUnifiedConnectionIdSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("laudantium") {{
+                    jwt = "";
+                }})
                 .build();
 
-            DeleteUnifiedConnectionIdRequest req = new DeleteUnifiedConnectionIdRequest("natus");            
+            DeleteUnifiedConnectionIdRequest req = new DeleteUnifiedConnectionIdRequest("commodi");            
 
-            DeleteUnifiedConnectionIdResponse res = sdk.unified.deleteUnifiedConnectionId(req, new DeleteUnifiedConnectionIdSecurity("ad") {{
-                jwt = "";
-            }});
+            DeleteUnifiedConnectionIdResponse res = sdk.unified.deleteUnifiedConnectionId(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -62,10 +63,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.DeleteUnifiedConnectionIdRequest](../../models/operations/DeleteUnifiedConnectionIdRequest.md)   | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
-| `security`                                                                                                                                   | [com.unifiedapi.unifiedto.models.operations.DeleteUnifiedConnectionIdSecurity](../../models/operations/DeleteUnifiedConnectionIdSecurity.md) | :heavy_check_mark:                                                                                                                           | The security requirements to use for the request.                                                                                            |
+| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.DeleteUnifiedConnectionIdRequest](../../models/operations/DeleteUnifiedConnectionIdRequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
 
 
 ### Response
@@ -84,17 +84,18 @@ package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.DeleteUnifiedUserResponse;
-import com.unifiedapi.unifiedto.models.operations.DeleteUnifiedUserSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("a") {{
+                    jwt = "";
+                }})
                 .build();
 
-            DeleteUnifiedUserResponse res = sdk.unified.deleteUnifiedUser(new DeleteUnifiedUserSecurity("cum") {{
-                jwt = "";
-            }});
+            DeleteUnifiedUserResponse res = sdk.unified.deleteUnifiedUser();
 
             if (res.statusCode == 200) {
                 // handle response
@@ -105,12 +106,6 @@ public class Application {
     }
 }
 ```
-
-### Parameters
-
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `security`                                                                                                                   | [com.unifiedapi.unifiedto.models.operations.DeleteUnifiedUserSecurity](../../models/operations/DeleteUnifiedUserSecurity.md) | :heavy_check_mark:                                                                                                           | The security requirements to use for the request.                                                                            |
 
 
 ### Response
@@ -130,19 +125,20 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.DeleteUnifiedWebhookIdRequest;
 import com.unifiedapi.unifiedto.models.operations.DeleteUnifiedWebhookIdResponse;
-import com.unifiedapi.unifiedto.models.operations.DeleteUnifiedWebhookIdSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("aliquid") {{
+                    jwt = "";
+                }})
                 .build();
 
-            DeleteUnifiedWebhookIdRequest req = new DeleteUnifiedWebhookIdRequest("dolorum");            
+            DeleteUnifiedWebhookIdRequest req = new DeleteUnifiedWebhookIdRequest("qui");            
 
-            DeleteUnifiedWebhookIdResponse res = sdk.unified.deleteUnifiedWebhookId(req, new DeleteUnifiedWebhookIdSecurity("quod") {{
-                jwt = "";
-            }});
+            DeleteUnifiedWebhookIdResponse res = sdk.unified.deleteUnifiedWebhookId(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -156,10 +152,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.DeleteUnifiedWebhookIdRequest](../../models/operations/DeleteUnifiedWebhookIdRequest.md)   | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `security`                                                                                                                             | [com.unifiedapi.unifiedto.models.operations.DeleteUnifiedWebhookIdSecurity](../../models/operations/DeleteUnifiedWebhookIdSecurity.md) | :heavy_check_mark:                                                                                                                     | The security requirements to use for the request.                                                                                      |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.DeleteUnifiedWebhookIdRequest](../../models/operations/DeleteUnifiedWebhookIdRequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
 
 
 ### Response
@@ -179,32 +174,33 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallResponse;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("eligendi") {{
+                    jwt = "";
+                }})
                 .build();
 
             GetUnifiedApicallRequest req = new GetUnifiedApicallRequest() {{
-                connectionId = "nihil";
-                createdLte = OffsetDateTime.parse("2022-07-03T21:15:21.218Z");
-                env = "tenetur";
+                connectionId = "perspiciatis";
+                createdLte = OffsetDateTime.parse("2022-06-04T16:12:34.148Z");
+                env = "eligendi";
                 error = false;
-                externalXref = "eaque";
-                integrationType = "ex";
-                limit = 6996.06d;
-                offset = 1700.97d;
-                order = "laudantium";
-                sort = "repudiandae";
-                updatedGte = OffsetDateTime.parse("2020-08-25T12:42:19.724Z");
+                externalXref = "incidunt";
+                integrationType = "quisquam";
+                limit = 7977.92d;
+                offset = 3856.2d;
+                order = "quidem";
+                sort = "reprehenderit";
+                updatedGte = OffsetDateTime.parse("2021-12-16T21:03:20.387Z");
             }};            
 
-            GetUnifiedApicallResponse res = sdk.unified.getUnifiedApicall(req, new GetUnifiedApicallSecurity("atque") {{
-                jwt = "";
-            }});
+            GetUnifiedApicallResponse res = sdk.unified.getUnifiedApicall(req);
 
             if (res.apiCalls != null) {
                 // handle response
@@ -218,10 +214,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallRequest](../../models/operations/GetUnifiedApicallRequest.md)   | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `security`                                                                                                                   | [com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallSecurity](../../models/operations/GetUnifiedApicallSecurity.md) | :heavy_check_mark:                                                                                                           | The security requirements to use for the request.                                                                            |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallRequest](../../models/operations/GetUnifiedApicallRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response
@@ -241,19 +236,20 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallIdRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallIdResponse;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallIdSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("error") {{
+                    jwt = "";
+                }})
                 .build();
 
-            GetUnifiedApicallIdRequest req = new GetUnifiedApicallIdRequest("autem");            
+            GetUnifiedApicallIdRequest req = new GetUnifiedApicallIdRequest("alias");            
 
-            GetUnifiedApicallIdResponse res = sdk.unified.getUnifiedApicallId(req, new GetUnifiedApicallIdSecurity("eius") {{
-                jwt = "";
-            }});
+            GetUnifiedApicallIdResponse res = sdk.unified.getUnifiedApicallId(req);
 
             if (res.apiCall != null) {
                 // handle response
@@ -267,10 +263,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallIdRequest](../../models/operations/GetUnifiedApicallIdRequest.md)   | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `security`                                                                                                                       | [com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallIdSecurity](../../models/operations/GetUnifiedApicallIdSecurity.md) | :heavy_check_mark:                                                                                                               | The security requirements to use for the request.                                                                                |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallIdRequest](../../models/operations/GetUnifiedApicallIdRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
 
 
 ### Response
@@ -291,31 +286,32 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionCategories;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionResponse;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("deserunt") {{
+                    jwt = "";
+                }})
                 .build();
 
             GetUnifiedConnectionRequest req = new GetUnifiedConnectionRequest() {{
                 categories = new com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionCategories[]{{
-                    add(GetUnifiedConnectionCategories.ENRICH),
+                    add(GetUnifiedConnectionCategories.HRIS),
                 }};
-                env = "sunt";
-                externalXref = "amet";
-                limit = 5118.79d;
-                offset = 4131.3d;
-                order = "a";
-                sort = "aliquid";
-                updatedGte = OffsetDateTime.parse("2022-03-31T18:36:20.568Z");
+                env = "sapiente";
+                externalXref = "illum";
+                limit = 2026.93d;
+                offset = 7609.41d;
+                order = "corrupti";
+                sort = "inventore";
+                updatedGte = OffsetDateTime.parse("2021-02-04T18:53:21.003Z");
             }};            
 
-            GetUnifiedConnectionResponse res = sdk.unified.getUnifiedConnection(req, new GetUnifiedConnectionSecurity("perspiciatis") {{
-                jwt = "";
-            }});
+            GetUnifiedConnectionResponse res = sdk.unified.getUnifiedConnection(req);
 
             if (res.connections != null) {
                 // handle response
@@ -329,10 +325,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionRequest](../../models/operations/GetUnifiedConnectionRequest.md)   | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
-| `security`                                                                                                                         | [com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionSecurity](../../models/operations/GetUnifiedConnectionSecurity.md) | :heavy_check_mark:                                                                                                                 | The security requirements to use for the request.                                                                                  |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionRequest](../../models/operations/GetUnifiedConnectionRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
 
 
 ### Response
@@ -352,19 +347,20 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionIdRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionIdResponse;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionIdSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("dicta") {{
+                    jwt = "";
+                }})
                 .build();
 
-            GetUnifiedConnectionIdRequest req = new GetUnifiedConnectionIdRequest("eum");            
+            GetUnifiedConnectionIdRequest req = new GetUnifiedConnectionIdRequest("perferendis");            
 
-            GetUnifiedConnectionIdResponse res = sdk.unified.getUnifiedConnectionId(req, new GetUnifiedConnectionIdSecurity("sint") {{
-                jwt = "";
-            }});
+            GetUnifiedConnectionIdResponse res = sdk.unified.getUnifiedConnectionId(req);
 
             if (res.connection != null) {
                 // handle response
@@ -378,10 +374,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionIdRequest](../../models/operations/GetUnifiedConnectionIdRequest.md)   | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `security`                                                                                                                             | [com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionIdSecurity](../../models/operations/GetUnifiedConnectionIdSecurity.md) | :heavy_check_mark:                                                                                                                     | The security requirements to use for the request.                                                                                      |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionIdRequest](../../models/operations/GetUnifiedConnectionIdRequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
 
 
 ### Response
@@ -402,31 +397,32 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationCategories;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationResponse;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("asperiores") {{
+                    jwt = "";
+                }})
                 .build();
 
             GetUnifiedIntegrationRequest req = new GetUnifiedIntegrationRequest() {{
                 active = false;
                 categories = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationCategories[]{{
-                    add(GetUnifiedIntegrationCategories.MARTECH),
+                    add(GetUnifiedIntegrationCategories.CRM),
                 }};
-                limit = 2765.07d;
-                offset = 7900.8d;
-                order = "quod";
-                sort = "laboriosam";
+                limit = 7596.13d;
+                offset = 1614.81d;
+                order = "non";
+                sort = "fugiat";
                 summary = false;
-                updatedGte = OffsetDateTime.parse("2022-02-13T18:05:25.054Z");
+                updatedGte = OffsetDateTime.parse("2021-02-26T18:39:20.796Z");
             }};            
 
-            GetUnifiedIntegrationResponse res = sdk.unified.getUnifiedIntegration(req, new GetUnifiedIntegrationSecurity("praesentium") {{
-                jwt = "";
-            }});
+            GetUnifiedIntegrationResponse res = sdk.unified.getUnifiedIntegration(req);
 
             if (res.integrations != null) {
                 // handle response
@@ -440,10 +436,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationRequest](../../models/operations/GetUnifiedIntegrationRequest.md)   | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-| `security`                                                                                                                           | [com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationSecurity](../../models/operations/GetUnifiedIntegrationSecurity.md) | :heavy_check_mark:                                                                                                                   | The security requirements to use for the request.                                                                                    |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationRequest](../../models/operations/GetUnifiedIntegrationRequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
 
 
 ### Response
@@ -464,25 +459,29 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeResponse;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("amet") {{
+                    jwt = "";
+                }})
                 .build();
 
-            GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest req = new GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest("totam", "error") {{
-                env = "alias";
-                externalXref = "deserunt";
-                failureRedirect = "sequi";
-                lang = "sapiente";
+            GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest req = new GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest("quae", "pariatur") {{
+                env = "officia";
+                externalXref = "velit";
+                failureRedirect = "debitis";
+                lang = "facere";
                 redirect = false;
                 scopes = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes[]{{
-                    add(GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes.HRIS_GROUP_WRITE),
+                    add(GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes.TICKETING_NOTE_READ),
                 }};
-                state = "nesciunt";
-                subdomain = "optio";
-                successRedirect = "corrupti";
+                state = "minima";
+                subdomain = "vitae";
+                successRedirect = "repellat";
             }};            
 
             GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeResponse res = sdk.unified.getUnifiedIntegrationAuthWorkspaceIdIntegrationType(req);
@@ -521,19 +520,20 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationIntegrationTypeRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationIntegrationTypeResponse;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationIntegrationTypeSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("est") {{
+                    jwt = "";
+                }})
                 .build();
 
-            GetUnifiedIntegrationIntegrationTypeRequest req = new GetUnifiedIntegrationIntegrationTypeRequest("inventore");            
+            GetUnifiedIntegrationIntegrationTypeRequest req = new GetUnifiedIntegrationIntegrationTypeRequest("facere");            
 
-            GetUnifiedIntegrationIntegrationTypeResponse res = sdk.unified.getUnifiedIntegrationIntegrationType(req, new GetUnifiedIntegrationIntegrationTypeSecurity("quibusdam") {{
-                jwt = "";
-            }});
+            GetUnifiedIntegrationIntegrationTypeResponse res = sdk.unified.getUnifiedIntegrationIntegrationType(req);
 
             if (res.integration != null) {
                 // handle response
@@ -547,10 +547,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                          | Type                                                                                                                                                               | Required                                                                                                                                                           | Description                                                                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationIntegrationTypeRequest](../../models/operations/GetUnifiedIntegrationIntegrationTypeRequest.md)   | :heavy_check_mark:                                                                                                                                                 | The request object to use for the request.                                                                                                                         |
-| `security`                                                                                                                                                         | [com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationIntegrationTypeSecurity](../../models/operations/GetUnifiedIntegrationIntegrationTypeSecurity.md) | :heavy_check_mark:                                                                                                                                                 | The security requirements to use for the request.                                                                                                                  |
+| Parameter                                                                                                                                                        | Type                                                                                                                                                             | Required                                                                                                                                                         | Description                                                                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationIntegrationTypeRequest](../../models/operations/GetUnifiedIntegrationIntegrationTypeRequest.md) | :heavy_check_mark:                                                                                                                                               | The request object to use for the request.                                                                                                                       |
 
 
 ### Response
@@ -571,19 +570,23 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationWorkspaceWorkspaceIdCategories;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationWorkspaceWorkspaceIdRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationWorkspaceWorkspaceIdResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("iste") {{
+                    jwt = "";
+                }})
                 .build();
 
-            GetUnifiedIntegrationWorkspaceWorkspaceIdRequest req = new GetUnifiedIntegrationWorkspaceWorkspaceIdRequest("culpa") {{
+            GetUnifiedIntegrationWorkspaceWorkspaceIdRequest req = new GetUnifiedIntegrationWorkspaceWorkspaceIdRequest("numquam") {{
                 active = false;
                 categories = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationWorkspaceWorkspaceIdCategories[]{{
-                    add(GetUnifiedIntegrationWorkspaceWorkspaceIdCategories.HRIS),
+                    add(GetUnifiedIntegrationWorkspaceWorkspaceIdCategories.ENRICH),
                 }};
-                env = "perferendis";
+                env = "optio";
                 summary = false;
             }};            
 
@@ -622,17 +625,18 @@ package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedUserResponse;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedUserSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("minus") {{
+                    jwt = "";
+                }})
                 .build();
 
-            GetUnifiedUserResponse res = sdk.unified.getUnifiedUser(new GetUnifiedUserSecurity("asperiores") {{
-                jwt = "";
-            }});
+            GetUnifiedUserResponse res = sdk.unified.getUnifiedUser();
 
             if (res.user != null) {
                 // handle response
@@ -643,12 +647,6 @@ public class Application {
     }
 }
 ```
-
-### Parameters
-
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `security`                                                                                                             | [com.unifiedapi.unifiedto.models.operations.GetUnifiedUserSecurity](../../models/operations/GetUnifiedUserSecurity.md) | :heavy_check_mark:                                                                                                     | The security requirements to use for the request.                                                                      |
 
 
 ### Response
@@ -667,17 +665,18 @@ package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedUserTokenResponse;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedUserTokenSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("sint") {{
+                    jwt = "";
+                }})
                 .build();
 
-            GetUnifiedUserTokenResponse res = sdk.unified.getUnifiedUserToken(new GetUnifiedUserTokenSecurity("deleniti") {{
-                jwt = "";
-            }});
+            GetUnifiedUserTokenResponse res = sdk.unified.getUnifiedUserToken();
 
             if (res.getUnifiedUserToken200ApplicationJSONString != null) {
                 // handle response
@@ -688,12 +687,6 @@ public class Application {
     }
 }
 ```
-
-### Parameters
-
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `security`                                                                                                                       | [com.unifiedapi.unifiedto.models.operations.GetUnifiedUserTokenSecurity](../../models/operations/GetUnifiedUserTokenSecurity.md) | :heavy_check_mark:                                                                                                               | The security requirements to use for the request.                                                                                |
 
 
 ### Response
@@ -713,28 +706,29 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookResponse;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("aliquam") {{
+                    jwt = "";
+                }})
                 .build();
 
             GetUnifiedWebhookRequest req = new GetUnifiedWebhookRequest() {{
-                env = "optio";
-                limit = 1614.81d;
-                object = "non";
-                offset = 8534.53d;
-                order = "voluptatibus";
-                sort = "iste";
-                updatedGte = OffsetDateTime.parse("2022-12-08T15:30:54.485Z");
+                env = "consectetur";
+                limit = 3554.68d;
+                object = "dicta";
+                offset = 2018.16d;
+                order = "reprehenderit";
+                sort = "esse";
+                updatedGte = OffsetDateTime.parse("2022-08-04T09:46:19.317Z");
             }};            
 
-            GetUnifiedWebhookResponse res = sdk.unified.getUnifiedWebhook(req, new GetUnifiedWebhookSecurity("pariatur") {{
-                jwt = "";
-            }});
+            GetUnifiedWebhookResponse res = sdk.unified.getUnifiedWebhook(req);
 
             if (res.webhooks != null) {
                 // handle response
@@ -748,10 +742,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookRequest](../../models/operations/GetUnifiedWebhookRequest.md)   | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `security`                                                                                                                   | [com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookSecurity](../../models/operations/GetUnifiedWebhookSecurity.md) | :heavy_check_mark:                                                                                                           | The security requirements to use for the request.                                                                            |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookRequest](../../models/operations/GetUnifiedWebhookRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response
@@ -771,19 +764,20 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookIdRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookIdResponse;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookIdSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("quibusdam") {{
+                    jwt = "";
+                }})
                 .build();
 
-            GetUnifiedWebhookIdRequest req = new GetUnifiedWebhookIdRequest("officia");            
+            GetUnifiedWebhookIdRequest req = new GetUnifiedWebhookIdRequest("veritatis");            
 
-            GetUnifiedWebhookIdResponse res = sdk.unified.getUnifiedWebhookId(req, new GetUnifiedWebhookIdSecurity("velit") {{
-                jwt = "";
-            }});
+            GetUnifiedWebhookIdResponse res = sdk.unified.getUnifiedWebhookId(req);
 
             if (res.webhook != null) {
                 // handle response
@@ -797,10 +791,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookIdRequest](../../models/operations/GetUnifiedWebhookIdRequest.md)   | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `security`                                                                                                                       | [com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookIdSecurity](../../models/operations/GetUnifiedWebhookIdSecurity.md) | :heavy_check_mark:                                                                                                               | The security requirements to use for the request.                                                                                |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookIdRequest](../../models/operations/GetUnifiedWebhookIdRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
 
 
 ### Response
@@ -820,66 +813,67 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchUnifiedConnectionIdRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchUnifiedConnectionIdResponse;
-import com.unifiedapi.unifiedto.models.operations.PatchUnifiedConnectionIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.Connection;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionAuth;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions;
 import com.unifiedapi.unifiedto.models.shared.PropertyPropertyConnectionAuthMeta;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("ad") {{
+                    jwt = "";
+                }})
                 .build();
 
-            PatchUnifiedConnectionIdRequest req = new PatchUnifiedConnectionIdRequest("debitis") {{
+            PatchUnifiedConnectionIdRequest req = new PatchUnifiedConnectionIdRequest("velit") {{
                 connection = new Connection(                new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                                    add(PropertyConnectionCategories.TICKETING),
-                                }}, "tempore",                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                                    add(PropertyConnectionPermissions.CRM_LEAD_READ),
+                                    add(PropertyConnectionCategories.HRIS),
+                                }}, "dicta",                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
+                                    add(PropertyConnectionPermissions.TICKETING_NOTE_READ),
                                 }}) {{
                     auth = new PropertyConnectionAuth() {{
-                        accessToken = "vitae";
-                        apiUrl = "repellat";
-                        appId = "est";
-                        authorizeUrl = "facere";
-                        clientId = "iste";
-                        clientSecret = "numquam";
-                        consumerKey = "similique";
-                        consumerSecret = "optio";
+                        accessToken = "quos";
+                        apiUrl = "velit";
+                        appId = "ratione";
+                        authorizeUrl = "fuga";
+                        clientId = "minima";
+                        clientSecret = "aliquid";
+                        consumerKey = "facere";
+                        consumerSecret = "laboriosam";
                         emails = new String[]{{
-                            add("minus"),
+                            add("sint"),
                         }};
-                        expiresIn = 5737.28d;
-                        expiryDate = OffsetDateTime.parse("2022-10-08T03:33:36.166Z");
-                        key = "ullam";
+                        expiresIn = 1038.74d;
+                        expiryDate = OffsetDateTime.parse("2022-12-31T00:52:18.100Z");
+                        key = "hic";
                         meta = new PropertyPropertyConnectionAuthMeta();;
-                        name = "Peggy Kilback";
+                        name = "Brad Altenwerth";
                         otherAuthInfo = new String[]{{
-                            add("ea"),
+                            add("occaecati"),
                         }};
-                        pem = "quibusdam";
-                        refreshToken = "veritatis";
-                        state = "ad";
-                        token = "velit";
-                        tokenUrl = "quia";
+                        pem = "fuga";
+                        refreshToken = "ex";
+                        state = "autem";
+                        token = "nostrum";
+                        tokenUrl = "atque";
                     }};;
-                    authAwsArn = "dicta";
-                    createdAt = OffsetDateTime.parse("2021-11-22T05:00:45.946Z");
-                    environment = "velit";
-                    externalXref = "ratione";
-                    id = "a56d6918-0ff6-40eb-9a66-58e69a4b843d";
+                    authAwsArn = "saepe";
+                    createdAt = OffsetDateTime.parse("2022-06-08T16:27:02.035Z");
+                    environment = "fuga";
+                    externalXref = "non";
+                    id = "b843d382-dbec-475c-a8c6-0659468ce304";
                     isPaused = false;
-                    updatedAt = OffsetDateTime.parse("2022-06-25T06:33:30.748Z");
-                    workspaceId = "explicabo";
+                    updatedAt = OffsetDateTime.parse("2021-05-21T22:29:01.030Z");
+                    workspaceId = "quas";
                 }};;
             }};            
 
-            PatchUnifiedConnectionIdResponse res = sdk.unified.patchUnifiedConnectionId(req, new PatchUnifiedConnectionIdSecurity("quibusdam") {{
-                jwt = "";
-            }});
+            PatchUnifiedConnectionIdResponse res = sdk.unified.patchUnifiedConnectionId(req);
 
             if (res.connection != null) {
                 // handle response
@@ -893,10 +887,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.PatchUnifiedConnectionIdRequest](../../models/operations/PatchUnifiedConnectionIdRequest.md)   | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
-| `security`                                                                                                                                 | [com.unifiedapi.unifiedto.models.operations.PatchUnifiedConnectionIdSecurity](../../models/operations/PatchUnifiedConnectionIdSecurity.md) | :heavy_check_mark:                                                                                                                         | The security requirements to use for the request.                                                                                          |
+| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.PatchUnifiedConnectionIdRequest](../../models/operations/PatchUnifiedConnectionIdRequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
 
 
 ### Response
@@ -915,8 +908,8 @@ package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchUnifiedUserResponse;
-import com.unifiedapi.unifiedto.models.operations.PatchUnifiedUserSecurity;
 import com.unifiedapi.unifiedto.models.shared.PropertyUserMeta;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.User;
 import java.time.OffsetDateTime;
 
@@ -924,22 +917,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("magnam") {{
+                    jwt = "";
+                }})
                 .build();
 
-            com.unifiedapi.unifiedto.models.shared.User req = new User("harum", "itaque",                 new String[]{{
-                                add("porro"),
+            com.unifiedapi.unifiedto.models.shared.User req = new User("cupiditate", "expedita",                 new String[]{{
+                                add("sapiente"),
                             }}) {{
-                createdAt = OffsetDateTime.parse("2022-09-04T21:09:32.258Z");
-                email = "Haleigh.Lockman1@hotmail.com";
-                environment = "nisi";
-                id = "59468ce3-04d8-4849-bf82-14c337f96bb0";
+                createdAt = OffsetDateTime.parse("2022-09-29T08:28:46.977Z");
+                email = "Dovie21@gmail.com";
+                environment = "nihil";
+                id = "f96bb0c6-9e37-42db-9344-ba9f78a5c0ed";
                 meta = new PropertyUserMeta();;
-                updatedAt = OffsetDateTime.parse("2021-09-21T09:19:07.430Z");
+                updatedAt = OffsetDateTime.parse("2022-04-29T13:00:48.899Z");
             }};            
 
-            PatchUnifiedUserResponse res = sdk.unified.patchUnifiedUser(req, new PatchUnifiedUserSecurity("omnis") {{
-                jwt = "";
-            }});
+            PatchUnifiedUserResponse res = sdk.unified.patchUnifiedUser(req);
 
             if (res.user != null) {
                 // handle response
@@ -953,10 +947,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.shared.User](../../models/shared/User.md)                                                 | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
-| `security`                                                                                                                 | [com.unifiedapi.unifiedto.models.operations.PatchUnifiedUserSecurity](../../models/operations/PatchUnifiedUserSecurity.md) | :heavy_check_mark:                                                                                                         | The security requirements to use for the request.                                                                          |
+| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `request`                                                                  | [com.unifiedapi.unifiedto.models.shared.User](../../models/shared/User.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
 
 
 ### Response
@@ -975,64 +968,65 @@ package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PostUnifiedConnectionResponse;
-import com.unifiedapi.unifiedto.models.operations.PostUnifiedConnectionSecurity;
 import com.unifiedapi.unifiedto.models.shared.Connection;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionAuth;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions;
 import com.unifiedapi.unifiedto.models.shared.PropertyPropertyConnectionAuthMeta;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("officia") {{
+                    jwt = "";
+                }})
                 .build();
 
             com.unifiedapi.unifiedto.models.shared.Connection req = new Connection(                new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                                add(PropertyConnectionCategories.UC),
-                            }}, "adipisci",                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                                add(PropertyConnectionPermissions.CRM_TEAM_READ),
+                                add(PropertyConnectionCategories.MARTECH),
+                            }}, "suscipit",                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
+                                add(PropertyConnectionPermissions.CRM_COMPANY_READ),
                             }}) {{
                 auth = new PropertyConnectionAuth() {{
-                    accessToken = "fugit";
-                    apiUrl = "facere";
-                    appId = "libero";
-                    authorizeUrl = "vitae";
-                    clientId = "non";
-                    clientSecret = "labore";
-                    consumerKey = "incidunt";
-                    consumerSecret = "tempore";
+                    accessToken = "recusandae";
+                    apiUrl = "unde";
+                    appId = "iusto";
+                    authorizeUrl = "aspernatur";
+                    clientId = "ea";
+                    clientSecret = "architecto";
+                    consumerKey = "earum";
+                    consumerSecret = "cum";
                     emails = new String[]{{
-                        add("deserunt"),
+                        add("alias"),
                     }};
-                    expiresIn = 6213.54d;
-                    expiryDate = OffsetDateTime.parse("2021-09-02T17:56:52.098Z");
-                    key = "rem";
+                    expiresIn = 8016.71d;
+                    expiryDate = OffsetDateTime.parse("2022-06-15T02:12:07.821Z");
+                    key = "temporibus";
                     meta = new PropertyPropertyConnectionAuthMeta();;
-                    name = "Dr. Wesley Russel";
+                    name = "Maureen Rohan V";
                     otherAuthInfo = new String[]{{
-                        add("reprehenderit"),
+                        add("cupiditate"),
                     }};
-                    pem = "laborum";
-                    refreshToken = "officia";
-                    state = "soluta";
-                    token = "suscipit";
-                    tokenUrl = "explicabo";
+                    pem = "ex";
+                    refreshToken = "tempore";
+                    state = "minima";
+                    token = "expedita";
+                    tokenUrl = "modi";
                 }};;
-                authAwsArn = "recusandae";
-                createdAt = OffsetDateTime.parse("2022-01-15T02:25:17.319Z");
-                environment = "aspernatur";
-                externalXref = "ea";
-                id = "1fb0c58d-27b5-4199-ab5b-4b50eef712b7";
+                authAwsArn = "expedita";
+                createdAt = OffsetDateTime.parse("2022-12-18T06:58:16.772Z");
+                environment = "recusandae";
+                externalXref = "saepe";
+                id = "f712b7a7-ab03-444b-9710-688deebef897";
                 isPaused = false;
-                updatedAt = OffsetDateTime.parse("2022-01-03T08:18:14.300Z");
-                workspaceId = "similique";
+                updatedAt = OffsetDateTime.parse("2022-04-08T10:37:22.639Z");
+                workspaceId = "fugiat";
             }};            
 
-            PostUnifiedConnectionResponse res = sdk.unified.postUnifiedConnection(req, new PostUnifiedConnectionSecurity("expedita") {{
-                jwt = "";
-            }});
+            PostUnifiedConnectionResponse res = sdk.unified.postUnifiedConnection(req);
 
             if (res.connection != null) {
                 // handle response
@@ -1046,10 +1040,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.shared.Connection](../../models/shared/Connection.md)                                               | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-| `security`                                                                                                                           | [com.unifiedapi.unifiedto.models.operations.PostUnifiedConnectionSecurity](../../models/operations/PostUnifiedConnectionSecurity.md) | :heavy_check_mark:                                                                                                                   | The security requirements to use for the request.                                                                                    |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [com.unifiedapi.unifiedto.models.shared.Connection](../../models/shared/Connection.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 
 ### Response
@@ -1070,8 +1063,8 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PostUnifiedWebhookConnectionIdObjectEvents;
 import com.unifiedapi.unifiedto.models.operations.PostUnifiedWebhookConnectionIdObjectRequest;
 import com.unifiedapi.unifiedto.models.operations.PostUnifiedWebhookConnectionIdObjectResponse;
-import com.unifiedapi.unifiedto.models.operations.PostUnifiedWebhookConnectionIdObjectSecurity;
 import com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.Webhook;
 import com.unifiedapi.unifiedto.models.shared.WebhookObjectType;
 import java.time.OffsetDateTime;
@@ -1080,30 +1073,31 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("pariatur") {{
+                    jwt = "";
+                }})
                 .build();
 
-            PostUnifiedWebhookConnectionIdObjectRequest req = new PostUnifiedWebhookConnectionIdObjectRequest("voluptatem", "adipisci") {{
-                webhook = new Webhook("tempora",                 new com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents[]{{
-                                    add(PropertyWebhookEvents.UPDATED),
-                                }}, "soluta", "inventore", 4958.07d, WebhookObjectType.ATS_INTERVIEW, "sit") {{
-                    checkedAt = OffsetDateTime.parse("2022-06-22T19:43:24.907Z");
-                    createdAt = OffsetDateTime.parse("2021-04-22T02:27:30.544Z");
-                    environment = "necessitatibus";
-                    id = "ebef897f-3dd0-4ccd-b3f1-1b3e4e080aa1";
+            PostUnifiedWebhookConnectionIdObjectRequest req = new PostUnifiedWebhookConnectionIdObjectRequest("voluptatem", "quod") {{
+                webhook = new Webhook("minus",                 new com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents[]{{
+                                    add(PropertyWebhookEvents.CREATED),
+                                }}, "dolor", "amet", 9483.01d, WebhookObjectType.ATS_DOCUMENT, "dicta") {{
+                    checkedAt = OffsetDateTime.parse("2022-08-04T00:06:02.333Z");
+                    createdAt = OffsetDateTime.parse("2022-02-02T19:33:56.131Z");
+                    environment = "voluptates";
+                    id = "080aa104-186e-4c75-9e02-f3702c5c8e2d";
                     includeRaw = false;
                     subscriptions = new String[]{{
-                        add("ipsa"),
+                        add("sequi"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-11-25T00:50:44.199Z");
+                    updatedAt = OffsetDateTime.parse("2022-01-31T16:44:35.094Z");
                 }};;
                 events = new com.unifiedapi.unifiedto.models.operations.PostUnifiedWebhookConnectionIdObjectEvents[]{{
                     add(PostUnifiedWebhookConnectionIdObjectEvents.CREATED),
                 }};
             }};            
 
-            PostUnifiedWebhookConnectionIdObjectResponse res = sdk.unified.postUnifiedWebhookConnectionIdObject(req, new PostUnifiedWebhookConnectionIdObjectSecurity("eum") {{
-                jwt = "";
-            }});
+            PostUnifiedWebhookConnectionIdObjectResponse res = sdk.unified.postUnifiedWebhookConnectionIdObject(req);
 
             if (res.webhook != null) {
                 // handle response
@@ -1117,10 +1111,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                          | Type                                                                                                                                                               | Required                                                                                                                                                           | Description                                                                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.PostUnifiedWebhookConnectionIdObjectRequest](../../models/operations/PostUnifiedWebhookConnectionIdObjectRequest.md)   | :heavy_check_mark:                                                                                                                                                 | The request object to use for the request.                                                                                                                         |
-| `security`                                                                                                                                                         | [com.unifiedapi.unifiedto.models.operations.PostUnifiedWebhookConnectionIdObjectSecurity](../../models/operations/PostUnifiedWebhookConnectionIdObjectSecurity.md) | :heavy_check_mark:                                                                                                                                                 | The security requirements to use for the request.                                                                                                                  |
+| Parameter                                                                                                                                                        | Type                                                                                                                                                             | Required                                                                                                                                                         | Description                                                                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.PostUnifiedWebhookConnectionIdObjectRequest](../../models/operations/PostUnifiedWebhookConnectionIdObjectRequest.md) | :heavy_check_mark:                                                                                                                                               | The request object to use for the request.                                                                                                                       |
 
 
 ### Response
@@ -1140,66 +1133,67 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PutUnifiedConnectionIdRequest;
 import com.unifiedapi.unifiedto.models.operations.PutUnifiedConnectionIdResponse;
-import com.unifiedapi.unifiedto.models.operations.PutUnifiedConnectionIdSecurity;
 import com.unifiedapi.unifiedto.models.shared.Connection;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionAuth;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions;
 import com.unifiedapi.unifiedto.models.shared.PropertyPropertyConnectionAuthMeta;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("at") {{
+                    jwt = "";
+                }})
                 .build();
 
-            PutUnifiedConnectionIdRequest req = new PutUnifiedConnectionIdRequest("accusamus") {{
+            PutUnifiedConnectionIdRequest req = new PutUnifiedConnectionIdRequest("dolorem") {{
                 connection = new Connection(                new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                                    add(PropertyConnectionCategories.MARTECH),
-                                }}, "odio",                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                                    add(PropertyConnectionPermissions.CRM_LEAD_WRITE),
+                                    add(PropertyConnectionCategories.HRIS),
+                                }}, "ipsa",                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
+                                    add(PropertyConnectionPermissions.CRM_EVENT_WRITE),
                                 }}) {{
                     auth = new PropertyConnectionAuth() {{
-                        accessToken = "provident";
-                        apiUrl = "officiis";
-                        appId = "ipsa";
-                        authorizeUrl = "eos";
-                        clientId = "delectus";
-                        clientSecret = "dolor";
-                        consumerKey = "dignissimos";
-                        consumerSecret = "doloremque";
+                        accessToken = "maiores";
+                        apiUrl = "culpa";
+                        appId = "dolore";
+                        authorizeUrl = "eius";
+                        clientId = "iure";
+                        clientSecret = "alias";
+                        consumerKey = "molestiae";
+                        consumerSecret = "rerum";
                         emails = new String[]{{
-                            add("consequuntur"),
+                            add("voluptatibus"),
                         }};
-                        expiresIn = 8062.61d;
-                        expiryDate = OffsetDateTime.parse("2022-03-26T22:18:03.848Z");
-                        key = "laudantium";
+                        expiresIn = 1930.78d;
+                        expiryDate = OffsetDateTime.parse("2022-09-04T09:23:21.254Z");
+                        key = "libero";
                         meta = new PropertyPropertyConnectionAuthMeta();;
-                        name = "Harry Stiedemann DVM";
+                        name = "Anita Cremin";
                         otherAuthInfo = new String[]{{
-                            add("culpa"),
+                            add("laudantium"),
                         }};
-                        pem = "at";
-                        refreshToken = "dolorem";
-                        state = "sunt";
-                        token = "ipsa";
-                        tokenUrl = "incidunt";
+                        pem = "fugit";
+                        refreshToken = "et";
+                        state = "reiciendis";
+                        token = "nulla";
+                        tokenUrl = "libero";
                     }};;
-                    authAwsArn = "maiores";
-                    createdAt = OffsetDateTime.parse("2022-05-30T02:37:49.056Z");
-                    environment = "eius";
-                    externalXref = "iure";
-                    id = "07bf375b-4428-4282-9fdb-2f69e59267c7";
+                    authAwsArn = "sed";
+                    createdAt = OffsetDateTime.parse("2021-09-13T03:45:37.385Z");
+                    environment = "sint";
+                    externalXref = "eveniet";
+                    id = "59267c71-cc8d-43cd-8258-d0358a82c808";
                     isPaused = false;
-                    updatedAt = OffsetDateTime.parse("2022-03-23T05:21:51.303Z");
-                    workspaceId = "optio";
+                    updatedAt = OffsetDateTime.parse("2020-04-10T06:08:51.506Z");
+                    workspaceId = "odit";
                 }};;
             }};            
 
-            PutUnifiedConnectionIdResponse res = sdk.unified.putUnifiedConnectionId(req, new PutUnifiedConnectionIdSecurity("voluptatum") {{
-                jwt = "";
-            }});
+            PutUnifiedConnectionIdResponse res = sdk.unified.putUnifiedConnectionId(req);
 
             if (res.connection != null) {
                 // handle response
@@ -1213,10 +1207,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.PutUnifiedConnectionIdRequest](../../models/operations/PutUnifiedConnectionIdRequest.md)   | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `security`                                                                                                                             | [com.unifiedapi.unifiedto.models.operations.PutUnifiedConnectionIdSecurity](../../models/operations/PutUnifiedConnectionIdSecurity.md) | :heavy_check_mark:                                                                                                                     | The security requirements to use for the request.                                                                                      |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.PutUnifiedConnectionIdRequest](../../models/operations/PutUnifiedConnectionIdRequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
 
 
 ### Response
@@ -1235,8 +1228,8 @@ package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PutUnifiedUserResponse;
-import com.unifiedapi.unifiedto.models.operations.PutUnifiedUserSecurity;
 import com.unifiedapi.unifiedto.models.shared.PropertyUserMeta;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.User;
 import java.time.OffsetDateTime;
 
@@ -1244,22 +1237,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("quam") {{
+                    jwt = "";
+                }})
                 .build();
 
-            com.unifiedapi.unifiedto.models.shared.User req = new User("pariatur", "sequi",                 new String[]{{
-                                add("quo"),
+            com.unifiedapi.unifiedto.models.shared.User req = new User("ullam", "inventore",                 new String[]{{
+                                add("laborum"),
                             }}) {{
-                createdAt = OffsetDateTime.parse("2022-02-21T08:11:19.907Z");
-                email = "Eusebio.Lehner22@gmail.com";
-                environment = "ipsam";
-                id = "8a82c808-fe27-451a-a047-c0449e143f96";
+                createdAt = OffsetDateTime.parse("2022-12-24T21:17:10.090Z");
+                email = "Jerome25@gmail.com";
+                environment = "numquam";
+                id = "9e143f96-19bb-47d4-8d5a-11fa436e6259";
                 meta = new PropertyUserMeta();;
-                updatedAt = OffsetDateTime.parse("2022-06-07T18:23:59.146Z");
+                updatedAt = OffsetDateTime.parse("2022-10-04T12:31:07.556Z");
             }};            
 
-            PutUnifiedUserResponse res = sdk.unified.putUnifiedUser(req, new PutUnifiedUserSecurity("distinctio") {{
-                jwt = "";
-            }});
+            PutUnifiedUserResponse res = sdk.unified.putUnifiedUser(req);
 
             if (res.user != null) {
                 // handle response
@@ -1273,10 +1267,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [com.unifiedapi.unifiedto.models.shared.User](../../models/shared/User.md)                                             | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-| `security`                                                                                                             | [com.unifiedapi.unifiedto.models.operations.PutUnifiedUserSecurity](../../models/operations/PutUnifiedUserSecurity.md) | :heavy_check_mark:                                                                                                     | The security requirements to use for the request.                                                                      |
+| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `request`                                                                  | [com.unifiedapi.unifiedto.models.shared.User](../../models/shared/User.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
 
 
 ### Response

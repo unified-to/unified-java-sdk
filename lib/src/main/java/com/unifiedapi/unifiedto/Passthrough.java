@@ -23,11 +23,10 @@ public class Passthrough {
     /**
      * Passthrough DELETE
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.DeletePassthroughConnectionIdPathResponse deletePassthroughConnectionIdPath(com.unifiedapi.unifiedto.models.operations.DeletePassthroughConnectionIdPathRequest request, com.unifiedapi.unifiedto.models.operations.DeletePassthroughConnectionIdPathSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.DeletePassthroughConnectionIdPathResponse deletePassthroughConnectionIdPath(com.unifiedapi.unifiedto.models.operations.DeletePassthroughConnectionIdPathRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeletePassthroughConnectionIdPathRequest.class, baseUrl, "/passthrough/{connection_id}/{path}", request, null);
         
@@ -38,7 +37,7 @@ public class Passthrough {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -63,11 +62,10 @@ public class Passthrough {
     /**
      * Passthrough GET
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetPassthroughConnectionIdPathResponse getPassthroughConnectionIdPath(com.unifiedapi.unifiedto.models.operations.GetPassthroughConnectionIdPathRequest request, com.unifiedapi.unifiedto.models.operations.GetPassthroughConnectionIdPathSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetPassthroughConnectionIdPathResponse getPassthroughConnectionIdPath(com.unifiedapi.unifiedto.models.operations.GetPassthroughConnectionIdPathRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetPassthroughConnectionIdPathRequest.class, baseUrl, "/passthrough/{connection_id}/{path}", request, null);
         
@@ -78,7 +76,7 @@ public class Passthrough {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -103,11 +101,10 @@ public class Passthrough {
     /**
      * Passthrough PUT
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchPassthroughConnectionIdPathResponse patchPassthroughConnectionIdPath(com.unifiedapi.unifiedto.models.operations.PatchPassthroughConnectionIdPathRequest request, com.unifiedapi.unifiedto.models.operations.PatchPassthroughConnectionIdPathSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchPassthroughConnectionIdPathResponse patchPassthroughConnectionIdPath(com.unifiedapi.unifiedto.models.operations.PatchPassthroughConnectionIdPathRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchPassthroughConnectionIdPathRequest.class, baseUrl, "/passthrough/{connection_id}/{path}", request, null);
         
@@ -120,7 +117,7 @@ public class Passthrough {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -145,11 +142,10 @@ public class Passthrough {
     /**
      * Passthrough POST
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PostPassthroughConnectionIdPathResponse postPassthroughConnectionIdPath(com.unifiedapi.unifiedto.models.operations.PostPassthroughConnectionIdPathRequest request, com.unifiedapi.unifiedto.models.operations.PostPassthroughConnectionIdPathSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PostPassthroughConnectionIdPathResponse postPassthroughConnectionIdPath(com.unifiedapi.unifiedto.models.operations.PostPassthroughConnectionIdPathRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PostPassthroughConnectionIdPathRequest.class, baseUrl, "/passthrough/{connection_id}/{path}", request, null);
         
@@ -162,7 +158,7 @@ public class Passthrough {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -187,11 +183,10 @@ public class Passthrough {
     /**
      * Passthrough PUT
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutPassthroughConnectionIdPathResponse putPassthroughConnectionIdPath(com.unifiedapi.unifiedto.models.operations.PutPassthroughConnectionIdPathRequest request, com.unifiedapi.unifiedto.models.operations.PutPassthroughConnectionIdPathSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PutPassthroughConnectionIdPathResponse putPassthroughConnectionIdPath(com.unifiedapi.unifiedto.models.operations.PutPassthroughConnectionIdPathRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutPassthroughConnectionIdPathRequest.class, baseUrl, "/passthrough/{connection_id}/{path}", request, null);
         
@@ -204,7 +199,7 @@ public class Passthrough {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

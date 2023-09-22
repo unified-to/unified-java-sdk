@@ -25,11 +25,10 @@ public class Pipeline {
     /**
      * Remove a pipeline
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdPipelineIdResponse deleteCrmConnectionIdPipelineId(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdPipelineIdRequest request, com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdPipelineIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdPipelineIdResponse deleteCrmConnectionIdPipelineId(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdPipelineIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdPipelineIdRequest.class, baseUrl, "/crm/{connection_id}/pipeline/{id}", request, null);
         
@@ -40,7 +39,7 @@ public class Pipeline {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -64,11 +63,10 @@ public class Pipeline {
     /**
      * List all pipelines
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineResponse getCrmConnectionIdPipeline(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineRequest request, com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineResponse getCrmConnectionIdPipeline(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineRequest.class, baseUrl, "/crm/{connection_id}/pipeline", request, null);
         
@@ -85,7 +83,7 @@ public class Pipeline {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -110,11 +108,10 @@ public class Pipeline {
     /**
      * Retrieve a pipeline
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineIdResponse getCrmConnectionIdPipelineId(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineIdRequest request, com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineIdResponse getCrmConnectionIdPipelineId(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineIdRequest.class, baseUrl, "/crm/{connection_id}/pipeline/{id}", request, null);
         
@@ -125,7 +122,7 @@ public class Pipeline {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -150,11 +147,10 @@ public class Pipeline {
     /**
      * Update a pipeline
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdPipelineIdResponse patchCrmConnectionIdPipelineId(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdPipelineIdRequest request, com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdPipelineIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdPipelineIdResponse patchCrmConnectionIdPipelineId(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdPipelineIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdPipelineIdRequest.class, baseUrl, "/crm/{connection_id}/pipeline/{id}", request, null);
         
@@ -167,7 +163,7 @@ public class Pipeline {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -192,11 +188,10 @@ public class Pipeline {
     /**
      * Create a pipeline
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdPipelineResponse postCrmConnectionIdPipeline(com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdPipelineRequest request, com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdPipelineSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdPipelineResponse postCrmConnectionIdPipeline(com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdPipelineRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdPipelineRequest.class, baseUrl, "/crm/{connection_id}/pipeline", request, null);
         
@@ -209,7 +204,7 @@ public class Pipeline {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -234,11 +229,10 @@ public class Pipeline {
     /**
      * Update a pipeline
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdPipelineIdResponse putCrmConnectionIdPipelineId(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdPipelineIdRequest request, com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdPipelineIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdPipelineIdResponse putCrmConnectionIdPipelineId(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdPipelineIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdPipelineIdRequest.class, baseUrl, "/crm/{connection_id}/pipeline/{id}", request, null);
         
@@ -251,7 +245,7 @@ public class Pipeline {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

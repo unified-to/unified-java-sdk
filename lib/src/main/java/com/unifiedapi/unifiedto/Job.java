@@ -25,11 +25,10 @@ public class Job {
     /**
      * Remove a job
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdJobIdResponse deleteAtsConnectionIdJobId(com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdJobIdRequest request, com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdJobIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdJobIdResponse deleteAtsConnectionIdJobId(com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdJobIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdJobIdRequest.class, baseUrl, "/ats/{connection_id}/job/{id}", request, null);
         
@@ -40,7 +39,7 @@ public class Job {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -64,11 +63,10 @@ public class Job {
     /**
      * List all jobs
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobResponse getAtsConnectionIdJob(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobRequest request, com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobResponse getAtsConnectionIdJob(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobRequest.class, baseUrl, "/ats/{connection_id}/job", request, null);
         
@@ -85,7 +83,7 @@ public class Job {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -110,11 +108,10 @@ public class Job {
     /**
      * Retrieve a job
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobIdResponse getAtsConnectionIdJobId(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobIdRequest request, com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobIdResponse getAtsConnectionIdJobId(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobIdRequest.class, baseUrl, "/ats/{connection_id}/job/{id}", request, null);
         
@@ -125,7 +122,7 @@ public class Job {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -150,11 +147,10 @@ public class Job {
     /**
      * Update a job
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdJobIdResponse patchAtsConnectionIdJobId(com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdJobIdRequest request, com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdJobIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdJobIdResponse patchAtsConnectionIdJobId(com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdJobIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdJobIdRequest.class, baseUrl, "/ats/{connection_id}/job/{id}", request, null);
         
@@ -167,7 +163,7 @@ public class Job {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -192,11 +188,10 @@ public class Job {
     /**
      * Create a job
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdJobResponse postAtsConnectionIdJob(com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdJobRequest request, com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdJobSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdJobResponse postAtsConnectionIdJob(com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdJobRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdJobRequest.class, baseUrl, "/ats/{connection_id}/job", request, null);
         
@@ -209,7 +204,7 @@ public class Job {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -234,11 +229,10 @@ public class Job {
     /**
      * Update a job
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdJobIdResponse putAtsConnectionIdJobId(com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdJobIdRequest request, com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdJobIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdJobIdResponse putAtsConnectionIdJobId(com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdJobIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdJobIdRequest.class, baseUrl, "/ats/{connection_id}/job/{id}", request, null);
         
@@ -251,7 +245,7 @@ public class Job {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -5,16 +5,17 @@
 package com.unifiedapi.unifiedto;
 
 import com.unifiedapi.unifiedto.utils.HTTPClient;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 class SDKConfiguration {
 	public HTTPClient defaultClient;
 	public HTTPClient securityClient;
-	
+	public Security security;
 	public String serverUrl;
 	public int serverIdx = 0;
 	public String language = "java";
 	public String openapiDocVersion = "1.0";
-	public String sdkVersion = "0.1.4";
-	public String genVersion = "2.118.1";
+	public String sdkVersion = "0.2.0";
+	public String genVersion = "2.125.1";
 	
 }

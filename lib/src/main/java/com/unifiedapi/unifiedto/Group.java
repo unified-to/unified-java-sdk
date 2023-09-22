@@ -25,11 +25,10 @@ public class Group {
     /**
      * Remove a Group
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.DeleteHrisConnectionIdGroupIdResponse deleteHrisConnectionIdGroupId(com.unifiedapi.unifiedto.models.operations.DeleteHrisConnectionIdGroupIdRequest request, com.unifiedapi.unifiedto.models.operations.DeleteHrisConnectionIdGroupIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.DeleteHrisConnectionIdGroupIdResponse deleteHrisConnectionIdGroupId(com.unifiedapi.unifiedto.models.operations.DeleteHrisConnectionIdGroupIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeleteHrisConnectionIdGroupIdRequest.class, baseUrl, "/hris/{connection_id}/group/{id}", request, null);
         
@@ -40,7 +39,7 @@ public class Group {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -64,11 +63,10 @@ public class Group {
     /**
      * List all Groups
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdGroupResponse getHrisConnectionIdGroup(com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdGroupRequest request, com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdGroupSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdGroupResponse getHrisConnectionIdGroup(com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdGroupRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdGroupRequest.class, baseUrl, "/hris/{connection_id}/group", request, null);
         
@@ -85,7 +83,7 @@ public class Group {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -110,11 +108,10 @@ public class Group {
     /**
      * Retrieve a Group
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdGroupIdResponse getHrisConnectionIdGroupId(com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdGroupIdRequest request, com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdGroupIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdGroupIdResponse getHrisConnectionIdGroupId(com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdGroupIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdGroupIdRequest.class, baseUrl, "/hris/{connection_id}/group/{id}", request, null);
         
@@ -125,7 +122,7 @@ public class Group {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -150,11 +147,10 @@ public class Group {
     /**
      * Update a Group
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchHrisConnectionIdGroupIdResponse patchHrisConnectionIdGroupId(com.unifiedapi.unifiedto.models.operations.PatchHrisConnectionIdGroupIdRequest request, com.unifiedapi.unifiedto.models.operations.PatchHrisConnectionIdGroupIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchHrisConnectionIdGroupIdResponse patchHrisConnectionIdGroupId(com.unifiedapi.unifiedto.models.operations.PatchHrisConnectionIdGroupIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchHrisConnectionIdGroupIdRequest.class, baseUrl, "/hris/{connection_id}/group/{id}", request, null);
         
@@ -167,7 +163,7 @@ public class Group {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -192,11 +188,10 @@ public class Group {
     /**
      * Create a Group
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PostHrisConnectionIdGroupResponse postHrisConnectionIdGroup(com.unifiedapi.unifiedto.models.operations.PostHrisConnectionIdGroupRequest request, com.unifiedapi.unifiedto.models.operations.PostHrisConnectionIdGroupSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PostHrisConnectionIdGroupResponse postHrisConnectionIdGroup(com.unifiedapi.unifiedto.models.operations.PostHrisConnectionIdGroupRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PostHrisConnectionIdGroupRequest.class, baseUrl, "/hris/{connection_id}/group", request, null);
         
@@ -209,7 +204,7 @@ public class Group {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -234,11 +229,10 @@ public class Group {
     /**
      * Update a Group
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutHrisConnectionIdGroupIdResponse putHrisConnectionIdGroupId(com.unifiedapi.unifiedto.models.operations.PutHrisConnectionIdGroupIdRequest request, com.unifiedapi.unifiedto.models.operations.PutHrisConnectionIdGroupIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PutHrisConnectionIdGroupIdResponse putHrisConnectionIdGroupId(com.unifiedapi.unifiedto.models.operations.PutHrisConnectionIdGroupIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutHrisConnectionIdGroupIdRequest.class, baseUrl, "/hris/{connection_id}/group/{id}", request, null);
         
@@ -251,7 +245,7 @@ public class Group {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -16,24 +16,25 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdPersonRequest;
 import com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdPersonResponse;
-import com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdPersonSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("asperiores") {{
+                    jwt = "";
+                }})
                 .build();
 
-            GetEnrichConnectionIdPersonRequest req = new GetEnrichConnectionIdPersonRequest("nobis") {{
-                email = "Lillian70@yahoo.com";
-                linkedinUrl = "atque";
-                name = "Joshua Padberg";
-                twitter = "maiores";
+            GetEnrichConnectionIdPersonRequest req = new GetEnrichConnectionIdPersonRequest("rem") {{
+                email = "Hayden81@hotmail.com";
+                linkedinUrl = "molestiae";
+                name = "Lori Stokes";
+                twitter = "libero";
             }};            
 
-            GetEnrichConnectionIdPersonResponse res = sdk.person.getEnrichConnectionIdPerson(req, new GetEnrichConnectionIdPersonSecurity("ea") {{
-                jwt = "";
-            }});
+            GetEnrichConnectionIdPersonResponse res = sdk.person.getEnrichConnectionIdPerson(req);
 
             if (res.enrichPerson != null) {
                 // handle response
@@ -47,10 +48,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdPersonRequest](../../models/operations/GetEnrichConnectionIdPersonRequest.md)   | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
-| `security`                                                                                                                                       | [com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdPersonSecurity](../../models/operations/GetEnrichConnectionIdPersonSecurity.md) | :heavy_check_mark:                                                                                                                               | The security requirements to use for the request.                                                                                                |
+| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdPersonRequest](../../models/operations/GetEnrichConnectionIdPersonRequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
 
 
 ### Response

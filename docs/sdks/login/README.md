@@ -16,19 +16,23 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("voluptatum") {{
+                    jwt = "";
+                }})
                 .build();
 
-            GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest req = new GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest("iste", "distinctio") {{
-                env = "cumque";
-                failureRedirect = "assumenda";
+            GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest req = new GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest("aperiam", "reprehenderit") {{
+                env = "animi";
+                failureRedirect = "officia";
                 redirect = false;
-                state = "alias";
-                successRedirect = "deserunt";
+                state = "eveniet";
+                successRedirect = "quae";
             }};            
 
             GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeResponse res = sdk.login.getUnifiedIntegrationLoginWorkspaceIdIntegrationType(req);

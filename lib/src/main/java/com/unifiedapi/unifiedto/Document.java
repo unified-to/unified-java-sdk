@@ -25,11 +25,10 @@ public class Document {
     /**
      * Remove a scorecard
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdScorecardIdResponse deleteAtsConnectionIdScorecardId(com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdScorecardIdRequest request, com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdScorecardIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdScorecardIdResponse deleteAtsConnectionIdScorecardId(com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdScorecardIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdScorecardIdRequest.class, baseUrl, "/ats/{connection_id}/scorecard/{id}", request, null);
         
@@ -40,7 +39,7 @@ public class Document {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -64,11 +63,10 @@ public class Document {
     /**
      * List all scorecards
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardResponse getAtsConnectionIdScorecard(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardRequest request, com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardResponse getAtsConnectionIdScorecard(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardRequest.class, baseUrl, "/ats/{connection_id}/scorecard", request, null);
         
@@ -85,7 +83,7 @@ public class Document {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -110,11 +108,10 @@ public class Document {
     /**
      * Retrieve a scorecard
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardIdResponse getAtsConnectionIdScorecardId(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardIdRequest request, com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardIdResponse getAtsConnectionIdScorecardId(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardIdRequest.class, baseUrl, "/ats/{connection_id}/scorecard/{id}", request, null);
         
@@ -125,7 +122,7 @@ public class Document {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -150,11 +147,10 @@ public class Document {
     /**
      * Update a scorecard
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdScorecardIdResponse patchAtsConnectionIdScorecardId(com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdScorecardIdRequest request, com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdScorecardIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdScorecardIdResponse patchAtsConnectionIdScorecardId(com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdScorecardIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdScorecardIdRequest.class, baseUrl, "/ats/{connection_id}/scorecard/{id}", request, null);
         
@@ -167,7 +163,7 @@ public class Document {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -192,11 +188,10 @@ public class Document {
     /**
      * Create a scorecard
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdScorecardResponse postAtsConnectionIdScorecard(com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdScorecardRequest request, com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdScorecardSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdScorecardResponse postAtsConnectionIdScorecard(com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdScorecardRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdScorecardRequest.class, baseUrl, "/ats/{connection_id}/scorecard", request, null);
         
@@ -209,7 +204,7 @@ public class Document {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -234,11 +229,10 @@ public class Document {
     /**
      * Update a scorecard
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdScorecardIdResponse putAtsConnectionIdScorecardId(com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdScorecardIdRequest request, com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdScorecardIdSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdScorecardIdResponse putAtsConnectionIdScorecardId(com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdScorecardIdRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdScorecardIdRequest.class, baseUrl, "/ats/{connection_id}/scorecard/{id}", request, null);
         
@@ -251,7 +245,7 @@ public class Document {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
