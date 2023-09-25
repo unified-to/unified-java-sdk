@@ -12,7 +12,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.2.0'
+implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.3.0'
 ```
 <!-- End SDK Installation -->
 
@@ -545,8 +545,6 @@ public class Application {
 
 
 <!-- Start Dev Containers -->
-
-
 
 <!-- End Dev Containers -->
 
