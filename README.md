@@ -12,7 +12,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.3.0'
+implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.3.1'
 ```
 <!-- End SDK Installation -->
 
@@ -54,7 +54,7 @@ public class Application {
 ## Available Resources and Operations
 
 
-### [Agent](docs/sdks/agent/README.md)
+### [agent](docs/sdks/agent/README.md)
 
 * [deleteTicketingConnectionIdAgentId](docs/sdks/agent/README.md#deleteticketingconnectionidagentid) - Remove a agent
 * [getTicketingConnectionIdAgent](docs/sdks/agent/README.md#getticketingconnectionidagent) - List all agents
@@ -64,12 +64,12 @@ public class Application {
 * [postTicketingConnectionIdAgent](docs/sdks/agent/README.md#postticketingconnectionidagent) - Create a agent
 * [putTicketingConnectionIdAgentId](docs/sdks/agent/README.md#putticketingconnectionidagentid) - Update a agent
 
-### [Apicall](docs/sdks/apicall/README.md)
+### [apicall](docs/sdks/apicall/README.md)
 
 * [getUnifiedApicall](docs/sdks/apicall/README.md#getunifiedapicall) - Returns API Calls
 * [getUnifiedApicallId](docs/sdks/apicall/README.md#getunifiedapicallid) - Retrieve specific API Call by its ID
 
-### [Application](docs/sdks/application/README.md)
+### [application](docs/sdks/application/README.md)
 
 * [deleteAtsConnectionIdApplicationId](docs/sdks/application/README.md#deleteatsconnectionidapplicationid) - Remove an application
 * [getAtsConnectionIdApplication](docs/sdks/application/README.md#getatsconnectionidapplication) - List all applications
@@ -78,7 +78,7 @@ public class Application {
 * [postAtsConnectionIdApplication](docs/sdks/application/README.md#postatsconnectionidapplication) - Create an application
 * [putAtsConnectionIdApplicationId](docs/sdks/application/README.md#putatsconnectionidapplicationid) - Update an application
 
-### [Ats](docs/sdks/ats/README.md)
+### [ats](docs/sdks/ats/README.md)
 
 * [deleteAtsConnectionIdApplicationId](docs/sdks/ats/README.md#deleteatsconnectionidapplicationid) - Remove an application
 * [deleteAtsConnectionIdCandidateId](docs/sdks/ats/README.md#deleteatsconnectionidcandidateid) - Remove a candidate
@@ -111,16 +111,16 @@ public class Application {
 * [putAtsConnectionIdJobId](docs/sdks/ats/README.md#putatsconnectionidjobid) - Update a job
 * [putAtsConnectionIdScorecardId](docs/sdks/ats/README.md#putatsconnectionidscorecardid) - Update a scorecard
 
-### [Auth](docs/sdks/auth/README.md)
+### [auth](docs/sdks/auth/README.md)
 
 * [getUnifiedIntegrationAuthWorkspaceIdIntegrationType](docs/sdks/auth/README.md#getunifiedintegrationauthworkspaceidintegrationtype) - Create connection indirectly
 * [getUnifiedIntegrationLoginWorkspaceIdIntegrationType](docs/sdks/auth/README.md#getunifiedintegrationloginworkspaceidintegrationtype) - Sign in a user
 
-### [Call](docs/sdks/call/README.md)
+### [call](docs/sdks/call/README.md)
 
 * [getUcConnectionIdCall](docs/sdks/call/README.md#getucconnectionidcall) - List all calls
 
-### [Candidate](docs/sdks/candidate/README.md)
+### [candidate](docs/sdks/candidate/README.md)
 
 * [deleteAtsConnectionIdCandidateId](docs/sdks/candidate/README.md#deleteatsconnectionidcandidateid) - Remove a candidate
 * [getAtsConnectionIdCandidate](docs/sdks/candidate/README.md#getatsconnectionidcandidate) - List all candidates
@@ -129,7 +129,7 @@ public class Application {
 * [postAtsConnectionIdCandidate](docs/sdks/candidate/README.md#postatsconnectionidcandidate) - Create a candidate
 * [putAtsConnectionIdCandidateId](docs/sdks/candidate/README.md#putatsconnectionidcandidateid) - Update a candidate
 
-### [Company](docs/sdks/company/README.md)
+### [company](docs/sdks/company/README.md)
 
 * [deleteCrmConnectionIdCompanyId](docs/sdks/company/README.md#deletecrmconnectionidcompanyid) - Remove a company
 * [deleteCrmConnectionIdCompanyIdDealDealId](docs/sdks/company/README.md#deletecrmconnectionidcompanyiddealdealid) - Remove deal association from a company
@@ -142,7 +142,7 @@ public class Application {
 * [putCrmConnectionIdCompanyId](docs/sdks/company/README.md#putcrmconnectionidcompanyid) - Update a company
 * [putCrmConnectionIdCompanyIdDealDealId](docs/sdks/company/README.md#putcrmconnectionidcompanyiddealdealid) - Associate a deal with a company
 
-### [Connection](docs/sdks/connection/README.md)
+### [connection](docs/sdks/connection/README.md)
 
 * [deleteUnifiedConnectionId](docs/sdks/connection/README.md#deleteunifiedconnectionid) - Remove connection
 * [getUnifiedConnection](docs/sdks/connection/README.md#getunifiedconnection) - List all connections
@@ -151,7 +151,7 @@ public class Application {
 * [postUnifiedConnection](docs/sdks/connection/README.md#postunifiedconnection) - Create connection
 * [putUnifiedConnectionId](docs/sdks/connection/README.md#putunifiedconnectionid) - Update connection
 
-### [Contact](docs/sdks/contact/README.md)
+### [contact](docs/sdks/contact/README.md)
 
 * [deleteCrmConnectionIdContactId](docs/sdks/contact/README.md#deletecrmconnectionidcontactid) - Remove a contact
 * [deleteCrmConnectionIdContactIdCompanyCompanyId](docs/sdks/contact/README.md#deletecrmconnectionidcontactidcompanycompanyid) - Remove company association from a contact
@@ -172,7 +172,7 @@ public class Application {
 * [putCrmConnectionIdContactIdDealDealId](docs/sdks/contact/README.md#putcrmconnectionidcontactiddealdealid) - Associate a deal with a contact
 * [putUcConnectionIdContactId](docs/sdks/contact/README.md#putucconnectionidcontactid) - Update a contact
 
-### [Crm](docs/sdks/crm/README.md)
+### [crm](docs/sdks/crm/README.md)
 
 * [deleteCrmConnectionIdCompanyId](docs/sdks/crm/README.md#deletecrmconnectionidcompanyid) - Remove a company
 * [deleteCrmConnectionIdCompanyIdDealDealId](docs/sdks/crm/README.md#deletecrmconnectionidcompanyiddealdealid) - Remove deal association from a company
@@ -247,7 +247,7 @@ public class Application {
 * [putCrmConnectionIdTeamId](docs/sdks/crm/README.md#putcrmconnectionidteamid) - Update a team
 * [putCrmConnectionIdUserId](docs/sdks/crm/README.md#putcrmconnectioniduserid) - Update a user
 
-### [Customer](docs/sdks/customer/README.md)
+### [customer](docs/sdks/customer/README.md)
 
 * [deleteTicketingConnectionIdCustomerId](docs/sdks/customer/README.md#deleteticketingconnectionidcustomerid) - Remove a customer
 * [getTicketingConnectionIdCustomer](docs/sdks/customer/README.md#getticketingconnectionidcustomer) - List all customers
@@ -256,7 +256,7 @@ public class Application {
 * [postTicketingConnectionIdCustomer](docs/sdks/customer/README.md#postticketingconnectionidcustomer) - Create a customer
 * [putTicketingConnectionIdCustomerId](docs/sdks/customer/README.md#putticketingconnectionidcustomerid) - Update a customer
 
-### [Deal](docs/sdks/deal/README.md)
+### [deal](docs/sdks/deal/README.md)
 
 * [deleteCrmConnectionIdDealId](docs/sdks/deal/README.md#deletecrmconnectioniddealid) - Remove a deal
 * [getCrmConnectionIdDeal](docs/sdks/deal/README.md#getcrmconnectioniddeal) - List all deals
@@ -265,7 +265,7 @@ public class Application {
 * [postCrmConnectionIdDeal](docs/sdks/deal/README.md#postcrmconnectioniddeal) - Create a deal
 * [putCrmConnectionIdDealId](docs/sdks/deal/README.md#putcrmconnectioniddealid) - Update a deal
 
-### [Document](docs/sdks/document/README.md)
+### [document](docs/sdks/document/README.md)
 
 * [deleteAtsConnectionIdScorecardId](docs/sdks/document/README.md#deleteatsconnectionidscorecardid) - Remove a scorecard
 * [getAtsConnectionIdScorecard](docs/sdks/document/README.md#getatsconnectionidscorecard) - List all scorecards
@@ -274,7 +274,7 @@ public class Application {
 * [postAtsConnectionIdScorecard](docs/sdks/document/README.md#postatsconnectionidscorecard) - Create a scorecard
 * [putAtsConnectionIdScorecardId](docs/sdks/document/README.md#putatsconnectionidscorecardid) - Update a scorecard
 
-### [Employee](docs/sdks/employee/README.md)
+### [employee](docs/sdks/employee/README.md)
 
 * [deleteHrisConnectionIdEmployeeId](docs/sdks/employee/README.md#deletehrisconnectionidemployeeid) - Remove a Employee
 * [getHrisConnectionIdEmployee](docs/sdks/employee/README.md#gethrisconnectionidemployee) - List all Employees
@@ -283,12 +283,12 @@ public class Application {
 * [postHrisConnectionIdEmployee](docs/sdks/employee/README.md#posthrisconnectionidemployee) - Create a Employee
 * [putHrisConnectionIdEmployeeId](docs/sdks/employee/README.md#puthrisconnectionidemployeeid) - Update a Employee
 
-### [Enrich](docs/sdks/enrich/README.md)
+### [enrich](docs/sdks/enrich/README.md)
 
 * [getEnrichConnectionIdCompany](docs/sdks/enrich/README.md#getenrichconnectionidcompany) - Retrieve enrichment information for a company
 * [getEnrichConnectionIdPerson](docs/sdks/enrich/README.md#getenrichconnectionidperson) - Retrieve enrichment information for a person
 
-### [Event](docs/sdks/event/README.md)
+### [event](docs/sdks/event/README.md)
 
 * [deleteCrmConnectionIdEventId](docs/sdks/event/README.md#deletecrmconnectionideventid) - Remove a event
 * [deleteCrmConnectionIdEventIdCompanyCompanyId](docs/sdks/event/README.md#deletecrmconnectionideventidcompanycompanyid) - Remove company association from an event
@@ -306,7 +306,7 @@ public class Application {
 * [putCrmConnectionIdEventIdContactContactId](docs/sdks/event/README.md#putcrmconnectionideventidcontactcontactid) - Associate a contact with an event
 * [putCrmConnectionIdEventIdDealDealId](docs/sdks/event/README.md#putcrmconnectionideventiddealdealid) - Associate a deal with an event
 
-### [File](docs/sdks/file/README.md)
+### [file](docs/sdks/file/README.md)
 
 * [deleteCrmConnectionIdFileId](docs/sdks/file/README.md#deletecrmconnectionidfileid) - Remove a file
 * [getCrmConnectionIdFile](docs/sdks/file/README.md#getcrmconnectionidfile) - List all files
@@ -315,7 +315,7 @@ public class Application {
 * [postCrmConnectionIdFile](docs/sdks/file/README.md#postcrmconnectionidfile) - Create a file
 * [putCrmConnectionIdFileId](docs/sdks/file/README.md#putcrmconnectionidfileid) - Update a file
 
-### [Group](docs/sdks/group/README.md)
+### [group](docs/sdks/group/README.md)
 
 * [deleteHrisConnectionIdGroupId](docs/sdks/group/README.md#deletehrisconnectionidgroupid) - Remove a Group
 * [getHrisConnectionIdGroup](docs/sdks/group/README.md#gethrisconnectionidgroup) - List all Groups
@@ -324,7 +324,7 @@ public class Application {
 * [postHrisConnectionIdGroup](docs/sdks/group/README.md#posthrisconnectionidgroup) - Create a Group
 * [putHrisConnectionIdGroupId](docs/sdks/group/README.md#puthrisconnectionidgroupid) - Update a Group
 
-### [Hris](docs/sdks/hris/README.md)
+### [hris](docs/sdks/hris/README.md)
 
 * [deleteHrisConnectionIdEmployeeId](docs/sdks/hris/README.md#deletehrisconnectionidemployeeid) - Remove a Employee
 * [deleteHrisConnectionIdGroupId](docs/sdks/hris/README.md#deletehrisconnectionidgroupid) - Remove a Group
@@ -339,14 +339,14 @@ public class Application {
 * [putHrisConnectionIdEmployeeId](docs/sdks/hris/README.md#puthrisconnectionidemployeeid) - Update a Employee
 * [putHrisConnectionIdGroupId](docs/sdks/hris/README.md#puthrisconnectionidgroupid) - Update a Group
 
-### [Integration](docs/sdks/integration/README.md)
+### [integration](docs/sdks/integration/README.md)
 
 * [getUnifiedIntegration](docs/sdks/integration/README.md#getunifiedintegration) - Returns all integrations
 * [getUnifiedIntegrationAuthWorkspaceIdIntegrationType](docs/sdks/integration/README.md#getunifiedintegrationauthworkspaceidintegrationtype) - Create connection indirectly
 * [getUnifiedIntegrationIntegrationType](docs/sdks/integration/README.md#getunifiedintegrationintegrationtype) - Retrieve an integration
 * [getUnifiedIntegrationWorkspaceWorkspaceId](docs/sdks/integration/README.md#getunifiedintegrationworkspaceworkspaceid) - Returns all activated integrations in a workspace
 
-### [Interview](docs/sdks/interview/README.md)
+### [interview](docs/sdks/interview/README.md)
 
 * [deleteAtsConnectionIdInterviewId](docs/sdks/interview/README.md#deleteatsconnectionidinterviewid) - Remove a interview
 * [getAtsConnectionIdInterview](docs/sdks/interview/README.md#getatsconnectionidinterview) - List all interviews
@@ -355,7 +355,7 @@ public class Application {
 * [postAtsConnectionIdInterview](docs/sdks/interview/README.md#postatsconnectionidinterview) - Create a interview
 * [putAtsConnectionIdInterviewId](docs/sdks/interview/README.md#putatsconnectionidinterviewid) - Update a interview
 
-### [Job](docs/sdks/job/README.md)
+### [job](docs/sdks/job/README.md)
 
 * [deleteAtsConnectionIdJobId](docs/sdks/job/README.md#deleteatsconnectionidjobid) - Remove a job
 * [getAtsConnectionIdJob](docs/sdks/job/README.md#getatsconnectionidjob) - List all jobs
@@ -364,7 +364,7 @@ public class Application {
 * [postAtsConnectionIdJob](docs/sdks/job/README.md#postatsconnectionidjob) - Create a job
 * [putAtsConnectionIdJobId](docs/sdks/job/README.md#putatsconnectionidjobid) - Update a job
 
-### [Lead](docs/sdks/lead/README.md)
+### [lead](docs/sdks/lead/README.md)
 
 * [deleteCrmConnectionIdLeadId](docs/sdks/lead/README.md#deletecrmconnectionidleadid) - Remove a lead
 * [getCrmConnectionIdLead](docs/sdks/lead/README.md#getcrmconnectionidlead) - List all leads
@@ -373,7 +373,7 @@ public class Application {
 * [postCrmConnectionIdLead](docs/sdks/lead/README.md#postcrmconnectionidlead) - Create a lead
 * [putCrmConnectionIdLeadId](docs/sdks/lead/README.md#putcrmconnectionidleadid) - Update a lead
 
-### [List](docs/sdks/list/README.md)
+### [list](docs/sdks/list/README.md)
 
 * [deleteMartechConnectionIdListId](docs/sdks/list/README.md#deletemartechconnectionidlistid) - Remove a list
 * [getMartechConnectionIdList](docs/sdks/list/README.md#getmartechconnectionidlist) - List all lists
@@ -382,11 +382,11 @@ public class Application {
 * [postMartechConnectionIdList](docs/sdks/list/README.md#postmartechconnectionidlist) - Create a list
 * [putMartechConnectionIdListId](docs/sdks/list/README.md#putmartechconnectionidlistid) - Update a list
 
-### [Login](docs/sdks/login/README.md)
+### [login](docs/sdks/login/README.md)
 
 * [getUnifiedIntegrationLoginWorkspaceIdIntegrationType](docs/sdks/login/README.md#getunifiedintegrationloginworkspaceidintegrationtype) - Sign in a user
 
-### [Martech](docs/sdks/martech/README.md)
+### [martech](docs/sdks/martech/README.md)
 
 * [deleteMartechConnectionIdListId](docs/sdks/martech/README.md#deletemartechconnectionidlistid) - Remove a list
 * [deleteMartechConnectionIdListIdMemberId](docs/sdks/martech/README.md#deletemartechconnectionidlistidmemberid) - Remove member from a list
@@ -401,7 +401,7 @@ public class Application {
 * [putMartechConnectionIdListId](docs/sdks/martech/README.md#putmartechconnectionidlistid) - Update a list
 * [putMartechConnectionIdListIdMemberId](docs/sdks/martech/README.md#putmartechconnectionidlistidmemberid) - Update a member in a list
 
-### [Member](docs/sdks/member/README.md)
+### [member](docs/sdks/member/README.md)
 
 * [deleteMartechConnectionIdListIdMemberId](docs/sdks/member/README.md#deletemartechconnectionidlistidmemberid) - Remove member from a list
 * [getMartechConnectionIdListIdMember](docs/sdks/member/README.md#getmartechconnectionidlistidmember) - List all members in a list
@@ -410,7 +410,7 @@ public class Application {
 * [postMartechConnectionIdListIdMember](docs/sdks/member/README.md#postmartechconnectionidlistidmember) - Create a member in a list
 * [putMartechConnectionIdListIdMemberId](docs/sdks/member/README.md#putmartechconnectionidlistidmemberid) - Update a member in a list
 
-### [Note](docs/sdks/note/README.md)
+### [note](docs/sdks/note/README.md)
 
 * [deleteTicketingConnectionIdNoteTicketIdId](docs/sdks/note/README.md#deleteticketingconnectionidnoteticketidid) - Remove a note
 * [getTicketingConnectionIdNoteTicketId](docs/sdks/note/README.md#getticketingconnectionidnoteticketid) - List all notes
@@ -419,7 +419,7 @@ public class Application {
 * [postTicketingConnectionIdNoteTicketId](docs/sdks/note/README.md#postticketingconnectionidnoteticketid) - Create a note
 * [putTicketingConnectionIdNoteTicketIdId](docs/sdks/note/README.md#putticketingconnectionidnoteticketidid) - Update a note
 
-### [Passthrough](docs/sdks/passthrough/README.md)
+### [passthrough](docs/sdks/passthrough/README.md)
 
 * [deletePassthroughConnectionIdPath](docs/sdks/passthrough/README.md#deletepassthroughconnectionidpath) - Passthrough DELETE
 * [getPassthroughConnectionIdPath](docs/sdks/passthrough/README.md#getpassthroughconnectionidpath) - Passthrough GET
@@ -427,11 +427,11 @@ public class Application {
 * [postPassthroughConnectionIdPath](docs/sdks/passthrough/README.md#postpassthroughconnectionidpath) - Passthrough POST
 * [putPassthroughConnectionIdPath](docs/sdks/passthrough/README.md#putpassthroughconnectionidpath) - Passthrough PUT
 
-### [Person](docs/sdks/person/README.md)
+### [person](docs/sdks/person/README.md)
 
 * [getEnrichConnectionIdPerson](docs/sdks/person/README.md#getenrichconnectionidperson) - Retrieve enrichment information for a person
 
-### [Pipeline](docs/sdks/pipeline/README.md)
+### [pipeline](docs/sdks/pipeline/README.md)
 
 * [deleteCrmConnectionIdPipelineId](docs/sdks/pipeline/README.md#deletecrmconnectionidpipelineid) - Remove a pipeline
 * [getCrmConnectionIdPipeline](docs/sdks/pipeline/README.md#getcrmconnectionidpipeline) - List all pipelines
@@ -440,7 +440,7 @@ public class Application {
 * [postCrmConnectionIdPipeline](docs/sdks/pipeline/README.md#postcrmconnectionidpipeline) - Create a pipeline
 * [putCrmConnectionIdPipelineId](docs/sdks/pipeline/README.md#putcrmconnectionidpipelineid) - Update a pipeline
 
-### [Team](docs/sdks/team/README.md)
+### [team](docs/sdks/team/README.md)
 
 * [deleteCrmConnectionIdTeamId](docs/sdks/team/README.md#deletecrmconnectionidteamid) - Remove a team
 * [getCrmConnectionIdTeam](docs/sdks/team/README.md#getcrmconnectionidteam) - List all teams
@@ -449,7 +449,7 @@ public class Application {
 * [postCrmConnectionIdTeam](docs/sdks/team/README.md#postcrmconnectionidteam) - Create a team
 * [putCrmConnectionIdTeamId](docs/sdks/team/README.md#putcrmconnectionidteamid) - Update a team
 
-### [Ticket](docs/sdks/ticket/README.md)
+### [ticket](docs/sdks/ticket/README.md)
 
 * [deleteTicketingConnectionIdTicketId](docs/sdks/ticket/README.md#deleteticketingconnectionidticketid) - Remove a ticket
 * [getTicketingConnectionIdTicket](docs/sdks/ticket/README.md#getticketingconnectionidticket) - List all tickets
@@ -458,7 +458,7 @@ public class Application {
 * [postTicketingConnectionIdTicket](docs/sdks/ticket/README.md#postticketingconnectionidticket) - Create a ticket
 * [putTicketingConnectionIdTicketId](docs/sdks/ticket/README.md#putticketingconnectionidticketid) - Update a ticket
 
-### [Ticketing](docs/sdks/ticketing/README.md)
+### [ticketing](docs/sdks/ticketing/README.md)
 
 * [deleteTicketingConnectionIdAgentId](docs/sdks/ticketing/README.md#deleteticketingconnectionidagentid) - Remove a agent
 * [deleteTicketingConnectionIdCustomerId](docs/sdks/ticketing/README.md#deleteticketingconnectionidcustomerid) - Remove a customer
@@ -485,7 +485,7 @@ public class Application {
 * [putTicketingConnectionIdNoteTicketIdId](docs/sdks/ticketing/README.md#putticketingconnectionidnoteticketidid) - Update a note
 * [putTicketingConnectionIdTicketId](docs/sdks/ticketing/README.md#putticketingconnectionidticketid) - Update a ticket
 
-### [Uc](docs/sdks/uc/README.md)
+### [uc](docs/sdks/uc/README.md)
 
 * [deleteUcConnectionIdContactId](docs/sdks/uc/README.md#deleteucconnectionidcontactid) - Remove a contact
 * [getUcConnectionIdAgent](docs/sdks/uc/README.md#getucconnectionidagent) - List all agents
@@ -496,7 +496,7 @@ public class Application {
 * [postUcConnectionIdContact](docs/sdks/uc/README.md#postucconnectionidcontact) - Create a contact
 * [putUcConnectionIdContactId](docs/sdks/uc/README.md#putucconnectionidcontactid) - Update a contact
 
-### [Unified](docs/sdks/unified/README.md)
+### [unified](docs/sdks/unified/README.md)
 
 * [deleteUnifiedConnectionId](docs/sdks/unified/README.md#deleteunifiedconnectionid) - Remove connection
 * [deleteUnifiedUser](docs/sdks/unified/README.md#deleteunifieduser) - Delete your user object
@@ -520,7 +520,7 @@ public class Application {
 * [putUnifiedConnectionId](docs/sdks/unified/README.md#putunifiedconnectionid) - Update connection
 * [putUnifiedUser](docs/sdks/unified/README.md#putunifieduser) - Updates your user object
 
-### [User](docs/sdks/user/README.md)
+### [user](docs/sdks/user/README.md)
 
 * [deleteCrmConnectionIdUserId](docs/sdks/user/README.md#deletecrmconnectioniduserid) - Remove a user
 * [deleteUnifiedUser](docs/sdks/user/README.md#deleteunifieduser) - Delete your user object
@@ -534,7 +534,7 @@ public class Application {
 * [putCrmConnectionIdUserId](docs/sdks/user/README.md#putcrmconnectioniduserid) - Update a user
 * [putUnifiedUser](docs/sdks/user/README.md#putunifieduser) - Updates your user object
 
-### [Webhook](docs/sdks/webhook/README.md)
+### [webhook](docs/sdks/webhook/README.md)
 
 * [deleteUnifiedWebhookId](docs/sdks/webhook/README.md#deleteunifiedwebhookid) - Remove webhook subscription
 * [getUnifiedWebhook](docs/sdks/webhook/README.md#getunifiedwebhook) - Returns all registered webhooks
