@@ -28,7 +28,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("facere") {{
+                .setSecurity(new Security("Mobility") {{
                     jwt = "";
                 }})
                 .build();
@@ -36,14 +36,14 @@ public class Application {
             GetUnifiedIntegrationRequest req = new GetUnifiedIntegrationRequest() {{
                 active = false;
                 categories = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationCategories[]{{
-                    add(GetUnifiedIntegrationCategories.UC),
+                    add(GetUnifiedIntegrationCategories.TICKETING),
                 }};
-                limit = 3480.56d;
-                offset = 6939.88d;
-                order = "ea";
-                sort = "molestiae";
+                limit = 5251.15d;
+                offset = 1545.55d;
+                order = "farad";
+                sort = "Implemented";
                 summary = false;
-                updatedGte = OffsetDateTime.parse("2022-06-06T18:58:28.166Z");
+                updatedGte = OffsetDateTime.parse("2021-12-28T03:20:26.143Z");
             }};            
 
             GetUnifiedIntegrationResponse res = sdk.integration.getUnifiedIntegration(req);
@@ -89,23 +89,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("voluptatum") {{
+                .setSecurity(new Security("Ireland") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest req = new GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest("iste", "eaque") {{
-                env = "reiciendis";
-                externalXref = "magnam";
-                failureRedirect = "consequuntur";
-                lang = "est";
+            GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest req = new GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest("Ergonomic", "quae") {{
+                env = "Surinam national Security";
+                externalXref = "purple positively";
+                failureRedirect = "Bicycle";
+                lang = "Home";
                 redirect = false;
                 scopes = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes[]{{
-                    add(GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes.CRM_EVENT_WRITE),
+                    add(GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes.CRM_PIPELINE_READ),
                 }};
-                state = "nobis";
-                subdomain = "expedita";
-                successRedirect = "modi";
+                state = "architectures";
+                subdomain = "Functionality";
+                successRedirect = "innovate payment";
             }};            
 
             GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeResponse res = sdk.integration.getUnifiedIntegrationAuthWorkspaceIdIntegrationType(req);
@@ -150,12 +150,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("adipisci") {{
+                .setSecurity(new Security("FTP") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedIntegrationIntegrationTypeRequest req = new GetUnifiedIntegrationIntegrationTypeRequest("atque");            
+            GetUnifiedIntegrationIntegrationTypeRequest req = new GetUnifiedIntegrationIntegrationTypeRequest("East");            
 
             GetUnifiedIntegrationIntegrationTypeResponse res = sdk.integration.getUnifiedIntegrationIntegrationType(req);
 
@@ -200,17 +200,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("at") {{
+                .setSecurity(new Security("Automotive") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedIntegrationWorkspaceWorkspaceIdRequest req = new GetUnifiedIntegrationWorkspaceWorkspaceIdRequest("rem") {{
+            GetUnifiedIntegrationWorkspaceWorkspaceIdRequest req = new GetUnifiedIntegrationWorkspaceWorkspaceIdRequest("North") {{
                 active = false;
                 categories = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationWorkspaceWorkspaceIdCategories[]{{
-                    add(GetUnifiedIntegrationWorkspaceWorkspaceIdCategories.AUTH),
+                    add(GetUnifiedIntegrationWorkspaceWorkspaceIdCategories.PASSTHROUGH),
                 }};
-                env = "tempore";
+                env = "exercitationem Franco National";
                 summary = false;
             }};            
 

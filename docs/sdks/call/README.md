@@ -24,20 +24,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("officia") {{
+                .setSecurity(new Security("Southeast") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetUcConnectionIdCallRequest req = new GetUcConnectionIdCallRequest("suscipit") {{
-                agentId = "aliquid";
-                contactId = "perferendis";
-                limit = 4317.6d;
-                offset = 3747.53d;
-                order = "iste";
-                query = "id";
-                sort = "ab";
-                updatedGte = OffsetDateTime.parse("2021-05-10T15:26:02.215Z");
+            GetUcConnectionIdCallRequest req = new GetUcConnectionIdCallRequest("blue") {{
+                agentId = "than";
+                contactId = "reintermediate Enid Applications";
+                limit = 1980.39d;
+                offset = 3478d;
+                order = "white Oklahoma Functionality";
+                query = "pricing whether Hillsboro";
+                sort = "Wooden desensitize SCSI";
+                updatedGte = OffsetDateTime.parse("2021-11-03T12:40:46.997Z");
             }};            
 
             GetUcConnectionIdCallResponse res = sdk.call.getUcConnectionIdCall(req);

@@ -28,12 +28,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("provident") {{
+                .setSecurity(new Security("lavender") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteTicketingConnectionIdTicketIdRequest req = new DeleteTicketingConnectionIdTicketIdRequest("ipsa", "delectus");            
+            DeleteTicketingConnectionIdTicketIdRequest req = new DeleteTicketingConnectionIdTicketIdRequest("Southwest", "meanwhile");            
 
             DeleteTicketingConnectionIdTicketIdResponse res = sdk.ticket.deleteTicketingConnectionIdTicketId(req);
 
@@ -78,20 +78,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("voluptas") {{
+                .setSecurity(new Security("Bronze") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetTicketingConnectionIdTicketRequest req = new GetTicketingConnectionIdTicketRequest("nihil") {{
-                agentId = "quae";
-                customerId = "voluptas";
-                limit = 3854.7d;
-                offset = 4974.55d;
-                order = "adipisci";
-                query = "doloribus";
-                sort = "ratione";
-                updatedGte = OffsetDateTime.parse("2022-03-11T14:00:33.052Z");
+            GetTicketingConnectionIdTicketRequest req = new GetTicketingConnectionIdTicketRequest("Funk") {{
+                agentId = "hertz Savings Steel";
+                customerId = "payment biopsy Kids";
+                limit = 7673.64d;
+                offset = 5134.74d;
+                order = "quantifying orange";
+                query = "male dynamic";
+                sort = "Sedan Tricycle Honda";
+                updatedGte = OffsetDateTime.parse("2022-08-06T21:30:52.879Z");
             }};            
 
             GetTicketingConnectionIdTicketResponse res = sdk.ticket.getTicketingConnectionIdTicket(req);
@@ -136,12 +136,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("quos") {{
+                .setSecurity(new Security("Florida") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetTicketingConnectionIdTicketIdRequest req = new GetTicketingConnectionIdTicketIdRequest("dicta", "minus");            
+            GetTicketingConnectionIdTicketIdRequest req = new GetTicketingConnectionIdTicketIdRequest("Ohio", "scalable");            
 
             GetTicketingConnectionIdTicketIdResponse res = sdk.ticket.getTicketingConnectionIdTicketId(req);
 
@@ -189,28 +189,28 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("exercitationem") {{
+                .setSecurity(new Security("Polygender") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchTicketingConnectionIdTicketIdRequest req = new PatchTicketingConnectionIdTicketIdRequest("molestiae", "iure") {{
+            PatchTicketingConnectionIdTicketIdRequest req = new PatchTicketingConnectionIdTicketIdRequest("messenger", "Principal") {{
                 ticketingTicket = new TicketingTicket(                new PropertyTicketingTicketRaw();) {{
-                    category = "blanditiis";
-                    closedAt = OffsetDateTime.parse("2020-09-05T03:32:51.886Z");
-                    createdAt = OffsetDateTime.parse("2021-07-27T13:21:27.520Z");
-                    customerId = "quaerat";
-                    description = "explicabo";
-                    id = "409a215e-0860-4148-9a5f-63e3af3dd9dd";
-                    priority = "officia";
-                    source = "dolorem";
-                    sourceRef = "velit";
-                    status = TicketingTicketStatus.CLOSED;
-                    subject = "placeat";
+                    category = "extend given Investor";
+                    closedAt = OffsetDateTime.parse("2023-12-07T18:07:23.872Z");
+                    createdAt = OffsetDateTime.parse("2022-10-21T07:37:31.857Z");
+                    customerId = "Serbia";
+                    description = "Persistent grid-enabled secured line";
+                    id = "<ID>";
+                    priority = "Bicycle";
+                    source = "Northeast Americium Hybrid";
+                    sourceRef = "Implementation";
+                    status = TicketingTicketStatus.ACTIVE;
+                    subject = "Reggae";
                     tags = new String[]{{
-                        add("pariatur"),
+                        add("yahoo"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-10-02T10:32:11.446Z");
+                    updatedAt = OffsetDateTime.parse("2021-03-02T21:08:11.761Z");
                 }};;
             }};            
 
@@ -260,28 +260,28 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("incidunt") {{
+                .setSecurity(new Security("Alabama") {{
                     jwt = "";
                 }})
                 .build();
 
-            PostTicketingConnectionIdTicketRequest req = new PostTicketingConnectionIdTicketRequest("praesentium") {{
+            PostTicketingConnectionIdTicketRequest req = new PostTicketingConnectionIdTicketRequest("Electronics") {{
                 ticketingTicket = new TicketingTicket(                new PropertyTicketingTicketRaw();) {{
-                    category = "ipsum";
-                    closedAt = OffsetDateTime.parse("2022-03-30T16:56:59.979Z");
-                    createdAt = OffsetDateTime.parse("2022-02-01T12:42:49.487Z");
-                    customerId = "id";
-                    description = "natus";
-                    id = "8e4df37e-45b8-4955-9413-e13a48231090";
-                    priority = "iure";
-                    source = "cum";
-                    sourceRef = "facere";
-                    status = TicketingTicketStatus.ACTIVE;
-                    subject = "quis";
+                    category = "mobile parse Jeep";
+                    closedAt = OffsetDateTime.parse("2022-11-15T22:23:01.161Z");
+                    createdAt = OffsetDateTime.parse("2022-10-28T10:15:53.503Z");
+                    customerId = "Cisgender Sedan Southwest";
+                    description = "Seamless intangible open architecture";
+                    id = "<ID>";
+                    priority = "solid Electric Bespoke";
+                    source = "Customer repellat carrot";
+                    sourceRef = "Oriental";
+                    status = TicketingTicketStatus.CLOSED;
+                    subject = "Zambia chunter";
                     tags = new String[]{{
-                        add("modi"),
+                        add("Coupe"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-12-16T13:07:52.756Z");
+                    updatedAt = OffsetDateTime.parse("2021-11-20T07:08:03.818Z");
                 }};;
             }};            
 
@@ -331,28 +331,28 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("cupiditate") {{
+                .setSecurity(new Security("driver") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutTicketingConnectionIdTicketIdRequest req = new PutTicketingConnectionIdTicketIdRequest("sed", "harum") {{
+            PutTicketingConnectionIdTicketIdRequest req = new PutTicketingConnectionIdTicketIdRequest("North", "holistic") {{
                 ticketingTicket = new TicketingTicket(                new PropertyTicketingTicketRaw();) {{
-                    category = "vero";
-                    closedAt = OffsetDateTime.parse("2022-10-04T15:32:48.639Z");
-                    createdAt = OffsetDateTime.parse("2022-01-17T19:19:34.032Z");
-                    customerId = "consequatur";
-                    description = "consequuntur";
-                    id = "449d86f4-bb20-4fe5-9911-cbfe749caf45";
-                    priority = "mollitia";
-                    source = "sed";
-                    sourceRef = "molestiae";
-                    status = TicketingTicketStatus.CLOSED;
-                    subject = "ex";
+                    category = "Rubber Jadyn drat";
+                    closedAt = OffsetDateTime.parse("2023-09-11T23:18:33.662Z");
+                    createdAt = OffsetDateTime.parse("2022-04-03T16:02:49.250Z");
+                    customerId = "Upgradable knuckle";
+                    description = "Front-line well-modulated challenge";
+                    id = "<ID>";
+                    priority = "manifest";
+                    source = "Wooden Crew";
+                    sourceRef = "fuchsia iusto Ferrari";
+                    status = TicketingTicketStatus.ACTIVE;
+                    subject = "South female Pants";
                     tags = new String[]{{
-                        add("error"),
+                        add("Cis"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-07-06T20:27:59.216Z");
+                    updatedAt = OffsetDateTime.parse("2022-09-18T19:21:55.137Z");
                 }};;
             }};            
 

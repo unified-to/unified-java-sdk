@@ -25,23 +25,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("vel") {{
+                .setSecurity(new Security("Ireland") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest req = new GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest("architecto", "fugiat") {{
-                env = "doloremque";
-                externalXref = "dicta";
-                failureRedirect = "odio";
-                lang = "tempora";
+            GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest req = new GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest("Ergonomic", "quae") {{
+                env = "Surinam national Security";
+                externalXref = "purple positively";
+                failureRedirect = "Bicycle";
+                lang = "Home";
                 redirect = false;
                 scopes = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes[]{{
-                    add(GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes.CRM_TEAM_READ),
+                    add(GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes.CRM_PIPELINE_READ),
                 }};
-                state = "ex";
-                subdomain = "consectetur";
-                successRedirect = "aliquid";
+                state = "architectures";
+                subdomain = "Functionality";
+                successRedirect = "innovate payment";
             }};            
 
             GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeResponse res = sdk.auth.getUnifiedIntegrationAuthWorkspaceIdIntegrationType(req);
@@ -86,17 +86,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("ipsa") {{
+                .setSecurity(new Security("East") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest req = new GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest("laborum", "sunt") {{
-                env = "nostrum";
-                failureRedirect = "fugiat";
+            GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest req = new GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest("Fresh", "gold") {{
+                env = "Volkswagen";
+                failureRedirect = "official";
                 redirect = false;
-                state = "expedita";
-                successRedirect = "aliquid";
+                state = "Multigender Volkswagen";
+                successRedirect = "Magnesium utterly";
             }};            
 
             GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeResponse res = sdk.auth.getUnifiedIntegrationLoginWorkspaceIdIntegrationType(req);

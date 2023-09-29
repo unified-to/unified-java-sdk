@@ -30,12 +30,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("doloribus") {{
+                .setSecurity(new Security("Aluminium") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteUcConnectionIdContactIdRequest req = new DeleteUcConnectionIdContactIdRequest("vel", "enim");            
+            DeleteUcConnectionIdContactIdRequest req = new DeleteUcConnectionIdContactIdRequest("Tactics", "Cobalt");            
 
             DeleteUcConnectionIdContactIdResponse res = sdk.uc.deleteUcConnectionIdContactId(req);
 
@@ -80,19 +80,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("ducimus") {{
+                .setSecurity(new Security("Passenger") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetUcConnectionIdAgentRequest req = new GetUcConnectionIdAgentRequest("quidem") {{
-                contactId = "in";
-                limit = 8705.47d;
-                offset = 44.74d;
-                order = "consectetur";
-                query = "mollitia";
-                sort = "beatae";
-                updatedGte = OffsetDateTime.parse("2022-06-29T09:22:06.397Z");
+            GetUcConnectionIdAgentRequest req = new GetUcConnectionIdAgentRequest("East") {{
+                contactId = "drafty blue teal";
+                limit = 745.71d;
+                offset = 7741.1d;
+                order = "reverse Bacon";
+                query = "Product which";
+                sort = "Chips";
+                updatedGte = OffsetDateTime.parse("2023-11-26T07:47:09.916Z");
             }};            
 
             GetUcConnectionIdAgentResponse res = sdk.uc.getUcConnectionIdAgent(req);
@@ -138,20 +138,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("aperiam") {{
+                .setSecurity(new Security("Southeast") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetUcConnectionIdCallRequest req = new GetUcConnectionIdCallRequest("hic") {{
-                agentId = "blanditiis";
-                contactId = "at";
-                limit = 9205.48d;
-                offset = 2171.36d;
-                order = "voluptatem";
-                query = "tenetur";
-                sort = "aut";
-                updatedGte = OffsetDateTime.parse("2022-05-31T11:19:36.018Z");
+            GetUcConnectionIdCallRequest req = new GetUcConnectionIdCallRequest("blue") {{
+                agentId = "than";
+                contactId = "reintermediate Enid Applications";
+                limit = 1980.39d;
+                offset = 3478d;
+                order = "white Oklahoma Functionality";
+                query = "pricing whether Hillsboro";
+                sort = "Wooden desensitize SCSI";
+                updatedGte = OffsetDateTime.parse("2021-11-03T12:40:46.997Z");
             }};            
 
             GetUcConnectionIdCallResponse res = sdk.uc.getUcConnectionIdCall(req);
@@ -197,19 +197,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("fugiat") {{
+                .setSecurity(new Security("Integration") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetUcConnectionIdContactRequest req = new GetUcConnectionIdContactRequest("atque") {{
-                agentId = "beatae";
-                limit = 157.06d;
-                offset = 4125.68d;
-                order = "architecto";
-                query = "atque";
-                sort = "temporibus";
-                updatedGte = OffsetDateTime.parse("2022-02-04T13:46:27.717Z");
+            GetUcConnectionIdContactRequest req = new GetUcConnectionIdContactRequest("envious") {{
+                agentId = "Non Dodge";
+                limit = 7215.14d;
+                offset = 2910.48d;
+                order = "Vermont";
+                query = "maroon JBOD";
+                sort = "hertz";
+                updatedGte = OffsetDateTime.parse("2023-01-29T17:06:35.136Z");
             }};            
 
             GetUcConnectionIdContactResponse res = sdk.uc.getUcConnectionIdContact(req);
@@ -254,12 +254,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("debitis") {{
+                .setSecurity(new Security("Africa") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetUcConnectionIdContactIdRequest req = new GetUcConnectionIdContactIdRequest("sunt", "ad");            
+            GetUcConnectionIdContactIdRequest req = new GetUcConnectionIdContactIdRequest("person", "firewall");            
 
             GetUcConnectionIdContactIdResponse res = sdk.uc.getUcConnectionIdContactId(req);
 
@@ -310,32 +310,32 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("quia") {{
+                .setSecurity(new Security("whose") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchUcConnectionIdContactIdRequest req = new PatchUcConnectionIdContactIdRequest("aspernatur", "iste") {{
+            PatchUcConnectionIdContactIdRequest req = new PatchUcConnectionIdContactIdRequest("Rosemary", "copying") {{
                 ucContact = new UcContact() {{
-                    company = "Harber - Borer";
-                    createdAt = OffsetDateTime.parse("2022-02-27T03:47:19.879Z");
+                    company = "Swaniawski - Hegmann";
+                    createdAt = OffsetDateTime.parse("2023-08-12T14:43:43.240Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
-                        add(new UcEmail("quia") {{
-                            email = "Julius11@yahoo.com";
+                        add(new UcEmail("Sleek") {{
+                            email = "Jerod_Effertz1@hotmail.com";
                             type = UcEmailType.WORK;
                         }}),
                     }};
-                    id = "92cc61c2-a702-4bb9-bee1-02da2de35f8e";
-                    name = "Diane Rempel";
+                    id = "<ID>";
+                    name = "Home";
                     raw = new PropertyUcContactRaw();;
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
-                        add(new UcTelephone("similique") {{
-                            telephone = "adipisci";
-                            type = UcTelephoneType.MOBILE;
+                        add(new UcTelephone("Fish") {{
+                            telephone = "Legacy";
+                            type = UcTelephoneType.OTHER;
                         }}),
                     }};
-                    title = "Miss";
-                    updatedAt = OffsetDateTime.parse("2022-06-07T22:59:32.310Z");
+                    title = "payment driver East";
+                    updatedAt = OffsetDateTime.parse("2022-12-06T16:53:33.493Z");
                 }};;
             }};            
 
@@ -388,32 +388,32 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("veniam") {{
+                .setSecurity(new Security("Plain") {{
                     jwt = "";
                 }})
                 .build();
 
-            PostUcConnectionIdContactRequest req = new PostUcConnectionIdContactRequest("eius") {{
+            PostUcConnectionIdContactRequest req = new PostUcConnectionIdContactRequest("Bacon") {{
                 ucContact = new UcContact() {{
-                    company = "Dach LLC";
-                    createdAt = OffsetDateTime.parse("2022-08-20T13:30:59.975Z");
+                    company = "Runolfsson - Bruen";
+                    createdAt = OffsetDateTime.parse("2022-11-30T09:19:12.974Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
-                        add(new UcEmail("placeat") {{
-                            email = "Alexandra_Gorczany11@yahoo.com";
-                            type = UcEmailType.OTHER;
+                        add(new UcEmail("Togo") {{
+                            email = "Marianne_Haley35@hotmail.com";
+                            type = UcEmailType.WORK;
                         }}),
                     }};
-                    id = "9fc61aae-5eb5-4f0c-892b-5744d08a2267";
-                    name = "Carlton Tillman";
+                    id = "<ID>";
+                    name = "payment generously";
                     raw = new PropertyUcContactRaw();;
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
-                        add(new UcTelephone("ipsum") {{
-                            telephone = "omnis";
-                            type = UcTelephoneType.MOBILE;
+                        add(new UcTelephone("Connecticut") {{
+                            telephone = "COM that";
+                            type = UcTelephoneType.FAX;
                         }}),
                     }};
-                    title = "Miss";
-                    updatedAt = OffsetDateTime.parse("2022-12-04T07:25:49.321Z");
+                    title = "bandwidth Supervisor East";
+                    updatedAt = OffsetDateTime.parse("2022-03-14T09:33:47.137Z");
                 }};;
             }};            
 
@@ -466,32 +466,32 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("est") {{
+                .setSecurity(new Security("geez") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutUcConnectionIdContactIdRequest req = new PutUcConnectionIdContactIdRequest("placeat", "sequi") {{
+            PutUcConnectionIdContactIdRequest req = new PutUcConnectionIdContactIdRequest("sticky", "Alabama") {{
                 ucContact = new UcContact() {{
-                    company = "Reynolds Group";
-                    createdAt = OffsetDateTime.parse("2020-11-05T23:16:02.065Z");
+                    company = "Walker - Koch";
+                    createdAt = OffsetDateTime.parse("2022-05-19T07:42:19.696Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
-                        add(new UcEmail("deleniti") {{
-                            email = "Daron22@yahoo.com";
+                        add(new UcEmail("ipsam") {{
+                            email = "Yasmine.Johns@yahoo.com";
                             type = UcEmailType.HOME;
                         }}),
                     }};
-                    id = "ae3bfc23-d945-40a9-86a4-95bac707f06b";
-                    name = "Myrtle Walker";
+                    id = "<ID>";
+                    name = "drat";
                     raw = new PropertyUcContactRaw();;
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
-                        add(new UcTelephone("eius") {{
-                            telephone = "atque";
-                            type = UcTelephoneType.OTHER;
+                        add(new UcTelephone("Gasoline") {{
+                            telephone = "Dynamic Loan Wooden";
+                            type = UcTelephoneType.WORK;
                         }}),
                     }};
-                    title = "Ms.";
-                    updatedAt = OffsetDateTime.parse("2022-10-10T10:30:42.311Z");
+                    title = "doubtfully";
+                    updatedAt = OffsetDateTime.parse("2021-03-08T23:31:07.532Z");
                 }};;
             }};            
 

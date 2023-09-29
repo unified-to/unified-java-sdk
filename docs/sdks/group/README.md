@@ -28,12 +28,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("qui") {{
+                .setSecurity(new Security("Human") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteHrisConnectionIdGroupIdRequest req = new DeleteHrisConnectionIdGroupIdRequest("libero", "maiores");            
+            DeleteHrisConnectionIdGroupIdRequest req = new DeleteHrisConnectionIdGroupIdRequest("Metal", "Country");            
 
             DeleteHrisConnectionIdGroupIdResponse res = sdk.group.deleteHrisConnectionIdGroupId(req);
 
@@ -78,18 +78,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("nam") {{
+                .setSecurity(new Security("Shirt") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetHrisConnectionIdGroupRequest req = new GetHrisConnectionIdGroupRequest("pariatur") {{
-                limit = 7972.62d;
-                offset = 2665.04d;
-                order = "vitae";
-                query = "delectus";
-                sort = "delectus";
-                updatedGte = OffsetDateTime.parse("2022-02-17T09:09:55.711Z");
+            GetHrisConnectionIdGroupRequest req = new GetHrisConnectionIdGroupRequest("Jaguar") {{
+                limit = 3486.96d;
+                offset = 9705.73d;
+                order = "Coordinator";
+                query = "World";
+                sort = "Dollar";
+                updatedGte = OffsetDateTime.parse("2021-01-15T16:06:13.340Z");
             }};            
 
             GetHrisConnectionIdGroupResponse res = sdk.group.getHrisConnectionIdGroup(req);
@@ -134,12 +134,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("magnam") {{
+                .setSecurity(new Security("Chips") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetHrisConnectionIdGroupIdRequest req = new GetHrisConnectionIdGroupIdRequest("officiis", "sed");            
+            GetHrisConnectionIdGroupIdRequest req = new GetHrisConnectionIdGroupIdRequest("eyeglasses", "nationalize");            
 
             GetHrisConnectionIdGroupIdResponse res = sdk.group.getHrisConnectionIdGroupId(req);
 
@@ -187,28 +187,28 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("mollitia") {{
+                .setSecurity(new Security("gosh") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchHrisConnectionIdGroupIdRequest req = new PatchHrisConnectionIdGroupIdRequest("saepe", "labore") {{
+            PatchHrisConnectionIdGroupIdRequest req = new PatchHrisConnectionIdGroupIdRequest("Northwest", "shootdown") {{
                 hrisGroup = new HrisGroup() {{
-                    createdAt = OffsetDateTime.parse("2020-11-21T01:27:24.061Z");
-                    description = "minima";
+                    createdAt = OffsetDateTime.parse("2022-02-05T05:07:10.835Z");
+                    description = "Advanced fresh-thinking methodology";
                     employeeIds = new String[]{{
-                        add("impedit"),
+                        add("West"),
                     }};
-                    id = "b35d1763-8f1e-4db7-8359-ecc5cb860f8c";
+                    id = "<ID>";
                     isActive = false;
                     managerIds = new String[]{{
-                        add("illum"),
+                        add("ouch"),
                     }};
-                    name = "Maxine Auer";
-                    parentId = "molestiae";
+                    name = "Shoes Kids Sedan";
+                    parentId = "Bike Intersex";
                     raw = new PropertyHrisGroupRaw();;
-                    type = HrisGroupType.GROUP;
-                    updatedAt = OffsetDateTime.parse("2022-10-04T00:40:35.322Z");
+                    type = HrisGroupType.BUSINESS_UNIT;
+                    updatedAt = OffsetDateTime.parse("2023-01-04T08:35:32.220Z");
                 }};;
             }};            
 
@@ -258,28 +258,28 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("aperiam") {{
+                .setSecurity(new Security("Bhutan") {{
                     jwt = "";
                 }})
                 .build();
 
-            PostHrisConnectionIdGroupRequest req = new PostHrisConnectionIdGroupRequest("itaque") {{
+            PostHrisConnectionIdGroupRequest req = new PostHrisConnectionIdGroupRequest("Polestar") {{
                 hrisGroup = new HrisGroup() {{
-                    createdAt = OffsetDateTime.parse("2022-01-01T00:26:49.464Z");
-                    description = "necessitatibus";
+                    createdAt = OffsetDateTime.parse("2022-04-05T02:35:18.855Z");
+                    description = "Synchronised discrete info-mediaries";
                     employeeIds = new String[]{{
-                        add("tempora"),
+                        add("XSS"),
                     }};
-                    id = "447297cd-3b1d-4d3b-bce2-47b7684eff50";
+                    id = "<ID>";
                     isActive = false;
                     managerIds = new String[]{{
-                        add("beatae"),
+                        add("whereas"),
                     }};
-                    name = "Vanessa Spencer DDS";
-                    parentId = "voluptatibus";
+                    name = "collaborative Cab Nissan";
+                    parentId = "scorn Gorgeous";
                     raw = new PropertyHrisGroupRaw();;
-                    type = HrisGroupType.SUB_DEPARTMENT;
-                    updatedAt = OffsetDateTime.parse("2021-05-14T13:09:41.388Z");
+                    type = HrisGroupType.TEAM;
+                    updatedAt = OffsetDateTime.parse("2022-05-06T13:36:36.113Z");
                 }};;
             }};            
 
@@ -329,28 +329,28 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("aut") {{
+                .setSecurity(new Security("panel") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutHrisConnectionIdGroupIdRequest req = new PutHrisConnectionIdGroupIdRequest("itaque", "rerum") {{
+            PutHrisConnectionIdGroupIdRequest req = new PutHrisConnectionIdGroupIdRequest("And", "Orchestrator") {{
                 hrisGroup = new HrisGroup() {{
-                    createdAt = OffsetDateTime.parse("2022-09-10T08:29:20.302Z");
-                    description = "distinctio";
+                    createdAt = OffsetDateTime.parse("2023-06-29T06:24:40.797Z");
+                    description = "Networked upward-trending flexibility";
                     employeeIds = new String[]{{
-                        add("blanditiis"),
+                        add("Northwest"),
                     }};
-                    id = "421953b4-4bd3-4c43-959d-33e5953c0011";
+                    id = "<ID>";
                     isActive = false;
                     managerIds = new String[]{{
-                        add("amet"),
+                        add("programming"),
                     }};
-                    name = "Isaac Hyatt";
-                    parentId = "fuga";
+                    name = "Licensed Response";
+                    parentId = "vortals interface Gasoline";
                     raw = new PropertyHrisGroupRaw();;
-                    type = HrisGroupType.GROUP;
-                    updatedAt = OffsetDateTime.parse("2022-02-03T00:03:20.488Z");
+                    type = HrisGroupType.BRANCH;
+                    updatedAt = OffsetDateTime.parse("2021-05-16T01:59:50.660Z");
                 }};;
             }};            
 

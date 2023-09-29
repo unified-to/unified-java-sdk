@@ -24,14 +24,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("aliquid") {{
+                .setSecurity(new Security("refresh") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetEnrichConnectionIdCompanyRequest req = new GetEnrichConnectionIdCompanyRequest("quam") {{
-                domain = "ea";
-                name = "Julie Pfannerstill";
+            GetEnrichConnectionIdCompanyRequest req = new GetEnrichConnectionIdCompanyRequest("Costa") {{
+                domain = "precious-legislation.net";
+                name = "gold";
             }};            
 
             GetEnrichConnectionIdCompanyResponse res = sdk.enrich.getEnrichConnectionIdCompany(req);
@@ -76,16 +76,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("quasi") {{
+                .setSecurity(new Security("Cisgender") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetEnrichConnectionIdPersonRequest req = new GetEnrichConnectionIdPersonRequest("sed") {{
-                email = "Ernie44@hotmail.com";
-                linkedinUrl = "libero";
-                name = "Miss Blanca Crist";
-                twitter = "distinctio";
+            GetEnrichConnectionIdPersonRequest req = new GetEnrichConnectionIdPersonRequest("Account") {{
+                email = "Jaiden_Weimann24@gmail.com";
+                linkedinUrl = "paradigms integrate Creative";
+                name = "Investment";
+                twitter = "Hills";
             }};            
 
             GetEnrichConnectionIdPersonResponse res = sdk.enrich.getEnrichConnectionIdPerson(req);

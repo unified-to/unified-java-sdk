@@ -28,12 +28,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("enim") {{
+                .setSecurity(new Security("Concrete") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteCrmConnectionIdDealIdRequest req = new DeleteCrmConnectionIdDealIdRequest("eaque", "ex");            
+            DeleteCrmConnectionIdDealIdRequest req = new DeleteCrmConnectionIdDealIdRequest("Tokelau", "Generic");            
 
             DeleteCrmConnectionIdDealIdResponse res = sdk.deal.deleteCrmConnectionIdDealId(req);
 
@@ -78,20 +78,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("eveniet") {{
+                .setSecurity(new Security("apud") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdDealRequest req = new GetCrmConnectionIdDealRequest("delectus") {{
-                companyId = "deleniti";
-                contactId = "provident";
-                limit = 156.76d;
-                offset = 6800.84d;
-                order = "nostrum";
-                query = "tempora";
-                sort = "nam";
-                updatedGte = OffsetDateTime.parse("2022-07-06T17:19:33.598Z");
+            GetCrmConnectionIdDealRequest req = new GetCrmConnectionIdDealRequest("foreground") {{
+                companyId = "Soul communities Renminbi";
+                contactId = "till payment World";
+                limit = 8656.16d;
+                offset = 4455.8d;
+                order = "global";
+                query = "Program Bespoke Wisconsin";
+                sort = "Netherlands under";
+                updatedGte = OffsetDateTime.parse("2022-12-23T01:47:21.816Z");
             }};            
 
             GetCrmConnectionIdDealResponse res = sdk.deal.getCrmConnectionIdDeal(req);
@@ -136,12 +136,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("nostrum") {{
+                .setSecurity(new Security("Response") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdDealIdRequest req = new GetCrmConnectionIdDealIdRequest("maiores", "veritatis");            
+            GetCrmConnectionIdDealIdRequest req = new GetCrmConnectionIdDealIdRequest("Electric", "Practical");            
 
             GetCrmConnectionIdDealIdResponse res = sdk.deal.getCrmConnectionIdDealId(req);
 
@@ -188,30 +188,30 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("autem") {{
+                .setSecurity(new Security("Bicycle") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmConnectionIdDealIdRequest req = new PatchCrmConnectionIdDealIdRequest("earum", "minima") {{
+            PatchCrmConnectionIdDealIdRequest req = new PatchCrmConnectionIdDealIdRequest("East", "North") {{
                 crmDeal = new CrmDeal() {{
-                    amount = 4051.61d;
-                    closedAt = OffsetDateTime.parse("2022-05-26T10:49:02.083Z");
-                    createdAt = OffsetDateTime.parse("2022-04-25T00:22:40.532Z");
-                    currency = "fuga";
-                    id = "3c4ac631-b99e-426c-ad8f-9fdb9410f63b";
-                    lostReason = "expedita";
-                    name = "Clayton Bruen";
-                    pipeline = "velit";
-                    probability = 4747.74d;
+                    amount = 83.47d;
+                    closedAt = OffsetDateTime.parse("2023-11-10T10:13:15.860Z");
+                    createdAt = OffsetDateTime.parse("2022-09-06T02:31:05.722Z");
+                    currency = "European Unit of Account 17(E.U.A.-17)";
+                    id = "<ID>";
+                    lostReason = "benchmark";
+                    name = "Loan";
+                    pipeline = "Cotton Blues ah";
+                    probability = 263.43d;
                     raw = new PropertyCrmDealRaw();;
-                    source = "nam";
-                    stage = "aperiam";
+                    source = "logistical transition Universal";
+                    stage = "Investment Elegant kilogram";
                     tags = new String[]{{
-                        add("vitae"),
+                        add("Germanium"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-01-07T23:15:28.817Z");
-                    wonReason = "at";
+                    updatedAt = OffsetDateTime.parse("2021-08-13T23:49:24.798Z");
+                    wonReason = "West";
                 }};;
             }};            
 
@@ -260,30 +260,30 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("quibusdam") {{
+                .setSecurity(new Security("M2F") {{
                     jwt = "";
                 }})
                 .build();
 
-            PostCrmConnectionIdDealRequest req = new PostCrmConnectionIdDealRequest("quam") {{
+            PostCrmConnectionIdDealRequest req = new PostCrmConnectionIdDealRequest("programming") {{
                 crmDeal = new CrmDeal() {{
-                    amount = 5345.09d;
-                    closedAt = OffsetDateTime.parse("2022-02-25T01:49:55.199Z");
-                    createdAt = OffsetDateTime.parse("2022-09-18T10:34:10.446Z");
-                    currency = "sunt";
-                    id = "89eb4487-3f50-433f-99db-f125ce4152ea";
-                    lostReason = "expedita";
-                    name = "Irving Smitham";
-                    pipeline = "minima";
-                    probability = 1419.86d;
+                    amount = 2558.82d;
+                    closedAt = OffsetDateTime.parse("2023-02-16T08:39:46.084Z");
+                    createdAt = OffsetDateTime.parse("2021-12-12T19:23:52.754Z");
+                    currency = "Canadian Dollar";
+                    id = "<ID>";
+                    lostReason = "payment";
+                    name = "International";
+                    pipeline = "Luxurious West";
+                    probability = 867.08d;
                     raw = new PropertyCrmDealRaw();;
-                    source = "odit";
-                    stage = "eius";
+                    source = "Account sometimes South";
+                    stage = "intermediate Latin Cisgender";
                     tags = new String[]{{
-                        add("error"),
+                        add("input"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-04-27T20:38:40.760Z");
-                    wonReason = "alias";
+                    updatedAt = OffsetDateTime.parse("2022-06-01T07:39:00.559Z");
+                    wonReason = "local Huntsville";
                 }};;
             }};            
 
@@ -332,30 +332,30 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("itaque") {{
+                .setSecurity(new Security("Account") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutCrmConnectionIdDealIdRequest req = new PutCrmConnectionIdDealIdRequest("ab", "sunt") {{
+            PutCrmConnectionIdDealIdRequest req = new PutCrmConnectionIdDealIdRequest("West", "laudantium") {{
                 crmDeal = new CrmDeal() {{
-                    amount = 2264.91d;
-                    closedAt = OffsetDateTime.parse("2022-01-14T19:05:36.267Z");
-                    createdAt = OffsetDateTime.parse("2022-07-01T09:19:17.296Z");
-                    currency = "esse";
-                    id = "ec59e1f6-7f3c-44cc-a4b6-d7696ff3c574";
-                    lostReason = "dignissimos";
-                    name = "Margaret Bradtke";
-                    pipeline = "nihil";
-                    probability = 8878.65d;
+                    amount = 1175.04d;
+                    closedAt = OffsetDateTime.parse("2023-10-14T13:29:58.098Z");
+                    createdAt = OffsetDateTime.parse("2022-10-24T03:12:54.428Z");
+                    currency = "Zambian Kwacha";
+                    id = "<ID>";
+                    lostReason = "Developer magenta calculating";
+                    name = "Gourde Chief";
+                    pipeline = "program Nihonium Corporate";
+                    probability = 4456.95d;
                     raw = new PropertyCrmDealRaw();;
-                    source = "dolore";
-                    stage = "magnam";
+                    source = "Tasty extranet";
+                    stage = "Unbranded";
                     tags = new String[]{{
-                        add("maiores"),
+                        add("Bangladesh"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-11-19T20:01:30.422Z");
-                    wonReason = "hic";
+                    updatedAt = OffsetDateTime.parse("2022-10-01T16:47:53.632Z");
+                    wonReason = "deter Montana";
                 }};;
             }};            
 

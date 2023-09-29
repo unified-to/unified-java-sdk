@@ -34,12 +34,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("adipisci") {{
+                .setSecurity(new Security("generate") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteMartechConnectionIdListIdRequest req = new DeleteMartechConnectionIdListIdRequest("hic", "dolorem");            
+            DeleteMartechConnectionIdListIdRequest req = new DeleteMartechConnectionIdListIdRequest("aliquam", "Crossroad");            
 
             DeleteMartechConnectionIdListIdResponse res = sdk.martech.deleteMartechConnectionIdListId(req);
 
@@ -83,12 +83,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("adipisci") {{
+                .setSecurity(new Security("Account") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteMartechConnectionIdListIdMemberIdRequest req = new DeleteMartechConnectionIdListIdMemberIdRequest("optio", "similique", "odio");            
+            DeleteMartechConnectionIdListIdMemberIdRequest req = new DeleteMartechConnectionIdListIdMemberIdRequest("fib", "Future", "Legacy");            
 
             DeleteMartechConnectionIdListIdMemberIdResponse res = sdk.martech.deleteMartechConnectionIdListIdMemberId(req);
 
@@ -133,18 +133,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("unde") {{
+                .setSecurity(new Security("project") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetMartechConnectionIdListRequest req = new GetMartechConnectionIdListRequest("asperiores") {{
-                limit = 7216.95d;
-                offset = 5891.24d;
-                order = "fugiat";
-                query = "recusandae";
-                sort = "non";
-                updatedGte = OffsetDateTime.parse("2022-10-17T11:20:49.691Z");
+            GetMartechConnectionIdListRequest req = new GetMartechConnectionIdListRequest("apportion") {{
+                limit = 2321.9d;
+                offset = 9799.48d;
+                order = "Wooden Pass";
+                query = "since";
+                sort = "South incubate";
+                updatedGte = OffsetDateTime.parse("2023-01-24T13:37:19.156Z");
             }};            
 
             GetMartechConnectionIdListResponse res = sdk.martech.getMartechConnectionIdList(req);
@@ -189,12 +189,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("quia") {{
+                .setSecurity(new Security("digital") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetMartechConnectionIdListIdRequest req = new GetMartechConnectionIdListIdRequest("soluta", "fuga");            
+            GetMartechConnectionIdListIdRequest req = new GetMartechConnectionIdListIdRequest("mint", "Arkansas");            
 
             GetMartechConnectionIdListIdResponse res = sdk.martech.getMartechConnectionIdListId(req);
 
@@ -239,18 +239,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("qui") {{
+                .setSecurity(new Security("Account") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetMartechConnectionIdListIdMemberRequest req = new GetMartechConnectionIdListIdMemberRequest("commodi", "a") {{
-                limit = 8359.65d;
-                offset = 1972.56d;
-                order = "eum";
-                query = "rem";
-                sort = "expedita";
-                updatedGte = OffsetDateTime.parse("2021-11-13T16:52:34.700Z");
+            GetMartechConnectionIdListIdMemberRequest req = new GetMartechConnectionIdListIdMemberRequest("economics", "dedicated") {{
+                limit = 865.46d;
+                offset = 9970.32d;
+                order = "East";
+                query = "payment";
+                sort = "male purple";
+                updatedGte = OffsetDateTime.parse("2021-02-18T03:26:17.750Z");
             }};            
 
             GetMartechConnectionIdListIdMemberResponse res = sdk.martech.getMartechConnectionIdListIdMember(req);
@@ -295,12 +295,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("dolores") {{
+                .setSecurity(new Security("South") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetMartechConnectionIdListIdMemberIdRequest req = new GetMartechConnectionIdListIdMemberIdRequest("dicta", "laboriosam", "distinctio");            
+            GetMartechConnectionIdListIdMemberIdRequest req = new GetMartechConnectionIdListIdMemberIdRequest("unless", "Gasoline", "Home");            
 
             GetMartechConnectionIdListIdMemberIdResponse res = sdk.martech.getMartechConnectionIdListIdMemberId(req);
 
@@ -347,18 +347,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("quo") {{
+                .setSecurity(new Security("engage") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchMartechConnectionIdListIdRequest req = new PatchMartechConnectionIdListIdRequest("facilis", "magnam") {{
+            PatchMartechConnectionIdListIdRequest req = new PatchMartechConnectionIdListIdRequest("bluetooth", "lime") {{
                 marketingList = new MarketingList() {{
-                    createdAt = "dicta";
-                    id = "5835c736-4172-4313-bedc-046bc5163bbc";
-                    name = "Ray Maggio";
+                    createdAt = "synergies lime Human";
+                    id = "<ID>";
+                    name = "Intelligent connecting Recumbent";
                     raw = new PropertyMarketingListRaw();;
-                    updatedAt = OffsetDateTime.parse("2022-03-16T23:54:29.838Z");
+                    updatedAt = OffsetDateTime.parse("2023-07-01T00:27:35.301Z");
                 }};;
             }};            
 
@@ -409,30 +409,30 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("non") {{
+                .setSecurity(new Security("neural") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchMartechConnectionIdListIdMemberIdRequest req = new PatchMartechConnectionIdListIdMemberIdRequest("odit", "maxime", "aspernatur") {{
+            PatchMartechConnectionIdListIdMemberIdRequest req = new PatchMartechConnectionIdListIdMemberIdRequest("board", "bah", "Bicycle") {{
                 marketingMember = new MarketingMember() {{
-                    createdAt = OffsetDateTime.parse("2022-03-16T19:29:34.509Z");
+                    createdAt = OffsetDateTime.parse("2022-12-27T20:50:12.207Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.MarketingEmail[]{{
-                        add(new MarketingEmail("cupiditate") {{
-                            email = "Frida3@gmail.com";
-                            type = MarketingEmailType.WORK;
+                        add(new MarketingEmail("Hatchback") {{
+                            email = "Florence48@yahoo.com";
+                            type = MarketingEmailType.HOME;
                         }}),
                     }};
-                    id = "5c5dbb3c-57c1-4e49-81e8-aa257ddc1912";
+                    id = "<ID>";
                     listIds = new String[]{{
-                        add("earum"),
+                        add("mutiny"),
                     }};
-                    name = "Josh Tremblay";
+                    name = "Northwest";
                     raw = new PropertyMarketingMemberRaw();;
                     tags = new String[]{{
-                        add("nam"),
+                        add("Southwest"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2020-08-25T03:12:50.028Z");
+                    updatedAt = OffsetDateTime.parse("2023-05-24T17:45:02.362Z");
                 }};;
             }};            
 
@@ -481,18 +481,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("impedit") {{
+                .setSecurity(new Security("black") {{
                     jwt = "";
                 }})
                 .build();
 
-            PostMartechConnectionIdListRequest req = new PostMartechConnectionIdListRequest("veniam") {{
+            PostMartechConnectionIdListRequest req = new PostMartechConnectionIdListRequest("Hafnium") {{
                 marketingList = new MarketingList() {{
-                    createdAt = "magnam";
-                    id = "69d4015d-fa79-4620-abef-2b0a3e42c1aa";
-                    name = "Pamela Auer";
+                    createdAt = "Steel caddy who";
+                    id = "<ID>";
+                    name = "Bicycle Bicycle Bicycle";
                     raw = new PropertyMarketingListRaw();;
-                    updatedAt = OffsetDateTime.parse("2021-09-25T16:42:58.940Z");
+                    updatedAt = OffsetDateTime.parse("2021-06-21T11:26:26.993Z");
                 }};;
             }};            
 
@@ -543,30 +543,30 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("quo") {{
+                .setSecurity(new Security("Tactics") {{
                     jwt = "";
                 }})
                 .build();
 
-            PostMartechConnectionIdListIdMemberRequest req = new PostMartechConnectionIdListIdMemberRequest("sunt", "necessitatibus") {{
+            PostMartechConnectionIdListIdMemberRequest req = new PostMartechConnectionIdListIdMemberRequest("drive", "virtual") {{
                 marketingMember = new MarketingMember() {{
-                    createdAt = OffsetDateTime.parse("2022-11-01T16:02:43.804Z");
+                    createdAt = OffsetDateTime.parse("2023-05-13T06:01:50.027Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.MarketingEmail[]{{
-                        add(new MarketingEmail("dicta") {{
-                            email = "Ethyl.Hauck@gmail.com";
-                            type = MarketingEmailType.OTHER;
+                        add(new MarketingEmail("copying") {{
+                            email = "Marilyne27@yahoo.com";
+                            type = MarketingEmailType.HOME;
                         }}),
                     }};
-                    id = "8f9f97a4-bfad-42bf-bd67-ca84ad99b41d";
+                    id = "<ID>";
                     listIds = new String[]{{
-                        add("voluptas"),
+                        add("Auto"),
                     }};
-                    name = "Sara Funk";
+                    name = "Conn Automotive";
                     raw = new PropertyMarketingMemberRaw();;
                     tags = new String[]{{
-                        add("nesciunt"),
+                        add("pink"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-07-01T06:53:47.405Z");
+                    updatedAt = OffsetDateTime.parse("2022-08-18T02:39:52.572Z");
                 }};;
             }};            
 
@@ -615,18 +615,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("quam") {{
+                .setSecurity(new Security("Swiss") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutMartechConnectionIdListIdRequest req = new PutMartechConnectionIdListIdRequest("perferendis", "cumque") {{
+            PutMartechConnectionIdListIdRequest req = new PutMartechConnectionIdListIdRequest("textual", "navigate") {{
                 marketingList = new MarketingList() {{
-                    createdAt = "delectus";
-                    id = "68b03ad4-21bd-443d-9f0c-b0a0003eb22d";
-                    name = "Garry Effertz";
+                    createdAt = "aggressive";
+                    id = "<ID>";
+                    name = "Progressive";
                     raw = new PropertyMarketingListRaw();;
-                    updatedAt = OffsetDateTime.parse("2022-02-18T09:22:26.126Z");
+                    updatedAt = OffsetDateTime.parse("2023-01-17T12:35:27.783Z");
                 }};;
             }};            
 
@@ -677,30 +677,30 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("excepturi") {{
+                .setSecurity(new Security("until") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutMartechConnectionIdListIdMemberIdRequest req = new PutMartechConnectionIdListIdMemberIdRequest("aliquam", "voluptatibus", "fuga") {{
+            PutMartechConnectionIdListIdMemberIdRequest req = new PutMartechConnectionIdListIdMemberIdRequest("Group", "reboot", "person") {{
                 marketingMember = new MarketingMember() {{
-                    createdAt = OffsetDateTime.parse("2022-02-15T01:18:45.557Z");
+                    createdAt = OffsetDateTime.parse("2022-01-09T03:37:45.236Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.MarketingEmail[]{{
-                        add(new MarketingEmail("dicta") {{
-                            email = "Austyn.Runte@gmail.com";
-                            type = MarketingEmailType.OTHER;
+                        add(new MarketingEmail("Strategist") {{
+                            email = "Chloe5@gmail.com";
+                            type = MarketingEmailType.WORK;
                         }}),
                     }};
-                    id = "fedc2050-d38d-4c3c-a185-472f9ee69166";
+                    id = "<ID>";
                     listIds = new String[]{{
-                        add("error"),
+                        add("following"),
                     }};
-                    name = "Geoffrey Turner";
+                    name = "Clara Mendelevium";
                     raw = new PropertyMarketingMemberRaw();;
                     tags = new String[]{{
-                        add("tempora"),
+                        add("Gasoline"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-02-09T06:59:30.365Z");
+                    updatedAt = OffsetDateTime.parse("2021-10-01T19:02:33.268Z");
                 }};;
             }};            
 

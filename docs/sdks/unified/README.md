@@ -43,12 +43,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("laudantium") {{
+                .setSecurity(new Security("Clothing") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteUnifiedConnectionIdRequest req = new DeleteUnifiedConnectionIdRequest("commodi");            
+            DeleteUnifiedConnectionIdRequest req = new DeleteUnifiedConnectionIdRequest("Rand");            
 
             DeleteUnifiedConnectionIdResponse res = sdk.unified.deleteUnifiedConnectionId(req);
 
@@ -91,7 +91,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("a") {{
+                .setSecurity(new Security("Northeast") {{
                     jwt = "";
                 }})
                 .build();
@@ -132,12 +132,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("aliquid") {{
+                .setSecurity(new Security("North") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteUnifiedWebhookIdRequest req = new DeleteUnifiedWebhookIdRequest("qui");            
+            DeleteUnifiedWebhookIdRequest req = new DeleteUnifiedWebhookIdRequest("optio");            
 
             DeleteUnifiedWebhookIdResponse res = sdk.unified.deleteUnifiedWebhookId(req);
 
@@ -182,23 +182,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("eligendi") {{
+                .setSecurity(new Security("tesla") {{
                     jwt = "";
                 }})
                 .build();
 
             GetUnifiedApicallRequest req = new GetUnifiedApicallRequest() {{
-                connectionId = "perspiciatis";
-                createdLte = OffsetDateTime.parse("2022-06-04T16:12:34.148Z");
-                env = "eligendi";
+                connectionId = "green Hybrid Northwest";
+                createdLte = OffsetDateTime.parse("2021-10-25T17:00:01.179Z");
+                env = "Steel lime";
                 error = false;
-                externalXref = "incidunt";
-                integrationType = "quisquam";
-                limit = 7977.92d;
-                offset = 3856.2d;
-                order = "quidem";
-                sort = "reprehenderit";
-                updatedGte = OffsetDateTime.parse("2021-12-16T21:03:20.387Z");
+                externalXref = "indexing North";
+                integrationType = "Faroe";
+                limit = 8086.35d;
+                offset = 4369.86d;
+                order = "Practical online";
+                sort = "envisioneer Executive Northwest";
+                updatedGte = OffsetDateTime.parse("2023-03-02T12:58:56.214Z");
             }};            
 
             GetUnifiedApicallResponse res = sdk.unified.getUnifiedApicall(req);
@@ -243,12 +243,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("error") {{
+                .setSecurity(new Security("fuchsia") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedApicallIdRequest req = new GetUnifiedApicallIdRequest("alias");            
+            GetUnifiedApicallIdRequest req = new GetUnifiedApicallIdRequest("Guadeloupe");            
 
             GetUnifiedApicallIdResponse res = sdk.unified.getUnifiedApicallId(req);
 
@@ -294,22 +294,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("deserunt") {{
+                .setSecurity(new Security("Granite") {{
                     jwt = "";
                 }})
                 .build();
 
             GetUnifiedConnectionRequest req = new GetUnifiedConnectionRequest() {{
                 categories = new com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionCategories[]{{
-                    add(GetUnifiedConnectionCategories.HRIS),
+                    add(GetUnifiedConnectionCategories.TICKETING),
                 }};
-                env = "sapiente";
-                externalXref = "illum";
-                limit = 2026.93d;
-                offset = 7609.41d;
-                order = "corrupti";
-                sort = "inventore";
-                updatedGte = OffsetDateTime.parse("2021-02-04T18:53:21.003Z");
+                env = "HTTP Islands West";
+                externalXref = "Bespoke Salad consequently";
+                limit = 5071.38d;
+                offset = 8108.56d;
+                order = "Product seamless Coupe";
+                sort = "Manager";
+                updatedGte = OffsetDateTime.parse("2022-09-23T00:11:33.487Z");
             }};            
 
             GetUnifiedConnectionResponse res = sdk.unified.getUnifiedConnection(req);
@@ -354,12 +354,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("dicta") {{
+                .setSecurity(new Security("Interactions") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedConnectionIdRequest req = new GetUnifiedConnectionIdRequest("perferendis");            
+            GetUnifiedConnectionIdRequest req = new GetUnifiedConnectionIdRequest("deploy");            
 
             GetUnifiedConnectionIdResponse res = sdk.unified.getUnifiedConnectionId(req);
 
@@ -405,7 +405,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("asperiores") {{
+                .setSecurity(new Security("Mobility") {{
                     jwt = "";
                 }})
                 .build();
@@ -413,14 +413,14 @@ public class Application {
             GetUnifiedIntegrationRequest req = new GetUnifiedIntegrationRequest() {{
                 active = false;
                 categories = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationCategories[]{{
-                    add(GetUnifiedIntegrationCategories.CRM),
+                    add(GetUnifiedIntegrationCategories.TICKETING),
                 }};
-                limit = 7596.13d;
-                offset = 1614.81d;
-                order = "non";
-                sort = "fugiat";
+                limit = 5251.15d;
+                offset = 1545.55d;
+                order = "farad";
+                sort = "Implemented";
                 summary = false;
-                updatedGte = OffsetDateTime.parse("2021-02-26T18:39:20.796Z");
+                updatedGte = OffsetDateTime.parse("2021-12-28T03:20:26.143Z");
             }};            
 
             GetUnifiedIntegrationResponse res = sdk.unified.getUnifiedIntegration(req);
@@ -466,23 +466,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("amet") {{
+                .setSecurity(new Security("Ireland") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest req = new GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest("quae", "pariatur") {{
-                env = "officia";
-                externalXref = "velit";
-                failureRedirect = "debitis";
-                lang = "facere";
+            GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest req = new GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest("Ergonomic", "quae") {{
+                env = "Surinam national Security";
+                externalXref = "purple positively";
+                failureRedirect = "Bicycle";
+                lang = "Home";
                 redirect = false;
                 scopes = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes[]{{
-                    add(GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes.TICKETING_NOTE_READ),
+                    add(GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes.CRM_PIPELINE_READ),
                 }};
-                state = "minima";
-                subdomain = "vitae";
-                successRedirect = "repellat";
+                state = "architectures";
+                subdomain = "Functionality";
+                successRedirect = "innovate payment";
             }};            
 
             GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeResponse res = sdk.unified.getUnifiedIntegrationAuthWorkspaceIdIntegrationType(req);
@@ -527,12 +527,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("est") {{
+                .setSecurity(new Security("FTP") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedIntegrationIntegrationTypeRequest req = new GetUnifiedIntegrationIntegrationTypeRequest("facere");            
+            GetUnifiedIntegrationIntegrationTypeRequest req = new GetUnifiedIntegrationIntegrationTypeRequest("East");            
 
             GetUnifiedIntegrationIntegrationTypeResponse res = sdk.unified.getUnifiedIntegrationIntegrationType(req);
 
@@ -577,17 +577,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("iste") {{
+                .setSecurity(new Security("Automotive") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedIntegrationWorkspaceWorkspaceIdRequest req = new GetUnifiedIntegrationWorkspaceWorkspaceIdRequest("numquam") {{
+            GetUnifiedIntegrationWorkspaceWorkspaceIdRequest req = new GetUnifiedIntegrationWorkspaceWorkspaceIdRequest("North") {{
                 active = false;
                 categories = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationWorkspaceWorkspaceIdCategories[]{{
-                    add(GetUnifiedIntegrationWorkspaceWorkspaceIdCategories.ENRICH),
+                    add(GetUnifiedIntegrationWorkspaceWorkspaceIdCategories.PASSTHROUGH),
                 }};
-                env = "optio";
+                env = "exercitationem Franco National";
                 summary = false;
             }};            
 
@@ -632,7 +632,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("minus") {{
+                .setSecurity(new Security("Pizza") {{
                     jwt = "";
                 }})
                 .build();
@@ -672,7 +672,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("sint") {{
+                .setSecurity(new Security("past") {{
                     jwt = "";
                 }})
                 .build();
@@ -714,19 +714,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("aliquam") {{
+                .setSecurity(new Security("proud") {{
                     jwt = "";
                 }})
                 .build();
 
             GetUnifiedWebhookRequest req = new GetUnifiedWebhookRequest() {{
-                env = "consectetur";
-                limit = 3554.68d;
-                object = "dicta";
-                offset = 2018.16d;
-                order = "reprehenderit";
-                sort = "esse";
-                updatedGte = OffsetDateTime.parse("2022-08-04T09:46:19.317Z");
+                env = "methodical Fitness";
+                limit = 8087.22d;
+                object = "Franc past salmon";
+                offset = 5240.75d;
+                order = "program";
+                sort = "below JSON";
+                updatedGte = OffsetDateTime.parse("2022-05-29T13:22:55.562Z");
             }};            
 
             GetUnifiedWebhookResponse res = sdk.unified.getUnifiedWebhook(req);
@@ -771,12 +771,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("quibusdam") {{
+                .setSecurity(new Security("up") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedWebhookIdRequest req = new GetUnifiedWebhookIdRequest("veritatis");            
+            GetUnifiedWebhookIdRequest req = new GetUnifiedWebhookIdRequest("optical");            
 
             GetUnifiedWebhookIdResponse res = sdk.unified.getUnifiedWebhookId(req);
 
@@ -826,51 +826,51 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("ad") {{
+                .setSecurity(new Security("Executive") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchUnifiedConnectionIdRequest req = new PatchUnifiedConnectionIdRequest("velit") {{
+            PatchUnifiedConnectionIdRequest req = new PatchUnifiedConnectionIdRequest("Cupertino") {{
                 connection = new Connection(                new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                                    add(PropertyConnectionCategories.HRIS),
-                                }}, "dicta",                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
+                                    add(PropertyConnectionCategories.MARTECH),
+                                }}, "Center",                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
                                     add(PropertyConnectionPermissions.TICKETING_NOTE_READ),
                                 }}) {{
                     auth = new PropertyConnectionAuth() {{
-                        accessToken = "quos";
-                        apiUrl = "velit";
-                        appId = "ratione";
-                        authorizeUrl = "fuga";
-                        clientId = "minima";
-                        clientSecret = "aliquid";
-                        consumerKey = "facere";
-                        consumerSecret = "laboriosam";
+                        accessToken = "Electric Latin Personal";
+                        apiUrl = "Electric Bicycle payment";
+                        appId = "transmitting North";
+                        authorizeUrl = "mole Gasoline morph";
+                        clientId = "Keyboard Antimony primary";
+                        clientSecret = "yearly";
+                        consumerKey = "Concrete array inside";
+                        consumerSecret = "Implemented Modern";
                         emails = new String[]{{
-                            add("sint"),
+                            add("UTF8"),
                         }};
-                        expiresIn = 1038.74d;
-                        expiryDate = OffsetDateTime.parse("2022-12-31T00:52:18.100Z");
-                        key = "hic";
+                        expiresIn = 6521.92d;
+                        expiryDate = OffsetDateTime.parse("2021-10-21T20:04:54.899Z");
+                        key = "<key>";
                         meta = new PropertyPropertyConnectionAuthMeta();;
-                        name = "Brad Altenwerth";
+                        name = "guard Internal";
                         otherAuthInfo = new String[]{{
-                            add("occaecati"),
+                            add("Bacon"),
                         }};
-                        pem = "fuga";
-                        refreshToken = "ex";
-                        state = "autem";
-                        token = "nostrum";
-                        tokenUrl = "atque";
+                        pem = "mug";
+                        refreshToken = "Cotton";
+                        state = "synthesizing payment dolorum";
+                        token = "Electric now Southwest";
+                        tokenUrl = "Games";
                     }};;
-                    authAwsArn = "saepe";
-                    createdAt = OffsetDateTime.parse("2022-06-08T16:27:02.035Z");
-                    environment = "fuga";
-                    externalXref = "non";
-                    id = "b843d382-dbec-475c-a8c6-0659468ce304";
+                    authAwsArn = "Northwest Balanced";
+                    createdAt = OffsetDateTime.parse("2021-11-27T20:38:25.719Z");
+                    environment = "North Soft relationships";
+                    externalXref = "extend";
+                    id = "<ID>";
                     isPaused = false;
-                    updatedAt = OffsetDateTime.parse("2021-05-21T22:29:01.030Z");
-                    workspaceId = "quas";
+                    updatedAt = OffsetDateTime.parse("2023-12-13T08:49:01.120Z");
+                    workspaceId = "Creative";
                 }};;
             }};            
 
@@ -918,20 +918,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("magnam") {{
+                .setSecurity(new Security("Liberian") {{
                     jwt = "";
                 }})
                 .build();
 
-            com.unifiedapi.unifiedto.models.shared.User req = new User("cupiditate", "expedita",                 new String[]{{
-                                add("sapiente"),
+            com.unifiedapi.unifiedto.models.shared.User req = new User("female", "Bicycle",                 new String[]{{
+                                add("Trigender"),
                             }}) {{
-                createdAt = OffsetDateTime.parse("2022-09-29T08:28:46.977Z");
-                email = "Dovie21@gmail.com";
-                environment = "nihil";
-                id = "f96bb0c6-9e37-42db-9344-ba9f78a5c0ed";
+                createdAt = OffsetDateTime.parse("2023-06-03T03:54:11.725Z");
+                email = "Vergie51@hotmail.com";
+                environment = "blue";
+                id = "<ID>";
                 meta = new PropertyUserMeta();;
-                updatedAt = OffsetDateTime.parse("2022-04-29T13:00:48.899Z");
+                updatedAt = OffsetDateTime.parse("2023-08-20T03:50:35.548Z");
             }};            
 
             PatchUnifiedUserResponse res = sdk.unified.patchUnifiedUser(req);
@@ -981,50 +981,50 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("officia") {{
+                .setSecurity(new Security("RSS") {{
                     jwt = "";
                 }})
                 .build();
 
             com.unifiedapi.unifiedto.models.shared.Connection req = new Connection(                new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                                add(PropertyConnectionCategories.MARTECH),
-                            }}, "suscipit",                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                                add(PropertyConnectionPermissions.CRM_COMPANY_READ),
+                                add(PropertyConnectionCategories.UC),
+                            }}, "indexing",                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
+                                add(PropertyConnectionPermissions.HRIS_EMPLOYEE_WRITE),
                             }}) {{
                 auth = new PropertyConnectionAuth() {{
-                    accessToken = "recusandae";
-                    apiUrl = "unde";
-                    appId = "iusto";
-                    authorizeUrl = "aspernatur";
-                    clientId = "ea";
-                    clientSecret = "architecto";
-                    consumerKey = "earum";
-                    consumerSecret = "cum";
+                    accessToken = "Livermorium Coordinator Sol";
+                    apiUrl = "PNG Modern Intranet";
+                    appId = "Integration";
+                    authorizeUrl = "Configurable Architect";
+                    clientId = "Audi";
+                    clientSecret = "Human";
+                    consumerKey = "intuitive Account membership";
+                    consumerSecret = "Configuration Crooks";
                     emails = new String[]{{
-                        add("alias"),
+                        add("Riel"),
                     }};
-                    expiresIn = 8016.71d;
-                    expiryDate = OffsetDateTime.parse("2022-06-15T02:12:07.821Z");
-                    key = "temporibus";
+                    expiresIn = 8567.25d;
+                    expiryDate = OffsetDateTime.parse("2023-12-23T23:29:58.525Z");
+                    key = "<key>";
                     meta = new PropertyPropertyConnectionAuthMeta();;
-                    name = "Maureen Rohan V";
+                    name = "Pula";
                     otherAuthInfo = new String[]{{
-                        add("cupiditate"),
+                        add("South"),
                     }};
-                    pem = "ex";
-                    refreshToken = "tempore";
-                    state = "minima";
-                    token = "expedita";
-                    tokenUrl = "modi";
+                    pem = "Northwest";
+                    refreshToken = "unbutton";
+                    state = "Investor circuit";
+                    token = "Designer";
+                    tokenUrl = "monitor";
                 }};;
-                authAwsArn = "expedita";
-                createdAt = OffsetDateTime.parse("2022-12-18T06:58:16.772Z");
-                environment = "recusandae";
-                externalXref = "saepe";
-                id = "f712b7a7-ab03-444b-9710-688deebef897";
+                authAwsArn = "port orchid";
+                createdAt = OffsetDateTime.parse("2023-10-03T19:36:19.419Z");
+                environment = "tan male stamp";
+                externalXref = "Towels Plastic";
+                id = "<ID>";
                 isPaused = false;
-                updatedAt = OffsetDateTime.parse("2022-04-08T10:37:22.639Z");
-                workspaceId = "fugiat";
+                updatedAt = OffsetDateTime.parse("2021-09-22T05:13:05.778Z");
+                workspaceId = "Auto";
             }};            
 
             PostUnifiedConnectionResponse res = sdk.unified.postUnifiedConnection(req);
@@ -1074,27 +1074,27 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("pariatur") {{
+                .setSecurity(new Security("Arab") {{
                     jwt = "";
                 }})
                 .build();
 
-            PostUnifiedWebhookConnectionIdObjectRequest req = new PostUnifiedWebhookConnectionIdObjectRequest("voluptatem", "quod") {{
-                webhook = new Webhook("minus",                 new com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents[]{{
+            PostUnifiedWebhookConnectionIdObjectRequest req = new PostUnifiedWebhookConnectionIdObjectRequest("tan", "siemens") {{
+                webhook = new Webhook("National",                 new com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents[]{{
                                     add(PropertyWebhookEvents.CREATED),
-                                }}, "dolor", "amet", 9483.01d, WebhookObjectType.ATS_DOCUMENT, "dicta") {{
-                    checkedAt = OffsetDateTime.parse("2022-08-04T00:06:02.333Z");
-                    createdAt = OffsetDateTime.parse("2022-02-02T19:33:56.131Z");
-                    environment = "voluptates";
-                    id = "080aa104-186e-4c75-9e02-f3702c5c8e2d";
+                                }}, "GB", "Rustic", 4473.47d, WebhookObjectType.CRM_COMPANY, "Demigender") {{
+                    checkedAt = OffsetDateTime.parse("2023-06-13T05:29:12.399Z");
+                    createdAt = OffsetDateTime.parse("2021-08-23T13:47:22.712Z");
+                    environment = "female ken";
+                    id = "<ID>";
                     includeRaw = false;
                     subscriptions = new String[]{{
-                        add("sequi"),
+                        add("Bronze"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-01-31T16:44:35.094Z");
+                    updatedAt = OffsetDateTime.parse("2023-02-10T01:49:37.759Z");
                 }};;
                 events = new com.unifiedapi.unifiedto.models.operations.PostUnifiedWebhookConnectionIdObjectEvents[]{{
-                    add(PostUnifiedWebhookConnectionIdObjectEvents.CREATED),
+                    add(PostUnifiedWebhookConnectionIdObjectEvents.UPDATED),
                 }};
             }};            
 
@@ -1146,51 +1146,51 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("at") {{
+                .setSecurity(new Security("Assurance") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutUnifiedConnectionIdRequest req = new PutUnifiedConnectionIdRequest("dolorem") {{
+            PutUnifiedConnectionIdRequest req = new PutUnifiedConnectionIdRequest("Avon") {{
                 connection = new Connection(                new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                                    add(PropertyConnectionCategories.HRIS),
-                                }}, "ipsa",                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                                    add(PropertyConnectionPermissions.CRM_EVENT_WRITE),
+                                    add(PropertyConnectionCategories.MARTECH),
+                                }}, "Northern",                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
+                                    add(PropertyConnectionPermissions.TICKETING_CUSTOMER_READ),
                                 }}) {{
                     auth = new PropertyConnectionAuth() {{
-                        accessToken = "maiores";
-                        apiUrl = "culpa";
-                        appId = "dolore";
-                        authorizeUrl = "eius";
-                        clientId = "iure";
-                        clientSecret = "alias";
-                        consumerKey = "molestiae";
-                        consumerSecret = "rerum";
+                        accessToken = "Dinar";
+                        apiUrl = "Account since Bacon";
+                        appId = "white Handmade navigating";
+                        authorizeUrl = "gray";
+                        clientId = "Officer";
+                        clientSecret = "Account Accountability Gorgeous";
+                        consumerKey = "oh";
+                        consumerSecret = "Virtual incidentally shrimp";
                         emails = new String[]{{
-                            add("voluptatibus"),
+                            add("bypass"),
                         }};
-                        expiresIn = 1930.78d;
-                        expiryDate = OffsetDateTime.parse("2022-09-04T09:23:21.254Z");
-                        key = "libero";
+                        expiresIn = 4451.19d;
+                        expiryDate = OffsetDateTime.parse("2023-09-04T21:32:52.916Z");
+                        key = "<key>";
                         meta = new PropertyPropertyConnectionAuthMeta();;
-                        name = "Anita Cremin";
+                        name = "recent midst Northeast";
                         otherAuthInfo = new String[]{{
-                            add("laudantium"),
+                            add("ivory"),
                         }};
-                        pem = "fugit";
-                        refreshToken = "et";
-                        state = "reiciendis";
-                        token = "nulla";
-                        tokenUrl = "libero";
+                        pem = "Product deleniti unfortunately";
+                        refreshToken = "Wagon Response";
+                        state = "withdrawal West personnel";
+                        token = "fuchsia experiences eveniet";
+                        tokenUrl = "Account Camren";
                     }};;
-                    authAwsArn = "sed";
-                    createdAt = OffsetDateTime.parse("2021-09-13T03:45:37.385Z");
-                    environment = "sint";
-                    externalXref = "eveniet";
-                    id = "59267c71-cc8d-43cd-8258-d0358a82c808";
+                    authAwsArn = "firewall";
+                    createdAt = OffsetDateTime.parse("2021-06-04T22:03:31.352Z");
+                    environment = "parsing";
+                    externalXref = "salmon excluding salmon";
+                    id = "<ID>";
                     isPaused = false;
-                    updatedAt = OffsetDateTime.parse("2020-04-10T06:08:51.506Z");
-                    workspaceId = "odit";
+                    updatedAt = OffsetDateTime.parse("2022-03-18T18:34:01.951Z");
+                    workspaceId = "software functionalities";
                 }};;
             }};            
 
@@ -1238,20 +1238,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("quam") {{
+                .setSecurity(new Security("Hatchback") {{
                     jwt = "";
                 }})
                 .build();
 
-            com.unifiedapi.unifiedto.models.shared.User req = new User("ullam", "inventore",                 new String[]{{
-                                add("laborum"),
+            com.unifiedapi.unifiedto.models.shared.User req = new User("thick", "Hilll",                 new String[]{{
+                                add("Lucia"),
                             }}) {{
-                createdAt = OffsetDateTime.parse("2022-12-24T21:17:10.090Z");
-                email = "Jerome25@gmail.com";
-                environment = "numquam";
-                id = "9e143f96-19bb-47d4-8d5a-11fa436e6259";
+                createdAt = OffsetDateTime.parse("2023-01-18T08:06:46.269Z");
+                email = "Alek.Rath@hotmail.com";
+                environment = "interface";
+                id = "<ID>";
                 meta = new PropertyUserMeta();;
-                updatedAt = OffsetDateTime.parse("2022-10-04T12:31:07.556Z");
+                updatedAt = OffsetDateTime.parse("2023-03-20T13:22:47.259Z");
             }};            
 
             PutUnifiedUserResponse res = sdk.unified.putUnifiedUser(req);

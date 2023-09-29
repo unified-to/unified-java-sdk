@@ -28,12 +28,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("praesentium") {{
+                .setSecurity(new Security("Account") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteAtsConnectionIdScorecardIdRequest req = new DeleteAtsConnectionIdScorecardIdRequest("libero", "consequatur");            
+            DeleteAtsConnectionIdScorecardIdRequest req = new DeleteAtsConnectionIdScorecardIdRequest("intrepid", "Faroe");            
 
             DeleteAtsConnectionIdScorecardIdResponse res = sdk.document.deleteAtsConnectionIdScorecardId(req);
 
@@ -78,21 +78,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("totam") {{
+                .setSecurity(new Security("FTP") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsConnectionIdScorecardRequest req = new GetAtsConnectionIdScorecardRequest("tempora") {{
-                applicationId = "quo";
-                candidateId = "dolor";
-                interviewId = "sunt";
-                limit = 6050.89d;
-                offset = 4644.9d;
-                order = "officiis";
-                query = "dicta";
-                sort = "excepturi";
-                updatedGte = OffsetDateTime.parse("2022-05-10T21:39:41.763Z");
+            GetAtsConnectionIdScorecardRequest req = new GetAtsConnectionIdScorecardRequest("Gasoline") {{
+                applicationId = "Southeast";
+                candidateId = "deep Tamarac maximize";
+                interviewId = "drive vibrate USB";
+                limit = 2304.86d;
+                offset = 1149.65d;
+                order = "Northeast Northwest Table";
+                query = "musty";
+                sort = "Bronze";
+                updatedGte = OffsetDateTime.parse("2023-02-18T10:02:20.781Z");
             }};            
 
             GetAtsConnectionIdScorecardResponse res = sdk.document.getAtsConnectionIdScorecard(req);
@@ -137,12 +137,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("odit") {{
+                .setSecurity(new Security("Aston") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsConnectionIdScorecardIdRequest req = new GetAtsConnectionIdScorecardIdRequest("incidunt", "corporis");            
+            GetAtsConnectionIdScorecardIdRequest req = new GetAtsConnectionIdScorecardIdRequest("mobile", "Mini");            
 
             GetAtsConnectionIdScorecardIdResponse res = sdk.document.getAtsConnectionIdScorecardId(req);
 
@@ -190,22 +190,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("quaerat") {{
+                .setSecurity(new Security("conventional") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchAtsConnectionIdScorecardIdRequest req = new PatchAtsConnectionIdScorecardIdRequest("suscipit", "ducimus") {{
+            PatchAtsConnectionIdScorecardIdRequest req = new PatchAtsConnectionIdScorecardIdRequest("Cisgender", "Cambridgeshire") {{
                 atsScorecard = new AtsScorecard(                new PropertyAtsScorecardRaw();) {{
-                    applicationId = "tenetur";
-                    candidateId = "excepturi";
-                    createdAt = OffsetDateTime.parse("2022-06-15T14:09:30.661Z");
-                    id = "74c2d5cc-4972-4233-a66b-d8fe5d00b979";
-                    interviewId = "officiis";
-                    interviewerId = "delectus";
-                    jobId = "magni";
-                    recommendation = AtsScorecardRecommendation.DEFINITELY_NO;
-                    updatedAt = OffsetDateTime.parse("2022-06-21T03:31:50.952Z");
+                    applicationId = "functionalities Hybrid";
+                    candidateId = "gold";
+                    createdAt = OffsetDateTime.parse("2022-04-13T14:51:20.146Z");
+                    id = "<ID>";
+                    interviewId = "Soft target";
+                    interviewerId = "blue against";
+                    jobId = "Buckinghamshire";
+                    recommendation = AtsScorecardRecommendation.STRONG_YES;
+                    updatedAt = OffsetDateTime.parse("2021-04-03T02:42:12.059Z");
                 }};;
             }};            
 
@@ -255,22 +255,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("nihil") {{
+                .setSecurity(new Security("cultivate") {{
                     jwt = "";
                 }})
                 .build();
 
-            PostAtsConnectionIdScorecardRequest req = new PostAtsConnectionIdScorecardRequest("neque") {{
+            PostAtsConnectionIdScorecardRequest req = new PostAtsConnectionIdScorecardRequest("Infrastructure") {{
                 atsScorecard = new AtsScorecard(                new PropertyAtsScorecardRaw();) {{
-                    applicationId = "aspernatur";
-                    candidateId = "eaque";
-                    createdAt = OffsetDateTime.parse("2022-05-31T13:36:01.431Z");
-                    id = "0ccc1096-4003-413b-be50-44f65fe72dc4";
-                    interviewId = "quae";
-                    interviewerId = "nihil";
-                    jobId = "quam";
-                    recommendation = AtsScorecardRecommendation.STRONG_YES;
-                    updatedAt = OffsetDateTime.parse("2022-03-26T10:15:26.218Z");
+                    applicationId = "compelling grey Cotton";
+                    candidateId = "Granite uniform now";
+                    createdAt = OffsetDateTime.parse("2022-03-02T00:20:35.044Z");
+                    id = "<ID>";
+                    interviewId = "Legacy tan";
+                    interviewerId = "programming And Southeast";
+                    jobId = "Frozen";
+                    recommendation = AtsScorecardRecommendation.DEFINITELY_NO;
+                    updatedAt = OffsetDateTime.parse("2023-05-04T04:13:26.389Z");
                 }};;
             }};            
 
@@ -320,22 +320,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("placeat") {{
+                .setSecurity(new Security("primary") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutAtsConnectionIdScorecardIdRequest req = new PutAtsConnectionIdScorecardIdRequest("adipisci", "tenetur") {{
+            PutAtsConnectionIdScorecardIdRequest req = new PutAtsConnectionIdScorecardIdRequest("Incredible", "Draper") {{
                 atsScorecard = new AtsScorecard(                new PropertyAtsScorecardRaw();) {{
-                    applicationId = "non";
-                    candidateId = "accusantium";
-                    createdAt = OffsetDateTime.parse("2021-02-18T07:00:42.340Z");
-                    id = "fc15ceb4-d6e1-4eae-8f75-aedf2acab58b";
-                    interviewId = "cupiditate";
-                    interviewerId = "unde";
-                    jobId = "et";
-                    recommendation = AtsScorecardRecommendation.STRONG_YES;
-                    updatedAt = OffsetDateTime.parse("2022-09-10T22:26:28.809Z");
+                    applicationId = "Computer Electric";
+                    candidateId = "Bugatti Minivan";
+                    createdAt = OffsetDateTime.parse("2021-08-13T02:19:12.551Z");
+                    id = "<ID>";
+                    interviewId = "Optional Oregon Adventure";
+                    interviewerId = "AI";
+                    jobId = "eveniet Home";
+                    recommendation = AtsScorecardRecommendation.YES;
+                    updatedAt = OffsetDateTime.parse("2021-08-24T23:05:01.366Z");
                 }};;
             }};            
 

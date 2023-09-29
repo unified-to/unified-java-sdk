@@ -23,16 +23,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("asperiores") {{
+                .setSecurity(new Security("Cisgender") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetEnrichConnectionIdPersonRequest req = new GetEnrichConnectionIdPersonRequest("rem") {{
-                email = "Hayden81@hotmail.com";
-                linkedinUrl = "molestiae";
-                name = "Lori Stokes";
-                twitter = "libero";
+            GetEnrichConnectionIdPersonRequest req = new GetEnrichConnectionIdPersonRequest("Account") {{
+                email = "Jaiden_Weimann24@gmail.com";
+                linkedinUrl = "paradigms integrate Creative";
+                name = "Investment";
+                twitter = "Hills";
             }};            
 
             GetEnrichConnectionIdPersonResponse res = sdk.person.getEnrichConnectionIdPerson(req);

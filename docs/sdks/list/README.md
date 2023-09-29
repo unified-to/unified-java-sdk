@@ -28,12 +28,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("fuga") {{
+                .setSecurity(new Security("generate") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteMartechConnectionIdListIdRequest req = new DeleteMartechConnectionIdListIdRequest("excepturi", "corporis");            
+            DeleteMartechConnectionIdListIdRequest req = new DeleteMartechConnectionIdListIdRequest("aliquam", "Crossroad");            
 
             DeleteMartechConnectionIdListIdResponse res = sdk.list.deleteMartechConnectionIdListId(req);
 
@@ -78,18 +78,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("nam") {{
+                .setSecurity(new Security("project") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetMartechConnectionIdListRequest req = new GetMartechConnectionIdListRequest("itaque") {{
-                limit = 3803.15d;
-                offset = 7837.02d;
-                order = "nulla";
-                query = "consequatur";
-                sort = "qui";
-                updatedGte = OffsetDateTime.parse("2022-09-07T16:40:30.556Z");
+            GetMartechConnectionIdListRequest req = new GetMartechConnectionIdListRequest("apportion") {{
+                limit = 2321.9d;
+                offset = 9799.48d;
+                order = "Wooden Pass";
+                query = "since";
+                sort = "South incubate";
+                updatedGte = OffsetDateTime.parse("2023-01-24T13:37:19.156Z");
             }};            
 
             GetMartechConnectionIdListResponse res = sdk.list.getMartechConnectionIdList(req);
@@ -134,12 +134,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("vel") {{
+                .setSecurity(new Security("digital") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetMartechConnectionIdListIdRequest req = new GetMartechConnectionIdListIdRequest("impedit", "consectetur");            
+            GetMartechConnectionIdListIdRequest req = new GetMartechConnectionIdListIdRequest("mint", "Arkansas");            
 
             GetMartechConnectionIdListIdResponse res = sdk.list.getMartechConnectionIdListId(req);
 
@@ -186,18 +186,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("quis") {{
+                .setSecurity(new Security("engage") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchMartechConnectionIdListIdRequest req = new PatchMartechConnectionIdListIdRequest("ut", "est") {{
+            PatchMartechConnectionIdListIdRequest req = new PatchMartechConnectionIdListIdRequest("bluetooth", "lime") {{
                 marketingList = new MarketingList() {{
-                    createdAt = "fuga";
-                    id = "432b47e1-763c-4520-8c23-e9802d82f0d4";
-                    name = "Casey Roberts";
+                    createdAt = "synergies lime Human";
+                    id = "<ID>";
+                    name = "Intelligent connecting Recumbent";
                     raw = new PropertyMarketingListRaw();;
-                    updatedAt = OffsetDateTime.parse("2021-07-03T18:22:54.786Z");
+                    updatedAt = OffsetDateTime.parse("2023-07-01T00:27:35.301Z");
                 }};;
             }};            
 
@@ -246,18 +246,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("ea") {{
+                .setSecurity(new Security("black") {{
                     jwt = "";
                 }})
                 .build();
 
-            PostMartechConnectionIdListRequest req = new PostMartechConnectionIdListRequest("iusto") {{
+            PostMartechConnectionIdListRequest req = new PostMartechConnectionIdListRequest("Hafnium") {{
                 marketingList = new MarketingList() {{
-                    createdAt = "dolore";
-                    id = "ee5cfc18-edc7-4f78-be32-e04b3d3ed0c5";
-                    name = "Melinda Ankunding";
+                    createdAt = "Steel caddy who";
+                    id = "<ID>";
+                    name = "Bicycle Bicycle Bicycle";
                     raw = new PropertyMarketingListRaw();;
-                    updatedAt = OffsetDateTime.parse("2022-11-13T15:01:42.389Z");
+                    updatedAt = OffsetDateTime.parse("2021-06-21T11:26:26.993Z");
                 }};;
             }};            
 
@@ -306,18 +306,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("harum") {{
+                .setSecurity(new Security("Swiss") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutMartechConnectionIdListIdRequest req = new PutMartechConnectionIdListIdRequest("illum", "dolor") {{
+            PutMartechConnectionIdListIdRequest req = new PutMartechConnectionIdListIdRequest("textual", "navigate") {{
                 marketingList = new MarketingList() {{
-                    createdAt = "porro";
-                    id = "9f1cc503-f6c3-49bc-90a6-290f957f3851";
-                    name = "Luther Nader";
+                    createdAt = "aggressive";
+                    id = "<ID>";
+                    name = "Progressive";
                     raw = new PropertyMarketingListRaw();;
-                    updatedAt = OffsetDateTime.parse("2020-02-02T07:47:47.626Z");
+                    updatedAt = OffsetDateTime.parse("2023-01-17T12:35:27.783Z");
                 }};;
             }};            
 

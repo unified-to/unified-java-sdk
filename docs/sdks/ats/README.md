@@ -52,12 +52,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("error") {{
+                .setSecurity(new Security("female") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteAtsConnectionIdApplicationIdRequest req = new DeleteAtsConnectionIdApplicationIdRequest("eaque", "occaecati");            
+            DeleteAtsConnectionIdApplicationIdRequest req = new DeleteAtsConnectionIdApplicationIdRequest("Southeast", "Darmstadtium");            
 
             DeleteAtsConnectionIdApplicationIdResponse res = sdk.ats.deleteAtsConnectionIdApplicationId(req);
 
@@ -101,12 +101,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("rerum") {{
+                .setSecurity(new Security("Shirt") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteAtsConnectionIdCandidateIdRequest req = new DeleteAtsConnectionIdCandidateIdRequest("adipisci", "asperiores");            
+            DeleteAtsConnectionIdCandidateIdRequest req = new DeleteAtsConnectionIdCandidateIdRequest("Central", "transmitting");            
 
             DeleteAtsConnectionIdCandidateIdResponse res = sdk.ats.deleteAtsConnectionIdCandidateId(req);
 
@@ -150,12 +150,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("earum") {{
+                .setSecurity(new Security("coulomb") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteAtsConnectionIdInterviewIdRequest req = new DeleteAtsConnectionIdInterviewIdRequest("modi", "iste");            
+            DeleteAtsConnectionIdInterviewIdRequest req = new DeleteAtsConnectionIdInterviewIdRequest("Verde", "Hayes");            
 
             DeleteAtsConnectionIdInterviewIdResponse res = sdk.ats.deleteAtsConnectionIdInterviewId(req);
 
@@ -199,12 +199,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("dolorum") {{
+                .setSecurity(new Security("Facilitator") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteAtsConnectionIdJobIdRequest req = new DeleteAtsConnectionIdJobIdRequest("deleniti", "pariatur");            
+            DeleteAtsConnectionIdJobIdRequest req = new DeleteAtsConnectionIdJobIdRequest("Cargo", "Hybrid");            
 
             DeleteAtsConnectionIdJobIdResponse res = sdk.ats.deleteAtsConnectionIdJobId(req);
 
@@ -248,12 +248,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("provident") {{
+                .setSecurity(new Security("Account") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteAtsConnectionIdScorecardIdRequest req = new DeleteAtsConnectionIdScorecardIdRequest("nobis", "libero");            
+            DeleteAtsConnectionIdScorecardIdRequest req = new DeleteAtsConnectionIdScorecardIdRequest("intrepid", "Faroe");            
 
             DeleteAtsConnectionIdScorecardIdResponse res = sdk.ats.deleteAtsConnectionIdScorecardId(req);
 
@@ -298,20 +298,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("delectus") {{
+                .setSecurity(new Security("Bacon") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsConnectionIdApplicationRequest req = new GetAtsConnectionIdApplicationRequest("quaerat") {{
-                candidateId = "quos";
-                jobId = "aliquid";
-                limit = 2123.9d;
-                offset = 2098.43d;
-                order = "dolor";
-                query = "qui";
-                sort = "ipsum";
-                updatedGte = OffsetDateTime.parse("2021-04-17T07:36:26.867Z");
+            GetAtsConnectionIdApplicationRequest req = new GetAtsConnectionIdApplicationRequest("withdrawal") {{
+                candidateId = "approach Bacon";
+                jobId = "Mobility";
+                limit = 576.8d;
+                offset = 7467.13d;
+                order = "Architect";
+                query = "loosely contingency";
+                sort = "female";
+                updatedGte = OffsetDateTime.parse("2023-09-05T13:59:23.348Z");
             }};            
 
             GetAtsConnectionIdApplicationResponse res = sdk.ats.getAtsConnectionIdApplication(req);
@@ -356,12 +356,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("cum") {{
+                .setSecurity(new Security("Brand") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsConnectionIdApplicationIdRequest req = new GetAtsConnectionIdApplicationIdRequest("voluptate", "dignissimos");            
+            GetAtsConnectionIdApplicationIdRequest req = new GetAtsConnectionIdApplicationIdRequest("Bicycle", "North");            
 
             GetAtsConnectionIdApplicationIdResponse res = sdk.ats.getAtsConnectionIdApplicationId(req);
 
@@ -406,18 +406,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("reiciendis") {{
+                .setSecurity(new Security("Executive") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsConnectionIdCandidateRequest req = new GetAtsConnectionIdCandidateRequest("amet") {{
-                limit = 6805.45d;
-                offset = 2543.56d;
-                order = "veritatis";
-                query = "ipsa";
-                sort = "ipsa";
-                updatedGte = OffsetDateTime.parse("2022-07-06T22:32:29.592Z");
+            GetAtsConnectionIdCandidateRequest req = new GetAtsConnectionIdCandidateRequest("optical") {{
+                limit = 3001.75d;
+                offset = 251d;
+                order = "Oriental whether";
+                query = "Kroon";
+                sort = "content huzzah thistle";
+                updatedGte = OffsetDateTime.parse("2022-03-13T15:14:03.645Z");
             }};            
 
             GetAtsConnectionIdCandidateResponse res = sdk.ats.getAtsConnectionIdCandidate(req);
@@ -462,12 +462,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("quaerat") {{
+                .setSecurity(new Security("itaque") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsConnectionIdCandidateIdRequest req = new GetAtsConnectionIdCandidateIdRequest("accusamus", "quidem");            
+            GetAtsConnectionIdCandidateIdRequest req = new GetAtsConnectionIdCandidateIdRequest("female", "olive");            
 
             GetAtsConnectionIdCandidateIdResponse res = sdk.ats.getAtsConnectionIdCandidateId(req);
 
@@ -512,19 +512,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("voluptatibus") {{
+                .setSecurity(new Security("disinter") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsConnectionIdInterviewRequest req = new GetAtsConnectionIdInterviewRequest("voluptas") {{
-                applicationId = "natus";
-                limit = 1796.03d;
-                offset = 5424.99d;
-                order = "sit";
-                query = "fugiat";
-                sort = "ab";
-                updatedGte = OffsetDateTime.parse("2021-08-23T01:02:18.527Z");
+            GetAtsConnectionIdInterviewRequest req = new GetAtsConnectionIdInterviewRequest("Smart") {{
+                applicationId = "Strategist blue";
+                limit = 3279.77d;
+                offset = 4526.93d;
+                order = "Customer Oregon";
+                query = "ivory";
+                sort = "Corporate Account";
+                updatedGte = OffsetDateTime.parse("2021-04-20T14:34:40.760Z");
             }};            
 
             GetAtsConnectionIdInterviewResponse res = sdk.ats.getAtsConnectionIdInterview(req);
@@ -569,12 +569,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("iusto") {{
+                .setSecurity(new Security("haemorrhage") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsConnectionIdInterviewIdRequest req = new GetAtsConnectionIdInterviewIdRequest("voluptate", "dolorum");            
+            GetAtsConnectionIdInterviewIdRequest req = new GetAtsConnectionIdInterviewIdRequest("Funk", "Gorgeous");            
 
             GetAtsConnectionIdInterviewIdResponse res = sdk.ats.getAtsConnectionIdInterviewId(req);
 
@@ -619,18 +619,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("deleniti") {{
+                .setSecurity(new Security("process") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsConnectionIdJobRequest req = new GetAtsConnectionIdJobRequest("omnis") {{
-                limit = 8966.72d;
-                offset = 7146.97d;
-                order = "asperiores";
-                query = "nihil";
-                sort = "ipsum";
-                updatedGte = OffsetDateTime.parse("2022-05-03T23:26:05.435Z");
+            GetAtsConnectionIdJobRequest req = new GetAtsConnectionIdJobRequest("Harbor") {{
+                limit = 975.14d;
+                offset = 9506.38d;
+                order = "Rhode national Kip";
+                query = "oversleep Baby transmitter";
+                sort = "East Electronic proactive";
+                updatedGte = OffsetDateTime.parse("2022-03-22T04:18:28.025Z");
             }};            
 
             GetAtsConnectionIdJobResponse res = sdk.ats.getAtsConnectionIdJob(req);
@@ -675,12 +675,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("saepe") {{
+                .setSecurity(new Security("plum") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsConnectionIdJobIdRequest req = new GetAtsConnectionIdJobIdRequest("eius", "aspernatur");            
+            GetAtsConnectionIdJobIdRequest req = new GetAtsConnectionIdJobIdRequest("Gold", "bypass");            
 
             GetAtsConnectionIdJobIdResponse res = sdk.ats.getAtsConnectionIdJobId(req);
 
@@ -725,21 +725,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("perferendis") {{
+                .setSecurity(new Security("FTP") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsConnectionIdScorecardRequest req = new GetAtsConnectionIdScorecardRequest("amet") {{
-                applicationId = "optio";
-                candidateId = "accusamus";
-                interviewId = "ad";
-                limit = 9044.25d;
-                offset = 3834.64d;
-                order = "deserunt";
-                query = "provident";
-                sort = "minima";
-                updatedGte = OffsetDateTime.parse("2021-06-10T21:59:23.045Z");
+            GetAtsConnectionIdScorecardRequest req = new GetAtsConnectionIdScorecardRequest("Gasoline") {{
+                applicationId = "Southeast";
+                candidateId = "deep Tamarac maximize";
+                interviewId = "drive vibrate USB";
+                limit = 2304.86d;
+                offset = 1149.65d;
+                order = "Northeast Northwest Table";
+                query = "musty";
+                sort = "Bronze";
+                updatedGte = OffsetDateTime.parse("2023-02-18T10:02:20.781Z");
             }};            
 
             GetAtsConnectionIdScorecardResponse res = sdk.ats.getAtsConnectionIdScorecard(req);
@@ -784,12 +784,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("similique") {{
+                .setSecurity(new Security("Aston") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsConnectionIdScorecardIdRequest req = new GetAtsConnectionIdScorecardIdRequest("alias", "at");            
+            GetAtsConnectionIdScorecardIdRequest req = new GetAtsConnectionIdScorecardIdRequest("mobile", "Mini");            
 
             GetAtsConnectionIdScorecardIdResponse res = sdk.ats.getAtsConnectionIdScorecardId(req);
 
@@ -837,24 +837,24 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("quaerat") {{
+                .setSecurity(new Security("ouch") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchAtsConnectionIdApplicationIdRequest req = new PatchAtsConnectionIdApplicationIdRequest("tempora", "vel") {{
+            PatchAtsConnectionIdApplicationIdRequest req = new PatchAtsConnectionIdApplicationIdRequest("North", "et") {{
                 atsApplication = new AtsApplication() {{
-                    appliedAt = OffsetDateTime.parse("2020-05-06T13:19:34.143Z");
-                    candidateId = "qui";
-                    createdAt = OffsetDateTime.parse("2021-02-04T11:05:24.484Z");
-                    id = "7a73cf3b-e453-4f87-8b32-6b5a73429cdb";
-                    jobId = "dicta";
+                    appliedAt = OffsetDateTime.parse("2023-12-06T09:54:21.775Z");
+                    candidateId = "Human";
+                    createdAt = OffsetDateTime.parse("2023-10-31T19:54:06.290Z");
+                    id = "<ID>";
+                    jobId = "Washington";
                     raw = new PropertyAtsApplicationRaw();;
-                    rejectedAt = OffsetDateTime.parse("2021-12-19T07:31:04.219Z");
-                    rejectedReason = "incidunt";
-                    source = "aspernatur";
-                    status = AtsApplicationStatus.SCREENING;
-                    updatedAt = OffsetDateTime.parse("2021-08-04T17:36:39.068Z");
+                    rejectedAt = OffsetDateTime.parse("2023-07-30T09:27:03.900Z");
+                    rejectedReason = "Northwest";
+                    source = "quantify models Carolina";
+                    status = AtsApplicationStatus.SUBMITTED;
+                    updatedAt = OffsetDateTime.parse("2021-05-11T22:36:02.527Z");
                 }};;
             }};            
 
@@ -908,47 +908,47 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("aliquid") {{
+                .setSecurity(new Security("Hybrid") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchAtsConnectionIdCandidateIdRequest req = new PatchAtsConnectionIdCandidateIdRequest("quam", "molestias") {{
+            PatchAtsConnectionIdCandidateIdRequest req = new PatchAtsConnectionIdCandidateIdRequest("Northeast", "incidunt") {{
                 atsCandidate = new AtsCandidate() {{
                     address = new PropertyAtsCandidateAddress() {{
-                        address1 = "temporibus";
-                        address2 = "qui";
-                        city = "East Casimir";
-                        country = "Lebanon";
-                        countryCode = "BS";
-                        postalCode = "79077";
-                        region = "nobis";
-                        regionCode = "et";
+                        address1 = "utilisation female";
+                        address2 = "Optimization Unbranded";
+                        city = "Gabrielletown";
+                        country = "American Samoa";
+                        countryCode = "ML";
+                        postalCode = "75348";
+                        region = "katal up";
+                        regionCode = "Senger Electric Direct";
                     }};;
-                    companyName = "saepe";
-                    createdAt = OffsetDateTime.parse("2022-12-01T13:13:09.182Z");
+                    companyName = "Moen - Gerlach";
+                    createdAt = OffsetDateTime.parse("2022-11-23T18:06:40.151Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
-                        add(new AtsEmail("dolorem") {{
-                            email = "Katrine.Reynolds@hotmail.com";
-                            type = AtsEmailType.OTHER;
+                        add(new AtsEmail("Southwest") {{
+                            email = "Carroll65@hotmail.com";
+                            type = AtsEmailType.HOME;
                         }}),
                     }};
-                    externalId = "dolore";
-                    id = "43a1108e-0adc-4f4b-9218-79fce953f73e";
-                    imageUrl = "tenetur";
-                    name = "Darla Rau";
+                    externalId = "phew qua";
+                    id = "<ID>";
+                    imageUrl = "Hybrid";
+                    name = "ornery whether";
                     raw = new PropertyAtsCandidateRaw();;
                     tags = new String[]{{
-                        add("similique"),
+                        add("Cadillac"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.AtsTelephone[]{{
-                        add(new AtsTelephone("ducimus") {{
-                            telephone = "facilis";
-                            type = AtsTelephoneType.MOBILE;
+                        add(new AtsTelephone("Belarus") {{
+                            telephone = "Marketing Cotton";
+                            type = AtsTelephoneType.HOME;
                         }}),
                     }};
-                    title = "Mrs.";
-                    updatedAt = OffsetDateTime.parse("2020-06-15T09:45:48.083Z");
+                    title = "wad";
+                    updatedAt = OffsetDateTime.parse("2022-06-30T03:38:25.993Z");
                 }};;
             }};            
 
@@ -998,27 +998,27 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("sequi") {{
+                .setSecurity(new Security("coulomb") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchAtsConnectionIdInterviewIdRequest req = new PatchAtsConnectionIdInterviewIdRequest("natus", "impedit") {{
+            PatchAtsConnectionIdInterviewIdRequest req = new PatchAtsConnectionIdInterviewIdRequest("Cruiser", "pascal") {{
                 atsInterview = new AtsInterview() {{
-                    applicationId = "aut";
-                    candidateId = "voluptatibus";
-                    createdAt = OffsetDateTime.parse("2022-02-20T06:09:58.619Z");
-                    endAt = OffsetDateTime.parse("2022-03-22T03:27:44.973Z");
-                    externalEventXref = "maiores";
-                    id = "f7c70a45-626d-4436-813f-16d9f5fce6c5";
-                    jobId = "veniam";
-                    location = "aliquid";
+                    applicationId = "Buckinghamshire example";
+                    candidateId = "salmon";
+                    createdAt = OffsetDateTime.parse("2023-12-02T13:16:53.615Z");
+                    endAt = OffsetDateTime.parse("2021-07-14T21:18:57.758Z");
+                    externalEventXref = "drive input transmitting";
+                    id = "<ID>";
+                    jobId = "Investor synthesizing";
+                    location = "Identity";
                     raw = new PropertyAtsInterviewRaw();;
-                    startAt = OffsetDateTime.parse("2022-09-12T19:57:40.850Z");
+                    startAt = OffsetDateTime.parse("2023-06-29T20:36:38.891Z");
                     status = AtsInterviewStatus.AWAITING_FEEDBACK;
-                    updatedAt = OffsetDateTime.parse("2022-04-21T16:53:11.568Z");
+                    updatedAt = OffsetDateTime.parse("2023-01-27T15:59:11.216Z");
                     userIds = new String[]{{
-                        add("recusandae"),
+                        add("Myrl"),
                     }};
                 }};;
             }};            
@@ -1074,57 +1074,57 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("aspernatur") {{
+                .setSecurity(new Security("Soap") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchAtsConnectionIdJobIdRequest req = new PatchAtsConnectionIdJobIdRequest("minima", "eaque") {{
+            PatchAtsConnectionIdJobIdRequest req = new PatchAtsConnectionIdJobIdRequest("jaunty", "leach") {{
                 atsJob = new AtsJob() {{
                     addresses = new com.unifiedapi.unifiedto.models.shared.AtsAddress[]{{
                         add(new AtsAddress() {{
-                            address1 = "a";
-                            address2 = "libero";
-                            city = "North Kadefort";
-                            country = "French Southern Territories";
-                            countryCode = "BZ";
-                            postalCode = "02066-8244";
-                            region = "nobis";
-                            regionCode = "quas";
+                            address1 = "Planner redundant";
+                            address2 = "tempore";
+                            city = "Euless";
+                            country = "Chad";
+                            countryCode = "NU";
+                            postalCode = "22603";
+                            region = "Cambridgeshire";
+                            regionCode = "Account Copernicium at";
                         }}),
                     }};
-                    closedAt = OffsetDateTime.parse("2020-06-02T16:42:54.630Z");
+                    closedAt = OffsetDateTime.parse("2023-01-02T09:14:26.844Z");
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
-                        add(new AtsCompensation(AtsCompensationType.SALARY) {{
-                            currency = "voluptas";
-                            frequency = AtsCompensationFrequency.MONTH;
-                            max = 965.49d;
-                            min = 2703.28d;
-                            type = AtsCompensationType.BONUS;
+                        add(new AtsCompensation(AtsCompensationType.STOCK_OPTIONS) {{
+                            currency = "Metical";
+                            frequency = AtsCompensationFrequency.HOUR;
+                            max = 1424.24d;
+                            min = 3626.17d;
+                            type = AtsCompensationType.SALARY;
                         }}),
                     }};
-                    createdAt = OffsetDateTime.parse("2022-11-21T13:50:30.142Z");
+                    createdAt = OffsetDateTime.parse("2021-07-23T21:10:49.249Z");
                     departments = new String[]{{
-                        add("molestiae"),
+                        add("Hatchback"),
                     }};
-                    description = "magnam";
-                    employmentType = AtsJobEmploymentType.CONSULTANT;
+                    description = "Customer-focused bifurcated flexibility";
+                    employmentType = AtsJobEmploymentType.VOLUNTEER;
                     hiringManagerIds = new String[]{{
-                        add("eius"),
+                        add("fuga"),
                     }};
-                    id = "778a7bd4-66d2-48c1-8ab3-cdca4251904e";
-                    languageLocale = "ipsam";
-                    name = "Emily Satterfield";
+                    id = "<ID>";
+                    languageLocale = "hence gracefully invoice";
+                    name = "Southeast vacantly Uranium";
                     publicJobUrls = new String[]{{
-                        add("aperiam"),
+                        add("Keith"),
                     }};
                     raw = new PropertyAtsJobRaw();;
                     recruiterIds = new String[]{{
-                        add("distinctio"),
+                        add("happily"),
                     }};
                     remote = false;
                     status = AtsJobStatus.OPEN;
-                    updatedAt = OffsetDateTime.parse("2022-12-03T21:51:40.661Z");
+                    updatedAt = OffsetDateTime.parse("2023-08-04T07:33:03.088Z");
                 }};;
             }};            
 
@@ -1174,22 +1174,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("nihil") {{
+                .setSecurity(new Security("conventional") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchAtsConnectionIdScorecardIdRequest req = new PatchAtsConnectionIdScorecardIdRequest("totam", "accusamus") {{
+            PatchAtsConnectionIdScorecardIdRequest req = new PatchAtsConnectionIdScorecardIdRequest("Cisgender", "Cambridgeshire") {{
                 atsScorecard = new AtsScorecard(                new PropertyAtsScorecardRaw();) {{
-                    applicationId = "aliquam";
-                    candidateId = "odio";
-                    createdAt = OffsetDateTime.parse("2022-03-04T08:46:39.442Z");
-                    id = "f2a70c68-8282-4aa4-8256-2f222e9817ee";
-                    interviewId = "veritatis";
-                    interviewerId = "esse";
-                    jobId = "quod";
-                    recommendation = AtsScorecardRecommendation.YES;
-                    updatedAt = OffsetDateTime.parse("2021-10-21T01:36:51.257Z");
+                    applicationId = "functionalities Hybrid";
+                    candidateId = "gold";
+                    createdAt = OffsetDateTime.parse("2022-04-13T14:51:20.146Z");
+                    id = "<ID>";
+                    interviewId = "Soft target";
+                    interviewerId = "blue against";
+                    jobId = "Buckinghamshire";
+                    recommendation = AtsScorecardRecommendation.STRONG_YES;
+                    updatedAt = OffsetDateTime.parse("2021-04-03T02:42:12.059Z");
                 }};;
             }};            
 
@@ -1239,24 +1239,24 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("quasi") {{
+                .setSecurity(new Security("Cotton") {{
                     jwt = "";
                 }})
                 .build();
 
-            PostAtsConnectionIdApplicationRequest req = new PostAtsConnectionIdApplicationRequest("saepe") {{
+            PostAtsConnectionIdApplicationRequest req = new PostAtsConnectionIdApplicationRequest("impedit") {{
                 atsApplication = new AtsApplication() {{
-                    appliedAt = OffsetDateTime.parse("2022-04-24T03:22:50.654Z");
-                    candidateId = "molestiae";
-                    createdAt = OffsetDateTime.parse("2021-11-03T10:56:47.600Z");
-                    id = "5bc0ab3c-20c4-4f37-89fd-871f99dd2efd";
-                    jobId = "veritatis";
+                    appliedAt = OffsetDateTime.parse("2021-08-17T19:51:25.858Z");
+                    candidateId = "Pizza";
+                    createdAt = OffsetDateTime.parse("2022-06-18T11:59:47.948Z");
+                    id = "<ID>";
+                    jobId = "globalize";
                     raw = new PropertyAtsApplicationRaw();;
-                    rejectedAt = OffsetDateTime.parse("2022-11-27T12:32:54.264Z");
-                    rejectedReason = "similique";
-                    source = "culpa";
-                    status = AtsApplicationStatus.FIRST_INTERVIEW;
-                    updatedAt = OffsetDateTime.parse("2022-10-24T07:54:12.362Z");
+                    rejectedAt = OffsetDateTime.parse("2021-04-05T14:19:56.779Z");
+                    rejectedReason = "Kids Van Tasty";
+                    source = "Electric Norfolk";
+                    status = AtsApplicationStatus.SCREENING;
+                    updatedAt = OffsetDateTime.parse("2022-09-29T00:44:25.415Z");
                 }};;
             }};            
 
@@ -1310,47 +1310,47 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("earum") {{
+                .setSecurity(new Security("Elegant") {{
                     jwt = "";
                 }})
                 .build();
 
-            PostAtsConnectionIdCandidateRequest req = new PostAtsConnectionIdCandidateRequest("vel") {{
+            PostAtsConnectionIdCandidateRequest req = new PostAtsConnectionIdCandidateRequest("iste") {{
                 atsCandidate = new AtsCandidate() {{
                     address = new PropertyAtsCandidateAddress() {{
-                        address1 = "in";
-                        address2 = "eius";
-                        city = "Stantonfort";
-                        country = "Antigua and Barbuda";
-                        countryCode = "GB";
-                        postalCode = "13433-0518";
-                        region = "ex";
-                        regionCode = "deleniti";
+                        address1 = "than";
+                        address2 = "Wooden siemens Wooden";
+                        city = "Lavonneview";
+                        country = "Croatia";
+                        countryCode = "FJ";
+                        postalCode = "02355";
+                        region = "Unbranded Architect";
+                        regionCode = "incidunt so candela";
                     }};;
-                    companyName = "itaque";
-                    createdAt = OffsetDateTime.parse("2022-10-20T06:44:46.478Z");
+                    companyName = "Strosin, Grimes and Rogahn";
+                    createdAt = OffsetDateTime.parse("2023-09-26T23:27:03.284Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
-                        add(new AtsEmail("minima") {{
-                            email = "Tyrese.Boyle45@yahoo.com";
-                            type = AtsEmailType.WORK;
+                        add(new AtsEmail("though") {{
+                            email = "Ima.Johns@yahoo.com";
+                            type = AtsEmailType.HOME;
                         }}),
                     }};
-                    externalId = "veritatis";
-                    id = "339d0808-6a18-4403-94c2-6071f93f5f06";
-                    imageUrl = "quaerat";
-                    name = "Kari Nikolaus";
+                    externalId = "Pants";
+                    id = "<ID>";
+                    imageUrl = "Raleigh";
+                    name = "Sausages";
                     raw = new PropertyAtsCandidateRaw();;
                     tags = new String[]{{
-                        add("officia"),
+                        add("opulent"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.AtsTelephone[]{{
-                        add(new AtsTelephone("quae") {{
-                            telephone = "asperiores";
-                            type = AtsTelephoneType.HOME;
+                        add(new AtsTelephone("Sleek") {{
+                            telephone = "Hip";
+                            type = AtsTelephoneType.WORK;
                         }}),
                     }};
-                    title = "Mrs.";
-                    updatedAt = OffsetDateTime.parse("2020-08-05T23:44:45.300Z");
+                    title = "Ngultrum";
+                    updatedAt = OffsetDateTime.parse("2021-07-10T22:22:03.940Z");
                 }};;
             }};            
 
@@ -1400,27 +1400,27 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("labore") {{
+                .setSecurity(new Security("Tricycle") {{
                     jwt = "";
                 }})
                 .build();
 
-            PostAtsConnectionIdInterviewRequest req = new PostAtsConnectionIdInterviewRequest("ab") {{
+            PostAtsConnectionIdInterviewRequest req = new PostAtsConnectionIdInterviewRequest("hertz") {{
                 atsInterview = new AtsInterview() {{
-                    applicationId = "adipisci";
-                    candidateId = "fuga";
-                    createdAt = OffsetDateTime.parse("2022-03-29T01:37:24.454Z");
-                    endAt = OffsetDateTime.parse("2022-05-14T14:45:53.115Z");
-                    externalEventXref = "est";
-                    id = "e8d67864-dbb6-475f-95e6-0b375ed4f6fb";
-                    jobId = "saepe";
-                    location = "necessitatibus";
+                    applicationId = "Stokes North Northeast";
+                    candidateId = "vertical platforms";
+                    createdAt = OffsetDateTime.parse("2023-03-16T18:42:23.230Z");
+                    endAt = OffsetDateTime.parse("2022-05-12T23:51:49.123Z");
+                    externalEventXref = "panel Identity";
+                    id = "<ID>";
+                    jobId = "Northwest Buckinghamshire";
+                    location = "ultimately Chevrolet";
                     raw = new PropertyAtsInterviewRaw();;
-                    startAt = OffsetDateTime.parse("2022-11-17T19:30:54.837Z");
-                    status = AtsInterviewStatus.COMPLETE;
-                    updatedAt = OffsetDateTime.parse("2022-10-01T23:04:48.771Z");
+                    startAt = OffsetDateTime.parse("2023-12-01T23:03:25.142Z");
+                    status = AtsInterviewStatus.SCHEDULED;
+                    updatedAt = OffsetDateTime.parse("2022-05-19T12:56:14.783Z");
                     userIds = new String[]{{
-                        add("amet"),
+                        add("Northeast"),
                     }};
                 }};;
             }};            
@@ -1476,57 +1476,57 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("beatae") {{
+                .setSecurity(new Security("Niger") {{
                     jwt = "";
                 }})
                 .build();
 
-            PostAtsConnectionIdJobRequest req = new PostAtsConnectionIdJobRequest("dignissimos") {{
+            PostAtsConnectionIdJobRequest req = new PostAtsConnectionIdJobRequest("Gasoline") {{
                 atsJob = new AtsJob() {{
                     addresses = new com.unifiedapi.unifiedto.models.shared.AtsAddress[]{{
                         add(new AtsAddress() {{
-                            address1 = "a";
-                            address2 = "debitis";
-                            city = "West Mary";
-                            country = "Holy See (Vatican City State)";
-                            countryCode = "AX";
-                            postalCode = "71862-1333";
-                            region = "minima";
-                            regionCode = "nobis";
+                            address1 = "shiny yellow upwardly";
+                            address2 = "Diesel virtual";
+                            city = "Arlington";
+                            country = "Gambia";
+                            countryCode = "PT";
+                            postalCode = "07814";
+                            region = "unknown eaque athwart";
+                            regionCode = "architectures protocol";
                         }}),
                     }};
-                    closedAt = OffsetDateTime.parse("2022-07-11T09:37:00.887Z");
+                    closedAt = OffsetDateTime.parse("2023-03-01T04:59:12.553Z");
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
-                        add(new AtsCompensation(AtsCompensationType.BONUS) {{
-                            currency = "minus";
-                            frequency = AtsCompensationFrequency.DAY;
-                            max = 5039.34d;
-                            min = 4492.92d;
+                        add(new AtsCompensation(AtsCompensationType.STOCK_OPTIONS) {{
+                            currency = "Bahraini Dinar";
+                            frequency = AtsCompensationFrequency.MONTH;
+                            max = 7040.68d;
+                            min = 6740.24d;
                             type = AtsCompensationType.BONUS;
                         }}),
                     }};
-                    createdAt = OffsetDateTime.parse("2020-06-26T02:06:35.498Z");
+                    createdAt = OffsetDateTime.parse("2022-01-31T22:52:23.593Z");
                     departments = new String[]{{
-                        add("ullam"),
+                        add("itaque"),
                     }};
-                    description = "adipisci";
-                    employmentType = AtsJobEmploymentType.SEASONAL;
+                    description = "Organized well-modulated projection";
+                    employmentType = AtsJobEmploymentType.FREELANCE;
                     hiringManagerIds = new String[]{{
-                        add("blanditiis"),
+                        add("architecture"),
                     }};
-                    id = "8f3a8d8f-5c0b-42f2-bb7b-194a276b2691";
-                    languageLocale = "suscipit";
-                    name = "Rogelio Bins V";
+                    id = "<ID>";
+                    languageLocale = "because harbor";
+                    name = "Jarrod rerum empowering";
                     publicJobUrls = new String[]{{
-                        add("maiores"),
+                        add("Fiat"),
                     }};
                     raw = new PropertyAtsJobRaw();;
                     recruiterIds = new String[]{{
-                        add("incidunt"),
+                        add("Innovative"),
                     }};
                     remote = false;
-                    status = AtsJobStatus.ARCHIVED;
-                    updatedAt = OffsetDateTime.parse("2022-06-26T03:32:06.720Z");
+                    status = AtsJobStatus.PENDING;
+                    updatedAt = OffsetDateTime.parse("2022-12-29T22:11:42.825Z");
                 }};;
             }};            
 
@@ -1576,22 +1576,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("necessitatibus") {{
+                .setSecurity(new Security("cultivate") {{
                     jwt = "";
                 }})
                 .build();
 
-            PostAtsConnectionIdScorecardRequest req = new PostAtsConnectionIdScorecardRequest("ipsum") {{
+            PostAtsConnectionIdScorecardRequest req = new PostAtsConnectionIdScorecardRequest("Infrastructure") {{
                 atsScorecard = new AtsScorecard(                new PropertyAtsScorecardRaw();) {{
-                    applicationId = "ea";
-                    candidateId = "occaecati";
-                    createdAt = OffsetDateTime.parse("2021-01-18T16:49:49.451Z");
-                    id = "447f603e-8b44-45e8-8ca5-5efd20e457e1";
-                    interviewId = "laudantium";
-                    interviewerId = "exercitationem";
-                    jobId = "praesentium";
-                    recommendation = AtsScorecardRecommendation.YES;
-                    updatedAt = OffsetDateTime.parse("2022-04-27T14:41:34.966Z");
+                    applicationId = "compelling grey Cotton";
+                    candidateId = "Granite uniform now";
+                    createdAt = OffsetDateTime.parse("2022-03-02T00:20:35.044Z");
+                    id = "<ID>";
+                    interviewId = "Legacy tan";
+                    interviewerId = "programming And Southeast";
+                    jobId = "Frozen";
+                    recommendation = AtsScorecardRecommendation.DEFINITELY_NO;
+                    updatedAt = OffsetDateTime.parse("2023-05-04T04:13:26.389Z");
                 }};;
             }};            
 
@@ -1641,24 +1641,24 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("voluptatum") {{
+                .setSecurity(new Security("farad") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutAtsConnectionIdApplicationIdRequest req = new PutAtsConnectionIdApplicationIdRequest("error", "hic") {{
+            PutAtsConnectionIdApplicationIdRequest req = new PutAtsConnectionIdApplicationIdRequest("Indianapolis", "Credit") {{
                 atsApplication = new AtsApplication() {{
-                    appliedAt = OffsetDateTime.parse("2021-03-20T05:03:12.319Z");
-                    candidateId = "neque";
-                    createdAt = OffsetDateTime.parse("2022-04-26T13:26:55.921Z");
-                    id = "aa8e4824-d0ab-4407-9088-e51862065e90";
-                    jobId = "incidunt";
+                    appliedAt = OffsetDateTime.parse("2021-06-01T03:05:28.938Z");
+                    candidateId = "middleware Jeep";
+                    createdAt = OffsetDateTime.parse("2021-12-14T14:50:12.070Z");
+                    id = "<ID>";
+                    jobId = "North";
                     raw = new PropertyAtsApplicationRaw();;
-                    rejectedAt = OffsetDateTime.parse("2022-05-16T07:46:15.799Z");
-                    rejectedReason = "harum";
-                    source = "dicta";
+                    rejectedAt = OffsetDateTime.parse("2022-10-28T04:38:47.547Z");
+                    rejectedReason = "Fort solid";
+                    source = "Ghana";
                     status = AtsApplicationStatus.REVIEWING;
-                    updatedAt = OffsetDateTime.parse("2022-06-03T11:07:35.218Z");
+                    updatedAt = OffsetDateTime.parse("2023-03-12T05:49:54.060Z");
                 }};;
             }};            
 
@@ -1712,47 +1712,47 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("quidem") {{
+                .setSecurity(new Security("East") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutAtsConnectionIdCandidateIdRequest req = new PutAtsConnectionIdCandidateIdRequest("atque", "laborum") {{
+            PutAtsConnectionIdCandidateIdRequest req = new PutAtsConnectionIdCandidateIdRequest("Northwest", "Specialist") {{
                 atsCandidate = new AtsCandidate() {{
                     address = new PropertyAtsCandidateAddress() {{
-                        address1 = "nam";
-                        address2 = "tenetur";
-                        city = "North Danielle";
-                        country = "Niger";
-                        countryCode = "JP";
-                        postalCode = "95899-0664";
-                        region = "facere";
-                        regionCode = "fuga";
+                        address1 = "interface compress";
+                        address2 = "nicely Personal";
+                        city = "New Vicenteshire";
+                        country = "Algeria";
+                        countryCode = "VN";
+                        postalCode = "52769";
+                        region = "Account person";
+                        regionCode = "redundant";
                     }};;
-                    companyName = "praesentium";
-                    createdAt = OffsetDateTime.parse("2022-05-02T04:56:06.858Z");
+                    companyName = "Barton - Kautzer";
+                    createdAt = OffsetDateTime.parse("2022-03-27T16:22:41.297Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
-                        add(new AtsEmail("asperiores") {{
-                            email = "Paul54@gmail.com";
+                        add(new AtsEmail("Concrete") {{
+                            email = "Allison.Jakubowski@yahoo.com";
                             type = AtsEmailType.HOME;
                         }}),
                     }};
-                    externalId = "totam";
-                    id = "6bc173d6-89ee-4e95-a6f8-d986e881ead4";
-                    imageUrl = "reiciendis";
-                    name = "Mr. Elvira Buckridge";
+                    externalId = "RSS Triathlon/Time";
+                    id = "<ID>";
+                    imageUrl = "Savings program collaborative";
+                    name = "Pangender";
                     raw = new PropertyAtsCandidateRaw();;
                     tags = new String[]{{
-                        add("enim"),
+                        add("until"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.AtsTelephone[]{{
-                        add(new AtsTelephone("a") {{
-                            telephone = "laboriosam";
-                            type = AtsTelephoneType.HOME;
+                        add(new AtsTelephone("than") {{
+                            telephone = "Industrial Isle";
+                            type = AtsTelephoneType.FAX;
                         }}),
                     }};
-                    title = "Ms.";
-                    updatedAt = OffsetDateTime.parse("2022-02-04T04:20:12.809Z");
+                    title = "West Ann Guinea";
+                    updatedAt = OffsetDateTime.parse("2022-07-24T20:27:07.015Z");
                 }};;
             }};            
 
@@ -1802,27 +1802,27 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("consequuntur") {{
+                .setSecurity(new Security("amet") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutAtsConnectionIdInterviewIdRequest req = new PutAtsConnectionIdInterviewIdRequest("occaecati", "officiis") {{
+            PutAtsConnectionIdInterviewIdRequest req = new PutAtsConnectionIdInterviewIdRequest("Global", "greatness") {{
                 atsInterview = new AtsInterview() {{
-                    applicationId = "perspiciatis";
-                    candidateId = "in";
-                    createdAt = OffsetDateTime.parse("2022-02-03T15:00:35.271Z");
-                    endAt = OffsetDateTime.parse("2022-09-06T00:45:42.817Z");
-                    externalEventXref = "fugit";
-                    id = "a57a15be-3e06-4080-be2b-6e3ab8845f05";
-                    jobId = "perspiciatis";
-                    location = "nihil";
+                    applicationId = "Meriden disbelieve online";
+                    candidateId = "architectures";
+                    createdAt = OffsetDateTime.parse("2023-07-30T10:46:54.075Z");
+                    endAt = OffsetDateTime.parse("2021-02-05T22:53:23.541Z");
+                    externalEventXref = "1080p";
+                    id = "<ID>";
+                    jobId = "Quality";
+                    location = "Metal Ferrari";
                     raw = new PropertyAtsInterviewRaw();;
-                    startAt = OffsetDateTime.parse("2022-03-30T21:08:39.591Z");
-                    status = AtsInterviewStatus.SCHEDULED;
-                    updatedAt = OffsetDateTime.parse("2020-02-03T14:34:15.560Z");
+                    startAt = OffsetDateTime.parse("2021-05-02T03:07:23.809Z");
+                    status = AtsInterviewStatus.AWAITING_FEEDBACK;
+                    updatedAt = OffsetDateTime.parse("2023-11-10T18:42:28.617Z");
                     userIds = new String[]{{
-                        add("dolores"),
+                        add("Cis"),
                     }};
                 }};;
             }};            
@@ -1878,57 +1878,57 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("id") {{
+                .setSecurity(new Security("invoice") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutAtsConnectionIdJobIdRequest req = new PutAtsConnectionIdJobIdRequest("minima", "dolore") {{
+            PutAtsConnectionIdJobIdRequest req = new PutAtsConnectionIdJobIdRequest("Keyboard", "rosin") {{
                 atsJob = new AtsJob() {{
                     addresses = new com.unifiedapi.unifiedto.models.shared.AtsAddress[]{{
                         add(new AtsAddress() {{
-                            address1 = "dolorum";
-                            address2 = "nesciunt";
-                            city = "Fort Lennyborough";
-                            country = "Kyrgyz Republic";
-                            countryCode = "ID";
-                            postalCode = "62854";
-                            region = "nemo";
-                            regionCode = "recusandae";
+                            address1 = "payment Dodge Outdoors";
+                            address2 = "Southwest Division Coordinator";
+                            city = "League City";
+                            country = "Latvia";
+                            countryCode = "KI";
+                            postalCode = "79320-1355";
+                            region = "solution embrace";
+                            regionCode = "continually Keyboard";
                         }}),
                     }};
-                    closedAt = OffsetDateTime.parse("2022-05-29T21:22:23.687Z");
+                    closedAt = OffsetDateTime.parse("2022-12-01T04:41:25.085Z");
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
-                        add(new AtsCompensation(AtsCompensationType.BONUS) {{
-                            currency = "quis";
-                            frequency = AtsCompensationFrequency.YEAR;
-                            max = 9704.94d;
-                            min = 5927.8d;
-                            type = AtsCompensationType.SALARY;
+                        add(new AtsCompensation(AtsCompensationType.OTHER) {{
+                            currency = "Belarusian Ruble";
+                            frequency = AtsCompensationFrequency.WEEK;
+                            max = 6633.85d;
+                            min = 2659.56d;
+                            type = AtsCompensationType.EQUITY;
                         }}),
                     }};
-                    createdAt = OffsetDateTime.parse("2022-05-06T04:30:23.999Z");
+                    createdAt = OffsetDateTime.parse("2023-03-29T05:48:33.492Z");
                     departments = new String[]{{
-                        add("nostrum"),
+                        add("Gasoline"),
                     }};
-                    description = "mollitia";
-                    employmentType = AtsJobEmploymentType.VOLUNTEER;
+                    description = "Open-source reciprocal interface";
+                    employmentType = AtsJobEmploymentType.FULL_TIME;
                     hiringManagerIds = new String[]{{
-                        add("possimus"),
+                        add("Utah"),
                     }};
-                    id = "a660ff57-bfaa-4d4f-9efc-1b4512c10326";
-                    languageLocale = "eius";
-                    name = "Wilfred Rutherford";
+                    id = "<ID>";
+                    languageLocale = "clamber West";
+                    name = "Supervisor North Security";
                     publicJobUrls = new String[]{{
-                        add("eum"),
+                        add("Meridian"),
                     }};
                     raw = new PropertyAtsJobRaw();;
                     recruiterIds = new String[]{{
-                        add("dicta"),
+                        add("Handmade"),
                     }};
                     remote = false;
-                    status = AtsJobStatus.PENDING;
-                    updatedAt = OffsetDateTime.parse("2022-06-02T01:22:45.175Z");
+                    status = AtsJobStatus.DRAFT;
+                    updatedAt = OffsetDateTime.parse("2023-03-24T08:00:25.046Z");
                 }};;
             }};            
 
@@ -1978,22 +1978,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("provident") {{
+                .setSecurity(new Security("primary") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutAtsConnectionIdScorecardIdRequest req = new PutAtsConnectionIdScorecardIdRequest("earum", "soluta") {{
+            PutAtsConnectionIdScorecardIdRequest req = new PutAtsConnectionIdScorecardIdRequest("Incredible", "Draper") {{
                 atsScorecard = new AtsScorecard(                new PropertyAtsScorecardRaw();) {{
-                    applicationId = "hic";
-                    candidateId = "illum";
-                    createdAt = OffsetDateTime.parse("2022-01-24T10:06:39.484Z");
-                    id = "9fe6c632-ca3a-4ed0-9179-96312fde0477";
-                    interviewId = "dicta";
-                    interviewerId = "iusto";
-                    jobId = "esse";
+                    applicationId = "Computer Electric";
+                    candidateId = "Bugatti Minivan";
+                    createdAt = OffsetDateTime.parse("2021-08-13T02:19:12.551Z");
+                    id = "<ID>";
+                    interviewId = "Optional Oregon Adventure";
+                    interviewerId = "AI";
+                    jobId = "eveniet Home";
                     recommendation = AtsScorecardRecommendation.YES;
-                    updatedAt = OffsetDateTime.parse("2020-02-06T20:25:31.567Z");
+                    updatedAt = OffsetDateTime.parse("2021-08-24T23:05:01.366Z");
                 }};;
             }};            
 

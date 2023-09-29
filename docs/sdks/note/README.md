@@ -28,12 +28,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("hic") {{
+                .setSecurity(new Security("Intersex") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteTicketingConnectionIdNoteTicketIdIdRequest req = new DeleteTicketingConnectionIdNoteTicketIdIdRequest("labore", "nisi", "voluptas");            
+            DeleteTicketingConnectionIdNoteTicketIdIdRequest req = new DeleteTicketingConnectionIdNoteTicketIdIdRequest("Liaison", "deposit", "besides");            
 
             DeleteTicketingConnectionIdNoteTicketIdIdResponse res = sdk.note.deleteTicketingConnectionIdNoteTicketIdId(req);
 
@@ -78,18 +78,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("saepe") {{
+                .setSecurity(new Security("Genderflux") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetTicketingConnectionIdNoteTicketIdRequest req = new GetTicketingConnectionIdNoteTicketIdRequest("praesentium", "veniam") {{
-                limit = 675.82d;
-                offset = 3246d;
-                order = "nisi";
-                query = "repellat";
-                sort = "sapiente";
-                updatedGte = OffsetDateTime.parse("2021-07-26T18:43:59.036Z");
+            GetTicketingConnectionIdNoteTicketIdRequest req = new GetTicketingConnectionIdNoteTicketIdRequest("synergy", "revolutionary") {{
+                limit = 2310.88d;
+                offset = 6688.82d;
+                order = "AI";
+                query = "stanch Investor attitude";
+                sort = "Cotton";
+                updatedGte = OffsetDateTime.parse("2022-05-07T04:47:47.948Z");
             }};            
 
             GetTicketingConnectionIdNoteTicketIdResponse res = sdk.note.getTicketingConnectionIdNoteTicketId(req);
@@ -134,12 +134,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("amet") {{
+                .setSecurity(new Security("Table") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetTicketingConnectionIdNoteTicketIdIdRequest req = new GetTicketingConnectionIdNoteTicketIdIdRequest("voluptatibus", "temporibus", "tenetur");            
+            GetTicketingConnectionIdNoteTicketIdIdRequest req = new GetTicketingConnectionIdNoteTicketIdIdRequest("in", "Fords", "North");            
 
             GetTicketingConnectionIdNoteTicketIdIdResponse res = sdk.note.getTicketingConnectionIdNoteTicketIdId(req);
 
@@ -186,19 +186,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("nostrum") {{
+                .setSecurity(new Security("quos") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchTicketingConnectionIdNoteTicketIdIdRequest req = new PatchTicketingConnectionIdNoteTicketIdIdRequest("tempora", "maiores", "facere") {{
+            PatchTicketingConnectionIdNoteTicketIdIdRequest req = new PatchTicketingConnectionIdNoteTicketIdIdRequest("Metal", "furrow", "York") {{
                 ticketingNote = new TicketingNote(                new PropertyTicketingNoteRaw();) {{
-                    agentId = "illum";
-                    createdAt = OffsetDateTime.parse("2022-02-04T16:54:24.882Z");
-                    customerId = "deserunt";
-                    description = "sint";
-                    id = "543398da-fb42-4a8d-a338-8e4d8039ea5f";
-                    updatedAt = "iste";
+                    agentId = "ROI";
+                    createdAt = OffsetDateTime.parse("2023-12-26T03:25:45.709Z");
+                    customerId = "Nissan";
+                    description = "Focused composite open system";
+                    id = "<ID>";
+                    updatedAt = "frictionless convergence officia";
                 }};;
             }};            
 
@@ -247,19 +247,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("harum") {{
+                .setSecurity(new Security("virtual") {{
                     jwt = "";
                 }})
                 .build();
 
-            PostTicketingConnectionIdNoteTicketIdRequest req = new PostTicketingConnectionIdNoteTicketIdRequest("sunt", "atque") {{
+            PostTicketingConnectionIdNoteTicketIdRequest req = new PostTicketingConnectionIdNoteTicketIdRequest("vertical", "Officer") {{
                 ticketingNote = new TicketingNote(                new PropertyTicketingNoteRaw();) {{
-                    agentId = "similique";
-                    createdAt = OffsetDateTime.parse("2022-09-23T16:55:35.004Z");
-                    customerId = "modi";
-                    description = "sapiente";
-                    id = "d619039d-acd3-48ed-8dc6-71dc7f1e3af1";
-                    updatedAt = "veniam";
+                    agentId = "Freeman";
+                    createdAt = OffsetDateTime.parse("2022-08-22T15:22:13.118Z");
+                    customerId = "functionalities";
+                    description = "Object-based mobile standardization";
+                    id = "<ID>";
+                    updatedAt = "Sulfur Berkshire gold";
                 }};;
             }};            
 
@@ -308,19 +308,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("provident") {{
+                .setSecurity(new Security("Applications") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutTicketingConnectionIdNoteTicketIdIdRequest req = new PutTicketingConnectionIdNoteTicketIdIdRequest("consequuntur", "aut", "maxime") {{
+            PutTicketingConnectionIdNoteTicketIdIdRequest req = new PutTicketingConnectionIdNoteTicketIdIdRequest("male", "Southeast", "East") {{
                 ticketingNote = new TicketingNote(                new PropertyTicketingNoteRaw();) {{
-                    agentId = "provident";
-                    createdAt = OffsetDateTime.parse("2022-03-02T16:44:32.966Z");
-                    customerId = "ab";
-                    description = "cum";
-                    id = "4901f2bd-89c8-4a32-a39d-a5b7b6902b88";
-                    updatedAt = "illo";
+                    agentId = "Carolina architecture";
+                    createdAt = OffsetDateTime.parse("2023-08-15T08:45:29.335Z");
+                    customerId = "Northeast Morocco supposing";
+                    description = "Grass-roots holistic conglomeration";
+                    id = "<ID>";
+                    updatedAt = "Hatchback Southwest round";
                 }};;
             }};            
 

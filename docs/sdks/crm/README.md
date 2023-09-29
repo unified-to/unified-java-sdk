@@ -94,12 +94,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("modi") {{
+                .setSecurity(new Security("portal") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteCrmConnectionIdCompanyIdRequest req = new DeleteCrmConnectionIdCompanyIdRequest("voluptates", "fugit");            
+            DeleteCrmConnectionIdCompanyIdRequest req = new DeleteCrmConnectionIdCompanyIdRequest("granular", "Salad");            
 
             DeleteCrmConnectionIdCompanyIdResponse res = sdk.crm.deleteCrmConnectionIdCompanyId(req);
 
@@ -143,12 +143,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("eius") {{
+                .setSecurity(new Security("Computer") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteCrmConnectionIdCompanyIdDealDealIdRequest req = new DeleteCrmConnectionIdCompanyIdDealDealIdRequest("sequi", "eligendi", "asperiores");            
+            DeleteCrmConnectionIdCompanyIdDealDealIdRequest req = new DeleteCrmConnectionIdCompanyIdDealDealIdRequest("silver", "Territory", "Nickel");            
 
             DeleteCrmConnectionIdCompanyIdDealDealIdResponse res = sdk.crm.deleteCrmConnectionIdCompanyIdDealDealId(req);
 
@@ -192,12 +192,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("esse") {{
+                .setSecurity(new Security("Wyoming") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteCrmConnectionIdContactIdRequest req = new DeleteCrmConnectionIdContactIdRequest("blanditiis", "sint");            
+            DeleteCrmConnectionIdContactIdRequest req = new DeleteCrmConnectionIdContactIdRequest("Arizona", "payment");            
 
             DeleteCrmConnectionIdContactIdResponse res = sdk.crm.deleteCrmConnectionIdContactId(req);
 
@@ -241,12 +241,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("repellat") {{
+                .setSecurity(new Security("Luxurious") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteCrmConnectionIdContactIdCompanyCompanyIdRequest req = new DeleteCrmConnectionIdContactIdCompanyCompanyIdRequest("a", "animi", "maiores");            
+            DeleteCrmConnectionIdContactIdCompanyCompanyIdRequest req = new DeleteCrmConnectionIdContactIdCompanyCompanyIdRequest("gladly", "Nissan", "Northeast");            
 
             DeleteCrmConnectionIdContactIdCompanyCompanyIdResponse res = sdk.crm.deleteCrmConnectionIdContactIdCompanyCompanyId(req);
 
@@ -290,12 +290,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("itaque") {{
+                .setSecurity(new Security("connect") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteCrmConnectionIdContactIdDealDealIdRequest req = new DeleteCrmConnectionIdContactIdDealDealIdRequest("nulla", "deserunt", "corporis");            
+            DeleteCrmConnectionIdContactIdDealDealIdRequest req = new DeleteCrmConnectionIdContactIdDealDealIdRequest("West", "Luxurious", "Electronic");            
 
             DeleteCrmConnectionIdContactIdDealDealIdResponse res = sdk.crm.deleteCrmConnectionIdContactIdDealDealId(req);
 
@@ -339,12 +339,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("velit") {{
+                .setSecurity(new Security("Concrete") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteCrmConnectionIdDealIdRequest req = new DeleteCrmConnectionIdDealIdRequest("officiis", "enim");            
+            DeleteCrmConnectionIdDealIdRequest req = new DeleteCrmConnectionIdDealIdRequest("Tokelau", "Generic");            
 
             DeleteCrmConnectionIdDealIdResponse res = sdk.crm.deleteCrmConnectionIdDealId(req);
 
@@ -388,12 +388,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("officia") {{
+                .setSecurity(new Security("overriding") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteCrmConnectionIdEventIdRequest req = new DeleteCrmConnectionIdEventIdRequest("saepe", "eum");            
+            DeleteCrmConnectionIdEventIdRequest req = new DeleteCrmConnectionIdEventIdRequest("Towels", "Moscovium");            
 
             DeleteCrmConnectionIdEventIdResponse res = sdk.crm.deleteCrmConnectionIdEventId(req);
 
@@ -437,12 +437,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("repudiandae") {{
+                .setSecurity(new Security("whereas") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteCrmConnectionIdEventIdCompanyCompanyIdRequest req = new DeleteCrmConnectionIdEventIdCompanyCompanyIdRequest("accusantium", "officia", "impedit");            
+            DeleteCrmConnectionIdEventIdCompanyCompanyIdRequest req = new DeleteCrmConnectionIdEventIdCompanyCompanyIdRequest("Lawrencium", "Nakfa", "Outdoors");            
 
             DeleteCrmConnectionIdEventIdCompanyCompanyIdResponse res = sdk.crm.deleteCrmConnectionIdEventIdCompanyCompanyId(req);
 
@@ -486,12 +486,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("quasi") {{
+                .setSecurity(new Security("invoice") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteCrmConnectionIdEventIdContactContactIdRequest req = new DeleteCrmConnectionIdEventIdContactContactIdRequest("blanditiis", "eius", "quisquam");            
+            DeleteCrmConnectionIdEventIdContactContactIdRequest req = new DeleteCrmConnectionIdEventIdContactContactIdRequest("HEX", "Bedfordshire", "Genderqueer");            
 
             DeleteCrmConnectionIdEventIdContactContactIdResponse res = sdk.crm.deleteCrmConnectionIdEventIdContactContactId(req);
 
@@ -535,12 +535,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("eos") {{
+                .setSecurity(new Security("yellow") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteCrmConnectionIdEventIdDealDealIdRequest req = new DeleteCrmConnectionIdEventIdDealDealIdRequest("nobis", "natus", "minus");            
+            DeleteCrmConnectionIdEventIdDealDealIdRequest req = new DeleteCrmConnectionIdEventIdDealDealIdRequest("Designer", "SQL", "compress");            
 
             DeleteCrmConnectionIdEventIdDealDealIdResponse res = sdk.crm.deleteCrmConnectionIdEventIdDealDealId(req);
 
@@ -584,12 +584,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("quia") {{
+                .setSecurity(new Security("ivory") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteCrmConnectionIdFileIdRequest req = new DeleteCrmConnectionIdFileIdRequest("magnam", "reprehenderit");            
+            DeleteCrmConnectionIdFileIdRequest req = new DeleteCrmConnectionIdFileIdRequest("Hybrid", "Dobra");            
 
             DeleteCrmConnectionIdFileIdResponse res = sdk.crm.deleteCrmConnectionIdFileId(req);
 
@@ -633,12 +633,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("quod") {{
+                .setSecurity(new Security("officia") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteCrmConnectionIdLeadIdRequest req = new DeleteCrmConnectionIdLeadIdRequest("quos", "corrupti");            
+            DeleteCrmConnectionIdLeadIdRequest req = new DeleteCrmConnectionIdLeadIdRequest("Buckinghamshire", "whose");            
 
             DeleteCrmConnectionIdLeadIdResponse res = sdk.crm.deleteCrmConnectionIdLeadId(req);
 
@@ -682,12 +682,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("amet") {{
+                .setSecurity(new Security("maxime") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteCrmConnectionIdPipelineIdRequest req = new DeleteCrmConnectionIdPipelineIdRequest("molestiae", "amet");            
+            DeleteCrmConnectionIdPipelineIdRequest req = new DeleteCrmConnectionIdPipelineIdRequest("Cambridgeshire", "astronomy");            
 
             DeleteCrmConnectionIdPipelineIdResponse res = sdk.crm.deleteCrmConnectionIdPipelineId(req);
 
@@ -731,12 +731,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("laborum") {{
+                .setSecurity(new Security("Louisiana") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteCrmConnectionIdTeamIdRequest req = new DeleteCrmConnectionIdTeamIdRequest("modi", "perferendis");            
+            DeleteCrmConnectionIdTeamIdRequest req = new DeleteCrmConnectionIdTeamIdRequest("Tuna", "Cruiser");            
 
             DeleteCrmConnectionIdTeamIdResponse res = sdk.crm.deleteCrmConnectionIdTeamId(req);
 
@@ -780,12 +780,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("necessitatibus") {{
+                .setSecurity(new Security("calculate") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteCrmConnectionIdUserIdRequest req = new DeleteCrmConnectionIdUserIdRequest("architecto", "molestias");            
+            DeleteCrmConnectionIdUserIdRequest req = new DeleteCrmConnectionIdUserIdRequest("Classical", "pink");            
 
             DeleteCrmConnectionIdUserIdResponse res = sdk.crm.deleteCrmConnectionIdUserId(req);
 
@@ -830,20 +830,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("dolore") {{
+                .setSecurity(new Security("Northeast") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdCompanyRequest req = new GetCrmConnectionIdCompanyRequest("sunt") {{
-                contactId = "maiores";
-                dealId = "neque";
-                limit = 1397.45d;
-                offset = 9368.45d;
-                order = "veniam";
-                query = "ipsam";
-                sort = "eaque";
-                updatedGte = OffsetDateTime.parse("2022-09-02T02:05:03.967Z");
+            GetCrmConnectionIdCompanyRequest req = new GetCrmConnectionIdCompanyRequest("withdrawal") {{
+                contactId = "blue synthesize Bronze";
+                dealId = "Gasoline";
+                limit = 9098.32d;
+                offset = 3330.24d;
+                order = "juxtapose invoice";
+                query = "Luxembourg yellow";
+                sort = "generate Forward";
+                updatedGte = OffsetDateTime.parse("2022-03-23T08:07:05.969Z");
             }};            
 
             GetCrmConnectionIdCompanyResponse res = sdk.crm.getCrmConnectionIdCompany(req);
@@ -888,12 +888,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("nihil") {{
+                .setSecurity(new Security("Ergonomic") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdCompanyIdRequest req = new GetCrmConnectionIdCompanyIdRequest("ad", "nisi");            
+            GetCrmConnectionIdCompanyIdRequest req = new GetCrmConnectionIdCompanyIdRequest("Data", "boo");            
 
             GetCrmConnectionIdCompanyIdResponse res = sdk.crm.getCrmConnectionIdCompanyId(req);
 
@@ -938,20 +938,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("tenetur") {{
+                .setSecurity(new Security("Technician") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdContactRequest req = new GetCrmConnectionIdContactRequest("quis") {{
-                companyId = "quibusdam";
-                dealId = "nemo";
-                limit = 3827.64d;
-                offset = 8664.59d;
-                order = "sit";
-                query = "quidem";
-                sort = "repellendus";
-                updatedGte = OffsetDateTime.parse("2022-05-04T21:42:10.988Z");
+            GetCrmConnectionIdContactRequest req = new GetCrmConnectionIdContactRequest("Southeast") {{
+                companyId = "magenta loose";
+                dealId = "intuitive";
+                limit = 9605d;
+                offset = 8572.44d;
+                order = "Music Electronics";
+                query = "Elegant";
+                sort = "North Analyst Otis";
+                updatedGte = OffsetDateTime.parse("2022-09-18T15:42:24.943Z");
             }};            
 
             GetCrmConnectionIdContactResponse res = sdk.crm.getCrmConnectionIdContact(req);
@@ -996,12 +996,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("sapiente") {{
+                .setSecurity(new Security("Southeast") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdContactIdRequest req = new GetCrmConnectionIdContactIdRequest("sed", "possimus");            
+            GetCrmConnectionIdContactIdRequest req = new GetCrmConnectionIdContactIdRequest("fountain", "visionary");            
 
             GetCrmConnectionIdContactIdResponse res = sdk.crm.getCrmConnectionIdContactId(req);
 
@@ -1046,20 +1046,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("repellat") {{
+                .setSecurity(new Security("apud") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdDealRequest req = new GetCrmConnectionIdDealRequest("repudiandae") {{
-                companyId = "architecto";
-                contactId = "adipisci";
-                limit = 8671.15d;
-                offset = 6884.63d;
-                order = "dolore";
-                query = "voluptatibus";
-                sort = "iure";
-                updatedGte = OffsetDateTime.parse("2022-03-16T15:48:02.869Z");
+            GetCrmConnectionIdDealRequest req = new GetCrmConnectionIdDealRequest("foreground") {{
+                companyId = "Soul communities Renminbi";
+                contactId = "till payment World";
+                limit = 8656.16d;
+                offset = 4455.8d;
+                order = "global";
+                query = "Program Bespoke Wisconsin";
+                sort = "Netherlands under";
+                updatedGte = OffsetDateTime.parse("2022-12-23T01:47:21.816Z");
             }};            
 
             GetCrmConnectionIdDealResponse res = sdk.crm.getCrmConnectionIdDeal(req);
@@ -1104,12 +1104,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("soluta") {{
+                .setSecurity(new Security("Response") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdDealIdRequest req = new GetCrmConnectionIdDealIdRequest("dolorum", "velit");            
+            GetCrmConnectionIdDealIdRequest req = new GetCrmConnectionIdDealIdRequest("Electric", "Practical");            
 
             GetCrmConnectionIdDealIdResponse res = sdk.crm.getCrmConnectionIdDealId(req);
 
@@ -1154,21 +1154,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("earum") {{
+                .setSecurity(new Security("qua") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdEventRequest req = new GetCrmConnectionIdEventRequest("praesentium") {{
-                companyId = "error";
-                contactId = "non";
-                dealId = "quasi";
-                limit = 6490.32d;
-                offset = 8843.61d;
-                order = "harum";
-                query = "cumque";
-                sort = "doloremque";
-                updatedGte = OffsetDateTime.parse("2021-11-26T01:21:46.726Z");
+            GetCrmConnectionIdEventRequest req = new GetCrmConnectionIdEventRequest("markets") {{
+                companyId = "Bedfordshire";
+                contactId = "Hybrid grey Ferrari";
+                dealId = "Checking Southeast";
+                limit = 7975.61d;
+                offset = 1549.88d;
+                order = "Salad Applications who";
+                query = "Tricycle";
+                sort = "Woman Recycled";
+                updatedGte = OffsetDateTime.parse("2021-03-01T02:52:41.600Z");
             }};            
 
             GetCrmConnectionIdEventResponse res = sdk.crm.getCrmConnectionIdEvent(req);
@@ -1213,12 +1213,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("eaque") {{
+                .setSecurity(new Security("Credit") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdEventIdRequest req = new GetCrmConnectionIdEventIdRequest("deserunt", "aliquid");            
+            GetCrmConnectionIdEventIdRequest req = new GetCrmConnectionIdEventIdRequest("equalise", "Diesel");            
 
             GetCrmConnectionIdEventIdResponse res = sdk.crm.getCrmConnectionIdEventId(req);
 
@@ -1263,21 +1263,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("excepturi") {{
+                .setSecurity(new Security("South") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdFileRequest req = new GetCrmConnectionIdFileRequest("magni") {{
-                companyId = "tempora";
-                contactId = "possimus";
-                dealId = "dolor";
-                limit = 7005.29d;
-                offset = 1535.82d;
-                order = "accusamus";
-                query = "optio";
-                sort = "delectus";
-                updatedGte = OffsetDateTime.parse("2020-09-04T15:37:57.416Z");
+            GetCrmConnectionIdFileRequest req = new GetCrmConnectionIdFileRequest("hm") {{
+                companyId = "Salad Recycled Electronic";
+                contactId = "Seychelles";
+                dealId = "Investment deposit";
+                limit = 2748.99d;
+                offset = 7968.15d;
+                order = "experiences Milo";
+                query = "Unbranded haptic FTP";
+                sort = "watt soprano deliverables";
+                updatedGte = OffsetDateTime.parse("2022-03-02T03:00:09.711Z");
             }};            
 
             GetCrmConnectionIdFileResponse res = sdk.crm.getCrmConnectionIdFile(req);
@@ -1322,12 +1322,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("quos") {{
+                .setSecurity(new Security("Buckinghamshire") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdFileIdRequest req = new GetCrmConnectionIdFileIdRequest("asperiores", "voluptatum");            
+            GetCrmConnectionIdFileIdRequest req = new GetCrmConnectionIdFileIdRequest("haptic", "Sheboygan");            
 
             GetCrmConnectionIdFileIdResponse res = sdk.crm.getCrmConnectionIdFileId(req);
 
@@ -1372,18 +1372,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("iste") {{
+                .setSecurity(new Security("Southeast") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdLeadRequest req = new GetCrmConnectionIdLeadRequest("corporis") {{
-                limit = 371.29d;
-                offset = 758.5d;
-                order = "aut";
-                query = "doloribus";
-                sort = "nostrum";
-                updatedGte = OffsetDateTime.parse("2020-07-13T07:09:47.394Z");
+            GetCrmConnectionIdLeadRequest req = new GetCrmConnectionIdLeadRequest("henry") {{
+                limit = 9979.59d;
+                offset = 6297.92d;
+                order = "candela Integration";
+                query = "impactful transform";
+                sort = "Tala defense Southwest";
+                updatedGte = OffsetDateTime.parse("2021-09-29T00:37:32.184Z");
             }};            
 
             GetCrmConnectionIdLeadResponse res = sdk.crm.getCrmConnectionIdLead(req);
@@ -1428,12 +1428,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("neque") {{
+                .setSecurity(new Security("beyond") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdLeadIdRequest req = new GetCrmConnectionIdLeadIdRequest("pariatur", "vel");            
+            GetCrmConnectionIdLeadIdRequest req = new GetCrmConnectionIdLeadIdRequest("Tandem", "Minnesota");            
 
             GetCrmConnectionIdLeadIdResponse res = sdk.crm.getCrmConnectionIdLeadId(req);
 
@@ -1478,18 +1478,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("sapiente") {{
+                .setSecurity(new Security("fuchsia") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdPipelineRequest req = new GetCrmConnectionIdPipelineRequest("mollitia") {{
-                limit = 651.21d;
-                offset = 5526.46d;
-                order = "aperiam";
-                query = "non";
-                sort = "voluptates";
-                updatedGte = OffsetDateTime.parse("2022-09-11T15:47:26.591Z");
+            GetCrmConnectionIdPipelineRequest req = new GetCrmConnectionIdPipelineRequest("Bike") {{
+                limit = 6106.83d;
+                offset = 4108.25d;
+                order = "iterate";
+                query = "Industrial contingency";
+                sort = "Ramp Honda";
+                updatedGte = OffsetDateTime.parse("2023-08-06T19:32:12.657Z");
             }};            
 
             GetCrmConnectionIdPipelineResponse res = sdk.crm.getCrmConnectionIdPipeline(req);
@@ -1534,12 +1534,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("quisquam") {{
+                .setSecurity(new Security("soon") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdPipelineIdRequest req = new GetCrmConnectionIdPipelineIdRequest("quas", "consequuntur");            
+            GetCrmConnectionIdPipelineIdRequest req = new GetCrmConnectionIdPipelineIdRequest("swath", "Director");            
 
             GetCrmConnectionIdPipelineIdResponse res = sdk.crm.getCrmConnectionIdPipelineId(req);
 
@@ -1584,18 +1584,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("maiores") {{
+                .setSecurity(new Security("Buckinghamshire") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdTeamRequest req = new GetCrmConnectionIdTeamRequest("inventore") {{
-                limit = 4004.48d;
-                offset = 5131.85d;
-                order = "est";
-                query = "dolor";
-                sort = "aliquid";
-                updatedGte = OffsetDateTime.parse("2022-03-26T14:36:52.931Z");
+            GetCrmConnectionIdTeamRequest req = new GetCrmConnectionIdTeamRequest("bypass") {{
+                limit = 1586.42d;
+                offset = 8382.08d;
+                order = "Northeast Shoes transform";
+                query = "Bedfordshire Senior strategize";
+                sort = "Ford up";
+                updatedGte = OffsetDateTime.parse("2021-01-24T11:58:31.884Z");
             }};            
 
             GetCrmConnectionIdTeamResponse res = sdk.crm.getCrmConnectionIdTeam(req);
@@ -1640,12 +1640,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("rem") {{
+                .setSecurity(new Security("Arsenic") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdTeamIdRequest req = new GetCrmConnectionIdTeamIdRequest("voluptatum", "ducimus");            
+            GetCrmConnectionIdTeamIdRequest req = new GetCrmConnectionIdTeamIdRequest("Garden", "CLI");            
 
             GetCrmConnectionIdTeamIdResponse res = sdk.crm.getCrmConnectionIdTeamId(req);
 
@@ -1690,18 +1690,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("adipisci") {{
+                .setSecurity(new Security("Strategist") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdUserRequest req = new GetCrmConnectionIdUserRequest("recusandae") {{
-                limit = 2713.06d;
-                offset = 5034.49d;
-                order = "numquam";
-                query = "sequi";
-                sort = "voluptatum";
-                updatedGte = OffsetDateTime.parse("2022-04-19T08:03:50.767Z");
+            GetCrmConnectionIdUserRequest req = new GetCrmConnectionIdUserRequest("enchanting") {{
+                limit = 1042.84d;
+                offset = 220.21d;
+                order = "visionary Tasty set";
+                query = "Fitness";
+                sort = "success servant";
+                updatedGte = OffsetDateTime.parse("2023-02-23T05:53:04.259Z");
             }};            
 
             GetCrmConnectionIdUserResponse res = sdk.crm.getCrmConnectionIdUser(req);
@@ -1746,12 +1746,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("veritatis") {{
+                .setSecurity(new Security("blanditiis") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdUserIdRequest req = new GetCrmConnectionIdUserIdRequest("tenetur", "autem");            
+            GetCrmConnectionIdUserIdRequest req = new GetCrmConnectionIdUserIdRequest("quantifying", "Yemen");            
 
             GetCrmConnectionIdUserIdResponse res = sdk.crm.getCrmConnectionIdUserId(req);
 
@@ -1803,49 +1803,49 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("quidem") {{
+                .setSecurity(new Security("Soft") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmConnectionIdCompanyIdRequest req = new PatchCrmConnectionIdCompanyIdRequest("totam", "porro") {{
+            PatchCrmConnectionIdCompanyIdRequest req = new PatchCrmConnectionIdCompanyIdRequest("invoice", "Synergized") {{
                 crmCompany = new CrmCompany() {{
                     active = false;
                     address = new PropertyCrmCompanyAddress() {{
-                        address1 = "deserunt";
-                        address2 = "magni";
-                        city = "Garlandchester";
-                        country = "Iran";
-                        countryCode = "AD";
-                        postalCode = "02836-3783";
-                        region = "occaecati";
-                        regionCode = "unde";
+                        address1 = "Quality redefine";
+                        address2 = "invoice National";
+                        city = "Feilport";
+                        country = "Switzerland";
+                        countryCode = "SZ";
+                        postalCode = "82050-3091";
+                        region = "Vermont Astatine";
+                        regionCode = "whoa female";
                     }};;
-                    createdAt = OffsetDateTime.parse("2022-07-13T18:04:19.094Z");
+                    createdAt = OffsetDateTime.parse("2021-11-05T19:33:29.059Z");
                     dealIds = new String[]{{
-                        add("inventore"),
+                        add("Representative"),
                     }};
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail() {{
-                            email = "Gabriel.Boyle68@hotmail.com";
-                            type = CrmEmailType.OTHER;
+                            email = "Cortez51@gmail.com";
+                            type = CrmEmailType.HOME;
                         }}),
                     }};
-                    id = "b1cf4b88-8ebd-4fc4-8cca-99bc7fc0b2dc";
-                    name = "Patrick Ankunding";
+                    id = "<ID>";
+                    name = "intensely";
                     raw = new PropertyCrmCompanyRaw();;
                     tags = new String[]{{
-                        add("dolor"),
+                        add("vitamin"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("magni") {{
-                            telephone = "voluptates";
-                            type = CrmTelephoneType.HOME;
+                        add(new CrmTelephone("navigate") {{
+                            telephone = "Waterloo";
+                            type = CrmTelephoneType.MOBILE;
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-12-03T08:49:29.896Z");
+                    updatedAt = OffsetDateTime.parse("2021-10-02T21:01:43.582Z");
                     websites = new String[]{{
-                        add("voluptatem"),
+                        add("transmit"),
                     }};
                 }};;
             }};            
@@ -1892,12 +1892,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("eum") {{
+                .setSecurity(new Security("monthly") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmConnectionIdCompanyIdDealDealIdRequest req = new PatchCrmConnectionIdCompanyIdDealDealIdRequest("at", "eum", "reprehenderit");            
+            PatchCrmConnectionIdCompanyIdDealDealIdRequest req = new PatchCrmConnectionIdCompanyIdDealDealIdRequest("drive", "Northwest", "Tuna");            
 
             PatchCrmConnectionIdCompanyIdDealDealIdResponse res = sdk.crm.patchCrmConnectionIdCompanyIdDealDealId(req);
 
@@ -1949,48 +1949,48 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("voluptatum") {{
+                .setSecurity(new Security("Bicycle") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmConnectionIdContactIdRequest req = new PatchCrmConnectionIdContactIdRequest("blanditiis", "nihil") {{
+            PatchCrmConnectionIdContactIdRequest req = new PatchCrmConnectionIdContactIdRequest("instantly", "Taiwan") {{
                 crmContact = new CrmContact() {{
                     address = new PropertyCrmContactAddress() {{
-                        address1 = "atque";
-                        address2 = "rerum";
-                        city = "Littelborough";
-                        country = "Mali";
-                        countryCode = "BL";
-                        postalCode = "35105-8329";
-                        region = "saepe";
-                        regionCode = "delectus";
+                        address1 = "disintermediate ah Southwest";
+                        address2 = "Bicycle communities infomediaries";
+                        city = "Mount Vernon";
+                        country = "Netherlands Antilles";
+                        countryCode = "SC";
+                        postalCode = "91274";
+                        region = "Investment";
+                        regionCode = "cormorant copying";
                     }};;
-                    company = "Mraz - Runolfsdottir";
+                    company = "Larson Group";
                     companyIds = new String[]{{
-                        add("natus"),
+                        add("person"),
                     }};
-                    createdAt = OffsetDateTime.parse("2022-01-06T08:05:01.455Z");
+                    createdAt = OffsetDateTime.parse("2022-07-09T02:39:19.057Z");
                     dealIds = new String[]{{
-                        add("quia"),
+                        add("Soft"),
                     }};
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail() {{
-                            email = "Maci.Runolfsdottir@hotmail.com";
-                            type = CrmEmailType.HOME;
+                            email = "Freeda_Gutkowski@hotmail.com";
+                            type = CrmEmailType.OTHER;
                         }}),
                     }};
-                    id = "5d307cfe-e812-406e-a813-fa4a41c480d3";
-                    name = "Bruce Block";
+                    id = "<ID>";
+                    name = "Borders Cotton Tactics";
                     raw = new PropertyCrmContactRaw();;
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("eaque") {{
-                            telephone = "fuga";
-                            type = CrmTelephoneType.MOBILE;
+                        add(new CrmTelephone("corn") {{
+                            telephone = "radian";
+                            type = CrmTelephoneType.HOME;
                         }}),
                     }};
-                    title = "Mrs.";
-                    updatedAt = OffsetDateTime.parse("2022-12-15T14:24:53.303Z");
+                    title = "autem Tuvalu";
+                    updatedAt = OffsetDateTime.parse("2022-09-21T14:40:36.486Z");
                 }};;
             }};            
 
@@ -2036,12 +2036,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("aspernatur") {{
+                .setSecurity(new Security("green") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmConnectionIdContactIdCompanyCompanyIdRequest req = new PatchCrmConnectionIdContactIdCompanyCompanyIdRequest("nulla", "enim", "illo");            
+            PatchCrmConnectionIdContactIdCompanyCompanyIdRequest req = new PatchCrmConnectionIdContactIdCompanyCompanyIdRequest("scale", "virtual", "Bedfordshire");            
 
             PatchCrmConnectionIdContactIdCompanyCompanyIdResponse res = sdk.crm.patchCrmConnectionIdContactIdCompanyCompanyId(req);
 
@@ -2085,12 +2085,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("magnam") {{
+                .setSecurity(new Security("male") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmConnectionIdContactIdDealDealIdRequest req = new PatchCrmConnectionIdContactIdDealDealIdRequest("delectus", "numquam", "optio");            
+            PatchCrmConnectionIdContactIdDealDealIdRequest req = new PatchCrmConnectionIdContactIdDealDealIdRequest("mobile", "Account", "Cambridgeshire");            
 
             PatchCrmConnectionIdContactIdDealDealIdResponse res = sdk.crm.patchCrmConnectionIdContactIdDealDealId(req);
 
@@ -2137,30 +2137,30 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("nobis") {{
+                .setSecurity(new Security("Bicycle") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmConnectionIdDealIdRequest req = new PatchCrmConnectionIdDealIdRequest("ex", "repellat") {{
+            PatchCrmConnectionIdDealIdRequest req = new PatchCrmConnectionIdDealIdRequest("East", "North") {{
                 crmDeal = new CrmDeal() {{
-                    amount = 651.18d;
-                    closedAt = OffsetDateTime.parse("2021-07-30T12:30:50.377Z");
-                    createdAt = OffsetDateTime.parse("2021-04-17T00:45:24.170Z");
-                    currency = "aliquid";
-                    id = "21a6a4f7-7a87-4ee3-a4be-752c65b34418";
-                    lostReason = "eveniet";
-                    name = "Kristy Renner DDS";
-                    pipeline = "quos";
-                    probability = 8356.46d;
+                    amount = 83.47d;
+                    closedAt = OffsetDateTime.parse("2023-11-10T10:13:15.860Z");
+                    createdAt = OffsetDateTime.parse("2022-09-06T02:31:05.722Z");
+                    currency = "European Unit of Account 17(E.U.A.-17)";
+                    id = "<ID>";
+                    lostReason = "benchmark";
+                    name = "Loan";
+                    pipeline = "Cotton Blues ah";
+                    probability = 263.43d;
                     raw = new PropertyCrmDealRaw();;
-                    source = "sint";
-                    stage = "iusto";
+                    source = "logistical transition Universal";
+                    stage = "Investment Elegant kilogram";
                     tags = new String[]{{
-                        add("enim"),
+                        add("Germanium"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-11-13T07:23:05.628Z");
-                    wonReason = "voluptates";
+                    updatedAt = OffsetDateTime.parse("2021-08-13T23:49:24.798Z");
+                    wonReason = "West";
                 }};;
             }};            
 
@@ -2215,56 +2215,56 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("laudantium") {{
+                .setSecurity(new Security("parse") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmConnectionIdEventIdRequest req = new PatchCrmConnectionIdEventIdRequest("tempora", "quae") {{
+            PatchCrmConnectionIdEventIdRequest req = new PatchCrmConnectionIdEventIdRequest("intranet", "silver") {{
                 crmEvent = new CrmEvent() {{
                     call = new PropertyCrmEventCall() {{
-                        description = "omnis";
-                        duration = 8480.63d;
+                        description = "Fully-configurable zero administration collaboration";
+                        duration = 6394.52d;
                     }};;
                     companyIds = new String[]{{
-                        add("rem"),
+                        add("North"),
                     }};
                     contactIds = new String[]{{
-                        add("tenetur"),
+                        add("French"),
                     }};
-                    createdAt = OffsetDateTime.parse("2022-06-21T13:56:00.357Z");
+                    createdAt = OffsetDateTime.parse("2022-04-03T00:59:00.853Z");
                     dealIds = new String[]{{
-                        add("earum"),
+                        add("Avon"),
                     }};
                     email = new PropertyCrmEventEmail() {{
-                        body = "architecto";
+                        body = "SDD Toyota Northeast";
                         cc = new String[]{{
-                            add("aliquam"),
+                            add("Sports"),
                         }};
-                        from = "labore";
-                        subject = "maiores";
+                        from = "Electronics";
+                        subject = "Demiflux impedit";
                         to = new String[]{{
-                            add("sequi"),
+                            add("Hyundai"),
                         }};
                     }};;
-                    id = "e07edcc4-aa5f-43ca-bd90-5a972e056728";
+                    id = "<ID>";
                     meeting = new PropertyCrmEventMeeting() {{
-                        description = "sed";
-                        endAt = OffsetDateTime.parse("2022-07-09T20:41:14.694Z");
-                        startAt = OffsetDateTime.parse("2022-08-24T20:05:24.555Z");
-                        title = "Dr.";
+                        description = "Multi-lateral 5th generation protocol";
+                        endAt = OffsetDateTime.parse("2022-01-23T16:29:52.497Z");
+                        startAt = OffsetDateTime.parse("2023-07-12T04:52:28.989Z");
+                        title = "Executive";
                     }};;
                     note = new PropertyCrmEventNote() {{
-                        description = "nesciunt";
+                        description = "Multi-lateral fault-tolerant framework";
                     }};;
                     raw = new PropertyCrmEventRaw();;
                     task = new PropertyCrmEventTask() {{
-                        description = "ipsa";
-                        name = "Miss Marcus Koch";
-                        status = "quam";
+                        description = "Function-based even-keeled pricing structure";
+                        name = "teethe Rustic";
+                        status = "Investment male Electric";
                     }};;
-                    type = CrmEventType.MEETING;
-                    updatedAt = OffsetDateTime.parse("2022-01-14T01:36:15.458Z");
+                    type = CrmEventType.EMAIL;
+                    updatedAt = OffsetDateTime.parse("2021-09-28T03:55:44.303Z");
                 }};;
             }};            
 
@@ -2310,12 +2310,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("culpa") {{
+                .setSecurity(new Security("local") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmConnectionIdEventIdCompanyCompanyIdRequest req = new PatchCrmConnectionIdEventIdCompanyCompanyIdRequest("voluptatum", "iusto", "quod");            
+            PatchCrmConnectionIdEventIdCompanyCompanyIdRequest req = new PatchCrmConnectionIdEventIdCompanyCompanyIdRequest("systems", "navigating", "convergence");            
 
             PatchCrmConnectionIdEventIdCompanyCompanyIdResponse res = sdk.crm.patchCrmConnectionIdEventIdCompanyCompanyId(req);
 
@@ -2359,12 +2359,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("voluptatibus") {{
+                .setSecurity(new Security("Southwest") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmConnectionIdEventIdContactContactIdRequest req = new PatchCrmConnectionIdEventIdContactContactIdRequest("voluptas", "non", "ullam");            
+            PatchCrmConnectionIdEventIdContactContactIdRequest req = new PatchCrmConnectionIdEventIdContactContactIdRequest("Extended", "Cotton", "Creek");            
 
             PatchCrmConnectionIdEventIdContactContactIdResponse res = sdk.crm.patchCrmConnectionIdEventIdContactContactId(req);
 
@@ -2408,12 +2408,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("laborum") {{
+                .setSecurity(new Security("Planner") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmConnectionIdEventIdDealDealIdRequest req = new PatchCrmConnectionIdEventIdDealDealIdRequest("voluptas", "doloribus", "animi");            
+            PatchCrmConnectionIdEventIdDealDealIdRequest req = new PatchCrmConnectionIdEventIdDealDealIdRequest("Developer", "withdrawal", "group");            
 
             PatchCrmConnectionIdEventIdDealDealIdResponse res = sdk.crm.patchCrmConnectionIdEventIdDealDealId(req);
 
@@ -2460,29 +2460,29 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("recusandae") {{
+                .setSecurity(new Security("tragedy") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmConnectionIdFileIdRequest req = new PatchCrmConnectionIdFileIdRequest("corporis", "non") {{
+            PatchCrmConnectionIdFileIdRequest req = new PatchCrmConnectionIdFileIdRequest("Engineer", "male") {{
                 crmFile = new CrmFile() {{
                     active = false;
-                    activityId = "necessitatibus";
-                    companyId = "distinctio";
-                    contactId = "maiores";
-                    createdAt = OffsetDateTime.parse("2022-12-20T21:27:48.504Z");
-                    dealId = "optio";
-                    description = "sequi";
-                    fileName = "sunt";
-                    fileSize = 1122.5d;
-                    fileType = "voluptatibus";
-                    fileUrl = "doloremque";
-                    id = "23b75d23-67fe-41a0-8c8d-f79f0a396d90";
-                    leadId = "impedit";
+                    activityId = "Home communities CFP";
+                    companyId = "unaware yellow generating";
+                    contactId = "World";
+                    createdAt = OffsetDateTime.parse("2021-07-25T09:47:16.664Z");
+                    dealId = "City and Electronic";
+                    description = "Virtual client-driven benchmark";
+                    fileName = "handcrafted_kong_maximized.jpeg";
+                    fileSize = 8601.07d;
+                    fileType = "image";
+                    fileUrl = "Awesome Accountability gadzooks";
+                    id = "<ID>";
+                    leadId = "Incredible Chromium";
                     raw = new PropertyCrmFileRaw();;
-                    updatedAt = OffsetDateTime.parse("2022-08-03T05:21:55.275Z");
-                    userId = "labore";
+                    updatedAt = OffsetDateTime.parse("2021-10-07T21:25:44.502Z");
+                    userId = "Hybrid";
                 }};;
             }};            
 
@@ -2536,45 +2536,45 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("expedita") {{
+                .setSecurity(new Security("robust") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmConnectionIdLeadIdRequest req = new PatchCrmConnectionIdLeadIdRequest("in", "quisquam") {{
+            PatchCrmConnectionIdLeadIdRequest req = new PatchCrmConnectionIdLeadIdRequest("when", "Oriental") {{
                 crmLead = new CrmLead() {{
                     active = false;
                     address = new PropertyCrmLeadAddress() {{
-                        address1 = "sunt";
-                        address2 = "enim";
-                        city = "White Plains";
-                        country = "Portugal";
-                        countryCode = "NE";
-                        postalCode = "80557-1729";
-                        region = "repudiandae";
-                        regionCode = "sed";
+                        address1 = "Gasoline Gasoline grey";
+                        address2 = "oof Passenger Southwest";
+                        city = "Boca Raton";
+                        country = "Bahrain";
+                        countryCode = "CG";
+                        postalCode = "07844-0796";
+                        region = "Gasoline conglomeration Tennessine";
+                        regionCode = "grow hub";
                     }};;
-                    companyId = "impedit";
-                    contactId = "quas";
-                    createdAt = OffsetDateTime.parse("2021-09-18T22:12:45.151Z");
-                    creatorUserId = "eligendi";
+                    companyId = "so digital watt";
+                    contactId = "sensor whiteboard";
+                    createdAt = OffsetDateTime.parse("2023-03-28T10:49:33.417Z");
+                    creatorUserId = "Diesel Triathlon/Time";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail() {{
-                            email = "Gunnar98@hotmail.com";
-                            type = CrmEmailType.OTHER;
+                            email = "Arvel_Ortiz@hotmail.com";
+                            type = CrmEmailType.WORK;
                         }}),
                     }};
-                    id = "eb1c7cbd-b6ee-4c74-b78b-a25317747dc9";
-                    name = "Annette Osinski";
+                    id = "<ID>";
+                    name = "yellow";
                     raw = new PropertyCrmLeadRaw();;
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("repellat") {{
-                            telephone = "maxime";
-                            type = CrmTelephoneType.FAX;
+                        add(new CrmTelephone("Bicycle") {{
+                            telephone = "radiant";
+                            type = CrmTelephoneType.OTHER;
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-02-25T17:35:04.595Z");
-                    userId = "quibusdam";
+                    updatedAt = OffsetDateTime.parse("2022-01-01T11:37:27.820Z");
+                    userId = "bypass deliverables Hyundai";
                 }};;
             }};            
 
@@ -2623,21 +2623,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("commodi") {{
+                .setSecurity(new Security("boastfully") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmConnectionIdPipelineIdRequest req = new PatchCrmConnectionIdPipelineIdRequest("esse", "explicabo") {{
+            PatchCrmConnectionIdPipelineIdRequest req = new PatchCrmConnectionIdPipelineIdRequest("relationships", "Southwest") {{
                 crmPipeline = new CrmPipeline() {{
                     active = false;
-                    createdAt = OffsetDateTime.parse("2022-02-28T03:59:08.192Z");
+                    createdAt = OffsetDateTime.parse("2021-01-06T10:07:28.591Z");
                     dealProbability = false;
-                    displayOrder = 7625.25d;
-                    id = "0f5ae2f3-a6b7-4008-b875-6143f5a6c98b";
-                    name = "Jill Hilpert";
+                    displayOrder = 2164.62d;
+                    id = "<ID>";
+                    name = "Licensed AI Trial";
                     raw = new PropertyCrmPipelineRaw();;
-                    updatedAt = OffsetDateTime.parse("2022-06-15T08:36:06.296Z");
+                    updatedAt = OffsetDateTime.parse("2023-12-18T09:09:15.002Z");
                 }};;
             }};            
 
@@ -2686,21 +2686,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("doloremque") {{
+                .setSecurity(new Security("Arizona") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmConnectionIdTeamIdRequest req = new PatchCrmConnectionIdTeamIdRequest("fugiat", "numquam") {{
+            PatchCrmConnectionIdTeamIdRequest req = new PatchCrmConnectionIdTeamIdRequest("to", "Internal") {{
                 crmTeam = new CrmTeam() {{
-                    createdAt = OffsetDateTime.parse("2022-04-05T19:27:13.618Z");
-                    description = "nobis";
-                    id = "acc6cbd6-b5f3-4ec9-8930-4f926bad2553";
-                    name = "Roger Mueller";
+                    createdAt = OffsetDateTime.parse("2022-01-07T23:31:14.855Z");
+                    description = "Up-sized high-level portal";
+                    id = "<ID>";
+                    name = "Moroccan pink";
                     raw = new PropertyCrmTeamRaw();;
-                    updatedAt = OffsetDateTime.parse("2022-09-27T16:08:58.380Z");
+                    updatedAt = OffsetDateTime.parse("2023-08-14T10:23:48.923Z");
                     userIds = new String[]{{
-                        add("expedita"),
+                        add("Candace"),
                     }};
                 }};;
             }};            
@@ -2755,48 +2755,48 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("aperiam") {{
+                .setSecurity(new Security("Northwest") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmConnectionIdUserIdRequest req = new PatchCrmConnectionIdUserIdRequest("voluptates", "possimus") {{
+            PatchCrmConnectionIdUserIdRequest req = new PatchCrmConnectionIdUserIdRequest("Blues", "violet") {{
                 crmUser = new CrmUser() {{
                     active = false;
                     address = new PropertyCrmUserAddress() {{
-                        address1 = "fugit";
-                        address2 = "voluptatem";
-                        city = "Grapevine";
-                        country = "Iran";
-                        countryCode = "CK";
-                        postalCode = "59994";
-                        region = "nesciunt";
-                        regionCode = "cupiditate";
+                        address1 = "Loan Grocery";
+                        address2 = "pish Supervisor North";
+                        city = "Justiceshire";
+                        country = "Israel";
+                        countryCode = "JO";
+                        postalCode = "37126";
+                        region = "Interactions";
+                        regionCode = "whiteboard";
                     }};;
-                    createdAt = OffsetDateTime.parse("2021-10-26T10:41:06.484Z");
-                    currency = "beatae";
-                    department = "ipsa";
-                    division = "mollitia";
+                    createdAt = OffsetDateTime.parse("2021-11-25T05:08:21.665Z");
+                    currency = "Falkland Islands Pound";
+                    department = "pascal Berkshire Europium";
+                    division = "anti";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail() {{
-                            email = "Rhea_Sanford41@hotmail.com";
+                            email = "Aniya40@yahoo.com";
                             type = CrmEmailType.WORK;
                         }}),
                     }};
-                    id = "676696e1-ec00-4221-b335-d89acb3ecfda";
-                    imageUrl = "atque";
-                    languageLocale = "quibusdam";
-                    name = "Angelica Harris";
+                    id = "<ID>";
+                    imageUrl = "sputter";
+                    languageLocale = "Porsche matrix Electric";
+                    name = "Nissan sedately Tricycle";
                     raw = new PropertyCrmUserRaw();;
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("doloremque") {{
-                            telephone = "vero";
-                            type = CrmTelephoneType.MOBILE;
+                        add(new CrmTelephone("Computer") {{
+                            telephone = "ubiquitous input ashamed";
+                            type = CrmTelephoneType.OTHER;
                         }}),
                     }};
-                    timezone = "ipsum";
-                    title = "Mr.";
-                    updatedAt = OffsetDateTime.parse("2022-09-23T02:06:07.148Z");
+                    timezone = "Asia/Chongqing";
+                    title = "newton Corporate";
+                    updatedAt = OffsetDateTime.parse("2023-06-03T09:54:55.953Z");
                 }};;
             }};            
 
@@ -2850,49 +2850,49 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("perspiciatis") {{
+                .setSecurity(new Security("Personal") {{
                     jwt = "";
                 }})
                 .build();
 
-            PostCrmConnectionIdCompanyRequest req = new PostCrmConnectionIdCompanyRequest("quam") {{
+            PostCrmConnectionIdCompanyRequest req = new PostCrmConnectionIdCompanyRequest("gosh") {{
                 crmCompany = new CrmCompany() {{
                     active = false;
                     address = new PropertyCrmCompanyAddress() {{
-                        address1 = "atque";
-                        address2 = "officia";
-                        city = "Barryshire";
-                        country = "Pakistan";
-                        countryCode = "BF";
-                        postalCode = "91045-5944";
-                        region = "quod";
-                        regionCode = "vitae";
+                        address1 = "phooey";
+                        address2 = "Bedfordshire neural";
+                        city = "Port Victoria";
+                        country = "Kenya";
+                        countryCode = "NF";
+                        postalCode = "77670";
+                        region = "male";
+                        regionCode = "utilisation Bronze";
                     }};;
-                    createdAt = OffsetDateTime.parse("2020-02-05T06:52:39.012Z");
+                    createdAt = OffsetDateTime.parse("2023-07-06T10:14:02.898Z");
                     dealIds = new String[]{{
-                        add("quod"),
+                        add("connect"),
                     }};
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail() {{
-                            email = "Arianna_Schultz6@yahoo.com";
+                            email = "Marisa84@yahoo.com";
                             type = CrmEmailType.HOME;
                         }}),
                     }};
-                    id = "3f2a3c80-a97f-4f33-8cdd-f857a9e61876";
-                    name = "Marc O'Connell Sr.";
+                    id = "<ID>";
+                    name = "East frenetically athwart";
                     raw = new PropertyCrmCompanyRaw();;
                     tags = new String[]{{
-                        add("nulla"),
+                        add("pink"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("illum") {{
-                            telephone = "magni";
-                            type = CrmTelephoneType.FAX;
+                        add(new CrmTelephone("who") {{
+                            telephone = "violet Account";
+                            type = CrmTelephoneType.OTHER;
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2020-09-08T16:05:14.281Z");
+                    updatedAt = OffsetDateTime.parse("2021-09-12T17:31:24.634Z");
                     websites = new String[]{{
-                        add("unde"),
+                        add("Intuitive"),
                     }};
                 }};;
             }};            
@@ -2947,48 +2947,48 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("ut") {{
+                .setSecurity(new Security("integrated") {{
                     jwt = "";
                 }})
                 .build();
 
-            PostCrmConnectionIdContactRequest req = new PostCrmConnectionIdContactRequest("facere") {{
+            PostCrmConnectionIdContactRequest req = new PostCrmConnectionIdContactRequest("Mobility") {{
                 crmContact = new CrmContact() {{
                     address = new PropertyCrmContactAddress() {{
-                        address1 = "voluptas";
-                        address2 = "doloribus";
-                        city = "San Jose";
-                        country = "Solomon Islands";
-                        countryCode = "KW";
-                        postalCode = "52500-4364";
-                        region = "assumenda";
-                        regionCode = "explicabo";
+                        address1 = "who SUV";
+                        address2 = "sievert Tungsten";
+                        city = "Fort Destiny";
+                        country = "Sao Tome and Principe";
+                        countryCode = "TO";
+                        postalCode = "66482-1980";
+                        region = "National Money Executive";
+                        regionCode = "Southwest";
                     }};;
-                    company = "Bauch, Bartoletti and Abshire";
+                    company = "Dooley, O'Keefe and Bailey";
                     companyIds = new String[]{{
-                        add("velit"),
+                        add("Rubber"),
                     }};
-                    createdAt = OffsetDateTime.parse("2022-08-30T05:31:52.329Z");
+                    createdAt = OffsetDateTime.parse("2021-08-24T16:59:07.539Z");
                     dealIds = new String[]{{
-                        add("velit"),
+                        add("farad"),
                     }};
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail() {{
-                            email = "Kaylee_Schmitt3@gmail.com";
-                            type = CrmEmailType.HOME;
+                            email = "Lurline.Emmerich@yahoo.com";
+                            type = CrmEmailType.WORK;
                         }}),
                     }};
-                    id = "6fa21e91-52cb-4311-9167-b8e3c8db0340";
-                    name = "Levi Johns";
+                    id = "<ID>";
+                    name = "second Fresh";
                     raw = new PropertyCrmContactRaw();;
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("earum") {{
-                            telephone = "voluptas";
-                            type = CrmTelephoneType.HOME;
+                        add(new CrmTelephone("Refined") {{
+                            telephone = "Cambridgeshire kilogram Audi";
+                            type = CrmTelephoneType.WORK;
                         }}),
                     }};
-                    title = "Dr.";
-                    updatedAt = OffsetDateTime.parse("2022-02-12T20:55:34.483Z");
+                    title = "streamline Berkshire World";
+                    updatedAt = OffsetDateTime.parse("2023-05-09T06:25:49.274Z");
                 }};;
             }};            
 
@@ -3037,30 +3037,30 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("enim") {{
+                .setSecurity(new Security("M2F") {{
                     jwt = "";
                 }})
                 .build();
 
-            PostCrmConnectionIdDealRequest req = new PostCrmConnectionIdDealRequest("ullam") {{
+            PostCrmConnectionIdDealRequest req = new PostCrmConnectionIdDealRequest("programming") {{
                 crmDeal = new CrmDeal() {{
-                    amount = 5981.93d;
-                    closedAt = OffsetDateTime.parse("2022-08-06T11:53:42.173Z");
-                    createdAt = OffsetDateTime.parse("2022-08-26T00:43:51.707Z");
-                    currency = "quia";
-                    id = "63d48e93-5c2c-49e8-9f30-be3e43202d72";
-                    lostReason = "beatae";
-                    name = "Geraldine Kling";
-                    pipeline = "sit";
-                    probability = 4265.27d;
+                    amount = 2558.82d;
+                    closedAt = OffsetDateTime.parse("2023-02-16T08:39:46.084Z");
+                    createdAt = OffsetDateTime.parse("2021-12-12T19:23:52.754Z");
+                    currency = "Canadian Dollar";
+                    id = "<ID>";
+                    lostReason = "payment";
+                    name = "International";
+                    pipeline = "Luxurious West";
+                    probability = 867.08d;
                     raw = new PropertyCrmDealRaw();;
-                    source = "laboriosam";
-                    stage = "quaerat";
+                    source = "Account sometimes South";
+                    stage = "intermediate Latin Cisgender";
                     tags = new String[]{{
-                        add("quasi"),
+                        add("input"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-01-05T16:30:14.088Z");
-                    wonReason = "doloremque";
+                    updatedAt = OffsetDateTime.parse("2022-06-01T07:39:00.559Z");
+                    wonReason = "local Huntsville";
                 }};;
             }};            
 
@@ -3115,56 +3115,56 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("assumenda") {{
+                .setSecurity(new Security("carburize") {{
                     jwt = "";
                 }})
                 .build();
 
-            PostCrmConnectionIdEventRequest req = new PostCrmConnectionIdEventRequest("provident") {{
+            PostCrmConnectionIdEventRequest req = new PostCrmConnectionIdEventRequest("SDR") {{
                 crmEvent = new CrmEvent() {{
                     call = new PropertyCrmEventCall() {{
-                        description = "facere";
-                        duration = 1528.87d;
+                        description = "Customer-focused empowering conglomeration";
+                        duration = 1255.4d;
                     }};;
                     companyIds = new String[]{{
-                        add("inventore"),
+                        add("male"),
                     }};
                     contactIds = new String[]{{
-                        add("voluptatibus"),
+                        add("Cupertino"),
                     }};
-                    createdAt = OffsetDateTime.parse("2021-09-16T16:56:09.386Z");
+                    createdAt = OffsetDateTime.parse("2022-07-24T22:18:30.290Z");
                     dealIds = new String[]{{
-                        add("repellendus"),
+                        add("Cambodia"),
                     }};
                     email = new PropertyCrmEventEmail() {{
-                        body = "consequatur";
+                        body = "male Games woman";
                         cc = new String[]{{
-                            add("adipisci"),
+                            add("Rock"),
                         }};
-                        from = "doloremque";
-                        subject = "optio";
+                        from = "Soft Southeast";
+                        subject = "capacitor Krone violet";
                         to = new String[]{{
-                            add("tempora"),
+                            add("Synergized"),
                         }};
                     }};;
-                    id = "ecc11a08-3642-4906-8b85-02a55e7f73bc";
+                    id = "<ID>";
                     meeting = new PropertyCrmEventMeeting() {{
-                        description = "praesentium";
-                        endAt = OffsetDateTime.parse("2022-08-18T22:20:38.381Z");
-                        startAt = OffsetDateTime.parse("2022-05-30T20:03:45.488Z");
-                        title = "Mr.";
+                        description = "Upgradable asymmetric hardware";
+                        endAt = OffsetDateTime.parse("2021-12-19T09:09:38.264Z");
+                        startAt = OffsetDateTime.parse("2023-11-21T21:46:08.139Z");
+                        title = "harness Collierville payment";
                     }};;
                     note = new PropertyCrmEventNote() {{
-                        description = "voluptatem";
+                        description = "Team-oriented context-sensitive definition";
                     }};;
                     raw = new PropertyCrmEventRaw();;
                     task = new PropertyCrmEventTask() {{
-                        description = "est";
-                        name = "Christine Mueller";
-                        status = "rerum";
+                        description = "Multi-layered radical projection";
+                        name = "Gorgeous Louisiana Directives";
+                        status = "indicate";
                     }};;
-                    type = CrmEventType.MEETING;
-                    updatedAt = OffsetDateTime.parse("2020-03-10T08:07:06.889Z");
+                    type = CrmEventType.EMAIL;
+                    updatedAt = OffsetDateTime.parse("2021-11-05T22:28:17.344Z");
                 }};;
             }};            
 
@@ -3213,29 +3213,29 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("excepturi") {{
+                .setSecurity(new Security("contaminate") {{
                     jwt = "";
                 }})
                 .build();
 
-            PostCrmConnectionIdFileRequest req = new PostCrmConnectionIdFileRequest("numquam") {{
+            PostCrmConnectionIdFileRequest req = new PostCrmConnectionIdFileRequest("standardization") {{
                 crmFile = new CrmFile() {{
                     active = false;
-                    activityId = "molestiae";
-                    companyId = "impedit";
-                    contactId = "error";
-                    createdAt = OffsetDateTime.parse("2021-12-11T00:26:54.870Z");
-                    dealId = "aliquid";
-                    description = "nihil";
-                    fileName = "facilis";
-                    fileSize = 7594.51d;
-                    fileType = "incidunt";
-                    fileUrl = "eos";
-                    id = "42666581-6ddc-4a8e-b51f-cb4c593ec12c";
-                    leadId = "temporibus";
+                    activityId = "Manager";
+                    companyId = "Florida Shoes East";
+                    contactId = "Ohio loyally regarding";
+                    createdAt = OffsetDateTime.parse("2022-08-05T21:17:21.878Z");
+                    dealId = "indigo Delaware";
+                    description = "Enhanced bifurcated structure";
+                    fileName = "for_chips_under.gif";
+                    fileSize = 9649.84d;
+                    fileType = "video";
+                    fileUrl = "Avon male";
+                    id = "<ID>";
+                    leadId = "Transgender";
                     raw = new PropertyCrmFileRaw();;
-                    updatedAt = OffsetDateTime.parse("2021-09-05T01:09:34.246Z");
-                    userId = "quibusdam";
+                    updatedAt = OffsetDateTime.parse("2021-11-20T07:00:09.078Z");
+                    userId = "national Lead";
                 }};;
             }};            
 
@@ -3289,45 +3289,45 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("ipsa") {{
+                .setSecurity(new Security("merrily") {{
                     jwt = "";
                 }})
                 .build();
 
-            PostCrmConnectionIdLeadRequest req = new PostCrmConnectionIdLeadRequest("accusamus") {{
+            PostCrmConnectionIdLeadRequest req = new PostCrmConnectionIdLeadRequest("overrun") {{
                 crmLead = new CrmLead() {{
                     active = false;
                     address = new PropertyCrmLeadAddress() {{
-                        address1 = "placeat";
-                        address2 = "quam";
-                        city = "Windlerside";
-                        country = "Slovenia";
-                        countryCode = "QA";
-                        postalCode = "50892-2562";
-                        region = "esse";
-                        regionCode = "reiciendis";
+                        address1 = "knowledge monthly";
+                        address2 = "Ghana Clothing";
+                        city = "South Herminio";
+                        country = "Vietnam";
+                        countryCode = "LB";
+                        postalCode = "58522";
+                        region = "Southeast Iowa";
+                        regionCode = "skedaddle demanding scratch";
                     }};;
-                    companyId = "iste";
-                    contactId = "amet";
-                    createdAt = OffsetDateTime.parse("2022-12-20T12:15:56.921Z");
-                    creatorUserId = "impedit";
+                    companyId = "calculating Xenogender driver";
+                    contactId = "black port";
+                    createdAt = OffsetDateTime.parse("2022-08-30T18:59:43.604Z");
+                    creatorUserId = "engine";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail() {{
-                            email = "Katlynn.Kuvalis@gmail.com";
-                            type = CrmEmailType.HOME;
+                            email = "Florence_Beatty5@hotmail.com";
+                            type = CrmEmailType.WORK;
                         }}),
                     }};
-                    id = "83dabf9e-f3ff-4dd9-b7f0-79af4d35724c";
-                    name = "Gerardo Beer";
+                    id = "<ID>";
+                    name = "Consultant";
                     raw = new PropertyCrmLeadRaw();;
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("quas") {{
-                            telephone = "vero";
-                            type = CrmTelephoneType.WORK;
+                        add(new CrmTelephone("Minnesota") {{
+                            telephone = "solutions gosh";
+                            type = CrmTelephoneType.HOME;
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-11-25T00:44:59.187Z");
-                    userId = "praesentium";
+                    updatedAt = OffsetDateTime.parse("2023-01-03T19:46:34.554Z");
+                    userId = "networks Southwest";
                 }};;
             }};            
 
@@ -3376,21 +3376,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("iusto") {{
+                .setSecurity(new Security("glean") {{
                     jwt = "";
                 }})
                 .build();
 
-            PostCrmConnectionIdPipelineRequest req = new PostCrmConnectionIdPipelineRequest("fugiat") {{
+            PostCrmConnectionIdPipelineRequest req = new PostCrmConnectionIdPipelineRequest("Account") {{
                 crmPipeline = new CrmPipeline() {{
                     active = false;
-                    createdAt = OffsetDateTime.parse("2022-07-25T23:09:25.248Z");
+                    createdAt = OffsetDateTime.parse("2021-01-25T16:28:43.841Z");
                     dealProbability = false;
-                    displayOrder = 5124.08d;
-                    id = "44eded85-a906-45e6-a8bd-fc2032b6c879";
-                    name = "Billy Effertz";
+                    displayOrder = 5334.42d;
+                    id = "<ID>";
+                    name = "motivating";
                     raw = new PropertyCrmPipelineRaw();;
-                    updatedAt = OffsetDateTime.parse("2022-08-31T06:45:02.544Z");
+                    updatedAt = OffsetDateTime.parse("2021-01-20T13:44:14.220Z");
                 }};;
             }};            
 
@@ -3439,21 +3439,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("dolor") {{
+                .setSecurity(new Security("local") {{
                     jwt = "";
                 }})
                 .build();
 
-            PostCrmConnectionIdTeamRequest req = new PostCrmConnectionIdTeamRequest("ad") {{
+            PostCrmConnectionIdTeamRequest req = new PostCrmConnectionIdTeamRequest("when") {{
                 crmTeam = new CrmTeam() {{
-                    createdAt = OffsetDateTime.parse("2022-06-07T02:39:33.974Z");
-                    description = "asperiores";
-                    id = "7ae12c68-91f8-42ce-9157-172305377dcf";
-                    name = "Jimmie McGlynn";
+                    createdAt = OffsetDateTime.parse("2022-02-04T15:43:12.746Z");
+                    description = "Horizontal contextually-based orchestration";
+                    id = "<ID>";
+                    name = "bandwidth Legacy holistic";
                     raw = new PropertyCrmTeamRaw();;
-                    updatedAt = OffsetDateTime.parse("2022-01-27T12:04:08.092Z");
+                    updatedAt = OffsetDateTime.parse("2021-02-01T07:27:20.539Z");
                     userIds = new String[]{{
-                        add("exercitationem"),
+                        add("East"),
                     }};
                 }};;
             }};            
@@ -3508,48 +3508,48 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("voluptates") {{
+                .setSecurity(new Security("Soul") {{
                     jwt = "";
                 }})
                 .build();
 
-            PostCrmConnectionIdUserRequest req = new PostCrmConnectionIdUserRequest("sequi") {{
+            PostCrmConnectionIdUserRequest req = new PostCrmConnectionIdUserRequest("Abilene") {{
                 crmUser = new CrmUser() {{
                     active = false;
                     address = new PropertyCrmUserAddress() {{
-                        address1 = "quis";
-                        address2 = "commodi";
-                        city = "Juanitaview";
-                        country = "Armenia";
-                        countryCode = "MP";
-                        postalCode = "96728";
-                        region = "temporibus";
-                        regionCode = "minus";
+                        address1 = "brr port";
+                        address2 = "Northeast like";
+                        city = "Fort Guillermo";
+                        country = "Cayman Islands";
+                        countryCode = "BW";
+                        postalCode = "34958";
+                        region = "South";
+                        regionCode = "morph an colossal";
                     }};;
-                    createdAt = OffsetDateTime.parse("2022-01-18T13:21:09.532Z");
-                    currency = "beatae";
-                    department = "vitae";
-                    division = "veritatis";
+                    createdAt = OffsetDateTime.parse("2021-02-02T08:27:21.693Z");
+                    currency = "Cayman Islands Dollar";
+                    department = "um";
+                    division = "West sievert generating";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail() {{
-                            email = "Tressa3@hotmail.com";
-                            type = CrmEmailType.WORK;
+                            email = "Jadon_Schumm45@gmail.com";
+                            type = CrmEmailType.HOME;
                         }}),
                     }};
-                    id = "6d541a4d-190f-4eb2-9780-bccc0dbbddb4";
-                    imageUrl = "laudantium";
-                    languageLocale = "tempora";
-                    name = "Laura Lowe";
+                    id = "<ID>";
+                    imageUrl = "radian Borders Southeast";
+                    languageLocale = "Silicon Awesome Industrial";
+                    name = "Mouse Accounts";
                     raw = new PropertyCrmUserRaw();;
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("amet") {{
-                            telephone = "aliquam";
+                        add(new CrmTelephone("integrate") {{
+                            telephone = "ohm Southeast ROI";
                             type = CrmTelephoneType.MOBILE;
                         }}),
                     }};
-                    timezone = "natus";
-                    title = "Mr.";
-                    updatedAt = OffsetDateTime.parse("2021-09-17T08:14:24.561Z");
+                    timezone = "Europe/Amsterdam";
+                    title = "Leannon";
+                    updatedAt = OffsetDateTime.parse("2022-09-02T21:48:50.401Z");
                 }};;
             }};            
 
@@ -3603,49 +3603,49 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("rerum") {{
+                .setSecurity(new Security("dicta") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutCrmConnectionIdCompanyIdRequest req = new PutCrmConnectionIdCompanyIdRequest("placeat", "ab") {{
+            PutCrmConnectionIdCompanyIdRequest req = new PutCrmConnectionIdCompanyIdRequest("background", "Malaysian") {{
                 crmCompany = new CrmCompany() {{
                     active = false;
                     address = new PropertyCrmCompanyAddress() {{
-                        address1 = "ad";
-                        address2 = "blanditiis";
-                        city = "Grantfort";
-                        country = "Fiji";
-                        countryCode = "UY";
-                        postalCode = "23559";
-                        region = "fuga";
-                        regionCode = "consectetur";
+                        address1 = "Diesel bitterly";
+                        address2 = "red overriding uniform";
+                        city = "Robertsburgh";
+                        country = "Nicaragua";
+                        countryCode = "FO";
+                        postalCode = "93827";
+                        region = "trigger North";
+                        regionCode = "invoice briefly";
                     }};;
-                    createdAt = OffsetDateTime.parse("2022-11-12T18:52:17.062Z");
+                    createdAt = OffsetDateTime.parse("2023-11-09T10:26:12.787Z");
                     dealIds = new String[]{{
-                        add("explicabo"),
+                        add("magenta"),
                     }};
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail() {{
-                            email = "Andreane_Vandervort@yahoo.com";
-                            type = CrmEmailType.WORK;
+                            email = "Travis_McClure@yahoo.com";
+                            type = CrmEmailType.HOME;
                         }}),
                     }};
-                    id = "00ce78a1-bd8f-4b7a-8a11-6ce723d4097f";
-                    name = "Philip Beier";
+                    id = "<ID>";
+                    name = "female";
                     raw = new PropertyCrmCompanyRaw();;
                     tags = new String[]{{
-                        add("deserunt"),
+                        add("holistic"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("consequuntur") {{
-                            telephone = "hic";
-                            type = CrmTelephoneType.OTHER;
+                        add(new CrmTelephone("Electric") {{
+                            telephone = "lavender";
+                            type = CrmTelephoneType.FAX;
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-04-09T16:36:14.999Z");
+                    updatedAt = OffsetDateTime.parse("2021-10-31T18:09:08.755Z");
                     websites = new String[]{{
-                        add("quia"),
+                        add("hard"),
                     }};
                 }};;
             }};            
@@ -3692,12 +3692,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("omnis") {{
+                .setSecurity(new Security("thoroughly") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutCrmConnectionIdCompanyIdDealDealIdRequest req = new PutCrmConnectionIdCompanyIdDealDealIdRequest("dicta", "qui", "explicabo");            
+            PutCrmConnectionIdCompanyIdDealDealIdRequest req = new PutCrmConnectionIdCompanyIdDealDealIdRequest("cart", "IB", "Susanna");            
 
             PutCrmConnectionIdCompanyIdDealDealIdResponse res = sdk.crm.putCrmConnectionIdCompanyIdDealDealId(req);
 
@@ -3749,48 +3749,48 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("consequatur") {{
+                .setSecurity(new Security("Outdoors") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutCrmConnectionIdContactIdRequest req = new PutCrmConnectionIdContactIdRequest("amet", "consequatur") {{
+            PutCrmConnectionIdContactIdRequest req = new PutCrmConnectionIdContactIdRequest("Credit", "laborum") {{
                 crmContact = new CrmContact() {{
                     address = new PropertyCrmContactAddress() {{
-                        address1 = "fugiat";
-                        address2 = "voluptatum";
-                        city = "Fort Fleta";
-                        country = "Niger";
-                        countryCode = "US";
-                        postalCode = "44558-1185";
-                        region = "optio";
-                        regionCode = "quasi";
+                        address1 = "copy Coordinator Northwest";
+                        address2 = "provided Mazda";
+                        city = "Kiarrafurt";
+                        country = "Latvia";
+                        countryCode = "GP";
+                        postalCode = "71632-5257";
+                        region = "transmitting till Oriental";
+                        regionCode = "Ways";
                     }};;
-                    company = "Littel, Gulgowski and Mertz";
+                    company = "Beatty Inc";
                     companyIds = new String[]{{
-                        add("amet"),
+                        add("ugh"),
                     }};
-                    createdAt = OffsetDateTime.parse("2022-10-01T15:10:03.132Z");
+                    createdAt = OffsetDateTime.parse("2021-02-15T11:20:20.781Z");
                     dealIds = new String[]{{
-                        add("nemo"),
+                        add("Gambia"),
                     }};
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail() {{
-                            email = "Rosetta16@hotmail.com";
+                            email = "Myron.Nicolas56@gmail.com";
                             type = CrmEmailType.OTHER;
                         }}),
                     }};
-                    id = "876c2c2d-fb4c-4fc1-8762-30f841fb1bd2";
-                    name = "Darla Sipes II";
+                    id = "<ID>";
+                    name = "gah male Malagasy";
                     raw = new PropertyCrmContactRaw();;
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("autem") {{
-                            telephone = "pariatur";
+                        add(new CrmTelephone("Vermont") {{
+                            telephone = "up Northeast";
                             type = CrmTelephoneType.FAX;
                         }}),
                     }};
-                    title = "Miss";
-                    updatedAt = OffsetDateTime.parse("2021-12-22T06:17:30.387Z");
+                    title = "ew";
+                    updatedAt = OffsetDateTime.parse("2022-03-04T13:25:22.825Z");
                 }};;
             }};            
 
@@ -3836,12 +3836,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("officia") {{
+                .setSecurity(new Security("tire") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutCrmConnectionIdContactIdCompanyCompanyIdRequest req = new PutCrmConnectionIdContactIdCompanyCompanyIdRequest("voluptas", "laudantium", "corporis");            
+            PutCrmConnectionIdContactIdCompanyCompanyIdRequest req = new PutCrmConnectionIdContactIdCompanyCompanyIdRequest("Group", "Phosphorus", "Tonga");            
 
             PutCrmConnectionIdContactIdCompanyCompanyIdResponse res = sdk.crm.putCrmConnectionIdContactIdCompanyCompanyId(req);
 
@@ -3885,12 +3885,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("excepturi") {{
+                .setSecurity(new Security("cartridge") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutCrmConnectionIdContactIdDealDealIdRequest req = new PutCrmConnectionIdContactIdDealDealIdRequest("natus", "deleniti", "necessitatibus");            
+            PutCrmConnectionIdContactIdDealDealIdRequest req = new PutCrmConnectionIdContactIdDealDealIdRequest("Wooden", "Coordinator", "Regional");            
 
             PutCrmConnectionIdContactIdDealDealIdResponse res = sdk.crm.putCrmConnectionIdContactIdDealDealId(req);
 
@@ -3937,30 +3937,30 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("aspernatur") {{
+                .setSecurity(new Security("Account") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutCrmConnectionIdDealIdRequest req = new PutCrmConnectionIdDealIdRequest("dolores", "laborum") {{
+            PutCrmConnectionIdDealIdRequest req = new PutCrmConnectionIdDealIdRequest("West", "laudantium") {{
                 crmDeal = new CrmDeal() {{
-                    amount = 8752d;
-                    closedAt = OffsetDateTime.parse("2022-12-21T21:45:29.120Z");
-                    createdAt = OffsetDateTime.parse("2021-01-07T22:18:05.310Z");
-                    currency = "quae";
-                    id = "6fc2b271-a289-4c57-a854-e90439d22246";
-                    lostReason = "ipsam";
-                    name = "Mae Gleichner";
-                    pipeline = "modi";
-                    probability = 392.1d;
+                    amount = 1175.04d;
+                    closedAt = OffsetDateTime.parse("2023-10-14T13:29:58.098Z");
+                    createdAt = OffsetDateTime.parse("2022-10-24T03:12:54.428Z");
+                    currency = "Zambian Kwacha";
+                    id = "<ID>";
+                    lostReason = "Developer magenta calculating";
+                    name = "Gourde Chief";
+                    pipeline = "program Nihonium Corporate";
+                    probability = 4456.95d;
                     raw = new PropertyCrmDealRaw();;
-                    source = "odio";
-                    stage = "sit";
+                    source = "Tasty extranet";
+                    stage = "Unbranded";
                     tags = new String[]{{
-                        add("voluptatum"),
+                        add("Bangladesh"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-01-14T17:17:09.533Z");
-                    wonReason = "quam";
+                    updatedAt = OffsetDateTime.parse("2022-10-01T16:47:53.632Z");
+                    wonReason = "deter Montana";
                 }};;
             }};            
 
@@ -4015,56 +4015,56 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("dolorum") {{
+                .setSecurity(new Security("Iron") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutCrmConnectionIdEventIdRequest req = new PutCrmConnectionIdEventIdRequest("libero", "ratione") {{
+            PutCrmConnectionIdEventIdRequest req = new PutCrmConnectionIdEventIdRequest("marshmallow", "DNS") {{
                 crmEvent = new CrmEvent() {{
                     call = new PropertyCrmEventCall() {{
-                        description = "molestiae";
-                        duration = 7613.31d;
+                        description = "Ameliorated solution-oriented installation";
+                        duration = 7468.95d;
                     }};;
                     companyIds = new String[]{{
-                        add("saepe"),
+                        add("naturalisation"),
                     }};
                     contactIds = new String[]{{
-                        add("maiores"),
+                        add("Hatchback"),
                     }};
-                    createdAt = OffsetDateTime.parse("2022-11-06T23:44:06.381Z");
+                    createdAt = OffsetDateTime.parse("2022-07-29T22:06:09.835Z");
                     dealIds = new String[]{{
-                        add("eos"),
+                        add("engineer"),
                     }};
                     email = new PropertyCrmEventEmail() {{
-                        body = "consequuntur";
+                        body = "Modern provided";
                         cc = new String[]{{
-                            add("quis"),
+                            add("Markets"),
                         }};
-                        from = "vitae";
-                        subject = "occaecati";
+                        from = "Human Card";
+                        subject = "Screen Reggae";
                         to = new String[]{{
-                            add("labore"),
+                            add("frenetically"),
                         }};
                     }};;
-                    id = "db55410a-dc66-49af-90a2-6c7cdc981f06";
+                    id = "<ID>";
                     meeting = new PropertyCrmEventMeeting() {{
-                        description = "laudantium";
-                        endAt = OffsetDateTime.parse("2021-11-29T09:33:34.942Z");
-                        startAt = OffsetDateTime.parse("2022-03-09T02:22:03.051Z");
-                        title = "Ms.";
+                        description = "Down-sized systematic installation";
+                        endAt = OffsetDateTime.parse("2023-10-23T15:46:53.856Z");
+                        startAt = OffsetDateTime.parse("2023-05-31T07:59:54.819Z");
+                        title = "portal";
                     }};;
                     note = new PropertyCrmEventNote() {{
-                        description = "libero";
+                        description = "Assimilated 6th generation website";
                     }};;
                     raw = new PropertyCrmEventRaw();;
                     task = new PropertyCrmEventTask() {{
-                        description = "nam";
-                        name = "Sylvia Schimmel";
-                        status = "fuga";
+                        description = "Inverse client-server initiative";
+                        name = "utilize nor";
+                        status = "Customer sky";
                     }};;
-                    type = CrmEventType.EMAIL;
-                    updatedAt = OffsetDateTime.parse("2022-06-26T16:56:56.149Z");
+                    type = CrmEventType.NOTE;
+                    updatedAt = OffsetDateTime.parse("2023-07-27T14:02:37.510Z");
                 }};;
             }};            
 
@@ -4110,12 +4110,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("cumque") {{
+                .setSecurity(new Security("Handcrafted") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutCrmConnectionIdEventIdCompanyCompanyIdRequest req = new PutCrmConnectionIdEventIdCompanyCompanyIdRequest("adipisci", "veritatis", "nam");            
+            PutCrmConnectionIdEventIdCompanyCompanyIdRequest req = new PutCrmConnectionIdEventIdCompanyCompanyIdRequest("Checking", "Ergonomic", "Ameliorated");            
 
             PutCrmConnectionIdEventIdCompanyCompanyIdResponse res = sdk.crm.putCrmConnectionIdEventIdCompanyCompanyId(req);
 
@@ -4159,12 +4159,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("voluptatibus") {{
+                .setSecurity(new Security("Southeast") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutCrmConnectionIdEventIdContactContactIdRequest req = new PutCrmConnectionIdEventIdContactContactIdRequest("magnam", "aperiam", "ducimus");            
+            PutCrmConnectionIdEventIdContactContactIdRequest req = new PutCrmConnectionIdEventIdContactContactIdRequest("Associate", "Creative", "Bahraini");            
 
             PutCrmConnectionIdEventIdContactContactIdResponse res = sdk.crm.putCrmConnectionIdEventIdContactContactId(req);
 
@@ -4208,12 +4208,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("itaque") {{
+                .setSecurity(new Security("Steel") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutCrmConnectionIdEventIdDealDealIdRequest req = new PutCrmConnectionIdEventIdDealDealIdRequest("necessitatibus", "numquam", "doloribus");            
+            PutCrmConnectionIdEventIdDealDealIdRequest req = new PutCrmConnectionIdEventIdDealDealIdRequest("Northwest", "provided", "apud");            
 
             PutCrmConnectionIdEventIdDealDealIdResponse res = sdk.crm.putCrmConnectionIdEventIdDealDealId(req);
 
@@ -4260,29 +4260,29 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("eligendi") {{
+                .setSecurity(new Security("East") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutCrmConnectionIdFileIdRequest req = new PutCrmConnectionIdFileIdRequest("sapiente", "alias") {{
+            PutCrmConnectionIdFileIdRequest req = new PutCrmConnectionIdFileIdRequest("Checking", "South") {{
                 crmFile = new CrmFile() {{
                     active = false;
-                    activityId = "impedit";
-                    companyId = "numquam";
-                    contactId = "aspernatur";
-                    createdAt = OffsetDateTime.parse("2022-01-24T09:34:00.238Z");
-                    dealId = "voluptatum";
-                    description = "reiciendis";
-                    fileName = "vitae";
-                    fileSize = 3530.09d;
-                    fileType = "nisi";
-                    fileUrl = "consequuntur";
-                    id = "6398a0dc-7663-424c-8b06-c8ca12d02529";
-                    leadId = "magni";
+                    activityId = "Southwest";
+                    companyId = "brief";
+                    contactId = "toward confiscate East";
+                    createdAt = OffsetDateTime.parse("2021-07-09T08:13:21.861Z");
+                    dealId = "Hip Suriname Tactics";
+                    description = "Extended homogeneous forecast";
+                    fileName = "framework_azure_metal.gif";
+                    fileSize = 7410.83d;
+                    fileType = "video";
+                    fileUrl = "Cheese error Minnesota";
+                    id = "<ID>";
+                    leadId = "biplane Handcrafted";
                     raw = new PropertyCrmFileRaw();;
-                    updatedAt = OffsetDateTime.parse("2022-12-30T23:50:22.523Z");
-                    userId = "quidem";
+                    updatedAt = OffsetDateTime.parse("2021-02-25T14:09:45.532Z");
+                    userId = "Implementation Fremont Rutherfordium";
                 }};;
             }};            
 
@@ -4336,45 +4336,45 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("deleniti") {{
+                .setSecurity(new Security("Delaware") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutCrmConnectionIdLeadIdRequest req = new PutCrmConnectionIdLeadIdRequest("possimus", "ipsam") {{
+            PutCrmConnectionIdLeadIdRequest req = new PutCrmConnectionIdLeadIdRequest("South", "Fish") {{
                 crmLead = new CrmLead() {{
                     active = false;
                     address = new PropertyCrmLeadAddress() {{
-                        address1 = "odio";
-                        address2 = "fugit";
-                        city = "Port Rowenamouth";
-                        country = "Micronesia";
-                        countryCode = "GP";
-                        postalCode = "57891-2875";
-                        region = "nemo";
-                        regionCode = "natus";
+                        address1 = "supposing Dorado Assistant";
+                        address2 = "Nissan Kwacha female";
+                        city = "Handboro";
+                        country = "Cyprus";
+                        countryCode = "BR";
+                        postalCode = "24449-7716";
+                        region = "models";
+                        regionCode = "District";
                     }};;
-                    companyId = "nisi";
-                    contactId = "provident";
-                    createdAt = OffsetDateTime.parse("2022-10-12T05:14:39.515Z");
-                    creatorUserId = "nostrum";
+                    companyId = "male";
+                    contactId = "bunch edge";
+                    createdAt = OffsetDateTime.parse("2021-04-03T18:08:02.798Z");
+                    creatorUserId = "East Panama";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail() {{
-                            email = "Urban35@gmail.com";
+                            email = "Jamal20@yahoo.com";
                             type = CrmEmailType.WORK;
                         }}),
                     }};
-                    id = "3994d78d-e3b6-4e93-89f5-abb7f662550a";
-                    name = "Irma Ferry";
+                    id = "<ID>";
+                    name = "pianist";
                     raw = new PropertyCrmLeadRaw();;
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("incidunt") {{
-                            telephone = "deserunt";
-                            type = CrmTelephoneType.FAX;
+                        add(new CrmTelephone("interface") {{
+                            telephone = "caricature female";
+                            type = CrmTelephoneType.HOME;
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-07-23T20:31:31.337Z");
-                    userId = "est";
+                    updatedAt = OffsetDateTime.parse("2023-01-17T06:22:01.751Z");
+                    userId = "Folding Tandem";
                 }};;
             }};            
 
@@ -4423,21 +4423,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("reiciendis") {{
+                .setSecurity(new Security("Nevada") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutCrmConnectionIdPipelineIdRequest req = new PutCrmConnectionIdPipelineIdRequest("possimus", "odit") {{
+            PutCrmConnectionIdPipelineIdRequest req = new PutCrmConnectionIdPipelineIdRequest("Bonita", "archive") {{
                 crmPipeline = new CrmPipeline() {{
                     active = false;
-                    createdAt = OffsetDateTime.parse("2022-12-02T10:27:20.280Z");
+                    createdAt = OffsetDateTime.parse("2022-02-09T07:18:58.841Z");
                     dealProbability = false;
-                    displayOrder = 3259.24d;
-                    id = "bba65016-4e06-4f5b-b6ae-591bc8bdef36";
-                    name = "Denise Reilly";
+                    displayOrder = 7464.57d;
+                    id = "<ID>";
+                    name = "meter";
                     raw = new PropertyCrmPipelineRaw();;
-                    updatedAt = OffsetDateTime.parse("2022-06-22T03:59:26.894Z");
+                    updatedAt = OffsetDateTime.parse("2023-08-26T13:09:17.139Z");
                 }};;
             }};            
 
@@ -4486,21 +4486,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("alias") {{
+                .setSecurity(new Security("immense") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutCrmConnectionIdTeamIdRequest req = new PutCrmConnectionIdTeamIdRequest("ad", "a") {{
+            PutCrmConnectionIdTeamIdRequest req = new PutCrmConnectionIdTeamIdRequest("Quality", "Orchestrator") {{
                 crmTeam = new CrmTeam() {{
-                    createdAt = OffsetDateTime.parse("2021-01-05T13:07:10.503Z");
-                    description = "atque";
-                    id = "40774a68-a9a3-45d0-86b6-f66fef020e9f";
-                    name = "Carrie Franey";
+                    createdAt = OffsetDateTime.parse("2022-11-23T06:02:39.043Z");
+                    description = "Multi-channelled methodical success";
+                    id = "<ID>";
+                    name = "Montebello as pixel";
                     raw = new PropertyCrmTeamRaw();;
-                    updatedAt = OffsetDateTime.parse("2022-09-06T18:47:24.329Z");
+                    updatedAt = OffsetDateTime.parse("2023-12-25T12:21:33.544Z");
                     userIds = new String[]{{
-                        add("nihil"),
+                        add("Southwest"),
                     }};
                 }};;
             }};            
@@ -4555,48 +4555,48 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("libero") {{
+                .setSecurity(new Security("Small") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutCrmConnectionIdUserIdRequest req = new PutCrmConnectionIdUserIdRequest("omnis", "excepturi") {{
+            PutCrmConnectionIdUserIdRequest req = new PutCrmConnectionIdUserIdRequest("moratorium", "Oxygen") {{
                 crmUser = new CrmUser() {{
                     active = false;
                     address = new PropertyCrmUserAddress() {{
-                        address1 = "eos";
-                        address2 = "quisquam";
-                        city = "Richmondcester";
-                        country = "Sudan";
-                        countryCode = "NO";
-                        postalCode = "64199";
-                        region = "id";
-                        regionCode = "odit";
+                        address1 = "backing";
+                        address2 = "Benin";
+                        city = "Port Art";
+                        country = "Djibouti";
+                        countryCode = "IN";
+                        postalCode = "07811";
+                        region = "psst how overriding";
+                        regionCode = "District Tricycle vaguely";
                     }};;
-                    createdAt = OffsetDateTime.parse("2022-05-22T12:47:41.665Z");
-                    currency = "atque";
-                    department = "explicabo";
-                    division = "ullam";
+                    createdAt = OffsetDateTime.parse("2023-10-20T20:13:29.023Z");
+                    currency = "Netherlands Antillian Guilder";
+                    department = "bluetooth Argon Designer";
+                    division = "wimp Colombia majestically";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail() {{
-                            email = "Xavier63@yahoo.com";
+                            email = "Yvette.Rolfson@gmail.com";
                             type = CrmEmailType.HOME;
                         }}),
                     }};
-                    id = "eba47f7d-3ef0-4496-80d6-a1831c87adf5";
-                    imageUrl = "cupiditate";
-                    languageLocale = "suscipit";
-                    name = "Miss Marcos Willms";
+                    id = "<ID>";
+                    imageUrl = "Plastic";
+                    languageLocale = "deposit Central";
+                    name = "Transexual Indiana gleefully";
                     raw = new PropertyCrmUserRaw();;
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("quam") {{
-                            telephone = "praesentium";
+                        add(new CrmTelephone("navigating") {{
+                            telephone = "red compressing copy";
                             type = CrmTelephoneType.HOME;
                         }}),
                     }};
-                    timezone = "animi";
-                    title = "Dr.";
-                    updatedAt = OffsetDateTime.parse("2022-12-11T08:56:33.553Z");
+                    timezone = "America/Monterrey";
+                    title = "Berkshire";
+                    updatedAt = OffsetDateTime.parse("2021-03-26T04:25:18.533Z");
                 }};;
             }};            
 

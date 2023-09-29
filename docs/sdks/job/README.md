@@ -28,12 +28,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("a") {{
+                .setSecurity(new Security("Facilitator") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteAtsConnectionIdJobIdRequest req = new DeleteAtsConnectionIdJobIdRequest("quibusdam", "culpa");            
+            DeleteAtsConnectionIdJobIdRequest req = new DeleteAtsConnectionIdJobIdRequest("Cargo", "Hybrid");            
 
             DeleteAtsConnectionIdJobIdResponse res = sdk.job.deleteAtsConnectionIdJobId(req);
 
@@ -78,18 +78,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("dolor") {{
+                .setSecurity(new Security("process") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsConnectionIdJobRequest req = new GetAtsConnectionIdJobRequest("occaecati") {{
-                limit = 3513.28d;
-                offset = 6018.68d;
-                order = "labore";
-                query = "pariatur";
-                sort = "vel";
-                updatedGte = OffsetDateTime.parse("2022-04-04T06:24:41.563Z");
+            GetAtsConnectionIdJobRequest req = new GetAtsConnectionIdJobRequest("Harbor") {{
+                limit = 975.14d;
+                offset = 9506.38d;
+                order = "Rhode national Kip";
+                query = "oversleep Baby transmitter";
+                sort = "East Electronic proactive";
+                updatedGte = OffsetDateTime.parse("2022-03-22T04:18:28.025Z");
             }};            
 
             GetAtsConnectionIdJobResponse res = sdk.job.getAtsConnectionIdJob(req);
@@ -134,12 +134,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("minus") {{
+                .setSecurity(new Security("plum") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsConnectionIdJobIdRequest req = new GetAtsConnectionIdJobIdRequest("magni", "mollitia");            
+            GetAtsConnectionIdJobIdRequest req = new GetAtsConnectionIdJobIdRequest("Gold", "bypass");            
 
             GetAtsConnectionIdJobIdResponse res = sdk.job.getAtsConnectionIdJobId(req);
 
@@ -192,57 +192,57 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("officiis") {{
+                .setSecurity(new Security("Soap") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchAtsConnectionIdJobIdRequest req = new PatchAtsConnectionIdJobIdRequest("aliquam", "quas") {{
+            PatchAtsConnectionIdJobIdRequest req = new PatchAtsConnectionIdJobIdRequest("jaunty", "leach") {{
                 atsJob = new AtsJob() {{
                     addresses = new com.unifiedapi.unifiedto.models.shared.AtsAddress[]{{
                         add(new AtsAddress() {{
-                            address1 = "aut";
-                            address2 = "autem";
-                            city = "East Maxine";
-                            country = "Namibia";
-                            countryCode = "ML";
-                            postalCode = "27496";
-                            region = "qui";
-                            regionCode = "explicabo";
+                            address1 = "Planner redundant";
+                            address2 = "tempore";
+                            city = "Euless";
+                            country = "Chad";
+                            countryCode = "NU";
+                            postalCode = "22603";
+                            region = "Cambridgeshire";
+                            regionCode = "Account Copernicium at";
                         }}),
                     }};
-                    closedAt = OffsetDateTime.parse("2022-07-27T05:13:50.435Z");
+                    closedAt = OffsetDateTime.parse("2023-01-02T09:14:26.844Z");
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(AtsCompensationType.STOCK_OPTIONS) {{
-                            currency = "nesciunt";
-                            frequency = AtsCompensationFrequency.QUARTER;
-                            max = 5646.65d;
-                            min = 5426.01d;
+                            currency = "Metical";
+                            frequency = AtsCompensationFrequency.HOUR;
+                            max = 1424.24d;
+                            min = 3626.17d;
                             type = AtsCompensationType.SALARY;
                         }}),
                     }};
-                    createdAt = OffsetDateTime.parse("2022-08-19T18:42:50.651Z");
+                    createdAt = OffsetDateTime.parse("2021-07-23T21:10:49.249Z");
                     departments = new String[]{{
-                        add("sequi"),
+                        add("Hatchback"),
                     }};
-                    description = "optio";
-                    employmentType = AtsJobEmploymentType.SEASONAL;
+                    description = "Customer-focused bifurcated flexibility";
+                    employmentType = AtsJobEmploymentType.VOLUNTEER;
                     hiringManagerIds = new String[]{{
-                        add("ab"),
+                        add("fuga"),
                     }};
-                    id = "0006bef4-921e-4c20-93b7-49366ac8ee0f";
-                    languageLocale = "magni";
-                    name = "Darrin Bogisich";
+                    id = "<ID>";
+                    languageLocale = "hence gracefully invoice";
+                    name = "Southeast vacantly Uranium";
                     publicJobUrls = new String[]{{
-                        add("quos"),
+                        add("Keith"),
                     }};
                     raw = new PropertyAtsJobRaw();;
                     recruiterIds = new String[]{{
-                        add("totam"),
+                        add("happily"),
                     }};
                     remote = false;
-                    status = AtsJobStatus.CLOSED;
-                    updatedAt = OffsetDateTime.parse("2022-12-17T11:29:52.968Z");
+                    status = AtsJobStatus.OPEN;
+                    updatedAt = OffsetDateTime.parse("2023-08-04T07:33:03.088Z");
                 }};;
             }};            
 
@@ -297,57 +297,57 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("vero") {{
+                .setSecurity(new Security("Niger") {{
                     jwt = "";
                 }})
                 .build();
 
-            PostAtsConnectionIdJobRequest req = new PostAtsConnectionIdJobRequest("aut") {{
+            PostAtsConnectionIdJobRequest req = new PostAtsConnectionIdJobRequest("Gasoline") {{
                 atsJob = new AtsJob() {{
                     addresses = new com.unifiedapi.unifiedto.models.shared.AtsAddress[]{{
                         add(new AtsAddress() {{
-                            address1 = "sequi";
-                            address2 = "reiciendis";
-                            city = "Port Susan";
-                            country = "Saint Helena";
-                            countryCode = "NO";
-                            postalCode = "64792";
-                            region = "itaque";
-                            regionCode = "cupiditate";
+                            address1 = "shiny yellow upwardly";
+                            address2 = "Diesel virtual";
+                            city = "Arlington";
+                            country = "Gambia";
+                            countryCode = "PT";
+                            postalCode = "07814";
+                            region = "unknown eaque athwart";
+                            regionCode = "architectures protocol";
                         }}),
                     }};
-                    closedAt = OffsetDateTime.parse("2022-04-24T09:09:35.225Z");
+                    closedAt = OffsetDateTime.parse("2023-03-01T04:59:12.553Z");
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(AtsCompensationType.STOCK_OPTIONS) {{
-                            currency = "nobis";
-                            frequency = AtsCompensationFrequency.DAY;
-                            max = 62.37d;
-                            min = 8402.72d;
-                            type = AtsCompensationType.OTHER;
+                            currency = "Bahraini Dinar";
+                            frequency = AtsCompensationFrequency.MONTH;
+                            max = 7040.68d;
+                            min = 6740.24d;
+                            type = AtsCompensationType.BONUS;
                         }}),
                     }};
-                    createdAt = OffsetDateTime.parse("2022-07-01T15:09:12.759Z");
+                    createdAt = OffsetDateTime.parse("2022-01-31T22:52:23.593Z");
                     departments = new String[]{{
-                        add("voluptatibus"),
+                        add("itaque"),
                     }};
-                    description = "nulla";
-                    employmentType = AtsJobEmploymentType.INTERN;
+                    description = "Organized well-modulated projection";
+                    employmentType = AtsJobEmploymentType.FREELANCE;
                     hiringManagerIds = new String[]{{
-                        add("ratione"),
+                        add("architecture"),
                     }};
-                    id = "405cb331-d492-4f4f-927f-b0e0bf1f8217";
-                    languageLocale = "sint";
-                    name = "Miss Jennie Stokes";
+                    id = "<ID>";
+                    languageLocale = "because harbor";
+                    name = "Jarrod rerum empowering";
                     publicJobUrls = new String[]{{
-                        add("impedit"),
+                        add("Fiat"),
                     }};
                     raw = new PropertyAtsJobRaw();;
                     recruiterIds = new String[]{{
-                        add("officia"),
+                        add("Innovative"),
                     }};
                     remote = false;
-                    status = AtsJobStatus.DRAFT;
-                    updatedAt = OffsetDateTime.parse("2022-05-09T07:53:45.270Z");
+                    status = AtsJobStatus.PENDING;
+                    updatedAt = OffsetDateTime.parse("2022-12-29T22:11:42.825Z");
                 }};;
             }};            
 
@@ -402,57 +402,57 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("repudiandae") {{
+                .setSecurity(new Security("invoice") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutAtsConnectionIdJobIdRequest req = new PutAtsConnectionIdJobIdRequest("tempore", "voluptate") {{
+            PutAtsConnectionIdJobIdRequest req = new PutAtsConnectionIdJobIdRequest("Keyboard", "rosin") {{
                 atsJob = new AtsJob() {{
                     addresses = new com.unifiedapi.unifiedto.models.shared.AtsAddress[]{{
                         add(new AtsAddress() {{
-                            address1 = "cum";
-                            address2 = "esse";
-                            city = "East Baileychester";
-                            country = "Guinea";
-                            countryCode = "CG";
-                            postalCode = "33633";
-                            region = "repudiandae";
-                            regionCode = "unde";
+                            address1 = "payment Dodge Outdoors";
+                            address2 = "Southwest Division Coordinator";
+                            city = "League City";
+                            country = "Latvia";
+                            countryCode = "KI";
+                            postalCode = "79320-1355";
+                            region = "solution embrace";
+                            regionCode = "continually Keyboard";
                         }}),
                     }};
-                    closedAt = OffsetDateTime.parse("2021-01-18T00:01:17.655Z");
+                    closedAt = OffsetDateTime.parse("2022-12-01T04:41:25.085Z");
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(AtsCompensationType.OTHER) {{
-                            currency = "facilis";
-                            frequency = AtsCompensationFrequency.ONE_TIME;
-                            max = 8871.99d;
-                            min = 3942.08d;
-                            type = AtsCompensationType.STOCK_OPTIONS;
+                            currency = "Belarusian Ruble";
+                            frequency = AtsCompensationFrequency.WEEK;
+                            max = 6633.85d;
+                            min = 2659.56d;
+                            type = AtsCompensationType.EQUITY;
                         }}),
                     }};
-                    createdAt = OffsetDateTime.parse("2022-05-30T16:45:18.347Z");
+                    createdAt = OffsetDateTime.parse("2023-03-29T05:48:33.492Z");
                     departments = new String[]{{
-                        add("ut"),
+                        add("Gasoline"),
                     }};
-                    description = "hic";
-                    employmentType = AtsJobEmploymentType.FREELANCE;
+                    description = "Open-source reciprocal interface";
+                    employmentType = AtsJobEmploymentType.FULL_TIME;
                     hiringManagerIds = new String[]{{
-                        add("tenetur"),
+                        add("Utah"),
                     }};
-                    id = "ed5540ef-53a3-44a1-b8fe-99731adc05d8";
-                    languageLocale = "quis";
-                    name = "Ramiro Cronin";
+                    id = "<ID>";
+                    languageLocale = "clamber West";
+                    name = "Supervisor North Security";
                     publicJobUrls = new String[]{{
-                        add("rerum"),
+                        add("Meridian"),
                     }};
                     raw = new PropertyAtsJobRaw();;
                     recruiterIds = new String[]{{
-                        add("voluptate"),
+                        add("Handmade"),
                     }};
                     remote = false;
-                    status = AtsJobStatus.ARCHIVED;
-                    updatedAt = OffsetDateTime.parse("2020-12-04T15:01:40.800Z");
+                    status = AtsJobStatus.DRAFT;
+                    updatedAt = OffsetDateTime.parse("2023-03-24T08:00:25.046Z");
                 }};;
             }};            
 

@@ -25,23 +25,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("qui") {{
+                .setSecurity(new Security("tesla") {{
                     jwt = "";
                 }})
                 .build();
 
             GetUnifiedApicallRequest req = new GetUnifiedApicallRequest() {{
-                connectionId = "aliquid";
-                createdLte = OffsetDateTime.parse("2021-11-23T10:34:02.904Z");
-                env = "perferendis";
+                connectionId = "green Hybrid Northwest";
+                createdLte = OffsetDateTime.parse("2021-10-25T17:00:01.179Z");
+                env = "Steel lime";
                 error = false;
-                externalXref = "magni";
-                integrationType = "assumenda";
-                limit = 3698.08d;
-                offset = 46.95d;
-                order = "fugit";
-                sort = "dolorum";
-                updatedGte = OffsetDateTime.parse("2022-06-17T21:27:36.672Z");
+                externalXref = "indexing North";
+                integrationType = "Faroe";
+                limit = 8086.35d;
+                offset = 4369.86d;
+                order = "Practical online";
+                sort = "envisioneer Executive Northwest";
+                updatedGte = OffsetDateTime.parse("2023-03-02T12:58:56.214Z");
             }};            
 
             GetUnifiedApicallResponse res = sdk.apicall.getUnifiedApicall(req);
@@ -86,12 +86,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("facilis") {{
+                .setSecurity(new Security("fuchsia") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedApicallIdRequest req = new GetUnifiedApicallIdRequest("tempore");            
+            GetUnifiedApicallIdRequest req = new GetUnifiedApicallIdRequest("Guadeloupe");            
 
             GetUnifiedApicallIdResponse res = sdk.apicall.getUnifiedApicallId(req);
 

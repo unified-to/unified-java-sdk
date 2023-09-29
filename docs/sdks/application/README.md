@@ -28,12 +28,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("labore") {{
+                .setSecurity(new Security("female") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteAtsConnectionIdApplicationIdRequest req = new DeleteAtsConnectionIdApplicationIdRequest("delectus", "eum");            
+            DeleteAtsConnectionIdApplicationIdRequest req = new DeleteAtsConnectionIdApplicationIdRequest("Southeast", "Darmstadtium");            
 
             DeleteAtsConnectionIdApplicationIdResponse res = sdk.application.deleteAtsConnectionIdApplicationId(req);
 
@@ -78,20 +78,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("non") {{
+                .setSecurity(new Security("Bacon") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsConnectionIdApplicationRequest req = new GetAtsConnectionIdApplicationRequest("eligendi") {{
-                candidateId = "sint";
-                jobId = "aliquid";
-                limit = 5920.42d;
-                offset = 8960.39d;
-                order = "sint";
-                query = "officia";
-                sort = "dolor";
-                updatedGte = OffsetDateTime.parse("2020-02-22T17:45:21.686Z");
+            GetAtsConnectionIdApplicationRequest req = new GetAtsConnectionIdApplicationRequest("withdrawal") {{
+                candidateId = "approach Bacon";
+                jobId = "Mobility";
+                limit = 576.8d;
+                offset = 7467.13d;
+                order = "Architect";
+                query = "loosely contingency";
+                sort = "female";
+                updatedGte = OffsetDateTime.parse("2023-09-05T13:59:23.348Z");
             }};            
 
             GetAtsConnectionIdApplicationResponse res = sdk.application.getAtsConnectionIdApplication(req);
@@ -136,12 +136,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("dolorum") {{
+                .setSecurity(new Security("Brand") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsConnectionIdApplicationIdRequest req = new GetAtsConnectionIdApplicationIdRequest("in", "in");            
+            GetAtsConnectionIdApplicationIdRequest req = new GetAtsConnectionIdApplicationIdRequest("Bicycle", "North");            
 
             GetAtsConnectionIdApplicationIdResponse res = sdk.application.getAtsConnectionIdApplicationId(req);
 
@@ -189,24 +189,24 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("illum") {{
+                .setSecurity(new Security("ouch") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchAtsConnectionIdApplicationIdRequest req = new PatchAtsConnectionIdApplicationIdRequest("maiores", "rerum") {{
+            PatchAtsConnectionIdApplicationIdRequest req = new PatchAtsConnectionIdApplicationIdRequest("North", "et") {{
                 atsApplication = new AtsApplication() {{
-                    appliedAt = OffsetDateTime.parse("2022-09-14T10:27:07.590Z");
-                    candidateId = "cumque";
-                    createdAt = OffsetDateTime.parse("2021-10-07T01:21:59.434Z");
-                    id = "6ae395ef-b9ba-488f-ba66-997074ba4469";
-                    jobId = "nobis";
+                    appliedAt = OffsetDateTime.parse("2023-12-06T09:54:21.775Z");
+                    candidateId = "Human";
+                    createdAt = OffsetDateTime.parse("2023-10-31T19:54:06.290Z");
+                    id = "<ID>";
+                    jobId = "Washington";
                     raw = new PropertyAtsApplicationRaw();;
-                    rejectedAt = OffsetDateTime.parse("2022-02-14T08:45:31.579Z");
-                    rejectedReason = "aspernatur";
-                    source = "architecto";
+                    rejectedAt = OffsetDateTime.parse("2023-07-30T09:27:03.900Z");
+                    rejectedReason = "Northwest";
+                    source = "quantify models Carolina";
                     status = AtsApplicationStatus.SUBMITTED;
-                    updatedAt = OffsetDateTime.parse("2022-06-06T23:06:26.119Z");
+                    updatedAt = OffsetDateTime.parse("2021-05-11T22:36:02.527Z");
                 }};;
             }};            
 
@@ -256,24 +256,24 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("ullam") {{
+                .setSecurity(new Security("Cotton") {{
                     jwt = "";
                 }})
                 .build();
 
-            PostAtsConnectionIdApplicationRequest req = new PostAtsConnectionIdApplicationRequest("provident") {{
+            PostAtsConnectionIdApplicationRequest req = new PostAtsConnectionIdApplicationRequest("impedit") {{
                 atsApplication = new AtsApplication() {{
-                    appliedAt = OffsetDateTime.parse("2021-11-07T17:49:17.039Z");
-                    candidateId = "accusantium";
-                    createdAt = OffsetDateTime.parse("2021-01-23T15:47:23.464Z");
-                    id = "a563e251-6fe4-4c8b-b11e-5b7fd2ed0289";
-                    jobId = "magni";
+                    appliedAt = OffsetDateTime.parse("2021-08-17T19:51:25.858Z");
+                    candidateId = "Pizza";
+                    createdAt = OffsetDateTime.parse("2022-06-18T11:59:47.948Z");
+                    id = "<ID>";
+                    jobId = "globalize";
                     raw = new PropertyAtsApplicationRaw();;
-                    rejectedAt = OffsetDateTime.parse("2022-03-22T15:30:46.869Z");
-                    rejectedReason = "illum";
-                    source = "pariatur";
-                    status = AtsApplicationStatus.ACCEPTED;
-                    updatedAt = OffsetDateTime.parse("2022-06-07T06:40:38.496Z");
+                    rejectedAt = OffsetDateTime.parse("2021-04-05T14:19:56.779Z");
+                    rejectedReason = "Kids Van Tasty";
+                    source = "Electric Norfolk";
+                    status = AtsApplicationStatus.SCREENING;
+                    updatedAt = OffsetDateTime.parse("2022-09-29T00:44:25.415Z");
                 }};;
             }};            
 
@@ -323,24 +323,24 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("odit") {{
+                .setSecurity(new Security("farad") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutAtsConnectionIdApplicationIdRequest req = new PutAtsConnectionIdApplicationIdRequest("ea", "accusantium") {{
+            PutAtsConnectionIdApplicationIdRequest req = new PutAtsConnectionIdApplicationIdRequest("Indianapolis", "Credit") {{
                 atsApplication = new AtsApplication() {{
-                    appliedAt = OffsetDateTime.parse("2022-01-07T08:38:36.147Z");
-                    candidateId = "quidem";
-                    createdAt = OffsetDateTime.parse("2022-07-19T10:57:57.489Z");
-                    id = "6b0d5f0d-30c5-4fbb-a587-053202c73d5f";
-                    jobId = "recusandae";
+                    appliedAt = OffsetDateTime.parse("2021-06-01T03:05:28.938Z");
+                    candidateId = "middleware Jeep";
+                    createdAt = OffsetDateTime.parse("2021-12-14T14:50:12.070Z");
+                    id = "<ID>";
+                    jobId = "North";
                     raw = new PropertyAtsApplicationRaw();;
-                    rejectedAt = OffsetDateTime.parse("2021-08-04T18:39:34.709Z");
-                    rejectedReason = "perspiciatis";
-                    source = "voluptatem";
-                    status = AtsApplicationStatus.ACCEPTED;
-                    updatedAt = OffsetDateTime.parse("2022-07-02T11:46:10.299Z");
+                    rejectedAt = OffsetDateTime.parse("2022-10-28T04:38:47.547Z");
+                    rejectedReason = "Fort solid";
+                    source = "Ghana";
+                    status = AtsApplicationStatus.REVIEWING;
+                    updatedAt = OffsetDateTime.parse("2023-03-12T05:49:54.060Z");
                 }};;
             }};            
 

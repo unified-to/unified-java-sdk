@@ -28,12 +28,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("culpa") {{
+                .setSecurity(new Security("maxime") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteCrmConnectionIdPipelineIdRequest req = new DeleteCrmConnectionIdPipelineIdRequest("tenetur", "molestias");            
+            DeleteCrmConnectionIdPipelineIdRequest req = new DeleteCrmConnectionIdPipelineIdRequest("Cambridgeshire", "astronomy");            
 
             DeleteCrmConnectionIdPipelineIdResponse res = sdk.pipeline.deleteCrmConnectionIdPipelineId(req);
 
@@ -78,18 +78,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("magnam") {{
+                .setSecurity(new Security("fuchsia") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdPipelineRequest req = new GetCrmConnectionIdPipelineRequest("voluptate") {{
-                limit = 3969.05d;
-                offset = 6426.52d;
-                order = "qui";
-                query = "animi";
-                sort = "vero";
-                updatedGte = OffsetDateTime.parse("2021-05-09T10:10:01.467Z");
+            GetCrmConnectionIdPipelineRequest req = new GetCrmConnectionIdPipelineRequest("Bike") {{
+                limit = 6106.83d;
+                offset = 4108.25d;
+                order = "iterate";
+                query = "Industrial contingency";
+                sort = "Ramp Honda";
+                updatedGte = OffsetDateTime.parse("2023-08-06T19:32:12.657Z");
             }};            
 
             GetCrmConnectionIdPipelineResponse res = sdk.pipeline.getCrmConnectionIdPipeline(req);
@@ -134,12 +134,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("optio") {{
+                .setSecurity(new Security("soon") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdPipelineIdRequest req = new GetCrmConnectionIdPipelineIdRequest("quo", "ullam");            
+            GetCrmConnectionIdPipelineIdRequest req = new GetCrmConnectionIdPipelineIdRequest("swath", "Director");            
 
             GetCrmConnectionIdPipelineIdResponse res = sdk.pipeline.getCrmConnectionIdPipelineId(req);
 
@@ -186,21 +186,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("ipsa") {{
+                .setSecurity(new Security("boastfully") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmConnectionIdPipelineIdRequest req = new PatchCrmConnectionIdPipelineIdRequest("placeat", "quas") {{
+            PatchCrmConnectionIdPipelineIdRequest req = new PatchCrmConnectionIdPipelineIdRequest("relationships", "Southwest") {{
                 crmPipeline = new CrmPipeline() {{
                     active = false;
-                    createdAt = OffsetDateTime.parse("2022-07-13T10:33:44.013Z");
+                    createdAt = OffsetDateTime.parse("2021-01-06T10:07:28.591Z");
                     dealProbability = false;
-                    displayOrder = 3455.88d;
-                    id = "12c73784-8930-4750-a00e-966ec736d431";
-                    name = "Calvin Donnelly";
+                    displayOrder = 2164.62d;
+                    id = "<ID>";
+                    name = "Licensed AI Trial";
                     raw = new PropertyCrmPipelineRaw();;
-                    updatedAt = OffsetDateTime.parse("2021-07-31T07:27:36.168Z");
+                    updatedAt = OffsetDateTime.parse("2023-12-18T09:09:15.002Z");
                 }};;
             }};            
 
@@ -249,21 +249,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("atque") {{
+                .setSecurity(new Security("glean") {{
                     jwt = "";
                 }})
                 .build();
 
-            PostCrmConnectionIdPipelineRequest req = new PostCrmConnectionIdPipelineRequest("dolor") {{
+            PostCrmConnectionIdPipelineRequest req = new PostCrmConnectionIdPipelineRequest("Account") {{
                 crmPipeline = new CrmPipeline() {{
                     active = false;
-                    createdAt = OffsetDateTime.parse("2021-04-01T21:30:28.639Z");
+                    createdAt = OffsetDateTime.parse("2021-01-25T16:28:43.841Z");
                     dealProbability = false;
-                    displayOrder = 1577.51d;
-                    id = "398ed3d3-ab7c-4a3c-9ca8-649a70cfd5d6";
-                    name = "Sidney Moore";
+                    displayOrder = 5334.42d;
+                    id = "<ID>";
+                    name = "motivating";
                     raw = new PropertyCrmPipelineRaw();;
-                    updatedAt = OffsetDateTime.parse("2022-12-21T22:06:02.543Z");
+                    updatedAt = OffsetDateTime.parse("2021-01-20T13:44:14.220Z");
                 }};;
             }};            
 
@@ -312,21 +312,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("voluptas") {{
+                .setSecurity(new Security("Nevada") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutCrmConnectionIdPipelineIdRequest req = new PutCrmConnectionIdPipelineIdRequest("magnam", "ad") {{
+            PutCrmConnectionIdPipelineIdRequest req = new PutCrmConnectionIdPipelineIdRequest("Bonita", "archive") {{
                 crmPipeline = new CrmPipeline() {{
                     active = false;
-                    createdAt = OffsetDateTime.parse("2022-12-11T13:51:05.168Z");
+                    createdAt = OffsetDateTime.parse("2022-02-09T07:18:58.841Z");
                     dealProbability = false;
-                    displayOrder = 4377.85d;
-                    id = "7d19ea83-d492-4ed1-8b8a-2c1954545e95";
-                    name = "Mable Runte IV";
+                    displayOrder = 7464.57d;
+                    id = "<ID>";
+                    name = "meter";
                     raw = new PropertyCrmPipelineRaw();;
-                    updatedAt = OffsetDateTime.parse("2022-02-02T02:12:59.696Z");
+                    updatedAt = OffsetDateTime.parse("2023-08-26T13:09:17.139Z");
                 }};;
             }};            
 

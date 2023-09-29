@@ -12,7 +12,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.3.1'
+implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.4.0'
 ```
 <!-- End SDK Installation -->
 
@@ -30,12 +30,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("quibusdam") {{
+                .setSecurity(new Security("South") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteTicketingConnectionIdAgentIdRequest req = new DeleteTicketingConnectionIdAgentIdRequest("unde", "nulla");            
+            DeleteTicketingConnectionIdAgentIdRequest req = new DeleteTicketingConnectionIdAgentIdRequest("background", "navigating");            
 
             DeleteTicketingConnectionIdAgentIdResponse res = sdk.agent.deleteTicketingConnectionIdAgentId(req);
 

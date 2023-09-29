@@ -28,12 +28,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("voluptate") {{
+                .setSecurity(new Security("ivory") {{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteCrmConnectionIdFileIdRequest req = new DeleteCrmConnectionIdFileIdRequest("cupiditate", "maxime");            
+            DeleteCrmConnectionIdFileIdRequest req = new DeleteCrmConnectionIdFileIdRequest("Hybrid", "Dobra");            
 
             DeleteCrmConnectionIdFileIdResponse res = sdk.file.deleteCrmConnectionIdFileId(req);
 
@@ -78,21 +78,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("assumenda") {{
+                .setSecurity(new Security("South") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdFileRequest req = new GetCrmConnectionIdFileRequest("nihil") {{
-                companyId = "sed";
-                contactId = "optio";
-                dealId = "nulla";
-                limit = 1664.81d;
-                offset = 2657.08d;
-                order = "voluptatum";
-                query = "dolore";
-                sort = "possimus";
-                updatedGte = OffsetDateTime.parse("2022-08-24T06:24:18.561Z");
+            GetCrmConnectionIdFileRequest req = new GetCrmConnectionIdFileRequest("hm") {{
+                companyId = "Salad Recycled Electronic";
+                contactId = "Seychelles";
+                dealId = "Investment deposit";
+                limit = 2748.99d;
+                offset = 7968.15d;
+                order = "experiences Milo";
+                query = "Unbranded haptic FTP";
+                sort = "watt soprano deliverables";
+                updatedGte = OffsetDateTime.parse("2022-03-02T03:00:09.711Z");
             }};            
 
             GetCrmConnectionIdFileResponse res = sdk.file.getCrmConnectionIdFile(req);
@@ -137,12 +137,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("sunt") {{
+                .setSecurity(new Security("Buckinghamshire") {{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdFileIdRequest req = new GetCrmConnectionIdFileIdRequest("quam", "eos");            
+            GetCrmConnectionIdFileIdRequest req = new GetCrmConnectionIdFileIdRequest("haptic", "Sheboygan");            
 
             GetCrmConnectionIdFileIdResponse res = sdk.file.getCrmConnectionIdFileId(req);
 
@@ -189,29 +189,29 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("omnis") {{
+                .setSecurity(new Security("tragedy") {{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmConnectionIdFileIdRequest req = new PatchCrmConnectionIdFileIdRequest("reiciendis", "qui") {{
+            PatchCrmConnectionIdFileIdRequest req = new PatchCrmConnectionIdFileIdRequest("Engineer", "male") {{
                 crmFile = new CrmFile() {{
                     active = false;
-                    activityId = "similique";
-                    companyId = "eligendi";
-                    contactId = "numquam";
-                    createdAt = OffsetDateTime.parse("2022-02-06T14:13:06.817Z");
-                    dealId = "tenetur";
-                    description = "exercitationem";
-                    fileName = "nihil";
-                    fileSize = 1547.23d;
-                    fileType = "quis";
-                    fileUrl = "maiores";
-                    id = "1169ac1e-41d8-4a23-823e-34f2dfa4a197";
-                    leadId = "a";
+                    activityId = "Home communities CFP";
+                    companyId = "unaware yellow generating";
+                    contactId = "World";
+                    createdAt = OffsetDateTime.parse("2021-07-25T09:47:16.664Z");
+                    dealId = "City and Electronic";
+                    description = "Virtual client-driven benchmark";
+                    fileName = "handcrafted_kong_maximized.jpeg";
+                    fileSize = 8601.07d;
+                    fileType = "image";
+                    fileUrl = "Awesome Accountability gadzooks";
+                    id = "<ID>";
+                    leadId = "Incredible Chromium";
                     raw = new PropertyCrmFileRaw();;
-                    updatedAt = OffsetDateTime.parse("2022-02-21T13:21:02.813Z");
-                    userId = "recusandae";
+                    updatedAt = OffsetDateTime.parse("2021-10-07T21:25:44.502Z");
+                    userId = "Hybrid";
                 }};;
             }};            
 
@@ -260,29 +260,29 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("iste") {{
+                .setSecurity(new Security("contaminate") {{
                     jwt = "";
                 }})
                 .build();
 
-            PostCrmConnectionIdFileRequest req = new PostCrmConnectionIdFileRequest("aspernatur") {{
+            PostCrmConnectionIdFileRequest req = new PostCrmConnectionIdFileRequest("standardization") {{
                 crmFile = new CrmFile() {{
                     active = false;
-                    activityId = "aspernatur";
-                    companyId = "et";
-                    contactId = "ipsam";
-                    createdAt = OffsetDateTime.parse("2022-01-15T00:47:03.305Z");
-                    dealId = "saepe";
-                    description = "sunt";
-                    fileName = "in";
-                    fileSize = 991.63d;
-                    fileType = "sed";
-                    fileUrl = "voluptatem";
-                    id = "99853e9f-543d-4854-839e-e224460443bc";
-                    leadId = "architecto";
+                    activityId = "Manager";
+                    companyId = "Florida Shoes East";
+                    contactId = "Ohio loyally regarding";
+                    createdAt = OffsetDateTime.parse("2022-08-05T21:17:21.878Z");
+                    dealId = "indigo Delaware";
+                    description = "Enhanced bifurcated structure";
+                    fileName = "for_chips_under.gif";
+                    fileSize = 9649.84d;
+                    fileType = "video";
+                    fileUrl = "Avon male";
+                    id = "<ID>";
+                    leadId = "Transgender";
                     raw = new PropertyCrmFileRaw();;
-                    updatedAt = OffsetDateTime.parse("2022-09-13T19:18:04.626Z");
-                    userId = "vitae";
+                    updatedAt = OffsetDateTime.parse("2021-11-20T07:00:09.078Z");
+                    userId = "national Lead";
                 }};;
             }};            
 
@@ -331,29 +331,29 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("quos") {{
+                .setSecurity(new Security("East") {{
                     jwt = "";
                 }})
                 .build();
 
-            PutCrmConnectionIdFileIdRequest req = new PutCrmConnectionIdFileIdRequest("atque", "quisquam") {{
+            PutCrmConnectionIdFileIdRequest req = new PutCrmConnectionIdFileIdRequest("Checking", "South") {{
                 crmFile = new CrmFile() {{
                     active = false;
-                    activityId = "sunt";
-                    companyId = "asperiores";
-                    contactId = "corporis";
-                    createdAt = OffsetDateTime.parse("2022-02-13T03:11:51.104Z");
-                    dealId = "totam";
-                    description = "ipsam";
-                    fileName = "at";
-                    fileSize = 6325.09d;
-                    fileType = "nihil";
-                    fileUrl = "laudantium";
-                    id = "32eabd61-7c3b-40d5-9a44-bf01bad8706d";
-                    leadId = "incidunt";
+                    activityId = "Southwest";
+                    companyId = "brief";
+                    contactId = "toward confiscate East";
+                    createdAt = OffsetDateTime.parse("2021-07-09T08:13:21.861Z");
+                    dealId = "Hip Suriname Tactics";
+                    description = "Extended homogeneous forecast";
+                    fileName = "framework_azure_metal.gif";
+                    fileSize = 7410.83d;
+                    fileType = "video";
+                    fileUrl = "Cheese error Minnesota";
+                    id = "<ID>";
+                    leadId = "biplane Handcrafted";
                     raw = new PropertyCrmFileRaw();;
-                    updatedAt = OffsetDateTime.parse("2022-12-30T03:44:43.178Z");
-                    userId = "laudantium";
+                    updatedAt = OffsetDateTime.parse("2021-02-25T14:09:45.532Z");
+                    userId = "Implementation Fremont Rutherfordium";
                 }};;
             }};            
 
