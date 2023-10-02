@@ -41,7 +41,7 @@ publishing {
         maven(MavenPublication) {
             groupId = 'com.unifiedapi'
             artifactId = 'unifiedto'
-            version = '0.5.1'
+            version = '0.5.2'
 
             from components.java
 
