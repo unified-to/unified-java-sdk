@@ -23,7 +23,7 @@ public class Employee {
 	}
 
     /**
-     * Remove a Employee
+     * Remove an employee
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -61,7 +61,7 @@ public class Employee {
     }
 
     /**
-     * List all Employees
+     * List all employees
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -106,7 +106,7 @@ public class Employee {
     }
 
     /**
-     * Retrieve a Employee
+     * Retrieve an employee
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -145,7 +145,7 @@ public class Employee {
     }
 
     /**
-     * Update a Employee
+     * Update an employee
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -186,7 +186,7 @@ public class Employee {
     }
 
     /**
-     * Create a Employee
+     * Create an employee
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -227,7 +227,7 @@ public class Employee {
     }
 
     /**
-     * Update a Employee
+     * Update an employee
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails

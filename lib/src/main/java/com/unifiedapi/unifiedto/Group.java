@@ -23,7 +23,7 @@ public class Group {
 	}
 
     /**
-     * Remove a Group
+     * Remove a group
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -61,7 +61,7 @@ public class Group {
     }
 
     /**
-     * List all Groups
+     * List all groups
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -106,7 +106,7 @@ public class Group {
     }
 
     /**
-     * Retrieve a Group
+     * Retrieve a group
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -145,7 +145,7 @@ public class Group {
     }
 
     /**
-     * Update a Group
+     * Update a group
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -186,7 +186,7 @@ public class Group {
     }
 
     /**
-     * Create a Group
+     * Create a group
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -227,7 +227,7 @@ public class Group {
     }
 
     /**
-     * Update a Group
+     * Update a group
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails

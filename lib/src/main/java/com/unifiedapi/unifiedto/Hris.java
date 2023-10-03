@@ -23,7 +23,7 @@ public class Hris {
 	}
 
     /**
-     * Remove a Employee
+     * Remove an employee
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -61,7 +61,7 @@ public class Hris {
     }
 
     /**
-     * Remove a Group
+     * Remove a group
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -99,7 +99,7 @@ public class Hris {
     }
 
     /**
-     * List all Employees
+     * List all employees
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -144,7 +144,7 @@ public class Hris {
     }
 
     /**
-     * Retrieve a Employee
+     * Retrieve an employee
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -183,7 +183,7 @@ public class Hris {
     }
 
     /**
-     * List all Groups
+     * List all groups
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -228,7 +228,7 @@ public class Hris {
     }
 
     /**
-     * Retrieve a Group
+     * Retrieve a group
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -267,7 +267,7 @@ public class Hris {
     }
 
     /**
-     * Update a Employee
+     * Update an employee
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -308,7 +308,7 @@ public class Hris {
     }
 
     /**
-     * Update a Group
+     * Update a group
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -349,7 +349,7 @@ public class Hris {
     }
 
     /**
-     * Create a Employee
+     * Create an employee
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -390,7 +390,7 @@ public class Hris {
     }
 
     /**
-     * Create a Group
+     * Create a group
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -431,7 +431,7 @@ public class Hris {
     }
 
     /**
-     * Update a Employee
+     * Update an employee
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -472,7 +472,7 @@ public class Hris {
     }
 
     /**
-     * Update a Group
+     * Update a group
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
