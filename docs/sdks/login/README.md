@@ -23,12 +23,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("East") {{
+                .setSecurity(new Security("East"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest req = new GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest("Fresh", "gold") {{
+            GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest req = new GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest("Fresh", "gold"){{
                 env = "Volkswagen";
                 failureRedirect = "official";
                 redirect = false;

@@ -28,7 +28,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Intersex") {{
+                .setSecurity(new Security("Intersex"){{
                     jwt = "";
                 }})
                 .build();
@@ -78,12 +78,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Genderflux") {{
+                .setSecurity(new Security("Genderflux"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetTicketingConnectionIdNoteTicketIdRequest req = new GetTicketingConnectionIdNoteTicketIdRequest("synergy", "revolutionary") {{
+            GetTicketingConnectionIdNoteTicketIdRequest req = new GetTicketingConnectionIdNoteTicketIdRequest("synergy", "revolutionary"){{
                 limit = 2310.88d;
                 offset = 6688.82d;
                 order = "AI";
@@ -134,7 +134,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Table") {{
+                .setSecurity(new Security("Table"){{
                     jwt = "";
                 }})
                 .build();
@@ -186,20 +186,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("quos") {{
+                .setSecurity(new Security("quos"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchTicketingConnectionIdNoteTicketIdIdRequest req = new PatchTicketingConnectionIdNoteTicketIdIdRequest("Metal", "furrow", "York") {{
-                ticketingNote = new TicketingNote(                new PropertyTicketingNoteRaw();) {{
+            PatchTicketingConnectionIdNoteTicketIdIdRequest req = new PatchTicketingConnectionIdNoteTicketIdIdRequest("Metal", "furrow", "York"){{
+                ticketingNote = new TicketingNote(new PropertyTicketingNoteRaw()){{
                     agentId = "ROI";
                     createdAt = OffsetDateTime.parse("2023-12-26T03:25:45.709Z");
                     customerId = "Nissan";
                     description = "Focused composite open system";
                     id = "<ID>";
                     updatedAt = "frictionless convergence officia";
-                }};;
+                }};
             }};            
 
             PatchTicketingConnectionIdNoteTicketIdIdResponse res = sdk.note.patchTicketingConnectionIdNoteTicketIdId(req);
@@ -247,20 +247,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("virtual") {{
+                .setSecurity(new Security("virtual"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostTicketingConnectionIdNoteTicketIdRequest req = new PostTicketingConnectionIdNoteTicketIdRequest("vertical", "Officer") {{
-                ticketingNote = new TicketingNote(                new PropertyTicketingNoteRaw();) {{
+            PostTicketingConnectionIdNoteTicketIdRequest req = new PostTicketingConnectionIdNoteTicketIdRequest("vertical", "Officer"){{
+                ticketingNote = new TicketingNote(new PropertyTicketingNoteRaw()){{
                     agentId = "Freeman";
                     createdAt = OffsetDateTime.parse("2022-08-22T15:22:13.118Z");
                     customerId = "functionalities";
                     description = "Object-based mobile standardization";
                     id = "<ID>";
                     updatedAt = "Sulfur Berkshire gold";
-                }};;
+                }};
             }};            
 
             PostTicketingConnectionIdNoteTicketIdResponse res = sdk.note.postTicketingConnectionIdNoteTicketId(req);
@@ -308,20 +308,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Applications") {{
+                .setSecurity(new Security("Applications"){{
                     jwt = "";
                 }})
                 .build();
 
-            PutTicketingConnectionIdNoteTicketIdIdRequest req = new PutTicketingConnectionIdNoteTicketIdIdRequest("male", "Southeast", "East") {{
-                ticketingNote = new TicketingNote(                new PropertyTicketingNoteRaw();) {{
+            PutTicketingConnectionIdNoteTicketIdIdRequest req = new PutTicketingConnectionIdNoteTicketIdIdRequest("male", "Southeast", "East"){{
+                ticketingNote = new TicketingNote(new PropertyTicketingNoteRaw()){{
                     agentId = "Carolina architecture";
                     createdAt = OffsetDateTime.parse("2023-08-15T08:45:29.335Z");
                     customerId = "Northeast Morocco supposing";
                     description = "Grass-roots holistic conglomeration";
                     id = "<ID>";
                     updatedAt = "Hatchback Southwest round";
-                }};;
+                }};
             }};            
 
             PutTicketingConnectionIdNoteTicketIdIdResponse res = sdk.note.putTicketingConnectionIdNoteTicketIdId(req);

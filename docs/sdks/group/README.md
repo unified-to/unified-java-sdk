@@ -28,7 +28,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Human") {{
+                .setSecurity(new Security("Human"){{
                     jwt = "";
                 }})
                 .build();
@@ -78,12 +78,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Shirt") {{
+                .setSecurity(new Security("Shirt"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetHrisConnectionIdGroupRequest req = new GetHrisConnectionIdGroupRequest("Jaguar") {{
+            GetHrisConnectionIdGroupRequest req = new GetHrisConnectionIdGroupRequest("Jaguar"){{
                 limit = 3486.96d;
                 offset = 9705.73d;
                 order = "Coordinator";
@@ -134,7 +134,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Chips") {{
+                .setSecurity(new Security("Chips"){{
                     jwt = "";
                 }})
                 .build();
@@ -187,13 +187,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("gosh") {{
+                .setSecurity(new Security("gosh"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchHrisConnectionIdGroupIdRequest req = new PatchHrisConnectionIdGroupIdRequest("Northwest", "shootdown") {{
-                hrisGroup = new HrisGroup() {{
+            PatchHrisConnectionIdGroupIdRequest req = new PatchHrisConnectionIdGroupIdRequest("Northwest", "shootdown"){{
+                hrisGroup = new HrisGroup(){{
                     createdAt = OffsetDateTime.parse("2022-02-05T05:07:10.835Z");
                     description = "Advanced fresh-thinking methodology";
                     employeeIds = new String[]{{
@@ -206,10 +206,10 @@ public class Application {
                     }};
                     name = "Shoes Kids Sedan";
                     parentId = "Bike Intersex";
-                    raw = new PropertyHrisGroupRaw();;
+                    raw = new PropertyHrisGroupRaw();
                     type = HrisGroupType.BUSINESS_UNIT;
                     updatedAt = OffsetDateTime.parse("2023-01-04T08:35:32.220Z");
-                }};;
+                }};
             }};            
 
             PatchHrisConnectionIdGroupIdResponse res = sdk.group.patchHrisConnectionIdGroupId(req);
@@ -258,13 +258,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Bhutan") {{
+                .setSecurity(new Security("Bhutan"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostHrisConnectionIdGroupRequest req = new PostHrisConnectionIdGroupRequest("Polestar") {{
-                hrisGroup = new HrisGroup() {{
+            PostHrisConnectionIdGroupRequest req = new PostHrisConnectionIdGroupRequest("Polestar"){{
+                hrisGroup = new HrisGroup(){{
                     createdAt = OffsetDateTime.parse("2022-04-05T02:35:18.855Z");
                     description = "Synchronised discrete info-mediaries";
                     employeeIds = new String[]{{
@@ -277,10 +277,10 @@ public class Application {
                     }};
                     name = "collaborative Cab Nissan";
                     parentId = "scorn Gorgeous";
-                    raw = new PropertyHrisGroupRaw();;
+                    raw = new PropertyHrisGroupRaw();
                     type = HrisGroupType.TEAM;
                     updatedAt = OffsetDateTime.parse("2022-05-06T13:36:36.113Z");
-                }};;
+                }};
             }};            
 
             PostHrisConnectionIdGroupResponse res = sdk.group.postHrisConnectionIdGroup(req);
@@ -329,13 +329,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("panel") {{
+                .setSecurity(new Security("panel"){{
                     jwt = "";
                 }})
                 .build();
 
-            PutHrisConnectionIdGroupIdRequest req = new PutHrisConnectionIdGroupIdRequest("And", "Orchestrator") {{
-                hrisGroup = new HrisGroup() {{
+            PutHrisConnectionIdGroupIdRequest req = new PutHrisConnectionIdGroupIdRequest("And", "Orchestrator"){{
+                hrisGroup = new HrisGroup(){{
                     createdAt = OffsetDateTime.parse("2023-06-29T06:24:40.797Z");
                     description = "Networked upward-trending flexibility";
                     employeeIds = new String[]{{
@@ -348,10 +348,10 @@ public class Application {
                     }};
                     name = "Licensed Response";
                     parentId = "vortals interface Gasoline";
-                    raw = new PropertyHrisGroupRaw();;
+                    raw = new PropertyHrisGroupRaw();
                     type = HrisGroupType.BRANCH;
                     updatedAt = OffsetDateTime.parse("2021-05-16T01:59:50.660Z");
-                }};;
+                }};
             }};            
 
             PutHrisConnectionIdGroupIdResponse res = sdk.group.putHrisConnectionIdGroupId(req);

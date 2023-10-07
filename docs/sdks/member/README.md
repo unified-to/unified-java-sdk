@@ -28,7 +28,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Account") {{
+                .setSecurity(new Security("Account"){{
                     jwt = "";
                 }})
                 .build();
@@ -78,12 +78,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Account") {{
+                .setSecurity(new Security("Account"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetMartechConnectionIdListIdMemberRequest req = new GetMartechConnectionIdListIdMemberRequest("economics", "dedicated") {{
+            GetMartechConnectionIdListIdMemberRequest req = new GetMartechConnectionIdListIdMemberRequest("economics", "dedicated"){{
                 limit = 865.46d;
                 offset = 9970.32d;
                 order = "East";
@@ -134,7 +134,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("South") {{
+                .setSecurity(new Security("South"){{
                     jwt = "";
                 }})
                 .build();
@@ -188,31 +188,30 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("neural") {{
+                .setSecurity(new Security("neural"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchMartechConnectionIdListIdMemberIdRequest req = new PatchMartechConnectionIdListIdMemberIdRequest("board", "bah", "Bicycle") {{
-                marketingMember = new MarketingMember() {{
+            PatchMartechConnectionIdListIdMemberIdRequest req = new PatchMartechConnectionIdListIdMemberIdRequest("board", "bah", "Bicycle"){{
+                marketingMember = new MarketingMember(){{
                     createdAt = OffsetDateTime.parse("2022-12-27T20:50:12.207Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.MarketingEmail[]{{
-                        add(new MarketingEmail("Hatchback") {{
+                        add(new MarketingEmail("to"){{
                             email = "Florence48@yahoo.com";
-                            type = MarketingEmailType.HOME;
                         }}),
                     }};
                     id = "<ID>";
                     listIds = new String[]{{
-                        add("mutiny"),
+                        add("XSS"),
                     }};
-                    name = "Northwest";
-                    raw = new PropertyMarketingMemberRaw();;
+                    name = "Computer female";
+                    raw = new PropertyMarketingMemberRaw();
                     tags = new String[]{{
-                        add("Southwest"),
+                        add("than"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-05-24T17:45:02.362Z");
-                }};;
+                    updatedAt = OffsetDateTime.parse("2021-05-01T02:18:33.859Z");
+                }};
             }};            
 
             PatchMartechConnectionIdListIdMemberIdResponse res = sdk.member.patchMartechConnectionIdListIdMemberId(req);
@@ -262,31 +261,30 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Tactics") {{
+                .setSecurity(new Security("Tactics"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostMartechConnectionIdListIdMemberRequest req = new PostMartechConnectionIdListIdMemberRequest("drive", "virtual") {{
-                marketingMember = new MarketingMember() {{
+            PostMartechConnectionIdListIdMemberRequest req = new PostMartechConnectionIdListIdMemberRequest("drive", "virtual"){{
+                marketingMember = new MarketingMember(){{
                     createdAt = OffsetDateTime.parse("2023-05-13T06:01:50.027Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.MarketingEmail[]{{
-                        add(new MarketingEmail("copying") {{
+                        add(new MarketingEmail("blanditiis"){{
                             email = "Marilyne27@yahoo.com";
-                            type = MarketingEmailType.HOME;
                         }}),
                     }};
                     id = "<ID>";
                     listIds = new String[]{{
-                        add("Auto"),
+                        add("Inverse"),
                     }};
-                    name = "Conn Automotive";
-                    raw = new PropertyMarketingMemberRaw();;
+                    name = "Green Convertible newton";
+                    raw = new PropertyMarketingMemberRaw();
                     tags = new String[]{{
-                        add("pink"),
+                        add("Automotive"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-08-18T02:39:52.572Z");
-                }};;
+                    updatedAt = OffsetDateTime.parse("2023-05-21T12:39:36.106Z");
+                }};
             }};            
 
             PostMartechConnectionIdListIdMemberResponse res = sdk.member.postMartechConnectionIdListIdMember(req);
@@ -336,31 +334,30 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("until") {{
+                .setSecurity(new Security("until"){{
                     jwt = "";
                 }})
                 .build();
 
-            PutMartechConnectionIdListIdMemberIdRequest req = new PutMartechConnectionIdListIdMemberIdRequest("Group", "reboot", "person") {{
-                marketingMember = new MarketingMember() {{
+            PutMartechConnectionIdListIdMemberIdRequest req = new PutMartechConnectionIdListIdMemberIdRequest("Group", "reboot", "person"){{
+                marketingMember = new MarketingMember(){{
                     createdAt = OffsetDateTime.parse("2022-01-09T03:37:45.236Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.MarketingEmail[]{{
-                        add(new MarketingEmail("Strategist") {{
+                        add(new MarketingEmail("Frozen"){{
                             email = "Chloe5@gmail.com";
-                            type = MarketingEmailType.WORK;
                         }}),
                     }};
                     id = "<ID>";
                     listIds = new String[]{{
-                        add("following"),
+                        add("quia"),
                     }};
-                    name = "Clara Mendelevium";
-                    raw = new PropertyMarketingMemberRaw();;
+                    name = "Games";
+                    raw = new PropertyMarketingMemberRaw();
                     tags = new String[]{{
-                        add("Gasoline"),
+                        add("Cab"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-10-01T19:02:33.268Z");
-                }};;
+                    updatedAt = OffsetDateTime.parse("2023-05-29T02:21:46.593Z");
+                }};
             }};            
 
             PutMartechConnectionIdListIdMemberIdResponse res = sdk.member.putMartechConnectionIdListIdMemberId(req);

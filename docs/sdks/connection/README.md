@@ -28,7 +28,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Clothing") {{
+                .setSecurity(new Security("Clothing"){{
                     jwt = "";
                 }})
                 .build();
@@ -79,12 +79,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Granite") {{
+                .setSecurity(new Security("Granite"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedConnectionRequest req = new GetUnifiedConnectionRequest() {{
+            GetUnifiedConnectionRequest req = new GetUnifiedConnectionRequest(){{
                 categories = new com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionCategories[]{{
                     add(GetUnifiedConnectionCategories.TICKETING),
                 }};
@@ -139,7 +139,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Interactions") {{
+                .setSecurity(new Security("Interactions"){{
                     jwt = "";
                 }})
                 .build();
@@ -194,18 +194,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Executive") {{
+                .setSecurity(new Security("Executive"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchUnifiedConnectionIdRequest req = new PatchUnifiedConnectionIdRequest("Cupertino") {{
-                connection = new Connection(                new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                                    add(PropertyConnectionCategories.MARTECH),
-                                }}, "Center",                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                                    add(PropertyConnectionPermissions.TICKETING_NOTE_READ),
-                                }}) {{
-                    auth = new PropertyConnectionAuth() {{
+            PatchUnifiedConnectionIdRequest req = new PatchUnifiedConnectionIdRequest("Cupertino"){{
+                connection = new Connection(new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
+                    add(PropertyConnectionCategories.MARTECH),
+                }}, "Center", new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
+                    add(PropertyConnectionPermissions.TICKETING_NOTE_READ),
+                }}){{
+                    auth = new PropertyConnectionAuth(){{
                         accessToken = "Electric Latin Personal";
                         apiUrl = "Electric Bicycle payment";
                         appId = "transmitting North";
@@ -220,7 +220,7 @@ public class Application {
                         expiresIn = 6521.92d;
                         expiryDate = OffsetDateTime.parse("2021-10-21T20:04:54.899Z");
                         key = "<key>";
-                        meta = new PropertyPropertyConnectionAuthMeta();;
+                        meta = new PropertyPropertyConnectionAuthMeta();
                         name = "guard Internal";
                         otherAuthInfo = new String[]{{
                             add("Bacon"),
@@ -230,7 +230,7 @@ public class Application {
                         state = "synthesizing payment dolorum";
                         token = "Electric now Southwest";
                         tokenUrl = "Games";
-                    }};;
+                    }};
                     authAwsArn = "Northwest Balanced";
                     createdAt = OffsetDateTime.parse("2021-11-27T20:38:25.719Z");
                     environment = "North Soft relationships";
@@ -239,7 +239,7 @@ public class Application {
                     isPaused = false;
                     updatedAt = OffsetDateTime.parse("2023-12-13T08:49:01.120Z");
                     workspaceId = "Creative";
-                }};;
+                }};
             }};            
 
             PatchUnifiedConnectionIdResponse res = sdk.connection.patchUnifiedConnectionId(req);
@@ -289,17 +289,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("RSS") {{
+                .setSecurity(new Security("RSS"){{
                     jwt = "";
                 }})
                 .build();
 
-            com.unifiedapi.unifiedto.models.shared.Connection req = new Connection(                new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                                add(PropertyConnectionCategories.UC),
-                            }}, "indexing",                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                                add(PropertyConnectionPermissions.HRIS_EMPLOYEE_WRITE),
-                            }}) {{
-                auth = new PropertyConnectionAuth() {{
+            com.unifiedapi.unifiedto.models.shared.Connection req = new Connection(new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
+    add(PropertyConnectionCategories.UC),
+}}, "indexing", new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
+    add(PropertyConnectionPermissions.HRIS_EMPLOYEE_WRITE),
+}}){{
+                auth = new PropertyConnectionAuth(){{
                     accessToken = "Livermorium Coordinator Sol";
                     apiUrl = "PNG Modern Intranet";
                     appId = "Integration";
@@ -314,7 +314,7 @@ public class Application {
                     expiresIn = 8567.25d;
                     expiryDate = OffsetDateTime.parse("2023-12-23T23:29:58.525Z");
                     key = "<key>";
-                    meta = new PropertyPropertyConnectionAuthMeta();;
+                    meta = new PropertyPropertyConnectionAuthMeta();
                     name = "Pula";
                     otherAuthInfo = new String[]{{
                         add("South"),
@@ -324,7 +324,7 @@ public class Application {
                     state = "Investor circuit";
                     token = "Designer";
                     tokenUrl = "monitor";
-                }};;
+                }};
                 authAwsArn = "port orchid";
                 createdAt = OffsetDateTime.parse("2023-10-03T19:36:19.419Z");
                 environment = "tan male stamp";
@@ -383,18 +383,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Assurance") {{
+                .setSecurity(new Security("Assurance"){{
                     jwt = "";
                 }})
                 .build();
 
-            PutUnifiedConnectionIdRequest req = new PutUnifiedConnectionIdRequest("Avon") {{
-                connection = new Connection(                new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                                    add(PropertyConnectionCategories.MARTECH),
-                                }}, "Northern",                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                                    add(PropertyConnectionPermissions.TICKETING_CUSTOMER_READ),
-                                }}) {{
-                    auth = new PropertyConnectionAuth() {{
+            PutUnifiedConnectionIdRequest req = new PutUnifiedConnectionIdRequest("Avon"){{
+                connection = new Connection(new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
+                    add(PropertyConnectionCategories.MARTECH),
+                }}, "Northern", new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
+                    add(PropertyConnectionPermissions.TICKETING_CUSTOMER_READ),
+                }}){{
+                    auth = new PropertyConnectionAuth(){{
                         accessToken = "Dinar";
                         apiUrl = "Account since Bacon";
                         appId = "white Handmade navigating";
@@ -409,7 +409,7 @@ public class Application {
                         expiresIn = 4451.19d;
                         expiryDate = OffsetDateTime.parse("2023-09-04T21:32:52.916Z");
                         key = "<key>";
-                        meta = new PropertyPropertyConnectionAuthMeta();;
+                        meta = new PropertyPropertyConnectionAuthMeta();
                         name = "recent midst Northeast";
                         otherAuthInfo = new String[]{{
                             add("ivory"),
@@ -419,7 +419,7 @@ public class Application {
                         state = "withdrawal West personnel";
                         token = "fuchsia experiences eveniet";
                         tokenUrl = "Account Camren";
-                    }};;
+                    }};
                     authAwsArn = "firewall";
                     createdAt = OffsetDateTime.parse("2021-06-04T22:03:31.352Z");
                     environment = "parsing";
@@ -428,7 +428,7 @@ public class Application {
                     isPaused = false;
                     updatedAt = OffsetDateTime.parse("2022-03-18T18:34:01.951Z");
                     workspaceId = "software functionalities";
-                }};;
+                }};
             }};            
 
             PutUnifiedConnectionIdResponse res = sdk.connection.putUnifiedConnectionId(req);

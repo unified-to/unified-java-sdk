@@ -28,7 +28,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Account") {{
+                .setSecurity(new Security("Account"){{
                     jwt = "";
                 }})
                 .build();
@@ -78,12 +78,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("FTP") {{
+                .setSecurity(new Security("FTP"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsConnectionIdScorecardRequest req = new GetAtsConnectionIdScorecardRequest("Gasoline") {{
+            GetAtsConnectionIdScorecardRequest req = new GetAtsConnectionIdScorecardRequest("Gasoline"){{
                 applicationId = "Southeast";
                 candidateId = "deep Tamarac maximize";
                 interviewId = "drive vibrate USB";
@@ -137,7 +137,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Aston") {{
+                .setSecurity(new Security("Aston"){{
                     jwt = "";
                 }})
                 .build();
@@ -190,13 +190,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("conventional") {{
+                .setSecurity(new Security("conventional"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchAtsConnectionIdScorecardIdRequest req = new PatchAtsConnectionIdScorecardIdRequest("Cisgender", "Cambridgeshire") {{
-                atsScorecard = new AtsScorecard(                new PropertyAtsScorecardRaw();) {{
+            PatchAtsConnectionIdScorecardIdRequest req = new PatchAtsConnectionIdScorecardIdRequest("Cisgender", "Cambridgeshire"){{
+                atsScorecard = new AtsScorecard(new PropertyAtsScorecardRaw()){{
                     applicationId = "functionalities Hybrid";
                     candidateId = "gold";
                     createdAt = OffsetDateTime.parse("2022-04-13T14:51:20.146Z");
@@ -206,7 +206,7 @@ public class Application {
                     jobId = "Buckinghamshire";
                     recommendation = AtsScorecardRecommendation.STRONG_YES;
                     updatedAt = OffsetDateTime.parse("2021-04-03T02:42:12.059Z");
-                }};;
+                }};
             }};            
 
             PatchAtsConnectionIdScorecardIdResponse res = sdk.document.patchAtsConnectionIdScorecardId(req);
@@ -255,13 +255,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("cultivate") {{
+                .setSecurity(new Security("cultivate"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostAtsConnectionIdScorecardRequest req = new PostAtsConnectionIdScorecardRequest("Infrastructure") {{
-                atsScorecard = new AtsScorecard(                new PropertyAtsScorecardRaw();) {{
+            PostAtsConnectionIdScorecardRequest req = new PostAtsConnectionIdScorecardRequest("Infrastructure"){{
+                atsScorecard = new AtsScorecard(new PropertyAtsScorecardRaw()){{
                     applicationId = "compelling grey Cotton";
                     candidateId = "Granite uniform now";
                     createdAt = OffsetDateTime.parse("2022-03-02T00:20:35.044Z");
@@ -271,7 +271,7 @@ public class Application {
                     jobId = "Frozen";
                     recommendation = AtsScorecardRecommendation.DEFINITELY_NO;
                     updatedAt = OffsetDateTime.parse("2023-05-04T04:13:26.389Z");
-                }};;
+                }};
             }};            
 
             PostAtsConnectionIdScorecardResponse res = sdk.document.postAtsConnectionIdScorecard(req);
@@ -320,13 +320,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("primary") {{
+                .setSecurity(new Security("primary"){{
                     jwt = "";
                 }})
                 .build();
 
-            PutAtsConnectionIdScorecardIdRequest req = new PutAtsConnectionIdScorecardIdRequest("Incredible", "Draper") {{
-                atsScorecard = new AtsScorecard(                new PropertyAtsScorecardRaw();) {{
+            PutAtsConnectionIdScorecardIdRequest req = new PutAtsConnectionIdScorecardIdRequest("Incredible", "Draper"){{
+                atsScorecard = new AtsScorecard(new PropertyAtsScorecardRaw()){{
                     applicationId = "Computer Electric";
                     candidateId = "Bugatti Minivan";
                     createdAt = OffsetDateTime.parse("2021-08-13T02:19:12.551Z");
@@ -336,7 +336,7 @@ public class Application {
                     jobId = "eveniet Home";
                     recommendation = AtsScorecardRecommendation.YES;
                     updatedAt = OffsetDateTime.parse("2021-08-24T23:05:01.366Z");
-                }};;
+                }};
             }};            
 
             PutAtsConnectionIdScorecardIdResponse res = sdk.document.putAtsConnectionIdScorecardId(req);

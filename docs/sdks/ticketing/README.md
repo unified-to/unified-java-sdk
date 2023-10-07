@@ -46,7 +46,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("South") {{
+                .setSecurity(new Security("South"){{
                     jwt = "";
                 }})
                 .build();
@@ -95,7 +95,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Curium") {{
+                .setSecurity(new Security("Curium"){{
                     jwt = "";
                 }})
                 .build();
@@ -144,7 +144,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Intersex") {{
+                .setSecurity(new Security("Intersex"){{
                     jwt = "";
                 }})
                 .build();
@@ -193,7 +193,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("lavender") {{
+                .setSecurity(new Security("lavender"){{
                     jwt = "";
                 }})
                 .build();
@@ -243,12 +243,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Supervisor") {{
+                .setSecurity(new Security("Supervisor"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetTicketingConnectionIdAgentRequest req = new GetTicketingConnectionIdAgentRequest("EXE") {{
+            GetTicketingConnectionIdAgentRequest req = new GetTicketingConnectionIdAgentRequest("EXE"){{
                 limit = 619.4d;
                 offset = 2793.16d;
                 order = "compensate reboot Korea";
@@ -299,7 +299,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Manganese") {{
+                .setSecurity(new Security("Manganese"){{
                     jwt = "";
                 }})
                 .build();
@@ -349,12 +349,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("merrily") {{
+                .setSecurity(new Security("merrily"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetTicketingConnectionIdCustomerRequest req = new GetTicketingConnectionIdCustomerRequest("Human") {{
+            GetTicketingConnectionIdCustomerRequest req = new GetTicketingConnectionIdCustomerRequest("Human"){{
                 limit = 843.49d;
                 offset = 2082.44d;
                 order = "Electric Southeast Shirt";
@@ -405,7 +405,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Principal") {{
+                .setSecurity(new Security("Principal"){{
                     jwt = "";
                 }})
                 .build();
@@ -455,12 +455,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Genderflux") {{
+                .setSecurity(new Security("Genderflux"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetTicketingConnectionIdNoteTicketIdRequest req = new GetTicketingConnectionIdNoteTicketIdRequest("synergy", "revolutionary") {{
+            GetTicketingConnectionIdNoteTicketIdRequest req = new GetTicketingConnectionIdNoteTicketIdRequest("synergy", "revolutionary"){{
                 limit = 2310.88d;
                 offset = 6688.82d;
                 order = "AI";
@@ -511,7 +511,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Table") {{
+                .setSecurity(new Security("Table"){{
                     jwt = "";
                 }})
                 .build();
@@ -561,12 +561,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Bronze") {{
+                .setSecurity(new Security("Bronze"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetTicketingConnectionIdTicketRequest req = new GetTicketingConnectionIdTicketRequest("Funk") {{
+            GetTicketingConnectionIdTicketRequest req = new GetTicketingConnectionIdTicketRequest("Funk"){{
                 agentId = "hertz Savings Steel";
                 customerId = "payment biopsy Kids";
                 limit = 7673.64d;
@@ -619,7 +619,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Florida") {{
+                .setSecurity(new Security("Florida"){{
                     jwt = "";
                 }})
                 .build();
@@ -675,30 +675,28 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("AGP") {{
+                .setSecurity(new Security("AGP"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchTicketingConnectionIdAgentIdRequest req = new PatchTicketingConnectionIdAgentIdRequest("Cambridgeshire", "Circle") {{
-                ticketingAgent = new TicketingAgent(                new PropertyTicketingAgentRaw();) {{
+            PatchTicketingConnectionIdAgentIdRequest req = new PatchTicketingConnectionIdAgentIdRequest("Cambridgeshire", "Circle"){{
+                ticketingAgent = new TicketingAgent(new PropertyTicketingAgentRaw()){{
                     createdAt = OffsetDateTime.parse("2022-09-04T07:08:00.976Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
-                        add(new TicketingEmail("Engineer") {{
+                        add(new TicketingEmail("calculating"){{
                             email = "Braulio15@hotmail.com";
-                            type = TicketingEmailType.HOME;
                         }}),
                     }};
                     id = "<ID>";
-                    name = "Diesel Springs North";
+                    name = "farad";
                     telephones = new com.unifiedapi.unifiedto.models.shared.TicketingTelephone[]{{
-                        add(new TicketingTelephone("Danville") {{
-                            telephone = "Awesome backing niches";
-                            type = TicketingTelephoneType.MOBILE;
+                        add(new TicketingTelephone("North"){{
+                            telephone = "Springs";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-11-15T22:58:08.296Z");
-                }};;
+                    updatedAt = OffsetDateTime.parse("2023-05-03T13:41:06.686Z");
+                }};
             }};            
 
             PatchTicketingConnectionIdAgentIdResponse res = sdk.ticketing.patchTicketingConnectionIdAgentId(req);
@@ -750,33 +748,31 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Architect") {{
+                .setSecurity(new Security("Architect"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchTicketingConnectionIdCustomerIdRequest req = new PatchTicketingConnectionIdCustomerIdRequest("Bicycle", "Waco") {{
-                ticketingCustomer = new TicketingCustomer(                new PropertyTicketingCustomerRaw();) {{
+            PatchTicketingConnectionIdCustomerIdRequest req = new PatchTicketingConnectionIdCustomerIdRequest("Bicycle", "Waco"){{
+                ticketingCustomer = new TicketingCustomer(new PropertyTicketingCustomerRaw()){{
                     createdAt = OffsetDateTime.parse("2022-02-08T21:12:15.300Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
-                        add(new TicketingEmail("Polestar") {{
+                        add(new TicketingEmail("Smyrna"){{
                             email = "Zoila67@hotmail.com";
-                            type = TicketingEmailType.WORK;
                         }}),
                     }};
                     id = "<ID>";
-                    name = "Hialeah";
+                    name = "emulation connect West";
                     tags = new String[]{{
-                        add("auxiliary"),
+                        add("Oregon"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.TicketingTelephone[]{{
-                        add(new TicketingTelephone("Bicycle") {{
-                            telephone = "Oregon demur Central";
-                            type = TicketingTelephoneType.FAX;
+                        add(new TicketingTelephone("Senegal"){{
+                            telephone = "Generic synthesizing Bicycle";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-02-15T23:57:55.260Z");
-                }};;
+                    updatedAt = OffsetDateTime.parse("2022-11-02T02:58:05.192Z");
+                }};
             }};            
 
             PatchTicketingConnectionIdCustomerIdResponse res = sdk.ticketing.patchTicketingConnectionIdCustomerId(req);
@@ -824,20 +820,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("quos") {{
+                .setSecurity(new Security("quos"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchTicketingConnectionIdNoteTicketIdIdRequest req = new PatchTicketingConnectionIdNoteTicketIdIdRequest("Metal", "furrow", "York") {{
-                ticketingNote = new TicketingNote(                new PropertyTicketingNoteRaw();) {{
+            PatchTicketingConnectionIdNoteTicketIdIdRequest req = new PatchTicketingConnectionIdNoteTicketIdIdRequest("Metal", "furrow", "York"){{
+                ticketingNote = new TicketingNote(new PropertyTicketingNoteRaw()){{
                     agentId = "ROI";
                     createdAt = OffsetDateTime.parse("2023-12-26T03:25:45.709Z");
                     customerId = "Nissan";
                     description = "Focused composite open system";
                     id = "<ID>";
                     updatedAt = "frictionless convergence officia";
-                }};;
+                }};
             }};            
 
             PatchTicketingConnectionIdNoteTicketIdIdResponse res = sdk.ticketing.patchTicketingConnectionIdNoteTicketIdId(req);
@@ -886,13 +882,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Polygender") {{
+                .setSecurity(new Security("Polygender"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchTicketingConnectionIdTicketIdRequest req = new PatchTicketingConnectionIdTicketIdRequest("messenger", "Principal") {{
-                ticketingTicket = new TicketingTicket(                new PropertyTicketingTicketRaw();) {{
+            PatchTicketingConnectionIdTicketIdRequest req = new PatchTicketingConnectionIdTicketIdRequest("messenger", "Principal"){{
+                ticketingTicket = new TicketingTicket(new PropertyTicketingTicketRaw()){{
                     category = "extend given Investor";
                     closedAt = OffsetDateTime.parse("2023-12-07T18:07:23.872Z");
                     createdAt = OffsetDateTime.parse("2022-10-21T07:37:31.857Z");
@@ -908,7 +904,7 @@ public class Application {
                         add("yahoo"),
                     }};
                     updatedAt = OffsetDateTime.parse("2021-03-02T21:08:11.761Z");
-                }};;
+                }};
             }};            
 
             PatchTicketingConnectionIdTicketIdResponse res = sdk.ticketing.patchTicketingConnectionIdTicketId(req);
@@ -960,30 +956,28 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Lead") {{
+                .setSecurity(new Security("Lead"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostTicketingConnectionIdAgentRequest req = new PostTicketingConnectionIdAgentRequest("proactive") {{
-                ticketingAgent = new TicketingAgent(                new PropertyTicketingAgentRaw();) {{
+            PostTicketingConnectionIdAgentRequest req = new PostTicketingConnectionIdAgentRequest("proactive"){{
+                ticketingAgent = new TicketingAgent(new PropertyTicketingAgentRaw()){{
                     createdAt = OffsetDateTime.parse("2023-06-05T05:37:22.282Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
-                        add(new TicketingEmail("Funk") {{
+                        add(new TicketingEmail("our"){{
                             email = "Dale.Weissnat85@yahoo.com";
-                            type = TicketingEmailType.OTHER;
                         }}),
                     }};
                     id = "<ID>";
-                    name = "absent TCP wireless";
+                    name = "male Korea";
                     telephones = new com.unifiedapi.unifiedto.models.shared.TicketingTelephone[]{{
-                        add(new TicketingTelephone("engage") {{
-                            telephone = "incentivize Tala capacity";
-                            type = TicketingTelephoneType.OTHER;
+                        add(new TicketingTelephone("Tala"){{
+                            telephone = "male incentivize";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-07-20T19:40:58.756Z");
-                }};;
+                    updatedAt = OffsetDateTime.parse("2022-03-12T22:09:40.908Z");
+                }};
             }};            
 
             PostTicketingConnectionIdAgentResponse res = sdk.ticketing.postTicketingConnectionIdAgent(req);
@@ -1035,33 +1029,31 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("JSON") {{
+                .setSecurity(new Security("JSON"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostTicketingConnectionIdCustomerRequest req = new PostTicketingConnectionIdCustomerRequest("Northeast") {{
-                ticketingCustomer = new TicketingCustomer(                new PropertyTicketingCustomerRaw();) {{
+            PostTicketingConnectionIdCustomerRequest req = new PostTicketingConnectionIdCustomerRequest("Northeast"){{
+                ticketingCustomer = new TicketingCustomer(new PropertyTicketingCustomerRaw()){{
                     createdAt = OffsetDateTime.parse("2021-04-02T13:32:21.285Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
-                        add(new TicketingEmail("Electric") {{
+                        add(new TicketingEmail("neural"){{
                             email = "Destiney_Huels@yahoo.com";
-                            type = TicketingEmailType.HOME;
                         }}),
                     }};
                     id = "<ID>";
-                    name = "engineer gold";
+                    name = "Product Hybrid";
                     tags = new String[]{{
-                        add("Research"),
+                        add("Gasoline"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.TicketingTelephone[]{{
-                        add(new TicketingTelephone("East") {{
-                            telephone = "Progressive Classical";
-                            type = TicketingTelephoneType.FAX;
+                        add(new TicketingTelephone("Classical"){{
+                            telephone = "Director";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-06-03T12:33:45.566Z");
-                }};;
+                    updatedAt = OffsetDateTime.parse("2023-04-10T10:20:10.759Z");
+                }};
             }};            
 
             PostTicketingConnectionIdCustomerResponse res = sdk.ticketing.postTicketingConnectionIdCustomer(req);
@@ -1109,20 +1101,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("virtual") {{
+                .setSecurity(new Security("virtual"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostTicketingConnectionIdNoteTicketIdRequest req = new PostTicketingConnectionIdNoteTicketIdRequest("vertical", "Officer") {{
-                ticketingNote = new TicketingNote(                new PropertyTicketingNoteRaw();) {{
+            PostTicketingConnectionIdNoteTicketIdRequest req = new PostTicketingConnectionIdNoteTicketIdRequest("vertical", "Officer"){{
+                ticketingNote = new TicketingNote(new PropertyTicketingNoteRaw()){{
                     agentId = "Freeman";
                     createdAt = OffsetDateTime.parse("2022-08-22T15:22:13.118Z");
                     customerId = "functionalities";
                     description = "Object-based mobile standardization";
                     id = "<ID>";
                     updatedAt = "Sulfur Berkshire gold";
-                }};;
+                }};
             }};            
 
             PostTicketingConnectionIdNoteTicketIdResponse res = sdk.ticketing.postTicketingConnectionIdNoteTicketId(req);
@@ -1171,13 +1163,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Alabama") {{
+                .setSecurity(new Security("Alabama"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostTicketingConnectionIdTicketRequest req = new PostTicketingConnectionIdTicketRequest("Electronics") {{
-                ticketingTicket = new TicketingTicket(                new PropertyTicketingTicketRaw();) {{
+            PostTicketingConnectionIdTicketRequest req = new PostTicketingConnectionIdTicketRequest("Electronics"){{
+                ticketingTicket = new TicketingTicket(new PropertyTicketingTicketRaw()){{
                     category = "mobile parse Jeep";
                     closedAt = OffsetDateTime.parse("2022-11-15T22:23:01.161Z");
                     createdAt = OffsetDateTime.parse("2022-10-28T10:15:53.503Z");
@@ -1193,7 +1185,7 @@ public class Application {
                         add("Coupe"),
                     }};
                     updatedAt = OffsetDateTime.parse("2021-11-20T07:08:03.818Z");
-                }};;
+                }};
             }};            
 
             PostTicketingConnectionIdTicketResponse res = sdk.ticketing.postTicketingConnectionIdTicket(req);
@@ -1245,30 +1237,28 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Human") {{
+                .setSecurity(new Security("Human"){{
                     jwt = "";
                 }})
                 .build();
 
-            PutTicketingConnectionIdAgentIdRequest req = new PutTicketingConnectionIdAgentIdRequest("West", "whose") {{
-                ticketingAgent = new TicketingAgent(                new PropertyTicketingAgentRaw();) {{
+            PutTicketingConnectionIdAgentIdRequest req = new PutTicketingConnectionIdAgentIdRequest("West", "whose"){{
+                ticketingAgent = new TicketingAgent(new PropertyTicketingAgentRaw()){{
                     createdAt = OffsetDateTime.parse("2022-01-17T04:10:02.116Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
-                        add(new TicketingEmail("Refined") {{
+                        add(new TicketingEmail("withdrawal"){{
                             email = "Nat_Halvorson@hotmail.com";
-                            type = TicketingEmailType.HOME;
                         }}),
                     }};
                     id = "<ID>";
-                    name = "asynchronous";
+                    name = "Refined portals Northwest";
                     telephones = new com.unifiedapi.unifiedto.models.shared.TicketingTelephone[]{{
-                        add(new TicketingTelephone("Honduras") {{
-                            telephone = "Southwest synergistic Uzbekistan";
-                            type = TicketingTelephoneType.WORK;
+                        add(new TicketingTelephone("female"){{
+                            telephone = "gladly";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-09-13T15:49:27.238Z");
-                }};;
+                    updatedAt = OffsetDateTime.parse("2023-11-15T17:52:49.338Z");
+                }};
             }};            
 
             PutTicketingConnectionIdAgentIdResponse res = sdk.ticketing.putTicketingConnectionIdAgentId(req);
@@ -1320,33 +1310,31 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Southwest") {{
+                .setSecurity(new Security("Southwest"){{
                     jwt = "";
                 }})
                 .build();
 
-            PutTicketingConnectionIdCustomerIdRequest req = new PutTicketingConnectionIdCustomerIdRequest("scarcely", "Grocery") {{
-                ticketingCustomer = new TicketingCustomer(                new PropertyTicketingCustomerRaw();) {{
+            PutTicketingConnectionIdCustomerIdRequest req = new PutTicketingConnectionIdCustomerIdRequest("scarcely", "Grocery"){{
+                ticketingCustomer = new TicketingCustomer(new PropertyTicketingCustomerRaw()){{
                     createdAt = OffsetDateTime.parse("2022-09-04T05:01:50.120Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
-                        add(new TicketingEmail("boohoo") {{
+                        add(new TicketingEmail("Sausages"){{
                             email = "Nicholaus.Pollich71@gmail.com";
-                            type = TicketingEmailType.WORK;
                         }}),
                     }};
                     id = "<ID>";
-                    name = "Small optimistically Usability";
+                    name = "kilogram";
                     tags = new String[]{{
-                        add("fruitful"),
+                        add("Taylorsville"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.TicketingTelephone[]{{
-                        add(new TicketingTelephone("sharply") {{
-                            telephone = "and";
-                            type = TicketingTelephoneType.MOBILE;
+                        add(new TicketingTelephone("Tonawanda"){{
+                            telephone = "Usability fruitful";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-12-11T20:09:11.294Z");
-                }};;
+                    updatedAt = OffsetDateTime.parse("2021-03-05T15:39:02.181Z");
+                }};
             }};            
 
             PutTicketingConnectionIdCustomerIdResponse res = sdk.ticketing.putTicketingConnectionIdCustomerId(req);
@@ -1394,20 +1382,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Applications") {{
+                .setSecurity(new Security("Applications"){{
                     jwt = "";
                 }})
                 .build();
 
-            PutTicketingConnectionIdNoteTicketIdIdRequest req = new PutTicketingConnectionIdNoteTicketIdIdRequest("male", "Southeast", "East") {{
-                ticketingNote = new TicketingNote(                new PropertyTicketingNoteRaw();) {{
+            PutTicketingConnectionIdNoteTicketIdIdRequest req = new PutTicketingConnectionIdNoteTicketIdIdRequest("male", "Southeast", "East"){{
+                ticketingNote = new TicketingNote(new PropertyTicketingNoteRaw()){{
                     agentId = "Carolina architecture";
                     createdAt = OffsetDateTime.parse("2023-08-15T08:45:29.335Z");
                     customerId = "Northeast Morocco supposing";
                     description = "Grass-roots holistic conglomeration";
                     id = "<ID>";
                     updatedAt = "Hatchback Southwest round";
-                }};;
+                }};
             }};            
 
             PutTicketingConnectionIdNoteTicketIdIdResponse res = sdk.ticketing.putTicketingConnectionIdNoteTicketIdId(req);
@@ -1456,13 +1444,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("driver") {{
+                .setSecurity(new Security("driver"){{
                     jwt = "";
                 }})
                 .build();
 
-            PutTicketingConnectionIdTicketIdRequest req = new PutTicketingConnectionIdTicketIdRequest("North", "holistic") {{
-                ticketingTicket = new TicketingTicket(                new PropertyTicketingTicketRaw();) {{
+            PutTicketingConnectionIdTicketIdRequest req = new PutTicketingConnectionIdTicketIdRequest("North", "holistic"){{
+                ticketingTicket = new TicketingTicket(new PropertyTicketingTicketRaw()){{
                     category = "Rubber Jadyn drat";
                     closedAt = OffsetDateTime.parse("2023-09-11T23:18:33.662Z");
                     createdAt = OffsetDateTime.parse("2022-04-03T16:02:49.250Z");
@@ -1478,7 +1466,7 @@ public class Application {
                         add("Cis"),
                     }};
                     updatedAt = OffsetDateTime.parse("2022-09-18T19:21:55.137Z");
-                }};;
+                }};
             }};            
 
             PutTicketingConnectionIdTicketIdResponse res = sdk.ticketing.putTicketingConnectionIdTicketId(req);

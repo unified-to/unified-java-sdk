@@ -28,7 +28,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("maxime") {{
+                .setSecurity(new Security("maxime"){{
                     jwt = "";
                 }})
                 .build();
@@ -78,12 +78,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("fuchsia") {{
+                .setSecurity(new Security("fuchsia"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdPipelineRequest req = new GetCrmConnectionIdPipelineRequest("Bike") {{
+            GetCrmConnectionIdPipelineRequest req = new GetCrmConnectionIdPipelineRequest("Bike"){{
                 limit = 6106.83d;
                 offset = 4108.25d;
                 order = "iterate";
@@ -134,7 +134,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("soon") {{
+                .setSecurity(new Security("soon"){{
                     jwt = "";
                 }})
                 .build();
@@ -186,22 +186,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("boastfully") {{
+                .setSecurity(new Security("boastfully"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmConnectionIdPipelineIdRequest req = new PatchCrmConnectionIdPipelineIdRequest("relationships", "Southwest") {{
-                crmPipeline = new CrmPipeline() {{
+            PatchCrmConnectionIdPipelineIdRequest req = new PatchCrmConnectionIdPipelineIdRequest("relationships", "Southwest"){{
+                crmPipeline = new CrmPipeline(){{
                     active = false;
                     createdAt = OffsetDateTime.parse("2021-01-06T10:07:28.591Z");
                     dealProbability = false;
                     displayOrder = 2164.62d;
                     id = "<ID>";
                     name = "Licensed AI Trial";
-                    raw = new PropertyCrmPipelineRaw();;
+                    raw = new PropertyCrmPipelineRaw();
                     updatedAt = OffsetDateTime.parse("2023-12-18T09:09:15.002Z");
-                }};;
+                }};
             }};            
 
             PatchCrmConnectionIdPipelineIdResponse res = sdk.pipeline.patchCrmConnectionIdPipelineId(req);
@@ -249,22 +249,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("glean") {{
+                .setSecurity(new Security("glean"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostCrmConnectionIdPipelineRequest req = new PostCrmConnectionIdPipelineRequest("Account") {{
-                crmPipeline = new CrmPipeline() {{
+            PostCrmConnectionIdPipelineRequest req = new PostCrmConnectionIdPipelineRequest("Account"){{
+                crmPipeline = new CrmPipeline(){{
                     active = false;
                     createdAt = OffsetDateTime.parse("2021-01-25T16:28:43.841Z");
                     dealProbability = false;
                     displayOrder = 5334.42d;
                     id = "<ID>";
                     name = "motivating";
-                    raw = new PropertyCrmPipelineRaw();;
+                    raw = new PropertyCrmPipelineRaw();
                     updatedAt = OffsetDateTime.parse("2021-01-20T13:44:14.220Z");
-                }};;
+                }};
             }};            
 
             PostCrmConnectionIdPipelineResponse res = sdk.pipeline.postCrmConnectionIdPipeline(req);
@@ -312,22 +312,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Nevada") {{
+                .setSecurity(new Security("Nevada"){{
                     jwt = "";
                 }})
                 .build();
 
-            PutCrmConnectionIdPipelineIdRequest req = new PutCrmConnectionIdPipelineIdRequest("Bonita", "archive") {{
-                crmPipeline = new CrmPipeline() {{
+            PutCrmConnectionIdPipelineIdRequest req = new PutCrmConnectionIdPipelineIdRequest("Bonita", "archive"){{
+                crmPipeline = new CrmPipeline(){{
                     active = false;
                     createdAt = OffsetDateTime.parse("2022-02-09T07:18:58.841Z");
                     dealProbability = false;
                     displayOrder = 7464.57d;
                     id = "<ID>";
                     name = "meter";
-                    raw = new PropertyCrmPipelineRaw();;
+                    raw = new PropertyCrmPipelineRaw();
                     updatedAt = OffsetDateTime.parse("2023-08-26T13:09:17.139Z");
-                }};;
+                }};
             }};            
 
             PutCrmConnectionIdPipelineIdResponse res = sdk.pipeline.putCrmConnectionIdPipelineId(req);

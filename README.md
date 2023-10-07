@@ -12,7 +12,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.5.3'
+implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.5.4'
 ```
 <!-- End SDK Installation -->
 
@@ -30,7 +30,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("South") {{
+                .setSecurity(new Security("South"){{
                     jwt = "";
                 }})
                 .build();

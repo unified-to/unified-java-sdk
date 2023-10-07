@@ -13,7 +13,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("South") {{
+                .setSecurity(new Security("South"){{
                     jwt = "";
                 }})
                 .build();

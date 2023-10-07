@@ -28,7 +28,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("ivory") {{
+                .setSecurity(new Security("ivory"){{
                     jwt = "";
                 }})
                 .build();
@@ -78,12 +78,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("South") {{
+                .setSecurity(new Security("South"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdFileRequest req = new GetCrmConnectionIdFileRequest("hm") {{
+            GetCrmConnectionIdFileRequest req = new GetCrmConnectionIdFileRequest("hm"){{
                 companyId = "Salad Recycled Electronic";
                 contactId = "Seychelles";
                 dealId = "Investment deposit";
@@ -137,7 +137,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Buckinghamshire") {{
+                .setSecurity(new Security("Buckinghamshire"){{
                     jwt = "";
                 }})
                 .build();
@@ -189,13 +189,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("tragedy") {{
+                .setSecurity(new Security("tragedy"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmConnectionIdFileIdRequest req = new PatchCrmConnectionIdFileIdRequest("Engineer", "male") {{
-                crmFile = new CrmFile() {{
+            PatchCrmConnectionIdFileIdRequest req = new PatchCrmConnectionIdFileIdRequest("Engineer", "male"){{
+                crmFile = new CrmFile(){{
                     active = false;
                     activityId = "Home communities CFP";
                     companyId = "unaware yellow generating";
@@ -209,10 +209,10 @@ public class Application {
                     fileUrl = "Awesome Accountability gadzooks";
                     id = "<ID>";
                     leadId = "Incredible Chromium";
-                    raw = new PropertyCrmFileRaw();;
+                    raw = new PropertyCrmFileRaw();
                     updatedAt = OffsetDateTime.parse("2021-10-07T21:25:44.502Z");
                     userId = "Hybrid";
-                }};;
+                }};
             }};            
 
             PatchCrmConnectionIdFileIdResponse res = sdk.file.patchCrmConnectionIdFileId(req);
@@ -260,13 +260,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("contaminate") {{
+                .setSecurity(new Security("contaminate"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostCrmConnectionIdFileRequest req = new PostCrmConnectionIdFileRequest("standardization") {{
-                crmFile = new CrmFile() {{
+            PostCrmConnectionIdFileRequest req = new PostCrmConnectionIdFileRequest("standardization"){{
+                crmFile = new CrmFile(){{
                     active = false;
                     activityId = "Manager";
                     companyId = "Florida Shoes East";
@@ -280,10 +280,10 @@ public class Application {
                     fileUrl = "Avon male";
                     id = "<ID>";
                     leadId = "Transgender";
-                    raw = new PropertyCrmFileRaw();;
+                    raw = new PropertyCrmFileRaw();
                     updatedAt = OffsetDateTime.parse("2021-11-20T07:00:09.078Z");
                     userId = "national Lead";
-                }};;
+                }};
             }};            
 
             PostCrmConnectionIdFileResponse res = sdk.file.postCrmConnectionIdFile(req);
@@ -331,13 +331,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("East") {{
+                .setSecurity(new Security("East"){{
                     jwt = "";
                 }})
                 .build();
 
-            PutCrmConnectionIdFileIdRequest req = new PutCrmConnectionIdFileIdRequest("Checking", "South") {{
-                crmFile = new CrmFile() {{
+            PutCrmConnectionIdFileIdRequest req = new PutCrmConnectionIdFileIdRequest("Checking", "South"){{
+                crmFile = new CrmFile(){{
                     active = false;
                     activityId = "Southwest";
                     companyId = "brief";
@@ -351,10 +351,10 @@ public class Application {
                     fileUrl = "Cheese error Minnesota";
                     id = "<ID>";
                     leadId = "biplane Handcrafted";
-                    raw = new PropertyCrmFileRaw();;
+                    raw = new PropertyCrmFileRaw();
                     updatedAt = OffsetDateTime.parse("2021-02-25T14:09:45.532Z");
                     userId = "Implementation Fremont Rutherfordium";
-                }};;
+                }};
             }};            
 
             PutCrmConnectionIdFileIdResponse res = sdk.file.putCrmConnectionIdFileId(req);

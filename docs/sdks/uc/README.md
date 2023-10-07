@@ -30,7 +30,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Aluminium") {{
+                .setSecurity(new Security("Aluminium"){{
                     jwt = "";
                 }})
                 .build();
@@ -80,12 +80,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Passenger") {{
+                .setSecurity(new Security("Passenger"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUcConnectionIdAgentRequest req = new GetUcConnectionIdAgentRequest("East") {{
+            GetUcConnectionIdAgentRequest req = new GetUcConnectionIdAgentRequest("East"){{
                 contactId = "drafty blue teal";
                 limit = 745.71d;
                 offset = 7741.1d;
@@ -138,12 +138,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Southeast") {{
+                .setSecurity(new Security("Southeast"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUcConnectionIdCallRequest req = new GetUcConnectionIdCallRequest("blue") {{
+            GetUcConnectionIdCallRequest req = new GetUcConnectionIdCallRequest("blue"){{
                 agentId = "than";
                 contactId = "reintermediate Enid Applications";
                 limit = 1980.39d;
@@ -197,12 +197,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Integration") {{
+                .setSecurity(new Security("Integration"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUcConnectionIdContactRequest req = new GetUcConnectionIdContactRequest("envious") {{
+            GetUcConnectionIdContactRequest req = new GetUcConnectionIdContactRequest("envious"){{
                 agentId = "Non Dodge";
                 limit = 7215.14d;
                 offset = 2910.48d;
@@ -254,7 +254,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Africa") {{
+                .setSecurity(new Security("Africa"){{
                     jwt = "";
                 }})
                 .build();
@@ -310,33 +310,31 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("whose") {{
+                .setSecurity(new Security("whose"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchUcConnectionIdContactIdRequest req = new PatchUcConnectionIdContactIdRequest("Rosemary", "copying") {{
-                ucContact = new UcContact() {{
+            PatchUcConnectionIdContactIdRequest req = new PatchUcConnectionIdContactIdRequest("Rosemary", "copying"){{
+                ucContact = new UcContact(){{
                     company = "Swaniawski - Hegmann";
                     createdAt = OffsetDateTime.parse("2023-08-12T14:43:43.240Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
-                        add(new UcEmail("Sleek") {{
+                        add(new UcEmail("24/7"){{
                             email = "Jerod_Effertz1@hotmail.com";
-                            type = UcEmailType.WORK;
                         }}),
                     }};
                     id = "<ID>";
-                    name = "Home";
-                    raw = new PropertyUcContactRaw();;
+                    name = "Table compress";
+                    raw = new PropertyUcContactRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
-                        add(new UcTelephone("Fish") {{
+                        add(new UcTelephone("overriding"){{
                             telephone = "Legacy";
-                            type = UcTelephoneType.OTHER;
                         }}),
                     }};
-                    title = "payment driver East";
-                    updatedAt = OffsetDateTime.parse("2022-12-06T16:53:33.493Z");
-                }};;
+                    title = "meanwhile atque Akron";
+                    updatedAt = OffsetDateTime.parse("2022-01-15T14:31:49.366Z");
+                }};
             }};            
 
             PatchUcConnectionIdContactIdResponse res = sdk.uc.patchUcConnectionIdContactId(req);
@@ -388,33 +386,31 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Plain") {{
+                .setSecurity(new Security("Plain"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostUcConnectionIdContactRequest req = new PostUcConnectionIdContactRequest("Bacon") {{
-                ucContact = new UcContact() {{
+            PostUcConnectionIdContactRequest req = new PostUcConnectionIdContactRequest("Bacon"){{
+                ucContact = new UcContact(){{
                     company = "Runolfsson - Bruen";
                     createdAt = OffsetDateTime.parse("2022-11-30T09:19:12.974Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
-                        add(new UcEmail("Togo") {{
+                        add(new UcEmail("Avon"){{
                             email = "Marianne_Haley35@hotmail.com";
-                            type = UcEmailType.WORK;
                         }}),
                     }};
                     id = "<ID>";
-                    name = "payment generously";
-                    raw = new PropertyUcContactRaw();;
+                    name = "Division Human COM";
+                    raw = new PropertyUcContactRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
-                        add(new UcTelephone("Connecticut") {{
-                            telephone = "COM that";
-                            type = UcTelephoneType.FAX;
+                        add(new UcTelephone("Solutions"){{
+                            telephone = "International Connecticut Fiat";
                         }}),
                     }};
-                    title = "bandwidth Supervisor East";
-                    updatedAt = OffsetDateTime.parse("2022-03-14T09:33:47.137Z");
-                }};;
+                    title = "Chair Potassium";
+                    updatedAt = OffsetDateTime.parse("2022-02-26T18:17:55.274Z");
+                }};
             }};            
 
             PostUcConnectionIdContactResponse res = sdk.uc.postUcConnectionIdContact(req);
@@ -466,33 +462,31 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("geez") {{
+                .setSecurity(new Security("geez"){{
                     jwt = "";
                 }})
                 .build();
 
-            PutUcConnectionIdContactIdRequest req = new PutUcConnectionIdContactIdRequest("sticky", "Alabama") {{
-                ucContact = new UcContact() {{
+            PutUcConnectionIdContactIdRequest req = new PutUcConnectionIdContactIdRequest("sticky", "Alabama"){{
+                ucContact = new UcContact(){{
                     company = "Walker - Koch";
                     createdAt = OffsetDateTime.parse("2022-05-19T07:42:19.696Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
-                        add(new UcEmail("ipsam") {{
+                        add(new UcEmail("Hip"){{
                             email = "Yasmine.Johns@yahoo.com";
-                            type = UcEmailType.HOME;
                         }}),
                     }};
                     id = "<ID>";
                     name = "drat";
-                    raw = new PropertyUcContactRaw();;
+                    raw = new PropertyUcContactRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
-                        add(new UcTelephone("Gasoline") {{
+                        add(new UcTelephone("Buckinghamshire"){{
                             telephone = "Dynamic Loan Wooden";
-                            type = UcTelephoneType.WORK;
                         }}),
                     }};
-                    title = "doubtfully";
-                    updatedAt = OffsetDateTime.parse("2021-03-08T23:31:07.532Z");
-                }};;
+                    title = "cyan Movies";
+                    updatedAt = OffsetDateTime.parse("2022-03-11T10:02:46.895Z");
+                }};
             }};            
 
             PutUcConnectionIdContactIdResponse res = sdk.uc.putUcConnectionIdContactId(req);

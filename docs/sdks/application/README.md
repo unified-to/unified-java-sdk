@@ -28,7 +28,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("female") {{
+                .setSecurity(new Security("female"){{
                     jwt = "";
                 }})
                 .build();
@@ -78,12 +78,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Bacon") {{
+                .setSecurity(new Security("Bacon"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsConnectionIdApplicationRequest req = new GetAtsConnectionIdApplicationRequest("withdrawal") {{
+            GetAtsConnectionIdApplicationRequest req = new GetAtsConnectionIdApplicationRequest("withdrawal"){{
                 candidateId = "approach Bacon";
                 jobId = "Mobility";
                 limit = 576.8d;
@@ -136,7 +136,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Brand") {{
+                .setSecurity(new Security("Brand"){{
                     jwt = "";
                 }})
                 .build();
@@ -189,25 +189,25 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("ouch") {{
+                .setSecurity(new Security("ouch"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchAtsConnectionIdApplicationIdRequest req = new PatchAtsConnectionIdApplicationIdRequest("North", "et") {{
-                atsApplication = new AtsApplication() {{
+            PatchAtsConnectionIdApplicationIdRequest req = new PatchAtsConnectionIdApplicationIdRequest("North", "et"){{
+                atsApplication = new AtsApplication(){{
                     appliedAt = OffsetDateTime.parse("2023-12-06T09:54:21.775Z");
                     candidateId = "Human";
                     createdAt = OffsetDateTime.parse("2023-10-31T19:54:06.290Z");
                     id = "<ID>";
                     jobId = "Washington";
-                    raw = new PropertyAtsApplicationRaw();;
+                    raw = new PropertyAtsApplicationRaw();
                     rejectedAt = OffsetDateTime.parse("2023-07-30T09:27:03.900Z");
                     rejectedReason = "Northwest";
                     source = "quantify models Carolina";
                     status = AtsApplicationStatus.SUBMITTED;
                     updatedAt = OffsetDateTime.parse("2021-05-11T22:36:02.527Z");
-                }};;
+                }};
             }};            
 
             PatchAtsConnectionIdApplicationIdResponse res = sdk.application.patchAtsConnectionIdApplicationId(req);
@@ -256,25 +256,25 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Cotton") {{
+                .setSecurity(new Security("Cotton"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostAtsConnectionIdApplicationRequest req = new PostAtsConnectionIdApplicationRequest("impedit") {{
-                atsApplication = new AtsApplication() {{
+            PostAtsConnectionIdApplicationRequest req = new PostAtsConnectionIdApplicationRequest("impedit"){{
+                atsApplication = new AtsApplication(){{
                     appliedAt = OffsetDateTime.parse("2021-08-17T19:51:25.858Z");
                     candidateId = "Pizza";
                     createdAt = OffsetDateTime.parse("2022-06-18T11:59:47.948Z");
                     id = "<ID>";
                     jobId = "globalize";
-                    raw = new PropertyAtsApplicationRaw();;
+                    raw = new PropertyAtsApplicationRaw();
                     rejectedAt = OffsetDateTime.parse("2021-04-05T14:19:56.779Z");
                     rejectedReason = "Kids Van Tasty";
                     source = "Electric Norfolk";
                     status = AtsApplicationStatus.SCREENING;
                     updatedAt = OffsetDateTime.parse("2022-09-29T00:44:25.415Z");
-                }};;
+                }};
             }};            
 
             PostAtsConnectionIdApplicationResponse res = sdk.application.postAtsConnectionIdApplication(req);
@@ -323,25 +323,25 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("farad") {{
+                .setSecurity(new Security("farad"){{
                     jwt = "";
                 }})
                 .build();
 
-            PutAtsConnectionIdApplicationIdRequest req = new PutAtsConnectionIdApplicationIdRequest("Indianapolis", "Credit") {{
-                atsApplication = new AtsApplication() {{
+            PutAtsConnectionIdApplicationIdRequest req = new PutAtsConnectionIdApplicationIdRequest("Indianapolis", "Credit"){{
+                atsApplication = new AtsApplication(){{
                     appliedAt = OffsetDateTime.parse("2021-06-01T03:05:28.938Z");
                     candidateId = "middleware Jeep";
                     createdAt = OffsetDateTime.parse("2021-12-14T14:50:12.070Z");
                     id = "<ID>";
                     jobId = "North";
-                    raw = new PropertyAtsApplicationRaw();;
+                    raw = new PropertyAtsApplicationRaw();
                     rejectedAt = OffsetDateTime.parse("2022-10-28T04:38:47.547Z");
                     rejectedReason = "Fort solid";
                     source = "Ghana";
                     status = AtsApplicationStatus.REVIEWING;
                     updatedAt = OffsetDateTime.parse("2023-03-12T05:49:54.060Z");
-                }};;
+                }};
             }};            
 
             PutAtsConnectionIdApplicationIdResponse res = sdk.application.putAtsConnectionIdApplicationId(req);

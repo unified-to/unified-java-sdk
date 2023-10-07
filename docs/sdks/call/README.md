@@ -24,12 +24,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Southeast") {{
+                .setSecurity(new Security("Southeast"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUcConnectionIdCallRequest req = new GetUcConnectionIdCallRequest("blue") {{
+            GetUcConnectionIdCallRequest req = new GetUcConnectionIdCallRequest("blue"){{
                 agentId = "than";
                 contactId = "reintermediate Enid Applications";
                 limit = 1980.39d;

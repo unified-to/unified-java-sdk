@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: 76108e321f4d72dedb6c9bb7b146f4ad
   docVersion: "1.0"
-  speakeasyVersion: 1.93.1
-  generationVersion: 2.144.7
+  speakeasyVersion: 1.96.1
+  generationVersion: 2.150.0
 generation:
   comments:
     disableComments: false
@@ -14,11 +14,11 @@ generation:
   tagNamespacingDisabled: false
 features:
   java:
-    core: 2.88.1
+    core: 2.88.3
     globalSecurity: 2.81.1
     globalServerURLs: 2.82.0
 java:
-  version: 0.5.3
+  version: 0.5.4
   artifactID: unifiedto
   companyEmail: hello@unified.to
   companyName: Unified API Inc.

@@ -28,7 +28,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("generate") {{
+                .setSecurity(new Security("generate"){{
                     jwt = "";
                 }})
                 .build();
@@ -78,12 +78,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("project") {{
+                .setSecurity(new Security("project"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetMartechConnectionIdListRequest req = new GetMartechConnectionIdListRequest("apportion") {{
+            GetMartechConnectionIdListRequest req = new GetMartechConnectionIdListRequest("apportion"){{
                 limit = 2321.9d;
                 offset = 9799.48d;
                 order = "Wooden Pass";
@@ -134,7 +134,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("digital") {{
+                .setSecurity(new Security("digital"){{
                     jwt = "";
                 }})
                 .build();
@@ -186,19 +186,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("engage") {{
+                .setSecurity(new Security("engage"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchMartechConnectionIdListIdRequest req = new PatchMartechConnectionIdListIdRequest("bluetooth", "lime") {{
-                marketingList = new MarketingList() {{
+            PatchMartechConnectionIdListIdRequest req = new PatchMartechConnectionIdListIdRequest("bluetooth", "lime"){{
+                marketingList = new MarketingList(){{
                     createdAt = "synergies lime Human";
                     id = "<ID>";
                     name = "Intelligent connecting Recumbent";
-                    raw = new PropertyMarketingListRaw();;
+                    raw = new PropertyMarketingListRaw();
                     updatedAt = OffsetDateTime.parse("2023-07-01T00:27:35.301Z");
-                }};;
+                }};
             }};            
 
             PatchMartechConnectionIdListIdResponse res = sdk.list.patchMartechConnectionIdListId(req);
@@ -246,19 +246,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("black") {{
+                .setSecurity(new Security("black"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostMartechConnectionIdListRequest req = new PostMartechConnectionIdListRequest("Hafnium") {{
-                marketingList = new MarketingList() {{
+            PostMartechConnectionIdListRequest req = new PostMartechConnectionIdListRequest("Hafnium"){{
+                marketingList = new MarketingList(){{
                     createdAt = "Steel caddy who";
                     id = "<ID>";
                     name = "Bicycle Bicycle Bicycle";
-                    raw = new PropertyMarketingListRaw();;
+                    raw = new PropertyMarketingListRaw();
                     updatedAt = OffsetDateTime.parse("2021-06-21T11:26:26.993Z");
-                }};;
+                }};
             }};            
 
             PostMartechConnectionIdListResponse res = sdk.list.postMartechConnectionIdList(req);
@@ -306,19 +306,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Swiss") {{
+                .setSecurity(new Security("Swiss"){{
                     jwt = "";
                 }})
                 .build();
 
-            PutMartechConnectionIdListIdRequest req = new PutMartechConnectionIdListIdRequest("textual", "navigate") {{
-                marketingList = new MarketingList() {{
+            PutMartechConnectionIdListIdRequest req = new PutMartechConnectionIdListIdRequest("textual", "navigate"){{
+                marketingList = new MarketingList(){{
                     createdAt = "aggressive";
                     id = "<ID>";
                     name = "Progressive";
-                    raw = new PropertyMarketingListRaw();;
+                    raw = new PropertyMarketingListRaw();
                     updatedAt = OffsetDateTime.parse("2023-01-17T12:35:27.783Z");
-                }};;
+                }};
             }};            
 
             PutMartechConnectionIdListIdResponse res = sdk.list.putMartechConnectionIdListId(req);

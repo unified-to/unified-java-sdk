@@ -28,7 +28,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Concrete") {{
+                .setSecurity(new Security("Concrete"){{
                     jwt = "";
                 }})
                 .build();
@@ -78,12 +78,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("apud") {{
+                .setSecurity(new Security("apud"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdDealRequest req = new GetCrmConnectionIdDealRequest("foreground") {{
+            GetCrmConnectionIdDealRequest req = new GetCrmConnectionIdDealRequest("foreground"){{
                 companyId = "Soul communities Renminbi";
                 contactId = "till payment World";
                 limit = 8656.16d;
@@ -136,7 +136,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Response") {{
+                .setSecurity(new Security("Response"){{
                     jwt = "";
                 }})
                 .build();
@@ -188,13 +188,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Bicycle") {{
+                .setSecurity(new Security("Bicycle"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmConnectionIdDealIdRequest req = new PatchCrmConnectionIdDealIdRequest("East", "North") {{
-                crmDeal = new CrmDeal() {{
+            PatchCrmConnectionIdDealIdRequest req = new PatchCrmConnectionIdDealIdRequest("East", "North"){{
+                crmDeal = new CrmDeal(){{
                     amount = 83.47d;
                     closedAt = OffsetDateTime.parse("2023-11-10T10:13:15.860Z");
                     createdAt = OffsetDateTime.parse("2022-09-06T02:31:05.722Z");
@@ -204,7 +204,7 @@ public class Application {
                     name = "Loan";
                     pipeline = "Cotton Blues ah";
                     probability = 263.43d;
-                    raw = new PropertyCrmDealRaw();;
+                    raw = new PropertyCrmDealRaw();
                     source = "logistical transition Universal";
                     stage = "Investment Elegant kilogram";
                     tags = new String[]{{
@@ -212,7 +212,7 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2021-08-13T23:49:24.798Z");
                     wonReason = "West";
-                }};;
+                }};
             }};            
 
             PatchCrmConnectionIdDealIdResponse res = sdk.deal.patchCrmConnectionIdDealId(req);
@@ -260,13 +260,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("M2F") {{
+                .setSecurity(new Security("M2F"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostCrmConnectionIdDealRequest req = new PostCrmConnectionIdDealRequest("programming") {{
-                crmDeal = new CrmDeal() {{
+            PostCrmConnectionIdDealRequest req = new PostCrmConnectionIdDealRequest("programming"){{
+                crmDeal = new CrmDeal(){{
                     amount = 2558.82d;
                     closedAt = OffsetDateTime.parse("2023-02-16T08:39:46.084Z");
                     createdAt = OffsetDateTime.parse("2021-12-12T19:23:52.754Z");
@@ -276,7 +276,7 @@ public class Application {
                     name = "International";
                     pipeline = "Luxurious West";
                     probability = 867.08d;
-                    raw = new PropertyCrmDealRaw();;
+                    raw = new PropertyCrmDealRaw();
                     source = "Account sometimes South";
                     stage = "intermediate Latin Cisgender";
                     tags = new String[]{{
@@ -284,7 +284,7 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2022-06-01T07:39:00.559Z");
                     wonReason = "local Huntsville";
-                }};;
+                }};
             }};            
 
             PostCrmConnectionIdDealResponse res = sdk.deal.postCrmConnectionIdDeal(req);
@@ -332,13 +332,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Account") {{
+                .setSecurity(new Security("Account"){{
                     jwt = "";
                 }})
                 .build();
 
-            PutCrmConnectionIdDealIdRequest req = new PutCrmConnectionIdDealIdRequest("West", "laudantium") {{
-                crmDeal = new CrmDeal() {{
+            PutCrmConnectionIdDealIdRequest req = new PutCrmConnectionIdDealIdRequest("West", "laudantium"){{
+                crmDeal = new CrmDeal(){{
                     amount = 1175.04d;
                     closedAt = OffsetDateTime.parse("2023-10-14T13:29:58.098Z");
                     createdAt = OffsetDateTime.parse("2022-10-24T03:12:54.428Z");
@@ -348,7 +348,7 @@ public class Application {
                     name = "Gourde Chief";
                     pipeline = "program Nihonium Corporate";
                     probability = 4456.95d;
-                    raw = new PropertyCrmDealRaw();;
+                    raw = new PropertyCrmDealRaw();
                     source = "Tasty extranet";
                     stage = "Unbranded";
                     tags = new String[]{{
@@ -356,7 +356,7 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2022-10-01T16:47:53.632Z");
                     wonReason = "deter Montana";
-                }};;
+                }};
             }};            
 
             PutCrmConnectionIdDealIdResponse res = sdk.deal.putCrmConnectionIdDealId(req);

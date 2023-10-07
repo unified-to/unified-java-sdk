@@ -24,12 +24,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("refresh") {{
+                .setSecurity(new Security("refresh"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetEnrichConnectionIdCompanyRequest req = new GetEnrichConnectionIdCompanyRequest("Costa") {{
+            GetEnrichConnectionIdCompanyRequest req = new GetEnrichConnectionIdCompanyRequest("Costa"){{
                 domain = "precious-legislation.net";
                 name = "gold";
             }};            
@@ -76,12 +76,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Cisgender") {{
+                .setSecurity(new Security("Cisgender"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetEnrichConnectionIdPersonRequest req = new GetEnrichConnectionIdPersonRequest("Account") {{
+            GetEnrichConnectionIdPersonRequest req = new GetEnrichConnectionIdPersonRequest("Account"){{
                 email = "Jaiden_Weimann24@gmail.com";
                 linkedinUrl = "paradigms integrate Creative";
                 name = "Investment";

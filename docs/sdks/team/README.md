@@ -28,7 +28,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Louisiana") {{
+                .setSecurity(new Security("Louisiana"){{
                     jwt = "";
                 }})
                 .build();
@@ -78,12 +78,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Buckinghamshire") {{
+                .setSecurity(new Security("Buckinghamshire"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdTeamRequest req = new GetCrmConnectionIdTeamRequest("bypass") {{
+            GetCrmConnectionIdTeamRequest req = new GetCrmConnectionIdTeamRequest("bypass"){{
                 limit = 1586.42d;
                 offset = 8382.08d;
                 order = "Northeast Shoes transform";
@@ -134,7 +134,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Arsenic") {{
+                .setSecurity(new Security("Arsenic"){{
                     jwt = "";
                 }})
                 .build();
@@ -186,23 +186,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Arizona") {{
+                .setSecurity(new Security("Arizona"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmConnectionIdTeamIdRequest req = new PatchCrmConnectionIdTeamIdRequest("to", "Internal") {{
-                crmTeam = new CrmTeam() {{
+            PatchCrmConnectionIdTeamIdRequest req = new PatchCrmConnectionIdTeamIdRequest("to", "Internal"){{
+                crmTeam = new CrmTeam(){{
                     createdAt = OffsetDateTime.parse("2022-01-07T23:31:14.855Z");
                     description = "Up-sized high-level portal";
                     id = "<ID>";
                     name = "Moroccan pink";
-                    raw = new PropertyCrmTeamRaw();;
+                    raw = new PropertyCrmTeamRaw();
                     updatedAt = OffsetDateTime.parse("2023-08-14T10:23:48.923Z");
                     userIds = new String[]{{
                         add("Candace"),
                     }};
-                }};;
+                }};
             }};            
 
             PatchCrmConnectionIdTeamIdResponse res = sdk.team.patchCrmConnectionIdTeamId(req);
@@ -250,23 +250,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("local") {{
+                .setSecurity(new Security("local"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostCrmConnectionIdTeamRequest req = new PostCrmConnectionIdTeamRequest("when") {{
-                crmTeam = new CrmTeam() {{
+            PostCrmConnectionIdTeamRequest req = new PostCrmConnectionIdTeamRequest("when"){{
+                crmTeam = new CrmTeam(){{
                     createdAt = OffsetDateTime.parse("2022-02-04T15:43:12.746Z");
                     description = "Horizontal contextually-based orchestration";
                     id = "<ID>";
                     name = "bandwidth Legacy holistic";
-                    raw = new PropertyCrmTeamRaw();;
+                    raw = new PropertyCrmTeamRaw();
                     updatedAt = OffsetDateTime.parse("2021-02-01T07:27:20.539Z");
                     userIds = new String[]{{
                         add("East"),
                     }};
-                }};;
+                }};
             }};            
 
             PostCrmConnectionIdTeamResponse res = sdk.team.postCrmConnectionIdTeam(req);
@@ -314,23 +314,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("immense") {{
+                .setSecurity(new Security("immense"){{
                     jwt = "";
                 }})
                 .build();
 
-            PutCrmConnectionIdTeamIdRequest req = new PutCrmConnectionIdTeamIdRequest("Quality", "Orchestrator") {{
-                crmTeam = new CrmTeam() {{
+            PutCrmConnectionIdTeamIdRequest req = new PutCrmConnectionIdTeamIdRequest("Quality", "Orchestrator"){{
+                crmTeam = new CrmTeam(){{
                     createdAt = OffsetDateTime.parse("2022-11-23T06:02:39.043Z");
                     description = "Multi-channelled methodical success";
                     id = "<ID>";
                     name = "Montebello as pixel";
-                    raw = new PropertyCrmTeamRaw();;
+                    raw = new PropertyCrmTeamRaw();
                     updatedAt = OffsetDateTime.parse("2023-12-25T12:21:33.544Z");
                     userIds = new String[]{{
                         add("Southwest"),
                     }};
-                }};;
+                }};
             }};            
 
             PutCrmConnectionIdTeamIdResponse res = sdk.team.putCrmConnectionIdTeamId(req);

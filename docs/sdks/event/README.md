@@ -28,7 +28,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("overriding") {{
+                .setSecurity(new Security("overriding"){{
                     jwt = "";
                 }})
                 .build();
@@ -78,12 +78,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("qua") {{
+                .setSecurity(new Security("qua"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdEventRequest req = new GetCrmConnectionIdEventRequest("markets") {{
+            GetCrmConnectionIdEventRequest req = new GetCrmConnectionIdEventRequest("markets"){{
                 companyId = "Bedfordshire";
                 contactId = "Hybrid grey Ferrari";
                 dealId = "Checking Southeast";
@@ -137,7 +137,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Credit") {{
+                .setSecurity(new Security("Credit"){{
                     jwt = "";
                 }})
                 .build();
@@ -195,17 +195,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("parse") {{
+                .setSecurity(new Security("parse"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmConnectionIdEventIdRequest req = new PatchCrmConnectionIdEventIdRequest("intranet", "silver") {{
-                crmEvent = new CrmEvent() {{
-                    call = new PropertyCrmEventCall() {{
+            PatchCrmConnectionIdEventIdRequest req = new PatchCrmConnectionIdEventIdRequest("intranet", "silver"){{
+                crmEvent = new CrmEvent(){{
+                    call = new PropertyCrmEventCall(){{
                         description = "Fully-configurable zero administration collaboration";
                         duration = 6394.52d;
-                    }};;
+                    }};
                     companyIds = new String[]{{
                         add("North"),
                     }};
@@ -216,7 +216,7 @@ public class Application {
                     dealIds = new String[]{{
                         add("Avon"),
                     }};
-                    email = new PropertyCrmEventEmail() {{
+                    email = new PropertyCrmEventEmail(){{
                         body = "SDD Toyota Northeast";
                         cc = new String[]{{
                             add("Sports"),
@@ -226,26 +226,26 @@ public class Application {
                         to = new String[]{{
                             add("Hyundai"),
                         }};
-                    }};;
+                    }};
                     id = "<ID>";
-                    meeting = new PropertyCrmEventMeeting() {{
+                    meeting = new PropertyCrmEventMeeting(){{
                         description = "Multi-lateral 5th generation protocol";
                         endAt = OffsetDateTime.parse("2022-01-23T16:29:52.497Z");
                         startAt = OffsetDateTime.parse("2023-07-12T04:52:28.989Z");
                         title = "Executive";
-                    }};;
-                    note = new PropertyCrmEventNote() {{
+                    }};
+                    note = new PropertyCrmEventNote(){{
                         description = "Multi-lateral fault-tolerant framework";
-                    }};;
-                    raw = new PropertyCrmEventRaw();;
-                    task = new PropertyCrmEventTask() {{
+                    }};
+                    raw = new PropertyCrmEventRaw();
+                    task = new PropertyCrmEventTask(){{
                         description = "Function-based even-keeled pricing structure";
                         name = "teethe Rustic";
                         status = "Investment male Electric";
-                    }};;
+                    }};
                     type = CrmEventType.EMAIL;
                     updatedAt = OffsetDateTime.parse("2021-09-28T03:55:44.303Z");
-                }};;
+                }};
             }};            
 
             PatchCrmConnectionIdEventIdResponse res = sdk.event.patchCrmConnectionIdEventId(req);
@@ -299,17 +299,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("carburize") {{
+                .setSecurity(new Security("carburize"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostCrmConnectionIdEventRequest req = new PostCrmConnectionIdEventRequest("SDR") {{
-                crmEvent = new CrmEvent() {{
-                    call = new PropertyCrmEventCall() {{
+            PostCrmConnectionIdEventRequest req = new PostCrmConnectionIdEventRequest("SDR"){{
+                crmEvent = new CrmEvent(){{
+                    call = new PropertyCrmEventCall(){{
                         description = "Customer-focused empowering conglomeration";
                         duration = 1255.4d;
-                    }};;
+                    }};
                     companyIds = new String[]{{
                         add("male"),
                     }};
@@ -320,7 +320,7 @@ public class Application {
                     dealIds = new String[]{{
                         add("Cambodia"),
                     }};
-                    email = new PropertyCrmEventEmail() {{
+                    email = new PropertyCrmEventEmail(){{
                         body = "male Games woman";
                         cc = new String[]{{
                             add("Rock"),
@@ -330,26 +330,26 @@ public class Application {
                         to = new String[]{{
                             add("Synergized"),
                         }};
-                    }};;
+                    }};
                     id = "<ID>";
-                    meeting = new PropertyCrmEventMeeting() {{
+                    meeting = new PropertyCrmEventMeeting(){{
                         description = "Upgradable asymmetric hardware";
                         endAt = OffsetDateTime.parse("2021-12-19T09:09:38.264Z");
                         startAt = OffsetDateTime.parse("2023-11-21T21:46:08.139Z");
                         title = "harness Collierville payment";
-                    }};;
-                    note = new PropertyCrmEventNote() {{
+                    }};
+                    note = new PropertyCrmEventNote(){{
                         description = "Team-oriented context-sensitive definition";
-                    }};;
-                    raw = new PropertyCrmEventRaw();;
-                    task = new PropertyCrmEventTask() {{
+                    }};
+                    raw = new PropertyCrmEventRaw();
+                    task = new PropertyCrmEventTask(){{
                         description = "Multi-layered radical projection";
                         name = "Gorgeous Louisiana Directives";
                         status = "indicate";
-                    }};;
+                    }};
                     type = CrmEventType.EMAIL;
                     updatedAt = OffsetDateTime.parse("2021-11-05T22:28:17.344Z");
-                }};;
+                }};
             }};            
 
             PostCrmConnectionIdEventResponse res = sdk.event.postCrmConnectionIdEvent(req);
@@ -403,17 +403,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Iron") {{
+                .setSecurity(new Security("Iron"){{
                     jwt = "";
                 }})
                 .build();
 
-            PutCrmConnectionIdEventIdRequest req = new PutCrmConnectionIdEventIdRequest("marshmallow", "DNS") {{
-                crmEvent = new CrmEvent() {{
-                    call = new PropertyCrmEventCall() {{
+            PutCrmConnectionIdEventIdRequest req = new PutCrmConnectionIdEventIdRequest("marshmallow", "DNS"){{
+                crmEvent = new CrmEvent(){{
+                    call = new PropertyCrmEventCall(){{
                         description = "Ameliorated solution-oriented installation";
                         duration = 7468.95d;
-                    }};;
+                    }};
                     companyIds = new String[]{{
                         add("naturalisation"),
                     }};
@@ -424,7 +424,7 @@ public class Application {
                     dealIds = new String[]{{
                         add("engineer"),
                     }};
-                    email = new PropertyCrmEventEmail() {{
+                    email = new PropertyCrmEventEmail(){{
                         body = "Modern provided";
                         cc = new String[]{{
                             add("Markets"),
@@ -434,26 +434,26 @@ public class Application {
                         to = new String[]{{
                             add("frenetically"),
                         }};
-                    }};;
+                    }};
                     id = "<ID>";
-                    meeting = new PropertyCrmEventMeeting() {{
+                    meeting = new PropertyCrmEventMeeting(){{
                         description = "Down-sized systematic installation";
                         endAt = OffsetDateTime.parse("2023-10-23T15:46:53.856Z");
                         startAt = OffsetDateTime.parse("2023-05-31T07:59:54.819Z");
                         title = "portal";
-                    }};;
-                    note = new PropertyCrmEventNote() {{
+                    }};
+                    note = new PropertyCrmEventNote(){{
                         description = "Assimilated 6th generation website";
-                    }};;
-                    raw = new PropertyCrmEventRaw();;
-                    task = new PropertyCrmEventTask() {{
+                    }};
+                    raw = new PropertyCrmEventRaw();
+                    task = new PropertyCrmEventTask(){{
                         description = "Inverse client-server initiative";
                         name = "utilize nor";
                         status = "Customer sky";
-                    }};;
+                    }};
                     type = CrmEventType.NOTE;
                     updatedAt = OffsetDateTime.parse("2023-07-27T14:02:37.510Z");
-                }};;
+                }};
             }};            
 
             PutCrmConnectionIdEventIdResponse res = sdk.event.putCrmConnectionIdEventId(req);

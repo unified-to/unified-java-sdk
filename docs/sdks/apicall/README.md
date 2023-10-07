@@ -25,12 +25,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("tesla") {{
+                .setSecurity(new Security("tesla"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedApicallRequest req = new GetUnifiedApicallRequest() {{
+            GetUnifiedApicallRequest req = new GetUnifiedApicallRequest(){{
                 connectionId = "green Hybrid Northwest";
                 createdLte = OffsetDateTime.parse("2021-10-25T17:00:01.179Z");
                 env = "Steel lime";
@@ -86,7 +86,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("fuchsia") {{
+                .setSecurity(new Security("fuchsia"){{
                     jwt = "";
                 }})
                 .build();

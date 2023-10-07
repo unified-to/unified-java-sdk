@@ -28,7 +28,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("coulomb") {{
+                .setSecurity(new Security("coulomb"){{
                     jwt = "";
                 }})
                 .build();
@@ -78,12 +78,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("disinter") {{
+                .setSecurity(new Security("disinter"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsConnectionIdInterviewRequest req = new GetAtsConnectionIdInterviewRequest("Smart") {{
+            GetAtsConnectionIdInterviewRequest req = new GetAtsConnectionIdInterviewRequest("Smart"){{
                 applicationId = "Strategist blue";
                 limit = 3279.77d;
                 offset = 4526.93d;
@@ -135,7 +135,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("haemorrhage") {{
+                .setSecurity(new Security("haemorrhage"){{
                     jwt = "";
                 }})
                 .build();
@@ -188,13 +188,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("coulomb") {{
+                .setSecurity(new Security("coulomb"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchAtsConnectionIdInterviewIdRequest req = new PatchAtsConnectionIdInterviewIdRequest("Cruiser", "pascal") {{
-                atsInterview = new AtsInterview() {{
+            PatchAtsConnectionIdInterviewIdRequest req = new PatchAtsConnectionIdInterviewIdRequest("Cruiser", "pascal"){{
+                atsInterview = new AtsInterview(){{
                     applicationId = "Buckinghamshire example";
                     candidateId = "salmon";
                     createdAt = OffsetDateTime.parse("2023-12-02T13:16:53.615Z");
@@ -203,14 +203,14 @@ public class Application {
                     id = "<ID>";
                     jobId = "Investor synthesizing";
                     location = "Identity";
-                    raw = new PropertyAtsInterviewRaw();;
+                    raw = new PropertyAtsInterviewRaw();
                     startAt = OffsetDateTime.parse("2023-06-29T20:36:38.891Z");
                     status = AtsInterviewStatus.AWAITING_FEEDBACK;
                     updatedAt = OffsetDateTime.parse("2023-01-27T15:59:11.216Z");
                     userIds = new String[]{{
                         add("Myrl"),
                     }};
-                }};;
+                }};
             }};            
 
             PatchAtsConnectionIdInterviewIdResponse res = sdk.interview.patchAtsConnectionIdInterviewId(req);
@@ -259,13 +259,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Tricycle") {{
+                .setSecurity(new Security("Tricycle"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostAtsConnectionIdInterviewRequest req = new PostAtsConnectionIdInterviewRequest("hertz") {{
-                atsInterview = new AtsInterview() {{
+            PostAtsConnectionIdInterviewRequest req = new PostAtsConnectionIdInterviewRequest("hertz"){{
+                atsInterview = new AtsInterview(){{
                     applicationId = "Stokes North Northeast";
                     candidateId = "vertical platforms";
                     createdAt = OffsetDateTime.parse("2023-03-16T18:42:23.230Z");
@@ -274,14 +274,14 @@ public class Application {
                     id = "<ID>";
                     jobId = "Northwest Buckinghamshire";
                     location = "ultimately Chevrolet";
-                    raw = new PropertyAtsInterviewRaw();;
+                    raw = new PropertyAtsInterviewRaw();
                     startAt = OffsetDateTime.parse("2023-12-01T23:03:25.142Z");
                     status = AtsInterviewStatus.SCHEDULED;
                     updatedAt = OffsetDateTime.parse("2022-05-19T12:56:14.783Z");
                     userIds = new String[]{{
                         add("Northeast"),
                     }};
-                }};;
+                }};
             }};            
 
             PostAtsConnectionIdInterviewResponse res = sdk.interview.postAtsConnectionIdInterview(req);
@@ -330,13 +330,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("amet") {{
+                .setSecurity(new Security("amet"){{
                     jwt = "";
                 }})
                 .build();
 
-            PutAtsConnectionIdInterviewIdRequest req = new PutAtsConnectionIdInterviewIdRequest("Global", "greatness") {{
-                atsInterview = new AtsInterview() {{
+            PutAtsConnectionIdInterviewIdRequest req = new PutAtsConnectionIdInterviewIdRequest("Global", "greatness"){{
+                atsInterview = new AtsInterview(){{
                     applicationId = "Meriden disbelieve online";
                     candidateId = "architectures";
                     createdAt = OffsetDateTime.parse("2023-07-30T10:46:54.075Z");
@@ -345,14 +345,14 @@ public class Application {
                     id = "<ID>";
                     jobId = "Quality";
                     location = "Metal Ferrari";
-                    raw = new PropertyAtsInterviewRaw();;
+                    raw = new PropertyAtsInterviewRaw();
                     startAt = OffsetDateTime.parse("2021-05-02T03:07:23.809Z");
                     status = AtsInterviewStatus.AWAITING_FEEDBACK;
                     updatedAt = OffsetDateTime.parse("2023-11-10T18:42:28.617Z");
                     userIds = new String[]{{
                         add("Cis"),
                     }};
-                }};;
+                }};
             }};            
 
             PutAtsConnectionIdInterviewIdResponse res = sdk.interview.putAtsConnectionIdInterviewId(req);

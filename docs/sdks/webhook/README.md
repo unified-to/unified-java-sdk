@@ -26,7 +26,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("North") {{
+                .setSecurity(new Security("North"){{
                     jwt = "";
                 }})
                 .build();
@@ -76,12 +76,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("proud") {{
+                .setSecurity(new Security("proud"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedWebhookRequest req = new GetUnifiedWebhookRequest() {{
+            GetUnifiedWebhookRequest req = new GetUnifiedWebhookRequest(){{
                 env = "methodical Fitness";
                 limit = 8087.22d;
                 object = "Franc past salmon";
@@ -133,7 +133,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("up") {{
+                .setSecurity(new Security("up"){{
                     jwt = "";
                 }})
                 .build();
@@ -187,15 +187,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Arab") {{
+                .setSecurity(new Security("Arab"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostUnifiedWebhookConnectionIdObjectRequest req = new PostUnifiedWebhookConnectionIdObjectRequest("tan", "siemens") {{
-                webhook = new Webhook("National",                 new com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents[]{{
-                                    add(PropertyWebhookEvents.CREATED),
-                                }}, "GB", "Rustic", 4473.47d, WebhookObjectType.CRM_COMPANY, "Demigender") {{
+            PostUnifiedWebhookConnectionIdObjectRequest req = new PostUnifiedWebhookConnectionIdObjectRequest("tan", "siemens"){{
+                webhook = new Webhook("National", new com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents[]{{
+                    add(PropertyWebhookEvents.CREATED),
+                }}, "GB", "Rustic", 4473.47d, WebhookObjectType.CRM_COMPANY, "Demigender"){{
                     checkedAt = OffsetDateTime.parse("2023-06-13T05:29:12.399Z");
                     createdAt = OffsetDateTime.parse("2021-08-23T13:47:22.712Z");
                     environment = "female ken";
@@ -205,7 +205,7 @@ public class Application {
                         add("Bronze"),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-02-10T01:49:37.759Z");
-                }};;
+                }};
                 events = new com.unifiedapi.unifiedto.models.operations.PostUnifiedWebhookConnectionIdObjectEvents[]{{
                     add(PostUnifiedWebhookConnectionIdObjectEvents.UPDATED),
                 }};

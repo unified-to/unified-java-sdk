@@ -27,7 +27,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Bicycle") {{
+                .setSecurity(new Security("Bicycle"){{
                     jwt = "";
                 }})
                 .build();
@@ -76,7 +76,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Orlando") {{
+                .setSecurity(new Security("Orlando"){{
                     jwt = "";
                 }})
                 .build();
@@ -126,13 +126,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("programming") {{
+                .setSecurity(new Security("programming"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchPassthroughConnectionIdPathRequest req = new PatchPassthroughConnectionIdPathRequest("Cayman", "navigating") {{
-                undefined = new Undefined();;
+            PatchPassthroughConnectionIdPathRequest req = new PatchPassthroughConnectionIdPathRequest("Cayman", "navigating"){{
+                undefined = new Undefined();
             }};            
 
             PatchPassthroughConnectionIdPathResponse res = sdk.passthrough.patchPassthroughConnectionIdPath(req);
@@ -178,13 +178,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("conglomeration") {{
+                .setSecurity(new Security("conglomeration"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostPassthroughConnectionIdPathRequest req = new PostPassthroughConnectionIdPathRequest("Southeast", "aut") {{
-                undefined = new Undefined();;
+            PostPassthroughConnectionIdPathRequest req = new PostPassthroughConnectionIdPathRequest("Southeast", "aut"){{
+                undefined = new Undefined();
             }};            
 
             PostPassthroughConnectionIdPathResponse res = sdk.passthrough.postPassthroughConnectionIdPath(req);
@@ -230,13 +230,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("digital") {{
+                .setSecurity(new Security("digital"){{
                     jwt = "";
                 }})
                 .build();
 
-            PutPassthroughConnectionIdPathRequest req = new PutPassthroughConnectionIdPathRequest("East", "farad") {{
-                undefined = new Undefined();;
+            PutPassthroughConnectionIdPathRequest req = new PutPassthroughConnectionIdPathRequest("East", "farad"){{
+                undefined = new Undefined();
             }};            
 
             PutPassthroughConnectionIdPathResponse res = sdk.passthrough.putPassthroughConnectionIdPath(req);
