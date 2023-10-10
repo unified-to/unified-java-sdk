@@ -8,6 +8,9 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * AtsEmail - An unified email object
+ */
 
 public class AtsEmail {
     @JsonProperty("email")

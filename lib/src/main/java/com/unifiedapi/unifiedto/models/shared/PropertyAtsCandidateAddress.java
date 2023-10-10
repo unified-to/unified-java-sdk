@@ -8,6 +8,9 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * PropertyAtsCandidateAddress - Unified address object
+ */
 
 public class PropertyAtsCandidateAddress {
     @JsonInclude(Include.NON_ABSENT)

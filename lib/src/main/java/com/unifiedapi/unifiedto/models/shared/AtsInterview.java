@@ -13,6 +13,9 @@ import com.unifiedapi.unifiedto.utils.DateTimeDeserializer;
 import com.unifiedapi.unifiedto.utils.DateTimeSerializer;
 import java.time.OffsetDateTime;
 
+/**
+ * AtsInterview - An interview between a candidate for a specific job
+ */
 
 public class AtsInterview {
     @JsonInclude(Include.NON_ABSENT)

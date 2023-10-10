@@ -9,6 +9,9 @@ import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 
 
 public class PatchAtsConnectionIdCandidateIdRequest {
+    /**
+     * A candidate looking for work
+     */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.unifiedapi.unifiedto.models.shared.AtsCandidate atsCandidate;
 

@@ -41,7 +41,7 @@ publishing {
         maven(MavenPublication) {
             groupId = 'com.unifiedapi'
             artifactId = 'unifiedto'
-            version = '0.5.4'
+            version = '0.6.0'
 
             from components.java
 
@@ -88,6 +88,7 @@ javadoc {
     if(JavaVersion.current().isJava9Compatible()) {
         options.addBooleanOption('html5', true)
     }
+    options.addStringOption('Xdoclint:none', '-quiet')   
 }
 
 dependencies {

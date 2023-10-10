@@ -13,6 +13,9 @@ import com.unifiedapi.unifiedto.utils.DateTimeDeserializer;
 import com.unifiedapi.unifiedto.utils.DateTimeSerializer;
 import java.time.OffsetDateTime;
 
+/**
+ * AtsScorecard - A scorecard is feedback/assessment of a candidate's interview
+ */
 
 public class AtsScorecard {
     @JsonInclude(Include.NON_ABSENT)

@@ -13,8 +13,14 @@ import com.unifiedapi.unifiedto.utils.DateTimeDeserializer;
 import com.unifiedapi.unifiedto.utils.DateTimeSerializer;
 import java.time.OffsetDateTime;
 
+/**
+ * AtsCandidate - A candidate looking for work
+ */
 
 public class AtsCandidate {
+    /**
+     * Unified address object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public PropertyAtsCandidateAddress address;

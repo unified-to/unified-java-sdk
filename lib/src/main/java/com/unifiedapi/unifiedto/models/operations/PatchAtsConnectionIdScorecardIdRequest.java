@@ -9,6 +9,9 @@ import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 
 
 public class PatchAtsConnectionIdScorecardIdRequest {
+    /**
+     * A scorecard is feedback/assessment of a candidate's interview
+     */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.unifiedapi.unifiedto.models.shared.AtsScorecard atsScorecard;
 
