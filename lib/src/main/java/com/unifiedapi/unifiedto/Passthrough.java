@@ -21,18 +21,20 @@ public class Passthrough {
 	}
 
     /**
-     * Passthrough DELETE
+     * Passthrough POST
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.DeletePassthroughConnectionIdPathResponse deletePassthroughConnectionIdPath(com.unifiedapi.unifiedto.models.operations.DeletePassthroughConnectionIdPathRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreatePassthroughResponse createPassthrough(com.unifiedapi.unifiedto.models.operations.CreatePassthroughRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeletePassthroughConnectionIdPathRequest.class, baseUrl, "/passthrough/{connection_id}/{path}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreatePassthroughRequest.class, baseUrl, "/passthrough/{connection_id}/{path}", request, null);
         
         HTTPRequest req = new HTTPRequest();
-        req.setMethod("DELETE");
+        req.setMethod("POST");
         req.setURL(url);
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "undefined", "json");
+        req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
@@ -43,7 +45,7 @@ public class Passthrough {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.DeletePassthroughConnectionIdPathResponse res = new com.unifiedapi.unifiedto.models.operations.DeletePassthroughConnectionIdPathResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.CreatePassthroughResponse res = new com.unifiedapi.unifiedto.models.operations.CreatePassthroughResponse(contentType, httpRes.statusCode()) {{
             undefined = null;
         }};
         res.rawResponse = httpRes;
@@ -65,9 +67,9 @@ public class Passthrough {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetPassthroughConnectionIdPathResponse getPassthroughConnectionIdPath(com.unifiedapi.unifiedto.models.operations.GetPassthroughConnectionIdPathRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListPassthroughsResponse listPassthroughs(com.unifiedapi.unifiedto.models.operations.ListPassthroughsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetPassthroughConnectionIdPathRequest.class, baseUrl, "/passthrough/{connection_id}/{path}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListPassthroughsRequest.class, baseUrl, "/passthrough/{connection_id}/{path}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -82,7 +84,7 @@ public class Passthrough {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.GetPassthroughConnectionIdPathResponse res = new com.unifiedapi.unifiedto.models.operations.GetPassthroughConnectionIdPathResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.ListPassthroughsResponse res = new com.unifiedapi.unifiedto.models.operations.ListPassthroughsResponse(contentType, httpRes.statusCode()) {{
             undefined = null;
         }};
         res.rawResponse = httpRes;
@@ -104,9 +106,9 @@ public class Passthrough {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchPassthroughConnectionIdPathResponse patchPassthroughConnectionIdPath(com.unifiedapi.unifiedto.models.operations.PatchPassthroughConnectionIdPathRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchPassthroughResponse patchPassthrough(com.unifiedapi.unifiedto.models.operations.PatchPassthroughRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchPassthroughConnectionIdPathRequest.class, baseUrl, "/passthrough/{connection_id}/{path}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchPassthroughRequest.class, baseUrl, "/passthrough/{connection_id}/{path}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
@@ -123,7 +125,7 @@ public class Passthrough {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PatchPassthroughConnectionIdPathResponse res = new com.unifiedapi.unifiedto.models.operations.PatchPassthroughConnectionIdPathResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.PatchPassthroughResponse res = new com.unifiedapi.unifiedto.models.operations.PatchPassthroughResponse(contentType, httpRes.statusCode()) {{
             undefined = null;
         }};
         res.rawResponse = httpRes;
@@ -140,20 +142,18 @@ public class Passthrough {
     }
 
     /**
-     * Passthrough POST
+     * Passthrough DELETE
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PostPassthroughConnectionIdPathResponse postPassthroughConnectionIdPath(com.unifiedapi.unifiedto.models.operations.PostPassthroughConnectionIdPathRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemovePassthroughResponse removePassthrough(com.unifiedapi.unifiedto.models.operations.RemovePassthroughRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PostPassthroughConnectionIdPathRequest.class, baseUrl, "/passthrough/{connection_id}/{path}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemovePassthroughRequest.class, baseUrl, "/passthrough/{connection_id}/{path}", request, null);
         
         HTTPRequest req = new HTTPRequest();
-        req.setMethod("POST");
+        req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "undefined", "json");
-        req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
@@ -164,7 +164,7 @@ public class Passthrough {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PostPassthroughConnectionIdPathResponse res = new com.unifiedapi.unifiedto.models.operations.PostPassthroughConnectionIdPathResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.RemovePassthroughResponse res = new com.unifiedapi.unifiedto.models.operations.RemovePassthroughResponse(contentType, httpRes.statusCode()) {{
             undefined = null;
         }};
         res.rawResponse = httpRes;
@@ -186,9 +186,9 @@ public class Passthrough {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutPassthroughConnectionIdPathResponse putPassthroughConnectionIdPath(com.unifiedapi.unifiedto.models.operations.PutPassthroughConnectionIdPathRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdatePassthroughResponse updatePassthrough(com.unifiedapi.unifiedto.models.operations.UpdatePassthroughRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutPassthroughConnectionIdPathRequest.class, baseUrl, "/passthrough/{connection_id}/{path}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdatePassthroughRequest.class, baseUrl, "/passthrough/{connection_id}/{path}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -205,7 +205,7 @@ public class Passthrough {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PutPassthroughConnectionIdPathResponse res = new com.unifiedapi.unifiedto.models.operations.PutPassthroughConnectionIdPathResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.UpdatePassthroughResponse res = new com.unifiedapi.unifiedto.models.operations.UpdatePassthroughResponse(contentType, httpRes.statusCode()) {{
             undefined = null;
         }};
         res.rawResponse = httpRes;

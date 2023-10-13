@@ -23,18 +23,20 @@ public class Contact {
 	}
 
     /**
-     * Remove a contact
+     * Create a contact
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdContactIdResponse deleteCrmConnectionIdContactId(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdContactIdRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateCrmContactResponse createCrmContact(com.unifiedapi.unifiedto.models.operations.CreateCrmContactRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdContactIdRequest.class, baseUrl, "/crm/{connection_id}/contact/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateCrmContactRequest.class, baseUrl, "/crm/{connection_id}/contact", request, null);
         
         HTTPRequest req = new HTTPRequest();
-        req.setMethod("DELETE");
+        req.setMethod("POST");
         req.setURL(url);
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "crmContact", "json");
+        req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
@@ -45,15 +47,16 @@ public class Contact {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdContactIdResponse res = new com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdContactIdResponse(contentType, httpRes.statusCode()) {{
-            deleteCrmConnectionIdContactIdDefaultApplicationJSONString = null;
+        com.unifiedapi.unifiedto.models.operations.CreateCrmContactResponse res = new com.unifiedapi.unifiedto.models.operations.CreateCrmContactResponse(contentType, httpRes.statusCode()) {{
+            crmContact = null;
         }};
         res.rawResponse = httpRes;
         
-        if (true) {
+        if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.deleteCrmConnectionIdContactIdDefaultApplicationJSONString = out;
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.CrmContact out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.CrmContact.class);
+                res.crmContact = out;
             }
         }
 
@@ -61,17 +64,58 @@ public class Contact {
     }
 
     /**
-     * Remove a contact
+     * Create a contact
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.DeleteUcConnectionIdContactIdResponse deleteUcConnectionIdContactId(com.unifiedapi.unifiedto.models.operations.DeleteUcConnectionIdContactIdRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateUcContactResponse createUcContact(com.unifiedapi.unifiedto.models.operations.CreateUcContactRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeleteUcConnectionIdContactIdRequest.class, baseUrl, "/uc/{connection_id}/contact/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateUcContactRequest.class, baseUrl, "/uc/{connection_id}/contact", request, null);
         
         HTTPRequest req = new HTTPRequest();
-        req.setMethod("DELETE");
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "ucContact", "json");
+        req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.CreateUcContactResponse res = new com.unifiedapi.unifiedto.models.operations.CreateUcContactResponse(contentType, httpRes.statusCode()) {{
+            ucContact = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.UcContact out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.UcContact.class);
+                res.ucContact = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Retrieve a contact
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.GetCrmContactResponse getCrmContact(com.unifiedapi.unifiedto.models.operations.GetCrmContactRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCrmContactRequest.class, baseUrl, "/crm/{connection_id}/contact/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
         req.setURL(url);
 
         req.addHeader("Accept", "application/json");
@@ -83,15 +127,55 @@ public class Contact {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.DeleteUcConnectionIdContactIdResponse res = new com.unifiedapi.unifiedto.models.operations.DeleteUcConnectionIdContactIdResponse(contentType, httpRes.statusCode()) {{
-            deleteUcConnectionIdContactIdDefaultApplicationJSONString = null;
+        com.unifiedapi.unifiedto.models.operations.GetCrmContactResponse res = new com.unifiedapi.unifiedto.models.operations.GetCrmContactResponse(contentType, httpRes.statusCode()) {{
+            crmContact = null;
         }};
         res.rawResponse = httpRes;
         
-        if (true) {
+        if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.deleteUcConnectionIdContactIdDefaultApplicationJSONString = out;
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.CrmContact out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.CrmContact.class);
+                res.crmContact = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Retrieve a contact
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.GetUcContactResponse getUcContact(com.unifiedapi.unifiedto.models.operations.GetUcContactRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetUcContactRequest.class, baseUrl, "/uc/{connection_id}/contact/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.GetUcContactResponse res = new com.unifiedapi.unifiedto.models.operations.GetUcContactResponse(contentType, httpRes.statusCode()) {{
+            ucContact = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.UcContact out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.UcContact.class);
+                res.ucContact = out;
             }
         }
 
@@ -104,9 +188,9 @@ public class Contact {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactResponse getCrmConnectionIdContact(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListCrmContactsResponse listCrmContacts(com.unifiedapi.unifiedto.models.operations.ListCrmContactsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactRequest.class, baseUrl, "/crm/{connection_id}/contact", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListCrmContactsRequest.class, baseUrl, "/crm/{connection_id}/contact", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -114,7 +198,7 @@ public class Contact {
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactRequest.class, request, null);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListCrmContactsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -127,7 +211,7 @@ public class Contact {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactResponse res = new com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.ListCrmContactsResponse res = new com.unifiedapi.unifiedto.models.operations.ListCrmContactsResponse(contentType, httpRes.statusCode()) {{
             crmContacts = null;
         }};
         res.rawResponse = httpRes;
@@ -144,53 +228,14 @@ public class Contact {
     }
 
     /**
-     * Retrieve a contact
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactIdResponse getCrmConnectionIdContactId(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactIdRequest.class, baseUrl, "/crm/{connection_id}/contact/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactIdResponse res = new com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactIdResponse(contentType, httpRes.statusCode()) {{
-            crmContact = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.CrmContact out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.CrmContact.class);
-                res.crmContact = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
      * List all contacts
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactResponse getUcConnectionIdContact(com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListUcContactsResponse listUcContacts(com.unifiedapi.unifiedto.models.operations.ListUcContactsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactRequest.class, baseUrl, "/uc/{connection_id}/contact", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListUcContactsRequest.class, baseUrl, "/uc/{connection_id}/contact", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -198,7 +243,7 @@ public class Contact {
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactRequest.class, request, null);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListUcContactsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -211,7 +256,7 @@ public class Contact {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactResponse res = new com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.ListUcContactsResponse res = new com.unifiedapi.unifiedto.models.operations.ListUcContactsResponse(contentType, httpRes.statusCode()) {{
             ucContacts = null;
         }};
         res.rawResponse = httpRes;
@@ -228,53 +273,14 @@ public class Contact {
     }
 
     /**
-     * Retrieve a contact
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactIdResponse getUcConnectionIdContactId(com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactIdRequest.class, baseUrl, "/uc/{connection_id}/contact/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactIdResponse res = new com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactIdResponse(contentType, httpRes.statusCode()) {{
-            ucContact = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.UcContact out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.UcContact.class);
-                res.ucContact = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
      * Update a contact
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdContactIdResponse patchCrmConnectionIdContactId(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdContactIdRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchCrmContactResponse patchCrmContact(com.unifiedapi.unifiedto.models.operations.PatchCrmContactRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdContactIdRequest.class, baseUrl, "/crm/{connection_id}/contact/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchCrmContactRequest.class, baseUrl, "/crm/{connection_id}/contact/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
@@ -291,7 +297,7 @@ public class Contact {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdContactIdResponse res = new com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdContactIdResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.PatchCrmContactResponse res = new com.unifiedapi.unifiedto.models.operations.PatchCrmContactResponse(contentType, httpRes.statusCode()) {{
             crmContact = null;
         }};
         res.rawResponse = httpRes;
@@ -313,9 +319,9 @@ public class Contact {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchUcConnectionIdContactIdResponse patchUcConnectionIdContactId(com.unifiedapi.unifiedto.models.operations.PatchUcConnectionIdContactIdRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchUcContactResponse patchUcContact(com.unifiedapi.unifiedto.models.operations.PatchUcContactRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchUcConnectionIdContactIdRequest.class, baseUrl, "/uc/{connection_id}/contact/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchUcContactRequest.class, baseUrl, "/uc/{connection_id}/contact/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
@@ -332,7 +338,7 @@ public class Contact {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PatchUcConnectionIdContactIdResponse res = new com.unifiedapi.unifiedto.models.operations.PatchUcConnectionIdContactIdResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.PatchUcContactResponse res = new com.unifiedapi.unifiedto.models.operations.PatchUcContactResponse(contentType, httpRes.statusCode()) {{
             ucContact = null;
         }};
         res.rawResponse = httpRes;
@@ -349,20 +355,18 @@ public class Contact {
     }
 
     /**
-     * Create a contact
+     * Remove a contact
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdContactResponse postCrmConnectionIdContact(com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdContactRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveCrmContactResponse removeCrmContact(com.unifiedapi.unifiedto.models.operations.RemoveCrmContactRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdContactRequest.class, baseUrl, "/crm/{connection_id}/contact", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveCrmContactRequest.class, baseUrl, "/crm/{connection_id}/contact/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
-        req.setMethod("POST");
+        req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "crmContact", "json");
-        req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
@@ -373,16 +377,15 @@ public class Contact {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdContactResponse res = new com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdContactResponse(contentType, httpRes.statusCode()) {{
-            crmContact = null;
+        com.unifiedapi.unifiedto.models.operations.RemoveCrmContactResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveCrmContactResponse(contentType, httpRes.statusCode()) {{
+            removeCrmContactDefaultApplicationJSONString = null;
         }};
         res.rawResponse = httpRes;
         
-        if (httpRes.statusCode() == 200) {
+        if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.CrmContact out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.CrmContact.class);
-                res.crmContact = out;
+                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
+                res.removeCrmContactDefaultApplicationJSONString = out;
             }
         }
 
@@ -390,20 +393,18 @@ public class Contact {
     }
 
     /**
-     * Create a contact
+     * Remove a contact
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PostUcConnectionIdContactResponse postUcConnectionIdContact(com.unifiedapi.unifiedto.models.operations.PostUcConnectionIdContactRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveUcContactResponse removeUcContact(com.unifiedapi.unifiedto.models.operations.RemoveUcContactRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PostUcConnectionIdContactRequest.class, baseUrl, "/uc/{connection_id}/contact", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveUcContactRequest.class, baseUrl, "/uc/{connection_id}/contact/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
-        req.setMethod("POST");
+        req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "ucContact", "json");
-        req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
@@ -414,16 +415,15 @@ public class Contact {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PostUcConnectionIdContactResponse res = new com.unifiedapi.unifiedto.models.operations.PostUcConnectionIdContactResponse(contentType, httpRes.statusCode()) {{
-            ucContact = null;
+        com.unifiedapi.unifiedto.models.operations.RemoveUcContactResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveUcContactResponse(contentType, httpRes.statusCode()) {{
+            removeUcContactDefaultApplicationJSONString = null;
         }};
         res.rawResponse = httpRes;
         
-        if (httpRes.statusCode() == 200) {
+        if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.UcContact out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.UcContact.class);
-                res.ucContact = out;
+                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
+                res.removeUcContactDefaultApplicationJSONString = out;
             }
         }
 
@@ -436,9 +436,9 @@ public class Contact {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdContactIdResponse putCrmConnectionIdContactId(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdContactIdRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateCrmContactResponse updateCrmContact(com.unifiedapi.unifiedto.models.operations.UpdateCrmContactRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdContactIdRequest.class, baseUrl, "/crm/{connection_id}/contact/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateCrmContactRequest.class, baseUrl, "/crm/{connection_id}/contact/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -455,7 +455,7 @@ public class Contact {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdContactIdResponse res = new com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdContactIdResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.UpdateCrmContactResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateCrmContactResponse(contentType, httpRes.statusCode()) {{
             crmContact = null;
         }};
         res.rawResponse = httpRes;
@@ -477,9 +477,9 @@ public class Contact {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutUcConnectionIdContactIdResponse putUcConnectionIdContactId(com.unifiedapi.unifiedto.models.operations.PutUcConnectionIdContactIdRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateUcContactResponse updateUcContact(com.unifiedapi.unifiedto.models.operations.UpdateUcContactRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutUcConnectionIdContactIdRequest.class, baseUrl, "/uc/{connection_id}/contact/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateUcContactRequest.class, baseUrl, "/uc/{connection_id}/contact/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -496,7 +496,7 @@ public class Contact {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PutUcConnectionIdContactIdResponse res = new com.unifiedapi.unifiedto.models.operations.PutUcConnectionIdContactIdResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.UpdateUcContactResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateUcContactResponse(contentType, httpRes.statusCode()) {{
             ucContact = null;
         }};
         res.rawResponse = httpRes;

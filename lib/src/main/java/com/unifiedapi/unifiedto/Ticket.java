@@ -23,177 +23,14 @@ public class Ticket {
 	}
 
     /**
-     * Remove a ticket
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdTicketIdResponse deleteTicketingConnectionIdTicketId(com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdTicketIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdTicketIdRequest.class, baseUrl, "/ticketing/{connection_id}/ticket/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("DELETE");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdTicketIdResponse res = new com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdTicketIdResponse(contentType, httpRes.statusCode()) {{
-            deleteTicketingConnectionIdTicketIdDefaultApplicationJSONString = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (true) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.deleteTicketingConnectionIdTicketIdDefaultApplicationJSONString = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * List all tickets
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdTicketResponse getTicketingConnectionIdTicket(com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdTicketRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdTicketRequest.class, baseUrl, "/ticketing/{connection_id}/ticket", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdTicketRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdTicketResponse res = new com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdTicketResponse(contentType, httpRes.statusCode()) {{
-            ticketingTickets = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.TicketingTicket[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.TicketingTicket[].class);
-                res.ticketingTickets = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Retrieve a ticket
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdTicketIdResponse getTicketingConnectionIdTicketId(com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdTicketIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdTicketIdRequest.class, baseUrl, "/ticketing/{connection_id}/ticket/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdTicketIdResponse res = new com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdTicketIdResponse(contentType, httpRes.statusCode()) {{
-            ticketingTicket = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.TicketingTicket out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.TicketingTicket.class);
-                res.ticketingTicket = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Update a ticket
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdTicketIdResponse patchTicketingConnectionIdTicketId(com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdTicketIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdTicketIdRequest.class, baseUrl, "/ticketing/{connection_id}/ticket/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("PATCH");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "ticketingTicket", "json");
-        req.setBody(serializedRequestBody);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdTicketIdResponse res = new com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdTicketIdResponse(contentType, httpRes.statusCode()) {{
-            ticketingTicket = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.TicketingTicket out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.TicketingTicket.class);
-                res.ticketingTicket = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
      * Create a ticket
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdTicketResponse postTicketingConnectionIdTicket(com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdTicketRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketResponse createTicketingTicket(com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdTicketRequest.class, baseUrl, "/ticketing/{connection_id}/ticket", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketRequest.class, baseUrl, "/ticketing/{connection_id}/ticket", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -210,7 +47,7 @@ public class Ticket {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdTicketResponse res = new com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdTicketResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketResponse res = new com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketResponse(contentType, httpRes.statusCode()) {{
             ticketingTicket = null;
         }};
         res.rawResponse = httpRes;
@@ -227,14 +64,177 @@ public class Ticket {
     }
 
     /**
+     * Retrieve a ticket
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.GetTicketingTicketResponse getTicketingTicket(com.unifiedapi.unifiedto.models.operations.GetTicketingTicketRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetTicketingTicketRequest.class, baseUrl, "/ticketing/{connection_id}/ticket/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.GetTicketingTicketResponse res = new com.unifiedapi.unifiedto.models.operations.GetTicketingTicketResponse(contentType, httpRes.statusCode()) {{
+            ticketingTicket = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.TicketingTicket out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.TicketingTicket.class);
+                res.ticketingTicket = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * List all tickets
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsResponse listTicketingTickets(com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsRequest.class, baseUrl, "/ticketing/{connection_id}/ticket", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsResponse res = new com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsResponse(contentType, httpRes.statusCode()) {{
+            ticketingTickets = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.TicketingTicket[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.TicketingTicket[].class);
+                res.ticketingTickets = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * Update a ticket
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdTicketIdResponse putTicketingConnectionIdTicketId(com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdTicketIdRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketResponse patchTicketingTicket(com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdTicketIdRequest.class, baseUrl, "/ticketing/{connection_id}/ticket/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketRequest.class, baseUrl, "/ticketing/{connection_id}/ticket/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PATCH");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "ticketingTicket", "json");
+        req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketResponse res = new com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketResponse(contentType, httpRes.statusCode()) {{
+            ticketingTicket = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.TicketingTicket out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.TicketingTicket.class);
+                res.ticketingTicket = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Remove a ticket
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketResponse removeTicketingTicket(com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketRequest.class, baseUrl, "/ticketing/{connection_id}/ticket/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("DELETE");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketResponse(contentType, httpRes.statusCode()) {{
+            removeTicketingTicketDefaultApplicationJSONString = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (true) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
+                res.removeTicketingTicketDefaultApplicationJSONString = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Update a ticket
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketResponse updateTicketingTicket(com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketRequest.class, baseUrl, "/ticketing/{connection_id}/ticket/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -251,7 +251,7 @@ public class Ticket {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdTicketIdResponse res = new com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdTicketIdResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketResponse(contentType, httpRes.statusCode()) {{
             ticketingTicket = null;
         }};
         res.rawResponse = httpRes;

@@ -1,9 +1,0 @@
-# PostTicketingConnectionIdTicketRequest
-
-
-## Fields
-
-| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ticketingTicket`                                                                                | [com.unifiedapi.unifiedto.models.shared.TicketingTicket](../../models/shared/TicketingTicket.md) | :heavy_minus_sign:                                                                               | N/A                                                                                              |
-| `connectionId`                                                                                   | *String*                                                                                         | :heavy_check_mark:                                                                               | ID of the connection                                                                             |

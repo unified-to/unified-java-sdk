@@ -23,18 +23,20 @@ public class Company {
 	}
 
     /**
-     * Remove a company
+     * Create a company
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdCompanyIdResponse deleteCrmConnectionIdCompanyId(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdCompanyIdRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateCrmCompanyResponse createCrmCompany(com.unifiedapi.unifiedto.models.operations.CreateCrmCompanyRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdCompanyIdRequest.class, baseUrl, "/crm/{connection_id}/company/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateCrmCompanyRequest.class, baseUrl, "/crm/{connection_id}/company", request, null);
         
         HTTPRequest req = new HTTPRequest();
-        req.setMethod("DELETE");
+        req.setMethod("POST");
         req.setURL(url);
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "crmCompany", "json");
+        req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
@@ -45,90 +47,7 @@ public class Company {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdCompanyIdResponse res = new com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdCompanyIdResponse(contentType, httpRes.statusCode()) {{
-            deleteCrmConnectionIdCompanyIdDefaultApplicationJSONString = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (true) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.deleteCrmConnectionIdCompanyIdDefaultApplicationJSONString = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * List all companies
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanyResponse getCrmConnectionIdCompany(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanyRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanyRequest.class, baseUrl, "/crm/{connection_id}/company", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanyRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanyResponse res = new com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanyResponse(contentType, httpRes.statusCode()) {{
-            crmCompanies = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.CrmCompany[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.CrmCompany[].class);
-                res.crmCompanies = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Retrieve a company
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanyIdResponse getCrmConnectionIdCompanyId(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanyIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanyIdRequest.class, baseUrl, "/crm/{connection_id}/company/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanyIdResponse res = new com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdCompanyIdResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.CreateCrmCompanyResponse res = new com.unifiedapi.unifiedto.models.operations.CreateCrmCompanyResponse(contentType, httpRes.statusCode()) {{
             crmCompany = null;
         }};
         res.rawResponse = httpRes;
@@ -145,14 +64,14 @@ public class Company {
     }
 
     /**
-     * Retrieve enrichment information for a company
+     * Retrieve a company
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdCompanyResponse getEnrichConnectionIdCompany(com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdCompanyRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetCrmCompanyResponse getCrmCompany(com.unifiedapi.unifiedto.models.operations.GetCrmCompanyRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdCompanyRequest.class, baseUrl, "/enrich/{connection_id}/company", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCrmCompanyRequest.class, baseUrl, "/crm/{connection_id}/company/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -160,7 +79,46 @@ public class Company {
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdCompanyRequest.class, request, null);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.GetCrmCompanyResponse res = new com.unifiedapi.unifiedto.models.operations.GetCrmCompanyResponse(contentType, httpRes.statusCode()) {{
+            crmCompany = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.CrmCompany out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.CrmCompany.class);
+                res.crmCompany = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * List all companies
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.ListCrmCompaniesResponse listCrmCompanies(com.unifiedapi.unifiedto.models.operations.ListCrmCompaniesRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListCrmCompaniesRequest.class, baseUrl, "/crm/{connection_id}/company", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListCrmCompaniesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -173,7 +131,52 @@ public class Company {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdCompanyResponse res = new com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdCompanyResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.ListCrmCompaniesResponse res = new com.unifiedapi.unifiedto.models.operations.ListCrmCompaniesResponse(contentType, httpRes.statusCode()) {{
+            crmCompanies = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.CrmCompany[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.CrmCompany[].class);
+                res.crmCompanies = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Retrieve enrichment information for a company
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesResponse listEnrichCompanies(com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesRequest.class, baseUrl, "/enrich/{connection_id}/company", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesResponse res = new com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesResponse(contentType, httpRes.statusCode()) {{
             enrichCompany = null;
         }};
         res.rawResponse = httpRes;
@@ -195,9 +198,9 @@ public class Company {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdCompanyIdResponse patchCrmConnectionIdCompanyId(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdCompanyIdRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchCrmCompanyResponse patchCrmCompany(com.unifiedapi.unifiedto.models.operations.PatchCrmCompanyRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdCompanyIdRequest.class, baseUrl, "/crm/{connection_id}/company/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchCrmCompanyRequest.class, baseUrl, "/crm/{connection_id}/company/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
@@ -214,7 +217,7 @@ public class Company {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdCompanyIdResponse res = new com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdCompanyIdResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.PatchCrmCompanyResponse res = new com.unifiedapi.unifiedto.models.operations.PatchCrmCompanyResponse(contentType, httpRes.statusCode()) {{
             crmCompany = null;
         }};
         res.rawResponse = httpRes;
@@ -231,20 +234,18 @@ public class Company {
     }
 
     /**
-     * Create a company
+     * Remove a company
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdCompanyResponse postCrmConnectionIdCompany(com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdCompanyRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyResponse removeCrmCompany(com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdCompanyRequest.class, baseUrl, "/crm/{connection_id}/company", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyRequest.class, baseUrl, "/crm/{connection_id}/company/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
-        req.setMethod("POST");
+        req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "crmCompany", "json");
-        req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
@@ -255,16 +256,15 @@ public class Company {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdCompanyResponse res = new com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdCompanyResponse(contentType, httpRes.statusCode()) {{
-            crmCompany = null;
+        com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyResponse(contentType, httpRes.statusCode()) {{
+            removeCrmCompanyDefaultApplicationJSONString = null;
         }};
         res.rawResponse = httpRes;
         
-        if (httpRes.statusCode() == 200) {
+        if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.CrmCompany out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.CrmCompany.class);
-                res.crmCompany = out;
+                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
+                res.removeCrmCompanyDefaultApplicationJSONString = out;
             }
         }
 
@@ -277,9 +277,9 @@ public class Company {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdCompanyIdResponse putCrmConnectionIdCompanyId(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdCompanyIdRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateCrmCompanyResponse updateCrmCompany(com.unifiedapi.unifiedto.models.operations.UpdateCrmCompanyRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdCompanyIdRequest.class, baseUrl, "/crm/{connection_id}/company/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateCrmCompanyRequest.class, baseUrl, "/crm/{connection_id}/company/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -296,7 +296,7 @@ public class Company {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdCompanyIdResponse res = new com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdCompanyIdResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.UpdateCrmCompanyResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateCrmCompanyResponse(contentType, httpRes.statusCode()) {{
             crmCompany = null;
         }};
         res.rawResponse = httpRes;

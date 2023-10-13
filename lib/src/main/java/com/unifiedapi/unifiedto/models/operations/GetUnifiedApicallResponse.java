@@ -13,10 +13,10 @@ public class GetUnifiedApicallResponse {
      * Successful
      */
     
-    public com.unifiedapi.unifiedto.models.shared.ApiCall[] apiCalls;
+    public com.unifiedapi.unifiedto.models.shared.ApiCall apiCall;
 
-    public GetUnifiedApicallResponse withApiCalls(com.unifiedapi.unifiedto.models.shared.ApiCall[] apiCalls) {
-        this.apiCalls = apiCalls;
+    public GetUnifiedApicallResponse withApiCall(com.unifiedapi.unifiedto.models.shared.ApiCall apiCall) {
+        this.apiCall = apiCall;
         return this;
     }
     

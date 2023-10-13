@@ -3,9 +3,9 @@
 
 ### Available Operations
 
-* [getEnrichConnectionIdPerson](#getenrichconnectionidperson) - Retrieve enrichment information for a person
+* [listEnrichPeople](#listenrichpeople) - Retrieve enrichment information for a person
 
-## getEnrichConnectionIdPerson
+## listEnrichPeople
 
 Retrieve enrichment information for a person
 
@@ -15,27 +15,27 @@ Retrieve enrichment information for a person
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdPersonRequest;
-import com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdPersonResponse;
+import com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleRequest;
+import com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Cisgender"){{
+                .setSecurity(new Security("Southwest"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetEnrichConnectionIdPersonRequest req = new GetEnrichConnectionIdPersonRequest("Account"){{
-                email = "Jaiden_Weimann24@gmail.com";
-                linkedinUrl = "paradigms integrate Creative";
-                name = "Investment";
-                twitter = "Hills";
+            ListEnrichPeopleRequest req = new ListEnrichPeopleRequest("Associate"){{
+                email = "Lia.Green@yahoo.com";
+                linkedinUrl = "ad";
+                name = "Investor";
+                twitter = "Convertible";
             }};            
 
-            GetEnrichConnectionIdPersonResponse res = sdk.person.getEnrichConnectionIdPerson(req);
+            ListEnrichPeopleResponse res = sdk.person.listEnrichPeople(req);
 
             if (res.enrichPerson != null) {
                 // handle response
@@ -49,12 +49,12 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdPersonRequest](../../models/operations/GetEnrichConnectionIdPersonRequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleRequest](../../models/operations/ListEnrichPeopleRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdPersonResponse](../../models/operations/GetEnrichConnectionIdPersonResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleResponse](../../models/operations/ListEnrichPeopleResponse.md)**
 

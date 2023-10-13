@@ -4,83 +4,23 @@
 
 package com.unifiedapi.unifiedto.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
-import java.time.OffsetDateTime;
 
 
 public class GetUnifiedConnectionRequest {
     /**
-     * Filter the results on these categories
+     * ID of the Connection
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=categories")
-    public GetUnifiedConnectionCategories[] categories;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
 
-    public GetUnifiedConnectionRequest withCategories(GetUnifiedConnectionCategories[] categories) {
-        this.categories = categories;
+    public GetUnifiedConnectionRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=env")
-    public String env;
-
-    public GetUnifiedConnectionRequest withEnv(String env) {
-        this.env = env;
-        return this;
-    }
-    
-    /**
-     * Filter the results to only those integrations for your user referenced by this value
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=external_xref")
-    public String externalXref;
-
-    public GetUnifiedConnectionRequest withExternalXref(String externalXref) {
-        this.externalXref = externalXref;
-        return this;
-    }
-    
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
-    public Double limit;
-
-    public GetUnifiedConnectionRequest withLimit(Double limit) {
-        this.limit = limit;
-        return this;
-    }
-    
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
-    public Double offset;
-
-    public GetUnifiedConnectionRequest withOffset(Double offset) {
-        this.offset = offset;
-        return this;
-    }
-    
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
-    public String order;
-
-    public GetUnifiedConnectionRequest withOrder(String order) {
-        this.order = order;
-        return this;
-    }
-    
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
-    public String sort;
-
-    public GetUnifiedConnectionRequest withSort(String sort) {
-        this.sort = sort;
-        return this;
-    }
-    
-    /**
-     * Return only results whose updated date is equal or greater to this value
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
-    public OffsetDateTime updatedGte;
-
-    public GetUnifiedConnectionRequest withUpdatedGte(OffsetDateTime updatedGte) {
-        this.updatedGte = updatedGte;
-        return this;
-    }
-    
-    public GetUnifiedConnectionRequest(){}
+    public GetUnifiedConnectionRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

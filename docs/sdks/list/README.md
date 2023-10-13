@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [deleteMartechConnectionIdListId](#deletemartechconnectionidlistid) - Remove a list
-* [getMartechConnectionIdList](#getmartechconnectionidlist) - List all lists
-* [getMartechConnectionIdListId](#getmartechconnectionidlistid) - Retrieve a list
-* [patchMartechConnectionIdListId](#patchmartechconnectionidlistid) - Update a list
-* [postMartechConnectionIdList](#postmartechconnectionidlist) - Create a list
-* [putMartechConnectionIdListId](#putmartechconnectionidlistid) - Update a list
+* [createMartechList](#createmartechlist) - Create a list
+* [getMartechList](#getmartechlist) - Retrieve a list
+* [listMartechLists](#listmartechlists) - List all lists
+* [patchMartechList](#patchmartechlist) - Update a list
+* [removeMartechList](#removemartechlist) - Remove a list
+* [updateMartechList](#updatemartechlist) - Update a list
 
-## deleteMartechConnectionIdListId
+## createMartechList
 
-Remove a list
+Create a list
 
 ### Example Usage
 
@@ -20,24 +20,35 @@ Remove a list
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.DeleteMartechConnectionIdListIdRequest;
-import com.unifiedapi.unifiedto.models.operations.DeleteMartechConnectionIdListIdResponse;
+import com.unifiedapi.unifiedto.models.operations.CreateMartechListRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateMartechListResponse;
+import com.unifiedapi.unifiedto.models.shared.MarketingList;
+import com.unifiedapi.unifiedto.models.shared.PropertyMarketingListRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("generate"){{
+                .setSecurity(new Security("Latin"){{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteMartechConnectionIdListIdRequest req = new DeleteMartechConnectionIdListIdRequest("aliquam", "Crossroad");            
+            CreateMartechListRequest req = new CreateMartechListRequest("withdrawal"){{
+                marketingList = new MarketingList(){{
+                    createdAt = "Recycled Fresh iusto";
+                    id = "<ID>";
+                    name = "Home Clothing indexing";
+                    raw = new PropertyMarketingListRaw();
+                    updatedAt = OffsetDateTime.parse("2022-06-21T04:01:59.310Z");
+                }};
+            }};            
 
-            DeleteMartechConnectionIdListIdResponse res = sdk.list.deleteMartechConnectionIdListId(req);
+            CreateMartechListResponse res = sdk.list.createMartechList(req);
 
-            if (res.statusCode == 200) {
+            if (res.marketingList != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -49,17 +60,66 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.DeleteMartechConnectionIdListIdRequest](../../models/operations/DeleteMartechConnectionIdListIdRequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.CreateMartechListRequest](../../models/operations/CreateMartechListRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.DeleteMartechConnectionIdListIdResponse](../../models/operations/DeleteMartechConnectionIdListIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.CreateMartechListResponse](../../models/operations/CreateMartechListResponse.md)**
 
 
-## getMartechConnectionIdList
+## getMartechList
+
+Retrieve a list
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.GetMartechListRequest;
+import com.unifiedapi.unifiedto.models.operations.GetMartechListResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("red"){{
+                    jwt = "";
+                }})
+                .build();
+
+            GetMartechListRequest req = new GetMartechListRequest("users", "Bespoke");            
+
+            GetMartechListResponse res = sdk.list.getMartechList(req);
+
+            if (res.marketingList != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [com.unifiedapi.unifiedto.models.operations.GetMartechListRequest](../../models/operations/GetMartechListRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.GetMartechListResponse](../../models/operations/GetMartechListResponse.md)**
+
+
+## listMartechLists
 
 List all lists
 
@@ -69,8 +129,8 @@ List all lists
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListRequest;
-import com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListResponse;
+import com.unifiedapi.unifiedto.models.operations.ListMartechListsRequest;
+import com.unifiedapi.unifiedto.models.operations.ListMartechListsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -78,21 +138,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("project"){{
+                .setSecurity(new Security("above"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetMartechConnectionIdListRequest req = new GetMartechConnectionIdListRequest("apportion"){{
-                limit = 2321.9d;
-                offset = 9799.48d;
-                order = "Wooden Pass";
-                query = "since";
-                sort = "South incubate";
-                updatedGte = OffsetDateTime.parse("2023-01-24T13:37:19.156Z");
+            ListMartechListsRequest req = new ListMartechListsRequest("Fantastic"){{
+                limit = 3446.94d;
+                offset = 7906.96d;
+                order = "black provided within";
+                query = "alarm evolve";
+                sort = "Account";
+                updatedGte = OffsetDateTime.parse("2021-10-01T15:40:04.957Z");
             }};            
 
-            GetMartechConnectionIdListResponse res = sdk.list.getMartechConnectionIdList(req);
+            ListMartechListsResponse res = sdk.list.listMartechLists(req);
 
             if (res.marketingLists != null) {
                 // handle response
@@ -106,66 +166,17 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListRequest](../../models/operations/GetMartechConnectionIdListRequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.ListMartechListsRequest](../../models/operations/ListMartechListsRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListResponse](../../models/operations/GetMartechConnectionIdListResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.ListMartechListsResponse](../../models/operations/ListMartechListsResponse.md)**
 
 
-## getMartechConnectionIdListId
-
-Retrieve a list
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListIdRequest;
-import com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListIdResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("digital"){{
-                    jwt = "";
-                }})
-                .build();
-
-            GetMartechConnectionIdListIdRequest req = new GetMartechConnectionIdListIdRequest("mint", "Arkansas");            
-
-            GetMartechConnectionIdListIdResponse res = sdk.list.getMartechConnectionIdListId(req);
-
-            if (res.marketingList != null) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListIdRequest](../../models/operations/GetMartechConnectionIdListIdRequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
-
-
-### Response
-
-**[com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListIdResponse](../../models/operations/GetMartechConnectionIdListIdResponse.md)**
-
-
-## patchMartechConnectionIdListId
+## patchMartechList
 
 Update a list
 
@@ -175,8 +186,8 @@ Update a list
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchMartechConnectionIdListIdRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchMartechConnectionIdListIdResponse;
+import com.unifiedapi.unifiedto.models.operations.PatchMartechListRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchMartechListResponse;
 import com.unifiedapi.unifiedto.models.shared.MarketingList;
 import com.unifiedapi.unifiedto.models.shared.PropertyMarketingListRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -186,22 +197,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("engage"){{
+                .setSecurity(new Security("Classical"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchMartechConnectionIdListIdRequest req = new PatchMartechConnectionIdListIdRequest("bluetooth", "lime"){{
+            PatchMartechListRequest req = new PatchMartechListRequest("alarm", "Dodge"){{
                 marketingList = new MarketingList(){{
-                    createdAt = "synergies lime Human";
+                    createdAt = "Toyota";
                     id = "<ID>";
-                    name = "Intelligent connecting Recumbent";
+                    name = "female";
                     raw = new PropertyMarketingListRaw();
-                    updatedAt = OffsetDateTime.parse("2023-07-01T00:27:35.301Z");
+                    updatedAt = OffsetDateTime.parse("2022-07-15T21:19:00.293Z");
                 }};
             }};            
 
-            PatchMartechConnectionIdListIdResponse res = sdk.list.patchMartechConnectionIdListId(req);
+            PatchMartechListResponse res = sdk.list.patchMartechList(req);
 
             if (res.marketingList != null) {
                 // handle response
@@ -215,19 +226,19 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.PatchMartechConnectionIdListIdRequest](../../models/operations/PatchMartechConnectionIdListIdRequest.md) | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.PatchMartechListRequest](../../models/operations/PatchMartechListRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchMartechConnectionIdListIdResponse](../../models/operations/PatchMartechConnectionIdListIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.PatchMartechListResponse](../../models/operations/PatchMartechListResponse.md)**
 
 
-## postMartechConnectionIdList
+## removeMartechList
 
-Create a list
+Remove a list
 
 ### Example Usage
 
@@ -235,35 +246,24 @@ Create a list
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PostMartechConnectionIdListRequest;
-import com.unifiedapi.unifiedto.models.operations.PostMartechConnectionIdListResponse;
-import com.unifiedapi.unifiedto.models.shared.MarketingList;
-import com.unifiedapi.unifiedto.models.shared.PropertyMarketingListRaw;
+import com.unifiedapi.unifiedto.models.operations.RemoveMartechListRequest;
+import com.unifiedapi.unifiedto.models.operations.RemoveMartechListResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("black"){{
+                .setSecurity(new Security("Northwest"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostMartechConnectionIdListRequest req = new PostMartechConnectionIdListRequest("Hafnium"){{
-                marketingList = new MarketingList(){{
-                    createdAt = "Steel caddy who";
-                    id = "<ID>";
-                    name = "Bicycle Bicycle Bicycle";
-                    raw = new PropertyMarketingListRaw();
-                    updatedAt = OffsetDateTime.parse("2021-06-21T11:26:26.993Z");
-                }};
-            }};            
+            RemoveMartechListRequest req = new RemoveMartechListRequest("trusting", "driver");            
 
-            PostMartechConnectionIdListResponse res = sdk.list.postMartechConnectionIdList(req);
+            RemoveMartechListResponse res = sdk.list.removeMartechList(req);
 
-            if (res.marketingList != null) {
+            if (res.statusCode == 200) {
                 // handle response
             }
         } catch (Exception e) {
@@ -275,17 +275,17 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.PostMartechConnectionIdListRequest](../../models/operations/PostMartechConnectionIdListRequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.RemoveMartechListRequest](../../models/operations/RemoveMartechListRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PostMartechConnectionIdListResponse](../../models/operations/PostMartechConnectionIdListResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.RemoveMartechListResponse](../../models/operations/RemoveMartechListResponse.md)**
 
 
-## putMartechConnectionIdListId
+## updateMartechList
 
 Update a list
 
@@ -295,8 +295,8 @@ Update a list
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PutMartechConnectionIdListIdRequest;
-import com.unifiedapi.unifiedto.models.operations.PutMartechConnectionIdListIdResponse;
+import com.unifiedapi.unifiedto.models.operations.UpdateMartechListRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdateMartechListResponse;
 import com.unifiedapi.unifiedto.models.shared.MarketingList;
 import com.unifiedapi.unifiedto.models.shared.PropertyMarketingListRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -306,22 +306,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Swiss"){{
+                .setSecurity(new Security("innocently"){{
                     jwt = "";
                 }})
                 .build();
 
-            PutMartechConnectionIdListIdRequest req = new PutMartechConnectionIdListIdRequest("textual", "navigate"){{
+            UpdateMartechListRequest req = new UpdateMartechListRequest("gold", "panel"){{
                 marketingList = new MarketingList(){{
-                    createdAt = "aggressive";
+                    createdAt = "precious East Bentley";
                     id = "<ID>";
-                    name = "Progressive";
+                    name = "Supervisor navigate Androgynous";
                     raw = new PropertyMarketingListRaw();
-                    updatedAt = OffsetDateTime.parse("2023-01-17T12:35:27.783Z");
+                    updatedAt = OffsetDateTime.parse("2021-03-28T05:43:12.466Z");
                 }};
             }};            
 
-            PutMartechConnectionIdListIdResponse res = sdk.list.putMartechConnectionIdListId(req);
+            UpdateMartechListResponse res = sdk.list.updateMartechList(req);
 
             if (res.marketingList != null) {
                 // handle response
@@ -335,12 +335,12 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.PutMartechConnectionIdListIdRequest](../../models/operations/PutMartechConnectionIdListIdRequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.UpdateMartechListRequest](../../models/operations/UpdateMartechListRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PutMartechConnectionIdListIdResponse](../../models/operations/PutMartechConnectionIdListIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.UpdateMartechListResponse](../../models/operations/UpdateMartechListResponse.md)**
 

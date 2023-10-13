@@ -24,10 +24,10 @@ public class GetUnifiedIntegrationResponse {
      * Successful
      */
     
-    public com.unifiedapi.unifiedto.models.shared.Integration[] integrations;
+    public com.unifiedapi.unifiedto.models.shared.Integration integration;
 
-    public GetUnifiedIntegrationResponse withIntegrations(com.unifiedapi.unifiedto.models.shared.Integration[] integrations) {
-        this.integrations = integrations;
+    public GetUnifiedIntegrationResponse withIntegration(com.unifiedapi.unifiedto.models.shared.Integration integration) {
+        this.integration = integration;
         return this;
     }
     

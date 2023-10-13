@@ -4,116 +4,23 @@
 
 package com.unifiedapi.unifiedto.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
-import java.time.OffsetDateTime;
 
 
 public class GetUnifiedApicallRequest {
     /**
-     * Filter the results to just this integration's API calls
+     * ID of the Apicall
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=connection_id")
-    public String connectionId;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
 
-    public GetUnifiedApicallRequest withConnectionId(String connectionId) {
-        this.connectionId = connectionId;
+    public GetUnifiedApicallRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    /**
-     * Return only results whose updated date is equal or less to this value
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_lte")
-    public OffsetDateTime createdLte;
-
-    public GetUnifiedApicallRequest withCreatedLte(OffsetDateTime createdLte) {
-        this.createdLte = createdLte;
-        return this;
-    }
-    
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=env")
-    public String env;
-
-    public GetUnifiedApicallRequest withEnv(String env) {
-        this.env = env;
-        return this;
-    }
-    
-    /**
-     * Filter the results for API Calls with errors
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=error")
-    public Boolean error;
-
-    public GetUnifiedApicallRequest withError(Boolean error) {
-        this.error = error;
-        return this;
-    }
-    
-    /**
-     * Filter the results to only those integrations for your user referenced by this value
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=external_xref")
-    public String externalXref;
-
-    public GetUnifiedApicallRequest withExternalXref(String externalXref) {
-        this.externalXref = externalXref;
-        return this;
-    }
-    
-    /**
-     * Filter the results for connections with this integration
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=integration_type")
-    public String integrationType;
-
-    public GetUnifiedApicallRequest withIntegrationType(String integrationType) {
-        this.integrationType = integrationType;
-        return this;
-    }
-    
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
-    public Double limit;
-
-    public GetUnifiedApicallRequest withLimit(Double limit) {
-        this.limit = limit;
-        return this;
-    }
-    
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
-    public Double offset;
-
-    public GetUnifiedApicallRequest withOffset(Double offset) {
-        this.offset = offset;
-        return this;
-    }
-    
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
-    public String order;
-
-    public GetUnifiedApicallRequest withOrder(String order) {
-        this.order = order;
-        return this;
-    }
-    
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
-    public String sort;
-
-    public GetUnifiedApicallRequest withSort(String sort) {
-        this.sort = sort;
-        return this;
-    }
-    
-    /**
-     * Return only results whose updated date is equal or greater to this value
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
-    public OffsetDateTime updatedGte;
-
-    public GetUnifiedApicallRequest withUpdatedGte(OffsetDateTime updatedGte) {
-        this.updatedGte = updatedGte;
-        return this;
-    }
-    
-    public GetUnifiedApicallRequest(){}
+    public GetUnifiedApicallRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

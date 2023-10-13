@@ -26,9 +26,9 @@ public class Call {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdCallResponse getUcConnectionIdCall(com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdCallRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListUcCallsResponse listUcCalls(com.unifiedapi.unifiedto.models.operations.ListUcCallsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdCallRequest.class, baseUrl, "/uc/{connection_id}/call", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListUcCallsRequest.class, baseUrl, "/uc/{connection_id}/call", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -36,7 +36,7 @@ public class Call {
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdCallRequest.class, request, null);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListUcCallsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -49,7 +49,7 @@ public class Call {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdCallResponse res = new com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdCallResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.ListUcCallsResponse res = new com.unifiedapi.unifiedto.models.operations.ListUcCallsResponse(contentType, httpRes.statusCode()) {{
             ucCalls = null;
         }};
         res.rawResponse = httpRes;

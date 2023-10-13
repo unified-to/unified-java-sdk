@@ -1,0 +1,11 @@
+# CreateUnifiedWebhookRequest
+
+
+## Fields
+
+| Field                                                                                     | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `webhook`                                                                                 | [com.unifiedapi.unifiedto.models.shared.Webhook](../../models/shared/Webhook.md)          | :heavy_minus_sign:                                                                        | A webhook is used to POST new/updated information to your server.                         |
+| `connectionId`                                                                            | *String*                                                                                  | :heavy_check_mark:                                                                        | ID of the connection                                                                      |
+| `events`                                                                                  | List<[CreateUnifiedWebhookEvents](../../models/operations/CreateUnifiedWebhookEvents.md)> | :heavy_minus_sign:                                                                        | Which events to subscribe to.                                                             |
+| `object`                                                                                  | *String*                                                                                  | :heavy_check_mark:                                                                        | The object to subscribe to                                                                |

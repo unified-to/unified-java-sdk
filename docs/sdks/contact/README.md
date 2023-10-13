@@ -3,22 +3,22 @@
 
 ### Available Operations
 
-* [deleteCrmConnectionIdContactId](#deletecrmconnectionidcontactid) - Remove a contact
-* [deleteUcConnectionIdContactId](#deleteucconnectionidcontactid) - Remove a contact
-* [getCrmConnectionIdContact](#getcrmconnectionidcontact) - List all contacts
-* [getCrmConnectionIdContactId](#getcrmconnectionidcontactid) - Retrieve a contact
-* [getUcConnectionIdContact](#getucconnectionidcontact) - List all contacts
-* [getUcConnectionIdContactId](#getucconnectionidcontactid) - Retrieve a contact
-* [patchCrmConnectionIdContactId](#patchcrmconnectionidcontactid) - Update a contact
-* [patchUcConnectionIdContactId](#patchucconnectionidcontactid) - Update a contact
-* [postCrmConnectionIdContact](#postcrmconnectionidcontact) - Create a contact
-* [postUcConnectionIdContact](#postucconnectionidcontact) - Create a contact
-* [putCrmConnectionIdContactId](#putcrmconnectionidcontactid) - Update a contact
-* [putUcConnectionIdContactId](#putucconnectionidcontactid) - Update a contact
+* [createCrmContact](#createcrmcontact) - Create a contact
+* [createUcContact](#createuccontact) - Create a contact
+* [getCrmContact](#getcrmcontact) - Retrieve a contact
+* [getUcContact](#getuccontact) - Retrieve a contact
+* [listCrmContacts](#listcrmcontacts) - List all contacts
+* [listUcContacts](#listuccontacts) - List all contacts
+* [patchCrmContact](#patchcrmcontact) - Update a contact
+* [patchUcContact](#patchuccontact) - Update a contact
+* [removeCrmContact](#removecrmcontact) - Remove a contact
+* [removeUcContact](#removeuccontact) - Remove a contact
+* [updateCrmContact](#updatecrmcontact) - Update a contact
+* [updateUcContact](#updateuccontact) - Update a contact
 
-## deleteCrmConnectionIdContactId
+## createCrmContact
 
-Remove a contact
+Create a contact
 
 ### Example Usage
 
@@ -26,24 +26,66 @@ Remove a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdContactIdRequest;
-import com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdContactIdResponse;
+import com.unifiedapi.unifiedto.models.operations.CreateCrmContactRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateCrmContactResponse;
+import com.unifiedapi.unifiedto.models.shared.CrmContact;
+import com.unifiedapi.unifiedto.models.shared.CrmEmail;
+import com.unifiedapi.unifiedto.models.shared.CrmEmailType;
+import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
+import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
+import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactAddress;
+import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Wyoming"){{
+                .setSecurity(new Security("Mendelevium"){{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteCrmConnectionIdContactIdRequest req = new DeleteCrmConnectionIdContactIdRequest("Arizona", "payment");            
+            CreateCrmContactRequest req = new CreateCrmContactRequest("Account"){{
+                crmContact = new CrmContact(){{
+                    address = new PropertyCrmContactAddress(){{
+                        address1 = "towards";
+                        address2 = "Cambridgeshire Passenger Producer";
+                        city = "Gutkowskifurt";
+                        country = "Bolivia";
+                        countryCode = "NA";
+                        postalCode = "06740";
+                        region = "Fresh auxiliary";
+                        regionCode = "Northwest";
+                    }};
+                    company = "Ratke, Pacocha and Harvey";
+                    companyIds = new String[]{{
+                        add("likewise"),
+                    }};
+                    createdAt = OffsetDateTime.parse("2023-03-19T11:45:23.493Z");
+                    dealIds = new String[]{{
+                        add("thatch"),
+                    }};
+                    emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
+                        add(new CrmEmail(){{}}),
+                    }};
+                    id = "<ID>";
+                    name = "asperiores Principal Wooden";
+                    raw = new PropertyCrmContactRaw();
+                    telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
+                        add(new CrmTelephone("flat"){{
+                            telephone = "generate rapidly Southeast";
+                        }}),
+                    }};
+                    title = "Coupe Industrial Won";
+                    updatedAt = OffsetDateTime.parse("2021-12-23T10:16:54.912Z");
+                }};
+            }};            
 
-            DeleteCrmConnectionIdContactIdResponse res = sdk.contact.deleteCrmConnectionIdContactId(req);
+            CreateCrmContactResponse res = sdk.contact.createCrmContact(req);
 
-            if (res.statusCode == 200) {
+            if (res.crmContact != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -55,19 +97,19 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdContactIdRequest](../../models/operations/DeleteCrmConnectionIdContactIdRequest.md) | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.CreateCrmContactRequest](../../models/operations/CreateCrmContactRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdContactIdResponse](../../models/operations/DeleteCrmConnectionIdContactIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.CreateCrmContactResponse](../../models/operations/CreateCrmContactResponse.md)**
 
 
-## deleteUcConnectionIdContactId
+## createUcContact
 
-Remove a contact
+Create a contact
 
 ### Example Usage
 
@@ -75,24 +117,51 @@ Remove a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.DeleteUcConnectionIdContactIdRequest;
-import com.unifiedapi.unifiedto.models.operations.DeleteUcConnectionIdContactIdResponse;
+import com.unifiedapi.unifiedto.models.operations.CreateUcContactRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateUcContactResponse;
+import com.unifiedapi.unifiedto.models.shared.PropertyUcContactRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.UcContact;
+import com.unifiedapi.unifiedto.models.shared.UcEmail;
+import com.unifiedapi.unifiedto.models.shared.UcEmailType;
+import com.unifiedapi.unifiedto.models.shared.UcTelephone;
+import com.unifiedapi.unifiedto.models.shared.UcTelephoneType;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Aluminium"){{
+                .setSecurity(new Security("Future"){{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteUcConnectionIdContactIdRequest req = new DeleteUcConnectionIdContactIdRequest("Tactics", "Cobalt");            
+            CreateUcContactRequest req = new CreateUcContactRequest("enhance"){{
+                ucContact = new UcContact(){{
+                    company = "Cummerata - Schaefer";
+                    createdAt = OffsetDateTime.parse("2023-09-28T00:27:58.979Z");
+                    emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
+                        add(new UcEmail("canoe"){{
+                            email = "Daphney_VonRueden@yahoo.com";
+                        }}),
+                    }};
+                    id = "<ID>";
+                    name = "Practical Diesel Garden";
+                    raw = new PropertyUcContactRaw();
+                    telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
+                        add(new UcTelephone("blackness"){{
+                            telephone = "after";
+                        }}),
+                    }};
+                    title = "interactive";
+                    updatedAt = OffsetDateTime.parse("2023-10-24T21:46:28.575Z");
+                }};
+            }};            
 
-            DeleteUcConnectionIdContactIdResponse res = sdk.contact.deleteUcConnectionIdContactId(req);
+            CreateUcContactResponse res = sdk.contact.createUcContact(req);
 
-            if (res.statusCode == 200) {
+            if (res.ucContact != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -104,17 +173,115 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.DeleteUcConnectionIdContactIdRequest](../../models/operations/DeleteUcConnectionIdContactIdRequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [com.unifiedapi.unifiedto.models.operations.CreateUcContactRequest](../../models/operations/CreateUcContactRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.DeleteUcConnectionIdContactIdResponse](../../models/operations/DeleteUcConnectionIdContactIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.CreateUcContactResponse](../../models/operations/CreateUcContactResponse.md)**
 
 
-## getCrmConnectionIdContact
+## getCrmContact
+
+Retrieve a contact
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.GetCrmContactRequest;
+import com.unifiedapi.unifiedto.models.operations.GetCrmContactResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("North"){{
+                    jwt = "";
+                }})
+                .build();
+
+            GetCrmContactRequest req = new GetCrmContactRequest("Silver", "transgender");            
+
+            GetCrmContactResponse res = sdk.contact.getCrmContact(req);
+
+            if (res.crmContact != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [com.unifiedapi.unifiedto.models.operations.GetCrmContactRequest](../../models/operations/GetCrmContactRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.GetCrmContactResponse](../../models/operations/GetCrmContactResponse.md)**
+
+
+## getUcContact
+
+Retrieve a contact
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.GetUcContactRequest;
+import com.unifiedapi.unifiedto.models.operations.GetUcContactResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("for"){{
+                    jwt = "";
+                }})
+                .build();
+
+            GetUcContactRequest req = new GetUcContactRequest("deposit", "katal");            
+
+            GetUcContactResponse res = sdk.contact.getUcContact(req);
+
+            if (res.ucContact != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [com.unifiedapi.unifiedto.models.operations.GetUcContactRequest](../../models/operations/GetUcContactRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.GetUcContactResponse](../../models/operations/GetUcContactResponse.md)**
+
+
+## listCrmContacts
 
 List all contacts
 
@@ -124,8 +291,8 @@ List all contacts
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactRequest;
-import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactResponse;
+import com.unifiedapi.unifiedto.models.operations.ListCrmContactsRequest;
+import com.unifiedapi.unifiedto.models.operations.ListCrmContactsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -133,23 +300,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Technician"){{
+                .setSecurity(new Security("female"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdContactRequest req = new GetCrmConnectionIdContactRequest("Southeast"){{
-                companyId = "magenta loose";
-                dealId = "intuitive";
-                limit = 9605d;
-                offset = 8572.44d;
-                order = "Music Electronics";
-                query = "Elegant";
-                sort = "North Analyst Otis";
-                updatedGte = OffsetDateTime.parse("2022-09-18T15:42:24.943Z");
+            ListCrmContactsRequest req = new ListCrmContactsRequest("Research"){{
+                companyId = "Nevada portal Recumbent";
+                dealId = "bah Music Lubbock";
+                limit = 6222.97d;
+                offset = 9658.75d;
+                order = "Rubber strategic Chair";
+                query = "Gloves gadzooks";
+                sort = "Electric";
+                updatedGte = OffsetDateTime.parse("2021-08-01T17:00:48.842Z");
             }};            
 
-            GetCrmConnectionIdContactResponse res = sdk.contact.getCrmConnectionIdContact(req);
+            ListCrmContactsResponse res = sdk.contact.listCrmContacts(req);
 
             if (res.crmContacts != null) {
                 // handle response
@@ -163,66 +330,17 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactRequest](../../models/operations/GetCrmConnectionIdContactRequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [com.unifiedapi.unifiedto.models.operations.ListCrmContactsRequest](../../models/operations/ListCrmContactsRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactResponse](../../models/operations/GetCrmConnectionIdContactResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.ListCrmContactsResponse](../../models/operations/ListCrmContactsResponse.md)**
 
 
-## getCrmConnectionIdContactId
-
-Retrieve a contact
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactIdRequest;
-import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactIdResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Southeast"){{
-                    jwt = "";
-                }})
-                .build();
-
-            GetCrmConnectionIdContactIdRequest req = new GetCrmConnectionIdContactIdRequest("fountain", "visionary");            
-
-            GetCrmConnectionIdContactIdResponse res = sdk.contact.getCrmConnectionIdContactId(req);
-
-            if (res.crmContact != null) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactIdRequest](../../models/operations/GetCrmConnectionIdContactIdRequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
-
-
-### Response
-
-**[com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdContactIdResponse](../../models/operations/GetCrmConnectionIdContactIdResponse.md)**
-
-
-## getUcConnectionIdContact
+## listUcContacts
 
 List all contacts
 
@@ -232,8 +350,8 @@ List all contacts
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactRequest;
-import com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactResponse;
+import com.unifiedapi.unifiedto.models.operations.ListUcContactsRequest;
+import com.unifiedapi.unifiedto.models.operations.ListUcContactsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -241,22 +359,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Integration"){{
+                .setSecurity(new Security("application"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUcConnectionIdContactRequest req = new GetUcConnectionIdContactRequest("envious"){{
-                agentId = "Non Dodge";
-                limit = 7215.14d;
-                offset = 2910.48d;
-                order = "Vermont";
-                query = "maroon JBOD";
-                sort = "hertz";
-                updatedGte = OffsetDateTime.parse("2023-01-29T17:06:35.136Z");
+            ListUcContactsRequest req = new ListUcContactsRequest("Xenogender"){{
+                agentId = "Solutions haptic Pickup";
+                limit = 5017.12d;
+                offset = 6179.01d;
+                order = "female North";
+                query = "Berkshire";
+                sort = "behind animi Jersey";
+                updatedGte = OffsetDateTime.parse("2023-10-30T03:50:09.755Z");
             }};            
 
-            GetUcConnectionIdContactResponse res = sdk.contact.getUcConnectionIdContact(req);
+            ListUcContactsResponse res = sdk.contact.listUcContacts(req);
 
             if (res.ucContacts != null) {
                 // handle response
@@ -270,66 +388,17 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactRequest](../../models/operations/GetUcConnectionIdContactRequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [com.unifiedapi.unifiedto.models.operations.ListUcContactsRequest](../../models/operations/ListUcContactsRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactResponse](../../models/operations/GetUcConnectionIdContactResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.ListUcContactsResponse](../../models/operations/ListUcContactsResponse.md)**
 
 
-## getUcConnectionIdContactId
-
-Retrieve a contact
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactIdRequest;
-import com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactIdResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Africa"){{
-                    jwt = "";
-                }})
-                .build();
-
-            GetUcConnectionIdContactIdRequest req = new GetUcConnectionIdContactIdRequest("person", "firewall");            
-
-            GetUcConnectionIdContactIdResponse res = sdk.contact.getUcConnectionIdContactId(req);
-
-            if (res.ucContact != null) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactIdRequest](../../models/operations/GetUcConnectionIdContactIdRequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
-
-
-### Response
-
-**[com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdContactIdResponse](../../models/operations/GetUcConnectionIdContactIdResponse.md)**
-
-
-## patchCrmConnectionIdContactId
+## patchCrmContact
 
 Update a contact
 
@@ -339,8 +408,8 @@ Update a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdContactIdRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdContactIdResponse;
+import com.unifiedapi.unifiedto.models.operations.PatchCrmContactRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchCrmContactResponse;
 import com.unifiedapi.unifiedto.models.shared.CrmContact;
 import com.unifiedapi.unifiedto.models.shared.CrmEmail;
 import com.unifiedapi.unifiedto.models.shared.CrmEmailType;
@@ -355,48 +424,48 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Bicycle"){{
+                .setSecurity(new Security("architecture"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmConnectionIdContactIdRequest req = new PatchCrmConnectionIdContactIdRequest("instantly", "Taiwan"){{
+            PatchCrmContactRequest req = new PatchCrmContactRequest("Buckinghamshire", "morph"){{
                 crmContact = new CrmContact(){{
                     address = new PropertyCrmContactAddress(){{
-                        address1 = "disintermediate ah Southwest";
-                        address2 = "Bicycle communities infomediaries";
-                        city = "Mount Vernon";
-                        country = "Netherlands Antilles";
-                        countryCode = "SC";
-                        postalCode = "91274";
-                        region = "Investment";
-                        regionCode = "cormorant copying";
+                        address1 = "Northeast salmon";
+                        address2 = "Wooden Southwest";
+                        city = "Caylaside";
+                        country = "Antigua and Barbuda";
+                        countryCode = "MM";
+                        postalCode = "17496";
+                        region = "Music questioning";
+                        regionCode = "Minivan Consultant Senior";
                     }};
-                    company = "Larson Group";
+                    company = "Roberts, Price and Ondricka";
                     companyIds = new String[]{{
-                        add("person"),
+                        add("Northwest"),
                     }};
-                    createdAt = OffsetDateTime.parse("2022-07-09T02:39:19.057Z");
+                    createdAt = OffsetDateTime.parse("2022-02-10T03:20:51.348Z");
                     dealIds = new String[]{{
-                        add("Soft"),
+                        add("Southwest"),
                     }};
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
-                    name = "disintermediate payment unsung";
+                    name = "South blockchains West";
                     raw = new PropertyCrmContactRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("Kennewick"){{
-                            telephone = "Response";
+                        add(new CrmTelephone("whereas"){{
+                            telephone = "quibusdam optical";
                         }}),
                     }};
-                    title = "payment markets";
-                    updatedAt = OffsetDateTime.parse("2022-06-29T19:29:52.973Z");
+                    title = "feed navigate";
+                    updatedAt = OffsetDateTime.parse("2023-04-18T19:04:11.197Z");
                 }};
             }};            
 
-            PatchCrmConnectionIdContactIdResponse res = sdk.contact.patchCrmConnectionIdContactId(req);
+            PatchCrmContactResponse res = sdk.contact.patchCrmContact(req);
 
             if (res.crmContact != null) {
                 // handle response
@@ -410,17 +479,17 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdContactIdRequest](../../models/operations/PatchCrmConnectionIdContactIdRequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [com.unifiedapi.unifiedto.models.operations.PatchCrmContactRequest](../../models/operations/PatchCrmContactRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdContactIdResponse](../../models/operations/PatchCrmConnectionIdContactIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.PatchCrmContactResponse](../../models/operations/PatchCrmContactResponse.md)**
 
 
-## patchUcConnectionIdContactId
+## patchUcContact
 
 Update a contact
 
@@ -430,8 +499,8 @@ Update a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchUcConnectionIdContactIdRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchUcConnectionIdContactIdResponse;
+import com.unifiedapi.unifiedto.models.operations.PatchUcContactRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchUcContactResponse;
 import com.unifiedapi.unifiedto.models.shared.PropertyUcContactRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.UcContact;
@@ -445,34 +514,34 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("whose"){{
+                .setSecurity(new Security("sate"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchUcConnectionIdContactIdRequest req = new PatchUcConnectionIdContactIdRequest("Rosemary", "copying"){{
+            PatchUcContactRequest req = new PatchUcContactRequest("Southwest", "Hybrid"){{
                 ucContact = new UcContact(){{
-                    company = "Swaniawski - Hegmann";
-                    createdAt = OffsetDateTime.parse("2023-08-12T14:43:43.240Z");
+                    company = "Mills Inc";
+                    createdAt = OffsetDateTime.parse("2023-05-15T16:26:27.523Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
-                        add(new UcEmail("24/7"){{
-                            email = "Jerod_Effertz1@hotmail.com";
+                        add(new UcEmail("candela"){{
+                            email = "Adrian33@hotmail.com";
                         }}),
                     }};
                     id = "<ID>";
-                    name = "Table compress";
+                    name = "Product aggravating";
                     raw = new PropertyUcContactRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
-                        add(new UcTelephone("overriding"){{
-                            telephone = "Legacy";
+                        add(new UcTelephone("female"){{
+                            telephone = "Electric Paradigm";
                         }}),
                     }};
-                    title = "meanwhile atque Akron";
-                    updatedAt = OffsetDateTime.parse("2022-01-15T14:31:49.366Z");
+                    title = "Hybrid Rubber";
+                    updatedAt = OffsetDateTime.parse("2023-10-30T10:35:45.233Z");
                 }};
             }};            
 
-            PatchUcConnectionIdContactIdResponse res = sdk.contact.patchUcConnectionIdContactId(req);
+            PatchUcContactResponse res = sdk.contact.patchUcContact(req);
 
             if (res.ucContact != null) {
                 // handle response
@@ -486,19 +555,19 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.PatchUcConnectionIdContactIdRequest](../../models/operations/PatchUcConnectionIdContactIdRequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [com.unifiedapi.unifiedto.models.operations.PatchUcContactRequest](../../models/operations/PatchUcContactRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchUcConnectionIdContactIdResponse](../../models/operations/PatchUcConnectionIdContactIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.PatchUcContactResponse](../../models/operations/PatchUcContactResponse.md)**
 
 
-## postCrmConnectionIdContact
+## removeCrmContact
 
-Create a contact
+Remove a contact
 
 ### Example Usage
 
@@ -506,8 +575,106 @@ Create a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdContactRequest;
-import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdContactResponse;
+import com.unifiedapi.unifiedto.models.operations.RemoveCrmContactRequest;
+import com.unifiedapi.unifiedto.models.operations.RemoveCrmContactResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("plum"){{
+                    jwt = "";
+                }})
+                .build();
+
+            RemoveCrmContactRequest req = new RemoveCrmContactRequest("Concrete", "ROI");            
+
+            RemoveCrmContactResponse res = sdk.contact.removeCrmContact(req);
+
+            if (res.statusCode == 200) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.RemoveCrmContactRequest](../../models/operations/RemoveCrmContactRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.RemoveCrmContactResponse](../../models/operations/RemoveCrmContactResponse.md)**
+
+
+## removeUcContact
+
+Remove a contact
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.RemoveUcContactRequest;
+import com.unifiedapi.unifiedto.models.operations.RemoveUcContactResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("Plastic"){{
+                    jwt = "";
+                }})
+                .build();
+
+            RemoveUcContactRequest req = new RemoveUcContactRequest("Northwest", "till");            
+
+            RemoveUcContactResponse res = sdk.contact.removeUcContact(req);
+
+            if (res.statusCode == 200) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [com.unifiedapi.unifiedto.models.operations.RemoveUcContactRequest](../../models/operations/RemoveUcContactRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.RemoveUcContactResponse](../../models/operations/RemoveUcContactResponse.md)**
+
+
+## updateCrmContact
+
+Update a contact
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.UpdateCrmContactRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdateCrmContactResponse;
 import com.unifiedapi.unifiedto.models.shared.CrmContact;
 import com.unifiedapi.unifiedto.models.shared.CrmEmail;
 import com.unifiedapi.unifiedto.models.shared.CrmEmailType;
@@ -522,48 +689,48 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("integrated"){{
+                .setSecurity(new Security("Universal"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostCrmConnectionIdContactRequest req = new PostCrmConnectionIdContactRequest("Mobility"){{
+            UpdateCrmContactRequest req = new UpdateCrmContactRequest("Harbors", "relieved"){{
                 crmContact = new CrmContact(){{
                     address = new PropertyCrmContactAddress(){{
-                        address1 = "who SUV";
-                        address2 = "sievert Tungsten";
-                        city = "Fort Destiny";
-                        country = "Sao Tome and Principe";
-                        countryCode = "TO";
-                        postalCode = "66482-1980";
-                        region = "National Money Executive";
-                        regionCode = "Southwest";
+                        address1 = "Des green";
+                        address2 = "man panel";
+                        city = "New Zacharyport";
+                        country = "Australia";
+                        countryCode = "BW";
+                        postalCode = "83405";
+                        region = "1080p Northeast";
+                        regionCode = "Virginia";
                     }};
-                    company = "Dooley, O'Keefe and Bailey";
+                    company = "Klocko Inc";
                     companyIds = new String[]{{
-                        add("Rubber"),
+                        add("Macedonia"),
                     }};
-                    createdAt = OffsetDateTime.parse("2021-08-24T16:59:07.539Z");
+                    createdAt = OffsetDateTime.parse("2021-09-06T18:08:34.170Z");
                     dealIds = new String[]{{
-                        add("farad"),
+                        add("Silver"),
                     }};
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
-                    name = "Dynamic withdrawal";
+                    name = "Buckinghamshire";
                     raw = new PropertyCrmContactRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("Bedfordshire"){{
-                            telephone = "SSD";
+                        add(new CrmTelephone("successfully"){{
+                            telephone = "violet synthesize";
                         }}),
                     }};
-                    title = "Senior Audi Northeast";
-                    updatedAt = OffsetDateTime.parse("2023-09-26T11:09:09.553Z");
+                    title = "Electronics 1080p withdrawal";
+                    updatedAt = OffsetDateTime.parse("2023-12-17T06:39:56.020Z");
                 }};
             }};            
 
-            PostCrmConnectionIdContactResponse res = sdk.contact.postCrmConnectionIdContact(req);
+            UpdateCrmContactResponse res = sdk.contact.updateCrmContact(req);
 
             if (res.crmContact != null) {
                 // handle response
@@ -577,19 +744,19 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdContactRequest](../../models/operations/PostCrmConnectionIdContactRequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.UpdateCrmContactRequest](../../models/operations/UpdateCrmContactRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdContactResponse](../../models/operations/PostCrmConnectionIdContactResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.UpdateCrmContactResponse](../../models/operations/UpdateCrmContactResponse.md)**
 
 
-## postUcConnectionIdContact
+## updateUcContact
 
-Create a contact
+Update a contact
 
 ### Example Usage
 
@@ -597,8 +764,8 @@ Create a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PostUcConnectionIdContactRequest;
-import com.unifiedapi.unifiedto.models.operations.PostUcConnectionIdContactResponse;
+import com.unifiedapi.unifiedto.models.operations.UpdateUcContactRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdateUcContactResponse;
 import com.unifiedapi.unifiedto.models.shared.PropertyUcContactRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.UcContact;
@@ -612,34 +779,34 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Plain"){{
+                .setSecurity(new Security("Mexico"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostUcConnectionIdContactRequest req = new PostUcConnectionIdContactRequest("Bacon"){{
+            UpdateUcContactRequest req = new UpdateUcContactRequest("per", "Convertible"){{
                 ucContact = new UcContact(){{
-                    company = "Runolfsson - Bruen";
-                    createdAt = OffsetDateTime.parse("2022-11-30T09:19:12.974Z");
+                    company = "Fisher Inc";
+                    createdAt = OffsetDateTime.parse("2021-05-01T13:06:37.779Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
-                        add(new UcEmail("Avon"){{
-                            email = "Marianne_Haley35@hotmail.com";
+                        add(new UcEmail("Awesome"){{
+                            email = "Amya22@yahoo.com";
                         }}),
                     }};
                     id = "<ID>";
-                    name = "Division Human COM";
+                    name = "Corporate";
                     raw = new PropertyUcContactRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
-                        add(new UcTelephone("Solutions"){{
-                            telephone = "International Connecticut Fiat";
+                        add(new UcTelephone("Principal"){{
+                            telephone = "Fish";
                         }}),
                     }};
-                    title = "Chair Potassium";
-                    updatedAt = OffsetDateTime.parse("2022-02-26T18:17:55.274Z");
+                    title = "Books";
+                    updatedAt = OffsetDateTime.parse("2023-04-20T04:04:49.023Z");
                 }};
             }};            
 
-            PostUcConnectionIdContactResponse res = sdk.contact.postUcConnectionIdContact(req);
+            UpdateUcContactResponse res = sdk.contact.updateUcContact(req);
 
             if (res.ucContact != null) {
                 // handle response
@@ -653,179 +820,12 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.PostUcConnectionIdContactRequest](../../models/operations/PostUcConnectionIdContactRequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [com.unifiedapi.unifiedto.models.operations.UpdateUcContactRequest](../../models/operations/UpdateUcContactRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PostUcConnectionIdContactResponse](../../models/operations/PostUcConnectionIdContactResponse.md)**
-
-
-## putCrmConnectionIdContactId
-
-Update a contact
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdContactIdRequest;
-import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdContactIdResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmContact;
-import com.unifiedapi.unifiedto.models.shared.CrmEmail;
-import com.unifiedapi.unifiedto.models.shared.CrmEmailType;
-import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
-import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactRaw;
-import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Outdoors"){{
-                    jwt = "";
-                }})
-                .build();
-
-            PutCrmConnectionIdContactIdRequest req = new PutCrmConnectionIdContactIdRequest("Credit", "laborum"){{
-                crmContact = new CrmContact(){{
-                    address = new PropertyCrmContactAddress(){{
-                        address1 = "copy Coordinator Northwest";
-                        address2 = "provided Mazda";
-                        city = "Kiarrafurt";
-                        country = "Latvia";
-                        countryCode = "GP";
-                        postalCode = "71632-5257";
-                        region = "transmitting till Oriental";
-                        regionCode = "Ways";
-                    }};
-                    company = "Beatty Inc";
-                    companyIds = new String[]{{
-                        add("ugh"),
-                    }};
-                    createdAt = OffsetDateTime.parse("2021-02-15T11:20:20.781Z");
-                    dealIds = new String[]{{
-                        add("Gambia"),
-                    }};
-                    emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
-                        add(new CrmEmail(){{}}),
-                    }};
-                    id = "<ID>";
-                    name = "Rhenium";
-                    raw = new PropertyCrmContactRaw();
-                    telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("male"){{
-                            telephone = "efficient oof gah";
-                        }}),
-                    }};
-                    title = "overriding incremental";
-                    updatedAt = OffsetDateTime.parse("2021-01-03T20:28:22.106Z");
-                }};
-            }};            
-
-            PutCrmConnectionIdContactIdResponse res = sdk.contact.putCrmConnectionIdContactId(req);
-
-            if (res.crmContact != null) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdContactIdRequest](../../models/operations/PutCrmConnectionIdContactIdRequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
-
-
-### Response
-
-**[com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdContactIdResponse](../../models/operations/PutCrmConnectionIdContactIdResponse.md)**
-
-
-## putUcConnectionIdContactId
-
-Update a contact
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PutUcConnectionIdContactIdRequest;
-import com.unifiedapi.unifiedto.models.operations.PutUcConnectionIdContactIdResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyUcContactRaw;
-import com.unifiedapi.unifiedto.models.shared.Security;
-import com.unifiedapi.unifiedto.models.shared.UcContact;
-import com.unifiedapi.unifiedto.models.shared.UcEmail;
-import com.unifiedapi.unifiedto.models.shared.UcEmailType;
-import com.unifiedapi.unifiedto.models.shared.UcTelephone;
-import com.unifiedapi.unifiedto.models.shared.UcTelephoneType;
-import java.time.OffsetDateTime;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("geez"){{
-                    jwt = "";
-                }})
-                .build();
-
-            PutUcConnectionIdContactIdRequest req = new PutUcConnectionIdContactIdRequest("sticky", "Alabama"){{
-                ucContact = new UcContact(){{
-                    company = "Walker - Koch";
-                    createdAt = OffsetDateTime.parse("2022-05-19T07:42:19.696Z");
-                    emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
-                        add(new UcEmail("Hip"){{
-                            email = "Yasmine.Johns@yahoo.com";
-                        }}),
-                    }};
-                    id = "<ID>";
-                    name = "drat";
-                    raw = new PropertyUcContactRaw();
-                    telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
-                        add(new UcTelephone("Buckinghamshire"){{
-                            telephone = "Dynamic Loan Wooden";
-                        }}),
-                    }};
-                    title = "cyan Movies";
-                    updatedAt = OffsetDateTime.parse("2022-03-11T10:02:46.895Z");
-                }};
-            }};            
-
-            PutUcConnectionIdContactIdResponse res = sdk.contact.putUcConnectionIdContactId(req);
-
-            if (res.ucContact != null) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.PutUcConnectionIdContactIdRequest](../../models/operations/PutUcConnectionIdContactIdRequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
-
-
-### Response
-
-**[com.unifiedapi.unifiedto.models.operations.PutUcConnectionIdContactIdResponse](../../models/operations/PutUcConnectionIdContactIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.UpdateUcContactResponse](../../models/operations/UpdateUcContactResponse.md)**
 

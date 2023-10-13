@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [deleteMartechConnectionIdListIdMemberId](#deletemartechconnectionidlistidmemberid) - Remove member from a list
-* [getMartechConnectionIdListIdMember](#getmartechconnectionidlistidmember) - List all members in a list
-* [getMartechConnectionIdListIdMemberId](#getmartechconnectionidlistidmemberid) - Retrieve a member from a list
-* [patchMartechConnectionIdListIdMemberId](#patchmartechconnectionidlistidmemberid) - Update a member in a list
-* [postMartechConnectionIdListIdMember](#postmartechconnectionidlistidmember) - Create a member in a list
-* [putMartechConnectionIdListIdMemberId](#putmartechconnectionidlistidmemberid) - Update a member in a list
+* [createMartechMember](#createmartechmember) - Create a member in a list
+* [getMartechMember](#getmartechmember) - Retrieve a member from a list
+* [listMartechMembers](#listmartechmembers) - List all members in a list
+* [patchMartechMember](#patchmartechmember) - Update a member in a list
+* [removeMartechMember](#removemartechmember) - Remove member from a list
+* [updateMartechMember](#updatemartechmember) - Update a member in a list
 
-## deleteMartechConnectionIdListIdMemberId
+## createMartechMember
 
-Remove member from a list
+Create a member in a list
 
 ### Example Usage
 
@@ -20,24 +20,48 @@ Remove member from a list
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.DeleteMartechConnectionIdListIdMemberIdRequest;
-import com.unifiedapi.unifiedto.models.operations.DeleteMartechConnectionIdListIdMemberIdResponse;
+import com.unifiedapi.unifiedto.models.operations.CreateMartechMemberRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateMartechMemberResponse;
+import com.unifiedapi.unifiedto.models.shared.MarketingEmail;
+import com.unifiedapi.unifiedto.models.shared.MarketingEmailType;
+import com.unifiedapi.unifiedto.models.shared.MarketingMember;
+import com.unifiedapi.unifiedto.models.shared.PropertyMarketingMemberRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Account"){{
+                .setSecurity(new Security("Home"){{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteMartechConnectionIdListIdMemberIdRequest req = new DeleteMartechConnectionIdListIdMemberIdRequest("fib", "Future", "Legacy");            
+            CreateMartechMemberRequest req = new CreateMartechMemberRequest("esse", "Towels"){{
+                marketingMember = new MarketingMember(){{
+                    createdAt = OffsetDateTime.parse("2023-04-25T03:20:19.740Z");
+                    emails = new com.unifiedapi.unifiedto.models.shared.MarketingEmail[]{{
+                        add(new MarketingEmail("Electronic"){{
+                            email = "Lavada29@yahoo.com";
+                        }}),
+                    }};
+                    id = "<ID>";
+                    listIds = new String[]{{
+                        add("calculate"),
+                    }};
+                    name = "ew scalable Hassium";
+                    raw = new PropertyMarketingMemberRaw();
+                    tags = new String[]{{
+                        add("Buckinghamshire"),
+                    }};
+                    updatedAt = OffsetDateTime.parse("2023-07-26T05:07:38.623Z");
+                }};
+            }};            
 
-            DeleteMartechConnectionIdListIdMemberIdResponse res = sdk.member.deleteMartechConnectionIdListIdMemberId(req);
+            CreateMartechMemberResponse res = sdk.member.createMartechMember(req);
 
-            if (res.statusCode == 200) {
+            if (res.marketingMember != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -49,17 +73,66 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                              | Type                                                                                                                                                                   | Required                                                                                                                                                               | Description                                                                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.DeleteMartechConnectionIdListIdMemberIdRequest](../../models/operations/DeleteMartechConnectionIdListIdMemberIdRequest.md) | :heavy_check_mark:                                                                                                                                                     | The request object to use for the request.                                                                                                                             |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.CreateMartechMemberRequest](../../models/operations/CreateMartechMemberRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.DeleteMartechConnectionIdListIdMemberIdResponse](../../models/operations/DeleteMartechConnectionIdListIdMemberIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.CreateMartechMemberResponse](../../models/operations/CreateMartechMemberResponse.md)**
 
 
-## getMartechConnectionIdListIdMember
+## getMartechMember
+
+Retrieve a member from a list
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.GetMartechMemberRequest;
+import com.unifiedapi.unifiedto.models.operations.GetMartechMemberResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("Japan"){{
+                    jwt = "";
+                }})
+                .build();
+
+            GetMartechMemberRequest req = new GetMartechMemberRequest("orange", "Gibraltar", "Northeast");            
+
+            GetMartechMemberResponse res = sdk.member.getMartechMember(req);
+
+            if (res.marketingMember != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.GetMartechMemberRequest](../../models/operations/GetMartechMemberRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.GetMartechMemberResponse](../../models/operations/GetMartechMemberResponse.md)**
+
+
+## listMartechMembers
 
 List all members in a list
 
@@ -69,8 +142,8 @@ List all members in a list
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListIdMemberRequest;
-import com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListIdMemberResponse;
+import com.unifiedapi.unifiedto.models.operations.ListMartechMembersRequest;
+import com.unifiedapi.unifiedto.models.operations.ListMartechMembersResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -78,21 +151,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Account"){{
+                .setSecurity(new Security("Frida"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetMartechConnectionIdListIdMemberRequest req = new GetMartechConnectionIdListIdMemberRequest("economics", "dedicated"){{
-                limit = 865.46d;
-                offset = 9970.32d;
-                order = "East";
-                query = "payment";
-                sort = "male purple";
-                updatedGte = OffsetDateTime.parse("2021-02-18T03:26:17.750Z");
+            ListMartechMembersRequest req = new ListMartechMembersRequest("structure", "Thallium"){{
+                limit = 2146.36d;
+                offset = 2458.73d;
+                order = "Neither huzzah wireless";
+                query = "Loop";
+                sort = "standardise reinvent microchip";
+                updatedGte = OffsetDateTime.parse("2022-12-12T03:36:49.362Z");
             }};            
 
-            GetMartechConnectionIdListIdMemberResponse res = sdk.member.getMartechConnectionIdListIdMember(req);
+            ListMartechMembersResponse res = sdk.member.listMartechMembers(req);
 
             if (res.marketingMembers != null) {
                 // handle response
@@ -106,66 +179,17 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                    | Type                                                                                                                                                         | Required                                                                                                                                                     | Description                                                                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListIdMemberRequest](../../models/operations/GetMartechConnectionIdListIdMemberRequest.md) | :heavy_check_mark:                                                                                                                                           | The request object to use for the request.                                                                                                                   |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.ListMartechMembersRequest](../../models/operations/ListMartechMembersRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListIdMemberResponse](../../models/operations/GetMartechConnectionIdListIdMemberResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.ListMartechMembersResponse](../../models/operations/ListMartechMembersResponse.md)**
 
 
-## getMartechConnectionIdListIdMemberId
-
-Retrieve a member from a list
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListIdMemberIdRequest;
-import com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListIdMemberIdResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("South"){{
-                    jwt = "";
-                }})
-                .build();
-
-            GetMartechConnectionIdListIdMemberIdRequest req = new GetMartechConnectionIdListIdMemberIdRequest("unless", "Gasoline", "Home");            
-
-            GetMartechConnectionIdListIdMemberIdResponse res = sdk.member.getMartechConnectionIdListIdMemberId(req);
-
-            if (res.marketingMember != null) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                                        | Type                                                                                                                                                             | Required                                                                                                                                                         | Description                                                                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListIdMemberIdRequest](../../models/operations/GetMartechConnectionIdListIdMemberIdRequest.md) | :heavy_check_mark:                                                                                                                                               | The request object to use for the request.                                                                                                                       |
-
-
-### Response
-
-**[com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListIdMemberIdResponse](../../models/operations/GetMartechConnectionIdListIdMemberIdResponse.md)**
-
-
-## patchMartechConnectionIdListIdMemberId
+## patchMartechMember
 
 Update a member in a list
 
@@ -175,8 +199,8 @@ Update a member in a list
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchMartechConnectionIdListIdMemberIdRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchMartechConnectionIdListIdMemberIdResponse;
+import com.unifiedapi.unifiedto.models.operations.PatchMartechMemberRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchMartechMemberResponse;
 import com.unifiedapi.unifiedto.models.shared.MarketingEmail;
 import com.unifiedapi.unifiedto.models.shared.MarketingEmailType;
 import com.unifiedapi.unifiedto.models.shared.MarketingMember;
@@ -188,33 +212,33 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("neural"){{
+                .setSecurity(new Security("Transexual"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchMartechConnectionIdListIdMemberIdRequest req = new PatchMartechConnectionIdListIdMemberIdRequest("board", "bah", "Bicycle"){{
+            PatchMartechMemberRequest req = new PatchMartechMemberRequest("Northwest", "astride", "female"){{
                 marketingMember = new MarketingMember(){{
-                    createdAt = OffsetDateTime.parse("2022-12-27T20:50:12.207Z");
+                    createdAt = OffsetDateTime.parse("2023-07-23T02:40:10.928Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.MarketingEmail[]{{
-                        add(new MarketingEmail("to"){{
-                            email = "Florence48@yahoo.com";
+                        add(new MarketingEmail("Money"){{
+                            email = "Danika.Walter@hotmail.com";
                         }}),
                     }};
                     id = "<ID>";
                     listIds = new String[]{{
-                        add("XSS"),
+                        add("Brand"),
                     }};
-                    name = "Computer female";
+                    name = "West integrated";
                     raw = new PropertyMarketingMemberRaw();
                     tags = new String[]{{
-                        add("than"),
+                        add("Regional"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-05-01T02:18:33.859Z");
+                    updatedAt = OffsetDateTime.parse("2022-02-01T06:57:40.654Z");
                 }};
             }};            
 
-            PatchMartechConnectionIdListIdMemberIdResponse res = sdk.member.patchMartechConnectionIdListIdMemberId(req);
+            PatchMartechMemberResponse res = sdk.member.patchMartechMember(req);
 
             if (res.marketingMember != null) {
                 // handle response
@@ -228,19 +252,19 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                            | Type                                                                                                                                                                 | Required                                                                                                                                                             | Description                                                                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.PatchMartechConnectionIdListIdMemberIdRequest](../../models/operations/PatchMartechConnectionIdListIdMemberIdRequest.md) | :heavy_check_mark:                                                                                                                                                   | The request object to use for the request.                                                                                                                           |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.PatchMartechMemberRequest](../../models/operations/PatchMartechMemberRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchMartechConnectionIdListIdMemberIdResponse](../../models/operations/PatchMartechConnectionIdListIdMemberIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.PatchMartechMemberResponse](../../models/operations/PatchMartechMemberResponse.md)**
 
 
-## postMartechConnectionIdListIdMember
+## removeMartechMember
 
-Create a member in a list
+Remove member from a list
 
 ### Example Usage
 
@@ -248,48 +272,24 @@ Create a member in a list
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PostMartechConnectionIdListIdMemberRequest;
-import com.unifiedapi.unifiedto.models.operations.PostMartechConnectionIdListIdMemberResponse;
-import com.unifiedapi.unifiedto.models.shared.MarketingEmail;
-import com.unifiedapi.unifiedto.models.shared.MarketingEmailType;
-import com.unifiedapi.unifiedto.models.shared.MarketingMember;
-import com.unifiedapi.unifiedto.models.shared.PropertyMarketingMemberRaw;
+import com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberRequest;
+import com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Tactics"){{
+                .setSecurity(new Security("integrated"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostMartechConnectionIdListIdMemberRequest req = new PostMartechConnectionIdListIdMemberRequest("drive", "virtual"){{
-                marketingMember = new MarketingMember(){{
-                    createdAt = OffsetDateTime.parse("2023-05-13T06:01:50.027Z");
-                    emails = new com.unifiedapi.unifiedto.models.shared.MarketingEmail[]{{
-                        add(new MarketingEmail("blanditiis"){{
-                            email = "Marilyne27@yahoo.com";
-                        }}),
-                    }};
-                    id = "<ID>";
-                    listIds = new String[]{{
-                        add("Inverse"),
-                    }};
-                    name = "Green Convertible newton";
-                    raw = new PropertyMarketingMemberRaw();
-                    tags = new String[]{{
-                        add("Automotive"),
-                    }};
-                    updatedAt = OffsetDateTime.parse("2023-05-21T12:39:36.106Z");
-                }};
-            }};            
+            RemoveMartechMemberRequest req = new RemoveMartechMemberRequest("Analyst", "North", "invoice");            
 
-            PostMartechConnectionIdListIdMemberResponse res = sdk.member.postMartechConnectionIdListIdMember(req);
+            RemoveMartechMemberResponse res = sdk.member.removeMartechMember(req);
 
-            if (res.marketingMember != null) {
+            if (res.statusCode == 200) {
                 // handle response
             }
         } catch (Exception e) {
@@ -301,17 +301,17 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                      | Type                                                                                                                                                           | Required                                                                                                                                                       | Description                                                                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.PostMartechConnectionIdListIdMemberRequest](../../models/operations/PostMartechConnectionIdListIdMemberRequest.md) | :heavy_check_mark:                                                                                                                                             | The request object to use for the request.                                                                                                                     |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberRequest](../../models/operations/RemoveMartechMemberRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PostMartechConnectionIdListIdMemberResponse](../../models/operations/PostMartechConnectionIdListIdMemberResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberResponse](../../models/operations/RemoveMartechMemberResponse.md)**
 
 
-## putMartechConnectionIdListIdMemberId
+## updateMartechMember
 
 Update a member in a list
 
@@ -321,8 +321,8 @@ Update a member in a list
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PutMartechConnectionIdListIdMemberIdRequest;
-import com.unifiedapi.unifiedto.models.operations.PutMartechConnectionIdListIdMemberIdResponse;
+import com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberResponse;
 import com.unifiedapi.unifiedto.models.shared.MarketingEmail;
 import com.unifiedapi.unifiedto.models.shared.MarketingEmailType;
 import com.unifiedapi.unifiedto.models.shared.MarketingMember;
@@ -334,33 +334,33 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("until"){{
+                .setSecurity(new Security("BMX"){{
                     jwt = "";
                 }})
                 .build();
 
-            PutMartechConnectionIdListIdMemberIdRequest req = new PutMartechConnectionIdListIdMemberIdRequest("Group", "reboot", "person"){{
+            UpdateMartechMemberRequest req = new UpdateMartechMemberRequest("Kong", "mobile", "deposit"){{
                 marketingMember = new MarketingMember(){{
-                    createdAt = OffsetDateTime.parse("2022-01-09T03:37:45.236Z");
+                    createdAt = OffsetDateTime.parse("2021-08-21T23:18:02.833Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.MarketingEmail[]{{
-                        add(new MarketingEmail("Frozen"){{
-                            email = "Chloe5@gmail.com";
+                        add(new MarketingEmail("payment"){{
+                            email = "Haven30@hotmail.com";
                         }}),
                     }};
                     id = "<ID>";
                     listIds = new String[]{{
-                        add("quia"),
+                        add("Lithuanian"),
                     }};
-                    name = "Games";
+                    name = "methodologies state";
                     raw = new PropertyMarketingMemberRaw();
                     tags = new String[]{{
-                        add("Cab"),
+                        add("Computer"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-05-29T02:21:46.593Z");
+                    updatedAt = OffsetDateTime.parse("2021-09-28T08:50:18.886Z");
                 }};
             }};            
 
-            PutMartechConnectionIdListIdMemberIdResponse res = sdk.member.putMartechConnectionIdListIdMemberId(req);
+            UpdateMartechMemberResponse res = sdk.member.updateMartechMember(req);
 
             if (res.marketingMember != null) {
                 // handle response
@@ -374,12 +374,12 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                        | Type                                                                                                                                                             | Required                                                                                                                                                         | Description                                                                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.PutMartechConnectionIdListIdMemberIdRequest](../../models/operations/PutMartechConnectionIdListIdMemberIdRequest.md) | :heavy_check_mark:                                                                                                                                               | The request object to use for the request.                                                                                                                       |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberRequest](../../models/operations/UpdateMartechMemberRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PutMartechConnectionIdListIdMemberIdResponse](../../models/operations/PutMartechConnectionIdListIdMemberIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberResponse](../../models/operations/UpdateMartechMemberResponse.md)**
 

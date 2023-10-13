@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [deleteCrmConnectionIdFileId](#deletecrmconnectionidfileid) - Remove a file
-* [getCrmConnectionIdFile](#getcrmconnectionidfile) - List all files
-* [getCrmConnectionIdFileId](#getcrmconnectionidfileid) - Retrieve a file
-* [patchCrmConnectionIdFileId](#patchcrmconnectionidfileid) - Update a file
-* [postCrmConnectionIdFile](#postcrmconnectionidfile) - Create a file
-* [putCrmConnectionIdFileId](#putcrmconnectionidfileid) - Update a file
+* [createCrmFile](#createcrmfile) - Create a file
+* [getCrmFile](#getcrmfile) - Retrieve a file
+* [listCrmFiles](#listcrmfiles) - List all files
+* [patchCrmFile](#patchcrmfile) - Update a file
+* [removeCrmFile](#removecrmfile) - Remove a file
+* [updateCrmFile](#updatecrmfile) - Update a file
 
-## deleteCrmConnectionIdFileId
+## createCrmFile
 
-Remove a file
+Create a file
 
 ### Example Usage
 
@@ -20,24 +20,46 @@ Remove a file
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdFileIdRequest;
-import com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdFileIdResponse;
+import com.unifiedapi.unifiedto.models.operations.CreateCrmFileRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateCrmFileResponse;
+import com.unifiedapi.unifiedto.models.shared.CrmFile;
+import com.unifiedapi.unifiedto.models.shared.PropertyCrmFileRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("ivory"){{
+                .setSecurity(new Security("loyally"){{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteCrmConnectionIdFileIdRequest req = new DeleteCrmConnectionIdFileIdRequest("Hybrid", "Dobra");            
+            CreateCrmFileRequest req = new CreateCrmFileRequest("Northwest"){{
+                crmFile = new CrmFile(){{
+                    active = false;
+                    activityId = "the";
+                    companyId = "Tactics Bicycle copy";
+                    contactId = "Soul";
+                    createdAt = OffsetDateTime.parse("2022-08-31T22:30:51.049Z");
+                    dealId = "SSL Reduced Buckinghamshire";
+                    description = "Upgradable radical archive";
+                    fileName = "coupe.mp4v";
+                    fileSize = 4288.39d;
+                    fileType = "application";
+                    fileUrl = "program hacking";
+                    id = "<ID>";
+                    leadId = "Bicycle Marketing Helium";
+                    raw = new PropertyCrmFileRaw();
+                    updatedAt = OffsetDateTime.parse("2022-09-17T10:16:03.549Z");
+                    userId = "mobile firewall salmon";
+                }};
+            }};            
 
-            DeleteCrmConnectionIdFileIdResponse res = sdk.file.deleteCrmConnectionIdFileId(req);
+            CreateCrmFileResponse res = sdk.file.createCrmFile(req);
 
-            if (res.statusCode == 200) {
+            if (res.crmFile != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -49,17 +71,66 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdFileIdRequest](../../models/operations/DeleteCrmConnectionIdFileIdRequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [com.unifiedapi.unifiedto.models.operations.CreateCrmFileRequest](../../models/operations/CreateCrmFileRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdFileIdResponse](../../models/operations/DeleteCrmConnectionIdFileIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.CreateCrmFileResponse](../../models/operations/CreateCrmFileResponse.md)**
 
 
-## getCrmConnectionIdFile
+## getCrmFile
+
+Retrieve a file
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.GetCrmFileRequest;
+import com.unifiedapi.unifiedto.models.operations.GetCrmFileResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("Southwest"){{
+                    jwt = "";
+                }})
+                .build();
+
+            GetCrmFileRequest req = new GetCrmFileRequest("sexy", "Southeast");            
+
+            GetCrmFileResponse res = sdk.file.getCrmFile(req);
+
+            if (res.crmFile != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [com.unifiedapi.unifiedto.models.operations.GetCrmFileRequest](../../models/operations/GetCrmFileRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.GetCrmFileResponse](../../models/operations/GetCrmFileResponse.md)**
+
+
+## listCrmFiles
 
 List all files
 
@@ -69,8 +140,8 @@ List all files
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileRequest;
-import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileResponse;
+import com.unifiedapi.unifiedto.models.operations.ListCrmFilesRequest;
+import com.unifiedapi.unifiedto.models.operations.ListCrmFilesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -78,24 +149,24 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("South"){{
+                .setSecurity(new Security("Bicycle"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmConnectionIdFileRequest req = new GetCrmConnectionIdFileRequest("hm"){{
-                companyId = "Salad Recycled Electronic";
-                contactId = "Seychelles";
-                dealId = "Investment deposit";
-                limit = 2748.99d;
-                offset = 7968.15d;
-                order = "experiences Milo";
-                query = "Unbranded haptic FTP";
-                sort = "watt soprano deliverables";
-                updatedGte = OffsetDateTime.parse("2022-03-02T03:00:09.711Z");
+            ListCrmFilesRequest req = new ListCrmFilesRequest("Genderflux"){{
+                companyId = "Paradigm";
+                contactId = "invoice hertz";
+                dealId = "SUV Carbon";
+                limit = 9242.75d;
+                offset = 824.64d;
+                order = "Gorgeous olive";
+                query = "suite Checking";
+                sort = "SUV";
+                updatedGte = OffsetDateTime.parse("2021-11-26T17:23:51.411Z");
             }};            
 
-            GetCrmConnectionIdFileResponse res = sdk.file.getCrmConnectionIdFile(req);
+            ListCrmFilesResponse res = sdk.file.listCrmFiles(req);
 
             if (res.crmFiles != null) {
                 // handle response
@@ -109,66 +180,17 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileRequest](../../models/operations/GetCrmConnectionIdFileRequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [com.unifiedapi.unifiedto.models.operations.ListCrmFilesRequest](../../models/operations/ListCrmFilesRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileResponse](../../models/operations/GetCrmConnectionIdFileResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.ListCrmFilesResponse](../../models/operations/ListCrmFilesResponse.md)**
 
 
-## getCrmConnectionIdFileId
-
-Retrieve a file
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileIdRequest;
-import com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileIdResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Buckinghamshire"){{
-                    jwt = "";
-                }})
-                .build();
-
-            GetCrmConnectionIdFileIdRequest req = new GetCrmConnectionIdFileIdRequest("haptic", "Sheboygan");            
-
-            GetCrmConnectionIdFileIdResponse res = sdk.file.getCrmConnectionIdFileId(req);
-
-            if (res.crmFile != null) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileIdRequest](../../models/operations/GetCrmConnectionIdFileIdRequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
-
-
-### Response
-
-**[com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdFileIdResponse](../../models/operations/GetCrmConnectionIdFileIdResponse.md)**
-
-
-## patchCrmConnectionIdFileId
+## patchCrmFile
 
 Update a file
 
@@ -178,8 +200,8 @@ Update a file
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdFileIdRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdFileIdResponse;
+import com.unifiedapi.unifiedto.models.operations.PatchCrmFileRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchCrmFileResponse;
 import com.unifiedapi.unifiedto.models.shared.CrmFile;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmFileRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -189,33 +211,33 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("tragedy"){{
+                .setSecurity(new Security("Health"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmConnectionIdFileIdRequest req = new PatchCrmConnectionIdFileIdRequest("Engineer", "male"){{
+            PatchCrmFileRequest req = new PatchCrmFileRequest("Future", "Southeast"){{
                 crmFile = new CrmFile(){{
                     active = false;
-                    activityId = "Home communities CFP";
-                    companyId = "unaware yellow generating";
-                    contactId = "World";
-                    createdAt = OffsetDateTime.parse("2021-07-25T09:47:16.664Z");
-                    dealId = "City and Electronic";
-                    description = "Virtual client-driven benchmark";
-                    fileName = "handcrafted_kong_maximized.jpeg";
-                    fileSize = 8601.07d;
-                    fileType = "image";
-                    fileUrl = "Awesome Accountability gadzooks";
+                    activityId = "Oriental invoice";
+                    companyId = "Texas blockchains";
+                    contactId = "navigate";
+                    createdAt = OffsetDateTime.parse("2021-12-30T16:07:40.056Z");
+                    dealId = "yellow Buckinghamshire";
+                    description = "Configurable exuding budgetary management";
+                    fileName = "xml_oxygen.gif";
+                    fileSize = 9689.63d;
+                    fileType = "application";
+                    fileUrl = "National Granite redundant";
                     id = "<ID>";
-                    leadId = "Incredible Chromium";
+                    leadId = "East";
                     raw = new PropertyCrmFileRaw();
-                    updatedAt = OffsetDateTime.parse("2021-10-07T21:25:44.502Z");
-                    userId = "Hybrid";
+                    updatedAt = OffsetDateTime.parse("2022-11-16T13:24:51.820Z");
+                    userId = "corrupti withdrawal Diesel";
                 }};
             }};            
 
-            PatchCrmConnectionIdFileIdResponse res = sdk.file.patchCrmConnectionIdFileId(req);
+            PatchCrmFileResponse res = sdk.file.patchCrmFile(req);
 
             if (res.crmFile != null) {
                 // handle response
@@ -229,19 +251,19 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdFileIdRequest](../../models/operations/PatchCrmConnectionIdFileIdRequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [com.unifiedapi.unifiedto.models.operations.PatchCrmFileRequest](../../models/operations/PatchCrmFileRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdFileIdResponse](../../models/operations/PatchCrmConnectionIdFileIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.PatchCrmFileResponse](../../models/operations/PatchCrmFileResponse.md)**
 
 
-## postCrmConnectionIdFile
+## removeCrmFile
 
-Create a file
+Remove a file
 
 ### Example Usage
 
@@ -249,46 +271,24 @@ Create a file
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdFileRequest;
-import com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdFileResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmFile;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmFileRaw;
+import com.unifiedapi.unifiedto.models.operations.RemoveCrmFileRequest;
+import com.unifiedapi.unifiedto.models.operations.RemoveCrmFileResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("contaminate"){{
+                .setSecurity(new Security("Zambia"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostCrmConnectionIdFileRequest req = new PostCrmConnectionIdFileRequest("standardization"){{
-                crmFile = new CrmFile(){{
-                    active = false;
-                    activityId = "Manager";
-                    companyId = "Florida Shoes East";
-                    contactId = "Ohio loyally regarding";
-                    createdAt = OffsetDateTime.parse("2022-08-05T21:17:21.878Z");
-                    dealId = "indigo Delaware";
-                    description = "Enhanced bifurcated structure";
-                    fileName = "for_chips_under.gif";
-                    fileSize = 9649.84d;
-                    fileType = "video";
-                    fileUrl = "Avon male";
-                    id = "<ID>";
-                    leadId = "Transgender";
-                    raw = new PropertyCrmFileRaw();
-                    updatedAt = OffsetDateTime.parse("2021-11-20T07:00:09.078Z");
-                    userId = "national Lead";
-                }};
-            }};            
+            RemoveCrmFileRequest req = new RemoveCrmFileRequest("Florida", "female");            
 
-            PostCrmConnectionIdFileResponse res = sdk.file.postCrmConnectionIdFile(req);
+            RemoveCrmFileResponse res = sdk.file.removeCrmFile(req);
 
-            if (res.crmFile != null) {
+            if (res.statusCode == 200) {
                 // handle response
             }
         } catch (Exception e) {
@@ -300,17 +300,17 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdFileRequest](../../models/operations/PostCrmConnectionIdFileRequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [com.unifiedapi.unifiedto.models.operations.RemoveCrmFileRequest](../../models/operations/RemoveCrmFileRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdFileResponse](../../models/operations/PostCrmConnectionIdFileResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.RemoveCrmFileResponse](../../models/operations/RemoveCrmFileResponse.md)**
 
 
-## putCrmConnectionIdFileId
+## updateCrmFile
 
 Update a file
 
@@ -320,8 +320,8 @@ Update a file
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdFileIdRequest;
-import com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdFileIdResponse;
+import com.unifiedapi.unifiedto.models.operations.UpdateCrmFileRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdateCrmFileResponse;
 import com.unifiedapi.unifiedto.models.shared.CrmFile;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmFileRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -331,33 +331,33 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("East"){{
+                .setSecurity(new Security("Plano"){{
                     jwt = "";
                 }})
                 .build();
 
-            PutCrmConnectionIdFileIdRequest req = new PutCrmConnectionIdFileIdRequest("Checking", "South"){{
+            UpdateCrmFileRequest req = new UpdateCrmFileRequest("generate", "unexpectedly"){{
                 crmFile = new CrmFile(){{
                     active = false;
-                    activityId = "Southwest";
-                    companyId = "brief";
-                    contactId = "toward confiscate East";
-                    createdAt = OffsetDateTime.parse("2021-07-09T08:13:21.861Z");
-                    dealId = "Hip Suriname Tactics";
-                    description = "Extended homogeneous forecast";
-                    fileName = "framework_azure_metal.gif";
-                    fileSize = 7410.83d;
-                    fileType = "video";
-                    fileUrl = "Cheese error Minnesota";
+                    activityId = "Cotton Specialist";
+                    companyId = "Rustic Bluffs";
+                    contactId = "content sorrowful Lead";
+                    createdAt = OffsetDateTime.parse("2022-06-16T11:45:11.956Z");
+                    dealId = "successfully Account";
+                    description = "Right-sized dedicated productivity";
+                    fileName = "radium.jpg";
+                    fileSize = 5172.6d;
+                    fileType = "audio";
+                    fileUrl = "Northeast Mandatory";
                     id = "<ID>";
-                    leadId = "biplane Handcrafted";
+                    leadId = "AI Small wasting";
                     raw = new PropertyCrmFileRaw();
-                    updatedAt = OffsetDateTime.parse("2021-02-25T14:09:45.532Z");
-                    userId = "Implementation Fremont Rutherfordium";
+                    updatedAt = OffsetDateTime.parse("2021-08-04T14:31:18.269Z");
+                    userId = "UTF8";
                 }};
             }};            
 
-            PutCrmConnectionIdFileIdResponse res = sdk.file.putCrmConnectionIdFileId(req);
+            UpdateCrmFileResponse res = sdk.file.updateCrmFile(req);
 
             if (res.crmFile != null) {
                 // handle response
@@ -371,12 +371,12 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdFileIdRequest](../../models/operations/PutCrmConnectionIdFileIdRequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [com.unifiedapi.unifiedto.models.operations.UpdateCrmFileRequest](../../models/operations/UpdateCrmFileRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdFileIdResponse](../../models/operations/PutCrmConnectionIdFileIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.UpdateCrmFileResponse](../../models/operations/UpdateCrmFileResponse.md)**
 

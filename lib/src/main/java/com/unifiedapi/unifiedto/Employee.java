@@ -23,177 +23,14 @@ public class Employee {
 	}
 
     /**
-     * Remove an employee
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.DeleteHrisConnectionIdEmployeeIdResponse deleteHrisConnectionIdEmployeeId(com.unifiedapi.unifiedto.models.operations.DeleteHrisConnectionIdEmployeeIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeleteHrisConnectionIdEmployeeIdRequest.class, baseUrl, "/hris/{connection_id}/employee/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("DELETE");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.DeleteHrisConnectionIdEmployeeIdResponse res = new com.unifiedapi.unifiedto.models.operations.DeleteHrisConnectionIdEmployeeIdResponse(contentType, httpRes.statusCode()) {{
-            deleteHrisConnectionIdEmployeeIdDefaultApplicationJSONString = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (true) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.deleteHrisConnectionIdEmployeeIdDefaultApplicationJSONString = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * List all employees
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdEmployeeResponse getHrisConnectionIdEmployee(com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdEmployeeRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdEmployeeRequest.class, baseUrl, "/hris/{connection_id}/employee", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdEmployeeRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdEmployeeResponse res = new com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdEmployeeResponse(contentType, httpRes.statusCode()) {{
-            hrisEmployees = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.HrisEmployee[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.HrisEmployee[].class);
-                res.hrisEmployees = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Retrieve an employee
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdEmployeeIdResponse getHrisConnectionIdEmployeeId(com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdEmployeeIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdEmployeeIdRequest.class, baseUrl, "/hris/{connection_id}/employee/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdEmployeeIdResponse res = new com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdEmployeeIdResponse(contentType, httpRes.statusCode()) {{
-            hrisEmployee = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.HrisEmployee out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.HrisEmployee.class);
-                res.hrisEmployee = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Update an employee
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.PatchHrisConnectionIdEmployeeIdResponse patchHrisConnectionIdEmployeeId(com.unifiedapi.unifiedto.models.operations.PatchHrisConnectionIdEmployeeIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchHrisConnectionIdEmployeeIdRequest.class, baseUrl, "/hris/{connection_id}/employee/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("PATCH");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "hrisEmployee", "json");
-        req.setBody(serializedRequestBody);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.PatchHrisConnectionIdEmployeeIdResponse res = new com.unifiedapi.unifiedto.models.operations.PatchHrisConnectionIdEmployeeIdResponse(contentType, httpRes.statusCode()) {{
-            hrisEmployee = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.HrisEmployee out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.HrisEmployee.class);
-                res.hrisEmployee = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
      * Create an employee
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PostHrisConnectionIdEmployeeResponse postHrisConnectionIdEmployee(com.unifiedapi.unifiedto.models.operations.PostHrisConnectionIdEmployeeRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeResponse createHrisEmployee(com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PostHrisConnectionIdEmployeeRequest.class, baseUrl, "/hris/{connection_id}/employee", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeRequest.class, baseUrl, "/hris/{connection_id}/employee", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -210,7 +47,7 @@ public class Employee {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PostHrisConnectionIdEmployeeResponse res = new com.unifiedapi.unifiedto.models.operations.PostHrisConnectionIdEmployeeResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeResponse res = new com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeResponse(contentType, httpRes.statusCode()) {{
             hrisEmployee = null;
         }};
         res.rawResponse = httpRes;
@@ -227,14 +64,177 @@ public class Employee {
     }
 
     /**
+     * Retrieve an employee
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.GetHrisEmployeeResponse getHrisEmployee(com.unifiedapi.unifiedto.models.operations.GetHrisEmployeeRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetHrisEmployeeRequest.class, baseUrl, "/hris/{connection_id}/employee/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.GetHrisEmployeeResponse res = new com.unifiedapi.unifiedto.models.operations.GetHrisEmployeeResponse(contentType, httpRes.statusCode()) {{
+            hrisEmployee = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.HrisEmployee out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.HrisEmployee.class);
+                res.hrisEmployee = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * List all employees
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.ListHrisEmployeesResponse listHrisEmployees(com.unifiedapi.unifiedto.models.operations.ListHrisEmployeesRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListHrisEmployeesRequest.class, baseUrl, "/hris/{connection_id}/employee", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListHrisEmployeesRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.ListHrisEmployeesResponse res = new com.unifiedapi.unifiedto.models.operations.ListHrisEmployeesResponse(contentType, httpRes.statusCode()) {{
+            hrisEmployees = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.HrisEmployee[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.HrisEmployee[].class);
+                res.hrisEmployees = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * Update an employee
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutHrisConnectionIdEmployeeIdResponse putHrisConnectionIdEmployeeId(com.unifiedapi.unifiedto.models.operations.PutHrisConnectionIdEmployeeIdRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeResponse patchHrisEmployee(com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutHrisConnectionIdEmployeeIdRequest.class, baseUrl, "/hris/{connection_id}/employee/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeRequest.class, baseUrl, "/hris/{connection_id}/employee/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PATCH");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "hrisEmployee", "json");
+        req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeResponse res = new com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeResponse(contentType, httpRes.statusCode()) {{
+            hrisEmployee = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.HrisEmployee out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.HrisEmployee.class);
+                res.hrisEmployee = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Remove an employee
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.RemoveHrisEmployeeResponse removeHrisEmployee(com.unifiedapi.unifiedto.models.operations.RemoveHrisEmployeeRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveHrisEmployeeRequest.class, baseUrl, "/hris/{connection_id}/employee/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("DELETE");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.RemoveHrisEmployeeResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveHrisEmployeeResponse(contentType, httpRes.statusCode()) {{
+            removeHrisEmployeeDefaultApplicationJSONString = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (true) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
+                res.removeHrisEmployeeDefaultApplicationJSONString = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Update an employee
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeResponse updateHrisEmployee(com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeRequest.class, baseUrl, "/hris/{connection_id}/employee/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -251,7 +251,7 @@ public class Employee {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PutHrisConnectionIdEmployeeIdResponse res = new com.unifiedapi.unifiedto.models.operations.PutHrisConnectionIdEmployeeIdResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeResponse(contentType, httpRes.statusCode()) {{
             hrisEmployee = null;
         }};
         res.rawResponse = httpRes;

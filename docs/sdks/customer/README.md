@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [deleteTicketingConnectionIdCustomerId](#deleteticketingconnectionidcustomerid) - Remove a customer
-* [getTicketingConnectionIdCustomer](#getticketingconnectionidcustomer) - List all customers
-* [getTicketingConnectionIdCustomerId](#getticketingconnectionidcustomerid) - Retrieve a customer
-* [patchTicketingConnectionIdCustomerId](#patchticketingconnectionidcustomerid) - Update a customer
-* [postTicketingConnectionIdCustomer](#postticketingconnectionidcustomer) - Create a customer
-* [putTicketingConnectionIdCustomerId](#putticketingconnectionidcustomerid) - Update a customer
+* [createTicketingCustomer](#createticketingcustomer) - Create a customer
+* [getTicketingCustomer](#getticketingcustomer) - Retrieve a customer
+* [listTicketingCustomers](#listticketingcustomers) - List all customers
+* [patchTicketingCustomer](#patchticketingcustomer) - Update a customer
+* [removeTicketingCustomer](#removeticketingcustomer) - Remove a customer
+* [updateTicketingCustomer](#updateticketingcustomer) - Update a customer
 
-## deleteTicketingConnectionIdCustomerId
+## createTicketingCustomer
 
-Remove a customer
+Create a customer
 
 ### Example Usage
 
@@ -20,24 +20,51 @@ Remove a customer
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdCustomerIdRequest;
-import com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdCustomerIdResponse;
+import com.unifiedapi.unifiedto.models.operations.CreateTicketingCustomerRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateTicketingCustomerResponse;
+import com.unifiedapi.unifiedto.models.shared.PropertyTicketingCustomerRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TicketingCustomer;
+import com.unifiedapi.unifiedto.models.shared.TicketingEmail;
+import com.unifiedapi.unifiedto.models.shared.TicketingEmailType;
+import com.unifiedapi.unifiedto.models.shared.TicketingTelephone;
+import com.unifiedapi.unifiedto.models.shared.TicketingTelephoneType;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Curium"){{
+                .setSecurity(new Security("redundant"){{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteTicketingConnectionIdCustomerIdRequest req = new DeleteTicketingConnectionIdCustomerIdRequest("DNS", "gladly");            
+            CreateTicketingCustomerRequest req = new CreateTicketingCustomerRequest("blue"){{
+                ticketingCustomer = new TicketingCustomer(new PropertyTicketingCustomerRaw()){{
+                    createdAt = OffsetDateTime.parse("2022-07-09T02:30:21.759Z");
+                    emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
+                        add(new TicketingEmail("Toys"){{
+                            email = "Rosalee13@hotmail.com";
+                        }}),
+                    }};
+                    id = "<ID>";
+                    name = "monitor Accountability Berkshire";
+                    tags = new String[]{{
+                        add("East"),
+                    }};
+                    telephones = new com.unifiedapi.unifiedto.models.shared.TicketingTelephone[]{{
+                        add(new TicketingTelephone("functionalities"){{
+                            telephone = "1080p transition Investment";
+                        }}),
+                    }};
+                    updatedAt = OffsetDateTime.parse("2021-07-10T05:40:36.874Z");
+                }};
+            }};            
 
-            DeleteTicketingConnectionIdCustomerIdResponse res = sdk.customer.deleteTicketingConnectionIdCustomerId(req);
+            CreateTicketingCustomerResponse res = sdk.customer.createTicketingCustomer(req);
 
-            if (res.statusCode == 200) {
+            if (res.ticketingCustomer != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -49,17 +76,66 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                          | Type                                                                                                                                                               | Required                                                                                                                                                           | Description                                                                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdCustomerIdRequest](../../models/operations/DeleteTicketingConnectionIdCustomerIdRequest.md) | :heavy_check_mark:                                                                                                                                                 | The request object to use for the request.                                                                                                                         |
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.CreateTicketingCustomerRequest](../../models/operations/CreateTicketingCustomerRequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdCustomerIdResponse](../../models/operations/DeleteTicketingConnectionIdCustomerIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.CreateTicketingCustomerResponse](../../models/operations/CreateTicketingCustomerResponse.md)**
 
 
-## getTicketingConnectionIdCustomer
+## getTicketingCustomer
+
+Retrieve a customer
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.GetTicketingCustomerRequest;
+import com.unifiedapi.unifiedto.models.operations.GetTicketingCustomerResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("Berkshire"){{
+                    jwt = "";
+                }})
+                .build();
+
+            GetTicketingCustomerRequest req = new GetTicketingCustomerRequest("Gloves", "Brand");            
+
+            GetTicketingCustomerResponse res = sdk.customer.getTicketingCustomer(req);
+
+            if (res.ticketingCustomer != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.GetTicketingCustomerRequest](../../models/operations/GetTicketingCustomerRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.GetTicketingCustomerResponse](../../models/operations/GetTicketingCustomerResponse.md)**
+
+
+## listTicketingCustomers
 
 List all customers
 
@@ -69,8 +145,8 @@ List all customers
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdCustomerRequest;
-import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdCustomerResponse;
+import com.unifiedapi.unifiedto.models.operations.ListTicketingCustomersRequest;
+import com.unifiedapi.unifiedto.models.operations.ListTicketingCustomersResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -78,21 +154,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("merrily"){{
+                .setSecurity(new Security("adapter"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetTicketingConnectionIdCustomerRequest req = new GetTicketingConnectionIdCustomerRequest("Human"){{
-                limit = 843.49d;
-                offset = 2082.44d;
-                order = "Electric Southeast Shirt";
-                query = "Jeep 1080p Hatchback";
-                sort = "Southeast Kansas";
-                updatedGte = OffsetDateTime.parse("2023-12-20T19:18:39.254Z");
+            ListTicketingCustomersRequest req = new ListTicketingCustomersRequest("Unions"){{
+                limit = 1472.38d;
+                offset = 9384.79d;
+                order = "Folk";
+                query = "Chips JSON";
+                sort = "louse";
+                updatedGte = OffsetDateTime.parse("2023-06-22T18:24:21.846Z");
             }};            
 
-            GetTicketingConnectionIdCustomerResponse res = sdk.customer.getTicketingConnectionIdCustomer(req);
+            ListTicketingCustomersResponse res = sdk.customer.listTicketingCustomers(req);
 
             if (res.ticketingCustomers != null) {
                 // handle response
@@ -106,66 +182,17 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                | Type                                                                                                                                                     | Required                                                                                                                                                 | Description                                                                                                                                              |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdCustomerRequest](../../models/operations/GetTicketingConnectionIdCustomerRequest.md) | :heavy_check_mark:                                                                                                                                       | The request object to use for the request.                                                                                                               |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.ListTicketingCustomersRequest](../../models/operations/ListTicketingCustomersRequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdCustomerResponse](../../models/operations/GetTicketingConnectionIdCustomerResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.ListTicketingCustomersResponse](../../models/operations/ListTicketingCustomersResponse.md)**
 
 
-## getTicketingConnectionIdCustomerId
-
-Retrieve a customer
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdCustomerIdRequest;
-import com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdCustomerIdResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Principal"){{
-                    jwt = "";
-                }})
-                .build();
-
-            GetTicketingConnectionIdCustomerIdRequest req = new GetTicketingConnectionIdCustomerIdRequest("for", "Pines");            
-
-            GetTicketingConnectionIdCustomerIdResponse res = sdk.customer.getTicketingConnectionIdCustomerId(req);
-
-            if (res.ticketingCustomer != null) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                                    | Type                                                                                                                                                         | Required                                                                                                                                                     | Description                                                                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdCustomerIdRequest](../../models/operations/GetTicketingConnectionIdCustomerIdRequest.md) | :heavy_check_mark:                                                                                                                                           | The request object to use for the request.                                                                                                                   |
-
-
-### Response
-
-**[com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdCustomerIdResponse](../../models/operations/GetTicketingConnectionIdCustomerIdResponse.md)**
-
-
-## patchTicketingConnectionIdCustomerId
+## patchTicketingCustomer
 
 Update a customer
 
@@ -175,8 +202,8 @@ Update a customer
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdCustomerIdRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdCustomerIdResponse;
+import com.unifiedapi.unifiedto.models.operations.PatchTicketingCustomerRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchTicketingCustomerResponse;
 import com.unifiedapi.unifiedto.models.shared.PropertyTicketingCustomerRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TicketingCustomer;
@@ -190,34 +217,34 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Architect"){{
+                .setSecurity(new Security("Royce"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchTicketingConnectionIdCustomerIdRequest req = new PatchTicketingConnectionIdCustomerIdRequest("Bicycle", "Waco"){{
+            PatchTicketingCustomerRequest req = new PatchTicketingCustomerRequest("West", "Brownsville"){{
                 ticketingCustomer = new TicketingCustomer(new PropertyTicketingCustomerRaw()){{
-                    createdAt = OffsetDateTime.parse("2022-02-08T21:12:15.300Z");
+                    createdAt = OffsetDateTime.parse("2021-10-01T03:16:10.656Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
-                        add(new TicketingEmail("Smyrna"){{
-                            email = "Zoila67@hotmail.com";
+                        add(new TicketingEmail("South"){{
+                            email = "Jo_Rippin11@hotmail.com";
                         }}),
                     }};
                     id = "<ID>";
-                    name = "emulation connect West";
+                    name = "Rustic";
                     tags = new String[]{{
-                        add("Oregon"),
+                        add("thug"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.TicketingTelephone[]{{
-                        add(new TicketingTelephone("Senegal"){{
-                            telephone = "Generic synthesizing Bicycle";
+                        add(new TicketingTelephone("Tesla"){{
+                            telephone = "Cis neatly circuit";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-11-02T02:58:05.192Z");
+                    updatedAt = OffsetDateTime.parse("2023-04-21T14:41:05.293Z");
                 }};
             }};            
 
-            PatchTicketingConnectionIdCustomerIdResponse res = sdk.customer.patchTicketingConnectionIdCustomerId(req);
+            PatchTicketingCustomerResponse res = sdk.customer.patchTicketingCustomer(req);
 
             if (res.ticketingCustomer != null) {
                 // handle response
@@ -231,19 +258,19 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                        | Type                                                                                                                                                             | Required                                                                                                                                                         | Description                                                                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdCustomerIdRequest](../../models/operations/PatchTicketingConnectionIdCustomerIdRequest.md) | :heavy_check_mark:                                                                                                                                               | The request object to use for the request.                                                                                                                       |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.PatchTicketingCustomerRequest](../../models/operations/PatchTicketingCustomerRequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdCustomerIdResponse](../../models/operations/PatchTicketingConnectionIdCustomerIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.PatchTicketingCustomerResponse](../../models/operations/PatchTicketingCustomerResponse.md)**
 
 
-## postTicketingConnectionIdCustomer
+## removeTicketingCustomer
 
-Create a customer
+Remove a customer
 
 ### Example Usage
 
@@ -251,51 +278,24 @@ Create a customer
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdCustomerRequest;
-import com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdCustomerResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyTicketingCustomerRaw;
+import com.unifiedapi.unifiedto.models.operations.RemoveTicketingCustomerRequest;
+import com.unifiedapi.unifiedto.models.operations.RemoveTicketingCustomerResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import com.unifiedapi.unifiedto.models.shared.TicketingCustomer;
-import com.unifiedapi.unifiedto.models.shared.TicketingEmail;
-import com.unifiedapi.unifiedto.models.shared.TicketingEmailType;
-import com.unifiedapi.unifiedto.models.shared.TicketingTelephone;
-import com.unifiedapi.unifiedto.models.shared.TicketingTelephoneType;
-import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("JSON"){{
+                .setSecurity(new Security("West"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostTicketingConnectionIdCustomerRequest req = new PostTicketingConnectionIdCustomerRequest("Northeast"){{
-                ticketingCustomer = new TicketingCustomer(new PropertyTicketingCustomerRaw()){{
-                    createdAt = OffsetDateTime.parse("2021-04-02T13:32:21.285Z");
-                    emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
-                        add(new TicketingEmail("neural"){{
-                            email = "Destiney_Huels@yahoo.com";
-                        }}),
-                    }};
-                    id = "<ID>";
-                    name = "Product Hybrid";
-                    tags = new String[]{{
-                        add("Gasoline"),
-                    }};
-                    telephones = new com.unifiedapi.unifiedto.models.shared.TicketingTelephone[]{{
-                        add(new TicketingTelephone("Classical"){{
-                            telephone = "Director";
-                        }}),
-                    }};
-                    updatedAt = OffsetDateTime.parse("2023-04-10T10:20:10.759Z");
-                }};
-            }};            
+            RemoveTicketingCustomerRequest req = new RemoveTicketingCustomerRequest("compress", "silver");            
 
-            PostTicketingConnectionIdCustomerResponse res = sdk.customer.postTicketingConnectionIdCustomer(req);
+            RemoveTicketingCustomerResponse res = sdk.customer.removeTicketingCustomer(req);
 
-            if (res.ticketingCustomer != null) {
+            if (res.statusCode == 200) {
                 // handle response
             }
         } catch (Exception e) {
@@ -307,17 +307,17 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdCustomerRequest](../../models/operations/PostTicketingConnectionIdCustomerRequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.RemoveTicketingCustomerRequest](../../models/operations/RemoveTicketingCustomerRequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdCustomerResponse](../../models/operations/PostTicketingConnectionIdCustomerResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.RemoveTicketingCustomerResponse](../../models/operations/RemoveTicketingCustomerResponse.md)**
 
 
-## putTicketingConnectionIdCustomerId
+## updateTicketingCustomer
 
 Update a customer
 
@@ -327,8 +327,8 @@ Update a customer
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdCustomerIdRequest;
-import com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdCustomerIdResponse;
+import com.unifiedapi.unifiedto.models.operations.UpdateTicketingCustomerRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdateTicketingCustomerResponse;
 import com.unifiedapi.unifiedto.models.shared.PropertyTicketingCustomerRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TicketingCustomer;
@@ -342,34 +342,34 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Southwest"){{
+                .setSecurity(new Security("mmm"){{
                     jwt = "";
                 }})
                 .build();
 
-            PutTicketingConnectionIdCustomerIdRequest req = new PutTicketingConnectionIdCustomerIdRequest("scarcely", "Grocery"){{
+            UpdateTicketingCustomerRequest req = new UpdateTicketingCustomerRequest("Granite", "South"){{
                 ticketingCustomer = new TicketingCustomer(new PropertyTicketingCustomerRaw()){{
-                    createdAt = OffsetDateTime.parse("2022-09-04T05:01:50.120Z");
+                    createdAt = OffsetDateTime.parse("2022-06-02T10:57:20.628Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
-                        add(new TicketingEmail("Sausages"){{
-                            email = "Nicholaus.Pollich71@gmail.com";
+                        add(new TicketingEmail("Bolivia"){{
+                            email = "Jonatan.Johnson@gmail.com";
                         }}),
                     }};
                     id = "<ID>";
-                    name = "kilogram";
+                    name = "Soft leading Borders";
                     tags = new String[]{{
-                        add("Taylorsville"),
+                        add("Bohrium"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.TicketingTelephone[]{{
-                        add(new TicketingTelephone("Tonawanda"){{
-                            telephone = "Usability fruitful";
+                        add(new TicketingTelephone("parsing"){{
+                            telephone = "safe invoice";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-03-05T15:39:02.181Z");
+                    updatedAt = OffsetDateTime.parse("2022-04-11T11:07:01.811Z");
                 }};
             }};            
 
-            PutTicketingConnectionIdCustomerIdResponse res = sdk.customer.putTicketingConnectionIdCustomerId(req);
+            UpdateTicketingCustomerResponse res = sdk.customer.updateTicketingCustomer(req);
 
             if (res.ticketingCustomer != null) {
                 // handle response
@@ -383,12 +383,12 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                    | Type                                                                                                                                                         | Required                                                                                                                                                     | Description                                                                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdCustomerIdRequest](../../models/operations/PutTicketingConnectionIdCustomerIdRequest.md) | :heavy_check_mark:                                                                                                                                           | The request object to use for the request.                                                                                                                   |
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.UpdateTicketingCustomerRequest](../../models/operations/UpdateTicketingCustomerRequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdCustomerIdResponse](../../models/operations/PutTicketingConnectionIdCustomerIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.UpdateTicketingCustomerResponse](../../models/operations/UpdateTicketingCustomerResponse.md)**
 

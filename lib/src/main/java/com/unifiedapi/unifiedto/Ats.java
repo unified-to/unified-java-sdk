@@ -23,829 +23,14 @@ public class Ats {
 	}
 
     /**
-     * Remove an application
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdApplicationIdResponse deleteAtsConnectionIdApplicationId(com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdApplicationIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdApplicationIdRequest.class, baseUrl, "/ats/{connection_id}/application/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("DELETE");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdApplicationIdResponse res = new com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdApplicationIdResponse(contentType, httpRes.statusCode()) {{
-            deleteAtsConnectionIdApplicationIdDefaultApplicationJSONString = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (true) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.deleteAtsConnectionIdApplicationIdDefaultApplicationJSONString = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Remove a candidate
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdCandidateIdResponse deleteAtsConnectionIdCandidateId(com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdCandidateIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdCandidateIdRequest.class, baseUrl, "/ats/{connection_id}/candidate/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("DELETE");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdCandidateIdResponse res = new com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdCandidateIdResponse(contentType, httpRes.statusCode()) {{
-            deleteAtsConnectionIdCandidateIdDefaultApplicationJSONString = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (true) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.deleteAtsConnectionIdCandidateIdDefaultApplicationJSONString = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Remove a interview
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdInterviewIdResponse deleteAtsConnectionIdInterviewId(com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdInterviewIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdInterviewIdRequest.class, baseUrl, "/ats/{connection_id}/interview/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("DELETE");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdInterviewIdResponse res = new com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdInterviewIdResponse(contentType, httpRes.statusCode()) {{
-            deleteAtsConnectionIdInterviewIdDefaultApplicationJSONString = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (true) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.deleteAtsConnectionIdInterviewIdDefaultApplicationJSONString = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Remove a job
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdJobIdResponse deleteAtsConnectionIdJobId(com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdJobIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdJobIdRequest.class, baseUrl, "/ats/{connection_id}/job/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("DELETE");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdJobIdResponse res = new com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdJobIdResponse(contentType, httpRes.statusCode()) {{
-            deleteAtsConnectionIdJobIdDefaultApplicationJSONString = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (true) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.deleteAtsConnectionIdJobIdDefaultApplicationJSONString = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Remove a scorecard
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdScorecardIdResponse deleteAtsConnectionIdScorecardId(com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdScorecardIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdScorecardIdRequest.class, baseUrl, "/ats/{connection_id}/scorecard/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("DELETE");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdScorecardIdResponse res = new com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdScorecardIdResponse(contentType, httpRes.statusCode()) {{
-            deleteAtsConnectionIdScorecardIdDefaultApplicationJSONString = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (true) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.deleteAtsConnectionIdScorecardIdDefaultApplicationJSONString = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * List all applications
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdApplicationResponse getAtsConnectionIdApplication(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdApplicationRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdApplicationRequest.class, baseUrl, "/ats/{connection_id}/application", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdApplicationRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdApplicationResponse res = new com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdApplicationResponse(contentType, httpRes.statusCode()) {{
-            atsApplications = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AtsApplication[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsApplication[].class);
-                res.atsApplications = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Retrieve an application
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdApplicationIdResponse getAtsConnectionIdApplicationId(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdApplicationIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdApplicationIdRequest.class, baseUrl, "/ats/{connection_id}/application/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdApplicationIdResponse res = new com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdApplicationIdResponse(contentType, httpRes.statusCode()) {{
-            atsApplication = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AtsApplication out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsApplication.class);
-                res.atsApplication = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * List all candidates
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateResponse getAtsConnectionIdCandidate(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateRequest.class, baseUrl, "/ats/{connection_id}/candidate", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateResponse res = new com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateResponse(contentType, httpRes.statusCode()) {{
-            atsCandidates = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AtsCandidate[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsCandidate[].class);
-                res.atsCandidates = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Retrieve a candidate
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateIdResponse getAtsConnectionIdCandidateId(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateIdRequest.class, baseUrl, "/ats/{connection_id}/candidate/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateIdResponse res = new com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdCandidateIdResponse(contentType, httpRes.statusCode()) {{
-            atsCandidate = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AtsCandidate out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsCandidate.class);
-                res.atsCandidate = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * List all interviews
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdInterviewResponse getAtsConnectionIdInterview(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdInterviewRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdInterviewRequest.class, baseUrl, "/ats/{connection_id}/interview", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdInterviewRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdInterviewResponse res = new com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdInterviewResponse(contentType, httpRes.statusCode()) {{
-            atsInterviews = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AtsInterview[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsInterview[].class);
-                res.atsInterviews = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Retrieve a interview
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdInterviewIdResponse getAtsConnectionIdInterviewId(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdInterviewIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdInterviewIdRequest.class, baseUrl, "/ats/{connection_id}/interview/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdInterviewIdResponse res = new com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdInterviewIdResponse(contentType, httpRes.statusCode()) {{
-            atsInterview = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AtsInterview out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsInterview.class);
-                res.atsInterview = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * List all jobs
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobResponse getAtsConnectionIdJob(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobRequest.class, baseUrl, "/ats/{connection_id}/job", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobResponse res = new com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobResponse(contentType, httpRes.statusCode()) {{
-            atsJobs = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AtsJob[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsJob[].class);
-                res.atsJobs = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Retrieve a job
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobIdResponse getAtsConnectionIdJobId(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobIdRequest.class, baseUrl, "/ats/{connection_id}/job/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobIdResponse res = new com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdJobIdResponse(contentType, httpRes.statusCode()) {{
-            atsJob = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AtsJob out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsJob.class);
-                res.atsJob = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * List all scorecards
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardResponse getAtsConnectionIdScorecard(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardRequest.class, baseUrl, "/ats/{connection_id}/scorecard", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardResponse res = new com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardResponse(contentType, httpRes.statusCode()) {{
-            atsScorecards = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AtsScorecard[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsScorecard[].class);
-                res.atsScorecards = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Retrieve a scorecard
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardIdResponse getAtsConnectionIdScorecardId(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardIdRequest.class, baseUrl, "/ats/{connection_id}/scorecard/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardIdResponse res = new com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardIdResponse(contentType, httpRes.statusCode()) {{
-            atsScorecard = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AtsScorecard out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsScorecard.class);
-                res.atsScorecard = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Update an application
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdApplicationIdResponse patchAtsConnectionIdApplicationId(com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdApplicationIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdApplicationIdRequest.class, baseUrl, "/ats/{connection_id}/application/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("PATCH");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "atsApplication", "json");
-        req.setBody(serializedRequestBody);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdApplicationIdResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdApplicationIdResponse(contentType, httpRes.statusCode()) {{
-            atsApplication = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AtsApplication out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsApplication.class);
-                res.atsApplication = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Update a candidate
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdCandidateIdResponse patchAtsConnectionIdCandidateId(com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdCandidateIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdCandidateIdRequest.class, baseUrl, "/ats/{connection_id}/candidate/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("PATCH");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "atsCandidate", "json");
-        req.setBody(serializedRequestBody);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdCandidateIdResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdCandidateIdResponse(contentType, httpRes.statusCode()) {{
-            atsCandidate = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AtsCandidate out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsCandidate.class);
-                res.atsCandidate = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Update a interview
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdInterviewIdResponse patchAtsConnectionIdInterviewId(com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdInterviewIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdInterviewIdRequest.class, baseUrl, "/ats/{connection_id}/interview/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("PATCH");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "atsInterview", "json");
-        req.setBody(serializedRequestBody);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdInterviewIdResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdInterviewIdResponse(contentType, httpRes.statusCode()) {{
-            atsInterview = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AtsInterview out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsInterview.class);
-                res.atsInterview = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Update a job
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdJobIdResponse patchAtsConnectionIdJobId(com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdJobIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdJobIdRequest.class, baseUrl, "/ats/{connection_id}/job/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("PATCH");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "atsJob", "json");
-        req.setBody(serializedRequestBody);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdJobIdResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdJobIdResponse(contentType, httpRes.statusCode()) {{
-            atsJob = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AtsJob out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsJob.class);
-                res.atsJob = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Update a scorecard
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdScorecardIdResponse patchAtsConnectionIdScorecardId(com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdScorecardIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdScorecardIdRequest.class, baseUrl, "/ats/{connection_id}/scorecard/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("PATCH");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "atsScorecard", "json");
-        req.setBody(serializedRequestBody);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdScorecardIdResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdScorecardIdResponse(contentType, httpRes.statusCode()) {{
-            atsScorecard = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AtsScorecard out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsScorecard.class);
-                res.atsScorecard = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
      * Create an application
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdApplicationResponse postAtsConnectionIdApplication(com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdApplicationRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationResponse createAtsApplication(com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdApplicationRequest.class, baseUrl, "/ats/{connection_id}/application", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationRequest.class, baseUrl, "/ats/{connection_id}/application", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -862,7 +47,7 @@ public class Ats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdApplicationResponse res = new com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdApplicationResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationResponse(contentType, httpRes.statusCode()) {{
             atsApplication = null;
         }};
         res.rawResponse = httpRes;
@@ -884,9 +69,9 @@ public class Ats {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdCandidateResponse postAtsConnectionIdCandidate(com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdCandidateRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateAtsCandidateResponse createAtsCandidate(com.unifiedapi.unifiedto.models.operations.CreateAtsCandidateRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdCandidateRequest.class, baseUrl, "/ats/{connection_id}/candidate", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateAtsCandidateRequest.class, baseUrl, "/ats/{connection_id}/candidate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -903,7 +88,7 @@ public class Ats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdCandidateResponse res = new com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdCandidateResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.CreateAtsCandidateResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAtsCandidateResponse(contentType, httpRes.statusCode()) {{
             atsCandidate = null;
         }};
         res.rawResponse = httpRes;
@@ -925,9 +110,9 @@ public class Ats {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdInterviewResponse postAtsConnectionIdInterview(com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdInterviewRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateAtsInterviewResponse createAtsInterview(com.unifiedapi.unifiedto.models.operations.CreateAtsInterviewRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdInterviewRequest.class, baseUrl, "/ats/{connection_id}/interview", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateAtsInterviewRequest.class, baseUrl, "/ats/{connection_id}/interview", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -944,7 +129,7 @@ public class Ats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdInterviewResponse res = new com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdInterviewResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.CreateAtsInterviewResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAtsInterviewResponse(contentType, httpRes.statusCode()) {{
             atsInterview = null;
         }};
         res.rawResponse = httpRes;
@@ -966,9 +151,9 @@ public class Ats {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdJobResponse postAtsConnectionIdJob(com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdJobRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateAtsJobResponse createAtsJob(com.unifiedapi.unifiedto.models.operations.CreateAtsJobRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdJobRequest.class, baseUrl, "/ats/{connection_id}/job", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateAtsJobRequest.class, baseUrl, "/ats/{connection_id}/job", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -985,7 +170,7 @@ public class Ats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdJobResponse res = new com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdJobResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.CreateAtsJobResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAtsJobResponse(contentType, httpRes.statusCode()) {{
             atsJob = null;
         }};
         res.rawResponse = httpRes;
@@ -1007,9 +192,9 @@ public class Ats {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdScorecardResponse postAtsConnectionIdScorecard(com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdScorecardRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse createAtsScorecard(com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdScorecardRequest.class, baseUrl, "/ats/{connection_id}/scorecard", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardRequest.class, baseUrl, "/ats/{connection_id}/scorecard", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -1026,7 +211,7 @@ public class Ats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdScorecardResponse res = new com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdScorecardResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse(contentType, httpRes.statusCode()) {{
             atsScorecard = null;
         }};
         res.rawResponse = httpRes;
@@ -1043,17 +228,437 @@ public class Ats {
     }
 
     /**
+     * Retrieve an application
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.GetAtsApplicationResponse getAtsApplication(com.unifiedapi.unifiedto.models.operations.GetAtsApplicationRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAtsApplicationRequest.class, baseUrl, "/ats/{connection_id}/application/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.GetAtsApplicationResponse res = new com.unifiedapi.unifiedto.models.operations.GetAtsApplicationResponse(contentType, httpRes.statusCode()) {{
+            atsApplication = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.AtsApplication out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsApplication.class);
+                res.atsApplication = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Retrieve a candidate
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.GetAtsCandidateResponse getAtsCandidate(com.unifiedapi.unifiedto.models.operations.GetAtsCandidateRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAtsCandidateRequest.class, baseUrl, "/ats/{connection_id}/candidate/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.GetAtsCandidateResponse res = new com.unifiedapi.unifiedto.models.operations.GetAtsCandidateResponse(contentType, httpRes.statusCode()) {{
+            atsCandidate = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.AtsCandidate out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsCandidate.class);
+                res.atsCandidate = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Retrieve a interview
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.GetAtsInterviewResponse getAtsInterview(com.unifiedapi.unifiedto.models.operations.GetAtsInterviewRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAtsInterviewRequest.class, baseUrl, "/ats/{connection_id}/interview/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.GetAtsInterviewResponse res = new com.unifiedapi.unifiedto.models.operations.GetAtsInterviewResponse(contentType, httpRes.statusCode()) {{
+            atsInterview = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.AtsInterview out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsInterview.class);
+                res.atsInterview = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Retrieve a job
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.GetAtsJobResponse getAtsJob(com.unifiedapi.unifiedto.models.operations.GetAtsJobRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAtsJobRequest.class, baseUrl, "/ats/{connection_id}/job/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.GetAtsJobResponse res = new com.unifiedapi.unifiedto.models.operations.GetAtsJobResponse(contentType, httpRes.statusCode()) {{
+            atsJob = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.AtsJob out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsJob.class);
+                res.atsJob = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Retrieve a scorecard
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.GetAtsScorecardResponse getAtsScorecard(com.unifiedapi.unifiedto.models.operations.GetAtsScorecardRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAtsScorecardRequest.class, baseUrl, "/ats/{connection_id}/scorecard/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.GetAtsScorecardResponse res = new com.unifiedapi.unifiedto.models.operations.GetAtsScorecardResponse(contentType, httpRes.statusCode()) {{
+            atsScorecard = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.AtsScorecard out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsScorecard.class);
+                res.atsScorecard = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * List all applications
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsResponse listAtsApplications(com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsRequest.class, baseUrl, "/ats/{connection_id}/application", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsResponse res = new com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsResponse(contentType, httpRes.statusCode()) {{
+            atsApplications = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.AtsApplication[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsApplication[].class);
+                res.atsApplications = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * List all candidates
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.ListAtsCandidatesResponse listAtsCandidates(com.unifiedapi.unifiedto.models.operations.ListAtsCandidatesRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListAtsCandidatesRequest.class, baseUrl, "/ats/{connection_id}/candidate", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListAtsCandidatesRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.ListAtsCandidatesResponse res = new com.unifiedapi.unifiedto.models.operations.ListAtsCandidatesResponse(contentType, httpRes.statusCode()) {{
+            atsCandidates = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.AtsCandidate[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsCandidate[].class);
+                res.atsCandidates = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * List all interviews
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.ListAtsInterviewsResponse listAtsInterviews(com.unifiedapi.unifiedto.models.operations.ListAtsInterviewsRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListAtsInterviewsRequest.class, baseUrl, "/ats/{connection_id}/interview", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListAtsInterviewsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.ListAtsInterviewsResponse res = new com.unifiedapi.unifiedto.models.operations.ListAtsInterviewsResponse(contentType, httpRes.statusCode()) {{
+            atsInterviews = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.AtsInterview[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsInterview[].class);
+                res.atsInterviews = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * List all jobs
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.ListAtsJobsResponse listAtsJobs(com.unifiedapi.unifiedto.models.operations.ListAtsJobsRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListAtsJobsRequest.class, baseUrl, "/ats/{connection_id}/job", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListAtsJobsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.ListAtsJobsResponse res = new com.unifiedapi.unifiedto.models.operations.ListAtsJobsResponse(contentType, httpRes.statusCode()) {{
+            atsJobs = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.AtsJob[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsJob[].class);
+                res.atsJobs = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * List all scorecards
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsResponse listAtsScorecards(com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsRequest.class, baseUrl, "/ats/{connection_id}/scorecard", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsResponse res = new com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsResponse(contentType, httpRes.statusCode()) {{
+            atsScorecards = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.AtsScorecard[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsScorecard[].class);
+                res.atsScorecards = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * Update an application
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdApplicationIdResponse putAtsConnectionIdApplicationId(com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdApplicationIdRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationResponse patchAtsApplication(com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdApplicationIdRequest.class, baseUrl, "/ats/{connection_id}/application/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationRequest.class, baseUrl, "/ats/{connection_id}/application/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
-        req.setMethod("PUT");
+        req.setMethod("PATCH");
         req.setURL(url);
         SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "atsApplication", "json");
         req.setBody(serializedRequestBody);
@@ -1067,7 +672,7 @@ public class Ats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdApplicationIdResponse res = new com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdApplicationIdResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationResponse(contentType, httpRes.statusCode()) {{
             atsApplication = null;
         }};
         res.rawResponse = httpRes;
@@ -1089,12 +694,12 @@ public class Ats {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdCandidateIdResponse putAtsConnectionIdCandidateId(com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdCandidateIdRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchAtsCandidateResponse patchAtsCandidate(com.unifiedapi.unifiedto.models.operations.PatchAtsCandidateRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdCandidateIdRequest.class, baseUrl, "/ats/{connection_id}/candidate/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAtsCandidateRequest.class, baseUrl, "/ats/{connection_id}/candidate/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
-        req.setMethod("PUT");
+        req.setMethod("PATCH");
         req.setURL(url);
         SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "atsCandidate", "json");
         req.setBody(serializedRequestBody);
@@ -1108,7 +713,7 @@ public class Ats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdCandidateIdResponse res = new com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdCandidateIdResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.PatchAtsCandidateResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAtsCandidateResponse(contentType, httpRes.statusCode()) {{
             atsCandidate = null;
         }};
         res.rawResponse = httpRes;
@@ -1130,12 +735,12 @@ public class Ats {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdInterviewIdResponse putAtsConnectionIdInterviewId(com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdInterviewIdRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchAtsInterviewResponse patchAtsInterview(com.unifiedapi.unifiedto.models.operations.PatchAtsInterviewRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdInterviewIdRequest.class, baseUrl, "/ats/{connection_id}/interview/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAtsInterviewRequest.class, baseUrl, "/ats/{connection_id}/interview/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
-        req.setMethod("PUT");
+        req.setMethod("PATCH");
         req.setURL(url);
         SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "atsInterview", "json");
         req.setBody(serializedRequestBody);
@@ -1149,7 +754,7 @@ public class Ats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdInterviewIdResponse res = new com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdInterviewIdResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.PatchAtsInterviewResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAtsInterviewResponse(contentType, httpRes.statusCode()) {{
             atsInterview = null;
         }};
         res.rawResponse = httpRes;
@@ -1171,12 +776,12 @@ public class Ats {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdJobIdResponse putAtsConnectionIdJobId(com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdJobIdRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchAtsJobResponse patchAtsJob(com.unifiedapi.unifiedto.models.operations.PatchAtsJobRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdJobIdRequest.class, baseUrl, "/ats/{connection_id}/job/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAtsJobRequest.class, baseUrl, "/ats/{connection_id}/job/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
-        req.setMethod("PUT");
+        req.setMethod("PATCH");
         req.setURL(url);
         SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "atsJob", "json");
         req.setBody(serializedRequestBody);
@@ -1190,7 +795,7 @@ public class Ats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdJobIdResponse res = new com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdJobIdResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.PatchAtsJobResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAtsJobResponse(contentType, httpRes.statusCode()) {{
             atsJob = null;
         }};
         res.rawResponse = httpRes;
@@ -1212,9 +817,404 @@ public class Ats {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdScorecardIdResponse putAtsConnectionIdScorecardId(com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdScorecardIdRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse patchAtsScorecard(com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdScorecardIdRequest.class, baseUrl, "/ats/{connection_id}/scorecard/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardRequest.class, baseUrl, "/ats/{connection_id}/scorecard/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PATCH");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "atsScorecard", "json");
+        req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse(contentType, httpRes.statusCode()) {{
+            atsScorecard = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.AtsScorecard out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsScorecard.class);
+                res.atsScorecard = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Remove an application
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationResponse removeAtsApplication(com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationRequest.class, baseUrl, "/ats/{connection_id}/application/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("DELETE");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationResponse(contentType, httpRes.statusCode()) {{
+            removeAtsApplicationDefaultApplicationJSONString = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (true) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
+                res.removeAtsApplicationDefaultApplicationJSONString = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Remove a candidate
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.RemoveAtsCandidateResponse removeAtsCandidate(com.unifiedapi.unifiedto.models.operations.RemoveAtsCandidateRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveAtsCandidateRequest.class, baseUrl, "/ats/{connection_id}/candidate/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("DELETE");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.RemoveAtsCandidateResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAtsCandidateResponse(contentType, httpRes.statusCode()) {{
+            removeAtsCandidateDefaultApplicationJSONString = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (true) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
+                res.removeAtsCandidateDefaultApplicationJSONString = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Remove a interview
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.RemoveAtsInterviewResponse removeAtsInterview(com.unifiedapi.unifiedto.models.operations.RemoveAtsInterviewRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveAtsInterviewRequest.class, baseUrl, "/ats/{connection_id}/interview/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("DELETE");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.RemoveAtsInterviewResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAtsInterviewResponse(contentType, httpRes.statusCode()) {{
+            removeAtsInterviewDefaultApplicationJSONString = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (true) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
+                res.removeAtsInterviewDefaultApplicationJSONString = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Remove a job
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.RemoveAtsJobResponse removeAtsJob(com.unifiedapi.unifiedto.models.operations.RemoveAtsJobRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveAtsJobRequest.class, baseUrl, "/ats/{connection_id}/job/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("DELETE");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.RemoveAtsJobResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAtsJobResponse(contentType, httpRes.statusCode()) {{
+            removeAtsJobDefaultApplicationJSONString = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (true) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
+                res.removeAtsJobDefaultApplicationJSONString = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Remove a scorecard
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse removeAtsScorecard(com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardRequest.class, baseUrl, "/ats/{connection_id}/scorecard/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("DELETE");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse(contentType, httpRes.statusCode()) {{
+            removeAtsScorecardDefaultApplicationJSONString = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (true) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
+                res.removeAtsScorecardDefaultApplicationJSONString = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Update an application
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationResponse updateAtsApplication(com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationRequest.class, baseUrl, "/ats/{connection_id}/application/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PUT");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "atsApplication", "json");
+        req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationResponse(contentType, httpRes.statusCode()) {{
+            atsApplication = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.AtsApplication out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsApplication.class);
+                res.atsApplication = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Update a candidate
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.UpdateAtsCandidateResponse updateAtsCandidate(com.unifiedapi.unifiedto.models.operations.UpdateAtsCandidateRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateAtsCandidateRequest.class, baseUrl, "/ats/{connection_id}/candidate/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PUT");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "atsCandidate", "json");
+        req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.UpdateAtsCandidateResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAtsCandidateResponse(contentType, httpRes.statusCode()) {{
+            atsCandidate = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.AtsCandidate out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsCandidate.class);
+                res.atsCandidate = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Update a interview
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.UpdateAtsInterviewResponse updateAtsInterview(com.unifiedapi.unifiedto.models.operations.UpdateAtsInterviewRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateAtsInterviewRequest.class, baseUrl, "/ats/{connection_id}/interview/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PUT");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "atsInterview", "json");
+        req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.UpdateAtsInterviewResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAtsInterviewResponse(contentType, httpRes.statusCode()) {{
+            atsInterview = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.AtsInterview out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsInterview.class);
+                res.atsInterview = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Update a job
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.UpdateAtsJobResponse updateAtsJob(com.unifiedapi.unifiedto.models.operations.UpdateAtsJobRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateAtsJobRequest.class, baseUrl, "/ats/{connection_id}/job/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PUT");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "atsJob", "json");
+        req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.UpdateAtsJobResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAtsJobResponse(contentType, httpRes.statusCode()) {{
+            atsJob = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.AtsJob out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsJob.class);
+                res.atsJob = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Update a scorecard
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse updateAtsScorecard(com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardRequest.class, baseUrl, "/ats/{connection_id}/scorecard/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -1231,7 +1231,7 @@ public class Ats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdScorecardIdResponse res = new com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdScorecardIdResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse(contentType, httpRes.statusCode()) {{
             atsScorecard = null;
         }};
         res.rawResponse = httpRes;

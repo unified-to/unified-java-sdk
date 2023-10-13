@@ -46,10 +46,10 @@ public class GetUnifiedWebhookResponse {
      * Successful
      */
     
-    public com.unifiedapi.unifiedto.models.shared.Webhook[] webhooks;
+    public com.unifiedapi.unifiedto.models.shared.Webhook webhook;
 
-    public GetUnifiedWebhookResponse withWebhooks(com.unifiedapi.unifiedto.models.shared.Webhook[] webhooks) {
-        this.webhooks = webhooks;
+    public GetUnifiedWebhookResponse withWebhook(com.unifiedapi.unifiedto.models.shared.Webhook webhook) {
+        this.webhook = webhook;
         return this;
     }
     

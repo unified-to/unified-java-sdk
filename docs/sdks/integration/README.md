@@ -3,14 +3,14 @@
 
 ### Available Operations
 
-* [getUnifiedIntegration](#getunifiedintegration) - Returns all integrations
-* [getUnifiedIntegrationAuthWorkspaceIdIntegrationType](#getunifiedintegrationauthworkspaceidintegrationtype) - Create connection indirectly
-* [getUnifiedIntegrationIntegrationType](#getunifiedintegrationintegrationtype) - Retrieve an integration
-* [getUnifiedIntegrationWorkspaceWorkspaceId](#getunifiedintegrationworkspaceworkspaceid) - Returns all activated integrations in a workspace
+* [getUnifiedIntegration](#getunifiedintegration) - Retrieve an integration
+* [getUnifiedIntegrationAuth](#getunifiedintegrationauth) - Create connection indirectly
+* [listUnifiedIntegrationWorkspaces](#listunifiedintegrationworkspaces) - Returns all activated integrations in a workspace
+* [listUnifiedIntegrations](#listunifiedintegrations) - Returns all integrations
 
 ## getUnifiedIntegration
 
-Returns all integrations
+Retrieve an integration
 
 ### Example Usage
 
@@ -18,11 +18,9 @@ Returns all integrations
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationCategories;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -33,22 +31,11 @@ public class Application {
                 }})
                 .build();
 
-            GetUnifiedIntegrationRequest req = new GetUnifiedIntegrationRequest(){{
-                active = false;
-                categories = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationCategories[]{{
-                    add(GetUnifiedIntegrationCategories.TICKETING),
-                }};
-                limit = 5251.15d;
-                offset = 1545.55d;
-                order = "farad";
-                sort = "Implemented";
-                summary = false;
-                updatedGte = OffsetDateTime.parse("2021-12-28T03:20:26.143Z");
-            }};            
+            GetUnifiedIntegrationRequest req = new GetUnifiedIntegrationRequest("Kia");            
 
             GetUnifiedIntegrationResponse res = sdk.integration.getUnifiedIntegration(req);
 
-            if (res.integrations != null) {
+            if (res.integration != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -70,7 +57,7 @@ public class Application {
 **[com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationResponse](../../models/operations/GetUnifiedIntegrationResponse.md)**
 
 
-## getUnifiedIntegrationAuthWorkspaceIdIntegrationType
+## getUnifiedIntegrationAuth
 
 Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
 
@@ -80,37 +67,37 @@ Returns an authorization URL for the specified integration.  Once a successful a
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeResponse;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes;
+import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest;
+import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse;
+import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthScopes;
 import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Ireland"){{
+                .setSecurity(new Security("supposing"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest req = new GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest("Ergonomic", "quae"){{
-                env = "Surinam national Security";
-                externalXref = "purple positively";
-                failureRedirect = "Bicycle";
-                lang = "Home";
+            GetUnifiedIntegrationAuthRequest req = new GetUnifiedIntegrationAuthRequest("Nobelium", "Branding"){{
+                env = "24/7 plum blot";
+                externalXref = "groupware";
+                failureRedirect = "Sausages Aston";
+                lang = "metrics Incredible Northwest";
                 redirect = false;
-                scopes = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes[]{{
-                    add(GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes.CRM_PIPELINE_READ),
+                scopes = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthScopes[]{{
+                    add(GetUnifiedIntegrationAuthScopes.CRM_COMPANY_READ),
                 }};
-                state = "architectures";
-                subdomain = "Functionality";
-                successRedirect = "innovate payment";
+                state = "California EXE Direct";
+                subdomain = "Lead Chair transmit";
+                successRedirect = "Central";
             }};            
 
-            GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeResponse res = sdk.integration.getUnifiedIntegrationAuthWorkspaceIdIntegrationType(req);
+            GetUnifiedIntegrationAuthResponse res = sdk.integration.getUnifiedIntegrationAuth(req);
 
-            if (res.getUnifiedIntegrationAuthWorkspaceIdIntegrationType200ApplicationJSONString != null) {
+            if (res.getUnifiedIntegrationAuth200ApplicationJSONString != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -122,66 +109,17 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                      | Type                                                                                                                                                                                           | Required                                                                                                                                                                                       | Description                                                                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest](../../models/operations/GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest.md) | :heavy_check_mark:                                                                                                                                                                             | The request object to use for the request.                                                                                                                                                     |
+| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest](../../models/operations/GetUnifiedIntegrationAuthRequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeResponse](../../models/operations/GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse](../../models/operations/GetUnifiedIntegrationAuthResponse.md)**
 
 
-## getUnifiedIntegrationIntegrationType
-
-Retrieve an integration
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationIntegrationTypeRequest;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationIntegrationTypeResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("FTP"){{
-                    jwt = "";
-                }})
-                .build();
-
-            GetUnifiedIntegrationIntegrationTypeRequest req = new GetUnifiedIntegrationIntegrationTypeRequest("East");            
-
-            GetUnifiedIntegrationIntegrationTypeResponse res = sdk.integration.getUnifiedIntegrationIntegrationType(req);
-
-            if (res.integration != null) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                                        | Type                                                                                                                                                             | Required                                                                                                                                                         | Description                                                                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationIntegrationTypeRequest](../../models/operations/GetUnifiedIntegrationIntegrationTypeRequest.md) | :heavy_check_mark:                                                                                                                                               | The request object to use for the request.                                                                                                                       |
-
-
-### Response
-
-**[com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationIntegrationTypeResponse](../../models/operations/GetUnifiedIntegrationIntegrationTypeResponse.md)**
-
-
-## getUnifiedIntegrationWorkspaceWorkspaceId
+## listUnifiedIntegrationWorkspaces
 
 No authentication required as this is to be used by front-end interface
 
@@ -191,30 +129,30 @@ No authentication required as this is to be used by front-end interface
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationWorkspaceWorkspaceIdCategories;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationWorkspaceWorkspaceIdRequest;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationWorkspaceWorkspaceIdResponse;
+import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesCategories;
+import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesRequest;
+import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Automotive"){{
+                .setSecurity(new Security("Trial"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedIntegrationWorkspaceWorkspaceIdRequest req = new GetUnifiedIntegrationWorkspaceWorkspaceIdRequest("North"){{
+            ListUnifiedIntegrationWorkspacesRequest req = new ListUnifiedIntegrationWorkspacesRequest("Intuitive"){{
                 active = false;
-                categories = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationWorkspaceWorkspaceIdCategories[]{{
-                    add(GetUnifiedIntegrationWorkspaceWorkspaceIdCategories.PASSTHROUGH),
+                categories = new com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesCategories[]{{
+                    add(ListUnifiedIntegrationWorkspacesCategories.ATS),
                 }};
-                env = "exercitationem Franco National";
+                env = "Representative transplantation";
                 summary = false;
             }};            
 
-            GetUnifiedIntegrationWorkspaceWorkspaceIdResponse res = sdk.integration.getUnifiedIntegrationWorkspaceWorkspaceId(req);
+            ListUnifiedIntegrationWorkspacesResponse res = sdk.integration.listUnifiedIntegrationWorkspaces(req);
 
             if (res.integrations != null) {
                 // handle response
@@ -228,12 +166,74 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                                  | Type                                                                                                                                                                       | Required                                                                                                                                                                   | Description                                                                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationWorkspaceWorkspaceIdRequest](../../models/operations/GetUnifiedIntegrationWorkspaceWorkspaceIdRequest.md) | :heavy_check_mark:                                                                                                                                                         | The request object to use for the request.                                                                                                                                 |
+| Parameter                                                                                                                                                | Type                                                                                                                                                     | Required                                                                                                                                                 | Description                                                                                                                                              |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesRequest](../../models/operations/ListUnifiedIntegrationWorkspacesRequest.md) | :heavy_check_mark:                                                                                                                                       | The request object to use for the request.                                                                                                               |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationWorkspaceWorkspaceIdResponse](../../models/operations/GetUnifiedIntegrationWorkspaceWorkspaceIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesResponse](../../models/operations/ListUnifiedIntegrationWorkspacesResponse.md)**
+
+
+## listUnifiedIntegrations
+
+Returns all integrations
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsCategories;
+import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsRequest;
+import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("Park"){{
+                    jwt = "";
+                }})
+                .build();
+
+            ListUnifiedIntegrationsRequest req = new ListUnifiedIntegrationsRequest(){{
+                active = false;
+                categories = new com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsCategories[]{{
+                    add(ListUnifiedIntegrationsCategories.HRIS),
+                }};
+                limit = 8305.29d;
+                offset = 9618d;
+                order = "Gabon";
+                sort = "Card";
+                summary = false;
+                updatedGte = OffsetDateTime.parse("2023-01-12T09:40:08.699Z");
+            }};            
+
+            ListUnifiedIntegrationsResponse res = sdk.integration.listUnifiedIntegrations(req);
+
+            if (res.integrations != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsRequest](../../models/operations/ListUnifiedIntegrationsRequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsResponse](../../models/operations/ListUnifiedIntegrationsResponse.md)**
 

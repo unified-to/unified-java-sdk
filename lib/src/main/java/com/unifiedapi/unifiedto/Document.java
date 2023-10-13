@@ -23,177 +23,14 @@ public class Document {
 	}
 
     /**
-     * Remove a scorecard
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdScorecardIdResponse deleteAtsConnectionIdScorecardId(com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdScorecardIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdScorecardIdRequest.class, baseUrl, "/ats/{connection_id}/scorecard/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("DELETE");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdScorecardIdResponse res = new com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdScorecardIdResponse(contentType, httpRes.statusCode()) {{
-            deleteAtsConnectionIdScorecardIdDefaultApplicationJSONString = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (true) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.deleteAtsConnectionIdScorecardIdDefaultApplicationJSONString = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * List all scorecards
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardResponse getAtsConnectionIdScorecard(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardRequest.class, baseUrl, "/ats/{connection_id}/scorecard", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardResponse res = new com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardResponse(contentType, httpRes.statusCode()) {{
-            atsScorecards = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AtsScorecard[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsScorecard[].class);
-                res.atsScorecards = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Retrieve a scorecard
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardIdResponse getAtsConnectionIdScorecardId(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardIdRequest.class, baseUrl, "/ats/{connection_id}/scorecard/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardIdResponse res = new com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardIdResponse(contentType, httpRes.statusCode()) {{
-            atsScorecard = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AtsScorecard out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsScorecard.class);
-                res.atsScorecard = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Update a scorecard
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdScorecardIdResponse patchAtsConnectionIdScorecardId(com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdScorecardIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdScorecardIdRequest.class, baseUrl, "/ats/{connection_id}/scorecard/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("PATCH");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "atsScorecard", "json");
-        req.setBody(serializedRequestBody);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdScorecardIdResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdScorecardIdResponse(contentType, httpRes.statusCode()) {{
-            atsScorecard = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AtsScorecard out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsScorecard.class);
-                res.atsScorecard = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
      * Create a scorecard
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdScorecardResponse postAtsConnectionIdScorecard(com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdScorecardRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse createAtsScorecard(com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdScorecardRequest.class, baseUrl, "/ats/{connection_id}/scorecard", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardRequest.class, baseUrl, "/ats/{connection_id}/scorecard", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -210,7 +47,7 @@ public class Document {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdScorecardResponse res = new com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdScorecardResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse(contentType, httpRes.statusCode()) {{
             atsScorecard = null;
         }};
         res.rawResponse = httpRes;
@@ -227,14 +64,177 @@ public class Document {
     }
 
     /**
+     * Retrieve a scorecard
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.GetAtsScorecardResponse getAtsScorecard(com.unifiedapi.unifiedto.models.operations.GetAtsScorecardRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAtsScorecardRequest.class, baseUrl, "/ats/{connection_id}/scorecard/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.GetAtsScorecardResponse res = new com.unifiedapi.unifiedto.models.operations.GetAtsScorecardResponse(contentType, httpRes.statusCode()) {{
+            atsScorecard = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.AtsScorecard out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsScorecard.class);
+                res.atsScorecard = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * List all scorecards
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsResponse listAtsScorecards(com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsRequest.class, baseUrl, "/ats/{connection_id}/scorecard", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsResponse res = new com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsResponse(contentType, httpRes.statusCode()) {{
+            atsScorecards = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.AtsScorecard[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsScorecard[].class);
+                res.atsScorecards = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * Update a scorecard
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdScorecardIdResponse putAtsConnectionIdScorecardId(com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdScorecardIdRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse patchAtsScorecard(com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdScorecardIdRequest.class, baseUrl, "/ats/{connection_id}/scorecard/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardRequest.class, baseUrl, "/ats/{connection_id}/scorecard/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PATCH");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "atsScorecard", "json");
+        req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse(contentType, httpRes.statusCode()) {{
+            atsScorecard = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.AtsScorecard out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AtsScorecard.class);
+                res.atsScorecard = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Remove a scorecard
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse removeAtsScorecard(com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardRequest.class, baseUrl, "/ats/{connection_id}/scorecard/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("DELETE");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse(contentType, httpRes.statusCode()) {{
+            removeAtsScorecardDefaultApplicationJSONString = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (true) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
+                res.removeAtsScorecardDefaultApplicationJSONString = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Update a scorecard
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse updateAtsScorecard(com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardRequest.class, baseUrl, "/ats/{connection_id}/scorecard/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -251,7 +251,7 @@ public class Document {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdScorecardIdResponse res = new com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdScorecardIdResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse(contentType, httpRes.statusCode()) {{
             atsScorecard = null;
         }};
         res.rawResponse = httpRes;

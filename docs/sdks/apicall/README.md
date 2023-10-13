@@ -3,12 +3,12 @@
 
 ### Available Operations
 
-* [getUnifiedApicall](#getunifiedapicall) - Returns API Calls
-* [getUnifiedApicallId](#getunifiedapicallid) - Retrieve specific API Call by its ID
+* [getUnifiedApicall](#getunifiedapicall) - Retrieve specific API Call by its ID
+* [listUnifiedApicalls](#listunifiedapicalls) - Returns API Calls
 
 ## getUnifiedApicall
 
-Returns API Calls
+Retrieve specific API Call by its ID
 
 ### Example Usage
 
@@ -19,7 +19,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,23 +29,11 @@ public class Application {
                 }})
                 .build();
 
-            GetUnifiedApicallRequest req = new GetUnifiedApicallRequest(){{
-                connectionId = "green Hybrid Northwest";
-                createdLte = OffsetDateTime.parse("2021-10-25T17:00:01.179Z");
-                env = "Steel lime";
-                error = false;
-                externalXref = "indexing North";
-                integrationType = "Faroe";
-                limit = 8086.35d;
-                offset = 4369.86d;
-                order = "Practical online";
-                sort = "envisioneer Executive Northwest";
-                updatedGte = OffsetDateTime.parse("2023-03-02T12:58:56.214Z");
-            }};            
+            GetUnifiedApicallRequest req = new GetUnifiedApicallRequest("anenst");            
 
             GetUnifiedApicallResponse res = sdk.apicall.getUnifiedApicall(req);
 
-            if (res.apiCalls != null) {
+            if (res.apiCall != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -68,9 +55,9 @@ public class Application {
 **[com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallResponse](../../models/operations/GetUnifiedApicallResponse.md)**
 
 
-## getUnifiedApicallId
+## listUnifiedApicalls
 
-Retrieve specific API Call by its ID
+Returns API Calls
 
 ### Example Usage
 
@@ -78,24 +65,37 @@ Retrieve specific API Call by its ID
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallIdRequest;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallIdResponse;
+import com.unifiedapi.unifiedto.models.operations.ListUnifiedApicallsRequest;
+import com.unifiedapi.unifiedto.models.operations.ListUnifiedApicallsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("fuchsia"){{
+                .setSecurity(new Security("attentive"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedApicallIdRequest req = new GetUnifiedApicallIdRequest("Guadeloupe");            
+            ListUnifiedApicallsRequest req = new ListUnifiedApicallsRequest(){{
+                connectionId = "Lead Krone";
+                createdLte = OffsetDateTime.parse("2022-09-06T17:13:51.274Z");
+                env = "parse dearly Integration";
+                error = false;
+                externalXref = "Customer Rap";
+                integrationType = "Rest solution";
+                limit = 1797.17d;
+                offset = 2364.47d;
+                order = "Kentucky";
+                sort = "copy Chile";
+                updatedGte = OffsetDateTime.parse("2021-03-07T15:44:54.599Z");
+            }};            
 
-            GetUnifiedApicallIdResponse res = sdk.apicall.getUnifiedApicallId(req);
+            ListUnifiedApicallsResponse res = sdk.apicall.listUnifiedApicalls(req);
 
-            if (res.apiCall != null) {
+            if (res.apiCalls != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -109,10 +109,10 @@ public class Application {
 
 | Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallIdRequest](../../models/operations/GetUnifiedApicallIdRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.ListUnifiedApicallsRequest](../../models/operations/ListUnifiedApicallsRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallIdResponse](../../models/operations/GetUnifiedApicallIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.ListUnifiedApicallsResponse](../../models/operations/ListUnifiedApicallsResponse.md)**
 

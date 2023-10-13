@@ -1,0 +1,9 @@
+# CreateCrmEventRequest
+
+
+## Fields
+
+| Field                                                                                                           | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `crmEvent`                                                                                                      | [com.unifiedapi.unifiedto.models.shared.CrmEvent](../../models/shared/CrmEvent.md)                              | :heavy_minus_sign:                                                                                              | An event represents an event, activity, or engagement and is always associated with a deal, contact, or company |
+| `connectionId`                                                                                                  | *String*                                                                                                        | :heavy_check_mark:                                                                                              | ID of the connection                                                                                            |

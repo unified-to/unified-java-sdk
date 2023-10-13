@@ -3,14 +3,14 @@
 
 ### Available Operations
 
-* [deleteUnifiedWebhookId](#deleteunifiedwebhookid) - Remove webhook subscription
-* [getUnifiedWebhook](#getunifiedwebhook) - Returns all registered webhooks
-* [getUnifiedWebhookId](#getunifiedwebhookid) - Retrieve webhook by its ID
-* [postUnifiedWebhookConnectionIdObject](#postunifiedwebhookconnectionidobject) - Create webhook subscription
+* [createUnifiedWebhook](#createunifiedwebhook) - Create webhook subscription
+* [getUnifiedWebhook](#getunifiedwebhook) - Retrieve webhook by its ID
+* [listUnifiedWebhooks](#listunifiedwebhooks) - Returns all registered webhooks
+* [removeUnifiedWebhook](#removeunifiedwebhook) - Remove webhook subscription
 
-## deleteUnifiedWebhookId
+## createUnifiedWebhook
 
-Remove webhook subscription
+To maintain compatibility with the webhooks specification and Zapier webhooks, only the hook_url field is required in the payload when creating a Webhook.  When updated/new objects are found, the array of objects will be POSTed to the hook_url with the paramater hookId=<hookId>.
 
 ### Example Usage
 
@@ -18,24 +18,46 @@ Remove webhook subscription
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.DeleteUnifiedWebhookIdRequest;
-import com.unifiedapi.unifiedto.models.operations.DeleteUnifiedWebhookIdResponse;
+import com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookEvents;
+import com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookResponse;
+import com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.Webhook;
+import com.unifiedapi.unifiedto.models.shared.WebhookObjectType;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("North"){{
+                .setSecurity(new Security("Lead"){{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteUnifiedWebhookIdRequest req = new DeleteUnifiedWebhookIdRequest("optio");            
+            CreateUnifiedWebhookRequest req = new CreateUnifiedWebhookRequest("payment", "Borders"){{
+                webhook = new Webhook("Representative", new com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents[]{{
+                    add(PropertyWebhookEvents.CREATED),
+                }}, "cyan", "Bedfordshire", 3.51d, WebhookObjectType.CRM_PIPELINE, "withdrawal"){{
+                    checkedAt = OffsetDateTime.parse("2023-02-22T14:23:57.210Z");
+                    createdAt = OffsetDateTime.parse("2023-09-03T17:40:00.994Z");
+                    environment = "PCI";
+                    id = "<ID>";
+                    includeRaw = false;
+                    subscriptions = new String[]{{
+                        add("Mali"),
+                    }};
+                    updatedAt = OffsetDateTime.parse("2022-04-24T02:01:08.617Z");
+                }};
+                events = new com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookEvents[]{{
+                    add(CreateUnifiedWebhookEvents.CREATED),
+                }};
+            }};            
 
-            DeleteUnifiedWebhookIdResponse res = sdk.webhook.deleteUnifiedWebhookId(req);
+            CreateUnifiedWebhookResponse res = sdk.webhook.createUnifiedWebhook(req);
 
-            if (res.statusCode == 200) {
+            if (res.webhook != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -47,19 +69,19 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.DeleteUnifiedWebhookIdRequest](../../models/operations/DeleteUnifiedWebhookIdRequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookRequest](../../models/operations/CreateUnifiedWebhookRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.DeleteUnifiedWebhookIdResponse](../../models/operations/DeleteUnifiedWebhookIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookResponse](../../models/operations/CreateUnifiedWebhookResponse.md)**
 
 
 ## getUnifiedWebhook
 
-Returns all registered webhooks
+Retrieve webhook by its ID
 
 ### Example Usage
 
@@ -70,7 +92,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -81,19 +102,11 @@ public class Application {
                 }})
                 .build();
 
-            GetUnifiedWebhookRequest req = new GetUnifiedWebhookRequest(){{
-                env = "methodical Fitness";
-                limit = 8087.22d;
-                object = "Franc past salmon";
-                offset = 5240.75d;
-                order = "program";
-                sort = "below JSON";
-                updatedGte = OffsetDateTime.parse("2022-05-29T13:22:55.562Z");
-            }};            
+            GetUnifiedWebhookRequest req = new GetUnifiedWebhookRequest("National");            
 
             GetUnifiedWebhookResponse res = sdk.webhook.getUnifiedWebhook(req);
 
-            if (res.webhooks != null) {
+            if (res.webhook != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -115,9 +128,9 @@ public class Application {
 **[com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookResponse](../../models/operations/GetUnifiedWebhookResponse.md)**
 
 
-## getUnifiedWebhookId
+## listUnifiedWebhooks
 
-Retrieve webhook by its ID
+Returns all registered webhooks
 
 ### Example Usage
 
@@ -125,24 +138,33 @@ Retrieve webhook by its ID
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookIdRequest;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookIdResponse;
+import com.unifiedapi.unifiedto.models.operations.ListUnifiedWebhooksRequest;
+import com.unifiedapi.unifiedto.models.operations.ListUnifiedWebhooksResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("up"){{
+                .setSecurity(new Security("Southeast"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedWebhookIdRequest req = new GetUnifiedWebhookIdRequest("optical");            
+            ListUnifiedWebhooksRequest req = new ListUnifiedWebhooksRequest(){{
+                env = "connecting";
+                limit = 7855.11d;
+                object = "withdrawal yum Cambridgeshire";
+                offset = 7784.34d;
+                order = "Supervisor alarm";
+                sort = "Computer regard Hip";
+                updatedGte = OffsetDateTime.parse("2022-08-27T06:39:32.501Z");
+            }};            
 
-            GetUnifiedWebhookIdResponse res = sdk.webhook.getUnifiedWebhookId(req);
+            ListUnifiedWebhooksResponse res = sdk.webhook.listUnifiedWebhooks(req);
 
-            if (res.webhook != null) {
+            if (res.webhooks != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -156,17 +178,17 @@ public class Application {
 
 | Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookIdRequest](../../models/operations/GetUnifiedWebhookIdRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.ListUnifiedWebhooksRequest](../../models/operations/ListUnifiedWebhooksRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookIdResponse](../../models/operations/GetUnifiedWebhookIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.ListUnifiedWebhooksResponse](../../models/operations/ListUnifiedWebhooksResponse.md)**
 
 
-## postUnifiedWebhookConnectionIdObject
+## removeUnifiedWebhook
 
-To maintain compatibility with the webhooks specification and Zapier webhooks, only the hook_url field is required in the payload when creating a Webhook.  When updated/new objects are found, the array of objects will be POSTed to the hook_url with the paramater hookId=<hookId>.
+Remove webhook subscription
 
 ### Example Usage
 
@@ -174,46 +196,24 @@ To maintain compatibility with the webhooks specification and Zapier webhooks, o
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PostUnifiedWebhookConnectionIdObjectEvents;
-import com.unifiedapi.unifiedto.models.operations.PostUnifiedWebhookConnectionIdObjectRequest;
-import com.unifiedapi.unifiedto.models.operations.PostUnifiedWebhookConnectionIdObjectResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents;
+import com.unifiedapi.unifiedto.models.operations.RemoveUnifiedWebhookRequest;
+import com.unifiedapi.unifiedto.models.operations.RemoveUnifiedWebhookResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import com.unifiedapi.unifiedto.models.shared.Webhook;
-import com.unifiedapi.unifiedto.models.shared.WebhookObjectType;
-import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Arab"){{
+                .setSecurity(new Security("API"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostUnifiedWebhookConnectionIdObjectRequest req = new PostUnifiedWebhookConnectionIdObjectRequest("tan", "siemens"){{
-                webhook = new Webhook("National", new com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents[]{{
-                    add(PropertyWebhookEvents.CREATED),
-                }}, "GB", "Rustic", 4473.47d, WebhookObjectType.CRM_COMPANY, "Demigender"){{
-                    checkedAt = OffsetDateTime.parse("2023-06-13T05:29:12.399Z");
-                    createdAt = OffsetDateTime.parse("2021-08-23T13:47:22.712Z");
-                    environment = "female ken";
-                    id = "<ID>";
-                    includeRaw = false;
-                    subscriptions = new String[]{{
-                        add("Bronze"),
-                    }};
-                    updatedAt = OffsetDateTime.parse("2023-02-10T01:49:37.759Z");
-                }};
-                events = new com.unifiedapi.unifiedto.models.operations.PostUnifiedWebhookConnectionIdObjectEvents[]{{
-                    add(PostUnifiedWebhookConnectionIdObjectEvents.UPDATED),
-                }};
-            }};            
+            RemoveUnifiedWebhookRequest req = new RemoveUnifiedWebhookRequest("Architect");            
 
-            PostUnifiedWebhookConnectionIdObjectResponse res = sdk.webhook.postUnifiedWebhookConnectionIdObject(req);
+            RemoveUnifiedWebhookResponse res = sdk.webhook.removeUnifiedWebhook(req);
 
-            if (res.webhook != null) {
+            if (res.statusCode == 200) {
                 // handle response
             }
         } catch (Exception e) {
@@ -225,12 +225,12 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                        | Type                                                                                                                                                             | Required                                                                                                                                                         | Description                                                                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.PostUnifiedWebhookConnectionIdObjectRequest](../../models/operations/PostUnifiedWebhookConnectionIdObjectRequest.md) | :heavy_check_mark:                                                                                                                                               | The request object to use for the request.                                                                                                                       |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.RemoveUnifiedWebhookRequest](../../models/operations/RemoveUnifiedWebhookRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PostUnifiedWebhookConnectionIdObjectResponse](../../models/operations/PostUnifiedWebhookConnectionIdObjectResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.RemoveUnifiedWebhookResponse](../../models/operations/RemoveUnifiedWebhookResponse.md)**
 

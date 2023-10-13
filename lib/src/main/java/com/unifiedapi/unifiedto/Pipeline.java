@@ -23,177 +23,14 @@ public class Pipeline {
 	}
 
     /**
-     * Remove a pipeline
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdPipelineIdResponse deleteCrmConnectionIdPipelineId(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdPipelineIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdPipelineIdRequest.class, baseUrl, "/crm/{connection_id}/pipeline/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("DELETE");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdPipelineIdResponse res = new com.unifiedapi.unifiedto.models.operations.DeleteCrmConnectionIdPipelineIdResponse(contentType, httpRes.statusCode()) {{
-            deleteCrmConnectionIdPipelineIdDefaultApplicationJSONString = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (true) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.deleteCrmConnectionIdPipelineIdDefaultApplicationJSONString = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * List all pipelines
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineResponse getCrmConnectionIdPipeline(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineRequest.class, baseUrl, "/crm/{connection_id}/pipeline", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineResponse res = new com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineResponse(contentType, httpRes.statusCode()) {{
-            crmPipelines = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.CrmPipeline[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.CrmPipeline[].class);
-                res.crmPipelines = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Retrieve a pipeline
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineIdResponse getCrmConnectionIdPipelineId(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineIdRequest.class, baseUrl, "/crm/{connection_id}/pipeline/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineIdResponse res = new com.unifiedapi.unifiedto.models.operations.GetCrmConnectionIdPipelineIdResponse(contentType, httpRes.statusCode()) {{
-            crmPipeline = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.CrmPipeline out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.CrmPipeline.class);
-                res.crmPipeline = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Update a pipeline
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdPipelineIdResponse patchCrmConnectionIdPipelineId(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdPipelineIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdPipelineIdRequest.class, baseUrl, "/crm/{connection_id}/pipeline/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("PATCH");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "crmPipeline", "json");
-        req.setBody(serializedRequestBody);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdPipelineIdResponse res = new com.unifiedapi.unifiedto.models.operations.PatchCrmConnectionIdPipelineIdResponse(contentType, httpRes.statusCode()) {{
-            crmPipeline = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.CrmPipeline out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.CrmPipeline.class);
-                res.crmPipeline = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
      * Create a pipeline
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdPipelineResponse postCrmConnectionIdPipeline(com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdPipelineRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineResponse createCrmPipeline(com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdPipelineRequest.class, baseUrl, "/crm/{connection_id}/pipeline", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineRequest.class, baseUrl, "/crm/{connection_id}/pipeline", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -210,7 +47,7 @@ public class Pipeline {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdPipelineResponse res = new com.unifiedapi.unifiedto.models.operations.PostCrmConnectionIdPipelineResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineResponse res = new com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineResponse(contentType, httpRes.statusCode()) {{
             crmPipeline = null;
         }};
         res.rawResponse = httpRes;
@@ -227,14 +64,177 @@ public class Pipeline {
     }
 
     /**
+     * Retrieve a pipeline
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.GetCrmPipelineResponse getCrmPipeline(com.unifiedapi.unifiedto.models.operations.GetCrmPipelineRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCrmPipelineRequest.class, baseUrl, "/crm/{connection_id}/pipeline/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.GetCrmPipelineResponse res = new com.unifiedapi.unifiedto.models.operations.GetCrmPipelineResponse(contentType, httpRes.statusCode()) {{
+            crmPipeline = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.CrmPipeline out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.CrmPipeline.class);
+                res.crmPipeline = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * List all pipelines
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesResponse listCrmPipelines(com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesRequest.class, baseUrl, "/crm/{connection_id}/pipeline", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesResponse res = new com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesResponse(contentType, httpRes.statusCode()) {{
+            crmPipelines = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.CrmPipeline[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.CrmPipeline[].class);
+                res.crmPipelines = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * Update a pipeline
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdPipelineIdResponse putCrmConnectionIdPipelineId(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdPipelineIdRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineResponse patchCrmPipeline(com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdPipelineIdRequest.class, baseUrl, "/crm/{connection_id}/pipeline/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineRequest.class, baseUrl, "/crm/{connection_id}/pipeline/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PATCH");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "crmPipeline", "json");
+        req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineResponse res = new com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineResponse(contentType, httpRes.statusCode()) {{
+            crmPipeline = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.CrmPipeline out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.CrmPipeline.class);
+                res.crmPipeline = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Remove a pipeline
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineResponse removeCrmPipeline(com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineRequest.class, baseUrl, "/crm/{connection_id}/pipeline/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("DELETE");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineResponse(contentType, httpRes.statusCode()) {{
+            removeCrmPipelineDefaultApplicationJSONString = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (true) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
+                res.removeCrmPipelineDefaultApplicationJSONString = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Update a pipeline
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineResponse updateCrmPipeline(com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineRequest.class, baseUrl, "/crm/{connection_id}/pipeline/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -251,7 +251,7 @@ public class Pipeline {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdPipelineIdResponse res = new com.unifiedapi.unifiedto.models.operations.PutCrmConnectionIdPipelineIdResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineResponse(contentType, httpRes.statusCode()) {{
             crmPipeline = null;
         }};
         res.rawResponse = httpRes;

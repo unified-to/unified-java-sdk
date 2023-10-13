@@ -1,0 +1,10 @@
+# PatchAtsApplicationRequest
+
+
+## Fields
+
+| Field                                                                                          | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `atsApplication`                                                                               | [com.unifiedapi.unifiedto.models.shared.AtsApplication](../../models/shared/AtsApplication.md) | :heavy_minus_sign:                                                                             | An application is an association object between a candidate and a job                          |
+| `connectionId`                                                                                 | *String*                                                                                       | :heavy_check_mark:                                                                             | ID of the connection                                                                           |
+| `id`                                                                                           | *String*                                                                                       | :heavy_check_mark:                                                                             | ID of the Application                                                                          |

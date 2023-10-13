@@ -23,177 +23,14 @@ public class Member {
 	}
 
     /**
-     * Remove member from a list
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.DeleteMartechConnectionIdListIdMemberIdResponse deleteMartechConnectionIdListIdMemberId(com.unifiedapi.unifiedto.models.operations.DeleteMartechConnectionIdListIdMemberIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeleteMartechConnectionIdListIdMemberIdRequest.class, baseUrl, "/martech/{connection_id}/{list_id}/member/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("DELETE");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.DeleteMartechConnectionIdListIdMemberIdResponse res = new com.unifiedapi.unifiedto.models.operations.DeleteMartechConnectionIdListIdMemberIdResponse(contentType, httpRes.statusCode()) {{
-            deleteMartechConnectionIdListIdMemberIdDefaultApplicationJSONString = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (true) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.deleteMartechConnectionIdListIdMemberIdDefaultApplicationJSONString = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * List all members in a list
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListIdMemberResponse getMartechConnectionIdListIdMember(com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListIdMemberRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListIdMemberRequest.class, baseUrl, "/martech/{connection_id}/{list_id}/member", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListIdMemberRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListIdMemberResponse res = new com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListIdMemberResponse(contentType, httpRes.statusCode()) {{
-            marketingMembers = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.MarketingMember[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.MarketingMember[].class);
-                res.marketingMembers = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Retrieve a member from a list
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListIdMemberIdResponse getMartechConnectionIdListIdMemberId(com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListIdMemberIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListIdMemberIdRequest.class, baseUrl, "/martech/{connection_id}/{list_id}/member/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListIdMemberIdResponse res = new com.unifiedapi.unifiedto.models.operations.GetMartechConnectionIdListIdMemberIdResponse(contentType, httpRes.statusCode()) {{
-            marketingMember = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.MarketingMember out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.MarketingMember.class);
-                res.marketingMember = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Update a member in a list
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.PatchMartechConnectionIdListIdMemberIdResponse patchMartechConnectionIdListIdMemberId(com.unifiedapi.unifiedto.models.operations.PatchMartechConnectionIdListIdMemberIdRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchMartechConnectionIdListIdMemberIdRequest.class, baseUrl, "/martech/{connection_id}/{list_id}/member/{id}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("PATCH");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "marketingMember", "json");
-        req.setBody(serializedRequestBody);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.PatchMartechConnectionIdListIdMemberIdResponse res = new com.unifiedapi.unifiedto.models.operations.PatchMartechConnectionIdListIdMemberIdResponse(contentType, httpRes.statusCode()) {{
-            marketingMember = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.MarketingMember out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.MarketingMember.class);
-                res.marketingMember = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
      * Create a member in a list
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PostMartechConnectionIdListIdMemberResponse postMartechConnectionIdListIdMember(com.unifiedapi.unifiedto.models.operations.PostMartechConnectionIdListIdMemberRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateMartechMemberResponse createMartechMember(com.unifiedapi.unifiedto.models.operations.CreateMartechMemberRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PostMartechConnectionIdListIdMemberRequest.class, baseUrl, "/martech/{connection_id}/{list_id}/member", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateMartechMemberRequest.class, baseUrl, "/martech/{connection_id}/{list_id}/member", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -210,7 +47,7 @@ public class Member {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PostMartechConnectionIdListIdMemberResponse res = new com.unifiedapi.unifiedto.models.operations.PostMartechConnectionIdListIdMemberResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.CreateMartechMemberResponse res = new com.unifiedapi.unifiedto.models.operations.CreateMartechMemberResponse(contentType, httpRes.statusCode()) {{
             marketingMember = null;
         }};
         res.rawResponse = httpRes;
@@ -227,14 +64,177 @@ public class Member {
     }
 
     /**
+     * Retrieve a member from a list
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.GetMartechMemberResponse getMartechMember(com.unifiedapi.unifiedto.models.operations.GetMartechMemberRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetMartechMemberRequest.class, baseUrl, "/martech/{connection_id}/{list_id}/member/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.GetMartechMemberResponse res = new com.unifiedapi.unifiedto.models.operations.GetMartechMemberResponse(contentType, httpRes.statusCode()) {{
+            marketingMember = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.MarketingMember out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.MarketingMember.class);
+                res.marketingMember = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * List all members in a list
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.ListMartechMembersResponse listMartechMembers(com.unifiedapi.unifiedto.models.operations.ListMartechMembersRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListMartechMembersRequest.class, baseUrl, "/martech/{connection_id}/{list_id}/member", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListMartechMembersRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.ListMartechMembersResponse res = new com.unifiedapi.unifiedto.models.operations.ListMartechMembersResponse(contentType, httpRes.statusCode()) {{
+            marketingMembers = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.MarketingMember[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.MarketingMember[].class);
+                res.marketingMembers = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * Update a member in a list
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutMartechConnectionIdListIdMemberIdResponse putMartechConnectionIdListIdMemberId(com.unifiedapi.unifiedto.models.operations.PutMartechConnectionIdListIdMemberIdRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchMartechMemberResponse patchMartechMember(com.unifiedapi.unifiedto.models.operations.PatchMartechMemberRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutMartechConnectionIdListIdMemberIdRequest.class, baseUrl, "/martech/{connection_id}/{list_id}/member/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchMartechMemberRequest.class, baseUrl, "/martech/{connection_id}/{list_id}/member/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PATCH");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "marketingMember", "json");
+        req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.PatchMartechMemberResponse res = new com.unifiedapi.unifiedto.models.operations.PatchMartechMemberResponse(contentType, httpRes.statusCode()) {{
+            marketingMember = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.MarketingMember out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.MarketingMember.class);
+                res.marketingMember = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Remove member from a list
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberResponse removeMartechMember(com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberRequest.class, baseUrl, "/martech/{connection_id}/{list_id}/member/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("DELETE");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberResponse(contentType, httpRes.statusCode()) {{
+            removeMartechMemberDefaultApplicationJSONString = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (true) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
+                res.removeMartechMemberDefaultApplicationJSONString = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Update a member in a list
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberResponse updateMartechMember(com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberRequest.class, baseUrl, "/martech/{connection_id}/{list_id}/member/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -251,7 +251,7 @@ public class Member {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PutMartechConnectionIdListIdMemberIdResponse res = new com.unifiedapi.unifiedto.models.operations.PutMartechConnectionIdListIdMemberIdResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberResponse(contentType, httpRes.statusCode()) {{
             marketingMember = null;
         }};
         res.rawResponse = httpRes;

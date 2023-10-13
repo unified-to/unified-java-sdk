@@ -23,18 +23,20 @@ public class Agent {
 	}
 
     /**
-     * Remove a agent
+     * Create a agent
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdAgentIdResponse deleteTicketingConnectionIdAgentId(com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdAgentIdRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateTicketingAgentResponse createTicketingAgent(com.unifiedapi.unifiedto.models.operations.CreateTicketingAgentRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdAgentIdRequest.class, baseUrl, "/ticketing/{connection_id}/agent/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateTicketingAgentRequest.class, baseUrl, "/ticketing/{connection_id}/agent", request, null);
         
         HTTPRequest req = new HTTPRequest();
-        req.setMethod("DELETE");
+        req.setMethod("POST");
         req.setURL(url);
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "ticketingAgent", "json");
+        req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
@@ -45,60 +47,16 @@ public class Agent {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdAgentIdResponse res = new com.unifiedapi.unifiedto.models.operations.DeleteTicketingConnectionIdAgentIdResponse(contentType, httpRes.statusCode()) {{
-            deleteTicketingConnectionIdAgentIdDefaultApplicationJSONString = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (true) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.deleteTicketingConnectionIdAgentIdDefaultApplicationJSONString = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * List all agents
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdAgentResponse getTicketingConnectionIdAgent(com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdAgentRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdAgentRequest.class, baseUrl, "/ticketing/{connection_id}/agent", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdAgentRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdAgentResponse res = new com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdAgentResponse(contentType, httpRes.statusCode()) {{
-            ticketingAgents = null;
+        com.unifiedapi.unifiedto.models.operations.CreateTicketingAgentResponse res = new com.unifiedapi.unifiedto.models.operations.CreateTicketingAgentResponse(contentType, httpRes.statusCode()) {{
+            ticketingAgent = null;
         }};
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.TicketingAgent[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.TicketingAgent[].class);
-                res.ticketingAgents = out;
+                com.unifiedapi.unifiedto.models.shared.TicketingAgent out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.TicketingAgent.class);
+                res.ticketingAgent = out;
             }
         }
 
@@ -111,9 +69,9 @@ public class Agent {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdAgentIdResponse getTicketingConnectionIdAgentId(com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdAgentIdRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetTicketingAgentResponse getTicketingAgent(com.unifiedapi.unifiedto.models.operations.GetTicketingAgentRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdAgentIdRequest.class, baseUrl, "/ticketing/{connection_id}/agent/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetTicketingAgentRequest.class, baseUrl, "/ticketing/{connection_id}/agent/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -128,7 +86,7 @@ public class Agent {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdAgentIdResponse res = new com.unifiedapi.unifiedto.models.operations.GetTicketingConnectionIdAgentIdResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.GetTicketingAgentResponse res = new com.unifiedapi.unifiedto.models.operations.GetTicketingAgentResponse(contentType, httpRes.statusCode()) {{
             ticketingAgent = null;
         }};
         res.rawResponse = httpRes;
@@ -150,9 +108,9 @@ public class Agent {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdAgentResponse getUcConnectionIdAgent(com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdAgentRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListTicketingAgentsResponse listTicketingAgents(com.unifiedapi.unifiedto.models.operations.ListTicketingAgentsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdAgentRequest.class, baseUrl, "/uc/{connection_id}/agent", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListTicketingAgentsRequest.class, baseUrl, "/ticketing/{connection_id}/agent", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -160,7 +118,7 @@ public class Agent {
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdAgentRequest.class, request, null);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListTicketingAgentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -173,7 +131,52 @@ public class Agent {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdAgentResponse res = new com.unifiedapi.unifiedto.models.operations.GetUcConnectionIdAgentResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.ListTicketingAgentsResponse res = new com.unifiedapi.unifiedto.models.operations.ListTicketingAgentsResponse(contentType, httpRes.statusCode()) {{
+            ticketingAgents = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.TicketingAgent[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.TicketingAgent[].class);
+                res.ticketingAgents = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * List all agents
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.ListUcAgentsResponse listUcAgents(com.unifiedapi.unifiedto.models.operations.ListUcAgentsRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListUcAgentsRequest.class, baseUrl, "/uc/{connection_id}/agent", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListUcAgentsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        com.unifiedapi.unifiedto.models.operations.ListUcAgentsResponse res = new com.unifiedapi.unifiedto.models.operations.ListUcAgentsResponse(contentType, httpRes.statusCode()) {{
             ucAgents = null;
         }};
         res.rawResponse = httpRes;
@@ -195,9 +198,9 @@ public class Agent {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdAgentIdResponse patchTicketingConnectionIdAgentId(com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdAgentIdRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchTicketingAgentResponse patchTicketingAgent(com.unifiedapi.unifiedto.models.operations.PatchTicketingAgentRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdAgentIdRequest.class, baseUrl, "/ticketing/{connection_id}/agent/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchTicketingAgentRequest.class, baseUrl, "/ticketing/{connection_id}/agent/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
@@ -214,7 +217,7 @@ public class Agent {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdAgentIdResponse res = new com.unifiedapi.unifiedto.models.operations.PatchTicketingConnectionIdAgentIdResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.PatchTicketingAgentResponse res = new com.unifiedapi.unifiedto.models.operations.PatchTicketingAgentResponse(contentType, httpRes.statusCode()) {{
             ticketingAgent = null;
         }};
         res.rawResponse = httpRes;
@@ -231,20 +234,18 @@ public class Agent {
     }
 
     /**
-     * Create a agent
+     * Remove a agent
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdAgentResponse postTicketingConnectionIdAgent(com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdAgentRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveTicketingAgentResponse removeTicketingAgent(com.unifiedapi.unifiedto.models.operations.RemoveTicketingAgentRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdAgentRequest.class, baseUrl, "/ticketing/{connection_id}/agent", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveTicketingAgentRequest.class, baseUrl, "/ticketing/{connection_id}/agent/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
-        req.setMethod("POST");
+        req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "ticketingAgent", "json");
-        req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
@@ -255,16 +256,15 @@ public class Agent {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdAgentResponse res = new com.unifiedapi.unifiedto.models.operations.PostTicketingConnectionIdAgentResponse(contentType, httpRes.statusCode()) {{
-            ticketingAgent = null;
+        com.unifiedapi.unifiedto.models.operations.RemoveTicketingAgentResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveTicketingAgentResponse(contentType, httpRes.statusCode()) {{
+            removeTicketingAgentDefaultApplicationJSONString = null;
         }};
         res.rawResponse = httpRes;
         
-        if (httpRes.statusCode() == 200) {
+        if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.TicketingAgent out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.TicketingAgent.class);
-                res.ticketingAgent = out;
+                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
+                res.removeTicketingAgentDefaultApplicationJSONString = out;
             }
         }
 
@@ -277,9 +277,9 @@ public class Agent {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdAgentIdResponse putTicketingConnectionIdAgentId(com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdAgentIdRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateTicketingAgentResponse updateTicketingAgent(com.unifiedapi.unifiedto.models.operations.UpdateTicketingAgentRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdAgentIdRequest.class, baseUrl, "/ticketing/{connection_id}/agent/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateTicketingAgentRequest.class, baseUrl, "/ticketing/{connection_id}/agent/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -296,7 +296,7 @@ public class Agent {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdAgentIdResponse res = new com.unifiedapi.unifiedto.models.operations.PutTicketingConnectionIdAgentIdResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.UpdateTicketingAgentResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateTicketingAgentResponse(contentType, httpRes.statusCode()) {{
             ticketingAgent = null;
         }};
         res.rawResponse = httpRes;

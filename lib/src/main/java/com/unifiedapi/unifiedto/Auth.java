@@ -25,9 +25,9 @@ public class Auth {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeResponse getUnifiedIntegrationAuthWorkspaceIdIntegrationType(com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse getUnifiedIntegrationAuth(com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest.class, baseUrl, "/unified/integration/auth/{workspace_id}/{integration_type}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest.class, baseUrl, "/unified/integration/auth/{workspace_id}/{integration_type}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -35,7 +35,7 @@ public class Auth {
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest.class, request, null);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -48,15 +48,15 @@ public class Auth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeResponse res = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeResponse(contentType, httpRes.statusCode()) {{
-            getUnifiedIntegrationAuthWorkspaceIdIntegrationType200ApplicationJSONString = null;
+        com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse res = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse(contentType, httpRes.statusCode()) {{
+            getUnifiedIntegrationAuth200ApplicationJSONString = null;
         }};
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.getUnifiedIntegrationAuthWorkspaceIdIntegrationType200ApplicationJSONString = out;
+                res.getUnifiedIntegrationAuth200ApplicationJSONString = out;
             }
         }
 
@@ -70,9 +70,9 @@ public class Auth {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeResponse getUnifiedIntegrationLoginWorkspaceIdIntegrationType(com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginResponse getUnifiedIntegrationLogin(com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest.class, baseUrl, "/unified/integration/login/{workspace_id}/{integration_type}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginRequest.class, baseUrl, "/unified/integration/login/{workspace_id}/{integration_type}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,7 +80,7 @@ public class Auth {
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest.class, request, null);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -93,15 +93,15 @@ public class Auth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeResponse res = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeResponse(contentType, httpRes.statusCode()) {{
-            getUnifiedIntegrationLoginWorkspaceIdIntegrationType200ApplicationJSONString = null;
+        com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginResponse res = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginResponse(contentType, httpRes.statusCode()) {{
+            getUnifiedIntegrationLogin200ApplicationJSONString = null;
         }};
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.getUnifiedIntegrationLoginWorkspaceIdIntegrationType200ApplicationJSONString = out;
+                res.getUnifiedIntegrationLogin200ApplicationJSONString = out;
             }
         }
 

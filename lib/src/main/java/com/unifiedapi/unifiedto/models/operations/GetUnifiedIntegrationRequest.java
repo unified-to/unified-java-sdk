@@ -4,83 +4,23 @@
 
 package com.unifiedapi.unifiedto.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
-import java.time.OffsetDateTime;
 
 
 public class GetUnifiedIntegrationRequest {
     /**
-     * Filter the results for only the workspace's active integrations
+     * Type of the supported integration
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=active")
-    public Boolean active;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=integration_type")
+    public String integrationType;
 
-    public GetUnifiedIntegrationRequest withActive(Boolean active) {
-        this.active = active;
+    public GetUnifiedIntegrationRequest withIntegrationType(String integrationType) {
+        this.integrationType = integrationType;
         return this;
     }
     
-    /**
-     * Filter the results on these categories
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=categories")
-    public GetUnifiedIntegrationCategories[] categories;
-
-    public GetUnifiedIntegrationRequest withCategories(GetUnifiedIntegrationCategories[] categories) {
-        this.categories = categories;
-        return this;
-    }
-    
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
-    public Double limit;
-
-    public GetUnifiedIntegrationRequest withLimit(Double limit) {
-        this.limit = limit;
-        return this;
-    }
-    
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
-    public Double offset;
-
-    public GetUnifiedIntegrationRequest withOffset(Double offset) {
-        this.offset = offset;
-        return this;
-    }
-    
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
-    public String order;
-
-    public GetUnifiedIntegrationRequest withOrder(String order) {
-        this.order = order;
-        return this;
-    }
-    
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
-    public String sort;
-
-    public GetUnifiedIntegrationRequest withSort(String sort) {
-        this.sort = sort;
-        return this;
-    }
-    
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=summary")
-    public Boolean summary;
-
-    public GetUnifiedIntegrationRequest withSummary(Boolean summary) {
-        this.summary = summary;
-        return this;
-    }
-    
-    /**
-     * Return only results whose updated date is equal or greater to this value
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
-    public OffsetDateTime updatedGte;
-
-    public GetUnifiedIntegrationRequest withUpdatedGte(OffsetDateTime updatedGte) {
-        this.updatedGte = updatedGte;
-        return this;
-    }
-    
-    public GetUnifiedIntegrationRequest(){}
+    public GetUnifiedIntegrationRequest(@JsonProperty("integration_type") String integrationType) {
+        this.integrationType = integrationType;
+  }
 }

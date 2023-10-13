@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [deleteAtsConnectionIdApplicationId](#deleteatsconnectionidapplicationid) - Remove an application
-* [getAtsConnectionIdApplication](#getatsconnectionidapplication) - List all applications
-* [getAtsConnectionIdApplicationId](#getatsconnectionidapplicationid) - Retrieve an application
-* [patchAtsConnectionIdApplicationId](#patchatsconnectionidapplicationid) - Update an application
-* [postAtsConnectionIdApplication](#postatsconnectionidapplication) - Create an application
-* [putAtsConnectionIdApplicationId](#putatsconnectionidapplicationid) - Update an application
+* [createAtsApplication](#createatsapplication) - Create an application
+* [getAtsApplication](#getatsapplication) - Retrieve an application
+* [listAtsApplications](#listatsapplications) - List all applications
+* [patchAtsApplication](#patchatsapplication) - Update an application
+* [removeAtsApplication](#removeatsapplication) - Remove an application
+* [updateAtsApplication](#updateatsapplication) - Update an application
 
-## deleteAtsConnectionIdApplicationId
+## createAtsApplication
 
-Remove an application
+Create an application
 
 ### Example Usage
 
@@ -20,24 +20,42 @@ Remove an application
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdApplicationIdRequest;
-import com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdApplicationIdResponse;
+import com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationResponse;
+import com.unifiedapi.unifiedto.models.shared.AtsApplication;
+import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
+import com.unifiedapi.unifiedto.models.shared.PropertyAtsApplicationRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("female"){{
+                .setSecurity(new Security("Hassium"){{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteAtsConnectionIdApplicationIdRequest req = new DeleteAtsConnectionIdApplicationIdRequest("Southeast", "Darmstadtium");            
+            CreateAtsApplicationRequest req = new CreateAtsApplicationRequest("payment"){{
+                atsApplication = new AtsApplication(){{
+                    appliedAt = OffsetDateTime.parse("2023-09-14T08:24:54.358Z");
+                    candidateId = "approach Hybrid";
+                    createdAt = OffsetDateTime.parse("2023-04-26T15:55:11.995Z");
+                    id = "<ID>";
+                    jobId = "Awesome";
+                    raw = new PropertyAtsApplicationRaw();
+                    rejectedAt = OffsetDateTime.parse("2023-09-30T14:39:16.583Z");
+                    rejectedReason = "Communications male programming";
+                    source = "plus Pataca";
+                    status = AtsApplicationStatus.SCREENING;
+                    updatedAt = OffsetDateTime.parse("2023-04-20T12:32:42.371Z");
+                }};
+            }};            
 
-            DeleteAtsConnectionIdApplicationIdResponse res = sdk.application.deleteAtsConnectionIdApplicationId(req);
+            CreateAtsApplicationResponse res = sdk.application.createAtsApplication(req);
 
-            if (res.statusCode == 200) {
+            if (res.atsApplication != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -49,17 +67,66 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                    | Type                                                                                                                                                         | Required                                                                                                                                                     | Description                                                                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdApplicationIdRequest](../../models/operations/DeleteAtsConnectionIdApplicationIdRequest.md) | :heavy_check_mark:                                                                                                                                           | The request object to use for the request.                                                                                                                   |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationRequest](../../models/operations/CreateAtsApplicationRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdApplicationIdResponse](../../models/operations/DeleteAtsConnectionIdApplicationIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationResponse](../../models/operations/CreateAtsApplicationResponse.md)**
 
 
-## getAtsConnectionIdApplication
+## getAtsApplication
+
+Retrieve an application
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.GetAtsApplicationRequest;
+import com.unifiedapi.unifiedto.models.operations.GetAtsApplicationResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("mobile"){{
+                    jwt = "";
+                }})
+                .build();
+
+            GetAtsApplicationRequest req = new GetAtsApplicationRequest("Key", "navigate");            
+
+            GetAtsApplicationResponse res = sdk.application.getAtsApplication(req);
+
+            if (res.atsApplication != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.GetAtsApplicationRequest](../../models/operations/GetAtsApplicationRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.GetAtsApplicationResponse](../../models/operations/GetAtsApplicationResponse.md)**
+
+
+## listAtsApplications
 
 List all applications
 
@@ -69,8 +136,8 @@ List all applications
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdApplicationRequest;
-import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdApplicationResponse;
+import com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsRequest;
+import com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -78,23 +145,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Bacon"){{
+                .setSecurity(new Security("Cambodia"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsConnectionIdApplicationRequest req = new GetAtsConnectionIdApplicationRequest("withdrawal"){{
-                candidateId = "approach Bacon";
-                jobId = "Mobility";
-                limit = 576.8d;
-                offset = 7467.13d;
-                order = "Architect";
-                query = "loosely contingency";
-                sort = "female";
-                updatedGte = OffsetDateTime.parse("2023-09-05T13:59:23.348Z");
+            ListAtsApplicationsRequest req = new ListAtsApplicationsRequest("models"){{
+                candidateId = "secrecy withdrawal Springs";
+                jobId = "Convertible solutions";
+                limit = 1330.66d;
+                offset = 5248.28d;
+                order = "Kazakhstan";
+                query = "SDD East boohoo";
+                sort = "Sports Assistant Chlorine";
+                updatedGte = OffsetDateTime.parse("2022-08-05T05:05:40.196Z");
             }};            
 
-            GetAtsConnectionIdApplicationResponse res = sdk.application.getAtsConnectionIdApplication(req);
+            ListAtsApplicationsResponse res = sdk.application.listAtsApplications(req);
 
             if (res.atsApplications != null) {
                 // handle response
@@ -108,66 +175,17 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdApplicationRequest](../../models/operations/GetAtsConnectionIdApplicationRequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsRequest](../../models/operations/ListAtsApplicationsRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdApplicationResponse](../../models/operations/GetAtsConnectionIdApplicationResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsResponse](../../models/operations/ListAtsApplicationsResponse.md)**
 
 
-## getAtsConnectionIdApplicationId
-
-Retrieve an application
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdApplicationIdRequest;
-import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdApplicationIdResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Brand"){{
-                    jwt = "";
-                }})
-                .build();
-
-            GetAtsConnectionIdApplicationIdRequest req = new GetAtsConnectionIdApplicationIdRequest("Bicycle", "North");            
-
-            GetAtsConnectionIdApplicationIdResponse res = sdk.application.getAtsConnectionIdApplicationId(req);
-
-            if (res.atsApplication != null) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdApplicationIdRequest](../../models/operations/GetAtsConnectionIdApplicationIdRequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
-
-
-### Response
-
-**[com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdApplicationIdResponse](../../models/operations/GetAtsConnectionIdApplicationIdResponse.md)**
-
-
-## patchAtsConnectionIdApplicationId
+## patchAtsApplication
 
 Update an application
 
@@ -177,8 +195,8 @@ Update an application
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdApplicationIdRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdApplicationIdResponse;
+import com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsApplication;
 import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsApplicationRaw;
@@ -189,162 +207,28 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("ouch"){{
+                .setSecurity(new Security("Lead"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchAtsConnectionIdApplicationIdRequest req = new PatchAtsConnectionIdApplicationIdRequest("North", "et"){{
+            PatchAtsApplicationRequest req = new PatchAtsApplicationRequest("Corporate", "Director"){{
                 atsApplication = new AtsApplication(){{
-                    appliedAt = OffsetDateTime.parse("2023-12-06T09:54:21.775Z");
-                    candidateId = "Human";
-                    createdAt = OffsetDateTime.parse("2023-10-31T19:54:06.290Z");
+                    appliedAt = OffsetDateTime.parse("2023-05-29T04:40:45.531Z");
+                    candidateId = "Usability Leonie";
+                    createdAt = OffsetDateTime.parse("2023-02-20T09:56:40.826Z");
                     id = "<ID>";
-                    jobId = "Washington";
+                    jobId = "amid";
                     raw = new PropertyAtsApplicationRaw();
-                    rejectedAt = OffsetDateTime.parse("2023-07-30T09:27:03.900Z");
-                    rejectedReason = "Northwest";
-                    source = "quantify models Carolina";
-                    status = AtsApplicationStatus.SUBMITTED;
-                    updatedAt = OffsetDateTime.parse("2021-05-11T22:36:02.527Z");
-                }};
-            }};            
-
-            PatchAtsConnectionIdApplicationIdResponse res = sdk.application.patchAtsConnectionIdApplicationId(req);
-
-            if (res.atsApplication != null) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdApplicationIdRequest](../../models/operations/PatchAtsConnectionIdApplicationIdRequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
-
-
-### Response
-
-**[com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdApplicationIdResponse](../../models/operations/PatchAtsConnectionIdApplicationIdResponse.md)**
-
-
-## postAtsConnectionIdApplication
-
-Create an application
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdApplicationRequest;
-import com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdApplicationResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsApplication;
-import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsApplicationRaw;
-import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Cotton"){{
-                    jwt = "";
-                }})
-                .build();
-
-            PostAtsConnectionIdApplicationRequest req = new PostAtsConnectionIdApplicationRequest("impedit"){{
-                atsApplication = new AtsApplication(){{
-                    appliedAt = OffsetDateTime.parse("2021-08-17T19:51:25.858Z");
-                    candidateId = "Pizza";
-                    createdAt = OffsetDateTime.parse("2022-06-18T11:59:47.948Z");
-                    id = "<ID>";
-                    jobId = "globalize";
-                    raw = new PropertyAtsApplicationRaw();
-                    rejectedAt = OffsetDateTime.parse("2021-04-05T14:19:56.779Z");
-                    rejectedReason = "Kids Van Tasty";
-                    source = "Electric Norfolk";
-                    status = AtsApplicationStatus.SCREENING;
-                    updatedAt = OffsetDateTime.parse("2022-09-29T00:44:25.415Z");
-                }};
-            }};            
-
-            PostAtsConnectionIdApplicationResponse res = sdk.application.postAtsConnectionIdApplication(req);
-
-            if (res.atsApplication != null) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdApplicationRequest](../../models/operations/PostAtsConnectionIdApplicationRequest.md) | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
-
-
-### Response
-
-**[com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdApplicationResponse](../../models/operations/PostAtsConnectionIdApplicationResponse.md)**
-
-
-## putAtsConnectionIdApplicationId
-
-Update an application
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdApplicationIdRequest;
-import com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdApplicationIdResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsApplication;
-import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsApplicationRaw;
-import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("farad"){{
-                    jwt = "";
-                }})
-                .build();
-
-            PutAtsConnectionIdApplicationIdRequest req = new PutAtsConnectionIdApplicationIdRequest("Indianapolis", "Credit"){{
-                atsApplication = new AtsApplication(){{
-                    appliedAt = OffsetDateTime.parse("2021-06-01T03:05:28.938Z");
-                    candidateId = "middleware Jeep";
-                    createdAt = OffsetDateTime.parse("2021-12-14T14:50:12.070Z");
-                    id = "<ID>";
-                    jobId = "North";
-                    raw = new PropertyAtsApplicationRaw();
-                    rejectedAt = OffsetDateTime.parse("2022-10-28T04:38:47.547Z");
-                    rejectedReason = "Fort solid";
-                    source = "Ghana";
+                    rejectedAt = OffsetDateTime.parse("2021-01-31T07:21:40.841Z");
+                    rejectedReason = "Royce";
+                    source = "Irving Generic Buckinghamshire";
                     status = AtsApplicationStatus.REVIEWING;
-                    updatedAt = OffsetDateTime.parse("2023-03-12T05:49:54.060Z");
+                    updatedAt = OffsetDateTime.parse("2022-04-27T14:23:51.358Z");
                 }};
             }};            
 
-            PutAtsConnectionIdApplicationIdResponse res = sdk.application.putAtsConnectionIdApplicationId(req);
+            PatchAtsApplicationResponse res = sdk.application.patchAtsApplication(req);
 
             if (res.atsApplication != null) {
                 // handle response
@@ -358,12 +242,128 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdApplicationIdRequest](../../models/operations/PutAtsConnectionIdApplicationIdRequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationRequest](../../models/operations/PatchAtsApplicationRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdApplicationIdResponse](../../models/operations/PutAtsConnectionIdApplicationIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationResponse](../../models/operations/PatchAtsApplicationResponse.md)**
+
+
+## removeAtsApplication
+
+Remove an application
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationRequest;
+import com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("gently"){{
+                    jwt = "";
+                }})
+                .build();
+
+            RemoveAtsApplicationRequest req = new RemoveAtsApplicationRequest("copying", "rem");            
+
+            RemoveAtsApplicationResponse res = sdk.application.removeAtsApplication(req);
+
+            if (res.statusCode == 200) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationRequest](../../models/operations/RemoveAtsApplicationRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationResponse](../../models/operations/RemoveAtsApplicationResponse.md)**
+
+
+## updateAtsApplication
+
+Update an application
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationResponse;
+import com.unifiedapi.unifiedto.models.shared.AtsApplication;
+import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
+import com.unifiedapi.unifiedto.models.shared.PropertyAtsApplicationRaw;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("Keyboard"){{
+                    jwt = "";
+                }})
+                .build();
+
+            UpdateAtsApplicationRequest req = new UpdateAtsApplicationRequest("Valley", "Account"){{
+                atsApplication = new AtsApplication(){{
+                    appliedAt = OffsetDateTime.parse("2023-07-05T09:39:00.042Z");
+                    candidateId = "repeatedly Configurable";
+                    createdAt = OffsetDateTime.parse("2022-08-30T07:40:08.280Z");
+                    id = "<ID>";
+                    jobId = "emulation synergies young";
+                    raw = new PropertyAtsApplicationRaw();
+                    rejectedAt = OffsetDateTime.parse("2022-01-06T02:13:22.264Z");
+                    rejectedReason = "Pants West";
+                    source = "once";
+                    status = AtsApplicationStatus.REVIEWING;
+                    updatedAt = OffsetDateTime.parse("2023-03-09T13:28:46.094Z");
+                }};
+            }};            
+
+            UpdateAtsApplicationResponse res = sdk.application.updateAtsApplication(req);
+
+            if (res.atsApplication != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationRequest](../../models/operations/UpdateAtsApplicationRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationResponse](../../models/operations/UpdateAtsApplicationResponse.md)**
 

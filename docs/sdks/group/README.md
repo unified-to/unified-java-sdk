@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [deleteHrisConnectionIdGroupId](#deletehrisconnectionidgroupid) - Remove a group
-* [getHrisConnectionIdGroup](#gethrisconnectionidgroup) - List all groups
-* [getHrisConnectionIdGroupId](#gethrisconnectionidgroupid) - Retrieve a group
-* [patchHrisConnectionIdGroupId](#patchhrisconnectionidgroupid) - Update a group
-* [postHrisConnectionIdGroup](#posthrisconnectionidgroup) - Create a group
-* [putHrisConnectionIdGroupId](#puthrisconnectionidgroupid) - Update a group
+* [createHrisGroup](#createhrisgroup) - Create a group
+* [getHrisGroup](#gethrisgroup) - Retrieve a group
+* [listHrisGroups](#listhrisgroups) - List all groups
+* [patchHrisGroup](#patchhrisgroup) - Update a group
+* [removeHrisGroup](#removehrisgroup) - Remove a group
+* [updateHrisGroup](#updatehrisgroup) - Update a group
 
-## deleteHrisConnectionIdGroupId
+## createHrisGroup
 
-Remove a group
+Create a group
 
 ### Example Usage
 
@@ -20,24 +20,46 @@ Remove a group
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.DeleteHrisConnectionIdGroupIdRequest;
-import com.unifiedapi.unifiedto.models.operations.DeleteHrisConnectionIdGroupIdResponse;
+import com.unifiedapi.unifiedto.models.operations.CreateHrisGroupRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateHrisGroupResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisGroup;
+import com.unifiedapi.unifiedto.models.shared.HrisGroupType;
+import com.unifiedapi.unifiedto.models.shared.PropertyHrisGroupRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Human"){{
+                .setSecurity(new Security("transmitter"){{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteHrisConnectionIdGroupIdRequest req = new DeleteHrisConnectionIdGroupIdRequest("Metal", "Country");            
+            CreateHrisGroupRequest req = new CreateHrisGroupRequest("dependable"){{
+                hrisGroup = new HrisGroup(){{
+                    createdAt = OffsetDateTime.parse("2021-01-15T12:45:54.663Z");
+                    description = "Re-contextualized executive model";
+                    employeeIds = new String[]{{
+                        add("markets"),
+                    }};
+                    id = "<ID>";
+                    isActive = false;
+                    managerIds = new String[]{{
+                        add("Forks"),
+                    }};
+                    name = "M2F Iranian";
+                    parentId = "driver Electric";
+                    raw = new PropertyHrisGroupRaw();
+                    type = HrisGroupType.DEPARTMENT;
+                    updatedAt = OffsetDateTime.parse("2022-11-20T16:35:37.465Z");
+                }};
+            }};            
 
-            DeleteHrisConnectionIdGroupIdResponse res = sdk.group.deleteHrisConnectionIdGroupId(req);
+            CreateHrisGroupResponse res = sdk.group.createHrisGroup(req);
 
-            if (res.statusCode == 200) {
+            if (res.hrisGroup != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -49,17 +71,66 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.DeleteHrisConnectionIdGroupIdRequest](../../models/operations/DeleteHrisConnectionIdGroupIdRequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [com.unifiedapi.unifiedto.models.operations.CreateHrisGroupRequest](../../models/operations/CreateHrisGroupRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.DeleteHrisConnectionIdGroupIdResponse](../../models/operations/DeleteHrisConnectionIdGroupIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.CreateHrisGroupResponse](../../models/operations/CreateHrisGroupResponse.md)**
 
 
-## getHrisConnectionIdGroup
+## getHrisGroup
+
+Retrieve a group
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.GetHrisGroupRequest;
+import com.unifiedapi.unifiedto.models.operations.GetHrisGroupResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("likewise"){{
+                    jwt = "";
+                }})
+                .build();
+
+            GetHrisGroupRequest req = new GetHrisGroupRequest("while", "Cadillac");            
+
+            GetHrisGroupResponse res = sdk.group.getHrisGroup(req);
+
+            if (res.hrisGroup != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [com.unifiedapi.unifiedto.models.operations.GetHrisGroupRequest](../../models/operations/GetHrisGroupRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.GetHrisGroupResponse](../../models/operations/GetHrisGroupResponse.md)**
+
+
+## listHrisGroups
 
 List all groups
 
@@ -69,8 +140,8 @@ List all groups
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdGroupRequest;
-import com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdGroupResponse;
+import com.unifiedapi.unifiedto.models.operations.ListHrisGroupsRequest;
+import com.unifiedapi.unifiedto.models.operations.ListHrisGroupsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -78,21 +149,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Shirt"){{
+                .setSecurity(new Security("Northwest"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetHrisConnectionIdGroupRequest req = new GetHrisConnectionIdGroupRequest("Jaguar"){{
-                limit = 3486.96d;
-                offset = 9705.73d;
-                order = "Coordinator";
-                query = "World";
-                sort = "Dollar";
-                updatedGte = OffsetDateTime.parse("2021-01-15T16:06:13.340Z");
+            ListHrisGroupsRequest req = new ListHrisGroupsRequest("however"){{
+                limit = 8700.83d;
+                offset = 6401.41d;
+                order = "utilisation";
+                query = "olive Shores";
+                sort = "Ghana";
+                updatedGte = OffsetDateTime.parse("2023-03-15T19:04:23.954Z");
             }};            
 
-            GetHrisConnectionIdGroupResponse res = sdk.group.getHrisConnectionIdGroup(req);
+            ListHrisGroupsResponse res = sdk.group.listHrisGroups(req);
 
             if (res.hrisGroups != null) {
                 // handle response
@@ -106,66 +177,17 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdGroupRequest](../../models/operations/GetHrisConnectionIdGroupRequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [com.unifiedapi.unifiedto.models.operations.ListHrisGroupsRequest](../../models/operations/ListHrisGroupsRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdGroupResponse](../../models/operations/GetHrisConnectionIdGroupResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.ListHrisGroupsResponse](../../models/operations/ListHrisGroupsResponse.md)**
 
 
-## getHrisConnectionIdGroupId
-
-Retrieve a group
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdGroupIdRequest;
-import com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdGroupIdResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Chips"){{
-                    jwt = "";
-                }})
-                .build();
-
-            GetHrisConnectionIdGroupIdRequest req = new GetHrisConnectionIdGroupIdRequest("eyeglasses", "nationalize");            
-
-            GetHrisConnectionIdGroupIdResponse res = sdk.group.getHrisConnectionIdGroupId(req);
-
-            if (res.hrisGroup != null) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdGroupIdRequest](../../models/operations/GetHrisConnectionIdGroupIdRequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
-
-
-### Response
-
-**[com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdGroupIdResponse](../../models/operations/GetHrisConnectionIdGroupIdResponse.md)**
-
-
-## patchHrisConnectionIdGroupId
+## patchHrisGroup
 
 Update a group
 
@@ -175,8 +197,8 @@ Update a group
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchHrisConnectionIdGroupIdRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchHrisConnectionIdGroupIdResponse;
+import com.unifiedapi.unifiedto.models.operations.PatchHrisGroupRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchHrisGroupResponse;
 import com.unifiedapi.unifiedto.models.shared.HrisGroup;
 import com.unifiedapi.unifiedto.models.shared.HrisGroupType;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisGroupRaw;
@@ -187,32 +209,32 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("gosh"){{
+                .setSecurity(new Security("scalable"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchHrisConnectionIdGroupIdRequest req = new PatchHrisConnectionIdGroupIdRequest("Northwest", "shootdown"){{
+            PatchHrisGroupRequest req = new PatchHrisGroupRequest("Bespoke", "indexing"){{
                 hrisGroup = new HrisGroup(){{
-                    createdAt = OffsetDateTime.parse("2022-02-05T05:07:10.835Z");
-                    description = "Advanced fresh-thinking methodology";
+                    createdAt = OffsetDateTime.parse("2022-12-25T07:04:30.987Z");
+                    description = "Adaptive radical methodology";
                     employeeIds = new String[]{{
-                        add("West"),
+                        add("online"),
                     }};
                     id = "<ID>";
                     isActive = false;
                     managerIds = new String[]{{
-                        add("ouch"),
+                        add("boohoo"),
                     }};
-                    name = "Shoes Kids Sedan";
-                    parentId = "Bike Intersex";
+                    name = "innovate";
+                    parentId = "Chevrolet";
                     raw = new PropertyHrisGroupRaw();
-                    type = HrisGroupType.BUSINESS_UNIT;
-                    updatedAt = OffsetDateTime.parse("2023-01-04T08:35:32.220Z");
+                    type = HrisGroupType.DIVISION;
+                    updatedAt = OffsetDateTime.parse("2023-01-02T08:52:32.014Z");
                 }};
             }};            
 
-            PatchHrisConnectionIdGroupIdResponse res = sdk.group.patchHrisConnectionIdGroupId(req);
+            PatchHrisGroupResponse res = sdk.group.patchHrisGroup(req);
 
             if (res.hrisGroup != null) {
                 // handle response
@@ -226,19 +248,19 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.PatchHrisConnectionIdGroupIdRequest](../../models/operations/PatchHrisConnectionIdGroupIdRequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [com.unifiedapi.unifiedto.models.operations.PatchHrisGroupRequest](../../models/operations/PatchHrisGroupRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchHrisConnectionIdGroupIdResponse](../../models/operations/PatchHrisConnectionIdGroupIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.PatchHrisGroupResponse](../../models/operations/PatchHrisGroupResponse.md)**
 
 
-## postHrisConnectionIdGroup
+## removeHrisGroup
 
-Create a group
+Remove a group
 
 ### Example Usage
 
@@ -246,46 +268,24 @@ Create a group
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PostHrisConnectionIdGroupRequest;
-import com.unifiedapi.unifiedto.models.operations.PostHrisConnectionIdGroupResponse;
-import com.unifiedapi.unifiedto.models.shared.HrisGroup;
-import com.unifiedapi.unifiedto.models.shared.HrisGroupType;
-import com.unifiedapi.unifiedto.models.shared.PropertyHrisGroupRaw;
+import com.unifiedapi.unifiedto.models.operations.RemoveHrisGroupRequest;
+import com.unifiedapi.unifiedto.models.operations.RemoveHrisGroupResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Bhutan"){{
+                .setSecurity(new Security("glistening"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostHrisConnectionIdGroupRequest req = new PostHrisConnectionIdGroupRequest("Polestar"){{
-                hrisGroup = new HrisGroup(){{
-                    createdAt = OffsetDateTime.parse("2022-04-05T02:35:18.855Z");
-                    description = "Synchronised discrete info-mediaries";
-                    employeeIds = new String[]{{
-                        add("XSS"),
-                    }};
-                    id = "<ID>";
-                    isActive = false;
-                    managerIds = new String[]{{
-                        add("whereas"),
-                    }};
-                    name = "collaborative Cab Nissan";
-                    parentId = "scorn Gorgeous";
-                    raw = new PropertyHrisGroupRaw();
-                    type = HrisGroupType.TEAM;
-                    updatedAt = OffsetDateTime.parse("2022-05-06T13:36:36.113Z");
-                }};
-            }};            
+            RemoveHrisGroupRequest req = new RemoveHrisGroupRequest("positive", "fabulous");            
 
-            PostHrisConnectionIdGroupResponse res = sdk.group.postHrisConnectionIdGroup(req);
+            RemoveHrisGroupResponse res = sdk.group.removeHrisGroup(req);
 
-            if (res.hrisGroup != null) {
+            if (res.statusCode == 200) {
                 // handle response
             }
         } catch (Exception e) {
@@ -297,17 +297,17 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.PostHrisConnectionIdGroupRequest](../../models/operations/PostHrisConnectionIdGroupRequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [com.unifiedapi.unifiedto.models.operations.RemoveHrisGroupRequest](../../models/operations/RemoveHrisGroupRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PostHrisConnectionIdGroupResponse](../../models/operations/PostHrisConnectionIdGroupResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.RemoveHrisGroupResponse](../../models/operations/RemoveHrisGroupResponse.md)**
 
 
-## putHrisConnectionIdGroupId
+## updateHrisGroup
 
 Update a group
 
@@ -317,8 +317,8 @@ Update a group
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PutHrisConnectionIdGroupIdRequest;
-import com.unifiedapi.unifiedto.models.operations.PutHrisConnectionIdGroupIdResponse;
+import com.unifiedapi.unifiedto.models.operations.UpdateHrisGroupRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdateHrisGroupResponse;
 import com.unifiedapi.unifiedto.models.shared.HrisGroup;
 import com.unifiedapi.unifiedto.models.shared.HrisGroupType;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisGroupRaw;
@@ -329,32 +329,32 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("panel"){{
+                .setSecurity(new Security("disintermediate"){{
                     jwt = "";
                 }})
                 .build();
 
-            PutHrisConnectionIdGroupIdRequest req = new PutHrisConnectionIdGroupIdRequest("And", "Orchestrator"){{
+            UpdateHrisGroupRequest req = new UpdateHrisGroupRequest("schemas", "Southwest"){{
                 hrisGroup = new HrisGroup(){{
-                    createdAt = OffsetDateTime.parse("2023-06-29T06:24:40.797Z");
-                    description = "Networked upward-trending flexibility";
+                    createdAt = OffsetDateTime.parse("2021-02-20T16:10:10.066Z");
+                    description = "Business-focused analyzing help-desk";
                     employeeIds = new String[]{{
-                        add("Northwest"),
+                        add("Southeast"),
                     }};
                     id = "<ID>";
                     isActive = false;
                     managerIds = new String[]{{
-                        add("programming"),
+                        add("Table"),
                     }};
-                    name = "Licensed Response";
-                    parentId = "vortals interface Gasoline";
+                    name = "lime";
+                    parentId = "Wagon Rubber";
                     raw = new PropertyHrisGroupRaw();
-                    type = HrisGroupType.BRANCH;
-                    updatedAt = OffsetDateTime.parse("2021-05-16T01:59:50.660Z");
+                    type = HrisGroupType.SUB_DEPARTMENT;
+                    updatedAt = OffsetDateTime.parse("2023-08-16T02:52:12.983Z");
                 }};
             }};            
 
-            PutHrisConnectionIdGroupIdResponse res = sdk.group.putHrisConnectionIdGroupId(req);
+            UpdateHrisGroupResponse res = sdk.group.updateHrisGroup(req);
 
             if (res.hrisGroup != null) {
                 // handle response
@@ -368,12 +368,12 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.PutHrisConnectionIdGroupIdRequest](../../models/operations/PutHrisConnectionIdGroupIdRequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [com.unifiedapi.unifiedto.models.operations.UpdateHrisGroupRequest](../../models/operations/UpdateHrisGroupRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PutHrisConnectionIdGroupIdResponse](../../models/operations/PutHrisConnectionIdGroupIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.UpdateHrisGroupResponse](../../models/operations/UpdateHrisGroupResponse.md)**
 

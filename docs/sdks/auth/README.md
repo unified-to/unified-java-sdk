@@ -3,10 +3,10 @@
 
 ### Available Operations
 
-* [getUnifiedIntegrationAuthWorkspaceIdIntegrationType](#getunifiedintegrationauthworkspaceidintegrationtype) - Create connection indirectly
-* [getUnifiedIntegrationLoginWorkspaceIdIntegrationType](#getunifiedintegrationloginworkspaceidintegrationtype) - Sign in a user
+* [getUnifiedIntegrationAuth](#getunifiedintegrationauth) - Create connection indirectly
+* [getUnifiedIntegrationLogin](#getunifiedintegrationlogin) - Sign in a user
 
-## getUnifiedIntegrationAuthWorkspaceIdIntegrationType
+## getUnifiedIntegrationAuth
 
 Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
 
@@ -16,37 +16,37 @@ Returns an authorization URL for the specified integration.  Once a successful a
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeResponse;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes;
+import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest;
+import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse;
+import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthScopes;
 import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Ireland"){{
+                .setSecurity(new Security("supposing"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest req = new GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest("Ergonomic", "quae"){{
-                env = "Surinam national Security";
-                externalXref = "purple positively";
-                failureRedirect = "Bicycle";
-                lang = "Home";
+            GetUnifiedIntegrationAuthRequest req = new GetUnifiedIntegrationAuthRequest("Nobelium", "Branding"){{
+                env = "24/7 plum blot";
+                externalXref = "groupware";
+                failureRedirect = "Sausages Aston";
+                lang = "metrics Incredible Northwest";
                 redirect = false;
-                scopes = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes[]{{
-                    add(GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeScopes.CRM_PIPELINE_READ),
+                scopes = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthScopes[]{{
+                    add(GetUnifiedIntegrationAuthScopes.CRM_COMPANY_READ),
                 }};
-                state = "architectures";
-                subdomain = "Functionality";
-                successRedirect = "innovate payment";
+                state = "California EXE Direct";
+                subdomain = "Lead Chair transmit";
+                successRedirect = "Central";
             }};            
 
-            GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeResponse res = sdk.auth.getUnifiedIntegrationAuthWorkspaceIdIntegrationType(req);
+            GetUnifiedIntegrationAuthResponse res = sdk.auth.getUnifiedIntegrationAuth(req);
 
-            if (res.getUnifiedIntegrationAuthWorkspaceIdIntegrationType200ApplicationJSONString != null) {
+            if (res.getUnifiedIntegrationAuth200ApplicationJSONString != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -58,17 +58,17 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                      | Type                                                                                                                                                                                           | Required                                                                                                                                                                                       | Description                                                                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest](../../models/operations/GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeRequest.md) | :heavy_check_mark:                                                                                                                                                                             | The request object to use for the request.                                                                                                                                                     |
+| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest](../../models/operations/GetUnifiedIntegrationAuthRequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeResponse](../../models/operations/GetUnifiedIntegrationAuthWorkspaceIdIntegrationTypeResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse](../../models/operations/GetUnifiedIntegrationAuthResponse.md)**
 
 
-## getUnifiedIntegrationLoginWorkspaceIdIntegrationType
+## getUnifiedIntegrationLogin
 
 Returns an authentication URL for the specified integration.  Once a successful authentication occurs, the name and emails are returned.
 
@@ -78,30 +78,30 @@ Returns an authentication URL for the specified integration.  Once a successful 
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeResponse;
+import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginRequest;
+import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("East"){{
+                .setSecurity(new Security("when"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest req = new GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest("Fresh", "gold"){{
-                env = "Volkswagen";
-                failureRedirect = "official";
+            GetUnifiedIntegrationLoginRequest req = new GetUnifiedIntegrationLoginRequest("Tricycle", "markets"){{
+                env = "Bicycle";
+                failureRedirect = "Strontium Silver Macy";
                 redirect = false;
-                state = "Multigender Volkswagen";
-                successRedirect = "Magnesium utterly";
+                state = "Surinam Berkshire reboot";
+                successRedirect = "volt Sanford";
             }};            
 
-            GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeResponse res = sdk.auth.getUnifiedIntegrationLoginWorkspaceIdIntegrationType(req);
+            GetUnifiedIntegrationLoginResponse res = sdk.auth.getUnifiedIntegrationLogin(req);
 
-            if (res.getUnifiedIntegrationLoginWorkspaceIdIntegrationType200ApplicationJSONString != null) {
+            if (res.getUnifiedIntegrationLogin200ApplicationJSONString != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -113,12 +113,12 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                        | Type                                                                                                                                                                                             | Required                                                                                                                                                                                         | Description                                                                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest](../../models/operations/GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeRequest.md) | :heavy_check_mark:                                                                                                                                                                               | The request object to use for the request.                                                                                                                                                       |
+| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginRequest](../../models/operations/GetUnifiedIntegrationLoginRequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeResponse](../../models/operations/GetUnifiedIntegrationLoginWorkspaceIdIntegrationTypeResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginResponse](../../models/operations/GetUnifiedIntegrationLoginResponse.md)**
 

@@ -1,0 +1,9 @@
+# CreateTicketingCustomerRequest
+
+
+## Fields
+
+| Field                                                                                                | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ticketingCustomer`                                                                                  | [com.unifiedapi.unifiedto.models.shared.TicketingCustomer](../../models/shared/TicketingCustomer.md) | :heavy_minus_sign:                                                                                   | N/A                                                                                                  |
+| `connectionId`                                                                                       | *String*                                                                                             | :heavy_check_mark:                                                                                   | ID of the connection                                                                                 |

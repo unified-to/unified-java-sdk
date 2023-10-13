@@ -13,10 +13,10 @@ public class GetUnifiedConnectionResponse {
      * Successful
      */
     
-    public com.unifiedapi.unifiedto.models.shared.Connection[] connections;
+    public com.unifiedapi.unifiedto.models.shared.Connection connection;
 
-    public GetUnifiedConnectionResponse withConnections(com.unifiedapi.unifiedto.models.shared.Connection[] connections) {
-        this.connections = connections;
+    public GetUnifiedConnectionResponse withConnection(com.unifiedapi.unifiedto.models.shared.Connection connection) {
+        this.connection = connection;
         return this;
     }
     

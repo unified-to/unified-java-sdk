@@ -1,0 +1,10 @@
+# PatchAtsInterviewRequest
+
+
+## Fields
+
+| Field                                                                                      | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `atsInterview`                                                                             | [com.unifiedapi.unifiedto.models.shared.AtsInterview](../../models/shared/AtsInterview.md) | :heavy_minus_sign:                                                                         | An interview between a candidate for a specific job                                        |
+| `connectionId`                                                                             | *String*                                                                                   | :heavy_check_mark:                                                                         | ID of the connection                                                                       |
+| `id`                                                                                       | *String*                                                                                   | :heavy_check_mark:                                                                         | ID of the Interview                                                                        |

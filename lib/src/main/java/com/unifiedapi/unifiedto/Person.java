@@ -27,9 +27,9 @@ public class Person {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdPersonResponse getEnrichConnectionIdPerson(com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdPersonRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleResponse listEnrichPeople(com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdPersonRequest.class, baseUrl, "/enrich/{connection_id}/person", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleRequest.class, baseUrl, "/enrich/{connection_id}/person", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -37,7 +37,7 @@ public class Person {
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdPersonRequest.class, request, null);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -50,7 +50,7 @@ public class Person {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdPersonResponse res = new com.unifiedapi.unifiedto.models.operations.GetEnrichConnectionIdPersonResponse(contentType, httpRes.statusCode()) {{
+        com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleResponse res = new com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleResponse(contentType, httpRes.statusCode()) {{
             enrichPerson = null;
         }};
         res.rawResponse = httpRes;

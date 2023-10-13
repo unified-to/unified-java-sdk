@@ -1,0 +1,11 @@
+# PatchTicketingNoteRequest
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ticketingNote`                                                                              | [com.unifiedapi.unifiedto.models.shared.TicketingNote](../../models/shared/TicketingNote.md) | :heavy_minus_sign:                                                                           | N/A                                                                                          |
+| `connectionId`                                                                               | *String*                                                                                     | :heavy_check_mark:                                                                           | ID of the connection                                                                         |
+| `id`                                                                                         | *String*                                                                                     | :heavy_check_mark:                                                                           | ID of the Note                                                                               |
+| `ticketId`                                                                                   | *String*                                                                                     | :heavy_check_mark:                                                                           | ID of the ticket                                                                             |

@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [deleteHrisConnectionIdEmployeeId](#deletehrisconnectionidemployeeid) - Remove an employee
-* [getHrisConnectionIdEmployee](#gethrisconnectionidemployee) - List all employees
-* [getHrisConnectionIdEmployeeId](#gethrisconnectionidemployeeid) - Retrieve an employee
-* [patchHrisConnectionIdEmployeeId](#patchhrisconnectionidemployeeid) - Update an employee
-* [postHrisConnectionIdEmployee](#posthrisconnectionidemployee) - Create an employee
-* [putHrisConnectionIdEmployeeId](#puthrisconnectionidemployeeid) - Update an employee
+* [createHrisEmployee](#createhrisemployee) - Create an employee
+* [getHrisEmployee](#gethrisemployee) - Retrieve an employee
+* [listHrisEmployees](#listhrisemployees) - List all employees
+* [patchHrisEmployee](#patchhrisemployee) - Update an employee
+* [removeHrisEmployee](#removehrisemployee) - Remove an employee
+* [updateHrisEmployee](#updatehrisemployee) - Update an employee
 
-## deleteHrisConnectionIdEmployeeId
+## createHrisEmployee
 
-Remove an employee
+Create an employee
 
 ### Example Usage
 
@@ -20,24 +20,77 @@ Remove an employee
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.DeleteHrisConnectionIdEmployeeIdRequest;
-import com.unifiedapi.unifiedto.models.operations.DeleteHrisConnectionIdEmployeeIdResponse;
+import com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisEmail;
+import com.unifiedapi.unifiedto.models.shared.HrisEmailType;
+import com.unifiedapi.unifiedto.models.shared.HrisEmployee;
+import com.unifiedapi.unifiedto.models.shared.HrisEmployeeEmploymentStatus;
+import com.unifiedapi.unifiedto.models.shared.HrisEmployeeEmploymentType;
+import com.unifiedapi.unifiedto.models.shared.HrisEmployeeGender;
+import com.unifiedapi.unifiedto.models.shared.HrisEmployeeMaritalStatus;
+import com.unifiedapi.unifiedto.models.shared.HrisTelephone;
+import com.unifiedapi.unifiedto.models.shared.HrisTelephoneType;
+import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeAddress;
+import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Cargo"){{
+                .setSecurity(new Security("meter"){{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteHrisConnectionIdEmployeeIdRequest req = new DeleteHrisConnectionIdEmployeeIdRequest("turquoise", "port");            
+            CreateHrisEmployeeRequest req = new CreateHrisEmployeeRequest("technologies"){{
+                hrisEmployee = new HrisEmployee(){{
+                    address = new PropertyHrisEmployeeAddress(){{
+                        address1 = "composite redefine";
+                        address2 = "repudiandae white primary";
+                        city = "Kent";
+                        country = "Faroe Islands";
+                        countryCode = "CC";
+                        postalCode = "14318-3860";
+                        region = "candela Data";
+                        regionCode = "Koruna where Director";
+                    }};
+                    createdAt = OffsetDateTime.parse("2022-08-18T03:26:10.390Z");
+                    dateOfBirth = OffsetDateTime.parse("2021-01-06T20:54:57.707Z");
+                    department = "City snake";
+                    division = "since Dinar Mills";
+                    emails = new com.unifiedapi.unifiedto.models.shared.HrisEmail[]{{
+                        add(new HrisEmail("deeply"){{
+                            email = "Graciela19@hotmail.com";
+                        }}),
+                    }};
+                    employeeNumber = "barley Kia";
+                    employmentStatus = HrisEmployeeEmploymentStatus.INACTIVE;
+                    employmentType = HrisEmployeeEmploymentType.FULL_TIME;
+                    gender = HrisEmployeeGender.NON_BINARY;
+                    hiredAt = OffsetDateTime.parse("2023-12-17T04:53:53.732Z");
+                    id = "<ID>";
+                    location = "Reggae extensible Guinea";
+                    managerId = "Cedi";
+                    maritalStatus = HrisEmployeeMaritalStatus.MARRIED;
+                    name = "Wagon";
+                    raw = new PropertyHrisEmployeeRaw();
+                    telephones = new com.unifiedapi.unifiedto.models.shared.HrisTelephone[]{{
+                        add(new HrisTelephone("Executive"){{
+                            telephone = "Carolina";
+                        }}),
+                    }};
+                    terminatedAt = OffsetDateTime.parse("2022-01-16T19:09:51.878Z");
+                    title = "payment North";
+                    updatedAt = OffsetDateTime.parse("2023-03-05T19:24:43.770Z");
+                }};
+            }};            
 
-            DeleteHrisConnectionIdEmployeeIdResponse res = sdk.employee.deleteHrisConnectionIdEmployeeId(req);
+            CreateHrisEmployeeResponse res = sdk.employee.createHrisEmployee(req);
 
-            if (res.statusCode == 200) {
+            if (res.hrisEmployee != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -49,17 +102,66 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                | Type                                                                                                                                                     | Required                                                                                                                                                 | Description                                                                                                                                              |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.DeleteHrisConnectionIdEmployeeIdRequest](../../models/operations/DeleteHrisConnectionIdEmployeeIdRequest.md) | :heavy_check_mark:                                                                                                                                       | The request object to use for the request.                                                                                                               |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeRequest](../../models/operations/CreateHrisEmployeeRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.DeleteHrisConnectionIdEmployeeIdResponse](../../models/operations/DeleteHrisConnectionIdEmployeeIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeResponse](../../models/operations/CreateHrisEmployeeResponse.md)**
 
 
-## getHrisConnectionIdEmployee
+## getHrisEmployee
+
+Retrieve an employee
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.GetHrisEmployeeRequest;
+import com.unifiedapi.unifiedto.models.operations.GetHrisEmployeeResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("Louisiana"){{
+                    jwt = "";
+                }})
+                .build();
+
+            GetHrisEmployeeRequest req = new GetHrisEmployeeRequest("Afghanistan", "Minivan");            
+
+            GetHrisEmployeeResponse res = sdk.employee.getHrisEmployee(req);
+
+            if (res.hrisEmployee != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [com.unifiedapi.unifiedto.models.operations.GetHrisEmployeeRequest](../../models/operations/GetHrisEmployeeRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.GetHrisEmployeeResponse](../../models/operations/GetHrisEmployeeResponse.md)**
+
+
+## listHrisEmployees
 
 List all employees
 
@@ -69,8 +171,8 @@ List all employees
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdEmployeeRequest;
-import com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdEmployeeResponse;
+import com.unifiedapi.unifiedto.models.operations.ListHrisEmployeesRequest;
+import com.unifiedapi.unifiedto.models.operations.ListHrisEmployeesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -78,21 +180,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("glittering"){{
+                .setSecurity(new Security("overriding"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetHrisConnectionIdEmployeeRequest req = new GetHrisConnectionIdEmployeeRequest("cyan"){{
-                limit = 3071.3d;
-                offset = 3821.57d;
-                order = "olive reinvent Aston";
-                query = "logistical methodology blue";
-                sort = "BMW";
-                updatedGte = OffsetDateTime.parse("2023-08-16T09:49:18.256Z");
+            ListHrisEmployeesRequest req = new ListHrisEmployeesRequest("Krona"){{
+                limit = 4462.02d;
+                offset = 6942.29d;
+                order = "hew Lari Cedi";
+                query = "pug";
+                sort = "SUV";
+                updatedGte = OffsetDateTime.parse("2022-01-13T14:38:18.201Z");
             }};            
 
-            GetHrisConnectionIdEmployeeResponse res = sdk.employee.getHrisConnectionIdEmployee(req);
+            ListHrisEmployeesResponse res = sdk.employee.listHrisEmployees(req);
 
             if (res.hrisEmployees != null) {
                 // handle response
@@ -106,66 +208,17 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdEmployeeRequest](../../models/operations/GetHrisConnectionIdEmployeeRequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.ListHrisEmployeesRequest](../../models/operations/ListHrisEmployeesRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdEmployeeResponse](../../models/operations/GetHrisConnectionIdEmployeeResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.ListHrisEmployeesResponse](../../models/operations/ListHrisEmployeesResponse.md)**
 
 
-## getHrisConnectionIdEmployeeId
-
-Retrieve an employee
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdEmployeeIdRequest;
-import com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdEmployeeIdResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("for"){{
-                    jwt = "";
-                }})
-                .build();
-
-            GetHrisConnectionIdEmployeeIdRequest req = new GetHrisConnectionIdEmployeeIdRequest("Flat", "relationships");            
-
-            GetHrisConnectionIdEmployeeIdResponse res = sdk.employee.getHrisConnectionIdEmployeeId(req);
-
-            if (res.hrisEmployee != null) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdEmployeeIdRequest](../../models/operations/GetHrisConnectionIdEmployeeIdRequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
-
-
-### Response
-
-**[com.unifiedapi.unifiedto.models.operations.GetHrisConnectionIdEmployeeIdResponse](../../models/operations/GetHrisConnectionIdEmployeeIdResponse.md)**
-
-
-## patchHrisConnectionIdEmployeeId
+## patchHrisEmployee
 
 Update an employee
 
@@ -175,8 +228,8 @@ Update an employee
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchHrisConnectionIdEmployeeIdRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchHrisConnectionIdEmployeeIdResponse;
+import com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeResponse;
 import com.unifiedapi.unifiedto.models.shared.HrisEmail;
 import com.unifiedapi.unifiedto.models.shared.HrisEmailType;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployee;
@@ -195,55 +248,55 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("male"){{
+                .setSecurity(new Security("invoice"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchHrisConnectionIdEmployeeIdRequest req = new PatchHrisConnectionIdEmployeeIdRequest("virtual", "focus"){{
+            PatchHrisEmployeeRequest req = new PatchHrisEmployeeRequest("New", "cyan"){{
                 hrisEmployee = new HrisEmployee(){{
                     address = new PropertyHrisEmployeeAddress(){{
-                        address1 = "female Upgradable";
-                        address2 = "Cambridgeshire";
-                        city = "Fort Everett";
-                        country = "Nepal";
-                        countryCode = "GI";
-                        postalCode = "11502";
-                        region = "Denar";
-                        regionCode = "Oregon Engineer";
+                        address1 = "Hybrid Fresh Alaska";
+                        address2 = "siemens ohm";
+                        city = "Fort Myrna";
+                        country = "Switzerland";
+                        countryCode = "SC";
+                        postalCode = "59699-8615";
+                        region = "hard";
+                        regionCode = "Soft Producer Borders";
                     }};
-                    createdAt = OffsetDateTime.parse("2023-10-29T05:35:50.072Z");
-                    dateOfBirth = OffsetDateTime.parse("2023-08-06T11:11:44.158Z");
-                    department = "web Robust onto";
-                    division = "loudly";
+                    createdAt = OffsetDateTime.parse("2023-01-28T09:34:42.602Z");
+                    dateOfBirth = OffsetDateTime.parse("2021-05-03T17:00:57.006Z");
+                    department = "Plastic outlet";
+                    division = "intuitive monitor";
                     emails = new com.unifiedapi.unifiedto.models.shared.HrisEmail[]{{
-                        add(new HrisEmail("monitor"){{
-                            email = "Korbin.Quigley63@yahoo.com";
+                        add(new HrisEmail("Terbium"){{
+                            email = "Desmond65@yahoo.com";
                         }}),
                     }};
-                    employeeNumber = "hydrate indigo transmit";
+                    employeeNumber = "Card";
                     employmentStatus = HrisEmployeeEmploymentStatus.INACTIVE;
-                    employmentType = HrisEmployeeEmploymentType.FULL_TIME;
-                    gender = HrisEmployeeGender.INTERSEX;
-                    hiredAt = OffsetDateTime.parse("2021-07-20T11:37:42.486Z");
+                    employmentType = HrisEmployeeEmploymentType.OTHER;
+                    gender = HrisEmployeeGender.MALE;
+                    hiredAt = OffsetDateTime.parse("2023-05-23T18:25:46.914Z");
                     id = "<ID>";
-                    location = "withdrawal wonderfully";
-                    managerId = "molestias white Gainesville";
-                    maritalStatus = HrisEmployeeMaritalStatus.MARRIED;
-                    name = "tensely technologies";
+                    location = "USB South";
+                    managerId = "inventore";
+                    maritalStatus = HrisEmployeeMaritalStatus.SINGLE;
+                    name = "Cambridgeshire genre Assurance";
                     raw = new PropertyHrisEmployeeRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.HrisTelephone[]{{
-                        add(new HrisTelephone("Sedan"){{
-                            telephone = "Northeast Music Hassium";
+                        add(new HrisTelephone("Lilangeni"){{
+                            telephone = "concept disburse Prairie";
                         }}),
                     }};
-                    terminatedAt = OffsetDateTime.parse("2023-10-17T18:58:49.012Z");
-                    title = "deposit eavesdrop purple";
-                    updatedAt = OffsetDateTime.parse("2022-11-14T10:34:20.270Z");
+                    terminatedAt = OffsetDateTime.parse("2021-06-18T18:33:10.110Z");
+                    title = "where instead female";
+                    updatedAt = OffsetDateTime.parse("2021-08-30T22:54:54.298Z");
                 }};
             }};            
 
-            PatchHrisConnectionIdEmployeeIdResponse res = sdk.employee.patchHrisConnectionIdEmployeeId(req);
+            PatchHrisEmployeeResponse res = sdk.employee.patchHrisEmployee(req);
 
             if (res.hrisEmployee != null) {
                 // handle response
@@ -257,19 +310,19 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.PatchHrisConnectionIdEmployeeIdRequest](../../models/operations/PatchHrisConnectionIdEmployeeIdRequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeRequest](../../models/operations/PatchHrisEmployeeRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchHrisConnectionIdEmployeeIdResponse](../../models/operations/PatchHrisConnectionIdEmployeeIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeResponse](../../models/operations/PatchHrisEmployeeResponse.md)**
 
 
-## postHrisConnectionIdEmployee
+## removeHrisEmployee
 
-Create an employee
+Remove an employee
 
 ### Example Usage
 
@@ -277,77 +330,24 @@ Create an employee
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PostHrisConnectionIdEmployeeRequest;
-import com.unifiedapi.unifiedto.models.operations.PostHrisConnectionIdEmployeeResponse;
-import com.unifiedapi.unifiedto.models.shared.HrisEmail;
-import com.unifiedapi.unifiedto.models.shared.HrisEmailType;
-import com.unifiedapi.unifiedto.models.shared.HrisEmployee;
-import com.unifiedapi.unifiedto.models.shared.HrisEmployeeEmploymentStatus;
-import com.unifiedapi.unifiedto.models.shared.HrisEmployeeEmploymentType;
-import com.unifiedapi.unifiedto.models.shared.HrisEmployeeGender;
-import com.unifiedapi.unifiedto.models.shared.HrisEmployeeMaritalStatus;
-import com.unifiedapi.unifiedto.models.shared.HrisTelephone;
-import com.unifiedapi.unifiedto.models.shared.HrisTelephoneType;
-import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeRaw;
+import com.unifiedapi.unifiedto.models.operations.RemoveHrisEmployeeRequest;
+import com.unifiedapi.unifiedto.models.operations.RemoveHrisEmployeeResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Diesel"){{
+                .setSecurity(new Security("Chicken"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostHrisConnectionIdEmployeeRequest req = new PostHrisConnectionIdEmployeeRequest("Erbium"){{
-                hrisEmployee = new HrisEmployee(){{
-                    address = new PropertyHrisEmployeeAddress(){{
-                        address1 = "withdrawal male";
-                        address2 = "yellow righteously";
-                        city = "Port Lula";
-                        country = "Saudi Arabia";
-                        countryCode = "SL";
-                        postalCode = "34772";
-                        region = "Kyat";
-                        regionCode = "silver Licensed";
-                    }};
-                    createdAt = OffsetDateTime.parse("2022-09-25T20:39:21.870Z");
-                    dateOfBirth = OffsetDateTime.parse("2022-04-06T20:53:56.362Z");
-                    department = "payment mull";
-                    division = "Blues red";
-                    emails = new com.unifiedapi.unifiedto.models.shared.HrisEmail[]{{
-                        add(new HrisEmail("Fantastic"){{
-                            email = "Jacquelyn8@hotmail.com";
-                        }}),
-                    }};
-                    employeeNumber = "lumbering Bulgarian";
-                    employmentStatus = HrisEmployeeEmploymentStatus.ACTIVE;
-                    employmentType = HrisEmployeeEmploymentType.INTERN;
-                    gender = HrisEmployeeGender.MALE;
-                    hiredAt = OffsetDateTime.parse("2023-06-26T04:20:32.892Z");
-                    id = "<ID>";
-                    location = "connect Xenogender";
-                    managerId = "platforms hmph";
-                    maritalStatus = HrisEmployeeMaritalStatus.MARRIED;
-                    name = "Classical Market";
-                    raw = new PropertyHrisEmployeeRaw();
-                    telephones = new com.unifiedapi.unifiedto.models.shared.HrisTelephone[]{{
-                        add(new HrisTelephone("Agent"){{
-                            telephone = "Vietnam male";
-                        }}),
-                    }};
-                    terminatedAt = OffsetDateTime.parse("2021-06-03T01:35:30.577Z");
-                    title = "Concrete unlike Officer";
-                    updatedAt = OffsetDateTime.parse("2021-12-19T23:49:44.425Z");
-                }};
-            }};            
+            RemoveHrisEmployeeRequest req = new RemoveHrisEmployeeRequest("TCP", "Northeast");            
 
-            PostHrisConnectionIdEmployeeResponse res = sdk.employee.postHrisConnectionIdEmployee(req);
+            RemoveHrisEmployeeResponse res = sdk.employee.removeHrisEmployee(req);
 
-            if (res.hrisEmployee != null) {
+            if (res.statusCode == 200) {
                 // handle response
             }
         } catch (Exception e) {
@@ -359,17 +359,17 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.PostHrisConnectionIdEmployeeRequest](../../models/operations/PostHrisConnectionIdEmployeeRequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.RemoveHrisEmployeeRequest](../../models/operations/RemoveHrisEmployeeRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PostHrisConnectionIdEmployeeResponse](../../models/operations/PostHrisConnectionIdEmployeeResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.RemoveHrisEmployeeResponse](../../models/operations/RemoveHrisEmployeeResponse.md)**
 
 
-## putHrisConnectionIdEmployeeId
+## updateHrisEmployee
 
 Update an employee
 
@@ -379,8 +379,8 @@ Update an employee
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PutHrisConnectionIdEmployeeIdRequest;
-import com.unifiedapi.unifiedto.models.operations.PutHrisConnectionIdEmployeeIdResponse;
+import com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeResponse;
 import com.unifiedapi.unifiedto.models.shared.HrisEmail;
 import com.unifiedapi.unifiedto.models.shared.HrisEmailType;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployee;
@@ -399,55 +399,55 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Northeast"){{
+                .setSecurity(new Security("Alabama"){{
                     jwt = "";
                 }})
                 .build();
 
-            PutHrisConnectionIdEmployeeIdRequest req = new PutHrisConnectionIdEmployeeIdRequest("Fresh", "singular"){{
+            UpdateHrisEmployeeRequest req = new UpdateHrisEmployeeRequest("Normal", "truly"){{
                 hrisEmployee = new HrisEmployee(){{
                     address = new PropertyHrisEmployeeAddress(){{
-                        address1 = "East deposit Internal";
-                        address2 = "Somoni";
-                        city = "East Anikaville";
-                        country = "Isle of Man";
-                        countryCode = "UY";
-                        postalCode = "07843-0940";
-                        region = "volt";
-                        regionCode = "saepe";
+                        address1 = "Brand Androgyne";
+                        address2 = "Distributed";
+                        city = "Yundtfield";
+                        country = "Zambia";
+                        countryCode = "SC";
+                        postalCode = "58866";
+                        region = "F2M";
+                        regionCode = "HEX Internal Buckinghamshire";
                     }};
-                    createdAt = OffsetDateTime.parse("2022-10-28T22:40:08.423Z");
-                    dateOfBirth = OffsetDateTime.parse("2022-11-03T23:19:59.295Z");
-                    department = "now Cheese";
-                    division = "Berkshire Metal";
+                    createdAt = OffsetDateTime.parse("2022-10-01T07:10:14.173Z");
+                    dateOfBirth = OffsetDateTime.parse("2022-04-22T02:08:52.236Z");
+                    department = "Gasoline anti";
+                    division = "unleash whiteboard Northwest";
                     emails = new com.unifiedapi.unifiedto.models.shared.HrisEmail[]{{
-                        add(new HrisEmail("primary"){{
-                            email = "Lambert41@yahoo.com";
+                        add(new HrisEmail("SCSI"){{
+                            email = "Monte55@yahoo.com";
                         }}),
                     }};
-                    employeeNumber = "Tokelau";
-                    employmentStatus = HrisEmployeeEmploymentStatus.ACTIVE;
-                    employmentType = HrisEmployeeEmploymentType.VOLUNTEER;
-                    gender = HrisEmployeeGender.FEMALE;
-                    hiredAt = OffsetDateTime.parse("2022-08-21T14:57:31.067Z");
+                    employeeNumber = "Southeast budgetary overriding";
+                    employmentStatus = HrisEmployeeEmploymentStatus.INACTIVE;
+                    employmentType = HrisEmployeeEmploymentType.PART_TIME;
+                    gender = HrisEmployeeGender.MALE;
+                    hiredAt = OffsetDateTime.parse("2021-12-05T02:34:17.642Z");
                     id = "<ID>";
-                    location = "Dollar East";
-                    managerId = "deposit withdrawal";
+                    location = "Direct";
+                    managerId = "Other Corporate Keyboard";
                     maritalStatus = HrisEmployeeMaritalStatus.MARRIED;
-                    name = "Analyst Card modern";
+                    name = "holistic";
                     raw = new PropertyHrisEmployeeRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.HrisTelephone[]{{
-                        add(new HrisTelephone("Southwest"){{
-                            telephone = "Tennessine hack blushing";
+                        add(new HrisTelephone("Outlying"){{
+                            telephone = "Diesel";
                         }}),
                     }};
-                    terminatedAt = OffsetDateTime.parse("2021-07-04T13:15:32.676Z");
-                    title = "onto reboot BMW";
-                    updatedAt = OffsetDateTime.parse("2023-05-24T20:02:32.617Z");
+                    terminatedAt = OffsetDateTime.parse("2022-02-01T05:32:53.194Z");
+                    title = "male";
+                    updatedAt = OffsetDateTime.parse("2021-06-28T03:29:04.540Z");
                 }};
             }};            
 
-            PutHrisConnectionIdEmployeeIdResponse res = sdk.employee.putHrisConnectionIdEmployeeId(req);
+            UpdateHrisEmployeeResponse res = sdk.employee.updateHrisEmployee(req);
 
             if (res.hrisEmployee != null) {
                 // handle response
@@ -461,12 +461,12 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.PutHrisConnectionIdEmployeeIdRequest](../../models/operations/PutHrisConnectionIdEmployeeIdRequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeRequest](../../models/operations/UpdateHrisEmployeeRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PutHrisConnectionIdEmployeeIdResponse](../../models/operations/PutHrisConnectionIdEmployeeIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeResponse](../../models/operations/UpdateHrisEmployeeResponse.md)**
 

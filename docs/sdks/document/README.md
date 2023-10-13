@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [deleteAtsConnectionIdScorecardId](#deleteatsconnectionidscorecardid) - Remove a scorecard
-* [getAtsConnectionIdScorecard](#getatsconnectionidscorecard) - List all scorecards
-* [getAtsConnectionIdScorecardId](#getatsconnectionidscorecardid) - Retrieve a scorecard
-* [patchAtsConnectionIdScorecardId](#patchatsconnectionidscorecardid) - Update a scorecard
-* [postAtsConnectionIdScorecard](#postatsconnectionidscorecard) - Create a scorecard
-* [putAtsConnectionIdScorecardId](#putatsconnectionidscorecardid) - Update a scorecard
+* [createAtsScorecard](#createatsscorecard) - Create a scorecard
+* [getAtsScorecard](#getatsscorecard) - Retrieve a scorecard
+* [listAtsScorecards](#listatsscorecards) - List all scorecards
+* [patchAtsScorecard](#patchatsscorecard) - Update a scorecard
+* [removeAtsScorecard](#removeatsscorecard) - Remove a scorecard
+* [updateAtsScorecard](#updateatsscorecard) - Update a scorecard
 
-## deleteAtsConnectionIdScorecardId
+## createAtsScorecard
 
-Remove a scorecard
+Create a scorecard
 
 ### Example Usage
 
@@ -20,24 +20,40 @@ Remove a scorecard
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdScorecardIdRequest;
-import com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdScorecardIdResponse;
+import com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse;
+import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
+import com.unifiedapi.unifiedto.models.shared.AtsScorecardRecommendation;
+import com.unifiedapi.unifiedto.models.shared.PropertyAtsScorecardRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Account"){{
+                .setSecurity(new Security("Brunei"){{
                     jwt = "";
                 }})
                 .build();
 
-            DeleteAtsConnectionIdScorecardIdRequest req = new DeleteAtsConnectionIdScorecardIdRequest("intrepid", "Faroe");            
+            CreateAtsScorecardRequest req = new CreateAtsScorecardRequest("Account"){{
+                atsScorecard = new AtsScorecard(new PropertyAtsScorecardRaw()){{
+                    applicationId = "mint Southeast";
+                    candidateId = "Manager Handcrafted";
+                    createdAt = OffsetDateTime.parse("2021-03-30T11:56:53.937Z");
+                    id = "<ID>";
+                    interviewId = "Keys";
+                    interviewerId = "compressing quantifying gain";
+                    jobId = "Jamaican Russian Quincy";
+                    recommendation = AtsScorecardRecommendation.STRONG_YES;
+                    updatedAt = OffsetDateTime.parse("2023-11-22T04:56:50.505Z");
+                }};
+            }};            
 
-            DeleteAtsConnectionIdScorecardIdResponse res = sdk.document.deleteAtsConnectionIdScorecardId(req);
+            CreateAtsScorecardResponse res = sdk.document.createAtsScorecard(req);
 
-            if (res.statusCode == 200) {
+            if (res.atsScorecard != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -49,17 +65,66 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                                | Type                                                                                                                                                     | Required                                                                                                                                                 | Description                                                                                                                                              |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdScorecardIdRequest](../../models/operations/DeleteAtsConnectionIdScorecardIdRequest.md) | :heavy_check_mark:                                                                                                                                       | The request object to use for the request.                                                                                                               |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardRequest](../../models/operations/CreateAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.DeleteAtsConnectionIdScorecardIdResponse](../../models/operations/DeleteAtsConnectionIdScorecardIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse](../../models/operations/CreateAtsScorecardResponse.md)**
 
 
-## getAtsConnectionIdScorecard
+## getAtsScorecard
+
+Retrieve a scorecard
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.GetAtsScorecardRequest;
+import com.unifiedapi.unifiedto.models.operations.GetAtsScorecardResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security("Cordoba"){{
+                    jwt = "";
+                }})
+                .build();
+
+            GetAtsScorecardRequest req = new GetAtsScorecardRequest("Nissan", "Gasoline");            
+
+            GetAtsScorecardResponse res = sdk.document.getAtsScorecard(req);
+
+            if (res.atsScorecard != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [com.unifiedapi.unifiedto.models.operations.GetAtsScorecardRequest](../../models/operations/GetAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.GetAtsScorecardResponse](../../models/operations/GetAtsScorecardResponse.md)**
+
+
+## listAtsScorecards
 
 List all scorecards
 
@@ -69,8 +134,8 @@ List all scorecards
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardRequest;
-import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardResponse;
+import com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsRequest;
+import com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -78,24 +143,24 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("FTP"){{
+                .setSecurity(new Security("synthesizing"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsConnectionIdScorecardRequest req = new GetAtsConnectionIdScorecardRequest("Gasoline"){{
-                applicationId = "Southeast";
-                candidateId = "deep Tamarac maximize";
-                interviewId = "drive vibrate USB";
-                limit = 2304.86d;
-                offset = 1149.65d;
-                order = "Northeast Northwest Table";
-                query = "musty";
-                sort = "Bronze";
-                updatedGte = OffsetDateTime.parse("2023-02-18T10:02:20.781Z");
+            ListAtsScorecardsRequest req = new ListAtsScorecardsRequest("surprised"){{
+                applicationId = "frantically";
+                candidateId = "invoice";
+                interviewId = "silver Diesel";
+                limit = 355.08d;
+                offset = 1893.11d;
+                order = "parallelism Lutetium";
+                query = "Account Adaptive frictionless";
+                sort = "Pizza Baby Circle";
+                updatedGte = OffsetDateTime.parse("2021-11-28T01:47:16.538Z");
             }};            
 
-            GetAtsConnectionIdScorecardResponse res = sdk.document.getAtsConnectionIdScorecard(req);
+            ListAtsScorecardsResponse res = sdk.document.listAtsScorecards(req);
 
             if (res.atsScorecards != null) {
                 // handle response
@@ -109,66 +174,17 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardRequest](../../models/operations/GetAtsConnectionIdScorecardRequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsRequest](../../models/operations/ListAtsScorecardsRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardResponse](../../models/operations/GetAtsConnectionIdScorecardResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsResponse](../../models/operations/ListAtsScorecardsResponse.md)**
 
 
-## getAtsConnectionIdScorecardId
-
-Retrieve a scorecard
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardIdRequest;
-import com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardIdResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Aston"){{
-                    jwt = "";
-                }})
-                .build();
-
-            GetAtsConnectionIdScorecardIdRequest req = new GetAtsConnectionIdScorecardIdRequest("mobile", "Mini");            
-
-            GetAtsConnectionIdScorecardIdResponse res = sdk.document.getAtsConnectionIdScorecardId(req);
-
-            if (res.atsScorecard != null) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardIdRequest](../../models/operations/GetAtsConnectionIdScorecardIdRequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
-
-
-### Response
-
-**[com.unifiedapi.unifiedto.models.operations.GetAtsConnectionIdScorecardIdResponse](../../models/operations/GetAtsConnectionIdScorecardIdResponse.md)**
-
-
-## patchAtsConnectionIdScorecardId
+## patchAtsScorecard
 
 Update a scorecard
 
@@ -178,8 +194,8 @@ Update a scorecard
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdScorecardIdRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdScorecardIdResponse;
+import com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
 import com.unifiedapi.unifiedto.models.shared.AtsScorecardRecommendation;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsScorecardRaw;
@@ -190,26 +206,26 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("conventional"){{
+                .setSecurity(new Security("Falls"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchAtsConnectionIdScorecardIdRequest req = new PatchAtsConnectionIdScorecardIdRequest("Cisgender", "Cambridgeshire"){{
+            PatchAtsScorecardRequest req = new PatchAtsScorecardRequest("engage", "Movies"){{
                 atsScorecard = new AtsScorecard(new PropertyAtsScorecardRaw()){{
-                    applicationId = "functionalities Hybrid";
-                    candidateId = "gold";
-                    createdAt = OffsetDateTime.parse("2022-04-13T14:51:20.146Z");
+                    applicationId = "watt Interactions";
+                    candidateId = "up";
+                    createdAt = OffsetDateTime.parse("2021-06-02T01:49:29.997Z");
                     id = "<ID>";
-                    interviewId = "Soft target";
-                    interviewerId = "blue against";
-                    jobId = "Buckinghamshire";
+                    interviewId = "Automotive Buckinghamshire";
+                    interviewerId = "Pickup tempora";
+                    jobId = "Prairie fondly Hatchback";
                     recommendation = AtsScorecardRecommendation.STRONG_YES;
-                    updatedAt = OffsetDateTime.parse("2021-04-03T02:42:12.059Z");
+                    updatedAt = OffsetDateTime.parse("2023-08-12T06:41:03.214Z");
                 }};
             }};            
 
-            PatchAtsConnectionIdScorecardIdResponse res = sdk.document.patchAtsConnectionIdScorecardId(req);
+            PatchAtsScorecardResponse res = sdk.document.patchAtsScorecard(req);
 
             if (res.atsScorecard != null) {
                 // handle response
@@ -223,19 +239,19 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdScorecardIdRequest](../../models/operations/PatchAtsConnectionIdScorecardIdRequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardRequest](../../models/operations/PatchAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchAtsConnectionIdScorecardIdResponse](../../models/operations/PatchAtsConnectionIdScorecardIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse](../../models/operations/PatchAtsScorecardResponse.md)**
 
 
-## postAtsConnectionIdScorecard
+## removeAtsScorecard
 
-Create a scorecard
+Remove a scorecard
 
 ### Example Usage
 
@@ -243,40 +259,24 @@ Create a scorecard
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdScorecardRequest;
-import com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdScorecardResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
-import com.unifiedapi.unifiedto.models.shared.AtsScorecardRecommendation;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsScorecardRaw;
+import com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardRequest;
+import com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("cultivate"){{
+                .setSecurity(new Security("approach"){{
                     jwt = "";
                 }})
                 .build();
 
-            PostAtsConnectionIdScorecardRequest req = new PostAtsConnectionIdScorecardRequest("Infrastructure"){{
-                atsScorecard = new AtsScorecard(new PropertyAtsScorecardRaw()){{
-                    applicationId = "compelling grey Cotton";
-                    candidateId = "Granite uniform now";
-                    createdAt = OffsetDateTime.parse("2022-03-02T00:20:35.044Z");
-                    id = "<ID>";
-                    interviewId = "Legacy tan";
-                    interviewerId = "programming And Southeast";
-                    jobId = "Frozen";
-                    recommendation = AtsScorecardRecommendation.DEFINITELY_NO;
-                    updatedAt = OffsetDateTime.parse("2023-05-04T04:13:26.389Z");
-                }};
-            }};            
+            RemoveAtsScorecardRequest req = new RemoveAtsScorecardRequest("indeed", "Non");            
 
-            PostAtsConnectionIdScorecardResponse res = sdk.document.postAtsConnectionIdScorecard(req);
+            RemoveAtsScorecardResponse res = sdk.document.removeAtsScorecard(req);
 
-            if (res.atsScorecard != null) {
+            if (res.statusCode == 200) {
                 // handle response
             }
         } catch (Exception e) {
@@ -288,17 +288,17 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdScorecardRequest](../../models/operations/PostAtsConnectionIdScorecardRequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardRequest](../../models/operations/RemoveAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PostAtsConnectionIdScorecardResponse](../../models/operations/PostAtsConnectionIdScorecardResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse](../../models/operations/RemoveAtsScorecardResponse.md)**
 
 
-## putAtsConnectionIdScorecardId
+## updateAtsScorecard
 
 Update a scorecard
 
@@ -308,8 +308,8 @@ Update a scorecard
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdScorecardIdRequest;
-import com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdScorecardIdResponse;
+import com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
 import com.unifiedapi.unifiedto.models.shared.AtsScorecardRecommendation;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsScorecardRaw;
@@ -320,26 +320,26 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("primary"){{
+                .setSecurity(new Security("East"){{
                     jwt = "";
                 }})
                 .build();
 
-            PutAtsConnectionIdScorecardIdRequest req = new PutAtsConnectionIdScorecardIdRequest("Incredible", "Draper"){{
+            UpdateAtsScorecardRequest req = new UpdateAtsScorecardRequest("Digitized", "Legacy"){{
                 atsScorecard = new AtsScorecard(new PropertyAtsScorecardRaw()){{
-                    applicationId = "Computer Electric";
-                    candidateId = "Bugatti Minivan";
-                    createdAt = OffsetDateTime.parse("2021-08-13T02:19:12.551Z");
+                    applicationId = "backing Incredible UDP";
+                    candidateId = "South Bethesda rail";
+                    createdAt = OffsetDateTime.parse("2022-01-13T06:37:40.295Z");
                     id = "<ID>";
-                    interviewId = "Optional Oregon Adventure";
-                    interviewerId = "AI";
-                    jobId = "eveniet Home";
-                    recommendation = AtsScorecardRecommendation.YES;
-                    updatedAt = OffsetDateTime.parse("2021-08-24T23:05:01.366Z");
+                    interviewId = "Executive haptic";
+                    interviewerId = "Nebraska scalable";
+                    jobId = "Wooden XML hierarchy";
+                    recommendation = AtsScorecardRecommendation.STRONG_YES;
+                    updatedAt = OffsetDateTime.parse("2023-10-31T22:09:25.392Z");
                 }};
             }};            
 
-            PutAtsConnectionIdScorecardIdResponse res = sdk.document.putAtsConnectionIdScorecardId(req);
+            UpdateAtsScorecardResponse res = sdk.document.updateAtsScorecard(req);
 
             if (res.atsScorecard != null) {
                 // handle response
@@ -353,12 +353,12 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdScorecardIdRequest](../../models/operations/PutAtsConnectionIdScorecardIdRequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardRequest](../../models/operations/UpdateAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PutAtsConnectionIdScorecardIdResponse](../../models/operations/PutAtsConnectionIdScorecardIdResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse](../../models/operations/UpdateAtsScorecardResponse.md)**
 
