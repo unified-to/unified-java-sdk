@@ -149,7 +149,10 @@ public class Application {
                     add(ListUnifiedIntegrationWorkspacesCategories.ATS),
                 }};
                 env = "Representative transplantation";
+                limit = 8272.38d;
+                offset = 2514.07d;
                 summary = false;
+                updatedGte = "phew Loan";
             }};            
 
             ListUnifiedIntegrationWorkspacesResponse res = sdk.integration.listUnifiedIntegrationWorkspaces(req);
@@ -190,7 +193,6 @@ import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsCategor
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -206,12 +208,13 @@ public class Application {
                 categories = new com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsCategories[]{{
                     add(ListUnifiedIntegrationsCategories.HRIS),
                 }};
-                limit = 8305.29d;
-                offset = 9618d;
-                order = "Gabon";
-                sort = "Card";
+                env = "at Gabon East";
+                limit = 7484.12d;
+                offset = 5432.17d;
+                order = "excepturi Cadillac GB";
+                sort = "Gloves";
                 summary = false;
-                updatedGte = OffsetDateTime.parse("2023-01-12T09:40:08.699Z");
+                updatedGte = "radian alarm Salad";
             }};            
 
             ListUnifiedIntegrationsResponse res = sdk.integration.listUnifiedIntegrations(req);

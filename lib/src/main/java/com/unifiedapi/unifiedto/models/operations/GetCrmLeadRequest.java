@@ -21,6 +21,17 @@ public class GetCrmLeadRequest {
     }
     
     /**
+     * Comma-delimited fields to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String[] fields;
+
+    public GetCrmLeadRequest withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
      * ID of the Lead
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")

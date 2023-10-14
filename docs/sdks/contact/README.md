@@ -81,6 +81,9 @@ public class Application {
                     title = "Coupe Industrial Won";
                     updatedAt = OffsetDateTime.parse("2021-12-23T10:16:54.912Z");
                 }};
+                fields = new String[]{{
+                    add("Granite"),
+                }};
             }};            
 
             CreateCrmContactResponse res = sdk.contact.createCrmContact(req);
@@ -157,6 +160,9 @@ public class Application {
                     title = "interactive";
                     updatedAt = OffsetDateTime.parse("2023-10-24T21:46:28.575Z");
                 }};
+                fields = new String[]{{
+                    add("Table"),
+                }};
             }};            
 
             CreateUcContactResponse res = sdk.contact.createUcContact(req);
@@ -206,7 +212,11 @@ public class Application {
                 }})
                 .build();
 
-            GetCrmContactRequest req = new GetCrmContactRequest("Silver", "transgender");            
+            GetCrmContactRequest req = new GetCrmContactRequest("Silver", "transgender"){{
+                fields = new String[]{{
+                    add("Associate"),
+                }};
+            }};            
 
             GetCrmContactResponse res = sdk.contact.getCrmContact(req);
 
@@ -255,7 +265,11 @@ public class Application {
                 }})
                 .build();
 
-            GetUcContactRequest req = new GetUcContactRequest("deposit", "katal");            
+            GetUcContactRequest req = new GetUcContactRequest("deposit", "katal"){{
+                fields = new String[]{{
+                    add("cohesive"),
+                }};
+            }};            
 
             GetUcContactResponse res = sdk.contact.getUcContact(req);
 
@@ -308,12 +322,15 @@ public class Application {
             ListCrmContactsRequest req = new ListCrmContactsRequest("Research"){{
                 companyId = "Nevada portal Recumbent";
                 dealId = "bah Music Lubbock";
-                limit = 6222.97d;
-                offset = 9658.75d;
-                order = "Rubber strategic Chair";
-                query = "Gloves gadzooks";
-                sort = "Electric";
-                updatedGte = OffsetDateTime.parse("2021-08-01T17:00:48.842Z");
+                fields = new String[]{{
+                    add("Usability"),
+                }};
+                limit = 9202.53d;
+                offset = 2649.7d;
+                order = "Principal";
+                query = "blue";
+                sort = "instantly";
+                updatedGte = OffsetDateTime.parse("2022-01-04T20:08:38.586Z");
             }};            
 
             ListCrmContactsResponse res = sdk.contact.listCrmContacts(req);
@@ -366,9 +383,12 @@ public class Application {
 
             ListUcContactsRequest req = new ListUcContactsRequest("Xenogender"){{
                 agentId = "Solutions haptic Pickup";
-                limit = 5017.12d;
-                offset = 6179.01d;
-                order = "female North";
+                fields = new String[]{{
+                    add("generating"),
+                }};
+                limit = 6559.53d;
+                offset = 7178.57d;
+                order = "North";
                 query = "Berkshire";
                 sort = "behind animi Jersey";
                 updatedGte = OffsetDateTime.parse("2023-10-30T03:50:09.755Z");
@@ -463,6 +483,9 @@ public class Application {
                     title = "feed navigate";
                     updatedAt = OffsetDateTime.parse("2023-04-18T19:04:11.197Z");
                 }};
+                fields = new String[]{{
+                    add("woman"),
+                }};
             }};            
 
             PatchCrmContactResponse res = sdk.contact.patchCrmContact(req);
@@ -538,6 +561,9 @@ public class Application {
                     }};
                     title = "Hybrid Rubber";
                     updatedAt = OffsetDateTime.parse("2023-10-30T10:35:45.233Z");
+                }};
+                fields = new String[]{{
+                    add("Associate"),
                 }};
             }};            
 
@@ -728,6 +754,9 @@ public class Application {
                     title = "Electronics 1080p withdrawal";
                     updatedAt = OffsetDateTime.parse("2023-12-17T06:39:56.020Z");
                 }};
+                fields = new String[]{{
+                    add("candela"),
+                }};
             }};            
 
             UpdateCrmContactResponse res = sdk.contact.updateCrmContact(req);
@@ -803,6 +832,9 @@ public class Application {
                     }};
                     title = "Books";
                     updatedAt = OffsetDateTime.parse("2023-04-20T04:04:49.023Z");
+                }};
+                fields = new String[]{{
+                    add("voluptatem"),
                 }};
             }};            
 

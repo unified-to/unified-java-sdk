@@ -49,6 +49,9 @@ public class Application {
                     recommendation = AtsScorecardRecommendation.STRONG_YES;
                     updatedAt = OffsetDateTime.parse("2023-11-22T04:56:50.505Z");
                 }};
+                fields = new String[]{{
+                    add("minima"),
+                }};
             }};            
 
             CreateAtsScorecardResponse res = sdk.document.createAtsScorecard(req);
@@ -98,7 +101,11 @@ public class Application {
                 }})
                 .build();
 
-            GetAtsScorecardRequest req = new GetAtsScorecardRequest("Nissan", "Gasoline");            
+            GetAtsScorecardRequest req = new GetAtsScorecardRequest("Nissan", "Gasoline"){{
+                fields = new String[]{{
+                    add("invoice"),
+                }};
+            }};            
 
             GetAtsScorecardResponse res = sdk.document.getAtsScorecard(req);
 
@@ -151,13 +158,16 @@ public class Application {
             ListAtsScorecardsRequest req = new ListAtsScorecardsRequest("surprised"){{
                 applicationId = "frantically";
                 candidateId = "invoice";
-                interviewId = "silver Diesel";
-                limit = 355.08d;
-                offset = 1893.11d;
-                order = "parallelism Lutetium";
-                query = "Account Adaptive frictionless";
-                sort = "Pizza Baby Circle";
-                updatedGte = OffsetDateTime.parse("2021-11-28T01:47:16.538Z");
+                fields = new String[]{{
+                    add("Seamless"),
+                }};
+                interviewId = "Diesel Clovis Dinar";
+                limit = 7350.75d;
+                offset = 5961.51d;
+                order = "Account Adaptive frictionless";
+                query = "Pizza Baby Circle";
+                sort = "Metal";
+                updatedGte = OffsetDateTime.parse("2021-07-10T16:39:24.000Z");
             }};            
 
             ListAtsScorecardsResponse res = sdk.document.listAtsScorecards(req);
@@ -222,6 +232,9 @@ public class Application {
                     jobId = "Prairie fondly Hatchback";
                     recommendation = AtsScorecardRecommendation.STRONG_YES;
                     updatedAt = OffsetDateTime.parse("2023-08-12T06:41:03.214Z");
+                }};
+                fields = new String[]{{
+                    add("Analyst"),
                 }};
             }};            
 
@@ -336,6 +349,9 @@ public class Application {
                     jobId = "Wooden XML hierarchy";
                     recommendation = AtsScorecardRecommendation.STRONG_YES;
                     updatedAt = OffsetDateTime.parse("2023-10-31T22:09:25.392Z");
+                }};
+                fields = new String[]{{
+                    add("Cheese"),
                 }};
             }};            
 

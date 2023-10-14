@@ -56,6 +56,9 @@ public class Application {
                     updatedAt = OffsetDateTime.parse("2021-07-10T09:34:06.255Z");
                     wonReason = "calculate Maryland";
                 }};
+                fields = new String[]{{
+                    add("connect"),
+                }};
             }};            
 
             CreateCrmDealResponse res = sdk.deal.createCrmDeal(req);
@@ -105,7 +108,11 @@ public class Application {
                 }})
                 .build();
 
-            GetCrmDealRequest req = new GetCrmDealRequest("mint", "Reduced");            
+            GetCrmDealRequest req = new GetCrmDealRequest("mint", "Reduced"){{
+                fields = new String[]{{
+                    add("East"),
+                }};
+            }};            
 
             GetCrmDealResponse res = sdk.deal.getCrmDeal(req);
 
@@ -158,12 +165,15 @@ public class Application {
             ListCrmDealsRequest req = new ListCrmDealsRequest("synthesize"){{
                 companyId = "payment";
                 contactId = "Tala Avon";
-                limit = 4899.83d;
-                offset = 2926.12d;
-                order = "West tan Cambridgeshire";
-                query = "Identity ash";
-                sort = "Bespoke Tuvalu woman";
-                updatedGte = OffsetDateTime.parse("2021-03-11T21:18:26.023Z");
+                fields = new String[]{{
+                    add("virtual"),
+                }};
+                limit = 7035.78d;
+                offset = 53.96d;
+                order = "tan Cambridgeshire quantifying";
+                query = "ash distance";
+                sort = "vertical gee";
+                updatedGte = OffsetDateTime.parse("2022-09-10T05:42:26.963Z");
             }};            
 
             ListCrmDealsResponse res = sdk.deal.listCrmDeals(req);
@@ -235,6 +245,9 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2021-11-27T11:12:42.357Z");
                     wonReason = "channels second";
+                }};
+                fields = new String[]{{
+                    add("Mercedes"),
                 }};
             }};            
 
@@ -356,6 +369,9 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2021-04-03T08:12:18.698Z");
                     wonReason = "Orchestrator Lamborghini ah";
+                }};
+                fields = new String[]{{
+                    add("Architect"),
                 }};
             }};            
 

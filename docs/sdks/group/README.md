@@ -55,6 +55,9 @@ public class Application {
                     type = HrisGroupType.DEPARTMENT;
                     updatedAt = OffsetDateTime.parse("2022-11-20T16:35:37.465Z");
                 }};
+                fields = new String[]{{
+                    add("SCSI"),
+                }};
             }};            
 
             CreateHrisGroupResponse res = sdk.group.createHrisGroup(req);
@@ -104,7 +107,11 @@ public class Application {
                 }})
                 .build();
 
-            GetHrisGroupRequest req = new GetHrisGroupRequest("while", "Cadillac");            
+            GetHrisGroupRequest req = new GetHrisGroupRequest("while", "Cadillac"){{
+                fields = new String[]{{
+                    add("optical"),
+                }};
+            }};            
 
             GetHrisGroupResponse res = sdk.group.getHrisGroup(req);
 
@@ -155,12 +162,15 @@ public class Application {
                 .build();
 
             ListHrisGroupsRequest req = new ListHrisGroupsRequest("however"){{
-                limit = 8700.83d;
-                offset = 6401.41d;
-                order = "utilisation";
-                query = "olive Shores";
-                sort = "Ghana";
-                updatedGte = OffsetDateTime.parse("2023-03-15T19:04:23.954Z");
+                fields = new String[]{{
+                    add("positive"),
+                }};
+                limit = 1929.12d;
+                offset = 3809.99d;
+                order = "portals even Manager";
+                query = "proactive deliverables";
+                sort = "West Plastic transmit";
+                updatedGte = OffsetDateTime.parse("2023-02-19T02:41:06.804Z");
             }};            
 
             ListHrisGroupsResponse res = sdk.group.listHrisGroups(req);
@@ -231,6 +241,9 @@ public class Application {
                     raw = new PropertyHrisGroupRaw();
                     type = HrisGroupType.DIVISION;
                     updatedAt = OffsetDateTime.parse("2023-01-02T08:52:32.014Z");
+                }};
+                fields = new String[]{{
+                    add("gladly"),
                 }};
             }};            
 
@@ -351,6 +364,9 @@ public class Application {
                     raw = new PropertyHrisGroupRaw();
                     type = HrisGroupType.SUB_DEPARTMENT;
                     updatedAt = OffsetDateTime.parse("2023-08-16T02:52:12.983Z");
+                }};
+                fields = new String[]{{
+                    add("Hat"),
                 }};
             }};            
 

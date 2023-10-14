@@ -75,6 +75,9 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2023-10-21T20:56:48.294Z");
                 }};
+                fields = new String[]{{
+                    add("Electric"),
+                }};
             }};            
 
             CreateTicketingAgentResponse res = sdk.ticketing.createTicketingAgent(req);
@@ -151,6 +154,9 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2021-07-10T05:40:36.874Z");
                 }};
+                fields = new String[]{{
+                    add("Haiti"),
+                }};
             }};            
 
             CreateTicketingCustomerResponse res = sdk.ticketing.createTicketingCustomer(req);
@@ -211,6 +217,9 @@ public class Application {
                     description = "Open-source secondary toolset";
                     id = "<ID>";
                     updatedAt = "Underpass Cambridgeshire";
+                }};
+                fields = new String[]{{
+                    add("Generic"),
                 }};
             }};            
 
@@ -283,6 +292,9 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2022-01-02T22:21:38.124Z");
                 }};
+                fields = new String[]{{
+                    add("superficial"),
+                }};
             }};            
 
             CreateTicketingTicketResponse res = sdk.ticketing.createTicketingTicket(req);
@@ -332,7 +344,11 @@ public class Application {
                 }})
                 .build();
 
-            GetTicketingAgentRequest req = new GetTicketingAgentRequest("connect", "Intersex");            
+            GetTicketingAgentRequest req = new GetTicketingAgentRequest("connect", "Intersex"){{
+                fields = new String[]{{
+                    add("kindness"),
+                }};
+            }};            
 
             GetTicketingAgentResponse res = sdk.ticketing.getTicketingAgent(req);
 
@@ -381,7 +397,11 @@ public class Application {
                 }})
                 .build();
 
-            GetTicketingCustomerRequest req = new GetTicketingCustomerRequest("Gloves", "Brand");            
+            GetTicketingCustomerRequest req = new GetTicketingCustomerRequest("Gloves", "Brand"){{
+                fields = new String[]{{
+                    add("Van"),
+                }};
+            }};            
 
             GetTicketingCustomerResponse res = sdk.ticketing.getTicketingCustomer(req);
 
@@ -430,7 +450,11 @@ public class Application {
                 }})
                 .build();
 
-            GetTicketingNoteRequest req = new GetTicketingNoteRequest("intranet", "Fresh", "Fitness");            
+            GetTicketingNoteRequest req = new GetTicketingNoteRequest("intranet", "Fresh", "Fitness"){{
+                fields = new String[]{{
+                    add("Applications"),
+                }};
+            }};            
 
             GetTicketingNoteResponse res = sdk.ticketing.getTicketingNote(req);
 
@@ -479,7 +503,11 @@ public class Application {
                 }})
                 .build();
 
-            GetTicketingTicketRequest req = new GetTicketingTicketRequest("Dollar", "Alaska");            
+            GetTicketingTicketRequest req = new GetTicketingTicketRequest("Dollar", "Alaska"){{
+                fields = new String[]{{
+                    add("Planner"),
+                }};
+            }};            
 
             GetTicketingTicketResponse res = sdk.ticketing.getTicketingTicket(req);
 
@@ -530,9 +558,12 @@ public class Application {
                 .build();
 
             ListTicketingAgentsRequest req = new ListTicketingAgentsRequest("Corporate"){{
-                limit = 3027.97d;
-                offset = 3254.85d;
-                order = "Books South";
+                fields = new String[]{{
+                    add("monetize"),
+                }};
+                limit = 6003.65d;
+                offset = 1931.45d;
+                order = "South";
                 query = "Investment World Small";
                 sort = "kelvin";
                 updatedGte = OffsetDateTime.parse("2023-09-24T13:03:50.991Z");
@@ -587,12 +618,15 @@ public class Application {
                 .build();
 
             ListTicketingCustomersRequest req = new ListTicketingCustomersRequest("Unions"){{
-                limit = 1472.38d;
-                offset = 9384.79d;
-                order = "Folk";
-                query = "Chips JSON";
-                sort = "louse";
-                updatedGte = OffsetDateTime.parse("2023-06-22T18:24:21.846Z");
+                fields = new String[]{{
+                    add("Ferry"),
+                }};
+                limit = 4622.26d;
+                offset = 2110.17d;
+                order = "JSON lavender transmitter";
+                query = "billboard Rial";
+                sort = "Account Bedfordshire Cis";
+                updatedGte = OffsetDateTime.parse("2023-06-22T18:28:19.811Z");
             }};            
 
             ListTicketingCustomersResponse res = sdk.ticketing.listTicketingCustomers(req);
@@ -644,12 +678,15 @@ public class Application {
                 .build();
 
             ListTicketingNotesRequest req = new ListTicketingNotesRequest("because", "Zimbabwe"){{
-                limit = 4262.61d;
-                offset = 2323.04d;
-                order = "Bicycle";
-                query = "Ford";
-                sort = "henry loudly complexity";
-                updatedGte = OffsetDateTime.parse("2022-11-30T16:54:06.786Z");
+                fields = new String[]{{
+                    add("Kroon"),
+                }};
+                limit = 1566.46d;
+                offset = 7692.3d;
+                order = "arrogantly Ford";
+                query = "henry loudly complexity";
+                sort = "ability duh";
+                updatedGte = OffsetDateTime.parse("2021-09-29T21:15:20.624Z");
             }};            
 
             ListTicketingNotesResponse res = sdk.ticketing.listTicketingNotes(req);
@@ -703,12 +740,15 @@ public class Application {
             ListTicketingTicketsRequest req = new ListTicketingTicketsRequest("archive"){{
                 agentId = "invoice shyly Awesome";
                 customerId = "Orchestrator Unbranded";
-                limit = 2038.67d;
-                offset = 4219.01d;
-                order = "analyzer enshroud Coconut";
-                query = "Rial";
-                sort = "Books";
-                updatedGte = OffsetDateTime.parse("2022-01-12T23:51:37.173Z");
+                fields = new String[]{{
+                    add("Table"),
+                }};
+                limit = 8170.02d;
+                offset = 3853.32d;
+                order = "enshroud";
+                query = "Health";
+                sort = "Rial";
+                updatedGte = OffsetDateTime.parse("2021-05-31T04:01:57.661Z");
             }};            
 
             ListTicketingTicketsResponse res = sdk.ticketing.listTicketingTickets(req);
@@ -781,6 +821,9 @@ public class Application {
                         }}),
                     }};
                     updatedAt = OffsetDateTime.parse("2021-06-19T13:45:09.457Z");
+                }};
+                fields = new String[]{{
+                    add("reinvent"),
                 }};
             }};            
 
@@ -858,6 +901,9 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2023-04-21T14:41:05.293Z");
                 }};
+                fields = new String[]{{
+                    add("Iceland"),
+                }};
             }};            
 
             PatchTicketingCustomerResponse res = sdk.ticketing.patchTicketingCustomer(req);
@@ -918,6 +964,9 @@ public class Application {
                     description = "Networked multi-state matrix";
                     id = "<ID>";
                     updatedAt = "Cadillac Credit";
+                }};
+                fields = new String[]{{
+                    add("Soap"),
                 }};
             }};            
 
@@ -989,6 +1038,9 @@ public class Application {
                         add("aha"),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-05-21T12:19:00.995Z");
+                }};
+                fields = new String[]{{
+                    add("Health"),
                 }};
             }};            
 
@@ -1259,6 +1311,9 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2021-03-23T14:40:54.013Z");
                 }};
+                fields = new String[]{{
+                    add("near"),
+                }};
             }};            
 
             UpdateTicketingAgentResponse res = sdk.ticketing.updateTicketingAgent(req);
@@ -1335,6 +1390,9 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2022-04-11T11:07:01.811Z");
                 }};
+                fields = new String[]{{
+                    add("Fiat"),
+                }};
             }};            
 
             UpdateTicketingCustomerResponse res = sdk.ticketing.updateTicketingCustomer(req);
@@ -1395,6 +1453,9 @@ public class Application {
                     description = "Programmable contextually-based ability";
                     id = "<ID>";
                     updatedAt = "Dynamic nemo sievert";
+                }};
+                fields = new String[]{{
+                    add("firewall"),
                 }};
             }};            
 
@@ -1466,6 +1527,9 @@ public class Application {
                         add("static"),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-12-26T18:35:36.989Z");
+                }};
+                fields = new String[]{{
+                    add("intensely"),
                 }};
             }};            
 

@@ -76,6 +76,9 @@ public class Application {
                     title = "composite Folk";
                     updatedAt = OffsetDateTime.parse("2023-07-21T12:53:25.440Z");
                 }};
+                fields = new String[]{{
+                    add("Brand"),
+                }};
             }};            
 
             CreateAtsCandidateResponse res = sdk.candidate.createAtsCandidate(req);
@@ -125,7 +128,11 @@ public class Application {
                 }})
                 .build();
 
-            GetAtsCandidateRequest req = new GetAtsCandidateRequest("hub", "man");            
+            GetAtsCandidateRequest req = new GetAtsCandidateRequest("hub", "man"){{
+                fields = new String[]{{
+                    add("intuitive"),
+                }};
+            }};            
 
             GetAtsCandidateResponse res = sdk.candidate.getAtsCandidate(req);
 
@@ -176,12 +183,15 @@ public class Application {
                 .build();
 
             ListAtsCandidatesRequest req = new ListAtsCandidatesRequest("Cambridgeshire"){{
-                limit = 1095.92d;
-                offset = 8552.83d;
-                order = "Accountability Hawaii";
-                query = "South";
-                sort = "Hybrid New";
-                updatedGte = OffsetDateTime.parse("2021-01-08T17:42:53.570Z");
+                fields = new String[]{{
+                    add("Southwest"),
+                }};
+                limit = 6403.86d;
+                offset = 6207.22d;
+                order = "Hawaii Burleson turquoise";
+                query = "Hybrid New";
+                sort = "plus";
+                updatedGte = OffsetDateTime.parse("2023-11-22T17:23:30.146Z");
             }};            
 
             ListAtsCandidatesResponse res = sdk.candidate.listAtsCandidates(req);
@@ -273,6 +283,9 @@ public class Application {
                     }};
                     title = "Fish Home Dobra";
                     updatedAt = OffsetDateTime.parse("2021-11-22T04:10:17.899Z");
+                }};
+                fields = new String[]{{
+                    add("empower"),
                 }};
             }};            
 
@@ -414,6 +427,9 @@ public class Application {
                     }};
                     title = "parsing";
                     updatedAt = OffsetDateTime.parse("2023-12-10T21:26:35.636Z");
+                }};
+                fields = new String[]{{
+                    add("synthesize"),
                 }};
             }};            
 

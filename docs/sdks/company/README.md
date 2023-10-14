@@ -78,6 +78,9 @@ public class Application {
                         add("Benz"),
                     }};
                 }};
+                fields = new String[]{{
+                    add("red"),
+                }};
             }};            
 
             CreateCrmCompanyResponse res = sdk.company.createCrmCompany(req);
@@ -127,7 +130,11 @@ public class Application {
                 }})
                 .build();
 
-            GetCrmCompanyRequest req = new GetCrmCompanyRequest("Mini", "inaugurate");            
+            GetCrmCompanyRequest req = new GetCrmCompanyRequest("Mini", "inaugurate"){{
+                fields = new String[]{{
+                    add("Zimbabwe"),
+                }};
+            }};            
 
             GetCrmCompanyResponse res = sdk.company.getCrmCompany(req);
 
@@ -180,12 +187,15 @@ public class Application {
             ListCrmCompaniesRequest req = new ListCrmCompaniesRequest("withdrawal"){{
                 contactId = "Hill Sleek Tricycle";
                 dealId = "synergies molestias Recycled";
-                limit = 7700.92d;
-                offset = 7980.96d;
-                order = "Malden Interactions";
-                query = "salmon Southwest Manager";
-                sort = "but Northwest";
-                updatedGte = OffsetDateTime.parse("2022-09-14T00:38:40.164Z");
+                fields = new String[]{{
+                    add("Touring"),
+                }};
+                limit = 276.08d;
+                offset = 5221.79d;
+                order = "sedately salmon";
+                query = "rudely";
+                sort = "UTF8";
+                updatedGte = OffsetDateTime.parse("2021-05-26T08:26:47.847Z");
             }};            
 
             ListCrmCompaniesResponse res = sdk.company.listCrmCompanies(req);
@@ -331,6 +341,9 @@ public class Application {
                         add("Palos"),
                     }};
                 }};
+                fields = new String[]{{
+                    add("City"),
+                }};
             }};            
 
             PatchCrmCompanyResponse res = sdk.company.patchCrmCompany(req);
@@ -472,6 +485,9 @@ public class Application {
                     websites = new String[]{{
                         add("Product"),
                     }};
+                }};
+                fields = new String[]{{
+                    add("drat"),
                 }};
             }};            
 

@@ -62,6 +62,9 @@ public class Application {
                     title = "interactive";
                     updatedAt = OffsetDateTime.parse("2023-10-24T21:46:28.575Z");
                 }};
+                fields = new String[]{{
+                    add("Table"),
+                }};
             }};            
 
             CreateUcContactResponse res = sdk.uc.createUcContact(req);
@@ -111,7 +114,11 @@ public class Application {
                 }})
                 .build();
 
-            GetUcContactRequest req = new GetUcContactRequest("deposit", "katal");            
+            GetUcContactRequest req = new GetUcContactRequest("deposit", "katal"){{
+                fields = new String[]{{
+                    add("cohesive"),
+                }};
+            }};            
 
             GetUcContactResponse res = sdk.uc.getUcContact(req);
 
@@ -163,10 +170,13 @@ public class Application {
 
             ListUcAgentsRequest req = new ListUcAgentsRequest("huzzah"){{
                 contactId = "hedgehog Awesome";
-                limit = 5908.79d;
-                offset = 67.08d;
-                order = "Producer Classical Electric";
-                query = "Wyoming Analyst beside";
+                fields = new String[]{{
+                    add("Rock"),
+                }};
+                limit = 8708.31d;
+                offset = 6888.79d;
+                order = "Classical Electric aboard";
+                query = "Analyst beside harmonious";
                 sort = "Innovative male hierarchy";
                 updatedGte = OffsetDateTime.parse("2021-02-24T03:25:44.788Z");
             }};            
@@ -222,12 +232,15 @@ public class Application {
             ListUcCallsRequest req = new ListUcCallsRequest("Cargo"){{
                 agentId = "playfully";
                 contactId = "AGP";
-                limit = 1965.31d;
-                offset = 4663.16d;
-                order = "ubiquitous error denationalise";
-                query = "at";
-                sort = "Money Florida female";
-                updatedGte = OffsetDateTime.parse("2022-10-12T14:01:07.814Z");
+                fields = new String[]{{
+                    add("Health"),
+                }};
+                limit = 8985.18d;
+                offset = 2975.86d;
+                order = "error denationalise Mauritania";
+                query = "female Tools Mouse";
+                sort = "Country";
+                updatedGte = OffsetDateTime.parse("2021-02-06T20:10:12.947Z");
             }};            
 
             ListUcCallsResponse res = sdk.uc.listUcCalls(req);
@@ -280,9 +293,12 @@ public class Application {
 
             ListUcContactsRequest req = new ListUcContactsRequest("Xenogender"){{
                 agentId = "Solutions haptic Pickup";
-                limit = 5017.12d;
-                offset = 6179.01d;
-                order = "female North";
+                fields = new String[]{{
+                    add("generating"),
+                }};
+                limit = 6559.53d;
+                offset = 7178.57d;
+                order = "North";
                 query = "Berkshire";
                 sort = "behind animi Jersey";
                 updatedGte = OffsetDateTime.parse("2023-10-30T03:50:09.755Z");
@@ -361,6 +377,9 @@ public class Application {
                     }};
                     title = "Hybrid Rubber";
                     updatedAt = OffsetDateTime.parse("2023-10-30T10:35:45.233Z");
+                }};
+                fields = new String[]{{
+                    add("Associate"),
                 }};
             }};            
 
@@ -486,6 +505,9 @@ public class Application {
                     }};
                     title = "Books";
                     updatedAt = OffsetDateTime.parse("2023-04-20T04:04:49.023Z");
+                }};
+                fields = new String[]{{
+                    add("voluptatem"),
                 }};
             }};            
 

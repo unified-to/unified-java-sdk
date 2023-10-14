@@ -86,6 +86,9 @@ public class Application {
                     title = "payment North";
                     updatedAt = OffsetDateTime.parse("2023-03-05T19:24:43.770Z");
                 }};
+                fields = new String[]{{
+                    add("generally"),
+                }};
             }};            
 
             CreateHrisEmployeeResponse res = sdk.employee.createHrisEmployee(req);
@@ -135,7 +138,11 @@ public class Application {
                 }})
                 .build();
 
-            GetHrisEmployeeRequest req = new GetHrisEmployeeRequest("Afghanistan", "Minivan");            
+            GetHrisEmployeeRequest req = new GetHrisEmployeeRequest("Afghanistan", "Minivan"){{
+                fields = new String[]{{
+                    add("hourly"),
+                }};
+            }};            
 
             GetHrisEmployeeResponse res = sdk.employee.getHrisEmployee(req);
 
@@ -186,9 +193,12 @@ public class Application {
                 .build();
 
             ListHrisEmployeesRequest req = new ListHrisEmployeesRequest("Krona"){{
-                limit = 4462.02d;
-                offset = 6942.29d;
-                order = "hew Lari Cedi";
+                fields = new String[]{{
+                    add("payment"),
+                }};
+                limit = 9587.43d;
+                offset = 9972.64d;
+                order = "Lari Cedi";
                 query = "pug";
                 sort = "SUV";
                 updatedGte = OffsetDateTime.parse("2022-01-13T14:38:18.201Z");
@@ -293,6 +303,9 @@ public class Application {
                     terminatedAt = OffsetDateTime.parse("2021-06-18T18:33:10.110Z");
                     title = "where instead female";
                     updatedAt = OffsetDateTime.parse("2021-08-30T22:54:54.298Z");
+                }};
+                fields = new String[]{{
+                    add("West"),
                 }};
             }};            
 
@@ -444,6 +457,9 @@ public class Application {
                     terminatedAt = OffsetDateTime.parse("2022-02-01T05:32:53.194Z");
                     title = "male";
                     updatedAt = OffsetDateTime.parse("2021-06-28T03:29:04.540Z");
+                }};
+                fields = new String[]{{
+                    add("Bronze"),
                 }};
             }};            
 

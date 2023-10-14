@@ -9,6 +9,9 @@ import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 
 
 public class ListUnifiedIntegrationWorkspacesRequest {
+    /**
+     * Filter the results for only the workspace's active integrations
+     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=active")
     public Boolean active;
 
@@ -36,11 +39,35 @@ public class ListUnifiedIntegrationWorkspacesRequest {
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Double limit;
+
+    public ListUnifiedIntegrationWorkspacesRequest withLimit(Double limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Double offset;
+
+    public ListUnifiedIntegrationWorkspacesRequest withOffset(Double offset) {
+        this.offset = offset;
+        return this;
+    }
+    
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=summary")
     public Boolean summary;
 
     public ListUnifiedIntegrationWorkspacesRequest withSummary(Boolean summary) {
         this.summary = summary;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
+    public String updatedGte;
+
+    public ListUnifiedIntegrationWorkspacesRequest withUpdatedGte(String updatedGte) {
+        this.updatedGte = updatedGte;
         return this;
     }
     

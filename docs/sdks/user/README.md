@@ -75,6 +75,9 @@ public class Application {
                     title = "violet";
                     updatedAt = OffsetDateTime.parse("2023-12-25T13:02:25.837Z");
                 }};
+                fields = new String[]{{
+                    add("convergence"),
+                }};
             }};            
 
             CreateCrmUserResponse res = sdk.user.createCrmUser(req);
@@ -124,7 +127,11 @@ public class Application {
                 }})
                 .build();
 
-            GetCrmUserRequest req = new GetCrmUserRequest("connect", "Bacon");            
+            GetCrmUserRequest req = new GetCrmUserRequest("connect", "Bacon"){{
+                fields = new String[]{{
+                    add("and"),
+                }};
+            }};            
 
             GetCrmUserResponse res = sdk.user.getCrmUser(req);
 
@@ -175,10 +182,13 @@ public class Application {
                 .build();
 
             ListCrmUsersRequest req = new ListCrmUsersRequest("Costa"){{
-                limit = 1707.72d;
-                offset = 6650.22d;
-                order = "cyan Southeast";
-                query = "scale Rock San";
+                fields = new String[]{{
+                    add("olive"),
+                }};
+                limit = 4392.99d;
+                offset = 7999.12d;
+                order = "Southeast orange tesla";
+                query = "San";
                 sort = "Centralized Neptunium";
                 updatedGte = OffsetDateTime.parse("2023-10-13T06:25:33.606Z");
             }};            
@@ -271,6 +281,9 @@ public class Application {
                     timezone = "Europe/Brussels";
                     title = "Agender Bicycle";
                     updatedAt = OffsetDateTime.parse("2023-09-30T00:47:17.388Z");
+                }};
+                fields = new String[]{{
+                    add("variant"),
                 }};
             }};            
 
@@ -411,6 +424,9 @@ public class Application {
                     timezone = "Asia/Singapore";
                     title = "hmph connecting Movies";
                     updatedAt = OffsetDateTime.parse("2021-02-07T04:55:02.364Z");
+                }};
+                fields = new String[]{{
+                    add("Berkshire"),
                 }};
             }};            
 

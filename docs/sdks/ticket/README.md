@@ -55,6 +55,9 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2022-01-02T22:21:38.124Z");
                 }};
+                fields = new String[]{{
+                    add("superficial"),
+                }};
             }};            
 
             CreateTicketingTicketResponse res = sdk.ticket.createTicketingTicket(req);
@@ -104,7 +107,11 @@ public class Application {
                 }})
                 .build();
 
-            GetTicketingTicketRequest req = new GetTicketingTicketRequest("Dollar", "Alaska");            
+            GetTicketingTicketRequest req = new GetTicketingTicketRequest("Dollar", "Alaska"){{
+                fields = new String[]{{
+                    add("Planner"),
+                }};
+            }};            
 
             GetTicketingTicketResponse res = sdk.ticket.getTicketingTicket(req);
 
@@ -157,12 +164,15 @@ public class Application {
             ListTicketingTicketsRequest req = new ListTicketingTicketsRequest("archive"){{
                 agentId = "invoice shyly Awesome";
                 customerId = "Orchestrator Unbranded";
-                limit = 2038.67d;
-                offset = 4219.01d;
-                order = "analyzer enshroud Coconut";
-                query = "Rial";
-                sort = "Books";
-                updatedGte = OffsetDateTime.parse("2022-01-12T23:51:37.173Z");
+                fields = new String[]{{
+                    add("Table"),
+                }};
+                limit = 8170.02d;
+                offset = 3853.32d;
+                order = "enshroud";
+                query = "Health";
+                sort = "Rial";
+                updatedGte = OffsetDateTime.parse("2021-05-31T04:01:57.661Z");
             }};            
 
             ListTicketingTicketsResponse res = sdk.ticket.listTicketingTickets(req);
@@ -233,6 +243,9 @@ public class Application {
                         add("aha"),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-05-21T12:19:00.995Z");
+                }};
+                fields = new String[]{{
+                    add("Health"),
                 }};
             }};            
 
@@ -353,6 +366,9 @@ public class Application {
                         add("static"),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-12-26T18:35:36.989Z");
+                }};
+                fields = new String[]{{
+                    add("intensely"),
                 }};
             }};            
 

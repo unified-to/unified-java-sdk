@@ -48,6 +48,9 @@ public class Application {
                         add("Northwest"),
                     }};
                 }};
+                fields = new String[]{{
+                    add("tow"),
+                }};
             }};            
 
             CreateCrmTeamResponse res = sdk.team.createCrmTeam(req);
@@ -97,7 +100,11 @@ public class Application {
                 }})
                 .build();
 
-            GetCrmTeamRequest req = new GetCrmTeamRequest("Outdoors", "Armenia");            
+            GetCrmTeamRequest req = new GetCrmTeamRequest("Outdoors", "Armenia"){{
+                fields = new String[]{{
+                    add("female"),
+                }};
+            }};            
 
             GetCrmTeamResponse res = sdk.team.getCrmTeam(req);
 
@@ -148,12 +155,15 @@ public class Application {
                 .build();
 
             ListCrmTeamsRequest req = new ListCrmTeamsRequest("microchip"){{
-                limit = 2537.47d;
-                offset = 2305.88d;
-                order = "Folk Direct conglomeration";
-                query = "brand becquerel audit";
-                sort = "Buckinghamshire Berkshire";
-                updatedGte = OffsetDateTime.parse("2022-08-22T07:37:51.566Z");
+                fields = new String[]{{
+                    add("Wooden"),
+                }};
+                limit = 7301.3d;
+                offset = 5943.38d;
+                order = "Direct";
+                query = "Oriental brand";
+                sort = "Principal Fluorine haptic";
+                updatedGte = OffsetDateTime.parse("2021-08-13T09:26:41.977Z");
             }};            
 
             ListCrmTeamsResponse res = sdk.team.listCrmTeams(req);
@@ -217,6 +227,9 @@ public class Application {
                     userIds = new String[]{{
                         add("convergence"),
                     }};
+                }};
+                fields = new String[]{{
+                    add("Country"),
                 }};
             }};            
 
@@ -330,6 +343,9 @@ public class Application {
                     userIds = new String[]{{
                         add("orchid"),
                     }};
+                }};
+                fields = new String[]{{
+                    add("West"),
                 }};
             }};            
 

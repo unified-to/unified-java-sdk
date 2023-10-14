@@ -29,6 +29,17 @@ public class UpdateHrisGroupRequest {
     }
     
     /**
+     * Comma-delimited fields to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String[] fields;
+
+    public UpdateHrisGroupRequest withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
      * ID of the Group
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")

@@ -32,6 +32,17 @@ public class CreateMartechMemberRequest {
     }
     
     /**
+     * Comma-delimited fields to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String[] fields;
+
+    public CreateMartechMemberRequest withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
      * ID of the list
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=list_id")

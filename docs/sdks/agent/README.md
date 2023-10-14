@@ -58,6 +58,9 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2023-10-21T20:56:48.294Z");
                 }};
+                fields = new String[]{{
+                    add("Electric"),
+                }};
             }};            
 
             CreateTicketingAgentResponse res = sdk.agent.createTicketingAgent(req);
@@ -107,7 +110,11 @@ public class Application {
                 }})
                 .build();
 
-            GetTicketingAgentRequest req = new GetTicketingAgentRequest("connect", "Intersex");            
+            GetTicketingAgentRequest req = new GetTicketingAgentRequest("connect", "Intersex"){{
+                fields = new String[]{{
+                    add("kindness"),
+                }};
+            }};            
 
             GetTicketingAgentResponse res = sdk.agent.getTicketingAgent(req);
 
@@ -158,9 +165,12 @@ public class Application {
                 .build();
 
             ListTicketingAgentsRequest req = new ListTicketingAgentsRequest("Corporate"){{
-                limit = 3027.97d;
-                offset = 3254.85d;
-                order = "Books South";
+                fields = new String[]{{
+                    add("monetize"),
+                }};
+                limit = 6003.65d;
+                offset = 1931.45d;
+                order = "South";
                 query = "Investment World Small";
                 sort = "kelvin";
                 updatedGte = OffsetDateTime.parse("2023-09-24T13:03:50.991Z");
@@ -216,10 +226,13 @@ public class Application {
 
             ListUcAgentsRequest req = new ListUcAgentsRequest("huzzah"){{
                 contactId = "hedgehog Awesome";
-                limit = 5908.79d;
-                offset = 67.08d;
-                order = "Producer Classical Electric";
-                query = "Wyoming Analyst beside";
+                fields = new String[]{{
+                    add("Rock"),
+                }};
+                limit = 8708.31d;
+                offset = 6888.79d;
+                order = "Classical Electric aboard";
+                query = "Analyst beside harmonious";
                 sort = "Innovative male hierarchy";
                 updatedGte = OffsetDateTime.parse("2021-02-24T03:25:44.788Z");
             }};            
@@ -294,6 +307,9 @@ public class Application {
                         }}),
                     }};
                     updatedAt = OffsetDateTime.parse("2021-06-19T13:45:09.457Z");
+                }};
+                fields = new String[]{{
+                    add("reinvent"),
                 }};
             }};            
 
@@ -416,6 +432,9 @@ public class Application {
                         }}),
                     }};
                     updatedAt = OffsetDateTime.parse("2021-03-23T14:40:54.013Z");
+                }};
+                fields = new String[]{{
+                    add("near"),
                 }};
             }};            
 

@@ -29,6 +29,17 @@ public class ListUcContactsRequest {
         return this;
     }
     
+    /**
+     * Comma-delimited fields to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String[] fields;
+
+    public ListUcContactsRequest withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
+    
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Double limit;
 

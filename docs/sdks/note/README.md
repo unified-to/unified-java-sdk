@@ -45,6 +45,9 @@ public class Application {
                     id = "<ID>";
                     updatedAt = "Underpass Cambridgeshire";
                 }};
+                fields = new String[]{{
+                    add("Generic"),
+                }};
             }};            
 
             CreateTicketingNoteResponse res = sdk.note.createTicketingNote(req);
@@ -94,7 +97,11 @@ public class Application {
                 }})
                 .build();
 
-            GetTicketingNoteRequest req = new GetTicketingNoteRequest("intranet", "Fresh", "Fitness");            
+            GetTicketingNoteRequest req = new GetTicketingNoteRequest("intranet", "Fresh", "Fitness"){{
+                fields = new String[]{{
+                    add("Applications"),
+                }};
+            }};            
 
             GetTicketingNoteResponse res = sdk.note.getTicketingNote(req);
 
@@ -145,12 +152,15 @@ public class Application {
                 .build();
 
             ListTicketingNotesRequest req = new ListTicketingNotesRequest("because", "Zimbabwe"){{
-                limit = 4262.61d;
-                offset = 2323.04d;
-                order = "Bicycle";
-                query = "Ford";
-                sort = "henry loudly complexity";
-                updatedGte = OffsetDateTime.parse("2022-11-30T16:54:06.786Z");
+                fields = new String[]{{
+                    add("Kroon"),
+                }};
+                limit = 1566.46d;
+                offset = 7692.3d;
+                order = "arrogantly Ford";
+                query = "henry loudly complexity";
+                sort = "ability duh";
+                updatedGte = OffsetDateTime.parse("2021-09-29T21:15:20.624Z");
             }};            
 
             ListTicketingNotesResponse res = sdk.note.listTicketingNotes(req);
@@ -211,6 +221,9 @@ public class Application {
                     description = "Networked multi-state matrix";
                     id = "<ID>";
                     updatedAt = "Cadillac Credit";
+                }};
+                fields = new String[]{{
+                    add("Soap"),
                 }};
             }};            
 
@@ -321,6 +334,9 @@ public class Application {
                     description = "Programmable contextually-based ability";
                     id = "<ID>";
                     updatedAt = "Dynamic nemo sievert";
+                }};
+                fields = new String[]{{
+                    add("firewall"),
                 }};
             }};            
 

@@ -33,6 +33,17 @@ public class ListAtsApplicationsRequest {
     }
     
     /**
+     * Comma-delimited fields to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String[] fields;
+
+    public ListAtsApplicationsRequest withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
      * The job ID to filter results
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=job_id")

@@ -57,6 +57,9 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2023-07-26T05:07:38.623Z");
                 }};
+                fields = new String[]{{
+                    add("Hybrid"),
+                }};
             }};            
 
             CreateMartechMemberResponse res = sdk.member.createMartechMember(req);
@@ -106,7 +109,11 @@ public class Application {
                 }})
                 .build();
 
-            GetMartechMemberRequest req = new GetMartechMemberRequest("orange", "Gibraltar", "Northeast");            
+            GetMartechMemberRequest req = new GetMartechMemberRequest("orange", "Gibraltar", "Northeast"){{
+                fields = new String[]{{
+                    add("Franc"),
+                }};
+            }};            
 
             GetMartechMemberResponse res = sdk.member.getMartechMember(req);
 
@@ -157,9 +164,12 @@ public class Application {
                 .build();
 
             ListMartechMembersRequest req = new ListMartechMembersRequest("structure", "Thallium"){{
-                limit = 2146.36d;
-                offset = 2458.73d;
-                order = "Neither huzzah wireless";
+                fields = new String[]{{
+                    add("Bike"),
+                }};
+                limit = 8667.14d;
+                offset = 6022.21d;
+                order = "huzzah wireless";
                 query = "Loop";
                 sort = "standardise reinvent microchip";
                 updatedGte = OffsetDateTime.parse("2022-12-12T03:36:49.362Z");
@@ -235,6 +245,9 @@ public class Application {
                         add("Regional"),
                     }};
                     updatedAt = OffsetDateTime.parse("2022-02-01T06:57:40.654Z");
+                }};
+                fields = new String[]{{
+                    add("quis"),
                 }};
             }};            
 
@@ -357,6 +370,9 @@ public class Application {
                         add("Computer"),
                     }};
                     updatedAt = OffsetDateTime.parse("2021-09-28T08:50:18.886Z");
+                }};
+                fields = new String[]{{
+                    add("Unbranded"),
                 }};
             }};            
 

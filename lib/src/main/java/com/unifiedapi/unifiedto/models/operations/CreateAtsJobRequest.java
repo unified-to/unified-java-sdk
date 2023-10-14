@@ -31,6 +31,17 @@ public class CreateAtsJobRequest {
         return this;
     }
     
+    /**
+     * Comma-delimited fields to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String[] fields;
+
+    public CreateAtsJobRequest withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
+    
     public CreateAtsJobRequest(@JsonProperty("connection_id") String connectionId) {
         this.connectionId = connectionId;
   }

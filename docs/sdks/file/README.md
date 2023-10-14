@@ -55,6 +55,9 @@ public class Application {
                     updatedAt = OffsetDateTime.parse("2022-09-17T10:16:03.549Z");
                     userId = "mobile firewall salmon";
                 }};
+                fields = new String[]{{
+                    add("voluptas"),
+                }};
             }};            
 
             CreateCrmFileResponse res = sdk.file.createCrmFile(req);
@@ -104,7 +107,11 @@ public class Application {
                 }})
                 .build();
 
-            GetCrmFileRequest req = new GetCrmFileRequest("sexy", "Southeast");            
+            GetCrmFileRequest req = new GetCrmFileRequest("sexy", "Southeast"){{
+                fields = new String[]{{
+                    add("lightly"),
+                }};
+            }};            
 
             GetCrmFileResponse res = sdk.file.getCrmFile(req);
 
@@ -158,9 +165,12 @@ public class Application {
                 companyId = "Paradigm";
                 contactId = "invoice hertz";
                 dealId = "SUV Carbon";
-                limit = 9242.75d;
-                offset = 824.64d;
-                order = "Gorgeous olive";
+                fields = new String[]{{
+                    add("blah"),
+                }};
+                limit = 4750.59d;
+                offset = 2265.7d;
+                order = "olive";
                 query = "suite Checking";
                 sort = "SUV";
                 updatedGte = OffsetDateTime.parse("2021-11-26T17:23:51.411Z");
@@ -234,6 +244,9 @@ public class Application {
                     raw = new PropertyCrmFileRaw();
                     updatedAt = OffsetDateTime.parse("2022-11-16T13:24:51.820Z");
                     userId = "corrupti withdrawal Diesel";
+                }};
+                fields = new String[]{{
+                    add("Consultant"),
                 }};
             }};            
 
@@ -354,6 +367,9 @@ public class Application {
                     raw = new PropertyCrmFileRaw();
                     updatedAt = OffsetDateTime.parse("2021-08-04T14:31:18.269Z");
                     userId = "UTF8";
+                }};
+                fields = new String[]{{
+                    add("Granite"),
                 }};
             }};            
 

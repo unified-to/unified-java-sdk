@@ -28,6 +28,17 @@ public class CreateCrmLeadRequest {
         return this;
     }
     
+    /**
+     * Comma-delimited fields to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String[] fields;
+
+    public CreateCrmLeadRequest withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
+    
     public CreateCrmLeadRequest(@JsonProperty("connection_id") String connectionId) {
         this.connectionId = connectionId;
   }

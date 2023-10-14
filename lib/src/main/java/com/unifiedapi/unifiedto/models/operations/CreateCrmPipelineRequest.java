@@ -28,6 +28,17 @@ public class CreateCrmPipelineRequest {
         return this;
     }
     
+    /**
+     * Comma-delimited fields to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String[] fields;
+
+    public CreateCrmPipelineRequest withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
+    
     public CreateCrmPipelineRequest(@JsonProperty("connection_id") String connectionId) {
         this.connectionId = connectionId;
   }

@@ -32,6 +32,17 @@ public class PatchCrmDealRequest {
     }
     
     /**
+     * Comma-delimited fields to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String[] fields;
+
+    public PatchCrmDealRequest withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
      * ID of the Deal
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")

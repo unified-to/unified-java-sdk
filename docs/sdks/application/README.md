@@ -51,6 +51,9 @@ public class Application {
                     status = AtsApplicationStatus.SCREENING;
                     updatedAt = OffsetDateTime.parse("2023-04-20T12:32:42.371Z");
                 }};
+                fields = new String[]{{
+                    add("Dakota"),
+                }};
             }};            
 
             CreateAtsApplicationResponse res = sdk.application.createAtsApplication(req);
@@ -100,7 +103,11 @@ public class Application {
                 }})
                 .build();
 
-            GetAtsApplicationRequest req = new GetAtsApplicationRequest("Key", "navigate");            
+            GetAtsApplicationRequest req = new GetAtsApplicationRequest("Key", "navigate"){{
+                fields = new String[]{{
+                    add("Ergonomic"),
+                }};
+            }};            
 
             GetAtsApplicationResponse res = sdk.application.getAtsApplication(req);
 
@@ -152,7 +159,10 @@ public class Application {
 
             ListAtsApplicationsRequest req = new ListAtsApplicationsRequest("models"){{
                 candidateId = "secrecy withdrawal Springs";
-                jobId = "Convertible solutions";
+                fields = new String[]{{
+                    add("Blues"),
+                }};
+                jobId = "solutions";
                 limit = 1330.66d;
                 offset = 5248.28d;
                 order = "Kazakhstan";
@@ -225,6 +235,9 @@ public class Application {
                     source = "Irving Generic Buckinghamshire";
                     status = AtsApplicationStatus.REVIEWING;
                     updatedAt = OffsetDateTime.parse("2022-04-27T14:23:51.358Z");
+                }};
+                fields = new String[]{{
+                    add("Idaho"),
                 }};
             }};            
 
@@ -341,6 +354,9 @@ public class Application {
                     source = "once";
                     status = AtsApplicationStatus.REVIEWING;
                     updatedAt = OffsetDateTime.parse("2023-03-09T13:28:46.094Z");
+                }};
+                fields = new String[]{{
+                    add("Books"),
                 }};
             }};            
 

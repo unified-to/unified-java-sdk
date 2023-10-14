@@ -44,6 +44,17 @@ public class ListAtsScorecardsRequest {
     }
     
     /**
+     * Comma-delimited fields to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String[] fields;
+
+    public ListAtsScorecardsRequest withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
      * The interview ID to filter results
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interview_id")

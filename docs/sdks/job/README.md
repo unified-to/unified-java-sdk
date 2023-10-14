@@ -76,6 +76,9 @@ public class Application {
                     status = AtsJobStatus.CLOSED;
                     updatedAt = OffsetDateTime.parse("2023-07-13T17:13:15.823Z");
                 }};
+                fields = new String[]{{
+                    add("sensor"),
+                }};
             }};            
 
             CreateAtsJobResponse res = sdk.job.createAtsJob(req);
@@ -125,7 +128,11 @@ public class Application {
                 }})
                 .build();
 
-            GetAtsJobRequest req = new GetAtsJobRequest("panel", "meh");            
+            GetAtsJobRequest req = new GetAtsJobRequest("panel", "meh"){{
+                fields = new String[]{{
+                    add("Martin"),
+                }};
+            }};            
 
             GetAtsJobResponse res = sdk.job.getAtsJob(req);
 
@@ -176,12 +183,15 @@ public class Application {
                 .build();
 
             ListAtsJobsRequest req = new ListAtsJobsRequest("Praseodymium"){{
-                limit = 7427.26d;
-                offset = 7749.91d;
-                order = "since";
-                query = "Electric";
-                sort = "protocol radian North";
-                updatedGte = OffsetDateTime.parse("2023-12-14T14:22:49.080Z");
+                fields = new String[]{{
+                    add("steradian"),
+                }};
+                limit = 523.86d;
+                offset = 9767.63d;
+                order = "Sports Car Electronic";
+                query = "Architect";
+                sort = "worth hence West";
+                updatedGte = OffsetDateTime.parse("2023-01-20T14:48:58.164Z");
             }};            
 
             ListAtsJobsResponse res = sdk.job.listAtsJobs(req);
@@ -273,6 +283,9 @@ public class Application {
                     remote = false;
                     status = AtsJobStatus.OPEN;
                     updatedAt = OffsetDateTime.parse("2022-10-29T02:53:10.534Z");
+                }};
+                fields = new String[]{{
+                    add("SMTP"),
                 }};
             }};            
 
@@ -414,6 +427,9 @@ public class Application {
                     remote = false;
                     status = AtsJobStatus.CLOSED;
                     updatedAt = OffsetDateTime.parse("2021-07-05T14:57:04.452Z");
+                }};
+                fields = new String[]{{
+                    add("quos"),
                 }};
             }};            
 

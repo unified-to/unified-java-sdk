@@ -29,6 +29,17 @@ public class CreateTicketingNoteRequest {
     }
     
     /**
+     * Comma-delimited fields to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String[] fields;
+
+    public CreateTicketingNoteRequest withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
      * ID of the ticket
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ticket_id")

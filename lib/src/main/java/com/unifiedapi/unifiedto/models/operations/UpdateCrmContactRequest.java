@@ -32,6 +32,17 @@ public class UpdateCrmContactRequest {
     }
     
     /**
+     * Comma-delimited fields to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String[] fields;
+
+    public UpdateCrmContactRequest withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
      * ID of the Contact
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")

@@ -32,12 +32,15 @@ public class Application {
             ListUcCallsRequest req = new ListUcCallsRequest("Cargo"){{
                 agentId = "playfully";
                 contactId = "AGP";
-                limit = 1965.31d;
-                offset = 4663.16d;
-                order = "ubiquitous error denationalise";
-                query = "at";
-                sort = "Money Florida female";
-                updatedGte = OffsetDateTime.parse("2022-10-12T14:01:07.814Z");
+                fields = new String[]{{
+                    add("Health"),
+                }};
+                limit = 8985.18d;
+                offset = 2975.86d;
+                order = "error denationalise Mauritania";
+                query = "female Tools Mouse";
+                sort = "Country";
+                updatedGte = OffsetDateTime.parse("2021-02-06T20:10:12.947Z");
             }};            
 
             ListUcCallsResponse res = sdk.call.listUcCalls(req);

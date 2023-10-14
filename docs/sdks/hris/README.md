@@ -92,6 +92,9 @@ public class Application {
                     title = "payment North";
                     updatedAt = OffsetDateTime.parse("2023-03-05T19:24:43.770Z");
                 }};
+                fields = new String[]{{
+                    add("generally"),
+                }};
             }};            
 
             CreateHrisEmployeeResponse res = sdk.hris.createHrisEmployee(req);
@@ -163,6 +166,9 @@ public class Application {
                     type = HrisGroupType.DEPARTMENT;
                     updatedAt = OffsetDateTime.parse("2022-11-20T16:35:37.465Z");
                 }};
+                fields = new String[]{{
+                    add("SCSI"),
+                }};
             }};            
 
             CreateHrisGroupResponse res = sdk.hris.createHrisGroup(req);
@@ -212,7 +218,11 @@ public class Application {
                 }})
                 .build();
 
-            GetHrisEmployeeRequest req = new GetHrisEmployeeRequest("Afghanistan", "Minivan");            
+            GetHrisEmployeeRequest req = new GetHrisEmployeeRequest("Afghanistan", "Minivan"){{
+                fields = new String[]{{
+                    add("hourly"),
+                }};
+            }};            
 
             GetHrisEmployeeResponse res = sdk.hris.getHrisEmployee(req);
 
@@ -261,7 +271,11 @@ public class Application {
                 }})
                 .build();
 
-            GetHrisGroupRequest req = new GetHrisGroupRequest("while", "Cadillac");            
+            GetHrisGroupRequest req = new GetHrisGroupRequest("while", "Cadillac"){{
+                fields = new String[]{{
+                    add("optical"),
+                }};
+            }};            
 
             GetHrisGroupResponse res = sdk.hris.getHrisGroup(req);
 
@@ -312,9 +326,12 @@ public class Application {
                 .build();
 
             ListHrisEmployeesRequest req = new ListHrisEmployeesRequest("Krona"){{
-                limit = 4462.02d;
-                offset = 6942.29d;
-                order = "hew Lari Cedi";
+                fields = new String[]{{
+                    add("payment"),
+                }};
+                limit = 9587.43d;
+                offset = 9972.64d;
+                order = "Lari Cedi";
                 query = "pug";
                 sort = "SUV";
                 updatedGte = OffsetDateTime.parse("2022-01-13T14:38:18.201Z");
@@ -369,12 +386,15 @@ public class Application {
                 .build();
 
             ListHrisGroupsRequest req = new ListHrisGroupsRequest("however"){{
-                limit = 8700.83d;
-                offset = 6401.41d;
-                order = "utilisation";
-                query = "olive Shores";
-                sort = "Ghana";
-                updatedGte = OffsetDateTime.parse("2023-03-15T19:04:23.954Z");
+                fields = new String[]{{
+                    add("positive"),
+                }};
+                limit = 1929.12d;
+                offset = 3809.99d;
+                order = "portals even Manager";
+                query = "proactive deliverables";
+                sort = "West Plastic transmit";
+                updatedGte = OffsetDateTime.parse("2023-02-19T02:41:06.804Z");
             }};            
 
             ListHrisGroupsResponse res = sdk.hris.listHrisGroups(req);
@@ -477,6 +497,9 @@ public class Application {
                     title = "where instead female";
                     updatedAt = OffsetDateTime.parse("2021-08-30T22:54:54.298Z");
                 }};
+                fields = new String[]{{
+                    add("West"),
+                }};
             }};            
 
             PatchHrisEmployeeResponse res = sdk.hris.patchHrisEmployee(req);
@@ -547,6 +570,9 @@ public class Application {
                     raw = new PropertyHrisGroupRaw();
                     type = HrisGroupType.DIVISION;
                     updatedAt = OffsetDateTime.parse("2023-01-02T08:52:32.014Z");
+                }};
+                fields = new String[]{{
+                    add("gladly"),
                 }};
             }};            
 
@@ -748,6 +774,9 @@ public class Application {
                     title = "male";
                     updatedAt = OffsetDateTime.parse("2021-06-28T03:29:04.540Z");
                 }};
+                fields = new String[]{{
+                    add("Bronze"),
+                }};
             }};            
 
             UpdateHrisEmployeeResponse res = sdk.hris.updateHrisEmployee(req);
@@ -818,6 +847,9 @@ public class Application {
                     raw = new PropertyHrisGroupRaw();
                     type = HrisGroupType.SUB_DEPARTMENT;
                     updatedAt = OffsetDateTime.parse("2023-08-16T02:52:12.983Z");
+                }};
+                fields = new String[]{{
+                    add("Hat"),
                 }};
             }};            
 

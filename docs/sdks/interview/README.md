@@ -55,6 +55,9 @@ public class Application {
                         add("Northeast"),
                     }};
                 }};
+                fields = new String[]{{
+                    add("Sedan"),
+                }};
             }};            
 
             CreateAtsInterviewResponse res = sdk.interview.createAtsInterview(req);
@@ -104,7 +107,11 @@ public class Application {
                 }})
                 .build();
 
-            GetAtsInterviewRequest req = new GetAtsInterviewRequest("programming", "payment");            
+            GetAtsInterviewRequest req = new GetAtsInterviewRequest("programming", "payment"){{
+                fields = new String[]{{
+                    add("katal"),
+                }};
+            }};            
 
             GetAtsInterviewResponse res = sdk.interview.getAtsInterview(req);
 
@@ -156,12 +163,15 @@ public class Application {
 
             ListAtsInterviewsRequest req = new ListAtsInterviewsRequest("Wooden"){{
                 applicationId = "Northeast";
-                limit = 8334.82d;
-                offset = 2371.68d;
-                order = "evolve";
-                query = "jar";
-                sort = "transmitting invoice Music";
-                updatedGte = OffsetDateTime.parse("2022-07-26T04:06:43.451Z");
+                fields = new String[]{{
+                    add("Chrysler"),
+                }};
+                limit = 2991.18d;
+                offset = 3108d;
+                order = "West";
+                query = "Analyst Pickup";
+                sort = "underwriting protocol";
+                updatedGte = OffsetDateTime.parse("2022-07-10T08:55:35.395Z");
             }};            
 
             ListAtsInterviewsResponse res = sdk.interview.listAtsInterviews(req);
@@ -232,6 +242,9 @@ public class Application {
                     userIds = new String[]{{
                         add("wetly"),
                     }};
+                }};
+                fields = new String[]{{
+                    add("modular"),
                 }};
             }};            
 
@@ -352,6 +365,9 @@ public class Application {
                     userIds = new String[]{{
                         add("tensor"),
                     }};
+                }};
+                fields = new String[]{{
+                    add("what"),
                 }};
             }};            
 

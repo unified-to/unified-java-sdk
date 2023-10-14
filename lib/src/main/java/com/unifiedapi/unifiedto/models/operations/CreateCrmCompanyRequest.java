@@ -31,6 +31,17 @@ public class CreateCrmCompanyRequest {
         return this;
     }
     
+    /**
+     * Comma-delimited fields to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String[] fields;
+
+    public CreateCrmCompanyRequest withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
+    
     public CreateCrmCompanyRequest(@JsonProperty("connection_id") String connectionId) {
         this.connectionId = connectionId;
   }

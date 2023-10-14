@@ -72,6 +72,9 @@ public class Application {
                     updatedAt = OffsetDateTime.parse("2021-04-11T02:45:56.928Z");
                     userId = "sky male";
                 }};
+                fields = new String[]{{
+                    add("steradian"),
+                }};
             }};            
 
             CreateCrmLeadResponse res = sdk.lead.createCrmLead(req);
@@ -121,7 +124,11 @@ public class Application {
                 }})
                 .build();
 
-            GetCrmLeadRequest req = new GetCrmLeadRequest("Curium", "Bahamas");            
+            GetCrmLeadRequest req = new GetCrmLeadRequest("Curium", "Bahamas"){{
+                fields = new String[]{{
+                    add("Keyboard"),
+                }};
+            }};            
 
             GetCrmLeadResponse res = sdk.lead.getCrmLead(req);
 
@@ -172,12 +179,15 @@ public class Application {
                 .build();
 
             ListCrmLeadsRequest req = new ListCrmLeadsRequest("dam"){{
-                limit = 4734.01d;
-                offset = 6489.94d;
-                order = "Human applications Program";
-                query = "Agent Automotive";
-                sort = "Electric Plastic";
-                updatedGte = OffsetDateTime.parse("2023-11-17T22:27:19.954Z");
+                fields = new String[]{{
+                    add("SDD"),
+                }};
+                limit = 8343.84d;
+                offset = 6533.73d;
+                order = "applications Program alarm";
+                query = "enthusiastically";
+                sort = "Auto Plastic ultimatum";
+                updatedGte = OffsetDateTime.parse("2023-11-15T21:31:35.896Z");
             }};            
 
             ListCrmLeadsResponse res = sdk.lead.listCrmLeads(req);
@@ -265,6 +275,9 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2021-11-20T08:57:15.653Z");
                     userId = "Shoes magenta";
+                }};
+                fields = new String[]{{
+                    add("violet"),
                 }};
             }};            
 
@@ -402,6 +415,9 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2023-03-27T06:34:53.317Z");
                     userId = "Customer";
+                }};
+                fields = new String[]{{
+                    add("Branding"),
                 }};
             }};            
 

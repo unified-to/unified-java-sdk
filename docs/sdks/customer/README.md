@@ -60,6 +60,9 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2021-07-10T05:40:36.874Z");
                 }};
+                fields = new String[]{{
+                    add("Haiti"),
+                }};
             }};            
 
             CreateTicketingCustomerResponse res = sdk.customer.createTicketingCustomer(req);
@@ -109,7 +112,11 @@ public class Application {
                 }})
                 .build();
 
-            GetTicketingCustomerRequest req = new GetTicketingCustomerRequest("Gloves", "Brand");            
+            GetTicketingCustomerRequest req = new GetTicketingCustomerRequest("Gloves", "Brand"){{
+                fields = new String[]{{
+                    add("Van"),
+                }};
+            }};            
 
             GetTicketingCustomerResponse res = sdk.customer.getTicketingCustomer(req);
 
@@ -160,12 +167,15 @@ public class Application {
                 .build();
 
             ListTicketingCustomersRequest req = new ListTicketingCustomersRequest("Unions"){{
-                limit = 1472.38d;
-                offset = 9384.79d;
-                order = "Folk";
-                query = "Chips JSON";
-                sort = "louse";
-                updatedGte = OffsetDateTime.parse("2023-06-22T18:24:21.846Z");
+                fields = new String[]{{
+                    add("Ferry"),
+                }};
+                limit = 4622.26d;
+                offset = 2110.17d;
+                order = "JSON lavender transmitter";
+                query = "billboard Rial";
+                sort = "Account Bedfordshire Cis";
+                updatedGte = OffsetDateTime.parse("2023-06-22T18:28:19.811Z");
             }};            
 
             ListTicketingCustomersResponse res = sdk.customer.listTicketingCustomers(req);
@@ -241,6 +251,9 @@ public class Application {
                         }}),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-04-21T14:41:05.293Z");
+                }};
+                fields = new String[]{{
+                    add("Iceland"),
                 }};
             }};            
 
@@ -366,6 +379,9 @@ public class Application {
                         }}),
                     }};
                     updatedAt = OffsetDateTime.parse("2022-04-11T11:07:01.811Z");
+                }};
+                fields = new String[]{{
+                    add("Fiat"),
                 }};
             }};            
 

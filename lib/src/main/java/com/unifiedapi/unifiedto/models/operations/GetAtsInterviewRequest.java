@@ -21,6 +21,17 @@ public class GetAtsInterviewRequest {
     }
     
     /**
+     * Comma-delimited fields to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String[] fields;
+
+    public GetAtsInterviewRequest withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
      * ID of the Interview
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")

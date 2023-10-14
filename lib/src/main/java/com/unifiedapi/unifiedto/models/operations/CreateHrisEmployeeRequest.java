@@ -28,6 +28,17 @@ public class CreateHrisEmployeeRequest {
         return this;
     }
     
+    /**
+     * Comma-delimited fields to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String[] fields;
+
+    public CreateHrisEmployeeRequest withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
+    
     public CreateHrisEmployeeRequest(@JsonProperty("connection_id") String connectionId) {
         this.connectionId = connectionId;
   }

@@ -29,6 +29,17 @@ public class UpdateCrmFileRequest {
     }
     
     /**
+     * Comma-delimited fields to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String[] fields;
+
+    public UpdateCrmFileRequest withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
      * ID of the File
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")

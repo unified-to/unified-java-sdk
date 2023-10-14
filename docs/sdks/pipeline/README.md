@@ -47,6 +47,9 @@ public class Application {
                     raw = new PropertyCrmPipelineRaw();
                     updatedAt = OffsetDateTime.parse("2021-05-19T19:45:21.711Z");
                 }};
+                fields = new String[]{{
+                    add("West"),
+                }};
             }};            
 
             CreateCrmPipelineResponse res = sdk.pipeline.createCrmPipeline(req);
@@ -96,7 +99,11 @@ public class Application {
                 }})
                 .build();
 
-            GetCrmPipelineRequest req = new GetCrmPipelineRequest("online", "boliviano");            
+            GetCrmPipelineRequest req = new GetCrmPipelineRequest("online", "boliviano"){{
+                fields = new String[]{{
+                    add("evolve"),
+                }};
+            }};            
 
             GetCrmPipelineResponse res = sdk.pipeline.getCrmPipeline(req);
 
@@ -147,9 +154,12 @@ public class Application {
                 .build();
 
             ListCrmPipelinesRequest req = new ListCrmPipelinesRequest("Concrete"){{
-                limit = 7450.66d;
-                offset = 5820.53d;
-                order = "majestically mobile generate";
+                fields = new String[]{{
+                    add("tesla"),
+                }};
+                limit = 6683.61d;
+                offset = 8826.41d;
+                order = "mobile generate";
                 query = "female National";
                 sort = "Buckinghamshire Bedfordshire";
                 updatedGte = OffsetDateTime.parse("2021-12-10T20:55:53.457Z");
@@ -215,6 +225,9 @@ public class Application {
                     name = "Lead Operative";
                     raw = new PropertyCrmPipelineRaw();
                     updatedAt = OffsetDateTime.parse("2021-10-29T04:39:52.787Z");
+                }};
+                fields = new String[]{{
+                    add("poorly"),
                 }};
             }};            
 
@@ -327,6 +340,9 @@ public class Application {
                     name = "Configuration Minivan";
                     raw = new PropertyCrmPipelineRaw();
                     updatedAt = OffsetDateTime.parse("2021-01-09T13:17:28.520Z");
+                }};
+                fields = new String[]{{
+                    add("Smart"),
                 }};
             }};            
 

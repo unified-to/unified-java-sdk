@@ -29,6 +29,17 @@ public class PatchTicketingCustomerRequest {
     }
     
     /**
+     * Comma-delimited fields to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String[] fields;
+
+    public PatchTicketingCustomerRequest withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
      * ID of the Customer
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")

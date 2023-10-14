@@ -88,6 +88,9 @@ public class Application {
                     type = CrmEventType.CALL;
                     updatedAt = OffsetDateTime.parse("2021-03-02T15:18:14.793Z");
                 }};
+                fields = new String[]{{
+                    add("productivity"),
+                }};
             }};            
 
             CreateCrmEventResponse res = sdk.event.createCrmEvent(req);
@@ -137,7 +140,11 @@ public class Application {
                 }})
                 .build();
 
-            GetCrmEventRequest req = new GetCrmEventRequest("Ergonomic", "Director");            
+            GetCrmEventRequest req = new GetCrmEventRequest("Ergonomic", "Director"){{
+                fields = new String[]{{
+                    add("comics"),
+                }};
+            }};            
 
             GetCrmEventResponse res = sdk.event.getCrmEvent(req);
 
@@ -191,12 +198,15 @@ public class Application {
                 companyId = "payment Female Checking";
                 contactId = "pascal";
                 dealId = "Senior Executive warmly";
-                limit = 3159.73d;
-                offset = 1427.26d;
-                order = "Borders proffer";
-                query = "Road";
-                sort = "Tasty";
-                updatedGte = OffsetDateTime.parse("2023-04-23T19:45:04.750Z");
+                fields = new String[]{{
+                    add("enable"),
+                }};
+                limit = 3340.43d;
+                offset = 600.97d;
+                order = "proffer ivory";
+                query = "Altoona Tasty Optimized";
+                sort = "mesh Hatchback";
+                updatedGte = OffsetDateTime.parse("2023-04-21T04:36:34.688Z");
             }};            
 
             ListCrmEventsResponse res = sdk.event.listCrmEvents(req);
@@ -300,6 +310,9 @@ public class Application {
                     }};
                     type = CrmEventType.CALL;
                     updatedAt = OffsetDateTime.parse("2021-06-15T11:47:58.504Z");
+                }};
+                fields = new String[]{{
+                    add("DeKalb"),
                 }};
             }};            
 
@@ -453,6 +466,9 @@ public class Application {
                     }};
                     type = CrmEventType.MEETING;
                     updatedAt = OffsetDateTime.parse("2023-10-23T02:58:57.471Z");
+                }};
+                fields = new String[]{{
+                    add("Minivan"),
                 }};
             }};            
 

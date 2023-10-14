@@ -5,7 +5,6 @@
 package com.unifiedapi.unifiedto.models.operations;
 
 import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
-import java.time.OffsetDateTime;
 
 
 public class ListUnifiedIntegrationsRequest {
@@ -28,6 +27,14 @@ public class ListUnifiedIntegrationsRequest {
 
     public ListUnifiedIntegrationsRequest withCategories(ListUnifiedIntegrationsCategories[] categories) {
         this.categories = categories;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=env")
+    public String env;
+
+    public ListUnifiedIntegrationsRequest withEnv(String env) {
+        this.env = env;
         return this;
     }
     
@@ -71,13 +78,10 @@ public class ListUnifiedIntegrationsRequest {
         return this;
     }
     
-    /**
-     * Return only results whose updated date is equal or greater to this value
-     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
-    public OffsetDateTime updatedGte;
+    public String updatedGte;
 
-    public ListUnifiedIntegrationsRequest withUpdatedGte(OffsetDateTime updatedGte) {
+    public ListUnifiedIntegrationsRequest withUpdatedGte(String updatedGte) {
         this.updatedGte = updatedGte;
         return this;
     }
