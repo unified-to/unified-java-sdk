@@ -92,9 +92,6 @@ public class Application {
                     title = "payment North";
                     updatedAt = OffsetDateTime.parse("2023-03-05T19:24:43.770Z");
                 }};
-                fields = new String[]{{
-                    add("generally"),
-                }};
             }};            
 
             CreateHrisEmployeeResponse res = sdk.hris.createHrisEmployee(req);
@@ -165,9 +162,6 @@ public class Application {
                     raw = new PropertyHrisGroupRaw();
                     type = HrisGroupType.DEPARTMENT;
                     updatedAt = OffsetDateTime.parse("2022-11-20T16:35:37.465Z");
-                }};
-                fields = new String[]{{
-                    add("SCSI"),
                 }};
             }};            
 
@@ -497,9 +491,6 @@ public class Application {
                     title = "where instead female";
                     updatedAt = OffsetDateTime.parse("2021-08-30T22:54:54.298Z");
                 }};
-                fields = new String[]{{
-                    add("West"),
-                }};
             }};            
 
             PatchHrisEmployeeResponse res = sdk.hris.patchHrisEmployee(req);
@@ -570,9 +561,6 @@ public class Application {
                     raw = new PropertyHrisGroupRaw();
                     type = HrisGroupType.DIVISION;
                     updatedAt = OffsetDateTime.parse("2023-01-02T08:52:32.014Z");
-                }};
-                fields = new String[]{{
-                    add("gladly"),
                 }};
             }};            
 
@@ -774,9 +762,6 @@ public class Application {
                     title = "male";
                     updatedAt = OffsetDateTime.parse("2021-06-28T03:29:04.540Z");
                 }};
-                fields = new String[]{{
-                    add("Bronze"),
-                }};
             }};            
 
             UpdateHrisEmployeeResponse res = sdk.hris.updateHrisEmployee(req);
@@ -847,9 +832,6 @@ public class Application {
                     raw = new PropertyHrisGroupRaw();
                     type = HrisGroupType.SUB_DEPARTMENT;
                     updatedAt = OffsetDateTime.parse("2023-08-16T02:52:12.983Z");
-                }};
-                fields = new String[]{{
-                    add("Hat"),
                 }};
             }};            
 

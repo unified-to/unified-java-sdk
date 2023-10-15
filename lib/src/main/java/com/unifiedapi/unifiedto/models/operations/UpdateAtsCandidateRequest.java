@@ -32,17 +32,6 @@ public class UpdateAtsCandidateRequest {
     }
     
     /**
-     * Comma-delimited fields to return
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    public String[] fields;
-
-    public UpdateAtsCandidateRequest withFields(String[] fields) {
-        this.fields = fields;
-        return this;
-    }
-    
-    /**
      * ID of the Candidate
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")

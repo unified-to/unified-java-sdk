@@ -55,9 +55,6 @@ public class Application {
                     type = HrisGroupType.DEPARTMENT;
                     updatedAt = OffsetDateTime.parse("2022-11-20T16:35:37.465Z");
                 }};
-                fields = new String[]{{
-                    add("SCSI"),
-                }};
             }};            
 
             CreateHrisGroupResponse res = sdk.group.createHrisGroup(req);
@@ -242,9 +239,6 @@ public class Application {
                     type = HrisGroupType.DIVISION;
                     updatedAt = OffsetDateTime.parse("2023-01-02T08:52:32.014Z");
                 }};
-                fields = new String[]{{
-                    add("gladly"),
-                }};
             }};            
 
             PatchHrisGroupResponse res = sdk.group.patchHrisGroup(req);
@@ -364,9 +358,6 @@ public class Application {
                     raw = new PropertyHrisGroupRaw();
                     type = HrisGroupType.SUB_DEPARTMENT;
                     updatedAt = OffsetDateTime.parse("2023-08-16T02:52:12.983Z");
-                }};
-                fields = new String[]{{
-                    add("Hat"),
                 }};
             }};            
 

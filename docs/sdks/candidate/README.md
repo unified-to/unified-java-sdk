@@ -76,9 +76,6 @@ public class Application {
                     title = "composite Folk";
                     updatedAt = OffsetDateTime.parse("2023-07-21T12:53:25.440Z");
                 }};
-                fields = new String[]{{
-                    add("Brand"),
-                }};
             }};            
 
             CreateAtsCandidateResponse res = sdk.candidate.createAtsCandidate(req);
@@ -284,9 +281,6 @@ public class Application {
                     title = "Fish Home Dobra";
                     updatedAt = OffsetDateTime.parse("2021-11-22T04:10:17.899Z");
                 }};
-                fields = new String[]{{
-                    add("empower"),
-                }};
             }};            
 
             PatchAtsCandidateResponse res = sdk.candidate.patchAtsCandidate(req);
@@ -427,9 +421,6 @@ public class Application {
                     }};
                     title = "parsing";
                     updatedAt = OffsetDateTime.parse("2023-12-10T21:26:35.636Z");
-                }};
-                fields = new String[]{{
-                    add("synthesize"),
                 }};
             }};            
 

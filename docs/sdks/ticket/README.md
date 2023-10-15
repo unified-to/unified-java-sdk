@@ -55,9 +55,6 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2022-01-02T22:21:38.124Z");
                 }};
-                fields = new String[]{{
-                    add("superficial"),
-                }};
             }};            
 
             CreateTicketingTicketResponse res = sdk.ticket.createTicketingTicket(req);
@@ -244,9 +241,6 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2023-05-21T12:19:00.995Z");
                 }};
-                fields = new String[]{{
-                    add("Health"),
-                }};
             }};            
 
             PatchTicketingTicketResponse res = sdk.ticket.patchTicketingTicket(req);
@@ -366,9 +360,6 @@ public class Application {
                         add("static"),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-12-26T18:35:36.989Z");
-                }};
-                fields = new String[]{{
-                    add("intensely"),
                 }};
             }};            
 

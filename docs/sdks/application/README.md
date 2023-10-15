@@ -51,9 +51,6 @@ public class Application {
                     status = AtsApplicationStatus.SCREENING;
                     updatedAt = OffsetDateTime.parse("2023-04-20T12:32:42.371Z");
                 }};
-                fields = new String[]{{
-                    add("Dakota"),
-                }};
             }};            
 
             CreateAtsApplicationResponse res = sdk.application.createAtsApplication(req);
@@ -236,9 +233,6 @@ public class Application {
                     status = AtsApplicationStatus.REVIEWING;
                     updatedAt = OffsetDateTime.parse("2022-04-27T14:23:51.358Z");
                 }};
-                fields = new String[]{{
-                    add("Idaho"),
-                }};
             }};            
 
             PatchAtsApplicationResponse res = sdk.application.patchAtsApplication(req);
@@ -354,9 +348,6 @@ public class Application {
                     source = "once";
                     status = AtsApplicationStatus.REVIEWING;
                     updatedAt = OffsetDateTime.parse("2023-03-09T13:28:46.094Z");
-                }};
-                fields = new String[]{{
-                    add("Books"),
                 }};
             }};            
 

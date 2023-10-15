@@ -55,9 +55,6 @@ public class Application {
                     updatedAt = OffsetDateTime.parse("2022-09-17T10:16:03.549Z");
                     userId = "mobile firewall salmon";
                 }};
-                fields = new String[]{{
-                    add("voluptas"),
-                }};
             }};            
 
             CreateCrmFileResponse res = sdk.file.createCrmFile(req);
@@ -245,9 +242,6 @@ public class Application {
                     updatedAt = OffsetDateTime.parse("2022-11-16T13:24:51.820Z");
                     userId = "corrupti withdrawal Diesel";
                 }};
-                fields = new String[]{{
-                    add("Consultant"),
-                }};
             }};            
 
             PatchCrmFileResponse res = sdk.file.patchCrmFile(req);
@@ -367,9 +361,6 @@ public class Application {
                     raw = new PropertyCrmFileRaw();
                     updatedAt = OffsetDateTime.parse("2021-08-04T14:31:18.269Z");
                     userId = "UTF8";
-                }};
-                fields = new String[]{{
-                    add("Granite"),
                 }};
             }};            
 

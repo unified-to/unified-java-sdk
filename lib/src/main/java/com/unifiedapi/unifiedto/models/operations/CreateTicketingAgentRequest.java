@@ -28,17 +28,6 @@ public class CreateTicketingAgentRequest {
         return this;
     }
     
-    /**
-     * Comma-delimited fields to return
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    public String[] fields;
-
-    public CreateTicketingAgentRequest withFields(String[] fields) {
-        this.fields = fields;
-        return this;
-    }
-    
     public CreateTicketingAgentRequest(@JsonProperty("connection_id") String connectionId) {
         this.connectionId = connectionId;
   }

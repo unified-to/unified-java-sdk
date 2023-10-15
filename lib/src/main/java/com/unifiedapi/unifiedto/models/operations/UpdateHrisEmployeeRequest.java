@@ -29,17 +29,6 @@ public class UpdateHrisEmployeeRequest {
     }
     
     /**
-     * Comma-delimited fields to return
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    public String[] fields;
-
-    public UpdateHrisEmployeeRequest withFields(String[] fields) {
-        this.fields = fields;
-        return this;
-    }
-    
-    /**
      * ID of the Employee
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")

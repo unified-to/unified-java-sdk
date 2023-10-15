@@ -50,9 +50,6 @@ public class Application {
                     raw = new PropertyMarketingListRaw();
                     updatedAt = OffsetDateTime.parse("2022-06-21T04:01:59.310Z");
                 }};
-                fields = new String[]{{
-                    add("once"),
-                }};
             }};            
 
             CreateMartechListResponse res = sdk.martech.createMartechList(req);
@@ -125,9 +122,6 @@ public class Application {
                         add("Buckinghamshire"),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-07-26T05:07:38.623Z");
-                }};
-                fields = new String[]{{
-                    add("Hybrid"),
                 }};
             }};            
 
@@ -415,9 +409,6 @@ public class Application {
                     raw = new PropertyMarketingListRaw();
                     updatedAt = OffsetDateTime.parse("2022-07-15T21:19:00.293Z");
                 }};
-                fields = new String[]{{
-                    add("Health"),
-                }};
             }};            
 
             PatchMartechListResponse res = sdk.martech.patchMartechList(req);
@@ -490,9 +481,6 @@ public class Application {
                         add("Regional"),
                     }};
                     updatedAt = OffsetDateTime.parse("2022-02-01T06:57:40.654Z");
-                }};
-                fields = new String[]{{
-                    add("quis"),
                 }};
             }};            
 
@@ -652,9 +640,6 @@ public class Application {
                     raw = new PropertyMarketingListRaw();
                     updatedAt = OffsetDateTime.parse("2021-03-28T05:43:12.466Z");
                 }};
-                fields = new String[]{{
-                    add("Bedfordshire"),
-                }};
             }};            
 
             UpdateMartechListResponse res = sdk.martech.updateMartechList(req);
@@ -727,9 +712,6 @@ public class Application {
                         add("Computer"),
                     }};
                     updatedAt = OffsetDateTime.parse("2021-09-28T08:50:18.886Z");
-                }};
-                fields = new String[]{{
-                    add("Unbranded"),
                 }};
             }};            
 

@@ -32,17 +32,6 @@ public class UpdateAtsScorecardRequest {
     }
     
     /**
-     * Comma-delimited fields to return
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    public String[] fields;
-
-    public UpdateAtsScorecardRequest withFields(String[] fields) {
-        this.fields = fields;
-        return this;
-    }
-    
-    /**
      * ID of the Document
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")

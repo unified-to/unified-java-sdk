@@ -31,17 +31,6 @@ public class CreateMartechListRequest {
         return this;
     }
     
-    /**
-     * Comma-delimited fields to return
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    public String[] fields;
-
-    public CreateMartechListRequest withFields(String[] fields) {
-        this.fields = fields;
-        return this;
-    }
-    
     public CreateMartechListRequest(@JsonProperty("connection_id") String connectionId) {
         this.connectionId = connectionId;
   }

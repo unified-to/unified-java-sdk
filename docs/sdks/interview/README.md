@@ -55,9 +55,6 @@ public class Application {
                         add("Northeast"),
                     }};
                 }};
-                fields = new String[]{{
-                    add("Sedan"),
-                }};
             }};            
 
             CreateAtsInterviewResponse res = sdk.interview.createAtsInterview(req);
@@ -243,9 +240,6 @@ public class Application {
                         add("wetly"),
                     }};
                 }};
-                fields = new String[]{{
-                    add("modular"),
-                }};
             }};            
 
             PatchAtsInterviewResponse res = sdk.interview.patchAtsInterview(req);
@@ -365,9 +359,6 @@ public class Application {
                     userIds = new String[]{{
                         add("tensor"),
                     }};
-                }};
-                fields = new String[]{{
-                    add("what"),
                 }};
             }};            
 

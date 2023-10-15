@@ -56,9 +56,6 @@ public class Application {
                     updatedAt = OffsetDateTime.parse("2021-07-10T09:34:06.255Z");
                     wonReason = "calculate Maryland";
                 }};
-                fields = new String[]{{
-                    add("connect"),
-                }};
             }};            
 
             CreateCrmDealResponse res = sdk.deal.createCrmDeal(req);
@@ -246,9 +243,6 @@ public class Application {
                     updatedAt = OffsetDateTime.parse("2021-11-27T11:12:42.357Z");
                     wonReason = "channels second";
                 }};
-                fields = new String[]{{
-                    add("Mercedes"),
-                }};
             }};            
 
             PatchCrmDealResponse res = sdk.deal.patchCrmDeal(req);
@@ -369,9 +363,6 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2021-04-03T08:12:18.698Z");
                     wonReason = "Orchestrator Lamborghini ah";
-                }};
-                fields = new String[]{{
-                    add("Architect"),
                 }};
             }};            
 

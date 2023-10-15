@@ -88,9 +88,6 @@ public class Application {
                     type = CrmEventType.CALL;
                     updatedAt = OffsetDateTime.parse("2021-03-02T15:18:14.793Z");
                 }};
-                fields = new String[]{{
-                    add("productivity"),
-                }};
             }};            
 
             CreateCrmEventResponse res = sdk.event.createCrmEvent(req);
@@ -311,9 +308,6 @@ public class Application {
                     type = CrmEventType.CALL;
                     updatedAt = OffsetDateTime.parse("2021-06-15T11:47:58.504Z");
                 }};
-                fields = new String[]{{
-                    add("DeKalb"),
-                }};
             }};            
 
             PatchCrmEventResponse res = sdk.event.patchCrmEvent(req);
@@ -466,9 +460,6 @@ public class Application {
                     }};
                     type = CrmEventType.MEETING;
                     updatedAt = OffsetDateTime.parse("2023-10-23T02:58:57.471Z");
-                }};
-                fields = new String[]{{
-                    add("Minivan"),
                 }};
             }};            
 

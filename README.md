@@ -12,7 +12,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.7.2'
+implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.7.3'
 ```
 <!-- End SDK Installation -->
 
@@ -58,9 +58,6 @@ public class Application {
                         }}),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-10-21T20:56:48.294Z");
-                }};
-                fields = new String[]{{
-                    add("Electric"),
                 }};
             }};            
 

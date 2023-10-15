@@ -86,9 +86,6 @@ public class Application {
                     title = "payment North";
                     updatedAt = OffsetDateTime.parse("2023-03-05T19:24:43.770Z");
                 }};
-                fields = new String[]{{
-                    add("generally"),
-                }};
             }};            
 
             CreateHrisEmployeeResponse res = sdk.employee.createHrisEmployee(req);
@@ -304,9 +301,6 @@ public class Application {
                     title = "where instead female";
                     updatedAt = OffsetDateTime.parse("2021-08-30T22:54:54.298Z");
                 }};
-                fields = new String[]{{
-                    add("West"),
-                }};
             }};            
 
             PatchHrisEmployeeResponse res = sdk.employee.patchHrisEmployee(req);
@@ -457,9 +451,6 @@ public class Application {
                     terminatedAt = OffsetDateTime.parse("2022-02-01T05:32:53.194Z");
                     title = "male";
                     updatedAt = OffsetDateTime.parse("2021-06-28T03:29:04.540Z");
-                }};
-                fields = new String[]{{
-                    add("Bronze"),
                 }};
             }};            
 

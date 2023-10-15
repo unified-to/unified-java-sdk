@@ -42,9 +42,6 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2023-10-21T20:56:48.294Z");
                 }};
-                fields = new String[]{{
-                    add("Electric"),
-                }};
             }};            
 
             CreateTicketingAgentResponse res = sdk.agent.createTicketingAgent(req);

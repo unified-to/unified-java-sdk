@@ -75,9 +75,6 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2023-10-21T20:56:48.294Z");
                 }};
-                fields = new String[]{{
-                    add("Electric"),
-                }};
             }};            
 
             CreateTicketingAgentResponse res = sdk.ticketing.createTicketingAgent(req);
@@ -154,9 +151,6 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2021-07-10T05:40:36.874Z");
                 }};
-                fields = new String[]{{
-                    add("Haiti"),
-                }};
             }};            
 
             CreateTicketingCustomerResponse res = sdk.ticketing.createTicketingCustomer(req);
@@ -217,9 +211,6 @@ public class Application {
                     description = "Open-source secondary toolset";
                     id = "<ID>";
                     updatedAt = "Underpass Cambridgeshire";
-                }};
-                fields = new String[]{{
-                    add("Generic"),
                 }};
             }};            
 
@@ -291,9 +282,6 @@ public class Application {
                         add("mmm"),
                     }};
                     updatedAt = OffsetDateTime.parse("2022-01-02T22:21:38.124Z");
-                }};
-                fields = new String[]{{
-                    add("superficial"),
                 }};
             }};            
 
@@ -822,9 +810,6 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2021-06-19T13:45:09.457Z");
                 }};
-                fields = new String[]{{
-                    add("reinvent"),
-                }};
             }};            
 
             PatchTicketingAgentResponse res = sdk.ticketing.patchTicketingAgent(req);
@@ -901,9 +886,6 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2023-04-21T14:41:05.293Z");
                 }};
-                fields = new String[]{{
-                    add("Iceland"),
-                }};
             }};            
 
             PatchTicketingCustomerResponse res = sdk.ticketing.patchTicketingCustomer(req);
@@ -964,9 +946,6 @@ public class Application {
                     description = "Networked multi-state matrix";
                     id = "<ID>";
                     updatedAt = "Cadillac Credit";
-                }};
-                fields = new String[]{{
-                    add("Soap"),
                 }};
             }};            
 
@@ -1038,9 +1017,6 @@ public class Application {
                         add("aha"),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-05-21T12:19:00.995Z");
-                }};
-                fields = new String[]{{
-                    add("Health"),
                 }};
             }};            
 
@@ -1311,9 +1287,6 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2021-03-23T14:40:54.013Z");
                 }};
-                fields = new String[]{{
-                    add("near"),
-                }};
             }};            
 
             UpdateTicketingAgentResponse res = sdk.ticketing.updateTicketingAgent(req);
@@ -1390,9 +1363,6 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2022-04-11T11:07:01.811Z");
                 }};
-                fields = new String[]{{
-                    add("Fiat"),
-                }};
             }};            
 
             UpdateTicketingCustomerResponse res = sdk.ticketing.updateTicketingCustomer(req);
@@ -1453,9 +1423,6 @@ public class Application {
                     description = "Programmable contextually-based ability";
                     id = "<ID>";
                     updatedAt = "Dynamic nemo sievert";
-                }};
-                fields = new String[]{{
-                    add("firewall"),
                 }};
             }};            
 
@@ -1527,9 +1494,6 @@ public class Application {
                         add("static"),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-12-26T18:35:36.989Z");
-                }};
-                fields = new String[]{{
-                    add("intensely"),
                 }};
             }};            
 

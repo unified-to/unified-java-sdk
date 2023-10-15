@@ -78,9 +78,6 @@ public class Application {
                         add("Benz"),
                     }};
                 }};
-                fields = new String[]{{
-                    add("red"),
-                }};
             }};            
 
             CreateCrmCompanyResponse res = sdk.company.createCrmCompany(req);
@@ -341,9 +338,6 @@ public class Application {
                         add("Palos"),
                     }};
                 }};
-                fields = new String[]{{
-                    add("City"),
-                }};
             }};            
 
             PatchCrmCompanyResponse res = sdk.company.patchCrmCompany(req);
@@ -485,9 +479,6 @@ public class Application {
                     websites = new String[]{{
                         add("Product"),
                     }};
-                }};
-                fields = new String[]{{
-                    add("drat"),
                 }};
             }};            
 

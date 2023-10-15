@@ -125,9 +125,6 @@ public class Application {
                         add("Benz"),
                     }};
                 }};
-                fields = new String[]{{
-                    add("red"),
-                }};
             }};            
 
             CreateCrmCompanyResponse res = sdk.crm.createCrmCompany(req);
@@ -219,9 +216,6 @@ public class Application {
                     title = "Coupe Industrial Won";
                     updatedAt = OffsetDateTime.parse("2021-12-23T10:16:54.912Z");
                 }};
-                fields = new String[]{{
-                    add("Granite"),
-                }};
             }};            
 
             CreateCrmContactResponse res = sdk.crm.createCrmContact(req);
@@ -293,9 +287,6 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2021-07-10T09:34:06.255Z");
                     wonReason = "calculate Maryland";
-                }};
-                fields = new String[]{{
-                    add("connect"),
                 }};
             }};            
 
@@ -401,9 +392,6 @@ public class Application {
                     type = CrmEventType.CALL;
                     updatedAt = OffsetDateTime.parse("2021-03-02T15:18:14.793Z");
                 }};
-                fields = new String[]{{
-                    add("productivity"),
-                }};
             }};            
 
             CreateCrmEventResponse res = sdk.crm.createCrmEvent(req);
@@ -474,9 +462,6 @@ public class Application {
                     raw = new PropertyCrmFileRaw();
                     updatedAt = OffsetDateTime.parse("2022-09-17T10:16:03.549Z");
                     userId = "mobile firewall salmon";
-                }};
-                fields = new String[]{{
-                    add("voluptas"),
                 }};
             }};            
 
@@ -566,9 +551,6 @@ public class Application {
                     updatedAt = OffsetDateTime.parse("2021-04-11T02:45:56.928Z");
                     userId = "sky male";
                 }};
-                fields = new String[]{{
-                    add("steradian"),
-                }};
             }};            
 
             CreateCrmLeadResponse res = sdk.crm.createCrmLead(req);
@@ -631,9 +613,6 @@ public class Application {
                     name = "Bicycle Hatchback Nobelium";
                     raw = new PropertyCrmPipelineRaw();
                     updatedAt = OffsetDateTime.parse("2021-05-19T19:45:21.711Z");
-                }};
-                fields = new String[]{{
-                    add("West"),
                 }};
             }};            
 
@@ -698,9 +677,6 @@ public class Application {
                     userIds = new String[]{{
                         add("Northwest"),
                     }};
-                }};
-                fields = new String[]{{
-                    add("tow"),
                 }};
             }};            
 
@@ -792,9 +768,6 @@ public class Application {
                     timezone = "Asia/Dhaka";
                     title = "violet";
                     updatedAt = OffsetDateTime.parse("2023-12-25T13:02:25.837Z");
-                }};
-                fields = new String[]{{
-                    add("convergence"),
                 }};
             }};            
 
@@ -1918,9 +1891,6 @@ public class Application {
                         add("Palos"),
                     }};
                 }};
-                fields = new String[]{{
-                    add("City"),
-                }};
             }};            
 
             PatchCrmCompanyResponse res = sdk.crm.patchCrmCompany(req);
@@ -2012,9 +1982,6 @@ public class Application {
                     title = "feed navigate";
                     updatedAt = OffsetDateTime.parse("2023-04-18T19:04:11.197Z");
                 }};
-                fields = new String[]{{
-                    add("woman"),
-                }};
             }};            
 
             PatchCrmContactResponse res = sdk.crm.patchCrmContact(req);
@@ -2086,9 +2053,6 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2021-11-27T11:12:42.357Z");
                     wonReason = "channels second";
-                }};
-                fields = new String[]{{
-                    add("Mercedes"),
                 }};
             }};            
 
@@ -2194,9 +2158,6 @@ public class Application {
                     type = CrmEventType.CALL;
                     updatedAt = OffsetDateTime.parse("2021-06-15T11:47:58.504Z");
                 }};
-                fields = new String[]{{
-                    add("DeKalb"),
-                }};
             }};            
 
             PatchCrmEventResponse res = sdk.crm.patchCrmEvent(req);
@@ -2267,9 +2228,6 @@ public class Application {
                     raw = new PropertyCrmFileRaw();
                     updatedAt = OffsetDateTime.parse("2022-11-16T13:24:51.820Z");
                     userId = "corrupti withdrawal Diesel";
-                }};
-                fields = new String[]{{
-                    add("Consultant"),
                 }};
             }};            
 
@@ -2359,9 +2317,6 @@ public class Application {
                     updatedAt = OffsetDateTime.parse("2021-11-20T08:57:15.653Z");
                     userId = "Shoes magenta";
                 }};
-                fields = new String[]{{
-                    add("violet"),
-                }};
             }};            
 
             PatchCrmLeadResponse res = sdk.crm.patchCrmLead(req);
@@ -2424,9 +2379,6 @@ public class Application {
                     name = "Lead Operative";
                     raw = new PropertyCrmPipelineRaw();
                     updatedAt = OffsetDateTime.parse("2021-10-29T04:39:52.787Z");
-                }};
-                fields = new String[]{{
-                    add("poorly"),
                 }};
             }};            
 
@@ -2491,9 +2443,6 @@ public class Application {
                     userIds = new String[]{{
                         add("convergence"),
                     }};
-                }};
-                fields = new String[]{{
-                    add("Country"),
                 }};
             }};            
 
@@ -2585,9 +2534,6 @@ public class Application {
                     timezone = "Europe/Brussels";
                     title = "Agender Bicycle";
                     updatedAt = OffsetDateTime.parse("2023-09-30T00:47:17.388Z");
-                }};
-                fields = new String[]{{
-                    add("variant"),
                 }};
             }};            
 
@@ -3123,9 +3069,6 @@ public class Application {
                         add("Product"),
                     }};
                 }};
-                fields = new String[]{{
-                    add("drat"),
-                }};
             }};            
 
             UpdateCrmCompanyResponse res = sdk.crm.updateCrmCompany(req);
@@ -3217,9 +3160,6 @@ public class Application {
                     title = "Electronics 1080p withdrawal";
                     updatedAt = OffsetDateTime.parse("2023-12-17T06:39:56.020Z");
                 }};
-                fields = new String[]{{
-                    add("candela"),
-                }};
             }};            
 
             UpdateCrmContactResponse res = sdk.crm.updateCrmContact(req);
@@ -3291,9 +3231,6 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2021-04-03T08:12:18.698Z");
                     wonReason = "Orchestrator Lamborghini ah";
-                }};
-                fields = new String[]{{
-                    add("Architect"),
                 }};
             }};            
 
@@ -3399,9 +3336,6 @@ public class Application {
                     type = CrmEventType.MEETING;
                     updatedAt = OffsetDateTime.parse("2023-10-23T02:58:57.471Z");
                 }};
-                fields = new String[]{{
-                    add("Minivan"),
-                }};
             }};            
 
             UpdateCrmEventResponse res = sdk.crm.updateCrmEvent(req);
@@ -3472,9 +3406,6 @@ public class Application {
                     raw = new PropertyCrmFileRaw();
                     updatedAt = OffsetDateTime.parse("2021-08-04T14:31:18.269Z");
                     userId = "UTF8";
-                }};
-                fields = new String[]{{
-                    add("Granite"),
                 }};
             }};            
 
@@ -3564,9 +3495,6 @@ public class Application {
                     updatedAt = OffsetDateTime.parse("2023-03-27T06:34:53.317Z");
                     userId = "Customer";
                 }};
-                fields = new String[]{{
-                    add("Branding"),
-                }};
             }};            
 
             UpdateCrmLeadResponse res = sdk.crm.updateCrmLead(req);
@@ -3629,9 +3557,6 @@ public class Application {
                     name = "Configuration Minivan";
                     raw = new PropertyCrmPipelineRaw();
                     updatedAt = OffsetDateTime.parse("2021-01-09T13:17:28.520Z");
-                }};
-                fields = new String[]{{
-                    add("Smart"),
                 }};
             }};            
 
@@ -3696,9 +3621,6 @@ public class Application {
                     userIds = new String[]{{
                         add("orchid"),
                     }};
-                }};
-                fields = new String[]{{
-                    add("West"),
                 }};
             }};            
 
@@ -3790,9 +3712,6 @@ public class Application {
                     timezone = "Asia/Singapore";
                     title = "hmph connecting Movies";
                     updatedAt = OffsetDateTime.parse("2021-02-07T04:55:02.364Z");
-                }};
-                fields = new String[]{{
-                    add("Berkshire"),
                 }};
             }};            
 

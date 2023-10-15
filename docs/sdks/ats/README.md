@@ -75,9 +75,6 @@ public class Application {
                     status = AtsApplicationStatus.SCREENING;
                     updatedAt = OffsetDateTime.parse("2023-04-20T12:32:42.371Z");
                 }};
-                fields = new String[]{{
-                    add("Dakota"),
-                }};
             }};            
 
             CreateAtsApplicationResponse res = sdk.ats.createAtsApplication(req);
@@ -170,9 +167,6 @@ public class Application {
                     title = "composite Folk";
                     updatedAt = OffsetDateTime.parse("2023-07-21T12:53:25.440Z");
                 }};
-                fields = new String[]{{
-                    add("Brand"),
-                }};
             }};            
 
             CreateAtsCandidateResponse res = sdk.ats.createAtsCandidate(req);
@@ -243,9 +237,6 @@ public class Application {
                     userIds = new String[]{{
                         add("Northeast"),
                     }};
-                }};
-                fields = new String[]{{
-                    add("Sedan"),
                 }};
             }};            
 
@@ -339,9 +330,6 @@ public class Application {
                     status = AtsJobStatus.CLOSED;
                     updatedAt = OffsetDateTime.parse("2023-07-13T17:13:15.823Z");
                 }};
-                fields = new String[]{{
-                    add("sensor"),
-                }};
             }};            
 
             CreateAtsJobResponse res = sdk.ats.createAtsJob(req);
@@ -406,9 +394,6 @@ public class Application {
                     jobId = "Jamaican Russian Quincy";
                     recommendation = AtsScorecardRecommendation.STRONG_YES;
                     updatedAt = OffsetDateTime.parse("2023-11-22T04:56:50.505Z");
-                }};
-                fields = new String[]{{
-                    add("minima"),
                 }};
             }};            
 
@@ -1048,9 +1033,6 @@ public class Application {
                     status = AtsApplicationStatus.REVIEWING;
                     updatedAt = OffsetDateTime.parse("2022-04-27T14:23:51.358Z");
                 }};
-                fields = new String[]{{
-                    add("Idaho"),
-                }};
             }};            
 
             PatchAtsApplicationResponse res = sdk.ats.patchAtsApplication(req);
@@ -1143,9 +1125,6 @@ public class Application {
                     title = "Fish Home Dobra";
                     updatedAt = OffsetDateTime.parse("2021-11-22T04:10:17.899Z");
                 }};
-                fields = new String[]{{
-                    add("empower"),
-                }};
             }};            
 
             PatchAtsCandidateResponse res = sdk.ats.patchAtsCandidate(req);
@@ -1216,9 +1195,6 @@ public class Application {
                     userIds = new String[]{{
                         add("wetly"),
                     }};
-                }};
-                fields = new String[]{{
-                    add("modular"),
                 }};
             }};            
 
@@ -1312,9 +1288,6 @@ public class Application {
                     status = AtsJobStatus.OPEN;
                     updatedAt = OffsetDateTime.parse("2022-10-29T02:53:10.534Z");
                 }};
-                fields = new String[]{{
-                    add("SMTP"),
-                }};
             }};            
 
             PatchAtsJobResponse res = sdk.ats.patchAtsJob(req);
@@ -1379,9 +1352,6 @@ public class Application {
                     jobId = "Prairie fondly Hatchback";
                     recommendation = AtsScorecardRecommendation.STRONG_YES;
                     updatedAt = OffsetDateTime.parse("2023-08-12T06:41:03.214Z");
-                }};
-                fields = new String[]{{
-                    add("Analyst"),
                 }};
             }};            
 
@@ -1695,9 +1665,6 @@ public class Application {
                     status = AtsApplicationStatus.REVIEWING;
                     updatedAt = OffsetDateTime.parse("2023-03-09T13:28:46.094Z");
                 }};
-                fields = new String[]{{
-                    add("Books"),
-                }};
             }};            
 
             UpdateAtsApplicationResponse res = sdk.ats.updateAtsApplication(req);
@@ -1790,9 +1757,6 @@ public class Application {
                     title = "parsing";
                     updatedAt = OffsetDateTime.parse("2023-12-10T21:26:35.636Z");
                 }};
-                fields = new String[]{{
-                    add("synthesize"),
-                }};
             }};            
 
             UpdateAtsCandidateResponse res = sdk.ats.updateAtsCandidate(req);
@@ -1863,9 +1827,6 @@ public class Application {
                     userIds = new String[]{{
                         add("tensor"),
                     }};
-                }};
-                fields = new String[]{{
-                    add("what"),
                 }};
             }};            
 
@@ -1959,9 +1920,6 @@ public class Application {
                     status = AtsJobStatus.CLOSED;
                     updatedAt = OffsetDateTime.parse("2021-07-05T14:57:04.452Z");
                 }};
-                fields = new String[]{{
-                    add("quos"),
-                }};
             }};            
 
             UpdateAtsJobResponse res = sdk.ats.updateAtsJob(req);
@@ -2026,9 +1984,6 @@ public class Application {
                     jobId = "Wooden XML hierarchy";
                     recommendation = AtsScorecardRecommendation.STRONG_YES;
                     updatedAt = OffsetDateTime.parse("2023-10-31T22:09:25.392Z");
-                }};
-                fields = new String[]{{
-                    add("Cheese"),
                 }};
             }};            
 

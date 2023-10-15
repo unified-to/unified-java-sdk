@@ -45,9 +45,6 @@ public class Application {
                     id = "<ID>";
                     updatedAt = "Underpass Cambridgeshire";
                 }};
-                fields = new String[]{{
-                    add("Generic"),
-                }};
             }};            
 
             CreateTicketingNoteResponse res = sdk.note.createTicketingNote(req);
@@ -222,9 +219,6 @@ public class Application {
                     id = "<ID>";
                     updatedAt = "Cadillac Credit";
                 }};
-                fields = new String[]{{
-                    add("Soap"),
-                }};
             }};            
 
             PatchTicketingNoteResponse res = sdk.note.patchTicketingNote(req);
@@ -334,9 +328,6 @@ public class Application {
                     description = "Programmable contextually-based ability";
                     id = "<ID>";
                     updatedAt = "Dynamic nemo sievert";
-                }};
-                fields = new String[]{{
-                    add("firewall"),
                 }};
             }};            
 

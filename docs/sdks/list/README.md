@@ -44,9 +44,6 @@ public class Application {
                     raw = new PropertyMarketingListRaw();
                     updatedAt = OffsetDateTime.parse("2022-06-21T04:01:59.310Z");
                 }};
-                fields = new String[]{{
-                    add("once"),
-                }};
             }};            
 
             CreateMartechListResponse res = sdk.list.createMartechList(req);
@@ -220,9 +217,6 @@ public class Application {
                     raw = new PropertyMarketingListRaw();
                     updatedAt = OffsetDateTime.parse("2022-07-15T21:19:00.293Z");
                 }};
-                fields = new String[]{{
-                    add("Health"),
-                }};
             }};            
 
             PatchMartechListResponse res = sdk.list.patchMartechList(req);
@@ -331,9 +325,6 @@ public class Application {
                     name = "Supervisor navigate Androgynous";
                     raw = new PropertyMarketingListRaw();
                     updatedAt = OffsetDateTime.parse("2021-03-28T05:43:12.466Z");
-                }};
-                fields = new String[]{{
-                    add("Bedfordshire"),
                 }};
             }};            
 

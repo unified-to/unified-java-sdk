@@ -72,9 +72,6 @@ public class Application {
                     updatedAt = OffsetDateTime.parse("2021-04-11T02:45:56.928Z");
                     userId = "sky male";
                 }};
-                fields = new String[]{{
-                    add("steradian"),
-                }};
             }};            
 
             CreateCrmLeadResponse res = sdk.lead.createCrmLead(req);
@@ -276,9 +273,6 @@ public class Application {
                     updatedAt = OffsetDateTime.parse("2021-11-20T08:57:15.653Z");
                     userId = "Shoes magenta";
                 }};
-                fields = new String[]{{
-                    add("violet"),
-                }};
             }};            
 
             PatchCrmLeadResponse res = sdk.lead.patchCrmLead(req);
@@ -415,9 +409,6 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2023-03-27T06:34:53.317Z");
                     userId = "Customer";
-                }};
-                fields = new String[]{{
-                    add("Branding"),
                 }};
             }};            
 

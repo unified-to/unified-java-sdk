@@ -60,9 +60,6 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2021-07-10T05:40:36.874Z");
                 }};
-                fields = new String[]{{
-                    add("Haiti"),
-                }};
             }};            
 
             CreateTicketingCustomerResponse res = sdk.customer.createTicketingCustomer(req);
@@ -252,9 +249,6 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2023-04-21T14:41:05.293Z");
                 }};
-                fields = new String[]{{
-                    add("Iceland"),
-                }};
             }};            
 
             PatchTicketingCustomerResponse res = sdk.customer.patchTicketingCustomer(req);
@@ -379,9 +373,6 @@ public class Application {
                         }}),
                     }};
                     updatedAt = OffsetDateTime.parse("2022-04-11T11:07:01.811Z");
-                }};
-                fields = new String[]{{
-                    add("Fiat"),
                 }};
             }};            
 

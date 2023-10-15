@@ -28,17 +28,6 @@ public class CreateCrmFileRequest {
         return this;
     }
     
-    /**
-     * Comma-delimited fields to return
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    public String[] fields;
-
-    public CreateCrmFileRequest withFields(String[] fields) {
-        this.fields = fields;
-        return this;
-    }
-    
     public CreateCrmFileRequest(@JsonProperty("connection_id") String connectionId) {
         this.connectionId = connectionId;
   }

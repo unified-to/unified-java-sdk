@@ -31,17 +31,6 @@ public class CreateUcContactRequest {
         return this;
     }
     
-    /**
-     * Comma-delimited fields to return
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    public String[] fields;
-
-    public CreateUcContactRequest withFields(String[] fields) {
-        this.fields = fields;
-        return this;
-    }
-    
     public CreateUcContactRequest(@JsonProperty("connection_id") String connectionId) {
         this.connectionId = connectionId;
   }

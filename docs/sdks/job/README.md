@@ -76,9 +76,6 @@ public class Application {
                     status = AtsJobStatus.CLOSED;
                     updatedAt = OffsetDateTime.parse("2023-07-13T17:13:15.823Z");
                 }};
-                fields = new String[]{{
-                    add("sensor"),
-                }};
             }};            
 
             CreateAtsJobResponse res = sdk.job.createAtsJob(req);
@@ -284,9 +281,6 @@ public class Application {
                     status = AtsJobStatus.OPEN;
                     updatedAt = OffsetDateTime.parse("2022-10-29T02:53:10.534Z");
                 }};
-                fields = new String[]{{
-                    add("SMTP"),
-                }};
             }};            
 
             PatchAtsJobResponse res = sdk.job.patchAtsJob(req);
@@ -427,9 +421,6 @@ public class Application {
                     remote = false;
                     status = AtsJobStatus.CLOSED;
                     updatedAt = OffsetDateTime.parse("2021-07-05T14:57:04.452Z");
-                }};
-                fields = new String[]{{
-                    add("quos"),
                 }};
             }};            
 

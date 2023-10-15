@@ -75,9 +75,6 @@ public class Application {
                     title = "violet";
                     updatedAt = OffsetDateTime.parse("2023-12-25T13:02:25.837Z");
                 }};
-                fields = new String[]{{
-                    add("convergence"),
-                }};
             }};            
 
             CreateCrmUserResponse res = sdk.user.createCrmUser(req);
@@ -282,9 +279,6 @@ public class Application {
                     title = "Agender Bicycle";
                     updatedAt = OffsetDateTime.parse("2023-09-30T00:47:17.388Z");
                 }};
-                fields = new String[]{{
-                    add("variant"),
-                }};
             }};            
 
             PatchCrmUserResponse res = sdk.user.patchCrmUser(req);
@@ -424,9 +418,6 @@ public class Application {
                     timezone = "Asia/Singapore";
                     title = "hmph connecting Movies";
                     updatedAt = OffsetDateTime.parse("2021-02-07T04:55:02.364Z");
-                }};
-                fields = new String[]{{
-                    add("Berkshire"),
                 }};
             }};            
 

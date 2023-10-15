@@ -32,17 +32,6 @@ public class PatchAtsJobRequest {
     }
     
     /**
-     * Comma-delimited fields to return
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    public String[] fields;
-
-    public PatchAtsJobRequest withFields(String[] fields) {
-        this.fields = fields;
-        return this;
-    }
-    
-    /**
      * ID of the Job
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")

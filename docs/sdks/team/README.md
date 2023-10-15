@@ -48,9 +48,6 @@ public class Application {
                         add("Northwest"),
                     }};
                 }};
-                fields = new String[]{{
-                    add("tow"),
-                }};
             }};            
 
             CreateCrmTeamResponse res = sdk.team.createCrmTeam(req);
@@ -228,9 +225,6 @@ public class Application {
                         add("convergence"),
                     }};
                 }};
-                fields = new String[]{{
-                    add("Country"),
-                }};
             }};            
 
             PatchCrmTeamResponse res = sdk.team.patchCrmTeam(req);
@@ -343,9 +337,6 @@ public class Application {
                     userIds = new String[]{{
                         add("orchid"),
                     }};
-                }};
-                fields = new String[]{{
-                    add("West"),
                 }};
             }};            
 

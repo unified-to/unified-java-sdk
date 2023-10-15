@@ -62,9 +62,6 @@ public class Application {
                     title = "interactive";
                     updatedAt = OffsetDateTime.parse("2023-10-24T21:46:28.575Z");
                 }};
-                fields = new String[]{{
-                    add("Table"),
-                }};
             }};            
 
             CreateUcContactResponse res = sdk.uc.createUcContact(req);
@@ -378,9 +375,6 @@ public class Application {
                     title = "Hybrid Rubber";
                     updatedAt = OffsetDateTime.parse("2023-10-30T10:35:45.233Z");
                 }};
-                fields = new String[]{{
-                    add("Associate"),
-                }};
             }};            
 
             PatchUcContactResponse res = sdk.uc.patchUcContact(req);
@@ -505,9 +499,6 @@ public class Application {
                     }};
                     title = "Books";
                     updatedAt = OffsetDateTime.parse("2023-04-20T04:04:49.023Z");
-                }};
-                fields = new String[]{{
-                    add("voluptatem"),
                 }};
             }};            
 

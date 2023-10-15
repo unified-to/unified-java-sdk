@@ -29,17 +29,6 @@ public class PatchCrmUserRequest {
     }
     
     /**
-     * Comma-delimited fields to return
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    public String[] fields;
-
-    public PatchCrmUserRequest withFields(String[] fields) {
-        this.fields = fields;
-        return this;
-    }
-    
-    /**
      * ID of the User
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")

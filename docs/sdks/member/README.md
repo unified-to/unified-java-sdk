@@ -57,9 +57,6 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2023-07-26T05:07:38.623Z");
                 }};
-                fields = new String[]{{
-                    add("Hybrid"),
-                }};
             }};            
 
             CreateMartechMemberResponse res = sdk.member.createMartechMember(req);
@@ -246,9 +243,6 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2022-02-01T06:57:40.654Z");
                 }};
-                fields = new String[]{{
-                    add("quis"),
-                }};
             }};            
 
             PatchMartechMemberResponse res = sdk.member.patchMartechMember(req);
@@ -370,9 +364,6 @@ public class Application {
                         add("Computer"),
                     }};
                     updatedAt = OffsetDateTime.parse("2021-09-28T08:50:18.886Z");
-                }};
-                fields = new String[]{{
-                    add("Unbranded"),
                 }};
             }};            
 

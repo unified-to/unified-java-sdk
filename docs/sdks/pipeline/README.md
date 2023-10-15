@@ -47,9 +47,6 @@ public class Application {
                     raw = new PropertyCrmPipelineRaw();
                     updatedAt = OffsetDateTime.parse("2021-05-19T19:45:21.711Z");
                 }};
-                fields = new String[]{{
-                    add("West"),
-                }};
             }};            
 
             CreateCrmPipelineResponse res = sdk.pipeline.createCrmPipeline(req);
@@ -226,9 +223,6 @@ public class Application {
                     raw = new PropertyCrmPipelineRaw();
                     updatedAt = OffsetDateTime.parse("2021-10-29T04:39:52.787Z");
                 }};
-                fields = new String[]{{
-                    add("poorly"),
-                }};
             }};            
 
             PatchCrmPipelineResponse res = sdk.pipeline.patchCrmPipeline(req);
@@ -340,9 +334,6 @@ public class Application {
                     name = "Configuration Minivan";
                     raw = new PropertyCrmPipelineRaw();
                     updatedAt = OffsetDateTime.parse("2021-01-09T13:17:28.520Z");
-                }};
-                fields = new String[]{{
-                    add("Smart"),
                 }};
             }};            
 

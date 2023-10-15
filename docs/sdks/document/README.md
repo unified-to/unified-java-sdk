@@ -49,9 +49,6 @@ public class Application {
                     recommendation = AtsScorecardRecommendation.STRONG_YES;
                     updatedAt = OffsetDateTime.parse("2023-11-22T04:56:50.505Z");
                 }};
-                fields = new String[]{{
-                    add("minima"),
-                }};
             }};            
 
             CreateAtsScorecardResponse res = sdk.document.createAtsScorecard(req);
@@ -233,9 +230,6 @@ public class Application {
                     recommendation = AtsScorecardRecommendation.STRONG_YES;
                     updatedAt = OffsetDateTime.parse("2023-08-12T06:41:03.214Z");
                 }};
-                fields = new String[]{{
-                    add("Analyst"),
-                }};
             }};            
 
             PatchAtsScorecardResponse res = sdk.document.patchAtsScorecard(req);
@@ -349,9 +343,6 @@ public class Application {
                     jobId = "Wooden XML hierarchy";
                     recommendation = AtsScorecardRecommendation.STRONG_YES;
                     updatedAt = OffsetDateTime.parse("2023-10-31T22:09:25.392Z");
-                }};
-                fields = new String[]{{
-                    add("Cheese"),
                 }};
             }};            
 

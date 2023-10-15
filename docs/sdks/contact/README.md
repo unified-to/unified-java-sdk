@@ -81,9 +81,6 @@ public class Application {
                     title = "Coupe Industrial Won";
                     updatedAt = OffsetDateTime.parse("2021-12-23T10:16:54.912Z");
                 }};
-                fields = new String[]{{
-                    add("Granite"),
-                }};
             }};            
 
             CreateCrmContactResponse res = sdk.contact.createCrmContact(req);
@@ -159,9 +156,6 @@ public class Application {
                     }};
                     title = "interactive";
                     updatedAt = OffsetDateTime.parse("2023-10-24T21:46:28.575Z");
-                }};
-                fields = new String[]{{
-                    add("Table"),
                 }};
             }};            
 
@@ -483,9 +477,6 @@ public class Application {
                     title = "feed navigate";
                     updatedAt = OffsetDateTime.parse("2023-04-18T19:04:11.197Z");
                 }};
-                fields = new String[]{{
-                    add("woman"),
-                }};
             }};            
 
             PatchCrmContactResponse res = sdk.contact.patchCrmContact(req);
@@ -561,9 +552,6 @@ public class Application {
                     }};
                     title = "Hybrid Rubber";
                     updatedAt = OffsetDateTime.parse("2023-10-30T10:35:45.233Z");
-                }};
-                fields = new String[]{{
-                    add("Associate"),
                 }};
             }};            
 
@@ -754,9 +742,6 @@ public class Application {
                     title = "Electronics 1080p withdrawal";
                     updatedAt = OffsetDateTime.parse("2023-12-17T06:39:56.020Z");
                 }};
-                fields = new String[]{{
-                    add("candela"),
-                }};
             }};            
 
             UpdateCrmContactResponse res = sdk.contact.updateCrmContact(req);
@@ -832,9 +817,6 @@ public class Application {
                     }};
                     title = "Books";
                     updatedAt = OffsetDateTime.parse("2023-04-20T04:04:49.023Z");
-                }};
-                fields = new String[]{{
-                    add("voluptatem"),
                 }};
             }};            
 
