@@ -43,7 +43,6 @@ public class Application {
 
             CreateCrmLeadRequest req = new CreateCrmLeadRequest("Soft"){{
                 crmLead = new CrmLead(){{
-                    active = false;
                     address = new PropertyCrmLeadAddress(){{
                         address1 = "ability Einsteinium Orchestrator";
                         address2 = "Optimization Rubber loyally";
@@ -62,15 +61,17 @@ public class Application {
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
+                    isActive = false;
                     name = "North";
                     raw = new PropertyCrmLeadRaw();
+                    source = "Diesel Shirt";
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("payment"){{
-                            telephone = "Diesel Shirt";
+                        add(new CrmTelephone("microchip"){{
+                            telephone = "female transmitter";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-04-11T02:45:56.928Z");
-                    userId = "sky male";
+                    updatedAt = OffsetDateTime.parse("2023-02-17T10:01:32.266Z");
+                    userId = "steradian Configurable Kyat";
                 }};
             }};            
 
@@ -244,7 +245,6 @@ public class Application {
 
             PatchCrmLeadRequest req = new PatchCrmLeadRequest("Bike", "copying"){{
                 crmLead = new CrmLead(){{
-                    active = false;
                     address = new PropertyCrmLeadAddress(){{
                         address1 = "Computer";
                         address2 = "matrix";
@@ -263,15 +263,17 @@ public class Application {
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
+                    isActive = false;
                     name = "Credit Coupe";
                     raw = new PropertyCrmLeadRaw();
+                    source = "Fisher convergence";
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("Hybrid"){{
-                            telephone = "Fisher convergence";
+                        add(new CrmTelephone("violet"){{
+                            telephone = "microchip Shoes magenta";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-11-20T08:57:15.653Z");
-                    userId = "Shoes magenta";
+                    updatedAt = OffsetDateTime.parse("2021-07-07T20:56:05.126Z");
+                    userId = "eggplant Human black";
                 }};
             }};            
 
@@ -381,7 +383,6 @@ public class Application {
 
             UpdateCrmLeadRequest req = new UpdateCrmLeadRequest("violation", "Pickup"){{
                 crmLead = new CrmLead(){{
-                    active = false;
                     address = new PropertyCrmLeadAddress(){{
                         address1 = "joule North Concrete";
                         address2 = "Officer auxiliary";
@@ -400,15 +401,17 @@ public class Application {
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
+                    isActive = false;
                     name = "Concrete Incredible Tesla";
                     raw = new PropertyCrmLeadRaw();
+                    source = "Health";
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("provided"){{
-                            telephone = "Health";
+                        add(new CrmTelephone("Handcrafted"){{
+                            telephone = "monitor Palau woman";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-03-27T06:34:53.317Z");
-                    userId = "Customer";
+                    updatedAt = OffsetDateTime.parse("2023-04-21T14:12:57.050Z");
+                    userId = "Chevrolet Account";
                 }};
             }};            
 

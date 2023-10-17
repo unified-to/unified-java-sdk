@@ -38,7 +38,6 @@ public class Application {
 
             CreateCrmFileRequest req = new CreateCrmFileRequest("Northwest"){{
                 crmFile = new CrmFile(){{
-                    active = false;
                     activityId = "the";
                     companyId = "Tactics Bicycle copy";
                     contactId = "Soul";
@@ -50,6 +49,7 @@ public class Application {
                     fileType = "application";
                     fileUrl = "program hacking";
                     id = "<ID>";
+                    isActive = false;
                     leadId = "Bicycle Marketing Helium";
                     raw = new PropertyCrmFileRaw();
                     updatedAt = OffsetDateTime.parse("2022-09-17T10:16:03.549Z");
@@ -225,7 +225,6 @@ public class Application {
 
             PatchCrmFileRequest req = new PatchCrmFileRequest("Future", "Southeast"){{
                 crmFile = new CrmFile(){{
-                    active = false;
                     activityId = "Oriental invoice";
                     companyId = "Texas blockchains";
                     contactId = "navigate";
@@ -237,6 +236,7 @@ public class Application {
                     fileType = "application";
                     fileUrl = "National Granite redundant";
                     id = "<ID>";
+                    isActive = false;
                     leadId = "East";
                     raw = new PropertyCrmFileRaw();
                     updatedAt = OffsetDateTime.parse("2022-11-16T13:24:51.820Z");
@@ -345,7 +345,6 @@ public class Application {
 
             UpdateCrmFileRequest req = new UpdateCrmFileRequest("generate", "unexpectedly"){{
                 crmFile = new CrmFile(){{
-                    active = false;
                     activityId = "Cotton Specialist";
                     companyId = "Rustic Bluffs";
                     contactId = "content sorrowful Lead";
@@ -357,6 +356,7 @@ public class Application {
                     fileType = "audio";
                     fileUrl = "Northeast Mandatory";
                     id = "<ID>";
+                    isActive = false;
                     leadId = "AI Small wasting";
                     raw = new PropertyCrmFileRaw();
                     updatedAt = OffsetDateTime.parse("2021-08-04T14:31:18.269Z");

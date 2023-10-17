@@ -16,15 +16,6 @@ import java.time.OffsetDateTime;
 
 public class CrmFile {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("active")
-    public Boolean active;
-
-    public CrmFile withActive(Boolean active) {
-        this.active = active;
-        return this;
-    }
-    
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activity_id")
     public String activityId;
 
@@ -122,6 +113,15 @@ public class CrmFile {
 
     public CrmFile withId(String id) {
         this.id = id;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_active")
+    public Boolean isActive;
+
+    public CrmFile withIsActive(Boolean isActive) {
+        this.isActive = isActive;
         return this;
     }
     

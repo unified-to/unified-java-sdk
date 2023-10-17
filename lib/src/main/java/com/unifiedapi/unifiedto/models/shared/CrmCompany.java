@@ -19,15 +19,6 @@ import java.time.OffsetDateTime;
 
 public class CrmCompany {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("active")
-    public Boolean active;
-
-    public CrmCompany withActive(Boolean active) {
-        this.active = active;
-        return this;
-    }
-    
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public PropertyCrmCompanyAddress address;
 
@@ -74,6 +65,15 @@ public class CrmCompany {
 
     public CrmCompany withId(String id) {
         this.id = id;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_active")
+    public Boolean isActive;
+
+    public CrmCompany withIsActive(Boolean isActive) {
+        this.isActive = isActive;
         return this;
     }
     

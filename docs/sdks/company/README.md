@@ -44,7 +44,6 @@ public class Application {
 
             CreateCrmCompanyRequest req = new CreateCrmCompanyRequest("carouse"){{
                 crmCompany = new CrmCompany(){{
-                    active = false;
                     address = new PropertyCrmCompanyAddress(){{
                         address1 = "Germany";
                         address2 = "soluta magenta Data";
@@ -63,6 +62,7 @@ public class Application {
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
+                    isActive = false;
                     name = "Profound woman Illinois";
                     raw = new PropertyCrmCompanyRaw();
                     tags = new String[]{{
@@ -304,7 +304,6 @@ public class Application {
 
             PatchCrmCompanyRequest req = new PatchCrmCompanyRequest("Corporate", "indexing"){{
                 crmCompany = new CrmCompany(){{
-                    active = false;
                     address = new PropertyCrmCompanyAddress(){{
                         address1 = "Phased Investment";
                         address2 = "Trans";
@@ -323,6 +322,7 @@ public class Application {
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
+                    isActive = false;
                     name = "invoice Metal";
                     raw = new PropertyCrmCompanyRaw();
                     tags = new String[]{{
@@ -446,7 +446,6 @@ public class Application {
 
             UpdateCrmCompanyRequest req = new UpdateCrmCompanyRequest("barrel", "except"){{
                 crmCompany = new CrmCompany(){{
-                    active = false;
                     address = new PropertyCrmCompanyAddress(){{
                         address1 = "Bicycle";
                         address2 = "mar Southeast";
@@ -465,6 +464,7 @@ public class Application {
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
+                    isActive = false;
                     name = "monitor Blues Northwest";
                     raw = new PropertyCrmCompanyRaw();
                     tags = new String[]{{

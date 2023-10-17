@@ -38,11 +38,11 @@ public class Application {
 
             CreateCrmPipelineRequest req = new CreateCrmPipelineRequest("enable"){{
                 crmPipeline = new CrmPipeline(){{
-                    active = false;
                     createdAt = OffsetDateTime.parse("2023-01-01T02:57:01.626Z");
                     dealProbability = false;
                     displayOrder = 16.09d;
                     id = "<ID>";
+                    isActive = false;
                     name = "Bicycle Hatchback Nobelium";
                     raw = new PropertyCrmPipelineRaw();
                     updatedAt = OffsetDateTime.parse("2021-05-19T19:45:21.711Z");
@@ -214,11 +214,11 @@ public class Application {
 
             PatchCrmPipelineRequest req = new PatchCrmPipelineRequest("Checking", "Electronic"){{
                 crmPipeline = new CrmPipeline(){{
-                    active = false;
                     createdAt = OffsetDateTime.parse("2023-09-09T16:00:07.264Z");
                     dealProbability = false;
                     displayOrder = 9737.04d;
                     id = "<ID>";
+                    isActive = false;
                     name = "Lead Operative";
                     raw = new PropertyCrmPipelineRaw();
                     updatedAt = OffsetDateTime.parse("2021-10-29T04:39:52.787Z");
@@ -326,11 +326,11 @@ public class Application {
 
             UpdateCrmPipelineRequest req = new UpdateCrmPipelineRequest("generating", "North"){{
                 crmPipeline = new CrmPipeline(){{
-                    active = false;
                     createdAt = OffsetDateTime.parse("2021-08-22T21:47:34.241Z");
                     dealProbability = false;
                     displayOrder = 1646.47d;
                     id = "<ID>";
+                    isActive = false;
                     name = "Configuration Minivan";
                     raw = new PropertyCrmPipelineRaw();
                     updatedAt = OffsetDateTime.parse("2021-01-09T13:17:28.520Z");

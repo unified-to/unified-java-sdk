@@ -43,7 +43,6 @@ public class Application {
 
             CreateCrmUserRequest req = new CreateCrmUserRequest("male"){{
                 crmUser = new CrmUser(){{
-                    active = false;
                     address = new PropertyCrmUserAddress(){{
                         address1 = "Incredible Virginia";
                         address2 = "Dakota";
@@ -63,6 +62,7 @@ public class Application {
                     }};
                     id = "<ID>";
                     imageUrl = "Central Director";
+                    isActive = false;
                     languageLocale = "Personal compelling similique";
                     name = "pink Toms";
                     raw = new PropertyCrmUserRaw();
@@ -247,7 +247,6 @@ public class Application {
 
             PatchCrmUserRequest req = new PatchCrmUserRequest("grey", "Pizza"){{
                 crmUser = new CrmUser(){{
-                    active = false;
                     address = new PropertyCrmUserAddress(){{
                         address1 = "around overburden Factors";
                         address2 = "Samir";
@@ -267,6 +266,7 @@ public class Application {
                     }};
                     id = "<ID>";
                     imageUrl = "male Land fumbling";
+                    isActive = false;
                     languageLocale = "bypassing microchip GB";
                     name = "Cambridgeshire sit Account";
                     raw = new PropertyCrmUserRaw();
@@ -387,7 +387,6 @@ public class Application {
 
             UpdateCrmUserRequest req = new UpdateCrmUserRequest("Rustic", "Bedfordshire"){{
                 crmUser = new CrmUser(){{
-                    active = false;
                     address = new PropertyCrmUserAddress(){{
                         address1 = "Carlo Beryllium";
                         address2 = "Southwest throughout Wooden";
@@ -407,6 +406,7 @@ public class Application {
                     }};
                     id = "<ID>";
                     imageUrl = "female less";
+                    isActive = false;
                     languageLocale = "perspiciatis Creative 1080p";
                     name = "Road Movies regulation";
                     raw = new PropertyCrmUserRaw();

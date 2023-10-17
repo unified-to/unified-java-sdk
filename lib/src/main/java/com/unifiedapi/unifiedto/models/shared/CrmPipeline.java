@@ -16,15 +16,6 @@ import java.time.OffsetDateTime;
 
 public class CrmPipeline {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("active")
-    public Boolean active;
-
-    public CrmPipeline withActive(Boolean active) {
-        this.active = active;
-        return this;
-    }
-    
-    @JsonInclude(Include.NON_ABSENT)
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
@@ -59,6 +50,15 @@ public class CrmPipeline {
 
     public CrmPipeline withId(String id) {
         this.id = id;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_active")
+    public Boolean isActive;
+
+    public CrmPipeline withIsActive(Boolean isActive) {
+        this.isActive = isActive;
         return this;
     }
     

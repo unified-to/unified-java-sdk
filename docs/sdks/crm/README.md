@@ -91,7 +91,6 @@ public class Application {
 
             CreateCrmCompanyRequest req = new CreateCrmCompanyRequest("carouse"){{
                 crmCompany = new CrmCompany(){{
-                    active = false;
                     address = new PropertyCrmCompanyAddress(){{
                         address1 = "Germany";
                         address2 = "soluta magenta Data";
@@ -110,6 +109,7 @@ public class Application {
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
+                    isActive = false;
                     name = "Profound woman Illinois";
                     raw = new PropertyCrmCompanyRaw();
                     tags = new String[]{{
@@ -446,7 +446,6 @@ public class Application {
 
             CreateCrmFileRequest req = new CreateCrmFileRequest("Northwest"){{
                 crmFile = new CrmFile(){{
-                    active = false;
                     activityId = "the";
                     companyId = "Tactics Bicycle copy";
                     contactId = "Soul";
@@ -458,6 +457,7 @@ public class Application {
                     fileType = "application";
                     fileUrl = "program hacking";
                     id = "<ID>";
+                    isActive = false;
                     leadId = "Bicycle Marketing Helium";
                     raw = new PropertyCrmFileRaw();
                     updatedAt = OffsetDateTime.parse("2022-09-17T10:16:03.549Z");
@@ -522,7 +522,6 @@ public class Application {
 
             CreateCrmLeadRequest req = new CreateCrmLeadRequest("Soft"){{
                 crmLead = new CrmLead(){{
-                    active = false;
                     address = new PropertyCrmLeadAddress(){{
                         address1 = "ability Einsteinium Orchestrator";
                         address2 = "Optimization Rubber loyally";
@@ -541,15 +540,17 @@ public class Application {
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
+                    isActive = false;
                     name = "North";
                     raw = new PropertyCrmLeadRaw();
+                    source = "Diesel Shirt";
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("payment"){{
-                            telephone = "Diesel Shirt";
+                        add(new CrmTelephone("microchip"){{
+                            telephone = "female transmitter";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-04-11T02:45:56.928Z");
-                    userId = "sky male";
+                    updatedAt = OffsetDateTime.parse("2023-02-17T10:01:32.266Z");
+                    userId = "steradian Configurable Kyat";
                 }};
             }};            
 
@@ -605,11 +606,11 @@ public class Application {
 
             CreateCrmPipelineRequest req = new CreateCrmPipelineRequest("enable"){{
                 crmPipeline = new CrmPipeline(){{
-                    active = false;
                     createdAt = OffsetDateTime.parse("2023-01-01T02:57:01.626Z");
                     dealProbability = false;
                     displayOrder = 16.09d;
                     id = "<ID>";
+                    isActive = false;
                     name = "Bicycle Hatchback Nobelium";
                     raw = new PropertyCrmPipelineRaw();
                     updatedAt = OffsetDateTime.parse("2021-05-19T19:45:21.711Z");
@@ -737,7 +738,6 @@ public class Application {
 
             CreateCrmUserRequest req = new CreateCrmUserRequest("male"){{
                 crmUser = new CrmUser(){{
-                    active = false;
                     address = new PropertyCrmUserAddress(){{
                         address1 = "Incredible Virginia";
                         address2 = "Dakota";
@@ -757,6 +757,7 @@ public class Application {
                     }};
                     id = "<ID>";
                     imageUrl = "Central Director";
+                    isActive = false;
                     languageLocale = "Personal compelling similique";
                     name = "pink Toms";
                     raw = new PropertyCrmUserRaw();
@@ -1857,7 +1858,6 @@ public class Application {
 
             PatchCrmCompanyRequest req = new PatchCrmCompanyRequest("Corporate", "indexing"){{
                 crmCompany = new CrmCompany(){{
-                    active = false;
                     address = new PropertyCrmCompanyAddress(){{
                         address1 = "Phased Investment";
                         address2 = "Trans";
@@ -1876,6 +1876,7 @@ public class Application {
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
+                    isActive = false;
                     name = "invoice Metal";
                     raw = new PropertyCrmCompanyRaw();
                     tags = new String[]{{
@@ -2212,7 +2213,6 @@ public class Application {
 
             PatchCrmFileRequest req = new PatchCrmFileRequest("Future", "Southeast"){{
                 crmFile = new CrmFile(){{
-                    active = false;
                     activityId = "Oriental invoice";
                     companyId = "Texas blockchains";
                     contactId = "navigate";
@@ -2224,6 +2224,7 @@ public class Application {
                     fileType = "application";
                     fileUrl = "National Granite redundant";
                     id = "<ID>";
+                    isActive = false;
                     leadId = "East";
                     raw = new PropertyCrmFileRaw();
                     updatedAt = OffsetDateTime.parse("2022-11-16T13:24:51.820Z");
@@ -2288,7 +2289,6 @@ public class Application {
 
             PatchCrmLeadRequest req = new PatchCrmLeadRequest("Bike", "copying"){{
                 crmLead = new CrmLead(){{
-                    active = false;
                     address = new PropertyCrmLeadAddress(){{
                         address1 = "Computer";
                         address2 = "matrix";
@@ -2307,15 +2307,17 @@ public class Application {
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
+                    isActive = false;
                     name = "Credit Coupe";
                     raw = new PropertyCrmLeadRaw();
+                    source = "Fisher convergence";
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("Hybrid"){{
-                            telephone = "Fisher convergence";
+                        add(new CrmTelephone("violet"){{
+                            telephone = "microchip Shoes magenta";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-11-20T08:57:15.653Z");
-                    userId = "Shoes magenta";
+                    updatedAt = OffsetDateTime.parse("2021-07-07T20:56:05.126Z");
+                    userId = "eggplant Human black";
                 }};
             }};            
 
@@ -2371,11 +2373,11 @@ public class Application {
 
             PatchCrmPipelineRequest req = new PatchCrmPipelineRequest("Checking", "Electronic"){{
                 crmPipeline = new CrmPipeline(){{
-                    active = false;
                     createdAt = OffsetDateTime.parse("2023-09-09T16:00:07.264Z");
                     dealProbability = false;
                     displayOrder = 9737.04d;
                     id = "<ID>";
+                    isActive = false;
                     name = "Lead Operative";
                     raw = new PropertyCrmPipelineRaw();
                     updatedAt = OffsetDateTime.parse("2021-10-29T04:39:52.787Z");
@@ -2503,7 +2505,6 @@ public class Application {
 
             PatchCrmUserRequest req = new PatchCrmUserRequest("grey", "Pizza"){{
                 crmUser = new CrmUser(){{
-                    active = false;
                     address = new PropertyCrmUserAddress(){{
                         address1 = "around overburden Factors";
                         address2 = "Samir";
@@ -2523,6 +2524,7 @@ public class Application {
                     }};
                     id = "<ID>";
                     imageUrl = "male Land fumbling";
+                    isActive = false;
                     languageLocale = "bypassing microchip GB";
                     name = "Cambridgeshire sit Account";
                     raw = new PropertyCrmUserRaw();
@@ -3035,7 +3037,6 @@ public class Application {
 
             UpdateCrmCompanyRequest req = new UpdateCrmCompanyRequest("barrel", "except"){{
                 crmCompany = new CrmCompany(){{
-                    active = false;
                     address = new PropertyCrmCompanyAddress(){{
                         address1 = "Bicycle";
                         address2 = "mar Southeast";
@@ -3054,6 +3055,7 @@ public class Application {
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
+                    isActive = false;
                     name = "monitor Blues Northwest";
                     raw = new PropertyCrmCompanyRaw();
                     tags = new String[]{{
@@ -3390,7 +3392,6 @@ public class Application {
 
             UpdateCrmFileRequest req = new UpdateCrmFileRequest("generate", "unexpectedly"){{
                 crmFile = new CrmFile(){{
-                    active = false;
                     activityId = "Cotton Specialist";
                     companyId = "Rustic Bluffs";
                     contactId = "content sorrowful Lead";
@@ -3402,6 +3403,7 @@ public class Application {
                     fileType = "audio";
                     fileUrl = "Northeast Mandatory";
                     id = "<ID>";
+                    isActive = false;
                     leadId = "AI Small wasting";
                     raw = new PropertyCrmFileRaw();
                     updatedAt = OffsetDateTime.parse("2021-08-04T14:31:18.269Z");
@@ -3466,7 +3468,6 @@ public class Application {
 
             UpdateCrmLeadRequest req = new UpdateCrmLeadRequest("violation", "Pickup"){{
                 crmLead = new CrmLead(){{
-                    active = false;
                     address = new PropertyCrmLeadAddress(){{
                         address1 = "joule North Concrete";
                         address2 = "Officer auxiliary";
@@ -3485,15 +3486,17 @@ public class Application {
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
+                    isActive = false;
                     name = "Concrete Incredible Tesla";
                     raw = new PropertyCrmLeadRaw();
+                    source = "Health";
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("provided"){{
-                            telephone = "Health";
+                        add(new CrmTelephone("Handcrafted"){{
+                            telephone = "monitor Palau woman";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-03-27T06:34:53.317Z");
-                    userId = "Customer";
+                    updatedAt = OffsetDateTime.parse("2023-04-21T14:12:57.050Z");
+                    userId = "Chevrolet Account";
                 }};
             }};            
 
@@ -3549,11 +3552,11 @@ public class Application {
 
             UpdateCrmPipelineRequest req = new UpdateCrmPipelineRequest("generating", "North"){{
                 crmPipeline = new CrmPipeline(){{
-                    active = false;
                     createdAt = OffsetDateTime.parse("2021-08-22T21:47:34.241Z");
                     dealProbability = false;
                     displayOrder = 1646.47d;
                     id = "<ID>";
+                    isActive = false;
                     name = "Configuration Minivan";
                     raw = new PropertyCrmPipelineRaw();
                     updatedAt = OffsetDateTime.parse("2021-01-09T13:17:28.520Z");
@@ -3681,7 +3684,6 @@ public class Application {
 
             UpdateCrmUserRequest req = new UpdateCrmUserRequest("Rustic", "Bedfordshire"){{
                 crmUser = new CrmUser(){{
-                    active = false;
                     address = new PropertyCrmUserAddress(){{
                         address1 = "Carlo Beryllium";
                         address2 = "Southwest throughout Wooden";
@@ -3701,6 +3703,7 @@ public class Application {
                     }};
                     id = "<ID>";
                     imageUrl = "female less";
+                    isActive = false;
                     languageLocale = "perspiciatis Creative 1080p";
                     name = "Road Movies regulation";
                     raw = new PropertyCrmUserRaw();
