@@ -5,7 +5,6 @@
 
 * [createUcContact](#createuccontact) - Create a contact
 * [getUcContact](#getuccontact) - Retrieve a contact
-* [listUcAgents](#listucagents) - List all agents
 * [listUcCalls](#listuccalls) - List all calls
 * [listUcContacts](#listuccontacts) - List all contacts
 * [patchUcContact](#patchuccontact) - Update a contact
@@ -139,67 +138,6 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.GetUcContactResponse](../../models/operations/GetUcContactResponse.md)**
-
-
-## listUcAgents
-
-List all agents
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListUcAgentsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListUcAgentsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Ohio"){{
-                    jwt = "";
-                }})
-                .build();
-
-            ListUcAgentsRequest req = new ListUcAgentsRequest("huzzah"){{
-                contactId = "Chief";
-                fields = new String[]{{
-                    add("Pound"),
-                }};
-                limit = 5908.79d;
-                offset = 67.08d;
-                order = "reliable";
-                query = "Ytterbium";
-                sort = "Data";
-                updatedGte = OffsetDateTime.parse("2022-03-26T21:53:35.461Z");
-            }};            
-
-            ListUcAgentsResponse res = sdk.uc.listUcAgents(req);
-
-            if (res.ucAgents != null) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [com.unifiedapi.unifiedto.models.operations.ListUcAgentsRequest](../../models/operations/ListUcAgentsRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-
-
-### Response
-
-**[com.unifiedapi.unifiedto.models.operations.ListUcAgentsResponse](../../models/operations/ListUcAgentsResponse.md)**
 
 
 ## listUcCalls

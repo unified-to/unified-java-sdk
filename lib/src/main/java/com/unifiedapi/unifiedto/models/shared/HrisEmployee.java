@@ -36,6 +36,15 @@ public class HrisEmployee {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("currency")
+    public String currency;
+
+    public HrisEmployee withCurrency(String currency) {
+        this.currency = currency;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date_of_birth")
@@ -130,6 +139,24 @@ public class HrisEmployee {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("image_url")
+    public String imageUrl;
+
+    public HrisEmployee withImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("language_locale")
+    public String languageLocale;
+
+    public HrisEmployee withLanguageLocale(String languageLocale) {
+        this.languageLocale = languageLocale;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
 
@@ -191,6 +218,15 @@ public class HrisEmployee {
 
     public HrisEmployee withTerminatedAt(OffsetDateTime terminatedAt) {
         this.terminatedAt = terminatedAt;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("timezone")
+    public String timezone;
+
+    public HrisEmployee withTimezone(String timezone) {
+        this.timezone = timezone;
         return this;
     }
     

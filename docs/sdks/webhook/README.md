@@ -39,7 +39,7 @@ public class Application {
             CreateUnifiedWebhookRequest req = new CreateUnifiedWebhookRequest("payment", "Borders"){{
                 webhook = new Webhook("Representative", new com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents[]{{
                     add(PropertyWebhookEvents.CREATED),
-                }}, "cyan", "Bedfordshire", 3.51d, WebhookObjectType.CRM_PIPELINE, "withdrawal"){{
+                }}, "cyan", "Bedfordshire", 3.51d, WebhookObjectType.CRM_FILE, "withdrawal"){{
                     checkedAt = OffsetDateTime.parse("2023-02-22T14:23:57.210Z");
                     createdAt = OffsetDateTime.parse("2023-09-03T17:40:00.994Z");
                     environment = "turquoise";

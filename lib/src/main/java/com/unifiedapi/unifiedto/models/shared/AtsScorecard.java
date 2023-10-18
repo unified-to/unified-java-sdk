@@ -34,6 +34,15 @@ public class AtsScorecard {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("comment")
+    public String comment;
+
+    public AtsScorecard withComment(String comment) {
+        this.comment = comment;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")

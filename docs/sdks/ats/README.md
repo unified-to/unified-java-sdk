@@ -387,13 +387,14 @@ public class Application {
                 atsScorecard = new AtsScorecard(new PropertyAtsScorecardRaw()){{
                     applicationId = "Yuan";
                     candidateId = "deposit";
-                    createdAt = OffsetDateTime.parse("2022-11-29T04:33:02.087Z");
+                    comment = "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit";
+                    createdAt = OffsetDateTime.parse("2022-03-18T10:43:10.267Z");
                     id = "<ID>";
-                    interviewId = "Credit";
-                    interviewerId = "hm";
-                    jobId = "Manager";
-                    recommendation = AtsScorecardRecommendation.YES;
-                    updatedAt = OffsetDateTime.parse("2021-03-30T11:56:53.937Z");
+                    interviewId = "Manager";
+                    interviewerId = "Handcrafted";
+                    jobId = "East";
+                    recommendation = AtsScorecardRecommendation.DEFINITELY_NO;
+                    updatedAt = OffsetDateTime.parse("2021-08-12T09:12:53.464Z");
                 }};
             }};            
 
@@ -1345,13 +1346,14 @@ public class Application {
                 atsScorecard = new AtsScorecard(new PropertyAtsScorecardRaw()){{
                     applicationId = "application";
                     candidateId = "Leu";
-                    createdAt = OffsetDateTime.parse("2023-09-14T09:14:37.430Z");
+                    comment = "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients";
+                    createdAt = OffsetDateTime.parse("2022-08-15T10:55:26.401Z");
                     id = "<ID>";
-                    interviewId = "generate";
-                    interviewerId = "Bespoke";
-                    jobId = "Malawi";
+                    interviewId = "program";
+                    interviewerId = "up";
+                    jobId = "Michigan";
                     recommendation = AtsScorecardRecommendation.DEFINITELY_NO;
-                    updatedAt = OffsetDateTime.parse("2022-04-07T09:43:56.983Z");
+                    updatedAt = OffsetDateTime.parse("2023-10-02T21:33:10.654Z");
                 }};
             }};            
 
@@ -1977,13 +1979,14 @@ public class Application {
                 atsScorecard = new AtsScorecard(new PropertyAtsScorecardRaw()){{
                     applicationId = "legislator";
                     candidateId = "East";
-                    createdAt = OffsetDateTime.parse("2021-09-15T07:42:18.559Z");
+                    comment = "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016";
+                    createdAt = OffsetDateTime.parse("2021-10-10T17:07:11.234Z");
                     id = "<ID>";
-                    interviewId = "Cotton";
-                    interviewerId = "youthful";
-                    jobId = "South";
-                    recommendation = AtsScorecardRecommendation.DEFINITELY_NO;
-                    updatedAt = OffsetDateTime.parse("2022-11-05T16:19:19.866Z");
+                    interviewId = "UDP";
+                    interviewerId = "act";
+                    jobId = "Supervisor";
+                    recommendation = AtsScorecardRecommendation.YES;
+                    updatedAt = OffsetDateTime.parse("2023-09-09T22:35:25.659Z");
                 }};
             }};            
 

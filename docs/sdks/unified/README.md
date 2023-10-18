@@ -51,7 +51,7 @@ public class Application {
             com.unifiedapi.unifiedto.models.shared.Connection req = new Connection(new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
     add(PropertyConnectionCategories.AUTH),
 }}, "Specialist", new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-    add(PropertyConnectionPermissions.MARTECH_LIST_READ),
+    add(PropertyConnectionPermissions.CRM_LEAD_READ),
 }}){{
                 auth = new PropertyConnectionAuth(){{
                     accessToken = "revolutionize";
@@ -144,7 +144,7 @@ public class Application {
             CreateUnifiedWebhookRequest req = new CreateUnifiedWebhookRequest("payment", "Borders"){{
                 webhook = new Webhook("Representative", new com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents[]{{
                     add(PropertyWebhookEvents.CREATED),
-                }}, "cyan", "Bedfordshire", 3.51d, WebhookObjectType.CRM_PIPELINE, "withdrawal"){{
+                }}, "cyan", "Bedfordshire", 3.51d, WebhookObjectType.CRM_FILE, "withdrawal"){{
                     checkedAt = OffsetDateTime.parse("2023-02-22T14:23:57.210Z");
                     createdAt = OffsetDateTime.parse("2023-09-03T17:40:00.994Z");
                     environment = "turquoise";
@@ -362,7 +362,7 @@ public class Application {
                 lang = "North";
                 redirect = false;
                 scopes = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthScopes[]{{
-                    add(GetUnifiedIntegrationAuthScopes.CRM_FILE_READ),
+                    add(GetUnifiedIntegrationAuthScopes.CRM_CONTACT_WRITE),
                 }};
                 state = "Investment";
                 subdomain = "spirit";
@@ -779,7 +779,7 @@ public class Application {
                 connection = new Connection(new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
                     add(PropertyConnectionCategories.ATS),
                 }}, "Northeast", new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                    add(PropertyConnectionPermissions.MARTECH_LIST_READ),
+                    add(PropertyConnectionPermissions.CRM_LEAD_READ),
                 }}){{
                     auth = new PropertyConnectionAuth(){{
                         accessToken = "scalable";
@@ -973,7 +973,7 @@ public class Application {
                 connection = new Connection(new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
                     add(PropertyConnectionCategories.CRM),
                 }}, "Cambridgeshire", new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                    add(PropertyConnectionPermissions.CRM_TEAM_WRITE),
+                    add(PropertyConnectionPermissions.CRM_EVENT_WRITE),
                 }}){{
                     auth = new PropertyConnectionAuth(){{
                         accessToken = "Berkshire";

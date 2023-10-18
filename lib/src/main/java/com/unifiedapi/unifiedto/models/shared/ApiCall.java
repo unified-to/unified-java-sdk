@@ -13,9 +13,6 @@ import com.unifiedapi.unifiedto.utils.DateTimeDeserializer;
 import com.unifiedapi.unifiedto.utils.DateTimeSerializer;
 import java.time.OffsetDateTime;
 
-/**
- * ApiCall - An API call made to Unified or a API callback/webhook made from Unified
- */
 
 public class ApiCall {
     @JsonInclude(Include.NON_ABSENT)

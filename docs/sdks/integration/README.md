@@ -88,7 +88,7 @@ public class Application {
                 lang = "North";
                 redirect = false;
                 scopes = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthScopes[]{{
-                    add(GetUnifiedIntegrationAuthScopes.CRM_FILE_READ),
+                    add(GetUnifiedIntegrationAuthScopes.CRM_CONTACT_WRITE),
                 }};
                 state = "Investment";
                 subdomain = "spirit";

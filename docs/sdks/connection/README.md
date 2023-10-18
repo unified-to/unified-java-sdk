@@ -41,7 +41,7 @@ public class Application {
             com.unifiedapi.unifiedto.models.shared.Connection req = new Connection(new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
     add(PropertyConnectionCategories.AUTH),
 }}, "Specialist", new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-    add(PropertyConnectionPermissions.MARTECH_LIST_READ),
+    add(PropertyConnectionPermissions.CRM_LEAD_READ),
 }}){{
                 auth = new PropertyConnectionAuth(){{
                     accessToken = "revolutionize";
@@ -247,7 +247,7 @@ public class Application {
                 connection = new Connection(new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
                     add(PropertyConnectionCategories.ATS),
                 }}, "Northeast", new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                    add(PropertyConnectionPermissions.MARTECH_LIST_READ),
+                    add(PropertyConnectionPermissions.CRM_LEAD_READ),
                 }}){{
                     auth = new PropertyConnectionAuth(){{
                         accessToken = "scalable";
@@ -392,7 +392,7 @@ public class Application {
                 connection = new Connection(new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
                     add(PropertyConnectionCategories.CRM),
                 }}, "Cambridgeshire", new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                    add(PropertyConnectionPermissions.CRM_TEAM_WRITE),
+                    add(PropertyConnectionPermissions.CRM_EVENT_WRITE),
                 }}){{
                     auth = new PropertyConnectionAuth(){{
                         accessToken = "Berkshire";

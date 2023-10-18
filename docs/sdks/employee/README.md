@@ -58,33 +58,37 @@ public class Application {
                         regionCode = "Gasoline";
                     }};
                     createdAt = OffsetDateTime.parse("2021-01-23T22:14:37.407Z");
-                    dateOfBirth = OffsetDateTime.parse("2022-02-17T06:57:07.657Z");
-                    department = "candela";
-                    division = "Data";
+                    currency = "Iranian Rial";
+                    dateOfBirth = OffsetDateTime.parse("2023-04-02T19:32:38.780Z");
+                    department = "Kids";
+                    division = "olive";
                     emails = new com.unifiedapi.unifiedto.models.shared.HrisEmail[]{{
-                        add(new HrisEmail("Director"){{
-                            email = "Hertha_Dooley79@hotmail.com";
+                        add(new HrisEmail("architectures"){{
+                            email = "Coleman_Ward68@yahoo.com";
                         }}),
                     }};
-                    employeeNumber = "back";
+                    employeeNumber = "East";
                     employmentStatus = HrisEmployeeEmploymentStatus.ACTIVE;
                     employmentType = HrisEmployeeEmploymentType.CONSULTANT;
                     gender = HrisEmployeeGender.INTERSEX;
                     hiredAt = OffsetDateTime.parse("2023-10-31T19:48:31.910Z");
                     id = "<ID>";
-                    location = "Gasoline";
-                    managerId = "since";
-                    maritalStatus = HrisEmployeeMaritalStatus.MARRIED;
-                    name = "system";
+                    imageUrl = "Gasoline";
+                    languageLocale = "since";
+                    location = "Dinar";
+                    managerId = "Mills";
+                    maritalStatus = HrisEmployeeMaritalStatus.SINGLE;
+                    name = "adapter";
                     raw = new PropertyHrisEmployeeRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.HrisTelephone[]{{
-                        add(new HrisTelephone("program"){{
-                            telephone = "ugh";
+                        add(new HrisTelephone("barley"){{
+                            telephone = "Fresh";
                         }}),
                     }};
-                    terminatedAt = OffsetDateTime.parse("2023-06-28T21:13:46.229Z");
-                    title = "adapter";
-                    updatedAt = OffsetDateTime.parse("2021-10-31T10:26:31.878Z");
+                    terminatedAt = OffsetDateTime.parse("2023-07-07T05:34:19.805Z");
+                    timezone = "Europe/Istanbul";
+                    title = "advice";
+                    updatedAt = OffsetDateTime.parse("2023-10-16T16:26:29.360Z");
                 }};
             }};            
 
@@ -273,33 +277,37 @@ public class Application {
                         regionCode = "Terbium";
                     }};
                     createdAt = OffsetDateTime.parse("2023-12-09T22:20:00.252Z");
-                    dateOfBirth = OffsetDateTime.parse("2023-02-02T08:38:55.837Z");
-                    department = "witch";
-                    division = "Minivan";
+                    currency = "Solomon Islands Dollar";
+                    dateOfBirth = OffsetDateTime.parse("2023-11-10T12:24:25.939Z");
+                    department = "stickybeak";
+                    division = "Cis";
                     emails = new com.unifiedapi.unifiedto.models.shared.HrisEmail[]{{
-                        add(new HrisEmail("reciprocal"){{
-                            email = "Kaylee_Fay@gmail.com";
+                        add(new HrisEmail("white"){{
+                            email = "Danyka.Lindgren@yahoo.com";
                         }}),
                     }};
-                    employeeNumber = "Soft";
-                    employmentStatus = HrisEmployeeEmploymentStatus.INACTIVE;
-                    employmentType = HrisEmployeeEmploymentType.SEASONAL;
-                    gender = HrisEmployeeGender.MALE;
-                    hiredAt = OffsetDateTime.parse("2022-10-11T00:26:48.645Z");
+                    employeeNumber = "Benz";
+                    employmentStatus = HrisEmployeeEmploymentStatus.ACTIVE;
+                    employmentType = HrisEmployeeEmploymentType.VOLUNTEER;
+                    gender = HrisEmployeeGender.TRANS;
+                    hiredAt = OffsetDateTime.parse("2021-05-03T17:00:57.006Z");
                     id = "<ID>";
-                    location = "Executive";
-                    managerId = "withdrawal";
-                    maritalStatus = HrisEmployeeMaritalStatus.MARRIED;
-                    name = "outlet";
+                    imageUrl = "withdrawal";
+                    languageLocale = "Intersex";
+                    location = "Rice";
+                    managerId = "North";
+                    maritalStatus = HrisEmployeeMaritalStatus.SINGLE;
+                    name = "Terbium";
                     raw = new PropertyHrisEmployeeRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.HrisTelephone[]{{
-                        add(new HrisTelephone("Rice"){{
-                            telephone = "GB";
+                        add(new HrisTelephone("killer"){{
+                            telephone = "Oriental";
                         }}),
                     }};
-                    terminatedAt = OffsetDateTime.parse("2021-01-04T14:13:21.475Z");
-                    title = "South";
-                    updatedAt = OffsetDateTime.parse("2023-03-11T10:23:11.228Z");
+                    terminatedAt = OffsetDateTime.parse("2023-01-20T14:01:14.505Z");
+                    timezone = "Europe/Minsk";
+                    title = "tonight";
+                    updatedAt = OffsetDateTime.parse("2021-04-24T07:59:40.422Z");
                 }};
             }};            
 
@@ -424,8 +432,9 @@ public class Application {
                         regionCode = "Barium";
                     }};
                     createdAt = OffsetDateTime.parse("2022-01-07T17:08:48.397Z");
-                    dateOfBirth = OffsetDateTime.parse("2022-12-23T03:19:29.631Z");
-                    department = "Van";
+                    currency = "Guarani";
+                    dateOfBirth = OffsetDateTime.parse("2023-07-23T03:17:52.660Z");
+                    department = "Buckinghamshire";
                     division = "Jazz";
                     emails = new com.unifiedapi.unifiedto.models.shared.HrisEmail[]{{
                         add(new HrisEmail("unleash"){{
@@ -438,19 +447,22 @@ public class Application {
                     gender = HrisEmployeeGender.INTERSEX;
                     hiredAt = OffsetDateTime.parse("2023-03-10T13:52:47.416Z");
                     id = "<ID>";
-                    location = "beckon";
-                    managerId = "connect";
-                    maritalStatus = HrisEmployeeMaritalStatus.SINGLE;
-                    name = "cleverly";
+                    imageUrl = "beckon";
+                    languageLocale = "connect";
+                    location = "Interactions";
+                    managerId = "Southeast";
+                    maritalStatus = HrisEmployeeMaritalStatus.MARRIED;
+                    name = "Maryland";
                     raw = new PropertyHrisEmployeeRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.HrisTelephone[]{{
-                        add(new HrisTelephone("Maryland"){{
-                            telephone = "Palladium";
+                        add(new HrisTelephone("hack"){{
+                            telephone = "overriding";
                         }}),
                     }};
-                    terminatedAt = OffsetDateTime.parse("2022-07-11T10:08:37.980Z");
-                    title = "Towels";
-                    updatedAt = OffsetDateTime.parse("2021-05-18T08:13:47.572Z");
+                    terminatedAt = OffsetDateTime.parse("2021-01-23T11:48:01.774Z");
+                    timezone = "Europe/Bratislava";
+                    title = "Generic";
+                    updatedAt = OffsetDateTime.parse("2021-05-24T07:13:49.503Z");
                 }};
             }};            
 
