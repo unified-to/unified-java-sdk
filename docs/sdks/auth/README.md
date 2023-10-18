@@ -31,17 +31,17 @@ public class Application {
                 .build();
 
             GetUnifiedIntegrationAuthRequest req = new GetUnifiedIntegrationAuthRequest("Nobelium", "Branding"){{
-                env = "24/7 plum blot";
-                externalXref = "groupware";
-                failureRedirect = "Sausages Aston";
-                lang = "metrics Incredible Northwest";
+                env = "pascal";
+                externalXref = "West";
+                failureRedirect = "Xenogender";
+                lang = "North";
                 redirect = false;
                 scopes = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthScopes[]{{
-                    add(GetUnifiedIntegrationAuthScopes.CRM_COMPANY_READ),
+                    add(GetUnifiedIntegrationAuthScopes.CRM_FILE_READ),
                 }};
-                state = "California EXE Direct";
-                subdomain = "Lead Chair transmit";
-                successRedirect = "Central";
+                state = "Investment";
+                subdomain = "spirit";
+                successRedirect = "East";
             }};            
 
             GetUnifiedIntegrationAuthResponse res = sdk.auth.getUnifiedIntegrationAuth(req);
@@ -92,11 +92,11 @@ public class Application {
                 .build();
 
             GetUnifiedIntegrationLoginRequest req = new GetUnifiedIntegrationLoginRequest("Tricycle", "markets"){{
-                env = "Bicycle";
-                failureRedirect = "Strontium Silver Macy";
+                env = "Soft";
+                failureRedirect = "haptic";
                 redirect = false;
-                state = "Surinam Berkshire reboot";
-                successRedirect = "volt Sanford";
+                state = "SUV";
+                successRedirect = "deploy";
             }};            
 
             GetUnifiedIntegrationLoginResponse res = sdk.auth.getUnifiedIntegrationLogin(req);

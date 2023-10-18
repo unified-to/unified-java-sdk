@@ -39,20 +39,20 @@ public class Application {
 
             CreateAtsInterviewRequest req = new CreateAtsInterviewRequest("Bar"){{
                 atsInterview = new AtsInterview(){{
-                    applicationId = "Serbia oof";
-                    candidateId = "Roanoke Smart";
-                    createdAt = OffsetDateTime.parse("2023-05-20T17:10:33.906Z");
-                    endAt = OffsetDateTime.parse("2022-06-19T14:41:27.830Z");
-                    externalEventXref = "Account ubiquitous";
+                    applicationId = "deposit";
+                    candidateId = "azure";
+                    createdAt = OffsetDateTime.parse("2023-11-15T15:04:25.524Z");
+                    endAt = OffsetDateTime.parse("2022-03-31T21:00:53.882Z");
+                    externalEventXref = "Roanoke";
                     id = "<ID>";
-                    jobId = "Davenport West nestle";
-                    location = "Heights";
+                    jobId = "Smart";
+                    location = "tan";
                     raw = new PropertyAtsInterviewRaw();
-                    startAt = OffsetDateTime.parse("2023-01-03T04:00:54.874Z");
-                    status = AtsInterviewStatus.SCHEDULED;
-                    updatedAt = OffsetDateTime.parse("2021-06-05T14:28:55.678Z");
+                    startAt = OffsetDateTime.parse("2022-03-12T23:24:16.286Z");
+                    status = AtsInterviewStatus.AWAITING_FEEDBACK;
+                    updatedAt = OffsetDateTime.parse("2021-02-03T09:38:05.196Z");
                     userIds = new String[]{{
-                        add("Northeast"),
+                        add("Optimization"),
                     }};
                 }};
             }};            
@@ -159,16 +159,16 @@ public class Application {
                 .build();
 
             ListAtsInterviewsRequest req = new ListAtsInterviewsRequest("Wooden"){{
-                applicationId = "Northeast";
+                applicationId = "Avon";
                 fields = new String[]{{
-                    add("Chrysler"),
+                    add("gold"),
                 }};
-                limit = 2991.18d;
-                offset = 3108d;
-                order = "West";
-                query = "Analyst Pickup";
-                sort = "underwriting protocol";
-                updatedGte = OffsetDateTime.parse("2022-07-10T08:55:35.395Z");
+                limit = 2371.68d;
+                offset = 2991.18d;
+                order = "evolve";
+                query = "West";
+                sort = "SMTP";
+                updatedGte = OffsetDateTime.parse("2022-07-10T13:30:46.522Z");
             }};            
 
             ListAtsInterviewsResponse res = sdk.interview.listAtsInterviews(req);
@@ -224,20 +224,20 @@ public class Application {
 
             PatchAtsInterviewRequest req = new PatchAtsInterviewRequest("Handmade", "Oxygen"){{
                 atsInterview = new AtsInterview(){{
-                    applicationId = "Ariary Regional rich";
-                    candidateId = "District Northeast";
-                    createdAt = OffsetDateTime.parse("2021-03-01T18:03:55.726Z");
-                    endAt = OffsetDateTime.parse("2022-05-26T13:01:26.520Z");
-                    externalEventXref = "Loan Avon";
+                    applicationId = "hen";
+                    candidateId = "quantifying";
+                    createdAt = OffsetDateTime.parse("2022-12-08T14:26:55.298Z");
+                    endAt = OffsetDateTime.parse("2022-03-09T03:30:12.586Z");
+                    externalEventXref = "rich";
                     id = "<ID>";
-                    jobId = "female Zloty";
-                    location = "quirkily Liaison Metical";
+                    jobId = "Zloty";
+                    location = "ASCII";
                     raw = new PropertyAtsInterviewRaw();
-                    startAt = OffsetDateTime.parse("2022-10-12T02:43:44.811Z");
-                    status = AtsInterviewStatus.AWAITING_FEEDBACK;
-                    updatedAt = OffsetDateTime.parse("2021-09-10T22:46:18.450Z");
+                    startAt = OffsetDateTime.parse("2021-07-14T09:05:37.522Z");
+                    status = AtsInterviewStatus.SCHEDULED;
+                    updatedAt = OffsetDateTime.parse("2022-05-26T13:01:26.520Z");
                     userIds = new String[]{{
-                        add("wetly"),
+                        add("Group"),
                     }};
                 }};
             }};            
@@ -344,20 +344,20 @@ public class Application {
 
             UpdateAtsInterviewRequest req = new UpdateAtsInterviewRequest("maroon", "Southeast"){{
                 atsInterview = new AtsInterview(){{
-                    applicationId = "FTM Modern";
-                    candidateId = "Buckinghamshire female";
-                    createdAt = OffsetDateTime.parse("2022-05-03T09:33:14.269Z");
-                    endAt = OffsetDateTime.parse("2022-10-27T22:37:05.474Z");
-                    externalEventXref = "sensor incidentally Research";
+                    applicationId = "omnis";
+                    candidateId = "Gorgeous";
+                    createdAt = OffsetDateTime.parse("2023-05-20T16:26:29.311Z");
+                    endAt = OffsetDateTime.parse("2023-02-12T09:40:25.959Z");
+                    externalEventXref = "JBOD";
                     id = "<ID>";
-                    jobId = "female Technician watt";
-                    location = "program";
+                    jobId = "sensor";
+                    location = "incidentally";
                     raw = new PropertyAtsInterviewRaw();
-                    startAt = OffsetDateTime.parse("2022-11-19T23:12:37.729Z");
+                    startAt = OffsetDateTime.parse("2022-11-12T19:56:49.769Z");
                     status = AtsInterviewStatus.SCHEDULED;
-                    updatedAt = OffsetDateTime.parse("2022-12-31T21:30:22.532Z");
+                    updatedAt = OffsetDateTime.parse("2023-10-23T17:18:45.612Z");
                     userIds = new String[]{{
-                        add("tensor"),
+                        add("female"),
                     }};
                 }};
             }};            

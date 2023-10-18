@@ -8,9 +8,6 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-/**
- * AtsCompensation - Unified compensation object for a job
- */
 
 public class AtsCompensation {
     @JsonInclude(Include.NON_ABSENT)

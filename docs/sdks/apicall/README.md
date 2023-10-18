@@ -80,17 +80,17 @@ public class Application {
                 .build();
 
             ListUnifiedApicallsRequest req = new ListUnifiedApicallsRequest(){{
-                connectionId = "Lead Krone";
-                createdLte = OffsetDateTime.parse("2022-09-06T17:13:51.274Z");
-                env = "parse dearly Integration";
+                connectionId = "feed";
+                createdLte = OffsetDateTime.parse("2021-01-15T05:06:05.218Z");
+                env = "flail";
                 error = false;
-                externalXref = "Customer Rap";
-                integrationType = "Rest solution";
-                limit = 1797.17d;
-                offset = 2364.47d;
-                order = "Kentucky";
-                sort = "copy Chile";
-                updatedGte = OffsetDateTime.parse("2021-03-07T15:44:54.599Z");
+                externalXref = "Trail";
+                integrationType = "male";
+                limit = 9674.36d;
+                offset = 8869.99d;
+                order = "Lights";
+                sort = "Hop";
+                updatedGte = OffsetDateTime.parse("2022-08-25T10:35:13.567Z");
             }};            
 
             ListUnifiedApicallsResponse res = sdk.apicall.listUnifiedApicalls(req);

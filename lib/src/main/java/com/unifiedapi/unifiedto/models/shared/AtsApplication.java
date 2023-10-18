@@ -13,9 +13,6 @@ import com.unifiedapi.unifiedto.utils.DateTimeDeserializer;
 import com.unifiedapi.unifiedto.utils.DateTimeSerializer;
 import java.time.OffsetDateTime;
 
-/**
- * AtsApplication - An application is an association object between a candidate and a job
- */
 
 public class AtsApplication {
     @JsonInclude(Include.NON_ABSENT)

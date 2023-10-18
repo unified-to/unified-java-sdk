@@ -54,43 +54,43 @@ public class Application {
             CreateHrisEmployeeRequest req = new CreateHrisEmployeeRequest("technologies"){{
                 hrisEmployee = new HrisEmployee(){{
                     address = new PropertyHrisEmployeeAddress(){{
-                        address1 = "composite redefine";
-                        address2 = "repudiandae white primary";
-                        city = "Kent";
-                        country = "Faroe Islands";
-                        countryCode = "CC";
-                        postalCode = "14318-3860";
-                        region = "candela Data";
-                        regionCode = "Koruna where Director";
+                        address1 = "Country";
+                        address2 = "Gloves";
+                        city = "West Palm Beach";
+                        country = "Micronesia";
+                        countryCode = "UA";
+                        postalCode = "24094-2191";
+                        region = "Money";
+                        regionCode = "Gasoline";
                     }};
-                    createdAt = OffsetDateTime.parse("2022-08-18T03:26:10.390Z");
-                    dateOfBirth = OffsetDateTime.parse("2021-01-06T20:54:57.707Z");
-                    department = "City snake";
-                    division = "since Dinar Mills";
+                    createdAt = OffsetDateTime.parse("2021-01-23T22:14:37.407Z");
+                    dateOfBirth = OffsetDateTime.parse("2022-02-17T06:57:07.657Z");
+                    department = "candela";
+                    division = "Data";
                     emails = new com.unifiedapi.unifiedto.models.shared.HrisEmail[]{{
-                        add(new HrisEmail("deeply"){{
-                            email = "Graciela19@hotmail.com";
+                        add(new HrisEmail("Director"){{
+                            email = "Hertha_Dooley79@hotmail.com";
                         }}),
                     }};
-                    employeeNumber = "barley Kia";
-                    employmentStatus = HrisEmployeeEmploymentStatus.INACTIVE;
-                    employmentType = HrisEmployeeEmploymentType.FULL_TIME;
-                    gender = HrisEmployeeGender.NON_BINARY;
-                    hiredAt = OffsetDateTime.parse("2023-12-17T04:53:53.732Z");
+                    employeeNumber = "back";
+                    employmentStatus = HrisEmployeeEmploymentStatus.ACTIVE;
+                    employmentType = HrisEmployeeEmploymentType.CONSULTANT;
+                    gender = HrisEmployeeGender.INTERSEX;
+                    hiredAt = OffsetDateTime.parse("2023-10-31T19:48:31.910Z");
                     id = "<ID>";
-                    location = "Reggae extensible Guinea";
-                    managerId = "Cedi";
+                    location = "Gasoline";
+                    managerId = "since";
                     maritalStatus = HrisEmployeeMaritalStatus.MARRIED;
-                    name = "Wagon";
+                    name = "system";
                     raw = new PropertyHrisEmployeeRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.HrisTelephone[]{{
-                        add(new HrisTelephone("Executive"){{
-                            telephone = "Carolina";
+                        add(new HrisTelephone("program"){{
+                            telephone = "ugh";
                         }}),
                     }};
-                    terminatedAt = OffsetDateTime.parse("2022-01-16T19:09:51.878Z");
-                    title = "payment North";
-                    updatedAt = OffsetDateTime.parse("2023-03-05T19:24:43.770Z");
+                    terminatedAt = OffsetDateTime.parse("2023-06-28T21:13:46.229Z");
+                    title = "adapter";
+                    updatedAt = OffsetDateTime.parse("2021-10-31T10:26:31.878Z");
                 }};
             }};            
 
@@ -157,11 +157,11 @@ public class Application {
                     managerIds = new String[]{{
                         add("Forks"),
                     }};
-                    name = "M2F Iranian";
-                    parentId = "driver Electric";
+                    name = "pixel";
+                    parentId = "navigating";
                     raw = new PropertyHrisGroupRaw();
                     type = HrisGroupType.DEPARTMENT;
-                    updatedAt = OffsetDateTime.parse("2022-11-20T16:35:37.465Z");
+                    updatedAt = OffsetDateTime.parse("2021-08-09T16:59:36.779Z");
                 }};
             }};            
 
@@ -325,10 +325,10 @@ public class Application {
                 }};
                 limit = 9587.43d;
                 offset = 9972.64d;
-                order = "Lari Cedi";
-                query = "pug";
-                sort = "SUV";
-                updatedGte = OffsetDateTime.parse("2022-01-13T14:38:18.201Z");
+                order = "Investment";
+                query = "Cedi";
+                sort = "Virginia";
+                updatedGte = OffsetDateTime.parse("2021-05-31T02:19:19.239Z");
             }};            
 
             ListHrisEmployeesResponse res = sdk.hris.listHrisEmployees(req);
@@ -385,10 +385,10 @@ public class Application {
                 }};
                 limit = 1929.12d;
                 offset = 3809.99d;
-                order = "portals even Manager";
-                query = "proactive deliverables";
-                sort = "West Plastic transmit";
-                updatedGte = OffsetDateTime.parse("2023-02-19T02:41:06.804Z");
+                order = "feel";
+                query = "olive";
+                sort = "Shores";
+                updatedGte = OffsetDateTime.parse("2021-11-06T13:39:44.797Z");
             }};            
 
             ListHrisGroupsResponse res = sdk.hris.listHrisGroups(req);
@@ -453,43 +453,43 @@ public class Application {
             PatchHrisEmployeeRequest req = new PatchHrisEmployeeRequest("New", "cyan"){{
                 hrisEmployee = new HrisEmployee(){{
                     address = new PropertyHrisEmployeeAddress(){{
-                        address1 = "Hybrid Fresh Alaska";
-                        address2 = "siemens ohm";
-                        city = "Fort Myrna";
-                        country = "Switzerland";
-                        countryCode = "SC";
-                        postalCode = "59699-8615";
-                        region = "hard";
-                        regionCode = "Soft Producer Borders";
+                        address1 = "farad";
+                        address2 = "barring";
+                        city = "Rudyfort";
+                        country = "Luxembourg";
+                        countryCode = "BR";
+                        postalCode = "47875";
+                        region = "Pizza";
+                        regionCode = "Terbium";
                     }};
-                    createdAt = OffsetDateTime.parse("2023-01-28T09:34:42.602Z");
-                    dateOfBirth = OffsetDateTime.parse("2021-05-03T17:00:57.006Z");
-                    department = "Plastic outlet";
-                    division = "intuitive monitor";
+                    createdAt = OffsetDateTime.parse("2023-12-09T22:20:00.252Z");
+                    dateOfBirth = OffsetDateTime.parse("2023-02-02T08:38:55.837Z");
+                    department = "witch";
+                    division = "Minivan";
                     emails = new com.unifiedapi.unifiedto.models.shared.HrisEmail[]{{
-                        add(new HrisEmail("Terbium"){{
-                            email = "Desmond65@yahoo.com";
+                        add(new HrisEmail("reciprocal"){{
+                            email = "Kaylee_Fay@gmail.com";
                         }}),
                     }};
-                    employeeNumber = "Card";
+                    employeeNumber = "Soft";
                     employmentStatus = HrisEmployeeEmploymentStatus.INACTIVE;
-                    employmentType = HrisEmployeeEmploymentType.OTHER;
+                    employmentType = HrisEmployeeEmploymentType.SEASONAL;
                     gender = HrisEmployeeGender.MALE;
-                    hiredAt = OffsetDateTime.parse("2023-05-23T18:25:46.914Z");
+                    hiredAt = OffsetDateTime.parse("2022-10-11T00:26:48.645Z");
                     id = "<ID>";
-                    location = "USB South";
-                    managerId = "inventore";
-                    maritalStatus = HrisEmployeeMaritalStatus.SINGLE;
-                    name = "Cambridgeshire genre Assurance";
+                    location = "Executive";
+                    managerId = "withdrawal";
+                    maritalStatus = HrisEmployeeMaritalStatus.MARRIED;
+                    name = "outlet";
                     raw = new PropertyHrisEmployeeRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.HrisTelephone[]{{
-                        add(new HrisTelephone("Lilangeni"){{
-                            telephone = "concept disburse Prairie";
+                        add(new HrisTelephone("Rice"){{
+                            telephone = "GB";
                         }}),
                     }};
-                    terminatedAt = OffsetDateTime.parse("2021-06-18T18:33:10.110Z");
-                    title = "where instead female";
-                    updatedAt = OffsetDateTime.parse("2021-08-30T22:54:54.298Z");
+                    terminatedAt = OffsetDateTime.parse("2021-01-04T14:13:21.475Z");
+                    title = "South";
+                    updatedAt = OffsetDateTime.parse("2023-03-11T10:23:11.228Z");
                 }};
             }};            
 
@@ -556,11 +556,11 @@ public class Application {
                     managerIds = new String[]{{
                         add("boohoo"),
                     }};
-                    name = "innovate";
-                    parentId = "Chevrolet";
+                    name = "South";
+                    parentId = "Potassium";
                     raw = new PropertyHrisGroupRaw();
-                    type = HrisGroupType.DIVISION;
-                    updatedAt = OffsetDateTime.parse("2023-01-02T08:52:32.014Z");
+                    type = HrisGroupType.BRANCH;
+                    updatedAt = OffsetDateTime.parse("2021-07-31T04:02:38.097Z");
                 }};
             }};            
 
@@ -724,43 +724,43 @@ public class Application {
             UpdateHrisEmployeeRequest req = new UpdateHrisEmployeeRequest("Normal", "truly"){{
                 hrisEmployee = new HrisEmployee(){{
                     address = new PropertyHrisEmployeeAddress(){{
-                        address1 = "Brand Androgyne";
-                        address2 = "Distributed";
-                        city = "Yundtfield";
-                        country = "Zambia";
-                        countryCode = "SC";
-                        postalCode = "58866";
+                        address1 = "Web";
+                        address2 = "Borders";
+                        city = "North Filibertoberg";
+                        country = "Saudi Arabia";
+                        countryCode = "YT";
+                        postalCode = "97158-8660";
                         region = "F2M";
-                        regionCode = "HEX Internal Buckinghamshire";
+                        regionCode = "Barium";
                     }};
-                    createdAt = OffsetDateTime.parse("2022-10-01T07:10:14.173Z");
-                    dateOfBirth = OffsetDateTime.parse("2022-04-22T02:08:52.236Z");
-                    department = "Gasoline anti";
-                    division = "unleash whiteboard Northwest";
+                    createdAt = OffsetDateTime.parse("2022-01-07T17:08:48.397Z");
+                    dateOfBirth = OffsetDateTime.parse("2022-12-23T03:19:29.631Z");
+                    department = "Van";
+                    division = "Jazz";
                     emails = new com.unifiedapi.unifiedto.models.shared.HrisEmail[]{{
-                        add(new HrisEmail("SCSI"){{
-                            email = "Monte55@yahoo.com";
+                        add(new HrisEmail("unleash"){{
+                            email = "Rafaela.Lakin77@yahoo.com";
                         }}),
                     }};
-                    employeeNumber = "Southeast budgetary overriding";
-                    employmentStatus = HrisEmployeeEmploymentStatus.INACTIVE;
-                    employmentType = HrisEmployeeEmploymentType.PART_TIME;
-                    gender = HrisEmployeeGender.MALE;
-                    hiredAt = OffsetDateTime.parse("2021-12-05T02:34:17.642Z");
+                    employeeNumber = "whiteboard";
+                    employmentStatus = HrisEmployeeEmploymentStatus.ACTIVE;
+                    employmentType = HrisEmployeeEmploymentType.INTERN;
+                    gender = HrisEmployeeGender.INTERSEX;
+                    hiredAt = OffsetDateTime.parse("2023-03-10T13:52:47.416Z");
                     id = "<ID>";
-                    location = "Direct";
-                    managerId = "Other Corporate Keyboard";
-                    maritalStatus = HrisEmployeeMaritalStatus.MARRIED;
-                    name = "holistic";
+                    location = "beckon";
+                    managerId = "connect";
+                    maritalStatus = HrisEmployeeMaritalStatus.SINGLE;
+                    name = "cleverly";
                     raw = new PropertyHrisEmployeeRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.HrisTelephone[]{{
-                        add(new HrisTelephone("Outlying"){{
-                            telephone = "Diesel";
+                        add(new HrisTelephone("Maryland"){{
+                            telephone = "Palladium";
                         }}),
                     }};
-                    terminatedAt = OffsetDateTime.parse("2022-02-01T05:32:53.194Z");
-                    title = "male";
-                    updatedAt = OffsetDateTime.parse("2021-06-28T03:29:04.540Z");
+                    terminatedAt = OffsetDateTime.parse("2022-07-11T10:08:37.980Z");
+                    title = "Towels";
+                    updatedAt = OffsetDateTime.parse("2021-05-18T08:13:47.572Z");
                 }};
             }};            
 
@@ -827,11 +827,11 @@ public class Application {
                     managerIds = new String[]{{
                         add("Table"),
                     }};
-                    name = "lime";
-                    parentId = "Wagon Rubber";
+                    name = "Charlottesville";
+                    parentId = "Zirconium";
                     raw = new PropertyHrisGroupRaw();
-                    type = HrisGroupType.SUB_DEPARTMENT;
-                    updatedAt = OffsetDateTime.parse("2023-08-16T02:52:12.983Z");
+                    type = HrisGroupType.BRANCH;
+                    updatedAt = OffsetDateTime.parse("2023-12-08T18:53:44.937Z");
                 }};
             }};            
 

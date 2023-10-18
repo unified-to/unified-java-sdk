@@ -50,36 +50,36 @@ public class Application {
             CreateCrmContactRequest req = new CreateCrmContactRequest("Account"){{
                 crmContact = new CrmContact(){{
                     address = new PropertyCrmContactAddress(){{
-                        address1 = "towards";
-                        address2 = "Cambridgeshire Passenger Producer";
-                        city = "Gutkowskifurt";
-                        country = "Bolivia";
-                        countryCode = "NA";
-                        postalCode = "06740";
-                        region = "Fresh auxiliary";
-                        regionCode = "Northwest";
+                        address1 = "Chips";
+                        address2 = "superb";
+                        city = "Fort Rosamondchester";
+                        country = "Croatia";
+                        countryCode = "NU";
+                        postalCode = "73616-0067";
+                        region = "deposit";
+                        regionCode = "Birr";
                     }};
-                    company = "Ratke, Pacocha and Harvey";
+                    company = "Bahringer - Gulgowski";
                     companyIds = new String[]{{
-                        add("likewise"),
+                        add("Northwest"),
                     }};
-                    createdAt = OffsetDateTime.parse("2023-03-19T11:45:23.493Z");
+                    createdAt = OffsetDateTime.parse("2023-10-05T01:54:07.502Z");
                     dealIds = new String[]{{
-                        add("thatch"),
+                        add("male"),
                     }};
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
-                    name = "asperiores Principal Wooden";
+                    name = "functionalities";
                     raw = new PropertyCrmContactRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("flat"){{
-                            telephone = "generate rapidly Southeast";
+                        add(new CrmTelephone("yet"){{
+                            telephone = "Account";
                         }}),
                     }};
-                    title = "Coupe Industrial Won";
-                    updatedAt = OffsetDateTime.parse("2021-12-23T10:16:54.912Z");
+                    title = "asperiores";
+                    updatedAt = OffsetDateTime.parse("2022-12-11T06:27:07.072Z");
                 }};
             }};            
 
@@ -147,15 +147,15 @@ public class Application {
                         }}),
                     }};
                     id = "<ID>";
-                    name = "Practical Diesel Garden";
+                    name = "darn";
                     raw = new PropertyUcContactRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
-                        add(new UcTelephone("blackness"){{
-                            telephone = "after";
+                        add(new UcTelephone("Garden"){{
+                            telephone = "Auto";
                         }}),
                     }};
-                    title = "interactive";
-                    updatedAt = OffsetDateTime.parse("2023-10-24T21:46:28.575Z");
+                    title = "Southwest";
+                    updatedAt = OffsetDateTime.parse("2021-01-17T23:42:49.226Z");
                 }};
             }};            
 
@@ -314,17 +314,17 @@ public class Application {
                 .build();
 
             ListCrmContactsRequest req = new ListCrmContactsRequest("Research"){{
-                companyId = "Nevada portal Recumbent";
-                dealId = "bah Music Lubbock";
+                companyId = "but";
+                dealId = "index";
                 fields = new String[]{{
-                    add("Usability"),
+                    add("steradian"),
                 }};
-                limit = 9202.53d;
-                offset = 2649.7d;
-                order = "Principal";
-                query = "blue";
-                sort = "instantly";
-                updatedGte = OffsetDateTime.parse("2022-01-04T20:08:38.586Z");
+                limit = 6500.88d;
+                offset = 4474.76d;
+                order = "upon";
+                query = "Directives";
+                sort = "Alaska";
+                updatedGte = OffsetDateTime.parse("2022-07-19T05:08:36.583Z");
             }};            
 
             ListCrmContactsResponse res = sdk.contact.listCrmContacts(req);
@@ -376,16 +376,16 @@ public class Application {
                 .build();
 
             ListUcContactsRequest req = new ListUcContactsRequest("Xenogender"){{
-                agentId = "Solutions haptic Pickup";
+                agentId = "male";
                 fields = new String[]{{
-                    add("generating"),
+                    add("East"),
                 }};
-                limit = 6559.53d;
-                offset = 7178.57d;
-                order = "North";
-                query = "Berkshire";
-                sort = "behind animi Jersey";
-                updatedGte = OffsetDateTime.parse("2023-10-30T03:50:09.755Z");
+                limit = 5154.91d;
+                offset = 8550.33d;
+                order = "paradigm";
+                query = "generating";
+                sort = "Legacy";
+                updatedGte = OffsetDateTime.parse("2021-01-07T17:07:06.790Z");
             }};            
 
             ListUcContactsResponse res = sdk.contact.listUcContacts(req);
@@ -446,36 +446,36 @@ public class Application {
             PatchCrmContactRequest req = new PatchCrmContactRequest("Buckinghamshire", "morph"){{
                 crmContact = new CrmContact(){{
                     address = new PropertyCrmContactAddress(){{
-                        address1 = "Northeast salmon";
-                        address2 = "Wooden Southwest";
-                        city = "Caylaside";
-                        country = "Antigua and Barbuda";
-                        countryCode = "MM";
-                        postalCode = "17496";
-                        region = "Music questioning";
-                        regionCode = "Minivan Consultant Senior";
+                        address1 = "array";
+                        address2 = "East";
+                        city = "Mafaldaboro";
+                        country = "Slovenia";
+                        countryCode = "CI";
+                        postalCode = "51751";
+                        region = "angelic";
+                        regionCode = "World";
                     }};
-                    company = "Roberts, Price and Ondricka";
+                    company = "Prohaska and Sons";
                     companyIds = new String[]{{
-                        add("Northwest"),
+                        add("notwithstanding"),
                     }};
-                    createdAt = OffsetDateTime.parse("2022-02-10T03:20:51.348Z");
+                    createdAt = OffsetDateTime.parse("2022-04-02T15:56:00.231Z");
                     dealIds = new String[]{{
-                        add("Southwest"),
+                        add("Music"),
                     }};
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
-                    name = "South blockchains West";
+                    name = "questioning";
                     raw = new PropertyCrmContactRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("whereas"){{
-                            telephone = "quibusdam optical";
+                        add(new CrmTelephone("Senior"){{
+                            telephone = "Developer";
                         }}),
                     }};
-                    title = "feed navigate";
-                    updatedAt = OffsetDateTime.parse("2023-04-18T19:04:11.197Z");
+                    title = "resident";
+                    updatedAt = OffsetDateTime.parse("2023-02-03T23:50:19.466Z");
                 }};
             }};            
 
@@ -543,15 +543,15 @@ public class Application {
                         }}),
                     }};
                     id = "<ID>";
-                    name = "Product aggravating";
+                    name = "Investor";
                     raw = new PropertyUcContactRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
-                        add(new UcTelephone("female"){{
-                            telephone = "Electric Paradigm";
+                        add(new UcTelephone("Electric"){{
+                            telephone = "South";
                         }}),
                     }};
-                    title = "Hybrid Rubber";
-                    updatedAt = OffsetDateTime.parse("2023-10-30T10:35:45.233Z");
+                    title = "Paradigm";
+                    updatedAt = OffsetDateTime.parse("2023-02-26T22:43:00.788Z");
                 }};
             }};            
 
@@ -711,36 +711,36 @@ public class Application {
             UpdateCrmContactRequest req = new UpdateCrmContactRequest("Harbors", "relieved"){{
                 crmContact = new CrmContact(){{
                     address = new PropertyCrmContactAddress(){{
-                        address1 = "Des green";
-                        address2 = "man panel";
-                        city = "New Zacharyport";
-                        country = "Australia";
-                        countryCode = "BW";
-                        postalCode = "83405";
-                        region = "1080p Northeast";
-                        regionCode = "Virginia";
+                        address1 = "backing";
+                        address2 = "responsive";
+                        city = "New Laylaton";
+                        country = "Mauritania";
+                        countryCode = "LR";
+                        postalCode = "05940";
+                        region = "Sigrid";
+                        regionCode = "Northeast";
                     }};
-                    company = "Klocko Inc";
+                    company = "Kub - Robel";
                     companyIds = new String[]{{
-                        add("Macedonia"),
+                        add("Northeast"),
                     }};
-                    createdAt = OffsetDateTime.parse("2021-09-06T18:08:34.170Z");
+                    createdAt = OffsetDateTime.parse("2021-09-13T08:55:04.418Z");
                     dealIds = new String[]{{
-                        add("Silver"),
+                        add("Virginia"),
                     }};
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
-                    name = "Buckinghamshire";
+                    name = "Berkshire";
                     raw = new PropertyCrmContactRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("successfully"){{
-                            telephone = "violet synthesize";
+                        add(new CrmTelephone("program"){{
+                            telephone = "Ergonomic";
                         }}),
                     }};
-                    title = "Electronics 1080p withdrawal";
-                    updatedAt = OffsetDateTime.parse("2023-12-17T06:39:56.020Z");
+                    title = "Silver";
+                    updatedAt = OffsetDateTime.parse("2021-02-24T19:24:14.026Z");
                 }};
             }};            
 
@@ -808,15 +808,15 @@ public class Application {
                         }}),
                     }};
                     id = "<ID>";
-                    name = "Corporate";
+                    name = "Northwest";
                     raw = new PropertyUcContactRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
-                        add(new UcTelephone("Principal"){{
-                            telephone = "Fish";
+                        add(new UcTelephone("Fish"){{
+                            telephone = "Books";
                         }}),
                     }};
-                    title = "Books";
-                    updatedAt = OffsetDateTime.parse("2023-04-20T04:04:49.023Z");
+                    title = "Principal";
+                    updatedAt = OffsetDateTime.parse("2021-02-19T05:22:48.848Z");
                 }};
             }};            
 

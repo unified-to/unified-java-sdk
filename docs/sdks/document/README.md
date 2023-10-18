@@ -39,15 +39,15 @@ public class Application {
 
             CreateAtsScorecardRequest req = new CreateAtsScorecardRequest("Account"){{
                 atsScorecard = new AtsScorecard(new PropertyAtsScorecardRaw()){{
-                    applicationId = "mint Southeast";
-                    candidateId = "Manager Handcrafted";
-                    createdAt = OffsetDateTime.parse("2021-03-30T11:56:53.937Z");
+                    applicationId = "Yuan";
+                    candidateId = "deposit";
+                    createdAt = OffsetDateTime.parse("2022-11-29T04:33:02.087Z");
                     id = "<ID>";
-                    interviewId = "Keys";
-                    interviewerId = "compressing quantifying gain";
-                    jobId = "Jamaican Russian Quincy";
-                    recommendation = AtsScorecardRecommendation.STRONG_YES;
-                    updatedAt = OffsetDateTime.parse("2023-11-22T04:56:50.505Z");
+                    interviewId = "Credit";
+                    interviewerId = "hm";
+                    jobId = "Manager";
+                    recommendation = AtsScorecardRecommendation.YES;
+                    updatedAt = OffsetDateTime.parse("2021-03-30T11:56:53.937Z");
                 }};
             }};            
 
@@ -153,18 +153,18 @@ public class Application {
                 .build();
 
             ListAtsScorecardsRequest req = new ListAtsScorecardsRequest("surprised"){{
-                applicationId = "frantically";
-                candidateId = "invoice";
+                applicationId = "Gislason";
+                candidateId = "Pickup";
                 fields = new String[]{{
-                    add("Seamless"),
+                    add("slop"),
                 }};
-                interviewId = "Diesel Clovis Dinar";
-                limit = 7350.75d;
-                offset = 5961.51d;
-                order = "Account Adaptive frictionless";
-                query = "Pizza Baby Circle";
-                sort = "Metal";
-                updatedGte = OffsetDateTime.parse("2021-07-10T16:39:24.000Z");
+                interviewId = "North";
+                limit = 1893.11d;
+                offset = 4281.16d;
+                order = "parallelism";
+                query = "Lutetium";
+                sort = "Tools";
+                updatedGte = OffsetDateTime.parse("2022-07-30T11:15:06.025Z");
             }};            
 
             ListAtsScorecardsResponse res = sdk.document.listAtsScorecards(req);
@@ -220,15 +220,15 @@ public class Application {
 
             PatchAtsScorecardRequest req = new PatchAtsScorecardRequest("engage", "Movies"){{
                 atsScorecard = new AtsScorecard(new PropertyAtsScorecardRaw()){{
-                    applicationId = "watt Interactions";
-                    candidateId = "up";
-                    createdAt = OffsetDateTime.parse("2021-06-02T01:49:29.997Z");
+                    applicationId = "application";
+                    candidateId = "Leu";
+                    createdAt = OffsetDateTime.parse("2023-09-14T09:14:37.430Z");
                     id = "<ID>";
-                    interviewId = "Automotive Buckinghamshire";
-                    interviewerId = "Pickup tempora";
-                    jobId = "Prairie fondly Hatchback";
-                    recommendation = AtsScorecardRecommendation.STRONG_YES;
-                    updatedAt = OffsetDateTime.parse("2023-08-12T06:41:03.214Z");
+                    interviewId = "generate";
+                    interviewerId = "Bespoke";
+                    jobId = "Malawi";
+                    recommendation = AtsScorecardRecommendation.DEFINITELY_NO;
+                    updatedAt = OffsetDateTime.parse("2022-04-07T09:43:56.983Z");
                 }};
             }};            
 
@@ -334,15 +334,15 @@ public class Application {
 
             UpdateAtsScorecardRequest req = new UpdateAtsScorecardRequest("Digitized", "Legacy"){{
                 atsScorecard = new AtsScorecard(new PropertyAtsScorecardRaw()){{
-                    applicationId = "backing Incredible UDP";
-                    candidateId = "South Bethesda rail";
-                    createdAt = OffsetDateTime.parse("2022-01-13T06:37:40.295Z");
+                    applicationId = "legislator";
+                    candidateId = "East";
+                    createdAt = OffsetDateTime.parse("2021-09-15T07:42:18.559Z");
                     id = "<ID>";
-                    interviewId = "Executive haptic";
-                    interviewerId = "Nebraska scalable";
-                    jobId = "Wooden XML hierarchy";
-                    recommendation = AtsScorecardRecommendation.STRONG_YES;
-                    updatedAt = OffsetDateTime.parse("2023-10-31T22:09:25.392Z");
+                    interviewId = "Cotton";
+                    interviewerId = "youthful";
+                    jobId = "South";
+                    recommendation = AtsScorecardRecommendation.DEFINITELY_NO;
+                    updatedAt = OffsetDateTime.parse("2022-11-05T16:19:19.866Z");
                 }};
             }};            
 

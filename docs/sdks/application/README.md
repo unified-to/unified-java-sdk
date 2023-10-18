@@ -40,16 +40,16 @@ public class Application {
             CreateAtsApplicationRequest req = new CreateAtsApplicationRequest("payment"){{
                 atsApplication = new AtsApplication(){{
                     appliedAt = OffsetDateTime.parse("2023-09-14T08:24:54.358Z");
-                    candidateId = "approach Hybrid";
-                    createdAt = OffsetDateTime.parse("2023-04-26T15:55:11.995Z");
+                    candidateId = "Money";
+                    createdAt = OffsetDateTime.parse("2022-02-26T06:43:14.350Z");
                     id = "<ID>";
-                    jobId = "Awesome";
+                    jobId = "Buckinghamshire";
                     raw = new PropertyAtsApplicationRaw();
-                    rejectedAt = OffsetDateTime.parse("2023-09-30T14:39:16.583Z");
-                    rejectedReason = "Communications male programming";
-                    source = "plus Pataca";
-                    status = AtsApplicationStatus.SCREENING;
-                    updatedAt = OffsetDateTime.parse("2023-04-20T12:32:42.371Z");
+                    rejectedAt = OffsetDateTime.parse("2023-11-29T01:08:00.744Z");
+                    rejectedReason = "Cyclocross";
+                    source = "Interactions";
+                    status = AtsApplicationStatus.ACCEPTED;
+                    updatedAt = OffsetDateTime.parse("2023-01-14T16:50:51.019Z");
                 }};
             }};            
 
@@ -155,17 +155,17 @@ public class Application {
                 .build();
 
             ListAtsApplicationsRequest req = new ListAtsApplicationsRequest("models"){{
-                candidateId = "secrecy withdrawal Springs";
+                candidateId = "Wagon";
                 fields = new String[]{{
-                    add("Blues"),
+                    add("violet"),
                 }};
-                jobId = "solutions";
-                limit = 1330.66d;
-                offset = 5248.28d;
-                order = "Kazakhstan";
-                query = "SDD East boohoo";
-                sort = "Sports Assistant Chlorine";
-                updatedGte = OffsetDateTime.parse("2022-08-05T05:05:40.196Z");
+                jobId = "adapter";
+                limit = 7975.22d;
+                offset = 8448.96d;
+                order = "Blues";
+                query = "pink";
+                sort = "Rustic";
+                updatedGte = OffsetDateTime.parse("2022-05-10T01:25:15.283Z");
             }};            
 
             ListAtsApplicationsResponse res = sdk.application.listAtsApplications(req);
@@ -222,16 +222,16 @@ public class Application {
             PatchAtsApplicationRequest req = new PatchAtsApplicationRequest("Corporate", "Director"){{
                 atsApplication = new AtsApplication(){{
                     appliedAt = OffsetDateTime.parse("2023-05-29T04:40:45.531Z");
-                    candidateId = "Usability Leonie";
-                    createdAt = OffsetDateTime.parse("2023-02-20T09:56:40.826Z");
+                    candidateId = "alarm";
+                    createdAt = OffsetDateTime.parse("2023-08-29T15:27:53.968Z");
                     id = "<ID>";
-                    jobId = "amid";
+                    jobId = "pith";
                     raw = new PropertyAtsApplicationRaw();
-                    rejectedAt = OffsetDateTime.parse("2021-01-31T07:21:40.841Z");
-                    rejectedReason = "Royce";
-                    source = "Irving Generic Buckinghamshire";
-                    status = AtsApplicationStatus.REVIEWING;
-                    updatedAt = OffsetDateTime.parse("2022-04-27T14:23:51.358Z");
+                    rejectedAt = OffsetDateTime.parse("2022-11-04T10:01:24.162Z");
+                    rejectedReason = "Leonie";
+                    source = "female";
+                    status = AtsApplicationStatus.WITHDRAWN;
+                    updatedAt = OffsetDateTime.parse("2021-05-11T06:56:17.734Z");
                 }};
             }};            
 
@@ -338,16 +338,16 @@ public class Application {
             UpdateAtsApplicationRequest req = new UpdateAtsApplicationRequest("Valley", "Account"){{
                 atsApplication = new AtsApplication(){{
                     appliedAt = OffsetDateTime.parse("2023-07-05T09:39:00.042Z");
-                    candidateId = "repeatedly Configurable";
-                    createdAt = OffsetDateTime.parse("2022-08-30T07:40:08.280Z");
+                    candidateId = "optical";
+                    createdAt = OffsetDateTime.parse("2023-01-02T00:01:44.538Z");
                     id = "<ID>";
-                    jobId = "emulation synergies young";
+                    jobId = "Configurable";
                     raw = new PropertyAtsApplicationRaw();
-                    rejectedAt = OffsetDateTime.parse("2022-01-06T02:13:22.264Z");
-                    rejectedReason = "Pants West";
-                    source = "once";
-                    status = AtsApplicationStatus.REVIEWING;
-                    updatedAt = OffsetDateTime.parse("2023-03-09T13:28:46.094Z");
+                    rejectedAt = OffsetDateTime.parse("2022-08-30T07:40:08.280Z");
+                    rejectedReason = "despite";
+                    source = "virtual";
+                    status = AtsApplicationStatus.NEW_;
+                    updatedAt = OffsetDateTime.parse("2021-02-24T21:00:45.820Z");
                 }};
             }};            
 

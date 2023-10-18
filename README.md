@@ -12,7 +12,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.8.0'
+implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.8.1'
 ```
 <!-- End SDK Installation -->
 
@@ -51,13 +51,13 @@ public class Application {
                         }}),
                     }};
                     id = "<ID>";
-                    name = "smoothly Algeria";
+                    name = "circuit";
                     telephones = new com.unifiedapi.unifiedto.models.shared.TicketingTelephone[]{{
-                        add(new TicketingTelephone("Africa"){{
-                            telephone = "array lime";
+                        add(new TicketingTelephone("East"){{
+                            telephone = "second";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-10-21T20:56:48.294Z");
+                    updatedAt = OffsetDateTime.parse("2022-08-04T07:00:33.318Z");
                 }};
             }};            
 

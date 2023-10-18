@@ -9,9 +9,6 @@ import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 
 
 public class CreateAtsJobRequest {
-    /**
-     * An opened position/job
-     */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.unifiedapi.unifiedto.models.shared.AtsJob atsJob;
 

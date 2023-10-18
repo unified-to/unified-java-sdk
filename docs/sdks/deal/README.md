@@ -43,18 +43,18 @@ public class Application {
                     createdAt = OffsetDateTime.parse("2023-12-05T13:48:49.322Z");
                     currency = "Zimbabwe Dollar";
                     id = "<ID>";
-                    lostReason = "haptic supposing Lexi";
-                    name = "Mercury Xenon";
-                    pipeline = "Elegant revolutionary ick";
-                    probability = 2681.26d;
+                    lostReason = "lay";
+                    name = "programming";
+                    pipeline = "Pop";
+                    probability = 4228.64d;
                     raw = new PropertyCrmDealRaw();
-                    source = "North PNG voluptatibus";
-                    stage = "Hybrid protocol";
+                    source = "Intersex";
+                    stage = "female";
                     tags = new String[]{{
-                        add("bitterly"),
+                        add("Xenon"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-07-10T09:34:06.255Z");
-                    wonReason = "calculate Maryland";
+                    updatedAt = OffsetDateTime.parse("2023-04-10T21:15:23.733Z");
+                    wonReason = "Elegant";
                 }};
             }};            
 
@@ -160,17 +160,17 @@ public class Application {
                 .build();
 
             ListCrmDealsRequest req = new ListCrmDealsRequest("synthesize"){{
-                companyId = "payment";
-                contactId = "Tala Avon";
+                companyId = "Health";
+                contactId = "male";
                 fields = new String[]{{
-                    add("virtual"),
+                    add("Tala"),
                 }};
-                limit = 7035.78d;
-                offset = 53.96d;
-                order = "tan Cambridgeshire quantifying";
-                query = "ash distance";
-                sort = "vertical gee";
-                updatedGte = OffsetDateTime.parse("2022-09-10T05:42:26.963Z");
+                limit = 620.3d;
+                offset = 1651.48d;
+                order = "virtual";
+                query = "female";
+                sort = "sweetly";
+                updatedGte = OffsetDateTime.parse("2022-07-15T10:37:52.542Z");
             }};            
 
             ListCrmDealsResponse res = sdk.deal.listCrmDeals(req);
@@ -230,18 +230,18 @@ public class Application {
                     createdAt = OffsetDateTime.parse("2022-03-18T14:17:53.089Z");
                     currency = "New Taiwan Dollar";
                     id = "<ID>";
-                    lostReason = "SCSI Licensed";
-                    name = "including Costa Cheese";
-                    pipeline = "HEX Executive Books";
-                    probability = 8889.47d;
+                    lostReason = "Integration";
+                    name = "cyan";
+                    pipeline = "including";
+                    probability = 536.01d;
                     raw = new PropertyCrmDealRaw();
-                    source = "Account Metal Paradigm";
-                    stage = "est Principal Kids";
+                    source = "Computer";
+                    stage = "Cheese";
                     tags = new String[]{{
-                        add("Folk"),
+                        add("kaleidoscopic"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-11-27T11:12:42.357Z");
-                    wonReason = "channels second";
+                    updatedAt = OffsetDateTime.parse("2022-01-13T05:30:26.726Z");
+                    wonReason = "Executive";
                 }};
             }};            
 
@@ -351,18 +351,18 @@ public class Application {
                     createdAt = OffsetDateTime.parse("2021-12-04T07:17:25.283Z");
                     currency = "Russian Ruble";
                     id = "<ID>";
-                    lostReason = "Coupe envisioneer";
-                    name = "obese Tala";
-                    pipeline = "technologies";
-                    probability = 5802.98d;
+                    lostReason = "Transexual";
+                    name = "envisioneer";
+                    pipeline = "bus";
+                    probability = 5809.97d;
                     raw = new PropertyCrmDealRaw();
-                    source = "infect calculating";
-                    stage = "Minivan although";
+                    source = "Tala";
+                    stage = "Elegant";
                     tags = new String[]{{
-                        add("deposit"),
+                        add("Loan"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-04-03T08:12:18.698Z");
-                    wonReason = "Orchestrator Lamborghini ah";
+                    updatedAt = OffsetDateTime.parse("2023-12-25T07:28:40.200Z");
+                    wonReason = "payment";
                 }};
             }};            
 

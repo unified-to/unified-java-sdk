@@ -38,12 +38,12 @@ public class Application {
 
             CreateTicketingNoteRequest req = new CreateTicketingNoteRequest("kilogram", "hmph"){{
                 ticketingNote = new TicketingNote(new PropertyTicketingNoteRaw()){{
-                    agentId = "Dakota function interface";
-                    createdAt = OffsetDateTime.parse("2023-06-27T08:45:10.338Z");
-                    customerId = "Folk Outdoors";
-                    description = "Open-source secondary toolset";
+                    agentId = "yowza";
+                    createdAt = OffsetDateTime.parse("2023-01-01T23:17:42.785Z");
+                    customerId = "Markets";
+                    description = "Implemented executive capacity";
                     id = "<ID>";
-                    updatedAt = "Underpass Cambridgeshire";
+                    updatedAt = "interface";
                 }};
             }};            
 
@@ -154,10 +154,10 @@ public class Application {
                 }};
                 limit = 1566.46d;
                 offset = 7692.3d;
-                order = "arrogantly Ford";
-                query = "henry loudly complexity";
-                sort = "ability duh";
-                updatedGte = OffsetDateTime.parse("2021-09-29T21:15:20.624Z");
+                order = "accusamus";
+                query = "Shoreline";
+                sort = "Synergistic";
+                updatedGte = OffsetDateTime.parse("2023-03-26T23:54:49.224Z");
             }};            
 
             ListTicketingNotesResponse res = sdk.note.listTicketingNotes(req);
@@ -212,12 +212,12 @@ public class Application {
 
             PatchTicketingNoteRequest req = new PatchTicketingNoteRequest("Strategist", "ew", "index"){{
                 ticketingNote = new TicketingNote(new PropertyTicketingNoteRaw()){{
-                    agentId = "woman Infrastructure";
-                    createdAt = OffsetDateTime.parse("2021-04-25T13:14:35.457Z");
-                    customerId = "Metal Hybrid";
-                    description = "Networked multi-state matrix";
+                    agentId = "Phased";
+                    createdAt = OffsetDateTime.parse("2023-08-04T11:43:45.522Z");
+                    customerId = "Investor";
+                    description = "Optimized attitude-oriented flexibility";
                     id = "<ID>";
-                    updatedAt = "Cadillac Credit";
+                    updatedAt = "Metal";
                 }};
             }};            
 
@@ -322,12 +322,12 @@ public class Application {
 
             UpdateTicketingNoteRequest req = new UpdateTicketingNoteRequest("waterspout", "York", "bluetooth"){{
                 ticketingNote = new TicketingNote(new PropertyTicketingNoteRaw()){{
-                    agentId = "when";
-                    createdAt = OffsetDateTime.parse("2023-04-15T07:00:21.250Z");
-                    customerId = "Cotton lesbian";
-                    description = "Programmable contextually-based ability";
+                    agentId = "Bedfordshire";
+                    createdAt = OffsetDateTime.parse("2022-12-18T11:05:00.853Z");
+                    customerId = "when";
+                    description = "Right-sized holistic definition";
                     id = "<ID>";
-                    updatedAt = "Dynamic nemo sievert";
+                    updatedAt = "navigating";
                 }};
             }};            
 

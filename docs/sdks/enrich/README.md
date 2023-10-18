@@ -31,7 +31,7 @@ public class Application {
 
             ListEnrichCompaniesRequest req = new ListEnrichCompaniesRequest("hope"){{
                 domain = "idle-transfer.name";
-                name = "Analyst bandwidth rasterise";
+                name = "sadly";
             }};            
 
             ListEnrichCompaniesResponse res = sdk.enrich.listEnrichCompanies(req);
@@ -83,9 +83,9 @@ public class Application {
 
             ListEnrichPeopleRequest req = new ListEnrichPeopleRequest("Associate"){{
                 email = "Lia.Green@yahoo.com";
-                linkedinUrl = "ad";
-                name = "Investor";
-                twitter = "Convertible";
+                linkedinUrl = "Organic";
+                name = "eyeballs";
+                twitter = "Investor";
             }};            
 
             ListEnrichPeopleResponse res = sdk.enrich.listEnrichPeople(req);

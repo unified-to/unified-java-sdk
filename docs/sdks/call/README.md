@@ -30,17 +30,17 @@ public class Application {
                 .build();
 
             ListUcCallsRequest req = new ListUcCallsRequest("Cargo"){{
-                agentId = "playfully";
-                contactId = "AGP";
+                agentId = "West";
+                contactId = "Pop";
                 fields = new String[]{{
-                    add("Health"),
+                    add("AGP"),
                 }};
-                limit = 8985.18d;
-                offset = 2975.86d;
-                order = "error denationalise Mauritania";
-                query = "female Tools Mouse";
-                sort = "Country";
-                updatedGte = OffsetDateTime.parse("2021-02-06T20:10:12.947Z");
+                limit = 1965.31d;
+                offset = 4663.16d;
+                order = "gracefully";
+                query = "so";
+                sort = "Paradigm";
+                updatedGte = OffsetDateTime.parse("2022-08-04T07:33:45.520Z");
             }};            
 
             ListUcCallsResponse res = sdk.call.listUcCalls(req);

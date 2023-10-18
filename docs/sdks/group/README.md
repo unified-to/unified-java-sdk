@@ -49,11 +49,11 @@ public class Application {
                     managerIds = new String[]{{
                         add("Forks"),
                     }};
-                    name = "M2F Iranian";
-                    parentId = "driver Electric";
+                    name = "pixel";
+                    parentId = "navigating";
                     raw = new PropertyHrisGroupRaw();
                     type = HrisGroupType.DEPARTMENT;
-                    updatedAt = OffsetDateTime.parse("2022-11-20T16:35:37.465Z");
+                    updatedAt = OffsetDateTime.parse("2021-08-09T16:59:36.779Z");
                 }};
             }};            
 
@@ -164,10 +164,10 @@ public class Application {
                 }};
                 limit = 1929.12d;
                 offset = 3809.99d;
-                order = "portals even Manager";
-                query = "proactive deliverables";
-                sort = "West Plastic transmit";
-                updatedGte = OffsetDateTime.parse("2023-02-19T02:41:06.804Z");
+                order = "feel";
+                query = "olive";
+                sort = "Shores";
+                updatedGte = OffsetDateTime.parse("2021-11-06T13:39:44.797Z");
             }};            
 
             ListHrisGroupsResponse res = sdk.group.listHrisGroups(req);
@@ -233,11 +233,11 @@ public class Application {
                     managerIds = new String[]{{
                         add("boohoo"),
                     }};
-                    name = "innovate";
-                    parentId = "Chevrolet";
+                    name = "South";
+                    parentId = "Potassium";
                     raw = new PropertyHrisGroupRaw();
-                    type = HrisGroupType.DIVISION;
-                    updatedAt = OffsetDateTime.parse("2023-01-02T08:52:32.014Z");
+                    type = HrisGroupType.BRANCH;
+                    updatedAt = OffsetDateTime.parse("2021-07-31T04:02:38.097Z");
                 }};
             }};            
 
@@ -353,11 +353,11 @@ public class Application {
                     managerIds = new String[]{{
                         add("Table"),
                     }};
-                    name = "lime";
-                    parentId = "Wagon Rubber";
+                    name = "Charlottesville";
+                    parentId = "Zirconium";
                     raw = new PropertyHrisGroupRaw();
-                    type = HrisGroupType.SUB_DEPARTMENT;
-                    updatedAt = OffsetDateTime.parse("2023-08-16T02:52:12.983Z");
+                    type = HrisGroupType.BRANCH;
+                    updatedAt = OffsetDateTime.parse("2023-12-08T18:53:44.937Z");
                 }};
             }};            
 

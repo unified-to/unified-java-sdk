@@ -39,21 +39,21 @@ public class Application {
 
             CreateTicketingTicketRequest req = new CreateTicketingTicketRequest("Cheese"){{
                 ticketingTicket = new TicketingTicket(new PropertyTicketingTicketRaw()){{
-                    category = "silver Outdoors Global";
-                    closedAt = OffsetDateTime.parse("2021-01-07T00:32:47.478Z");
-                    createdAt = OffsetDateTime.parse("2023-08-10T16:44:56.220Z");
-                    customerId = "repellendus";
-                    description = "Managed cohesive customer loyalty";
+                    category = "indigo";
+                    closedAt = OffsetDateTime.parse("2023-12-07T07:31:56.249Z");
+                    createdAt = OffsetDateTime.parse("2021-07-31T11:54:47.053Z");
+                    customerId = "pristine";
+                    description = "Open-source 24 hour strategy";
                     id = "<ID>";
-                    priority = "withdrawal excluding kilogram";
-                    source = "ah Latin";
-                    sourceRef = "vacantly South Tunisian";
-                    status = TicketingTicketStatus.CLOSED;
-                    subject = "hackwork";
+                    priority = "Shirt";
+                    source = "Southeast";
+                    sourceRef = "Hyundai";
+                    status = TicketingTicketStatus.ACTIVE;
+                    subject = "Soft";
                     tags = new String[]{{
-                        add("mmm"),
+                        add("withdrawal"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-01-02T22:21:38.124Z");
+                    updatedAt = OffsetDateTime.parse("2023-11-20T23:41:02.649Z");
                 }};
             }};            
 
@@ -159,17 +159,17 @@ public class Application {
                 .build();
 
             ListTicketingTicketsRequest req = new ListTicketingTicketsRequest("archive"){{
-                agentId = "invoice shyly Awesome";
-                customerId = "Orchestrator Unbranded";
+                agentId = "inform";
+                customerId = "while";
                 fields = new String[]{{
-                    add("Table"),
+                    add("Copper"),
                 }};
-                limit = 8170.02d;
-                offset = 3853.32d;
-                order = "enshroud";
-                query = "Health";
-                sort = "Rial";
-                updatedGte = OffsetDateTime.parse("2021-05-31T04:01:57.661Z");
+                limit = 5907.42d;
+                offset = 6235.08d;
+                order = "Orchestrator";
+                query = "Unbranded";
+                sort = "Table";
+                updatedGte = OffsetDateTime.parse("2023-06-14T14:48:09.118Z");
             }};            
 
             ListTicketingTicketsResponse res = sdk.ticket.listTicketingTickets(req);
@@ -225,21 +225,21 @@ public class Application {
 
             PatchTicketingTicketRequest req = new PatchTicketingTicketRequest("program", "smooth"){{
                 ticketingTicket = new TicketingTicket(new PropertyTicketingTicketRaw()){{
-                    category = "Concrete redefine Licensed";
-                    closedAt = OffsetDateTime.parse("2021-11-20T17:05:11.248Z");
-                    createdAt = OffsetDateTime.parse("2022-08-22T06:41:57.593Z");
-                    customerId = "Neither Dinar Strategist";
-                    description = "Synergized reciprocal matrix";
+                    category = "Chrysler";
+                    closedAt = OffsetDateTime.parse("2021-10-23T20:42:43.325Z");
+                    createdAt = OffsetDateTime.parse("2021-12-10T08:56:46.968Z");
+                    customerId = "astride";
+                    description = "Secured discrete intranet";
                     id = "<ID>";
-                    priority = "Industrial Pants";
-                    source = "functionalities questioning";
-                    sourceRef = "Planner Steel";
-                    status = TicketingTicketStatus.ACTIVE;
-                    subject = "encompassing Engineer Alabama";
+                    priority = "Maserati";
+                    source = "Genderqueer";
+                    sourceRef = "leverage";
+                    status = TicketingTicketStatus.CLOSED;
+                    subject = "Northeast";
                     tags = new String[]{{
-                        add("aha"),
+                        add("suture"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-05-21T12:19:00.995Z");
+                    updatedAt = OffsetDateTime.parse("2023-08-15T09:38:25.083Z");
                 }};
             }};            
 
@@ -345,21 +345,21 @@ public class Application {
 
             UpdateTicketingTicketRequest req = new UpdateTicketingTicketRequest("gee", "East"){{
                 ticketingTicket = new TicketingTicket(new PropertyTicketingTicketRaw()){{
-                    category = "caring optimal";
-                    closedAt = OffsetDateTime.parse("2021-06-26T06:18:17.061Z");
-                    createdAt = OffsetDateTime.parse("2022-06-27T20:32:42.434Z");
-                    customerId = "Integration North array";
-                    description = "Ergonomic zero tolerance open system";
+                    category = "Synergized";
+                    closedAt = OffsetDateTime.parse("2021-04-30T11:37:03.465Z");
+                    createdAt = OffsetDateTime.parse("2022-02-02T14:07:25.957Z");
+                    customerId = "Potassium";
+                    description = "Networked tangible migration";
                     id = "<ID>";
-                    priority = "Music Investor";
-                    source = "Bedfordshire vertical what";
-                    sourceRef = "Bicycle";
+                    priority = "Steel";
+                    source = "East";
+                    sourceRef = "Northeast";
                     status = TicketingTicketStatus.CLOSED;
-                    subject = "program";
+                    subject = "Designer";
                     tags = new String[]{{
-                        add("static"),
+                        add("Music"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-12-26T18:35:36.989Z");
+                    updatedAt = OffsetDateTime.parse("2022-12-19T01:20:18.164Z");
                 }};
             }};            
 

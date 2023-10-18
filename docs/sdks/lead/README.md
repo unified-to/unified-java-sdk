@@ -44,34 +44,34 @@ public class Application {
             CreateCrmLeadRequest req = new CreateCrmLeadRequest("Soft"){{
                 crmLead = new CrmLead(){{
                     address = new PropertyCrmLeadAddress(){{
-                        address1 = "ability Einsteinium Orchestrator";
-                        address2 = "Optimization Rubber loyally";
-                        city = "Mitchellfort";
-                        country = "Morocco";
-                        countryCode = "GT";
-                        postalCode = "14014";
-                        region = "Strategist Product Reggae";
-                        regionCode = "possimus Chief Intelligent";
+                        address1 = "maroon";
+                        address2 = "South";
+                        city = "Plantation";
+                        country = "Mozambique";
+                        countryCode = "SE";
+                        postalCode = "52684-4776";
+                        region = "Health";
+                        regionCode = "North";
                     }};
-                    companyId = "Division Ball Diesel";
-                    contactId = "Peso Grocery";
-                    createdAt = OffsetDateTime.parse("2022-01-25T18:26:15.433Z");
-                    creatorUserId = "Southeast";
+                    companyId = "invoice";
+                    contactId = "Strategist";
+                    createdAt = OffsetDateTime.parse("2022-12-29T06:24:16.487Z");
+                    creatorUserId = "applications";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
                     isActive = false;
-                    name = "North";
+                    name = "Account";
                     raw = new PropertyCrmLeadRaw();
-                    source = "Diesel Shirt";
+                    source = "sievert";
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("microchip"){{
-                            telephone = "female transmitter";
+                        add(new CrmTelephone("Chief"){{
+                            telephone = "possimus";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-02-17T10:01:32.266Z");
-                    userId = "steradian Configurable Kyat";
+                    updatedAt = OffsetDateTime.parse("2021-10-22T23:53:59.320Z");
+                    userId = "Baby";
                 }};
             }};            
 
@@ -182,10 +182,10 @@ public class Application {
                 }};
                 limit = 8343.84d;
                 offset = 6533.73d;
-                order = "applications Program alarm";
-                query = "enthusiastically";
-                sort = "Auto Plastic ultimatum";
-                updatedGte = OffsetDateTime.parse("2023-11-15T21:31:35.896Z");
+                order = "generous";
+                query = "Mazda";
+                sort = "Macedonia";
+                updatedGte = OffsetDateTime.parse("2022-12-26T04:44:56.329Z");
             }};            
 
             ListCrmLeadsResponse res = sdk.lead.listCrmLeads(req);
@@ -246,34 +246,34 @@ public class Application {
             PatchCrmLeadRequest req = new PatchCrmLeadRequest("Bike", "copying"){{
                 crmLead = new CrmLead(){{
                     address = new PropertyCrmLeadAddress(){{
-                        address1 = "Computer";
-                        address2 = "matrix";
-                        city = "Gerholdview";
-                        country = "Sao Tome and Principe";
-                        countryCode = "LC";
-                        postalCode = "53034-9357";
-                        region = "Lanka Northeast";
-                        regionCode = "Decentralized gray Fresh";
+                        address1 = "Ball";
+                        address2 = "Chips";
+                        city = "Port Adeliamouth";
+                        country = "Venezuela";
+                        countryCode = "NF";
+                        postalCode = "47585";
+                        region = "Ameliorated";
+                        regionCode = "Mandatory";
                     }};
-                    companyId = "woman Forint";
-                    contactId = "Associate";
-                    createdAt = OffsetDateTime.parse("2022-02-07T21:39:27.693Z");
-                    creatorUserId = "Ergonomic";
+                    companyId = "by";
+                    contactId = "input";
+                    createdAt = OffsetDateTime.parse("2022-02-02T07:00:30.982Z");
+                    creatorUserId = "Lanka";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
                     isActive = false;
-                    name = "Credit Coupe";
+                    name = "Northeast";
                     raw = new PropertyCrmLeadRaw();
-                    source = "Fisher convergence";
+                    source = "female";
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("violet"){{
-                            telephone = "microchip Shoes magenta";
+                        add(new CrmTelephone("methodology"){{
+                            telephone = "Field";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-07-07T20:56:05.126Z");
-                    userId = "eggplant Human black";
+                    updatedAt = OffsetDateTime.parse("2021-04-14T13:59:39.244Z");
+                    userId = "index";
                 }};
             }};            
 
@@ -384,34 +384,34 @@ public class Application {
             UpdateCrmLeadRequest req = new UpdateCrmLeadRequest("violation", "Pickup"){{
                 crmLead = new CrmLead(){{
                     address = new PropertyCrmLeadAddress(){{
-                        address1 = "joule North Concrete";
-                        address2 = "Officer auxiliary";
-                        city = "Greenfelderworth";
-                        country = "Uzbekistan";
-                        countryCode = "CV";
-                        postalCode = "85356-4106";
-                        region = "numquam Ball Concrete";
-                        regionCode = "Technician";
+                        address1 = "Polestar";
+                        address2 = "Checking";
+                        city = "West Laisha";
+                        country = "Pakistan";
+                        countryCode = "MA";
+                        postalCode = "19406";
+                        region = "holistic";
+                        regionCode = "corner";
                     }};
-                    companyId = "treasure attitude sint";
-                    contactId = "Cab charming";
-                    createdAt = OffsetDateTime.parse("2022-09-10T10:31:16.748Z");
-                    creatorUserId = "purple yawningly";
+                    companyId = "Bicycle";
+                    contactId = "local";
+                    createdAt = OffsetDateTime.parse("2022-12-30T09:10:32.001Z");
+                    creatorUserId = "deposit";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
                     isActive = false;
-                    name = "Concrete Incredible Tesla";
+                    name = "Buckinghamshire";
                     raw = new PropertyCrmLeadRaw();
-                    source = "Health";
+                    source = "Electric";
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("Handcrafted"){{
-                            telephone = "monitor Palau woman";
+                        add(new CrmTelephone("Wooden"){{
+                            telephone = "Bespoke";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-04-21T14:12:57.050Z");
-                    userId = "Chevrolet Account";
+                    updatedAt = OffsetDateTime.parse("2021-10-02T07:44:27.408Z");
+                    userId = "Concrete";
                 }};
             }};            
 

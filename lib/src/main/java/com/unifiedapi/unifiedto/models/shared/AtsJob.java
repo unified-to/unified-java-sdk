@@ -13,9 +13,6 @@ import com.unifiedapi.unifiedto.utils.DateTimeDeserializer;
 import com.unifiedapi.unifiedto.utils.DateTimeSerializer;
 import java.time.OffsetDateTime;
 
-/**
- * AtsJob - An opened position/job
- */
 
 public class AtsJob {
     @JsonInclude(Include.NON_ABSENT)

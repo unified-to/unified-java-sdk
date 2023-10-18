@@ -64,16 +64,16 @@ public class Application {
             CreateAtsApplicationRequest req = new CreateAtsApplicationRequest("payment"){{
                 atsApplication = new AtsApplication(){{
                     appliedAt = OffsetDateTime.parse("2023-09-14T08:24:54.358Z");
-                    candidateId = "approach Hybrid";
-                    createdAt = OffsetDateTime.parse("2023-04-26T15:55:11.995Z");
+                    candidateId = "Money";
+                    createdAt = OffsetDateTime.parse("2022-02-26T06:43:14.350Z");
                     id = "<ID>";
-                    jobId = "Awesome";
+                    jobId = "Buckinghamshire";
                     raw = new PropertyAtsApplicationRaw();
-                    rejectedAt = OffsetDateTime.parse("2023-09-30T14:39:16.583Z");
-                    rejectedReason = "Communications male programming";
-                    source = "plus Pataca";
-                    status = AtsApplicationStatus.SCREENING;
-                    updatedAt = OffsetDateTime.parse("2023-04-20T12:32:42.371Z");
+                    rejectedAt = OffsetDateTime.parse("2023-11-29T01:08:00.744Z");
+                    rejectedReason = "Cyclocross";
+                    source = "Interactions";
+                    status = AtsApplicationStatus.ACCEPTED;
+                    updatedAt = OffsetDateTime.parse("2023-01-14T16:50:51.019Z");
                 }};
             }};            
 
@@ -135,37 +135,37 @@ public class Application {
             CreateAtsCandidateRequest req = new CreateAtsCandidateRequest("Recycled"){{
                 atsCandidate = new AtsCandidate(){{
                     address = new PropertyAtsCandidateAddress(){{
-                        address1 = "radian who";
-                        address2 = "Pop";
-                        city = "Hermannfurt";
-                        country = "Papua New Guinea";
-                        countryCode = "MC";
-                        postalCode = "68671";
-                        region = "Bedfordshire Southeast Oregon";
-                        regionCode = "distributed ha";
+                        address1 = "Trans";
+                        address2 = "who";
+                        city = "New Bertfurt";
+                        country = "Guatemala";
+                        countryCode = "MZ";
+                        postalCode = "50686-7190";
+                        region = "Bronze";
+                        regionCode = "aspernatur";
                     }};
-                    companyName = "Mohr, Batz and Murphy";
-                    createdAt = OffsetDateTime.parse("2021-12-02T07:49:42.485Z");
+                    companyName = "Murray, Greenholt and Metz";
+                    createdAt = OffsetDateTime.parse("2023-10-07T18:34:01.389Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
-                        add(new AtsEmail("Tungsten"){{
-                            email = "Morris41@hotmail.com";
+                        add(new AtsEmail("drive"){{
+                            email = "Skye62@hotmail.com";
                         }}),
                     }};
-                    externalId = "Yost";
+                    externalId = "Radon";
                     id = "<ID>";
-                    imageUrl = "hidden";
-                    name = "Rock";
+                    imageUrl = "Shirt";
+                    name = "Tungsten";
                     raw = new PropertyAtsCandidateRaw();
                     tags = new String[]{{
-                        add("override"),
+                        add("Delaware"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.AtsTelephone[]{{
-                        add(new AtsTelephone("synthesize"){{
-                            telephone = "Bicycle midst";
+                        add(new AtsTelephone("Southwest"){{
+                            telephone = "parse";
                         }}),
                     }};
-                    title = "composite Folk";
-                    updatedAt = OffsetDateTime.parse("2023-07-21T12:53:25.440Z");
+                    title = "benchmark";
+                    updatedAt = OffsetDateTime.parse("2022-10-03T07:30:02.540Z");
                 }};
             }};            
 
@@ -222,20 +222,20 @@ public class Application {
 
             CreateAtsInterviewRequest req = new CreateAtsInterviewRequest("Bar"){{
                 atsInterview = new AtsInterview(){{
-                    applicationId = "Serbia oof";
-                    candidateId = "Roanoke Smart";
-                    createdAt = OffsetDateTime.parse("2023-05-20T17:10:33.906Z");
-                    endAt = OffsetDateTime.parse("2022-06-19T14:41:27.830Z");
-                    externalEventXref = "Account ubiquitous";
+                    applicationId = "deposit";
+                    candidateId = "azure";
+                    createdAt = OffsetDateTime.parse("2023-11-15T15:04:25.524Z");
+                    endAt = OffsetDateTime.parse("2022-03-31T21:00:53.882Z");
+                    externalEventXref = "Roanoke";
                     id = "<ID>";
-                    jobId = "Davenport West nestle";
-                    location = "Heights";
+                    jobId = "Smart";
+                    location = "tan";
                     raw = new PropertyAtsInterviewRaw();
-                    startAt = OffsetDateTime.parse("2023-01-03T04:00:54.874Z");
-                    status = AtsInterviewStatus.SCHEDULED;
-                    updatedAt = OffsetDateTime.parse("2021-06-05T14:28:55.678Z");
+                    startAt = OffsetDateTime.parse("2022-03-12T23:24:16.286Z");
+                    status = AtsInterviewStatus.AWAITING_FEEDBACK;
+                    updatedAt = OffsetDateTime.parse("2021-02-03T09:38:05.196Z");
                     userIds = new String[]{{
-                        add("Northeast"),
+                        add("Optimization"),
                     }};
                 }};
             }};            
@@ -317,18 +317,18 @@ public class Application {
                         add("Customer"),
                     }};
                     id = "<ID>";
-                    languageLocale = "olive SMS";
-                    name = "Cotton South";
+                    languageLocale = "Loan";
+                    name = "SMS";
                     publicJobUrls = new String[]{{
-                        add("withdrawal"),
+                        add("Optimization"),
                     }};
                     raw = new PropertyAtsJobRaw();
                     recruiterIds = new String[]{{
-                        add("payment"),
+                        add("withdrawal"),
                     }};
                     remote = false;
-                    status = AtsJobStatus.CLOSED;
-                    updatedAt = OffsetDateTime.parse("2023-07-13T17:13:15.823Z");
+                    status = AtsJobStatus.DRAFT;
+                    updatedAt = OffsetDateTime.parse("2022-08-25T20:04:09.010Z");
                 }};
             }};            
 
@@ -385,15 +385,15 @@ public class Application {
 
             CreateAtsScorecardRequest req = new CreateAtsScorecardRequest("Account"){{
                 atsScorecard = new AtsScorecard(new PropertyAtsScorecardRaw()){{
-                    applicationId = "mint Southeast";
-                    candidateId = "Manager Handcrafted";
-                    createdAt = OffsetDateTime.parse("2021-03-30T11:56:53.937Z");
+                    applicationId = "Yuan";
+                    candidateId = "deposit";
+                    createdAt = OffsetDateTime.parse("2022-11-29T04:33:02.087Z");
                     id = "<ID>";
-                    interviewId = "Keys";
-                    interviewerId = "compressing quantifying gain";
-                    jobId = "Jamaican Russian Quincy";
-                    recommendation = AtsScorecardRecommendation.STRONG_YES;
-                    updatedAt = OffsetDateTime.parse("2023-11-22T04:56:50.505Z");
+                    interviewId = "Credit";
+                    interviewerId = "hm";
+                    jobId = "Manager";
+                    recommendation = AtsScorecardRecommendation.YES;
+                    updatedAt = OffsetDateTime.parse("2021-03-30T11:56:53.937Z");
                 }};
             }};            
 
@@ -711,17 +711,17 @@ public class Application {
                 .build();
 
             ListAtsApplicationsRequest req = new ListAtsApplicationsRequest("models"){{
-                candidateId = "secrecy withdrawal Springs";
+                candidateId = "Wagon";
                 fields = new String[]{{
-                    add("Blues"),
+                    add("violet"),
                 }};
-                jobId = "solutions";
-                limit = 1330.66d;
-                offset = 5248.28d;
-                order = "Kazakhstan";
-                query = "SDD East boohoo";
-                sort = "Sports Assistant Chlorine";
-                updatedGte = OffsetDateTime.parse("2022-08-05T05:05:40.196Z");
+                jobId = "adapter";
+                limit = 7975.22d;
+                offset = 8448.96d;
+                order = "Blues";
+                query = "pink";
+                sort = "Rustic";
+                updatedGte = OffsetDateTime.parse("2022-05-10T01:25:15.283Z");
             }};            
 
             ListAtsApplicationsResponse res = sdk.ats.listAtsApplications(req);
@@ -778,10 +778,10 @@ public class Application {
                 }};
                 limit = 6403.86d;
                 offset = 6207.22d;
-                order = "Hawaii Burleson turquoise";
-                query = "Hybrid New";
-                sort = "plus";
-                updatedGte = OffsetDateTime.parse("2023-11-22T17:23:30.146Z");
+                order = "colorful";
+                query = "Chair";
+                sort = "South";
+                updatedGte = OffsetDateTime.parse("2022-08-17T07:27:35.647Z");
             }};            
 
             ListAtsCandidatesResponse res = sdk.ats.listAtsCandidates(req);
@@ -833,16 +833,16 @@ public class Application {
                 .build();
 
             ListAtsInterviewsRequest req = new ListAtsInterviewsRequest("Wooden"){{
-                applicationId = "Northeast";
+                applicationId = "Avon";
                 fields = new String[]{{
-                    add("Chrysler"),
+                    add("gold"),
                 }};
-                limit = 2991.18d;
-                offset = 3108d;
-                order = "West";
-                query = "Analyst Pickup";
-                sort = "underwriting protocol";
-                updatedGte = OffsetDateTime.parse("2022-07-10T08:55:35.395Z");
+                limit = 2371.68d;
+                offset = 2991.18d;
+                order = "evolve";
+                query = "West";
+                sort = "SMTP";
+                updatedGte = OffsetDateTime.parse("2022-07-10T13:30:46.522Z");
             }};            
 
             ListAtsInterviewsResponse res = sdk.ats.listAtsInterviews(req);
@@ -899,10 +899,10 @@ public class Application {
                 }};
                 limit = 523.86d;
                 offset = 9767.63d;
-                order = "Sports Car Electronic";
-                query = "Architect";
-                sort = "worth hence West";
-                updatedGte = OffsetDateTime.parse("2023-01-20T14:48:58.164Z");
+                order = "teal";
+                query = "Electric";
+                sort = "ohm";
+                updatedGte = OffsetDateTime.parse("2021-03-15T18:47:12.832Z");
             }};            
 
             ListAtsJobsResponse res = sdk.ats.listAtsJobs(req);
@@ -954,18 +954,18 @@ public class Application {
                 .build();
 
             ListAtsScorecardsRequest req = new ListAtsScorecardsRequest("surprised"){{
-                applicationId = "frantically";
-                candidateId = "invoice";
+                applicationId = "Gislason";
+                candidateId = "Pickup";
                 fields = new String[]{{
-                    add("Seamless"),
+                    add("slop"),
                 }};
-                interviewId = "Diesel Clovis Dinar";
-                limit = 7350.75d;
-                offset = 5961.51d;
-                order = "Account Adaptive frictionless";
-                query = "Pizza Baby Circle";
-                sort = "Metal";
-                updatedGte = OffsetDateTime.parse("2021-07-10T16:39:24.000Z");
+                interviewId = "North";
+                limit = 1893.11d;
+                offset = 4281.16d;
+                order = "parallelism";
+                query = "Lutetium";
+                sort = "Tools";
+                updatedGte = OffsetDateTime.parse("2022-07-30T11:15:06.025Z");
             }};            
 
             ListAtsScorecardsResponse res = sdk.ats.listAtsScorecards(req);
@@ -1022,16 +1022,16 @@ public class Application {
             PatchAtsApplicationRequest req = new PatchAtsApplicationRequest("Corporate", "Director"){{
                 atsApplication = new AtsApplication(){{
                     appliedAt = OffsetDateTime.parse("2023-05-29T04:40:45.531Z");
-                    candidateId = "Usability Leonie";
-                    createdAt = OffsetDateTime.parse("2023-02-20T09:56:40.826Z");
+                    candidateId = "alarm";
+                    createdAt = OffsetDateTime.parse("2023-08-29T15:27:53.968Z");
                     id = "<ID>";
-                    jobId = "amid";
+                    jobId = "pith";
                     raw = new PropertyAtsApplicationRaw();
-                    rejectedAt = OffsetDateTime.parse("2021-01-31T07:21:40.841Z");
-                    rejectedReason = "Royce";
-                    source = "Irving Generic Buckinghamshire";
-                    status = AtsApplicationStatus.REVIEWING;
-                    updatedAt = OffsetDateTime.parse("2022-04-27T14:23:51.358Z");
+                    rejectedAt = OffsetDateTime.parse("2022-11-04T10:01:24.162Z");
+                    rejectedReason = "Leonie";
+                    source = "female";
+                    status = AtsApplicationStatus.WITHDRAWN;
+                    updatedAt = OffsetDateTime.parse("2021-05-11T06:56:17.734Z");
                 }};
             }};            
 
@@ -1093,37 +1093,37 @@ public class Application {
             PatchAtsCandidateRequest req = new PatchAtsCandidateRequest("Tennessee", "platforms"){{
                 atsCandidate = new AtsCandidate(){{
                     address = new PropertyAtsCandidateAddress(){{
-                        address1 = "Security esse";
-                        address2 = "Books Customer";
-                        city = "Hesselside";
-                        country = "Senegal";
-                        countryCode = "AS";
-                        postalCode = "09868";
-                        region = "Licensed Applications";
-                        regionCode = "purple";
+                        address1 = "Credit";
+                        address2 = "esse";
+                        city = "Donnellytown";
+                        country = "Oman";
+                        countryCode = "MQ";
+                        postalCode = "80639";
+                        region = "green";
+                        regionCode = "Argentina";
                     }};
-                    companyName = "Keeling, Jast and McKenzie";
-                    createdAt = OffsetDateTime.parse("2021-04-06T07:32:08.374Z");
+                    companyName = "Stanton, Parker and Spinka";
+                    createdAt = OffsetDateTime.parse("2022-01-29T07:02:46.611Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
-                        add(new AtsEmail("Audi"){{
-                            email = "Coby98@hotmail.com";
+                        add(new AtsEmail("to"){{
+                            email = "Ressie.Padberg51@gmail.com";
                         }}),
                     }};
-                    externalId = "into Division deposit";
+                    externalId = "Rustic";
                     id = "<ID>";
-                    imageUrl = "hard Polygender";
-                    name = "female";
+                    imageUrl = "North";
+                    name = "Home";
                     raw = new PropertyAtsCandidateRaw();
                     tags = new String[]{{
-                        add("Fresh"),
+                        add("Cruiser"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.AtsTelephone[]{{
-                        add(new AtsTelephone("Berkshire"){{
-                            telephone = "HEX";
+                        add(new AtsTelephone("Audi"){{
+                            telephone = "blockchains";
                         }}),
                     }};
-                    title = "Fish Home Dobra";
-                    updatedAt = OffsetDateTime.parse("2021-11-22T04:10:17.899Z");
+                    title = "oof";
+                    updatedAt = OffsetDateTime.parse("2022-07-30T04:46:09.633Z");
                 }};
             }};            
 
@@ -1180,20 +1180,20 @@ public class Application {
 
             PatchAtsInterviewRequest req = new PatchAtsInterviewRequest("Handmade", "Oxygen"){{
                 atsInterview = new AtsInterview(){{
-                    applicationId = "Ariary Regional rich";
-                    candidateId = "District Northeast";
-                    createdAt = OffsetDateTime.parse("2021-03-01T18:03:55.726Z");
-                    endAt = OffsetDateTime.parse("2022-05-26T13:01:26.520Z");
-                    externalEventXref = "Loan Avon";
+                    applicationId = "hen";
+                    candidateId = "quantifying";
+                    createdAt = OffsetDateTime.parse("2022-12-08T14:26:55.298Z");
+                    endAt = OffsetDateTime.parse("2022-03-09T03:30:12.586Z");
+                    externalEventXref = "rich";
                     id = "<ID>";
-                    jobId = "female Zloty";
-                    location = "quirkily Liaison Metical";
+                    jobId = "Zloty";
+                    location = "ASCII";
                     raw = new PropertyAtsInterviewRaw();
-                    startAt = OffsetDateTime.parse("2022-10-12T02:43:44.811Z");
-                    status = AtsInterviewStatus.AWAITING_FEEDBACK;
-                    updatedAt = OffsetDateTime.parse("2021-09-10T22:46:18.450Z");
+                    startAt = OffsetDateTime.parse("2021-07-14T09:05:37.522Z");
+                    status = AtsInterviewStatus.SCHEDULED;
+                    updatedAt = OffsetDateTime.parse("2022-05-26T13:01:26.520Z");
                     userIds = new String[]{{
-                        add("wetly"),
+                        add("Group"),
                     }};
                 }};
             }};            
@@ -1275,18 +1275,18 @@ public class Application {
                         add("flawless"),
                     }};
                     id = "<ID>";
-                    languageLocale = "Assimilated vero";
-                    name = "voluptates";
+                    languageLocale = "Forint";
+                    name = "Missoula";
                     publicJobUrls = new String[]{{
-                        add("non"),
+                        add("every"),
                     }};
                     raw = new PropertyAtsJobRaw();
                     recruiterIds = new String[]{{
-                        add("near"),
+                        add("voluptates"),
                     }};
                     remote = false;
-                    status = AtsJobStatus.OPEN;
-                    updatedAt = OffsetDateTime.parse("2022-10-29T02:53:10.534Z");
+                    status = AtsJobStatus.DRAFT;
+                    updatedAt = OffsetDateTime.parse("2021-10-01T22:46:41.539Z");
                 }};
             }};            
 
@@ -1343,15 +1343,15 @@ public class Application {
 
             PatchAtsScorecardRequest req = new PatchAtsScorecardRequest("engage", "Movies"){{
                 atsScorecard = new AtsScorecard(new PropertyAtsScorecardRaw()){{
-                    applicationId = "watt Interactions";
-                    candidateId = "up";
-                    createdAt = OffsetDateTime.parse("2021-06-02T01:49:29.997Z");
+                    applicationId = "application";
+                    candidateId = "Leu";
+                    createdAt = OffsetDateTime.parse("2023-09-14T09:14:37.430Z");
                     id = "<ID>";
-                    interviewId = "Automotive Buckinghamshire";
-                    interviewerId = "Pickup tempora";
-                    jobId = "Prairie fondly Hatchback";
-                    recommendation = AtsScorecardRecommendation.STRONG_YES;
-                    updatedAt = OffsetDateTime.parse("2023-08-12T06:41:03.214Z");
+                    interviewId = "generate";
+                    interviewerId = "Bespoke";
+                    jobId = "Malawi";
+                    recommendation = AtsScorecardRecommendation.DEFINITELY_NO;
+                    updatedAt = OffsetDateTime.parse("2022-04-07T09:43:56.983Z");
                 }};
             }};            
 
@@ -1654,16 +1654,16 @@ public class Application {
             UpdateAtsApplicationRequest req = new UpdateAtsApplicationRequest("Valley", "Account"){{
                 atsApplication = new AtsApplication(){{
                     appliedAt = OffsetDateTime.parse("2023-07-05T09:39:00.042Z");
-                    candidateId = "repeatedly Configurable";
-                    createdAt = OffsetDateTime.parse("2022-08-30T07:40:08.280Z");
+                    candidateId = "optical";
+                    createdAt = OffsetDateTime.parse("2023-01-02T00:01:44.538Z");
                     id = "<ID>";
-                    jobId = "emulation synergies young";
+                    jobId = "Configurable";
                     raw = new PropertyAtsApplicationRaw();
-                    rejectedAt = OffsetDateTime.parse("2022-01-06T02:13:22.264Z");
-                    rejectedReason = "Pants West";
-                    source = "once";
-                    status = AtsApplicationStatus.REVIEWING;
-                    updatedAt = OffsetDateTime.parse("2023-03-09T13:28:46.094Z");
+                    rejectedAt = OffsetDateTime.parse("2022-08-30T07:40:08.280Z");
+                    rejectedReason = "despite";
+                    source = "virtual";
+                    status = AtsApplicationStatus.NEW_;
+                    updatedAt = OffsetDateTime.parse("2021-02-24T21:00:45.820Z");
                 }};
             }};            
 
@@ -1725,37 +1725,37 @@ public class Application {
             UpdateAtsCandidateRequest req = new UpdateAtsCandidateRequest("synergies", "flawless"){{
                 atsCandidate = new AtsCandidate(){{
                     address = new PropertyAtsCandidateAddress(){{
-                        address1 = "now";
-                        address2 = "monetize";
-                        city = "Dickinsonstad";
-                        country = "Niue";
-                        countryCode = "CF";
-                        postalCode = "13972-7823";
-                        region = "SUV Frozen Future";
-                        regionCode = "until";
+                        address1 = "iterate";
+                        address2 = "DNS";
+                        city = "West Manley";
+                        country = "Comoros";
+                        countryCode = "MC";
+                        postalCode = "17139-7278";
+                        region = "Gloves";
+                        regionCode = "threadbare";
                     }};
-                    companyName = "Roob - Koelpin";
-                    createdAt = OffsetDateTime.parse("2021-09-14T22:57:55.708Z");
+                    companyName = "Friesen, Witting and Hills";
+                    createdAt = OffsetDateTime.parse("2023-08-17T08:01:13.812Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
-                        add(new AtsEmail("Mendelevium"){{
-                            email = "Stephania20@hotmail.com";
+                        add(new AtsEmail("until"){{
+                            email = "Durward.Upton32@yahoo.com";
                         }}),
                     }};
-                    externalId = "among microchip";
+                    externalId = "eligendi";
                     id = "<ID>";
-                    imageUrl = "streamline";
-                    name = "auxiliary";
+                    imageUrl = "deposit";
+                    name = "theology";
                     raw = new PropertyAtsCandidateRaw();
                     tags = new String[]{{
-                        add("Southeast"),
+                        add("Manager"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.AtsTelephone[]{{
-                        add(new AtsTelephone("Small"){{
-                            telephone = "yellow Analyst";
+                        add(new AtsTelephone("Minivan"){{
+                            telephone = "Fish";
                         }}),
                     }};
-                    title = "parsing";
-                    updatedAt = OffsetDateTime.parse("2023-12-10T21:26:35.636Z");
+                    title = "among";
+                    updatedAt = OffsetDateTime.parse("2022-08-04T11:40:47.590Z");
                 }};
             }};            
 
@@ -1812,20 +1812,20 @@ public class Application {
 
             UpdateAtsInterviewRequest req = new UpdateAtsInterviewRequest("maroon", "Southeast"){{
                 atsInterview = new AtsInterview(){{
-                    applicationId = "FTM Modern";
-                    candidateId = "Buckinghamshire female";
-                    createdAt = OffsetDateTime.parse("2022-05-03T09:33:14.269Z");
-                    endAt = OffsetDateTime.parse("2022-10-27T22:37:05.474Z");
-                    externalEventXref = "sensor incidentally Research";
+                    applicationId = "omnis";
+                    candidateId = "Gorgeous";
+                    createdAt = OffsetDateTime.parse("2023-05-20T16:26:29.311Z");
+                    endAt = OffsetDateTime.parse("2023-02-12T09:40:25.959Z");
+                    externalEventXref = "JBOD";
                     id = "<ID>";
-                    jobId = "female Technician watt";
-                    location = "program";
+                    jobId = "sensor";
+                    location = "incidentally";
                     raw = new PropertyAtsInterviewRaw();
-                    startAt = OffsetDateTime.parse("2022-11-19T23:12:37.729Z");
+                    startAt = OffsetDateTime.parse("2022-11-12T19:56:49.769Z");
                     status = AtsInterviewStatus.SCHEDULED;
-                    updatedAt = OffsetDateTime.parse("2022-12-31T21:30:22.532Z");
+                    updatedAt = OffsetDateTime.parse("2023-10-23T17:18:45.612Z");
                     userIds = new String[]{{
-                        add("tensor"),
+                        add("female"),
                     }};
                 }};
             }};            
@@ -1907,18 +1907,18 @@ public class Application {
                         add("withdrawal"),
                     }};
                     id = "<ID>";
-                    languageLocale = "Investor Mini Orchestrator";
-                    name = "backing";
+                    languageLocale = "Technician";
+                    name = "Representative";
                     publicJobUrls = new String[]{{
-                        add("Corporate"),
+                        add("Orchestrator"),
                     }};
                     raw = new PropertyAtsJobRaw();
                     recruiterIds = new String[]{{
-                        add("Executive"),
+                        add("Southeast"),
                     }};
                     remote = false;
-                    status = AtsJobStatus.CLOSED;
-                    updatedAt = OffsetDateTime.parse("2021-07-05T14:57:04.452Z");
+                    status = AtsJobStatus.ARCHIVED;
+                    updatedAt = OffsetDateTime.parse("2022-06-19T11:57:37.224Z");
                 }};
             }};            
 
@@ -1975,15 +1975,15 @@ public class Application {
 
             UpdateAtsScorecardRequest req = new UpdateAtsScorecardRequest("Digitized", "Legacy"){{
                 atsScorecard = new AtsScorecard(new PropertyAtsScorecardRaw()){{
-                    applicationId = "backing Incredible UDP";
-                    candidateId = "South Bethesda rail";
-                    createdAt = OffsetDateTime.parse("2022-01-13T06:37:40.295Z");
+                    applicationId = "legislator";
+                    candidateId = "East";
+                    createdAt = OffsetDateTime.parse("2021-09-15T07:42:18.559Z");
                     id = "<ID>";
-                    interviewId = "Executive haptic";
-                    interviewerId = "Nebraska scalable";
-                    jobId = "Wooden XML hierarchy";
-                    recommendation = AtsScorecardRecommendation.STRONG_YES;
-                    updatedAt = OffsetDateTime.parse("2023-10-31T22:09:25.392Z");
+                    interviewId = "Cotton";
+                    interviewerId = "youthful";
+                    jobId = "South";
+                    recommendation = AtsScorecardRecommendation.DEFINITELY_NO;
+                    updatedAt = OffsetDateTime.parse("2022-11-05T16:19:19.866Z");
                 }};
             }};            
 

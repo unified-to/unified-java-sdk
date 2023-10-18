@@ -29,11 +29,11 @@ public class Application {
                 .build();
 
             GetUnifiedIntegrationLoginRequest req = new GetUnifiedIntegrationLoginRequest("Tricycle", "markets"){{
-                env = "Bicycle";
-                failureRedirect = "Strontium Silver Macy";
+                env = "Soft";
+                failureRedirect = "haptic";
                 redirect = false;
-                state = "Surinam Berkshire reboot";
-                successRedirect = "volt Sanford";
+                state = "SUV";
+                successRedirect = "deploy";
             }};            
 
             GetUnifiedIntegrationLoginResponse res = sdk.login.getUnifiedIntegrationLogin(req);

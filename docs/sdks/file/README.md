@@ -38,22 +38,22 @@ public class Application {
 
             CreateCrmFileRequest req = new CreateCrmFileRequest("Northwest"){{
                 crmFile = new CrmFile(){{
-                    activityId = "the";
-                    companyId = "Tactics Bicycle copy";
-                    contactId = "Soul";
-                    createdAt = OffsetDateTime.parse("2022-08-31T22:30:51.049Z");
-                    dealId = "SSL Reduced Buckinghamshire";
-                    description = "Upgradable radical archive";
-                    fileName = "coupe.mp4v";
-                    fileSize = 4288.39d;
-                    fileType = "application";
-                    fileUrl = "program hacking";
+                    activityId = "Tasty";
+                    companyId = "Gasoline";
+                    contactId = "Tactics";
+                    createdAt = OffsetDateTime.parse("2023-04-25T01:22:24.549Z");
+                    dealId = "invoice";
+                    description = "Optional eco-centric definition";
+                    fileName = "generate_coulomb.mp4v";
+                    fileSize = 7403.39d;
+                    fileType = "video";
+                    fileUrl = "male";
                     id = "<ID>";
                     isActive = false;
-                    leadId = "Bicycle Marketing Helium";
+                    leadId = "mole";
                     raw = new PropertyCrmFileRaw();
-                    updatedAt = OffsetDateTime.parse("2022-09-17T10:16:03.549Z");
-                    userId = "mobile firewall salmon";
+                    updatedAt = OffsetDateTime.parse("2021-08-10T15:19:38.772Z");
+                    userId = "Coupe";
                 }};
             }};            
 
@@ -159,18 +159,18 @@ public class Application {
                 .build();
 
             ListCrmFilesRequest req = new ListCrmFilesRequest("Genderflux"){{
-                companyId = "Paradigm";
-                contactId = "invoice hertz";
-                dealId = "SUV Carbon";
+                companyId = "Southeast";
+                contactId = "invoice";
+                dealId = "hertz";
                 fields = new String[]{{
-                    add("blah"),
+                    add("invoice"),
                 }};
-                limit = 4750.59d;
-                offset = 2265.7d;
-                order = "olive";
-                query = "suite Checking";
-                sort = "SUV";
-                updatedGte = OffsetDateTime.parse("2021-11-26T17:23:51.411Z");
+                limit = 7868.48d;
+                offset = 7222.04d;
+                order = "Tuvalu";
+                query = "West";
+                sort = "Gorgeous";
+                updatedGte = OffsetDateTime.parse("2021-07-02T02:06:49.991Z");
             }};            
 
             ListCrmFilesResponse res = sdk.file.listCrmFiles(req);
@@ -225,22 +225,22 @@ public class Application {
 
             PatchCrmFileRequest req = new PatchCrmFileRequest("Future", "Southeast"){{
                 crmFile = new CrmFile(){{
-                    activityId = "Oriental invoice";
-                    companyId = "Texas blockchains";
-                    contactId = "navigate";
-                    createdAt = OffsetDateTime.parse("2021-12-30T16:07:40.056Z");
-                    dealId = "yellow Buckinghamshire";
-                    description = "Configurable exuding budgetary management";
-                    fileName = "xml_oxygen.gif";
-                    fileSize = 9689.63d;
-                    fileType = "application";
-                    fileUrl = "National Granite redundant";
+                    activityId = "communities";
+                    companyId = "watt";
+                    contactId = "Gasoline";
+                    createdAt = OffsetDateTime.parse("2021-02-07T08:18:55.524Z");
+                    dealId = "dreamily";
+                    description = "Function-based zero defect conglomeration";
+                    fileName = "fundamental_directives.mpga";
+                    fileSize = 7321.52d;
+                    fileType = "video";
+                    fileUrl = "molestiae";
                     id = "<ID>";
                     isActive = false;
-                    leadId = "East";
+                    leadId = "qua";
                     raw = new PropertyCrmFileRaw();
-                    updatedAt = OffsetDateTime.parse("2022-11-16T13:24:51.820Z");
-                    userId = "corrupti withdrawal Diesel";
+                    updatedAt = OffsetDateTime.parse("2021-03-11T08:59:40.328Z");
+                    userId = "Usability";
                 }};
             }};            
 
@@ -345,22 +345,22 @@ public class Application {
 
             UpdateCrmFileRequest req = new UpdateCrmFileRequest("generate", "unexpectedly"){{
                 crmFile = new CrmFile(){{
-                    activityId = "Cotton Specialist";
-                    companyId = "Rustic Bluffs";
-                    contactId = "content sorrowful Lead";
-                    createdAt = OffsetDateTime.parse("2022-06-16T11:45:11.956Z");
-                    dealId = "successfully Account";
-                    description = "Right-sized dedicated productivity";
-                    fileName = "radium.jpg";
-                    fileSize = 5172.6d;
-                    fileType = "audio";
-                    fileUrl = "Northeast Mandatory";
+                    activityId = "Nakfa";
+                    companyId = "wireless";
+                    contactId = "seamless";
+                    createdAt = OffsetDateTime.parse("2021-09-11T08:15:48.719Z");
+                    dealId = "Station";
+                    description = "Function-based grid-enabled strategy";
+                    fileName = "lead_haptic_successfully.png";
+                    fileSize = 2930.3d;
+                    fileType = "text";
+                    fileUrl = "Bicycle";
                     id = "<ID>";
                     isActive = false;
-                    leadId = "AI Small wasting";
+                    leadId = "Oregon";
                     raw = new PropertyCrmFileRaw();
-                    updatedAt = OffsetDateTime.parse("2021-08-04T14:31:18.269Z");
-                    userId = "UTF8";
+                    updatedAt = OffsetDateTime.parse("2023-03-20T00:28:11.359Z");
+                    userId = "navigating";
                 }};
             }};            
 

@@ -45,37 +45,37 @@ public class Application {
             CreateCrmCompanyRequest req = new CreateCrmCompanyRequest("carouse"){{
                 crmCompany = new CrmCompany(){{
                     address = new PropertyCrmCompanyAddress(){{
-                        address1 = "Germany";
-                        address2 = "soluta magenta Data";
-                        city = "Indio";
-                        country = "Jordan";
-                        countryCode = "MM";
-                        postalCode = "53595-4222";
-                        region = "Bedfordshire Compatible";
-                        regionCode = "Steel protocol users";
+                        address1 = "Car";
+                        address2 = "experiences";
+                        city = "Narcisoville";
+                        country = "Paraguay";
+                        countryCode = "MV";
+                        postalCode = "94455-5359";
+                        region = "ea";
+                        regionCode = "Gorgeous";
                     }};
-                    createdAt = OffsetDateTime.parse("2021-08-20T21:53:39.286Z");
+                    createdAt = OffsetDateTime.parse("2021-10-18T22:02:23.716Z");
                     dealIds = new String[]{{
-                        add("joint"),
+                        add("Compatible"),
                     }};
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
                     isActive = false;
-                    name = "Profound woman Illinois";
+                    name = "Dodge";
                     raw = new PropertyCrmCompanyRaw();
                     tags = new String[]{{
-                        add("bewilder"),
+                        add("Harrisonburg"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("meanwhile"){{
-                            telephone = "joule";
+                        add(new CrmTelephone("Bicycle"){{
+                            telephone = "Electric";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-04-25T05:51:27.903Z");
+                    updatedAt = OffsetDateTime.parse("2022-05-14T16:32:52.189Z");
                     websites = new String[]{{
-                        add("Benz"),
+                        add("hm"),
                     }};
                 }};
             }};            
@@ -182,17 +182,17 @@ public class Application {
                 .build();
 
             ListCrmCompaniesRequest req = new ListCrmCompaniesRequest("withdrawal"){{
-                contactId = "Hill Sleek Tricycle";
-                dealId = "synergies molestias Recycled";
+                contactId = "yuck";
+                dealId = "Lamborghini";
                 fields = new String[]{{
-                    add("Touring"),
+                    add("Sleek"),
                 }};
-                limit = 276.08d;
-                offset = 5221.79d;
-                order = "sedately salmon";
-                query = "rudely";
-                sort = "UTF8";
-                updatedGte = OffsetDateTime.parse("2021-05-26T08:26:47.847Z");
+                limit = 7660.91d;
+                offset = 9558.16d;
+                order = "honestly";
+                query = "South";
+                sort = "dolor";
+                updatedGte = OffsetDateTime.parse("2022-06-03T14:44:05.988Z");
             }};            
 
             ListCrmCompaniesResponse res = sdk.company.listCrmCompanies(req);
@@ -244,7 +244,7 @@ public class Application {
 
             ListEnrichCompaniesRequest req = new ListEnrichCompaniesRequest("hope"){{
                 domain = "idle-transfer.name";
-                name = "Analyst bandwidth rasterise";
+                name = "sadly";
             }};            
 
             ListEnrichCompaniesResponse res = sdk.company.listEnrichCompanies(req);
@@ -305,37 +305,37 @@ public class Application {
             PatchCrmCompanyRequest req = new PatchCrmCompanyRequest("Corporate", "indexing"){{
                 crmCompany = new CrmCompany(){{
                     address = new PropertyCrmCompanyAddress(){{
-                        address1 = "Phased Investment";
-                        address2 = "Trans";
-                        city = "Ewaldland";
-                        country = "Benin";
-                        countryCode = "SA";
-                        postalCode = "32828-2802";
-                        region = "Thorium Buckinghamshire Programmable";
-                        regionCode = "revolutionary Lock Investment";
+                        address1 = "array";
+                        address2 = "Genderflux";
+                        city = "Agustinaberg";
+                        country = "Myanmar";
+                        countryCode = "SH";
+                        postalCode = "30076";
+                        region = "didactic";
+                        regionCode = "Coupe";
                     }};
-                    createdAt = OffsetDateTime.parse("2022-06-26T20:56:24.683Z");
+                    createdAt = OffsetDateTime.parse("2023-07-14T17:37:26.000Z");
                     dealIds = new String[]{{
-                        add("over"),
+                        add("Salad"),
                     }};
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
                     isActive = false;
-                    name = "invoice Metal";
+                    name = "Cyprus";
                     raw = new PropertyCrmCompanyRaw();
                     tags = new String[]{{
-                        add("upon"),
+                        add("SUV"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("shelf"){{
-                            telephone = "steradian Sleek";
+                        add(new CrmTelephone("Ford"){{
+                            telephone = "mole";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-11-02T22:14:25.075Z");
+                    updatedAt = OffsetDateTime.parse("2023-01-01T12:10:17.789Z");
                     websites = new String[]{{
-                        add("Palos"),
+                        add("generally"),
                     }};
                 }};
             }};            
@@ -447,37 +447,37 @@ public class Application {
             UpdateCrmCompanyRequest req = new UpdateCrmCompanyRequest("barrel", "except"){{
                 crmCompany = new CrmCompany(){{
                     address = new PropertyCrmCompanyAddress(){{
-                        address1 = "Bicycle";
-                        address2 = "mar Southeast";
-                        city = "Enidburgh";
-                        country = "Honduras";
-                        countryCode = "TG";
-                        postalCode = "69514-8448";
-                        region = "port male";
-                        regionCode = "portals";
+                        address1 = "enterprise";
+                        address2 = "alarm";
+                        city = "South Everett";
+                        country = "Yemen";
+                        countryCode = "LI";
+                        postalCode = "55323";
+                        region = "unsightly";
+                        regionCode = "Metrics";
                     }};
-                    createdAt = OffsetDateTime.parse("2021-05-19T11:53:09.825Z");
+                    createdAt = OffsetDateTime.parse("2022-09-09T22:26:47.796Z");
                     dealIds = new String[]{{
-                        add("Salvador"),
+                        add("Massachusetts"),
                     }};
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
                     isActive = false;
-                    name = "monitor Blues Northwest";
+                    name = "illustrious";
                     raw = new PropertyCrmCompanyRaw();
                     tags = new String[]{{
-                        add("Borders"),
+                        add("THX"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("discrete"){{
-                            telephone = "Romania";
+                        add(new CrmTelephone("Rubber"){{
+                            telephone = "Kyat";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-04-16T09:00:32.301Z");
+                    updatedAt = OffsetDateTime.parse("2023-06-22T10:50:30.857Z");
                     websites = new String[]{{
-                        add("Product"),
+                        add("abdicate"),
                     }};
                 }};
             }};            

@@ -82,17 +82,17 @@ public class Application {
                 .build();
 
             GetUnifiedIntegrationAuthRequest req = new GetUnifiedIntegrationAuthRequest("Nobelium", "Branding"){{
-                env = "24/7 plum blot";
-                externalXref = "groupware";
-                failureRedirect = "Sausages Aston";
-                lang = "metrics Incredible Northwest";
+                env = "pascal";
+                externalXref = "West";
+                failureRedirect = "Xenogender";
+                lang = "North";
                 redirect = false;
                 scopes = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthScopes[]{{
-                    add(GetUnifiedIntegrationAuthScopes.CRM_COMPANY_READ),
+                    add(GetUnifiedIntegrationAuthScopes.CRM_FILE_READ),
                 }};
-                state = "California EXE Direct";
-                subdomain = "Lead Chair transmit";
-                successRedirect = "Central";
+                state = "Investment";
+                subdomain = "spirit";
+                successRedirect = "East";
             }};            
 
             GetUnifiedIntegrationAuthResponse res = sdk.integration.getUnifiedIntegrationAuth(req);
@@ -148,11 +148,11 @@ public class Application {
                 categories = new com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesCategories[]{{
                     add(ListUnifiedIntegrationWorkspacesCategories.ATS),
                 }};
-                env = "Representative transplantation";
-                limit = 8272.38d;
-                offset = 2514.07d;
+                env = "quidem";
+                limit = 9499.08d;
+                offset = 9586.14d;
                 summary = false;
-                updatedGte = "phew Loan";
+                updatedGte = "gosh";
             }};            
 
             ListUnifiedIntegrationWorkspacesResponse res = sdk.integration.listUnifiedIntegrationWorkspaces(req);
@@ -208,13 +208,13 @@ public class Application {
                 categories = new com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsCategories[]{{
                     add(ListUnifiedIntegrationsCategories.HRIS),
                 }};
-                env = "at Gabon East";
-                limit = 7484.12d;
-                offset = 5432.17d;
-                order = "excepturi Cadillac GB";
-                sort = "Gloves";
+                env = "Volkswagen";
+                limit = 2371.74d;
+                offset = 558.38d;
+                order = "implement";
+                sort = "Card";
                 summary = false;
-                updatedGte = "radian alarm Salad";
+                updatedGte = "Global";
             }};            
 
             ListUnifiedIntegrationsResponse res = sdk.integration.listUnifiedIntegrations(req);

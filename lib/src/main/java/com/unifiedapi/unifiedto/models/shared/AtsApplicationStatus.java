@@ -18,7 +18,8 @@ public enum AtsApplicationStatus {
     OFFERED("OFFERED"),
     ACCEPTED("ACCEPTED"),
     HIRED("HIRED"),
-    REJECTED("REJECTED");
+    REJECTED("REJECTED"),
+    WITHDRAWN("WITHDRAWN");
 
     @JsonValue
     public final String value;

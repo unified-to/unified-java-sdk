@@ -63,18 +63,18 @@ public class Application {
                         add("Customer"),
                     }};
                     id = "<ID>";
-                    languageLocale = "olive SMS";
-                    name = "Cotton South";
+                    languageLocale = "Loan";
+                    name = "SMS";
                     publicJobUrls = new String[]{{
-                        add("withdrawal"),
+                        add("Optimization"),
                     }};
                     raw = new PropertyAtsJobRaw();
                     recruiterIds = new String[]{{
-                        add("payment"),
+                        add("withdrawal"),
                     }};
                     remote = false;
-                    status = AtsJobStatus.CLOSED;
-                    updatedAt = OffsetDateTime.parse("2023-07-13T17:13:15.823Z");
+                    status = AtsJobStatus.DRAFT;
+                    updatedAt = OffsetDateTime.parse("2022-08-25T20:04:09.010Z");
                 }};
             }};            
 
@@ -185,10 +185,10 @@ public class Application {
                 }};
                 limit = 523.86d;
                 offset = 9767.63d;
-                order = "Sports Car Electronic";
-                query = "Architect";
-                sort = "worth hence West";
-                updatedGte = OffsetDateTime.parse("2023-01-20T14:48:58.164Z");
+                order = "teal";
+                query = "Electric";
+                sort = "ohm";
+                updatedGte = OffsetDateTime.parse("2021-03-15T18:47:12.832Z");
             }};            
 
             ListAtsJobsResponse res = sdk.job.listAtsJobs(req);
@@ -268,18 +268,18 @@ public class Application {
                         add("flawless"),
                     }};
                     id = "<ID>";
-                    languageLocale = "Assimilated vero";
-                    name = "voluptates";
+                    languageLocale = "Forint";
+                    name = "Missoula";
                     publicJobUrls = new String[]{{
-                        add("non"),
+                        add("every"),
                     }};
                     raw = new PropertyAtsJobRaw();
                     recruiterIds = new String[]{{
-                        add("near"),
+                        add("voluptates"),
                     }};
                     remote = false;
-                    status = AtsJobStatus.OPEN;
-                    updatedAt = OffsetDateTime.parse("2022-10-29T02:53:10.534Z");
+                    status = AtsJobStatus.DRAFT;
+                    updatedAt = OffsetDateTime.parse("2021-10-01T22:46:41.539Z");
                 }};
             }};            
 
@@ -409,18 +409,18 @@ public class Application {
                         add("withdrawal"),
                     }};
                     id = "<ID>";
-                    languageLocale = "Investor Mini Orchestrator";
-                    name = "backing";
+                    languageLocale = "Technician";
+                    name = "Representative";
                     publicJobUrls = new String[]{{
-                        add("Corporate"),
+                        add("Orchestrator"),
                     }};
                     raw = new PropertyAtsJobRaw();
                     recruiterIds = new String[]{{
-                        add("Executive"),
+                        add("Southeast"),
                     }};
                     remote = false;
-                    status = AtsJobStatus.CLOSED;
-                    updatedAt = OffsetDateTime.parse("2021-07-05T14:57:04.452Z");
+                    status = AtsJobStatus.ARCHIVED;
+                    updatedAt = OffsetDateTime.parse("2022-06-19T11:57:37.224Z");
                 }};
             }};            
 

@@ -38,11 +38,11 @@ public class Application {
 
             CreateMartechListRequest req = new CreateMartechListRequest("withdrawal"){{
                 marketingList = new MarketingList(){{
-                    createdAt = "Recycled Fresh iusto";
+                    createdAt = "teal";
                     id = "<ID>";
-                    name = "Home Clothing indexing";
+                    name = "EXE";
                     raw = new PropertyMarketingListRaw();
-                    updatedAt = OffsetDateTime.parse("2022-06-21T04:01:59.310Z");
+                    updatedAt = OffsetDateTime.parse("2021-07-26T18:05:38.910Z");
                 }};
             }};            
 
@@ -153,10 +153,10 @@ public class Application {
                 }};
                 limit = 6845.92d;
                 offset = 7925.09d;
-                order = "provided";
-                query = "knife alarm evolve";
-                sort = "Account";
-                updatedGte = OffsetDateTime.parse("2021-10-01T15:40:04.957Z");
+                order = "customized";
+                query = "parse";
+                sort = "knife";
+                updatedGte = OffsetDateTime.parse("2022-08-12T22:58:00.911Z");
             }};            
 
             ListMartechListsResponse res = sdk.list.listMartechLists(req);
@@ -211,11 +211,11 @@ public class Application {
 
             PatchMartechListRequest req = new PatchMartechListRequest("alarm", "Dodge"){{
                 marketingList = new MarketingList(){{
-                    createdAt = "Toyota";
+                    createdAt = "Tennessee";
                     id = "<ID>";
-                    name = "female";
+                    name = "phooey";
                     raw = new PropertyMarketingListRaw();
-                    updatedAt = OffsetDateTime.parse("2022-07-15T21:19:00.293Z");
+                    updatedAt = OffsetDateTime.parse("2023-02-22T03:23:44.682Z");
                 }};
             }};            
 
@@ -320,11 +320,11 @@ public class Application {
 
             UpdateMartechListRequest req = new UpdateMartechListRequest("gold", "panel"){{
                 marketingList = new MarketingList(){{
-                    createdAt = "precious East Bentley";
+                    createdAt = "suite";
                     id = "<ID>";
-                    name = "Supervisor navigate Androgynous";
+                    name = "Lead";
                     raw = new PropertyMarketingListRaw();
-                    updatedAt = OffsetDateTime.parse("2021-03-28T05:43:12.466Z");
+                    updatedAt = OffsetDateTime.parse("2022-04-30T09:07:09.154Z");
                 }};
             }};            
 

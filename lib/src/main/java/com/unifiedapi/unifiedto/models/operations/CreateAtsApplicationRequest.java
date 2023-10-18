@@ -9,9 +9,6 @@ import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 
 
 public class CreateAtsApplicationRequest {
-    /**
-     * An application is an association object between a candidate and a job
-     */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.unifiedapi.unifiedto.models.shared.AtsApplication atsApplication;
 

@@ -54,39 +54,39 @@ public class Application {
     add(PropertyConnectionPermissions.MARTECH_LIST_READ),
 }}){{
                 auth = new PropertyConnectionAuth(){{
-                    accessToken = "Maserati";
-                    apiUrl = "Van fondly";
-                    appId = "Lilangeni Rubber sticky";
-                    authorizeUrl = "worrisome Programmable eos";
-                    clientId = "Bicycle maroon";
-                    clientSecret = "Account female";
-                    consumerKey = "tart Centralized Tesla";
-                    consumerSecret = "mint coulomb";
+                    accessToken = "revolutionize";
+                    apiUrl = "neutral";
+                    appId = "Engineer";
+                    authorizeUrl = "Lilangeni";
+                    clientId = "Rubber";
+                    clientSecret = "sticky";
+                    consumerKey = "towards";
+                    consumerSecret = "fit";
                     emails = new String[]{{
-                        add("interpenetrate"),
+                        add("Designer"),
                     }};
-                    expiresIn = 5184.19d;
-                    expiryDate = OffsetDateTime.parse("2022-06-18T09:15:26.195Z");
+                    expiresIn = 5649.9d;
+                    expiryDate = OffsetDateTime.parse("2023-03-20T08:57:28.874Z");
                     key = "<key>";
                     meta = new PropertyPropertyConnectionAuthMeta();
-                    name = "as yowza";
+                    name = "maroon";
                     otherAuthInfo = new String[]{{
-                        add("online"),
+                        add("Group"),
                     }};
-                    pem = "web";
-                    refreshToken = "whenever";
-                    state = "Salad person compress";
-                    token = "Gasoline since";
-                    tokenUrl = "quantify HDD";
+                    pem = "Rap";
+                    refreshToken = "female";
+                    state = "Wagon";
+                    token = "intensely";
+                    tokenUrl = "Buckinghamshire";
                 }};
-                authAwsArn = "Pakistan Electric Bicycle";
-                createdAt = OffsetDateTime.parse("2022-04-19T22:04:20.419Z");
-                environment = "Bicycle transmitting";
-                externalXref = "Loan";
+                authAwsArn = "inquisitively";
+                createdAt = OffsetDateTime.parse("2023-05-19T12:51:51.899Z");
+                environment = "Music";
+                externalXref = "coulomb";
                 id = "<ID>";
                 isPaused = false;
-                updatedAt = OffsetDateTime.parse("2022-12-18T10:24:24.001Z");
-                workspaceId = "Rock";
+                updatedAt = OffsetDateTime.parse("2023-12-15T00:36:00.880Z");
+                workspaceId = "PCI";
             }};            
 
             CreateUnifiedConnectionResponse res = sdk.unified.createUnifiedConnection(req);
@@ -147,11 +147,11 @@ public class Application {
                 }}, "cyan", "Bedfordshire", 3.51d, WebhookObjectType.CRM_PIPELINE, "withdrawal"){{
                     checkedAt = OffsetDateTime.parse("2023-02-22T14:23:57.210Z");
                     createdAt = OffsetDateTime.parse("2023-09-03T17:40:00.994Z");
-                    environment = "PCI";
+                    environment = "turquoise";
                     id = "<ID>";
                     includeRaw = false;
                     subscriptions = new String[]{{
-                        add("Mali"),
+                        add("up"),
                     }};
                     updatedAt = OffsetDateTime.parse("2022-04-24T02:01:08.617Z");
                 }};
@@ -356,17 +356,17 @@ public class Application {
                 .build();
 
             GetUnifiedIntegrationAuthRequest req = new GetUnifiedIntegrationAuthRequest("Nobelium", "Branding"){{
-                env = "24/7 plum blot";
-                externalXref = "groupware";
-                failureRedirect = "Sausages Aston";
-                lang = "metrics Incredible Northwest";
+                env = "pascal";
+                externalXref = "West";
+                failureRedirect = "Xenogender";
+                lang = "North";
                 redirect = false;
                 scopes = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthScopes[]{{
-                    add(GetUnifiedIntegrationAuthScopes.CRM_COMPANY_READ),
+                    add(GetUnifiedIntegrationAuthScopes.CRM_FILE_READ),
                 }};
-                state = "California EXE Direct";
-                subdomain = "Lead Chair transmit";
-                successRedirect = "Central";
+                state = "Investment";
+                subdomain = "spirit";
+                successRedirect = "East";
             }};            
 
             GetUnifiedIntegrationAuthResponse res = sdk.unified.getUnifiedIntegrationAuth(req);
@@ -467,17 +467,17 @@ public class Application {
                 .build();
 
             ListUnifiedApicallsRequest req = new ListUnifiedApicallsRequest(){{
-                connectionId = "Lead Krone";
-                createdLte = OffsetDateTime.parse("2022-09-06T17:13:51.274Z");
-                env = "parse dearly Integration";
+                connectionId = "feed";
+                createdLte = OffsetDateTime.parse("2021-01-15T05:06:05.218Z");
+                env = "flail";
                 error = false;
-                externalXref = "Customer Rap";
-                integrationType = "Rest solution";
-                limit = 1797.17d;
-                offset = 2364.47d;
-                order = "Kentucky";
-                sort = "copy Chile";
-                updatedGte = OffsetDateTime.parse("2021-03-07T15:44:54.599Z");
+                externalXref = "Trail";
+                integrationType = "male";
+                limit = 9674.36d;
+                offset = 8869.99d;
+                order = "Lights";
+                sort = "Hop";
+                updatedGte = OffsetDateTime.parse("2022-08-25T10:35:13.567Z");
             }};            
 
             ListUnifiedApicallsResponse res = sdk.unified.listUnifiedApicalls(req);
@@ -533,13 +533,13 @@ public class Application {
                 categories = new com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsCategories[]{{
                     add(ListUnifiedConnectionsCategories.PASSTHROUGH),
                 }};
-                env = "Administrator";
-                externalXref = "FTP orange";
-                limit = 9313.63d;
-                offset = 3975.39d;
-                order = "female Southwest";
-                sort = "Chief";
-                updatedGte = OffsetDateTime.parse("2023-01-01T21:41:02.863Z");
+                env = "Schamberger";
+                externalXref = "Tellurium";
+                limit = 4785.07d;
+                offset = 2709.69d;
+                order = "orange";
+                sort = "aha";
+                updatedGte = OffsetDateTime.parse("2022-03-28T17:39:35.590Z");
             }};            
 
             ListUnifiedConnectionsResponse res = sdk.unified.listUnifiedConnections(req);
@@ -595,11 +595,11 @@ public class Application {
                 categories = new com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesCategories[]{{
                     add(ListUnifiedIntegrationWorkspacesCategories.ATS),
                 }};
-                env = "Representative transplantation";
-                limit = 8272.38d;
-                offset = 2514.07d;
+                env = "quidem";
+                limit = 9499.08d;
+                offset = 9586.14d;
                 summary = false;
-                updatedGte = "phew Loan";
+                updatedGte = "gosh";
             }};            
 
             ListUnifiedIntegrationWorkspacesResponse res = sdk.unified.listUnifiedIntegrationWorkspaces(req);
@@ -655,13 +655,13 @@ public class Application {
                 categories = new com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsCategories[]{{
                     add(ListUnifiedIntegrationsCategories.HRIS),
                 }};
-                env = "at Gabon East";
-                limit = 7484.12d;
-                offset = 5432.17d;
-                order = "excepturi Cadillac GB";
-                sort = "Gloves";
+                env = "Volkswagen";
+                limit = 2371.74d;
+                offset = 558.38d;
+                order = "implement";
+                sort = "Card";
                 summary = false;
-                updatedGte = "radian alarm Salad";
+                updatedGte = "Global";
             }};            
 
             ListUnifiedIntegrationsResponse res = sdk.unified.listUnifiedIntegrations(req);
@@ -713,13 +713,13 @@ public class Application {
                 .build();
 
             ListUnifiedWebhooksRequest req = new ListUnifiedWebhooksRequest(){{
-                env = "connecting";
-                limit = 7855.11d;
-                object = "withdrawal yum Cambridgeshire";
-                offset = 7784.34d;
-                order = "Supervisor alarm";
-                sort = "Computer regard Hip";
-                updatedGte = OffsetDateTime.parse("2022-08-27T06:39:32.501Z");
+                env = "Southeast";
+                limit = 5051.74d;
+                object = "indigo";
+                offset = 4478.86d;
+                order = "optimize";
+                sort = "Polestar";
+                updatedGte = OffsetDateTime.parse("2022-01-21T13:12:54.296Z");
             }};            
 
             ListUnifiedWebhooksResponse res = sdk.unified.listUnifiedWebhooks(req);
@@ -782,39 +782,39 @@ public class Application {
                     add(PropertyConnectionPermissions.MARTECH_LIST_READ),
                 }}){{
                     auth = new PropertyConnectionAuth(){{
-                        accessToken = "Gasoline given";
-                        apiUrl = "Chair customized";
-                        appId = "Branding Direct";
-                        authorizeUrl = "Pop";
-                        clientId = "streamline so";
-                        clientSecret = "Chair Silver payment";
-                        consumerKey = "violet via";
-                        consumerSecret = "Southwest constrict magenta";
+                        accessToken = "scalable";
+                        apiUrl = "Flerovium";
+                        appId = "online";
+                        authorizeUrl = "Chair";
+                        clientId = "customized";
+                        clientSecret = "Classical";
+                        consumerKey = "repeatedly";
+                        consumerSecret = "Grocery";
                         emails = new String[]{{
-                            add("World"),
+                            add("Direct"),
                         }};
-                        expiresIn = 60.89d;
-                        expiryDate = OffsetDateTime.parse("2022-03-18T20:14:39.397Z");
+                        expiresIn = 867.16d;
+                        expiryDate = OffsetDateTime.parse("2022-10-16T13:14:14.900Z");
                         key = "<key>";
                         meta = new PropertyPropertyConnectionAuthMeta();
-                        name = "viral";
+                        name = "Causeway";
                         otherAuthInfo = new String[]{{
-                            add("maximized"),
+                            add("hic"),
                         }};
-                        pem = "FTM";
-                        refreshToken = "Texas real Wooden";
-                        state = "male Southwest Regional";
-                        token = "West";
-                        tokenUrl = "matrix Optimization";
+                        pem = "Chair";
+                        refreshToken = "Silver";
+                        state = "payment";
+                        token = "schemas";
+                        tokenUrl = "Loti";
                     }};
-                    authAwsArn = "yuck Diesel";
-                    createdAt = OffsetDateTime.parse("2021-03-01T19:03:24.336Z");
-                    environment = "towards Executive";
-                    externalXref = "Intelligent";
+                    authAwsArn = "buckwheat";
+                    createdAt = OffsetDateTime.parse("2023-08-07T03:19:45.101Z");
+                    environment = "constrict";
+                    externalXref = "magenta";
                     id = "<ID>";
                     isPaused = false;
-                    updatedAt = OffsetDateTime.parse("2022-03-18T19:38:58.861Z");
-                    workspaceId = "Diesel";
+                    updatedAt = OffsetDateTime.parse("2022-10-13T10:42:23.688Z");
+                    workspaceId = "synergies";
                 }};
             }};            
 
@@ -976,39 +976,39 @@ public class Application {
                     add(PropertyConnectionPermissions.CRM_TEAM_WRITE),
                 }}){{
                     auth = new PropertyConnectionAuth(){{
-                        accessToken = "Intuitive";
-                        apiUrl = "delete digital Minivan";
-                        appId = "contest Fish Books";
-                        authorizeUrl = "Southwest squall clang";
-                        clientId = "Land Grocery";
-                        clientSecret = "violet";
-                        consumerKey = "Martinique";
-                        consumerSecret = "Administrator";
+                        accessToken = "Berkshire";
+                        apiUrl = "Account";
+                        appId = "Recycled";
+                        authorizeUrl = "Pizza";
+                        clientId = "Accounts";
+                        clientSecret = "contest";
+                        consumerKey = "Fish";
+                        consumerSecret = "Books";
                         emails = new String[]{{
-                            add("groupware"),
+                            add("ampere"),
                         }};
-                        expiresIn = 8498.46d;
-                        expiryDate = OffsetDateTime.parse("2023-05-02T14:37:36.929Z");
+                        expiresIn = 9854.22d;
+                        expiryDate = OffsetDateTime.parse("2023-12-23T03:55:24.236Z");
                         key = "<key>";
                         meta = new PropertyPropertyConnectionAuthMeta();
-                        name = "copy Toys Pants";
+                        name = "Wagon";
                         otherAuthInfo = new String[]{{
-                            add("iste"),
+                            add("Shoals"),
                         }};
-                        pem = "minus Van Account";
-                        refreshToken = "TCP Chrysler";
-                        state = "blockchains Southeast";
-                        token = "Runolfsdottir Southwest";
-                        tokenUrl = "North";
+                        pem = "invoice";
+                        refreshToken = "Grocery";
+                        state = "Bacon";
+                        token = "deposit";
+                        tokenUrl = "Martinique";
                     }};
-                    authAwsArn = "red";
-                    createdAt = OffsetDateTime.parse("2022-01-14T09:05:41.167Z");
-                    environment = "out";
-                    externalXref = "Waldorf Agent";
+                    authAwsArn = "North";
+                    createdAt = OffsetDateTime.parse("2022-04-13T10:14:02.294Z");
+                    environment = "Tala";
+                    externalXref = "groupware";
                     id = "<ID>";
                     isPaused = false;
-                    updatedAt = OffsetDateTime.parse("2021-12-25T08:16:04.688Z");
-                    workspaceId = "Track";
+                    updatedAt = OffsetDateTime.parse("2023-07-20T13:56:27.665Z");
+                    workspaceId = "Tricycle";
                 }};
             }};            
 

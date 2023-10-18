@@ -44,36 +44,36 @@ public class Application {
             CreateCrmUserRequest req = new CreateCrmUserRequest("male"){{
                 crmUser = new CrmUser(){{
                     address = new PropertyCrmUserAddress(){{
-                        address1 = "Incredible Virginia";
-                        address2 = "Dakota";
-                        city = "Atascocita";
-                        country = "Brazil";
-                        countryCode = "JP";
-                        postalCode = "31377-1960";
-                        region = "red";
-                        regionCode = "male";
+                        address1 = "program";
+                        address2 = "for";
+                        city = "Port Valentinahaven";
+                        country = "Armenia";
+                        countryCode = "BR";
+                        postalCode = "53137";
+                        region = "Bicycle";
+                        regionCode = "Senior";
                     }};
-                    createdAt = OffsetDateTime.parse("2023-02-24T09:43:14.454Z");
-                    currency = "Silver";
-                    department = "AI North";
-                    division = "Latin Will the";
+                    createdAt = OffsetDateTime.parse("2021-04-16T09:17:52.674Z");
+                    currency = "Rial Omani";
+                    department = "Ohio";
+                    division = "male";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
-                    imageUrl = "Central Director";
+                    imageUrl = "Applications";
                     isActive = false;
-                    languageLocale = "Personal compelling similique";
-                    name = "pink Toms";
+                    languageLocale = "Avon";
+                    name = "Orange";
                     raw = new PropertyCrmUserRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("Clifton"){{
-                            telephone = "cyan";
+                        add(new CrmTelephone("woman"){{
+                            telephone = "female";
                         }}),
                     }};
-                    timezone = "Asia/Dhaka";
-                    title = "violet";
-                    updatedAt = OffsetDateTime.parse("2023-12-25T13:02:25.837Z");
+                    timezone = "Asia/Kamchatka";
+                    title = "jealously";
+                    updatedAt = OffsetDateTime.parse("2023-12-04T11:50:25.111Z");
                 }};
             }};            
 
@@ -184,10 +184,10 @@ public class Application {
                 }};
                 limit = 4392.99d;
                 offset = 7999.12d;
-                order = "Southeast orange tesla";
-                query = "San";
-                sort = "Centralized Neptunium";
-                updatedGte = OffsetDateTime.parse("2023-10-13T06:25:33.606Z");
+                order = "before";
+                query = "Forward";
+                sort = "scale";
+                updatedGte = OffsetDateTime.parse("2022-09-30T10:56:59.338Z");
             }};            
 
             ListCrmUsersResponse res = sdk.user.listCrmUsers(req);
@@ -248,36 +248,36 @@ public class Application {
             PatchCrmUserRequest req = new PatchCrmUserRequest("grey", "Pizza"){{
                 crmUser = new CrmUser(){{
                     address = new PropertyCrmUserAddress(){{
-                        address1 = "around overburden Factors";
-                        address2 = "Samir";
-                        city = "Lake Glennaboro";
-                        country = "Bahamas";
-                        countryCode = "AU";
-                        postalCode = "38358-1281";
-                        region = "Bike";
-                        regionCode = "blue";
+                        address1 = "katal";
+                        address2 = "Industrial";
+                        city = "Lilyanshire";
+                        country = "Bhutan";
+                        countryCode = "CC";
+                        postalCode = "89307";
+                        region = "encryption";
+                        regionCode = "Avon";
                     }};
-                    createdAt = OffsetDateTime.parse("2021-01-31T22:26:45.960Z");
-                    currency = "Fiji Dollar";
-                    department = "sticky pink card";
-                    division = "synergize Cotton apud";
+                    createdAt = OffsetDateTime.parse("2023-07-13T05:11:09.038Z");
+                    currency = "Iceland Krona";
+                    department = "Cab";
+                    division = "colorfully";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
-                    imageUrl = "male Land fumbling";
+                    imageUrl = "Pizza";
                     isActive = false;
-                    languageLocale = "bypassing microchip GB";
-                    name = "Cambridgeshire sit Account";
+                    languageLocale = "Northeast";
+                    name = "Bike";
                     raw = new PropertyCrmUserRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("Engineer"){{
-                            telephone = "though";
+                        add(new CrmTelephone("input"){{
+                            telephone = "Sanford";
                         }}),
                     }};
-                    timezone = "Europe/Brussels";
-                    title = "Agender Bicycle";
-                    updatedAt = OffsetDateTime.parse("2023-09-30T00:47:17.388Z");
+                    timezone = "America/Juneau";
+                    title = "Bike";
+                    updatedAt = OffsetDateTime.parse("2022-01-23T14:50:07.697Z");
                 }};
             }};            
 
@@ -388,36 +388,36 @@ public class Application {
             UpdateCrmUserRequest req = new UpdateCrmUserRequest("Rustic", "Bedfordshire"){{
                 crmUser = new CrmUser(){{
                     address = new PropertyCrmUserAddress(){{
-                        address1 = "Carlo Beryllium";
-                        address2 = "Southwest throughout Wooden";
-                        city = "North Richland Hills";
-                        country = "Namibia";
-                        countryCode = "EG";
-                        postalCode = "00841";
-                        region = "lazy";
-                        regionCode = "Hat";
+                        address1 = "Savings";
+                        address2 = "Corwin";
+                        city = "Bruenfield";
+                        country = "Virgin Islands, British";
+                        countryCode = "SN";
+                        postalCode = "29662";
+                        region = "evolve";
+                        regionCode = "Switzerland";
                     }};
-                    createdAt = OffsetDateTime.parse("2023-10-16T17:08:05.884Z");
-                    currency = "Tanzanian Shilling";
-                    department = "invoice";
-                    division = "Ethiopian";
+                    createdAt = OffsetDateTime.parse("2022-06-17T09:31:08.726Z");
+                    currency = "Belize Dollar";
+                    department = "Southwest";
+                    division = "Hat";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
-                    imageUrl = "female less";
+                    imageUrl = "Northwest";
                     isActive = false;
-                    languageLocale = "perspiciatis Creative 1080p";
-                    name = "Road Movies regulation";
+                    languageLocale = "expurgate";
+                    name = "Ethiopian";
                     raw = new PropertyCrmUserRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("Granite"){{
-                            telephone = "Northeast Avon";
+                        add(new CrmTelephone("models"){{
+                            telephone = "quis";
                         }}),
                     }};
-                    timezone = "Asia/Singapore";
-                    title = "hmph connecting Movies";
-                    updatedAt = OffsetDateTime.parse("2021-02-07T04:55:02.364Z");
+                    timezone = "America/Indiana/Indianapolis";
+                    title = "less";
+                    updatedAt = OffsetDateTime.parse("2023-03-27T14:28:54.417Z");
                 }};
             }};            
 

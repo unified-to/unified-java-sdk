@@ -44,11 +44,11 @@ public class Application {
 
             CreateMartechListRequest req = new CreateMartechListRequest("withdrawal"){{
                 marketingList = new MarketingList(){{
-                    createdAt = "Recycled Fresh iusto";
+                    createdAt = "teal";
                     id = "<ID>";
-                    name = "Home Clothing indexing";
+                    name = "EXE";
                     raw = new PropertyMarketingListRaw();
-                    updatedAt = OffsetDateTime.parse("2022-06-21T04:01:59.310Z");
+                    updatedAt = OffsetDateTime.parse("2021-07-26T18:05:38.910Z");
                 }};
             }};            
 
@@ -116,12 +116,12 @@ public class Application {
                     listIds = new String[]{{
                         add("calculate"),
                     }};
-                    name = "ew scalable Hassium";
+                    name = "translate";
                     raw = new PropertyMarketingMemberRaw();
                     tags = new String[]{{
-                        add("Buckinghamshire"),
+                        add("B2C"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-07-26T05:07:38.623Z");
+                    updatedAt = OffsetDateTime.parse("2021-04-25T09:16:50.202Z");
                 }};
             }};            
 
@@ -285,10 +285,10 @@ public class Application {
                 }};
                 limit = 6845.92d;
                 offset = 7925.09d;
-                order = "provided";
-                query = "knife alarm evolve";
-                sort = "Account";
-                updatedGte = OffsetDateTime.parse("2021-10-01T15:40:04.957Z");
+                order = "customized";
+                query = "parse";
+                sort = "knife";
+                updatedGte = OffsetDateTime.parse("2022-08-12T22:58:00.911Z");
             }};            
 
             ListMartechListsResponse res = sdk.martech.listMartechLists(req);
@@ -345,10 +345,10 @@ public class Application {
                 }};
                 limit = 8667.14d;
                 offset = 6022.21d;
-                order = "huzzah wireless";
-                query = "Loop";
-                sort = "standardise reinvent microchip";
-                updatedGte = OffsetDateTime.parse("2022-12-12T03:36:49.362Z");
+                order = "Trigender";
+                query = "turquoise";
+                sort = "Marketing";
+                updatedGte = OffsetDateTime.parse("2022-07-06T11:38:30.717Z");
             }};            
 
             ListMartechMembersResponse res = sdk.martech.listMartechMembers(req);
@@ -403,11 +403,11 @@ public class Application {
 
             PatchMartechListRequest req = new PatchMartechListRequest("alarm", "Dodge"){{
                 marketingList = new MarketingList(){{
-                    createdAt = "Toyota";
+                    createdAt = "Tennessee";
                     id = "<ID>";
-                    name = "female";
+                    name = "phooey";
                     raw = new PropertyMarketingListRaw();
-                    updatedAt = OffsetDateTime.parse("2022-07-15T21:19:00.293Z");
+                    updatedAt = OffsetDateTime.parse("2023-02-22T03:23:44.682Z");
                 }};
             }};            
 
@@ -475,12 +475,12 @@ public class Application {
                     listIds = new String[]{{
                         add("Brand"),
                     }};
-                    name = "West integrated";
+                    name = "Rock";
                     raw = new PropertyMarketingMemberRaw();
                     tags = new String[]{{
-                        add("Regional"),
+                        add("Ferrari"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-02-01T06:57:40.654Z");
+                    updatedAt = OffsetDateTime.parse("2023-04-24T19:34:51.201Z");
                 }};
             }};            
 
@@ -634,11 +634,11 @@ public class Application {
 
             UpdateMartechListRequest req = new UpdateMartechListRequest("gold", "panel"){{
                 marketingList = new MarketingList(){{
-                    createdAt = "precious East Bentley";
+                    createdAt = "suite";
                     id = "<ID>";
-                    name = "Supervisor navigate Androgynous";
+                    name = "Lead";
                     raw = new PropertyMarketingListRaw();
-                    updatedAt = OffsetDateTime.parse("2021-03-28T05:43:12.466Z");
+                    updatedAt = OffsetDateTime.parse("2022-04-30T09:07:09.154Z");
                 }};
             }};            
 
@@ -706,12 +706,12 @@ public class Application {
                     listIds = new String[]{{
                         add("Lithuanian"),
                     }};
-                    name = "methodologies state";
+                    name = "navigate";
                     raw = new PropertyMarketingMemberRaw();
                     tags = new String[]{{
-                        add("Computer"),
+                        add("below"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-09-28T08:50:18.886Z");
+                    updatedAt = OffsetDateTime.parse("2023-07-28T09:08:59.988Z");
                 }};
             }};            
 

@@ -59,34 +59,34 @@ public class Application {
                         add("Savings"),
                     }};
                     email = new PropertyCrmEventEmail(){{
-                        body = "forenenst interface Switzerland";
+                        body = "within";
                         cc = new String[]{{
-                            add("Underpass"),
+                            add("PNG"),
                         }};
-                        from = "Egypt Lutetium SUV";
-                        subject = "Rock XSS Pickup";
+                        from = "generation";
+                        subject = "Underpass";
                         to = new String[]{{
-                            add("Fresh"),
+                            add("astrakhan"),
                         }};
                     }};
                     id = "<ID>";
                     meeting = new PropertyCrmEventMeeting(){{
-                        description = "Configurable needs-based forecast";
-                        endAt = OffsetDateTime.parse("2023-04-17T00:16:04.496Z");
-                        startAt = OffsetDateTime.parse("2022-08-12T07:03:56.644Z");
-                        title = "Hip Loan";
+                        description = "Exclusive optimal matrix";
+                        endAt = OffsetDateTime.parse("2023-07-15T12:28:49.883Z");
+                        startAt = OffsetDateTime.parse("2023-03-21T07:12:55.587Z");
+                        title = "supposing";
                     }};
                     note = new PropertyCrmEventNote(){{
-                        description = "Quality-focused upward-trending budgetary management";
+                        description = "Ameliorated homogeneous utilisation";
                     }};
                     raw = new PropertyCrmEventRaw();
                     task = new PropertyCrmEventTask(){{
-                        description = "Secured stable software";
-                        name = "as interface United";
-                        status = "meanwhile viral Marketing";
+                        description = "Switchable directional productivity";
+                        name = "Fresh";
+                        status = "Southeast";
                     }};
-                    type = CrmEventType.CALL;
-                    updatedAt = OffsetDateTime.parse("2021-03-02T15:18:14.793Z");
+                    type = CrmEventType.EMAIL;
+                    updatedAt = OffsetDateTime.parse("2023-04-17T00:16:04.496Z");
                 }};
             }};            
 
@@ -192,18 +192,18 @@ public class Application {
                 .build();
 
             ListCrmEventsRequest req = new ListCrmEventsRequest("empower"){{
-                companyId = "payment Female Checking";
-                contactId = "pascal";
-                dealId = "Senior Executive warmly";
+                companyId = "violet";
+                contactId = "generating";
+                dealId = "paradigms";
                 fields = new String[]{{
-                    add("enable"),
+                    add("Checking"),
                 }};
-                limit = 3340.43d;
-                offset = 600.97d;
-                order = "proffer ivory";
-                query = "Altoona Tasty Optimized";
-                sort = "mesh Hatchback";
-                updatedGte = OffsetDateTime.parse("2023-04-21T04:36:34.688Z");
+                limit = 2512.65d;
+                offset = 3220.29d;
+                order = "Saint";
+                query = "gadzooks";
+                sort = "Borders";
+                updatedGte = OffsetDateTime.parse("2023-10-24T12:08:20.855Z");
             }};            
 
             ListCrmEventsResponse res = sdk.event.listCrmEvents(req);
@@ -279,34 +279,34 @@ public class Application {
                         add("Administrator"),
                     }};
                     email = new PropertyCrmEventEmail(){{
-                        body = "Bike gold Intersex";
+                        body = "around";
                         cc = new String[]{{
-                            add("Polestar"),
+                            add("Wooden"),
                         }};
-                        from = "miserably";
-                        subject = "vein Idaho boo";
+                        from = "Gasoline";
+                        subject = "neural";
                         to = new String[]{{
-                            add("Technician"),
+                            add("mole"),
                         }};
                     }};
                     id = "<ID>";
                     meeting = new PropertyCrmEventMeeting(){{
-                        description = "Multi-lateral intangible implementation";
-                        endAt = OffsetDateTime.parse("2021-08-21T02:50:26.982Z");
-                        startAt = OffsetDateTime.parse("2021-10-12T21:23:43.046Z");
-                        title = "jest down";
+                        description = "Total homogeneous policy";
+                        endAt = OffsetDateTime.parse("2023-11-15T04:26:14.346Z");
+                        startAt = OffsetDateTime.parse("2023-11-08T07:39:26.236Z");
+                        title = "Idaho";
                     }};
                     note = new PropertyCrmEventNote(){{
-                        description = "Face to face coherent flexibility";
+                        description = "Up-sized asymmetric open architecture";
                     }};
                     raw = new PropertyCrmEventRaw();
                     task = new PropertyCrmEventTask(){{
-                        description = "Enhanced multimedia array";
-                        name = "Extended zero compressing";
-                        status = "hierarchy mostly communities";
+                        description = "Profound holistic interface";
+                        name = "DNS";
+                        status = "Shoes";
                     }};
-                    type = CrmEventType.CALL;
-                    updatedAt = OffsetDateTime.parse("2021-06-15T11:47:58.504Z");
+                    type = CrmEventType.EMAIL;
+                    updatedAt = OffsetDateTime.parse("2021-11-11T23:29:31.701Z");
                 }};
             }};            
 
@@ -432,34 +432,34 @@ public class Application {
                         add("Keyboard"),
                     }};
                     email = new PropertyCrmEventEmail(){{
-                        body = "Electric parsing Morgan";
+                        body = "thoroughly";
                         cc = new String[]{{
-                            add("Global"),
+                            add("impactful"),
                         }};
-                        from = "Manat mint";
-                        subject = "Interactions Account ratione";
+                        from = "arse";
+                        subject = "Jazz";
                         to = new String[]{{
-                            add("Group"),
+                            add("Global"),
                         }};
                     }};
                     id = "<ID>";
                     meeting = new PropertyCrmEventMeeting(){{
-                        description = "Polarised coherent circuit";
-                        endAt = OffsetDateTime.parse("2021-04-13T01:04:45.491Z");
-                        startAt = OffsetDateTime.parse("2022-03-05T22:42:07.974Z");
-                        title = "pish Specialist";
+                        description = "Organized full-range productivity";
+                        endAt = OffsetDateTime.parse("2021-07-12T17:04:07.207Z");
+                        startAt = OffsetDateTime.parse("2021-07-28T12:59:49.441Z");
+                        title = "Industrial";
                     }};
                     note = new PropertyCrmEventNote(){{
-                        description = "Down-sized secondary success";
+                        description = "Pre-emptive tertiary Graphic Interface";
                     }};
                     raw = new PropertyCrmEventRaw();
                     task = new PropertyCrmEventTask(){{
-                        description = "User-friendly background installation";
-                        name = "Intranet monitor Washington";
-                        status = "hard drat weber";
+                        description = "Grass-roots responsive local area network";
+                        name = "Baby";
+                        status = "Rial";
                     }};
-                    type = CrmEventType.MEETING;
-                    updatedAt = OffsetDateTime.parse("2023-10-23T02:58:57.471Z");
+                    type = CrmEventType.NOTE;
+                    updatedAt = OffsetDateTime.parse("2021-04-13T01:04:45.491Z");
                 }};
             }};            
 

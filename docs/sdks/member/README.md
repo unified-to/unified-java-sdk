@@ -50,12 +50,12 @@ public class Application {
                     listIds = new String[]{{
                         add("calculate"),
                     }};
-                    name = "ew scalable Hassium";
+                    name = "translate";
                     raw = new PropertyMarketingMemberRaw();
                     tags = new String[]{{
-                        add("Buckinghamshire"),
+                        add("B2C"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-07-26T05:07:38.623Z");
+                    updatedAt = OffsetDateTime.parse("2021-04-25T09:16:50.202Z");
                 }};
             }};            
 
@@ -166,10 +166,10 @@ public class Application {
                 }};
                 limit = 8667.14d;
                 offset = 6022.21d;
-                order = "huzzah wireless";
-                query = "Loop";
-                sort = "standardise reinvent microchip";
-                updatedGte = OffsetDateTime.parse("2022-12-12T03:36:49.362Z");
+                order = "Trigender";
+                query = "turquoise";
+                sort = "Marketing";
+                updatedGte = OffsetDateTime.parse("2022-07-06T11:38:30.717Z");
             }};            
 
             ListMartechMembersResponse res = sdk.member.listMartechMembers(req);
@@ -236,12 +236,12 @@ public class Application {
                     listIds = new String[]{{
                         add("Brand"),
                     }};
-                    name = "West integrated";
+                    name = "Rock";
                     raw = new PropertyMarketingMemberRaw();
                     tags = new String[]{{
-                        add("Regional"),
+                        add("Ferrari"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-02-01T06:57:40.654Z");
+                    updatedAt = OffsetDateTime.parse("2023-04-24T19:34:51.201Z");
                 }};
             }};            
 
@@ -358,12 +358,12 @@ public class Application {
                     listIds = new String[]{{
                         add("Lithuanian"),
                     }};
-                    name = "methodologies state";
+                    name = "navigate";
                     raw = new PropertyMarketingMemberRaw();
                     tags = new String[]{{
-                        add("Computer"),
+                        add("below"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-09-28T08:50:18.886Z");
+                    updatedAt = OffsetDateTime.parse("2023-07-28T09:08:59.988Z");
                 }};
             }};            
 

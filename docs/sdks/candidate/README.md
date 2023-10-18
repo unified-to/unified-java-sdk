@@ -44,37 +44,37 @@ public class Application {
             CreateAtsCandidateRequest req = new CreateAtsCandidateRequest("Recycled"){{
                 atsCandidate = new AtsCandidate(){{
                     address = new PropertyAtsCandidateAddress(){{
-                        address1 = "radian who";
-                        address2 = "Pop";
-                        city = "Hermannfurt";
-                        country = "Papua New Guinea";
-                        countryCode = "MC";
-                        postalCode = "68671";
-                        region = "Bedfordshire Southeast Oregon";
-                        regionCode = "distributed ha";
+                        address1 = "Trans";
+                        address2 = "who";
+                        city = "New Bertfurt";
+                        country = "Guatemala";
+                        countryCode = "MZ";
+                        postalCode = "50686-7190";
+                        region = "Bronze";
+                        regionCode = "aspernatur";
                     }};
-                    companyName = "Mohr, Batz and Murphy";
-                    createdAt = OffsetDateTime.parse("2021-12-02T07:49:42.485Z");
+                    companyName = "Murray, Greenholt and Metz";
+                    createdAt = OffsetDateTime.parse("2023-10-07T18:34:01.389Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
-                        add(new AtsEmail("Tungsten"){{
-                            email = "Morris41@hotmail.com";
+                        add(new AtsEmail("drive"){{
+                            email = "Skye62@hotmail.com";
                         }}),
                     }};
-                    externalId = "Yost";
+                    externalId = "Radon";
                     id = "<ID>";
-                    imageUrl = "hidden";
-                    name = "Rock";
+                    imageUrl = "Shirt";
+                    name = "Tungsten";
                     raw = new PropertyAtsCandidateRaw();
                     tags = new String[]{{
-                        add("override"),
+                        add("Delaware"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.AtsTelephone[]{{
-                        add(new AtsTelephone("synthesize"){{
-                            telephone = "Bicycle midst";
+                        add(new AtsTelephone("Southwest"){{
+                            telephone = "parse";
                         }}),
                     }};
-                    title = "composite Folk";
-                    updatedAt = OffsetDateTime.parse("2023-07-21T12:53:25.440Z");
+                    title = "benchmark";
+                    updatedAt = OffsetDateTime.parse("2022-10-03T07:30:02.540Z");
                 }};
             }};            
 
@@ -185,10 +185,10 @@ public class Application {
                 }};
                 limit = 6403.86d;
                 offset = 6207.22d;
-                order = "Hawaii Burleson turquoise";
-                query = "Hybrid New";
-                sort = "plus";
-                updatedGte = OffsetDateTime.parse("2023-11-22T17:23:30.146Z");
+                order = "colorful";
+                query = "Chair";
+                sort = "South";
+                updatedGte = OffsetDateTime.parse("2022-08-17T07:27:35.647Z");
             }};            
 
             ListAtsCandidatesResponse res = sdk.candidate.listAtsCandidates(req);
@@ -249,37 +249,37 @@ public class Application {
             PatchAtsCandidateRequest req = new PatchAtsCandidateRequest("Tennessee", "platforms"){{
                 atsCandidate = new AtsCandidate(){{
                     address = new PropertyAtsCandidateAddress(){{
-                        address1 = "Security esse";
-                        address2 = "Books Customer";
-                        city = "Hesselside";
-                        country = "Senegal";
-                        countryCode = "AS";
-                        postalCode = "09868";
-                        region = "Licensed Applications";
-                        regionCode = "purple";
+                        address1 = "Credit";
+                        address2 = "esse";
+                        city = "Donnellytown";
+                        country = "Oman";
+                        countryCode = "MQ";
+                        postalCode = "80639";
+                        region = "green";
+                        regionCode = "Argentina";
                     }};
-                    companyName = "Keeling, Jast and McKenzie";
-                    createdAt = OffsetDateTime.parse("2021-04-06T07:32:08.374Z");
+                    companyName = "Stanton, Parker and Spinka";
+                    createdAt = OffsetDateTime.parse("2022-01-29T07:02:46.611Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
-                        add(new AtsEmail("Audi"){{
-                            email = "Coby98@hotmail.com";
+                        add(new AtsEmail("to"){{
+                            email = "Ressie.Padberg51@gmail.com";
                         }}),
                     }};
-                    externalId = "into Division deposit";
+                    externalId = "Rustic";
                     id = "<ID>";
-                    imageUrl = "hard Polygender";
-                    name = "female";
+                    imageUrl = "North";
+                    name = "Home";
                     raw = new PropertyAtsCandidateRaw();
                     tags = new String[]{{
-                        add("Fresh"),
+                        add("Cruiser"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.AtsTelephone[]{{
-                        add(new AtsTelephone("Berkshire"){{
-                            telephone = "HEX";
+                        add(new AtsTelephone("Audi"){{
+                            telephone = "blockchains";
                         }}),
                     }};
-                    title = "Fish Home Dobra";
-                    updatedAt = OffsetDateTime.parse("2021-11-22T04:10:17.899Z");
+                    title = "oof";
+                    updatedAt = OffsetDateTime.parse("2022-07-30T04:46:09.633Z");
                 }};
             }};            
 
@@ -390,37 +390,37 @@ public class Application {
             UpdateAtsCandidateRequest req = new UpdateAtsCandidateRequest("synergies", "flawless"){{
                 atsCandidate = new AtsCandidate(){{
                     address = new PropertyAtsCandidateAddress(){{
-                        address1 = "now";
-                        address2 = "monetize";
-                        city = "Dickinsonstad";
-                        country = "Niue";
-                        countryCode = "CF";
-                        postalCode = "13972-7823";
-                        region = "SUV Frozen Future";
-                        regionCode = "until";
+                        address1 = "iterate";
+                        address2 = "DNS";
+                        city = "West Manley";
+                        country = "Comoros";
+                        countryCode = "MC";
+                        postalCode = "17139-7278";
+                        region = "Gloves";
+                        regionCode = "threadbare";
                     }};
-                    companyName = "Roob - Koelpin";
-                    createdAt = OffsetDateTime.parse("2021-09-14T22:57:55.708Z");
+                    companyName = "Friesen, Witting and Hills";
+                    createdAt = OffsetDateTime.parse("2023-08-17T08:01:13.812Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
-                        add(new AtsEmail("Mendelevium"){{
-                            email = "Stephania20@hotmail.com";
+                        add(new AtsEmail("until"){{
+                            email = "Durward.Upton32@yahoo.com";
                         }}),
                     }};
-                    externalId = "among microchip";
+                    externalId = "eligendi";
                     id = "<ID>";
-                    imageUrl = "streamline";
-                    name = "auxiliary";
+                    imageUrl = "deposit";
+                    name = "theology";
                     raw = new PropertyAtsCandidateRaw();
                     tags = new String[]{{
-                        add("Southeast"),
+                        add("Manager"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.AtsTelephone[]{{
-                        add(new AtsTelephone("Small"){{
-                            telephone = "yellow Analyst";
+                        add(new AtsTelephone("Minivan"){{
+                            telephone = "Fish";
                         }}),
                     }};
-                    title = "parsing";
-                    updatedAt = OffsetDateTime.parse("2023-12-10T21:26:35.636Z");
+                    title = "among";
+                    updatedAt = OffsetDateTime.parse("2022-08-04T11:40:47.590Z");
                 }};
             }};            
 

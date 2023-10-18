@@ -30,9 +30,9 @@ public class Application {
 
             ListEnrichPeopleRequest req = new ListEnrichPeopleRequest("Associate"){{
                 email = "Lia.Green@yahoo.com";
-                linkedinUrl = "ad";
-                name = "Investor";
-                twitter = "Convertible";
+                linkedinUrl = "Organic";
+                name = "eyeballs";
+                twitter = "Investor";
             }};            
 
             ListEnrichPeopleResponse res = sdk.person.listEnrichPeople(req);

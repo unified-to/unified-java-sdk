@@ -43,9 +43,9 @@ public class Application {
                     displayOrder = 16.09d;
                     id = "<ID>";
                     isActive = false;
-                    name = "Bicycle Hatchback Nobelium";
+                    name = "round";
                     raw = new PropertyCrmPipelineRaw();
-                    updatedAt = OffsetDateTime.parse("2021-05-19T19:45:21.711Z");
+                    updatedAt = OffsetDateTime.parse("2021-07-13T00:16:45.285Z");
                 }};
             }};            
 
@@ -156,10 +156,10 @@ public class Application {
                 }};
                 limit = 6683.61d;
                 offset = 8826.41d;
-                order = "mobile generate";
-                query = "female National";
-                sort = "Buckinghamshire Bedfordshire";
-                updatedGte = OffsetDateTime.parse("2021-12-10T20:55:53.457Z");
+                order = "OCR";
+                query = "muss";
+                sort = "firewall";
+                updatedGte = OffsetDateTime.parse("2023-02-18T11:32:10.923Z");
             }};            
 
             ListCrmPipelinesResponse res = sdk.pipeline.listCrmPipelines(req);
@@ -219,9 +219,9 @@ public class Application {
                     displayOrder = 9737.04d;
                     id = "<ID>";
                     isActive = false;
-                    name = "Lead Operative";
+                    name = "Zloty";
                     raw = new PropertyCrmPipelineRaw();
-                    updatedAt = OffsetDateTime.parse("2021-10-29T04:39:52.787Z");
+                    updatedAt = OffsetDateTime.parse("2021-02-02T18:05:08.135Z");
                 }};
             }};            
 
@@ -331,9 +331,9 @@ public class Application {
                     displayOrder = 1646.47d;
                     id = "<ID>";
                     isActive = false;
-                    name = "Configuration Minivan";
+                    name = "Proactive";
                     raw = new PropertyCrmPipelineRaw();
-                    updatedAt = OffsetDateTime.parse("2021-01-09T13:17:28.520Z");
+                    updatedAt = OffsetDateTime.parse("2023-08-02T23:22:34.017Z");
                 }};
             }};            
 
