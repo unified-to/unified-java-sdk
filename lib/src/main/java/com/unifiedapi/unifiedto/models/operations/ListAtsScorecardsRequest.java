@@ -65,6 +65,17 @@ public class ListAtsScorecardsRequest {
         return this;
     }
     
+    /**
+     * The job ID to filter results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=job_id")
+    public String jobId;
+
+    public ListAtsScorecardsRequest withJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Double limit;
 
