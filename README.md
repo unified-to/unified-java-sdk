@@ -12,7 +12,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.9.0'
+implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.10.0'
 ```
 <!-- End SDK Installation -->
 
@@ -30,12 +30,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("tesla"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedApicallRequest req = new GetUnifiedApicallRequest("anenst");            
+            GetUnifiedApicallRequest req = new GetUnifiedApicallRequest("string");            
 
             GetUnifiedApicallResponse res = sdk.apicall.getUnifiedApicall(req);
 

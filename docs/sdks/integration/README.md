@@ -26,12 +26,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Mobility"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedIntegrationRequest req = new GetUnifiedIntegrationRequest("Kia");            
+            GetUnifiedIntegrationRequest req = new GetUnifiedIntegrationRequest("string");            
 
             GetUnifiedIntegrationResponse res = sdk.integration.getUnifiedIntegration(req);
 
@@ -76,23 +76,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("supposing"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedIntegrationAuthRequest req = new GetUnifiedIntegrationAuthRequest("Nobelium", "Branding"){{
-                env = "pascal";
-                externalXref = "West";
-                failureRedirect = "Xenogender";
-                lang = "North";
+            GetUnifiedIntegrationAuthRequest req = new GetUnifiedIntegrationAuthRequest("string", "string"){{
+                env = "string";
+                externalXref = "string";
+                failureRedirect = "string";
+                lang = "string";
                 redirect = false;
                 scopes = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthScopes[]{{
-                    add(GetUnifiedIntegrationAuthScopes.CRM_CONTACT_WRITE),
+                    add(GetUnifiedIntegrationAuthScopes.HRIS_GROUP_READ),
                 }};
-                state = "Investment";
-                subdomain = "spirit";
-                successRedirect = "East";
+                state = "string";
+                subdomain = "string";
+                successRedirect = "string";
             }};            
 
             GetUnifiedIntegrationAuthResponse res = sdk.integration.getUnifiedIntegrationAuth(req);
@@ -138,21 +138,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Trial"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListUnifiedIntegrationWorkspacesRequest req = new ListUnifiedIntegrationWorkspacesRequest("Intuitive"){{
+            ListUnifiedIntegrationWorkspacesRequest req = new ListUnifiedIntegrationWorkspacesRequest("string"){{
                 active = false;
                 categories = new com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesCategories[]{{
-                    add(ListUnifiedIntegrationWorkspacesCategories.ATS),
+                    add(ListUnifiedIntegrationWorkspacesCategories.MARTECH),
                 }};
-                env = "quidem";
-                limit = 9499.08d;
-                offset = 9586.14d;
+                env = "string";
+                limit = 9072.99d;
+                offset = 5948.93d;
                 summary = false;
-                updatedGte = "gosh";
+                updatedGte = "string";
             }};            
 
             ListUnifiedIntegrationWorkspacesResponse res = sdk.integration.listUnifiedIntegrationWorkspaces(req);
@@ -198,7 +198,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Park"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
@@ -206,15 +206,15 @@ public class Application {
             ListUnifiedIntegrationsRequest req = new ListUnifiedIntegrationsRequest(){{
                 active = false;
                 categories = new com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsCategories[]{{
-                    add(ListUnifiedIntegrationsCategories.HRIS),
+                    add(ListUnifiedIntegrationsCategories.AUTH),
                 }};
-                env = "Volkswagen";
-                limit = 2371.74d;
-                offset = 558.38d;
-                order = "implement";
-                sort = "Card";
+                env = "string";
+                limit = 7382.58d;
+                offset = 353.99d;
+                order = "string";
+                sort = "string";
                 summary = false;
-                updatedGte = "Global";
+                updatedGte = "string";
             }};            
 
             ListUnifiedIntegrationsResponse res = sdk.integration.listUnifiedIntegrations(req);

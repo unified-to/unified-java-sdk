@@ -28,12 +28,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("turquoise"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreatePassthroughRequest req = new CreatePassthroughRequest("for", "Handmade"){{
+            CreatePassthroughRequest req = new CreatePassthroughRequest("string", "string"){{
                 undefined = new Undefined();
             }};            
 
@@ -79,12 +79,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("nisi"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListPassthroughsRequest req = new ListPassthroughsRequest("maroon", "quantifying");            
+            ListPassthroughsRequest req = new ListPassthroughsRequest("string", "string");            
 
             ListPassthroughsResponse res = sdk.passthrough.listPassthroughs(req);
 
@@ -129,12 +129,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("brand"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchPassthroughRequest req = new PatchPassthroughRequest("woot", "Congo"){{
+            PatchPassthroughRequest req = new PatchPassthroughRequest("string", "string"){{
                 undefined = new Undefined();
             }};            
 
@@ -180,12 +180,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("North"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemovePassthroughRequest req = new RemovePassthroughRequest("generation", "Jazz");            
+            RemovePassthroughRequest req = new RemovePassthroughRequest("string", "string");            
 
             RemovePassthroughResponse res = sdk.passthrough.removePassthrough(req);
 
@@ -230,12 +230,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Northwest"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdatePassthroughRequest req = new UpdatePassthroughRequest("gadzooks", "Handmade"){{
+            UpdatePassthroughRequest req = new UpdatePassthroughRequest("string", "string"){{
                 undefined = new Undefined();
             }};            
 

@@ -31,18 +31,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Latin"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateMartechListRequest req = new CreateMartechListRequest("withdrawal"){{
+            CreateMartechListRequest req = new CreateMartechListRequest("string"){{
                 marketingList = new MarketingList(){{
-                    createdAt = "teal";
+                    createdAt = "string";
                     id = "<ID>";
-                    name = "EXE";
+                    name = "string";
                     raw = new PropertyMarketingListRaw();
-                    updatedAt = OffsetDateTime.parse("2021-07-26T18:05:38.910Z");
+                    updatedAt = OffsetDateTime.parse("2022-10-15T11:18:03.715Z");
                 }};
             }};            
 
@@ -88,14 +88,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("red"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetMartechListRequest req = new GetMartechListRequest("users", "Bespoke"){{
+            GetMartechListRequest req = new GetMartechListRequest("string", "string"){{
                 fields = new String[]{{
-                    add("Victoria"),
+                    add("string"),
                 }};
             }};            
 
@@ -142,21 +142,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("above"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListMartechListsRequest req = new ListMartechListsRequest("Fantastic"){{
+            ListMartechListsRequest req = new ListMartechListsRequest("string"){{
                 fields = new String[]{{
-                    add("Secured"),
+                    add("string"),
                 }};
-                limit = 6845.92d;
-                offset = 7925.09d;
-                order = "customized";
-                query = "parse";
-                sort = "knife";
-                updatedGte = OffsetDateTime.parse("2022-08-12T22:58:00.911Z");
+                limit = 9665.22d;
+                offset = 367.94d;
+                order = "string";
+                query = "string";
+                sort = "string";
+                updatedGte = OffsetDateTime.parse("2021-09-12T06:44:44.684Z");
             }};            
 
             ListMartechListsResponse res = sdk.list.listMartechLists(req);
@@ -204,18 +204,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Classical"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchMartechListRequest req = new PatchMartechListRequest("alarm", "Dodge"){{
+            PatchMartechListRequest req = new PatchMartechListRequest("string", "string"){{
                 marketingList = new MarketingList(){{
-                    createdAt = "Tennessee";
+                    createdAt = "string";
                     id = "<ID>";
-                    name = "phooey";
+                    name = "string";
                     raw = new PropertyMarketingListRaw();
-                    updatedAt = OffsetDateTime.parse("2023-02-22T03:23:44.682Z");
+                    updatedAt = OffsetDateTime.parse("2022-10-07T20:57:43.081Z");
                 }};
             }};            
 
@@ -261,12 +261,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Northwest"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveMartechListRequest req = new RemoveMartechListRequest("trusting", "driver");            
+            RemoveMartechListRequest req = new RemoveMartechListRequest("string", "string");            
 
             RemoveMartechListResponse res = sdk.list.removeMartechList(req);
 
@@ -313,18 +313,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("innocently"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateMartechListRequest req = new UpdateMartechListRequest("gold", "panel"){{
+            UpdateMartechListRequest req = new UpdateMartechListRequest("string", "string"){{
                 marketingList = new MarketingList(){{
-                    createdAt = "suite";
+                    createdAt = "string";
                     id = "<ID>";
-                    name = "Lead";
+                    name = "string";
                     raw = new PropertyMarketingListRaw();
-                    updatedAt = OffsetDateTime.parse("2022-04-30T09:07:09.154Z");
+                    updatedAt = OffsetDateTime.parse("2023-09-02T06:01:18.792Z");
                 }};
             }};            
 

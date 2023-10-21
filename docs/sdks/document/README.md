@@ -32,23 +32,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Brunei"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateAtsScorecardRequest req = new CreateAtsScorecardRequest("Account"){{
+            CreateAtsScorecardRequest req = new CreateAtsScorecardRequest("string"){{
                 atsScorecard = new AtsScorecard(new PropertyAtsScorecardRaw()){{
-                    applicationId = "Yuan";
-                    candidateId = "deposit";
-                    comment = "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit";
-                    createdAt = OffsetDateTime.parse("2022-03-18T10:43:10.267Z");
+                    applicationId = "string";
+                    candidateId = "string";
+                    comment = "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J";
+                    createdAt = OffsetDateTime.parse("2021-04-24T07:49:32.768Z");
                     id = "<ID>";
-                    interviewId = "Manager";
-                    interviewerId = "Handcrafted";
-                    jobId = "East";
-                    recommendation = AtsScorecardRecommendation.DEFINITELY_NO;
-                    updatedAt = OffsetDateTime.parse("2021-08-12T09:12:53.464Z");
+                    interviewId = "string";
+                    interviewerId = "string";
+                    jobId = "string";
+                    recommendation = AtsScorecardRecommendation.NO;
+                    updatedAt = OffsetDateTime.parse("2022-04-01T17:31:47.454Z");
                 }};
             }};            
 
@@ -94,14 +94,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Cordoba"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsScorecardRequest req = new GetAtsScorecardRequest("Nissan", "Gasoline"){{
+            GetAtsScorecardRequest req = new GetAtsScorecardRequest("string", "string"){{
                 fields = new String[]{{
-                    add("invoice"),
+                    add("string"),
                 }};
             }};            
 
@@ -148,25 +148,25 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("synthesizing"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListAtsScorecardsRequest req = new ListAtsScorecardsRequest("surprised"){{
-                applicationId = "Gislason";
-                candidateId = "Pickup";
+            ListAtsScorecardsRequest req = new ListAtsScorecardsRequest("string"){{
+                applicationId = "string";
+                candidateId = "string";
                 fields = new String[]{{
-                    add("slop"),
+                    add("string"),
                 }};
-                interviewId = "North";
-                jobId = "Grocery";
-                limit = 3973.62d;
-                offset = 7307.28d;
-                order = "Lutetium";
-                query = "Tools";
-                sort = "bus";
-                updatedGte = OffsetDateTime.parse("2022-10-22T18:15:20.224Z");
+                interviewId = "string";
+                jobId = "string";
+                limit = 5126.98d;
+                offset = 8077.44d;
+                order = "string";
+                query = "string";
+                sort = "string";
+                updatedGte = OffsetDateTime.parse("2023-08-19T17:42:56.145Z");
             }};            
 
             ListAtsScorecardsResponse res = sdk.document.listAtsScorecards(req);
@@ -215,23 +215,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Falls"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchAtsScorecardRequest req = new PatchAtsScorecardRequest("engage", "Movies"){{
+            PatchAtsScorecardRequest req = new PatchAtsScorecardRequest("string", "string"){{
                 atsScorecard = new AtsScorecard(new PropertyAtsScorecardRaw()){{
-                    applicationId = "application";
-                    candidateId = "Leu";
-                    comment = "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients";
-                    createdAt = OffsetDateTime.parse("2022-08-15T10:55:26.401Z");
+                    applicationId = "string";
+                    candidateId = "string";
+                    comment = "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support";
+                    createdAt = OffsetDateTime.parse("2023-10-06T15:26:03.447Z");
                     id = "<ID>";
-                    interviewId = "program";
-                    interviewerId = "up";
-                    jobId = "Michigan";
-                    recommendation = AtsScorecardRecommendation.DEFINITELY_NO;
-                    updatedAt = OffsetDateTime.parse("2023-10-02T21:33:10.654Z");
+                    interviewId = "string";
+                    interviewerId = "string";
+                    jobId = "string";
+                    recommendation = AtsScorecardRecommendation.YES;
+                    updatedAt = OffsetDateTime.parse("2021-11-28T07:58:12.100Z");
                 }};
             }};            
 
@@ -277,12 +277,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("approach"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveAtsScorecardRequest req = new RemoveAtsScorecardRequest("indeed", "Non");            
+            RemoveAtsScorecardRequest req = new RemoveAtsScorecardRequest("string", "string");            
 
             RemoveAtsScorecardResponse res = sdk.document.removeAtsScorecard(req);
 
@@ -330,23 +330,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("East"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateAtsScorecardRequest req = new UpdateAtsScorecardRequest("Digitized", "Legacy"){{
+            UpdateAtsScorecardRequest req = new UpdateAtsScorecardRequest("string", "string"){{
                 atsScorecard = new AtsScorecard(new PropertyAtsScorecardRaw()){{
-                    applicationId = "legislator";
-                    candidateId = "East";
-                    comment = "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016";
-                    createdAt = OffsetDateTime.parse("2021-10-10T17:07:11.234Z");
+                    applicationId = "string";
+                    candidateId = "string";
+                    comment = "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive";
+                    createdAt = OffsetDateTime.parse("2021-07-10T12:08:12.226Z");
                     id = "<ID>";
-                    interviewId = "UDP";
-                    interviewerId = "act";
-                    jobId = "Supervisor";
-                    recommendation = AtsScorecardRecommendation.YES;
-                    updatedAt = OffsetDateTime.parse("2023-09-09T22:35:25.659Z");
+                    interviewId = "string";
+                    interviewerId = "string";
+                    jobId = "string";
+                    recommendation = AtsScorecardRecommendation.NO;
+                    updatedAt = OffsetDateTime.parse("2021-07-26T04:45:45.856Z");
                 }};
             }};            
 

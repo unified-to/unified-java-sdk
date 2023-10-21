@@ -32,28 +32,28 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("transmitter"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateHrisGroupRequest req = new CreateHrisGroupRequest("dependable"){{
+            CreateHrisGroupRequest req = new CreateHrisGroupRequest("string"){{
                 hrisGroup = new HrisGroup(){{
-                    createdAt = OffsetDateTime.parse("2021-01-15T12:45:54.663Z");
-                    description = "Re-contextualized executive model";
+                    createdAt = OffsetDateTime.parse("2022-08-11T13:14:46.931Z");
+                    description = "Self-enabling system-worthy collaboration";
                     employeeIds = new String[]{{
-                        add("markets"),
+                        add("string"),
                     }};
                     id = "<ID>";
                     isActive = false;
                     managerIds = new String[]{{
-                        add("Forks"),
+                        add("string"),
                     }};
-                    name = "pixel";
-                    parentId = "navigating";
+                    name = "string";
+                    parentId = "string";
                     raw = new PropertyHrisGroupRaw();
-                    type = HrisGroupType.DEPARTMENT;
-                    updatedAt = OffsetDateTime.parse("2021-08-09T16:59:36.779Z");
+                    type = HrisGroupType.TEAM;
+                    updatedAt = OffsetDateTime.parse("2023-03-10T00:20:29.321Z");
                 }};
             }};            
 
@@ -99,14 +99,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("likewise"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetHrisGroupRequest req = new GetHrisGroupRequest("while", "Cadillac"){{
+            GetHrisGroupRequest req = new GetHrisGroupRequest("string", "string"){{
                 fields = new String[]{{
-                    add("optical"),
+                    add("string"),
                 }};
             }};            
 
@@ -153,21 +153,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Northwest"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListHrisGroupsRequest req = new ListHrisGroupsRequest("however"){{
+            ListHrisGroupsRequest req = new ListHrisGroupsRequest("string"){{
                 fields = new String[]{{
-                    add("positive"),
+                    add("string"),
                 }};
-                limit = 1929.12d;
-                offset = 3809.99d;
-                order = "feel";
-                query = "olive";
-                sort = "Shores";
-                updatedGte = OffsetDateTime.parse("2021-11-06T13:39:44.797Z");
+                limit = 4815.14d;
+                offset = 2554.75d;
+                order = "string";
+                query = "string";
+                sort = "string";
+                updatedGte = OffsetDateTime.parse("2021-04-29T22:04:03.121Z");
             }};            
 
             ListHrisGroupsResponse res = sdk.group.listHrisGroups(req);
@@ -216,28 +216,28 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("scalable"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchHrisGroupRequest req = new PatchHrisGroupRequest("Bespoke", "indexing"){{
+            PatchHrisGroupRequest req = new PatchHrisGroupRequest("string", "string"){{
                 hrisGroup = new HrisGroup(){{
-                    createdAt = OffsetDateTime.parse("2022-12-25T07:04:30.987Z");
-                    description = "Adaptive radical methodology";
+                    createdAt = OffsetDateTime.parse("2021-11-09T20:25:35.217Z");
+                    description = "Compatible contextually-based local area network";
                     employeeIds = new String[]{{
-                        add("online"),
+                        add("string"),
                     }};
                     id = "<ID>";
                     isActive = false;
                     managerIds = new String[]{{
-                        add("boohoo"),
+                        add("string"),
                     }};
-                    name = "South";
-                    parentId = "Potassium";
+                    name = "string";
+                    parentId = "string";
                     raw = new PropertyHrisGroupRaw();
-                    type = HrisGroupType.BRANCH;
-                    updatedAt = OffsetDateTime.parse("2021-07-31T04:02:38.097Z");
+                    type = HrisGroupType.DIVISION;
+                    updatedAt = OffsetDateTime.parse("2022-06-23T09:49:13.425Z");
                 }};
             }};            
 
@@ -283,12 +283,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("glistening"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveHrisGroupRequest req = new RemoveHrisGroupRequest("positive", "fabulous");            
+            RemoveHrisGroupRequest req = new RemoveHrisGroupRequest("string", "string");            
 
             RemoveHrisGroupResponse res = sdk.group.removeHrisGroup(req);
 
@@ -336,28 +336,28 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("disintermediate"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateHrisGroupRequest req = new UpdateHrisGroupRequest("schemas", "Southwest"){{
+            UpdateHrisGroupRequest req = new UpdateHrisGroupRequest("string", "string"){{
                 hrisGroup = new HrisGroup(){{
-                    createdAt = OffsetDateTime.parse("2021-02-20T16:10:10.066Z");
-                    description = "Business-focused analyzing help-desk";
+                    createdAt = OffsetDateTime.parse("2021-12-06T17:42:02.933Z");
+                    description = "Integrated empowering productivity";
                     employeeIds = new String[]{{
-                        add("Southeast"),
+                        add("string"),
                     }};
                     id = "<ID>";
                     isActive = false;
                     managerIds = new String[]{{
-                        add("Table"),
+                        add("string"),
                     }};
-                    name = "Charlottesville";
-                    parentId = "Zirconium";
+                    name = "string";
+                    parentId = "string";
                     raw = new PropertyHrisGroupRaw();
-                    type = HrisGroupType.BRANCH;
-                    updatedAt = OffsetDateTime.parse("2023-12-08T18:53:44.937Z");
+                    type = HrisGroupType.TEAM;
+                    updatedAt = OffsetDateTime.parse("2023-09-12T15:58:06.273Z");
                 }};
             }};            
 

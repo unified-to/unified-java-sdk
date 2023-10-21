@@ -23,17 +23,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("when"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedIntegrationLoginRequest req = new GetUnifiedIntegrationLoginRequest("Tricycle", "markets"){{
-                env = "Soft";
-                failureRedirect = "haptic";
+            GetUnifiedIntegrationLoginRequest req = new GetUnifiedIntegrationLoginRequest("string", "string"){{
+                env = "string";
+                failureRedirect = "string";
                 redirect = false;
-                state = "SUV";
-                successRedirect = "deploy";
+                state = "string";
+                successRedirect = "string";
             }};            
 
             GetUnifiedIntegrationLoginResponse res = sdk.login.getUnifiedIntegrationLogin(req);

@@ -31,29 +31,29 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("loyally"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateCrmFileRequest req = new CreateCrmFileRequest("Northwest"){{
+            CreateCrmFileRequest req = new CreateCrmFileRequest("string"){{
                 crmFile = new CrmFile(){{
-                    activityId = "Tasty";
-                    companyId = "Gasoline";
-                    contactId = "Tactics";
-                    createdAt = OffsetDateTime.parse("2023-04-25T01:22:24.549Z");
-                    dealId = "invoice";
-                    description = "Optional eco-centric definition";
-                    fileName = "generate_coulomb.mp4v";
-                    fileSize = 7403.39d;
-                    fileType = "video";
-                    fileUrl = "male";
+                    activityId = "string";
+                    companyId = "string";
+                    contactId = "string";
+                    createdAt = OffsetDateTime.parse("2023-08-23T16:58:07.247Z");
+                    dealId = "string";
+                    description = "Multi-lateral background database";
+                    fileName = "the.mp4v";
+                    fileSize = 3460.69d;
+                    fileType = "text";
+                    fileUrl = "string";
                     id = "<ID>";
                     isActive = false;
-                    leadId = "mole";
+                    leadId = "string";
                     raw = new PropertyCrmFileRaw();
-                    updatedAt = OffsetDateTime.parse("2021-08-10T15:19:38.772Z");
-                    userId = "Coupe";
+                    updatedAt = OffsetDateTime.parse("2022-05-03T12:27:57.377Z");
+                    userId = "string";
                 }};
             }};            
 
@@ -99,14 +99,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Southwest"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmFileRequest req = new GetCrmFileRequest("sexy", "Southeast"){{
+            GetCrmFileRequest req = new GetCrmFileRequest("string", "string"){{
                 fields = new String[]{{
-                    add("lightly"),
+                    add("string"),
                 }};
             }};            
 
@@ -153,24 +153,24 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Bicycle"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListCrmFilesRequest req = new ListCrmFilesRequest("Genderflux"){{
-                companyId = "Southeast";
-                contactId = "invoice";
-                dealId = "hertz";
+            ListCrmFilesRequest req = new ListCrmFilesRequest("string"){{
+                companyId = "string";
+                contactId = "string";
+                dealId = "string";
                 fields = new String[]{{
-                    add("invoice"),
+                    add("string"),
                 }};
-                limit = 7868.48d;
-                offset = 7222.04d;
-                order = "Tuvalu";
-                query = "West";
-                sort = "Gorgeous";
-                updatedGte = OffsetDateTime.parse("2021-07-02T02:06:49.991Z");
+                limit = 7725.49d;
+                offset = 1697.5d;
+                order = "string";
+                query = "string";
+                sort = "string";
+                updatedGte = OffsetDateTime.parse("2023-11-04T18:55:22.126Z");
             }};            
 
             ListCrmFilesResponse res = sdk.file.listCrmFiles(req);
@@ -218,29 +218,29 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Health"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmFileRequest req = new PatchCrmFileRequest("Future", "Southeast"){{
+            PatchCrmFileRequest req = new PatchCrmFileRequest("string", "string"){{
                 crmFile = new CrmFile(){{
-                    activityId = "communities";
-                    companyId = "watt";
-                    contactId = "Gasoline";
-                    createdAt = OffsetDateTime.parse("2021-02-07T08:18:55.524Z");
-                    dealId = "dreamily";
-                    description = "Function-based zero defect conglomeration";
-                    fileName = "fundamental_directives.mpga";
-                    fileSize = 7321.52d;
-                    fileType = "video";
-                    fileUrl = "molestiae";
+                    activityId = "string";
+                    companyId = "string";
+                    contactId = "string";
+                    createdAt = OffsetDateTime.parse("2021-08-02T16:08:30.860Z");
+                    dealId = "string";
+                    description = "Networked multimedia database";
+                    fileName = "country.wav";
+                    fileSize = 7551.13d;
+                    fileType = "image";
+                    fileUrl = "string";
                     id = "<ID>";
                     isActive = false;
-                    leadId = "qua";
+                    leadId = "string";
                     raw = new PropertyCrmFileRaw();
-                    updatedAt = OffsetDateTime.parse("2021-03-11T08:59:40.328Z");
-                    userId = "Usability";
+                    updatedAt = OffsetDateTime.parse("2023-06-07T04:39:27.375Z");
+                    userId = "string";
                 }};
             }};            
 
@@ -286,12 +286,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Zambia"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveCrmFileRequest req = new RemoveCrmFileRequest("Florida", "female");            
+            RemoveCrmFileRequest req = new RemoveCrmFileRequest("string", "string");            
 
             RemoveCrmFileResponse res = sdk.file.removeCrmFile(req);
 
@@ -338,29 +338,29 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Plano"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateCrmFileRequest req = new UpdateCrmFileRequest("generate", "unexpectedly"){{
+            UpdateCrmFileRequest req = new UpdateCrmFileRequest("string", "string"){{
                 crmFile = new CrmFile(){{
-                    activityId = "Nakfa";
-                    companyId = "wireless";
-                    contactId = "seamless";
-                    createdAt = OffsetDateTime.parse("2021-09-11T08:15:48.719Z");
-                    dealId = "Station";
-                    description = "Function-based grid-enabled strategy";
-                    fileName = "lead_haptic_successfully.png";
-                    fileSize = 2930.3d;
+                    activityId = "string";
+                    companyId = "string";
+                    contactId = "string";
+                    createdAt = OffsetDateTime.parse("2021-02-11T14:36:52.051Z");
+                    dealId = "string";
+                    description = "Quality-focused mobile orchestration";
+                    fileName = "circuit_extended.jpe";
+                    fileSize = 2826.44d;
                     fileType = "text";
-                    fileUrl = "Bicycle";
+                    fileUrl = "string";
                     id = "<ID>";
                     isActive = false;
-                    leadId = "Oregon";
+                    leadId = "string";
                     raw = new PropertyCrmFileRaw();
-                    updatedAt = OffsetDateTime.parse("2023-03-20T00:28:11.359Z");
-                    userId = "navigating";
+                    updatedAt = OffsetDateTime.parse("2021-09-11T08:15:48.719Z");
+                    userId = "string";
                 }};
             }};            
 

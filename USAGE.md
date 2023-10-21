@@ -13,12 +13,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("tesla"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedApicallRequest req = new GetUnifiedApicallRequest("anenst");            
+            GetUnifiedApicallRequest req = new GetUnifiedApicallRequest("string");            
 
             GetUnifiedApicallResponse res = sdk.apicall.getUnifiedApicall(req);
 

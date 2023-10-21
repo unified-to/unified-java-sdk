@@ -31,30 +31,30 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Toys"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateCrmDealRequest req = new CreateCrmDealRequest("hacking"){{
+            CreateCrmDealRequest req = new CreateCrmDealRequest("string"){{
                 crmDeal = new CrmDeal(){{
-                    amount = 1087.81d;
-                    closedAt = OffsetDateTime.parse("2022-10-13T05:28:26.663Z");
-                    createdAt = OffsetDateTime.parse("2023-12-05T13:48:49.322Z");
-                    currency = "Zimbabwe Dollar";
+                    amount = 1917.45d;
+                    closedAt = OffsetDateTime.parse("2022-08-27T15:05:01.017Z");
+                    createdAt = OffsetDateTime.parse("2022-07-23T03:04:45.267Z");
+                    currency = "Cuban Peso";
                     id = "<ID>";
-                    lostReason = "lay";
-                    name = "programming";
-                    pipeline = "Pop";
-                    probability = 4228.64d;
+                    lostReason = "string";
+                    name = "string";
+                    pipeline = "string";
+                    probability = 1087.81d;
                     raw = new PropertyCrmDealRaw();
-                    source = "Intersex";
-                    stage = "female";
+                    source = "string";
+                    stage = "string";
                     tags = new String[]{{
-                        add("Xenon"),
+                        add("string"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-04-10T21:15:23.733Z");
-                    wonReason = "Elegant";
+                    updatedAt = OffsetDateTime.parse("2022-10-13T05:28:26.663Z");
+                    wonReason = "string";
                 }};
             }};            
 
@@ -100,14 +100,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("payment"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmDealRequest req = new GetCrmDealRequest("mint", "Reduced"){{
+            GetCrmDealRequest req = new GetCrmDealRequest("string", "string"){{
                 fields = new String[]{{
-                    add("East"),
+                    add("string"),
                 }};
             }};            
 
@@ -154,23 +154,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Southeast"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListCrmDealsRequest req = new ListCrmDealsRequest("synthesize"){{
-                companyId = "Health";
-                contactId = "male";
+            ListCrmDealsRequest req = new ListCrmDealsRequest("string"){{
+                companyId = "string";
+                contactId = "string";
                 fields = new String[]{{
-                    add("Tala"),
+                    add("string"),
                 }};
-                limit = 620.3d;
-                offset = 1651.48d;
-                order = "virtual";
-                query = "female";
-                sort = "sweetly";
-                updatedGte = OffsetDateTime.parse("2022-07-15T10:37:52.542Z");
+                limit = 917.49d;
+                offset = 8216.92d;
+                order = "string";
+                query = "string";
+                sort = "string";
+                updatedGte = OffsetDateTime.parse("2022-09-03T12:16:34.604Z");
             }};            
 
             ListCrmDealsResponse res = sdk.deal.listCrmDeals(req);
@@ -218,30 +218,30 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("consign"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmDealRequest req = new PatchCrmDealRequest("withdrawal", "quill"){{
+            PatchCrmDealRequest req = new PatchCrmDealRequest("string", "string"){{
                 crmDeal = new CrmDeal(){{
-                    amount = 639.27d;
-                    closedAt = OffsetDateTime.parse("2021-03-27T18:57:29.941Z");
-                    createdAt = OffsetDateTime.parse("2022-03-18T14:17:53.089Z");
-                    currency = "New Taiwan Dollar";
+                    amount = 9874.05d;
+                    closedAt = OffsetDateTime.parse("2021-07-09T08:48:03.715Z");
+                    createdAt = OffsetDateTime.parse("2022-04-30T07:03:46.302Z");
+                    currency = "Riel";
                     id = "<ID>";
-                    lostReason = "Integration";
-                    name = "cyan";
-                    pipeline = "including";
-                    probability = 536.01d;
+                    lostReason = "string";
+                    name = "string";
+                    pipeline = "string";
+                    probability = 9555.58d;
                     raw = new PropertyCrmDealRaw();
-                    source = "Computer";
-                    stage = "Cheese";
+                    source = "string";
+                    stage = "string";
                     tags = new String[]{{
-                        add("kaleidoscopic"),
+                        add("string"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-01-13T05:30:26.726Z");
-                    wonReason = "Executive";
+                    updatedAt = OffsetDateTime.parse("2023-02-21T14:41:27.897Z");
+                    wonReason = "string";
                 }};
             }};            
 
@@ -287,12 +287,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Handmade"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveCrmDealRequest req = new RemoveCrmDealRequest("for", "Eritrea");            
+            RemoveCrmDealRequest req = new RemoveCrmDealRequest("string", "string");            
 
             RemoveCrmDealResponse res = sdk.deal.removeCrmDeal(req);
 
@@ -339,30 +339,30 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("South"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateCrmDealRequest req = new UpdateCrmDealRequest("global", "viral"){{
+            UpdateCrmDealRequest req = new UpdateCrmDealRequest("string", "string"){{
                 crmDeal = new CrmDeal(){{
-                    amount = 4059.95d;
-                    closedAt = OffsetDateTime.parse("2023-02-16T21:28:03.065Z");
-                    createdAt = OffsetDateTime.parse("2021-12-04T07:17:25.283Z");
-                    currency = "Russian Ruble";
+                    amount = 854.3d;
+                    closedAt = OffsetDateTime.parse("2022-01-13T07:04:58.998Z");
+                    createdAt = OffsetDateTime.parse("2021-11-20T16:49:31.989Z");
+                    currency = "Pound Sterling";
                     id = "<ID>";
-                    lostReason = "Transexual";
-                    name = "envisioneer";
-                    pipeline = "bus";
-                    probability = 5809.97d;
+                    lostReason = "string";
+                    name = "string";
+                    pipeline = "string";
+                    probability = 2970.01d;
                     raw = new PropertyCrmDealRaw();
-                    source = "Tala";
-                    stage = "Elegant";
+                    source = "string";
+                    stage = "string";
                     tags = new String[]{{
-                        add("Loan"),
+                        add("string"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-12-25T07:28:40.200Z");
-                    wonReason = "payment";
+                    updatedAt = OffsetDateTime.parse("2022-01-31T15:37:01.475Z");
+                    wonReason = "string";
                 }};
             }};            
 

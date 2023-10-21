@@ -24,12 +24,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("tesla"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedApicallRequest req = new GetUnifiedApicallRequest("anenst");            
+            GetUnifiedApicallRequest req = new GetUnifiedApicallRequest("string");            
 
             GetUnifiedApicallResponse res = sdk.apicall.getUnifiedApicall(req);
 
@@ -74,23 +74,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("attentive"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
             ListUnifiedApicallsRequest req = new ListUnifiedApicallsRequest(){{
-                connectionId = "feed";
-                createdLte = OffsetDateTime.parse("2021-01-15T05:06:05.218Z");
-                env = "flail";
+                connectionId = "string";
+                createdLte = OffsetDateTime.parse("2023-08-09T20:57:25.500Z");
+                env = "string";
                 error = false;
-                externalXref = "Trail";
-                integrationType = "male";
-                limit = 9674.36d;
-                offset = 8869.99d;
-                order = "Lights";
-                sort = "Hop";
-                updatedGte = OffsetDateTime.parse("2022-08-25T10:35:13.567Z");
+                externalXref = "string";
+                integrationType = "string";
+                limit = 494.66d;
+                offset = 5267.27d;
+                order = "string";
+                sort = "string";
+                updatedGte = OffsetDateTime.parse("2023-01-09T10:22:39.053Z");
             }};            
 
             ListUnifiedApicallsResponse res = sdk.apicall.listUnifiedApicalls(req);

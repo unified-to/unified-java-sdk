@@ -36,30 +36,30 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Future"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateUcContactRequest req = new CreateUcContactRequest("enhance"){{
+            CreateUcContactRequest req = new CreateUcContactRequest("string"){{
                 ucContact = new UcContact(){{
-                    company = "Cummerata - Schaefer";
-                    createdAt = OffsetDateTime.parse("2023-09-28T00:27:58.979Z");
+                    company = "Gottlieb - Becker";
+                    createdAt = OffsetDateTime.parse("2023-07-20T18:36:15.437Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
-                        add(new UcEmail("canoe"){{
-                            email = "Daphney_VonRueden@yahoo.com";
+                        add(new UcEmail("string"){{
+                            email = "Elliot78@hotmail.com";
                         }}),
                     }};
                     id = "<ID>";
-                    name = "darn";
+                    name = "string";
                     raw = new PropertyUcContactRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
-                        add(new UcTelephone("Garden"){{
-                            telephone = "Auto";
+                        add(new UcTelephone("string"){{
+                            telephone = "string";
                         }}),
                     }};
-                    title = "Southwest";
-                    updatedAt = OffsetDateTime.parse("2021-01-17T23:42:49.226Z");
+                    title = "string";
+                    updatedAt = OffsetDateTime.parse("2023-09-28T00:27:58.979Z");
                 }};
             }};            
 
@@ -105,14 +105,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("for"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUcContactRequest req = new GetUcContactRequest("deposit", "katal"){{
+            GetUcContactRequest req = new GetUcContactRequest("string", "string"){{
                 fields = new String[]{{
-                    add("cohesive"),
+                    add("string"),
                 }};
             }};            
 
@@ -159,23 +159,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Liberia"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListUcCallsRequest req = new ListUcCallsRequest("Cargo"){{
-                agentId = "West";
-                contactId = "Pop";
+            ListUcCallsRequest req = new ListUcCallsRequest("string"){{
+                agentId = "string";
+                contactId = "string";
                 fields = new String[]{{
-                    add("AGP"),
+                    add("string"),
                 }};
-                limit = 1965.31d;
-                offset = 4663.16d;
-                order = "gracefully";
-                query = "so";
-                sort = "Paradigm";
-                updatedGte = OffsetDateTime.parse("2022-08-04T07:33:45.520Z");
+                limit = 465.25d;
+                offset = 4996.09d;
+                order = "string";
+                query = "string";
+                sort = "string";
+                updatedGte = OffsetDateTime.parse("2023-07-25T02:48:36.966Z");
             }};            
 
             ListUcCallsResponse res = sdk.uc.listUcCalls(req);
@@ -221,22 +221,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("application"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListUcContactsRequest req = new ListUcContactsRequest("Xenogender"){{
-                agentId = "male";
+            ListUcContactsRequest req = new ListUcContactsRequest("string"){{
+                agentId = "string";
                 fields = new String[]{{
-                    add("East"),
+                    add("string"),
                 }};
-                limit = 5154.91d;
-                offset = 8550.33d;
-                order = "paradigm";
-                query = "generating";
-                sort = "Legacy";
-                updatedGte = OffsetDateTime.parse("2021-01-07T17:07:06.790Z");
+                limit = 5333.71d;
+                offset = 7775.9d;
+                order = "string";
+                query = "string";
+                sort = "string";
+                updatedGte = OffsetDateTime.parse("2022-10-25T15:03:37.771Z");
             }};            
 
             ListUcContactsResponse res = sdk.uc.listUcContacts(req);
@@ -288,30 +288,30 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("sate"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchUcContactRequest req = new PatchUcContactRequest("Southwest", "Hybrid"){{
+            PatchUcContactRequest req = new PatchUcContactRequest("string", "string"){{
                 ucContact = new UcContact(){{
-                    company = "Mills Inc";
-                    createdAt = OffsetDateTime.parse("2023-05-15T16:26:27.523Z");
+                    company = "Runolfsdottir, Boehm and Toy";
+                    createdAt = OffsetDateTime.parse("2023-05-28T14:51:42.138Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
-                        add(new UcEmail("candela"){{
-                            email = "Adrian33@hotmail.com";
+                        add(new UcEmail("string"){{
+                            email = "Arlie78@hotmail.com";
                         }}),
                     }};
                     id = "<ID>";
-                    name = "Investor";
+                    name = "string";
                     raw = new PropertyUcContactRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
-                        add(new UcTelephone("Electric"){{
-                            telephone = "South";
+                        add(new UcTelephone("string"){{
+                            telephone = "string";
                         }}),
                     }};
-                    title = "Paradigm";
-                    updatedAt = OffsetDateTime.parse("2023-02-26T22:43:00.788Z");
+                    title = "string";
+                    updatedAt = OffsetDateTime.parse("2023-05-08T12:55:44.030Z");
                 }};
             }};            
 
@@ -357,12 +357,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Plastic"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveUcContactRequest req = new RemoveUcContactRequest("Northwest", "till");            
+            RemoveUcContactRequest req = new RemoveUcContactRequest("string", "string");            
 
             RemoveUcContactResponse res = sdk.uc.removeUcContact(req);
 
@@ -413,30 +413,30 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Mexico"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateUcContactRequest req = new UpdateUcContactRequest("per", "Convertible"){{
+            UpdateUcContactRequest req = new UpdateUcContactRequest("string", "string"){{
                 ucContact = new UcContact(){{
-                    company = "Fisher Inc";
-                    createdAt = OffsetDateTime.parse("2021-05-01T13:06:37.779Z");
+                    company = "Marquardt Group";
+                    createdAt = OffsetDateTime.parse("2023-02-21T01:40:47.681Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
-                        add(new UcEmail("Awesome"){{
-                            email = "Amya22@yahoo.com";
+                        add(new UcEmail("string"){{
+                            email = "Stephany25@yahoo.com";
                         }}),
                     }};
                     id = "<ID>";
-                    name = "Northwest";
+                    name = "string";
                     raw = new PropertyUcContactRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
-                        add(new UcTelephone("Fish"){{
-                            telephone = "Books";
+                        add(new UcTelephone("string"){{
+                            telephone = "string";
                         }}),
                     }};
-                    title = "Principal";
-                    updatedAt = OffsetDateTime.parse("2021-02-19T05:22:48.848Z");
+                    title = "string";
+                    updatedAt = OffsetDateTime.parse("2021-09-20T12:26:20.446Z");
                 }};
             }};            
 

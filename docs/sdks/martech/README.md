@@ -37,18 +37,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Latin"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateMartechListRequest req = new CreateMartechListRequest("withdrawal"){{
+            CreateMartechListRequest req = new CreateMartechListRequest("string"){{
                 marketingList = new MarketingList(){{
-                    createdAt = "teal";
+                    createdAt = "string";
                     id = "<ID>";
-                    name = "EXE";
+                    name = "string";
                     raw = new PropertyMarketingListRaw();
-                    updatedAt = OffsetDateTime.parse("2021-07-26T18:05:38.910Z");
+                    updatedAt = OffsetDateTime.parse("2022-10-15T11:18:03.715Z");
                 }};
             }};            
 
@@ -99,29 +99,29 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Home"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateMartechMemberRequest req = new CreateMartechMemberRequest("esse", "Towels"){{
+            CreateMartechMemberRequest req = new CreateMartechMemberRequest("string", "string"){{
                 marketingMember = new MarketingMember(){{
-                    createdAt = OffsetDateTime.parse("2023-04-25T03:20:19.740Z");
+                    createdAt = OffsetDateTime.parse("2021-07-29T12:25:04.271Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.MarketingEmail[]{{
-                        add(new MarketingEmail("Electronic"){{
-                            email = "Lavada29@yahoo.com";
+                        add(new MarketingEmail("string"){{
+                            email = "Kimberly55@gmail.com";
                         }}),
                     }};
                     id = "<ID>";
                     listIds = new String[]{{
-                        add("calculate"),
+                        add("string"),
                     }};
-                    name = "translate";
+                    name = "string";
                     raw = new PropertyMarketingMemberRaw();
                     tags = new String[]{{
-                        add("B2C"),
+                        add("string"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-04-25T09:16:50.202Z");
+                    updatedAt = OffsetDateTime.parse("2023-04-25T03:20:19.740Z");
                 }};
             }};            
 
@@ -167,14 +167,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("red"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetMartechListRequest req = new GetMartechListRequest("users", "Bespoke"){{
+            GetMartechListRequest req = new GetMartechListRequest("string", "string"){{
                 fields = new String[]{{
-                    add("Victoria"),
+                    add("string"),
                 }};
             }};            
 
@@ -220,14 +220,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Japan"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetMartechMemberRequest req = new GetMartechMemberRequest("orange", "Gibraltar", "Northeast"){{
+            GetMartechMemberRequest req = new GetMartechMemberRequest("string", "string", "string"){{
                 fields = new String[]{{
-                    add("Franc"),
+                    add("string"),
                 }};
             }};            
 
@@ -274,21 +274,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("above"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListMartechListsRequest req = new ListMartechListsRequest("Fantastic"){{
+            ListMartechListsRequest req = new ListMartechListsRequest("string"){{
                 fields = new String[]{{
-                    add("Secured"),
+                    add("string"),
                 }};
-                limit = 6845.92d;
-                offset = 7925.09d;
-                order = "customized";
-                query = "parse";
-                sort = "knife";
-                updatedGte = OffsetDateTime.parse("2022-08-12T22:58:00.911Z");
+                limit = 9665.22d;
+                offset = 367.94d;
+                order = "string";
+                query = "string";
+                sort = "string";
+                updatedGte = OffsetDateTime.parse("2021-09-12T06:44:44.684Z");
             }};            
 
             ListMartechListsResponse res = sdk.martech.listMartechLists(req);
@@ -334,21 +334,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Frida"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListMartechMembersRequest req = new ListMartechMembersRequest("structure", "Thallium"){{
+            ListMartechMembersRequest req = new ListMartechMembersRequest("string", "string"){{
                 fields = new String[]{{
-                    add("Bike"),
+                    add("string"),
                 }};
-                limit = 8667.14d;
-                offset = 6022.21d;
-                order = "Trigender";
-                query = "turquoise";
-                sort = "Marketing";
-                updatedGte = OffsetDateTime.parse("2022-07-06T11:38:30.717Z");
+                limit = 1432.99d;
+                offset = 4150.29d;
+                order = "string";
+                query = "string";
+                sort = "string";
+                updatedGte = OffsetDateTime.parse("2022-02-09T03:38:53.799Z");
             }};            
 
             ListMartechMembersResponse res = sdk.martech.listMartechMembers(req);
@@ -396,18 +396,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Classical"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchMartechListRequest req = new PatchMartechListRequest("alarm", "Dodge"){{
+            PatchMartechListRequest req = new PatchMartechListRequest("string", "string"){{
                 marketingList = new MarketingList(){{
-                    createdAt = "Tennessee";
+                    createdAt = "string";
                     id = "<ID>";
-                    name = "phooey";
+                    name = "string";
                     raw = new PropertyMarketingListRaw();
-                    updatedAt = OffsetDateTime.parse("2023-02-22T03:23:44.682Z");
+                    updatedAt = OffsetDateTime.parse("2022-10-07T20:57:43.081Z");
                 }};
             }};            
 
@@ -458,29 +458,29 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Transexual"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchMartechMemberRequest req = new PatchMartechMemberRequest("Northwest", "astride", "female"){{
+            PatchMartechMemberRequest req = new PatchMartechMemberRequest("string", "string", "string"){{
                 marketingMember = new MarketingMember(){{
-                    createdAt = OffsetDateTime.parse("2023-07-23T02:40:10.928Z");
+                    createdAt = OffsetDateTime.parse("2022-11-02T06:23:45.231Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.MarketingEmail[]{{
-                        add(new MarketingEmail("Money"){{
-                            email = "Danika.Walter@hotmail.com";
+                        add(new MarketingEmail("string"){{
+                            email = "Avis.Nikolaus70@hotmail.com";
                         }}),
                     }};
                     id = "<ID>";
                     listIds = new String[]{{
-                        add("Brand"),
+                        add("string"),
                     }};
-                    name = "Rock";
+                    name = "string";
                     raw = new PropertyMarketingMemberRaw();
                     tags = new String[]{{
-                        add("Ferrari"),
+                        add("string"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-04-24T19:34:51.201Z");
+                    updatedAt = OffsetDateTime.parse("2022-01-21T22:23:04.281Z");
                 }};
             }};            
 
@@ -526,12 +526,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Northwest"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveMartechListRequest req = new RemoveMartechListRequest("trusting", "driver");            
+            RemoveMartechListRequest req = new RemoveMartechListRequest("string", "string");            
 
             RemoveMartechListResponse res = sdk.martech.removeMartechList(req);
 
@@ -575,12 +575,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("integrated"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveMartechMemberRequest req = new RemoveMartechMemberRequest("Analyst", "North", "invoice");            
+            RemoveMartechMemberRequest req = new RemoveMartechMemberRequest("string", "string", "string");            
 
             RemoveMartechMemberResponse res = sdk.martech.removeMartechMember(req);
 
@@ -627,18 +627,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("innocently"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateMartechListRequest req = new UpdateMartechListRequest("gold", "panel"){{
+            UpdateMartechListRequest req = new UpdateMartechListRequest("string", "string"){{
                 marketingList = new MarketingList(){{
-                    createdAt = "suite";
+                    createdAt = "string";
                     id = "<ID>";
-                    name = "Lead";
+                    name = "string";
                     raw = new PropertyMarketingListRaw();
-                    updatedAt = OffsetDateTime.parse("2022-04-30T09:07:09.154Z");
+                    updatedAt = OffsetDateTime.parse("2023-09-02T06:01:18.792Z");
                 }};
             }};            
 
@@ -689,29 +689,29 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("BMX"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateMartechMemberRequest req = new UpdateMartechMemberRequest("Kong", "mobile", "deposit"){{
+            UpdateMartechMemberRequest req = new UpdateMartechMemberRequest("string", "string", "string"){{
                 marketingMember = new MarketingMember(){{
-                    createdAt = OffsetDateTime.parse("2021-08-21T23:18:02.833Z");
+                    createdAt = OffsetDateTime.parse("2023-04-24T11:56:04.469Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.MarketingEmail[]{{
-                        add(new MarketingEmail("payment"){{
-                            email = "Haven30@hotmail.com";
+                        add(new MarketingEmail("string"){{
+                            email = "Horacio55@gmail.com";
                         }}),
                     }};
                     id = "<ID>";
                     listIds = new String[]{{
-                        add("Lithuanian"),
+                        add("string"),
                     }};
-                    name = "navigate";
+                    name = "string";
                     raw = new PropertyMarketingMemberRaw();
                     tags = new String[]{{
-                        add("below"),
+                        add("string"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-07-28T09:08:59.988Z");
+                    updatedAt = OffsetDateTime.parse("2022-06-16T07:22:55.607Z");
                 }};
             }};            
 

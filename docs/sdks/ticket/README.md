@@ -32,28 +32,28 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("sky"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateTicketingTicketRequest req = new CreateTicketingTicketRequest("Cheese"){{
+            CreateTicketingTicketRequest req = new CreateTicketingTicketRequest("string"){{
                 ticketingTicket = new TicketingTicket(new PropertyTicketingTicketRaw()){{
-                    category = "indigo";
-                    closedAt = OffsetDateTime.parse("2023-12-07T07:31:56.249Z");
-                    createdAt = OffsetDateTime.parse("2021-07-31T11:54:47.053Z");
-                    customerId = "pristine";
-                    description = "Open-source 24 hour strategy";
+                    category = "string";
+                    closedAt = OffsetDateTime.parse("2021-06-28T11:20:21.005Z");
+                    createdAt = OffsetDateTime.parse("2022-08-19T22:26:35.479Z");
+                    customerId = "string";
+                    description = "Automated composite productivity";
                     id = "<ID>";
-                    priority = "Shirt";
-                    source = "Southeast";
-                    sourceRef = "Hyundai";
-                    status = TicketingTicketStatus.ACTIVE;
-                    subject = "Soft";
+                    priority = "string";
+                    source = "string";
+                    sourceRef = "string";
+                    status = TicketingTicketStatus.CLOSED;
+                    subject = "string";
                     tags = new String[]{{
-                        add("withdrawal"),
+                        add("string"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-11-20T23:41:02.649Z");
+                    updatedAt = OffsetDateTime.parse("2023-05-07T02:01:09.815Z");
                 }};
             }};            
 
@@ -99,14 +99,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Marks"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetTicketingTicketRequest req = new GetTicketingTicketRequest("Dollar", "Alaska"){{
+            GetTicketingTicketRequest req = new GetTicketingTicketRequest("string", "string"){{
                 fields = new String[]{{
-                    add("Planner"),
+                    add("string"),
                 }};
             }};            
 
@@ -153,23 +153,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Cisgender"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListTicketingTicketsRequest req = new ListTicketingTicketsRequest("archive"){{
-                agentId = "inform";
-                customerId = "while";
+            ListTicketingTicketsRequest req = new ListTicketingTicketsRequest("string"){{
+                agentId = "string";
+                customerId = "string";
                 fields = new String[]{{
-                    add("Copper"),
+                    add("string"),
                 }};
-                limit = 5907.42d;
-                offset = 6235.08d;
-                order = "Orchestrator";
-                query = "Unbranded";
-                sort = "Table";
-                updatedGte = OffsetDateTime.parse("2023-06-14T14:48:09.118Z");
+                limit = 6139.39d;
+                offset = 1839.22d;
+                order = "string";
+                query = "string";
+                sort = "string";
+                updatedGte = OffsetDateTime.parse("2022-02-28T14:14:11.846Z");
             }};            
 
             ListTicketingTicketsResponse res = sdk.ticket.listTicketingTickets(req);
@@ -218,28 +218,28 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Bespoke"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchTicketingTicketRequest req = new PatchTicketingTicketRequest("program", "smooth"){{
+            PatchTicketingTicketRequest req = new PatchTicketingTicketRequest("string", "string"){{
                 ticketingTicket = new TicketingTicket(new PropertyTicketingTicketRaw()){{
-                    category = "Chrysler";
-                    closedAt = OffsetDateTime.parse("2021-10-23T20:42:43.325Z");
-                    createdAt = OffsetDateTime.parse("2021-12-10T08:56:46.968Z");
-                    customerId = "astride";
-                    description = "Secured discrete intranet";
+                    category = "string";
+                    closedAt = OffsetDateTime.parse("2021-09-14T12:10:45.667Z");
+                    createdAt = OffsetDateTime.parse("2022-09-29T23:22:13.568Z");
+                    customerId = "string";
+                    description = "Operative composite strategy";
                     id = "<ID>";
-                    priority = "Maserati";
-                    source = "Genderqueer";
-                    sourceRef = "leverage";
+                    priority = "string";
+                    source = "string";
+                    sourceRef = "string";
                     status = TicketingTicketStatus.CLOSED;
-                    subject = "Northeast";
+                    subject = "string";
                     tags = new String[]{{
-                        add("suture"),
+                        add("string"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-08-15T09:38:25.083Z");
+                    updatedAt = OffsetDateTime.parse("2023-07-06T16:05:08.020Z");
                 }};
             }};            
 
@@ -285,12 +285,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("communities"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveTicketingTicketRequest req = new RemoveTicketingTicketRequest("Technetium", "Avon");            
+            RemoveTicketingTicketRequest req = new RemoveTicketingTicketRequest("string", "string");            
 
             RemoveTicketingTicketResponse res = sdk.ticket.removeTicketingTicket(req);
 
@@ -338,28 +338,28 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Rhode"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateTicketingTicketRequest req = new UpdateTicketingTicketRequest("gee", "East"){{
+            UpdateTicketingTicketRequest req = new UpdateTicketingTicketRequest("string", "string"){{
                 ticketingTicket = new TicketingTicket(new PropertyTicketingTicketRaw()){{
-                    category = "Synergized";
-                    closedAt = OffsetDateTime.parse("2021-04-30T11:37:03.465Z");
-                    createdAt = OffsetDateTime.parse("2022-02-02T14:07:25.957Z");
-                    customerId = "Potassium";
-                    description = "Networked tangible migration";
+                    category = "string";
+                    closedAt = OffsetDateTime.parse("2021-05-30T22:19:31.995Z");
+                    createdAt = OffsetDateTime.parse("2023-04-29T18:27:57.571Z");
+                    customerId = "string";
+                    description = "Configurable user-facing middleware";
                     id = "<ID>";
-                    priority = "Steel";
-                    source = "East";
-                    sourceRef = "Northeast";
-                    status = TicketingTicketStatus.CLOSED;
-                    subject = "Designer";
+                    priority = "string";
+                    source = "string";
+                    sourceRef = "string";
+                    status = TicketingTicketStatus.ACTIVE;
+                    subject = "string";
                     tags = new String[]{{
-                        add("Music"),
+                        add("string"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-12-19T01:20:18.164Z");
+                    updatedAt = OffsetDateTime.parse("2022-01-16T17:18:07.743Z");
                 }};
             }};            
 

@@ -32,27 +32,27 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Metrics"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateAtsInterviewRequest req = new CreateAtsInterviewRequest("Bar"){{
+            CreateAtsInterviewRequest req = new CreateAtsInterviewRequest("string"){{
                 atsInterview = new AtsInterview(){{
-                    applicationId = "deposit";
-                    candidateId = "azure";
-                    createdAt = OffsetDateTime.parse("2023-11-15T15:04:25.524Z");
-                    endAt = OffsetDateTime.parse("2022-03-31T21:00:53.882Z");
-                    externalEventXref = "Roanoke";
+                    applicationId = "string";
+                    candidateId = "string";
+                    createdAt = OffsetDateTime.parse("2022-01-10T19:55:26.926Z");
+                    endAt = OffsetDateTime.parse("2023-12-21T09:01:54.390Z");
+                    externalEventXref = "string";
                     id = "<ID>";
-                    jobId = "Smart";
-                    location = "tan";
+                    jobId = "string";
+                    location = "string";
                     raw = new PropertyAtsInterviewRaw();
-                    startAt = OffsetDateTime.parse("2022-03-12T23:24:16.286Z");
-                    status = AtsInterviewStatus.AWAITING_FEEDBACK;
-                    updatedAt = OffsetDateTime.parse("2021-02-03T09:38:05.196Z");
+                    startAt = OffsetDateTime.parse("2022-11-19T09:10:03.014Z");
+                    status = AtsInterviewStatus.COMPLETE;
+                    updatedAt = OffsetDateTime.parse("2021-02-07T14:25:56.954Z");
                     userIds = new String[]{{
-                        add("Optimization"),
+                        add("string"),
                     }};
                 }};
             }};            
@@ -99,14 +99,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("yum"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsInterviewRequest req = new GetAtsInterviewRequest("programming", "payment"){{
+            GetAtsInterviewRequest req = new GetAtsInterviewRequest("string", "string"){{
                 fields = new String[]{{
-                    add("katal"),
+                    add("string"),
                 }};
             }};            
 
@@ -153,22 +153,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Bronze"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListAtsInterviewsRequest req = new ListAtsInterviewsRequest("Wooden"){{
-                applicationId = "Avon";
+            ListAtsInterviewsRequest req = new ListAtsInterviewsRequest("string"){{
+                applicationId = "string";
                 fields = new String[]{{
-                    add("gold"),
+                    add("string"),
                 }};
-                limit = 2371.68d;
-                offset = 2991.18d;
-                order = "evolve";
-                query = "West";
-                sort = "SMTP";
-                updatedGte = OffsetDateTime.parse("2022-07-10T13:30:46.522Z");
+                limit = 2562.12d;
+                offset = 1185.02d;
+                order = "string";
+                query = "string";
+                sort = "string";
+                updatedGte = OffsetDateTime.parse("2021-09-28T09:19:25.744Z");
             }};            
 
             ListAtsInterviewsResponse res = sdk.interview.listAtsInterviews(req);
@@ -217,27 +217,27 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("courageously"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchAtsInterviewRequest req = new PatchAtsInterviewRequest("Handmade", "Oxygen"){{
+            PatchAtsInterviewRequest req = new PatchAtsInterviewRequest("string", "string"){{
                 atsInterview = new AtsInterview(){{
-                    applicationId = "hen";
-                    candidateId = "quantifying";
-                    createdAt = OffsetDateTime.parse("2022-12-08T14:26:55.298Z");
-                    endAt = OffsetDateTime.parse("2022-03-09T03:30:12.586Z");
-                    externalEventXref = "rich";
+                    applicationId = "string";
+                    candidateId = "string";
+                    createdAt = OffsetDateTime.parse("2023-09-11T21:35:40.790Z");
+                    endAt = OffsetDateTime.parse("2021-05-28T19:11:29.616Z");
+                    externalEventXref = "string";
                     id = "<ID>";
-                    jobId = "Zloty";
-                    location = "ASCII";
+                    jobId = "string";
+                    location = "string";
                     raw = new PropertyAtsInterviewRaw();
-                    startAt = OffsetDateTime.parse("2021-07-14T09:05:37.522Z");
-                    status = AtsInterviewStatus.SCHEDULED;
-                    updatedAt = OffsetDateTime.parse("2022-05-26T13:01:26.520Z");
+                    startAt = OffsetDateTime.parse("2021-09-10T02:01:13.488Z");
+                    status = AtsInterviewStatus.COMPLETE;
+                    updatedAt = OffsetDateTime.parse("2023-03-18T09:12:18.749Z");
                     userIds = new String[]{{
-                        add("Group"),
+                        add("string"),
                     }};
                 }};
             }};            
@@ -284,12 +284,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("green"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveAtsInterviewRequest req = new RemoveAtsInterviewRequest("whiteboard", "redefine");            
+            RemoveAtsInterviewRequest req = new RemoveAtsInterviewRequest("string", "string");            
 
             RemoveAtsInterviewResponse res = sdk.interview.removeAtsInterview(req);
 
@@ -337,27 +337,27 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("maroon"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateAtsInterviewRequest req = new UpdateAtsInterviewRequest("maroon", "Southeast"){{
+            UpdateAtsInterviewRequest req = new UpdateAtsInterviewRequest("string", "string"){{
                 atsInterview = new AtsInterview(){{
-                    applicationId = "omnis";
-                    candidateId = "Gorgeous";
-                    createdAt = OffsetDateTime.parse("2023-05-20T16:26:29.311Z");
-                    endAt = OffsetDateTime.parse("2023-02-12T09:40:25.959Z");
-                    externalEventXref = "JBOD";
+                    applicationId = "string";
+                    candidateId = "string";
+                    createdAt = OffsetDateTime.parse("2023-05-06T10:37:46.574Z");
+                    endAt = OffsetDateTime.parse("2022-03-29T10:34:23.230Z");
+                    externalEventXref = "string";
                     id = "<ID>";
-                    jobId = "sensor";
-                    location = "incidentally";
+                    jobId = "string";
+                    location = "string";
                     raw = new PropertyAtsInterviewRaw();
-                    startAt = OffsetDateTime.parse("2022-11-12T19:56:49.769Z");
-                    status = AtsInterviewStatus.SCHEDULED;
-                    updatedAt = OffsetDateTime.parse("2023-10-23T17:18:45.612Z");
+                    startAt = OffsetDateTime.parse("2023-05-05T12:38:13.018Z");
+                    status = AtsInterviewStatus.AWAITING_FEEDBACK;
+                    updatedAt = OffsetDateTime.parse("2021-05-01T14:26:12.006Z");
                     userIds = new String[]{{
-                        add("female"),
+                        add("string"),
                     }};
                 }};
             }};            

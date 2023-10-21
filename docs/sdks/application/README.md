@@ -32,24 +32,24 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Hassium"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateAtsApplicationRequest req = new CreateAtsApplicationRequest("payment"){{
+            CreateAtsApplicationRequest req = new CreateAtsApplicationRequest("string"){{
                 atsApplication = new AtsApplication(){{
-                    appliedAt = OffsetDateTime.parse("2023-09-14T08:24:54.358Z");
-                    candidateId = "Money";
-                    createdAt = OffsetDateTime.parse("2022-02-26T06:43:14.350Z");
+                    appliedAt = OffsetDateTime.parse("2023-03-09T11:35:08.252Z");
+                    candidateId = "string";
+                    createdAt = OffsetDateTime.parse("2023-09-22T15:02:56.144Z");
                     id = "<ID>";
-                    jobId = "Buckinghamshire";
+                    jobId = "string";
                     raw = new PropertyAtsApplicationRaw();
-                    rejectedAt = OffsetDateTime.parse("2023-11-29T01:08:00.744Z");
-                    rejectedReason = "Cyclocross";
-                    source = "Interactions";
-                    status = AtsApplicationStatus.ACCEPTED;
-                    updatedAt = OffsetDateTime.parse("2023-01-14T16:50:51.019Z");
+                    rejectedAt = OffsetDateTime.parse("2022-01-18T22:03:17.799Z");
+                    rejectedReason = "string";
+                    source = "string";
+                    status = AtsApplicationStatus.FIRST_INTERVIEW;
+                    updatedAt = OffsetDateTime.parse("2022-04-22T10:02:31.440Z");
                 }};
             }};            
 
@@ -95,14 +95,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("mobile"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsApplicationRequest req = new GetAtsApplicationRequest("Key", "navigate"){{
+            GetAtsApplicationRequest req = new GetAtsApplicationRequest("string", "string"){{
                 fields = new String[]{{
-                    add("Ergonomic"),
+                    add("string"),
                 }};
             }};            
 
@@ -149,23 +149,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Cambodia"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListAtsApplicationsRequest req = new ListAtsApplicationsRequest("models"){{
-                candidateId = "Wagon";
+            ListAtsApplicationsRequest req = new ListAtsApplicationsRequest("string"){{
+                candidateId = "string";
                 fields = new String[]{{
-                    add("violet"),
+                    add("string"),
                 }};
-                jobId = "adapter";
-                limit = 7975.22d;
-                offset = 8448.96d;
-                order = "Blues";
-                query = "pink";
-                sort = "Rustic";
-                updatedGte = OffsetDateTime.parse("2022-05-10T01:25:15.283Z");
+                jobId = "string";
+                limit = 441.56d;
+                offset = 1448.74d;
+                order = "string";
+                query = "string";
+                sort = "string";
+                updatedGte = OffsetDateTime.parse("2021-12-21T12:43:47.690Z");
             }};            
 
             ListAtsApplicationsResponse res = sdk.application.listAtsApplications(req);
@@ -214,24 +214,24 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Lead"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchAtsApplicationRequest req = new PatchAtsApplicationRequest("Corporate", "Director"){{
+            PatchAtsApplicationRequest req = new PatchAtsApplicationRequest("string", "string"){{
                 atsApplication = new AtsApplication(){{
-                    appliedAt = OffsetDateTime.parse("2023-05-29T04:40:45.531Z");
-                    candidateId = "alarm";
-                    createdAt = OffsetDateTime.parse("2023-08-29T15:27:53.968Z");
+                    appliedAt = OffsetDateTime.parse("2022-12-15T04:58:14.527Z");
+                    candidateId = "string";
+                    createdAt = OffsetDateTime.parse("2021-01-06T05:50:03.360Z");
                     id = "<ID>";
-                    jobId = "pith";
+                    jobId = "string";
                     raw = new PropertyAtsApplicationRaw();
-                    rejectedAt = OffsetDateTime.parse("2022-11-04T10:01:24.162Z");
-                    rejectedReason = "Leonie";
-                    source = "female";
-                    status = AtsApplicationStatus.WITHDRAWN;
-                    updatedAt = OffsetDateTime.parse("2021-05-11T06:56:17.734Z");
+                    rejectedAt = OffsetDateTime.parse("2022-12-04T13:56:12.670Z");
+                    rejectedReason = "string";
+                    source = "string";
+                    status = AtsApplicationStatus.SCREENING;
+                    updatedAt = OffsetDateTime.parse("2022-02-02T14:46:44.919Z");
                 }};
             }};            
 
@@ -277,12 +277,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("gently"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveAtsApplicationRequest req = new RemoveAtsApplicationRequest("copying", "rem");            
+            RemoveAtsApplicationRequest req = new RemoveAtsApplicationRequest("string", "string");            
 
             RemoveAtsApplicationResponse res = sdk.application.removeAtsApplication(req);
 
@@ -330,24 +330,24 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Keyboard"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateAtsApplicationRequest req = new UpdateAtsApplicationRequest("Valley", "Account"){{
+            UpdateAtsApplicationRequest req = new UpdateAtsApplicationRequest("string", "string"){{
                 atsApplication = new AtsApplication(){{
-                    appliedAt = OffsetDateTime.parse("2023-07-05T09:39:00.042Z");
-                    candidateId = "optical";
-                    createdAt = OffsetDateTime.parse("2023-01-02T00:01:44.538Z");
+                    appliedAt = OffsetDateTime.parse("2021-08-22T07:14:38.941Z");
+                    candidateId = "string";
+                    createdAt = OffsetDateTime.parse("2021-06-04T09:23:07.789Z");
                     id = "<ID>";
-                    jobId = "Configurable";
+                    jobId = "string";
                     raw = new PropertyAtsApplicationRaw();
-                    rejectedAt = OffsetDateTime.parse("2022-08-30T07:40:08.280Z");
-                    rejectedReason = "despite";
-                    source = "virtual";
-                    status = AtsApplicationStatus.NEW_;
-                    updatedAt = OffsetDateTime.parse("2021-02-24T21:00:45.820Z");
+                    rejectedAt = OffsetDateTime.parse("2021-02-09T08:05:18.054Z");
+                    rejectedReason = "string";
+                    source = "string";
+                    status = AtsApplicationStatus.REJECTED;
+                    updatedAt = OffsetDateTime.parse("2022-11-28T16:36:33.801Z");
                 }};
             }};            
 

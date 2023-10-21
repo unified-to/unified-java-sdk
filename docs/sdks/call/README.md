@@ -24,23 +24,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Liberia"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListUcCallsRequest req = new ListUcCallsRequest("Cargo"){{
-                agentId = "West";
-                contactId = "Pop";
+            ListUcCallsRequest req = new ListUcCallsRequest("string"){{
+                agentId = "string";
+                contactId = "string";
                 fields = new String[]{{
-                    add("AGP"),
+                    add("string"),
                 }};
-                limit = 1965.31d;
-                offset = 4663.16d;
-                order = "gracefully";
-                query = "so";
-                sort = "Paradigm";
-                updatedGte = OffsetDateTime.parse("2022-08-04T07:33:45.520Z");
+                limit = 465.25d;
+                offset = 4996.09d;
+                order = "string";
+                query = "string";
+                sort = "string";
+                updatedGte = OffsetDateTime.parse("2023-07-25T02:48:36.966Z");
             }};            
 
             ListUcCallsResponse res = sdk.call.listUcCalls(req);

@@ -36,42 +36,42 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Designer"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateCrmLeadRequest req = new CreateCrmLeadRequest("Soft"){{
+            CreateCrmLeadRequest req = new CreateCrmLeadRequest("string"){{
                 crmLead = new CrmLead(){{
                     address = new PropertyCrmLeadAddress(){{
-                        address1 = "maroon";
-                        address2 = "South";
-                        city = "Plantation";
-                        country = "Mozambique";
-                        countryCode = "SE";
-                        postalCode = "52684-4776";
-                        region = "Health";
-                        regionCode = "North";
+                        address1 = "string";
+                        address2 = "string";
+                        city = "Lindboro";
+                        country = "Saint Barthelemy";
+                        countryCode = "SG";
+                        postalCode = "67307-8667";
+                        region = "string";
+                        regionCode = "string";
                     }};
-                    companyId = "invoice";
-                    contactId = "Strategist";
-                    createdAt = OffsetDateTime.parse("2022-12-29T06:24:16.487Z");
-                    creatorUserId = "applications";
+                    companyId = "string";
+                    contactId = "string";
+                    createdAt = OffsetDateTime.parse("2022-12-02T12:39:30.878Z");
+                    creatorUserId = "string";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
                     isActive = false;
-                    name = "Account";
+                    name = "string";
                     raw = new PropertyCrmLeadRaw();
-                    source = "sievert";
+                    source = "string";
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("Chief"){{
-                            telephone = "possimus";
+                        add(new CrmTelephone("string"){{
+                            telephone = "string";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-10-22T23:53:59.320Z");
-                    userId = "Baby";
+                    updatedAt = OffsetDateTime.parse("2022-07-14T20:21:45.580Z");
+                    userId = "string";
                 }};
             }};            
 
@@ -117,14 +117,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("how"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmLeadRequest req = new GetCrmLeadRequest("Curium", "Bahamas"){{
+            GetCrmLeadRequest req = new GetCrmLeadRequest("string", "string"){{
                 fields = new String[]{{
-                    add("Keyboard"),
+                    add("string"),
                 }};
             }};            
 
@@ -171,21 +171,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Implementation"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListCrmLeadsRequest req = new ListCrmLeadsRequest("dam"){{
+            ListCrmLeadsRequest req = new ListCrmLeadsRequest("string"){{
                 fields = new String[]{{
-                    add("SDD"),
+                    add("string"),
                 }};
-                limit = 8343.84d;
-                offset = 6533.73d;
-                order = "generous";
-                query = "Mazda";
-                sort = "Macedonia";
-                updatedGte = OffsetDateTime.parse("2022-12-26T04:44:56.329Z");
+                limit = 2895.08d;
+                offset = 6446.8d;
+                order = "string";
+                query = "string";
+                sort = "string";
+                updatedGte = OffsetDateTime.parse("2023-01-11T15:13:29.920Z");
             }};            
 
             ListCrmLeadsResponse res = sdk.lead.listCrmLeads(req);
@@ -238,42 +238,42 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("deposit"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmLeadRequest req = new PatchCrmLeadRequest("Bike", "copying"){{
+            PatchCrmLeadRequest req = new PatchCrmLeadRequest("string", "string"){{
                 crmLead = new CrmLead(){{
                     address = new PropertyCrmLeadAddress(){{
-                        address1 = "Ball";
-                        address2 = "Chips";
-                        city = "Port Adeliamouth";
-                        country = "Venezuela";
-                        countryCode = "NF";
-                        postalCode = "47585";
-                        region = "Ameliorated";
-                        regionCode = "Mandatory";
+                        address1 = "string";
+                        address2 = "string";
+                        city = "Caseyberg";
+                        country = "Cote d'Ivoire";
+                        countryCode = "LK";
+                        postalCode = "22291";
+                        region = "string";
+                        regionCode = "string";
                     }};
-                    companyId = "by";
-                    contactId = "input";
-                    createdAt = OffsetDateTime.parse("2022-02-02T07:00:30.982Z");
-                    creatorUserId = "Lanka";
+                    companyId = "string";
+                    contactId = "string";
+                    createdAt = OffsetDateTime.parse("2023-04-29T09:14:32.818Z");
+                    creatorUserId = "string";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
                     isActive = false;
-                    name = "Northeast";
+                    name = "string";
                     raw = new PropertyCrmLeadRaw();
-                    source = "female";
+                    source = "string";
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("methodology"){{
-                            telephone = "Field";
+                        add(new CrmTelephone("string"){{
+                            telephone = "string";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-04-14T13:59:39.244Z");
-                    userId = "index";
+                    updatedAt = OffsetDateTime.parse("2021-01-11T14:24:44.509Z");
+                    userId = "string";
                 }};
             }};            
 
@@ -319,12 +319,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Springs"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveCrmLeadRequest req = new RemoveCrmLeadRequest("incubate", "in");            
+            RemoveCrmLeadRequest req = new RemoveCrmLeadRequest("string", "string");            
 
             RemoveCrmLeadResponse res = sdk.lead.removeCrmLead(req);
 
@@ -376,42 +376,42 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Northwest"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateCrmLeadRequest req = new UpdateCrmLeadRequest("violation", "Pickup"){{
+            UpdateCrmLeadRequest req = new UpdateCrmLeadRequest("string", "string"){{
                 crmLead = new CrmLead(){{
                     address = new PropertyCrmLeadAddress(){{
-                        address1 = "Polestar";
-                        address2 = "Checking";
-                        city = "West Laisha";
-                        country = "Pakistan";
-                        countryCode = "MA";
-                        postalCode = "19406";
-                        region = "holistic";
-                        regionCode = "corner";
+                        address1 = "string";
+                        address2 = "string";
+                        city = "West Vernerworth";
+                        country = "Suriname";
+                        countryCode = "ID";
+                        postalCode = "87400-2256";
+                        region = "string";
+                        regionCode = "string";
                     }};
-                    companyId = "Bicycle";
-                    contactId = "local";
-                    createdAt = OffsetDateTime.parse("2022-12-30T09:10:32.001Z");
-                    creatorUserId = "deposit";
+                    companyId = "string";
+                    contactId = "string";
+                    createdAt = OffsetDateTime.parse("2022-08-24T09:40:13.817Z");
+                    creatorUserId = "string";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(){{}}),
                     }};
                     id = "<ID>";
                     isActive = false;
-                    name = "Buckinghamshire";
+                    name = "string";
                     raw = new PropertyCrmLeadRaw();
-                    source = "Electric";
+                    source = "string";
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone("Wooden"){{
-                            telephone = "Bespoke";
+                        add(new CrmTelephone("string"){{
+                            telephone = "string";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-10-02T07:44:27.408Z");
-                    userId = "Concrete";
+                    updatedAt = OffsetDateTime.parse("2021-10-13T01:50:20.665Z");
+                    userId = "string";
                 }};
             }};            
 

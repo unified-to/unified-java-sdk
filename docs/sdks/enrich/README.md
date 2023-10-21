@@ -24,14 +24,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Bike"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListEnrichCompaniesRequest req = new ListEnrichCompaniesRequest("hope"){{
-                domain = "idle-transfer.name";
-                name = "sadly";
+            ListEnrichCompaniesRequest req = new ListEnrichCompaniesRequest("string"){{
+                domain = "dismal-cornmeal.org";
+                name = "string";
             }};            
 
             ListEnrichCompaniesResponse res = sdk.enrich.listEnrichCompanies(req);
@@ -76,16 +76,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Southwest"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListEnrichPeopleRequest req = new ListEnrichPeopleRequest("Associate"){{
-                email = "Lia.Green@yahoo.com";
-                linkedinUrl = "Organic";
-                name = "eyeballs";
-                twitter = "Investor";
+            ListEnrichPeopleRequest req = new ListEnrichPeopleRequest("string"){{
+                email = "Rosendo53@gmail.com";
+                linkedinUrl = "string";
+                name = "string";
+                twitter = "string";
             }};            
 
             ListEnrichPeopleResponse res = sdk.enrich.listEnrichPeople(req);

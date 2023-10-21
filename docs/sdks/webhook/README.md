@@ -31,24 +31,24 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Lead"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateUnifiedWebhookRequest req = new CreateUnifiedWebhookRequest("payment", "Borders"){{
-                webhook = new Webhook("Representative", new com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents[]{{
+            CreateUnifiedWebhookRequest req = new CreateUnifiedWebhookRequest("string", "string"){{
+                webhook = new Webhook("string", new com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents[]{{
                     add(PropertyWebhookEvents.CREATED),
-                }}, "cyan", "Bedfordshire", 3.51d, WebhookObjectType.CRM_FILE, "withdrawal"){{
-                    checkedAt = OffsetDateTime.parse("2023-02-22T14:23:57.210Z");
-                    createdAt = OffsetDateTime.parse("2023-09-03T17:40:00.994Z");
-                    environment = "turquoise";
+                }}, "string", "string", 188.12d, WebhookObjectType.CRM_LEAD, "string"){{
+                    checkedAt = OffsetDateTime.parse("2022-11-04T14:37:16.392Z");
+                    createdAt = OffsetDateTime.parse("2021-03-22T19:34:26.447Z");
+                    environment = "string";
                     id = "<ID>";
                     includeRaw = false;
                     subscriptions = new String[]{{
-                        add("up"),
+                        add("string"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-04-24T02:01:08.617Z");
+                    updatedAt = OffsetDateTime.parse("2022-08-09T17:23:28.216Z");
                 }};
                 events = new com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookEvents[]{{
                     add(CreateUnifiedWebhookEvents.CREATED),
@@ -97,12 +97,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("proud"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedWebhookRequest req = new GetUnifiedWebhookRequest("National");            
+            GetUnifiedWebhookRequest req = new GetUnifiedWebhookRequest("string");            
 
             GetUnifiedWebhookResponse res = sdk.webhook.getUnifiedWebhook(req);
 
@@ -147,19 +147,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Southeast"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
             ListUnifiedWebhooksRequest req = new ListUnifiedWebhooksRequest(){{
-                env = "Southeast";
-                limit = 5051.74d;
-                object = "indigo";
-                offset = 4478.86d;
-                order = "optimize";
-                sort = "Polestar";
-                updatedGte = OffsetDateTime.parse("2022-01-21T13:12:54.296Z");
+                env = "string";
+                limit = 1162.24d;
+                object = "string";
+                offset = 5094.7d;
+                order = "string";
+                sort = "string";
+                updatedGte = OffsetDateTime.parse("2021-04-20T14:39:47.451Z");
             }};            
 
             ListUnifiedWebhooksResponse res = sdk.webhook.listUnifiedWebhooks(req);
@@ -204,12 +204,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("API"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveUnifiedWebhookRequest req = new RemoveUnifiedWebhookRequest("Architect");            
+            RemoveUnifiedWebhookRequest req = new RemoveUnifiedWebhookRequest("string");            
 
             RemoveUnifiedWebhookResponse res = sdk.webhook.removeUnifiedWebhook(req);
 

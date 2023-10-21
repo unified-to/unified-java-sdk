@@ -25,23 +25,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("supposing"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedIntegrationAuthRequest req = new GetUnifiedIntegrationAuthRequest("Nobelium", "Branding"){{
-                env = "pascal";
-                externalXref = "West";
-                failureRedirect = "Xenogender";
-                lang = "North";
+            GetUnifiedIntegrationAuthRequest req = new GetUnifiedIntegrationAuthRequest("string", "string"){{
+                env = "string";
+                externalXref = "string";
+                failureRedirect = "string";
+                lang = "string";
                 redirect = false;
                 scopes = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthScopes[]{{
-                    add(GetUnifiedIntegrationAuthScopes.CRM_CONTACT_WRITE),
+                    add(GetUnifiedIntegrationAuthScopes.HRIS_GROUP_READ),
                 }};
-                state = "Investment";
-                subdomain = "spirit";
-                successRedirect = "East";
+                state = "string";
+                subdomain = "string";
+                successRedirect = "string";
             }};            
 
             GetUnifiedIntegrationAuthResponse res = sdk.auth.getUnifiedIntegrationAuth(req);
@@ -86,17 +86,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("when"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedIntegrationLoginRequest req = new GetUnifiedIntegrationLoginRequest("Tricycle", "markets"){{
-                env = "Soft";
-                failureRedirect = "haptic";
+            GetUnifiedIntegrationLoginRequest req = new GetUnifiedIntegrationLoginRequest("string", "string"){{
+                env = "string";
+                failureRedirect = "string";
                 redirect = false;
-                state = "SUV";
-                successRedirect = "deploy";
+                state = "string";
+                successRedirect = "string";
             }};            
 
             GetUnifiedIntegrationLoginResponse res = sdk.auth.getUnifiedIntegrationLogin(req);

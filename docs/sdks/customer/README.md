@@ -35,30 +35,30 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("redundant"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateTicketingCustomerRequest req = new CreateTicketingCustomerRequest("blue"){{
+            CreateTicketingCustomerRequest req = new CreateTicketingCustomerRequest("string"){{
                 ticketingCustomer = new TicketingCustomer(new PropertyTicketingCustomerRaw()){{
-                    createdAt = OffsetDateTime.parse("2022-07-09T02:30:21.759Z");
+                    createdAt = OffsetDateTime.parse("2022-06-19T07:03:19.095Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
-                        add(new TicketingEmail("Toys"){{
-                            email = "Rosalee13@hotmail.com";
+                        add(new TicketingEmail("string"){{
+                            email = "Jenifer.Friesen50@yahoo.com";
                         }}),
                     }};
                     id = "<ID>";
-                    name = "aw";
+                    name = "string";
                     tags = new String[]{{
-                        add("Osmium"),
+                        add("string"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.TicketingTelephone[]{{
-                        add(new TicketingTelephone("24/7"){{
-                            telephone = "blissfully";
+                        add(new TicketingTelephone("string"){{
+                            telephone = "string";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-01-24T04:51:51.264Z");
+                    updatedAt = OffsetDateTime.parse("2023-08-22T11:52:38.346Z");
                 }};
             }};            
 
@@ -104,14 +104,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Berkshire"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetTicketingCustomerRequest req = new GetTicketingCustomerRequest("Gloves", "Brand"){{
+            GetTicketingCustomerRequest req = new GetTicketingCustomerRequest("string", "string"){{
                 fields = new String[]{{
-                    add("Van"),
+                    add("string"),
                 }};
             }};            
 
@@ -158,21 +158,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("adapter"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListTicketingCustomersRequest req = new ListTicketingCustomersRequest("Unions"){{
+            ListTicketingCustomersRequest req = new ListTicketingCustomersRequest("string"){{
                 fields = new String[]{{
-                    add("Ferry"),
+                    add("string"),
                 }};
-                limit = 4622.26d;
-                offset = 2110.17d;
-                order = "jump";
-                query = "deposit";
-                sort = "louse";
-                updatedGte = OffsetDateTime.parse("2023-06-22T18:24:21.846Z");
+                limit = 3917.11d;
+                offset = 274.81d;
+                order = "string";
+                query = "string";
+                sort = "string";
+                updatedGte = OffsetDateTime.parse("2021-06-05T16:20:32.808Z");
             }};            
 
             ListTicketingCustomersResponse res = sdk.customer.listTicketingCustomers(req);
@@ -224,30 +224,30 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Royce"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchTicketingCustomerRequest req = new PatchTicketingCustomerRequest("West", "Brownsville"){{
+            PatchTicketingCustomerRequest req = new PatchTicketingCustomerRequest("string", "string"){{
                 ticketingCustomer = new TicketingCustomer(new PropertyTicketingCustomerRaw()){{
-                    createdAt = OffsetDateTime.parse("2021-10-01T03:16:10.656Z");
+                    createdAt = OffsetDateTime.parse("2023-06-30T19:19:15.782Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
-                        add(new TicketingEmail("South"){{
-                            email = "Jo_Rippin11@hotmail.com";
+                        add(new TicketingEmail("string"){{
+                            email = "Rosalinda.Abshire11@hotmail.com";
                         }}),
                     }};
                     id = "<ID>";
-                    name = "East";
+                    name = "string";
                     tags = new String[]{{
-                        add("lavender"),
+                        add("string"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.TicketingTelephone[]{{
-                        add(new TicketingTelephone("Cis"){{
-                            telephone = "where";
+                        add(new TicketingTelephone("string"){{
+                            telephone = "string";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-08-27T02:03:43.083Z");
+                    updatedAt = OffsetDateTime.parse("2021-10-01T03:16:10.656Z");
                 }};
             }};            
 
@@ -293,12 +293,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("West"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveTicketingCustomerRequest req = new RemoveTicketingCustomerRequest("compress", "silver");            
+            RemoveTicketingCustomerRequest req = new RemoveTicketingCustomerRequest("string", "string");            
 
             RemoveTicketingCustomerResponse res = sdk.customer.removeTicketingCustomer(req);
 
@@ -349,30 +349,30 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("mmm"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateTicketingCustomerRequest req = new UpdateTicketingCustomerRequest("Granite", "South"){{
+            UpdateTicketingCustomerRequest req = new UpdateTicketingCustomerRequest("string", "string"){{
                 ticketingCustomer = new TicketingCustomer(new PropertyTicketingCustomerRaw()){{
-                    createdAt = OffsetDateTime.parse("2022-06-02T10:57:20.628Z");
+                    createdAt = OffsetDateTime.parse("2023-10-13T13:29:08.944Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
-                        add(new TicketingEmail("Bolivia"){{
-                            email = "Jonatan.Johnson@gmail.com";
+                        add(new TicketingEmail("string"){{
+                            email = "Demetris72@hotmail.com";
                         }}),
                     }};
                     id = "<ID>";
-                    name = "pfft";
+                    name = "string";
                     tags = new String[]{{
-                        add("lux"),
+                        add("string"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.TicketingTelephone[]{{
-                        add(new TicketingTelephone("Reggae"){{
-                            telephone = "bypassing";
+                        add(new TicketingTelephone("string"){{
+                            telephone = "string";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-09-16T12:16:43.732Z");
+                    updatedAt = OffsetDateTime.parse("2022-06-02T10:57:20.628Z");
                 }};
             }};            
 

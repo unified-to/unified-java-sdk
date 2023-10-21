@@ -37,56 +37,56 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("repeatedly"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateCrmEventRequest req = new CreateCrmEventRequest("Sedan"){{
+            CreateCrmEventRequest req = new CreateCrmEventRequest("string"){{
                 crmEvent = new CrmEvent(){{
                     call = new PropertyCrmEventCall(){{
-                        description = "Synergistic 3rd generation capacity";
-                        duration = 5320.65d;
+                        description = "Grass-roots intangible superstructure";
+                        duration = 6684.26d;
                     }};
                     companyIds = new String[]{{
-                        add("zero"),
+                        add("string"),
                     }};
                     contactIds = new String[]{{
-                        add("Bronze"),
+                        add("string"),
                     }};
-                    createdAt = OffsetDateTime.parse("2021-05-09T00:50:22.588Z");
+                    createdAt = OffsetDateTime.parse("2023-07-15T01:49:08.083Z");
                     dealIds = new String[]{{
-                        add("Savings"),
+                        add("string"),
                     }};
                     email = new PropertyCrmEventEmail(){{
-                        body = "within";
+                        body = "string";
                         cc = new String[]{{
-                            add("PNG"),
+                            add("string"),
                         }};
-                        from = "generation";
-                        subject = "Underpass";
+                        from = "string";
+                        subject = "string";
                         to = new String[]{{
-                            add("astrakhan"),
+                            add("string"),
                         }};
                     }};
                     id = "<ID>";
                     meeting = new PropertyCrmEventMeeting(){{
-                        description = "Exclusive optimal matrix";
-                        endAt = OffsetDateTime.parse("2023-07-15T12:28:49.883Z");
-                        startAt = OffsetDateTime.parse("2023-03-21T07:12:55.587Z");
-                        title = "supposing";
+                        description = "Synergized systemic adapter";
+                        endAt = OffsetDateTime.parse("2021-06-19T06:42:51.348Z");
+                        startAt = OffsetDateTime.parse("2022-08-06T14:40:43.070Z");
+                        title = "string";
                     }};
                     note = new PropertyCrmEventNote(){{
-                        description = "Ameliorated homogeneous utilisation";
+                        description = "Horizontal zero administration architecture";
                     }};
                     raw = new PropertyCrmEventRaw();
                     task = new PropertyCrmEventTask(){{
-                        description = "Switchable directional productivity";
-                        name = "Fresh";
-                        status = "Southeast";
+                        description = "Extended 5th generation artificial intelligence";
+                        name = "string";
+                        status = "string";
                     }};
-                    type = CrmEventType.EMAIL;
-                    updatedAt = OffsetDateTime.parse("2023-04-17T00:16:04.496Z");
+                    type = CrmEventType.TASK;
+                    updatedAt = OffsetDateTime.parse("2022-07-14T14:31:08.257Z");
                 }};
             }};            
 
@@ -132,14 +132,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Technetium"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmEventRequest req = new GetCrmEventRequest("Ergonomic", "Director"){{
+            GetCrmEventRequest req = new GetCrmEventRequest("string", "string"){{
                 fields = new String[]{{
-                    add("comics"),
+                    add("string"),
                 }};
             }};            
 
@@ -186,24 +186,24 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("withdrawal"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListCrmEventsRequest req = new ListCrmEventsRequest("empower"){{
-                companyId = "violet";
-                contactId = "generating";
-                dealId = "paradigms";
+            ListCrmEventsRequest req = new ListCrmEventsRequest("string"){{
+                companyId = "string";
+                contactId = "string";
+                dealId = "string";
                 fields = new String[]{{
-                    add("Checking"),
+                    add("string"),
                 }};
-                limit = 2512.65d;
-                offset = 3220.29d;
-                order = "Saint";
-                query = "gadzooks";
-                sort = "Borders";
-                updatedGte = OffsetDateTime.parse("2023-10-24T12:08:20.855Z");
+                limit = 4453.11d;
+                offset = 4555.2d;
+                order = "string";
+                query = "string";
+                sort = "string";
+                updatedGte = OffsetDateTime.parse("2023-04-30T09:02:38.779Z");
             }};            
 
             ListCrmEventsResponse res = sdk.event.listCrmEvents(req);
@@ -257,56 +257,56 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("XML"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmEventRequest req = new PatchCrmEventRequest("Accountability", "copying"){{
+            PatchCrmEventRequest req = new PatchCrmEventRequest("string", "string"){{
                 crmEvent = new CrmEvent(){{
                     call = new PropertyCrmEventCall(){{
-                        description = "Universal 24/7 migration";
-                        duration = 1195.18d;
+                        description = "Multi-layered well-modulated middleware";
+                        duration = 8718.07d;
                     }};
                     companyIds = new String[]{{
-                        add("Metal"),
+                        add("string"),
                     }};
                     contactIds = new String[]{{
-                        add("Keyboard"),
+                        add("string"),
                     }};
-                    createdAt = OffsetDateTime.parse("2021-05-24T04:28:38.959Z");
+                    createdAt = OffsetDateTime.parse("2022-07-20T20:04:26.682Z");
                     dealIds = new String[]{{
-                        add("Administrator"),
+                        add("string"),
                     }};
                     email = new PropertyCrmEventEmail(){{
-                        body = "around";
+                        body = "string";
                         cc = new String[]{{
-                            add("Wooden"),
+                            add("string"),
                         }};
-                        from = "Gasoline";
-                        subject = "neural";
+                        from = "string";
+                        subject = "string";
                         to = new String[]{{
-                            add("mole"),
+                            add("string"),
                         }};
                     }};
                     id = "<ID>";
                     meeting = new PropertyCrmEventMeeting(){{
-                        description = "Total homogeneous policy";
-                        endAt = OffsetDateTime.parse("2023-11-15T04:26:14.346Z");
-                        startAt = OffsetDateTime.parse("2023-11-08T07:39:26.236Z");
-                        title = "Idaho";
+                        description = "Horizontal uniform access";
+                        endAt = OffsetDateTime.parse("2022-11-19T03:29:57.620Z");
+                        startAt = OffsetDateTime.parse("2021-05-11T20:55:56.558Z");
+                        title = "string";
                     }};
                     note = new PropertyCrmEventNote(){{
-                        description = "Up-sized asymmetric open architecture";
+                        description = "Exclusive non-volatile conglomeration";
                     }};
                     raw = new PropertyCrmEventRaw();
                     task = new PropertyCrmEventTask(){{
-                        description = "Profound holistic interface";
-                        name = "DNS";
-                        status = "Shoes";
+                        description = "Cross-platform bi-directional open architecture";
+                        name = "string";
+                        status = "string";
                     }};
-                    type = CrmEventType.EMAIL;
-                    updatedAt = OffsetDateTime.parse("2021-11-11T23:29:31.701Z");
+                    type = CrmEventType.TASK;
+                    updatedAt = OffsetDateTime.parse("2023-11-30T20:46:48.999Z");
                 }};
             }};            
 
@@ -352,12 +352,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("enterprise"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveCrmEventRequest req = new RemoveCrmEventRequest("Kyat", "integrate");            
+            RemoveCrmEventRequest req = new RemoveCrmEventRequest("string", "string");            
 
             RemoveCrmEventResponse res = sdk.event.removeCrmEvent(req);
 
@@ -410,56 +410,56 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("Account"){{
+                .setSecurity(new Security("string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateCrmEventRequest req = new UpdateCrmEventRequest("DRAM", "input"){{
+            UpdateCrmEventRequest req = new UpdateCrmEventRequest("string", "string"){{
                 crmEvent = new CrmEvent(){{
                     call = new PropertyCrmEventCall(){{
-                        description = "Right-sized user-facing moratorium";
-                        duration = 8447.26d;
+                        description = "Intuitive incremental orchestration";
+                        duration = 4665.81d;
                     }};
                     companyIds = new String[]{{
-                        add("beset"),
+                        add("string"),
                     }};
                     contactIds = new String[]{{
-                        add("Accountability"),
+                        add("string"),
                     }};
-                    createdAt = OffsetDateTime.parse("2023-02-03T22:22:41.402Z");
+                    createdAt = OffsetDateTime.parse("2021-09-01T00:40:18.553Z");
                     dealIds = new String[]{{
-                        add("Keyboard"),
+                        add("string"),
                     }};
                     email = new PropertyCrmEventEmail(){{
-                        body = "thoroughly";
+                        body = "string";
                         cc = new String[]{{
-                            add("impactful"),
+                            add("string"),
                         }};
-                        from = "arse";
-                        subject = "Jazz";
+                        from = "string";
+                        subject = "string";
                         to = new String[]{{
-                            add("Global"),
+                            add("string"),
                         }};
                     }};
                     id = "<ID>";
                     meeting = new PropertyCrmEventMeeting(){{
-                        description = "Organized full-range productivity";
-                        endAt = OffsetDateTime.parse("2021-07-12T17:04:07.207Z");
-                        startAt = OffsetDateTime.parse("2021-07-28T12:59:49.441Z");
-                        title = "Industrial";
+                        description = "Optional real-time process improvement";
+                        endAt = OffsetDateTime.parse("2023-10-22T11:59:17.612Z");
+                        startAt = OffsetDateTime.parse("2023-01-03T21:08:02.575Z");
+                        title = "string";
                     }};
                     note = new PropertyCrmEventNote(){{
-                        description = "Pre-emptive tertiary Graphic Interface";
+                        description = "Switchable zero defect approach";
                     }};
                     raw = new PropertyCrmEventRaw();
                     task = new PropertyCrmEventTask(){{
-                        description = "Grass-roots responsive local area network";
-                        name = "Baby";
-                        status = "Rial";
+                        description = "Pre-emptive system-worthy open system";
+                        name = "string";
+                        status = "string";
                     }};
-                    type = CrmEventType.NOTE;
-                    updatedAt = OffsetDateTime.parse("2021-04-13T01:04:45.491Z");
+                    type = CrmEventType.EMAIL;
+                    updatedAt = OffsetDateTime.parse("2021-06-26T08:01:25.242Z");
                 }};
             }};            
 
