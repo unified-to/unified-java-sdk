@@ -76,9 +76,9 @@ public class ListTicketingNotesRequest {
     }
     
     /**
-     * ID of the ticket
+     * Usually required
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ticket_id")
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ticket_id")
     public String ticketId;
 
     public ListTicketingNotesRequest withTicketId(String ticketId) {
@@ -97,8 +97,7 @@ public class ListTicketingNotesRequest {
         return this;
     }
     
-    public ListTicketingNotesRequest(@JsonProperty("connection_id") String connectionId, @JsonProperty("ticket_id") String ticketId) {
+    public ListTicketingNotesRequest(@JsonProperty("connection_id") String connectionId) {
         this.connectionId = connectionId;
-        this.ticketId = ticketId;
   }
 }

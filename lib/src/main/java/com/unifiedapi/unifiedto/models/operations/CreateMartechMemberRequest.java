@@ -31,19 +31,7 @@ public class CreateMartechMemberRequest {
         return this;
     }
     
-    /**
-     * ID of the list
-     */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=list_id")
-    public String listId;
-
-    public CreateMartechMemberRequest withListId(String listId) {
-        this.listId = listId;
-        return this;
-    }
-    
-    public CreateMartechMemberRequest(@JsonProperty("connection_id") String connectionId, @JsonProperty("list_id") String listId) {
+    public CreateMartechMemberRequest(@JsonProperty("connection_id") String connectionId) {
         this.connectionId = connectionId;
-        this.listId = listId;
   }
 }

@@ -31,20 +31,8 @@ public class RemoveMartechMemberRequest {
         return this;
     }
     
-    /**
-     * ID of the list
-     */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=list_id")
-    public String listId;
-
-    public RemoveMartechMemberRequest withListId(String listId) {
-        this.listId = listId;
-        return this;
-    }
-    
-    public RemoveMartechMemberRequest(@JsonProperty("connection_id") String connectionId, @JsonProperty("id") String id, @JsonProperty("list_id") String listId) {
+    public RemoveMartechMemberRequest(@JsonProperty("connection_id") String connectionId, @JsonProperty("id") String id) {
         this.connectionId = connectionId;
         this.id = id;
-        this.listId = listId;
   }
 }

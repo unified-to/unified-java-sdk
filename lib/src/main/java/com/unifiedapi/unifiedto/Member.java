@@ -23,14 +23,14 @@ public class Member {
 	}
 
     /**
-     * Create a member in a list
+     * Create a member
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
     public com.unifiedapi.unifiedto.models.operations.CreateMartechMemberResponse createMartechMember(com.unifiedapi.unifiedto.models.operations.CreateMartechMemberRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateMartechMemberRequest.class, baseUrl, "/martech/{connection_id}/{list_id}/member", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateMartechMemberRequest.class, baseUrl, "/martech/{connection_id}/member", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -64,14 +64,14 @@ public class Member {
     }
 
     /**
-     * Retrieve a member from a list
+     * Retrieve a member
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
     public com.unifiedapi.unifiedto.models.operations.GetMartechMemberResponse getMartechMember(com.unifiedapi.unifiedto.models.operations.GetMartechMemberRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetMartechMemberRequest.class, baseUrl, "/martech/{connection_id}/{list_id}/member/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetMartechMemberRequest.class, baseUrl, "/martech/{connection_id}/member/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -109,14 +109,14 @@ public class Member {
     }
 
     /**
-     * List all members in a list
+     * List all members
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
     public com.unifiedapi.unifiedto.models.operations.ListMartechMembersResponse listMartechMembers(com.unifiedapi.unifiedto.models.operations.ListMartechMembersRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListMartechMembersRequest.class, baseUrl, "/martech/{connection_id}/{list_id}/member", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListMartechMembersRequest.class, baseUrl, "/martech/{connection_id}/member", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -154,14 +154,14 @@ public class Member {
     }
 
     /**
-     * Update a member in a list
+     * Update a member
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
     public com.unifiedapi.unifiedto.models.operations.PatchMartechMemberResponse patchMartechMember(com.unifiedapi.unifiedto.models.operations.PatchMartechMemberRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchMartechMemberRequest.class, baseUrl, "/martech/{connection_id}/{list_id}/member/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchMartechMemberRequest.class, baseUrl, "/martech/{connection_id}/member/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
@@ -195,14 +195,14 @@ public class Member {
     }
 
     /**
-     * Remove member from a list
+     * Remove member
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
     public com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberResponse removeMartechMember(com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberRequest.class, baseUrl, "/martech/{connection_id}/{list_id}/member/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberRequest.class, baseUrl, "/martech/{connection_id}/member/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -233,14 +233,14 @@ public class Member {
     }
 
     /**
-     * Update a member in a list
+     * Update a member
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
     public com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberResponse updateMartechMember(com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberRequest.class, baseUrl, "/martech/{connection_id}/{list_id}/member/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberRequest.class, baseUrl, "/martech/{connection_id}/member/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

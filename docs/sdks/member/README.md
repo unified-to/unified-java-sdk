@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [createMartechMember](#createmartechmember) - Create a member in a list
-* [getMartechMember](#getmartechmember) - Retrieve a member from a list
-* [listMartechMembers](#listmartechmembers) - List all members in a list
-* [patchMartechMember](#patchmartechmember) - Update a member in a list
-* [removeMartechMember](#removemartechmember) - Remove member from a list
-* [updateMartechMember](#updatemartechmember) - Update a member in a list
+* [createMartechMember](#createmartechmember) - Create a member
+* [getMartechMember](#getmartechmember) - Retrieve a member
+* [listMartechMembers](#listmartechmembers) - List all members
+* [patchMartechMember](#patchmartechmember) - Update a member
+* [removeMartechMember](#removemartechmember) - Remove member
+* [updateMartechMember](#updatemartechmember) - Update a member
 
 ## createMartechMember
 
-Create a member in a list
+Create a member
 
 ### Example Usage
 
@@ -38,7 +38,7 @@ public class Application {
                 }})
                 .build();
 
-            CreateMartechMemberRequest req = new CreateMartechMemberRequest("string", "string"){{
+            CreateMartechMemberRequest req = new CreateMartechMemberRequest("string"){{
                 marketingMember = new MarketingMember(){{
                     createdAt = OffsetDateTime.parse("2021-07-29T12:25:04.271Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.MarketingEmail[]{{
@@ -85,7 +85,7 @@ public class Application {
 
 ## getMartechMember
 
-Retrieve a member from a list
+Retrieve a member
 
 ### Example Usage
 
@@ -106,7 +106,7 @@ public class Application {
                 }})
                 .build();
 
-            GetMartechMemberRequest req = new GetMartechMemberRequest("string", "string", "string"){{
+            GetMartechMemberRequest req = new GetMartechMemberRequest("string", "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
@@ -138,7 +138,7 @@ public class Application {
 
 ## listMartechMembers
 
-List all members in a list
+List all members
 
 ### Example Usage
 
@@ -160,11 +160,12 @@ public class Application {
                 }})
                 .build();
 
-            ListMartechMembersRequest req = new ListMartechMembersRequest("string", "string"){{
+            ListMartechMembersRequest req = new ListMartechMembersRequest("string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
                 limit = 1432.99d;
+                listId = "string";
                 offset = 4150.29d;
                 order = "string";
                 query = "string";
@@ -198,7 +199,7 @@ public class Application {
 
 ## patchMartechMember
 
-Update a member in a list
+Update a member
 
 ### Example Usage
 
@@ -224,7 +225,7 @@ public class Application {
                 }})
                 .build();
 
-            PatchMartechMemberRequest req = new PatchMartechMemberRequest("string", "string", "string"){{
+            PatchMartechMemberRequest req = new PatchMartechMemberRequest("string", "string"){{
                 marketingMember = new MarketingMember(){{
                     createdAt = OffsetDateTime.parse("2022-11-02T06:23:45.231Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.MarketingEmail[]{{
@@ -271,7 +272,7 @@ public class Application {
 
 ## removeMartechMember
 
-Remove member from a list
+Remove member
 
 ### Example Usage
 
@@ -292,7 +293,7 @@ public class Application {
                 }})
                 .build();
 
-            RemoveMartechMemberRequest req = new RemoveMartechMemberRequest("string", "string", "string");            
+            RemoveMartechMemberRequest req = new RemoveMartechMemberRequest("string", "string");            
 
             RemoveMartechMemberResponse res = sdk.member.removeMartechMember(req);
 
@@ -320,7 +321,7 @@ public class Application {
 
 ## updateMartechMember
 
-Update a member in a list
+Update a member
 
 ### Example Usage
 
@@ -346,7 +347,7 @@ public class Application {
                 }})
                 .build();
 
-            UpdateMartechMemberRequest req = new UpdateMartechMemberRequest("string", "string", "string"){{
+            UpdateMartechMemberRequest req = new UpdateMartechMemberRequest("string", "string"){{
                 marketingMember = new MarketingMember(){{
                     createdAt = OffsetDateTime.parse("2023-04-24T11:56:04.469Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.MarketingEmail[]{{

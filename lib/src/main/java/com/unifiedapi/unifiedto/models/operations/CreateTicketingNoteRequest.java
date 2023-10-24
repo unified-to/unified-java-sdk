@@ -28,19 +28,7 @@ public class CreateTicketingNoteRequest {
         return this;
     }
     
-    /**
-     * ID of the ticket
-     */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ticket_id")
-    public String ticketId;
-
-    public CreateTicketingNoteRequest withTicketId(String ticketId) {
-        this.ticketId = ticketId;
-        return this;
-    }
-    
-    public CreateTicketingNoteRequest(@JsonProperty("connection_id") String connectionId, @JsonProperty("ticket_id") String ticketId) {
+    public CreateTicketingNoteRequest(@JsonProperty("connection_id") String connectionId) {
         this.connectionId = connectionId;
-        this.ticketId = ticketId;
   }
 }

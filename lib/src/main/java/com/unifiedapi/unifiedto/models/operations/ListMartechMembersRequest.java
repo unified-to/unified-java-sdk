@@ -41,9 +41,9 @@ public class ListMartechMembersRequest {
     }
     
     /**
-     * ID of the list
+     * Usually required
      */
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=list_id")
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=list_id")
     public String listId;
 
     public ListMartechMembersRequest withListId(String listId) {
@@ -97,8 +97,7 @@ public class ListMartechMembersRequest {
         return this;
     }
     
-    public ListMartechMembersRequest(@JsonProperty("connection_id") String connectionId, @JsonProperty("list_id") String listId) {
+    public ListMartechMembersRequest(@JsonProperty("connection_id") String connectionId) {
         this.connectionId = connectionId;
-        this.listId = listId;
   }
 }

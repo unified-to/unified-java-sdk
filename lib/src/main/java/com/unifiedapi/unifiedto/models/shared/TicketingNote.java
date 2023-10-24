@@ -71,6 +71,15 @@ public class TicketingNote {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ticket_id")
+    public String ticketId;
+
+    public TicketingNote withTicketId(String ticketId) {
+        this.ticketId = ticketId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
 

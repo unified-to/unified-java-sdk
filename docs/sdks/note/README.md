@@ -36,13 +36,14 @@ public class Application {
                 }})
                 .build();
 
-            CreateTicketingNoteRequest req = new CreateTicketingNoteRequest("string", "string"){{
+            CreateTicketingNoteRequest req = new CreateTicketingNoteRequest("string"){{
                 ticketingNote = new TicketingNote(new PropertyTicketingNoteRaw()){{
                     agentId = "string";
                     createdAt = OffsetDateTime.parse("2023-04-20T19:05:27.564Z");
                     customerId = "string";
                     description = "Distributed 4th generation portal";
                     id = "<ID>";
+                    ticketId = "string";
                     updatedAt = "string";
                 }};
             }};            
@@ -94,7 +95,7 @@ public class Application {
                 }})
                 .build();
 
-            GetTicketingNoteRequest req = new GetTicketingNoteRequest("string", "string", "string"){{
+            GetTicketingNoteRequest req = new GetTicketingNoteRequest("string", "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
@@ -148,7 +149,7 @@ public class Application {
                 }})
                 .build();
 
-            ListTicketingNotesRequest req = new ListTicketingNotesRequest("string", "string"){{
+            ListTicketingNotesRequest req = new ListTicketingNotesRequest("string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
@@ -157,6 +158,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
+                ticketId = "string";
                 updatedGte = OffsetDateTime.parse("2023-09-20T18:22:08.785Z");
             }};            
 
@@ -210,13 +212,14 @@ public class Application {
                 }})
                 .build();
 
-            PatchTicketingNoteRequest req = new PatchTicketingNoteRequest("string", "string", "string"){{
+            PatchTicketingNoteRequest req = new PatchTicketingNoteRequest("string", "string"){{
                 ticketingNote = new TicketingNote(new PropertyTicketingNoteRaw()){{
                     agentId = "string";
                     createdAt = OffsetDateTime.parse("2023-09-04T23:33:24.591Z");
                     customerId = "string";
                     description = "Right-sized national productivity";
                     id = "<ID>";
+                    ticketId = "string";
                     updatedAt = "string";
                 }};
             }};            
@@ -268,7 +271,7 @@ public class Application {
                 }})
                 .build();
 
-            RemoveTicketingNoteRequest req = new RemoveTicketingNoteRequest("string", "string", "string");            
+            RemoveTicketingNoteRequest req = new RemoveTicketingNoteRequest("string", "string");            
 
             RemoveTicketingNoteResponse res = sdk.note.removeTicketingNote(req);
 
@@ -320,13 +323,14 @@ public class Application {
                 }})
                 .build();
 
-            UpdateTicketingNoteRequest req = new UpdateTicketingNoteRequest("string", "string", "string"){{
+            UpdateTicketingNoteRequest req = new UpdateTicketingNoteRequest("string", "string"){{
                 ticketingNote = new TicketingNote(new PropertyTicketingNoteRaw()){{
                     agentId = "string";
                     createdAt = OffsetDateTime.parse("2023-05-15T06:19:14.487Z");
                     customerId = "string";
                     description = "Versatile value-added utilisation";
                     id = "<ID>";
+                    ticketId = "string";
                     updatedAt = "string";
                 }};
             }};            
