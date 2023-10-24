@@ -29,7 +29,7 @@ public class PatchAtsScorecardRequest {
     }
     
     /**
-     * ID of the Document
+     * ID of the Scorecard
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;

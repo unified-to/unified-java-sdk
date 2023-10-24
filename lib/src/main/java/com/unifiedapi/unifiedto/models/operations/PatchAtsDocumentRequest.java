@@ -8,12 +8,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 
 
-public class UpdateAtsScorecardRequest {
+public class PatchAtsDocumentRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public com.unifiedapi.unifiedto.models.shared.AtsScorecard atsScorecard;
+    public com.unifiedapi.unifiedto.models.shared.AtsDocument atsDocument;
 
-    public UpdateAtsScorecardRequest withAtsScorecard(com.unifiedapi.unifiedto.models.shared.AtsScorecard atsScorecard) {
-        this.atsScorecard = atsScorecard;
+    public PatchAtsDocumentRequest withAtsDocument(com.unifiedapi.unifiedto.models.shared.AtsDocument atsDocument) {
+        this.atsDocument = atsDocument;
         return this;
     }
     
@@ -23,23 +23,23 @@ public class UpdateAtsScorecardRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
     public String connectionId;
 
-    public UpdateAtsScorecardRequest withConnectionId(String connectionId) {
+    public PatchAtsDocumentRequest withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
     }
     
     /**
-     * ID of the Scorecard
+     * ID of the Document
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
 
-    public UpdateAtsScorecardRequest withId(String id) {
+    public PatchAtsDocumentRequest withId(String id) {
         this.id = id;
         return this;
     }
     
-    public UpdateAtsScorecardRequest(@JsonProperty("connection_id") String connectionId, @JsonProperty("id") String id) {
+    public PatchAtsDocumentRequest(@JsonProperty("connection_id") String connectionId, @JsonProperty("id") String id) {
         this.connectionId = connectionId;
         this.id = id;
   }

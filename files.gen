@@ -30,6 +30,7 @@ lib/src/main/java/com/unifiedapi/unifiedto/Note.java
 lib/src/main/java/com/unifiedapi/unifiedto/Passthrough.java
 lib/src/main/java/com/unifiedapi/unifiedto/Person.java
 lib/src/main/java/com/unifiedapi/unifiedto/Pipeline.java
+lib/src/main/java/com/unifiedapi/unifiedto/Scorecard.java
 lib/src/main/java/com/unifiedapi/unifiedto/Ticket.java
 lib/src/main/java/com/unifiedapi/unifiedto/Ticketing.java
 lib/src/main/java/com/unifiedapi/unifiedto/Uc.java
@@ -83,6 +84,8 @@ lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAtsApplicatio
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAtsApplicationResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAtsCandidateRequest.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAtsCandidateResponse.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAtsDocumentRequest.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAtsDocumentResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAtsInterviewRequest.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAtsInterviewResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAtsJobRequest.java
@@ -91,6 +94,8 @@ lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAtsScorecardR
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAtsScorecardResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsCandidateRequest.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsCandidateResponse.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsDocumentRequest.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsDocumentResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsInterviewRequest.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsInterviewResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsJobRequest.java
@@ -99,6 +104,8 @@ lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsScorecardRequ
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsScorecardResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsCandidatesRequest.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsCandidatesResponse.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsDocumentsRequest.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsDocumentsResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsInterviewsRequest.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsInterviewsResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsJobsRequest.java
@@ -107,6 +114,8 @@ lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsScorecardsRe
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsScorecardsResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAtsCandidateRequest.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAtsCandidateResponse.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAtsDocumentRequest.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAtsDocumentResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAtsInterviewRequest.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAtsInterviewResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAtsJobRequest.java
@@ -115,6 +124,8 @@ lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAtsScorecardRe
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAtsScorecardResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAtsCandidateRequest.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAtsCandidateResponse.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAtsDocumentRequest.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAtsDocumentResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAtsInterviewRequest.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAtsInterviewResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAtsJobRequest.java
@@ -123,6 +134,8 @@ lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAtsScorecardR
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAtsScorecardResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAtsCandidateRequest.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAtsCandidateResponse.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAtsDocumentRequest.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAtsDocumentResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAtsInterviewRequest.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAtsInterviewResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAtsJobRequest.java
@@ -371,6 +384,9 @@ lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAtsCandidateRaw
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsEmailType.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsEmail.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAtsCandidateAddress.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsDocumentType.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsDocument.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAtsDocumentRaw.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsInterviewStatus.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsInterview.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAtsInterviewRaw.java
@@ -501,6 +517,8 @@ docs/models/operations/UpdateAtsApplicationRequest.md
 docs/models/operations/UpdateAtsApplicationResponse.md
 docs/models/operations/CreateAtsCandidateRequest.md
 docs/models/operations/CreateAtsCandidateResponse.md
+docs/models/operations/CreateAtsDocumentRequest.md
+docs/models/operations/CreateAtsDocumentResponse.md
 docs/models/operations/CreateAtsInterviewRequest.md
 docs/models/operations/CreateAtsInterviewResponse.md
 docs/models/operations/CreateAtsJobRequest.md
@@ -509,6 +527,8 @@ docs/models/operations/CreateAtsScorecardRequest.md
 docs/models/operations/CreateAtsScorecardResponse.md
 docs/models/operations/GetAtsCandidateRequest.md
 docs/models/operations/GetAtsCandidateResponse.md
+docs/models/operations/GetAtsDocumentRequest.md
+docs/models/operations/GetAtsDocumentResponse.md
 docs/models/operations/GetAtsInterviewRequest.md
 docs/models/operations/GetAtsInterviewResponse.md
 docs/models/operations/GetAtsJobRequest.md
@@ -517,6 +537,8 @@ docs/models/operations/GetAtsScorecardRequest.md
 docs/models/operations/GetAtsScorecardResponse.md
 docs/models/operations/ListAtsCandidatesRequest.md
 docs/models/operations/ListAtsCandidatesResponse.md
+docs/models/operations/ListAtsDocumentsRequest.md
+docs/models/operations/ListAtsDocumentsResponse.md
 docs/models/operations/ListAtsInterviewsRequest.md
 docs/models/operations/ListAtsInterviewsResponse.md
 docs/models/operations/ListAtsJobsRequest.md
@@ -525,6 +547,8 @@ docs/models/operations/ListAtsScorecardsRequest.md
 docs/models/operations/ListAtsScorecardsResponse.md
 docs/models/operations/PatchAtsCandidateRequest.md
 docs/models/operations/PatchAtsCandidateResponse.md
+docs/models/operations/PatchAtsDocumentRequest.md
+docs/models/operations/PatchAtsDocumentResponse.md
 docs/models/operations/PatchAtsInterviewRequest.md
 docs/models/operations/PatchAtsInterviewResponse.md
 docs/models/operations/PatchAtsJobRequest.md
@@ -533,6 +557,8 @@ docs/models/operations/PatchAtsScorecardRequest.md
 docs/models/operations/PatchAtsScorecardResponse.md
 docs/models/operations/RemoveAtsCandidateRequest.md
 docs/models/operations/RemoveAtsCandidateResponse.md
+docs/models/operations/RemoveAtsDocumentRequest.md
+docs/models/operations/RemoveAtsDocumentResponse.md
 docs/models/operations/RemoveAtsInterviewRequest.md
 docs/models/operations/RemoveAtsInterviewResponse.md
 docs/models/operations/RemoveAtsJobRequest.md
@@ -541,6 +567,8 @@ docs/models/operations/RemoveAtsScorecardRequest.md
 docs/models/operations/RemoveAtsScorecardResponse.md
 docs/models/operations/UpdateAtsCandidateRequest.md
 docs/models/operations/UpdateAtsCandidateResponse.md
+docs/models/operations/UpdateAtsDocumentRequest.md
+docs/models/operations/UpdateAtsDocumentResponse.md
 docs/models/operations/UpdateAtsInterviewRequest.md
 docs/models/operations/UpdateAtsInterviewResponse.md
 docs/models/operations/UpdateAtsJobRequest.md
@@ -789,6 +817,9 @@ docs/models/shared/PropertyAtsCandidateRaw.md
 docs/models/shared/AtsEmailType.md
 docs/models/shared/AtsEmail.md
 docs/models/shared/PropertyAtsCandidateAddress.md
+docs/models/shared/AtsDocumentType.md
+docs/models/shared/AtsDocument.md
+docs/models/shared/PropertyAtsDocumentRaw.md
 docs/models/shared/AtsInterviewStatus.md
 docs/models/shared/AtsInterview.md
 docs/models/shared/PropertyAtsInterviewRaw.md
@@ -932,6 +963,7 @@ docs/sdks/note/README.md
 docs/sdks/passthrough/README.md
 docs/sdks/person/README.md
 docs/sdks/pipeline/README.md
+docs/sdks/scorecard/README.md
 docs/sdks/ticket/README.md
 docs/sdks/ticketing/README.md
 docs/sdks/uc/README.md

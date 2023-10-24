@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [createAtsScorecard](#createatsscorecard) - Create a scorecard
-* [getAtsScorecard](#getatsscorecard) - Retrieve a scorecard
-* [listAtsScorecards](#listatsscorecards) - List all scorecards
-* [patchAtsScorecard](#patchatsscorecard) - Update a scorecard
-* [removeAtsScorecard](#removeatsscorecard) - Remove a scorecard
-* [updateAtsScorecard](#updateatsscorecard) - Update a scorecard
+* [createAtsDocument](#createatsdocument) - Create a document
+* [getAtsDocument](#getatsdocument) - Retrieve a document
+* [listAtsDocuments](#listatsdocuments) - List all documents
+* [patchAtsDocument](#patchatsdocument) - Update a document
+* [removeAtsDocument](#removeatsdocument) - Remove a document
+* [updateAtsDocument](#updateatsdocument) - Update a document
 
-## createAtsScorecard
+## createAtsDocument
 
-Create a scorecard
+Create a document
 
 ### Example Usage
 
@@ -20,11 +20,11 @@ Create a scorecard
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
-import com.unifiedapi.unifiedto.models.shared.AtsScorecardRecommendation;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsScorecardRaw;
+import com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentResponse;
+import com.unifiedapi.unifiedto.models.shared.AtsDocument;
+import com.unifiedapi.unifiedto.models.shared.AtsDocumentType;
+import com.unifiedapi.unifiedto.models.shared.PropertyAtsDocumentRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -37,24 +37,24 @@ public class Application {
                 }})
                 .build();
 
-            CreateAtsScorecardRequest req = new CreateAtsScorecardRequest("string"){{
-                atsScorecard = new AtsScorecard(new PropertyAtsScorecardRaw()){{
+            CreateAtsDocumentRequest req = new CreateAtsDocumentRequest("string"){{
+                atsDocument = new AtsDocument(new PropertyAtsDocumentRaw()){{
                     applicationId = "string";
                     candidateId = "string";
-                    comment = "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J";
-                    createdAt = OffsetDateTime.parse("2021-04-24T07:49:32.768Z");
+                    createdAt = OffsetDateTime.parse("2021-04-24T22:30:56.289Z");
+                    documentUrl = "string";
+                    filename = "mouse_per_missouri.mp4";
                     id = "<ID>";
-                    interviewId = "string";
-                    interviewerId = "string";
                     jobId = "string";
-                    recommendation = AtsScorecardRecommendation.NO;
-                    updatedAt = OffsetDateTime.parse("2022-04-01T17:31:47.454Z");
+                    type = AtsDocumentType.OFFER_PACKET;
+                    updatedAt = OffsetDateTime.parse("2021-12-28T09:27:32.859Z");
+                    userId = "string";
                 }};
             }};            
 
-            CreateAtsScorecardResponse res = sdk.document.createAtsScorecard(req);
+            CreateAtsDocumentResponse res = sdk.document.createAtsDocument(req);
 
-            if (res.atsScorecard != null) {
+            if (res.atsDocument != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -66,19 +66,19 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardRequest](../../models/operations/CreateAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentRequest](../../models/operations/CreateAtsDocumentRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse](../../models/operations/CreateAtsScorecardResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentResponse](../../models/operations/CreateAtsDocumentResponse.md)**
 
 
-## getAtsScorecard
+## getAtsDocument
 
-Retrieve a scorecard
+Retrieve a document
 
 ### Example Usage
 
@@ -86,8 +86,8 @@ Retrieve a scorecard
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetAtsScorecardRequest;
-import com.unifiedapi.unifiedto.models.operations.GetAtsScorecardResponse;
+import com.unifiedapi.unifiedto.models.operations.GetAtsDocumentRequest;
+import com.unifiedapi.unifiedto.models.operations.GetAtsDocumentResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
@@ -99,15 +99,15 @@ public class Application {
                 }})
                 .build();
 
-            GetAtsScorecardRequest req = new GetAtsScorecardRequest("string", "string"){{
+            GetAtsDocumentRequest req = new GetAtsDocumentRequest("string", "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
             }};            
 
-            GetAtsScorecardResponse res = sdk.document.getAtsScorecard(req);
+            GetAtsDocumentResponse res = sdk.document.getAtsDocument(req);
 
-            if (res.atsScorecard != null) {
+            if (res.atsDocument != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -119,19 +119,19 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [com.unifiedapi.unifiedto.models.operations.GetAtsScorecardRequest](../../models/operations/GetAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [com.unifiedapi.unifiedto.models.operations.GetAtsDocumentRequest](../../models/operations/GetAtsDocumentRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetAtsScorecardResponse](../../models/operations/GetAtsScorecardResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.GetAtsDocumentResponse](../../models/operations/GetAtsDocumentResponse.md)**
 
 
-## listAtsScorecards
+## listAtsDocuments
 
-List all scorecards
+List all documents
 
 ### Example Usage
 
@@ -139,8 +139,8 @@ List all scorecards
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsResponse;
+import com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsRequest;
+import com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -153,25 +153,22 @@ public class Application {
                 }})
                 .build();
 
-            ListAtsScorecardsRequest req = new ListAtsScorecardsRequest("string"){{
+            ListAtsDocumentsRequest req = new ListAtsDocumentsRequest("string"){{
                 applicationId = "string";
-                candidateId = "string";
                 fields = new String[]{{
                     add("string"),
                 }};
-                interviewId = "string";
-                jobId = "string";
-                limit = 5126.98d;
-                offset = 8077.44d;
+                limit = 9635.37d;
+                offset = 8402.77d;
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2023-08-19T17:42:56.145Z");
+                updatedGte = OffsetDateTime.parse("2022-08-30T11:38:20.739Z");
             }};            
 
-            ListAtsScorecardsResponse res = sdk.document.listAtsScorecards(req);
+            ListAtsDocumentsResponse res = sdk.document.listAtsDocuments(req);
 
-            if (res.atsScorecards != null) {
+            if (res.atsDocuments != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -183,19 +180,19 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsRequest](../../models/operations/ListAtsScorecardsRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsRequest](../../models/operations/ListAtsDocumentsRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsResponse](../../models/operations/ListAtsScorecardsResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsResponse](../../models/operations/ListAtsDocumentsResponse.md)**
 
 
-## patchAtsScorecard
+## patchAtsDocument
 
-Update a scorecard
+Update a document
 
 ### Example Usage
 
@@ -203,11 +200,11 @@ Update a scorecard
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
-import com.unifiedapi.unifiedto.models.shared.AtsScorecardRecommendation;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsScorecardRaw;
+import com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentResponse;
+import com.unifiedapi.unifiedto.models.shared.AtsDocument;
+import com.unifiedapi.unifiedto.models.shared.AtsDocumentType;
+import com.unifiedapi.unifiedto.models.shared.PropertyAtsDocumentRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -220,24 +217,24 @@ public class Application {
                 }})
                 .build();
 
-            PatchAtsScorecardRequest req = new PatchAtsScorecardRequest("string", "string"){{
-                atsScorecard = new AtsScorecard(new PropertyAtsScorecardRaw()){{
+            PatchAtsDocumentRequest req = new PatchAtsDocumentRequest("string", "string"){{
+                atsDocument = new AtsDocument(new PropertyAtsDocumentRaw()){{
                     applicationId = "string";
                     candidateId = "string";
-                    comment = "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support";
-                    createdAt = OffsetDateTime.parse("2023-10-06T15:26:03.447Z");
+                    createdAt = OffsetDateTime.parse("2021-04-01T09:34:15.248Z");
+                    documentUrl = "string";
+                    filename = "future_underpin.mp4v";
                     id = "<ID>";
-                    interviewId = "string";
-                    interviewerId = "string";
                     jobId = "string";
-                    recommendation = AtsScorecardRecommendation.YES;
-                    updatedAt = OffsetDateTime.parse("2021-11-28T07:58:12.100Z");
+                    type = AtsDocumentType.OFFER_LETTER;
+                    updatedAt = OffsetDateTime.parse("2022-02-14T01:39:21.030Z");
+                    userId = "string";
                 }};
             }};            
 
-            PatchAtsScorecardResponse res = sdk.document.patchAtsScorecard(req);
+            PatchAtsDocumentResponse res = sdk.document.patchAtsDocument(req);
 
-            if (res.atsScorecard != null) {
+            if (res.atsDocument != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -249,19 +246,19 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardRequest](../../models/operations/PatchAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentRequest](../../models/operations/PatchAtsDocumentRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse](../../models/operations/PatchAtsScorecardResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentResponse](../../models/operations/PatchAtsDocumentResponse.md)**
 
 
-## removeAtsScorecard
+## removeAtsDocument
 
-Remove a scorecard
+Remove a document
 
 ### Example Usage
 
@@ -269,8 +266,8 @@ Remove a scorecard
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse;
+import com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentRequest;
+import com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
@@ -282,9 +279,9 @@ public class Application {
                 }})
                 .build();
 
-            RemoveAtsScorecardRequest req = new RemoveAtsScorecardRequest("string", "string");            
+            RemoveAtsDocumentRequest req = new RemoveAtsDocumentRequest("string", "string");            
 
-            RemoveAtsScorecardResponse res = sdk.document.removeAtsScorecard(req);
+            RemoveAtsDocumentResponse res = sdk.document.removeAtsDocument(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -298,19 +295,19 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardRequest](../../models/operations/RemoveAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentRequest](../../models/operations/RemoveAtsDocumentRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse](../../models/operations/RemoveAtsScorecardResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentResponse](../../models/operations/RemoveAtsDocumentResponse.md)**
 
 
-## updateAtsScorecard
+## updateAtsDocument
 
-Update a scorecard
+Update a document
 
 ### Example Usage
 
@@ -318,11 +315,11 @@ Update a scorecard
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
-import com.unifiedapi.unifiedto.models.shared.AtsScorecardRecommendation;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsScorecardRaw;
+import com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentResponse;
+import com.unifiedapi.unifiedto.models.shared.AtsDocument;
+import com.unifiedapi.unifiedto.models.shared.AtsDocumentType;
+import com.unifiedapi.unifiedto.models.shared.PropertyAtsDocumentRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -335,24 +332,24 @@ public class Application {
                 }})
                 .build();
 
-            UpdateAtsScorecardRequest req = new UpdateAtsScorecardRequest("string", "string"){{
-                atsScorecard = new AtsScorecard(new PropertyAtsScorecardRaw()){{
+            UpdateAtsDocumentRequest req = new UpdateAtsDocumentRequest("string", "string"){{
+                atsDocument = new AtsDocument(new PropertyAtsDocumentRaw()){{
                     applicationId = "string";
                     candidateId = "string";
-                    comment = "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive";
-                    createdAt = OffsetDateTime.parse("2021-07-10T12:08:12.226Z");
+                    createdAt = OffsetDateTime.parse("2021-07-05T13:01:49.006Z");
+                    documentUrl = "string";
+                    filename = "unbranded_reprehenderit.jpg";
                     id = "<ID>";
-                    interviewId = "string";
-                    interviewerId = "string";
                     jobId = "string";
-                    recommendation = AtsScorecardRecommendation.NO;
-                    updatedAt = OffsetDateTime.parse("2021-07-26T04:45:45.856Z");
+                    type = AtsDocumentType.OFFER_PACKET;
+                    updatedAt = OffsetDateTime.parse("2021-12-02T17:00:21.700Z");
+                    userId = "string";
                 }};
             }};            
 
-            UpdateAtsScorecardResponse res = sdk.document.updateAtsScorecard(req);
+            UpdateAtsDocumentResponse res = sdk.document.updateAtsDocument(req);
 
-            if (res.atsScorecard != null) {
+            if (res.atsDocument != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -364,12 +361,12 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardRequest](../../models/operations/UpdateAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentRequest](../../models/operations/UpdateAtsDocumentRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse](../../models/operations/UpdateAtsScorecardResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentResponse](../../models/operations/UpdateAtsDocumentResponse.md)**
 

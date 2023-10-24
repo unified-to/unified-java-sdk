@@ -56,6 +56,7 @@ public class UnifiedTo {
     public Passthrough passthrough;
     public Person person;
     public Pipeline pipeline;
+    public Scorecard scorecard;
     public Ticket ticket;
     public Ticketing ticketing;
     public Uc uc;
@@ -228,6 +229,8 @@ public class UnifiedTo {
 		this.person = new Person(this.sdkConfiguration);
 		
 		this.pipeline = new Pipeline(this.sdkConfiguration);
+		
+		this.scorecard = new Scorecard(this.sdkConfiguration);
 		
 		this.ticket = new Ticket(this.sdkConfiguration);
 		
