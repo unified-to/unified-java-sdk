@@ -38,7 +38,7 @@ public class Application {
                 .build();
 
             CreateAtsDocumentRequest req = new CreateAtsDocumentRequest("string"){{
-                atsDocument = new AtsDocument(new PropertyAtsDocumentRaw()){{
+                atsDocument = new AtsDocument(){{
                     applicationId = "string";
                     candidateId = "string";
                     createdAt = OffsetDateTime.parse("2021-04-24T22:30:56.289Z");
@@ -46,6 +46,7 @@ public class Application {
                     filename = "mouse_per_missouri.mp4";
                     id = "<ID>";
                     jobId = "string";
+                    raw = new PropertyAtsDocumentRaw();
                     type = AtsDocumentType.OFFER_PACKET;
                     updatedAt = OffsetDateTime.parse("2021-12-28T09:27:32.859Z");
                     userId = "string";
@@ -218,7 +219,7 @@ public class Application {
                 .build();
 
             PatchAtsDocumentRequest req = new PatchAtsDocumentRequest("string", "string"){{
-                atsDocument = new AtsDocument(new PropertyAtsDocumentRaw()){{
+                atsDocument = new AtsDocument(){{
                     applicationId = "string";
                     candidateId = "string";
                     createdAt = OffsetDateTime.parse("2021-04-01T09:34:15.248Z");
@@ -226,6 +227,7 @@ public class Application {
                     filename = "future_underpin.mp4v";
                     id = "<ID>";
                     jobId = "string";
+                    raw = new PropertyAtsDocumentRaw();
                     type = AtsDocumentType.OFFER_LETTER;
                     updatedAt = OffsetDateTime.parse("2022-02-14T01:39:21.030Z");
                     userId = "string";
@@ -333,7 +335,7 @@ public class Application {
                 .build();
 
             UpdateAtsDocumentRequest req = new UpdateAtsDocumentRequest("string", "string"){{
-                atsDocument = new AtsDocument(new PropertyAtsDocumentRaw()){{
+                atsDocument = new AtsDocument(){{
                     applicationId = "string";
                     candidateId = "string";
                     createdAt = OffsetDateTime.parse("2021-07-05T13:01:49.006Z");
@@ -341,6 +343,7 @@ public class Application {
                     filename = "unbranded_reprehenderit.jpg";
                     id = "<ID>";
                     jobId = "string";
+                    raw = new PropertyAtsDocumentRaw();
                     type = AtsDocumentType.OFFER_PACKET;
                     updatedAt = OffsetDateTime.parse("2021-12-02T17:00:21.700Z");
                     userId = "string";

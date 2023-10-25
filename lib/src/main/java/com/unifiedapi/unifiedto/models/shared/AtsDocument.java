@@ -80,6 +80,7 @@ public class AtsDocument {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     public PropertyAtsDocumentRaw raw;
 
@@ -117,7 +118,5 @@ public class AtsDocument {
         return this;
     }
     
-    public AtsDocument(@JsonProperty("raw") PropertyAtsDocumentRaw raw) {
-        this.raw = raw;
-  }
+    public AtsDocument(){}
 }
