@@ -9,9 +9,6 @@ import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 
 
 public class CreateUnifiedWebhookRequest {
-    /**
-     * A webhook is used to POST new/updated information to your server.
-     */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.unifiedapi.unifiedto.models.shared.Webhook webhook;
 

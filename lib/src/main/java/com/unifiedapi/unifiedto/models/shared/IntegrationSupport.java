@@ -83,6 +83,15 @@ public class IntegrationSupport {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("list_invoice_id")
+    public Boolean listInvoiceId;
+
+    public IntegrationSupport withListInvoiceId(Boolean listInvoiceId) {
+        this.listInvoiceId = listInvoiceId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_job_id")
     public Boolean listJobId;
 

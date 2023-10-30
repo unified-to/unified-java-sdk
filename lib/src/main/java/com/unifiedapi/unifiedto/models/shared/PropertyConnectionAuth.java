@@ -177,6 +177,26 @@ public class PropertyConnectionAuth {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("refresh_token_expires_date")
+    public OffsetDateTime refreshTokenExpiresDate;
+
+    public PropertyConnectionAuth withRefreshTokenExpiresDate(OffsetDateTime refreshTokenExpiresDate) {
+        this.refreshTokenExpiresDate = refreshTokenExpiresDate;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("refresh_token_expires_in")
+    public Double refreshTokenExpiresIn;
+
+    public PropertyConnectionAuth withRefreshTokenExpiresIn(Double refreshTokenExpiresIn) {
+        this.refreshTokenExpiresIn = refreshTokenExpiresIn;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
 
