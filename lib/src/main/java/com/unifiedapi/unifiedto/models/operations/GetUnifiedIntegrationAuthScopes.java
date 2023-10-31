@@ -8,6 +8,12 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum GetUnifiedIntegrationAuthScopes {
     AUTH_LOGIN("auth_login"),
+    ACCOUNTING_INVOICE_READ("accounting_invoice_read"),
+    ACCOUNTING_INVOICE_WRITE("accounting_invoice_write"),
+    ACCOUNTING_CUSTOMER_READ("accounting_customer_read"),
+    ACCOUNTING_CUSTOMER_WRITE("accounting_customer_write"),
+    ACCOUNTING_PAYMENT_READ("accounting_payment_read"),
+    ACCOUNTING_PAYMENT_WRITE("accounting_payment_write"),
     ATS_SCORECARD_READ("ats_scorecard_read"),
     ATS_SCORECARD_WRITE("ats_scorecard_write"),
     ATS_APPLICATION_READ("ats_application_read"),

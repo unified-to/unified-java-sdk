@@ -88,7 +88,7 @@ public class Application {
                 lang = "string";
                 redirect = false;
                 scopes = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthScopes[]{{
-                    add(GetUnifiedIntegrationAuthScopes.HRIS_GROUP_READ),
+                    add(GetUnifiedIntegrationAuthScopes.HRIS_EMPLOYEE_WRITE),
                 }};
                 state = "string";
                 subdomain = "string";
@@ -146,7 +146,7 @@ public class Application {
             ListUnifiedIntegrationWorkspacesRequest req = new ListUnifiedIntegrationWorkspacesRequest("string"){{
                 active = false;
                 categories = new com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesCategories[]{{
-                    add(ListUnifiedIntegrationWorkspacesCategories.MARTECH),
+                    add(ListUnifiedIntegrationWorkspacesCategories.TICKETING),
                 }};
                 env = "string";
                 limit = 9072.99d;

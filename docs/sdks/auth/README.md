@@ -37,7 +37,7 @@ public class Application {
                 lang = "string";
                 redirect = false;
                 scopes = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthScopes[]{{
-                    add(GetUnifiedIntegrationAuthScopes.HRIS_GROUP_READ),
+                    add(GetUnifiedIntegrationAuthScopes.HRIS_EMPLOYEE_WRITE),
                 }};
                 state = "string";
                 subdomain = "string";

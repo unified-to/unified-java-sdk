@@ -49,9 +49,9 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.shared.Connection req = new Connection(new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-    add(PropertyConnectionCategories.UC),
+    add(PropertyConnectionCategories.ACCOUNTING),
 }}, "string", new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-    add(PropertyConnectionPermissions.CRM_DEAL_WRITE),
+    add(PropertyConnectionPermissions.CRM_COMPANY_WRITE),
 }}){{
                 auth = new PropertyConnectionAuth(){{
                     accessToken = "string";
@@ -146,7 +146,7 @@ public class Application {
             CreateUnifiedWebhookRequest req = new CreateUnifiedWebhookRequest("string", "string"){{
                 webhook = new Webhook("string", new com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents[]{{
                     add(PropertyWebhookEvents.CREATED),
-                }}, "string", "string", 188.12d, WebhookObjectType.CRM_LEAD, "string"){{
+                }}, "string", "string", 188.12d, WebhookObjectType.CRM_EVENT, "string"){{
                     checkedAt = OffsetDateTime.parse("2022-11-04T14:37:16.392Z");
                     createdAt = OffsetDateTime.parse("2021-03-22T19:34:26.447Z");
                     environment = "string";
@@ -364,7 +364,7 @@ public class Application {
                 lang = "string";
                 redirect = false;
                 scopes = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthScopes[]{{
-                    add(GetUnifiedIntegrationAuthScopes.HRIS_GROUP_READ),
+                    add(GetUnifiedIntegrationAuthScopes.HRIS_EMPLOYEE_WRITE),
                 }};
                 state = "string";
                 subdomain = "string";
@@ -533,7 +533,7 @@ public class Application {
 
             ListUnifiedConnectionsRequest req = new ListUnifiedConnectionsRequest(){{
                 categories = new com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsCategories[]{{
-                    add(ListUnifiedConnectionsCategories.CRM),
+                    add(ListUnifiedConnectionsCategories.ENRICH),
                 }};
                 env = "string";
                 externalXref = "string";
@@ -595,7 +595,7 @@ public class Application {
             ListUnifiedIntegrationWorkspacesRequest req = new ListUnifiedIntegrationWorkspacesRequest("string"){{
                 active = false;
                 categories = new com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesCategories[]{{
-                    add(ListUnifiedIntegrationWorkspacesCategories.MARTECH),
+                    add(ListUnifiedIntegrationWorkspacesCategories.TICKETING),
                 }};
                 env = "string";
                 limit = 9072.99d;
@@ -779,9 +779,9 @@ public class Application {
 
             PatchUnifiedConnectionRequest req = new PatchUnifiedConnectionRequest("string"){{
                 connection = new Connection(new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                    add(PropertyConnectionCategories.ENRICH),
+                    add(PropertyConnectionCategories.MARTECH),
                 }}, "string", new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                    add(PropertyConnectionPermissions.MARTECH_MEMBER_WRITE),
+                    add(PropertyConnectionPermissions.MARTECH_LIST_WRITE),
                 }}){{
                     auth = new PropertyConnectionAuth(){{
                         accessToken = "string";
@@ -977,7 +977,7 @@ public class Application {
                 connection = new Connection(new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
                     add(PropertyConnectionCategories.TICKETING),
                 }}, "string", new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                    add(PropertyConnectionPermissions.CRM_LEAD_READ),
+                    add(PropertyConnectionPermissions.CRM_DEAL_WRITE),
                 }}){{
                     auth = new PropertyConnectionAuth(){{
                         accessToken = "string";

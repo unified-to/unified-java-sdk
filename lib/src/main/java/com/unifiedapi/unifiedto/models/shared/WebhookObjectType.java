@@ -7,6 +7,9 @@ package com.unifiedapi.unifiedto.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum WebhookObjectType {
+    ACCOUNTING_CUSTOMER("accounting_customer"),
+    ACCOUNTING_INVOICE("accounting_invoice"),
+    ACCOUNTING_PAYMENT("accounting_payment"),
     ATS_APPLICATION("ats_application"),
     ATS_CANDIDATE("ats_candidate"),
     ATS_DOCUMENT("ats_document"),

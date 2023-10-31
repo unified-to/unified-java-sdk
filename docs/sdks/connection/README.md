@@ -39,9 +39,9 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.shared.Connection req = new Connection(new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-    add(PropertyConnectionCategories.UC),
+    add(PropertyConnectionCategories.ACCOUNTING),
 }}, "string", new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-    add(PropertyConnectionPermissions.CRM_DEAL_WRITE),
+    add(PropertyConnectionPermissions.CRM_COMPANY_WRITE),
 }}){{
                 auth = new PropertyConnectionAuth(){{
                     accessToken = "string";
@@ -181,7 +181,7 @@ public class Application {
 
             ListUnifiedConnectionsRequest req = new ListUnifiedConnectionsRequest(){{
                 categories = new com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsCategories[]{{
-                    add(ListUnifiedConnectionsCategories.CRM),
+                    add(ListUnifiedConnectionsCategories.ENRICH),
                 }};
                 env = "string";
                 externalXref = "string";
@@ -247,9 +247,9 @@ public class Application {
 
             PatchUnifiedConnectionRequest req = new PatchUnifiedConnectionRequest("string"){{
                 connection = new Connection(new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                    add(PropertyConnectionCategories.ENRICH),
+                    add(PropertyConnectionCategories.MARTECH),
                 }}, "string", new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                    add(PropertyConnectionPermissions.MARTECH_MEMBER_WRITE),
+                    add(PropertyConnectionPermissions.MARTECH_LIST_WRITE),
                 }}){{
                     auth = new PropertyConnectionAuth(){{
                         accessToken = "string";
@@ -396,7 +396,7 @@ public class Application {
                 connection = new Connection(new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
                     add(PropertyConnectionCategories.TICKETING),
                 }}, "string", new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                    add(PropertyConnectionPermissions.CRM_LEAD_READ),
+                    add(PropertyConnectionPermissions.CRM_DEAL_WRITE),
                 }}){{
                     auth = new PropertyConnectionAuth(){{
                         accessToken = "string";

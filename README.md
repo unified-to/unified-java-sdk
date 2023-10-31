@@ -12,7 +12,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.10.4'
+implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.10.5'
 ```
 <!-- End SDK Installation -->
 
@@ -22,9 +22,19 @@ implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.10.4'
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallRequest;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallResponse;
+import com.unifiedapi.unifiedto.models.operations.CreateAccountingCustomerRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateAccountingCustomerResponse;
+import com.unifiedapi.unifiedto.models.shared.AccountingCustomer;
+import com.unifiedapi.unifiedto.models.shared.AccountingCustomerTaxExemption;
+import com.unifiedapi.unifiedto.models.shared.AccountingEmail;
+import com.unifiedapi.unifiedto.models.shared.AccountingEmailType;
+import com.unifiedapi.unifiedto.models.shared.AccountingTelephone;
+import com.unifiedapi.unifiedto.models.shared.AccountingTelephoneType;
+import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerBillingAddress;
+import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerRaw;
+import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerShippingAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
@@ -35,11 +45,52 @@ public class Application {
                 }})
                 .build();
 
-            GetUnifiedApicallRequest req = new GetUnifiedApicallRequest("string");            
+            CreateAccountingCustomerRequest req = new CreateAccountingCustomerRequest("string"){{
+                accountingCustomer = new AccountingCustomer(){{
+                    billingAddress = new PropertyAccountingCustomerBillingAddress(){{
+                        address1 = "string";
+                        address2 = "string";
+                        city = "New Raulfield";
+                        country = "Libyan Arab Jamahiriya";
+                        countryCode = "IN";
+                        postalCode = "22232";
+                        region = "string";
+                        regionCode = "string";
+                    }};
+                    createdAt = OffsetDateTime.parse("2021-07-22T19:16:48.798Z");
+                    currency = "Dalasi";
+                    emails = new com.unifiedapi.unifiedto.models.shared.AccountingEmail[]{{
+                        add(new AccountingEmail("string"){{
+                            email = "Loren78@gmail.com";
+                        }}),
+                    }};
+                    id = "<ID>";
+                    isActive = false;
+                    name = "string";
+                    raw = new PropertyAccountingCustomerRaw();
+                    shippingAddress = new PropertyAccountingCustomerShippingAddress(){{
+                        address1 = "string";
+                        address2 = "string";
+                        city = "North Stanford";
+                        country = "Iceland";
+                        countryCode = "AZ";
+                        postalCode = "11906-2906";
+                        region = "string";
+                        regionCode = "string";
+                    }};
+                    taxExemption = AccountingCustomerTaxExemption.RESALE;
+                    telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
+                        add(new AccountingTelephone("string"){{
+                            telephone = "string";
+                        }}),
+                    }};
+                    updatedAt = OffsetDateTime.parse("2021-12-07T14:42:11.734Z");
+                }};
+            }};            
 
-            GetUnifiedApicallResponse res = sdk.apicall.getUnifiedApicall(req);
+            CreateAccountingCustomerResponse res = sdk.accounting.createAccountingCustomer(req);
 
-            if (res.apiCall != null) {
+            if (res.accountingCustomer != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -53,6 +104,27 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
+
+### [accounting](docs/sdks/accounting/README.md)
+
+* [createAccountingCustomer](docs/sdks/accounting/README.md#createaccountingcustomer) - Create a customer
+* [createAccountingInvoice](docs/sdks/accounting/README.md#createaccountinginvoice) - Create a invoice
+* [createAccountingPayment](docs/sdks/accounting/README.md#createaccountingpayment) - Create a payment
+* [getAccountingCustomer](docs/sdks/accounting/README.md#getaccountingcustomer) - Retrieve a customer
+* [getAccountingInvoice](docs/sdks/accounting/README.md#getaccountinginvoice) - Retrieve a invoice
+* [getAccountingPayment](docs/sdks/accounting/README.md#getaccountingpayment) - Retrieve a payment
+* [listAccountingCustomers](docs/sdks/accounting/README.md#listaccountingcustomers) - List all customers
+* [listAccountingInvoices](docs/sdks/accounting/README.md#listaccountinginvoices) - List all invoices
+* [listAccountingPayments](docs/sdks/accounting/README.md#listaccountingpayments) - List all payments
+* [patchAccountingCustomer](docs/sdks/accounting/README.md#patchaccountingcustomer) - Update a customer
+* [patchAccountingInvoice](docs/sdks/accounting/README.md#patchaccountinginvoice) - Update a invoice
+* [patchAccountingPayment](docs/sdks/accounting/README.md#patchaccountingpayment) - Update a payment
+* [removeAccountingCustomer](docs/sdks/accounting/README.md#removeaccountingcustomer) - Remove a customer
+* [removeAccountingInvoice](docs/sdks/accounting/README.md#removeaccountinginvoice) - Remove a invoice
+* [removeAccountingPayment](docs/sdks/accounting/README.md#removeaccountingpayment) - Remove a payment
+* [updateAccountingCustomer](docs/sdks/accounting/README.md#updateaccountingcustomer) - Update a customer
+* [updateAccountingInvoice](docs/sdks/accounting/README.md#updateaccountinginvoice) - Update a invoice
+* [updateAccountingPayment](docs/sdks/accounting/README.md#updateaccountingpayment) - Update a payment
 
 ### [apicall](docs/sdks/apicall/README.md)
 
@@ -206,11 +278,17 @@ public class Application {
 
 ### [customer](docs/sdks/customer/README.md)
 
+* [createAccountingCustomer](docs/sdks/customer/README.md#createaccountingcustomer) - Create a customer
 * [createTicketingCustomer](docs/sdks/customer/README.md#createticketingcustomer) - Create a customer
+* [getAccountingCustomer](docs/sdks/customer/README.md#getaccountingcustomer) - Retrieve a customer
 * [getTicketingCustomer](docs/sdks/customer/README.md#getticketingcustomer) - Retrieve a customer
+* [listAccountingCustomers](docs/sdks/customer/README.md#listaccountingcustomers) - List all customers
 * [listTicketingCustomers](docs/sdks/customer/README.md#listticketingcustomers) - List all customers
+* [patchAccountingCustomer](docs/sdks/customer/README.md#patchaccountingcustomer) - Update a customer
 * [patchTicketingCustomer](docs/sdks/customer/README.md#patchticketingcustomer) - Update a customer
+* [removeAccountingCustomer](docs/sdks/customer/README.md#removeaccountingcustomer) - Remove a customer
 * [removeTicketingCustomer](docs/sdks/customer/README.md#removeticketingcustomer) - Remove a customer
+* [updateAccountingCustomer](docs/sdks/customer/README.md#updateaccountingcustomer) - Update a customer
 * [updateTicketingCustomer](docs/sdks/customer/README.md#updateticketingcustomer) - Update a customer
 
 ### [deal](docs/sdks/deal/README.md)
@@ -303,6 +381,15 @@ public class Application {
 * [removeAtsInterview](docs/sdks/interview/README.md#removeatsinterview) - Remove a interview
 * [updateAtsInterview](docs/sdks/interview/README.md#updateatsinterview) - Update a interview
 
+### [invoice](docs/sdks/invoice/README.md)
+
+* [createAccountingInvoice](docs/sdks/invoice/README.md#createaccountinginvoice) - Create a invoice
+* [getAccountingInvoice](docs/sdks/invoice/README.md#getaccountinginvoice) - Retrieve a invoice
+* [listAccountingInvoices](docs/sdks/invoice/README.md#listaccountinginvoices) - List all invoices
+* [patchAccountingInvoice](docs/sdks/invoice/README.md#patchaccountinginvoice) - Update a invoice
+* [removeAccountingInvoice](docs/sdks/invoice/README.md#removeaccountinginvoice) - Remove a invoice
+* [updateAccountingInvoice](docs/sdks/invoice/README.md#updateaccountinginvoice) - Update a invoice
+
 ### [job](docs/sdks/job/README.md)
 
 * [createAtsJob](docs/sdks/job/README.md#createatsjob) - Create a job
@@ -374,6 +461,15 @@ public class Application {
 * [patchPassthrough](docs/sdks/passthrough/README.md#patchpassthrough) - Passthrough PUT
 * [removePassthrough](docs/sdks/passthrough/README.md#removepassthrough) - Passthrough DELETE
 * [updatePassthrough](docs/sdks/passthrough/README.md#updatepassthrough) - Passthrough PUT
+
+### [payment](docs/sdks/payment/README.md)
+
+* [createAccountingPayment](docs/sdks/payment/README.md#createaccountingpayment) - Create a payment
+* [getAccountingPayment](docs/sdks/payment/README.md#getaccountingpayment) - Retrieve a payment
+* [listAccountingPayments](docs/sdks/payment/README.md#listaccountingpayments) - List all payments
+* [patchAccountingPayment](docs/sdks/payment/README.md#patchaccountingpayment) - Update a payment
+* [removeAccountingPayment](docs/sdks/payment/README.md#removeaccountingpayment) - Remove a payment
+* [updateAccountingPayment](docs/sdks/payment/README.md#updateaccountingpayment) - Update a payment
 
 ### [person](docs/sdks/person/README.md)
 

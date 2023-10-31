@@ -15,7 +15,8 @@ public enum ListUnifiedConnectionsCategories {
     ENRICH("enrich"),
     MARTECH("martech"),
     TICKETING("ticketing"),
-    UC("uc");
+    UC("uc"),
+    ACCOUNTING("accounting");
 
     @JsonValue
     public final String value;

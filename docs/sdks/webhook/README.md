@@ -39,7 +39,7 @@ public class Application {
             CreateUnifiedWebhookRequest req = new CreateUnifiedWebhookRequest("string", "string"){{
                 webhook = new Webhook("string", new com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents[]{{
                     add(PropertyWebhookEvents.CREATED),
-                }}, "string", "string", 188.12d, WebhookObjectType.CRM_LEAD, "string"){{
+                }}, "string", "string", 188.12d, WebhookObjectType.CRM_EVENT, "string"){{
                     checkedAt = OffsetDateTime.parse("2022-11-04T14:37:16.392Z");
                     createdAt = OffsetDateTime.parse("2021-03-22T19:34:26.447Z");
                     environment = "string";

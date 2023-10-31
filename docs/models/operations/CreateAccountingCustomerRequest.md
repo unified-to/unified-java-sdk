@@ -1,0 +1,9 @@
+# CreateAccountingCustomerRequest
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `accountingCustomer`                                                                                   | [com.unifiedapi.unifiedto.models.shared.AccountingCustomer](../../models/shared/AccountingCustomer.md) | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |
+| `connectionId`                                                                                         | *String*                                                                                               | :heavy_check_mark:                                                                                     | ID of the connection                                                                                   |

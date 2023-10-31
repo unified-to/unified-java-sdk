@@ -25,6 +25,7 @@ public class UnifiedTo {
         "https://api-eu.unified.to",
 	};
   	
+    public Accounting accounting;
     public Apicall apicall;
     public Application application;
     public Ats ats;
@@ -46,6 +47,7 @@ public class UnifiedTo {
     public Hris hris;
     public Integration integration;
     public Interview interview;
+    public Invoice invoice;
     public Job job;
     public Lead lead;
     public List list;
@@ -54,6 +56,7 @@ public class UnifiedTo {
     public Member member;
     public Note note;
     public Passthrough passthrough;
+    public Payment payment;
     public Person person;
     public Pipeline pipeline;
     public Scorecard scorecard;
@@ -168,6 +171,8 @@ public class UnifiedTo {
 	private UnifiedTo(SDKConfiguration sdkConfiguration) throws Exception {
 		this.sdkConfiguration = sdkConfiguration;
 		
+		this.accounting = new Accounting(this.sdkConfiguration);
+		
 		this.apicall = new Apicall(this.sdkConfiguration);
 		
 		this.application = new Application(this.sdkConfiguration);
@@ -210,6 +215,8 @@ public class UnifiedTo {
 		
 		this.interview = new Interview(this.sdkConfiguration);
 		
+		this.invoice = new Invoice(this.sdkConfiguration);
+		
 		this.job = new Job(this.sdkConfiguration);
 		
 		this.lead = new Lead(this.sdkConfiguration);
@@ -225,6 +232,8 @@ public class UnifiedTo {
 		this.note = new Note(this.sdkConfiguration);
 		
 		this.passthrough = new Passthrough(this.sdkConfiguration);
+		
+		this.payment = new Payment(this.sdkConfiguration);
 		
 		this.person = new Person(this.sdkConfiguration);
 		
