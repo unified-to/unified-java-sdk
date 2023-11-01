@@ -46,10 +46,10 @@ public class RemoveAtsInterviewResponse {
      * Successful
      */
     
-    public String removeAtsInterviewDefaultApplicationJSONString;
+    public String res;
 
-    public RemoveAtsInterviewResponse withRemoveAtsInterviewDefaultApplicationJSONString(String removeAtsInterviewDefaultApplicationJSONString) {
-        this.removeAtsInterviewDefaultApplicationJSONString = removeAtsInterviewDefaultApplicationJSONString;
+    public RemoveAtsInterviewResponse withRes(String res) {
+        this.res = res;
         return this;
     }
     

@@ -218,14 +218,14 @@ public class Ticket {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketResponse(contentType, httpRes.statusCode()) {{
-            removeTicketingTicketDefaultApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.removeTicketingTicketDefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 

@@ -49,14 +49,14 @@ public class Auth {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse res = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse(contentType, httpRes.statusCode()) {{
-            getUnifiedIntegrationAuth200ApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.getUnifiedIntegrationAuth200ApplicationJSONString = out;
+                res.res = out;
             }
         }
 
@@ -94,14 +94,14 @@ public class Auth {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginResponse res = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginResponse(contentType, httpRes.statusCode()) {{
-            getUnifiedIntegrationLogin200ApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.getUnifiedIntegrationLogin200ApplicationJSONString = out;
+                res.res = out;
             }
         }
 

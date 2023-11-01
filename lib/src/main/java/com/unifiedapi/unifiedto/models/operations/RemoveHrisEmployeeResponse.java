@@ -46,10 +46,10 @@ public class RemoveHrisEmployeeResponse {
      * Successful
      */
     
-    public String removeHrisEmployeeDefaultApplicationJSONString;
+    public String res;
 
-    public RemoveHrisEmployeeResponse withRemoveHrisEmployeeDefaultApplicationJSONString(String removeHrisEmployeeDefaultApplicationJSONString) {
-        this.removeHrisEmployeeDefaultApplicationJSONString = removeHrisEmployeeDefaultApplicationJSONString;
+    public RemoveHrisEmployeeResponse withRes(String res) {
+        this.res = res;
         return this;
     }
     

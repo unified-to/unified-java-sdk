@@ -46,10 +46,10 @@ public class RemoveCrmEventResponse {
      * Successful
      */
     
-    public String removeCrmEventDefaultApplicationJSONString;
+    public String res;
 
-    public RemoveCrmEventResponse withRemoveCrmEventDefaultApplicationJSONString(String removeCrmEventDefaultApplicationJSONString) {
-        this.removeCrmEventDefaultApplicationJSONString = removeCrmEventDefaultApplicationJSONString;
+    public RemoveCrmEventResponse withRes(String res) {
+        this.res = res;
         return this;
     }
     

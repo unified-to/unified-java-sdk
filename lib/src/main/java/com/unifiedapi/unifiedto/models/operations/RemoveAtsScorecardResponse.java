@@ -46,10 +46,10 @@ public class RemoveAtsScorecardResponse {
      * Successful
      */
     
-    public String removeAtsScorecardDefaultApplicationJSONString;
+    public String res;
 
-    public RemoveAtsScorecardResponse withRemoveAtsScorecardDefaultApplicationJSONString(String removeAtsScorecardDefaultApplicationJSONString) {
-        this.removeAtsScorecardDefaultApplicationJSONString = removeAtsScorecardDefaultApplicationJSONString;
+    public RemoveAtsScorecardResponse withRes(String res) {
+        this.res = res;
         return this;
     }
     

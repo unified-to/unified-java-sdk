@@ -46,10 +46,10 @@ public class GetUnifiedIntegrationAuthResponse {
      * Successful
      */
     
-    public String getUnifiedIntegrationAuth200ApplicationJSONString;
+    public String res;
 
-    public GetUnifiedIntegrationAuthResponse withGetUnifiedIntegrationAuth200ApplicationJSONString(String getUnifiedIntegrationAuth200ApplicationJSONString) {
-        this.getUnifiedIntegrationAuth200ApplicationJSONString = getUnifiedIntegrationAuth200ApplicationJSONString;
+    public GetUnifiedIntegrationAuthResponse withRes(String res) {
+        this.res = res;
         return this;
     }
     

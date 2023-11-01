@@ -1,5 +1,5 @@
 # Login
-(*login*)
+(*.login*)
 
 ### Available Operations
 
@@ -38,7 +38,7 @@ public class Application {
 
             GetUnifiedIntegrationLoginResponse res = sdk.login.getUnifiedIntegrationLogin(req);
 
-            if (res.getUnifiedIntegrationLogin200ApplicationJSONString != null) {
+            if (res.res != null) {
                 // handle response
             }
         } catch (Exception e) {

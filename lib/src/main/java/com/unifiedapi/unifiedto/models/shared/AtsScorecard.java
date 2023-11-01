@@ -99,9 +99,9 @@ public class AtsScorecard {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendation")
-    public AtsScorecardRecommendation recommendation;
+    public Recommendation recommendation;
 
-    public AtsScorecard withRecommendation(AtsScorecardRecommendation recommendation) {
+    public AtsScorecard withRecommendation(Recommendation recommendation) {
         this.recommendation = recommendation;
         return this;
     }

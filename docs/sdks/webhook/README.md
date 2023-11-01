@@ -1,5 +1,5 @@
 # Webhook
-(*webhook*)
+(*.webhook*)
 
 ### Available Operations
 
@@ -18,13 +18,13 @@ To maintain compatibility with the webhooks specification and Zapier webhooks, o
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookEvents;
 import com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookResponse;
+import com.unifiedapi.unifiedto.models.operations.Events;
+import com.unifiedapi.unifiedto.models.shared.ObjectType;
 import com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.Webhook;
-import com.unifiedapi.unifiedto.models.shared.WebhookObjectType;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -39,7 +39,7 @@ public class Application {
             CreateUnifiedWebhookRequest req = new CreateUnifiedWebhookRequest("string", "string"){{
                 webhook = new Webhook("string", new com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents[]{{
                     add(PropertyWebhookEvents.CREATED),
-                }}, "string", "string", 188.12d, WebhookObjectType.CRM_EVENT, "string"){{
+                }}, "string", "string", 188.12d, ObjectType.CRM_EVENT, "string"){{
                     checkedAt = OffsetDateTime.parse("2022-11-04T14:37:16.392Z");
                     createdAt = OffsetDateTime.parse("2021-03-22T19:34:26.447Z");
                     environment = "string";
@@ -50,8 +50,8 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2022-08-09T17:23:28.216Z");
                 }};
-                events = new com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookEvents[]{{
-                    add(CreateUnifiedWebhookEvents.CREATED),
+                events = new com.unifiedapi.unifiedto.models.operations.Events[]{{
+                    add(Events.CREATED),
                 }};
             }};            
 

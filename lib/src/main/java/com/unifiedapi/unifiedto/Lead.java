@@ -218,14 +218,14 @@ public class Lead {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         com.unifiedapi.unifiedto.models.operations.RemoveCrmLeadResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveCrmLeadResponse(contentType, httpRes.statusCode()) {{
-            removeCrmLeadDefaultApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.removeCrmLeadDefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 

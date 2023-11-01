@@ -100,9 +100,9 @@ public class EnrichPerson {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
-    public EnrichPersonGender gender;
+    public Gender gender;
 
-    public EnrichPerson withGender(EnrichPersonGender gender) {
+    public EnrichPerson withGender(Gender gender) {
         this.gender = gender;
         return this;
     }

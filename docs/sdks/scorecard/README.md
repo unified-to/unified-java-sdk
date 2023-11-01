@@ -1,5 +1,5 @@
 # Scorecard
-(*scorecard*)
+(*.scorecard*)
 
 ### Available Operations
 
@@ -23,8 +23,8 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
-import com.unifiedapi.unifiedto.models.shared.AtsScorecardRecommendation;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsScorecardRaw;
+import com.unifiedapi.unifiedto.models.shared.Recommendation;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -47,7 +47,7 @@ public class Application {
                     interviewId = "string";
                     interviewerId = "string";
                     jobId = "string";
-                    recommendation = AtsScorecardRecommendation.NO;
+                    recommendation = Recommendation.NO;
                     updatedAt = OffsetDateTime.parse("2022-04-01T17:31:47.454Z");
                 }};
             }};            
@@ -206,8 +206,8 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
-import com.unifiedapi.unifiedto.models.shared.AtsScorecardRecommendation;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsScorecardRaw;
+import com.unifiedapi.unifiedto.models.shared.Recommendation;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -230,7 +230,7 @@ public class Application {
                     interviewId = "string";
                     interviewerId = "string";
                     jobId = "string";
-                    recommendation = AtsScorecardRecommendation.YES;
+                    recommendation = Recommendation.YES;
                     updatedAt = OffsetDateTime.parse("2021-11-28T07:58:12.100Z");
                 }};
             }};            
@@ -321,8 +321,8 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
-import com.unifiedapi.unifiedto.models.shared.AtsScorecardRecommendation;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsScorecardRaw;
+import com.unifiedapi.unifiedto.models.shared.Recommendation;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -345,7 +345,7 @@ public class Application {
                     interviewId = "string";
                     interviewerId = "string";
                     jobId = "string";
-                    recommendation = AtsScorecardRecommendation.NO;
+                    recommendation = Recommendation.NO;
                     updatedAt = OffsetDateTime.parse("2021-07-26T04:45:45.856Z");
                 }};
             }};            

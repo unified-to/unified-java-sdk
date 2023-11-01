@@ -1,5 +1,5 @@
 # Connection
-(*connection*)
+(*.connection*)
 
 ### Available Operations
 
@@ -164,7 +164,7 @@ List all connections
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsCategories;
+import com.unifiedapi.unifiedto.models.operations.Categories;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -180,8 +180,8 @@ public class Application {
                 .build();
 
             ListUnifiedConnectionsRequest req = new ListUnifiedConnectionsRequest(){{
-                categories = new com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsCategories[]{{
-                    add(ListUnifiedConnectionsCategories.ENRICH),
+                categories = new com.unifiedapi.unifiedto.models.operations.Categories[]{{
+                    add(Categories.ENRICH),
                 }};
                 env = "string";
                 externalXref = "string";

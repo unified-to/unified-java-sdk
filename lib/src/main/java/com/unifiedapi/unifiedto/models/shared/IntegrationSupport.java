@@ -246,9 +246,9 @@ public class IntegrationSupport {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhook_type")
-    public IntegrationSupportWebhookType webhookType;
+    public WebhookType webhookType;
 
-    public IntegrationSupport withWebhookType(IntegrationSupportWebhookType webhookType) {
+    public IntegrationSupport withWebhookType(WebhookType webhookType) {
         this.webhookType = webhookType;
         return this;
     }

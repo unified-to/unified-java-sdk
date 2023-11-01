@@ -1078,14 +1078,14 @@ public class Ats {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationResponse(contentType, httpRes.statusCode()) {{
-            removeAtsApplicationDefaultApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.removeAtsApplicationDefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 
@@ -1116,14 +1116,14 @@ public class Ats {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         com.unifiedapi.unifiedto.models.operations.RemoveAtsCandidateResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAtsCandidateResponse(contentType, httpRes.statusCode()) {{
-            removeAtsCandidateDefaultApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.removeAtsCandidateDefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 
@@ -1154,14 +1154,14 @@ public class Ats {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentResponse(contentType, httpRes.statusCode()) {{
-            removeAtsDocumentDefaultApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.removeAtsDocumentDefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 
@@ -1192,14 +1192,14 @@ public class Ats {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         com.unifiedapi.unifiedto.models.operations.RemoveAtsInterviewResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAtsInterviewResponse(contentType, httpRes.statusCode()) {{
-            removeAtsInterviewDefaultApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.removeAtsInterviewDefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 
@@ -1230,14 +1230,14 @@ public class Ats {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         com.unifiedapi.unifiedto.models.operations.RemoveAtsJobResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAtsJobResponse(contentType, httpRes.statusCode()) {{
-            removeAtsJobDefaultApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.removeAtsJobDefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 
@@ -1268,14 +1268,14 @@ public class Ats {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse(contentType, httpRes.statusCode()) {{
-            removeAtsScorecardDefaultApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.removeAtsScorecardDefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 

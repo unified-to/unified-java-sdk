@@ -218,14 +218,14 @@ public class File {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         com.unifiedapi.unifiedto.models.operations.RemoveCrmFileResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveCrmFileResponse(contentType, httpRes.statusCode()) {{
-            removeCrmFileDefaultApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.removeCrmFileDefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 

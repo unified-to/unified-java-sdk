@@ -1,5 +1,5 @@
 # Employee
-(*employee*)
+(*.employee*)
 
 ### Available Operations
 
@@ -22,15 +22,15 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeResponse;
+import com.unifiedapi.unifiedto.models.shared.EmploymentStatus;
 import com.unifiedapi.unifiedto.models.shared.HrisEmail;
 import com.unifiedapi.unifiedto.models.shared.HrisEmailType;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployee;
-import com.unifiedapi.unifiedto.models.shared.HrisEmployeeEmploymentStatus;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployeeEmploymentType;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployeeGender;
-import com.unifiedapi.unifiedto.models.shared.HrisEmployeeMaritalStatus;
 import com.unifiedapi.unifiedto.models.shared.HrisTelephone;
 import com.unifiedapi.unifiedto.models.shared.HrisTelephoneType;
+import com.unifiedapi.unifiedto.models.shared.MaritalStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -68,7 +68,7 @@ public class Application {
                         }}),
                     }};
                     employeeNumber = "string";
-                    employmentStatus = HrisEmployeeEmploymentStatus.ACTIVE;
+                    employmentStatus = EmploymentStatus.ACTIVE;
                     employmentType = HrisEmployeeEmploymentType.OTHER;
                     gender = HrisEmployeeGender.MALE;
                     hiredAt = OffsetDateTime.parse("2022-04-01T13:27:50.152Z");
@@ -77,7 +77,7 @@ public class Application {
                     languageLocale = "string";
                     location = "string";
                     managerId = "string";
-                    maritalStatus = HrisEmployeeMaritalStatus.MARRIED;
+                    maritalStatus = MaritalStatus.MARRIED;
                     name = "string";
                     raw = new PropertyHrisEmployeeRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.HrisTelephone[]{{
@@ -241,15 +241,15 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeResponse;
+import com.unifiedapi.unifiedto.models.shared.EmploymentStatus;
 import com.unifiedapi.unifiedto.models.shared.HrisEmail;
 import com.unifiedapi.unifiedto.models.shared.HrisEmailType;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployee;
-import com.unifiedapi.unifiedto.models.shared.HrisEmployeeEmploymentStatus;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployeeEmploymentType;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployeeGender;
-import com.unifiedapi.unifiedto.models.shared.HrisEmployeeMaritalStatus;
 import com.unifiedapi.unifiedto.models.shared.HrisTelephone;
 import com.unifiedapi.unifiedto.models.shared.HrisTelephoneType;
+import com.unifiedapi.unifiedto.models.shared.MaritalStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -287,7 +287,7 @@ public class Application {
                         }}),
                     }};
                     employeeNumber = "string";
-                    employmentStatus = HrisEmployeeEmploymentStatus.INACTIVE;
+                    employmentStatus = EmploymentStatus.INACTIVE;
                     employmentType = HrisEmployeeEmploymentType.SEASONAL;
                     gender = HrisEmployeeGender.INTERSEX;
                     hiredAt = OffsetDateTime.parse("2021-10-17T23:43:46.221Z");
@@ -296,7 +296,7 @@ public class Application {
                     languageLocale = "string";
                     location = "string";
                     managerId = "string";
-                    maritalStatus = HrisEmployeeMaritalStatus.SINGLE;
+                    maritalStatus = MaritalStatus.SINGLE;
                     name = "string";
                     raw = new PropertyHrisEmployeeRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.HrisTelephone[]{{
@@ -396,15 +396,15 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeResponse;
+import com.unifiedapi.unifiedto.models.shared.EmploymentStatus;
 import com.unifiedapi.unifiedto.models.shared.HrisEmail;
 import com.unifiedapi.unifiedto.models.shared.HrisEmailType;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployee;
-import com.unifiedapi.unifiedto.models.shared.HrisEmployeeEmploymentStatus;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployeeEmploymentType;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployeeGender;
-import com.unifiedapi.unifiedto.models.shared.HrisEmployeeMaritalStatus;
 import com.unifiedapi.unifiedto.models.shared.HrisTelephone;
 import com.unifiedapi.unifiedto.models.shared.HrisTelephoneType;
+import com.unifiedapi.unifiedto.models.shared.MaritalStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -442,7 +442,7 @@ public class Application {
                         }}),
                     }};
                     employeeNumber = "string";
-                    employmentStatus = HrisEmployeeEmploymentStatus.ACTIVE;
+                    employmentStatus = EmploymentStatus.ACTIVE;
                     employmentType = HrisEmployeeEmploymentType.CASUAL;
                     gender = HrisEmployeeGender.FEMALE;
                     hiredAt = OffsetDateTime.parse("2023-03-14T02:34:09.315Z");
@@ -451,7 +451,7 @@ public class Application {
                     languageLocale = "string";
                     location = "string";
                     managerId = "string";
-                    maritalStatus = HrisEmployeeMaritalStatus.MARRIED;
+                    maritalStatus = MaritalStatus.MARRIED;
                     name = "string";
                     raw = new PropertyHrisEmployeeRaw();
                     telephones = new com.unifiedapi.unifiedto.models.shared.HrisTelephone[]{{

@@ -46,10 +46,10 @@ public class RemoveCrmPipelineResponse {
      * Successful
      */
     
-    public String removeCrmPipelineDefaultApplicationJSONString;
+    public String res;
 
-    public RemoveCrmPipelineResponse withRemoveCrmPipelineDefaultApplicationJSONString(String removeCrmPipelineDefaultApplicationJSONString) {
-        this.removeCrmPipelineDefaultApplicationJSONString = removeCrmPipelineDefaultApplicationJSONString;
+    public RemoveCrmPipelineResponse withRes(String res) {
+        this.res = res;
         return this;
     }
     

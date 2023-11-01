@@ -21,9 +21,9 @@ public class AtsCompensation {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequency")
-    public AtsCompensationFrequency frequency;
+    public Frequency frequency;
 
-    public AtsCompensation withFrequency(AtsCompensationFrequency frequency) {
+    public AtsCompensation withFrequency(Frequency frequency) {
         this.frequency = frequency;
         return this;
     }

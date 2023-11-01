@@ -75,9 +75,9 @@ public class AtsJob {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employment_type")
-    public AtsJobEmploymentType employmentType;
+    public EmploymentType employmentType;
 
-    public AtsJob withEmploymentType(AtsJobEmploymentType employmentType) {
+    public AtsJob withEmploymentType(EmploymentType employmentType) {
         this.employmentType = employmentType;
         return this;
     }

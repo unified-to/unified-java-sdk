@@ -108,9 +108,9 @@ public class Webhook {
     }
     
     @JsonProperty("object_type")
-    public WebhookObjectType objectType;
+    public ObjectType objectType;
 
-    public Webhook withObjectType(WebhookObjectType objectType) {
+    public Webhook withObjectType(ObjectType objectType) {
         this.objectType = objectType;
         return this;
     }
@@ -146,7 +146,7 @@ public class Webhook {
         return this;
     }
     
-    public Webhook(@JsonProperty("connection_id") String connectionId, @JsonProperty("events") PropertyWebhookEvents[] events, @JsonProperty("hook_url") String hookUrl, @JsonProperty("integration_type") String integrationType, @JsonProperty("interval") Double interval, @JsonProperty("object_type") WebhookObjectType objectType, @JsonProperty("workspace_id") String workspaceId) {
+    public Webhook(@JsonProperty("connection_id") String connectionId, @JsonProperty("events") PropertyWebhookEvents[] events, @JsonProperty("hook_url") String hookUrl, @JsonProperty("integration_type") String integrationType, @JsonProperty("interval") Double interval, @JsonProperty("object_type") ObjectType objectType, @JsonProperty("workspace_id") String workspaceId) {
         this.connectionId = connectionId;
         this.events = events;
         this.hookUrl = hookUrl;

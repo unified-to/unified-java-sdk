@@ -1,5 +1,5 @@
 # Accounting
-(*accounting*)
+(*.accounting*)
 
 ### Available Operations
 
@@ -35,15 +35,15 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingCustomerRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingCustomerResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingCustomer;
-import com.unifiedapi.unifiedto.models.shared.AccountingCustomerTaxExemption;
 import com.unifiedapi.unifiedto.models.shared.AccountingEmail;
-import com.unifiedapi.unifiedto.models.shared.AccountingEmailType;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephone;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerBillingAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerShippingAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TaxExemption;
+import com.unifiedapi.unifiedto.models.shared.Type;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -88,7 +88,7 @@ public class Application {
                         region = "string";
                         regionCode = "string";
                     }};
-                    taxExemption = AccountingCustomerTaxExemption.RESALE;
+                    taxExemption = TaxExemption.RESALE;
                     telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
                         add(new AccountingTelephone("string"){{
                             telephone = "string";
@@ -625,15 +625,15 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingCustomerRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingCustomerResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingCustomer;
-import com.unifiedapi.unifiedto.models.shared.AccountingCustomerTaxExemption;
 import com.unifiedapi.unifiedto.models.shared.AccountingEmail;
-import com.unifiedapi.unifiedto.models.shared.AccountingEmailType;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephone;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerBillingAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerShippingAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TaxExemption;
+import com.unifiedapi.unifiedto.models.shared.Type;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -678,7 +678,7 @@ public class Application {
                         region = "string";
                         regionCode = "string";
                     }};
-                    taxExemption = AccountingCustomerTaxExemption.LOCAL_GOV;
+                    taxExemption = TaxExemption.LOCAL_GOV;
                     telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
                         add(new AccountingTelephone("string"){{
                             telephone = "string";
@@ -1020,15 +1020,15 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingCustomerRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingCustomerResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingCustomer;
-import com.unifiedapi.unifiedto.models.shared.AccountingCustomerTaxExemption;
 import com.unifiedapi.unifiedto.models.shared.AccountingEmail;
-import com.unifiedapi.unifiedto.models.shared.AccountingEmailType;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephone;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerBillingAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerShippingAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TaxExemption;
+import com.unifiedapi.unifiedto.models.shared.Type;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -1073,7 +1073,7 @@ public class Application {
                         region = "string";
                         regionCode = "string";
                     }};
-                    taxExemption = AccountingCustomerTaxExemption.CHARITABLE_ORG;
+                    taxExemption = TaxExemption.CHARITABLE_ORG;
                     telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
                         add(new AccountingTelephone("string"){{
                             telephone = "string";

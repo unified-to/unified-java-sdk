@@ -1,5 +1,5 @@
 # Ats
-(*ats*)
+(*.ats*)
 
 ### Available Operations
 
@@ -53,9 +53,9 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsApplication;
-import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsApplicationRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.Status;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -78,7 +78,7 @@ public class Application {
                     rejectedAt = OffsetDateTime.parse("2022-01-18T22:03:17.799Z");
                     rejectedReason = "string";
                     source = "string";
-                    status = AtsApplicationStatus.FIRST_INTERVIEW;
+                    status = Status.FIRST_INTERVIEW;
                     updatedAt = OffsetDateTime.parse("2022-04-22T10:02:31.440Z");
                 }};
             }};            
@@ -351,11 +351,11 @@ import com.unifiedapi.unifiedto.models.operations.CreateAtsJobRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsJobResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsAddress;
 import com.unifiedapi.unifiedto.models.shared.AtsCompensation;
-import com.unifiedapi.unifiedto.models.shared.AtsCompensationFrequency;
 import com.unifiedapi.unifiedto.models.shared.AtsCompensationType;
 import com.unifiedapi.unifiedto.models.shared.AtsJob;
-import com.unifiedapi.unifiedto.models.shared.AtsJobEmploymentType;
 import com.unifiedapi.unifiedto.models.shared.AtsJobStatus;
+import com.unifiedapi.unifiedto.models.shared.EmploymentType;
+import com.unifiedapi.unifiedto.models.shared.Frequency;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsJobRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
@@ -385,7 +385,7 @@ public class Application {
                         add("string"),
                     }};
                     description = "Operative 24 hour methodology";
-                    employmentType = AtsJobEmploymentType.OTHER;
+                    employmentType = EmploymentType.OTHER;
                     hiringManagerIds = new String[]{{
                         add("string"),
                     }};
@@ -442,8 +442,8 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
-import com.unifiedapi.unifiedto.models.shared.AtsScorecardRecommendation;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsScorecardRaw;
+import com.unifiedapi.unifiedto.models.shared.Recommendation;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -466,7 +466,7 @@ public class Application {
                     interviewId = "string";
                     interviewerId = "string";
                     jobId = "string";
-                    recommendation = AtsScorecardRecommendation.NO;
+                    recommendation = Recommendation.NO;
                     updatedAt = OffsetDateTime.parse("2022-04-01T17:31:47.454Z");
                 }};
             }};            
@@ -1194,9 +1194,9 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsApplication;
-import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsApplicationRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.Status;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -1219,7 +1219,7 @@ public class Application {
                     rejectedAt = OffsetDateTime.parse("2022-12-04T13:56:12.670Z");
                     rejectedReason = "string";
                     source = "string";
-                    status = AtsApplicationStatus.SCREENING;
+                    status = Status.SCREENING;
                     updatedAt = OffsetDateTime.parse("2022-02-02T14:46:44.919Z");
                 }};
             }};            
@@ -1492,11 +1492,11 @@ import com.unifiedapi.unifiedto.models.operations.PatchAtsJobRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsJobResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsAddress;
 import com.unifiedapi.unifiedto.models.shared.AtsCompensation;
-import com.unifiedapi.unifiedto.models.shared.AtsCompensationFrequency;
 import com.unifiedapi.unifiedto.models.shared.AtsCompensationType;
 import com.unifiedapi.unifiedto.models.shared.AtsJob;
-import com.unifiedapi.unifiedto.models.shared.AtsJobEmploymentType;
 import com.unifiedapi.unifiedto.models.shared.AtsJobStatus;
+import com.unifiedapi.unifiedto.models.shared.EmploymentType;
+import com.unifiedapi.unifiedto.models.shared.Frequency;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsJobRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
@@ -1526,7 +1526,7 @@ public class Application {
                         add("string"),
                     }};
                     description = "Extended empowering middleware";
-                    employmentType = AtsJobEmploymentType.FULL_TIME;
+                    employmentType = EmploymentType.FULL_TIME;
                     hiringManagerIds = new String[]{{
                         add("string"),
                     }};
@@ -1583,8 +1583,8 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
-import com.unifiedapi.unifiedto.models.shared.AtsScorecardRecommendation;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsScorecardRaw;
+import com.unifiedapi.unifiedto.models.shared.Recommendation;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -1607,7 +1607,7 @@ public class Application {
                     interviewId = "string";
                     interviewerId = "string";
                     jobId = "string";
-                    recommendation = AtsScorecardRecommendation.YES;
+                    recommendation = Recommendation.YES;
                     updatedAt = OffsetDateTime.parse("2021-11-28T07:58:12.100Z");
                 }};
             }};            
@@ -1943,9 +1943,9 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsApplication;
-import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsApplicationRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.Status;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -1968,7 +1968,7 @@ public class Application {
                     rejectedAt = OffsetDateTime.parse("2021-02-09T08:05:18.054Z");
                     rejectedReason = "string";
                     source = "string";
-                    status = AtsApplicationStatus.REJECTED;
+                    status = Status.REJECTED;
                     updatedAt = OffsetDateTime.parse("2022-11-28T16:36:33.801Z");
                 }};
             }};            
@@ -2241,11 +2241,11 @@ import com.unifiedapi.unifiedto.models.operations.UpdateAtsJobRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsJobResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsAddress;
 import com.unifiedapi.unifiedto.models.shared.AtsCompensation;
-import com.unifiedapi.unifiedto.models.shared.AtsCompensationFrequency;
 import com.unifiedapi.unifiedto.models.shared.AtsCompensationType;
 import com.unifiedapi.unifiedto.models.shared.AtsJob;
-import com.unifiedapi.unifiedto.models.shared.AtsJobEmploymentType;
 import com.unifiedapi.unifiedto.models.shared.AtsJobStatus;
+import com.unifiedapi.unifiedto.models.shared.EmploymentType;
+import com.unifiedapi.unifiedto.models.shared.Frequency;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsJobRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
@@ -2275,7 +2275,7 @@ public class Application {
                         add("string"),
                     }};
                     description = "Re-contextualized 24 hour support";
-                    employmentType = AtsJobEmploymentType.CASUAL;
+                    employmentType = EmploymentType.CASUAL;
                     hiringManagerIds = new String[]{{
                         add("string"),
                     }};
@@ -2332,8 +2332,8 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
-import com.unifiedapi.unifiedto.models.shared.AtsScorecardRecommendation;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsScorecardRaw;
+import com.unifiedapi.unifiedto.models.shared.Recommendation;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -2356,7 +2356,7 @@ public class Application {
                     interviewId = "string";
                     interviewerId = "string";
                     jobId = "string";
-                    recommendation = AtsScorecardRecommendation.NO;
+                    recommendation = Recommendation.NO;
                     updatedAt = OffsetDateTime.parse("2021-07-26T04:45:45.856Z");
                 }};
             }};            

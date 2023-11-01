@@ -46,10 +46,10 @@ public class RemoveUcContactResponse {
      * Successful
      */
     
-    public String removeUcContactDefaultApplicationJSONString;
+    public String res;
 
-    public RemoveUcContactResponse withRemoveUcContactDefaultApplicationJSONString(String removeUcContactDefaultApplicationJSONString) {
-        this.removeUcContactDefaultApplicationJSONString = removeUcContactDefaultApplicationJSONString;
+    public RemoveUcContactResponse withRes(String res) {
+        this.res = res;
         return this;
     }
     

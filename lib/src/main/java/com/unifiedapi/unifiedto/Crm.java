@@ -1250,14 +1250,14 @@ public class Crm {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyResponse(contentType, httpRes.statusCode()) {{
-            removeCrmCompanyDefaultApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.removeCrmCompanyDefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 
@@ -1288,14 +1288,14 @@ public class Crm {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         com.unifiedapi.unifiedto.models.operations.RemoveCrmContactResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveCrmContactResponse(contentType, httpRes.statusCode()) {{
-            removeCrmContactDefaultApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.removeCrmContactDefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 
@@ -1326,14 +1326,14 @@ public class Crm {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         com.unifiedapi.unifiedto.models.operations.RemoveCrmDealResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveCrmDealResponse(contentType, httpRes.statusCode()) {{
-            removeCrmDealDefaultApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.removeCrmDealDefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 
@@ -1364,14 +1364,14 @@ public class Crm {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         com.unifiedapi.unifiedto.models.operations.RemoveCrmEventResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveCrmEventResponse(contentType, httpRes.statusCode()) {{
-            removeCrmEventDefaultApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.removeCrmEventDefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 
@@ -1402,14 +1402,14 @@ public class Crm {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         com.unifiedapi.unifiedto.models.operations.RemoveCrmFileResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveCrmFileResponse(contentType, httpRes.statusCode()) {{
-            removeCrmFileDefaultApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.removeCrmFileDefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 
@@ -1440,14 +1440,14 @@ public class Crm {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         com.unifiedapi.unifiedto.models.operations.RemoveCrmLeadResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveCrmLeadResponse(contentType, httpRes.statusCode()) {{
-            removeCrmLeadDefaultApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.removeCrmLeadDefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 
@@ -1478,14 +1478,14 @@ public class Crm {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineResponse(contentType, httpRes.statusCode()) {{
-            removeCrmPipelineDefaultApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.removeCrmPipelineDefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 

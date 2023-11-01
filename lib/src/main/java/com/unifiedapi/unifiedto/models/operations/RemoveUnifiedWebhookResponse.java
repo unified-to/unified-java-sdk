@@ -46,10 +46,10 @@ public class RemoveUnifiedWebhookResponse {
      * Successful
      */
     
-    public String removeUnifiedWebhookDefaultApplicationJSONString;
+    public String res;
 
-    public RemoveUnifiedWebhookResponse withRemoveUnifiedWebhookDefaultApplicationJSONString(String removeUnifiedWebhookDefaultApplicationJSONString) {
-        this.removeUnifiedWebhookDefaultApplicationJSONString = removeUnifiedWebhookDefaultApplicationJSONString;
+    public RemoveUnifiedWebhookResponse withRes(String res) {
+        this.res = res;
         return this;
     }
     

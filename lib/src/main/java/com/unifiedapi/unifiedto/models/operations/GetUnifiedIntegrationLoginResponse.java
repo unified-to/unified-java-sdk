@@ -46,10 +46,10 @@ public class GetUnifiedIntegrationLoginResponse {
      * Successful
      */
     
-    public String getUnifiedIntegrationLogin200ApplicationJSONString;
+    public String res;
 
-    public GetUnifiedIntegrationLoginResponse withGetUnifiedIntegrationLogin200ApplicationJSONString(String getUnifiedIntegrationLogin200ApplicationJSONString) {
-        this.getUnifiedIntegrationLogin200ApplicationJSONString = getUnifiedIntegrationLogin200ApplicationJSONString;
+    public GetUnifiedIntegrationLoginResponse withRes(String res) {
+        this.res = res;
         return this;
     }
     

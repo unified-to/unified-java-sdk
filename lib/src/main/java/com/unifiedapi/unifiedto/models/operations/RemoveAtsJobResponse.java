@@ -46,10 +46,10 @@ public class RemoveAtsJobResponse {
      * Successful
      */
     
-    public String removeAtsJobDefaultApplicationJSONString;
+    public String res;
 
-    public RemoveAtsJobResponse withRemoveAtsJobDefaultApplicationJSONString(String removeAtsJobDefaultApplicationJSONString) {
-        this.removeAtsJobDefaultApplicationJSONString = removeAtsJobDefaultApplicationJSONString;
+    public RemoveAtsJobResponse withRes(String res) {
+        this.res = res;
         return this;
     }
     

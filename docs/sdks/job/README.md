@@ -1,5 +1,5 @@
 # Job
-(*job*)
+(*.job*)
 
 ### Available Operations
 
@@ -24,11 +24,11 @@ import com.unifiedapi.unifiedto.models.operations.CreateAtsJobRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsJobResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsAddress;
 import com.unifiedapi.unifiedto.models.shared.AtsCompensation;
-import com.unifiedapi.unifiedto.models.shared.AtsCompensationFrequency;
 import com.unifiedapi.unifiedto.models.shared.AtsCompensationType;
 import com.unifiedapi.unifiedto.models.shared.AtsJob;
-import com.unifiedapi.unifiedto.models.shared.AtsJobEmploymentType;
 import com.unifiedapi.unifiedto.models.shared.AtsJobStatus;
+import com.unifiedapi.unifiedto.models.shared.EmploymentType;
+import com.unifiedapi.unifiedto.models.shared.Frequency;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsJobRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
@@ -58,7 +58,7 @@ public class Application {
                         add("string"),
                     }};
                     description = "Operative 24 hour methodology";
-                    employmentType = AtsJobEmploymentType.OTHER;
+                    employmentType = EmploymentType.OTHER;
                     hiringManagerIds = new String[]{{
                         add("string"),
                     }};
@@ -229,11 +229,11 @@ import com.unifiedapi.unifiedto.models.operations.PatchAtsJobRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsJobResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsAddress;
 import com.unifiedapi.unifiedto.models.shared.AtsCompensation;
-import com.unifiedapi.unifiedto.models.shared.AtsCompensationFrequency;
 import com.unifiedapi.unifiedto.models.shared.AtsCompensationType;
 import com.unifiedapi.unifiedto.models.shared.AtsJob;
-import com.unifiedapi.unifiedto.models.shared.AtsJobEmploymentType;
 import com.unifiedapi.unifiedto.models.shared.AtsJobStatus;
+import com.unifiedapi.unifiedto.models.shared.EmploymentType;
+import com.unifiedapi.unifiedto.models.shared.Frequency;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsJobRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
@@ -263,7 +263,7 @@ public class Application {
                         add("string"),
                     }};
                     description = "Extended empowering middleware";
-                    employmentType = AtsJobEmploymentType.FULL_TIME;
+                    employmentType = EmploymentType.FULL_TIME;
                     hiringManagerIds = new String[]{{
                         add("string"),
                     }};
@@ -370,11 +370,11 @@ import com.unifiedapi.unifiedto.models.operations.UpdateAtsJobRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsJobResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsAddress;
 import com.unifiedapi.unifiedto.models.shared.AtsCompensation;
-import com.unifiedapi.unifiedto.models.shared.AtsCompensationFrequency;
 import com.unifiedapi.unifiedto.models.shared.AtsCompensationType;
 import com.unifiedapi.unifiedto.models.shared.AtsJob;
-import com.unifiedapi.unifiedto.models.shared.AtsJobEmploymentType;
 import com.unifiedapi.unifiedto.models.shared.AtsJobStatus;
+import com.unifiedapi.unifiedto.models.shared.EmploymentType;
+import com.unifiedapi.unifiedto.models.shared.Frequency;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsJobRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
@@ -404,7 +404,7 @@ public class Application {
                         add("string"),
                     }};
                     description = "Re-contextualized 24 hour support";
-                    employmentType = AtsJobEmploymentType.CASUAL;
+                    employmentType = EmploymentType.CASUAL;
                     hiringManagerIds = new String[]{{
                         add("string"),
                     }};

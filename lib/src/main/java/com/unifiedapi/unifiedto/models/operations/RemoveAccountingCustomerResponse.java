@@ -46,10 +46,10 @@ public class RemoveAccountingCustomerResponse {
      * Successful
      */
     
-    public String removeAccountingCustomerDefaultApplicationJSONString;
+    public String res;
 
-    public RemoveAccountingCustomerResponse withRemoveAccountingCustomerDefaultApplicationJSONString(String removeAccountingCustomerDefaultApplicationJSONString) {
-        this.removeAccountingCustomerDefaultApplicationJSONString = removeAccountingCustomerDefaultApplicationJSONString;
+    public RemoveAccountingCustomerResponse withRes(String res) {
+        this.res = res;
         return this;
     }
     

@@ -1,5 +1,5 @@
 # Unified
-(*unified*)
+(*.unified*)
 
 ### Available Operations
 
@@ -125,13 +125,13 @@ To maintain compatibility with the webhooks specification and Zapier webhooks, o
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookEvents;
 import com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookResponse;
+import com.unifiedapi.unifiedto.models.operations.Events;
+import com.unifiedapi.unifiedto.models.shared.ObjectType;
 import com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.Webhook;
-import com.unifiedapi.unifiedto.models.shared.WebhookObjectType;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -146,7 +146,7 @@ public class Application {
             CreateUnifiedWebhookRequest req = new CreateUnifiedWebhookRequest("string", "string"){{
                 webhook = new Webhook("string", new com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents[]{{
                     add(PropertyWebhookEvents.CREATED),
-                }}, "string", "string", 188.12d, WebhookObjectType.CRM_EVENT, "string"){{
+                }}, "string", "string", 188.12d, ObjectType.CRM_EVENT, "string"){{
                     checkedAt = OffsetDateTime.parse("2022-11-04T14:37:16.392Z");
                     createdAt = OffsetDateTime.parse("2021-03-22T19:34:26.447Z");
                     environment = "string";
@@ -157,8 +157,8 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2022-08-09T17:23:28.216Z");
                 }};
-                events = new com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookEvents[]{{
-                    add(CreateUnifiedWebhookEvents.CREATED),
+                events = new com.unifiedapi.unifiedto.models.operations.Events[]{{
+                    add(Events.CREATED),
                 }};
             }};            
 
@@ -345,7 +345,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthScopes;
+import com.unifiedapi.unifiedto.models.operations.Scopes;
 import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
@@ -363,8 +363,8 @@ public class Application {
                 failureRedirect = "string";
                 lang = "string";
                 redirect = false;
-                scopes = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthScopes[]{{
-                    add(GetUnifiedIntegrationAuthScopes.HRIS_EMPLOYEE_WRITE),
+                scopes = new com.unifiedapi.unifiedto.models.operations.Scopes[]{{
+                    add(Scopes.HRIS_EMPLOYEE_WRITE),
                 }};
                 state = "string";
                 subdomain = "string";
@@ -373,7 +373,7 @@ public class Application {
 
             GetUnifiedIntegrationAuthResponse res = sdk.unified.getUnifiedIntegrationAuth(req);
 
-            if (res.getUnifiedIntegrationAuth200ApplicationJSONString != null) {
+            if (res.res != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -516,7 +516,7 @@ List all connections
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsCategories;
+import com.unifiedapi.unifiedto.models.operations.Categories;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -532,8 +532,8 @@ public class Application {
                 .build();
 
             ListUnifiedConnectionsRequest req = new ListUnifiedConnectionsRequest(){{
-                categories = new com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsCategories[]{{
-                    add(ListUnifiedConnectionsCategories.ENRICH),
+                categories = new com.unifiedapi.unifiedto.models.operations.Categories[]{{
+                    add(Categories.ENRICH),
                 }};
                 env = "string";
                 externalXref = "string";
@@ -578,9 +578,9 @@ No authentication required as this is to be used by front-end interface
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesCategories;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesResponse;
+import com.unifiedapi.unifiedto.models.operations.QueryParamCategories;
 import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
@@ -594,8 +594,8 @@ public class Application {
 
             ListUnifiedIntegrationWorkspacesRequest req = new ListUnifiedIntegrationWorkspacesRequest("string"){{
                 active = false;
-                categories = new com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesCategories[]{{
-                    add(ListUnifiedIntegrationWorkspacesCategories.TICKETING),
+                categories = new com.unifiedapi.unifiedto.models.operations.QueryParamCategories[]{{
+                    add(QueryParamCategories.TICKETING),
                 }};
                 env = "string";
                 limit = 9072.99d;
@@ -638,7 +638,7 @@ Returns all integrations
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsCategories;
+import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsQueryParamCategories;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -654,8 +654,8 @@ public class Application {
 
             ListUnifiedIntegrationsRequest req = new ListUnifiedIntegrationsRequest(){{
                 active = false;
-                categories = new com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsCategories[]{{
-                    add(ListUnifiedIntegrationsCategories.AUTH),
+                categories = new com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsQueryParamCategories[]{{
+                    add(ListUnifiedIntegrationsQueryParamCategories.AUTH),
                 }};
                 env = "string";
                 limit = 7382.58d;

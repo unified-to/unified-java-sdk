@@ -1,5 +1,5 @@
 # Integration
-(*integration*)
+(*.integration*)
 
 ### Available Operations
 
@@ -69,7 +69,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthScopes;
+import com.unifiedapi.unifiedto.models.operations.Scopes;
 import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
@@ -87,8 +87,8 @@ public class Application {
                 failureRedirect = "string";
                 lang = "string";
                 redirect = false;
-                scopes = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthScopes[]{{
-                    add(GetUnifiedIntegrationAuthScopes.HRIS_EMPLOYEE_WRITE),
+                scopes = new com.unifiedapi.unifiedto.models.operations.Scopes[]{{
+                    add(Scopes.HRIS_EMPLOYEE_WRITE),
                 }};
                 state = "string";
                 subdomain = "string";
@@ -97,7 +97,7 @@ public class Application {
 
             GetUnifiedIntegrationAuthResponse res = sdk.integration.getUnifiedIntegrationAuth(req);
 
-            if (res.getUnifiedIntegrationAuth200ApplicationJSONString != null) {
+            if (res.res != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -129,9 +129,9 @@ No authentication required as this is to be used by front-end interface
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesCategories;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesResponse;
+import com.unifiedapi.unifiedto.models.operations.QueryParamCategories;
 import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
@@ -145,8 +145,8 @@ public class Application {
 
             ListUnifiedIntegrationWorkspacesRequest req = new ListUnifiedIntegrationWorkspacesRequest("string"){{
                 active = false;
-                categories = new com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesCategories[]{{
-                    add(ListUnifiedIntegrationWorkspacesCategories.TICKETING),
+                categories = new com.unifiedapi.unifiedto.models.operations.QueryParamCategories[]{{
+                    add(QueryParamCategories.TICKETING),
                 }};
                 env = "string";
                 limit = 9072.99d;
@@ -189,7 +189,7 @@ Returns all integrations
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsCategories;
+import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsQueryParamCategories;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -205,8 +205,8 @@ public class Application {
 
             ListUnifiedIntegrationsRequest req = new ListUnifiedIntegrationsRequest(){{
                 active = false;
-                categories = new com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsCategories[]{{
-                    add(ListUnifiedIntegrationsCategories.AUTH),
+                categories = new com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsQueryParamCategories[]{{
+                    add(ListUnifiedIntegrationsQueryParamCategories.AUTH),
                 }};
                 env = "string";
                 limit = 7382.58d;

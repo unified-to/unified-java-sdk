@@ -390,14 +390,14 @@ public class Customer {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         com.unifiedapi.unifiedto.models.operations.RemoveAccountingCustomerResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAccountingCustomerResponse(contentType, httpRes.statusCode()) {{
-            removeAccountingCustomerDefaultApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.removeAccountingCustomerDefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 
@@ -428,14 +428,14 @@ public class Customer {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         com.unifiedapi.unifiedto.models.operations.RemoveTicketingCustomerResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveTicketingCustomerResponse(contentType, httpRes.statusCode()) {{
-            removeTicketingCustomerDefaultApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.removeTicketingCustomerDefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 

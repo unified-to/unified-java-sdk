@@ -13,9 +13,9 @@ public class ListUnifiedConnectionsRequest {
      * Filter the results on these categories
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=categories")
-    public ListUnifiedConnectionsCategories[] categories;
+    public Categories[] categories;
 
-    public ListUnifiedConnectionsRequest withCategories(ListUnifiedConnectionsCategories[] categories) {
+    public ListUnifiedConnectionsRequest withCategories(Categories[] categories) {
         this.categories = categories;
         return this;
     }

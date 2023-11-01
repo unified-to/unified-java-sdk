@@ -1,5 +1,5 @@
 # Auth
-(*auth*)
+(*.auth*)
 
 ### Available Operations
 
@@ -18,7 +18,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthScopes;
+import com.unifiedapi.unifiedto.models.operations.Scopes;
 import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
@@ -36,8 +36,8 @@ public class Application {
                 failureRedirect = "string";
                 lang = "string";
                 redirect = false;
-                scopes = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthScopes[]{{
-                    add(GetUnifiedIntegrationAuthScopes.HRIS_EMPLOYEE_WRITE),
+                scopes = new com.unifiedapi.unifiedto.models.operations.Scopes[]{{
+                    add(Scopes.HRIS_EMPLOYEE_WRITE),
                 }};
                 state = "string";
                 subdomain = "string";
@@ -46,7 +46,7 @@ public class Application {
 
             GetUnifiedIntegrationAuthResponse res = sdk.auth.getUnifiedIntegrationAuth(req);
 
-            if (res.getUnifiedIntegrationAuth200ApplicationJSONString != null) {
+            if (res.res != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -101,7 +101,7 @@ public class Application {
 
             GetUnifiedIntegrationLoginResponse res = sdk.auth.getUnifiedIntegrationLogin(req);
 
-            if (res.getUnifiedIntegrationLogin200ApplicationJSONString != null) {
+            if (res.res != null) {
                 // handle response
             }
         } catch (Exception e) {

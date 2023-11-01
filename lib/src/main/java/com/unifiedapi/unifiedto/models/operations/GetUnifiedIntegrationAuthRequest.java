@@ -70,9 +70,9 @@ public class GetUnifiedIntegrationAuthRequest {
     }
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scopes")
-    public GetUnifiedIntegrationAuthScopes[] scopes;
+    public Scopes[] scopes;
 
-    public GetUnifiedIntegrationAuthRequest withScopes(GetUnifiedIntegrationAuthScopes[] scopes) {
+    public GetUnifiedIntegrationAuthRequest withScopes(Scopes[] scopes) {
         this.scopes = scopes;
         return this;
     }

@@ -46,10 +46,10 @@ public class RemoveTicketingTicketResponse {
      * Successful
      */
     
-    public String removeTicketingTicketDefaultApplicationJSONString;
+    public String res;
 
-    public RemoveTicketingTicketResponse withRemoveTicketingTicketDefaultApplicationJSONString(String removeTicketingTicketDefaultApplicationJSONString) {
-        this.removeTicketingTicketDefaultApplicationJSONString = removeTicketingTicketDefaultApplicationJSONString;
+    public RemoveTicketingTicketResponse withRes(String res) {
+        this.res = res;
         return this;
     }
     

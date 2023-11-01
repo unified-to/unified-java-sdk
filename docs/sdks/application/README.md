@@ -1,5 +1,5 @@
 # Application
-(*application*)
+(*.application*)
 
 ### Available Operations
 
@@ -23,9 +23,9 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsApplication;
-import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsApplicationRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.Status;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -48,7 +48,7 @@ public class Application {
                     rejectedAt = OffsetDateTime.parse("2022-01-18T22:03:17.799Z");
                     rejectedReason = "string";
                     source = "string";
-                    status = AtsApplicationStatus.FIRST_INTERVIEW;
+                    status = Status.FIRST_INTERVIEW;
                     updatedAt = OffsetDateTime.parse("2022-04-22T10:02:31.440Z");
                 }};
             }};            
@@ -205,9 +205,9 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsApplication;
-import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsApplicationRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.Status;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -230,7 +230,7 @@ public class Application {
                     rejectedAt = OffsetDateTime.parse("2022-12-04T13:56:12.670Z");
                     rejectedReason = "string";
                     source = "string";
-                    status = AtsApplicationStatus.SCREENING;
+                    status = Status.SCREENING;
                     updatedAt = OffsetDateTime.parse("2022-02-02T14:46:44.919Z");
                 }};
             }};            
@@ -321,9 +321,9 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsApplication;
-import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsApplicationRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.Status;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -346,7 +346,7 @@ public class Application {
                     rejectedAt = OffsetDateTime.parse("2021-02-09T08:05:18.054Z");
                     rejectedReason = "string";
                     source = "string";
-                    status = AtsApplicationStatus.REJECTED;
+                    status = Status.REJECTED;
                     updatedAt = OffsetDateTime.parse("2022-11-28T16:36:33.801Z");
                 }};
             }};            

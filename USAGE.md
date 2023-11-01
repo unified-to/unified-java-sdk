@@ -8,15 +8,15 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingCustomerRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingCustomerResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingCustomer;
-import com.unifiedapi.unifiedto.models.shared.AccountingCustomerTaxExemption;
 import com.unifiedapi.unifiedto.models.shared.AccountingEmail;
-import com.unifiedapi.unifiedto.models.shared.AccountingEmailType;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephone;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerBillingAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerShippingAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TaxExemption;
+import com.unifiedapi.unifiedto.models.shared.Type;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -61,7 +61,7 @@ public class Application {
                         region = "string";
                         regionCode = "string";
                     }};
-                    taxExemption = AccountingCustomerTaxExemption.RESALE;
+                    taxExemption = TaxExemption.RESALE;
                     telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
                         add(new AccountingTelephone("string"){{
                             telephone = "string";

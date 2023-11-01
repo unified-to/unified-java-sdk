@@ -93,9 +93,9 @@ public class HrisEmployee {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employment_status")
-    public HrisEmployeeEmploymentStatus employmentStatus;
+    public EmploymentStatus employmentStatus;
 
-    public HrisEmployee withEmploymentStatus(HrisEmployeeEmploymentStatus employmentStatus) {
+    public HrisEmployee withEmploymentStatus(EmploymentStatus employmentStatus) {
         this.employmentStatus = employmentStatus;
         return this;
     }
@@ -176,9 +176,9 @@ public class HrisEmployee {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marital_status")
-    public HrisEmployeeMaritalStatus maritalStatus;
+    public MaritalStatus maritalStatus;
 
-    public HrisEmployee withMaritalStatus(HrisEmployeeMaritalStatus maritalStatus) {
+    public HrisEmployee withMaritalStatus(MaritalStatus maritalStatus) {
         this.maritalStatus = maritalStatus;
         return this;
     }

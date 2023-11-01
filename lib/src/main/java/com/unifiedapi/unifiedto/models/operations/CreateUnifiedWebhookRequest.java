@@ -32,9 +32,9 @@ public class CreateUnifiedWebhookRequest {
      * Which events to subscribe to.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=events")
-    public CreateUnifiedWebhookEvents[] events;
+    public Events[] events;
 
-    public CreateUnifiedWebhookRequest withEvents(CreateUnifiedWebhookEvents[] events) {
+    public CreateUnifiedWebhookRequest withEvents(Events[] events) {
         this.events = events;
         return this;
     }

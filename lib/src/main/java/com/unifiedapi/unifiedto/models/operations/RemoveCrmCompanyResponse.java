@@ -46,10 +46,10 @@ public class RemoveCrmCompanyResponse {
      * Successful
      */
     
-    public String removeCrmCompanyDefaultApplicationJSONString;
+    public String res;
 
-    public RemoveCrmCompanyResponse withRemoveCrmCompanyDefaultApplicationJSONString(String removeCrmCompanyDefaultApplicationJSONString) {
-        this.removeCrmCompanyDefaultApplicationJSONString = removeCrmCompanyDefaultApplicationJSONString;
+    public RemoveCrmCompanyResponse withRes(String res) {
+        this.res = res;
         return this;
     }
     

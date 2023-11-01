@@ -100,9 +100,9 @@ public class AccountingCustomer {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_exemption")
-    public AccountingCustomerTaxExemption taxExemption;
+    public TaxExemption taxExemption;
 
-    public AccountingCustomer withTaxExemption(AccountingCustomerTaxExemption taxExemption) {
+    public AccountingCustomer withTaxExemption(TaxExemption taxExemption) {
         this.taxExemption = taxExemption;
         return this;
     }

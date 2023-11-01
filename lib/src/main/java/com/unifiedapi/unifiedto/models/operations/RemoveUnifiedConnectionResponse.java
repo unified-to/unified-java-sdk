@@ -46,10 +46,10 @@ public class RemoveUnifiedConnectionResponse {
      * Successful
      */
     
-    public String removeUnifiedConnectionDefaultApplicationJSONString;
+    public String res;
 
-    public RemoveUnifiedConnectionResponse withRemoveUnifiedConnectionDefaultApplicationJSONString(String removeUnifiedConnectionDefaultApplicationJSONString) {
-        this.removeUnifiedConnectionDefaultApplicationJSONString = removeUnifiedConnectionDefaultApplicationJSONString;
+    public RemoveUnifiedConnectionResponse withRes(String res) {
+        this.res = res;
         return this;
     }
     

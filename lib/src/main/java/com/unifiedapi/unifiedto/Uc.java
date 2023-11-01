@@ -263,14 +263,14 @@ public class Uc {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         com.unifiedapi.unifiedto.models.operations.RemoveUcContactResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveUcContactResponse(contentType, httpRes.statusCode()) {{
-            removeUcContactDefaultApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.removeUcContactDefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 

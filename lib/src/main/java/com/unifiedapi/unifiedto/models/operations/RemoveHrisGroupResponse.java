@@ -46,10 +46,10 @@ public class RemoveHrisGroupResponse {
      * Successful
      */
     
-    public String removeHrisGroupDefaultApplicationJSONString;
+    public String res;
 
-    public RemoveHrisGroupResponse withRemoveHrisGroupDefaultApplicationJSONString(String removeHrisGroupDefaultApplicationJSONString) {
-        this.removeHrisGroupDefaultApplicationJSONString = removeHrisGroupDefaultApplicationJSONString;
+    public RemoveHrisGroupResponse withRes(String res) {
+        this.res = res;
         return this;
     }
     
