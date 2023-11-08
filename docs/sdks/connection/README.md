@@ -1,5 +1,5 @@
 # Connection
-(*.connection*)
+(*connection*)
 
 ### Available Operations
 

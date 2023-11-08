@@ -45,6 +45,15 @@ public class AtsDocument {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("document_data")
+    public String documentData;
+
+    public AtsDocument withDocumentData(String documentData) {
+        this.documentData = documentData;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document_url")
     public String documentUrl;
 

@@ -26,44 +26,44 @@ public class UnifiedTo {
 	};
   	
     public Accounting accounting;
-    public Apicall apicall;
-    public Application application;
-    public Ats ats;
-    public Auth auth;
-    public Call call;
-    public Candidate candidate;
-    public Company company;
-    public Connection connection;
-    public Contact contact;
-    public Crm crm;
     public Customer customer;
-    public Deal deal;
+    public Invoice invoice;
+    public Payment payment;
+    public Ats ats;
+    public Application application;
+    public Candidate candidate;
     public Document document;
-    public Employee employee;
-    public Enrich enrich;
+    public Interview interview;
+    public Job job;
+    public Scorecard scorecard;
+    public Crm crm;
+    public Company company;
+    public Contact contact;
+    public Deal deal;
     public Event event;
     public File file;
-    public Group group;
-    public Hris hris;
-    public Integration integration;
-    public Interview interview;
-    public Invoice invoice;
-    public Job job;
     public Lead lead;
-    public List list;
-    public Login login;
-    public Martech martech;
-    public Member member;
-    public Note note;
-    public Passthrough passthrough;
-    public Payment payment;
-    public Person person;
     public Pipeline pipeline;
-    public Scorecard scorecard;
-    public Ticket ticket;
+    public Enrich enrich;
+    public Person person;
+    public Hris hris;
+    public Employee employee;
+    public Group group;
+    public Martech martech;
+    public List list;
+    public Member member;
+    public Passthrough passthrough;
     public Ticketing ticketing;
+    public Note note;
+    public Ticket ticket;
     public Uc uc;
+    public Call call;
     public Unified unified;
+    public Apicall apicall;
+    public Connection connection;
+    public Integration integration;
+    public Auth auth;
+    public Login login;
     public Webhook webhook;	
 
 	private SDKConfiguration sdkConfiguration;
@@ -173,81 +173,81 @@ public class UnifiedTo {
 		
 		this.accounting = new Accounting(this.sdkConfiguration);
 		
-		this.apicall = new Apicall(this.sdkConfiguration);
+		this.customer = new Customer(this.sdkConfiguration);
 		
-		this.application = new Application(this.sdkConfiguration);
+		this.invoice = new Invoice(this.sdkConfiguration);
+		
+		this.payment = new Payment(this.sdkConfiguration);
 		
 		this.ats = new Ats(this.sdkConfiguration);
 		
-		this.auth = new Auth(this.sdkConfiguration);
-		
-		this.call = new Call(this.sdkConfiguration);
+		this.application = new Application(this.sdkConfiguration);
 		
 		this.candidate = new Candidate(this.sdkConfiguration);
 		
-		this.company = new Company(this.sdkConfiguration);
+		this.document = new Document(this.sdkConfiguration);
 		
-		this.connection = new Connection(this.sdkConfiguration);
+		this.interview = new Interview(this.sdkConfiguration);
 		
-		this.contact = new Contact(this.sdkConfiguration);
+		this.job = new Job(this.sdkConfiguration);
+		
+		this.scorecard = new Scorecard(this.sdkConfiguration);
 		
 		this.crm = new Crm(this.sdkConfiguration);
 		
-		this.customer = new Customer(this.sdkConfiguration);
+		this.company = new Company(this.sdkConfiguration);
+		
+		this.contact = new Contact(this.sdkConfiguration);
 		
 		this.deal = new Deal(this.sdkConfiguration);
-		
-		this.document = new Document(this.sdkConfiguration);
-		
-		this.employee = new Employee(this.sdkConfiguration);
-		
-		this.enrich = new Enrich(this.sdkConfiguration);
 		
 		this.event = new Event(this.sdkConfiguration);
 		
 		this.file = new File(this.sdkConfiguration);
 		
-		this.group = new Group(this.sdkConfiguration);
-		
-		this.hris = new Hris(this.sdkConfiguration);
-		
-		this.integration = new Integration(this.sdkConfiguration);
-		
-		this.interview = new Interview(this.sdkConfiguration);
-		
-		this.invoice = new Invoice(this.sdkConfiguration);
-		
-		this.job = new Job(this.sdkConfiguration);
-		
 		this.lead = new Lead(this.sdkConfiguration);
-		
-		this.list = new List(this.sdkConfiguration);
-		
-		this.login = new Login(this.sdkConfiguration);
-		
-		this.martech = new Martech(this.sdkConfiguration);
-		
-		this.member = new Member(this.sdkConfiguration);
-		
-		this.note = new Note(this.sdkConfiguration);
-		
-		this.passthrough = new Passthrough(this.sdkConfiguration);
-		
-		this.payment = new Payment(this.sdkConfiguration);
-		
-		this.person = new Person(this.sdkConfiguration);
 		
 		this.pipeline = new Pipeline(this.sdkConfiguration);
 		
-		this.scorecard = new Scorecard(this.sdkConfiguration);
+		this.enrich = new Enrich(this.sdkConfiguration);
 		
-		this.ticket = new Ticket(this.sdkConfiguration);
+		this.person = new Person(this.sdkConfiguration);
+		
+		this.hris = new Hris(this.sdkConfiguration);
+		
+		this.employee = new Employee(this.sdkConfiguration);
+		
+		this.group = new Group(this.sdkConfiguration);
+		
+		this.martech = new Martech(this.sdkConfiguration);
+		
+		this.list = new List(this.sdkConfiguration);
+		
+		this.member = new Member(this.sdkConfiguration);
+		
+		this.passthrough = new Passthrough(this.sdkConfiguration);
 		
 		this.ticketing = new Ticketing(this.sdkConfiguration);
 		
+		this.note = new Note(this.sdkConfiguration);
+		
+		this.ticket = new Ticket(this.sdkConfiguration);
+		
 		this.uc = new Uc(this.sdkConfiguration);
 		
+		this.call = new Call(this.sdkConfiguration);
+		
 		this.unified = new Unified(this.sdkConfiguration);
+		
+		this.apicall = new Apicall(this.sdkConfiguration);
+		
+		this.connection = new Connection(this.sdkConfiguration);
+		
+		this.integration = new Integration(this.sdkConfiguration);
+		
+		this.auth = new Auth(this.sdkConfiguration);
+		
+		this.login = new Login(this.sdkConfiguration);
 		
 		this.webhook = new Webhook(this.sdkConfiguration);
 	}

@@ -1,33 +1,38 @@
 configVersion: 1.0.0
 management:
-  docChecksum: 7b1cb43287adc82723644e87b73cba93
+  docChecksum: 6639616828c5ad26c6ebed036fc6e678
   docVersion: "1.0"
-  speakeasyVersion: 1.110.1
-  generationVersion: 2.175.1
+  speakeasyVersion: 1.116.0
+  generationVersion: 2.185.0
 generation:
-  comments:
-    disableComments: false
-    omitDescriptionIfSummaryPresent: false
-  baseServerURL: ""
-  repoURL: https://github.com/unified-to/unified-java-sdk.git
+  comments: {}
   sdkClassName: Unified-to
-  singleTagPerOp: false
-  tagNamespacingDisabled: false
+  repoURL: https://github.com/unified-to/unified-java-sdk.git
 features:
   java:
-    core: 3.0.1
+    core: 3.0.2
     globalSecurity: 2.81.1
     globalServerURLs: 2.82.0
 java:
-  version: 0.11.0
+  version: 0.11.1
   artifactID: unifiedto
   companyEmail: hello@unified.to
   companyName: Unified API Inc.
   companyURL: www.unified.to
   githubURL: github.com/unified-to/unified-java-sdk
   groupID: com.unifiedapi
+  imports:
+    option: openapi
+    paths:
+      callbacks: models/callbacks
+      errors: models/errors
+      operations: models/operations
+      shared: models/shared
+      webhooks: models/webhooks
+  inputModelSuffix: input
   maxMethodParams: 0
   ossrhURL: https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/
+  outputModelSuffix: output
   projectName: Unified-java-sdk
   published: true
   repoSubDirectory: .

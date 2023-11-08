@@ -1,5 +1,5 @@
 # Integration
-(*.integration*)
+(*integration*)
 
 ### Available Operations
 

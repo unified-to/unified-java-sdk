@@ -1,5 +1,5 @@
 # Document
-(*.document*)
+(*document*)
 
 ### Available Operations
 
@@ -42,6 +42,7 @@ public class Application {
                     applicationId = "string";
                     candidateId = "string";
                     createdAt = OffsetDateTime.parse("2021-04-24T22:30:56.289Z");
+                    documentData = "string";
                     documentUrl = "string";
                     filename = "mouse_per_missouri.mp4";
                     id = "<ID>";
@@ -223,6 +224,7 @@ public class Application {
                     applicationId = "string";
                     candidateId = "string";
                     createdAt = OffsetDateTime.parse("2021-04-01T09:34:15.248Z");
+                    documentData = "string";
                     documentUrl = "string";
                     filename = "future_underpin.mp4v";
                     id = "<ID>";
@@ -339,6 +341,7 @@ public class Application {
                     applicationId = "string";
                     candidateId = "string";
                     createdAt = OffsetDateTime.parse("2021-07-05T13:01:49.006Z");
+                    documentData = "string";
                     documentUrl = "string";
                     filename = "unbranded_reprehenderit.jpg";
                     id = "<ID>";

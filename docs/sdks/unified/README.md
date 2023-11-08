@@ -1,5 +1,5 @@
 # Unified
-(*.unified*)
+(*unified*)
 
 ### Available Operations
 
