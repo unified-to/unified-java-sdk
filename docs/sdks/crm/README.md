@@ -532,6 +532,7 @@ public class Application {
                     name = "string";
                     raw = new PropertyCrmLeadRaw();
                     source = "string";
+                    status = "string";
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
                         add(new CrmTelephone("string"){{
                             telephone = "string";
@@ -1918,6 +1919,7 @@ public class Application {
                     name = "string";
                     raw = new PropertyCrmLeadRaw();
                     source = "string";
+                    status = "string";
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
                         add(new CrmTelephone("string"){{
                             telephone = "string";
@@ -2844,6 +2846,7 @@ public class Application {
                     name = "string";
                     raw = new PropertyCrmLeadRaw();
                     source = "string";
+                    status = "string";
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
                         add(new CrmTelephone("string"){{
                             telephone = "string";
