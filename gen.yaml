@@ -1,28 +1,24 @@
 configVersion: 1.0.0
 management:
-  docChecksum: 6639616828c5ad26c6ebed036fc6e678
+  docChecksum: 971f963bb8131d7583f1525d9455db1e
   docVersion: "1.0"
-  speakeasyVersion: 1.116.0
-  generationVersion: 2.185.0
+  speakeasyVersion: 1.119.0
+  generationVersion: 2.188.1
 generation:
-  comments:
-    disableComments: false
-    omitDescriptionIfSummaryPresent: false
-  baseServerURL: ""
-  flattenGlobalSecurity: true
-  repoURL: https://github.com/unified-to/unified-python-sdk.git
+  comments: {}
   sdkClassName: Unified-to
-  singleTagPerOp: false
-  tagNamespacingDisabled: false
+  repoURL: https://github.com/unified-to/unified-java-sdk.git
   usageSnippets:
     optionalPropertyRendering: withExample
+  baseServerURL: ""
+  flattenGlobalSecurity: true
 features:
   java:
     core: 3.0.2
     globalSecurity: 2.81.1
     globalServerURLs: 2.82.0
 java:
-  version: 0.11.1
+  version: 0.11.2
   artifactID: unifiedto
   companyEmail: hello@unified.to
   companyName: Unified API Inc.
