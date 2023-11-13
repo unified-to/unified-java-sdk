@@ -117,6 +117,15 @@ public class CrmLead {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public String status;
+
+    public CrmLead withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephones")
     public CrmTelephone[] telephones;
 
