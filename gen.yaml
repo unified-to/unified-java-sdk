@@ -10,7 +10,7 @@ generation:
     omitDescriptionIfSummaryPresent: false
   baseServerURL: ""
   flattenGlobalSecurity: true
-  repoURL: https://github.com/unified-to/unified-python-sdk.git
+  repoURL: https://github.com/unified-to/unified-typescript-sdk.git
   sdkClassName: Unified-to
   singleTagPerOp: false
   tagNamespacingDisabled: false
