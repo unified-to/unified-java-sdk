@@ -5,17 +5,13 @@ management:
   speakeasyVersion: 1.116.0
   generationVersion: 2.185.0
 generation:
-  comments:
-    disableComments: false
-    omitDescriptionIfSummaryPresent: false
-  baseServerURL: ""
-  flattenGlobalSecurity: true
-  repoURL: https://github.com/unified-to/unified-typescript-sdk.git
+  comments: {}
   sdkClassName: Unified-to
-  singleTagPerOp: false
-  tagNamespacingDisabled: false
+  repoURL: https://github.com/unified-to/unified-go-sdk.git
   usageSnippets:
     optionalPropertyRendering: withExample
+  baseServerURL: ""
+  flattenGlobalSecurity: true
 features:
   java:
     core: 3.0.2
