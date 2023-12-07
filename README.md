@@ -6,33 +6,31 @@
     
 </div>
 
-<!-- Start SDK Installation -->
+<!-- Start SDK Installation [installation] -->
 ## SDK Installation
 
 ### Gradle
 
 ```groovy
-implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.11.1'
+implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.11.2'
 ```
-<!-- End SDK Installation -->
+<!-- End SDK Installation [installation] -->
 
+<!-- Start SDK Example Usage [usage] -->
 ## SDK Example Usage
-<!-- Start SDK Example Usage -->
+
+### Example
+
 ```java
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingCustomerRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingCustomerResponse;
-import com.unifiedapi.unifiedto.models.shared.AccountingCustomer;
-import com.unifiedapi.unifiedto.models.shared.AccountingEmail;
-import com.unifiedapi.unifiedto.models.shared.AccountingTelephone;
-import com.unifiedapi.unifiedto.models.shared.AccountingTelephoneType;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerBillingAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerRaw;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerShippingAddress;
+import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse;
+import com.unifiedapi.unifiedto.models.shared.AccountingAccount;
+import com.unifiedapi.unifiedto.models.shared.PropertyAccountingAccountRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import com.unifiedapi.unifiedto.models.shared.TaxExemption;
+import com.unifiedapi.unifiedto.models.shared.Status;
 import com.unifiedapi.unifiedto.models.shared.Type;
 import java.time.OffsetDateTime;
 
@@ -40,57 +38,36 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateAccountingCustomerRequest req = new CreateAccountingCustomerRequest("string"){{
-                accountingCustomer = new AccountingCustomer(){{
-                    billingAddress = new PropertyAccountingCustomerBillingAddress(){{
-                        address1 = "string";
-                        address2 = "string";
-                        city = "New Raulfield";
-                        country = "Libyan Arab Jamahiriya";
-                        countryCode = "IN";
-                        postalCode = "22232";
-                        region = "string";
-                        regionCode = "string";
-                    }};
-                    createdAt = OffsetDateTime.parse("2021-07-22T19:16:48.798Z");
-                    currency = "Dalasi";
-                    emails = new com.unifiedapi.unifiedto.models.shared.AccountingEmail[]{{
-                        add(new AccountingEmail("string"){{
-                            email = "Loren78@gmail.com";
-                        }}),
-                    }};
+            com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest req = new CreateAccountingAccountRequest(
+                "string"){{
+                accountingAccount = new AccountingAccount(
+                    "string"){{
+                    balance = 6602.56d;
+                    bankAccountNumber = "string";
+                    createdAt = OffsetDateTime.parse("2022-09-02T08:51:10.063Z");
+                    currency = "Saint Helena Pound";
+                    customerDefinedCode = "string";
+                    description = "Cross-group zero defect task-force";
                     id = "<ID>";
-                    isActive = false;
-                    name = "string";
-                    raw = new PropertyAccountingCustomerRaw();
-                    shippingAddress = new PropertyAccountingCustomerShippingAddress(){{
-                        address1 = "string";
-                        address2 = "string";
-                        city = "North Stanford";
-                        country = "Iceland";
-                        countryCode = "AZ";
-                        postalCode = "11906-2906";
-                        region = "string";
-                        regionCode = "string";
-                    }};
-                    taxExemption = TaxExemption.RESALE;
-                    telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
-                        add(new AccountingTelephone("string"){{
-                            telephone = "string";
-                        }}),
-                    }};
-                    updatedAt = OffsetDateTime.parse("2021-12-07T14:42:11.734Z");
+                    raw = new PropertyAccountingAccountRaw(
+);
+                    status = Status.ACTIVE;
+                    type = Type.EQUITY;
+                    updatedAt = OffsetDateTime.parse("2022-09-09T10:11:13.258Z");
+
                 }};
-            }};            
 
-            CreateAccountingCustomerResponse res = sdk.accounting.createAccountingCustomer(req);
+            }};
 
-            if (res.accountingCustomer != null) {
+            com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse res = sdk.accounting.createAccountingAccount(req);
+
+            if (res.accountingAccount != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -99,32 +76,52 @@ public class Application {
     }
 }
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->
 
-<!-- Start SDK Available Operations -->
+<!-- Start Available Resources and Operations [operations] -->
 ## Available Resources and Operations
-
 
 ### [accounting](docs/sdks/accounting/README.md)
 
+* [createAccountingAccount](docs/sdks/accounting/README.md#createaccountingaccount) - Create an account
 * [createAccountingCustomer](docs/sdks/accounting/README.md#createaccountingcustomer) - Create a customer
 * [createAccountingInvoice](docs/sdks/accounting/README.md#createaccountinginvoice) - Create a invoice
 * [createAccountingPayment](docs/sdks/accounting/README.md#createaccountingpayment) - Create a payment
+* [createAccountingTransaction](docs/sdks/accounting/README.md#createaccountingtransaction) - Create a transaction
+* [getAccountingAccount](docs/sdks/accounting/README.md#getaccountingaccount) - Retrieve an account
 * [getAccountingCustomer](docs/sdks/accounting/README.md#getaccountingcustomer) - Retrieve a customer
 * [getAccountingInvoice](docs/sdks/accounting/README.md#getaccountinginvoice) - Retrieve a invoice
 * [getAccountingPayment](docs/sdks/accounting/README.md#getaccountingpayment) - Retrieve a payment
+* [getAccountingTransaction](docs/sdks/accounting/README.md#getaccountingtransaction) - Retrieve a transaction
+* [listAccountingAccounts](docs/sdks/accounting/README.md#listaccountingaccounts) - List all accounts
 * [listAccountingCustomers](docs/sdks/accounting/README.md#listaccountingcustomers) - List all customers
 * [listAccountingInvoices](docs/sdks/accounting/README.md#listaccountinginvoices) - List all invoices
 * [listAccountingPayments](docs/sdks/accounting/README.md#listaccountingpayments) - List all payments
+* [listAccountingTransactions](docs/sdks/accounting/README.md#listaccountingtransactions) - List all transactions
+* [patchAccountingAccount](docs/sdks/accounting/README.md#patchaccountingaccount) - Update an account
 * [patchAccountingCustomer](docs/sdks/accounting/README.md#patchaccountingcustomer) - Update a customer
 * [patchAccountingInvoice](docs/sdks/accounting/README.md#patchaccountinginvoice) - Update a invoice
 * [patchAccountingPayment](docs/sdks/accounting/README.md#patchaccountingpayment) - Update a payment
+* [patchAccountingTransaction](docs/sdks/accounting/README.md#patchaccountingtransaction) - Update a transaction
+* [removeAccountingAccount](docs/sdks/accounting/README.md#removeaccountingaccount) - Remove an account
 * [removeAccountingCustomer](docs/sdks/accounting/README.md#removeaccountingcustomer) - Remove a customer
 * [removeAccountingInvoice](docs/sdks/accounting/README.md#removeaccountinginvoice) - Remove a invoice
 * [removeAccountingPayment](docs/sdks/accounting/README.md#removeaccountingpayment) - Remove a payment
+* [removeAccountingTransaction](docs/sdks/accounting/README.md#removeaccountingtransaction) - Remove a transaction
+* [updateAccountingAccount](docs/sdks/accounting/README.md#updateaccountingaccount) - Update an account
 * [updateAccountingCustomer](docs/sdks/accounting/README.md#updateaccountingcustomer) - Update a customer
 * [updateAccountingInvoice](docs/sdks/accounting/README.md#updateaccountinginvoice) - Update a invoice
 * [updateAccountingPayment](docs/sdks/accounting/README.md#updateaccountingpayment) - Update a payment
+* [updateAccountingTransaction](docs/sdks/accounting/README.md#updateaccountingtransaction) - Update a transaction
+
+### [account](docs/sdks/account/README.md)
+
+* [createAccountingAccount](docs/sdks/account/README.md#createaccountingaccount) - Create an account
+* [getAccountingAccount](docs/sdks/account/README.md#getaccountingaccount) - Retrieve an account
+* [listAccountingAccounts](docs/sdks/account/README.md#listaccountingaccounts) - List all accounts
+* [patchAccountingAccount](docs/sdks/account/README.md#patchaccountingaccount) - Update an account
+* [removeAccountingAccount](docs/sdks/account/README.md#removeaccountingaccount) - Remove an account
+* [updateAccountingAccount](docs/sdks/account/README.md#updateaccountingaccount) - Update an account
 
 ### [customer](docs/sdks/customer/README.md)
 
@@ -158,6 +155,15 @@ public class Application {
 * [patchAccountingPayment](docs/sdks/payment/README.md#patchaccountingpayment) - Update a payment
 * [removeAccountingPayment](docs/sdks/payment/README.md#removeaccountingpayment) - Remove a payment
 * [updateAccountingPayment](docs/sdks/payment/README.md#updateaccountingpayment) - Update a payment
+
+### [transaction](docs/sdks/transaction/README.md)
+
+* [createAccountingTransaction](docs/sdks/transaction/README.md#createaccountingtransaction) - Create a transaction
+* [getAccountingTransaction](docs/sdks/transaction/README.md#getaccountingtransaction) - Retrieve a transaction
+* [listAccountingTransactions](docs/sdks/transaction/README.md#listaccountingtransactions) - List all transactions
+* [patchAccountingTransaction](docs/sdks/transaction/README.md#patchaccountingtransaction) - Update a transaction
+* [removeAccountingTransaction](docs/sdks/transaction/README.md#removeaccountingtransaction) - Remove a transaction
+* [updateAccountingTransaction](docs/sdks/transaction/README.md#updateaccountingtransaction) - Update a transaction
 
 ### [ats](docs/sdks/ats/README.md)
 
@@ -558,13 +564,31 @@ public class Application {
 * [getUnifiedWebhook](docs/sdks/webhook/README.md#getunifiedwebhook) - Retrieve webhook by its ID
 * [listUnifiedWebhooks](docs/sdks/webhook/README.md#listunifiedwebhooks) - Returns all registered webhooks
 * [removeUnifiedWebhook](docs/sdks/webhook/README.md#removeunifiedwebhook) - Remove webhook subscription
-<!-- End SDK Available Operations -->
+<!-- End Available Resources and Operations [operations] -->
 
 
 
-<!-- Start Dev Containers -->
+<!-- Start Server Selection [server] -->
+## Server Selection
 
-<!-- End Dev Containers -->
+## Server Selection
+
+### Select Server by Index
+
+You can override the default server globally using the `setServerIndex` option when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
+
+| # | Server | Variables |
+| - | ------ | --------- |
+| 0 | `https://api.unified.to` | None |
+| 1 | `https://api-eu.unified.to` | None |
+
+
+
+
+### Override Server URL Per-Client
+
+The default server can also be overridden globally using the `setServerURL` option when initializing the SDK client instance. For example:
+<!-- End Server Selection [server] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

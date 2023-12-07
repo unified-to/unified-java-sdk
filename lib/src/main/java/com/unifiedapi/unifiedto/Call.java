@@ -48,11 +48,10 @@ public class Call {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.ListUcCallsResponse res = new com.unifiedapi.unifiedto.models.operations.ListUcCallsResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.ListUcCallsResponse res = new com.unifiedapi.unifiedto.models.operations.ListUcCallsResponse(contentType, httpRes.statusCode(), httpRes) {{
             ucCalls = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {

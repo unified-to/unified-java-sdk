@@ -46,11 +46,10 @@ public class Application {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationResponse(contentType, httpRes.statusCode(), httpRes) {{
             atsApplication = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -91,11 +90,10 @@ public class Application {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetAtsApplicationResponse res = new com.unifiedapi.unifiedto.models.operations.GetAtsApplicationResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.GetAtsApplicationResponse res = new com.unifiedapi.unifiedto.models.operations.GetAtsApplicationResponse(contentType, httpRes.statusCode(), httpRes) {{
             atsApplication = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -136,11 +134,10 @@ public class Application {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsResponse res = new com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsResponse res = new com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsResponse(contentType, httpRes.statusCode(), httpRes) {{
             atsApplications = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -177,11 +174,10 @@ public class Application {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationResponse(contentType, httpRes.statusCode(), httpRes) {{
             atsApplication = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -216,11 +212,10 @@ public class Application {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationResponse(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -256,11 +251,10 @@ public class Application {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationResponse(contentType, httpRes.statusCode(), httpRes) {{
             atsApplication = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {

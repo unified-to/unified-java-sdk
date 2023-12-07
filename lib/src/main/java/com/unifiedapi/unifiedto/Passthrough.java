@@ -44,11 +44,10 @@ public class Passthrough {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.CreatePassthroughResponse res = new com.unifiedapi.unifiedto.models.operations.CreatePassthroughResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.CreatePassthroughResponse res = new com.unifiedapi.unifiedto.models.operations.CreatePassthroughResponse(contentType, httpRes.statusCode(), httpRes) {{
             undefined = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -83,11 +82,10 @@ public class Passthrough {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.ListPassthroughsResponse res = new com.unifiedapi.unifiedto.models.operations.ListPassthroughsResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.ListPassthroughsResponse res = new com.unifiedapi.unifiedto.models.operations.ListPassthroughsResponse(contentType, httpRes.statusCode(), httpRes) {{
             undefined = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -124,11 +122,10 @@ public class Passthrough {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.PatchPassthroughResponse res = new com.unifiedapi.unifiedto.models.operations.PatchPassthroughResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.PatchPassthroughResponse res = new com.unifiedapi.unifiedto.models.operations.PatchPassthroughResponse(contentType, httpRes.statusCode(), httpRes) {{
             undefined = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -163,11 +160,10 @@ public class Passthrough {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.RemovePassthroughResponse res = new com.unifiedapi.unifiedto.models.operations.RemovePassthroughResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.RemovePassthroughResponse res = new com.unifiedapi.unifiedto.models.operations.RemovePassthroughResponse(contentType, httpRes.statusCode(), httpRes) {{
             undefined = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -204,11 +200,10 @@ public class Passthrough {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.UpdatePassthroughResponse res = new com.unifiedapi.unifiedto.models.operations.UpdatePassthroughResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.UpdatePassthroughResponse res = new com.unifiedapi.unifiedto.models.operations.UpdatePassthroughResponse(contentType, httpRes.statusCode(), httpRes) {{
             undefined = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {

@@ -44,7 +44,7 @@ public class ListAtsApplicationsRequest {
     }
     
     /**
-     * The job ID to filter results
+     * The job ID
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=job_id")
     public String jobId;

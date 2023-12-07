@@ -33,17 +33,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            com.unifiedapi.unifiedto.models.shared.Connection req = new Connection(new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-    add(PropertyConnectionCategories.ACCOUNTING),
-}}, "string", new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-    add(PropertyConnectionPermissions.CRM_COMPANY_WRITE),
-}}){{
-                auth = new PropertyConnectionAuth(){{
+            com.unifiedapi.unifiedto.models.shared.Connection req = new Connection(
+                new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
+                    add(PropertyConnectionCategories.ACCOUNTING),
+                }},
+                "string",
+                new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
+                    add(PropertyConnectionPermissions.ATS_DOCUMENT_WRITE),
+                }}){{
+                auth = new PropertyConnectionAuth(
+){{
                     accessToken = "string";
                     apiUrl = "string";
                     appId = "string";
@@ -58,7 +63,8 @@ public class Application {
                     expiresIn = 4311.07d;
                     expiryDate = OffsetDateTime.parse("2023-01-23T23:52:45.470Z");
                     key = "<key>";
-                    meta = new PropertyPropertyConnectionAuthMeta();
+                    meta = new PropertyPropertyConnectionAuthMeta(
+);
                     name = "string";
                     otherAuthInfo = new String[]{{
                         add("string"),
@@ -70,6 +76,7 @@ public class Application {
                     state = "string";
                     token = "string";
                     tokenUrl = "string";
+
                 }};
                 authAwsArn = "string";
                 createdAt = OffsetDateTime.parse("2021-12-11T09:33:42.804Z");
@@ -79,9 +86,10 @@ public class Application {
                 isPaused = false;
                 updatedAt = OffsetDateTime.parse("2023-06-29T03:45:15.691Z");
                 workspaceId = "string";
-            }};            
 
-            CreateUnifiedConnectionResponse res = sdk.connection.createUnifiedConnection(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateUnifiedConnectionResponse res = sdk.connection.createUnifiedConnection(req);
 
             if (res.connection != null) {
                 // handle response
@@ -123,14 +131,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedConnectionRequest req = new GetUnifiedConnectionRequest("string");            
+            com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionRequest req = new GetUnifiedConnectionRequest(
+                "string");
 
-            GetUnifiedConnectionResponse res = sdk.connection.getUnifiedConnection(req);
+            com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionResponse res = sdk.connection.getUnifiedConnection(req);
 
             if (res.connection != null) {
                 // handle response
@@ -174,12 +184,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListUnifiedConnectionsRequest req = new ListUnifiedConnectionsRequest(){{
+            com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsRequest req = new ListUnifiedConnectionsRequest(
+){{
                 categories = new com.unifiedapi.unifiedto.models.operations.Categories[]{{
                     add(Categories.ENRICH),
                 }};
@@ -190,9 +202,10 @@ public class Application {
                 order = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2021-06-20T10:15:04.986Z");
-            }};            
 
-            ListUnifiedConnectionsResponse res = sdk.connection.listUnifiedConnections(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsResponse res = sdk.connection.listUnifiedConnections(req);
 
             if (res.connections != null) {
                 // handle response
@@ -240,18 +253,24 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchUnifiedConnectionRequest req = new PatchUnifiedConnectionRequest("string"){{
-                connection = new Connection(new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                    add(PropertyConnectionCategories.MARTECH),
-                }}, "string", new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                    add(PropertyConnectionPermissions.MARTECH_LIST_WRITE),
-                }}){{
-                    auth = new PropertyConnectionAuth(){{
+            com.unifiedapi.unifiedto.models.operations.PatchUnifiedConnectionRequest req = new PatchUnifiedConnectionRequest(
+                "string"){{
+                connection = new Connection(
+                    new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
+                        add(PropertyConnectionCategories.MARTECH),
+                    }},
+                    "string",
+                    new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
+                        add(PropertyConnectionPermissions.MARTECH_LIST_READ),
+                    }}){{
+                    auth = new PropertyConnectionAuth(
+){{
                         accessToken = "string";
                         apiUrl = "string";
                         appId = "string";
@@ -266,7 +285,8 @@ public class Application {
                         expiresIn = 9973.13d;
                         expiryDate = OffsetDateTime.parse("2023-07-15T22:36:11.466Z");
                         key = "<key>";
-                        meta = new PropertyPropertyConnectionAuthMeta();
+                        meta = new PropertyPropertyConnectionAuthMeta(
+);
                         name = "string";
                         otherAuthInfo = new String[]{{
                             add("string"),
@@ -278,6 +298,7 @@ public class Application {
                         state = "string";
                         token = "string";
                         tokenUrl = "string";
+
                     }};
                     authAwsArn = "string";
                     createdAt = OffsetDateTime.parse("2021-05-14T09:50:52.127Z");
@@ -287,10 +308,12 @@ public class Application {
                     isPaused = false;
                     updatedAt = OffsetDateTime.parse("2022-07-09T00:35:16.005Z");
                     workspaceId = "string";
-                }};
-            }};            
 
-            PatchUnifiedConnectionResponse res = sdk.connection.patchUnifiedConnection(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.PatchUnifiedConnectionResponse res = sdk.connection.patchUnifiedConnection(req);
 
             if (res.connection != null) {
                 // handle response
@@ -332,14 +355,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveUnifiedConnectionRequest req = new RemoveUnifiedConnectionRequest("string");            
+            com.unifiedapi.unifiedto.models.operations.RemoveUnifiedConnectionRequest req = new RemoveUnifiedConnectionRequest(
+                "string");
 
-            RemoveUnifiedConnectionResponse res = sdk.connection.removeUnifiedConnection(req);
+            com.unifiedapi.unifiedto.models.operations.RemoveUnifiedConnectionResponse res = sdk.connection.removeUnifiedConnection(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -387,18 +412,24 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateUnifiedConnectionRequest req = new UpdateUnifiedConnectionRequest("string"){{
-                connection = new Connection(new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                    add(PropertyConnectionCategories.TICKETING),
-                }}, "string", new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                    add(PropertyConnectionPermissions.CRM_DEAL_WRITE),
-                }}){{
-                    auth = new PropertyConnectionAuth(){{
+            com.unifiedapi.unifiedto.models.operations.UpdateUnifiedConnectionRequest req = new UpdateUnifiedConnectionRequest(
+                "string"){{
+                connection = new Connection(
+                    new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
+                        add(PropertyConnectionCategories.TICKETING),
+                    }},
+                    "string",
+                    new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
+                        add(PropertyConnectionPermissions.CRM_DEAL_READ),
+                    }}){{
+                    auth = new PropertyConnectionAuth(
+){{
                         accessToken = "string";
                         apiUrl = "string";
                         appId = "string";
@@ -413,7 +444,8 @@ public class Application {
                         expiresIn = 9842.07d;
                         expiryDate = OffsetDateTime.parse("2023-03-25T08:32:03.332Z");
                         key = "<key>";
-                        meta = new PropertyPropertyConnectionAuthMeta();
+                        meta = new PropertyPropertyConnectionAuthMeta(
+);
                         name = "string";
                         otherAuthInfo = new String[]{{
                             add("string"),
@@ -425,6 +457,7 @@ public class Application {
                         state = "string";
                         token = "string";
                         tokenUrl = "string";
+
                     }};
                     authAwsArn = "string";
                     createdAt = OffsetDateTime.parse("2023-11-26T11:58:40.326Z");
@@ -434,10 +467,12 @@ public class Application {
                     isPaused = false;
                     updatedAt = OffsetDateTime.parse("2022-06-09T04:40:33.286Z");
                     workspaceId = "string";
-                }};
-            }};            
 
-            UpdateUnifiedConnectionResponse res = sdk.connection.updateUnifiedConnection(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.UpdateUnifiedConnectionResponse res = sdk.connection.updateUnifiedConnection(req);
 
             if (res.connection != null) {
                 // handle response

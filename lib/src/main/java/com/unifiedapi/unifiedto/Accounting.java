@@ -23,6 +23,46 @@ public class Accounting {
 	}
 
     /**
+     * Create an account
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse createAccountingAccount(com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest.class, baseUrl, "/accounting/{connection_id}/account", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "accountingAccount", "json");
+        req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse(contentType, httpRes.statusCode(), httpRes) {{
+            accountingAccount = null;
+        }};
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.AccountingAccount out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingAccount.class);
+                res.accountingAccount = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * Create a customer
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
@@ -46,11 +86,10 @@ public class Accounting {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.CreateAccountingCustomerResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAccountingCustomerResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.CreateAccountingCustomerResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAccountingCustomerResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountingCustomer = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -87,11 +126,10 @@ public class Accounting {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.CreateAccountingInvoiceResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAccountingInvoiceResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.CreateAccountingInvoiceResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAccountingInvoiceResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountingInvoice = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -128,17 +166,100 @@ public class Accounting {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.CreateAccountingPaymentResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAccountingPaymentResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.CreateAccountingPaymentResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAccountingPaymentResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountingPayment = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 com.unifiedapi.unifiedto.models.shared.AccountingPayment out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingPayment.class);
                 res.accountingPayment = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Create a transaction
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionResponse createAccountingTransaction(com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionRequest.class, baseUrl, "/accounting/{connection_id}/transaction", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "accountingTransaction", "json");
+        req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionResponse(contentType, httpRes.statusCode(), httpRes) {{
+            accountingTransaction = null;
+        }};
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.AccountingTransaction out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingTransaction.class);
+                res.accountingTransaction = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Retrieve an account
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.GetAccountingAccountResponse getAccountingAccount(com.unifiedapi.unifiedto.models.operations.GetAccountingAccountRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAccountingAccountRequest.class, baseUrl, "/accounting/{connection_id}/account/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetAccountingAccountRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        com.unifiedapi.unifiedto.models.operations.GetAccountingAccountResponse res = new com.unifiedapi.unifiedto.models.operations.GetAccountingAccountResponse(contentType, httpRes.statusCode(), httpRes) {{
+            accountingAccount = null;
+        }};
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.AccountingAccount out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingAccount.class);
+                res.accountingAccount = out;
             }
         }
 
@@ -173,11 +294,10 @@ public class Accounting {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetAccountingCustomerResponse res = new com.unifiedapi.unifiedto.models.operations.GetAccountingCustomerResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.GetAccountingCustomerResponse res = new com.unifiedapi.unifiedto.models.operations.GetAccountingCustomerResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountingCustomer = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -218,11 +338,10 @@ public class Accounting {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetAccountingInvoiceResponse res = new com.unifiedapi.unifiedto.models.operations.GetAccountingInvoiceResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.GetAccountingInvoiceResponse res = new com.unifiedapi.unifiedto.models.operations.GetAccountingInvoiceResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountingInvoice = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -263,17 +382,104 @@ public class Accounting {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetAccountingPaymentResponse res = new com.unifiedapi.unifiedto.models.operations.GetAccountingPaymentResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.GetAccountingPaymentResponse res = new com.unifiedapi.unifiedto.models.operations.GetAccountingPaymentResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountingPayment = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 com.unifiedapi.unifiedto.models.shared.AccountingPayment out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingPayment.class);
                 res.accountingPayment = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Retrieve a transaction
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.GetAccountingTransactionResponse getAccountingTransaction(com.unifiedapi.unifiedto.models.operations.GetAccountingTransactionRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAccountingTransactionRequest.class, baseUrl, "/accounting/{connection_id}/transaction/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetAccountingTransactionRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        com.unifiedapi.unifiedto.models.operations.GetAccountingTransactionResponse res = new com.unifiedapi.unifiedto.models.operations.GetAccountingTransactionResponse(contentType, httpRes.statusCode(), httpRes) {{
+            accountingTransaction = null;
+        }};
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.AccountingTransaction out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingTransaction.class);
+                res.accountingTransaction = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * List all accounts
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.ListAccountingAccountsResponse listAccountingAccounts(com.unifiedapi.unifiedto.models.operations.ListAccountingAccountsRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListAccountingAccountsRequest.class, baseUrl, "/accounting/{connection_id}/account", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListAccountingAccountsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        com.unifiedapi.unifiedto.models.operations.ListAccountingAccountsResponse res = new com.unifiedapi.unifiedto.models.operations.ListAccountingAccountsResponse(contentType, httpRes.statusCode(), httpRes) {{
+            accountingAccounts = null;
+        }};
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.AccountingAccount[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingAccount[].class);
+                res.accountingAccounts = out;
             }
         }
 
@@ -308,11 +514,10 @@ public class Accounting {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.ListAccountingCustomersResponse res = new com.unifiedapi.unifiedto.models.operations.ListAccountingCustomersResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.ListAccountingCustomersResponse res = new com.unifiedapi.unifiedto.models.operations.ListAccountingCustomersResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountingCustomers = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -353,11 +558,10 @@ public class Accounting {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.ListAccountingInvoicesResponse res = new com.unifiedapi.unifiedto.models.operations.ListAccountingInvoicesResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.ListAccountingInvoicesResponse res = new com.unifiedapi.unifiedto.models.operations.ListAccountingInvoicesResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountingInvoices = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -398,17 +602,100 @@ public class Accounting {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.ListAccountingPaymentsResponse res = new com.unifiedapi.unifiedto.models.operations.ListAccountingPaymentsResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.ListAccountingPaymentsResponse res = new com.unifiedapi.unifiedto.models.operations.ListAccountingPaymentsResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountingPayments = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 com.unifiedapi.unifiedto.models.shared.AccountingPayment[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingPayment[].class);
                 res.accountingPayments = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * List all transactions
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.ListAccountingTransactionsResponse listAccountingTransactions(com.unifiedapi.unifiedto.models.operations.ListAccountingTransactionsRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListAccountingTransactionsRequest.class, baseUrl, "/accounting/{connection_id}/transaction", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListAccountingTransactionsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        com.unifiedapi.unifiedto.models.operations.ListAccountingTransactionsResponse res = new com.unifiedapi.unifiedto.models.operations.ListAccountingTransactionsResponse(contentType, httpRes.statusCode(), httpRes) {{
+            accountingTransactions = null;
+        }};
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.AccountingTransaction[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingTransaction[].class);
+                res.accountingTransactions = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Update an account
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.PatchAccountingAccountResponse patchAccountingAccount(com.unifiedapi.unifiedto.models.operations.PatchAccountingAccountRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAccountingAccountRequest.class, baseUrl, "/accounting/{connection_id}/account/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PATCH");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "accountingAccount", "json");
+        req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        com.unifiedapi.unifiedto.models.operations.PatchAccountingAccountResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAccountingAccountResponse(contentType, httpRes.statusCode(), httpRes) {{
+            accountingAccount = null;
+        }};
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.AccountingAccount out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingAccount.class);
+                res.accountingAccount = out;
             }
         }
 
@@ -439,11 +726,10 @@ public class Accounting {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.PatchAccountingCustomerResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAccountingCustomerResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.PatchAccountingCustomerResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAccountingCustomerResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountingCustomer = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -480,11 +766,10 @@ public class Accounting {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.PatchAccountingInvoiceResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAccountingInvoiceResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.PatchAccountingInvoiceResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAccountingInvoiceResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountingInvoice = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -521,17 +806,93 @@ public class Accounting {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.PatchAccountingPaymentResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAccountingPaymentResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.PatchAccountingPaymentResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAccountingPaymentResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountingPayment = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 com.unifiedapi.unifiedto.models.shared.AccountingPayment out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingPayment.class);
                 res.accountingPayment = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Update a transaction
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionResponse patchAccountingTransaction(com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionRequest.class, baseUrl, "/accounting/{connection_id}/transaction/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PATCH");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "accountingTransaction", "json");
+        req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionResponse(contentType, httpRes.statusCode(), httpRes) {{
+            accountingTransaction = null;
+        }};
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.AccountingTransaction out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingTransaction.class);
+                res.accountingTransaction = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Remove an account
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.RemoveAccountingAccountResponse removeAccountingAccount(com.unifiedapi.unifiedto.models.operations.RemoveAccountingAccountRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveAccountingAccountRequest.class, baseUrl, "/accounting/{connection_id}/account/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("DELETE");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        com.unifiedapi.unifiedto.models.operations.RemoveAccountingAccountResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAccountingAccountResponse(contentType, httpRes.statusCode(), httpRes) {{
+            res = null;
+        }};
+        
+        if (true) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
+                res.res = out;
             }
         }
 
@@ -560,11 +921,10 @@ public class Accounting {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.RemoveAccountingCustomerResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAccountingCustomerResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.RemoveAccountingCustomerResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAccountingCustomerResponse(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -598,11 +958,10 @@ public class Accounting {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.RemoveAccountingInvoiceResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAccountingInvoiceResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.RemoveAccountingInvoiceResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAccountingInvoiceResponse(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -636,16 +995,92 @@ public class Accounting {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.RemoveAccountingPaymentResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAccountingPaymentResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.RemoveAccountingPaymentResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAccountingPaymentResponse(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
                 res.res = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Remove a transaction
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.RemoveAccountingTransactionResponse removeAccountingTransaction(com.unifiedapi.unifiedto.models.operations.RemoveAccountingTransactionRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveAccountingTransactionRequest.class, baseUrl, "/accounting/{connection_id}/transaction/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("DELETE");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        com.unifiedapi.unifiedto.models.operations.RemoveAccountingTransactionResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAccountingTransactionResponse(contentType, httpRes.statusCode(), httpRes) {{
+            res = null;
+        }};
+        
+        if (true) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
+                res.res = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Update an account
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.UpdateAccountingAccountResponse updateAccountingAccount(com.unifiedapi.unifiedto.models.operations.UpdateAccountingAccountRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateAccountingAccountRequest.class, baseUrl, "/accounting/{connection_id}/account/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PUT");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "accountingAccount", "json");
+        req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        com.unifiedapi.unifiedto.models.operations.UpdateAccountingAccountResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAccountingAccountResponse(contentType, httpRes.statusCode(), httpRes) {{
+            accountingAccount = null;
+        }};
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.AccountingAccount out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingAccount.class);
+                res.accountingAccount = out;
             }
         }
 
@@ -676,11 +1111,10 @@ public class Accounting {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.UpdateAccountingCustomerResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAccountingCustomerResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.UpdateAccountingCustomerResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAccountingCustomerResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountingCustomer = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -717,11 +1151,10 @@ public class Accounting {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountingInvoice = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -758,17 +1191,56 @@ public class Accounting {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.UpdateAccountingPaymentResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAccountingPaymentResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.UpdateAccountingPaymentResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAccountingPaymentResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountingPayment = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 com.unifiedapi.unifiedto.models.shared.AccountingPayment out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingPayment.class);
                 res.accountingPayment = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Update a transaction
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionResponse updateAccountingTransaction(com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionRequest.class, baseUrl, "/accounting/{connection_id}/transaction/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PUT");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "accountingTransaction", "json");
+        req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionResponse(contentType, httpRes.statusCode(), httpRes) {{
+            accountingTransaction = null;
+        }};
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.AccountingTransaction out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingTransaction.class);
+                res.accountingTransaction = out;
             }
         }
 

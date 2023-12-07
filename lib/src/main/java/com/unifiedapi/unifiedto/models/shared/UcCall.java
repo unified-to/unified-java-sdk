@@ -66,6 +66,7 @@ public class UcCall {
     /**
      * The raw data returned by the integration for this call
      */
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     public PropertyUcCallRaw raw;
 
@@ -108,8 +109,7 @@ public class UcCall {
         return this;
     }
     
-    public UcCall(@JsonProperty("agency_id") String agencyId, @JsonProperty("raw") PropertyUcCallRaw raw) {
+    public UcCall(@JsonProperty("agency_id") String agencyId) {
         this.agencyId = agencyId;
-        this.raw = raw;
   }
 }

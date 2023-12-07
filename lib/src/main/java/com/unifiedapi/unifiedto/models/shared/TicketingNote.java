@@ -62,6 +62,7 @@ public class TicketingNote {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     public PropertyTicketingNoteRaw raw;
 
@@ -88,7 +89,5 @@ public class TicketingNote {
         return this;
     }
     
-    public TicketingNote(@JsonProperty("raw") PropertyTicketingNoteRaw raw) {
-        this.raw = raw;
-  }
+    public TicketingNote(){}
 }

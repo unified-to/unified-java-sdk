@@ -28,16 +28,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreatePassthroughRequest req = new CreatePassthroughRequest("string", "string"){{
-                undefined = new Undefined();
-            }};            
+            com.unifiedapi.unifiedto.models.operations.CreatePassthroughRequest req = new CreatePassthroughRequest(
+                "string",
+                "string"){{
+                undefined = new Undefined(
+);
 
-            CreatePassthroughResponse res = sdk.passthrough.createPassthrough(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreatePassthroughResponse res = sdk.passthrough.createPassthrough(req);
 
             if (res.undefined != null) {
                 // handle response
@@ -79,14 +84,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListPassthroughsRequest req = new ListPassthroughsRequest("string", "string");            
+            com.unifiedapi.unifiedto.models.operations.ListPassthroughsRequest req = new ListPassthroughsRequest(
+                "string",
+                "string");
 
-            ListPassthroughsResponse res = sdk.passthrough.listPassthroughs(req);
+            com.unifiedapi.unifiedto.models.operations.ListPassthroughsResponse res = sdk.passthrough.listPassthroughs(req);
 
             if (res.undefined != null) {
                 // handle response
@@ -129,16 +137,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchPassthroughRequest req = new PatchPassthroughRequest("string", "string"){{
-                undefined = new Undefined();
-            }};            
+            com.unifiedapi.unifiedto.models.operations.PatchPassthroughRequest req = new PatchPassthroughRequest(
+                "string",
+                "string"){{
+                undefined = new Undefined(
+);
 
-            PatchPassthroughResponse res = sdk.passthrough.patchPassthrough(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.PatchPassthroughResponse res = sdk.passthrough.patchPassthrough(req);
 
             if (res.undefined != null) {
                 // handle response
@@ -180,14 +193,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemovePassthroughRequest req = new RemovePassthroughRequest("string", "string");            
+            com.unifiedapi.unifiedto.models.operations.RemovePassthroughRequest req = new RemovePassthroughRequest(
+                "string",
+                "string");
 
-            RemovePassthroughResponse res = sdk.passthrough.removePassthrough(req);
+            com.unifiedapi.unifiedto.models.operations.RemovePassthroughResponse res = sdk.passthrough.removePassthrough(req);
 
             if (res.undefined != null) {
                 // handle response
@@ -230,16 +246,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdatePassthroughRequest req = new UpdatePassthroughRequest("string", "string"){{
-                undefined = new Undefined();
-            }};            
+            com.unifiedapi.unifiedto.models.operations.UpdatePassthroughRequest req = new UpdatePassthroughRequest(
+                "string",
+                "string"){{
+                undefined = new Undefined(
+);
 
-            UpdatePassthroughResponse res = sdk.passthrough.updatePassthrough(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.UpdatePassthroughResponse res = sdk.passthrough.updatePassthrough(req);
 
             if (res.undefined != null) {
                 // handle response

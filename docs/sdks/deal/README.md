@@ -31,13 +31,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateCrmDealRequest req = new CreateCrmDealRequest("string"){{
-                crmDeal = new CrmDeal(){{
+            com.unifiedapi.unifiedto.models.operations.CreateCrmDealRequest req = new CreateCrmDealRequest(
+                "string"){{
+                crmDeal = new CrmDeal(
+){{
                     amount = 1917.45d;
                     closedAt = OffsetDateTime.parse("2022-08-27T15:05:01.017Z");
                     createdAt = OffsetDateTime.parse("2022-07-23T03:04:45.267Z");
@@ -47,7 +50,8 @@ public class Application {
                     name = "string";
                     pipeline = "string";
                     probability = 1087.81d;
-                    raw = new PropertyCrmDealRaw();
+                    raw = new PropertyCrmDealRaw(
+);
                     source = "string";
                     stage = "string";
                     tags = new String[]{{
@@ -55,10 +59,12 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2022-10-13T05:28:26.663Z");
                     wonReason = "string";
-                }};
-            }};            
 
-            CreateCrmDealResponse res = sdk.deal.createCrmDeal(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateCrmDealResponse res = sdk.deal.createCrmDeal(req);
 
             if (res.crmDeal != null) {
                 // handle response
@@ -100,18 +106,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmDealRequest req = new GetCrmDealRequest("string", "string"){{
+            com.unifiedapi.unifiedto.models.operations.GetCrmDealRequest req = new GetCrmDealRequest(
+                "string",
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
-            }};            
 
-            GetCrmDealResponse res = sdk.deal.getCrmDeal(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetCrmDealResponse res = sdk.deal.getCrmDeal(req);
 
             if (res.crmDeal != null) {
                 // handle response
@@ -154,12 +164,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListCrmDealsRequest req = new ListCrmDealsRequest("string"){{
+            com.unifiedapi.unifiedto.models.operations.ListCrmDealsRequest req = new ListCrmDealsRequest(
+                "string"){{
                 companyId = "string";
                 contactId = "string";
                 fields = new String[]{{
@@ -171,9 +183,10 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2022-09-03T12:16:34.604Z");
-            }};            
 
-            ListCrmDealsResponse res = sdk.deal.listCrmDeals(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListCrmDealsResponse res = sdk.deal.listCrmDeals(req);
 
             if (res.crmDeals != null) {
                 // handle response
@@ -218,13 +231,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmDealRequest req = new PatchCrmDealRequest("string", "string"){{
-                crmDeal = new CrmDeal(){{
+            com.unifiedapi.unifiedto.models.operations.PatchCrmDealRequest req = new PatchCrmDealRequest(
+                "string",
+                "string"){{
+                crmDeal = new CrmDeal(
+){{
                     amount = 9874.05d;
                     closedAt = OffsetDateTime.parse("2021-07-09T08:48:03.715Z");
                     createdAt = OffsetDateTime.parse("2022-04-30T07:03:46.302Z");
@@ -234,7 +251,8 @@ public class Application {
                     name = "string";
                     pipeline = "string";
                     probability = 9555.58d;
-                    raw = new PropertyCrmDealRaw();
+                    raw = new PropertyCrmDealRaw(
+);
                     source = "string";
                     stage = "string";
                     tags = new String[]{{
@@ -242,10 +260,12 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2023-02-21T14:41:27.897Z");
                     wonReason = "string";
-                }};
-            }};            
 
-            PatchCrmDealResponse res = sdk.deal.patchCrmDeal(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.PatchCrmDealResponse res = sdk.deal.patchCrmDeal(req);
 
             if (res.crmDeal != null) {
                 // handle response
@@ -287,14 +307,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveCrmDealRequest req = new RemoveCrmDealRequest("string", "string");            
+            com.unifiedapi.unifiedto.models.operations.RemoveCrmDealRequest req = new RemoveCrmDealRequest(
+                "string",
+                "string");
 
-            RemoveCrmDealResponse res = sdk.deal.removeCrmDeal(req);
+            com.unifiedapi.unifiedto.models.operations.RemoveCrmDealResponse res = sdk.deal.removeCrmDeal(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -339,13 +362,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateCrmDealRequest req = new UpdateCrmDealRequest("string", "string"){{
-                crmDeal = new CrmDeal(){{
+            com.unifiedapi.unifiedto.models.operations.UpdateCrmDealRequest req = new UpdateCrmDealRequest(
+                "string",
+                "string"){{
+                crmDeal = new CrmDeal(
+){{
                     amount = 854.3d;
                     closedAt = OffsetDateTime.parse("2022-01-13T07:04:58.998Z");
                     createdAt = OffsetDateTime.parse("2021-11-20T16:49:31.989Z");
@@ -355,7 +382,8 @@ public class Application {
                     name = "string";
                     pipeline = "string";
                     probability = 2970.01d;
-                    raw = new PropertyCrmDealRaw();
+                    raw = new PropertyCrmDealRaw(
+);
                     source = "string";
                     stage = "string";
                     tags = new String[]{{
@@ -363,10 +391,12 @@ public class Application {
                     }};
                     updatedAt = OffsetDateTime.parse("2022-01-31T15:37:01.475Z");
                     wonReason = "string";
-                }};
-            }};            
 
-            UpdateCrmDealResponse res = sdk.deal.updateCrmDeal(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.UpdateCrmDealResponse res = sdk.deal.updateCrmDeal(req);
 
             if (res.crmDeal != null) {
                 // handle response

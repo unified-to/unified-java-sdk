@@ -89,6 +89,7 @@ public class AtsScorecard {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     public PropertyAtsScorecardRaw raw;
 
@@ -117,7 +118,5 @@ public class AtsScorecard {
         return this;
     }
     
-    public AtsScorecard(@JsonProperty("raw") PropertyAtsScorecardRaw raw) {
-        this.raw = raw;
-  }
+    public AtsScorecard(){}
 }

@@ -31,25 +31,31 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateCrmPipelineRequest req = new CreateCrmPipelineRequest("string"){{
-                crmPipeline = new CrmPipeline(){{
+            com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineRequest req = new CreateCrmPipelineRequest(
+                "string"){{
+                crmPipeline = new CrmPipeline(
+){{
                     createdAt = OffsetDateTime.parse("2023-06-24T14:15:54.218Z");
                     dealProbability = false;
                     displayOrder = 6254.97d;
                     id = "<ID>";
                     isActive = false;
                     name = "string";
-                    raw = new PropertyCrmPipelineRaw();
+                    raw = new PropertyCrmPipelineRaw(
+);
                     updatedAt = OffsetDateTime.parse("2021-12-01T06:10:18.007Z");
-                }};
-            }};            
 
-            CreateCrmPipelineResponse res = sdk.pipeline.createCrmPipeline(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineResponse res = sdk.pipeline.createCrmPipeline(req);
 
             if (res.crmPipeline != null) {
                 // handle response
@@ -91,18 +97,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmPipelineRequest req = new GetCrmPipelineRequest("string", "string"){{
+            com.unifiedapi.unifiedto.models.operations.GetCrmPipelineRequest req = new GetCrmPipelineRequest(
+                "string",
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
-            }};            
 
-            GetCrmPipelineResponse res = sdk.pipeline.getCrmPipeline(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetCrmPipelineResponse res = sdk.pipeline.getCrmPipeline(req);
 
             if (res.crmPipeline != null) {
                 // handle response
@@ -145,12 +155,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListCrmPipelinesRequest req = new ListCrmPipelinesRequest("string"){{
+            com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesRequest req = new ListCrmPipelinesRequest(
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
@@ -160,9 +172,10 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2021-04-29T15:47:27.871Z");
-            }};            
 
-            ListCrmPipelinesResponse res = sdk.pipeline.listCrmPipelines(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesResponse res = sdk.pipeline.listCrmPipelines(req);
 
             if (res.crmPipelines != null) {
                 // handle response
@@ -207,25 +220,32 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmPipelineRequest req = new PatchCrmPipelineRequest("string", "string"){{
-                crmPipeline = new CrmPipeline(){{
+            com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineRequest req = new PatchCrmPipelineRequest(
+                "string",
+                "string"){{
+                crmPipeline = new CrmPipeline(
+){{
                     createdAt = OffsetDateTime.parse("2023-08-26T17:19:01.949Z");
                     dealProbability = false;
                     displayOrder = 8620.92d;
                     id = "<ID>";
                     isActive = false;
                     name = "string";
-                    raw = new PropertyCrmPipelineRaw();
+                    raw = new PropertyCrmPipelineRaw(
+);
                     updatedAt = OffsetDateTime.parse("2022-04-03T12:55:27.421Z");
-                }};
-            }};            
 
-            PatchCrmPipelineResponse res = sdk.pipeline.patchCrmPipeline(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineResponse res = sdk.pipeline.patchCrmPipeline(req);
 
             if (res.crmPipeline != null) {
                 // handle response
@@ -267,14 +287,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveCrmPipelineRequest req = new RemoveCrmPipelineRequest("string", "string");            
+            com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineRequest req = new RemoveCrmPipelineRequest(
+                "string",
+                "string");
 
-            RemoveCrmPipelineResponse res = sdk.pipeline.removeCrmPipeline(req);
+            com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineResponse res = sdk.pipeline.removeCrmPipeline(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -319,25 +342,32 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateCrmPipelineRequest req = new UpdateCrmPipelineRequest("string", "string"){{
-                crmPipeline = new CrmPipeline(){{
+            com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineRequest req = new UpdateCrmPipelineRequest(
+                "string",
+                "string"){{
+                crmPipeline = new CrmPipeline(
+){{
                     createdAt = OffsetDateTime.parse("2021-12-27T08:28:05.275Z");
                     dealProbability = false;
                     displayOrder = 8923.83d;
                     id = "<ID>";
                     isActive = false;
                     name = "string";
-                    raw = new PropertyCrmPipelineRaw();
+                    raw = new PropertyCrmPipelineRaw(
+);
                     updatedAt = OffsetDateTime.parse("2022-07-18T01:45:20.441Z");
-                }};
-            }};            
 
-            UpdateCrmPipelineResponse res = sdk.pipeline.updateCrmPipeline(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineResponse res = sdk.pipeline.updateCrmPipeline(req);
 
             if (res.crmPipeline != null) {
                 // handle response

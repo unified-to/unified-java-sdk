@@ -98,6 +98,15 @@ public class CrmEvent {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lead_ids")
+    public String[] leadIds;
+
+    public CrmEvent withLeadIds(String[] leadIds) {
+        this.leadIds = leadIds;
+        return this;
+    }
+    
     /**
      * The meeting object, when type = meeting
      */

@@ -46,11 +46,10 @@ public class Payment {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.CreateAccountingPaymentResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAccountingPaymentResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.CreateAccountingPaymentResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAccountingPaymentResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountingPayment = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -91,11 +90,10 @@ public class Payment {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetAccountingPaymentResponse res = new com.unifiedapi.unifiedto.models.operations.GetAccountingPaymentResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.GetAccountingPaymentResponse res = new com.unifiedapi.unifiedto.models.operations.GetAccountingPaymentResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountingPayment = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -136,11 +134,10 @@ public class Payment {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.ListAccountingPaymentsResponse res = new com.unifiedapi.unifiedto.models.operations.ListAccountingPaymentsResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.ListAccountingPaymentsResponse res = new com.unifiedapi.unifiedto.models.operations.ListAccountingPaymentsResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountingPayments = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -177,11 +174,10 @@ public class Payment {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.PatchAccountingPaymentResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAccountingPaymentResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.PatchAccountingPaymentResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAccountingPaymentResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountingPayment = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -216,11 +212,10 @@ public class Payment {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.RemoveAccountingPaymentResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAccountingPaymentResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.RemoveAccountingPaymentResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAccountingPaymentResponse(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -256,11 +251,10 @@ public class Payment {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.UpdateAccountingPaymentResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAccountingPaymentResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.UpdateAccountingPaymentResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAccountingPaymentResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountingPayment = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {

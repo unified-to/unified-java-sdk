@@ -23,20 +23,24 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedIntegrationLoginRequest req = new GetUnifiedIntegrationLoginRequest("string", "string"){{
+            com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginRequest req = new GetUnifiedIntegrationLoginRequest(
+                "string",
+                "string"){{
                 env = "string";
                 failureRedirect = "string";
                 redirect = false;
                 state = "string";
                 successRedirect = "string";
-            }};            
 
-            GetUnifiedIntegrationLoginResponse res = sdk.login.getUnifiedIntegrationLogin(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginResponse res = sdk.login.getUnifiedIntegrationLogin(req);
 
             if (res.res != null) {
                 // handle response

@@ -40,14 +40,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateHrisEmployeeRequest req = new CreateHrisEmployeeRequest("string"){{
-                hrisEmployee = new HrisEmployee(){{
-                    address = new PropertyHrisEmployeeAddress(){{
+            com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeRequest req = new CreateHrisEmployeeRequest(
+                "string"){{
+                hrisEmployee = new HrisEmployee(
+){{
+                    address = new PropertyHrisEmployeeAddress(
+){{
                         address1 = "string";
                         address2 = "string";
                         city = "Armstrongborough";
@@ -56,6 +60,7 @@ public class Application {
                         postalCode = "23995";
                         region = "string";
                         regionCode = "string";
+
                     }};
                     createdAt = OffsetDateTime.parse("2023-10-07T18:03:23.931Z");
                     currency = "Tunisian Dinar";
@@ -63,7 +68,8 @@ public class Application {
                     department = "string";
                     division = "string";
                     emails = new com.unifiedapi.unifiedto.models.shared.HrisEmail[]{{
-                        add(new HrisEmail("string"){{
+                        add(new HrisEmail(
+                        "string"){{
                             email = "Audrey.Wilkinson@yahoo.com";
                         }}),
                     }};
@@ -79,9 +85,11 @@ public class Application {
                     managerId = "string";
                     maritalStatus = MaritalStatus.MARRIED;
                     name = "string";
-                    raw = new PropertyHrisEmployeeRaw();
+                    raw = new PropertyHrisEmployeeRaw(
+);
                     telephones = new com.unifiedapi.unifiedto.models.shared.HrisTelephone[]{{
-                        add(new HrisTelephone("string"){{
+                        add(new HrisTelephone(
+                        "string"){{
                             telephone = "string";
                         }}),
                     }};
@@ -89,10 +97,12 @@ public class Application {
                     timezone = "Australia/Melbourne";
                     title = "string";
                     updatedAt = OffsetDateTime.parse("2022-02-26T07:00:32.887Z");
-                }};
-            }};            
 
-            CreateHrisEmployeeResponse res = sdk.employee.createHrisEmployee(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeResponse res = sdk.employee.createHrisEmployee(req);
 
             if (res.hrisEmployee != null) {
                 // handle response
@@ -134,18 +144,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetHrisEmployeeRequest req = new GetHrisEmployeeRequest("string", "string"){{
+            com.unifiedapi.unifiedto.models.operations.GetHrisEmployeeRequest req = new GetHrisEmployeeRequest(
+                "string",
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
-            }};            
 
-            GetHrisEmployeeResponse res = sdk.employee.getHrisEmployee(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetHrisEmployeeResponse res = sdk.employee.getHrisEmployee(req);
 
             if (res.hrisEmployee != null) {
                 // handle response
@@ -188,12 +202,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListHrisEmployeesRequest req = new ListHrisEmployeesRequest("string"){{
+            com.unifiedapi.unifiedto.models.operations.ListHrisEmployeesRequest req = new ListHrisEmployeesRequest(
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
@@ -203,9 +219,10 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2022-04-09T14:44:59.888Z");
-            }};            
 
-            ListHrisEmployeesResponse res = sdk.employee.listHrisEmployees(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListHrisEmployeesResponse res = sdk.employee.listHrisEmployees(req);
 
             if (res.hrisEmployees != null) {
                 // handle response
@@ -259,14 +276,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchHrisEmployeeRequest req = new PatchHrisEmployeeRequest("string", "string"){{
-                hrisEmployee = new HrisEmployee(){{
-                    address = new PropertyHrisEmployeeAddress(){{
+            com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeRequest req = new PatchHrisEmployeeRequest(
+                "string",
+                "string"){{
+                hrisEmployee = new HrisEmployee(
+){{
+                    address = new PropertyHrisEmployeeAddress(
+){{
                         address1 = "string";
                         address2 = "string";
                         city = "Zettaland";
@@ -275,6 +297,7 @@ public class Application {
                         postalCode = "87892";
                         region = "string";
                         regionCode = "string";
+
                     }};
                     createdAt = OffsetDateTime.parse("2022-07-12T10:27:03.270Z");
                     currency = "Venezuelan bolívar";
@@ -282,7 +305,8 @@ public class Application {
                     department = "string";
                     division = "string";
                     emails = new com.unifiedapi.unifiedto.models.shared.HrisEmail[]{{
-                        add(new HrisEmail("string"){{
+                        add(new HrisEmail(
+                        "string"){{
                             email = "Bobby_Balistreri@yahoo.com";
                         }}),
                     }};
@@ -298,9 +322,11 @@ public class Application {
                     managerId = "string";
                     maritalStatus = MaritalStatus.SINGLE;
                     name = "string";
-                    raw = new PropertyHrisEmployeeRaw();
+                    raw = new PropertyHrisEmployeeRaw(
+);
                     telephones = new com.unifiedapi.unifiedto.models.shared.HrisTelephone[]{{
-                        add(new HrisTelephone("string"){{
+                        add(new HrisTelephone(
+                        "string"){{
                             telephone = "string";
                         }}),
                     }};
@@ -308,10 +334,12 @@ public class Application {
                     timezone = "Australia/Darwin";
                     title = "string";
                     updatedAt = OffsetDateTime.parse("2023-05-06T23:32:48.401Z");
-                }};
-            }};            
 
-            PatchHrisEmployeeResponse res = sdk.employee.patchHrisEmployee(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeResponse res = sdk.employee.patchHrisEmployee(req);
 
             if (res.hrisEmployee != null) {
                 // handle response
@@ -353,14 +381,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveHrisEmployeeRequest req = new RemoveHrisEmployeeRequest("string", "string");            
+            com.unifiedapi.unifiedto.models.operations.RemoveHrisEmployeeRequest req = new RemoveHrisEmployeeRequest(
+                "string",
+                "string");
 
-            RemoveHrisEmployeeResponse res = sdk.employee.removeHrisEmployee(req);
+            com.unifiedapi.unifiedto.models.operations.RemoveHrisEmployeeResponse res = sdk.employee.removeHrisEmployee(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -414,14 +445,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateHrisEmployeeRequest req = new UpdateHrisEmployeeRequest("string", "string"){{
-                hrisEmployee = new HrisEmployee(){{
-                    address = new PropertyHrisEmployeeAddress(){{
+            com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeRequest req = new UpdateHrisEmployeeRequest(
+                "string",
+                "string"){{
+                hrisEmployee = new HrisEmployee(
+){{
+                    address = new PropertyHrisEmployeeAddress(
+){{
                         address1 = "string";
                         address2 = "string";
                         city = "North Alfurt";
@@ -430,6 +466,7 @@ public class Application {
                         postalCode = "60601-3179";
                         region = "string";
                         regionCode = "string";
+
                     }};
                     createdAt = OffsetDateTime.parse("2023-06-07T20:54:18.451Z");
                     currency = "Zimbabwe Dollar";
@@ -437,7 +474,8 @@ public class Application {
                     department = "string";
                     division = "string";
                     emails = new com.unifiedapi.unifiedto.models.shared.HrisEmail[]{{
-                        add(new HrisEmail("string"){{
+                        add(new HrisEmail(
+                        "string"){{
                             email = "Larue_Schroeder65@gmail.com";
                         }}),
                     }};
@@ -453,9 +491,11 @@ public class Application {
                     managerId = "string";
                     maritalStatus = MaritalStatus.MARRIED;
                     name = "string";
-                    raw = new PropertyHrisEmployeeRaw();
+                    raw = new PropertyHrisEmployeeRaw(
+);
                     telephones = new com.unifiedapi.unifiedto.models.shared.HrisTelephone[]{{
-                        add(new HrisTelephone("string"){{
+                        add(new HrisTelephone(
+                        "string"){{
                             telephone = "string";
                         }}),
                     }};
@@ -463,10 +503,12 @@ public class Application {
                     timezone = "Asia/Karachi";
                     title = "string";
                     updatedAt = OffsetDateTime.parse("2023-07-23T03:17:52.660Z");
-                }};
-            }};            
 
-            UpdateHrisEmployeeResponse res = sdk.employee.updateHrisEmployee(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeResponse res = sdk.employee.updateHrisEmployee(req);
 
             if (res.hrisEmployee != null) {
                 // handle response

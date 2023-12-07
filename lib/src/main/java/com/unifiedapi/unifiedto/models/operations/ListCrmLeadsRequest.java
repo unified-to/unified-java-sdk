@@ -11,6 +11,17 @@ import java.time.OffsetDateTime;
 
 public class ListCrmLeadsRequest {
     /**
+     * The company ID to filter results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=company_id")
+    public String companyId;
+
+    public ListCrmLeadsRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
+        return this;
+    }
+    
+    /**
      * ID of the connection
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
@@ -18,6 +29,17 @@ public class ListCrmLeadsRequest {
 
     public ListCrmLeadsRequest withConnectionId(String connectionId) {
         this.connectionId = connectionId;
+        return this;
+    }
+    
+    /**
+     * The contact ID to filter results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contact_id")
+    public String contactId;
+
+    public ListCrmLeadsRequest withContactId(String contactId) {
+        this.contactId = contactId;
         return this;
     }
     

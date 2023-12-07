@@ -46,11 +46,10 @@ public class Hris {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeResponse res = new com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeResponse res = new com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeResponse(contentType, httpRes.statusCode(), httpRes) {{
             hrisEmployee = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -87,11 +86,10 @@ public class Hris {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.CreateHrisGroupResponse res = new com.unifiedapi.unifiedto.models.operations.CreateHrisGroupResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.CreateHrisGroupResponse res = new com.unifiedapi.unifiedto.models.operations.CreateHrisGroupResponse(contentType, httpRes.statusCode(), httpRes) {{
             hrisGroup = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -132,11 +130,10 @@ public class Hris {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetHrisEmployeeResponse res = new com.unifiedapi.unifiedto.models.operations.GetHrisEmployeeResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.GetHrisEmployeeResponse res = new com.unifiedapi.unifiedto.models.operations.GetHrisEmployeeResponse(contentType, httpRes.statusCode(), httpRes) {{
             hrisEmployee = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -177,11 +174,10 @@ public class Hris {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetHrisGroupResponse res = new com.unifiedapi.unifiedto.models.operations.GetHrisGroupResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.GetHrisGroupResponse res = new com.unifiedapi.unifiedto.models.operations.GetHrisGroupResponse(contentType, httpRes.statusCode(), httpRes) {{
             hrisGroup = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -222,11 +218,10 @@ public class Hris {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.ListHrisEmployeesResponse res = new com.unifiedapi.unifiedto.models.operations.ListHrisEmployeesResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.ListHrisEmployeesResponse res = new com.unifiedapi.unifiedto.models.operations.ListHrisEmployeesResponse(contentType, httpRes.statusCode(), httpRes) {{
             hrisEmployees = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -267,11 +262,10 @@ public class Hris {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.ListHrisGroupsResponse res = new com.unifiedapi.unifiedto.models.operations.ListHrisGroupsResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.ListHrisGroupsResponse res = new com.unifiedapi.unifiedto.models.operations.ListHrisGroupsResponse(contentType, httpRes.statusCode(), httpRes) {{
             hrisGroups = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -308,11 +302,10 @@ public class Hris {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeResponse res = new com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeResponse res = new com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeResponse(contentType, httpRes.statusCode(), httpRes) {{
             hrisEmployee = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -349,11 +342,10 @@ public class Hris {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.PatchHrisGroupResponse res = new com.unifiedapi.unifiedto.models.operations.PatchHrisGroupResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.PatchHrisGroupResponse res = new com.unifiedapi.unifiedto.models.operations.PatchHrisGroupResponse(contentType, httpRes.statusCode(), httpRes) {{
             hrisGroup = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -388,11 +380,10 @@ public class Hris {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.RemoveHrisEmployeeResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveHrisEmployeeResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.RemoveHrisEmployeeResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveHrisEmployeeResponse(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -426,11 +417,10 @@ public class Hris {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.RemoveHrisGroupResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveHrisGroupResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.RemoveHrisGroupResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveHrisGroupResponse(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -466,11 +456,10 @@ public class Hris {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeResponse(contentType, httpRes.statusCode(), httpRes) {{
             hrisEmployee = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -507,11 +496,10 @@ public class Hris {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.UpdateHrisGroupResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateHrisGroupResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.UpdateHrisGroupResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateHrisGroupResponse(contentType, httpRes.statusCode(), httpRes) {{
             hrisGroup = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {

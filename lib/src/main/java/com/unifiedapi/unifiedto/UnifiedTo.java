@@ -26,9 +26,11 @@ public class UnifiedTo {
 	};
   	
     public Accounting accounting;
+    public Account account;
     public Customer customer;
     public Invoice invoice;
     public Payment payment;
+    public Transaction transaction;
     public Ats ats;
     public Application application;
     public Candidate candidate;
@@ -173,11 +175,15 @@ public class UnifiedTo {
 		
 		this.accounting = new Accounting(this.sdkConfiguration);
 		
+		this.account = new Account(this.sdkConfiguration);
+		
 		this.customer = new Customer(this.sdkConfiguration);
 		
 		this.invoice = new Invoice(this.sdkConfiguration);
 		
 		this.payment = new Payment(this.sdkConfiguration);
+		
+		this.transaction = new Transaction(this.sdkConfiguration);
 		
 		this.ats = new Ats(this.sdkConfiguration);
 		

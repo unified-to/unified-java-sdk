@@ -32,13 +32,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateAtsDocumentRequest req = new CreateAtsDocumentRequest("string"){{
-                atsDocument = new AtsDocument(){{
+            com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentRequest req = new CreateAtsDocumentRequest(
+                "string"){{
+                atsDocument = new AtsDocument(
+){{
                     applicationId = "string";
                     candidateId = "string";
                     createdAt = OffsetDateTime.parse("2021-04-24T22:30:56.289Z");
@@ -47,14 +50,17 @@ public class Application {
                     filename = "mouse_per_missouri.mp4";
                     id = "<ID>";
                     jobId = "string";
-                    raw = new PropertyAtsDocumentRaw();
+                    raw = new PropertyAtsDocumentRaw(
+);
                     type = AtsDocumentType.OFFER_PACKET;
                     updatedAt = OffsetDateTime.parse("2021-12-28T09:27:32.859Z");
                     userId = "string";
-                }};
-            }};            
 
-            CreateAtsDocumentResponse res = sdk.document.createAtsDocument(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentResponse res = sdk.document.createAtsDocument(req);
 
             if (res.atsDocument != null) {
                 // handle response
@@ -96,18 +102,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsDocumentRequest req = new GetAtsDocumentRequest("string", "string"){{
+            com.unifiedapi.unifiedto.models.operations.GetAtsDocumentRequest req = new GetAtsDocumentRequest(
+                "string",
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
-            }};            
 
-            GetAtsDocumentResponse res = sdk.document.getAtsDocument(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetAtsDocumentResponse res = sdk.document.getAtsDocument(req);
 
             if (res.atsDocument != null) {
                 // handle response
@@ -150,12 +160,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListAtsDocumentsRequest req = new ListAtsDocumentsRequest("string"){{
+            com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsRequest req = new ListAtsDocumentsRequest(
+                "string"){{
                 applicationId = "string";
                 fields = new String[]{{
                     add("string"),
@@ -166,9 +178,10 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2022-08-30T11:38:20.739Z");
-            }};            
 
-            ListAtsDocumentsResponse res = sdk.document.listAtsDocuments(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsResponse res = sdk.document.listAtsDocuments(req);
 
             if (res.atsDocuments != null) {
                 // handle response
@@ -214,13 +227,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchAtsDocumentRequest req = new PatchAtsDocumentRequest("string", "string"){{
-                atsDocument = new AtsDocument(){{
+            com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentRequest req = new PatchAtsDocumentRequest(
+                "string",
+                "string"){{
+                atsDocument = new AtsDocument(
+){{
                     applicationId = "string";
                     candidateId = "string";
                     createdAt = OffsetDateTime.parse("2021-04-01T09:34:15.248Z");
@@ -229,14 +246,17 @@ public class Application {
                     filename = "future_underpin.mp4v";
                     id = "<ID>";
                     jobId = "string";
-                    raw = new PropertyAtsDocumentRaw();
+                    raw = new PropertyAtsDocumentRaw(
+);
                     type = AtsDocumentType.OFFER_LETTER;
                     updatedAt = OffsetDateTime.parse("2022-02-14T01:39:21.030Z");
                     userId = "string";
-                }};
-            }};            
 
-            PatchAtsDocumentResponse res = sdk.document.patchAtsDocument(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentResponse res = sdk.document.patchAtsDocument(req);
 
             if (res.atsDocument != null) {
                 // handle response
@@ -278,14 +298,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveAtsDocumentRequest req = new RemoveAtsDocumentRequest("string", "string");            
+            com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentRequest req = new RemoveAtsDocumentRequest(
+                "string",
+                "string");
 
-            RemoveAtsDocumentResponse res = sdk.document.removeAtsDocument(req);
+            com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentResponse res = sdk.document.removeAtsDocument(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -331,13 +354,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateAtsDocumentRequest req = new UpdateAtsDocumentRequest("string", "string"){{
-                atsDocument = new AtsDocument(){{
+            com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentRequest req = new UpdateAtsDocumentRequest(
+                "string",
+                "string"){{
+                atsDocument = new AtsDocument(
+){{
                     applicationId = "string";
                     candidateId = "string";
                     createdAt = OffsetDateTime.parse("2021-07-05T13:01:49.006Z");
@@ -346,14 +373,17 @@ public class Application {
                     filename = "unbranded_reprehenderit.jpg";
                     id = "<ID>";
                     jobId = "string";
-                    raw = new PropertyAtsDocumentRaw();
+                    raw = new PropertyAtsDocumentRaw(
+);
                     type = AtsDocumentType.OFFER_PACKET;
                     updatedAt = OffsetDateTime.parse("2021-12-02T17:00:21.700Z");
                     userId = "string";
-                }};
-            }};            
 
-            UpdateAtsDocumentResponse res = sdk.document.updateAtsDocument(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentResponse res = sdk.document.updateAtsDocument(req);
 
             if (res.atsDocument != null) {
                 // handle response

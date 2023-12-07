@@ -31,13 +31,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateAccountingPaymentRequest req = new CreateAccountingPaymentRequest("string"){{
-                accountingPayment = new AccountingPayment(){{
+            com.unifiedapi.unifiedto.models.operations.CreateAccountingPaymentRequest req = new CreateAccountingPaymentRequest(
+                "string"){{
+                accountingPayment = new AccountingPayment(
+){{
                     createdAt = OffsetDateTime.parse("2023-01-27T20:38:27.181Z");
                     currency = "Lari";
                     customerId = "string";
@@ -47,14 +50,17 @@ public class Application {
                     }};
                     notes = "string";
                     paymentMethod = "string";
-                    raw = new PropertyAccountingPaymentRaw();
+                    raw = new PropertyAccountingPaymentRaw(
+);
                     reference = "string";
                     totalAmount = 291.36d;
                     updatedAt = OffsetDateTime.parse("2022-09-30T13:35:20.411Z");
-                }};
-            }};            
 
-            CreateAccountingPaymentResponse res = sdk.payment.createAccountingPayment(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateAccountingPaymentResponse res = sdk.payment.createAccountingPayment(req);
 
             if (res.accountingPayment != null) {
                 // handle response
@@ -96,18 +102,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetAccountingPaymentRequest req = new GetAccountingPaymentRequest("string", "string"){{
+            com.unifiedapi.unifiedto.models.operations.GetAccountingPaymentRequest req = new GetAccountingPaymentRequest(
+                "string",
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
-            }};            
 
-            GetAccountingPaymentResponse res = sdk.payment.getAccountingPayment(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetAccountingPaymentResponse res = sdk.payment.getAccountingPayment(req);
 
             if (res.accountingPayment != null) {
                 // handle response
@@ -150,12 +160,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListAccountingPaymentsRequest req = new ListAccountingPaymentsRequest("string"){{
+            com.unifiedapi.unifiedto.models.operations.ListAccountingPaymentsRequest req = new ListAccountingPaymentsRequest(
+                "string"){{
                 customerId = "string";
                 fields = new String[]{{
                     add("string"),
@@ -167,9 +179,10 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2023-02-25T01:03:12.222Z");
-            }};            
 
-            ListAccountingPaymentsResponse res = sdk.payment.listAccountingPayments(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListAccountingPaymentsResponse res = sdk.payment.listAccountingPayments(req);
 
             if (res.accountingPayments != null) {
                 // handle response
@@ -214,13 +227,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchAccountingPaymentRequest req = new PatchAccountingPaymentRequest("string", "string"){{
-                accountingPayment = new AccountingPayment(){{
+            com.unifiedapi.unifiedto.models.operations.PatchAccountingPaymentRequest req = new PatchAccountingPaymentRequest(
+                "string",
+                "string"){{
+                accountingPayment = new AccountingPayment(
+){{
                     createdAt = OffsetDateTime.parse("2021-02-25T01:44:17.944Z");
                     currency = "Boliviano boliviano";
                     customerId = "string";
@@ -230,14 +247,17 @@ public class Application {
                     }};
                     notes = "string";
                     paymentMethod = "string";
-                    raw = new PropertyAccountingPaymentRaw();
+                    raw = new PropertyAccountingPaymentRaw(
+);
                     reference = "string";
                     totalAmount = 8698.74d;
                     updatedAt = OffsetDateTime.parse("2022-11-07T21:51:56.510Z");
-                }};
-            }};            
 
-            PatchAccountingPaymentResponse res = sdk.payment.patchAccountingPayment(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.PatchAccountingPaymentResponse res = sdk.payment.patchAccountingPayment(req);
 
             if (res.accountingPayment != null) {
                 // handle response
@@ -279,14 +299,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveAccountingPaymentRequest req = new RemoveAccountingPaymentRequest("string", "string");            
+            com.unifiedapi.unifiedto.models.operations.RemoveAccountingPaymentRequest req = new RemoveAccountingPaymentRequest(
+                "string",
+                "string");
 
-            RemoveAccountingPaymentResponse res = sdk.payment.removeAccountingPayment(req);
+            com.unifiedapi.unifiedto.models.operations.RemoveAccountingPaymentResponse res = sdk.payment.removeAccountingPayment(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -331,13 +354,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateAccountingPaymentRequest req = new UpdateAccountingPaymentRequest("string", "string"){{
-                accountingPayment = new AccountingPayment(){{
+            com.unifiedapi.unifiedto.models.operations.UpdateAccountingPaymentRequest req = new UpdateAccountingPaymentRequest(
+                "string",
+                "string"){{
+                accountingPayment = new AccountingPayment(
+){{
                     createdAt = OffsetDateTime.parse("2021-01-04T17:25:22.482Z");
                     currency = "Sudanese Pound";
                     customerId = "string";
@@ -347,14 +374,17 @@ public class Application {
                     }};
                     notes = "string";
                     paymentMethod = "string";
-                    raw = new PropertyAccountingPaymentRaw();
+                    raw = new PropertyAccountingPaymentRaw(
+);
                     reference = "string";
                     totalAmount = 1869.63d;
                     updatedAt = OffsetDateTime.parse("2021-05-14T15:37:22.784Z");
-                }};
-            }};            
 
-            UpdateAccountingPaymentResponse res = sdk.payment.updateAccountingPayment(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.UpdateAccountingPaymentResponse res = sdk.payment.updateAccountingPayment(req);
 
             if (res.accountingPayment != null) {
                 // handle response

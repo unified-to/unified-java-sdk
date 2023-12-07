@@ -31,24 +31,31 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateTicketingNoteRequest req = new CreateTicketingNoteRequest("string"){{
-                ticketingNote = new TicketingNote(new PropertyTicketingNoteRaw()){{
+            com.unifiedapi.unifiedto.models.operations.CreateTicketingNoteRequest req = new CreateTicketingNoteRequest(
+                "string"){{
+                ticketingNote = new TicketingNote(
+){{
                     agentId = "string";
                     createdAt = OffsetDateTime.parse("2023-04-20T19:05:27.564Z");
                     customerId = "string";
                     description = "Distributed 4th generation portal";
                     id = "<ID>";
+                    raw = new PropertyTicketingNoteRaw(
+);
                     ticketId = "string";
                     updatedAt = "string";
-                }};
-            }};            
 
-            CreateTicketingNoteResponse res = sdk.note.createTicketingNote(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateTicketingNoteResponse res = sdk.note.createTicketingNote(req);
 
             if (res.ticketingNote != null) {
                 // handle response
@@ -90,18 +97,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetTicketingNoteRequest req = new GetTicketingNoteRequest("string", "string"){{
+            com.unifiedapi.unifiedto.models.operations.GetTicketingNoteRequest req = new GetTicketingNoteRequest(
+                "string",
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
-            }};            
 
-            GetTicketingNoteResponse res = sdk.note.getTicketingNote(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetTicketingNoteResponse res = sdk.note.getTicketingNote(req);
 
             if (res.ticketingNote != null) {
                 // handle response
@@ -144,12 +155,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListTicketingNotesRequest req = new ListTicketingNotesRequest("string"){{
+            com.unifiedapi.unifiedto.models.operations.ListTicketingNotesRequest req = new ListTicketingNotesRequest(
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
@@ -160,9 +173,10 @@ public class Application {
                 sort = "string";
                 ticketId = "string";
                 updatedGte = OffsetDateTime.parse("2023-09-20T18:22:08.785Z");
-            }};            
 
-            ListTicketingNotesResponse res = sdk.note.listTicketingNotes(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListTicketingNotesResponse res = sdk.note.listTicketingNotes(req);
 
             if (res.ticketingNotes != null) {
                 // handle response
@@ -207,24 +221,32 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchTicketingNoteRequest req = new PatchTicketingNoteRequest("string", "string"){{
-                ticketingNote = new TicketingNote(new PropertyTicketingNoteRaw()){{
+            com.unifiedapi.unifiedto.models.operations.PatchTicketingNoteRequest req = new PatchTicketingNoteRequest(
+                "string",
+                "string"){{
+                ticketingNote = new TicketingNote(
+){{
                     agentId = "string";
                     createdAt = OffsetDateTime.parse("2023-09-04T23:33:24.591Z");
                     customerId = "string";
                     description = "Right-sized national productivity";
                     id = "<ID>";
+                    raw = new PropertyTicketingNoteRaw(
+);
                     ticketId = "string";
                     updatedAt = "string";
-                }};
-            }};            
 
-            PatchTicketingNoteResponse res = sdk.note.patchTicketingNote(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.PatchTicketingNoteResponse res = sdk.note.patchTicketingNote(req);
 
             if (res.ticketingNote != null) {
                 // handle response
@@ -266,14 +288,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveTicketingNoteRequest req = new RemoveTicketingNoteRequest("string", "string");            
+            com.unifiedapi.unifiedto.models.operations.RemoveTicketingNoteRequest req = new RemoveTicketingNoteRequest(
+                "string",
+                "string");
 
-            RemoveTicketingNoteResponse res = sdk.note.removeTicketingNote(req);
+            com.unifiedapi.unifiedto.models.operations.RemoveTicketingNoteResponse res = sdk.note.removeTicketingNote(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -318,24 +343,32 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateTicketingNoteRequest req = new UpdateTicketingNoteRequest("string", "string"){{
-                ticketingNote = new TicketingNote(new PropertyTicketingNoteRaw()){{
+            com.unifiedapi.unifiedto.models.operations.UpdateTicketingNoteRequest req = new UpdateTicketingNoteRequest(
+                "string",
+                "string"){{
+                ticketingNote = new TicketingNote(
+){{
                     agentId = "string";
                     createdAt = OffsetDateTime.parse("2023-05-15T06:19:14.487Z");
                     customerId = "string";
                     description = "Versatile value-added utilisation";
                     id = "<ID>";
+                    raw = new PropertyTicketingNoteRaw(
+);
                     ticketId = "string";
                     updatedAt = "string";
-                }};
-            }};            
 
-            UpdateTicketingNoteResponse res = sdk.note.updateTicketingNote(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.UpdateTicketingNoteResponse res = sdk.note.updateTicketingNote(req);
 
             if (res.ticketingNote != null) {
                 // handle response

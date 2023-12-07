@@ -32,13 +32,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateHrisGroupRequest req = new CreateHrisGroupRequest("string"){{
-                hrisGroup = new HrisGroup(){{
+            com.unifiedapi.unifiedto.models.operations.CreateHrisGroupRequest req = new CreateHrisGroupRequest(
+                "string"){{
+                hrisGroup = new HrisGroup(
+){{
                     createdAt = OffsetDateTime.parse("2022-08-11T13:14:46.931Z");
                     description = "Self-enabling system-worthy collaboration";
                     employeeIds = new String[]{{
@@ -51,13 +54,16 @@ public class Application {
                     }};
                     name = "string";
                     parentId = "string";
-                    raw = new PropertyHrisGroupRaw();
+                    raw = new PropertyHrisGroupRaw(
+);
                     type = HrisGroupType.TEAM;
                     updatedAt = OffsetDateTime.parse("2023-03-10T00:20:29.321Z");
-                }};
-            }};            
 
-            CreateHrisGroupResponse res = sdk.group.createHrisGroup(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateHrisGroupResponse res = sdk.group.createHrisGroup(req);
 
             if (res.hrisGroup != null) {
                 // handle response
@@ -99,18 +105,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetHrisGroupRequest req = new GetHrisGroupRequest("string", "string"){{
+            com.unifiedapi.unifiedto.models.operations.GetHrisGroupRequest req = new GetHrisGroupRequest(
+                "string",
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
-            }};            
 
-            GetHrisGroupResponse res = sdk.group.getHrisGroup(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetHrisGroupResponse res = sdk.group.getHrisGroup(req);
 
             if (res.hrisGroup != null) {
                 // handle response
@@ -153,12 +163,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListHrisGroupsRequest req = new ListHrisGroupsRequest("string"){{
+            com.unifiedapi.unifiedto.models.operations.ListHrisGroupsRequest req = new ListHrisGroupsRequest(
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
@@ -168,9 +180,10 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2021-04-29T22:04:03.121Z");
-            }};            
 
-            ListHrisGroupsResponse res = sdk.group.listHrisGroups(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListHrisGroupsResponse res = sdk.group.listHrisGroups(req);
 
             if (res.hrisGroups != null) {
                 // handle response
@@ -216,13 +229,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchHrisGroupRequest req = new PatchHrisGroupRequest("string", "string"){{
-                hrisGroup = new HrisGroup(){{
+            com.unifiedapi.unifiedto.models.operations.PatchHrisGroupRequest req = new PatchHrisGroupRequest(
+                "string",
+                "string"){{
+                hrisGroup = new HrisGroup(
+){{
                     createdAt = OffsetDateTime.parse("2021-11-09T20:25:35.217Z");
                     description = "Compatible contextually-based local area network";
                     employeeIds = new String[]{{
@@ -235,13 +252,16 @@ public class Application {
                     }};
                     name = "string";
                     parentId = "string";
-                    raw = new PropertyHrisGroupRaw();
+                    raw = new PropertyHrisGroupRaw(
+);
                     type = HrisGroupType.DIVISION;
                     updatedAt = OffsetDateTime.parse("2022-06-23T09:49:13.425Z");
-                }};
-            }};            
 
-            PatchHrisGroupResponse res = sdk.group.patchHrisGroup(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.PatchHrisGroupResponse res = sdk.group.patchHrisGroup(req);
 
             if (res.hrisGroup != null) {
                 // handle response
@@ -283,14 +303,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveHrisGroupRequest req = new RemoveHrisGroupRequest("string", "string");            
+            com.unifiedapi.unifiedto.models.operations.RemoveHrisGroupRequest req = new RemoveHrisGroupRequest(
+                "string",
+                "string");
 
-            RemoveHrisGroupResponse res = sdk.group.removeHrisGroup(req);
+            com.unifiedapi.unifiedto.models.operations.RemoveHrisGroupResponse res = sdk.group.removeHrisGroup(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -336,13 +359,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateHrisGroupRequest req = new UpdateHrisGroupRequest("string", "string"){{
-                hrisGroup = new HrisGroup(){{
+            com.unifiedapi.unifiedto.models.operations.UpdateHrisGroupRequest req = new UpdateHrisGroupRequest(
+                "string",
+                "string"){{
+                hrisGroup = new HrisGroup(
+){{
                     createdAt = OffsetDateTime.parse("2021-12-06T17:42:02.933Z");
                     description = "Integrated empowering productivity";
                     employeeIds = new String[]{{
@@ -355,13 +382,16 @@ public class Application {
                     }};
                     name = "string";
                     parentId = "string";
-                    raw = new PropertyHrisGroupRaw();
+                    raw = new PropertyHrisGroupRaw(
+);
                     type = HrisGroupType.TEAM;
                     updatedAt = OffsetDateTime.parse("2023-09-12T15:58:06.273Z");
-                }};
-            }};            
 
-            UpdateHrisGroupResponse res = sdk.group.updateHrisGroup(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.UpdateHrisGroupResponse res = sdk.group.updateHrisGroup(req);
 
             if (res.hrisGroup != null) {
                 // handle response

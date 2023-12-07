@@ -53,37 +53,43 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsApplication;
+import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsApplicationRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import com.unifiedapi.unifiedto.models.shared.Status;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateAtsApplicationRequest req = new CreateAtsApplicationRequest("string"){{
-                atsApplication = new AtsApplication(){{
+            com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationRequest req = new CreateAtsApplicationRequest(
+                "string"){{
+                atsApplication = new AtsApplication(
+){{
                     appliedAt = OffsetDateTime.parse("2023-03-09T11:35:08.252Z");
                     candidateId = "string";
                     createdAt = OffsetDateTime.parse("2023-09-22T15:02:56.144Z");
                     id = "<ID>";
                     jobId = "string";
-                    raw = new PropertyAtsApplicationRaw();
+                    raw = new PropertyAtsApplicationRaw(
+);
                     rejectedAt = OffsetDateTime.parse("2022-01-18T22:03:17.799Z");
                     rejectedReason = "string";
                     source = "string";
-                    status = Status.FIRST_INTERVIEW;
+                    status = AtsApplicationStatus.FIRST_INTERVIEW;
                     updatedAt = OffsetDateTime.parse("2022-04-22T10:02:31.440Z");
-                }};
-            }};            
 
-            CreateAtsApplicationResponse res = sdk.ats.createAtsApplication(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationResponse res = sdk.ats.createAtsApplication(req);
 
             if (res.atsApplication != null) {
                 // handle response
@@ -133,14 +139,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateAtsCandidateRequest req = new CreateAtsCandidateRequest("string"){{
-                atsCandidate = new AtsCandidate(){{
-                    address = new PropertyAtsCandidateAddress(){{
+            com.unifiedapi.unifiedto.models.operations.CreateAtsCandidateRequest req = new CreateAtsCandidateRequest(
+                "string"){{
+                atsCandidate = new AtsCandidate(
+){{
+                    address = new PropertyAtsCandidateAddress(
+){{
                         address1 = "string";
                         address2 = "string";
                         city = "South Hill";
@@ -149,33 +159,42 @@ public class Application {
                         postalCode = "72991-5163";
                         region = "string";
                         regionCode = "string";
+
                     }};
                     companyName = "Pollich - Lubowitz";
                     createdAt = OffsetDateTime.parse("2021-03-05T23:23:31.487Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
-                        add(new AtsEmail("string"){{
+                        add(new AtsEmail(
+                        "string"){{
                             email = "Ransom.OReilly99@yahoo.com";
                         }}),
                     }};
                     externalId = "string";
                     id = "<ID>";
                     imageUrl = "string";
+                    linkUrls = new String[]{{
+                        add("string"),
+                    }};
                     name = "string";
-                    raw = new PropertyAtsCandidateRaw();
+                    raw = new PropertyAtsCandidateRaw(
+);
                     tags = new String[]{{
                         add("string"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.AtsTelephone[]{{
-                        add(new AtsTelephone("string"){{
+                        add(new AtsTelephone(
+                        "string"){{
                             telephone = "string";
                         }}),
                     }};
                     title = "string";
                     updatedAt = OffsetDateTime.parse("2021-03-23T22:20:02.861Z");
-                }};
-            }};            
 
-            CreateAtsCandidateResponse res = sdk.ats.createAtsCandidate(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateAtsCandidateResponse res = sdk.ats.createAtsCandidate(req);
 
             if (res.atsCandidate != null) {
                 // handle response
@@ -221,13 +240,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateAtsDocumentRequest req = new CreateAtsDocumentRequest("string"){{
-                atsDocument = new AtsDocument(){{
+            com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentRequest req = new CreateAtsDocumentRequest(
+                "string"){{
+                atsDocument = new AtsDocument(
+){{
                     applicationId = "string";
                     candidateId = "string";
                     createdAt = OffsetDateTime.parse("2021-04-24T22:30:56.289Z");
@@ -236,14 +258,17 @@ public class Application {
                     filename = "mouse_per_missouri.mp4";
                     id = "<ID>";
                     jobId = "string";
-                    raw = new PropertyAtsDocumentRaw();
+                    raw = new PropertyAtsDocumentRaw(
+);
                     type = AtsDocumentType.OFFER_PACKET;
                     updatedAt = OffsetDateTime.parse("2021-12-28T09:27:32.859Z");
                     userId = "string";
-                }};
-            }};            
 
-            CreateAtsDocumentResponse res = sdk.ats.createAtsDocument(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentResponse res = sdk.ats.createAtsDocument(req);
 
             if (res.atsDocument != null) {
                 // handle response
@@ -289,13 +314,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateAtsInterviewRequest req = new CreateAtsInterviewRequest("string"){{
-                atsInterview = new AtsInterview(){{
+            com.unifiedapi.unifiedto.models.operations.CreateAtsInterviewRequest req = new CreateAtsInterviewRequest(
+                "string"){{
+                atsInterview = new AtsInterview(
+){{
                     applicationId = "string";
                     candidateId = "string";
                     createdAt = OffsetDateTime.parse("2022-01-10T19:55:26.926Z");
@@ -304,17 +332,20 @@ public class Application {
                     id = "<ID>";
                     jobId = "string";
                     location = "string";
-                    raw = new PropertyAtsInterviewRaw();
+                    raw = new PropertyAtsInterviewRaw(
+);
                     startAt = OffsetDateTime.parse("2022-11-19T09:10:03.014Z");
                     status = AtsInterviewStatus.COMPLETE;
                     updatedAt = OffsetDateTime.parse("2021-02-07T14:25:56.954Z");
                     userIds = new String[]{{
                         add("string"),
                     }};
-                }};
-            }};            
 
-            CreateAtsInterviewResponse res = sdk.ats.createAtsInterview(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateAtsInterviewResponse res = sdk.ats.createAtsInterview(req);
 
             if (res.atsInterview != null) {
                 // handle response
@@ -365,19 +396,24 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateAtsJobRequest req = new CreateAtsJobRequest("string"){{
-                atsJob = new AtsJob(){{
+            com.unifiedapi.unifiedto.models.operations.CreateAtsJobRequest req = new CreateAtsJobRequest(
+                "string"){{
+                atsJob = new AtsJob(
+){{
                     addresses = new com.unifiedapi.unifiedto.models.shared.AtsAddress[]{{
-                        add(new AtsAddress(){{}}),
+                        add(new AtsAddress(
+                        ){{}}),
                     }};
                     closedAt = OffsetDateTime.parse("2021-01-14T18:13:00.731Z");
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
-                        add(new AtsCompensation(AtsCompensationType.EQUITY){{
+                        add(new AtsCompensation(
+                        AtsCompensationType.EQUITY){{
                             type = AtsCompensationType.STOCK_OPTIONS;
                         }}),
                     }};
@@ -396,17 +432,20 @@ public class Application {
                     publicJobUrls = new String[]{{
                         add("string"),
                     }};
-                    raw = new PropertyAtsJobRaw();
+                    raw = new PropertyAtsJobRaw(
+);
                     recruiterIds = new String[]{{
                         add("string"),
                     }};
                     remote = false;
                     status = AtsJobStatus.CLOSED;
                     updatedAt = OffsetDateTime.parse("2023-01-24T10:09:39.331Z");
-                }};
-            }};            
 
-            CreateAtsJobResponse res = sdk.ats.createAtsJob(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateAtsJobResponse res = sdk.ats.createAtsJob(req);
 
             if (res.atsJob != null) {
                 // handle response
@@ -452,13 +491,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateAtsScorecardRequest req = new CreateAtsScorecardRequest("string"){{
-                atsScorecard = new AtsScorecard(new PropertyAtsScorecardRaw()){{
+            com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardRequest req = new CreateAtsScorecardRequest(
+                "string"){{
+                atsScorecard = new AtsScorecard(
+){{
                     applicationId = "string";
                     candidateId = "string";
                     comment = "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J";
@@ -467,12 +509,16 @@ public class Application {
                     interviewId = "string";
                     interviewerId = "string";
                     jobId = "string";
+                    raw = new PropertyAtsScorecardRaw(
+);
                     recommendation = Recommendation.NO;
                     updatedAt = OffsetDateTime.parse("2022-04-01T17:31:47.454Z");
-                }};
-            }};            
 
-            CreateAtsScorecardResponse res = sdk.ats.createAtsScorecard(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse res = sdk.ats.createAtsScorecard(req);
 
             if (res.atsScorecard != null) {
                 // handle response
@@ -514,18 +560,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsApplicationRequest req = new GetAtsApplicationRequest("string", "string"){{
+            com.unifiedapi.unifiedto.models.operations.GetAtsApplicationRequest req = new GetAtsApplicationRequest(
+                "string",
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
-            }};            
 
-            GetAtsApplicationResponse res = sdk.ats.getAtsApplication(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetAtsApplicationResponse res = sdk.ats.getAtsApplication(req);
 
             if (res.atsApplication != null) {
                 // handle response
@@ -567,18 +617,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsCandidateRequest req = new GetAtsCandidateRequest("string", "string"){{
+            com.unifiedapi.unifiedto.models.operations.GetAtsCandidateRequest req = new GetAtsCandidateRequest(
+                "string",
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
-            }};            
 
-            GetAtsCandidateResponse res = sdk.ats.getAtsCandidate(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetAtsCandidateResponse res = sdk.ats.getAtsCandidate(req);
 
             if (res.atsCandidate != null) {
                 // handle response
@@ -620,18 +674,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsDocumentRequest req = new GetAtsDocumentRequest("string", "string"){{
+            com.unifiedapi.unifiedto.models.operations.GetAtsDocumentRequest req = new GetAtsDocumentRequest(
+                "string",
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
-            }};            
 
-            GetAtsDocumentResponse res = sdk.ats.getAtsDocument(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetAtsDocumentResponse res = sdk.ats.getAtsDocument(req);
 
             if (res.atsDocument != null) {
                 // handle response
@@ -673,18 +731,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsInterviewRequest req = new GetAtsInterviewRequest("string", "string"){{
+            com.unifiedapi.unifiedto.models.operations.GetAtsInterviewRequest req = new GetAtsInterviewRequest(
+                "string",
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
-            }};            
 
-            GetAtsInterviewResponse res = sdk.ats.getAtsInterview(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetAtsInterviewResponse res = sdk.ats.getAtsInterview(req);
 
             if (res.atsInterview != null) {
                 // handle response
@@ -726,18 +788,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsJobRequest req = new GetAtsJobRequest("string", "string"){{
+            com.unifiedapi.unifiedto.models.operations.GetAtsJobRequest req = new GetAtsJobRequest(
+                "string",
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
-            }};            
 
-            GetAtsJobResponse res = sdk.ats.getAtsJob(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetAtsJobResponse res = sdk.ats.getAtsJob(req);
 
             if (res.atsJob != null) {
                 // handle response
@@ -779,18 +845,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsScorecardRequest req = new GetAtsScorecardRequest("string", "string"){{
+            com.unifiedapi.unifiedto.models.operations.GetAtsScorecardRequest req = new GetAtsScorecardRequest(
+                "string",
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
-            }};            
 
-            GetAtsScorecardResponse res = sdk.ats.getAtsScorecard(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetAtsScorecardResponse res = sdk.ats.getAtsScorecard(req);
 
             if (res.atsScorecard != null) {
                 // handle response
@@ -833,12 +903,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListAtsApplicationsRequest req = new ListAtsApplicationsRequest("string"){{
+            com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsRequest req = new ListAtsApplicationsRequest(
+                "string"){{
                 candidateId = "string";
                 fields = new String[]{{
                     add("string"),
@@ -850,9 +922,10 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2021-12-21T12:43:47.690Z");
-            }};            
 
-            ListAtsApplicationsResponse res = sdk.ats.listAtsApplications(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsResponse res = sdk.ats.listAtsApplications(req);
 
             if (res.atsApplications != null) {
                 // handle response
@@ -895,12 +968,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListAtsCandidatesRequest req = new ListAtsCandidatesRequest("string"){{
+            com.unifiedapi.unifiedto.models.operations.ListAtsCandidatesRequest req = new ListAtsCandidatesRequest(
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
@@ -910,9 +985,10 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2021-03-17T23:18:31.102Z");
-            }};            
 
-            ListAtsCandidatesResponse res = sdk.ats.listAtsCandidates(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListAtsCandidatesResponse res = sdk.ats.listAtsCandidates(req);
 
             if (res.atsCandidates != null) {
                 // handle response
@@ -955,12 +1031,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListAtsDocumentsRequest req = new ListAtsDocumentsRequest("string"){{
+            com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsRequest req = new ListAtsDocumentsRequest(
+                "string"){{
                 applicationId = "string";
                 fields = new String[]{{
                     add("string"),
@@ -971,9 +1049,10 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2022-08-30T11:38:20.739Z");
-            }};            
 
-            ListAtsDocumentsResponse res = sdk.ats.listAtsDocuments(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsResponse res = sdk.ats.listAtsDocuments(req);
 
             if (res.atsDocuments != null) {
                 // handle response
@@ -1016,12 +1095,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListAtsInterviewsRequest req = new ListAtsInterviewsRequest("string"){{
+            com.unifiedapi.unifiedto.models.operations.ListAtsInterviewsRequest req = new ListAtsInterviewsRequest(
+                "string"){{
                 applicationId = "string";
                 fields = new String[]{{
                     add("string"),
@@ -1032,9 +1113,10 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2021-09-28T09:19:25.744Z");
-            }};            
 
-            ListAtsInterviewsResponse res = sdk.ats.listAtsInterviews(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListAtsInterviewsResponse res = sdk.ats.listAtsInterviews(req);
 
             if (res.atsInterviews != null) {
                 // handle response
@@ -1077,12 +1159,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListAtsJobsRequest req = new ListAtsJobsRequest("string"){{
+            com.unifiedapi.unifiedto.models.operations.ListAtsJobsRequest req = new ListAtsJobsRequest(
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
@@ -1092,9 +1176,10 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2022-03-03T15:53:00.086Z");
-            }};            
 
-            ListAtsJobsResponse res = sdk.ats.listAtsJobs(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListAtsJobsResponse res = sdk.ats.listAtsJobs(req);
 
             if (res.atsJobs != null) {
                 // handle response
@@ -1137,12 +1222,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListAtsScorecardsRequest req = new ListAtsScorecardsRequest("string"){{
+            com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsRequest req = new ListAtsScorecardsRequest(
+                "string"){{
                 applicationId = "string";
                 candidateId = "string";
                 fields = new String[]{{
@@ -1156,9 +1243,10 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2023-08-19T17:42:56.145Z");
-            }};            
 
-            ListAtsScorecardsResponse res = sdk.ats.listAtsScorecards(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsResponse res = sdk.ats.listAtsScorecards(req);
 
             if (res.atsScorecards != null) {
                 // handle response
@@ -1195,37 +1283,44 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsApplication;
+import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsApplicationRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import com.unifiedapi.unifiedto.models.shared.Status;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchAtsApplicationRequest req = new PatchAtsApplicationRequest("string", "string"){{
-                atsApplication = new AtsApplication(){{
+            com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationRequest req = new PatchAtsApplicationRequest(
+                "string",
+                "string"){{
+                atsApplication = new AtsApplication(
+){{
                     appliedAt = OffsetDateTime.parse("2022-12-15T04:58:14.527Z");
                     candidateId = "string";
                     createdAt = OffsetDateTime.parse("2021-01-06T05:50:03.360Z");
                     id = "<ID>";
                     jobId = "string";
-                    raw = new PropertyAtsApplicationRaw();
+                    raw = new PropertyAtsApplicationRaw(
+);
                     rejectedAt = OffsetDateTime.parse("2022-12-04T13:56:12.670Z");
                     rejectedReason = "string";
                     source = "string";
-                    status = Status.SCREENING;
+                    status = AtsApplicationStatus.SCREENING;
                     updatedAt = OffsetDateTime.parse("2022-02-02T14:46:44.919Z");
-                }};
-            }};            
 
-            PatchAtsApplicationResponse res = sdk.ats.patchAtsApplication(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationResponse res = sdk.ats.patchAtsApplication(req);
 
             if (res.atsApplication != null) {
                 // handle response
@@ -1275,14 +1370,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchAtsCandidateRequest req = new PatchAtsCandidateRequest("string", "string"){{
-                atsCandidate = new AtsCandidate(){{
-                    address = new PropertyAtsCandidateAddress(){{
+            com.unifiedapi.unifiedto.models.operations.PatchAtsCandidateRequest req = new PatchAtsCandidateRequest(
+                "string",
+                "string"){{
+                atsCandidate = new AtsCandidate(
+){{
+                    address = new PropertyAtsCandidateAddress(
+){{
                         address1 = "string";
                         address2 = "string";
                         city = "Fort Bridget";
@@ -1291,33 +1391,42 @@ public class Application {
                         postalCode = "46054";
                         region = "string";
                         regionCode = "string";
+
                     }};
                     companyName = "Donnelly - Bartell";
                     createdAt = OffsetDateTime.parse("2023-01-06T12:13:20.908Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
-                        add(new AtsEmail("string"){{
+                        add(new AtsEmail(
+                        "string"){{
                             email = "Elissa62@yahoo.com";
                         }}),
                     }};
                     externalId = "string";
                     id = "<ID>";
                     imageUrl = "string";
+                    linkUrls = new String[]{{
+                        add("string"),
+                    }};
                     name = "string";
-                    raw = new PropertyAtsCandidateRaw();
+                    raw = new PropertyAtsCandidateRaw(
+);
                     tags = new String[]{{
                         add("string"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.AtsTelephone[]{{
-                        add(new AtsTelephone("string"){{
+                        add(new AtsTelephone(
+                        "string"){{
                             telephone = "string";
                         }}),
                     }};
                     title = "string";
                     updatedAt = OffsetDateTime.parse("2022-01-30T06:27:20.051Z");
-                }};
-            }};            
 
-            PatchAtsCandidateResponse res = sdk.ats.patchAtsCandidate(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.PatchAtsCandidateResponse res = sdk.ats.patchAtsCandidate(req);
 
             if (res.atsCandidate != null) {
                 // handle response
@@ -1363,13 +1472,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchAtsDocumentRequest req = new PatchAtsDocumentRequest("string", "string"){{
-                atsDocument = new AtsDocument(){{
+            com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentRequest req = new PatchAtsDocumentRequest(
+                "string",
+                "string"){{
+                atsDocument = new AtsDocument(
+){{
                     applicationId = "string";
                     candidateId = "string";
                     createdAt = OffsetDateTime.parse("2021-04-01T09:34:15.248Z");
@@ -1378,14 +1491,17 @@ public class Application {
                     filename = "future_underpin.mp4v";
                     id = "<ID>";
                     jobId = "string";
-                    raw = new PropertyAtsDocumentRaw();
+                    raw = new PropertyAtsDocumentRaw(
+);
                     type = AtsDocumentType.OFFER_LETTER;
                     updatedAt = OffsetDateTime.parse("2022-02-14T01:39:21.030Z");
                     userId = "string";
-                }};
-            }};            
 
-            PatchAtsDocumentResponse res = sdk.ats.patchAtsDocument(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentResponse res = sdk.ats.patchAtsDocument(req);
 
             if (res.atsDocument != null) {
                 // handle response
@@ -1431,13 +1547,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchAtsInterviewRequest req = new PatchAtsInterviewRequest("string", "string"){{
-                atsInterview = new AtsInterview(){{
+            com.unifiedapi.unifiedto.models.operations.PatchAtsInterviewRequest req = new PatchAtsInterviewRequest(
+                "string",
+                "string"){{
+                atsInterview = new AtsInterview(
+){{
                     applicationId = "string";
                     candidateId = "string";
                     createdAt = OffsetDateTime.parse("2023-09-11T21:35:40.790Z");
@@ -1446,17 +1566,20 @@ public class Application {
                     id = "<ID>";
                     jobId = "string";
                     location = "string";
-                    raw = new PropertyAtsInterviewRaw();
+                    raw = new PropertyAtsInterviewRaw(
+);
                     startAt = OffsetDateTime.parse("2021-09-10T02:01:13.488Z");
                     status = AtsInterviewStatus.COMPLETE;
                     updatedAt = OffsetDateTime.parse("2023-03-18T09:12:18.749Z");
                     userIds = new String[]{{
                         add("string"),
                     }};
-                }};
-            }};            
 
-            PatchAtsInterviewResponse res = sdk.ats.patchAtsInterview(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.PatchAtsInterviewResponse res = sdk.ats.patchAtsInterview(req);
 
             if (res.atsInterview != null) {
                 // handle response
@@ -1507,19 +1630,25 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchAtsJobRequest req = new PatchAtsJobRequest("string", "string"){{
-                atsJob = new AtsJob(){{
+            com.unifiedapi.unifiedto.models.operations.PatchAtsJobRequest req = new PatchAtsJobRequest(
+                "string",
+                "string"){{
+                atsJob = new AtsJob(
+){{
                     addresses = new com.unifiedapi.unifiedto.models.shared.AtsAddress[]{{
-                        add(new AtsAddress(){{}}),
+                        add(new AtsAddress(
+                        ){{}}),
                     }};
                     closedAt = OffsetDateTime.parse("2021-08-09T12:54:15.288Z");
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
-                        add(new AtsCompensation(AtsCompensationType.EQUITY){{
+                        add(new AtsCompensation(
+                        AtsCompensationType.EQUITY){{
                             type = AtsCompensationType.SALARY;
                         }}),
                     }};
@@ -1538,17 +1667,20 @@ public class Application {
                     publicJobUrls = new String[]{{
                         add("string"),
                     }};
-                    raw = new PropertyAtsJobRaw();
+                    raw = new PropertyAtsJobRaw(
+);
                     recruiterIds = new String[]{{
                         add("string"),
                     }};
                     remote = false;
                     status = AtsJobStatus.ARCHIVED;
                     updatedAt = OffsetDateTime.parse("2023-10-30T02:05:51.064Z");
-                }};
-            }};            
 
-            PatchAtsJobResponse res = sdk.ats.patchAtsJob(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.PatchAtsJobResponse res = sdk.ats.patchAtsJob(req);
 
             if (res.atsJob != null) {
                 // handle response
@@ -1594,13 +1726,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchAtsScorecardRequest req = new PatchAtsScorecardRequest("string", "string"){{
-                atsScorecard = new AtsScorecard(new PropertyAtsScorecardRaw()){{
+            com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardRequest req = new PatchAtsScorecardRequest(
+                "string",
+                "string"){{
+                atsScorecard = new AtsScorecard(
+){{
                     applicationId = "string";
                     candidateId = "string";
                     comment = "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support";
@@ -1609,12 +1745,16 @@ public class Application {
                     interviewId = "string";
                     interviewerId = "string";
                     jobId = "string";
+                    raw = new PropertyAtsScorecardRaw(
+);
                     recommendation = Recommendation.YES;
                     updatedAt = OffsetDateTime.parse("2021-11-28T07:58:12.100Z");
-                }};
-            }};            
 
-            PatchAtsScorecardResponse res = sdk.ats.patchAtsScorecard(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse res = sdk.ats.patchAtsScorecard(req);
 
             if (res.atsScorecard != null) {
                 // handle response
@@ -1656,14 +1796,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveAtsApplicationRequest req = new RemoveAtsApplicationRequest("string", "string");            
+            com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationRequest req = new RemoveAtsApplicationRequest(
+                "string",
+                "string");
 
-            RemoveAtsApplicationResponse res = sdk.ats.removeAtsApplication(req);
+            com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationResponse res = sdk.ats.removeAtsApplication(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -1705,14 +1848,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveAtsCandidateRequest req = new RemoveAtsCandidateRequest("string", "string");            
+            com.unifiedapi.unifiedto.models.operations.RemoveAtsCandidateRequest req = new RemoveAtsCandidateRequest(
+                "string",
+                "string");
 
-            RemoveAtsCandidateResponse res = sdk.ats.removeAtsCandidate(req);
+            com.unifiedapi.unifiedto.models.operations.RemoveAtsCandidateResponse res = sdk.ats.removeAtsCandidate(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -1754,14 +1900,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveAtsDocumentRequest req = new RemoveAtsDocumentRequest("string", "string");            
+            com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentRequest req = new RemoveAtsDocumentRequest(
+                "string",
+                "string");
 
-            RemoveAtsDocumentResponse res = sdk.ats.removeAtsDocument(req);
+            com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentResponse res = sdk.ats.removeAtsDocument(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -1803,14 +1952,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveAtsInterviewRequest req = new RemoveAtsInterviewRequest("string", "string");            
+            com.unifiedapi.unifiedto.models.operations.RemoveAtsInterviewRequest req = new RemoveAtsInterviewRequest(
+                "string",
+                "string");
 
-            RemoveAtsInterviewResponse res = sdk.ats.removeAtsInterview(req);
+            com.unifiedapi.unifiedto.models.operations.RemoveAtsInterviewResponse res = sdk.ats.removeAtsInterview(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -1852,14 +2004,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveAtsJobRequest req = new RemoveAtsJobRequest("string", "string");            
+            com.unifiedapi.unifiedto.models.operations.RemoveAtsJobRequest req = new RemoveAtsJobRequest(
+                "string",
+                "string");
 
-            RemoveAtsJobResponse res = sdk.ats.removeAtsJob(req);
+            com.unifiedapi.unifiedto.models.operations.RemoveAtsJobResponse res = sdk.ats.removeAtsJob(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -1901,14 +2056,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveAtsScorecardRequest req = new RemoveAtsScorecardRequest("string", "string");            
+            com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardRequest req = new RemoveAtsScorecardRequest(
+                "string",
+                "string");
 
-            RemoveAtsScorecardResponse res = sdk.ats.removeAtsScorecard(req);
+            com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse res = sdk.ats.removeAtsScorecard(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -1945,37 +2103,44 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsApplication;
+import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsApplicationRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import com.unifiedapi.unifiedto.models.shared.Status;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateAtsApplicationRequest req = new UpdateAtsApplicationRequest("string", "string"){{
-                atsApplication = new AtsApplication(){{
+            com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationRequest req = new UpdateAtsApplicationRequest(
+                "string",
+                "string"){{
+                atsApplication = new AtsApplication(
+){{
                     appliedAt = OffsetDateTime.parse("2021-08-22T07:14:38.941Z");
                     candidateId = "string";
                     createdAt = OffsetDateTime.parse("2021-06-04T09:23:07.789Z");
                     id = "<ID>";
                     jobId = "string";
-                    raw = new PropertyAtsApplicationRaw();
+                    raw = new PropertyAtsApplicationRaw(
+);
                     rejectedAt = OffsetDateTime.parse("2021-02-09T08:05:18.054Z");
                     rejectedReason = "string";
                     source = "string";
-                    status = Status.REJECTED;
+                    status = AtsApplicationStatus.REJECTED;
                     updatedAt = OffsetDateTime.parse("2022-11-28T16:36:33.801Z");
-                }};
-            }};            
 
-            UpdateAtsApplicationResponse res = sdk.ats.updateAtsApplication(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationResponse res = sdk.ats.updateAtsApplication(req);
 
             if (res.atsApplication != null) {
                 // handle response
@@ -2025,14 +2190,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateAtsCandidateRequest req = new UpdateAtsCandidateRequest("string", "string"){{
-                atsCandidate = new AtsCandidate(){{
-                    address = new PropertyAtsCandidateAddress(){{
+            com.unifiedapi.unifiedto.models.operations.UpdateAtsCandidateRequest req = new UpdateAtsCandidateRequest(
+                "string",
+                "string"){{
+                atsCandidate = new AtsCandidate(
+){{
+                    address = new PropertyAtsCandidateAddress(
+){{
                         address1 = "string";
                         address2 = "string";
                         city = "Hintzborough";
@@ -2041,33 +2211,42 @@ public class Application {
                         postalCode = "39423";
                         region = "string";
                         regionCode = "string";
+
                     }};
                     companyName = "O'Reilly Inc";
                     createdAt = OffsetDateTime.parse("2022-08-30T14:37:21.726Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
-                        add(new AtsEmail("string"){{
+                        add(new AtsEmail(
+                        "string"){{
                             email = "Cary37@yahoo.com";
                         }}),
                     }};
                     externalId = "string";
                     id = "<ID>";
                     imageUrl = "string";
+                    linkUrls = new String[]{{
+                        add("string"),
+                    }};
                     name = "string";
-                    raw = new PropertyAtsCandidateRaw();
+                    raw = new PropertyAtsCandidateRaw(
+);
                     tags = new String[]{{
                         add("string"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.AtsTelephone[]{{
-                        add(new AtsTelephone("string"){{
+                        add(new AtsTelephone(
+                        "string"){{
                             telephone = "string";
                         }}),
                     }};
                     title = "string";
                     updatedAt = OffsetDateTime.parse("2023-12-25T01:08:38.353Z");
-                }};
-            }};            
 
-            UpdateAtsCandidateResponse res = sdk.ats.updateAtsCandidate(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.UpdateAtsCandidateResponse res = sdk.ats.updateAtsCandidate(req);
 
             if (res.atsCandidate != null) {
                 // handle response
@@ -2113,13 +2292,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateAtsDocumentRequest req = new UpdateAtsDocumentRequest("string", "string"){{
-                atsDocument = new AtsDocument(){{
+            com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentRequest req = new UpdateAtsDocumentRequest(
+                "string",
+                "string"){{
+                atsDocument = new AtsDocument(
+){{
                     applicationId = "string";
                     candidateId = "string";
                     createdAt = OffsetDateTime.parse("2021-07-05T13:01:49.006Z");
@@ -2128,14 +2311,17 @@ public class Application {
                     filename = "unbranded_reprehenderit.jpg";
                     id = "<ID>";
                     jobId = "string";
-                    raw = new PropertyAtsDocumentRaw();
+                    raw = new PropertyAtsDocumentRaw(
+);
                     type = AtsDocumentType.OFFER_PACKET;
                     updatedAt = OffsetDateTime.parse("2021-12-02T17:00:21.700Z");
                     userId = "string";
-                }};
-            }};            
 
-            UpdateAtsDocumentResponse res = sdk.ats.updateAtsDocument(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentResponse res = sdk.ats.updateAtsDocument(req);
 
             if (res.atsDocument != null) {
                 // handle response
@@ -2181,13 +2367,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateAtsInterviewRequest req = new UpdateAtsInterviewRequest("string", "string"){{
-                atsInterview = new AtsInterview(){{
+            com.unifiedapi.unifiedto.models.operations.UpdateAtsInterviewRequest req = new UpdateAtsInterviewRequest(
+                "string",
+                "string"){{
+                atsInterview = new AtsInterview(
+){{
                     applicationId = "string";
                     candidateId = "string";
                     createdAt = OffsetDateTime.parse("2023-05-06T10:37:46.574Z");
@@ -2196,17 +2386,20 @@ public class Application {
                     id = "<ID>";
                     jobId = "string";
                     location = "string";
-                    raw = new PropertyAtsInterviewRaw();
+                    raw = new PropertyAtsInterviewRaw(
+);
                     startAt = OffsetDateTime.parse("2023-05-05T12:38:13.018Z");
                     status = AtsInterviewStatus.AWAITING_FEEDBACK;
                     updatedAt = OffsetDateTime.parse("2021-05-01T14:26:12.006Z");
                     userIds = new String[]{{
                         add("string"),
                     }};
-                }};
-            }};            
 
-            UpdateAtsInterviewResponse res = sdk.ats.updateAtsInterview(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.UpdateAtsInterviewResponse res = sdk.ats.updateAtsInterview(req);
 
             if (res.atsInterview != null) {
                 // handle response
@@ -2257,19 +2450,25 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateAtsJobRequest req = new UpdateAtsJobRequest("string", "string"){{
-                atsJob = new AtsJob(){{
+            com.unifiedapi.unifiedto.models.operations.UpdateAtsJobRequest req = new UpdateAtsJobRequest(
+                "string",
+                "string"){{
+                atsJob = new AtsJob(
+){{
                     addresses = new com.unifiedapi.unifiedto.models.shared.AtsAddress[]{{
-                        add(new AtsAddress(){{}}),
+                        add(new AtsAddress(
+                        ){{}}),
                     }};
                     closedAt = OffsetDateTime.parse("2022-10-20T17:16:11.353Z");
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
-                        add(new AtsCompensation(AtsCompensationType.BONUS){{
+                        add(new AtsCompensation(
+                        AtsCompensationType.BONUS){{
                             type = AtsCompensationType.BONUS;
                         }}),
                     }};
@@ -2288,17 +2487,20 @@ public class Application {
                     publicJobUrls = new String[]{{
                         add("string"),
                     }};
-                    raw = new PropertyAtsJobRaw();
+                    raw = new PropertyAtsJobRaw(
+);
                     recruiterIds = new String[]{{
                         add("string"),
                     }};
                     remote = false;
                     status = AtsJobStatus.ARCHIVED;
                     updatedAt = OffsetDateTime.parse("2022-05-26T20:04:55.537Z");
-                }};
-            }};            
 
-            UpdateAtsJobResponse res = sdk.ats.updateAtsJob(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.UpdateAtsJobResponse res = sdk.ats.updateAtsJob(req);
 
             if (res.atsJob != null) {
                 // handle response
@@ -2344,13 +2546,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateAtsScorecardRequest req = new UpdateAtsScorecardRequest("string", "string"){{
-                atsScorecard = new AtsScorecard(new PropertyAtsScorecardRaw()){{
+            com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardRequest req = new UpdateAtsScorecardRequest(
+                "string",
+                "string"){{
+                atsScorecard = new AtsScorecard(
+){{
                     applicationId = "string";
                     candidateId = "string";
                     comment = "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive";
@@ -2359,12 +2565,16 @@ public class Application {
                     interviewId = "string";
                     interviewerId = "string";
                     jobId = "string";
+                    raw = new PropertyAtsScorecardRaw(
+);
                     recommendation = Recommendation.NO;
                     updatedAt = OffsetDateTime.parse("2021-07-26T04:45:45.856Z");
-                }};
-            }};            
 
-            UpdateAtsScorecardResponse res = sdk.ats.updateAtsScorecard(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse res = sdk.ats.updateAtsScorecard(req);
 
             if (res.atsScorecard != null) {
                 // handle response

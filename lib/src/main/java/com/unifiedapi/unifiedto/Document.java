@@ -46,11 +46,10 @@ public class Document {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentResponse(contentType, httpRes.statusCode(), httpRes) {{
             atsDocument = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -91,11 +90,10 @@ public class Document {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetAtsDocumentResponse res = new com.unifiedapi.unifiedto.models.operations.GetAtsDocumentResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.GetAtsDocumentResponse res = new com.unifiedapi.unifiedto.models.operations.GetAtsDocumentResponse(contentType, httpRes.statusCode(), httpRes) {{
             atsDocument = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -136,11 +134,10 @@ public class Document {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsResponse res = new com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsResponse res = new com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsResponse(contentType, httpRes.statusCode(), httpRes) {{
             atsDocuments = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -177,11 +174,10 @@ public class Document {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentResponse(contentType, httpRes.statusCode(), httpRes) {{
             atsDocument = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -216,11 +212,10 @@ public class Document {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentResponse(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -256,11 +251,10 @@ public class Document {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentResponse(contentType, httpRes.statusCode(), httpRes) {{
             atsDocument = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {

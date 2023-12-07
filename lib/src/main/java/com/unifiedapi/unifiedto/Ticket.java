@@ -46,11 +46,10 @@ public class Ticket {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketResponse res = new com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketResponse res = new com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketResponse(contentType, httpRes.statusCode(), httpRes) {{
             ticketingTicket = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -91,11 +90,10 @@ public class Ticket {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetTicketingTicketResponse res = new com.unifiedapi.unifiedto.models.operations.GetTicketingTicketResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.GetTicketingTicketResponse res = new com.unifiedapi.unifiedto.models.operations.GetTicketingTicketResponse(contentType, httpRes.statusCode(), httpRes) {{
             ticketingTicket = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -136,11 +134,10 @@ public class Ticket {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsResponse res = new com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsResponse res = new com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsResponse(contentType, httpRes.statusCode(), httpRes) {{
             ticketingTickets = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -177,11 +174,10 @@ public class Ticket {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketResponse res = new com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketResponse res = new com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketResponse(contentType, httpRes.statusCode(), httpRes) {{
             ticketingTicket = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -216,11 +212,10 @@ public class Ticket {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketResponse(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -256,11 +251,10 @@ public class Ticket {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketResponse(contentType, httpRes.statusCode(), httpRes) {{
             ticketingTicket = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {

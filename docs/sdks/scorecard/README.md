@@ -32,13 +32,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateAtsScorecardRequest req = new CreateAtsScorecardRequest("string"){{
-                atsScorecard = new AtsScorecard(new PropertyAtsScorecardRaw()){{
+            com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardRequest req = new CreateAtsScorecardRequest(
+                "string"){{
+                atsScorecard = new AtsScorecard(
+){{
                     applicationId = "string";
                     candidateId = "string";
                     comment = "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J";
@@ -47,12 +50,16 @@ public class Application {
                     interviewId = "string";
                     interviewerId = "string";
                     jobId = "string";
+                    raw = new PropertyAtsScorecardRaw(
+);
                     recommendation = Recommendation.NO;
                     updatedAt = OffsetDateTime.parse("2022-04-01T17:31:47.454Z");
-                }};
-            }};            
 
-            CreateAtsScorecardResponse res = sdk.scorecard.createAtsScorecard(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse res = sdk.scorecard.createAtsScorecard(req);
 
             if (res.atsScorecard != null) {
                 // handle response
@@ -94,18 +101,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetAtsScorecardRequest req = new GetAtsScorecardRequest("string", "string"){{
+            com.unifiedapi.unifiedto.models.operations.GetAtsScorecardRequest req = new GetAtsScorecardRequest(
+                "string",
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
-            }};            
 
-            GetAtsScorecardResponse res = sdk.scorecard.getAtsScorecard(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetAtsScorecardResponse res = sdk.scorecard.getAtsScorecard(req);
 
             if (res.atsScorecard != null) {
                 // handle response
@@ -148,12 +159,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListAtsScorecardsRequest req = new ListAtsScorecardsRequest("string"){{
+            com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsRequest req = new ListAtsScorecardsRequest(
+                "string"){{
                 applicationId = "string";
                 candidateId = "string";
                 fields = new String[]{{
@@ -167,9 +180,10 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2023-08-19T17:42:56.145Z");
-            }};            
 
-            ListAtsScorecardsResponse res = sdk.scorecard.listAtsScorecards(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsResponse res = sdk.scorecard.listAtsScorecards(req);
 
             if (res.atsScorecards != null) {
                 // handle response
@@ -215,13 +229,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchAtsScorecardRequest req = new PatchAtsScorecardRequest("string", "string"){{
-                atsScorecard = new AtsScorecard(new PropertyAtsScorecardRaw()){{
+            com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardRequest req = new PatchAtsScorecardRequest(
+                "string",
+                "string"){{
+                atsScorecard = new AtsScorecard(
+){{
                     applicationId = "string";
                     candidateId = "string";
                     comment = "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support";
@@ -230,12 +248,16 @@ public class Application {
                     interviewId = "string";
                     interviewerId = "string";
                     jobId = "string";
+                    raw = new PropertyAtsScorecardRaw(
+);
                     recommendation = Recommendation.YES;
                     updatedAt = OffsetDateTime.parse("2021-11-28T07:58:12.100Z");
-                }};
-            }};            
 
-            PatchAtsScorecardResponse res = sdk.scorecard.patchAtsScorecard(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse res = sdk.scorecard.patchAtsScorecard(req);
 
             if (res.atsScorecard != null) {
                 // handle response
@@ -277,14 +299,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveAtsScorecardRequest req = new RemoveAtsScorecardRequest("string", "string");            
+            com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardRequest req = new RemoveAtsScorecardRequest(
+                "string",
+                "string");
 
-            RemoveAtsScorecardResponse res = sdk.scorecard.removeAtsScorecard(req);
+            com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse res = sdk.scorecard.removeAtsScorecard(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -330,13 +355,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateAtsScorecardRequest req = new UpdateAtsScorecardRequest("string", "string"){{
-                atsScorecard = new AtsScorecard(new PropertyAtsScorecardRaw()){{
+            com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardRequest req = new UpdateAtsScorecardRequest(
+                "string",
+                "string"){{
+                atsScorecard = new AtsScorecard(
+){{
                     applicationId = "string";
                     candidateId = "string";
                     comment = "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive";
@@ -345,12 +374,16 @@ public class Application {
                     interviewId = "string";
                     interviewerId = "string";
                     jobId = "string";
+                    raw = new PropertyAtsScorecardRaw(
+);
                     recommendation = Recommendation.NO;
                     updatedAt = OffsetDateTime.parse("2021-07-26T04:45:45.856Z");
-                }};
-            }};            
 
-            UpdateAtsScorecardResponse res = sdk.scorecard.updateAtsScorecard(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse res = sdk.scorecard.updateAtsScorecard(req);
 
             if (res.atsScorecard != null) {
                 // handle response

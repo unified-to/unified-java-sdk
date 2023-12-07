@@ -1,0 +1,10 @@
+# UpdateAccountingAccountRequest
+
+
+## Fields
+
+| Field                                                                                                | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `accountingAccount`                                                                                  | [com.unifiedapi.unifiedto.models.shared.AccountingAccount](../../models/shared/AccountingAccount.md) | :heavy_minus_sign:                                                                                   | N/A                                                                                                  |
+| `connectionId`                                                                                       | *String*                                                                                             | :heavy_check_mark:                                                                                   | ID of the connection                                                                                 |
+| `id`                                                                                                 | *String*                                                                                             | :heavy_check_mark:                                                                                   | ID of the Account                                                                                    |

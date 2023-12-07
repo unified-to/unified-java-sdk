@@ -43,11 +43,10 @@ public class Apicall {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallResponse res = new com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallResponse res = new com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallResponse(contentType, httpRes.statusCode(), httpRes) {{
             apiCall = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -88,11 +87,10 @@ public class Apicall {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.ListUnifiedApicallsResponse res = new com.unifiedapi.unifiedto.models.operations.ListUnifiedApicallsResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.ListUnifiedApicallsResponse res = new com.unifiedapi.unifiedto.models.operations.ListUnifiedApicallsResponse(contentType, httpRes.statusCode(), httpRes) {{
             apiCalls = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {

@@ -46,11 +46,10 @@ public class Connection {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.CreateUnifiedConnectionResponse res = new com.unifiedapi.unifiedto.models.operations.CreateUnifiedConnectionResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.CreateUnifiedConnectionResponse res = new com.unifiedapi.unifiedto.models.operations.CreateUnifiedConnectionResponse(contentType, httpRes.statusCode(), httpRes) {{
             connection = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -85,11 +84,10 @@ public class Connection {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionResponse res = new com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionResponse res = new com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionResponse(contentType, httpRes.statusCode(), httpRes) {{
             connection = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -130,11 +128,10 @@ public class Connection {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsResponse res = new com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsResponse res = new com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsResponse(contentType, httpRes.statusCode(), httpRes) {{
             connections = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -171,11 +168,10 @@ public class Connection {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.PatchUnifiedConnectionResponse res = new com.unifiedapi.unifiedto.models.operations.PatchUnifiedConnectionResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.PatchUnifiedConnectionResponse res = new com.unifiedapi.unifiedto.models.operations.PatchUnifiedConnectionResponse(contentType, httpRes.statusCode(), httpRes) {{
             connection = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -210,11 +206,10 @@ public class Connection {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.RemoveUnifiedConnectionResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveUnifiedConnectionResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.RemoveUnifiedConnectionResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveUnifiedConnectionResponse(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -250,11 +245,10 @@ public class Connection {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.UpdateUnifiedConnectionResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateUnifiedConnectionResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.UpdateUnifiedConnectionResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateUnifiedConnectionResponse(contentType, httpRes.statusCode(), httpRes) {{
             connection = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {

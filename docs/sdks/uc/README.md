@@ -36,34 +36,42 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateUcContactRequest req = new CreateUcContactRequest("string"){{
-                ucContact = new UcContact(){{
+            com.unifiedapi.unifiedto.models.operations.CreateUcContactRequest req = new CreateUcContactRequest(
+                "string"){{
+                ucContact = new UcContact(
+){{
                     company = "Gottlieb - Becker";
                     createdAt = OffsetDateTime.parse("2023-07-20T18:36:15.437Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
-                        add(new UcEmail("string"){{
+                        add(new UcEmail(
+                        "string"){{
                             email = "Elliot78@hotmail.com";
                         }}),
                     }};
                     id = "<ID>";
                     name = "string";
-                    raw = new PropertyUcContactRaw();
+                    raw = new PropertyUcContactRaw(
+);
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
-                        add(new UcTelephone("string"){{
+                        add(new UcTelephone(
+                        "string"){{
                             telephone = "string";
                         }}),
                     }};
                     title = "string";
                     updatedAt = OffsetDateTime.parse("2023-09-28T00:27:58.979Z");
-                }};
-            }};            
 
-            CreateUcContactResponse res = sdk.uc.createUcContact(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateUcContactResponse res = sdk.uc.createUcContact(req);
 
             if (res.ucContact != null) {
                 // handle response
@@ -105,18 +113,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUcContactRequest req = new GetUcContactRequest("string", "string"){{
+            com.unifiedapi.unifiedto.models.operations.GetUcContactRequest req = new GetUcContactRequest(
+                "string",
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
-            }};            
 
-            GetUcContactResponse res = sdk.uc.getUcContact(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetUcContactResponse res = sdk.uc.getUcContact(req);
 
             if (res.ucContact != null) {
                 // handle response
@@ -159,12 +171,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListUcCallsRequest req = new ListUcCallsRequest("string"){{
+            com.unifiedapi.unifiedto.models.operations.ListUcCallsRequest req = new ListUcCallsRequest(
+                "string"){{
                 agentId = "string";
                 contactId = "string";
                 fields = new String[]{{
@@ -176,9 +190,10 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2023-07-25T02:48:36.966Z");
-            }};            
 
-            ListUcCallsResponse res = sdk.uc.listUcCalls(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListUcCallsResponse res = sdk.uc.listUcCalls(req);
 
             if (res.ucCalls != null) {
                 // handle response
@@ -221,12 +236,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListUcContactsRequest req = new ListUcContactsRequest("string"){{
+            com.unifiedapi.unifiedto.models.operations.ListUcContactsRequest req = new ListUcContactsRequest(
+                "string"){{
                 agentId = "string";
                 fields = new String[]{{
                     add("string"),
@@ -237,9 +254,10 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2022-10-25T15:03:37.771Z");
-            }};            
 
-            ListUcContactsResponse res = sdk.uc.listUcContacts(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListUcContactsResponse res = sdk.uc.listUcContacts(req);
 
             if (res.ucContacts != null) {
                 // handle response
@@ -288,34 +306,43 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchUcContactRequest req = new PatchUcContactRequest("string", "string"){{
-                ucContact = new UcContact(){{
+            com.unifiedapi.unifiedto.models.operations.PatchUcContactRequest req = new PatchUcContactRequest(
+                "string",
+                "string"){{
+                ucContact = new UcContact(
+){{
                     company = "Runolfsdottir, Boehm and Toy";
                     createdAt = OffsetDateTime.parse("2023-05-28T14:51:42.138Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
-                        add(new UcEmail("string"){{
+                        add(new UcEmail(
+                        "string"){{
                             email = "Arlie78@hotmail.com";
                         }}),
                     }};
                     id = "<ID>";
                     name = "string";
-                    raw = new PropertyUcContactRaw();
+                    raw = new PropertyUcContactRaw(
+);
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
-                        add(new UcTelephone("string"){{
+                        add(new UcTelephone(
+                        "string"){{
                             telephone = "string";
                         }}),
                     }};
                     title = "string";
                     updatedAt = OffsetDateTime.parse("2023-05-08T12:55:44.030Z");
-                }};
-            }};            
 
-            PatchUcContactResponse res = sdk.uc.patchUcContact(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.PatchUcContactResponse res = sdk.uc.patchUcContact(req);
 
             if (res.ucContact != null) {
                 // handle response
@@ -357,14 +384,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveUcContactRequest req = new RemoveUcContactRequest("string", "string");            
+            com.unifiedapi.unifiedto.models.operations.RemoveUcContactRequest req = new RemoveUcContactRequest(
+                "string",
+                "string");
 
-            RemoveUcContactResponse res = sdk.uc.removeUcContact(req);
+            com.unifiedapi.unifiedto.models.operations.RemoveUcContactResponse res = sdk.uc.removeUcContact(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -413,34 +443,43 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateUcContactRequest req = new UpdateUcContactRequest("string", "string"){{
-                ucContact = new UcContact(){{
+            com.unifiedapi.unifiedto.models.operations.UpdateUcContactRequest req = new UpdateUcContactRequest(
+                "string",
+                "string"){{
+                ucContact = new UcContact(
+){{
                     company = "Marquardt Group";
                     createdAt = OffsetDateTime.parse("2023-02-21T01:40:47.681Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
-                        add(new UcEmail("string"){{
+                        add(new UcEmail(
+                        "string"){{
                             email = "Stephany25@yahoo.com";
                         }}),
                     }};
                     id = "<ID>";
                     name = "string";
-                    raw = new PropertyUcContactRaw();
+                    raw = new PropertyUcContactRaw(
+);
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
-                        add(new UcTelephone("string"){{
+                        add(new UcTelephone(
+                        "string"){{
                             telephone = "string";
                         }}),
                     }};
                     title = "string";
                     updatedAt = OffsetDateTime.parse("2021-09-20T12:26:20.446Z");
-                }};
-            }};            
 
-            UpdateUcContactResponse res = sdk.uc.updateUcContact(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.UpdateUcContactResponse res = sdk.uc.updateUcContact(req);
 
             if (res.ucContact != null) {
                 // handle response

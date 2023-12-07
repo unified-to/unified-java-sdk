@@ -46,11 +46,10 @@ public class Lead {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.CreateCrmLeadResponse res = new com.unifiedapi.unifiedto.models.operations.CreateCrmLeadResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.CreateCrmLeadResponse res = new com.unifiedapi.unifiedto.models.operations.CreateCrmLeadResponse(contentType, httpRes.statusCode(), httpRes) {{
             crmLead = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -91,11 +90,10 @@ public class Lead {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetCrmLeadResponse res = new com.unifiedapi.unifiedto.models.operations.GetCrmLeadResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.GetCrmLeadResponse res = new com.unifiedapi.unifiedto.models.operations.GetCrmLeadResponse(contentType, httpRes.statusCode(), httpRes) {{
             crmLead = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -136,11 +134,10 @@ public class Lead {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.ListCrmLeadsResponse res = new com.unifiedapi.unifiedto.models.operations.ListCrmLeadsResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.ListCrmLeadsResponse res = new com.unifiedapi.unifiedto.models.operations.ListCrmLeadsResponse(contentType, httpRes.statusCode(), httpRes) {{
             crmLeads = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -177,11 +174,10 @@ public class Lead {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.PatchCrmLeadResponse res = new com.unifiedapi.unifiedto.models.operations.PatchCrmLeadResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.PatchCrmLeadResponse res = new com.unifiedapi.unifiedto.models.operations.PatchCrmLeadResponse(contentType, httpRes.statusCode(), httpRes) {{
             crmLead = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -216,11 +212,10 @@ public class Lead {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.RemoveCrmLeadResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveCrmLeadResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.RemoveCrmLeadResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveCrmLeadResponse(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -256,11 +251,10 @@ public class Lead {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.UpdateCrmLeadResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateCrmLeadResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.UpdateCrmLeadResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateCrmLeadResponse(contentType, httpRes.statusCode(), httpRes) {{
             crmLead = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {

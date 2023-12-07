@@ -43,11 +43,10 @@ public class Integration {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationResponse res = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationResponse res = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationResponse(contentType, httpRes.statusCode(), httpRes) {{
             integration = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -75,7 +74,7 @@ public class Integration {
         req.setMethod("GET");
         req.setURL(url);
 
-        req.addHeader("Accept", "application/json");
+        req.addHeader("Accept", "text/plain");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest.class, request, null);
         if (queryParams != null) {
@@ -89,14 +88,13 @@ public class Integration {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse res = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse res = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "text/plain")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
                 res.res = out;
             }
@@ -134,11 +132,10 @@ public class Integration {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesResponse res = new com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesResponse res = new com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesResponse(contentType, httpRes.statusCode(), httpRes) {{
             integrations = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -179,11 +176,10 @@ public class Integration {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsResponse res = new com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsResponse res = new com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsResponse(contentType, httpRes.statusCode(), httpRes) {{
             integrations = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {

@@ -23,19 +23,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListEnrichPeopleRequest req = new ListEnrichPeopleRequest("string"){{
+            com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleRequest req = new ListEnrichPeopleRequest(
+                "string"){{
                 email = "Rosendo53@gmail.com";
                 linkedinUrl = "string";
                 name = "string";
                 twitter = "string";
-            }};            
 
-            ListEnrichPeopleResponse res = sdk.person.listEnrichPeople(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleResponse res = sdk.person.listEnrichPeople(req);
 
             if (res.enrichPerson != null) {
                 // handle response

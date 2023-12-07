@@ -30,6 +30,7 @@ import com.unifiedapi.unifiedto.models.operations.CreateAccountingCustomerReques
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingCustomerResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingCustomer;
 import com.unifiedapi.unifiedto.models.shared.AccountingEmail;
+import com.unifiedapi.unifiedto.models.shared.AccountingEmailType;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephone;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerBillingAddress;
@@ -37,21 +38,24 @@ import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerShippingAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TaxExemption;
-import com.unifiedapi.unifiedto.models.shared.Type;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateAccountingCustomerRequest req = new CreateAccountingCustomerRequest("string"){{
-                accountingCustomer = new AccountingCustomer(){{
-                    billingAddress = new PropertyAccountingCustomerBillingAddress(){{
+            com.unifiedapi.unifiedto.models.operations.CreateAccountingCustomerRequest req = new CreateAccountingCustomerRequest(
+                "string"){{
+                accountingCustomer = new AccountingCustomer(
+){{
+                    billingAddress = new PropertyAccountingCustomerBillingAddress(
+){{
                         address1 = "string";
                         address2 = "string";
                         city = "New Raulfield";
@@ -60,19 +64,23 @@ public class Application {
                         postalCode = "22232";
                         region = "string";
                         regionCode = "string";
+
                     }};
                     createdAt = OffsetDateTime.parse("2021-07-22T19:16:48.798Z");
                     currency = "Dalasi";
                     emails = new com.unifiedapi.unifiedto.models.shared.AccountingEmail[]{{
-                        add(new AccountingEmail("string"){{
+                        add(new AccountingEmail(
+                        "string"){{
                             email = "Loren78@gmail.com";
                         }}),
                     }};
                     id = "<ID>";
                     isActive = false;
                     name = "string";
-                    raw = new PropertyAccountingCustomerRaw();
-                    shippingAddress = new PropertyAccountingCustomerShippingAddress(){{
+                    raw = new PropertyAccountingCustomerRaw(
+);
+                    shippingAddress = new PropertyAccountingCustomerShippingAddress(
+){{
                         address1 = "string";
                         address2 = "string";
                         city = "North Stanford";
@@ -81,18 +89,22 @@ public class Application {
                         postalCode = "11906-2906";
                         region = "string";
                         regionCode = "string";
+
                     }};
                     taxExemption = TaxExemption.RESALE;
                     telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
-                        add(new AccountingTelephone("string"){{
+                        add(new AccountingTelephone(
+                        "string"){{
                             telephone = "string";
                         }}),
                     }};
                     updatedAt = OffsetDateTime.parse("2021-12-07T14:42:11.734Z");
-                }};
-            }};            
 
-            CreateAccountingCustomerResponse res = sdk.customer.createAccountingCustomer(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateAccountingCustomerResponse res = sdk.customer.createAccountingCustomer(req);
 
             if (res.accountingCustomer != null) {
                 // handle response
@@ -141,34 +153,43 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateTicketingCustomerRequest req = new CreateTicketingCustomerRequest("string"){{
-                ticketingCustomer = new TicketingCustomer(new PropertyTicketingCustomerRaw()){{
+            com.unifiedapi.unifiedto.models.operations.CreateTicketingCustomerRequest req = new CreateTicketingCustomerRequest(
+                "string"){{
+                ticketingCustomer = new TicketingCustomer(
+){{
                     createdAt = OffsetDateTime.parse("2022-06-19T07:03:19.095Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
-                        add(new TicketingEmail("string"){{
+                        add(new TicketingEmail(
+                        "string"){{
                             email = "Jenifer.Friesen50@yahoo.com";
                         }}),
                     }};
                     id = "<ID>";
                     name = "string";
+                    raw = new PropertyTicketingCustomerRaw(
+);
                     tags = new String[]{{
                         add("string"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.TicketingTelephone[]{{
-                        add(new TicketingTelephone("string"){{
+                        add(new TicketingTelephone(
+                        "string"){{
                             telephone = "string";
                         }}),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-08-22T11:52:38.346Z");
-                }};
-            }};            
 
-            CreateTicketingCustomerResponse res = sdk.customer.createTicketingCustomer(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateTicketingCustomerResponse res = sdk.customer.createTicketingCustomer(req);
 
             if (res.ticketingCustomer != null) {
                 // handle response
@@ -210,18 +231,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetAccountingCustomerRequest req = new GetAccountingCustomerRequest("string", "string"){{
+            com.unifiedapi.unifiedto.models.operations.GetAccountingCustomerRequest req = new GetAccountingCustomerRequest(
+                "string",
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
-            }};            
 
-            GetAccountingCustomerResponse res = sdk.customer.getAccountingCustomer(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetAccountingCustomerResponse res = sdk.customer.getAccountingCustomer(req);
 
             if (res.accountingCustomer != null) {
                 // handle response
@@ -263,18 +288,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetTicketingCustomerRequest req = new GetTicketingCustomerRequest("string", "string"){{
+            com.unifiedapi.unifiedto.models.operations.GetTicketingCustomerRequest req = new GetTicketingCustomerRequest(
+                "string",
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
-            }};            
 
-            GetTicketingCustomerResponse res = sdk.customer.getTicketingCustomer(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetTicketingCustomerResponse res = sdk.customer.getTicketingCustomer(req);
 
             if (res.ticketingCustomer != null) {
                 // handle response
@@ -317,12 +346,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListAccountingCustomersRequest req = new ListAccountingCustomersRequest("string"){{
+            com.unifiedapi.unifiedto.models.operations.ListAccountingCustomersRequest req = new ListAccountingCustomersRequest(
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
@@ -332,9 +363,10 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2021-08-23T13:14:33.970Z");
-            }};            
 
-            ListAccountingCustomersResponse res = sdk.customer.listAccountingCustomers(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListAccountingCustomersResponse res = sdk.customer.listAccountingCustomers(req);
 
             if (res.accountingCustomers != null) {
                 // handle response
@@ -377,12 +409,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListTicketingCustomersRequest req = new ListTicketingCustomersRequest("string"){{
+            com.unifiedapi.unifiedto.models.operations.ListTicketingCustomersRequest req = new ListTicketingCustomersRequest(
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
@@ -392,9 +426,10 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2021-06-05T16:20:32.808Z");
-            }};            
 
-            ListTicketingCustomersResponse res = sdk.customer.listTicketingCustomers(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListTicketingCustomersResponse res = sdk.customer.listTicketingCustomers(req);
 
             if (res.ticketingCustomers != null) {
                 // handle response
@@ -432,6 +467,7 @@ import com.unifiedapi.unifiedto.models.operations.PatchAccountingCustomerRequest
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingCustomerResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingCustomer;
 import com.unifiedapi.unifiedto.models.shared.AccountingEmail;
+import com.unifiedapi.unifiedto.models.shared.AccountingEmailType;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephone;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerBillingAddress;
@@ -439,21 +475,25 @@ import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerShippingAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TaxExemption;
-import com.unifiedapi.unifiedto.models.shared.Type;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchAccountingCustomerRequest req = new PatchAccountingCustomerRequest("string", "string"){{
-                accountingCustomer = new AccountingCustomer(){{
-                    billingAddress = new PropertyAccountingCustomerBillingAddress(){{
+            com.unifiedapi.unifiedto.models.operations.PatchAccountingCustomerRequest req = new PatchAccountingCustomerRequest(
+                "string",
+                "string"){{
+                accountingCustomer = new AccountingCustomer(
+){{
+                    billingAddress = new PropertyAccountingCustomerBillingAddress(
+){{
                         address1 = "string";
                         address2 = "string";
                         city = "Visalia";
@@ -462,19 +502,23 @@ public class Application {
                         postalCode = "50996-7347";
                         region = "string";
                         regionCode = "string";
+
                     }};
                     createdAt = OffsetDateTime.parse("2023-08-27T01:00:12.169Z");
                     currency = "Kina";
                     emails = new com.unifiedapi.unifiedto.models.shared.AccountingEmail[]{{
-                        add(new AccountingEmail("string"){{
+                        add(new AccountingEmail(
+                        "string"){{
                             email = "Imani57@yahoo.com";
                         }}),
                     }};
                     id = "<ID>";
                     isActive = false;
                     name = "string";
-                    raw = new PropertyAccountingCustomerRaw();
-                    shippingAddress = new PropertyAccountingCustomerShippingAddress(){{
+                    raw = new PropertyAccountingCustomerRaw(
+);
+                    shippingAddress = new PropertyAccountingCustomerShippingAddress(
+){{
                         address1 = "string";
                         address2 = "string";
                         city = "Haltom City";
@@ -483,18 +527,22 @@ public class Application {
                         postalCode = "10354-8050";
                         region = "string";
                         regionCode = "string";
+
                     }};
                     taxExemption = TaxExemption.LOCAL_GOV;
                     telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
-                        add(new AccountingTelephone("string"){{
+                        add(new AccountingTelephone(
+                        "string"){{
                             telephone = "string";
                         }}),
                     }};
                     updatedAt = OffsetDateTime.parse("2022-02-08T06:05:59.693Z");
-                }};
-            }};            
 
-            PatchAccountingCustomerResponse res = sdk.customer.patchAccountingCustomer(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.PatchAccountingCustomerResponse res = sdk.customer.patchAccountingCustomer(req);
 
             if (res.accountingCustomer != null) {
                 // handle response
@@ -543,34 +591,44 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchTicketingCustomerRequest req = new PatchTicketingCustomerRequest("string", "string"){{
-                ticketingCustomer = new TicketingCustomer(new PropertyTicketingCustomerRaw()){{
+            com.unifiedapi.unifiedto.models.operations.PatchTicketingCustomerRequest req = new PatchTicketingCustomerRequest(
+                "string",
+                "string"){{
+                ticketingCustomer = new TicketingCustomer(
+){{
                     createdAt = OffsetDateTime.parse("2023-06-30T19:19:15.782Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
-                        add(new TicketingEmail("string"){{
+                        add(new TicketingEmail(
+                        "string"){{
                             email = "Rosalinda.Abshire11@hotmail.com";
                         }}),
                     }};
                     id = "<ID>";
                     name = "string";
+                    raw = new PropertyTicketingCustomerRaw(
+);
                     tags = new String[]{{
                         add("string"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.TicketingTelephone[]{{
-                        add(new TicketingTelephone("string"){{
+                        add(new TicketingTelephone(
+                        "string"){{
                             telephone = "string";
                         }}),
                     }};
                     updatedAt = OffsetDateTime.parse("2021-10-01T03:16:10.656Z");
-                }};
-            }};            
 
-            PatchTicketingCustomerResponse res = sdk.customer.patchTicketingCustomer(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.PatchTicketingCustomerResponse res = sdk.customer.patchTicketingCustomer(req);
 
             if (res.ticketingCustomer != null) {
                 // handle response
@@ -612,14 +670,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveAccountingCustomerRequest req = new RemoveAccountingCustomerRequest("string", "string");            
+            com.unifiedapi.unifiedto.models.operations.RemoveAccountingCustomerRequest req = new RemoveAccountingCustomerRequest(
+                "string",
+                "string");
 
-            RemoveAccountingCustomerResponse res = sdk.customer.removeAccountingCustomer(req);
+            com.unifiedapi.unifiedto.models.operations.RemoveAccountingCustomerResponse res = sdk.customer.removeAccountingCustomer(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -661,14 +722,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveTicketingCustomerRequest req = new RemoveTicketingCustomerRequest("string", "string");            
+            com.unifiedapi.unifiedto.models.operations.RemoveTicketingCustomerRequest req = new RemoveTicketingCustomerRequest(
+                "string",
+                "string");
 
-            RemoveTicketingCustomerResponse res = sdk.customer.removeTicketingCustomer(req);
+            com.unifiedapi.unifiedto.models.operations.RemoveTicketingCustomerResponse res = sdk.customer.removeTicketingCustomer(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -706,6 +770,7 @@ import com.unifiedapi.unifiedto.models.operations.UpdateAccountingCustomerReques
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingCustomerResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingCustomer;
 import com.unifiedapi.unifiedto.models.shared.AccountingEmail;
+import com.unifiedapi.unifiedto.models.shared.AccountingEmailType;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephone;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerBillingAddress;
@@ -713,21 +778,25 @@ import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerShippingAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TaxExemption;
-import com.unifiedapi.unifiedto.models.shared.Type;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateAccountingCustomerRequest req = new UpdateAccountingCustomerRequest("string", "string"){{
-                accountingCustomer = new AccountingCustomer(){{
-                    billingAddress = new PropertyAccountingCustomerBillingAddress(){{
+            com.unifiedapi.unifiedto.models.operations.UpdateAccountingCustomerRequest req = new UpdateAccountingCustomerRequest(
+                "string",
+                "string"){{
+                accountingCustomer = new AccountingCustomer(
+){{
+                    billingAddress = new PropertyAccountingCustomerBillingAddress(
+){{
                         address1 = "string";
                         address2 = "string";
                         city = "Renton";
@@ -736,19 +805,23 @@ public class Application {
                         postalCode = "77223-4340";
                         region = "string";
                         regionCode = "string";
+
                     }};
                     createdAt = OffsetDateTime.parse("2023-05-08T08:34:01.295Z");
                     currency = "Guinea Franc";
                     emails = new com.unifiedapi.unifiedto.models.shared.AccountingEmail[]{{
-                        add(new AccountingEmail("string"){{
+                        add(new AccountingEmail(
+                        "string"){{
                             email = "Johnson53@hotmail.com";
                         }}),
                     }};
                     id = "<ID>";
                     isActive = false;
                     name = "string";
-                    raw = new PropertyAccountingCustomerRaw();
-                    shippingAddress = new PropertyAccountingCustomerShippingAddress(){{
+                    raw = new PropertyAccountingCustomerRaw(
+);
+                    shippingAddress = new PropertyAccountingCustomerShippingAddress(
+){{
                         address1 = "string";
                         address2 = "string";
                         city = "Catalina Foothills";
@@ -757,18 +830,22 @@ public class Application {
                         postalCode = "44150";
                         region = "string";
                         regionCode = "string";
+
                     }};
                     taxExemption = TaxExemption.CHARITABLE_ORG;
                     telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
-                        add(new AccountingTelephone("string"){{
+                        add(new AccountingTelephone(
+                        "string"){{
                             telephone = "string";
                         }}),
                     }};
                     updatedAt = OffsetDateTime.parse("2022-07-26T10:11:07.824Z");
-                }};
-            }};            
 
-            UpdateAccountingCustomerResponse res = sdk.customer.updateAccountingCustomer(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.UpdateAccountingCustomerResponse res = sdk.customer.updateAccountingCustomer(req);
 
             if (res.accountingCustomer != null) {
                 // handle response
@@ -817,34 +894,44 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateTicketingCustomerRequest req = new UpdateTicketingCustomerRequest("string", "string"){{
-                ticketingCustomer = new TicketingCustomer(new PropertyTicketingCustomerRaw()){{
+            com.unifiedapi.unifiedto.models.operations.UpdateTicketingCustomerRequest req = new UpdateTicketingCustomerRequest(
+                "string",
+                "string"){{
+                ticketingCustomer = new TicketingCustomer(
+){{
                     createdAt = OffsetDateTime.parse("2023-10-13T13:29:08.944Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
-                        add(new TicketingEmail("string"){{
+                        add(new TicketingEmail(
+                        "string"){{
                             email = "Demetris72@hotmail.com";
                         }}),
                     }};
                     id = "<ID>";
                     name = "string";
+                    raw = new PropertyTicketingCustomerRaw(
+);
                     tags = new String[]{{
                         add("string"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.TicketingTelephone[]{{
-                        add(new TicketingTelephone("string"){{
+                        add(new TicketingTelephone(
+                        "string"){{
                             telephone = "string";
                         }}),
                     }};
                     updatedAt = OffsetDateTime.parse("2022-06-02T10:57:20.628Z");
-                }};
-            }};            
 
-            UpdateTicketingCustomerResponse res = sdk.customer.updateTicketingCustomer(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.UpdateTicketingCustomerResponse res = sdk.customer.updateTicketingCustomer(req);
 
             if (res.ticketingCustomer != null) {
                 // handle response

@@ -46,11 +46,10 @@ public class Scorecard {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse(contentType, httpRes.statusCode(), httpRes) {{
             atsScorecard = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -91,11 +90,10 @@ public class Scorecard {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetAtsScorecardResponse res = new com.unifiedapi.unifiedto.models.operations.GetAtsScorecardResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.GetAtsScorecardResponse res = new com.unifiedapi.unifiedto.models.operations.GetAtsScorecardResponse(contentType, httpRes.statusCode(), httpRes) {{
             atsScorecard = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -136,11 +134,10 @@ public class Scorecard {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsResponse res = new com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsResponse res = new com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsResponse(contentType, httpRes.statusCode(), httpRes) {{
             atsScorecards = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -177,11 +174,10 @@ public class Scorecard {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse(contentType, httpRes.statusCode(), httpRes) {{
             atsScorecard = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -216,11 +212,10 @@ public class Scorecard {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -256,11 +251,10 @@ public class Scorecard {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse(contentType, httpRes.statusCode(), httpRes) {{
             atsScorecard = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {

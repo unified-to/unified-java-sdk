@@ -24,12 +24,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListUcCallsRequest req = new ListUcCallsRequest("string"){{
+            com.unifiedapi.unifiedto.models.operations.ListUcCallsRequest req = new ListUcCallsRequest(
+                "string"){{
                 agentId = "string";
                 contactId = "string";
                 fields = new String[]{{
@@ -41,9 +43,10 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2023-07-25T02:48:36.966Z");
-            }};            
 
-            ListUcCallsResponse res = sdk.call.listUcCalls(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListUcCallsResponse res = sdk.call.listUcCalls(req);
 
             if (res.ucCalls != null) {
                 // handle response

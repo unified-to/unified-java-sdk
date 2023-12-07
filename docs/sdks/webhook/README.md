@@ -10,7 +10,7 @@
 
 ## createUnifiedWebhook
 
-To maintain compatibility with the webhooks specification and Zapier webhooks, only the hook_url field is required in the payload when creating a Webhook.  When updated/new objects are found, the array of objects will be POSTed to the hook_url with the paramater hookId=<hookId>.
+To maintain compatibility with the webhooks specification and Zapier webhooks, only the hook_url field is required in the payload when creating a Webhook.  When updated/new objects are found, the array of objects will be POSTed to the hook_url with the paramater hookId=<hookId>. The data payload received by your server is described at https://docs.unified.to/unified/overview
 
 ### Example Usage
 
@@ -31,15 +31,25 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateUnifiedWebhookRequest req = new CreateUnifiedWebhookRequest("string", "string"){{
-                webhook = new Webhook("string", new com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents[]{{
-                    add(PropertyWebhookEvents.CREATED),
-                }}, "string", "string", 188.12d, ObjectType.CRM_EVENT, "string"){{
+            com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookRequest req = new CreateUnifiedWebhookRequest(
+                "string",
+                "string"){{
+                webhook = new Webhook(
+                    "string",
+                    new com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents[]{{
+                        add(PropertyWebhookEvents.CREATED),
+                    }},
+                    "string",
+                    "string",
+                    188.12d,
+                    ObjectType.CRM_DEAL,
+                    "string"){{
                     checkedAt = OffsetDateTime.parse("2022-11-04T14:37:16.392Z");
                     createdAt = OffsetDateTime.parse("2021-03-22T19:34:26.447Z");
                     environment = "string";
@@ -49,13 +59,15 @@ public class Application {
                         add("string"),
                     }};
                     updatedAt = OffsetDateTime.parse("2022-08-09T17:23:28.216Z");
+
                 }};
                 events = new com.unifiedapi.unifiedto.models.operations.Events[]{{
                     add(Events.CREATED),
                 }};
-            }};            
 
-            CreateUnifiedWebhookResponse res = sdk.webhook.createUnifiedWebhook(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookResponse res = sdk.webhook.createUnifiedWebhook(req);
 
             if (res.webhook != null) {
                 // handle response
@@ -97,14 +109,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedWebhookRequest req = new GetUnifiedWebhookRequest("string");            
+            com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookRequest req = new GetUnifiedWebhookRequest(
+                "string");
 
-            GetUnifiedWebhookResponse res = sdk.webhook.getUnifiedWebhook(req);
+            com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookResponse res = sdk.webhook.getUnifiedWebhook(req);
 
             if (res.webhook != null) {
                 // handle response
@@ -147,12 +161,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListUnifiedWebhooksRequest req = new ListUnifiedWebhooksRequest(){{
+            com.unifiedapi.unifiedto.models.operations.ListUnifiedWebhooksRequest req = new ListUnifiedWebhooksRequest(
+){{
                 env = "string";
                 limit = 1162.24d;
                 object = "string";
@@ -160,9 +176,10 @@ public class Application {
                 order = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2021-04-20T14:39:47.451Z");
-            }};            
 
-            ListUnifiedWebhooksResponse res = sdk.webhook.listUnifiedWebhooks(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListUnifiedWebhooksResponse res = sdk.webhook.listUnifiedWebhooks(req);
 
             if (res.webhooks != null) {
                 // handle response
@@ -204,14 +221,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveUnifiedWebhookRequest req = new RemoveUnifiedWebhookRequest("string");            
+            com.unifiedapi.unifiedto.models.operations.RemoveUnifiedWebhookRequest req = new RemoveUnifiedWebhookRequest(
+                "string");
 
-            RemoveUnifiedWebhookResponse res = sdk.webhook.removeUnifiedWebhook(req);
+            com.unifiedapi.unifiedto.models.operations.RemoveUnifiedWebhookResponse res = sdk.webhook.removeUnifiedWebhook(req);
 
             if (res.statusCode == 200) {
                 // handle response

@@ -32,13 +32,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateTicketingTicketRequest req = new CreateTicketingTicketRequest("string"){{
-                ticketingTicket = new TicketingTicket(new PropertyTicketingTicketRaw()){{
+            com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketRequest req = new CreateTicketingTicketRequest(
+                "string"){{
+                ticketingTicket = new TicketingTicket(
+){{
                     category = "string";
                     closedAt = OffsetDateTime.parse("2021-06-28T11:20:21.005Z");
                     createdAt = OffsetDateTime.parse("2022-08-19T22:26:35.479Z");
@@ -46,6 +49,8 @@ public class Application {
                     description = "Automated composite productivity";
                     id = "<ID>";
                     priority = "string";
+                    raw = new PropertyTicketingTicketRaw(
+);
                     source = "string";
                     sourceRef = "string";
                     status = TicketingTicketStatus.CLOSED;
@@ -54,10 +59,12 @@ public class Application {
                         add("string"),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-05-07T02:01:09.815Z");
-                }};
-            }};            
 
-            CreateTicketingTicketResponse res = sdk.ticket.createTicketingTicket(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketResponse res = sdk.ticket.createTicketingTicket(req);
 
             if (res.ticketingTicket != null) {
                 // handle response
@@ -99,18 +106,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetTicketingTicketRequest req = new GetTicketingTicketRequest("string", "string"){{
+            com.unifiedapi.unifiedto.models.operations.GetTicketingTicketRequest req = new GetTicketingTicketRequest(
+                "string",
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
-            }};            
 
-            GetTicketingTicketResponse res = sdk.ticket.getTicketingTicket(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetTicketingTicketResponse res = sdk.ticket.getTicketingTicket(req);
 
             if (res.ticketingTicket != null) {
                 // handle response
@@ -153,12 +164,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListTicketingTicketsRequest req = new ListTicketingTicketsRequest("string"){{
+            com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsRequest req = new ListTicketingTicketsRequest(
+                "string"){{
                 agentId = "string";
                 customerId = "string";
                 fields = new String[]{{
@@ -170,9 +183,10 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2022-02-28T14:14:11.846Z");
-            }};            
 
-            ListTicketingTicketsResponse res = sdk.ticket.listTicketingTickets(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsResponse res = sdk.ticket.listTicketingTickets(req);
 
             if (res.ticketingTickets != null) {
                 // handle response
@@ -218,13 +232,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchTicketingTicketRequest req = new PatchTicketingTicketRequest("string", "string"){{
-                ticketingTicket = new TicketingTicket(new PropertyTicketingTicketRaw()){{
+            com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketRequest req = new PatchTicketingTicketRequest(
+                "string",
+                "string"){{
+                ticketingTicket = new TicketingTicket(
+){{
                     category = "string";
                     closedAt = OffsetDateTime.parse("2021-09-14T12:10:45.667Z");
                     createdAt = OffsetDateTime.parse("2022-09-29T23:22:13.568Z");
@@ -232,6 +250,8 @@ public class Application {
                     description = "Operative composite strategy";
                     id = "<ID>";
                     priority = "string";
+                    raw = new PropertyTicketingTicketRaw(
+);
                     source = "string";
                     sourceRef = "string";
                     status = TicketingTicketStatus.CLOSED;
@@ -240,10 +260,12 @@ public class Application {
                         add("string"),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-07-06T16:05:08.020Z");
-                }};
-            }};            
 
-            PatchTicketingTicketResponse res = sdk.ticket.patchTicketingTicket(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketResponse res = sdk.ticket.patchTicketingTicket(req);
 
             if (res.ticketingTicket != null) {
                 // handle response
@@ -285,14 +307,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveTicketingTicketRequest req = new RemoveTicketingTicketRequest("string", "string");            
+            com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketRequest req = new RemoveTicketingTicketRequest(
+                "string",
+                "string");
 
-            RemoveTicketingTicketResponse res = sdk.ticket.removeTicketingTicket(req);
+            com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketResponse res = sdk.ticket.removeTicketingTicket(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -338,13 +363,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateTicketingTicketRequest req = new UpdateTicketingTicketRequest("string", "string"){{
-                ticketingTicket = new TicketingTicket(new PropertyTicketingTicketRaw()){{
+            com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketRequest req = new UpdateTicketingTicketRequest(
+                "string",
+                "string"){{
+                ticketingTicket = new TicketingTicket(
+){{
                     category = "string";
                     closedAt = OffsetDateTime.parse("2021-05-30T22:19:31.995Z");
                     createdAt = OffsetDateTime.parse("2023-04-29T18:27:57.571Z");
@@ -352,6 +381,8 @@ public class Application {
                     description = "Configurable user-facing middleware";
                     id = "<ID>";
                     priority = "string";
+                    raw = new PropertyTicketingTicketRaw(
+);
                     source = "string";
                     sourceRef = "string";
                     status = TicketingTicketStatus.ACTIVE;
@@ -360,10 +391,12 @@ public class Application {
                         add("string"),
                     }};
                     updatedAt = OffsetDateTime.parse("2022-01-16T17:18:07.743Z");
-                }};
-            }};            
 
-            UpdateTicketingTicketResponse res = sdk.ticket.updateTicketingTicket(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketResponse res = sdk.ticket.updateTicketingTicket(req);
 
             if (res.ticketingTicket != null) {
                 // handle response

@@ -20,9 +20,9 @@ public class AccountingEmail {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    public Type type;
+    public AccountingEmailType type;
 
-    public AccountingEmail withType(Type type) {
+    public AccountingEmail withType(AccountingEmailType type) {
         this.type = type;
         return this;
     }

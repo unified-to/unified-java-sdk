@@ -31,13 +31,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateCrmFileRequest req = new CreateCrmFileRequest("string"){{
-                crmFile = new CrmFile(){{
+            com.unifiedapi.unifiedto.models.operations.CreateCrmFileRequest req = new CreateCrmFileRequest(
+                "string"){{
+                crmFile = new CrmFile(
+){{
                     activityId = "string";
                     companyId = "string";
                     contactId = "string";
@@ -51,13 +54,16 @@ public class Application {
                     id = "<ID>";
                     isActive = false;
                     leadId = "string";
-                    raw = new PropertyCrmFileRaw();
+                    raw = new PropertyCrmFileRaw(
+);
                     updatedAt = OffsetDateTime.parse("2022-05-03T12:27:57.377Z");
                     userId = "string";
-                }};
-            }};            
 
-            CreateCrmFileResponse res = sdk.file.createCrmFile(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateCrmFileResponse res = sdk.file.createCrmFile(req);
 
             if (res.crmFile != null) {
                 // handle response
@@ -99,18 +105,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetCrmFileRequest req = new GetCrmFileRequest("string", "string"){{
+            com.unifiedapi.unifiedto.models.operations.GetCrmFileRequest req = new GetCrmFileRequest(
+                "string",
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
-            }};            
 
-            GetCrmFileResponse res = sdk.file.getCrmFile(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetCrmFileResponse res = sdk.file.getCrmFile(req);
 
             if (res.crmFile != null) {
                 // handle response
@@ -153,12 +163,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListCrmFilesRequest req = new ListCrmFilesRequest("string"){{
+            com.unifiedapi.unifiedto.models.operations.ListCrmFilesRequest req = new ListCrmFilesRequest(
+                "string"){{
                 companyId = "string";
                 contactId = "string";
                 dealId = "string";
@@ -171,9 +183,10 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2023-11-04T18:55:22.126Z");
-            }};            
 
-            ListCrmFilesResponse res = sdk.file.listCrmFiles(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListCrmFilesResponse res = sdk.file.listCrmFiles(req);
 
             if (res.crmFiles != null) {
                 // handle response
@@ -218,13 +231,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchCrmFileRequest req = new PatchCrmFileRequest("string", "string"){{
-                crmFile = new CrmFile(){{
+            com.unifiedapi.unifiedto.models.operations.PatchCrmFileRequest req = new PatchCrmFileRequest(
+                "string",
+                "string"){{
+                crmFile = new CrmFile(
+){{
                     activityId = "string";
                     companyId = "string";
                     contactId = "string";
@@ -238,13 +255,16 @@ public class Application {
                     id = "<ID>";
                     isActive = false;
                     leadId = "string";
-                    raw = new PropertyCrmFileRaw();
+                    raw = new PropertyCrmFileRaw(
+);
                     updatedAt = OffsetDateTime.parse("2023-06-07T04:39:27.375Z");
                     userId = "string";
-                }};
-            }};            
 
-            PatchCrmFileResponse res = sdk.file.patchCrmFile(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.PatchCrmFileResponse res = sdk.file.patchCrmFile(req);
 
             if (res.crmFile != null) {
                 // handle response
@@ -286,14 +306,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveCrmFileRequest req = new RemoveCrmFileRequest("string", "string");            
+            com.unifiedapi.unifiedto.models.operations.RemoveCrmFileRequest req = new RemoveCrmFileRequest(
+                "string",
+                "string");
 
-            RemoveCrmFileResponse res = sdk.file.removeCrmFile(req);
+            com.unifiedapi.unifiedto.models.operations.RemoveCrmFileResponse res = sdk.file.removeCrmFile(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -338,13 +361,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateCrmFileRequest req = new UpdateCrmFileRequest("string", "string"){{
-                crmFile = new CrmFile(){{
+            com.unifiedapi.unifiedto.models.operations.UpdateCrmFileRequest req = new UpdateCrmFileRequest(
+                "string",
+                "string"){{
+                crmFile = new CrmFile(
+){{
                     activityId = "string";
                     companyId = "string";
                     contactId = "string";
@@ -358,13 +385,16 @@ public class Application {
                     id = "<ID>";
                     isActive = false;
                     leadId = "string";
-                    raw = new PropertyCrmFileRaw();
+                    raw = new PropertyCrmFileRaw(
+);
                     updatedAt = OffsetDateTime.parse("2021-09-11T08:15:48.719Z");
                     userId = "string";
-                }};
-            }};            
 
-            UpdateCrmFileResponse res = sdk.file.updateCrmFile(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.UpdateCrmFileResponse res = sdk.file.updateCrmFile(req);
 
             if (res.crmFile != null) {
                 // handle response

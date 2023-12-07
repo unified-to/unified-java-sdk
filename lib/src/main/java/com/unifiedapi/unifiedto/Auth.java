@@ -33,7 +33,7 @@ public class Auth {
         req.setMethod("GET");
         req.setURL(url);
 
-        req.addHeader("Accept", "application/json");
+        req.addHeader("Accept", "text/plain");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest.class, request, null);
         if (queryParams != null) {
@@ -47,14 +47,13 @@ public class Auth {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse res = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse res = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "text/plain")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
                 res.res = out;
             }
@@ -78,7 +77,7 @@ public class Auth {
         req.setMethod("GET");
         req.setURL(url);
 
-        req.addHeader("Accept", "application/json");
+        req.addHeader("Accept", "text/plain");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginRequest.class, request, null);
         if (queryParams != null) {
@@ -92,14 +91,13 @@ public class Auth {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginResponse res = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginResponse res = new com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginResponse(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
-            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "text/plain")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
                 res.res = out;
             }

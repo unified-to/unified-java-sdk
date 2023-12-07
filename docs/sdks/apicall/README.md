@@ -24,14 +24,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedApicallRequest req = new GetUnifiedApicallRequest("string");            
+            com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallRequest req = new GetUnifiedApicallRequest(
+                "string");
 
-            GetUnifiedApicallResponse res = sdk.apicall.getUnifiedApicall(req);
+            com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallResponse res = sdk.apicall.getUnifiedApicall(req);
 
             if (res.apiCall != null) {
                 // handle response
@@ -74,12 +76,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListUnifiedApicallsRequest req = new ListUnifiedApicallsRequest(){{
+            com.unifiedapi.unifiedto.models.operations.ListUnifiedApicallsRequest req = new ListUnifiedApicallsRequest(
+){{
                 connectionId = "string";
                 createdLte = OffsetDateTime.parse("2023-08-09T20:57:25.500Z");
                 env = "string";
@@ -91,9 +95,10 @@ public class Application {
                 order = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2023-01-09T10:22:39.053Z");
-            }};            
 
-            ListUnifiedApicallsResponse res = sdk.apicall.listUnifiedApicalls(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListUnifiedApicallsResponse res = sdk.apicall.listUnifiedApicalls(req);
 
             if (res.apiCalls != null) {
                 // handle response

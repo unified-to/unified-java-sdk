@@ -34,6 +34,15 @@ public class CrmLead {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("company_name")
+    public String companyName;
+
+    public CrmLead withCompanyName(String companyName) {
+        this.companyName = companyName;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     public String contactId;
 
@@ -113,6 +122,15 @@ public class CrmLead {
 
     public CrmLead withSource(String source) {
         this.source = source;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public String status;
+
+    public CrmLead withStatus(String status) {
+        this.status = status;
         return this;
     }
     

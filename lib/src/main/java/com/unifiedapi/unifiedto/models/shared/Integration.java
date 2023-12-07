@@ -57,12 +57,10 @@ public class Integration {
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonSerialize(using = DateTimeSerializer.class)
-    @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
-    public OffsetDateTime createdAt;
+    public String createdAt;
 
-    public Integration withCreatedAt(OffsetDateTime createdAt) {
+    public Integration withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
     }
@@ -180,12 +178,10 @@ public class Integration {
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonSerialize(using = DateTimeSerializer.class)
-    @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
-    public OffsetDateTime updatedAt;
+    public String updatedAt;
 
-    public Integration withUpdatedAt(OffsetDateTime updatedAt) {
+    public Integration withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }

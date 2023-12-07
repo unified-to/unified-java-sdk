@@ -26,14 +26,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedIntegrationRequest req = new GetUnifiedIntegrationRequest("string");            
+            com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationRequest req = new GetUnifiedIntegrationRequest(
+                "string");
 
-            GetUnifiedIntegrationResponse res = sdk.integration.getUnifiedIntegration(req);
+            com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationResponse res = sdk.integration.getUnifiedIntegration(req);
 
             if (res.integration != null) {
                 // handle response
@@ -76,12 +78,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedIntegrationAuthRequest req = new GetUnifiedIntegrationAuthRequest("string", "string"){{
+            com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest req = new GetUnifiedIntegrationAuthRequest(
+                "string",
+                "string"){{
                 env = "string";
                 externalXref = "string";
                 failureRedirect = "string";
@@ -93,9 +98,10 @@ public class Application {
                 state = "string";
                 subdomain = "string";
                 successRedirect = "string";
-            }};            
 
-            GetUnifiedIntegrationAuthResponse res = sdk.integration.getUnifiedIntegrationAuth(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse res = sdk.integration.getUnifiedIntegrationAuth(req);
 
             if (res.res != null) {
                 // handle response
@@ -138,12 +144,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListUnifiedIntegrationWorkspacesRequest req = new ListUnifiedIntegrationWorkspacesRequest("string"){{
+            com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesRequest req = new ListUnifiedIntegrationWorkspacesRequest(
+                "string"){{
                 active = false;
                 categories = new com.unifiedapi.unifiedto.models.operations.QueryParamCategories[]{{
                     add(QueryParamCategories.TICKETING),
@@ -153,9 +161,10 @@ public class Application {
                 offset = 5948.93d;
                 summary = false;
                 updatedGte = "string";
-            }};            
 
-            ListUnifiedIntegrationWorkspacesResponse res = sdk.integration.listUnifiedIntegrationWorkspaces(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesResponse res = sdk.integration.listUnifiedIntegrationWorkspaces(req);
 
             if (res.integrations != null) {
                 // handle response
@@ -198,12 +207,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListUnifiedIntegrationsRequest req = new ListUnifiedIntegrationsRequest(){{
+            com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsRequest req = new ListUnifiedIntegrationsRequest(
+){{
                 active = false;
                 categories = new com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsQueryParamCategories[]{{
                     add(ListUnifiedIntegrationsQueryParamCategories.AUTH),
@@ -215,9 +226,10 @@ public class Application {
                 sort = "string";
                 summary = false;
                 updatedGte = "string";
-            }};            
 
-            ListUnifiedIntegrationsResponse res = sdk.integration.listUnifiedIntegrations(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsResponse res = sdk.integration.listUnifiedIntegrations(req);
 
             if (res.integrations != null) {
                 // handle response

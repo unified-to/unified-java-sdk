@@ -25,12 +25,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedIntegrationAuthRequest req = new GetUnifiedIntegrationAuthRequest("string", "string"){{
+            com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest req = new GetUnifiedIntegrationAuthRequest(
+                "string",
+                "string"){{
                 env = "string";
                 externalXref = "string";
                 failureRedirect = "string";
@@ -42,9 +45,10 @@ public class Application {
                 state = "string";
                 subdomain = "string";
                 successRedirect = "string";
-            }};            
 
-            GetUnifiedIntegrationAuthResponse res = sdk.auth.getUnifiedIntegrationAuth(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse res = sdk.auth.getUnifiedIntegrationAuth(req);
 
             if (res.res != null) {
                 // handle response
@@ -86,20 +90,24 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetUnifiedIntegrationLoginRequest req = new GetUnifiedIntegrationLoginRequest("string", "string"){{
+            com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginRequest req = new GetUnifiedIntegrationLoginRequest(
+                "string",
+                "string"){{
                 env = "string";
                 failureRedirect = "string";
                 redirect = false;
                 state = "string";
                 successRedirect = "string";
-            }};            
 
-            GetUnifiedIntegrationLoginResponse res = sdk.auth.getUnifiedIntegrationLogin(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginResponse res = sdk.auth.getUnifiedIntegrationLogin(req);
 
             if (res.res != null) {
                 // handle response

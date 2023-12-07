@@ -7,6 +7,8 @@ package com.unifiedapi.unifiedto.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum ObjectType {
+    ACCOUNTING_ACCOUNT("accounting_account"),
+    ACCOUNTING_TRANSACTION("accounting_transaction"),
     ACCOUNTING_CUSTOMER("accounting_customer"),
     ACCOUNTING_INVOICE("accounting_invoice"),
     ACCOUNTING_PAYMENT("accounting_payment"),

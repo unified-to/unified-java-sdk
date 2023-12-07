@@ -104,9 +104,9 @@ public class AtsApplication {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
-    public Status status;
+    public AtsApplicationStatus status;
 
-    public AtsApplication withStatus(Status status) {
+    public AtsApplication withStatus(AtsApplicationStatus status) {
         this.status = status;
         return this;
     }

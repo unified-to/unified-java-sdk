@@ -53,6 +53,7 @@ public class TicketingCustomer {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     public PropertyTicketingCustomerRaw raw;
 
@@ -90,7 +91,5 @@ public class TicketingCustomer {
         return this;
     }
     
-    public TicketingCustomer(@JsonProperty("raw") PropertyTicketingCustomerRaw raw) {
-        this.raw = raw;
-  }
+    public TicketingCustomer(){}
 }

@@ -7,8 +7,15 @@ package com.unifiedapi.unifiedto.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum Type {
-    WORK("WORK"),
-    HOME("HOME"),
+    ACCOUNTS_PAYABLE("ACCOUNTS_PAYABLE"),
+    ACCOUNTS_RECEIVABLE("ACCOUNTS_RECEIVABLE"),
+    BANK("BANK"),
+    CREDIT_CARD("CREDIT_CARD"),
+    FIXED_ASSET("FIXED_ASSET"),
+    LIABILITY("LIABILITY"),
+    EQUITY("EQUITY"),
+    EXPENSE("EXPENSE"),
+    REVENUE("REVENUE"),
     OTHER("OTHER");
 
     @JsonValue

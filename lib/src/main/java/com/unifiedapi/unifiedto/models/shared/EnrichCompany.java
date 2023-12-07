@@ -170,6 +170,7 @@ public class EnrichCompany {
     /**
      * The raw data returned by the integration for this company
      */
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     public PropertyEnrichCompanyRaw raw;
 
@@ -273,7 +274,5 @@ public class EnrichCompany {
         return this;
     }
     
-    public EnrichCompany(@JsonProperty("raw") PropertyEnrichCompanyRaw raw) {
-        this.raw = raw;
-  }
+    public EnrichCompany(){}
 }

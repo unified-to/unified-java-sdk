@@ -49,11 +49,10 @@ public class Person {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleResponse res = new com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleResponse res = new com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleResponse(contentType, httpRes.statusCode(), httpRes) {{
             enrichPerson = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {

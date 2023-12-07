@@ -164,6 +164,7 @@ public class EnrichPerson {
     /**
      * The raw data returned by the integration for this person
      */
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     public PropertyEnrichPersonRaw raw;
 
@@ -249,7 +250,5 @@ public class EnrichPerson {
         return this;
     }
     
-    public EnrichPerson(@JsonProperty("raw") PropertyEnrichPersonRaw raw) {
-        this.raw = raw;
-  }
+    public EnrichPerson(){}
 }

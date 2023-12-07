@@ -46,11 +46,10 @@ public class Member {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.CreateMartechMemberResponse res = new com.unifiedapi.unifiedto.models.operations.CreateMartechMemberResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.CreateMartechMemberResponse res = new com.unifiedapi.unifiedto.models.operations.CreateMartechMemberResponse(contentType, httpRes.statusCode(), httpRes) {{
             marketingMember = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -91,11 +90,10 @@ public class Member {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetMartechMemberResponse res = new com.unifiedapi.unifiedto.models.operations.GetMartechMemberResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.GetMartechMemberResponse res = new com.unifiedapi.unifiedto.models.operations.GetMartechMemberResponse(contentType, httpRes.statusCode(), httpRes) {{
             marketingMember = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -136,11 +134,10 @@ public class Member {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.ListMartechMembersResponse res = new com.unifiedapi.unifiedto.models.operations.ListMartechMembersResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.ListMartechMembersResponse res = new com.unifiedapi.unifiedto.models.operations.ListMartechMembersResponse(contentType, httpRes.statusCode(), httpRes) {{
             marketingMembers = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -177,11 +174,10 @@ public class Member {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.PatchMartechMemberResponse res = new com.unifiedapi.unifiedto.models.operations.PatchMartechMemberResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.PatchMartechMemberResponse res = new com.unifiedapi.unifiedto.models.operations.PatchMartechMemberResponse(contentType, httpRes.statusCode(), httpRes) {{
             marketingMember = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -216,11 +212,10 @@ public class Member {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberResponse(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -256,11 +251,10 @@ public class Member {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberResponse(contentType, httpRes.statusCode(), httpRes) {{
             marketingMember = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {

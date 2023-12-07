@@ -46,11 +46,10 @@ public class Note {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.CreateTicketingNoteResponse res = new com.unifiedapi.unifiedto.models.operations.CreateTicketingNoteResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.CreateTicketingNoteResponse res = new com.unifiedapi.unifiedto.models.operations.CreateTicketingNoteResponse(contentType, httpRes.statusCode(), httpRes) {{
             ticketingNote = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -91,11 +90,10 @@ public class Note {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetTicketingNoteResponse res = new com.unifiedapi.unifiedto.models.operations.GetTicketingNoteResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.GetTicketingNoteResponse res = new com.unifiedapi.unifiedto.models.operations.GetTicketingNoteResponse(contentType, httpRes.statusCode(), httpRes) {{
             ticketingNote = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -136,11 +134,10 @@ public class Note {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.ListTicketingNotesResponse res = new com.unifiedapi.unifiedto.models.operations.ListTicketingNotesResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.ListTicketingNotesResponse res = new com.unifiedapi.unifiedto.models.operations.ListTicketingNotesResponse(contentType, httpRes.statusCode(), httpRes) {{
             ticketingNotes = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -177,11 +174,10 @@ public class Note {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.PatchTicketingNoteResponse res = new com.unifiedapi.unifiedto.models.operations.PatchTicketingNoteResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.PatchTicketingNoteResponse res = new com.unifiedapi.unifiedto.models.operations.PatchTicketingNoteResponse(contentType, httpRes.statusCode(), httpRes) {{
             ticketingNote = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -216,11 +212,10 @@ public class Note {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.RemoveTicketingNoteResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveTicketingNoteResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.RemoveTicketingNoteResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveTicketingNoteResponse(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -256,11 +251,10 @@ public class Note {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.UpdateTicketingNoteResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateTicketingNoteResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.UpdateTicketingNoteResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateTicketingNoteResponse(contentType, httpRes.statusCode(), httpRes) {{
             ticketingNote = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {

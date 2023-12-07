@@ -7,19 +7,8 @@ package com.unifiedapi.unifiedto.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum Status {
-    NEW_("NEW"),
-    REVIEWING("REVIEWING"),
-    SCREENING("SCREENING"),
-    SUBMITTED("SUBMITTED"),
-    FIRST_INTERVIEW("FIRST_INTERVIEW"),
-    SECOND_INTERVIEW("SECOND_INTERVIEW"),
-    THIRD_INTERVIEW("THIRD_INTERVIEW"),
-    BACKGROUND_CHECK("BACKGROUND_CHECK"),
-    OFFERED("OFFERED"),
-    ACCEPTED("ACCEPTED"),
-    HIRED("HIRED"),
-    REJECTED("REJECTED"),
-    WITHDRAWN("WITHDRAWN");
+    ACTIVE("ACTIVE"),
+    ARCHIVED("ARCHIVED");
 
     @JsonValue
     public final String value;

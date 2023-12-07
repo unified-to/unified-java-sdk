@@ -80,6 +80,18 @@ public class AtsCandidate {
         return this;
     }
     
+    /**
+     * a list of social media links associated with the candidate. eg. LinkedIn URL
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("link_urls")
+    public String[] linkUrls;
+
+    public AtsCandidate withLinkUrls(String[] linkUrls) {
+        this.linkUrls = linkUrls;
+        return this;
+    }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;

@@ -46,11 +46,10 @@ public class Invoice {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.CreateAccountingInvoiceResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAccountingInvoiceResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.CreateAccountingInvoiceResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAccountingInvoiceResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountingInvoice = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -91,11 +90,10 @@ public class Invoice {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.GetAccountingInvoiceResponse res = new com.unifiedapi.unifiedto.models.operations.GetAccountingInvoiceResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.GetAccountingInvoiceResponse res = new com.unifiedapi.unifiedto.models.operations.GetAccountingInvoiceResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountingInvoice = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -136,11 +134,10 @@ public class Invoice {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.ListAccountingInvoicesResponse res = new com.unifiedapi.unifiedto.models.operations.ListAccountingInvoicesResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.ListAccountingInvoicesResponse res = new com.unifiedapi.unifiedto.models.operations.ListAccountingInvoicesResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountingInvoices = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -177,11 +174,10 @@ public class Invoice {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.PatchAccountingInvoiceResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAccountingInvoiceResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.PatchAccountingInvoiceResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAccountingInvoiceResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountingInvoice = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -216,11 +212,10 @@ public class Invoice {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.RemoveAccountingInvoiceResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAccountingInvoiceResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.RemoveAccountingInvoiceResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAccountingInvoiceResponse(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -256,11 +251,10 @@ public class Invoice {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceResponse(contentType, httpRes.statusCode()) {{
+        
+        com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountingInvoice = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {

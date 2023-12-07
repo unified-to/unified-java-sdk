@@ -33,16 +33,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateMartechMemberRequest req = new CreateMartechMemberRequest("string"){{
-                marketingMember = new MarketingMember(){{
+            com.unifiedapi.unifiedto.models.operations.CreateMartechMemberRequest req = new CreateMartechMemberRequest(
+                "string"){{
+                marketingMember = new MarketingMember(
+){{
                     createdAt = OffsetDateTime.parse("2021-07-29T12:25:04.271Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.MarketingEmail[]{{
-                        add(new MarketingEmail("string"){{
+                        add(new MarketingEmail(
+                        "string"){{
                             email = "Kimberly55@gmail.com";
                         }}),
                     }};
@@ -51,15 +55,18 @@ public class Application {
                         add("string"),
                     }};
                     name = "string";
-                    raw = new PropertyMarketingMemberRaw();
+                    raw = new PropertyMarketingMemberRaw(
+);
                     tags = new String[]{{
                         add("string"),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-04-25T03:20:19.740Z");
-                }};
-            }};            
 
-            CreateMartechMemberResponse res = sdk.member.createMartechMember(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateMartechMemberResponse res = sdk.member.createMartechMember(req);
 
             if (res.marketingMember != null) {
                 // handle response
@@ -101,18 +108,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            GetMartechMemberRequest req = new GetMartechMemberRequest("string", "string"){{
+            com.unifiedapi.unifiedto.models.operations.GetMartechMemberRequest req = new GetMartechMemberRequest(
+                "string",
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
-            }};            
 
-            GetMartechMemberResponse res = sdk.member.getMartechMember(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetMartechMemberResponse res = sdk.member.getMartechMember(req);
 
             if (res.marketingMember != null) {
                 // handle response
@@ -155,12 +166,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            ListMartechMembersRequest req = new ListMartechMembersRequest("string"){{
+            com.unifiedapi.unifiedto.models.operations.ListMartechMembersRequest req = new ListMartechMembersRequest(
+                "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
@@ -171,9 +184,10 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2022-02-09T03:38:53.799Z");
-            }};            
 
-            ListMartechMembersResponse res = sdk.member.listMartechMembers(req);
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListMartechMembersResponse res = sdk.member.listMartechMembers(req);
 
             if (res.marketingMembers != null) {
                 // handle response
@@ -220,16 +234,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            PatchMartechMemberRequest req = new PatchMartechMemberRequest("string", "string"){{
-                marketingMember = new MarketingMember(){{
+            com.unifiedapi.unifiedto.models.operations.PatchMartechMemberRequest req = new PatchMartechMemberRequest(
+                "string",
+                "string"){{
+                marketingMember = new MarketingMember(
+){{
                     createdAt = OffsetDateTime.parse("2022-11-02T06:23:45.231Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.MarketingEmail[]{{
-                        add(new MarketingEmail("string"){{
+                        add(new MarketingEmail(
+                        "string"){{
                             email = "Avis.Nikolaus70@hotmail.com";
                         }}),
                     }};
@@ -238,15 +257,18 @@ public class Application {
                         add("string"),
                     }};
                     name = "string";
-                    raw = new PropertyMarketingMemberRaw();
+                    raw = new PropertyMarketingMemberRaw(
+);
                     tags = new String[]{{
                         add("string"),
                     }};
                     updatedAt = OffsetDateTime.parse("2022-01-21T22:23:04.281Z");
-                }};
-            }};            
 
-            PatchMartechMemberResponse res = sdk.member.patchMartechMember(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.PatchMartechMemberResponse res = sdk.member.patchMartechMember(req);
 
             if (res.marketingMember != null) {
                 // handle response
@@ -288,14 +310,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            RemoveMartechMemberRequest req = new RemoveMartechMemberRequest("string", "string");            
+            com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberRequest req = new RemoveMartechMemberRequest(
+                "string",
+                "string");
 
-            RemoveMartechMemberResponse res = sdk.member.removeMartechMember(req);
+            com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberResponse res = sdk.member.removeMartechMember(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -342,16 +367,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            UpdateMartechMemberRequest req = new UpdateMartechMemberRequest("string", "string"){{
-                marketingMember = new MarketingMember(){{
+            com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberRequest req = new UpdateMartechMemberRequest(
+                "string",
+                "string"){{
+                marketingMember = new MarketingMember(
+){{
                     createdAt = OffsetDateTime.parse("2023-04-24T11:56:04.469Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.MarketingEmail[]{{
-                        add(new MarketingEmail("string"){{
+                        add(new MarketingEmail(
+                        "string"){{
                             email = "Horacio55@gmail.com";
                         }}),
                     }};
@@ -360,15 +390,18 @@ public class Application {
                         add("string"),
                     }};
                     name = "string";
-                    raw = new PropertyMarketingMemberRaw();
+                    raw = new PropertyMarketingMemberRaw(
+);
                     tags = new String[]{{
                         add("string"),
                     }};
                     updatedAt = OffsetDateTime.parse("2022-06-16T07:22:55.607Z");
-                }};
-            }};            
 
-            UpdateMartechMemberResponse res = sdk.member.updateMartechMember(req);
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberResponse res = sdk.member.updateMartechMember(req);
 
             if (res.marketingMember != null) {
                 // handle response

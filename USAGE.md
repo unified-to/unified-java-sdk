@@ -1,21 +1,14 @@
-<!-- Start SDK Example Usage -->
-
-
+<!-- Start SDK Example Usage [usage] -->
 ```java
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingCustomerRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingCustomerResponse;
-import com.unifiedapi.unifiedto.models.shared.AccountingCustomer;
-import com.unifiedapi.unifiedto.models.shared.AccountingEmail;
-import com.unifiedapi.unifiedto.models.shared.AccountingTelephone;
-import com.unifiedapi.unifiedto.models.shared.AccountingTelephoneType;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerBillingAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerRaw;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingCustomerShippingAddress;
+import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse;
+import com.unifiedapi.unifiedto.models.shared.AccountingAccount;
+import com.unifiedapi.unifiedto.models.shared.PropertyAccountingAccountRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import com.unifiedapi.unifiedto.models.shared.TaxExemption;
+import com.unifiedapi.unifiedto.models.shared.Status;
 import com.unifiedapi.unifiedto.models.shared.Type;
 import java.time.OffsetDateTime;
 
@@ -23,57 +16,36 @@ public class Application {
     public static void main(String[] args) {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     jwt = "";
                 }})
                 .build();
 
-            CreateAccountingCustomerRequest req = new CreateAccountingCustomerRequest("string"){{
-                accountingCustomer = new AccountingCustomer(){{
-                    billingAddress = new PropertyAccountingCustomerBillingAddress(){{
-                        address1 = "string";
-                        address2 = "string";
-                        city = "New Raulfield";
-                        country = "Libyan Arab Jamahiriya";
-                        countryCode = "IN";
-                        postalCode = "22232";
-                        region = "string";
-                        regionCode = "string";
-                    }};
-                    createdAt = OffsetDateTime.parse("2021-07-22T19:16:48.798Z");
-                    currency = "Dalasi";
-                    emails = new com.unifiedapi.unifiedto.models.shared.AccountingEmail[]{{
-                        add(new AccountingEmail("string"){{
-                            email = "Loren78@gmail.com";
-                        }}),
-                    }};
+            com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest req = new CreateAccountingAccountRequest(
+                "string"){{
+                accountingAccount = new AccountingAccount(
+                    "string"){{
+                    balance = 6602.56d;
+                    bankAccountNumber = "string";
+                    createdAt = OffsetDateTime.parse("2022-09-02T08:51:10.063Z");
+                    currency = "Saint Helena Pound";
+                    customerDefinedCode = "string";
+                    description = "Cross-group zero defect task-force";
                     id = "<ID>";
-                    isActive = false;
-                    name = "string";
-                    raw = new PropertyAccountingCustomerRaw();
-                    shippingAddress = new PropertyAccountingCustomerShippingAddress(){{
-                        address1 = "string";
-                        address2 = "string";
-                        city = "North Stanford";
-                        country = "Iceland";
-                        countryCode = "AZ";
-                        postalCode = "11906-2906";
-                        region = "string";
-                        regionCode = "string";
-                    }};
-                    taxExemption = TaxExemption.RESALE;
-                    telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
-                        add(new AccountingTelephone("string"){{
-                            telephone = "string";
-                        }}),
-                    }};
-                    updatedAt = OffsetDateTime.parse("2021-12-07T14:42:11.734Z");
+                    raw = new PropertyAccountingAccountRaw(
+);
+                    status = Status.ACTIVE;
+                    type = Type.EQUITY;
+                    updatedAt = OffsetDateTime.parse("2022-09-09T10:11:13.258Z");
+
                 }};
-            }};            
 
-            CreateAccountingCustomerResponse res = sdk.accounting.createAccountingCustomer(req);
+            }};
 
-            if (res.accountingCustomer != null) {
+            com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse res = sdk.accounting.createAccountingAccount(req);
+
+            if (res.accountingAccount != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -82,4 +54,4 @@ public class Application {
     }
 }
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->
