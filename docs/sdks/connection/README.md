@@ -27,6 +27,7 @@ import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions;
 import com.unifiedapi.unifiedto.models.shared.PropertyPropertyConnectionAuthMeta;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.Undefined;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -80,11 +81,17 @@ public class Application {
                 }};
                 authAwsArn = "string";
                 createdAt = OffsetDateTime.parse("2021-12-11T09:33:42.804Z");
+                cursorsCache = new com.unifiedapi.unifiedto.models.shared.Undefined[]{{
+                    add(new Undefined(
+                    ){{}}),
+                }};
                 environment = "string";
                 externalXref = "string";
                 id = "<ID>";
                 isPaused = false;
-                updatedAt = OffsetDateTime.parse("2023-06-29T03:45:15.691Z");
+                lastHealthyAt = OffsetDateTime.parse("2023-06-29T03:45:15.691Z");
+                lastUnhealthyAt = OffsetDateTime.parse("2022-10-31T18:29:46.878Z");
+                updatedAt = OffsetDateTime.parse("2022-02-04T22:51:39.532Z");
                 workspaceId = "string";
 
             }};
@@ -247,6 +254,7 @@ import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions;
 import com.unifiedapi.unifiedto.models.shared.PropertyPropertyConnectionAuthMeta;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.Undefined;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -302,11 +310,17 @@ public class Application {
                     }};
                     authAwsArn = "string";
                     createdAt = OffsetDateTime.parse("2021-05-14T09:50:52.127Z");
+                    cursorsCache = new com.unifiedapi.unifiedto.models.shared.Undefined[]{{
+                        add(new Undefined(
+                        ){{}}),
+                    }};
                     environment = "string";
                     externalXref = "string";
                     id = "<ID>";
                     isPaused = false;
-                    updatedAt = OffsetDateTime.parse("2022-07-09T00:35:16.005Z");
+                    lastHealthyAt = OffsetDateTime.parse("2022-07-09T00:35:16.005Z");
+                    lastUnhealthyAt = OffsetDateTime.parse("2022-02-13T20:51:31.469Z");
+                    updatedAt = OffsetDateTime.parse("2023-06-03T17:57:56.069Z");
                     workspaceId = "string";
 
                 }};
@@ -406,6 +420,7 @@ import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions;
 import com.unifiedapi.unifiedto.models.shared.PropertyPropertyConnectionAuthMeta;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.Undefined;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -461,11 +476,17 @@ public class Application {
                     }};
                     authAwsArn = "string";
                     createdAt = OffsetDateTime.parse("2023-11-26T11:58:40.326Z");
+                    cursorsCache = new com.unifiedapi.unifiedto.models.shared.Undefined[]{{
+                        add(new Undefined(
+                        ){{}}),
+                    }};
                     environment = "string";
                     externalXref = "string";
                     id = "<ID>";
                     isPaused = false;
-                    updatedAt = OffsetDateTime.parse("2022-06-09T04:40:33.286Z");
+                    lastHealthyAt = OffsetDateTime.parse("2022-06-09T04:40:33.286Z");
+                    lastUnhealthyAt = OffsetDateTime.parse("2021-03-08T18:03:04.028Z");
+                    updatedAt = OffsetDateTime.parse("2022-01-09T08:00:07.180Z");
                     workspaceId = "string";
 
                 }};

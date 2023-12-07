@@ -62,6 +62,15 @@ public class Connection {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cursors_cache")
+    public Undefined[] cursorsCache;
+
+    public Connection withCursorsCache(Undefined[] cursorsCache) {
+        this.cursorsCache = cursorsCache;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public String environment;
 
@@ -102,6 +111,28 @@ public class Connection {
 
     public Connection withIsPaused(Boolean isPaused) {
         this.isPaused = isPaused;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("last_healthy_at")
+    public OffsetDateTime lastHealthyAt;
+
+    public Connection withLastHealthyAt(OffsetDateTime lastHealthyAt) {
+        this.lastHealthyAt = lastHealthyAt;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("last_unhealthy_at")
+    public OffsetDateTime lastUnhealthyAt;
+
+    public Connection withLastUnhealthyAt(OffsetDateTime lastUnhealthyAt) {
+        this.lastUnhealthyAt = lastUnhealthyAt;
         return this;
     }
     
