@@ -4,7 +4,6 @@
 
 package com.unifiedapi.unifiedto.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 
 
@@ -17,7 +16,5 @@ public class Security {
         return this;
     }
     
-    public Security(@JsonProperty("jwt") String jwt) {
-        this.jwt = jwt;
-  }
+    public Security(){}
 }

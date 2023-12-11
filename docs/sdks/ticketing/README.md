@@ -48,8 +48,8 @@ public class Application {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    jwt = "";
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -129,8 +129,8 @@ public class Application {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    jwt = "";
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -199,8 +199,8 @@ public class Application {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    jwt = "";
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -273,8 +273,8 @@ public class Application {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    jwt = "";
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -330,8 +330,8 @@ public class Application {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    jwt = "";
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -387,8 +387,8 @@ public class Application {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    jwt = "";
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -445,8 +445,8 @@ public class Application {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    jwt = "";
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -508,8 +508,8 @@ public class Application {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    jwt = "";
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -572,8 +572,8 @@ public class Application {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    jwt = "";
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -643,8 +643,8 @@ public class Application {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    jwt = "";
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -725,8 +725,8 @@ public class Application {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    jwt = "";
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -796,8 +796,8 @@ public class Application {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    jwt = "";
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -871,8 +871,8 @@ public class Application {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    jwt = "";
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -923,8 +923,8 @@ public class Application {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    jwt = "";
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -975,8 +975,8 @@ public class Application {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    jwt = "";
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -1034,8 +1034,8 @@ public class Application {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    jwt = "";
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -1116,8 +1116,8 @@ public class Application {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    jwt = "";
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -1187,8 +1187,8 @@ public class Application {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    jwt = "";
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 

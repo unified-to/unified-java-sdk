@@ -12,7 +12,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.11.3'
+implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.12.0'
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -39,8 +39,8 @@ public class Application {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    jwt = "";
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
