@@ -47,6 +47,17 @@ public class AtsApplication {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("hired_at")
+    public OffsetDateTime hiredAt;
+
+    public AtsApplication withHiredAt(OffsetDateTime hiredAt) {
+        this.hiredAt = hiredAt;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
 
