@@ -571,7 +571,7 @@ public class Ats {
     }
 
     /**
-     * List all application statuss
+     * List all application statuses
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
