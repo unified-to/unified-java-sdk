@@ -16,6 +16,7 @@
 * [getAtsJob](#getatsjob) - Retrieve a job
 * [getAtsScorecard](#getatsscorecard) - Retrieve a scorecard
 * [listAtsApplications](#listatsapplications) - List all applications
+* [listAtsApplicationstatuses](#listatsapplicationstatuses) - List all application statuss
 * [listAtsCandidates](#listatscandidates) - List all candidates
 * [listAtsDocuments](#listatsdocuments) - List all documents
 * [listAtsInterviews](#listatsinterviews) - List all interviews
@@ -78,6 +79,7 @@ public class Application {
                     hiredAt = OffsetDateTime.parse("2022-01-18T22:03:17.799Z");
                     id = "<ID>";
                     jobId = "string";
+                    originalStatus = "string";
                     raw = new PropertyAtsApplicationRaw(
 );
                     rejectedAt = OffsetDateTime.parse("2022-01-29T22:20:11.749Z");
@@ -950,6 +952,69 @@ public class Application {
 **[com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsResponse](../../models/operations/ListAtsApplicationsResponse.md)**
 
 
+## listAtsApplicationstatuses
+
+List all application statuss
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.ListAtsApplicationstatusesRequest;
+import com.unifiedapi.unifiedto.models.operations.ListAtsApplicationstatusesResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.ListAtsApplicationstatusesRequest req = new ListAtsApplicationstatusesRequest(
+                "string"){{
+                fields = new String[]{{
+                    add("string"),
+                }};
+                limit = 5199.96d;
+                offset = 7673.65d;
+                order = "string";
+                query = "string";
+                sort = "string";
+                updatedGte = OffsetDateTime.parse("2023-03-26T00:21:04.080Z");
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListAtsApplicationstatusesResponse res = sdk.ats.listAtsApplicationstatuses(req);
+
+            if (res.atsStatuses != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.ListAtsApplicationstatusesRequest](../../models/operations/ListAtsApplicationstatusesRequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.ListAtsApplicationstatusesResponse](../../models/operations/ListAtsApplicationstatusesResponse.md)**
+
+
 ## listAtsCandidates
 
 List all candidates
@@ -1310,6 +1375,7 @@ public class Application {
                     hiredAt = OffsetDateTime.parse("2022-12-04T13:56:12.670Z");
                     id = "<ID>";
                     jobId = "string";
+                    originalStatus = "string";
                     raw = new PropertyAtsApplicationRaw(
 );
                     rejectedAt = OffsetDateTime.parse("2021-07-12T22:20:57.326Z");
@@ -2131,6 +2197,7 @@ public class Application {
                     hiredAt = OffsetDateTime.parse("2021-02-09T08:05:18.054Z");
                     id = "<ID>";
                     jobId = "string";
+                    originalStatus = "string";
                     raw = new PropertyAtsApplicationRaw(
 );
                     rejectedAt = OffsetDateTime.parse("2023-07-19T08:25:10.616Z");

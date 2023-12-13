@@ -48,6 +48,7 @@ public class Application {
                     hiredAt = OffsetDateTime.parse("2022-01-18T22:03:17.799Z");
                     id = "<ID>";
                     jobId = "string";
+                    originalStatus = "string";
                     raw = new PropertyAtsApplicationRaw(
 );
                     rejectedAt = OffsetDateTime.parse("2022-01-29T22:20:11.749Z");
@@ -245,6 +246,7 @@ public class Application {
                     hiredAt = OffsetDateTime.parse("2022-12-04T13:56:12.670Z");
                     id = "<ID>";
                     jobId = "string";
+                    originalStatus = "string";
                     raw = new PropertyAtsApplicationRaw(
 );
                     rejectedAt = OffsetDateTime.parse("2021-07-12T22:20:57.326Z");
@@ -372,6 +374,7 @@ public class Application {
                     hiredAt = OffsetDateTime.parse("2021-02-09T08:05:18.054Z");
                     id = "<ID>";
                     jobId = "string";
+                    originalStatus = "string";
                     raw = new PropertyAtsApplicationRaw(
 );
                     rejectedAt = OffsetDateTime.parse("2023-07-19T08:25:10.616Z");

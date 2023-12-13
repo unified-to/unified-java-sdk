@@ -7,6 +7,7 @@ lib/src/main/java/com/unifiedapi/unifiedto/Payment.java
 lib/src/main/java/com/unifiedapi/unifiedto/Transaction.java
 lib/src/main/java/com/unifiedapi/unifiedto/Ats.java
 lib/src/main/java/com/unifiedapi/unifiedto/Application.java
+lib/src/main/java/com/unifiedapi/unifiedto/Applicationstatus.java
 lib/src/main/java/com/unifiedapi/unifiedto/Candidate.java
 lib/src/main/java/com/unifiedapi/unifiedto/Document.java
 lib/src/main/java/com/unifiedapi/unifiedto/Interview.java
@@ -169,6 +170,8 @@ lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsScorecardRequ
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsScorecardResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsApplicationsRequest.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsApplicationsResponse.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsApplicationstatusesRequest.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsApplicationstatusesResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsCandidatesRequest.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsCandidatesResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsDocumentsRequest.java
@@ -492,6 +495,9 @@ lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsAddress.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/Recommendation.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsScorecard.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAtsScorecardRaw.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsStatusStatus.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsStatus.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAtsStatusRaw.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmCompany.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmTelephoneType.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmTelephone.java
@@ -683,6 +689,8 @@ docs/models/operations/GetAtsScorecardRequest.md
 docs/models/operations/GetAtsScorecardResponse.md
 docs/models/operations/ListAtsApplicationsRequest.md
 docs/models/operations/ListAtsApplicationsResponse.md
+docs/models/operations/ListAtsApplicationstatusesRequest.md
+docs/models/operations/ListAtsApplicationstatusesResponse.md
 docs/models/operations/ListAtsCandidatesRequest.md
 docs/models/operations/ListAtsCandidatesResponse.md
 docs/models/operations/ListAtsDocumentsRequest.md
@@ -1006,6 +1014,9 @@ docs/models/shared/AtsAddress.md
 docs/models/shared/Recommendation.md
 docs/models/shared/AtsScorecard.md
 docs/models/shared/PropertyAtsScorecardRaw.md
+docs/models/shared/AtsStatusStatus.md
+docs/models/shared/AtsStatus.md
+docs/models/shared/PropertyAtsStatusRaw.md
 docs/models/shared/CrmCompany.md
 docs/models/shared/CrmTelephoneType.md
 docs/models/shared/CrmTelephone.md
@@ -1108,6 +1119,7 @@ docs/sdks/payment/README.md
 docs/sdks/transaction/README.md
 docs/sdks/ats/README.md
 docs/sdks/application/README.md
+docs/sdks/applicationstatus/README.md
 docs/sdks/candidate/README.md
 docs/sdks/document/README.md
 docs/sdks/interview/README.md

@@ -76,6 +76,15 @@ public class AtsApplication {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("original_status")
+    public String originalStatus;
+
+    public AtsApplication withOriginalStatus(String originalStatus) {
+        this.originalStatus = originalStatus;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     public PropertyAtsApplicationRaw raw;
 

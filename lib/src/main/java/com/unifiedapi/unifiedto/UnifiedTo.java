@@ -33,6 +33,7 @@ public class UnifiedTo {
     public Transaction transaction;
     public Ats ats;
     public Application application;
+    public Applicationstatus applicationstatus;
     public Candidate candidate;
     public Document document;
     public Interview interview;
@@ -188,6 +189,8 @@ public class UnifiedTo {
 		this.ats = new Ats(this.sdkConfiguration);
 		
 		this.application = new Application(this.sdkConfiguration);
+		
+		this.applicationstatus = new Applicationstatus(this.sdkConfiguration);
 		
 		this.candidate = new Candidate(this.sdkConfiguration);
 		
