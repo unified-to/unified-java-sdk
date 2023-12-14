@@ -92,6 +92,7 @@ public class Application {
 
                     }};
                     taxExemption = TaxExemption.RESALE;
+                    taxNumber = "string";
                     telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
                         add(new AccountingTelephone(
                         "string"){{
@@ -530,6 +531,7 @@ public class Application {
 
                     }};
                     taxExemption = TaxExemption.LOCAL_GOV;
+                    taxNumber = "string";
                     telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
                         add(new AccountingTelephone(
                         "string"){{
@@ -833,6 +835,7 @@ public class Application {
 
                     }};
                     taxExemption = TaxExemption.CHARITABLE_ORG;
+                    taxNumber = "string";
                     telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
                         add(new AccountingTelephone(
                         "string"){{

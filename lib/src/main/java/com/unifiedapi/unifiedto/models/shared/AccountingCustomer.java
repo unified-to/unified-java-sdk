@@ -108,6 +108,15 @@ public class AccountingCustomer {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tax_number")
+    public String taxNumber;
+
+    public AccountingCustomer withTaxNumber(String taxNumber) {
+        this.taxNumber = taxNumber;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephones")
     public AccountingTelephone[] telephones;
 
