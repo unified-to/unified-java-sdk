@@ -28,6 +28,7 @@ public class AtsStatus {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_status")
     public String originalStatus;
 
@@ -54,7 +55,5 @@ public class AtsStatus {
         return this;
     }
     
-    public AtsStatus(@JsonProperty("original_status") String originalStatus) {
-        this.originalStatus = originalStatus;
-  }
+    public AtsStatus(){}
 }

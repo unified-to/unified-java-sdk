@@ -421,9 +421,7 @@ public class Application {
                     description = "Cross-platform dedicated policy";
                     lineItems = new com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineitem[]{{
                         add(new AccountingTransactionLineitem(
-                        "string",
                         4121.55d){{
-                            id = "<ID>";
                             totalAmount = 8276.07d;
                         }}),
                     }};
@@ -1456,9 +1454,7 @@ public class Application {
                     description = "Implemented 6th generation extranet";
                     lineItems = new com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineitem[]{{
                         add(new AccountingTransactionLineitem(
-                        "string",
                         8716.58d){{
-                            id = "<ID>";
                             totalAmount = 259.82d;
                         }}),
                     }};
@@ -2148,9 +2144,7 @@ public class Application {
                     description = "Reactive content-based collaboration";
                     lineItems = new com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineitem[]{{
                         add(new AccountingTransactionLineitem(
-                        "string",
                         8603.41d){{
-                            id = "<ID>";
                             totalAmount = 421.84d;
                         }}),
                     }};

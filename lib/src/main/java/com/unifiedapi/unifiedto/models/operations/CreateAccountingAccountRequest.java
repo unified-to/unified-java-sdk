@@ -9,6 +9,9 @@ import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 
 
 public class CreateAccountingAccountRequest {
+    /**
+     * A user's bank account
+     */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.unifiedapi.unifiedto.models.shared.AccountingAccount accountingAccount;
 

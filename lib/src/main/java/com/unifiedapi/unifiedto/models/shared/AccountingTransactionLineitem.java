@@ -28,6 +28,7 @@ public class AccountingTransactionLineitem {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
 
@@ -71,8 +72,7 @@ public class AccountingTransactionLineitem {
         return this;
     }
     
-    public AccountingTransactionLineitem(@JsonProperty("id") String id, @JsonProperty("total_amount") Double totalAmount) {
-        this.id = id;
+    public AccountingTransactionLineitem(@JsonProperty("total_amount") Double totalAmount) {
         this.totalAmount = totalAmount;
   }
 }

@@ -228,6 +228,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
+                type = "string";
                 updatedGte = OffsetDateTime.parse("2023-04-30T09:02:38.779Z");
 
             }};
