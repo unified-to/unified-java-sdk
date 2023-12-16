@@ -29,6 +29,7 @@ public class Webhook {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connection_id")
     public String connectionId;
 
@@ -57,11 +58,28 @@ public class Webhook {
         return this;
     }
     
+    @JsonProperty("event")
+    public Event event;
+
+    public Webhook withEvent(Event event) {
+        this.event = event;
+        return this;
+    }
+    
     @JsonProperty("events")
     public PropertyWebhookEvents[] events;
 
     public Webhook withEvents(PropertyWebhookEvents[] events) {
         this.events = events;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fields")
+    public String fields;
+
+    public Webhook withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
@@ -91,6 +109,7 @@ public class Webhook {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integration_type")
     public String integrationType;
 
@@ -107,11 +126,32 @@ public class Webhook {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("meta")
+    public PropertyWebhookMeta meta;
+
+    public Webhook withMeta(PropertyWebhookMeta meta) {
+        this.meta = meta;
+        return this;
+    }
+    
     @JsonProperty("object_type")
     public ObjectType objectType;
 
     public Webhook withObjectType(ObjectType objectType) {
         this.objectType = objectType;
+        return this;
+    }
+    
+    /**
+     * An array of the most revent virtual webhook runs
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("runs")
+    public String[] runs;
+
+    public Webhook withRuns(String[] runs) {
+        this.runs = runs;
         return this;
     }
     
@@ -138,6 +178,16 @@ public class Webhook {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("webhook_type")
+    public WebhookWebhookType webhookType;
+
+    public Webhook withWebhookType(WebhookWebhookType webhookType) {
+        this.webhookType = webhookType;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspace_id")
     public String workspaceId;
 
@@ -146,13 +196,11 @@ public class Webhook {
         return this;
     }
     
-    public Webhook(@JsonProperty("connection_id") String connectionId, @JsonProperty("events") PropertyWebhookEvents[] events, @JsonProperty("hook_url") String hookUrl, @JsonProperty("integration_type") String integrationType, @JsonProperty("interval") Double interval, @JsonProperty("object_type") ObjectType objectType, @JsonProperty("workspace_id") String workspaceId) {
-        this.connectionId = connectionId;
+    public Webhook(@JsonProperty("event") Event event, @JsonProperty("events") PropertyWebhookEvents[] events, @JsonProperty("hook_url") String hookUrl, @JsonProperty("interval") Double interval, @JsonProperty("object_type") ObjectType objectType) {
+        this.event = event;
         this.events = events;
         this.hookUrl = hookUrl;
-        this.integrationType = integrationType;
         this.interval = interval;
         this.objectType = objectType;
-        this.workspaceId = workspaceId;
   }
 }

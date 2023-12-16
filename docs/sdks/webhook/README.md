@@ -21,10 +21,13 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookResponse;
 import com.unifiedapi.unifiedto.models.operations.Events;
+import com.unifiedapi.unifiedto.models.shared.Event;
 import com.unifiedapi.unifiedto.models.shared.ObjectType;
 import com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents;
+import com.unifiedapi.unifiedto.models.shared.PropertyWebhookMeta;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.Webhook;
+import com.unifiedapi.unifiedto.models.shared.WebhookWebhookType;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -41,24 +44,32 @@ public class Application {
                 "string",
                 "string"){{
                 webhook = new Webhook(
-                    "string",
+                    Event.CREATED,
                     new com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents[]{{
-                        add(PropertyWebhookEvents.CREATED),
+                        add(PropertyWebhookEvents.UPDATED),
                     }},
                     "string",
-                    "string",
-                    188.12d,
-                    ObjectType.CRM_DEAL,
-                    "string"){{
-                    checkedAt = OffsetDateTime.parse("2022-11-04T14:37:16.392Z");
-                    createdAt = OffsetDateTime.parse("2021-03-22T19:34:26.447Z");
+                    4583.16d,
+                    ObjectType.HRIS_EMPLOYEE){{
+                    checkedAt = OffsetDateTime.parse("2021-03-22T19:34:26.447Z");
+                    connectionId = "string";
+                    createdAt = OffsetDateTime.parse("2022-08-09T17:23:28.216Z");
                     environment = "string";
+                    fields = "string";
                     id = "<ID>";
                     includeRaw = false;
+                    integrationType = "string";
+                    meta = new PropertyWebhookMeta(
+);
+                    runs = new String[]{{
+                        add("string"),
+                    }};
                     subscriptions = new String[]{{
                         add("string"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-08-09T17:23:28.216Z");
+                    updatedAt = OffsetDateTime.parse("2023-01-16T07:35:44.253Z");
+                    webhookType = WebhookWebhookType.NATIVE_;
+                    workspaceId = "string";
 
                 }};
                 events = new com.unifiedapi.unifiedto.models.operations.Events[]{{
