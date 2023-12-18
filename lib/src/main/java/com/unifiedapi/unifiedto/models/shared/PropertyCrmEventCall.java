@@ -7,6 +7,11 @@ package com.unifiedapi.unifiedto.models.shared;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.unifiedapi.unifiedto.utils.DateTimeDeserializer;
+import com.unifiedapi.unifiedto.utils.DateTimeSerializer;
+import java.time.OffsetDateTime;
 
 /**
  * PropertyCrmEventCall - The call object, when type = call
@@ -28,6 +33,17 @@ public class PropertyCrmEventCall {
 
     public PropertyCrmEventCall withDuration(Double duration) {
         this.duration = duration;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("start_at")
+    public OffsetDateTime startAt;
+
+    public PropertyCrmEventCall withStartAt(OffsetDateTime startAt) {
+        this.startAt = startAt;
         return this;
     }
     

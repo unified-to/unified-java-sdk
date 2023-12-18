@@ -369,6 +369,7 @@ public class Application {
 ){{
                         description = "Grass-roots intangible superstructure";
                         duration = 6684.26d;
+                        startAt = OffsetDateTime.parse("2023-07-15T01:49:08.083Z");
 
                     }};
                     companyIds = new String[]{{
@@ -377,7 +378,7 @@ public class Application {
                     contactIds = new String[]{{
                         add("string"),
                     }};
-                    createdAt = OffsetDateTime.parse("2023-07-15T01:49:08.083Z");
+                    createdAt = OffsetDateTime.parse("2023-08-20T22:53:04.600Z");
                     dealIds = new String[]{{
                         add("string"),
                     }};
@@ -387,6 +388,7 @@ public class Application {
                         cc = new String[]{{
                             add("string"),
                         }};
+                        createdAt = OffsetDateTime.parse("2023-08-07T10:54:17.524Z");
                         from = "string";
                         subject = "string";
                         to = new String[]{{
@@ -400,28 +402,30 @@ public class Application {
                     }};
                     meeting = new PropertyCrmEventMeeting(
 ){{
-                        description = "Synergized systemic adapter";
-                        endAt = OffsetDateTime.parse("2021-06-19T06:42:51.348Z");
-                        startAt = OffsetDateTime.parse("2022-08-06T14:40:43.070Z");
+                        description = "Ameliorated bottom-line internet solution";
+                        endAt = OffsetDateTime.parse("2022-02-08T19:04:07.609Z");
+                        startAt = OffsetDateTime.parse("2023-11-30T18:01:57.751Z");
                         title = "string";
 
                     }};
                     note = new PropertyCrmEventNote(
 ){{
-                        description = "Horizontal zero administration architecture";
+                        createdAt = OffsetDateTime.parse("2021-03-29T05:15:10.995Z");
+                        description = "Extended 5th generation artificial intelligence";
 
                     }};
                     raw = new PropertyCrmEventRaw(
 );
                     task = new PropertyCrmEventTask(
 ){{
-                        description = "Extended 5th generation artificial intelligence";
+                        description = "Multi-tiered impactful attitude";
+                        dueAt = OffsetDateTime.parse("2022-03-26T03:42:01.335Z");
                         name = "string";
                         status = "string";
 
                     }};
-                    type = CrmEventType.TASK;
-                    updatedAt = OffsetDateTime.parse("2022-07-14T14:31:08.257Z");
+                    type = CrmEventType.NOTE;
+                    updatedAt = OffsetDateTime.parse("2021-01-03T22:29:47.132Z");
 
                 }};
 
@@ -1880,6 +1884,7 @@ public class Application {
 ){{
                         description = "Multi-layered well-modulated middleware";
                         duration = 8718.07d;
+                        startAt = OffsetDateTime.parse("2022-07-20T20:04:26.682Z");
 
                     }};
                     companyIds = new String[]{{
@@ -1888,7 +1893,7 @@ public class Application {
                     contactIds = new String[]{{
                         add("string"),
                     }};
-                    createdAt = OffsetDateTime.parse("2022-07-20T20:04:26.682Z");
+                    createdAt = OffsetDateTime.parse("2022-02-07T22:00:21.638Z");
                     dealIds = new String[]{{
                         add("string"),
                     }};
@@ -1898,6 +1903,7 @@ public class Application {
                         cc = new String[]{{
                             add("string"),
                         }};
+                        createdAt = OffsetDateTime.parse("2023-09-27T22:24:14.342Z");
                         from = "string";
                         subject = "string";
                         to = new String[]{{
@@ -1911,28 +1917,30 @@ public class Application {
                     }};
                     meeting = new PropertyCrmEventMeeting(
 ){{
-                        description = "Horizontal uniform access";
-                        endAt = OffsetDateTime.parse("2022-11-19T03:29:57.620Z");
-                        startAt = OffsetDateTime.parse("2021-05-11T20:55:56.558Z");
+                        description = "Advanced modular attitude";
+                        endAt = OffsetDateTime.parse("2021-10-10T20:03:27.454Z");
+                        startAt = OffsetDateTime.parse("2023-02-23T14:52:55.729Z");
                         title = "string";
 
                     }};
                     note = new PropertyCrmEventNote(
 ){{
-                        description = "Exclusive non-volatile conglomeration";
+                        createdAt = OffsetDateTime.parse("2021-08-25T21:43:17.031Z");
+                        description = "Cross-platform bi-directional open architecture";
 
                     }};
                     raw = new PropertyCrmEventRaw(
 );
                     task = new PropertyCrmEventTask(
 ){{
-                        description = "Cross-platform bi-directional open architecture";
+                        description = "Intuitive zero administration complexity";
+                        dueAt = OffsetDateTime.parse("2021-09-27T16:02:13.626Z");
                         name = "string";
                         status = "string";
 
                     }};
-                    type = CrmEventType.TASK;
-                    updatedAt = OffsetDateTime.parse("2023-11-30T20:46:48.999Z");
+                    type = CrmEventType.NOTE;
+                    updatedAt = OffsetDateTime.parse("2023-06-11T14:07:17.897Z");
 
                 }};
 
@@ -2903,6 +2911,7 @@ public class Application {
 ){{
                         description = "Intuitive incremental orchestration";
                         duration = 4665.81d;
+                        startAt = OffsetDateTime.parse("2021-09-01T00:40:18.553Z");
 
                     }};
                     companyIds = new String[]{{
@@ -2911,7 +2920,7 @@ public class Application {
                     contactIds = new String[]{{
                         add("string"),
                     }};
-                    createdAt = OffsetDateTime.parse("2021-09-01T00:40:18.553Z");
+                    createdAt = OffsetDateTime.parse("2022-08-31T19:24:42.330Z");
                     dealIds = new String[]{{
                         add("string"),
                     }};
@@ -2921,6 +2930,7 @@ public class Application {
                         cc = new String[]{{
                             add("string"),
                         }};
+                        createdAt = OffsetDateTime.parse("2023-04-26T09:24:21.940Z");
                         from = "string";
                         subject = "string";
                         to = new String[]{{
@@ -2934,28 +2944,30 @@ public class Application {
                     }};
                     meeting = new PropertyCrmEventMeeting(
 ){{
-                        description = "Optional real-time process improvement";
-                        endAt = OffsetDateTime.parse("2023-10-22T11:59:17.612Z");
-                        startAt = OffsetDateTime.parse("2023-01-03T21:08:02.575Z");
+                        description = "Right-sized user-facing moratorium";
+                        endAt = OffsetDateTime.parse("2023-07-14T23:23:37.626Z");
+                        startAt = OffsetDateTime.parse("2023-12-12T17:40:29.095Z");
                         title = "string";
 
                     }};
                     note = new PropertyCrmEventNote(
 ){{
-                        description = "Switchable zero defect approach";
+                        createdAt = OffsetDateTime.parse("2021-03-16T20:16:04.654Z");
+                        description = "Pre-emptive system-worthy open system";
 
                     }};
                     raw = new PropertyCrmEventRaw(
 );
                     task = new PropertyCrmEventTask(
 ){{
-                        description = "Pre-emptive system-worthy open system";
+                        description = "Diverse clear-thinking success";
+                        dueAt = OffsetDateTime.parse("2023-06-10T23:10:51.860Z");
                         name = "string";
                         status = "string";
 
                     }};
                     type = CrmEventType.EMAIL;
-                    updatedAt = OffsetDateTime.parse("2021-06-26T08:01:25.242Z");
+                    updatedAt = OffsetDateTime.parse("2022-07-14T14:12:00.132Z");
 
                 }};
 
