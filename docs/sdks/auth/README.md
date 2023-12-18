@@ -40,7 +40,7 @@ public class Application {
                 lang = "string";
                 redirect = false;
                 scopes = new com.unifiedapi.unifiedto.models.operations.Scopes[]{{
-                    add(Scopes.HRIS_EMPLOYEE_WRITE),
+                    add(Scopes.HRIS_EMPLOYEE_READ),
                 }};
                 state = "string";
                 subdomain = "string";

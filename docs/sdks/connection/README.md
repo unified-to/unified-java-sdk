@@ -46,7 +46,7 @@ public class Application {
                 }},
                 "string",
                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                    add(PropertyConnectionPermissions.ATS_DOCUMENT_READ),
+                    add(PropertyConnectionPermissions.ATS_JOB_WRITE),
                 }}){{
                 auth = new PropertyConnectionAuth(
 ){{
@@ -441,7 +441,7 @@ public class Application {
                     }},
                     "string",
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                        add(PropertyConnectionPermissions.CRM_CONTACT_WRITE),
+                        add(PropertyConnectionPermissions.CRM_CONTACT_READ),
                     }}){{
                     auth = new PropertyConnectionAuth(
 ){{

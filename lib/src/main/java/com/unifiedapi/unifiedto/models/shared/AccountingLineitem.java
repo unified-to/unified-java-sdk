@@ -109,6 +109,15 @@ public class AccountingLineitem {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("taxrate_id")
+    public String taxrateId;
+
+    public AccountingLineitem withTaxrateId(String taxrateId) {
+        this.taxrateId = taxrateId;
+        return this;
+    }
+    
     @JsonProperty("total_amount")
     public Double totalAmount;
 

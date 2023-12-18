@@ -56,7 +56,7 @@ public class Application {
                 }},
                 "string",
                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                    add(PropertyConnectionPermissions.ATS_DOCUMENT_READ),
+                    add(PropertyConnectionPermissions.ATS_JOB_WRITE),
                 }}){{
                 auth = new PropertyConnectionAuth(
 ){{
@@ -172,7 +172,7 @@ public class Application {
                     }},
                     "string",
                     4583.16d,
-                    ObjectType.HRIS_EMPLOYEE){{
+                    ObjectType.CRM_PIPELINE){{
                     checkedAt = OffsetDateTime.parse("2021-03-22T19:34:26.447Z");
                     connectionId = "string";
                     createdAt = OffsetDateTime.parse("2022-08-09T17:23:28.216Z");
@@ -411,7 +411,7 @@ public class Application {
                 lang = "string";
                 redirect = false;
                 scopes = new com.unifiedapi.unifiedto.models.operations.Scopes[]{{
-                    add(Scopes.HRIS_EMPLOYEE_WRITE),
+                    add(Scopes.HRIS_EMPLOYEE_READ),
                 }};
                 state = "string";
                 subdomain = "string";
@@ -1069,7 +1069,7 @@ public class Application {
                     }},
                     "string",
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                        add(PropertyConnectionPermissions.CRM_CONTACT_WRITE),
+                        add(PropertyConnectionPermissions.CRM_CONTACT_READ),
                     }}){{
                     auth = new PropertyConnectionAuth(
 ){{

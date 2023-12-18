@@ -50,7 +50,7 @@ public class Application {
                     }},
                     "string",
                     4583.16d,
-                    ObjectType.HRIS_EMPLOYEE){{
+                    ObjectType.CRM_PIPELINE){{
                     checkedAt = OffsetDateTime.parse("2021-03-22T19:34:26.447Z");
                     connectionId = "string";
                     createdAt = OffsetDateTime.parse("2022-08-09T17:23:28.216Z");
