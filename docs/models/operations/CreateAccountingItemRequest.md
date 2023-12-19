@@ -1,0 +1,9 @@
+# CreateAccountingItemRequest
+
+
+## Fields
+
+| Field                                                                                          | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `accountingItem`                                                                               | [com.unifiedapi.unifiedto.models.shared.AccountingItem](../../models/shared/AccountingItem.md) | :heavy_minus_sign:                                                                             | An item or product                                                                             |
+| `connectionId`                                                                                 | *String*                                                                                       | :heavy_check_mark:                                                                             | ID of the connection                                                                           |

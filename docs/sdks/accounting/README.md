@@ -6,12 +6,14 @@
 * [createAccountingAccount](#createaccountingaccount) - Create an account
 * [createAccountingCustomer](#createaccountingcustomer) - Create a customer
 * [createAccountingInvoice](#createaccountinginvoice) - Create a invoice
+* [createAccountingItem](#createaccountingitem) - Create an item
 * [createAccountingPayment](#createaccountingpayment) - Create a payment
 * [createAccountingTaxrate](#createaccountingtaxrate) - Create a taxrate
 * [createAccountingTransaction](#createaccountingtransaction) - Create a transaction
 * [getAccountingAccount](#getaccountingaccount) - Retrieve an account
 * [getAccountingCustomer](#getaccountingcustomer) - Retrieve a customer
 * [getAccountingInvoice](#getaccountinginvoice) - Retrieve a invoice
+* [getAccountingItem](#getaccountingitem) - Retrieve an item
 * [getAccountingOrganization](#getaccountingorganization) - Retrieve an organization
 * [getAccountingPayment](#getaccountingpayment) - Retrieve a payment
 * [getAccountingTaxrate](#getaccountingtaxrate) - Retrieve a taxrate
@@ -19,6 +21,7 @@
 * [listAccountingAccounts](#listaccountingaccounts) - List all accounts
 * [listAccountingCustomers](#listaccountingcustomers) - List all customers
 * [listAccountingInvoices](#listaccountinginvoices) - List all invoices
+* [listAccountingItems](#listaccountingitems) - List all items
 * [listAccountingOrganizations](#listaccountingorganizations) - List all organizations
 * [listAccountingPayments](#listaccountingpayments) - List all payments
 * [listAccountingTaxrates](#listaccountingtaxrates) - List all taxrates
@@ -26,18 +29,21 @@
 * [patchAccountingAccount](#patchaccountingaccount) - Update an account
 * [patchAccountingCustomer](#patchaccountingcustomer) - Update a customer
 * [patchAccountingInvoice](#patchaccountinginvoice) - Update a invoice
+* [patchAccountingItem](#patchaccountingitem) - Update an item
 * [patchAccountingPayment](#patchaccountingpayment) - Update a payment
 * [patchAccountingTaxrate](#patchaccountingtaxrate) - Update a taxrate
 * [patchAccountingTransaction](#patchaccountingtransaction) - Update a transaction
 * [removeAccountingAccount](#removeaccountingaccount) - Remove an account
 * [removeAccountingCustomer](#removeaccountingcustomer) - Remove a customer
 * [removeAccountingInvoice](#removeaccountinginvoice) - Remove a invoice
+* [removeAccountingItem](#removeaccountingitem) - Remove an item
 * [removeAccountingPayment](#removeaccountingpayment) - Remove a payment
 * [removeAccountingTaxrate](#removeaccountingtaxrate) - Remove a taxrate
 * [removeAccountingTransaction](#removeaccountingtransaction) - Remove a transaction
 * [updateAccountingAccount](#updateaccountingaccount) - Update an account
 * [updateAccountingCustomer](#updateaccountingcustomer) - Update a customer
 * [updateAccountingInvoice](#updateaccountinginvoice) - Update a invoice
+* [updateAccountingItem](#updateaccountingitem) - Update an item
 * [updateAccountingPayment](#updateaccountingpayment) - Update a payment
 * [updateAccountingTaxrate](#updateaccountingtaxrate) - Update a taxrate
 * [updateAccountingTransaction](#updateaccountingtransaction) - Update a transaction
@@ -314,6 +320,78 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.CreateAccountingInvoiceResponse](../../models/operations/CreateAccountingInvoiceResponse.md)**
+
+
+## createAccountingItem
+
+Create an item
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.CreateAccountingItemRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateAccountingItemResponse;
+import com.unifiedapi.unifiedto.models.shared.AccountingItem;
+import com.unifiedapi.unifiedto.models.shared.PropertyAccountingItemRaw;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.CreateAccountingItemRequest req = new CreateAccountingItemRequest(
+                "string"){{
+                accountingItem = new AccountingItem(
+                    "string"){{
+                    createdAt = OffsetDateTime.parse("2021-11-04T15:00:45.309Z");
+                    description = "Team-oriented grid-enabled open system";
+                    id = "<ID>";
+                    isActive = false;
+                    isTaxable = false;
+                    price = 8182.36d;
+                    publicDescription = "string";
+                    quantityOnHand = 9042.97d;
+                    raw = new PropertyAccountingItemRaw(
+);
+                    sku = "string";
+                    updatedAt = OffsetDateTime.parse("2023-04-05T14:16:42.877Z");
+
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateAccountingItemResponse res = sdk.accounting.createAccountingItem(req);
+
+            if (res.accountingItem != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.CreateAccountingItemRequest](../../models/operations/CreateAccountingItemRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.CreateAccountingItemResponse](../../models/operations/CreateAccountingItemResponse.md)**
 
 
 ## createAccountingPayment
@@ -705,6 +783,63 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.GetAccountingInvoiceResponse](../../models/operations/GetAccountingInvoiceResponse.md)**
+
+
+## getAccountingItem
+
+Retrieve an item
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.GetAccountingItemRequest;
+import com.unifiedapi.unifiedto.models.operations.GetAccountingItemResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.GetAccountingItemRequest req = new GetAccountingItemRequest(
+                "string",
+                "string"){{
+                fields = new String[]{{
+                    add("string"),
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetAccountingItemResponse res = sdk.accounting.getAccountingItem(req);
+
+            if (res.accountingItem != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.GetAccountingItemRequest](../../models/operations/GetAccountingItemRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.GetAccountingItemResponse](../../models/operations/GetAccountingItemResponse.md)**
 
 
 ## getAccountingOrganization
@@ -1123,6 +1258,69 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.ListAccountingInvoicesResponse](../../models/operations/ListAccountingInvoicesResponse.md)**
+
+
+## listAccountingItems
+
+List all items
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.ListAccountingItemsRequest;
+import com.unifiedapi.unifiedto.models.operations.ListAccountingItemsResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.ListAccountingItemsRequest req = new ListAccountingItemsRequest(
+                "string"){{
+                fields = new String[]{{
+                    add("string"),
+                }};
+                limit = 5739.49d;
+                offset = 6744.69d;
+                order = "string";
+                query = "string";
+                sort = "string";
+                updatedGte = OffsetDateTime.parse("2022-11-10T02:16:10.814Z");
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListAccountingItemsResponse res = sdk.accounting.listAccountingItems(req);
+
+            if (res.accountingItems != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.ListAccountingItemsRequest](../../models/operations/ListAccountingItemsRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.ListAccountingItemsResponse](../../models/operations/ListAccountingItemsResponse.md)**
 
 
 ## listAccountingOrganizations
@@ -1656,6 +1854,79 @@ public class Application {
 **[com.unifiedapi.unifiedto.models.operations.PatchAccountingInvoiceResponse](../../models/operations/PatchAccountingInvoiceResponse.md)**
 
 
+## patchAccountingItem
+
+Update an item
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.PatchAccountingItemRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchAccountingItemResponse;
+import com.unifiedapi.unifiedto.models.shared.AccountingItem;
+import com.unifiedapi.unifiedto.models.shared.PropertyAccountingItemRaw;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.PatchAccountingItemRequest req = new PatchAccountingItemRequest(
+                "string",
+                "string"){{
+                accountingItem = new AccountingItem(
+                    "string"){{
+                    createdAt = OffsetDateTime.parse("2021-09-11T19:48:47.302Z");
+                    description = "Operative coherent forecast";
+                    id = "<ID>";
+                    isActive = false;
+                    isTaxable = false;
+                    price = 1007.53d;
+                    publicDescription = "string";
+                    quantityOnHand = 3510.34d;
+                    raw = new PropertyAccountingItemRaw(
+);
+                    sku = "string";
+                    updatedAt = OffsetDateTime.parse("2022-11-18T10:09:49.214Z");
+
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.PatchAccountingItemResponse res = sdk.accounting.patchAccountingItem(req);
+
+            if (res.accountingItem != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.PatchAccountingItemRequest](../../models/operations/PatchAccountingItemRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.PatchAccountingItemResponse](../../models/operations/PatchAccountingItemResponse.md)**
+
+
 ## patchAccountingPayment
 
 Update a payment
@@ -2033,6 +2304,58 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.RemoveAccountingInvoiceResponse](../../models/operations/RemoveAccountingInvoiceResponse.md)**
+
+
+## removeAccountingItem
+
+Remove an item
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.RemoveAccountingItemRequest;
+import com.unifiedapi.unifiedto.models.operations.RemoveAccountingItemResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.RemoveAccountingItemRequest req = new RemoveAccountingItemRequest(
+                "string",
+                "string");
+
+            com.unifiedapi.unifiedto.models.operations.RemoveAccountingItemResponse res = sdk.accounting.removeAccountingItem(req);
+
+            if (res.statusCode == 200) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.RemoveAccountingItemRequest](../../models/operations/RemoveAccountingItemRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.RemoveAccountingItemResponse](../../models/operations/RemoveAccountingItemResponse.md)**
 
 
 ## removeAccountingPayment
@@ -2466,6 +2789,79 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceResponse](../../models/operations/UpdateAccountingInvoiceResponse.md)**
+
+
+## updateAccountingItem
+
+Update an item
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.UpdateAccountingItemRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdateAccountingItemResponse;
+import com.unifiedapi.unifiedto.models.shared.AccountingItem;
+import com.unifiedapi.unifiedto.models.shared.PropertyAccountingItemRaw;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.UpdateAccountingItemRequest req = new UpdateAccountingItemRequest(
+                "string",
+                "string"){{
+                accountingItem = new AccountingItem(
+                    "string"){{
+                    createdAt = OffsetDateTime.parse("2021-03-31T21:33:39.658Z");
+                    description = "Programmable modular artificial intelligence";
+                    id = "<ID>";
+                    isActive = false;
+                    isTaxable = false;
+                    price = 3314.34d;
+                    publicDescription = "string";
+                    quantityOnHand = 9226.47d;
+                    raw = new PropertyAccountingItemRaw(
+);
+                    sku = "string";
+                    updatedAt = OffsetDateTime.parse("2021-12-08T23:08:08.961Z");
+
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.UpdateAccountingItemResponse res = sdk.accounting.updateAccountingItem(req);
+
+            if (res.accountingItem != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.UpdateAccountingItemRequest](../../models/operations/UpdateAccountingItemRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.UpdateAccountingItemResponse](../../models/operations/UpdateAccountingItemResponse.md)**
 
 
 ## updateAccountingPayment

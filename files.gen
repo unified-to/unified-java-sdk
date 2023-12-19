@@ -3,6 +3,7 @@ lib/src/main/java/com/unifiedapi/unifiedto/Accounting.java
 lib/src/main/java/com/unifiedapi/unifiedto/Account.java
 lib/src/main/java/com/unifiedapi/unifiedto/Customer.java
 lib/src/main/java/com/unifiedapi/unifiedto/Invoice.java
+lib/src/main/java/com/unifiedapi/unifiedto/Item.java
 lib/src/main/java/com/unifiedapi/unifiedto/Organization.java
 lib/src/main/java/com/unifiedapi/unifiedto/Payment.java
 lib/src/main/java/com/unifiedapi/unifiedto/Taxrate.java
@@ -80,6 +81,8 @@ lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingCus
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingCustomerResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingInvoiceRequest.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingInvoiceResponse.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingItemRequest.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingItemResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingPaymentRequest.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingPaymentResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingTaxrateRequest.java
@@ -92,6 +95,8 @@ lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingCustom
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingCustomerResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingInvoiceRequest.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingInvoiceResponse.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingItemRequest.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingItemResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingOrganizationRequest.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingOrganizationResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingPaymentRequest.java
@@ -106,6 +111,8 @@ lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingCusto
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingCustomersResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingInvoicesRequest.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingInvoicesResponse.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingItemsRequest.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingItemsResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingOrganizationsRequest.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingOrganizationsResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingPaymentsRequest.java
@@ -120,6 +127,8 @@ lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingCust
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingCustomerResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingInvoiceRequest.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingInvoiceResponse.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingItemRequest.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingItemResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingPaymentRequest.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingPaymentResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingTaxrateRequest.java
@@ -132,6 +141,8 @@ lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingCus
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingCustomerResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingInvoiceRequest.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingInvoiceResponse.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingItemRequest.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingItemResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingPaymentRequest.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingPaymentResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingTaxrateRequest.java
@@ -144,6 +155,8 @@ lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingCus
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingCustomerResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingInvoiceRequest.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingInvoiceResponse.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingItemRequest.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingItemResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingPaymentRequest.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingPaymentResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingTaxrateRequest.java
@@ -474,6 +487,8 @@ lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingCusto
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingInvoice.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingInvoiceRaw.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingLineitem.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingItem.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingItemRaw.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingPayment.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingPaymentRaw.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTaxrate.java
@@ -623,6 +638,8 @@ docs/models/operations/CreateAccountingCustomerRequest.md
 docs/models/operations/CreateAccountingCustomerResponse.md
 docs/models/operations/CreateAccountingInvoiceRequest.md
 docs/models/operations/CreateAccountingInvoiceResponse.md
+docs/models/operations/CreateAccountingItemRequest.md
+docs/models/operations/CreateAccountingItemResponse.md
 docs/models/operations/CreateAccountingPaymentRequest.md
 docs/models/operations/CreateAccountingPaymentResponse.md
 docs/models/operations/CreateAccountingTaxrateRequest.md
@@ -635,6 +652,8 @@ docs/models/operations/GetAccountingCustomerRequest.md
 docs/models/operations/GetAccountingCustomerResponse.md
 docs/models/operations/GetAccountingInvoiceRequest.md
 docs/models/operations/GetAccountingInvoiceResponse.md
+docs/models/operations/GetAccountingItemRequest.md
+docs/models/operations/GetAccountingItemResponse.md
 docs/models/operations/GetAccountingOrganizationRequest.md
 docs/models/operations/GetAccountingOrganizationResponse.md
 docs/models/operations/GetAccountingPaymentRequest.md
@@ -649,6 +668,8 @@ docs/models/operations/ListAccountingCustomersRequest.md
 docs/models/operations/ListAccountingCustomersResponse.md
 docs/models/operations/ListAccountingInvoicesRequest.md
 docs/models/operations/ListAccountingInvoicesResponse.md
+docs/models/operations/ListAccountingItemsRequest.md
+docs/models/operations/ListAccountingItemsResponse.md
 docs/models/operations/ListAccountingOrganizationsRequest.md
 docs/models/operations/ListAccountingOrganizationsResponse.md
 docs/models/operations/ListAccountingPaymentsRequest.md
@@ -663,6 +684,8 @@ docs/models/operations/PatchAccountingCustomerRequest.md
 docs/models/operations/PatchAccountingCustomerResponse.md
 docs/models/operations/PatchAccountingInvoiceRequest.md
 docs/models/operations/PatchAccountingInvoiceResponse.md
+docs/models/operations/PatchAccountingItemRequest.md
+docs/models/operations/PatchAccountingItemResponse.md
 docs/models/operations/PatchAccountingPaymentRequest.md
 docs/models/operations/PatchAccountingPaymentResponse.md
 docs/models/operations/PatchAccountingTaxrateRequest.md
@@ -675,6 +698,8 @@ docs/models/operations/RemoveAccountingCustomerRequest.md
 docs/models/operations/RemoveAccountingCustomerResponse.md
 docs/models/operations/RemoveAccountingInvoiceRequest.md
 docs/models/operations/RemoveAccountingInvoiceResponse.md
+docs/models/operations/RemoveAccountingItemRequest.md
+docs/models/operations/RemoveAccountingItemResponse.md
 docs/models/operations/RemoveAccountingPaymentRequest.md
 docs/models/operations/RemoveAccountingPaymentResponse.md
 docs/models/operations/RemoveAccountingTaxrateRequest.md
@@ -687,6 +712,8 @@ docs/models/operations/UpdateAccountingCustomerRequest.md
 docs/models/operations/UpdateAccountingCustomerResponse.md
 docs/models/operations/UpdateAccountingInvoiceRequest.md
 docs/models/operations/UpdateAccountingInvoiceResponse.md
+docs/models/operations/UpdateAccountingItemRequest.md
+docs/models/operations/UpdateAccountingItemResponse.md
 docs/models/operations/UpdateAccountingPaymentRequest.md
 docs/models/operations/UpdateAccountingPaymentResponse.md
 docs/models/operations/UpdateAccountingTaxrateRequest.md
@@ -1017,6 +1044,8 @@ docs/models/shared/PropertyAccountingCustomerBillingAddress.md
 docs/models/shared/AccountingInvoice.md
 docs/models/shared/PropertyAccountingInvoiceRaw.md
 docs/models/shared/AccountingLineitem.md
+docs/models/shared/AccountingItem.md
+docs/models/shared/PropertyAccountingItemRaw.md
 docs/models/shared/AccountingPayment.md
 docs/models/shared/PropertyAccountingPaymentRaw.md
 docs/models/shared/AccountingTaxrate.md
@@ -1165,6 +1194,7 @@ docs/sdks/accounting/README.md
 docs/sdks/account/README.md
 docs/sdks/customer/README.md
 docs/sdks/invoice/README.md
+docs/sdks/item/README.md
 docs/sdks/organization/README.md
 docs/sdks/payment/README.md
 docs/sdks/taxrate/README.md

@@ -29,6 +29,7 @@ public class UnifiedTo {
     public Account account;
     public Customer customer;
     public Invoice invoice;
+    public Item item;
     public Organization organization;
     public Payment payment;
     public Taxrate taxrate;
@@ -183,6 +184,8 @@ public class UnifiedTo {
 		this.customer = new Customer(this.sdkConfiguration);
 		
 		this.invoice = new Invoice(this.sdkConfiguration);
+		
+		this.item = new Item(this.sdkConfiguration);
 		
 		this.organization = new Organization(this.sdkConfiguration);
 		
