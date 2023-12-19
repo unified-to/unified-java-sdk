@@ -54,11 +54,11 @@ public class AccountingLineitem {
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("item_identifier")
-    public String itemIdentifier;
+    @JsonProperty("item_id")
+    public String itemId;
 
-    public AccountingLineitem withItemIdentifier(String itemIdentifier) {
-        this.itemIdentifier = itemIdentifier;
+    public AccountingLineitem withItemId(String itemId) {
+        this.itemId = itemId;
         return this;
     }
     
@@ -68,6 +68,15 @@ public class AccountingLineitem {
 
     public AccountingLineitem withItemName(String itemName) {
         this.itemName = itemName;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("item_sku")
+    public String itemSku;
+
+    public AccountingLineitem withItemSku(String itemSku) {
+        this.itemSku = itemSku;
         return this;
     }
     

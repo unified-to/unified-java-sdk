@@ -59,6 +59,7 @@ public class Application {
                     id = "<ID>";
                     includeRaw = false;
                     integrationType = "string";
+                    isHealthy = false;
                     meta = new PropertyWebhookMeta(
 );
                     runs = new String[]{{

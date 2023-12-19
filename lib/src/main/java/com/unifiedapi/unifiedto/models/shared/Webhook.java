@@ -127,6 +127,15 @@ public class Webhook {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_healthy")
+    public Boolean isHealthy;
+
+    public Webhook withIsHealthy(Boolean isHealthy) {
+        this.isHealthy = isHealthy;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public PropertyWebhookMeta meta;
 
