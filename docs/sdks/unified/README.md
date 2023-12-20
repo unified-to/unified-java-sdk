@@ -4,6 +4,7 @@
 ### Available Operations
 
 * [createUnifiedConnection](#createunifiedconnection) - Create connection
+* [createUnifiedWebhook](#createunifiedwebhook) - Create webhook subscription
 * [getUnifiedApicall](#getunifiedapicall) - Retrieve specific API Call by its ID
 * [getUnifiedConnection](#getunifiedconnection) - Retrieve connection
 * [getUnifiedIntegration](#getunifiedintegration) - Retrieve an integration
@@ -127,6 +128,97 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.CreateUnifiedConnectionResponse](../../models/operations/CreateUnifiedConnectionResponse.md)**
+
+
+## createUnifiedWebhook
+
+The data payload received by your server is described at https://docs.unified.to/unified/overview.  The `interval` field can be set as low as 15 minutes for paid accounts, and 60 minutes for free accounts.
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookResponse;
+import com.unifiedapi.unifiedto.models.shared.Event;
+import com.unifiedapi.unifiedto.models.shared.ObjectType;
+import com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents;
+import com.unifiedapi.unifiedto.models.shared.PropertyWebhookMeta;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.Webhook;
+import com.unifiedapi.unifiedto.models.shared.WebhookWebhookType;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookRequest req = new CreateUnifiedWebhookRequest(
+){{
+                webhook = new Webhook(
+                    Event.CREATED,
+                    new com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents[]{{
+                        add(PropertyWebhookEvents.UPDATED),
+                    }},
+                    "string",
+                    4583.16d,
+                    ObjectType.CRM_LEAD){{
+                    checkedAt = OffsetDateTime.parse("2021-03-22T19:34:26.447Z");
+                    connectionId = "string";
+                    createdAt = OffsetDateTime.parse("2022-08-09T17:23:28.216Z");
+                    environment = "string";
+                    fields = "string";
+                    id = "<ID>";
+                    includeRaw = false;
+                    integrationType = "string";
+                    isHealthy = false;
+                    meta = new PropertyWebhookMeta(
+);
+                    runs = new String[]{{
+                        add("string"),
+                    }};
+                    subscriptions = new String[]{{
+                        add("string"),
+                    }};
+                    updatedAt = OffsetDateTime.parse("2023-01-16T07:35:44.253Z");
+                    webhookType = WebhookWebhookType.NATIVE_;
+                    workspaceId = "string";
+
+                }};
+                includeAll = false;
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookResponse res = sdk.unified.createUnifiedWebhook(req);
+
+            if (res.webhook != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookRequest](../../models/operations/CreateUnifiedWebhookRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookResponse](../../models/operations/CreateUnifiedWebhookResponse.md)**
 
 
 ## getUnifiedApicall
