@@ -97,7 +97,7 @@ public class GetUnifiedIntegrationAuthRequest {
     }
     
     /**
-     * The URL where you want the user to be redirect to after a successful authentication.  The connection ID will be appended with (id=&lt;connectionId&gt;) to this URL, as will the state that was provided.
+     * The URL where you want the user to be redirect to after a successful authorization.  The connection ID will be appended with (id=&lt;connectionId&gt;) to this URL, as will the state that was provided.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=success_redirect")
     public String successRedirect;

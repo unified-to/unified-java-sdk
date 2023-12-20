@@ -434,9 +434,6 @@ lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateTicketingTick
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListUcCallsRequest.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListUcCallsResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateUnifiedConnectionResponse.java
-lib/src/main/java/com/unifiedapi/unifiedto/models/operations/Events.java
-lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateUnifiedWebhookRequest.java
-lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateUnifiedWebhookResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetUnifiedApicallRequest.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetUnifiedApicallResponse.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetUnifiedConnectionRequest.java
@@ -487,6 +484,7 @@ lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingCusto
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingInvoice.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingInvoiceRaw.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingLineitem.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingLineitemRaw.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingItem.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingItemRaw.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingPayment.java
@@ -616,12 +614,6 @@ lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyConnectionPermi
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyConnectionCategories.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyConnectionAuth.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyPropertyConnectionAuthMeta.java
-lib/src/main/java/com/unifiedapi/unifiedto/models/shared/Event.java
-lib/src/main/java/com/unifiedapi/unifiedto/models/shared/ObjectType.java
-lib/src/main/java/com/unifiedapi/unifiedto/models/shared/WebhookWebhookType.java
-lib/src/main/java/com/unifiedapi/unifiedto/models/shared/Webhook.java
-lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyWebhookMeta.java
-lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyWebhookEvents.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/ApiCallType.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/ApiCall.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/Integration.java
@@ -631,6 +623,12 @@ lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyIntegrationSupp
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyIntegrationSupportOutboundFields.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyIntegrationSupportInboundFields.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyIntegrationCategories.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/shared/Event.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/shared/ObjectType.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/shared/WebhookWebhookType.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/shared/Webhook.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyWebhookMeta.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyWebhookEvents.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/Security.java
 docs/models/operations/CreateAccountingAccountRequest.md
 docs/models/operations/CreateAccountingAccountResponse.md
@@ -991,9 +989,6 @@ docs/models/operations/UpdateTicketingTicketResponse.md
 docs/models/operations/ListUcCallsRequest.md
 docs/models/operations/ListUcCallsResponse.md
 docs/models/operations/CreateUnifiedConnectionResponse.md
-docs/models/operations/Events.md
-docs/models/operations/CreateUnifiedWebhookRequest.md
-docs/models/operations/CreateUnifiedWebhookResponse.md
 docs/models/operations/GetUnifiedApicallRequest.md
 docs/models/operations/GetUnifiedApicallResponse.md
 docs/models/operations/GetUnifiedConnectionRequest.md
@@ -1044,6 +1039,7 @@ docs/models/shared/PropertyAccountingCustomerBillingAddress.md
 docs/models/shared/AccountingInvoice.md
 docs/models/shared/PropertyAccountingInvoiceRaw.md
 docs/models/shared/AccountingLineitem.md
+docs/models/shared/PropertyAccountingLineitemRaw.md
 docs/models/shared/AccountingItem.md
 docs/models/shared/PropertyAccountingItemRaw.md
 docs/models/shared/AccountingPayment.md
@@ -1173,12 +1169,6 @@ docs/models/shared/PropertyConnectionPermissions.md
 docs/models/shared/PropertyConnectionCategories.md
 docs/models/shared/PropertyConnectionAuth.md
 docs/models/shared/PropertyPropertyConnectionAuthMeta.md
-docs/models/shared/Event.md
-docs/models/shared/ObjectType.md
-docs/models/shared/WebhookWebhookType.md
-docs/models/shared/Webhook.md
-docs/models/shared/PropertyWebhookMeta.md
-docs/models/shared/PropertyWebhookEvents.md
 docs/models/shared/ApiCallType.md
 docs/models/shared/ApiCall.md
 docs/models/shared/Integration.md
@@ -1188,6 +1178,12 @@ docs/models/shared/PropertyIntegrationSupportWebhookEvents.md
 docs/models/shared/PropertyIntegrationSupportOutboundFields.md
 docs/models/shared/PropertyIntegrationSupportInboundFields.md
 docs/models/shared/PropertyIntegrationCategories.md
+docs/models/shared/Event.md
+docs/models/shared/ObjectType.md
+docs/models/shared/WebhookWebhookType.md
+docs/models/shared/Webhook.md
+docs/models/shared/PropertyWebhookMeta.md
+docs/models/shared/PropertyWebhookEvents.md
 docs/models/shared/Security.md
 docs/sdks/unifiedto/README.md
 docs/sdks/accounting/README.md

@@ -16,6 +16,15 @@ import java.time.OffsetDateTime;
 
 public class AccountingLineitem {
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("account_id")
+    public String accountId;
+
+    public AccountingLineitem withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
@@ -86,6 +95,15 @@ public class AccountingLineitem {
 
     public AccountingLineitem withNotes(String notes) {
         this.notes = notes;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("raw")
+    public PropertyAccountingLineitemRaw raw;
+
+    public AccountingLineitem withRaw(PropertyAccountingLineitemRaw raw) {
+        this.raw = raw;
         return this;
     }
     

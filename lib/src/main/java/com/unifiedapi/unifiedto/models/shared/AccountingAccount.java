@@ -13,9 +13,6 @@ import com.unifiedapi.unifiedto.utils.DateTimeDeserializer;
 import com.unifiedapi.unifiedto.utils.DateTimeSerializer;
 import java.time.OffsetDateTime;
 
-/**
- * AccountingAccount - A user's bank account
- */
 
 public class AccountingAccount {
     @JsonInclude(Include.NON_ABSENT)
