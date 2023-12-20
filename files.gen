@@ -621,7 +621,6 @@ lib/src/main/java/com/unifiedapi/unifiedto/models/shared/ObjectType.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/WebhookWebhookType.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/Webhook.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyWebhookMeta.java
-lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyWebhookEvents.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/ApiCallType.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/ApiCall.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/Integration.java
@@ -1178,7 +1177,6 @@ docs/models/shared/ObjectType.md
 docs/models/shared/WebhookWebhookType.md
 docs/models/shared/Webhook.md
 docs/models/shared/PropertyWebhookMeta.md
-docs/models/shared/PropertyWebhookEvents.md
 docs/models/shared/ApiCallType.md
 docs/models/shared/ApiCall.md
 docs/models/shared/Integration.md

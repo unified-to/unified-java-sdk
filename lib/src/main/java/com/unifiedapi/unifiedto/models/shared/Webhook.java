@@ -29,7 +29,6 @@ public class Webhook {
         return this;
     }
     
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connection_id")
     public String connectionId;
 
@@ -67,15 +66,6 @@ public class Webhook {
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("events")
-    public PropertyWebhookEvents[] events;
-
-    public Webhook withEvents(PropertyWebhookEvents[] events) {
-        this.events = events;
-        return this;
-    }
-    
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
 
@@ -98,15 +88,6 @@ public class Webhook {
 
     public Webhook withId(String id) {
         this.id = id;
-        return this;
-    }
-    
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("include_raw")
-    public Boolean includeRaw;
-
-    public Webhook withIncludeRaw(Boolean includeRaw) {
-        this.includeRaw = includeRaw;
         return this;
     }
     
@@ -165,18 +146,6 @@ public class Webhook {
         return this;
     }
     
-    /**
-     * integration-specific subscriptions IDs
-     */
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("subscriptions")
-    public String[] subscriptions;
-
-    public Webhook withSubscriptions(String[] subscriptions) {
-        this.subscriptions = subscriptions;
-        return this;
-    }
-    
     @JsonInclude(Include.NON_ABSENT)
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
@@ -206,7 +175,8 @@ public class Webhook {
         return this;
     }
     
-    public Webhook(@JsonProperty("event") Event event, @JsonProperty("hook_url") String hookUrl, @JsonProperty("interval") Double interval, @JsonProperty("object_type") ObjectType objectType) {
+    public Webhook(@JsonProperty("connection_id") String connectionId, @JsonProperty("event") Event event, @JsonProperty("hook_url") String hookUrl, @JsonProperty("interval") Double interval, @JsonProperty("object_type") ObjectType objectType) {
+        this.connectionId = connectionId;
         this.event = event;
         this.hookUrl = hookUrl;
         this.interval = interval;
