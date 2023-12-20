@@ -43,16 +43,16 @@ public class Application {
 ){{
                 webhook = new Webhook(
                     Event.CREATED,
-                    new com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents[]{{
-                        add(PropertyWebhookEvents.UPDATED),
-                    }},
                     "string",
-                    4583.16d,
-                    ObjectType.CRM_LEAD){{
-                    checkedAt = OffsetDateTime.parse("2021-03-22T19:34:26.447Z");
+                    188.12d,
+                    ObjectType.CRM_COMPANY){{
+                    checkedAt = OffsetDateTime.parse("2022-11-04T14:37:16.392Z");
                     connectionId = "string";
-                    createdAt = OffsetDateTime.parse("2022-08-09T17:23:28.216Z");
+                    createdAt = OffsetDateTime.parse("2021-03-22T19:34:26.447Z");
                     environment = "string";
+                    events = new com.unifiedapi.unifiedto.models.shared.PropertyWebhookEvents[]{{
+                        add(PropertyWebhookEvents.CREATED),
+                    }};
                     fields = "string";
                     id = "<ID>";
                     includeRaw = false;

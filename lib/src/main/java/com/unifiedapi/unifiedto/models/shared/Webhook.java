@@ -66,6 +66,7 @@ public class Webhook {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events")
     public PropertyWebhookEvents[] events;
 
@@ -205,9 +206,8 @@ public class Webhook {
         return this;
     }
     
-    public Webhook(@JsonProperty("event") Event event, @JsonProperty("events") PropertyWebhookEvents[] events, @JsonProperty("hook_url") String hookUrl, @JsonProperty("interval") Double interval, @JsonProperty("object_type") ObjectType objectType) {
+    public Webhook(@JsonProperty("event") Event event, @JsonProperty("hook_url") String hookUrl, @JsonProperty("interval") Double interval, @JsonProperty("object_type") ObjectType objectType) {
         this.event = event;
-        this.events = events;
         this.hookUrl = hookUrl;
         this.interval = interval;
         this.objectType = objectType;
