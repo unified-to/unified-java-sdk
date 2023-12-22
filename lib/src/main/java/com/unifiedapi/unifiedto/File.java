@@ -63,6 +63,46 @@ public class File {
     }
 
     /**
+     * Create a file
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.CreateStorageFileResponse createStorageFile(com.unifiedapi.unifiedto.models.operations.CreateStorageFileRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateStorageFileRequest.class, baseUrl, "/storage/{connection_id}/file", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "storageFile", "json");
+        req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        com.unifiedapi.unifiedto.models.operations.CreateStorageFileResponse res = new com.unifiedapi.unifiedto.models.operations.CreateStorageFileResponse(contentType, httpRes.statusCode(), httpRes) {{
+            storageFile = null;
+        }};
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.StorageFile out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.StorageFile.class);
+                res.storageFile = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * Retrieve a file
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
@@ -100,6 +140,50 @@ public class File {
                 ObjectMapper mapper = JSON.getMapper();
                 com.unifiedapi.unifiedto.models.shared.CrmFile out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.CrmFile.class);
                 res.crmFile = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Retrieve a file
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.GetStorageFileResponse getStorageFile(com.unifiedapi.unifiedto.models.operations.GetStorageFileRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetStorageFileRequest.class, baseUrl, "/storage/{connection_id}/file/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetStorageFileRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        com.unifiedapi.unifiedto.models.operations.GetStorageFileResponse res = new com.unifiedapi.unifiedto.models.operations.GetStorageFileResponse(contentType, httpRes.statusCode(), httpRes) {{
+            storageFile = null;
+        }};
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.StorageFile out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.StorageFile.class);
+                res.storageFile = out;
             }
         }
 
@@ -151,6 +235,50 @@ public class File {
     }
 
     /**
+     * List all files
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.ListStorageFilesResponse listStorageFiles(com.unifiedapi.unifiedto.models.operations.ListStorageFilesRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListStorageFilesRequest.class, baseUrl, "/storage/{connection_id}/file", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListStorageFilesRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        com.unifiedapi.unifiedto.models.operations.ListStorageFilesResponse res = new com.unifiedapi.unifiedto.models.operations.ListStorageFilesResponse(contentType, httpRes.statusCode(), httpRes) {{
+            storageFiles = null;
+        }};
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.StorageFile[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.StorageFile[].class);
+                res.storageFiles = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * Update a file
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
@@ -191,6 +319,46 @@ public class File {
     }
 
     /**
+     * Update a file
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.PatchStorageFileResponse patchStorageFile(com.unifiedapi.unifiedto.models.operations.PatchStorageFileRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchStorageFileRequest.class, baseUrl, "/storage/{connection_id}/file/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PATCH");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "storageFile", "json");
+        req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        com.unifiedapi.unifiedto.models.operations.PatchStorageFileResponse res = new com.unifiedapi.unifiedto.models.operations.PatchStorageFileResponse(contentType, httpRes.statusCode(), httpRes) {{
+            storageFile = null;
+        }};
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.StorageFile out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.StorageFile.class);
+                res.storageFile = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * Remove a file
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
@@ -214,6 +382,43 @@ public class File {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
         com.unifiedapi.unifiedto.models.operations.RemoveCrmFileResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveCrmFileResponse(contentType, httpRes.statusCode(), httpRes) {{
+            res = null;
+        }};
+        
+        if (true) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
+                res.res = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Remove a file
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.RemoveStorageFileResponse removeStorageFile(com.unifiedapi.unifiedto.models.operations.RemoveStorageFileRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveStorageFileRequest.class, baseUrl, "/storage/{connection_id}/file/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("DELETE");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        com.unifiedapi.unifiedto.models.operations.RemoveStorageFileResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveStorageFileResponse(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
         
@@ -261,6 +466,46 @@ public class File {
                 ObjectMapper mapper = JSON.getMapper();
                 com.unifiedapi.unifiedto.models.shared.CrmFile out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.CrmFile.class);
                 res.crmFile = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Update a file
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.UpdateStorageFileResponse updateStorageFile(com.unifiedapi.unifiedto.models.operations.UpdateStorageFileRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateStorageFileRequest.class, baseUrl, "/storage/{connection_id}/file/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PUT");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "storageFile", "json");
+        req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        com.unifiedapi.unifiedto.models.operations.UpdateStorageFileResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateStorageFileResponse(contentType, httpRes.statusCode(), httpRes) {{
+            storageFile = null;
+        }};
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.StorageFile out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.StorageFile.class);
+                res.storageFile = out;
             }
         }
 

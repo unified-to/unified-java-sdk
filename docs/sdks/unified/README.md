@@ -52,11 +52,11 @@ public class Application {
 
             com.unifiedapi.unifiedto.models.shared.Connection req = new Connection(
                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                    add(PropertyConnectionCategories.ACCOUNTING),
+                    add(PropertyConnectionCategories.STORAGE),
                 }},
                 "string",
                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                    add(PropertyConnectionPermissions.ATS_JOB_READ),
+                    add(PropertyConnectionPermissions.ATS_JOB_WRITE),
                 }}){{
                 auth = new PropertyConnectionAuth(
 ){{
@@ -167,7 +167,7 @@ public class Application {
                     Event.CREATED,
                     "string",
                     188.12d,
-                    ObjectType.CRM_COMPANY){{
+                    ObjectType.CRM_CONTACT){{
                     checkedAt = OffsetDateTime.parse("2022-11-04T14:37:16.392Z");
                     createdAt = OffsetDateTime.parse("2021-03-22T19:34:26.447Z");
                     environment = "string";
@@ -400,7 +400,7 @@ public class Application {
                 lang = "string";
                 redirect = false;
                 scopes = new com.unifiedapi.unifiedto.models.operations.Scopes[]{{
-                    add(Scopes.HRIS_EMPLOYEE_READ),
+                    add(Scopes.HRIS_GROUP_READ),
                 }};
                 state = "string";
                 subdomain = "string";
@@ -642,7 +642,7 @@ public class Application {
                 "string"){{
                 active = false;
                 categories = new com.unifiedapi.unifiedto.models.operations.QueryParamCategories[]{{
-                    add(QueryParamCategories.TICKETING),
+                    add(QueryParamCategories.UC),
                 }};
                 env = "string";
                 limit = 9072.99d;
@@ -837,11 +837,11 @@ public class Application {
                 "string"){{
                 connection = new Connection(
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                        add(PropertyConnectionCategories.MARTECH),
+                        add(PropertyConnectionCategories.TICKETING),
                     }},
                     "string",
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                        add(PropertyConnectionPermissions.CRM_PIPELINE_READ),
+                        add(PropertyConnectionPermissions.MARTECH_LIST_READ),
                     }}){{
                     auth = new PropertyConnectionAuth(
 ){{
@@ -1054,11 +1054,11 @@ public class Application {
                 "string"){{
                 connection = new Connection(
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                        add(PropertyConnectionCategories.TICKETING),
+                        add(PropertyConnectionCategories.UC),
                     }},
                     "string",
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                        add(PropertyConnectionPermissions.CRM_COMPANY_WRITE),
+                        add(PropertyConnectionPermissions.CRM_CONTACT_READ),
                     }}){{
                     auth = new PropertyConnectionAuth(
 ){{

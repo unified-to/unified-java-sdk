@@ -59,6 +59,7 @@ public class UnifiedTo {
     public List list;
     public Member member;
     public Passthrough passthrough;
+    public Storage storage;
     public Ticketing ticketing;
     public Note note;
     public Ticket ticket;
@@ -244,6 +245,8 @@ public class UnifiedTo {
 		this.member = new Member(this.sdkConfiguration);
 		
 		this.passthrough = new Passthrough(this.sdkConfiguration);
+		
+		this.storage = new Storage(this.sdkConfiguration);
 		
 		this.ticketing = new Ticketing(this.sdkConfiguration);
 		

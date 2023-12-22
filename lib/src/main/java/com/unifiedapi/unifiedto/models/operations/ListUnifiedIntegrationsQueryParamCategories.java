@@ -16,7 +16,8 @@ public enum ListUnifiedIntegrationsQueryParamCategories {
     MARTECH("martech"),
     TICKETING("ticketing"),
     UC("uc"),
-    ACCOUNTING("accounting");
+    ACCOUNTING("accounting"),
+    STORAGE("storage");
 
     @JsonValue
     public final String value;

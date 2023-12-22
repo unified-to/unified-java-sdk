@@ -42,11 +42,11 @@ public class Application {
 
             com.unifiedapi.unifiedto.models.shared.Connection req = new Connection(
                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                    add(PropertyConnectionCategories.ACCOUNTING),
+                    add(PropertyConnectionCategories.STORAGE),
                 }},
                 "string",
                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                    add(PropertyConnectionPermissions.ATS_JOB_READ),
+                    add(PropertyConnectionPermissions.ATS_JOB_WRITE),
                 }}){{
                 auth = new PropertyConnectionAuth(
 ){{
@@ -271,11 +271,11 @@ public class Application {
                 "string"){{
                 connection = new Connection(
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                        add(PropertyConnectionCategories.MARTECH),
+                        add(PropertyConnectionCategories.TICKETING),
                     }},
                     "string",
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                        add(PropertyConnectionPermissions.CRM_PIPELINE_READ),
+                        add(PropertyConnectionPermissions.MARTECH_LIST_READ),
                     }}){{
                     auth = new PropertyConnectionAuth(
 ){{
@@ -437,11 +437,11 @@ public class Application {
                 "string"){{
                 connection = new Connection(
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                        add(PropertyConnectionCategories.TICKETING),
+                        add(PropertyConnectionCategories.UC),
                     }},
                     "string",
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                        add(PropertyConnectionPermissions.CRM_COMPANY_WRITE),
+                        add(PropertyConnectionPermissions.CRM_CONTACT_READ),
                     }}){{
                     auth = new PropertyConnectionAuth(
 ){{

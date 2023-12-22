@@ -45,7 +45,7 @@ public class Application {
                     Event.CREATED,
                     "string",
                     188.12d,
-                    ObjectType.CRM_COMPANY){{
+                    ObjectType.CRM_CONTACT){{
                     checkedAt = OffsetDateTime.parse("2022-11-04T14:37:16.392Z");
                     createdAt = OffsetDateTime.parse("2021-03-22T19:34:26.447Z");
                     environment = "string";

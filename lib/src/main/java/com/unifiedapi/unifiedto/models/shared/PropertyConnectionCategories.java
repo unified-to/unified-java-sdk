@@ -16,7 +16,8 @@ public enum PropertyConnectionCategories {
     MARTECH("martech"),
     TICKETING("ticketing"),
     UC("uc"),
-    ACCOUNTING("accounting");
+    ACCOUNTING("accounting"),
+    STORAGE("storage");
 
     @JsonValue
     public final String value;

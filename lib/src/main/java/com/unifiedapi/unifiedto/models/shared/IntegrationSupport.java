@@ -128,6 +128,15 @@ public class IntegrationSupport {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("list_parent_id")
+    public Boolean listParentId;
+
+    public IntegrationSupport withListParentId(Boolean listParentId) {
+        this.listParentId = listParentId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_query")
     public Boolean listQuery;
 

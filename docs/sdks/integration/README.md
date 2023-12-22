@@ -93,7 +93,7 @@ public class Application {
                 lang = "string";
                 redirect = false;
                 scopes = new com.unifiedapi.unifiedto.models.operations.Scopes[]{{
-                    add(Scopes.HRIS_EMPLOYEE_READ),
+                    add(Scopes.HRIS_GROUP_READ),
                 }};
                 state = "string";
                 subdomain = "string";
@@ -154,7 +154,7 @@ public class Application {
                 "string"){{
                 active = false;
                 categories = new com.unifiedapi.unifiedto.models.operations.QueryParamCategories[]{{
-                    add(QueryParamCategories.TICKETING),
+                    add(QueryParamCategories.UC),
                 }};
                 env = "string";
                 limit = 9072.99d;
