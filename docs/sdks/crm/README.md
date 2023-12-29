@@ -98,12 +98,18 @@ public class Application {
                     dealIds = new String[]{{
                         add("string"),
                     }};
+                    description = "Pre-emptive responsive task-force";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(
                         ){{}}),
                     }};
+                    employees = 4175.89d;
                     id = "<ID>";
+                    industry = "string";
                     isActive = false;
+                    linkUrls = new String[]{{
+                        add("string"),
+                    }};
                     name = "string";
                     raw = new PropertyCrmCompanyRaw(
 );
@@ -116,7 +122,8 @@ public class Application {
                             telephone = "string";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-11-13T01:08:44.894Z");
+                    timezone = "Europe/Bucharest";
+                    updatedAt = OffsetDateTime.parse("2022-10-03T05:30:56.861Z");
                     websites = new String[]{{
                         add("string"),
                     }};
@@ -348,6 +355,7 @@ import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventMeeting;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventNote;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTask;
+import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTaskStatus;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -421,11 +429,11 @@ public class Application {
                         description = "Multi-tiered impactful attitude";
                         dueAt = OffsetDateTime.parse("2022-03-26T03:42:01.335Z");
                         name = "string";
-                        status = "string";
+                        status = PropertyCrmEventTaskStatus.COMPLETED;
 
                     }};
                     type = CrmEventType.NOTE;
-                    updatedAt = OffsetDateTime.parse("2021-01-03T22:29:47.132Z");
+                    updatedAt = OffsetDateTime.parse("2023-12-09T05:59:05.742Z");
 
                 }};
 
@@ -1610,12 +1618,18 @@ public class Application {
                     dealIds = new String[]{{
                         add("string"),
                     }};
+                    description = "Diverse mission-critical project";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(
                         ){{}}),
                     }};
+                    employees = 4128.78d;
                     id = "<ID>";
+                    industry = "string";
                     isActive = false;
+                    linkUrls = new String[]{{
+                        add("string"),
+                    }};
                     name = "string";
                     raw = new PropertyCrmCompanyRaw(
 );
@@ -1628,7 +1642,8 @@ public class Application {
                             telephone = "string";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-08-09T20:12:23.736Z");
+                    timezone = "Europe/Skopje";
+                    updatedAt = OffsetDateTime.parse("2021-04-08T06:12:00.839Z");
                     websites = new String[]{{
                         add("string"),
                     }};
@@ -1862,6 +1877,7 @@ import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventMeeting;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventNote;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTask;
+import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTaskStatus;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -1936,11 +1952,11 @@ public class Application {
                         description = "Intuitive zero administration complexity";
                         dueAt = OffsetDateTime.parse("2021-09-27T16:02:13.626Z");
                         name = "string";
-                        status = "string";
+                        status = PropertyCrmEventTaskStatus.COMPLETED;
 
                     }};
-                    type = CrmEventType.NOTE;
-                    updatedAt = OffsetDateTime.parse("2023-06-11T14:07:17.897Z");
+                    type = CrmEventType.CALL;
+                    updatedAt = OffsetDateTime.parse("2022-10-23T05:51:18.046Z");
 
                 }};
 
@@ -2637,12 +2653,18 @@ public class Application {
                     dealIds = new String[]{{
                         add("string"),
                     }};
+                    description = "Future-proofed zero defect instruction set";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(
                         ){{}}),
                     }};
+                    employees = 1100.41d;
                     id = "<ID>";
+                    industry = "string";
                     isActive = false;
+                    linkUrls = new String[]{{
+                        add("string"),
+                    }};
                     name = "string";
                     raw = new PropertyCrmCompanyRaw(
 );
@@ -2655,7 +2677,8 @@ public class Application {
                             telephone = "string";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-01-12T06:06:45.272Z");
+                    timezone = "Africa/Harare";
+                    updatedAt = OffsetDateTime.parse("2022-09-13T00:13:39.786Z");
                     websites = new String[]{{
                         add("string"),
                     }};
@@ -2889,6 +2912,7 @@ import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventMeeting;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventNote;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTask;
+import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTaskStatus;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -2963,11 +2987,11 @@ public class Application {
                         description = "Diverse clear-thinking success";
                         dueAt = OffsetDateTime.parse("2023-06-10T23:10:51.860Z");
                         name = "string";
-                        status = "string";
+                        status = PropertyCrmEventTaskStatus.NOT_STARTED;
 
                     }};
-                    type = CrmEventType.EMAIL;
-                    updatedAt = OffsetDateTime.parse("2022-07-14T14:12:00.132Z");
+                    type = CrmEventType.TASK;
+                    updatedAt = OffsetDateTime.parse("2023-12-12T06:51:37.177Z");
 
                 }};
 

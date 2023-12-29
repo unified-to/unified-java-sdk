@@ -30,6 +30,7 @@ import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventMeeting;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventNote;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTask;
+import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTaskStatus;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -103,11 +104,11 @@ public class Application {
                         description = "Multi-tiered impactful attitude";
                         dueAt = OffsetDateTime.parse("2022-03-26T03:42:01.335Z");
                         name = "string";
-                        status = "string";
+                        status = PropertyCrmEventTaskStatus.COMPLETED;
 
                     }};
                     type = CrmEventType.NOTE;
-                    updatedAt = OffsetDateTime.parse("2021-01-03T22:29:47.132Z");
+                    updatedAt = OffsetDateTime.parse("2023-12-09T05:59:05.742Z");
 
                 }};
 
@@ -281,6 +282,7 @@ import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventMeeting;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventNote;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTask;
+import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTaskStatus;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -355,11 +357,11 @@ public class Application {
                         description = "Intuitive zero administration complexity";
                         dueAt = OffsetDateTime.parse("2021-09-27T16:02:13.626Z");
                         name = "string";
-                        status = "string";
+                        status = PropertyCrmEventTaskStatus.COMPLETED;
 
                     }};
-                    type = CrmEventType.NOTE;
-                    updatedAt = OffsetDateTime.parse("2023-06-11T14:07:17.897Z");
+                    type = CrmEventType.CALL;
+                    updatedAt = OffsetDateTime.parse("2022-10-23T05:51:18.046Z");
 
                 }};
 
@@ -461,6 +463,7 @@ import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventMeeting;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventNote;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTask;
+import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTaskStatus;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -535,11 +538,11 @@ public class Application {
                         description = "Diverse clear-thinking success";
                         dueAt = OffsetDateTime.parse("2023-06-10T23:10:51.860Z");
                         name = "string";
-                        status = "string";
+                        status = PropertyCrmEventTaskStatus.NOT_STARTED;
 
                     }};
-                    type = CrmEventType.EMAIL;
-                    updatedAt = OffsetDateTime.parse("2022-07-14T14:12:00.132Z");
+                    type = CrmEventType.TASK;
+                    updatedAt = OffsetDateTime.parse("2023-12-12T06:51:37.177Z");
 
                 }};
 

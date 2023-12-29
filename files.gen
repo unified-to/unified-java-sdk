@@ -563,6 +563,7 @@ lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmDeal.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmDealRaw.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmEventType.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmEvent.java
+lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmEventTaskStatus.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmEventTask.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmEventRaw.java
 lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmEventNote.java
@@ -1136,6 +1137,7 @@ docs/models/shared/CrmDeal.md
 docs/models/shared/PropertyCrmDealRaw.md
 docs/models/shared/CrmEventType.md
 docs/models/shared/CrmEvent.md
+docs/models/shared/PropertyCrmEventTaskStatus.md
 docs/models/shared/PropertyCrmEventTask.md
 docs/models/shared/PropertyCrmEventRaw.md
 docs/models/shared/PropertyCrmEventNote.md

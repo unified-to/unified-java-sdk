@@ -49,9 +49,9 @@ public class PropertyCrmEventTask {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
-    public String status;
+    public PropertyCrmEventTaskStatus status;
 
-    public PropertyCrmEventTask withStatus(String status) {
+    public PropertyCrmEventTask withStatus(PropertyCrmEventTaskStatus status) {
         this.status = status;
         return this;
     }

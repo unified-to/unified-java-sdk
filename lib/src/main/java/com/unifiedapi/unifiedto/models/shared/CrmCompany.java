@@ -51,11 +51,29 @@ public class CrmCompany {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+
+    public CrmCompany withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     public CrmEmail[] emails;
 
     public CrmCompany withEmails(CrmEmail[] emails) {
         this.emails = emails;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("employees")
+    public Double employees;
+
+    public CrmCompany withEmployees(Double employees) {
+        this.employees = employees;
         return this;
     }
     
@@ -69,11 +87,29 @@ public class CrmCompany {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("industry")
+    public String industry;
+
+    public CrmCompany withIndustry(String industry) {
+        this.industry = industry;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     public Boolean isActive;
 
     public CrmCompany withIsActive(Boolean isActive) {
         this.isActive = isActive;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("link_urls")
+    public String[] linkUrls;
+
+    public CrmCompany withLinkUrls(String[] linkUrls) {
+        this.linkUrls = linkUrls;
         return this;
     }
     
@@ -113,6 +149,15 @@ public class CrmCompany {
 
     public CrmCompany withTelephones(CrmTelephone[] telephones) {
         this.telephones = telephones;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("timezone")
+    public String timezone;
+
+    public CrmCompany withTimezone(String timezone) {
+        this.timezone = timezone;
         return this;
     }
     

@@ -63,12 +63,18 @@ public class Application {
                     dealIds = new String[]{{
                         add("string"),
                     }};
+                    description = "Pre-emptive responsive task-force";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(
                         ){{}}),
                     }};
+                    employees = 4175.89d;
                     id = "<ID>";
+                    industry = "string";
                     isActive = false;
+                    linkUrls = new String[]{{
+                        add("string"),
+                    }};
                     name = "string";
                     raw = new PropertyCrmCompanyRaw(
 );
@@ -81,7 +87,8 @@ public class Application {
                             telephone = "string";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-11-13T01:08:44.894Z");
+                    timezone = "Europe/Bucharest";
+                    updatedAt = OffsetDateTime.parse("2022-10-03T05:30:56.861Z");
                     websites = new String[]{{
                         add("string"),
                     }};
@@ -344,12 +351,18 @@ public class Application {
                     dealIds = new String[]{{
                         add("string"),
                     }};
+                    description = "Diverse mission-critical project";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(
                         ){{}}),
                     }};
+                    employees = 4128.78d;
                     id = "<ID>";
+                    industry = "string";
                     isActive = false;
+                    linkUrls = new String[]{{
+                        add("string"),
+                    }};
                     name = "string";
                     raw = new PropertyCrmCompanyRaw(
 );
@@ -362,7 +375,8 @@ public class Application {
                             telephone = "string";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-08-09T20:12:23.736Z");
+                    timezone = "Europe/Skopje";
+                    updatedAt = OffsetDateTime.parse("2021-04-08T06:12:00.839Z");
                     websites = new String[]{{
                         add("string"),
                     }};
@@ -500,12 +514,18 @@ public class Application {
                     dealIds = new String[]{{
                         add("string"),
                     }};
+                    description = "Future-proofed zero defect instruction set";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(
                         ){{}}),
                     }};
+                    employees = 1100.41d;
                     id = "<ID>";
+                    industry = "string";
                     isActive = false;
+                    linkUrls = new String[]{{
+                        add("string"),
+                    }};
                     name = "string";
                     raw = new PropertyCrmCompanyRaw(
 );
@@ -518,7 +538,8 @@ public class Application {
                             telephone = "string";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-01-12T06:06:45.272Z");
+                    timezone = "Africa/Harare";
+                    updatedAt = OffsetDateTime.parse("2022-09-13T00:13:39.786Z");
                     websites = new String[]{{
                         add("string"),
                     }};

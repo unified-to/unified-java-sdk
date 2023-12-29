@@ -69,7 +69,7 @@ public class PropertyCrmEventEmail {
     }
     
     /**
-     * The event email's to name &amp; email (name &lt;test@test.com&gt;)
+     * The event email's "to" name &amp; email (name &lt;test@test.com&gt;)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
