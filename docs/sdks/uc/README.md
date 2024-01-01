@@ -47,7 +47,7 @@ public class Application {
                 ucContact = new UcContact(
 ){{
                     company = "Gottlieb - Becker";
-                    createdAt = OffsetDateTime.parse("2023-07-20T18:36:15.437Z");
+                    createdAt = OffsetDateTime.parse("2024-07-20T15:00:17.424Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
                         add(new UcEmail(
                         "string"){{
@@ -65,7 +65,7 @@ public class Application {
                         }}),
                     }};
                     title = "string";
-                    updatedAt = OffsetDateTime.parse("2023-09-28T00:27:58.979Z");
+                    updatedAt = OffsetDateTime.parse("2024-09-27T22:23:04.622Z");
 
                 }};
 
@@ -189,7 +189,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2023-07-25T02:48:36.966Z");
+                updatedGte = OffsetDateTime.parse("2024-07-24T23:18:21.548Z");
 
             }};
 
@@ -253,7 +253,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2022-10-25T15:03:37.771Z");
+                updatedGte = OffsetDateTime.parse("2023-10-26T05:35:01.805Z");
 
             }};
 
@@ -318,7 +318,7 @@ public class Application {
                 ucContact = new UcContact(
 ){{
                     company = "Runolfsdottir, Boehm and Toy";
-                    createdAt = OffsetDateTime.parse("2023-05-28T14:51:42.138Z");
+                    createdAt = OffsetDateTime.parse("2024-05-28T10:05:49.902Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
                         add(new UcEmail(
                         "string"){{
@@ -336,7 +336,7 @@ public class Application {
                         }}),
                     }};
                     title = "string";
-                    updatedAt = OffsetDateTime.parse("2023-05-08T12:55:44.030Z");
+                    updatedAt = OffsetDateTime.parse("2024-05-08T07:43:27.358Z");
 
                 }};
 
@@ -455,7 +455,7 @@ public class Application {
                 ucContact = new UcContact(
 ){{
                     company = "Marquardt Group";
-                    createdAt = OffsetDateTime.parse("2023-02-21T01:40:47.681Z");
+                    createdAt = OffsetDateTime.parse("2024-02-21T18:47:57.314Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
                         add(new UcEmail(
                         "string"){{
@@ -473,7 +473,7 @@ public class Application {
                         }}),
                     }};
                     title = "string";
-                    updatedAt = OffsetDateTime.parse("2021-09-20T12:26:20.446Z");
+                    updatedAt = OffsetDateTime.parse("2022-09-20T18:11:34.218Z");
 
                 }};
 

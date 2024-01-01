@@ -42,8 +42,8 @@ public class Application {
                 crmDeal = new CrmDeal(
 ){{
                     amount = 1917.45d;
-                    closedAt = OffsetDateTime.parse("2022-08-27T15:05:01.017Z");
-                    createdAt = OffsetDateTime.parse("2022-07-23T03:04:45.267Z");
+                    closedAt = OffsetDateTime.parse("2023-08-28T04:18:49.785Z");
+                    createdAt = OffsetDateTime.parse("2023-07-23T15:31:52.925Z");
                     currency = "Cuban Peso";
                     id = "<ID>";
                     lostReason = "string";
@@ -57,7 +57,7 @@ public class Application {
                     tags = new String[]{{
                         add("string"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-10-13T05:28:26.663Z");
+                    updatedAt = OffsetDateTime.parse("2023-10-13T19:43:32.331Z");
                     wonReason = "string";
 
                 }};
@@ -182,7 +182,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2022-09-03T12:16:34.604Z");
+                updatedGte = OffsetDateTime.parse("2023-09-04T01:39:26.472Z");
 
             }};
 
@@ -243,8 +243,8 @@ public class Application {
                 crmDeal = new CrmDeal(
 ){{
                     amount = 9874.05d;
-                    closedAt = OffsetDateTime.parse("2021-07-09T08:48:03.715Z");
-                    createdAt = OffsetDateTime.parse("2022-04-30T07:03:46.302Z");
+                    closedAt = OffsetDateTime.parse("2022-07-09T12:57:05.527Z");
+                    createdAt = OffsetDateTime.parse("2023-04-30T17:40:39.112Z");
                     currency = "Riel";
                     id = "<ID>";
                     lostReason = "string";
@@ -258,7 +258,7 @@ public class Application {
                     tags = new String[]{{
                         add("string"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-02-21T14:41:27.897Z");
+                    updatedAt = OffsetDateTime.parse("2024-02-22T07:49:20.306Z");
                     wonReason = "string";
 
                 }};
@@ -374,8 +374,8 @@ public class Application {
                 crmDeal = new CrmDeal(
 ){{
                     amount = 854.3d;
-                    closedAt = OffsetDateTime.parse("2022-01-13T07:04:58.998Z");
-                    createdAt = OffsetDateTime.parse("2021-11-20T16:49:31.989Z");
+                    closedAt = OffsetDateTime.parse("2023-01-13T15:21:09.134Z");
+                    createdAt = OffsetDateTime.parse("2022-11-20T23:55:13.334Z");
                     currency = "Pound Sterling";
                     id = "<ID>";
                     lostReason = "string";
@@ -389,7 +389,7 @@ public class Application {
                     tags = new String[]{{
                         add("string"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-01-31T15:37:01.475Z");
+                    updatedAt = OffsetDateTime.parse("2023-02-01T00:17:19.942Z");
                     wonReason = "string";
 
                 }};

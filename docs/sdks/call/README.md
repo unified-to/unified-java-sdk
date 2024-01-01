@@ -42,7 +42,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2023-07-25T02:48:36.966Z");
+                updatedGte = OffsetDateTime.parse("2024-07-24T23:18:21.548Z");
 
             }};
 

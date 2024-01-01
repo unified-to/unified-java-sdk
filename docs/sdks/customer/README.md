@@ -66,7 +66,7 @@ public class Application {
                         regionCode = "string";
 
                     }};
-                    createdAt = OffsetDateTime.parse("2021-07-22T19:16:48.798Z");
+                    createdAt = OffsetDateTime.parse("2022-07-22T23:43:30.815Z");
                     currency = "Dalasi";
                     emails = new com.unifiedapi.unifiedto.models.shared.AccountingEmail[]{{
                         add(new AccountingEmail(
@@ -99,7 +99,7 @@ public class Application {
                             telephone = "string";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-12-07T14:42:11.734Z");
+                    updatedAt = OffsetDateTime.parse("2022-12-07T22:10:07.470Z");
 
                 }};
 
@@ -164,7 +164,7 @@ public class Application {
                 "string"){{
                 ticketingCustomer = new TicketingCustomer(
 ){{
-                    createdAt = OffsetDateTime.parse("2022-06-19T07:03:19.095Z");
+                    createdAt = OffsetDateTime.parse("2023-06-19T18:45:57.085Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
                         add(new TicketingEmail(
                         "string"){{
@@ -184,7 +184,7 @@ public class Application {
                             telephone = "string";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-08-22T11:52:38.346Z");
+                    updatedAt = OffsetDateTime.parse("2024-08-22T08:59:42.052Z");
 
                 }};
 
@@ -363,7 +363,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2021-08-23T13:14:33.970Z");
+                updatedGte = OffsetDateTime.parse("2022-08-23T18:23:01.069Z");
 
             }};
 
@@ -426,7 +426,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2021-06-05T16:20:32.808Z");
+                updatedGte = OffsetDateTime.parse("2022-06-05T19:45:16.674Z");
 
             }};
 
@@ -505,7 +505,7 @@ public class Application {
                         regionCode = "string";
 
                     }};
-                    createdAt = OffsetDateTime.parse("2023-08-27T01:00:12.169Z");
+                    createdAt = OffsetDateTime.parse("2024-08-26T22:13:14.646Z");
                     currency = "Kina";
                     emails = new com.unifiedapi.unifiedto.models.shared.AccountingEmail[]{{
                         add(new AccountingEmail(
@@ -538,7 +538,7 @@ public class Application {
                             telephone = "string";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-02-08T06:05:59.693Z");
+                    updatedAt = OffsetDateTime.parse("2023-02-08T14:56:18.103Z");
 
                 }};
 
@@ -604,7 +604,7 @@ public class Application {
                 "string"){{
                 ticketingCustomer = new TicketingCustomer(
 ){{
-                    createdAt = OffsetDateTime.parse("2023-06-30T19:19:15.782Z");
+                    createdAt = OffsetDateTime.parse("2024-06-30T15:17:02.043Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
                         add(new TicketingEmail(
                         "string"){{
@@ -624,7 +624,7 @@ public class Application {
                             telephone = "string";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-10-01T03:16:10.656Z");
+                    updatedAt = OffsetDateTime.parse("2022-10-01T09:15:22.227Z");
 
                 }};
 
@@ -809,7 +809,7 @@ public class Application {
                         regionCode = "string";
 
                     }};
-                    createdAt = OffsetDateTime.parse("2023-05-08T08:34:01.295Z");
+                    createdAt = OffsetDateTime.parse("2024-05-08T03:21:30.283Z");
                     currency = "Guinea Franc";
                     emails = new com.unifiedapi.unifiedto.models.shared.AccountingEmail[]{{
                         add(new AccountingEmail(
@@ -842,7 +842,7 @@ public class Application {
                             telephone = "string";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-07-26T10:11:07.824Z");
+                    updatedAt = OffsetDateTime.parse("2023-07-26T22:42:35.557Z");
 
                 }};
 
@@ -908,7 +908,7 @@ public class Application {
                 "string"){{
                 ticketingCustomer = new TicketingCustomer(
 ){{
-                    createdAt = OffsetDateTime.parse("2023-10-13T13:29:08.944Z");
+                    createdAt = OffsetDateTime.parse("2024-10-13T11:44:40.953Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
                         add(new TicketingEmail(
                         "string"){{
@@ -928,7 +928,7 @@ public class Application {
                             telephone = "string";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-06-02T10:57:20.628Z");
+                    updatedAt = OffsetDateTime.parse("2023-06-02T22:17:50.071Z");
 
                 }};
 

@@ -42,13 +42,13 @@ public class Application {
                 accountingTaxrate = new AccountingTaxrate(
                     "string",
                     1719.1d){{
-                    createdAt = OffsetDateTime.parse("2021-09-20T11:21:00.826Z");
+                    createdAt = OffsetDateTime.parse("2022-09-20T17:06:11.018Z");
                     description = "Ergonomic regional neural-net";
                     id = "<ID>";
                     isActive = false;
                     raw = new PropertyAccountingTaxrateRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2022-12-27T07:12:37.927Z");
+                    updatedAt = OffsetDateTime.parse("2023-12-27T23:06:27.112Z");
 
                 }};
 
@@ -170,7 +170,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2022-06-14T02:55:23.362Z");
+                updatedGte = OffsetDateTime.parse("2023-06-14T14:31:13.247Z");
 
             }};
 
@@ -231,13 +231,13 @@ public class Application {
                 accountingTaxrate = new AccountingTaxrate(
                     "string",
                     5991.47d){{
-                    createdAt = OffsetDateTime.parse("2023-01-29T05:25:29.500Z");
+                    createdAt = OffsetDateTime.parse("2024-01-29T22:02:36.650Z");
                     description = "Upgradable coherent adapter";
                     id = "<ID>";
                     isActive = false;
                     raw = new PropertyAccountingTaxrateRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2023-01-16T18:23:47.556Z");
+                    updatedAt = OffsetDateTime.parse("2024-01-17T10:44:31.599Z");
 
                 }};
 
@@ -352,13 +352,13 @@ public class Application {
                 accountingTaxrate = new AccountingTaxrate(
                     "string",
                     3382.78d){{
-                    createdAt = OffsetDateTime.parse("2023-07-16T05:06:34.184Z");
+                    createdAt = OffsetDateTime.parse("2024-07-16T01:24:36.188Z");
                     description = "Open-source human-resource database";
                     id = "<ID>";
                     isActive = false;
                     raw = new PropertyAccountingTaxrateRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2021-03-21T09:13:35.294Z");
+                    updatedAt = OffsetDateTime.parse("2022-03-21T10:57:59.053Z");
 
                 }};
 

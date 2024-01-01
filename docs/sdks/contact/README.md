@@ -68,7 +68,7 @@ public class Application {
                     companyIds = new String[]{{
                         add("string"),
                     }};
-                    createdAt = OffsetDateTime.parse("2023-03-07T16:46:57.366Z");
+                    createdAt = OffsetDateTime.parse("2024-03-07T10:13:21.309Z");
                     dealIds = new String[]{{
                         add("string"),
                     }};
@@ -87,7 +87,7 @@ public class Application {
                         }}),
                     }};
                     title = "string";
-                    updatedAt = OffsetDateTime.parse("2023-03-21T23:24:52.050Z");
+                    updatedAt = OffsetDateTime.parse("2024-03-21T17:10:02.454Z");
 
                 }};
 
@@ -153,7 +153,7 @@ public class Application {
                 ucContact = new UcContact(
 ){{
                     company = "Gottlieb - Becker";
-                    createdAt = OffsetDateTime.parse("2023-07-20T18:36:15.437Z");
+                    createdAt = OffsetDateTime.parse("2024-07-20T15:00:17.424Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
                         add(new UcEmail(
                         "string"){{
@@ -171,7 +171,7 @@ public class Application {
                         }}),
                     }};
                     title = "string";
-                    updatedAt = OffsetDateTime.parse("2023-09-28T00:27:58.979Z");
+                    updatedAt = OffsetDateTime.parse("2024-09-27T22:23:04.622Z");
 
                 }};
 
@@ -352,7 +352,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2022-11-15T04:38:32.631Z");
+                updatedGte = OffsetDateTime.parse("2023-11-15T19:36:59.401Z");
 
             }};
 
@@ -416,7 +416,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2022-10-25T15:03:37.771Z");
+                updatedGte = OffsetDateTime.parse("2023-10-26T05:35:01.805Z");
 
             }};
 
@@ -497,7 +497,7 @@ public class Application {
                     companyIds = new String[]{{
                         add("string"),
                     }};
-                    createdAt = OffsetDateTime.parse("2021-07-11T20:03:30.520Z");
+                    createdAt = OffsetDateTime.parse("2022-07-12T00:15:47.150Z");
                     dealIds = new String[]{{
                         add("string"),
                     }};
@@ -516,7 +516,7 @@ public class Application {
                         }}),
                     }};
                     title = "string";
-                    updatedAt = OffsetDateTime.parse("2021-11-28T14:54:45.741Z");
+                    updatedAt = OffsetDateTime.parse("2022-11-28T22:10:52.030Z");
 
                 }};
 
@@ -583,7 +583,7 @@ public class Application {
                 ucContact = new UcContact(
 ){{
                     company = "Runolfsdottir, Boehm and Toy";
-                    createdAt = OffsetDateTime.parse("2023-05-28T14:51:42.138Z");
+                    createdAt = OffsetDateTime.parse("2024-05-28T10:05:49.902Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
                         add(new UcEmail(
                         "string"){{
@@ -601,7 +601,7 @@ public class Application {
                         }}),
                     }};
                     title = "string";
-                    updatedAt = OffsetDateTime.parse("2023-05-08T12:55:44.030Z");
+                    updatedAt = OffsetDateTime.parse("2024-05-08T07:43:27.358Z");
 
                 }};
 
@@ -788,7 +788,7 @@ public class Application {
                     companyIds = new String[]{{
                         add("string"),
                     }};
-                    createdAt = OffsetDateTime.parse("2021-02-12T11:36:07.720Z");
+                    createdAt = OffsetDateTime.parse("2022-02-12T12:31:59.837Z");
                     dealIds = new String[]{{
                         add("string"),
                     }};
@@ -807,7 +807,7 @@ public class Application {
                         }}),
                     }};
                     title = "string";
-                    updatedAt = OffsetDateTime.parse("2022-09-02T04:38:24.473Z");
+                    updatedAt = OffsetDateTime.parse("2023-09-02T17:59:32.331Z");
 
                 }};
 
@@ -874,7 +874,7 @@ public class Application {
                 ucContact = new UcContact(
 ){{
                     company = "Marquardt Group";
-                    createdAt = OffsetDateTime.parse("2023-02-21T01:40:47.681Z");
+                    createdAt = OffsetDateTime.parse("2024-02-21T18:47:57.314Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
                         add(new UcEmail(
                         "string"){{
@@ -892,7 +892,7 @@ public class Application {
                         }}),
                     }};
                     title = "string";
-                    updatedAt = OffsetDateTime.parse("2021-09-20T12:26:20.446Z");
+                    updatedAt = OffsetDateTime.parse("2022-09-20T18:11:34.218Z");
 
                 }};
 

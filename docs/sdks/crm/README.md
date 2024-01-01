@@ -94,7 +94,7 @@ public class Application {
                         regionCode = "string";
 
                     }};
-                    createdAt = OffsetDateTime.parse("2023-02-02T17:21:10.729Z");
+                    createdAt = OffsetDateTime.parse("2024-02-03T10:04:12.712Z");
                     dealIds = new String[]{{
                         add("string"),
                     }};
@@ -123,7 +123,7 @@ public class Application {
                         }}),
                     }};
                     timezone = "Europe/Bucharest";
-                    updatedAt = OffsetDateTime.parse("2022-10-03T05:30:56.861Z");
+                    updatedAt = OffsetDateTime.parse("2023-10-03T19:32:53.625Z");
                     websites = new String[]{{
                         add("string"),
                     }};
@@ -208,7 +208,7 @@ public class Application {
                     companyIds = new String[]{{
                         add("string"),
                     }};
-                    createdAt = OffsetDateTime.parse("2023-03-07T16:46:57.366Z");
+                    createdAt = OffsetDateTime.parse("2024-03-07T10:13:21.309Z");
                     dealIds = new String[]{{
                         add("string"),
                     }};
@@ -227,7 +227,7 @@ public class Application {
                         }}),
                     }};
                     title = "string";
-                    updatedAt = OffsetDateTime.parse("2023-03-21T23:24:52.050Z");
+                    updatedAt = OffsetDateTime.parse("2024-03-21T17:10:02.454Z");
 
                 }};
 
@@ -289,8 +289,8 @@ public class Application {
                 crmDeal = new CrmDeal(
 ){{
                     amount = 1917.45d;
-                    closedAt = OffsetDateTime.parse("2022-08-27T15:05:01.017Z");
-                    createdAt = OffsetDateTime.parse("2022-07-23T03:04:45.267Z");
+                    closedAt = OffsetDateTime.parse("2023-08-28T04:18:49.785Z");
+                    createdAt = OffsetDateTime.parse("2023-07-23T15:31:52.925Z");
                     currency = "Cuban Peso";
                     id = "<ID>";
                     lostReason = "string";
@@ -304,7 +304,7 @@ public class Application {
                     tags = new String[]{{
                         add("string"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-10-13T05:28:26.663Z");
+                    updatedAt = OffsetDateTime.parse("2023-10-13T19:43:32.331Z");
                     wonReason = "string";
 
                 }};
@@ -377,7 +377,7 @@ public class Application {
 ){{
                         description = "Grass-roots intangible superstructure";
                         duration = 6684.26d;
-                        startAt = OffsetDateTime.parse("2023-07-15T01:49:08.083Z");
+                        startAt = OffsetDateTime.parse("2024-07-14T22:05:40.365Z");
 
                     }};
                     companyIds = new String[]{{
@@ -386,7 +386,7 @@ public class Application {
                     contactIds = new String[]{{
                         add("string"),
                     }};
-                    createdAt = OffsetDateTime.parse("2023-08-20T22:53:04.600Z");
+                    createdAt = OffsetDateTime.parse("2024-08-20T19:58:06.686Z");
                     dealIds = new String[]{{
                         add("string"),
                     }};
@@ -396,7 +396,7 @@ public class Application {
                         cc = new String[]{{
                             add("string"),
                         }};
-                        createdAt = OffsetDateTime.parse("2023-08-07T10:54:17.524Z");
+                        createdAt = OffsetDateTime.parse("2024-08-07T07:41:34.472Z");
                         from = "string";
                         subject = "string";
                         to = new String[]{{
@@ -411,14 +411,14 @@ public class Application {
                     meeting = new PropertyCrmEventMeeting(
 ){{
                         description = "Ameliorated bottom-line internet solution";
-                        endAt = OffsetDateTime.parse("2022-02-08T19:04:07.609Z");
-                        startAt = OffsetDateTime.parse("2023-11-30T18:01:57.751Z");
+                        endAt = OffsetDateTime.parse("2023-02-09T03:55:08.657Z");
+                        startAt = OffsetDateTime.parse("2024-11-30T17:20:52.105Z");
                         title = "string";
 
                     }};
                     note = new PropertyCrmEventNote(
 ){{
-                        createdAt = OffsetDateTime.parse("2021-03-29T05:15:10.995Z");
+                        createdAt = OffsetDateTime.parse("2022-03-29T07:09:52.923Z");
                         description = "Extended 5th generation artificial intelligence";
 
                     }};
@@ -427,13 +427,13 @@ public class Application {
                     task = new PropertyCrmEventTask(
 ){{
                         description = "Multi-tiered impactful attitude";
-                        dueAt = OffsetDateTime.parse("2022-03-26T03:42:01.335Z");
+                        dueAt = OffsetDateTime.parse("2023-03-26T13:32:41.446Z");
                         name = "string";
                         status = PropertyCrmEventTaskStatus.COMPLETED;
 
                     }};
                     type = CrmEventType.NOTE;
-                    updatedAt = OffsetDateTime.parse("2023-12-09T05:59:05.742Z");
+                    updatedAt = OffsetDateTime.parse("2024-12-09T05:29:10.624Z");
 
                 }};
 
@@ -497,7 +497,7 @@ public class Application {
                     activityId = "string";
                     companyId = "string";
                     contactId = "string";
-                    createdAt = OffsetDateTime.parse("2023-08-23T16:58:07.247Z");
+                    createdAt = OffsetDateTime.parse("2024-08-23T14:06:46.596Z");
                     dealId = "string";
                     description = "Multi-lateral background database";
                     fileName = "the.mp4v";
@@ -509,7 +509,7 @@ public class Application {
                     leadId = "string";
                     raw = new PropertyCrmFileRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2022-05-03T12:27:57.377Z");
+                    updatedAt = OffsetDateTime.parse("2023-05-03T23:09:04.663Z");
                     userId = "string";
 
                 }};
@@ -591,7 +591,7 @@ public class Application {
                     companyId = "string";
                     companyName = "Langosh - Fritsch";
                     contactId = "string";
-                    createdAt = OffsetDateTime.parse("2022-12-22T23:40:58.272Z");
+                    createdAt = OffsetDateTime.parse("2023-12-23T15:29:07.093Z");
                     creatorUserId = "string";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(
@@ -610,7 +610,7 @@ public class Application {
                             telephone = "string";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-09-01T21:13:09.210Z");
+                    updatedAt = OffsetDateTime.parse("2024-09-01T18:33:52.670Z");
                     userId = "string";
 
                 }};
@@ -672,7 +672,7 @@ public class Application {
                 "string"){{
                 crmPipeline = new CrmPipeline(
 ){{
-                    createdAt = OffsetDateTime.parse("2023-06-24T14:15:54.218Z");
+                    createdAt = OffsetDateTime.parse("2024-06-24T10:05:30.432Z");
                     dealProbability = false;
                     displayOrder = 6254.97d;
                     id = "<ID>";
@@ -680,7 +680,7 @@ public class Application {
                     name = "string";
                     raw = new PropertyCrmPipelineRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2021-12-01T06:10:18.007Z");
+                    updatedAt = OffsetDateTime.parse("2022-12-01T13:29:52.270Z");
 
                 }};
 
@@ -1146,7 +1146,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2022-05-02T07:12:37.628Z");
+                updatedGte = OffsetDateTime.parse("2023-05-02T17:52:08.731Z");
 
             }};
 
@@ -1211,7 +1211,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2022-11-15T04:38:32.631Z");
+                updatedGte = OffsetDateTime.parse("2023-11-15T19:36:59.401Z");
 
             }};
 
@@ -1276,7 +1276,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2022-09-03T12:16:34.604Z");
+                updatedGte = OffsetDateTime.parse("2023-09-04T01:39:26.472Z");
 
             }};
 
@@ -1343,7 +1343,7 @@ public class Application {
                 query = "string";
                 sort = "string";
                 type = "string";
-                updatedGte = OffsetDateTime.parse("2023-04-30T09:02:38.779Z");
+                updatedGte = OffsetDateTime.parse("2024-04-30T03:39:38.103Z");
 
             }};
 
@@ -1409,7 +1409,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2023-11-04T18:55:22.126Z");
+                updatedGte = OffsetDateTime.parse("2024-11-04T17:40:07.899Z");
 
             }};
 
@@ -1474,7 +1474,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2023-01-11T15:13:29.920Z");
+                updatedGte = OffsetDateTime.parse("2024-01-12T07:27:29.016Z");
 
             }};
 
@@ -1537,7 +1537,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2021-04-29T15:47:27.871Z");
+                updatedGte = OffsetDateTime.parse("2022-04-29T18:23:30.472Z");
 
             }};
 
@@ -1614,7 +1614,7 @@ public class Application {
                         regionCode = "string";
 
                     }};
-                    createdAt = OffsetDateTime.parse("2021-01-19T16:28:56.295Z");
+                    createdAt = OffsetDateTime.parse("2022-01-19T16:53:30.758Z");
                     dealIds = new String[]{{
                         add("string"),
                     }};
@@ -1643,7 +1643,7 @@ public class Application {
                         }}),
                     }};
                     timezone = "Europe/Skopje";
-                    updatedAt = OffsetDateTime.parse("2021-04-08T06:12:00.839Z");
+                    updatedAt = OffsetDateTime.parse("2022-04-08T08:19:54.922Z");
                     websites = new String[]{{
                         add("string"),
                     }};
@@ -1729,7 +1729,7 @@ public class Application {
                     companyIds = new String[]{{
                         add("string"),
                     }};
-                    createdAt = OffsetDateTime.parse("2021-07-11T20:03:30.520Z");
+                    createdAt = OffsetDateTime.parse("2022-07-12T00:15:47.150Z");
                     dealIds = new String[]{{
                         add("string"),
                     }};
@@ -1748,7 +1748,7 @@ public class Application {
                         }}),
                     }};
                     title = "string";
-                    updatedAt = OffsetDateTime.parse("2021-11-28T14:54:45.741Z");
+                    updatedAt = OffsetDateTime.parse("2022-11-28T22:10:52.030Z");
 
                 }};
 
@@ -1811,8 +1811,8 @@ public class Application {
                 crmDeal = new CrmDeal(
 ){{
                     amount = 9874.05d;
-                    closedAt = OffsetDateTime.parse("2021-07-09T08:48:03.715Z");
-                    createdAt = OffsetDateTime.parse("2022-04-30T07:03:46.302Z");
+                    closedAt = OffsetDateTime.parse("2022-07-09T12:57:05.527Z");
+                    createdAt = OffsetDateTime.parse("2023-04-30T17:40:39.112Z");
                     currency = "Riel";
                     id = "<ID>";
                     lostReason = "string";
@@ -1826,7 +1826,7 @@ public class Application {
                     tags = new String[]{{
                         add("string"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-02-21T14:41:27.897Z");
+                    updatedAt = OffsetDateTime.parse("2024-02-22T07:49:20.306Z");
                     wonReason = "string";
 
                 }};
@@ -1900,7 +1900,7 @@ public class Application {
 ){{
                         description = "Multi-layered well-modulated middleware";
                         duration = 8718.07d;
-                        startAt = OffsetDateTime.parse("2022-07-20T20:04:26.682Z");
+                        startAt = OffsetDateTime.parse("2023-07-21T08:28:33.501Z");
 
                     }};
                     companyIds = new String[]{{
@@ -1909,7 +1909,7 @@ public class Application {
                     contactIds = new String[]{{
                         add("string"),
                     }};
-                    createdAt = OffsetDateTime.parse("2022-02-07T22:00:21.638Z");
+                    createdAt = OffsetDateTime.parse("2023-02-08T06:50:13.439Z");
                     dealIds = new String[]{{
                         add("string"),
                     }};
@@ -1919,7 +1919,7 @@ public class Application {
                         cc = new String[]{{
                             add("string"),
                         }};
-                        createdAt = OffsetDateTime.parse("2023-09-27T22:24:14.342Z");
+                        createdAt = OffsetDateTime.parse("2024-09-27T20:19:13.205Z");
                         from = "string";
                         subject = "string";
                         to = new String[]{{
@@ -1934,14 +1934,14 @@ public class Application {
                     meeting = new PropertyCrmEventMeeting(
 ){{
                         description = "Advanced modular attitude";
-                        endAt = OffsetDateTime.parse("2021-10-10T20:03:27.454Z");
-                        startAt = OffsetDateTime.parse("2023-02-23T14:52:55.729Z");
+                        endAt = OffsetDateTime.parse("2022-10-11T02:15:24.355Z");
+                        startAt = OffsetDateTime.parse("2024-02-24T08:03:26.575Z");
                         title = "string";
 
                     }};
                     note = new PropertyCrmEventNote(
 ){{
-                        createdAt = OffsetDateTime.parse("2021-08-25T21:43:17.031Z");
+                        createdAt = OffsetDateTime.parse("2022-08-26T02:54:49.814Z");
                         description = "Cross-platform bi-directional open architecture";
 
                     }};
@@ -1950,13 +1950,13 @@ public class Application {
                     task = new PropertyCrmEventTask(
 ){{
                         description = "Intuitive zero administration complexity";
-                        dueAt = OffsetDateTime.parse("2021-09-27T16:02:13.626Z");
+                        dueAt = OffsetDateTime.parse("2022-09-27T21:56:51.556Z");
                         name = "string";
                         status = PropertyCrmEventTaskStatus.COMPLETED;
 
                     }};
                     type = CrmEventType.CALL;
-                    updatedAt = OffsetDateTime.parse("2022-10-23T05:51:18.046Z");
+                    updatedAt = OffsetDateTime.parse("2023-10-23T20:19:34.007Z");
 
                 }};
 
@@ -2021,7 +2021,7 @@ public class Application {
                     activityId = "string";
                     companyId = "string";
                     contactId = "string";
-                    createdAt = OffsetDateTime.parse("2021-08-02T16:08:30.860Z");
+                    createdAt = OffsetDateTime.parse("2022-08-02T20:49:30.505Z");
                     dealId = "string";
                     description = "Networked multimedia database";
                     fileName = "country.wav";
@@ -2033,7 +2033,7 @@ public class Application {
                     leadId = "string";
                     raw = new PropertyCrmFileRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2023-06-07T04:39:27.375Z");
+                    updatedAt = OffsetDateTime.parse("2024-06-07T00:06:10.633Z");
                     userId = "string";
 
                 }};
@@ -2116,7 +2116,7 @@ public class Application {
                     companyId = "string";
                     companyName = "Altenwerth, Lebsack and Wintheiser";
                     contactId = "string";
-                    createdAt = OffsetDateTime.parse("2022-12-15T21:54:30.872Z");
+                    createdAt = OffsetDateTime.parse("2023-12-16T13:33:21.530Z");
                     creatorUserId = "string";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(
@@ -2135,7 +2135,7 @@ public class Application {
                             telephone = "string";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-10-10T05:25:00.043Z");
+                    updatedAt = OffsetDateTime.parse("2022-10-10T11:36:08.811Z");
                     userId = "string";
 
                 }};
@@ -2198,7 +2198,7 @@ public class Application {
                 "string"){{
                 crmPipeline = new CrmPipeline(
 ){{
-                    createdAt = OffsetDateTime.parse("2023-08-26T17:19:01.949Z");
+                    createdAt = OffsetDateTime.parse("2024-08-26T14:31:39.156Z");
                     dealProbability = false;
                     displayOrder = 8620.92d;
                     id = "<ID>";
@@ -2206,7 +2206,7 @@ public class Application {
                     name = "string";
                     raw = new PropertyCrmPipelineRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2022-04-03T12:55:27.421Z");
+                    updatedAt = OffsetDateTime.parse("2023-04-03T22:57:09.090Z");
 
                 }};
 
@@ -2649,7 +2649,7 @@ public class Application {
                         regionCode = "string";
 
                     }};
-                    createdAt = OffsetDateTime.parse("2022-06-18T22:28:27.597Z");
+                    createdAt = OffsetDateTime.parse("2023-06-19T10:10:37.376Z");
                     dealIds = new String[]{{
                         add("string"),
                     }};
@@ -2678,7 +2678,7 @@ public class Application {
                         }}),
                     }};
                     timezone = "Africa/Harare";
-                    updatedAt = OffsetDateTime.parse("2022-09-13T00:13:39.786Z");
+                    updatedAt = OffsetDateTime.parse("2023-09-13T13:49:01.082Z");
                     websites = new String[]{{
                         add("string"),
                     }};
@@ -2764,7 +2764,7 @@ public class Application {
                     companyIds = new String[]{{
                         add("string"),
                     }};
-                    createdAt = OffsetDateTime.parse("2021-02-12T11:36:07.720Z");
+                    createdAt = OffsetDateTime.parse("2022-02-12T12:31:59.837Z");
                     dealIds = new String[]{{
                         add("string"),
                     }};
@@ -2783,7 +2783,7 @@ public class Application {
                         }}),
                     }};
                     title = "string";
-                    updatedAt = OffsetDateTime.parse("2022-09-02T04:38:24.473Z");
+                    updatedAt = OffsetDateTime.parse("2023-09-02T17:59:32.331Z");
 
                 }};
 
@@ -2846,8 +2846,8 @@ public class Application {
                 crmDeal = new CrmDeal(
 ){{
                     amount = 854.3d;
-                    closedAt = OffsetDateTime.parse("2022-01-13T07:04:58.998Z");
-                    createdAt = OffsetDateTime.parse("2021-11-20T16:49:31.989Z");
+                    closedAt = OffsetDateTime.parse("2023-01-13T15:21:09.134Z");
+                    createdAt = OffsetDateTime.parse("2022-11-20T23:55:13.334Z");
                     currency = "Pound Sterling";
                     id = "<ID>";
                     lostReason = "string";
@@ -2861,7 +2861,7 @@ public class Application {
                     tags = new String[]{{
                         add("string"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-01-31T15:37:01.475Z");
+                    updatedAt = OffsetDateTime.parse("2023-02-01T00:17:19.942Z");
                     wonReason = "string";
 
                 }};
@@ -2935,7 +2935,7 @@ public class Application {
 ){{
                         description = "Intuitive incremental orchestration";
                         duration = 4665.81d;
-                        startAt = OffsetDateTime.parse("2021-09-01T00:40:18.553Z");
+                        startAt = OffsetDateTime.parse("2022-09-01T05:59:54.461Z");
 
                     }};
                     companyIds = new String[]{{
@@ -2944,7 +2944,7 @@ public class Application {
                     contactIds = new String[]{{
                         add("string"),
                     }};
-                    createdAt = OffsetDateTime.parse("2022-08-31T19:24:42.330Z");
+                    createdAt = OffsetDateTime.parse("2023-09-01T08:44:00.944Z");
                     dealIds = new String[]{{
                         add("string"),
                     }};
@@ -2954,7 +2954,7 @@ public class Application {
                         cc = new String[]{{
                             add("string"),
                         }};
-                        createdAt = OffsetDateTime.parse("2023-04-26T09:24:21.940Z");
+                        createdAt = OffsetDateTime.parse("2024-04-26T03:56:06.837Z");
                         from = "string";
                         subject = "string";
                         to = new String[]{{
@@ -2969,14 +2969,14 @@ public class Application {
                     meeting = new PropertyCrmEventMeeting(
 ){{
                         description = "Right-sized user-facing moratorium";
-                        endAt = OffsetDateTime.parse("2023-07-14T23:23:37.626Z");
-                        startAt = OffsetDateTime.parse("2023-12-12T17:40:29.095Z");
+                        endAt = OffsetDateTime.parse("2024-07-14T19:40:01.934Z");
+                        startAt = OffsetDateTime.parse("2024-12-12T17:15:09.122Z");
                         title = "string";
 
                     }};
                     note = new PropertyCrmEventNote(
 ){{
-                        createdAt = OffsetDateTime.parse("2021-03-16T20:16:04.654Z");
+                        createdAt = OffsetDateTime.parse("2022-03-16T21:54:30.192Z");
                         description = "Pre-emptive system-worthy open system";
 
                     }};
@@ -2985,13 +2985,13 @@ public class Application {
                     task = new PropertyCrmEventTask(
 ){{
                         description = "Diverse clear-thinking success";
-                        dueAt = OffsetDateTime.parse("2023-06-10T23:10:51.860Z");
+                        dueAt = OffsetDateTime.parse("2024-06-10T18:42:32.729Z");
                         name = "string";
                         status = PropertyCrmEventTaskStatus.NOT_STARTED;
 
                     }};
                     type = CrmEventType.TASK;
-                    updatedAt = OffsetDateTime.parse("2023-12-12T06:51:37.177Z");
+                    updatedAt = OffsetDateTime.parse("2024-12-12T06:25:41.650Z");
 
                 }};
 
@@ -3056,7 +3056,7 @@ public class Application {
                     activityId = "string";
                     companyId = "string";
                     contactId = "string";
-                    createdAt = OffsetDateTime.parse("2021-02-11T14:36:52.051Z");
+                    createdAt = OffsetDateTime.parse("2022-02-11T15:31:35.167Z");
                     dealId = "string";
                     description = "Quality-focused mobile orchestration";
                     fileName = "circuit_extended.jpe";
@@ -3068,7 +3068,7 @@ public class Application {
                     leadId = "string";
                     raw = new PropertyCrmFileRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2021-09-11T08:15:48.719Z");
+                    updatedAt = OffsetDateTime.parse("2022-09-11T13:48:58.626Z");
                     userId = "string";
 
                 }};
@@ -3151,7 +3151,7 @@ public class Application {
                     companyId = "string";
                     companyName = "Gibson - Cummings";
                     contactId = "string";
-                    createdAt = OffsetDateTime.parse("2023-12-12T09:21:19.873Z");
+                    createdAt = OffsetDateTime.parse("2024-12-12T08:55:32.549Z");
                     creatorUserId = "string";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(
@@ -3170,7 +3170,7 @@ public class Application {
                             telephone = "string";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-06-13T22:33:13.952Z");
+                    updatedAt = OffsetDateTime.parse("2023-06-14T10:08:49.472Z");
                     userId = "string";
 
                 }};
@@ -3233,7 +3233,7 @@ public class Application {
                 "string"){{
                 crmPipeline = new CrmPipeline(
 ){{
-                    createdAt = OffsetDateTime.parse("2021-12-27T08:28:05.275Z");
+                    createdAt = OffsetDateTime.parse("2022-12-27T16:21:58.595Z");
                     dealProbability = false;
                     displayOrder = 8923.83d;
                     id = "<ID>";
@@ -3241,7 +3241,7 @@ public class Application {
                     name = "string";
                     raw = new PropertyCrmPipelineRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2022-07-18T01:45:20.441Z");
+                    updatedAt = OffsetDateTime.parse("2023-07-18T14:05:49.227Z");
 
                 }};
 

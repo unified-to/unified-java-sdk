@@ -50,7 +50,7 @@ public class Application {
                     activityId = "string";
                     companyId = "string";
                     contactId = "string";
-                    createdAt = OffsetDateTime.parse("2023-08-23T16:58:07.247Z");
+                    createdAt = OffsetDateTime.parse("2024-08-23T14:06:46.596Z");
                     dealId = "string";
                     description = "Multi-lateral background database";
                     fileName = "the.mp4v";
@@ -62,7 +62,7 @@ public class Application {
                     leadId = "string";
                     raw = new PropertyCrmFileRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2022-05-03T12:27:57.377Z");
+                    updatedAt = OffsetDateTime.parse("2023-05-03T23:09:04.663Z");
                     userId = "string";
 
                 }};
@@ -127,7 +127,7 @@ public class Application {
                 "string"){{
                 storageFile = new StorageFile(
 ){{
-                    createdAt = OffsetDateTime.parse("2023-11-26T17:57:07.851Z");
+                    createdAt = OffsetDateTime.parse("2024-11-26T17:10:46.324Z");
                     description = "Digitized systematic Graphic Interface";
                     downloadUrl = "string";
                     id = "<ID>";
@@ -148,7 +148,7 @@ public class Application {
 );
                     size = 3999.85d;
                     type = StorageFileType.FOLDER;
-                    updatedAt = OffsetDateTime.parse("2023-03-07T20:57:30.769Z");
+                    updatedAt = OffsetDateTime.parse("2024-03-07T14:24:08.441Z");
                     userId = "string";
 
                 }};
@@ -331,7 +331,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2023-11-04T18:55:22.126Z");
+                updatedGte = OffsetDateTime.parse("2024-11-04T17:40:07.899Z");
 
             }};
 
@@ -395,7 +395,7 @@ public class Application {
                 parentId = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2021-01-28T04:00:20.237Z");
+                updatedGte = OffsetDateTime.parse("2022-01-28T04:36:03.817Z");
 
             }};
 
@@ -458,7 +458,7 @@ public class Application {
                     activityId = "string";
                     companyId = "string";
                     contactId = "string";
-                    createdAt = OffsetDateTime.parse("2021-08-02T16:08:30.860Z");
+                    createdAt = OffsetDateTime.parse("2022-08-02T20:49:30.505Z");
                     dealId = "string";
                     description = "Networked multimedia database";
                     fileName = "country.wav";
@@ -470,7 +470,7 @@ public class Application {
                     leadId = "string";
                     raw = new PropertyCrmFileRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2023-06-07T04:39:27.375Z");
+                    updatedAt = OffsetDateTime.parse("2024-06-07T00:06:10.633Z");
                     userId = "string";
 
                 }};
@@ -536,7 +536,7 @@ public class Application {
                 "string"){{
                 storageFile = new StorageFile(
 ){{
-                    createdAt = OffsetDateTime.parse("2021-03-01T12:30:10.419Z");
+                    createdAt = OffsetDateTime.parse("2022-03-01T13:48:26.867Z");
                     description = "Customer-focused mission-critical monitoring";
                     downloadUrl = "string";
                     id = "<ID>";
@@ -557,7 +557,7 @@ public class Application {
 );
                     size = 2253.31d;
                     type = StorageFileType.FILE;
-                    updatedAt = OffsetDateTime.parse("2022-11-03T00:36:38.789Z");
+                    updatedAt = OffsetDateTime.parse("2023-11-03T15:19:05.454Z");
                     userId = "string";
 
                 }};
@@ -727,7 +727,7 @@ public class Application {
                     activityId = "string";
                     companyId = "string";
                     contactId = "string";
-                    createdAt = OffsetDateTime.parse("2021-02-11T14:36:52.051Z");
+                    createdAt = OffsetDateTime.parse("2022-02-11T15:31:35.167Z");
                     dealId = "string";
                     description = "Quality-focused mobile orchestration";
                     fileName = "circuit_extended.jpe";
@@ -739,7 +739,7 @@ public class Application {
                     leadId = "string";
                     raw = new PropertyCrmFileRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2021-09-11T08:15:48.719Z");
+                    updatedAt = OffsetDateTime.parse("2022-09-11T13:48:58.626Z");
                     userId = "string";
 
                 }};
@@ -805,7 +805,7 @@ public class Application {
                 "string"){{
                 storageFile = new StorageFile(
 ){{
-                    createdAt = OffsetDateTime.parse("2023-06-06T20:12:23.700Z");
+                    createdAt = OffsetDateTime.parse("2024-06-06T15:38:39.174Z");
                     description = "Polarised intangible architecture";
                     downloadUrl = "string";
                     id = "<ID>";
@@ -826,7 +826,7 @@ public class Application {
 );
                     size = 4091d;
                     type = StorageFileType.FOLDER;
-                    updatedAt = OffsetDateTime.parse("2021-06-25T17:25:38.480Z");
+                    updatedAt = OffsetDateTime.parse("2022-06-25T21:16:43.994Z");
                     userId = "string";
 
                 }};

@@ -42,20 +42,20 @@ public class Application {
                 "string"){{
                 atsApplication = new AtsApplication(
 ){{
-                    appliedAt = OffsetDateTime.parse("2023-03-09T11:35:08.252Z");
+                    appliedAt = OffsetDateTime.parse("2024-03-09T05:03:52.917Z");
                     candidateId = "string";
-                    createdAt = OffsetDateTime.parse("2023-09-22T15:02:56.144Z");
-                    hiredAt = OffsetDateTime.parse("2022-01-18T22:03:17.799Z");
+                    createdAt = OffsetDateTime.parse("2024-09-22T12:50:56.305Z");
+                    hiredAt = OffsetDateTime.parse("2023-01-19T06:26:51.678Z");
                     id = "<ID>";
                     jobId = "string";
                     originalStatus = "string";
                     raw = new PropertyAtsApplicationRaw(
 );
-                    rejectedAt = OffsetDateTime.parse("2022-01-29T22:20:11.749Z");
+                    rejectedAt = OffsetDateTime.parse("2023-01-30T06:58:14.500Z");
                     rejectedReason = "string";
                     source = "string";
                     status = AtsApplicationStatus.SECOND_INTERVIEW;
-                    updatedAt = OffsetDateTime.parse("2023-09-21T23:44:32.523Z");
+                    updatedAt = OffsetDateTime.parse("2024-09-21T21:31:42.360Z");
 
                 }};
 
@@ -179,7 +179,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2021-12-21T12:43:47.690Z");
+                updatedGte = OffsetDateTime.parse("2022-12-21T20:30:01.596Z");
 
             }};
 
@@ -240,20 +240,20 @@ public class Application {
                 "string"){{
                 atsApplication = new AtsApplication(
 ){{
-                    appliedAt = OffsetDateTime.parse("2022-12-15T04:58:14.527Z");
+                    appliedAt = OffsetDateTime.parse("2023-12-15T20:36:09.499Z");
                     candidateId = "string";
-                    createdAt = OffsetDateTime.parse("2021-01-06T05:50:03.360Z");
-                    hiredAt = OffsetDateTime.parse("2022-12-04T13:56:12.670Z");
+                    createdAt = OffsetDateTime.parse("2022-01-06T05:56:57.062Z");
+                    hiredAt = OffsetDateTime.parse("2023-12-05T05:20:09.174Z");
                     id = "<ID>";
                     jobId = "string";
                     originalStatus = "string";
                     raw = new PropertyAtsApplicationRaw(
 );
-                    rejectedAt = OffsetDateTime.parse("2021-07-12T22:20:57.326Z");
+                    rejectedAt = OffsetDateTime.parse("2022-07-13T02:34:40.392Z");
                     rejectedReason = "string";
                     source = "string";
                     status = AtsApplicationStatus.FIRST_INTERVIEW;
-                    updatedAt = OffsetDateTime.parse("2023-01-24T01:05:36.238Z");
+                    updatedAt = OffsetDateTime.parse("2024-01-24T17:35:54.628Z");
 
                 }};
 
@@ -368,20 +368,20 @@ public class Application {
                 "string"){{
                 atsApplication = new AtsApplication(
 ){{
-                    appliedAt = OffsetDateTime.parse("2021-08-22T07:14:38.941Z");
+                    appliedAt = OffsetDateTime.parse("2022-08-22T12:21:27.415Z");
                     candidateId = "string";
-                    createdAt = OffsetDateTime.parse("2021-06-04T09:23:07.789Z");
-                    hiredAt = OffsetDateTime.parse("2021-02-09T08:05:18.054Z");
+                    createdAt = OffsetDateTime.parse("2022-06-04T12:46:09.878Z");
+                    hiredAt = OffsetDateTime.parse("2022-02-09T08:57:01.906Z");
                     id = "<ID>";
                     jobId = "string";
                     originalStatus = "string";
                     raw = new PropertyAtsApplicationRaw(
 );
-                    rejectedAt = OffsetDateTime.parse("2023-07-19T08:25:10.616Z");
+                    rejectedAt = OffsetDateTime.parse("2024-07-19T04:47:20.215Z");
                     rejectedReason = "string";
                     source = "string";
                     status = AtsApplicationStatus.OFFERED;
-                    updatedAt = OffsetDateTime.parse("2022-03-16T17:33:44.222Z");
+                    updatedAt = OffsetDateTime.parse("2023-03-17T03:12:00.865Z");
 
                 }};
 

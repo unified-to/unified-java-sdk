@@ -42,7 +42,7 @@ public class Application {
                 "string"){{
                 hrisGroup = new HrisGroup(
 ){{
-                    createdAt = OffsetDateTime.parse("2022-08-11T13:14:46.931Z");
+                    createdAt = OffsetDateTime.parse("2023-08-12T02:07:27.193Z");
                     description = "Self-enabling system-worthy collaboration";
                     employeeIds = new String[]{{
                         add("string"),
@@ -57,7 +57,7 @@ public class Application {
                     raw = new PropertyHrisGroupRaw(
 );
                     type = HrisGroupType.TEAM;
-                    updatedAt = OffsetDateTime.parse("2023-03-10T00:20:29.321Z");
+                    updatedAt = OffsetDateTime.parse("2024-03-09T17:49:55.923Z");
 
                 }};
 
@@ -179,7 +179,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2021-04-29T22:04:03.121Z");
+                updatedGte = OffsetDateTime.parse("2022-04-30T00:40:26.357Z");
 
             }};
 
@@ -240,7 +240,7 @@ public class Application {
                 "string"){{
                 hrisGroup = new HrisGroup(
 ){{
-                    createdAt = OffsetDateTime.parse("2021-11-09T20:25:35.217Z");
+                    createdAt = OffsetDateTime.parse("2022-11-10T03:17:00.454Z");
                     description = "Compatible contextually-based local area network";
                     employeeIds = new String[]{{
                         add("string"),
@@ -255,7 +255,7 @@ public class Application {
                     raw = new PropertyHrisGroupRaw(
 );
                     type = HrisGroupType.DIVISION;
-                    updatedAt = OffsetDateTime.parse("2022-06-23T09:49:13.425Z");
+                    updatedAt = OffsetDateTime.parse("2023-06-23T21:37:16.122Z");
 
                 }};
 
@@ -370,7 +370,7 @@ public class Application {
                 "string"){{
                 hrisGroup = new HrisGroup(
 ){{
-                    createdAt = OffsetDateTime.parse("2021-12-06T17:42:02.933Z");
+                    createdAt = OffsetDateTime.parse("2022-12-07T01:08:49.621Z");
                     description = "Integrated empowering productivity";
                     employeeIds = new String[]{{
                         add("string"),
@@ -385,7 +385,7 @@ public class Application {
                     raw = new PropertyHrisGroupRaw(
 );
                     type = HrisGroupType.TEAM;
-                    updatedAt = OffsetDateTime.parse("2023-09-12T15:58:06.273Z");
+                    updatedAt = OffsetDateTime.parse("2024-09-12T13:33:00.416Z");
 
                 }};
 

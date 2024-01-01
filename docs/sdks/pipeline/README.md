@@ -41,7 +41,7 @@ public class Application {
                 "string"){{
                 crmPipeline = new CrmPipeline(
 ){{
-                    createdAt = OffsetDateTime.parse("2023-06-24T14:15:54.218Z");
+                    createdAt = OffsetDateTime.parse("2024-06-24T10:05:30.432Z");
                     dealProbability = false;
                     displayOrder = 6254.97d;
                     id = "<ID>";
@@ -49,7 +49,7 @@ public class Application {
                     name = "string";
                     raw = new PropertyCrmPipelineRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2021-12-01T06:10:18.007Z");
+                    updatedAt = OffsetDateTime.parse("2022-12-01T13:29:52.270Z");
 
                 }};
 
@@ -171,7 +171,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2021-04-29T15:47:27.871Z");
+                updatedGte = OffsetDateTime.parse("2022-04-29T18:23:30.472Z");
 
             }};
 
@@ -231,7 +231,7 @@ public class Application {
                 "string"){{
                 crmPipeline = new CrmPipeline(
 ){{
-                    createdAt = OffsetDateTime.parse("2023-08-26T17:19:01.949Z");
+                    createdAt = OffsetDateTime.parse("2024-08-26T14:31:39.156Z");
                     dealProbability = false;
                     displayOrder = 8620.92d;
                     id = "<ID>";
@@ -239,7 +239,7 @@ public class Application {
                     name = "string";
                     raw = new PropertyCrmPipelineRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2022-04-03T12:55:27.421Z");
+                    updatedAt = OffsetDateTime.parse("2023-04-03T22:57:09.090Z");
 
                 }};
 
@@ -353,7 +353,7 @@ public class Application {
                 "string"){{
                 crmPipeline = new CrmPipeline(
 ){{
-                    createdAt = OffsetDateTime.parse("2021-12-27T08:28:05.275Z");
+                    createdAt = OffsetDateTime.parse("2022-12-27T16:21:58.595Z");
                     dealProbability = false;
                     displayOrder = 8923.83d;
                     id = "<ID>";
@@ -361,7 +361,7 @@ public class Application {
                     name = "string";
                     raw = new PropertyCrmPipelineRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2022-07-18T01:45:20.441Z");
+                    updatedAt = OffsetDateTime.parse("2023-07-18T14:05:49.227Z");
 
                 }};
 

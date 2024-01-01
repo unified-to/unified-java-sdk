@@ -68,9 +68,9 @@ public class Application {
                         regionCode = "string";
 
                     }};
-                    createdAt = OffsetDateTime.parse("2023-10-07T18:03:23.931Z");
+                    createdAt = OffsetDateTime.parse("2024-10-07T16:11:17.542Z");
                     currency = "Tunisian Dinar";
-                    dateOfBirth = OffsetDateTime.parse("2021-09-15T16:13:17.445Z");
+                    dateOfBirth = OffsetDateTime.parse("2022-09-15T21:52:09.133Z");
                     department = "string";
                     division = "string";
                     emails = new com.unifiedapi.unifiedto.models.shared.HrisEmail[]{{
@@ -83,7 +83,7 @@ public class Application {
                     employmentStatus = EmploymentStatus.ACTIVE;
                     employmentType = HrisEmployeeEmploymentType.OTHER;
                     gender = HrisEmployeeGender.MALE;
-                    hiredAt = OffsetDateTime.parse("2022-04-01T13:27:50.152Z");
+                    hiredAt = OffsetDateTime.parse("2023-04-01T23:26:55.787Z");
                     id = "<ID>";
                     imageUrl = "string";
                     languageLocale = "string";
@@ -99,10 +99,10 @@ public class Application {
                             telephone = "string";
                         }}),
                     }};
-                    terminatedAt = OffsetDateTime.parse("2021-06-06T13:40:21.012Z");
+                    terminatedAt = OffsetDateTime.parse("2022-06-06T17:06:15.004Z");
                     timezone = "Australia/Melbourne";
                     title = "string";
-                    updatedAt = OffsetDateTime.parse("2022-02-26T07:00:32.887Z");
+                    updatedAt = OffsetDateTime.parse("2023-02-26T16:14:34.561Z");
 
                 }};
 
@@ -164,7 +164,7 @@ public class Application {
                 "string"){{
                 hrisGroup = new HrisGroup(
 ){{
-                    createdAt = OffsetDateTime.parse("2022-08-11T13:14:46.931Z");
+                    createdAt = OffsetDateTime.parse("2023-08-12T02:07:27.193Z");
                     description = "Self-enabling system-worthy collaboration";
                     employeeIds = new String[]{{
                         add("string"),
@@ -179,7 +179,7 @@ public class Application {
                     raw = new PropertyHrisGroupRaw(
 );
                     type = HrisGroupType.TEAM;
-                    updatedAt = OffsetDateTime.parse("2023-03-10T00:20:29.321Z");
+                    updatedAt = OffsetDateTime.parse("2024-03-09T17:49:55.923Z");
 
                 }};
 
@@ -358,7 +358,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2022-04-09T14:44:59.888Z");
+                updatedGte = OffsetDateTime.parse("2023-04-10T00:54:40.984Z");
 
             }};
 
@@ -421,7 +421,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2021-04-29T22:04:03.121Z");
+                updatedGte = OffsetDateTime.parse("2022-04-30T00:40:26.357Z");
 
             }};
 
@@ -502,9 +502,9 @@ public class Application {
                         regionCode = "string";
 
                     }};
-                    createdAt = OffsetDateTime.parse("2022-07-12T10:27:03.270Z");
+                    createdAt = OffsetDateTime.parse("2023-07-12T22:40:07.218Z");
                     currency = "Venezuelan bolívar";
-                    dateOfBirth = OffsetDateTime.parse("2023-05-04T09:04:41.512Z");
+                    dateOfBirth = OffsetDateTime.parse("2024-05-04T03:46:56.564Z");
                     department = "string";
                     division = "string";
                     emails = new com.unifiedapi.unifiedto.models.shared.HrisEmail[]{{
@@ -517,7 +517,7 @@ public class Application {
                     employmentStatus = EmploymentStatus.INACTIVE;
                     employmentType = HrisEmployeeEmploymentType.SEASONAL;
                     gender = HrisEmployeeGender.INTERSEX;
-                    hiredAt = OffsetDateTime.parse("2021-10-17T23:43:46.221Z");
+                    hiredAt = OffsetDateTime.parse("2022-10-18T06:05:07.523Z");
                     id = "<ID>";
                     imageUrl = "string";
                     languageLocale = "string";
@@ -533,10 +533,10 @@ public class Application {
                             telephone = "string";
                         }}),
                     }};
-                    terminatedAt = OffsetDateTime.parse("2023-03-20T00:58:31.370Z");
+                    terminatedAt = OffsetDateTime.parse("2024-03-19T18:41:09.098Z");
                     timezone = "Australia/Darwin";
                     title = "string";
-                    updatedAt = OffsetDateTime.parse("2023-05-06T23:32:48.401Z");
+                    updatedAt = OffsetDateTime.parse("2024-05-06T18:18:28.829Z");
 
                 }};
 
@@ -599,7 +599,7 @@ public class Application {
                 "string"){{
                 hrisGroup = new HrisGroup(
 ){{
-                    createdAt = OffsetDateTime.parse("2021-11-09T20:25:35.217Z");
+                    createdAt = OffsetDateTime.parse("2022-11-10T03:17:00.454Z");
                     description = "Compatible contextually-based local area network";
                     employeeIds = new String[]{{
                         add("string"),
@@ -614,7 +614,7 @@ public class Application {
                     raw = new PropertyHrisGroupRaw(
 );
                     type = HrisGroupType.DIVISION;
-                    updatedAt = OffsetDateTime.parse("2022-06-23T09:49:13.425Z");
+                    updatedAt = OffsetDateTime.parse("2023-06-23T21:37:16.122Z");
 
                 }};
 
@@ -801,9 +801,9 @@ public class Application {
                         regionCode = "string";
 
                     }};
-                    createdAt = OffsetDateTime.parse("2023-06-07T20:54:18.451Z");
+                    createdAt = OffsetDateTime.parse("2024-06-07T16:21:55.126Z");
                     currency = "Zimbabwe Dollar";
-                    dateOfBirth = OffsetDateTime.parse("2023-05-04T04:51:18.540Z");
+                    dateOfBirth = OffsetDateTime.parse("2024-05-03T23:33:19.708Z");
                     department = "string";
                     division = "string";
                     emails = new com.unifiedapi.unifiedto.models.shared.HrisEmail[]{{
@@ -816,7 +816,7 @@ public class Application {
                     employmentStatus = EmploymentStatus.ACTIVE;
                     employmentType = HrisEmployeeEmploymentType.CASUAL;
                     gender = HrisEmployeeGender.FEMALE;
-                    hiredAt = OffsetDateTime.parse("2023-03-14T02:34:09.315Z");
+                    hiredAt = OffsetDateTime.parse("2024-03-13T20:08:58.858Z");
                     id = "<ID>";
                     imageUrl = "string";
                     languageLocale = "string";
@@ -832,10 +832,10 @@ public class Application {
                             telephone = "string";
                         }}),
                     }};
-                    terminatedAt = OffsetDateTime.parse("2022-01-07T17:08:48.397Z");
+                    terminatedAt = OffsetDateTime.parse("2023-01-08T01:17:38.194Z");
                     timezone = "Asia/Karachi";
                     title = "string";
-                    updatedAt = OffsetDateTime.parse("2023-07-23T03:17:52.660Z");
+                    updatedAt = OffsetDateTime.parse("2024-07-22T23:45:01.037Z");
 
                 }};
 
@@ -898,7 +898,7 @@ public class Application {
                 "string"){{
                 hrisGroup = new HrisGroup(
 ){{
-                    createdAt = OffsetDateTime.parse("2021-12-06T17:42:02.933Z");
+                    createdAt = OffsetDateTime.parse("2022-12-07T01:08:49.621Z");
                     description = "Integrated empowering productivity";
                     employeeIds = new String[]{{
                         add("string"),
@@ -913,7 +913,7 @@ public class Application {
                     raw = new PropertyHrisGroupRaw(
 );
                     type = HrisGroupType.TEAM;
-                    updatedAt = OffsetDateTime.parse("2023-09-12T15:58:06.273Z");
+                    updatedAt = OffsetDateTime.parse("2024-09-12T13:33:00.416Z");
 
                 }};
 

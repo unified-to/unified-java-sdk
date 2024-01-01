@@ -83,7 +83,7 @@ public class Application {
                     "string"){{
                     balance = 6602.56d;
                     bankAccountNumber = "string";
-                    createdAt = OffsetDateTime.parse("2022-09-02T08:51:10.063Z");
+                    createdAt = OffsetDateTime.parse("2023-09-02T22:12:31.771Z");
                     currency = "Saint Helena Pound";
                     customerDefinedCode = "string";
                     description = "Cross-group zero defect task-force";
@@ -92,7 +92,7 @@ public class Application {
 );
                     status = Status.ACTIVE;
                     type = Type.EQUITY;
-                    updatedAt = OffsetDateTime.parse("2022-09-09T10:11:13.258Z");
+                    updatedAt = OffsetDateTime.parse("2023-09-09T23:41:51.681Z");
 
                 }};
 
@@ -172,7 +172,7 @@ public class Application {
                         regionCode = "string";
 
                     }};
-                    createdAt = OffsetDateTime.parse("2021-07-22T19:16:48.798Z");
+                    createdAt = OffsetDateTime.parse("2022-07-22T23:43:30.815Z");
                     currency = "Dalasi";
                     emails = new com.unifiedapi.unifiedto.models.shared.AccountingEmail[]{{
                         add(new AccountingEmail(
@@ -205,7 +205,7 @@ public class Application {
                             telephone = "string";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-12-07T14:42:11.734Z");
+                    updatedAt = OffsetDateTime.parse("2022-12-07T22:10:07.470Z");
 
                 }};
 
@@ -269,12 +269,12 @@ public class Application {
                 accountingInvoice = new AccountingInvoice(
 ){{
                     balanceAmount = 6736.06d;
-                    cancelledAt = OffsetDateTime.parse("2021-06-27T05:21:39.307Z");
-                    createdAt = OffsetDateTime.parse("2021-07-05T14:28:47.244Z");
+                    cancelledAt = OffsetDateTime.parse("2022-06-27T09:14:42.959Z");
+                    createdAt = OffsetDateTime.parse("2022-07-05T18:32:52.109Z");
                     currency = "Uzbekistan Sum";
                     customerId = "string";
                     discountAmount = 259.66d;
-                    dueAt = OffsetDateTime.parse("2022-04-30T05:18:12.430Z");
+                    dueAt = OffsetDateTime.parse("2023-04-30T15:54:59.455Z");
                     id = "<ID>";
                     invoiceNumber = "string";
                     lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingLineitem[]{{
@@ -287,15 +287,15 @@ public class Application {
                     }};
                     notes = "string";
                     paidAmount = 6572.32d;
-                    paidAt = OffsetDateTime.parse("2022-07-10T06:26:36.842Z");
+                    paidAt = OffsetDateTime.parse("2023-07-10T18:36:49.807Z");
                     raw = new PropertyAccountingInvoiceRaw(
 );
                     refundAmount = 1578.89d;
                     refundReason = "string";
-                    refundedAt = OffsetDateTime.parse("2022-08-26T15:09:50.054Z");
+                    refundedAt = OffsetDateTime.parse("2023-08-27T04:22:20.182Z");
                     taxAmount = 8057.4d;
                     totalAmount = 6864d;
-                    updatedAt = OffsetDateTime.parse("2023-01-23T15:26:28.999Z");
+                    updatedAt = OffsetDateTime.parse("2024-01-24T07:56:15.656Z");
 
                 }};
 
@@ -356,7 +356,7 @@ public class Application {
                 "string"){{
                 accountingItem = new AccountingItem(
                     "string"){{
-                    createdAt = OffsetDateTime.parse("2021-11-04T15:00:45.309Z");
+                    createdAt = OffsetDateTime.parse("2022-11-04T21:45:18.227Z");
                     description = "Team-oriented grid-enabled open system";
                     id = "<ID>";
                     isActive = false;
@@ -367,7 +367,7 @@ public class Application {
                     raw = new PropertyAccountingItemRaw(
 );
                     sku = "string";
-                    updatedAt = OffsetDateTime.parse("2023-04-05T14:16:42.877Z");
+                    updatedAt = OffsetDateTime.parse("2024-04-05T08:21:06.807Z");
 
                 }};
 
@@ -428,7 +428,7 @@ public class Application {
                 "string"){{
                 accountingPayment = new AccountingPayment(
 ){{
-                    createdAt = OffsetDateTime.parse("2023-01-27T20:38:27.181Z");
+                    createdAt = OffsetDateTime.parse("2024-01-28T13:13:46.548Z");
                     currency = "Lari";
                     customerId = "string";
                     id = "<ID>";
@@ -441,7 +441,7 @@ public class Application {
 );
                     reference = "string";
                     totalAmount = 291.36d;
-                    updatedAt = OffsetDateTime.parse("2022-09-30T13:35:20.411Z");
+                    updatedAt = OffsetDateTime.parse("2023-10-01T03:33:47.004Z");
 
                 }};
 
@@ -503,13 +503,13 @@ public class Application {
                 accountingTaxrate = new AccountingTaxrate(
                     "string",
                     1719.1d){{
-                    createdAt = OffsetDateTime.parse("2021-09-20T11:21:00.826Z");
+                    createdAt = OffsetDateTime.parse("2022-09-20T17:06:11.018Z");
                     description = "Ergonomic regional neural-net";
                     id = "<ID>";
                     isActive = false;
                     raw = new PropertyAccountingTaxrateRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2022-12-27T07:12:37.927Z");
+                    updatedAt = OffsetDateTime.parse("2023-12-27T23:06:27.112Z");
 
                 }};
 
@@ -1108,7 +1108,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2023-04-20T03:09:57.234Z");
+                updatedGte = OffsetDateTime.parse("2024-04-19T21:33:28.191Z");
 
             }};
 
@@ -1171,7 +1171,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2021-08-23T13:14:33.970Z");
+                updatedGte = OffsetDateTime.parse("2022-08-23T18:23:01.069Z");
 
             }};
 
@@ -1235,7 +1235,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2021-05-23T15:55:15.727Z");
+                updatedGte = OffsetDateTime.parse("2022-05-23T19:02:52.454Z");
 
             }};
 
@@ -1298,7 +1298,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2022-11-10T02:16:10.814Z");
+                updatedGte = OffsetDateTime.parse("2023-11-10T17:07:55.262Z");
 
             }};
 
@@ -1361,7 +1361,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2022-04-02T08:55:00.055Z");
+                updatedGte = OffsetDateTime.parse("2023-04-02T18:55:09.644Z");
 
             }};
 
@@ -1426,7 +1426,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2023-02-25T01:03:12.222Z");
+                updatedGte = OffsetDateTime.parse("2024-02-25T18:15:35.411Z");
 
             }};
 
@@ -1489,7 +1489,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2022-06-14T02:55:23.362Z");
+                updatedGte = OffsetDateTime.parse("2023-06-14T14:31:13.247Z");
 
             }};
 
@@ -1552,7 +1552,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2023-12-02T12:59:27.985Z");
+                updatedGte = OffsetDateTime.parse("2024-12-02T12:20:43.572Z");
 
             }};
 
@@ -1616,7 +1616,7 @@ public class Application {
                     "string"){{
                     balance = 1931.26d;
                     bankAccountNumber = "string";
-                    createdAt = OffsetDateTime.parse("2022-01-09T05:24:17.966Z");
+                    createdAt = OffsetDateTime.parse("2023-01-09T13:35:06.969Z");
                     currency = "Won";
                     customerDefinedCode = "string";
                     description = "Quality-focused multimedia implementation";
@@ -1625,7 +1625,7 @@ public class Application {
 );
                     status = Status.ARCHIVED;
                     type = Type.REVENUE;
-                    updatedAt = OffsetDateTime.parse("2023-12-10T11:14:55.383Z");
+                    updatedAt = OffsetDateTime.parse("2024-12-10T10:46:36.474Z");
 
                 }};
 
@@ -1706,7 +1706,7 @@ public class Application {
                         regionCode = "string";
 
                     }};
-                    createdAt = OffsetDateTime.parse("2023-08-27T01:00:12.169Z");
+                    createdAt = OffsetDateTime.parse("2024-08-26T22:13:14.646Z");
                     currency = "Kina";
                     emails = new com.unifiedapi.unifiedto.models.shared.AccountingEmail[]{{
                         add(new AccountingEmail(
@@ -1739,7 +1739,7 @@ public class Application {
                             telephone = "string";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-02-08T06:05:59.693Z");
+                    updatedAt = OffsetDateTime.parse("2023-02-08T14:56:18.103Z");
 
                 }};
 
@@ -1804,12 +1804,12 @@ public class Application {
                 accountingInvoice = new AccountingInvoice(
 ){{
                     balanceAmount = 7374.1d;
-                    cancelledAt = OffsetDateTime.parse("2023-12-18T11:43:07.271Z");
-                    createdAt = OffsetDateTime.parse("2022-06-13T18:03:55.091Z");
+                    cancelledAt = OffsetDateTime.parse("2024-12-18T11:25:21.140Z");
+                    createdAt = OffsetDateTime.parse("2023-06-14T05:39:15.854Z");
                     currency = "Gold";
                     customerId = "string";
                     discountAmount = 9127.96d;
-                    dueAt = OffsetDateTime.parse("2023-07-05T09:52:05.856Z");
+                    dueAt = OffsetDateTime.parse("2024-07-05T05:55:55.560Z");
                     id = "<ID>";
                     invoiceNumber = "string";
                     lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingLineitem[]{{
@@ -1822,15 +1822,15 @@ public class Application {
                     }};
                     notes = "string";
                     paidAmount = 1152.38d;
-                    paidAt = OffsetDateTime.parse("2022-03-23T04:43:31.245Z");
+                    paidAt = OffsetDateTime.parse("2023-03-23T14:30:18.013Z");
                     raw = new PropertyAccountingInvoiceRaw(
 );
                     refundAmount = 6443.77d;
                     refundReason = "string";
-                    refundedAt = OffsetDateTime.parse("2021-08-20T20:08:59.249Z");
+                    refundedAt = OffsetDateTime.parse("2022-08-21T01:13:52.344Z");
                     taxAmount = 3028.19d;
                     totalAmount = 1140.08d;
-                    updatedAt = OffsetDateTime.parse("2022-05-13T12:16:20.651Z");
+                    updatedAt = OffsetDateTime.parse("2023-05-13T23:10:36.341Z");
 
                 }};
 
@@ -1892,7 +1892,7 @@ public class Application {
                 "string"){{
                 accountingItem = new AccountingItem(
                     "string"){{
-                    createdAt = OffsetDateTime.parse("2021-09-11T19:48:47.302Z");
+                    createdAt = OffsetDateTime.parse("2022-09-12T01:22:35.181Z");
                     description = "Operative coherent forecast";
                     id = "<ID>";
                     isActive = false;
@@ -1903,7 +1903,7 @@ public class Application {
                     raw = new PropertyAccountingItemRaw(
 );
                     sku = "string";
-                    updatedAt = OffsetDateTime.parse("2022-11-18T10:09:49.214Z");
+                    updatedAt = OffsetDateTime.parse("2023-11-19T01:12:30.848Z");
 
                 }};
 
@@ -1965,7 +1965,7 @@ public class Application {
                 "string"){{
                 accountingPayment = new AccountingPayment(
 ){{
-                    createdAt = OffsetDateTime.parse("2021-02-25T01:44:17.944Z");
+                    createdAt = OffsetDateTime.parse("2022-02-25T02:56:43.385Z");
                     currency = "Boliviano boliviano";
                     customerId = "string";
                     id = "<ID>";
@@ -1978,7 +1978,7 @@ public class Application {
 );
                     reference = "string";
                     totalAmount = 8698.74d;
-                    updatedAt = OffsetDateTime.parse("2022-11-07T21:51:56.510Z");
+                    updatedAt = OffsetDateTime.parse("2023-11-08T12:40:48.671Z");
 
                 }};
 
@@ -2041,13 +2041,13 @@ public class Application {
                 accountingTaxrate = new AccountingTaxrate(
                     "string",
                     5991.47d){{
-                    createdAt = OffsetDateTime.parse("2023-01-29T05:25:29.500Z");
+                    createdAt = OffsetDateTime.parse("2024-01-29T22:02:36.650Z");
                     description = "Upgradable coherent adapter";
                     id = "<ID>";
                     isActive = false;
                     raw = new PropertyAccountingTaxrateRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2023-01-16T18:23:47.556Z");
+                    updatedAt = OffsetDateTime.parse("2024-01-17T10:44:31.599Z");
 
                 }};
 
@@ -2556,7 +2556,7 @@ public class Application {
                     "string"){{
                     balance = 5954.09d;
                     bankAccountNumber = "string";
-                    createdAt = OffsetDateTime.parse("2021-05-21T20:36:10.841Z");
+                    createdAt = OffsetDateTime.parse("2022-05-21T23:41:25.152Z");
                     currency = "Tanzanian Shilling";
                     customerDefinedCode = "string";
                     description = "Stand-alone grid-enabled model";
@@ -2565,7 +2565,7 @@ public class Application {
 );
                     status = Status.ACTIVE;
                     type = Type.BANK;
-                    updatedAt = OffsetDateTime.parse("2021-04-02T17:59:24.345Z");
+                    updatedAt = OffsetDateTime.parse("2022-04-02T20:00:03.765Z");
 
                 }};
 
@@ -2646,7 +2646,7 @@ public class Application {
                         regionCode = "string";
 
                     }};
-                    createdAt = OffsetDateTime.parse("2023-05-08T08:34:01.295Z");
+                    createdAt = OffsetDateTime.parse("2024-05-08T03:21:30.283Z");
                     currency = "Guinea Franc";
                     emails = new com.unifiedapi.unifiedto.models.shared.AccountingEmail[]{{
                         add(new AccountingEmail(
@@ -2679,7 +2679,7 @@ public class Application {
                             telephone = "string";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-07-26T10:11:07.824Z");
+                    updatedAt = OffsetDateTime.parse("2023-07-26T22:42:35.557Z");
 
                 }};
 
@@ -2744,12 +2744,12 @@ public class Application {
                 accountingInvoice = new AccountingInvoice(
 ){{
                     balanceAmount = 6974.28d;
-                    cancelledAt = OffsetDateTime.parse("2022-06-02T19:25:29.417Z");
-                    createdAt = OffsetDateTime.parse("2021-07-10T19:18:48.997Z");
+                    cancelledAt = OffsetDateTime.parse("2023-06-03T06:46:26.704Z");
+                    createdAt = OffsetDateTime.parse("2022-07-10T23:29:44.275Z");
                     currency = "Forint";
                     customerId = "string";
                     discountAmount = 2579.09d;
-                    dueAt = OffsetDateTime.parse("2022-12-25T00:33:40.514Z");
+                    dueAt = OffsetDateTime.parse("2023-12-25T16:24:30.030Z");
                     id = "<ID>";
                     invoiceNumber = "string";
                     lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingLineitem[]{{
@@ -2762,15 +2762,15 @@ public class Application {
                     }};
                     notes = "string";
                     paidAmount = 2842.49d;
-                    paidAt = OffsetDateTime.parse("2021-06-05T12:20:35.409Z");
+                    paidAt = OffsetDateTime.parse("2022-06-05T15:45:06.127Z");
                     raw = new PropertyAccountingInvoiceRaw(
 );
                     refundAmount = 3314.72d;
                     refundReason = "string";
-                    refundedAt = OffsetDateTime.parse("2023-04-06T02:08:30.487Z");
+                    refundedAt = OffsetDateTime.parse("2024-04-05T20:13:33.419Z");
                     taxAmount = 7716.41d;
                     totalAmount = 3824.24d;
-                    updatedAt = OffsetDateTime.parse("2021-11-18T22:14:50.421Z");
+                    updatedAt = OffsetDateTime.parse("2022-11-19T05:18:11.782Z");
 
                 }};
 
@@ -2832,7 +2832,7 @@ public class Application {
                 "string"){{
                 accountingItem = new AccountingItem(
                     "string"){{
-                    createdAt = OffsetDateTime.parse("2021-03-31T21:33:39.658Z");
+                    createdAt = OffsetDateTime.parse("2022-03-31T23:31:53.009Z");
                     description = "Programmable modular artificial intelligence";
                     id = "<ID>";
                     isActive = false;
@@ -2843,7 +2843,7 @@ public class Application {
                     raw = new PropertyAccountingItemRaw(
 );
                     sku = "string";
-                    updatedAt = OffsetDateTime.parse("2021-12-08T23:08:08.961Z");
+                    updatedAt = OffsetDateTime.parse("2022-12-09T06:37:51.326Z");
 
                 }};
 
@@ -2905,7 +2905,7 @@ public class Application {
                 "string"){{
                 accountingPayment = new AccountingPayment(
 ){{
-                    createdAt = OffsetDateTime.parse("2021-01-04T17:25:22.482Z");
+                    createdAt = OffsetDateTime.parse("2022-01-04T17:30:16.475Z");
                     currency = "Sudanese Pound";
                     customerId = "string";
                     id = "<ID>";
@@ -2918,7 +2918,7 @@ public class Application {
 );
                     reference = "string";
                     totalAmount = 1869.63d;
-                    updatedAt = OffsetDateTime.parse("2021-05-14T15:37:22.784Z");
+                    updatedAt = OffsetDateTime.parse("2022-05-14T18:33:08.394Z");
 
                 }};
 
@@ -2981,13 +2981,13 @@ public class Application {
                 accountingTaxrate = new AccountingTaxrate(
                     "string",
                     3382.78d){{
-                    createdAt = OffsetDateTime.parse("2023-07-16T05:06:34.184Z");
+                    createdAt = OffsetDateTime.parse("2024-07-16T01:24:36.188Z");
                     description = "Open-source human-resource database";
                     id = "<ID>";
                     isActive = false;
                     raw = new PropertyAccountingTaxrateRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2021-03-21T09:13:35.294Z");
+                    updatedAt = OffsetDateTime.parse("2022-03-21T10:57:59.053Z");
 
                 }};
 

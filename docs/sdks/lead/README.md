@@ -61,7 +61,7 @@ public class Application {
                     companyId = "string";
                     companyName = "Langosh - Fritsch";
                     contactId = "string";
-                    createdAt = OffsetDateTime.parse("2022-12-22T23:40:58.272Z");
+                    createdAt = OffsetDateTime.parse("2023-12-23T15:29:07.093Z");
                     creatorUserId = "string";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(
@@ -80,7 +80,7 @@ public class Application {
                             telephone = "string";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-09-01T21:13:09.210Z");
+                    updatedAt = OffsetDateTime.parse("2024-09-01T18:33:52.670Z");
                     userId = "string";
 
                 }};
@@ -205,7 +205,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2023-01-11T15:13:29.920Z");
+                updatedGte = OffsetDateTime.parse("2024-01-12T07:27:29.016Z");
 
             }};
 
@@ -285,7 +285,7 @@ public class Application {
                     companyId = "string";
                     companyName = "Altenwerth, Lebsack and Wintheiser";
                     contactId = "string";
-                    createdAt = OffsetDateTime.parse("2022-12-15T21:54:30.872Z");
+                    createdAt = OffsetDateTime.parse("2023-12-16T13:33:21.530Z");
                     creatorUserId = "string";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(
@@ -304,7 +304,7 @@ public class Application {
                             telephone = "string";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2021-10-10T05:25:00.043Z");
+                    updatedAt = OffsetDateTime.parse("2022-10-10T11:36:08.811Z");
                     userId = "string";
 
                 }};
@@ -439,7 +439,7 @@ public class Application {
                     companyId = "string";
                     companyName = "Gibson - Cummings";
                     contactId = "string";
-                    createdAt = OffsetDateTime.parse("2023-12-12T09:21:19.873Z");
+                    createdAt = OffsetDateTime.parse("2024-12-12T08:55:32.549Z");
                     creatorUserId = "string";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(
@@ -458,7 +458,7 @@ public class Application {
                             telephone = "string";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-06-13T22:33:13.952Z");
+                    updatedAt = OffsetDateTime.parse("2023-06-14T10:08:49.472Z");
                     userId = "string";
 
                 }};

@@ -51,14 +51,14 @@ public class Application {
                         add(new AtsAddress(
                         ){{}}),
                     }};
-                    closedAt = OffsetDateTime.parse("2021-01-14T18:13:00.731Z");
+                    closedAt = OffsetDateTime.parse("2022-01-14T18:31:06.376Z");
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(
                         AtsCompensationType.EQUITY){{
                             type = AtsCompensationType.STOCK_OPTIONS;
                         }}),
                     }};
-                    createdAt = OffsetDateTime.parse("2022-03-05T06:41:41.152Z");
+                    createdAt = OffsetDateTime.parse("2023-03-05T16:04:54.121Z");
                     departments = new String[]{{
                         add("string"),
                     }};
@@ -80,7 +80,7 @@ public class Application {
                     }};
                     remote = false;
                     status = AtsJobStatus.CLOSED;
-                    updatedAt = OffsetDateTime.parse("2023-01-24T10:09:39.331Z");
+                    updatedAt = OffsetDateTime.parse("2024-01-25T02:40:27.531Z");
 
                 }};
 
@@ -202,7 +202,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2022-03-03T15:53:00.086Z");
+                updatedGte = OffsetDateTime.parse("2023-03-04T01:14:05.456Z");
 
             }};
 
@@ -272,14 +272,14 @@ public class Application {
                         add(new AtsAddress(
                         ){{}}),
                     }};
-                    closedAt = OffsetDateTime.parse("2021-08-09T12:54:15.288Z");
+                    closedAt = OffsetDateTime.parse("2022-08-09T17:44:16.617Z");
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(
                         AtsCompensationType.EQUITY){{
                             type = AtsCompensationType.SALARY;
                         }}),
                     }};
-                    createdAt = OffsetDateTime.parse("2021-03-27T19:07:06.669Z");
+                    createdAt = OffsetDateTime.parse("2022-03-27T20:59:56.374Z");
                     departments = new String[]{{
                         add("string"),
                     }};
@@ -301,7 +301,7 @@ public class Application {
                     }};
                     remote = false;
                     status = AtsJobStatus.ARCHIVED;
-                    updatedAt = OffsetDateTime.parse("2023-10-30T02:05:51.064Z");
+                    updatedAt = OffsetDateTime.parse("2024-10-30T00:43:07.001Z");
 
                 }};
 
@@ -425,14 +425,14 @@ public class Application {
                         add(new AtsAddress(
                         ){{}}),
                     }};
-                    closedAt = OffsetDateTime.parse("2022-10-20T17:16:11.353Z");
+                    closedAt = OffsetDateTime.parse("2023-10-21T07:41:08.131Z");
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(
                         AtsCompensationType.BONUS){{
                             type = AtsCompensationType.BONUS;
                         }}),
                     }};
-                    createdAt = OffsetDateTime.parse("2022-01-19T09:16:59.292Z");
+                    createdAt = OffsetDateTime.parse("2023-01-19T17:41:10.086Z");
                     departments = new String[]{{
                         add("string"),
                     }};
@@ -454,7 +454,7 @@ public class Application {
                     }};
                     remote = false;
                     status = AtsJobStatus.ARCHIVED;
-                    updatedAt = OffsetDateTime.parse("2022-05-26T20:04:55.537Z");
+                    updatedAt = OffsetDateTime.parse("2023-05-27T07:16:42.656Z");
 
                 }};
 

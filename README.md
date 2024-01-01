@@ -12,7 +12,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.12.16'
+implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.12.17'
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -50,7 +50,7 @@ public class Application {
                     "string"){{
                     balance = 6602.56d;
                     bankAccountNumber = "string";
-                    createdAt = OffsetDateTime.parse("2022-09-02T08:51:10.063Z");
+                    createdAt = OffsetDateTime.parse("2023-09-02T22:12:31.771Z");
                     currency = "Saint Helena Pound";
                     customerDefinedCode = "string";
                     description = "Cross-group zero defect task-force";
@@ -59,7 +59,7 @@ public class Application {
 );
                     status = Status.ACTIVE;
                     type = Type.EQUITY;
-                    updatedAt = OffsetDateTime.parse("2022-09-09T10:11:13.258Z");
+                    updatedAt = OffsetDateTime.parse("2023-09-09T23:41:51.681Z");
 
                 }};
 

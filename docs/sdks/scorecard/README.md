@@ -45,7 +45,7 @@ public class Application {
                     applicationId = "string";
                     candidateId = "string";
                     comment = "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J";
-                    createdAt = OffsetDateTime.parse("2021-04-24T07:49:32.768Z");
+                    createdAt = OffsetDateTime.parse("2022-04-24T10:18:34.661Z");
                     id = "<ID>";
                     interviewId = "string";
                     interviewerId = "string";
@@ -53,7 +53,7 @@ public class Application {
                     raw = new PropertyAtsScorecardRaw(
 );
                     recommendation = Recommendation.NO;
-                    updatedAt = OffsetDateTime.parse("2022-04-01T17:31:47.454Z");
+                    updatedAt = OffsetDateTime.parse("2023-04-02T03:31:06.456Z");
 
                 }};
 
@@ -179,7 +179,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2023-08-19T17:42:56.145Z");
+                updatedGte = OffsetDateTime.parse("2024-08-19T14:46:22.333Z");
 
             }};
 
@@ -243,7 +243,7 @@ public class Application {
                     applicationId = "string";
                     candidateId = "string";
                     comment = "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support";
-                    createdAt = OffsetDateTime.parse("2023-10-06T15:26:03.447Z");
+                    createdAt = OffsetDateTime.parse("2024-10-06T13:32:29.533Z");
                     id = "<ID>";
                     interviewId = "string";
                     interviewerId = "string";
@@ -251,7 +251,7 @@ public class Application {
                     raw = new PropertyAtsScorecardRaw(
 );
                     recommendation = Recommendation.YES;
-                    updatedAt = OffsetDateTime.parse("2021-11-28T07:58:12.100Z");
+                    updatedAt = OffsetDateTime.parse("2022-11-28T15:13:55.563Z");
 
                 }};
 
@@ -369,7 +369,7 @@ public class Application {
                     applicationId = "string";
                     candidateId = "string";
                     comment = "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive";
-                    createdAt = OffsetDateTime.parse("2021-07-10T12:08:12.226Z");
+                    createdAt = OffsetDateTime.parse("2022-07-10T16:18:43.908Z");
                     id = "<ID>";
                     interviewId = "string";
                     interviewerId = "string";
@@ -377,7 +377,7 @@ public class Application {
                     raw = new PropertyAtsScorecardRaw(
 );
                     recommendation = Recommendation.NO;
-                    updatedAt = OffsetDateTime.parse("2021-07-26T04:45:45.856Z");
+                    updatedAt = OffsetDateTime.parse("2022-07-26T09:16:55.761Z");
 
                 }};
 

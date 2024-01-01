@@ -46,7 +46,7 @@ public class Application {
                     name = "string";
                     raw = new PropertyMarketingListRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2022-10-15T11:18:03.715Z");
+                    updatedAt = OffsetDateTime.parse("2023-10-16T01:36:06.349Z");
 
                 }};
 
@@ -168,7 +168,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2021-09-12T06:44:44.684Z");
+                updatedGte = OffsetDateTime.parse("2022-09-12T12:19:08.506Z");
 
             }};
 
@@ -233,7 +233,7 @@ public class Application {
                     name = "string";
                     raw = new PropertyMarketingListRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2022-10-07T20:57:43.081Z");
+                    updatedAt = OffsetDateTime.parse("2023-10-08T11:05:46.244Z");
 
                 }};
 
@@ -352,7 +352,7 @@ public class Application {
                     name = "string";
                     raw = new PropertyMarketingListRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2023-09-02T06:01:18.792Z");
+                    updatedAt = OffsetDateTime.parse("2024-09-02T03:22:31.192Z");
 
                 }};
 

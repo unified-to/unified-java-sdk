@@ -59,7 +59,7 @@ public class Application {
                         regionCode = "string";
 
                     }};
-                    createdAt = OffsetDateTime.parse("2023-02-02T17:21:10.729Z");
+                    createdAt = OffsetDateTime.parse("2024-02-03T10:04:12.712Z");
                     dealIds = new String[]{{
                         add("string"),
                     }};
@@ -88,7 +88,7 @@ public class Application {
                         }}),
                     }};
                     timezone = "Europe/Bucharest";
-                    updatedAt = OffsetDateTime.parse("2022-10-03T05:30:56.861Z");
+                    updatedAt = OffsetDateTime.parse("2023-10-03T19:32:53.625Z");
                     websites = new String[]{{
                         add("string"),
                     }};
@@ -215,7 +215,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2022-05-02T07:12:37.628Z");
+                updatedGte = OffsetDateTime.parse("2023-05-02T17:52:08.731Z");
 
             }};
 
@@ -347,7 +347,7 @@ public class Application {
                         regionCode = "string";
 
                     }};
-                    createdAt = OffsetDateTime.parse("2021-01-19T16:28:56.295Z");
+                    createdAt = OffsetDateTime.parse("2022-01-19T16:53:30.758Z");
                     dealIds = new String[]{{
                         add("string"),
                     }};
@@ -376,7 +376,7 @@ public class Application {
                         }}),
                     }};
                     timezone = "Europe/Skopje";
-                    updatedAt = OffsetDateTime.parse("2021-04-08T06:12:00.839Z");
+                    updatedAt = OffsetDateTime.parse("2022-04-08T08:19:54.922Z");
                     websites = new String[]{{
                         add("string"),
                     }};
@@ -510,7 +510,7 @@ public class Application {
                         regionCode = "string";
 
                     }};
-                    createdAt = OffsetDateTime.parse("2022-06-18T22:28:27.597Z");
+                    createdAt = OffsetDateTime.parse("2023-06-19T10:10:37.376Z");
                     dealIds = new String[]{{
                         add("string"),
                     }};
@@ -539,7 +539,7 @@ public class Application {
                         }}),
                     }};
                     timezone = "Africa/Harare";
-                    updatedAt = OffsetDateTime.parse("2022-09-13T00:13:39.786Z");
+                    updatedAt = OffsetDateTime.parse("2023-09-13T13:49:01.082Z");
                     websites = new String[]{{
                         add("string"),
                     }};

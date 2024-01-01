@@ -44,12 +44,12 @@ public class Application {
                 accountingInvoice = new AccountingInvoice(
 ){{
                     balanceAmount = 6736.06d;
-                    cancelledAt = OffsetDateTime.parse("2021-06-27T05:21:39.307Z");
-                    createdAt = OffsetDateTime.parse("2021-07-05T14:28:47.244Z");
+                    cancelledAt = OffsetDateTime.parse("2022-06-27T09:14:42.959Z");
+                    createdAt = OffsetDateTime.parse("2022-07-05T18:32:52.109Z");
                     currency = "Uzbekistan Sum";
                     customerId = "string";
                     discountAmount = 259.66d;
-                    dueAt = OffsetDateTime.parse("2022-04-30T05:18:12.430Z");
+                    dueAt = OffsetDateTime.parse("2023-04-30T15:54:59.455Z");
                     id = "<ID>";
                     invoiceNumber = "string";
                     lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingLineitem[]{{
@@ -62,15 +62,15 @@ public class Application {
                     }};
                     notes = "string";
                     paidAmount = 6572.32d;
-                    paidAt = OffsetDateTime.parse("2022-07-10T06:26:36.842Z");
+                    paidAt = OffsetDateTime.parse("2023-07-10T18:36:49.807Z");
                     raw = new PropertyAccountingInvoiceRaw(
 );
                     refundAmount = 1578.89d;
                     refundReason = "string";
-                    refundedAt = OffsetDateTime.parse("2022-08-26T15:09:50.054Z");
+                    refundedAt = OffsetDateTime.parse("2023-08-27T04:22:20.182Z");
                     taxAmount = 8057.4d;
                     totalAmount = 6864d;
-                    updatedAt = OffsetDateTime.parse("2023-01-23T15:26:28.999Z");
+                    updatedAt = OffsetDateTime.parse("2024-01-24T07:56:15.656Z");
 
                 }};
 
@@ -193,7 +193,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2021-05-23T15:55:15.727Z");
+                updatedGte = OffsetDateTime.parse("2022-05-23T19:02:52.454Z");
 
             }};
 
@@ -256,12 +256,12 @@ public class Application {
                 accountingInvoice = new AccountingInvoice(
 ){{
                     balanceAmount = 7374.1d;
-                    cancelledAt = OffsetDateTime.parse("2023-12-18T11:43:07.271Z");
-                    createdAt = OffsetDateTime.parse("2022-06-13T18:03:55.091Z");
+                    cancelledAt = OffsetDateTime.parse("2024-12-18T11:25:21.140Z");
+                    createdAt = OffsetDateTime.parse("2023-06-14T05:39:15.854Z");
                     currency = "Gold";
                     customerId = "string";
                     discountAmount = 9127.96d;
-                    dueAt = OffsetDateTime.parse("2023-07-05T09:52:05.856Z");
+                    dueAt = OffsetDateTime.parse("2024-07-05T05:55:55.560Z");
                     id = "<ID>";
                     invoiceNumber = "string";
                     lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingLineitem[]{{
@@ -274,15 +274,15 @@ public class Application {
                     }};
                     notes = "string";
                     paidAmount = 1152.38d;
-                    paidAt = OffsetDateTime.parse("2022-03-23T04:43:31.245Z");
+                    paidAt = OffsetDateTime.parse("2023-03-23T14:30:18.013Z");
                     raw = new PropertyAccountingInvoiceRaw(
 );
                     refundAmount = 6443.77d;
                     refundReason = "string";
-                    refundedAt = OffsetDateTime.parse("2021-08-20T20:08:59.249Z");
+                    refundedAt = OffsetDateTime.parse("2022-08-21T01:13:52.344Z");
                     taxAmount = 3028.19d;
                     totalAmount = 1140.08d;
-                    updatedAt = OffsetDateTime.parse("2022-05-13T12:16:20.651Z");
+                    updatedAt = OffsetDateTime.parse("2023-05-13T23:10:36.341Z");
 
                 }};
 
@@ -399,12 +399,12 @@ public class Application {
                 accountingInvoice = new AccountingInvoice(
 ){{
                     balanceAmount = 6974.28d;
-                    cancelledAt = OffsetDateTime.parse("2022-06-02T19:25:29.417Z");
-                    createdAt = OffsetDateTime.parse("2021-07-10T19:18:48.997Z");
+                    cancelledAt = OffsetDateTime.parse("2023-06-03T06:46:26.704Z");
+                    createdAt = OffsetDateTime.parse("2022-07-10T23:29:44.275Z");
                     currency = "Forint";
                     customerId = "string";
                     discountAmount = 2579.09d;
-                    dueAt = OffsetDateTime.parse("2022-12-25T00:33:40.514Z");
+                    dueAt = OffsetDateTime.parse("2023-12-25T16:24:30.030Z");
                     id = "<ID>";
                     invoiceNumber = "string";
                     lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingLineitem[]{{
@@ -417,15 +417,15 @@ public class Application {
                     }};
                     notes = "string";
                     paidAmount = 2842.49d;
-                    paidAt = OffsetDateTime.parse("2021-06-05T12:20:35.409Z");
+                    paidAt = OffsetDateTime.parse("2022-06-05T15:45:06.127Z");
                     raw = new PropertyAccountingInvoiceRaw(
 );
                     refundAmount = 3314.72d;
                     refundReason = "string";
-                    refundedAt = OffsetDateTime.parse("2023-04-06T02:08:30.487Z");
+                    refundedAt = OffsetDateTime.parse("2024-04-05T20:13:33.419Z");
                     taxAmount = 7716.41d;
                     totalAmount = 3824.24d;
-                    updatedAt = OffsetDateTime.parse("2021-11-18T22:14:50.421Z");
+                    updatedAt = OffsetDateTime.parse("2022-11-19T05:18:11.782Z");
 
                 }};
 

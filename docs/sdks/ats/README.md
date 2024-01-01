@@ -73,20 +73,20 @@ public class Application {
                 "string"){{
                 atsApplication = new AtsApplication(
 ){{
-                    appliedAt = OffsetDateTime.parse("2023-03-09T11:35:08.252Z");
+                    appliedAt = OffsetDateTime.parse("2024-03-09T05:03:52.917Z");
                     candidateId = "string";
-                    createdAt = OffsetDateTime.parse("2023-09-22T15:02:56.144Z");
-                    hiredAt = OffsetDateTime.parse("2022-01-18T22:03:17.799Z");
+                    createdAt = OffsetDateTime.parse("2024-09-22T12:50:56.305Z");
+                    hiredAt = OffsetDateTime.parse("2023-01-19T06:26:51.678Z");
                     id = "<ID>";
                     jobId = "string";
                     originalStatus = "string";
                     raw = new PropertyAtsApplicationRaw(
 );
-                    rejectedAt = OffsetDateTime.parse("2022-01-29T22:20:11.749Z");
+                    rejectedAt = OffsetDateTime.parse("2023-01-30T06:58:14.500Z");
                     rejectedReason = "string";
                     source = "string";
                     status = AtsApplicationStatus.SECOND_INTERVIEW;
-                    updatedAt = OffsetDateTime.parse("2023-09-21T23:44:32.523Z");
+                    updatedAt = OffsetDateTime.parse("2024-09-21T21:31:42.360Z");
 
                 }};
 
@@ -165,7 +165,7 @@ public class Application {
 
                     }};
                     companyName = "Pollich - Lubowitz";
-                    createdAt = OffsetDateTime.parse("2021-03-05T23:23:31.487Z");
+                    createdAt = OffsetDateTime.parse("2022-03-06T00:47:39.352Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
                         add(new AtsEmail(
                         "string"){{
@@ -191,7 +191,7 @@ public class Application {
                         }}),
                     }};
                     title = "string";
-                    updatedAt = OffsetDateTime.parse("2021-03-23T22:20:02.861Z");
+                    updatedAt = OffsetDateTime.parse("2022-03-24T00:07:47.521Z");
 
                 }};
 
@@ -255,7 +255,7 @@ public class Application {
 ){{
                     applicationId = "string";
                     candidateId = "string";
-                    createdAt = OffsetDateTime.parse("2021-04-24T22:30:56.289Z");
+                    createdAt = OffsetDateTime.parse("2022-04-25T01:00:46.478Z");
                     documentData = "string";
                     documentUrl = "string";
                     filename = "mouse_per_missouri.mp4";
@@ -264,7 +264,7 @@ public class Application {
                     raw = new PropertyAtsDocumentRaw(
 );
                     type = AtsDocumentType.OFFER_PACKET;
-                    updatedAt = OffsetDateTime.parse("2021-12-28T09:27:32.859Z");
+                    updatedAt = OffsetDateTime.parse("2022-12-28T17:22:48.342Z");
                     userId = "string";
 
                 }};
@@ -329,17 +329,17 @@ public class Application {
 ){{
                     applicationId = "string";
                     candidateId = "string";
-                    createdAt = OffsetDateTime.parse("2022-01-10T19:55:26.926Z");
-                    endAt = OffsetDateTime.parse("2023-12-21T09:01:54.390Z");
+                    createdAt = OffsetDateTime.parse("2023-01-11T04:08:22.567Z");
+                    endAt = OffsetDateTime.parse("2024-12-21T08:47:56.138Z");
                     externalEventXref = "string";
                     id = "<ID>";
                     jobId = "string";
                     location = "string";
                     raw = new PropertyAtsInterviewRaw(
 );
-                    startAt = OffsetDateTime.parse("2022-11-19T09:10:03.014Z");
+                    startAt = OffsetDateTime.parse("2023-11-20T00:14:00.277Z");
                     status = AtsInterviewStatus.COMPLETE;
-                    updatedAt = OffsetDateTime.parse("2021-02-07T14:25:56.954Z");
+                    updatedAt = OffsetDateTime.parse("2022-02-07T15:15:23.855Z");
                     userIds = new String[]{{
                         add("string"),
                     }};
@@ -413,14 +413,14 @@ public class Application {
                         add(new AtsAddress(
                         ){{}}),
                     }};
-                    closedAt = OffsetDateTime.parse("2021-01-14T18:13:00.731Z");
+                    closedAt = OffsetDateTime.parse("2022-01-14T18:31:06.376Z");
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(
                         AtsCompensationType.EQUITY){{
                             type = AtsCompensationType.STOCK_OPTIONS;
                         }}),
                     }};
-                    createdAt = OffsetDateTime.parse("2022-03-05T06:41:41.152Z");
+                    createdAt = OffsetDateTime.parse("2023-03-05T16:04:54.121Z");
                     departments = new String[]{{
                         add("string"),
                     }};
@@ -442,7 +442,7 @@ public class Application {
                     }};
                     remote = false;
                     status = AtsJobStatus.CLOSED;
-                    updatedAt = OffsetDateTime.parse("2023-01-24T10:09:39.331Z");
+                    updatedAt = OffsetDateTime.parse("2024-01-25T02:40:27.531Z");
 
                 }};
 
@@ -507,7 +507,7 @@ public class Application {
                     applicationId = "string";
                     candidateId = "string";
                     comment = "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J";
-                    createdAt = OffsetDateTime.parse("2021-04-24T07:49:32.768Z");
+                    createdAt = OffsetDateTime.parse("2022-04-24T10:18:34.661Z");
                     id = "<ID>";
                     interviewId = "string";
                     interviewerId = "string";
@@ -515,7 +515,7 @@ public class Application {
                     raw = new PropertyAtsScorecardRaw(
 );
                     recommendation = Recommendation.NO;
-                    updatedAt = OffsetDateTime.parse("2022-04-01T17:31:47.454Z");
+                    updatedAt = OffsetDateTime.parse("2023-04-02T03:31:06.456Z");
 
                 }};
 
@@ -924,7 +924,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2021-12-21T12:43:47.690Z");
+                updatedGte = OffsetDateTime.parse("2022-12-21T20:30:01.596Z");
 
             }};
 
@@ -987,7 +987,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2023-03-26T00:21:04.080Z");
+                updatedGte = OffsetDateTime.parse("2024-03-25T18:11:33.180Z");
 
             }};
 
@@ -1050,7 +1050,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2021-03-17T23:18:31.102Z");
+                updatedGte = OffsetDateTime.parse("2022-03-18T00:58:25.541Z");
 
             }};
 
@@ -1114,7 +1114,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2022-08-30T11:38:20.739Z");
+                updatedGte = OffsetDateTime.parse("2023-08-31T00:55:54.895Z");
 
             }};
 
@@ -1178,7 +1178,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2021-09-28T09:19:25.744Z");
+                updatedGte = OffsetDateTime.parse("2022-09-28T15:15:00.508Z");
 
             }};
 
@@ -1241,7 +1241,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2022-03-03T15:53:00.086Z");
+                updatedGte = OffsetDateTime.parse("2023-03-04T01:14:05.456Z");
 
             }};
 
@@ -1308,7 +1308,7 @@ public class Application {
                 order = "string";
                 query = "string";
                 sort = "string";
-                updatedGte = OffsetDateTime.parse("2023-08-19T17:42:56.145Z");
+                updatedGte = OffsetDateTime.parse("2024-08-19T14:46:22.333Z");
 
             }};
 
@@ -1369,20 +1369,20 @@ public class Application {
                 "string"){{
                 atsApplication = new AtsApplication(
 ){{
-                    appliedAt = OffsetDateTime.parse("2022-12-15T04:58:14.527Z");
+                    appliedAt = OffsetDateTime.parse("2023-12-15T20:36:09.499Z");
                     candidateId = "string";
-                    createdAt = OffsetDateTime.parse("2021-01-06T05:50:03.360Z");
-                    hiredAt = OffsetDateTime.parse("2022-12-04T13:56:12.670Z");
+                    createdAt = OffsetDateTime.parse("2022-01-06T05:56:57.062Z");
+                    hiredAt = OffsetDateTime.parse("2023-12-05T05:20:09.174Z");
                     id = "<ID>";
                     jobId = "string";
                     originalStatus = "string";
                     raw = new PropertyAtsApplicationRaw(
 );
-                    rejectedAt = OffsetDateTime.parse("2021-07-12T22:20:57.326Z");
+                    rejectedAt = OffsetDateTime.parse("2022-07-13T02:34:40.392Z");
                     rejectedReason = "string";
                     source = "string";
                     status = AtsApplicationStatus.FIRST_INTERVIEW;
-                    updatedAt = OffsetDateTime.parse("2023-01-24T01:05:36.238Z");
+                    updatedAt = OffsetDateTime.parse("2024-01-24T17:35:54.628Z");
 
                 }};
 
@@ -1462,7 +1462,7 @@ public class Application {
 
                     }};
                     companyName = "Donnelly - Bartell";
-                    createdAt = OffsetDateTime.parse("2023-01-06T12:13:20.908Z");
+                    createdAt = OffsetDateTime.parse("2024-01-07T04:20:35.612Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
                         add(new AtsEmail(
                         "string"){{
@@ -1488,7 +1488,7 @@ public class Application {
                         }}),
                     }};
                     title = "string";
-                    updatedAt = OffsetDateTime.parse("2022-01-30T06:27:20.051Z");
+                    updatedAt = OffsetDateTime.parse("2023-01-30T15:05:49.494Z");
 
                 }};
 
@@ -1553,7 +1553,7 @@ public class Application {
 ){{
                     applicationId = "string";
                     candidateId = "string";
-                    createdAt = OffsetDateTime.parse("2021-04-01T09:34:15.248Z");
+                    createdAt = OffsetDateTime.parse("2022-04-01T11:33:08.084Z");
                     documentData = "string";
                     documentUrl = "string";
                     filename = "future_underpin.mp4v";
@@ -1562,7 +1562,7 @@ public class Application {
                     raw = new PropertyAtsDocumentRaw(
 );
                     type = AtsDocumentType.OFFER_LETTER;
-                    updatedAt = OffsetDateTime.parse("2022-02-14T01:39:21.030Z");
+                    updatedAt = OffsetDateTime.parse("2023-02-14T10:37:18.255Z");
                     userId = "string";
 
                 }};
@@ -1628,17 +1628,17 @@ public class Application {
 ){{
                     applicationId = "string";
                     candidateId = "string";
-                    createdAt = OffsetDateTime.parse("2023-09-11T21:35:40.790Z");
-                    endAt = OffsetDateTime.parse("2021-05-28T19:11:29.616Z");
+                    createdAt = OffsetDateTime.parse("2024-09-11T19:09:34.526Z");
+                    endAt = OffsetDateTime.parse("2022-05-28T22:25:51.616Z");
                     externalEventXref = "string";
                     id = "<ID>";
                     jobId = "string";
                     location = "string";
                     raw = new PropertyAtsInterviewRaw(
 );
-                    startAt = OffsetDateTime.parse("2021-09-10T02:01:13.488Z");
+                    startAt = OffsetDateTime.parse("2022-09-10T07:32:43.966Z");
                     status = AtsInterviewStatus.COMPLETE;
-                    updatedAt = OffsetDateTime.parse("2023-03-18T09:12:18.749Z");
+                    updatedAt = OffsetDateTime.parse("2024-03-18T02:52:45.725Z");
                     userIds = new String[]{{
                         add("string"),
                     }};
@@ -1713,14 +1713,14 @@ public class Application {
                         add(new AtsAddress(
                         ){{}}),
                     }};
-                    closedAt = OffsetDateTime.parse("2021-08-09T12:54:15.288Z");
+                    closedAt = OffsetDateTime.parse("2022-08-09T17:44:16.617Z");
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(
                         AtsCompensationType.EQUITY){{
                             type = AtsCompensationType.SALARY;
                         }}),
                     }};
-                    createdAt = OffsetDateTime.parse("2021-03-27T19:07:06.669Z");
+                    createdAt = OffsetDateTime.parse("2022-03-27T20:59:56.374Z");
                     departments = new String[]{{
                         add("string"),
                     }};
@@ -1742,7 +1742,7 @@ public class Application {
                     }};
                     remote = false;
                     status = AtsJobStatus.ARCHIVED;
-                    updatedAt = OffsetDateTime.parse("2023-10-30T02:05:51.064Z");
+                    updatedAt = OffsetDateTime.parse("2024-10-30T00:43:07.001Z");
 
                 }};
 
@@ -1808,7 +1808,7 @@ public class Application {
                     applicationId = "string";
                     candidateId = "string";
                     comment = "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support";
-                    createdAt = OffsetDateTime.parse("2023-10-06T15:26:03.447Z");
+                    createdAt = OffsetDateTime.parse("2024-10-06T13:32:29.533Z");
                     id = "<ID>";
                     interviewId = "string";
                     interviewerId = "string";
@@ -1816,7 +1816,7 @@ public class Application {
                     raw = new PropertyAtsScorecardRaw(
 );
                     recommendation = Recommendation.YES;
-                    updatedAt = OffsetDateTime.parse("2021-11-28T07:58:12.100Z");
+                    updatedAt = OffsetDateTime.parse("2022-11-28T15:13:55.563Z");
 
                 }};
 
@@ -2191,20 +2191,20 @@ public class Application {
                 "string"){{
                 atsApplication = new AtsApplication(
 ){{
-                    appliedAt = OffsetDateTime.parse("2021-08-22T07:14:38.941Z");
+                    appliedAt = OffsetDateTime.parse("2022-08-22T12:21:27.415Z");
                     candidateId = "string";
-                    createdAt = OffsetDateTime.parse("2021-06-04T09:23:07.789Z");
-                    hiredAt = OffsetDateTime.parse("2021-02-09T08:05:18.054Z");
+                    createdAt = OffsetDateTime.parse("2022-06-04T12:46:09.878Z");
+                    hiredAt = OffsetDateTime.parse("2022-02-09T08:57:01.906Z");
                     id = "<ID>";
                     jobId = "string";
                     originalStatus = "string";
                     raw = new PropertyAtsApplicationRaw(
 );
-                    rejectedAt = OffsetDateTime.parse("2023-07-19T08:25:10.616Z");
+                    rejectedAt = OffsetDateTime.parse("2024-07-19T04:47:20.215Z");
                     rejectedReason = "string";
                     source = "string";
                     status = AtsApplicationStatus.OFFERED;
-                    updatedAt = OffsetDateTime.parse("2022-03-16T17:33:44.222Z");
+                    updatedAt = OffsetDateTime.parse("2023-03-17T03:12:00.865Z");
 
                 }};
 
@@ -2284,7 +2284,7 @@ public class Application {
 
                     }};
                     companyName = "O'Reilly Inc";
-                    createdAt = OffsetDateTime.parse("2022-08-30T14:37:21.726Z");
+                    createdAt = OffsetDateTime.parse("2023-08-31T03:55:05.691Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
                         add(new AtsEmail(
                         "string"){{
@@ -2310,7 +2310,7 @@ public class Application {
                         }}),
                     }};
                     title = "string";
-                    updatedAt = OffsetDateTime.parse("2023-12-25T01:08:38.353Z");
+                    updatedAt = OffsetDateTime.parse("2024-12-25T00:59:29.785Z");
 
                 }};
 
@@ -2375,7 +2375,7 @@ public class Application {
 ){{
                     applicationId = "string";
                     candidateId = "string";
-                    createdAt = OffsetDateTime.parse("2021-07-05T13:01:49.006Z");
+                    createdAt = OffsetDateTime.parse("2022-07-05T17:05:49.106Z");
                     documentData = "string";
                     documentUrl = "string";
                     filename = "unbranded_reprehenderit.jpg";
@@ -2384,7 +2384,7 @@ public class Application {
                     raw = new PropertyAtsDocumentRaw(
 );
                     type = AtsDocumentType.OFFER_PACKET;
-                    updatedAt = OffsetDateTime.parse("2021-12-02T17:00:21.700Z");
+                    updatedAt = OffsetDateTime.parse("2022-12-03T00:21:50.487Z");
                     userId = "string";
 
                 }};
@@ -2450,17 +2450,17 @@ public class Application {
 ){{
                     applicationId = "string";
                     candidateId = "string";
-                    createdAt = OffsetDateTime.parse("2023-05-06T10:37:46.574Z");
-                    endAt = OffsetDateTime.parse("2022-03-29T10:34:23.230Z");
+                    createdAt = OffsetDateTime.parse("2024-05-06T05:22:44.534Z");
+                    endAt = OffsetDateTime.parse("2023-03-29T20:29:22.648Z");
                     externalEventXref = "string";
                     id = "<ID>";
                     jobId = "string";
                     location = "string";
                     raw = new PropertyAtsInterviewRaw(
 );
-                    startAt = OffsetDateTime.parse("2023-05-05T12:38:13.018Z");
+                    startAt = OffsetDateTime.parse("2024-05-05T07:21:58.674Z");
                     status = AtsInterviewStatus.AWAITING_FEEDBACK;
-                    updatedAt = OffsetDateTime.parse("2021-05-01T14:26:12.006Z");
+                    updatedAt = OffsetDateTime.parse("2022-05-01T17:04:47.962Z");
                     userIds = new String[]{{
                         add("string"),
                     }};
@@ -2535,14 +2535,14 @@ public class Application {
                         add(new AtsAddress(
                         ){{}}),
                     }};
-                    closedAt = OffsetDateTime.parse("2022-10-20T17:16:11.353Z");
+                    closedAt = OffsetDateTime.parse("2023-10-21T07:41:08.131Z");
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(
                         AtsCompensationType.BONUS){{
                             type = AtsCompensationType.BONUS;
                         }}),
                     }};
-                    createdAt = OffsetDateTime.parse("2022-01-19T09:16:59.292Z");
+                    createdAt = OffsetDateTime.parse("2023-01-19T17:41:10.086Z");
                     departments = new String[]{{
                         add("string"),
                     }};
@@ -2564,7 +2564,7 @@ public class Application {
                     }};
                     remote = false;
                     status = AtsJobStatus.ARCHIVED;
-                    updatedAt = OffsetDateTime.parse("2022-05-26T20:04:55.537Z");
+                    updatedAt = OffsetDateTime.parse("2023-05-27T07:16:42.656Z");
 
                 }};
 
@@ -2630,7 +2630,7 @@ public class Application {
                     applicationId = "string";
                     candidateId = "string";
                     comment = "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive";
-                    createdAt = OffsetDateTime.parse("2021-07-10T12:08:12.226Z");
+                    createdAt = OffsetDateTime.parse("2022-07-10T16:18:43.908Z");
                     id = "<ID>";
                     interviewId = "string";
                     interviewerId = "string";
@@ -2638,7 +2638,7 @@ public class Application {
                     raw = new PropertyAtsScorecardRaw(
 );
                     recommendation = Recommendation.NO;
-                    updatedAt = OffsetDateTime.parse("2021-07-26T04:45:45.856Z");
+                    updatedAt = OffsetDateTime.parse("2022-07-26T09:16:55.761Z");
 
                 }};
 
