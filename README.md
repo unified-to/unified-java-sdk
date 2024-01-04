@@ -12,7 +12,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.12.18'
+implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.12.19'
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -572,7 +572,6 @@ public class Application {
 * [createUnifiedWebhook](docs/sdks/unified/README.md#createunifiedwebhook) - Create webhook subscription
 * [getUnifiedApicall](docs/sdks/unified/README.md#getunifiedapicall) - Retrieve specific API Call by its ID
 * [getUnifiedConnection](docs/sdks/unified/README.md#getunifiedconnection) - Retrieve connection
-* [getUnifiedIntegration](docs/sdks/unified/README.md#getunifiedintegration) - Retrieve an integration
 * [getUnifiedIntegrationAuth](docs/sdks/unified/README.md#getunifiedintegrationauth) - Create connection indirectly
 * [getUnifiedWebhook](docs/sdks/unified/README.md#getunifiedwebhook) - Retrieve webhook by its ID
 * [listUnifiedApicalls](docs/sdks/unified/README.md#listunifiedapicalls) - Returns API Calls
@@ -601,7 +600,6 @@ public class Application {
 
 ### [integration](docs/sdks/integration/README.md)
 
-* [getUnifiedIntegration](docs/sdks/integration/README.md#getunifiedintegration) - Retrieve an integration
 * [getUnifiedIntegrationAuth](docs/sdks/integration/README.md#getunifiedintegrationauth) - Create connection indirectly
 * [listUnifiedIntegrationWorkspaces](docs/sdks/integration/README.md#listunifiedintegrationworkspaces) - Returns all activated integrations in a workspace
 * [listUnifiedIntegrations](docs/sdks/integration/README.md#listunifiedintegrations) - Returns all integrations

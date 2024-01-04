@@ -7,7 +7,6 @@
 * [createUnifiedWebhook](#createunifiedwebhook) - Create webhook subscription
 * [getUnifiedApicall](#getunifiedapicall) - Retrieve specific API Call by its ID
 * [getUnifiedConnection](#getunifiedconnection) - Retrieve connection
-* [getUnifiedIntegration](#getunifiedintegration) - Retrieve an integration
 * [getUnifiedIntegrationAuth](#getunifiedintegrationauth) - Create connection indirectly
 * [getUnifiedWebhook](#getunifiedwebhook) - Retrieve webhook by its ID
 * [listUnifiedApicalls](#listunifiedapicalls) - Returns API Calls
@@ -313,57 +312,6 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionResponse](../../models/operations/GetUnifiedConnectionResponse.md)**
-
-
-## getUnifiedIntegration
-
-Retrieve an integration
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationRequest;
-import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
-
-            com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationRequest req = new GetUnifiedIntegrationRequest(
-                "string");
-
-            com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationResponse res = sdk.unified.getUnifiedIntegration(req);
-
-            if (res.integration != null) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationRequest](../../models/operations/GetUnifiedIntegrationRequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
-
-
-### Response
-
-**[com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationResponse](../../models/operations/GetUnifiedIntegrationResponse.md)**
 
 
 ## getUnifiedIntegrationAuth
@@ -713,6 +661,7 @@ public class Application {
                 order = "string";
                 sort = "string";
                 summary = false;
+                type = "string";
                 updatedGte = "string";
 
             }};

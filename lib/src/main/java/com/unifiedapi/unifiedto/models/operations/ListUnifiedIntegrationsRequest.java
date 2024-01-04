@@ -78,6 +78,17 @@ public class ListUnifiedIntegrationsRequest {
         return this;
     }
     
+    /**
+     * Filter the results for only this integration type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+
+    public ListUnifiedIntegrationsRequest withType(String type) {
+        this.type = type;
+        return this;
+    }
+    
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     public String updatedGte;
 
