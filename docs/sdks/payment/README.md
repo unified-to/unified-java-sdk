@@ -45,9 +45,7 @@ public class Application {
                     currency = "Lari";
                     customerId = "string";
                     id = "<ID>";
-                    invoiceIds = new String[]{{
-                        add("string"),
-                    }};
+                    invoiceId = "string";
                     notes = "string";
                     paymentMethod = "string";
                     raw = new PropertyAccountingPaymentRaw(
@@ -242,9 +240,7 @@ public class Application {
                     currency = "Boliviano boliviano";
                     customerId = "string";
                     id = "<ID>";
-                    invoiceIds = new String[]{{
-                        add("string"),
-                    }};
+                    invoiceId = "string";
                     notes = "string";
                     paymentMethod = "string";
                     raw = new PropertyAccountingPaymentRaw(
@@ -369,9 +365,7 @@ public class Application {
                     currency = "Sudanese Pound";
                     customerId = "string";
                     id = "<ID>";
-                    invoiceIds = new String[]{{
-                        add("string"),
-                    }};
+                    invoiceId = "string";
                     notes = "string";
                     paymentMethod = "string";
                     raw = new PropertyAccountingPaymentRaw(

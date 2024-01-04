@@ -54,11 +54,11 @@ public class AccountingPayment {
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("invoice_ids")
-    public String[] invoiceIds;
+    @JsonProperty("invoice_id")
+    public String invoiceId;
 
-    public AccountingPayment withInvoiceIds(String[] invoiceIds) {
-        this.invoiceIds = invoiceIds;
+    public AccountingPayment withInvoiceId(String invoiceId) {
+        this.invoiceId = invoiceId;
         return this;
     }
     
