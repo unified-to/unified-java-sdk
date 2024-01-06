@@ -4,15 +4,15 @@ management:
   docChecksum: 56cbb60774d35fb7bb0337c12bcc7948
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.225.2
-  releaseVersion: 0.12.19
-  configChecksum: 305c911da394ab65a1132cd7593927f1
+  generationVersion: 2.228.1
+  releaseVersion: 0.12.20
+  configChecksum: 8288195a33c4f80fa99a3690c42a1a56
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
 features:
   java:
-    core: 3.2.0
+    core: 3.2.1
     globalSecurity: 2.81.2
     globalServerURLs: 2.82.1
 generatedFiles:
