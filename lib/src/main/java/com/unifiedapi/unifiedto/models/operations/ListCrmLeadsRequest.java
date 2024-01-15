@@ -108,6 +108,17 @@ public class ListCrmLeadsRequest {
         return this;
     }
     
+    /**
+     * The user/owner ID to filter results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
+    public String userId;
+
+    public ListCrmLeadsRequest withUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    
     public ListCrmLeadsRequest(@JsonProperty("connection_id") String connectionId) {
         this.connectionId = connectionId;
   }

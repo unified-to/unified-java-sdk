@@ -173,6 +173,15 @@ public class CrmCompany {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("user_id")
+    public String userId;
+
+    public CrmCompany withUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("websites")
     public String[] websites;
 

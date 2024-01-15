@@ -41,7 +41,6 @@ public class Application {
                 "string"){{
                 ticketingNote = new TicketingNote(
 ){{
-                    agentId = "string";
                     createdAt = OffsetDateTime.parse("2024-04-20T13:29:50.877Z");
                     customerId = "string";
                     description = "Distributed 4th generation portal";
@@ -50,6 +49,7 @@ public class Application {
 );
                     ticketId = "string";
                     updatedAt = "string";
+                    userId = "string";
 
                 }};
 
@@ -232,7 +232,6 @@ public class Application {
                 "string"){{
                 ticketingNote = new TicketingNote(
 ){{
-                    agentId = "string";
                     createdAt = OffsetDateTime.parse("2024-09-04T20:58:12.449Z");
                     customerId = "string";
                     description = "Right-sized national productivity";
@@ -241,6 +240,7 @@ public class Application {
 );
                     ticketId = "string";
                     updatedAt = "string";
+                    userId = "string";
 
                 }};
 
@@ -354,7 +354,6 @@ public class Application {
                 "string"){{
                 ticketingNote = new TicketingNote(
 ){{
-                    agentId = "string";
                     createdAt = OffsetDateTime.parse("2024-05-15T01:15:48.418Z");
                     customerId = "string";
                     description = "Versatile value-added utilisation";
@@ -363,6 +362,7 @@ public class Application {
 );
                     ticketId = "string";
                     updatedAt = "string";
+                    userId = "string";
 
                 }};
 

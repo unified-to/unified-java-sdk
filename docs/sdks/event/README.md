@@ -67,6 +67,9 @@ public class Application {
                     }};
                     email = new PropertyCrmEventEmail(
 ){{
+                        attachmentFileIds = new String[]{{
+                            add("string"),
+                        }};
                         body = "string";
                         cc = new String[]{{
                             add("string"),
@@ -109,6 +112,7 @@ public class Application {
                     }};
                     type = CrmEventType.NOTE;
                     updatedAt = OffsetDateTime.parse("2024-12-09T05:29:10.624Z");
+                    userId = "string";
 
                 }};
 
@@ -235,6 +239,7 @@ public class Application {
                 sort = "string";
                 type = "string";
                 updatedGte = OffsetDateTime.parse("2024-04-30T03:39:38.103Z");
+                userId = "string";
 
             }};
 
@@ -320,6 +325,9 @@ public class Application {
                     }};
                     email = new PropertyCrmEventEmail(
 ){{
+                        attachmentFileIds = new String[]{{
+                            add("string"),
+                        }};
                         body = "string";
                         cc = new String[]{{
                             add("string"),
@@ -362,6 +370,7 @@ public class Application {
                     }};
                     type = CrmEventType.CALL;
                     updatedAt = OffsetDateTime.parse("2023-10-23T20:19:34.007Z");
+                    userId = "string";
 
                 }};
 
@@ -501,6 +510,9 @@ public class Application {
                     }};
                     email = new PropertyCrmEventEmail(
 ){{
+                        attachmentFileIds = new String[]{{
+                            add("string"),
+                        }};
                         body = "string";
                         cc = new String[]{{
                             add("string"),
@@ -543,6 +555,7 @@ public class Application {
                     }};
                     type = CrmEventType.TASK;
                     updatedAt = OffsetDateTime.parse("2024-12-12T06:25:41.650Z");
+                    userId = "string";
 
                 }};
 

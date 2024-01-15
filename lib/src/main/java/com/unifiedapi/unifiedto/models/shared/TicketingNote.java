@@ -16,15 +16,6 @@ import java.time.OffsetDateTime;
 
 public class TicketingNote {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("agent_id")
-    public String agentId;
-
-    public TicketingNote withAgentId(String agentId) {
-        this.agentId = agentId;
-        return this;
-    }
-    
-    @JsonInclude(Include.NON_ABSENT)
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
@@ -86,6 +77,15 @@ public class TicketingNote {
 
     public TicketingNote withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("user_id")
+    public String userId;
+
+    public TicketingNote withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

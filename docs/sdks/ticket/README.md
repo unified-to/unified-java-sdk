@@ -59,6 +59,7 @@ public class Application {
                         add("string"),
                     }};
                     updatedAt = OffsetDateTime.parse("2024-05-06T20:46:58.372Z");
+                    userId = "string";
 
                 }};
 
@@ -172,7 +173,6 @@ public class Application {
 
             com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsRequest req = new ListTicketingTicketsRequest(
                 "string"){{
-                agentId = "string";
                 customerId = "string";
                 fields = new String[]{{
                     add("string"),
@@ -183,6 +183,7 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2023-02-28T23:31:15.090Z");
+                userId = "string";
 
             }};
 
@@ -260,6 +261,7 @@ public class Application {
                         add("string"),
                     }};
                     updatedAt = OffsetDateTime.parse("2024-07-06T12:10:37.068Z");
+                    userId = "string";
 
                 }};
 
@@ -391,6 +393,7 @@ public class Application {
                         add("string"),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-01-17T01:38:48.188Z");
+                    userId = "string";
 
                 }};
 

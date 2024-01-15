@@ -10,14 +10,6 @@ import java.time.OffsetDateTime;
 
 
 public class ListUcCallsRequest {
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=agent_id")
-    public String agentId;
-
-    public ListUcCallsRequest withAgentId(String agentId) {
-        this.agentId = agentId;
-        return this;
-    }
-    
     /**
      * ID of the connection
      */
@@ -99,6 +91,14 @@ public class ListUcCallsRequest {
 
     public ListUcCallsRequest withUpdatedGte(OffsetDateTime updatedGte) {
         this.updatedGte = updatedGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
+    public String userId;
+
+    public ListUcCallsRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

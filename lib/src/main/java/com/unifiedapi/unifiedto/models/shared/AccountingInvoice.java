@@ -179,6 +179,15 @@ public class AccountingInvoice {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public AccountingInvoiceStatus status;
+
+    public AccountingInvoice withStatus(AccountingInvoiceStatus status) {
+        this.status = status;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_amount")
     public Double taxAmount;
 

@@ -88,6 +88,7 @@ public class Application {
                     }};
                     title = "string";
                     updatedAt = OffsetDateTime.parse("2024-03-21T17:10:02.454Z");
+                    userId = "string";
 
                 }};
 
@@ -353,6 +354,7 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2023-11-15T19:36:59.401Z");
+                userId = "string";
 
             }};
 
@@ -407,7 +409,6 @@ public class Application {
 
             com.unifiedapi.unifiedto.models.operations.ListUcContactsRequest req = new ListUcContactsRequest(
                 "string"){{
-                agentId = "string";
                 fields = new String[]{{
                     add("string"),
                 }};
@@ -417,6 +418,7 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2023-10-26T05:35:01.805Z");
+                userId = "string";
 
             }};
 
@@ -517,6 +519,7 @@ public class Application {
                     }};
                     title = "string";
                     updatedAt = OffsetDateTime.parse("2022-11-28T22:10:52.030Z");
+                    userId = "string";
 
                 }};
 
@@ -808,6 +811,7 @@ public class Application {
                     }};
                     title = "string";
                     updatedAt = OffsetDateTime.parse("2023-09-02T17:59:32.331Z");
+                    userId = "string";
 
                 }};
 

@@ -47,22 +47,22 @@ public class Application {
                 "string"){{
                 crmFile = new CrmFile(
 ){{
-                    activityId = "string";
                     companyId = "string";
                     contactId = "string";
                     createdAt = OffsetDateTime.parse("2024-08-23T14:06:46.596Z");
                     dealId = "string";
                     description = "Multi-lateral background database";
-                    fileName = "the.mp4v";
-                    fileSize = 3460.69d;
-                    fileType = "text";
-                    fileUrl = "string";
+                    downloadUrl = "string";
+                    eventId = "string";
                     id = "<ID>";
                     isActive = false;
                     leadId = "string";
+                    mimeType = "string";
+                    name = "string";
                     raw = new PropertyCrmFileRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2023-05-03T23:09:04.663Z");
+                    size = 2318.83d;
+                    updatedAt = OffsetDateTime.parse("2024-11-27T09:12:07.889Z");
                     userId = "string";
 
                 }};
@@ -455,22 +455,22 @@ public class Application {
                 "string"){{
                 crmFile = new CrmFile(
 ){{
-                    activityId = "string";
                     companyId = "string";
                     contactId = "string";
                     createdAt = OffsetDateTime.parse("2022-08-02T20:49:30.505Z");
                     dealId = "string";
                     description = "Networked multimedia database";
-                    fileName = "country.wav";
-                    fileSize = 7551.13d;
-                    fileType = "image";
-                    fileUrl = "string";
+                    downloadUrl = "string";
+                    eventId = "string";
                     id = "<ID>";
                     isActive = false;
                     leadId = "string";
+                    mimeType = "string";
+                    name = "string";
                     raw = new PropertyCrmFileRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2024-06-07T00:06:10.633Z");
+                    size = 1185.84d;
+                    updatedAt = OffsetDateTime.parse("2023-10-10T22:21:44.295Z");
                     userId = "string";
 
                 }};
@@ -724,22 +724,22 @@ public class Application {
                 "string"){{
                 crmFile = new CrmFile(
 ){{
-                    activityId = "string";
                     companyId = "string";
                     contactId = "string";
                     createdAt = OffsetDateTime.parse("2022-02-11T15:31:35.167Z");
                     dealId = "string";
                     description = "Quality-focused mobile orchestration";
-                    fileName = "circuit_extended.jpe";
-                    fileSize = 2826.44d;
-                    fileType = "text";
-                    fileUrl = "string";
+                    downloadUrl = "string";
+                    eventId = "string";
                     id = "<ID>";
                     isActive = false;
                     leadId = "string";
+                    mimeType = "string";
+                    name = "string";
                     raw = new PropertyCrmFileRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2022-09-11T13:48:58.626Z");
+                    size = 5501.47d;
+                    updatedAt = OffsetDateTime.parse("2023-07-25T13:19:41.584Z");
                     userId = "string";
 
                 }};

@@ -6,7 +6,9 @@
 * [createUnifiedWebhook](#createunifiedwebhook) - Create webhook subscription
 * [getUnifiedWebhook](#getunifiedwebhook) - Retrieve webhook by its ID
 * [listUnifiedWebhooks](#listunifiedwebhooks) - Returns all registered webhooks
+* [patchUnifiedWebhookTrigger](#patchunifiedwebhooktrigger) - Trigger webhook
 * [removeUnifiedWebhook](#removeunifiedwebhook) - Remove webhook subscription
+* [updateUnifiedWebhookTrigger](#updateunifiedwebhooktrigger) - Trigger webhook
 
 ## createUnifiedWebhook
 
@@ -203,6 +205,57 @@ public class Application {
 **[com.unifiedapi.unifiedto.models.operations.ListUnifiedWebhooksResponse](../../models/operations/ListUnifiedWebhooksResponse.md)**
 
 
+## patchUnifiedWebhookTrigger
+
+Trigger webhook
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerRequest req = new PatchUnifiedWebhookTriggerRequest(
+                "string");
+
+            com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerResponse res = sdk.webhook.patchUnifiedWebhookTrigger(req);
+
+            if (res.statusCode == 200) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerRequest](../../models/operations/PatchUnifiedWebhookTriggerRequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerResponse](../../models/operations/PatchUnifiedWebhookTriggerResponse.md)**
+
+
 ## removeUnifiedWebhook
 
 Remove webhook subscription
@@ -252,4 +305,55 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.RemoveUnifiedWebhookResponse](../../models/operations/RemoveUnifiedWebhookResponse.md)**
+
+
+## updateUnifiedWebhookTrigger
+
+Trigger webhook
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerRequest req = new UpdateUnifiedWebhookTriggerRequest(
+                "string");
+
+            com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerResponse res = sdk.webhook.updateUnifiedWebhookTrigger(req);
+
+            if (res.statusCode == 200) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerRequest](../../models/operations/UpdateUnifiedWebhookTriggerRequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerResponse](../../models/operations/UpdateUnifiedWebhookTriggerResponse.md)**
 

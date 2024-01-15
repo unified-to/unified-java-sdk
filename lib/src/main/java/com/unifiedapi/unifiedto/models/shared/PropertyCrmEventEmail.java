@@ -19,6 +19,15 @@ import java.time.OffsetDateTime;
 
 public class PropertyCrmEventEmail {
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("attachment_file_ids")
+    public String[] attachmentFileIds;
+
+    public PropertyCrmEventEmail withAttachmentFileIds(String[] attachmentFileIds) {
+        this.attachmentFileIds = attachmentFileIds;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
 

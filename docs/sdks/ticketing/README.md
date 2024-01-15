@@ -138,7 +138,6 @@ public class Application {
                 "string"){{
                 ticketingNote = new TicketingNote(
 ){{
-                    agentId = "string";
                     createdAt = OffsetDateTime.parse("2024-04-20T13:29:50.877Z");
                     customerId = "string";
                     description = "Distributed 4th generation portal";
@@ -147,6 +146,7 @@ public class Application {
 );
                     ticketId = "string";
                     updatedAt = "string";
+                    userId = "string";
 
                 }};
 
@@ -225,6 +225,7 @@ public class Application {
                         add("string"),
                     }};
                     updatedAt = OffsetDateTime.parse("2024-05-06T20:46:58.372Z");
+                    userId = "string";
 
                 }};
 
@@ -579,7 +580,6 @@ public class Application {
 
             com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsRequest req = new ListTicketingTicketsRequest(
                 "string"){{
-                agentId = "string";
                 customerId = "string";
                 fields = new String[]{{
                     add("string"),
@@ -590,6 +590,7 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2023-02-28T23:31:15.090Z");
+                userId = "string";
 
             }};
 
@@ -735,7 +736,6 @@ public class Application {
                 "string"){{
                 ticketingNote = new TicketingNote(
 ){{
-                    agentId = "string";
                     createdAt = OffsetDateTime.parse("2024-09-04T20:58:12.449Z");
                     customerId = "string";
                     description = "Right-sized national productivity";
@@ -744,6 +744,7 @@ public class Application {
 );
                     ticketId = "string";
                     updatedAt = "string";
+                    userId = "string";
 
                 }};
 
@@ -823,6 +824,7 @@ public class Application {
                         add("string"),
                     }};
                     updatedAt = OffsetDateTime.parse("2024-07-06T12:10:37.068Z");
+                    userId = "string";
 
                 }};
 
@@ -1126,7 +1128,6 @@ public class Application {
                 "string"){{
                 ticketingNote = new TicketingNote(
 ){{
-                    agentId = "string";
                     createdAt = OffsetDateTime.parse("2024-05-15T01:15:48.418Z");
                     customerId = "string";
                     description = "Versatile value-added utilisation";
@@ -1135,6 +1136,7 @@ public class Application {
 );
                     ticketId = "string";
                     updatedAt = "string";
+                    userId = "string";
 
                 }};
 
@@ -1214,6 +1216,7 @@ public class Application {
                         add("string"),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-01-17T01:38:48.188Z");
+                    userId = "string";
 
                 }};
 

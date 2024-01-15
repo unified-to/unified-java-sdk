@@ -16,15 +16,6 @@ import java.time.OffsetDateTime;
 
 public class CrmFile {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("activity_id")
-    public String activityId;
-
-    public CrmFile withActivityId(String activityId) {
-        this.activityId = activityId;
-        return this;
-    }
-    
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
     public String companyId;
 
@@ -72,38 +63,20 @@ public class CrmFile {
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("file_name")
-    public String fileName;
+    @JsonProperty("download_url")
+    public String downloadUrl;
 
-    public CrmFile withFileName(String fileName) {
-        this.fileName = fileName;
+    public CrmFile withDownloadUrl(String downloadUrl) {
+        this.downloadUrl = downloadUrl;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("file_size")
-    public Double fileSize;
+    @JsonProperty("event_id")
+    public String eventId;
 
-    public CrmFile withFileSize(Double fileSize) {
-        this.fileSize = fileSize;
-        return this;
-    }
-    
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("file_type")
-    public String fileType;
-
-    public CrmFile withFileType(String fileType) {
-        this.fileType = fileType;
-        return this;
-    }
-    
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("file_url")
-    public String fileUrl;
-
-    public CrmFile withFileUrl(String fileUrl) {
-        this.fileUrl = fileUrl;
+    public CrmFile withEventId(String eventId) {
+        this.eventId = eventId;
         return this;
     }
     
@@ -135,11 +108,38 @@ public class CrmFile {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("mime_type")
+    public String mimeType;
+
+    public CrmFile withMimeType(String mimeType) {
+        this.mimeType = mimeType;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    public String name;
+
+    public CrmFile withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     public PropertyCrmFileRaw raw;
 
     public CrmFile withRaw(PropertyCrmFileRaw raw) {
         this.raw = raw;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("size")
+    public Double size;
+
+    public CrmFile withSize(Double size) {
+        this.size = size;
         return this;
     }
     

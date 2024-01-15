@@ -16,6 +16,15 @@ import java.time.OffsetDateTime;
 
 public class AccountingPayment {
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("account_id")
+    public String accountId;
+
+    public AccountingPayment withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")

@@ -12,7 +12,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.12.20'
+implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.13.0'
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -580,9 +580,11 @@ public class Application {
 * [listUnifiedIntegrations](docs/sdks/unified/README.md#listunifiedintegrations) - Returns all integrations
 * [listUnifiedWebhooks](docs/sdks/unified/README.md#listunifiedwebhooks) - Returns all registered webhooks
 * [patchUnifiedConnection](docs/sdks/unified/README.md#patchunifiedconnection) - Update connection
+* [patchUnifiedWebhookTrigger](docs/sdks/unified/README.md#patchunifiedwebhooktrigger) - Trigger webhook
 * [removeUnifiedConnection](docs/sdks/unified/README.md#removeunifiedconnection) - Remove connection
 * [removeUnifiedWebhook](docs/sdks/unified/README.md#removeunifiedwebhook) - Remove webhook subscription
 * [updateUnifiedConnection](docs/sdks/unified/README.md#updateunifiedconnection) - Update connection
+* [updateUnifiedWebhookTrigger](docs/sdks/unified/README.md#updateunifiedwebhooktrigger) - Trigger webhook
 
 ### [apicall](docs/sdks/apicall/README.md)
 
@@ -618,7 +620,9 @@ public class Application {
 * [createUnifiedWebhook](docs/sdks/webhook/README.md#createunifiedwebhook) - Create webhook subscription
 * [getUnifiedWebhook](docs/sdks/webhook/README.md#getunifiedwebhook) - Retrieve webhook by its ID
 * [listUnifiedWebhooks](docs/sdks/webhook/README.md#listunifiedwebhooks) - Returns all registered webhooks
+* [patchUnifiedWebhookTrigger](docs/sdks/webhook/README.md#patchunifiedwebhooktrigger) - Trigger webhook
 * [removeUnifiedWebhook](docs/sdks/webhook/README.md#removeunifiedwebhook) - Remove webhook subscription
+* [updateUnifiedWebhookTrigger](docs/sdks/webhook/README.md#updateunifiedwebhooktrigger) - Trigger webhook
 <!-- End Available Resources and Operations [operations] -->
 
 

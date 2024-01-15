@@ -58,6 +58,7 @@ public class Application {
                         add("string"),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-10-13T19:43:32.331Z");
+                    userId = "string";
                     wonReason = "string";
 
                 }};
@@ -183,6 +184,7 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2023-09-04T01:39:26.472Z");
+                userId = "string";
 
             }};
 
@@ -259,6 +261,7 @@ public class Application {
                         add("string"),
                     }};
                     updatedAt = OffsetDateTime.parse("2024-02-22T07:49:20.306Z");
+                    userId = "string";
                     wonReason = "string";
 
                 }};
@@ -390,6 +393,7 @@ public class Application {
                         add("string"),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-02-01T00:17:19.942Z");
+                    userId = "string";
                     wonReason = "string";
 
                 }};

@@ -529,6 +529,43 @@ public class Unified {
     }
 
     /**
+     * Trigger webhook
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerResponse patchUnifiedWebhookTrigger(com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerRequest.class, baseUrl, "/unified/webhook/{id}/trigger", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PATCH");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerResponse res = new com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerResponse(contentType, httpRes.statusCode(), httpRes) {{
+            res = null;
+        }};
+        
+        if (true) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
+                res.res = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * Remove connection
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
@@ -636,6 +673,43 @@ public class Unified {
                 ObjectMapper mapper = JSON.getMapper();
                 com.unifiedapi.unifiedto.models.shared.Connection out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.Connection.class);
                 res.connection = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Trigger webhook
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerResponse updateUnifiedWebhookTrigger(com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerRequest.class, baseUrl, "/unified/webhook/{id}/trigger", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PUT");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerResponse(contentType, httpRes.statusCode(), httpRes) {{
+            res = null;
+        }};
+        
+        if (true) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
+                res.res = out;
             }
         }
 

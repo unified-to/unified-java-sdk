@@ -20,15 +20,6 @@ public class IntegrationSupport {
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("list_agent_id")
-    public Boolean listAgentId;
-
-    public IntegrationSupport withListAgentId(Boolean listAgentId) {
-        this.listAgentId = listAgentId;
-        return this;
-    }
-    
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_application_id")
     public Boolean listApplicationId;
 
@@ -178,6 +169,15 @@ public class IntegrationSupport {
 
     public IntegrationSupport withListUpdatedGte(Boolean listUpdatedGte) {
         this.listUpdatedGte = listUpdatedGte;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("list_user_id")
+    public Boolean listUserId;
+
+    public IntegrationSupport withListUserId(Boolean listUserId) {
+        this.listUserId = listUserId;
         return this;
     }
     

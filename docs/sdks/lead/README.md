@@ -206,6 +206,7 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2024-01-12T07:27:29.016Z");
+                userId = "string";
 
             }};
 

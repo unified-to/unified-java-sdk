@@ -11,17 +11,6 @@ import java.time.OffsetDateTime;
 
 public class ListTicketingTicketsRequest {
     /**
-     * The agent ID to filter results
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=agent_id")
-    public String agentId;
-
-    public ListTicketingTicketsRequest withAgentId(String agentId) {
-        this.agentId = agentId;
-        return this;
-    }
-    
-    /**
      * ID of the connection
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
@@ -105,6 +94,17 @@ public class ListTicketingTicketsRequest {
 
     public ListTicketingTicketsRequest withUpdatedGte(OffsetDateTime updatedGte) {
         this.updatedGte = updatedGte;
+        return this;
+    }
+    
+    /**
+     * The user/agent ID to filter results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
+    public String userId;
+
+    public ListTicketingTicketsRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

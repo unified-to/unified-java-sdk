@@ -32,7 +32,6 @@ public class Application {
 
             com.unifiedapi.unifiedto.models.operations.ListUcCallsRequest req = new ListUcCallsRequest(
                 "string"){{
-                agentId = "string";
                 contactId = "string";
                 fields = new String[]{{
                     add("string"),
@@ -43,6 +42,7 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2024-07-24T23:18:21.548Z");
+                userId = "string";
 
             }};
 

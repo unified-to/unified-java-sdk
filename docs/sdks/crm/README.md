@@ -124,6 +124,7 @@ public class Application {
                     }};
                     timezone = "Europe/Bucharest";
                     updatedAt = OffsetDateTime.parse("2023-10-03T19:32:53.625Z");
+                    userId = "string";
                     websites = new String[]{{
                         add("string"),
                     }};
@@ -228,6 +229,7 @@ public class Application {
                     }};
                     title = "string";
                     updatedAt = OffsetDateTime.parse("2024-03-21T17:10:02.454Z");
+                    userId = "string";
 
                 }};
 
@@ -305,6 +307,7 @@ public class Application {
                         add("string"),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-10-13T19:43:32.331Z");
+                    userId = "string";
                     wonReason = "string";
 
                 }};
@@ -392,6 +395,9 @@ public class Application {
                     }};
                     email = new PropertyCrmEventEmail(
 ){{
+                        attachmentFileIds = new String[]{{
+                            add("string"),
+                        }};
                         body = "string";
                         cc = new String[]{{
                             add("string"),
@@ -434,6 +440,7 @@ public class Application {
                     }};
                     type = CrmEventType.NOTE;
                     updatedAt = OffsetDateTime.parse("2024-12-09T05:29:10.624Z");
+                    userId = "string";
 
                 }};
 
@@ -494,22 +501,22 @@ public class Application {
                 "string"){{
                 crmFile = new CrmFile(
 ){{
-                    activityId = "string";
                     companyId = "string";
                     contactId = "string";
                     createdAt = OffsetDateTime.parse("2024-08-23T14:06:46.596Z");
                     dealId = "string";
                     description = "Multi-lateral background database";
-                    fileName = "the.mp4v";
-                    fileSize = 3460.69d;
-                    fileType = "text";
-                    fileUrl = "string";
+                    downloadUrl = "string";
+                    eventId = "string";
                     id = "<ID>";
                     isActive = false;
                     leadId = "string";
+                    mimeType = "string";
+                    name = "string";
                     raw = new PropertyCrmFileRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2023-05-03T23:09:04.663Z");
+                    size = 2318.83d;
+                    updatedAt = OffsetDateTime.parse("2024-11-27T09:12:07.889Z");
                     userId = "string";
 
                 }};
@@ -1147,6 +1154,7 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2023-05-02T17:52:08.731Z");
+                userId = "string";
 
             }};
 
@@ -1212,6 +1220,7 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2023-11-15T19:36:59.401Z");
+                userId = "string";
 
             }};
 
@@ -1277,6 +1286,7 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2023-09-04T01:39:26.472Z");
+                userId = "string";
 
             }};
 
@@ -1344,6 +1354,7 @@ public class Application {
                 sort = "string";
                 type = "string";
                 updatedGte = OffsetDateTime.parse("2024-04-30T03:39:38.103Z");
+                userId = "string";
 
             }};
 
@@ -1475,6 +1486,7 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2024-01-12T07:27:29.016Z");
+                userId = "string";
 
             }};
 
@@ -1644,6 +1656,7 @@ public class Application {
                     }};
                     timezone = "Europe/Skopje";
                     updatedAt = OffsetDateTime.parse("2022-04-08T08:19:54.922Z");
+                    userId = "string";
                     websites = new String[]{{
                         add("string"),
                     }};
@@ -1749,6 +1762,7 @@ public class Application {
                     }};
                     title = "string";
                     updatedAt = OffsetDateTime.parse("2022-11-28T22:10:52.030Z");
+                    userId = "string";
 
                 }};
 
@@ -1827,6 +1841,7 @@ public class Application {
                         add("string"),
                     }};
                     updatedAt = OffsetDateTime.parse("2024-02-22T07:49:20.306Z");
+                    userId = "string";
                     wonReason = "string";
 
                 }};
@@ -1915,6 +1930,9 @@ public class Application {
                     }};
                     email = new PropertyCrmEventEmail(
 ){{
+                        attachmentFileIds = new String[]{{
+                            add("string"),
+                        }};
                         body = "string";
                         cc = new String[]{{
                             add("string"),
@@ -1957,6 +1975,7 @@ public class Application {
                     }};
                     type = CrmEventType.CALL;
                     updatedAt = OffsetDateTime.parse("2023-10-23T20:19:34.007Z");
+                    userId = "string";
 
                 }};
 
@@ -2018,22 +2037,22 @@ public class Application {
                 "string"){{
                 crmFile = new CrmFile(
 ){{
-                    activityId = "string";
                     companyId = "string";
                     contactId = "string";
                     createdAt = OffsetDateTime.parse("2022-08-02T20:49:30.505Z");
                     dealId = "string";
                     description = "Networked multimedia database";
-                    fileName = "country.wav";
-                    fileSize = 7551.13d;
-                    fileType = "image";
-                    fileUrl = "string";
+                    downloadUrl = "string";
+                    eventId = "string";
                     id = "<ID>";
                     isActive = false;
                     leadId = "string";
+                    mimeType = "string";
+                    name = "string";
                     raw = new PropertyCrmFileRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2024-06-07T00:06:10.633Z");
+                    size = 1185.84d;
+                    updatedAt = OffsetDateTime.parse("2023-10-10T22:21:44.295Z");
                     userId = "string";
 
                 }};
@@ -2679,6 +2698,7 @@ public class Application {
                     }};
                     timezone = "Africa/Harare";
                     updatedAt = OffsetDateTime.parse("2023-09-13T13:49:01.082Z");
+                    userId = "string";
                     websites = new String[]{{
                         add("string"),
                     }};
@@ -2784,6 +2804,7 @@ public class Application {
                     }};
                     title = "string";
                     updatedAt = OffsetDateTime.parse("2023-09-02T17:59:32.331Z");
+                    userId = "string";
 
                 }};
 
@@ -2862,6 +2883,7 @@ public class Application {
                         add("string"),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-02-01T00:17:19.942Z");
+                    userId = "string";
                     wonReason = "string";
 
                 }};
@@ -2950,6 +2972,9 @@ public class Application {
                     }};
                     email = new PropertyCrmEventEmail(
 ){{
+                        attachmentFileIds = new String[]{{
+                            add("string"),
+                        }};
                         body = "string";
                         cc = new String[]{{
                             add("string"),
@@ -2992,6 +3017,7 @@ public class Application {
                     }};
                     type = CrmEventType.TASK;
                     updatedAt = OffsetDateTime.parse("2024-12-12T06:25:41.650Z");
+                    userId = "string";
 
                 }};
 
@@ -3053,22 +3079,22 @@ public class Application {
                 "string"){{
                 crmFile = new CrmFile(
 ){{
-                    activityId = "string";
                     companyId = "string";
                     contactId = "string";
                     createdAt = OffsetDateTime.parse("2022-02-11T15:31:35.167Z");
                     dealId = "string";
                     description = "Quality-focused mobile orchestration";
-                    fileName = "circuit_extended.jpe";
-                    fileSize = 2826.44d;
-                    fileType = "text";
-                    fileUrl = "string";
+                    downloadUrl = "string";
+                    eventId = "string";
                     id = "<ID>";
                     isActive = false;
                     leadId = "string";
+                    mimeType = "string";
+                    name = "string";
                     raw = new PropertyCrmFileRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2022-09-11T13:48:58.626Z");
+                    size = 5501.47d;
+                    updatedAt = OffsetDateTime.parse("2023-07-25T13:19:41.584Z");
                     userId = "string";
 
                 }};

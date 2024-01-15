@@ -147,5 +147,14 @@ public class TicketingTicket {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("user_id")
+    public String userId;
+
+    public TicketingTicket withUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    
     public TicketingTicket(){}
 }

@@ -89,6 +89,7 @@ public class Application {
                     }};
                     timezone = "Europe/Bucharest";
                     updatedAt = OffsetDateTime.parse("2023-10-03T19:32:53.625Z");
+                    userId = "string";
                     websites = new String[]{{
                         add("string"),
                     }};
@@ -216,6 +217,7 @@ public class Application {
                 query = "string";
                 sort = "string";
                 updatedGte = OffsetDateTime.parse("2023-05-02T17:52:08.731Z");
+                userId = "string";
 
             }};
 
@@ -377,6 +379,7 @@ public class Application {
                     }};
                     timezone = "Europe/Skopje";
                     updatedAt = OffsetDateTime.parse("2022-04-08T08:19:54.922Z");
+                    userId = "string";
                     websites = new String[]{{
                         add("string"),
                     }};
@@ -540,6 +543,7 @@ public class Application {
                     }};
                     timezone = "Africa/Harare";
                     updatedAt = OffsetDateTime.parse("2023-09-13T13:49:01.082Z");
+                    userId = "string";
                     websites = new String[]{{
                         add("string"),
                     }};

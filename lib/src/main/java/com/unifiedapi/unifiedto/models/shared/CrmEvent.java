@@ -175,5 +175,14 @@ public class CrmEvent {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("user_id")
+    public String userId;
+
+    public CrmEvent withUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    
     public CrmEvent(){}
 }

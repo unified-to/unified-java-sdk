@@ -145,5 +145,14 @@ public class CrmContact {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("user_id")
+    public String userId;
+
+    public CrmContact withUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    
     public CrmContact(){}
 }

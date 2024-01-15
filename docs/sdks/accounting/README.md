@@ -248,6 +248,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingInvoiceRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingInvoiceResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingInvoice;
+import com.unifiedapi.unifiedto.models.shared.AccountingInvoiceStatus;
 import com.unifiedapi.unifiedto.models.shared.AccountingLineitem;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingInvoiceRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingLineitemRaw;
@@ -293,9 +294,10 @@ public class Application {
                     refundAmount = 1578.89d;
                     refundReason = "string";
                     refundedAt = OffsetDateTime.parse("2023-08-27T04:22:20.182Z");
-                    taxAmount = 8057.4d;
-                    totalAmount = 6864d;
-                    updatedAt = OffsetDateTime.parse("2024-01-24T07:56:15.656Z");
+                    status = AccountingInvoiceStatus.AUTHORIZED;
+                    taxAmount = 6864d;
+                    totalAmount = 6873.46d;
+                    updatedAt = OffsetDateTime.parse("2023-11-19T22:49:02.835Z");
 
                 }};
 
@@ -428,6 +430,7 @@ public class Application {
                 "string"){{
                 accountingPayment = new AccountingPayment(
 ){{
+                    accountId = "string";
                     createdAt = OffsetDateTime.parse("2024-01-28T13:13:46.548Z");
                     currency = "Lari";
                     customerId = "string";
@@ -1780,6 +1783,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingInvoiceRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingInvoiceResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingInvoice;
+import com.unifiedapi.unifiedto.models.shared.AccountingInvoiceStatus;
 import com.unifiedapi.unifiedto.models.shared.AccountingLineitem;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingInvoiceRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingLineitemRaw;
@@ -1826,9 +1830,10 @@ public class Application {
                     refundAmount = 6443.77d;
                     refundReason = "string";
                     refundedAt = OffsetDateTime.parse("2022-08-21T01:13:52.344Z");
-                    taxAmount = 3028.19d;
-                    totalAmount = 1140.08d;
-                    updatedAt = OffsetDateTime.parse("2023-05-13T23:10:36.341Z");
+                    status = AccountingInvoiceStatus.DRAFT;
+                    taxAmount = 1140.08d;
+                    totalAmount = 4543.48d;
+                    updatedAt = OffsetDateTime.parse("2024-02-02T12:10:13.037Z");
 
                 }};
 
@@ -1963,6 +1968,7 @@ public class Application {
                 "string"){{
                 accountingPayment = new AccountingPayment(
 ){{
+                    accountId = "string";
                     createdAt = OffsetDateTime.parse("2022-02-25T02:56:43.385Z");
                     currency = "Boliviano boliviano";
                     customerId = "string";
@@ -2718,6 +2724,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingInvoice;
+import com.unifiedapi.unifiedto.models.shared.AccountingInvoiceStatus;
 import com.unifiedapi.unifiedto.models.shared.AccountingLineitem;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingInvoiceRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingLineitemRaw;
@@ -2764,9 +2771,10 @@ public class Application {
                     refundAmount = 3314.72d;
                     refundReason = "string";
                     refundedAt = OffsetDateTime.parse("2024-04-05T20:13:33.419Z");
-                    taxAmount = 7716.41d;
-                    totalAmount = 3824.24d;
-                    updatedAt = OffsetDateTime.parse("2022-11-19T05:18:11.782Z");
+                    status = AccountingInvoiceStatus.AUTHORIZED;
+                    taxAmount = 3824.24d;
+                    totalAmount = 2939.97d;
+                    updatedAt = OffsetDateTime.parse("2022-08-13T18:41:11.569Z");
 
                 }};
 
@@ -2901,6 +2909,7 @@ public class Application {
                 "string"){{
                 accountingPayment = new AccountingPayment(
 ){{
+                    accountId = "string";
                     createdAt = OffsetDateTime.parse("2022-01-04T17:30:16.475Z");
                     currency = "Sudanese Pound";
                     customerId = "string";

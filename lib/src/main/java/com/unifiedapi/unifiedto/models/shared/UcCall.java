@@ -15,14 +15,6 @@ import java.time.OffsetDateTime;
 
 
 public class UcCall {
-    @JsonProperty("agency_id")
-    public String agencyId;
-
-    public UcCall withAgencyId(String agencyId) {
-        this.agencyId = agencyId;
-        return this;
-    }
-    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     public String contactId;
@@ -109,7 +101,14 @@ public class UcCall {
         return this;
     }
     
-    public UcCall(@JsonProperty("agency_id") String agencyId) {
-        this.agencyId = agencyId;
-  }
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("user_id")
+    public String userId;
+
+    public UcCall withUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    
+    public UcCall(){}
 }

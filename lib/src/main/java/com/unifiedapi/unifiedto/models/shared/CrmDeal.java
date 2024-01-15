@@ -154,6 +154,15 @@ public class CrmDeal {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("user_id")
+    public String userId;
+
+    public CrmDeal withUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("won_reason")
     public String wonReason;
 

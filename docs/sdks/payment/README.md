@@ -41,6 +41,7 @@ public class Application {
                 "string"){{
                 accountingPayment = new AccountingPayment(
 ){{
+                    accountId = "string";
                     createdAt = OffsetDateTime.parse("2024-01-28T13:13:46.548Z");
                     currency = "Lari";
                     customerId = "string";
@@ -236,6 +237,7 @@ public class Application {
                 "string"){{
                 accountingPayment = new AccountingPayment(
 ){{
+                    accountId = "string";
                     createdAt = OffsetDateTime.parse("2022-02-25T02:56:43.385Z");
                     currency = "Boliviano boliviano";
                     customerId = "string";
@@ -361,6 +363,7 @@ public class Application {
                 "string"){{
                 accountingPayment = new AccountingPayment(
 ){{
+                    accountId = "string";
                     createdAt = OffsetDateTime.parse("2022-01-04T17:30:16.475Z");
                     currency = "Sudanese Pound";
                     customerId = "string";
