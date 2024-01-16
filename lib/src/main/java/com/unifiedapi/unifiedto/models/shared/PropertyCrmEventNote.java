@@ -7,28 +7,12 @@ package com.unifiedapi.unifiedto.models.shared;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.unifiedapi.unifiedto.utils.DateTimeDeserializer;
-import com.unifiedapi.unifiedto.utils.DateTimeSerializer;
-import java.time.OffsetDateTime;
 
 /**
  * PropertyCrmEventNote - The note object, when type = note
  */
 
 public class PropertyCrmEventNote {
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonSerialize(using = DateTimeSerializer.class)
-    @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("created_at")
-    public OffsetDateTime createdAt;
-
-    public PropertyCrmEventNote withCreatedAt(OffsetDateTime createdAt) {
-        this.createdAt = createdAt;
-        return this;
-    }
-    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
