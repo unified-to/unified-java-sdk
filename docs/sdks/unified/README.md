@@ -57,7 +57,7 @@ public class Application {
                 }},
                 "string",
                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                    add(PropertyConnectionPermissions.ATS_JOB_WRITE),
+                    add(PropertyConnectionPermissions.ATS_JOB_READ),
                 }}){{
                 auth = new PropertyConnectionAuth(
 ){{
@@ -168,7 +168,7 @@ public class Application {
                     Event.CREATED,
                     "string",
                     188.12d,
-                    ObjectType.CRM_CONTACT){{
+                    ObjectType.CRM_COMPANY){{
                     checkedAt = OffsetDateTime.parse("2023-11-05T05:21:48.024Z");
                     createdAt = OffsetDateTime.parse("2022-03-22T21:20:43.128Z");
                     environment = "string";
@@ -1060,7 +1060,7 @@ public class Application {
                     }},
                     "string",
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                        add(PropertyConnectionPermissions.CRM_CONTACT_READ),
+                        add(PropertyConnectionPermissions.CRM_COMPANY_WRITE),
                     }}){{
                     auth = new PropertyConnectionAuth(
 ){{

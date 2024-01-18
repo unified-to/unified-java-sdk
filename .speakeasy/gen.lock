@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: fcf38ba1245f7399c1338dc1ef8df2e7
+  docChecksum: ede9055e4403162b0dc1469530be3da9
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.234.3
-  releaseVersion: 0.13.1
-  configChecksum: f3632309356269ce1ede3ed6c3b91147
+  generationVersion: 2.235.3
+  releaseVersion: 0.13.2
+  configChecksum: ad6b8815729aec3476ca028f757eaf44
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -39,7 +39,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/Contact.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Deal.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Event.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/File.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Lead.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Pipeline.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Enrich.java
@@ -52,6 +51,7 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/Member.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Passthrough.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Storage.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/File.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Ticketing.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Note.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Ticket.java
@@ -276,8 +276,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmDealResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmEventRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmEventResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmFileRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmFileResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmLeadRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmLeadResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmPipelineRequest.java
@@ -290,8 +288,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmDealResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmEventRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmEventResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmFileRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmFileResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmLeadRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmLeadResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmPipelineRequest.java
@@ -304,8 +300,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmDealsResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmEventsRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmEventsResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmFilesRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmFilesResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmLeadsRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmLeadsResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmPipelinesRequest.java
@@ -318,8 +312,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmDealResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmEventRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmEventResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmFileRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmFileResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmLeadRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmLeadResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmPipelineRequest.java
@@ -332,8 +324,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmDealResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmEventRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmEventResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmFileRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmFileResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmLeadRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmLeadResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmPipelineRequest.java
@@ -346,8 +336,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmDealResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmEventRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmEventResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmFileRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmFileResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmLeadRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmLeadResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmPipelineRequest.java
@@ -366,18 +354,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveUcContactResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateUcContactRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateUcContactResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateStorageFileRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateStorageFileResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetStorageFileRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetStorageFileResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListStorageFilesRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListStorageFilesResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchStorageFileRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchStorageFileResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveStorageFileRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveStorageFileResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateStorageFileRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateStorageFileResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListEnrichPeopleRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListEnrichPeopleResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateHrisEmployeeRequest.java
@@ -438,6 +414,18 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemovePassthroughResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePassthroughRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePassthroughResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateStorageFileRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateStorageFileResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetStorageFileRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetStorageFileResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListStorageFilesRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListStorageFilesResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchStorageFileRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchStorageFileResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveStorageFileRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveStorageFileResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateStorageFileRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateStorageFileResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateTicketingNoteRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateTicketingNoteResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateTicketingTicketRequest.java
@@ -591,8 +579,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmEventMeeting.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmEventEmail.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmEventCall.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmFile.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmFileRaw.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmLead.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmLeadRaw.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmLeadAddress.java
@@ -609,11 +595,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUcContactRaw.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/UcEmailType.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/UcEmail.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/StorageFileType.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/StorageFile.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyStorageFileRaw.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/StoragePermission.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyStoragePermissionRoles.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/Gender.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/EnrichPerson.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/EnrichPersonWorkHistory.java
@@ -642,6 +623,11 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/MarketingEmailType.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/MarketingEmail.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/Undefined.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/StorageFileType.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/StorageFile.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyStorageFileRaw.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/StoragePermission.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyStoragePermissionRoles.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/TicketingNote.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyTicketingNoteRaw.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/TicketingTicketStatus.java
@@ -853,8 +839,6 @@ generatedFiles:
   - docs/models/operations/CreateCrmDealResponse.md
   - docs/models/operations/CreateCrmEventRequest.md
   - docs/models/operations/CreateCrmEventResponse.md
-  - docs/models/operations/CreateCrmFileRequest.md
-  - docs/models/operations/CreateCrmFileResponse.md
   - docs/models/operations/CreateCrmLeadRequest.md
   - docs/models/operations/CreateCrmLeadResponse.md
   - docs/models/operations/CreateCrmPipelineRequest.md
@@ -867,8 +851,6 @@ generatedFiles:
   - docs/models/operations/GetCrmDealResponse.md
   - docs/models/operations/GetCrmEventRequest.md
   - docs/models/operations/GetCrmEventResponse.md
-  - docs/models/operations/GetCrmFileRequest.md
-  - docs/models/operations/GetCrmFileResponse.md
   - docs/models/operations/GetCrmLeadRequest.md
   - docs/models/operations/GetCrmLeadResponse.md
   - docs/models/operations/GetCrmPipelineRequest.md
@@ -881,8 +863,6 @@ generatedFiles:
   - docs/models/operations/ListCrmDealsResponse.md
   - docs/models/operations/ListCrmEventsRequest.md
   - docs/models/operations/ListCrmEventsResponse.md
-  - docs/models/operations/ListCrmFilesRequest.md
-  - docs/models/operations/ListCrmFilesResponse.md
   - docs/models/operations/ListCrmLeadsRequest.md
   - docs/models/operations/ListCrmLeadsResponse.md
   - docs/models/operations/ListCrmPipelinesRequest.md
@@ -895,8 +875,6 @@ generatedFiles:
   - docs/models/operations/PatchCrmDealResponse.md
   - docs/models/operations/PatchCrmEventRequest.md
   - docs/models/operations/PatchCrmEventResponse.md
-  - docs/models/operations/PatchCrmFileRequest.md
-  - docs/models/operations/PatchCrmFileResponse.md
   - docs/models/operations/PatchCrmLeadRequest.md
   - docs/models/operations/PatchCrmLeadResponse.md
   - docs/models/operations/PatchCrmPipelineRequest.md
@@ -909,8 +887,6 @@ generatedFiles:
   - docs/models/operations/RemoveCrmDealResponse.md
   - docs/models/operations/RemoveCrmEventRequest.md
   - docs/models/operations/RemoveCrmEventResponse.md
-  - docs/models/operations/RemoveCrmFileRequest.md
-  - docs/models/operations/RemoveCrmFileResponse.md
   - docs/models/operations/RemoveCrmLeadRequest.md
   - docs/models/operations/RemoveCrmLeadResponse.md
   - docs/models/operations/RemoveCrmPipelineRequest.md
@@ -923,8 +899,6 @@ generatedFiles:
   - docs/models/operations/UpdateCrmDealResponse.md
   - docs/models/operations/UpdateCrmEventRequest.md
   - docs/models/operations/UpdateCrmEventResponse.md
-  - docs/models/operations/UpdateCrmFileRequest.md
-  - docs/models/operations/UpdateCrmFileResponse.md
   - docs/models/operations/UpdateCrmLeadRequest.md
   - docs/models/operations/UpdateCrmLeadResponse.md
   - docs/models/operations/UpdateCrmPipelineRequest.md
@@ -943,18 +917,6 @@ generatedFiles:
   - docs/models/operations/RemoveUcContactResponse.md
   - docs/models/operations/UpdateUcContactRequest.md
   - docs/models/operations/UpdateUcContactResponse.md
-  - docs/models/operations/CreateStorageFileRequest.md
-  - docs/models/operations/CreateStorageFileResponse.md
-  - docs/models/operations/GetStorageFileRequest.md
-  - docs/models/operations/GetStorageFileResponse.md
-  - docs/models/operations/ListStorageFilesRequest.md
-  - docs/models/operations/ListStorageFilesResponse.md
-  - docs/models/operations/PatchStorageFileRequest.md
-  - docs/models/operations/PatchStorageFileResponse.md
-  - docs/models/operations/RemoveStorageFileRequest.md
-  - docs/models/operations/RemoveStorageFileResponse.md
-  - docs/models/operations/UpdateStorageFileRequest.md
-  - docs/models/operations/UpdateStorageFileResponse.md
   - docs/models/operations/ListEnrichPeopleRequest.md
   - docs/models/operations/ListEnrichPeopleResponse.md
   - docs/models/operations/CreateHrisEmployeeRequest.md
@@ -1015,6 +977,18 @@ generatedFiles:
   - docs/models/operations/RemovePassthroughResponse.md
   - docs/models/operations/UpdatePassthroughRequest.md
   - docs/models/operations/UpdatePassthroughResponse.md
+  - docs/models/operations/CreateStorageFileRequest.md
+  - docs/models/operations/CreateStorageFileResponse.md
+  - docs/models/operations/GetStorageFileRequest.md
+  - docs/models/operations/GetStorageFileResponse.md
+  - docs/models/operations/ListStorageFilesRequest.md
+  - docs/models/operations/ListStorageFilesResponse.md
+  - docs/models/operations/PatchStorageFileRequest.md
+  - docs/models/operations/PatchStorageFileResponse.md
+  - docs/models/operations/RemoveStorageFileRequest.md
+  - docs/models/operations/RemoveStorageFileResponse.md
+  - docs/models/operations/UpdateStorageFileRequest.md
+  - docs/models/operations/UpdateStorageFileResponse.md
   - docs/models/operations/CreateTicketingNoteRequest.md
   - docs/models/operations/CreateTicketingNoteResponse.md
   - docs/models/operations/CreateTicketingTicketRequest.md
@@ -1168,8 +1142,6 @@ generatedFiles:
   - docs/models/shared/PropertyCrmEventMeeting.md
   - docs/models/shared/PropertyCrmEventEmail.md
   - docs/models/shared/PropertyCrmEventCall.md
-  - docs/models/shared/CrmFile.md
-  - docs/models/shared/PropertyCrmFileRaw.md
   - docs/models/shared/CrmLead.md
   - docs/models/shared/PropertyCrmLeadRaw.md
   - docs/models/shared/PropertyCrmLeadAddress.md
@@ -1186,11 +1158,6 @@ generatedFiles:
   - docs/models/shared/PropertyUcContactRaw.md
   - docs/models/shared/UcEmailType.md
   - docs/models/shared/UcEmail.md
-  - docs/models/shared/StorageFileType.md
-  - docs/models/shared/StorageFile.md
-  - docs/models/shared/PropertyStorageFileRaw.md
-  - docs/models/shared/StoragePermission.md
-  - docs/models/shared/PropertyStoragePermissionRoles.md
   - docs/models/shared/Gender.md
   - docs/models/shared/EnrichPerson.md
   - docs/models/shared/EnrichPersonWorkHistory.md
@@ -1219,6 +1186,11 @@ generatedFiles:
   - docs/models/shared/MarketingEmailType.md
   - docs/models/shared/MarketingEmail.md
   - docs/models/shared/Undefined.md
+  - docs/models/shared/StorageFileType.md
+  - docs/models/shared/StorageFile.md
+  - docs/models/shared/PropertyStorageFileRaw.md
+  - docs/models/shared/StoragePermission.md
+  - docs/models/shared/PropertyStoragePermissionRoles.md
   - docs/models/shared/TicketingNote.md
   - docs/models/shared/PropertyTicketingNoteRaw.md
   - docs/models/shared/TicketingTicketStatus.md
@@ -1271,7 +1243,6 @@ generatedFiles:
   - docs/sdks/contact/README.md
   - docs/sdks/deal/README.md
   - docs/sdks/event/README.md
-  - docs/sdks/file/README.md
   - docs/sdks/lead/README.md
   - docs/sdks/pipeline/README.md
   - docs/sdks/enrich/README.md
@@ -1284,6 +1255,7 @@ generatedFiles:
   - docs/sdks/member/README.md
   - docs/sdks/passthrough/README.md
   - docs/sdks/storage/README.md
+  - docs/sdks/file/README.md
   - docs/sdks/ticketing/README.md
   - docs/sdks/note/README.md
   - docs/sdks/ticket/README.md

@@ -7,42 +7,36 @@
 * [createCrmContact](#createcrmcontact) - Create a contact
 * [createCrmDeal](#createcrmdeal) - Create a deal
 * [createCrmEvent](#createcrmevent) - Create a event
-* [createCrmFile](#createcrmfile) - Create a file
 * [createCrmLead](#createcrmlead) - Create a lead
 * [createCrmPipeline](#createcrmpipeline) - Create a pipeline
 * [getCrmCompany](#getcrmcompany) - Retrieve a company
 * [getCrmContact](#getcrmcontact) - Retrieve a contact
 * [getCrmDeal](#getcrmdeal) - Retrieve a deal
 * [getCrmEvent](#getcrmevent) - Retrieve a event
-* [getCrmFile](#getcrmfile) - Retrieve a file
 * [getCrmLead](#getcrmlead) - Retrieve a lead
 * [getCrmPipeline](#getcrmpipeline) - Retrieve a pipeline
 * [listCrmCompanies](#listcrmcompanies) - List all companies
 * [listCrmContacts](#listcrmcontacts) - List all contacts
 * [listCrmDeals](#listcrmdeals) - List all deals
 * [listCrmEvents](#listcrmevents) - List all events
-* [listCrmFiles](#listcrmfiles) - List all files
 * [listCrmLeads](#listcrmleads) - List all leads
 * [listCrmPipelines](#listcrmpipelines) - List all pipelines
 * [patchCrmCompany](#patchcrmcompany) - Update a company
 * [patchCrmContact](#patchcrmcontact) - Update a contact
 * [patchCrmDeal](#patchcrmdeal) - Update a deal
 * [patchCrmEvent](#patchcrmevent) - Update a event
-* [patchCrmFile](#patchcrmfile) - Update a file
 * [patchCrmLead](#patchcrmlead) - Update a lead
 * [patchCrmPipeline](#patchcrmpipeline) - Update a pipeline
 * [removeCrmCompany](#removecrmcompany) - Remove a company
 * [removeCrmContact](#removecrmcontact) - Remove a contact
 * [removeCrmDeal](#removecrmdeal) - Remove a deal
 * [removeCrmEvent](#removecrmevent) - Remove a event
-* [removeCrmFile](#removecrmfile) - Remove a file
 * [removeCrmLead](#removecrmlead) - Remove a lead
 * [removeCrmPipeline](#removecrmpipeline) - Remove a pipeline
 * [updateCrmCompany](#updatecrmcompany) - Update a company
 * [updateCrmContact](#updatecrmcontact) - Update a contact
 * [updateCrmDeal](#updatecrmdeal) - Update a deal
 * [updateCrmEvent](#updatecrmevent) - Update a event
-* [updateCrmFile](#updatecrmfile) - Update a file
 * [updateCrmLead](#updatecrmlead) - Update a lead
 * [updateCrmPipeline](#updatecrmpipeline) - Update a pipeline
 
@@ -468,83 +462,6 @@ public class Application {
 **[com.unifiedapi.unifiedto.models.operations.CreateCrmEventResponse](../../models/operations/CreateCrmEventResponse.md)**
 
 
-## createCrmFile
-
-Create a file
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateCrmFileRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateCrmFileResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmFile;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmFileRaw;
-import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
-
-            com.unifiedapi.unifiedto.models.operations.CreateCrmFileRequest req = new CreateCrmFileRequest(
-                "string"){{
-                crmFile = new CrmFile(
-){{
-                    companyId = "string";
-                    contactId = "string";
-                    createdAt = OffsetDateTime.parse("2024-08-23T14:06:46.596Z");
-                    dealId = "string";
-                    description = "Multi-lateral background database";
-                    downloadUrl = "string";
-                    eventId = "string";
-                    id = "<ID>";
-                    isActive = false;
-                    leadId = "string";
-                    mimeType = "string";
-                    name = "string";
-                    raw = new PropertyCrmFileRaw(
-);
-                    size = 2318.83d;
-                    updatedAt = OffsetDateTime.parse("2024-11-27T09:12:07.889Z");
-                    userId = "string";
-
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.CreateCrmFileResponse res = sdk.crm.createCrmFile(req);
-
-            if (res.crmFile != null) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [com.unifiedapi.unifiedto.models.operations.CreateCrmFileRequest](../../models/operations/CreateCrmFileRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-
-
-### Response
-
-**[com.unifiedapi.unifiedto.models.operations.CreateCrmFileResponse](../../models/operations/CreateCrmFileResponse.md)**
-
-
 ## createCrmLead
 
 Create a lead
@@ -943,63 +860,6 @@ public class Application {
 **[com.unifiedapi.unifiedto.models.operations.GetCrmEventResponse](../../models/operations/GetCrmEventResponse.md)**
 
 
-## getCrmFile
-
-Retrieve a file
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetCrmFileRequest;
-import com.unifiedapi.unifiedto.models.operations.GetCrmFileResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
-
-            com.unifiedapi.unifiedto.models.operations.GetCrmFileRequest req = new GetCrmFileRequest(
-                "string",
-                "string"){{
-                fields = new String[]{{
-                    add("string"),
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.GetCrmFileResponse res = sdk.crm.getCrmFile(req);
-
-            if (res.crmFile != null) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [com.unifiedapi.unifiedto.models.operations.GetCrmFileRequest](../../models/operations/GetCrmFileRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-
-
-### Response
-
-**[com.unifiedapi.unifiedto.models.operations.GetCrmFileResponse](../../models/operations/GetCrmFileResponse.md)**
-
-
 ## getCrmLead
 
 Retrieve a lead
@@ -1378,72 +1238,6 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.ListCrmEventsResponse](../../models/operations/ListCrmEventsResponse.md)**
-
-
-## listCrmFiles
-
-List all files
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListCrmFilesRequest;
-import com.unifiedapi.unifiedto.models.operations.ListCrmFilesResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
-
-            com.unifiedapi.unifiedto.models.operations.ListCrmFilesRequest req = new ListCrmFilesRequest(
-                "string"){{
-                companyId = "string";
-                contactId = "string";
-                dealId = "string";
-                fields = new String[]{{
-                    add("string"),
-                }};
-                limit = 7725.49d;
-                offset = 1697.5d;
-                order = "string";
-                query = "string";
-                sort = "string";
-                updatedGte = OffsetDateTime.parse("2024-11-04T17:40:07.899Z");
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.ListCrmFilesResponse res = sdk.crm.listCrmFiles(req);
-
-            if (res.crmFiles != null) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [com.unifiedapi.unifiedto.models.operations.ListCrmFilesRequest](../../models/operations/ListCrmFilesRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-
-
-### Response
-
-**[com.unifiedapi.unifiedto.models.operations.ListCrmFilesResponse](../../models/operations/ListCrmFilesResponse.md)**
 
 
 ## listCrmLeads
@@ -2001,84 +1795,6 @@ public class Application {
 **[com.unifiedapi.unifiedto.models.operations.PatchCrmEventResponse](../../models/operations/PatchCrmEventResponse.md)**
 
 
-## patchCrmFile
-
-Update a file
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmFileRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmFileResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmFile;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmFileRaw;
-import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
-
-            com.unifiedapi.unifiedto.models.operations.PatchCrmFileRequest req = new PatchCrmFileRequest(
-                "string",
-                "string"){{
-                crmFile = new CrmFile(
-){{
-                    companyId = "string";
-                    contactId = "string";
-                    createdAt = OffsetDateTime.parse("2022-08-02T20:49:30.505Z");
-                    dealId = "string";
-                    description = "Networked multimedia database";
-                    downloadUrl = "string";
-                    eventId = "string";
-                    id = "<ID>";
-                    isActive = false;
-                    leadId = "string";
-                    mimeType = "string";
-                    name = "string";
-                    raw = new PropertyCrmFileRaw(
-);
-                    size = 1185.84d;
-                    updatedAt = OffsetDateTime.parse("2023-10-10T22:21:44.295Z");
-                    userId = "string";
-
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.PatchCrmFileResponse res = sdk.crm.patchCrmFile(req);
-
-            if (res.crmFile != null) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [com.unifiedapi.unifiedto.models.operations.PatchCrmFileRequest](../../models/operations/PatchCrmFileRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-
-
-### Response
-
-**[com.unifiedapi.unifiedto.models.operations.PatchCrmFileResponse](../../models/operations/PatchCrmFileResponse.md)**
-
-
 ## patchCrmLead
 
 Update a lead
@@ -2457,58 +2173,6 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.RemoveCrmEventResponse](../../models/operations/RemoveCrmEventResponse.md)**
-
-
-## removeCrmFile
-
-Remove a file
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveCrmFileRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveCrmFileResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
-
-            com.unifiedapi.unifiedto.models.operations.RemoveCrmFileRequest req = new RemoveCrmFileRequest(
-                "string",
-                "string");
-
-            com.unifiedapi.unifiedto.models.operations.RemoveCrmFileResponse res = sdk.crm.removeCrmFile(req);
-
-            if (res.statusCode == 200) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [com.unifiedapi.unifiedto.models.operations.RemoveCrmFileRequest](../../models/operations/RemoveCrmFileRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-
-
-### Response
-
-**[com.unifiedapi.unifiedto.models.operations.RemoveCrmFileResponse](../../models/operations/RemoveCrmFileResponse.md)**
 
 
 ## removeCrmLead
@@ -3039,84 +2703,6 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.UpdateCrmEventResponse](../../models/operations/UpdateCrmEventResponse.md)**
-
-
-## updateCrmFile
-
-Update a file
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateCrmFileRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateCrmFileResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmFile;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmFileRaw;
-import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
-
-            com.unifiedapi.unifiedto.models.operations.UpdateCrmFileRequest req = new UpdateCrmFileRequest(
-                "string",
-                "string"){{
-                crmFile = new CrmFile(
-){{
-                    companyId = "string";
-                    contactId = "string";
-                    createdAt = OffsetDateTime.parse("2022-02-11T15:31:35.167Z");
-                    dealId = "string";
-                    description = "Quality-focused mobile orchestration";
-                    downloadUrl = "string";
-                    eventId = "string";
-                    id = "<ID>";
-                    isActive = false;
-                    leadId = "string";
-                    mimeType = "string";
-                    name = "string";
-                    raw = new PropertyCrmFileRaw(
-);
-                    size = 5501.47d;
-                    updatedAt = OffsetDateTime.parse("2023-07-25T13:19:41.584Z");
-                    userId = "string";
-
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.UpdateCrmFileResponse res = sdk.crm.updateCrmFile(req);
-
-            if (res.crmFile != null) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [com.unifiedapi.unifiedto.models.operations.UpdateCrmFileRequest](../../models/operations/UpdateCrmFileRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-
-
-### Response
-
-**[com.unifiedapi.unifiedto.models.operations.UpdateCrmFileResponse](../../models/operations/UpdateCrmFileResponse.md)**
 
 
 ## updateCrmLead

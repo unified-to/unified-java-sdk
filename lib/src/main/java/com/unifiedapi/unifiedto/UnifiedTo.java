@@ -47,7 +47,6 @@ public class UnifiedTo {
     public Contact contact;
     public Deal deal;
     public Event event;
-    public File file;
     public Lead lead;
     public Pipeline pipeline;
     public Enrich enrich;
@@ -60,6 +59,7 @@ public class UnifiedTo {
     public Member member;
     public Passthrough passthrough;
     public Storage storage;
+    public File file;
     public Ticketing ticketing;
     public Note note;
     public Ticket ticket;
@@ -222,8 +222,6 @@ public class UnifiedTo {
 		
 		this.event = new Event(this.sdkConfiguration);
 		
-		this.file = new File(this.sdkConfiguration);
-		
 		this.lead = new Lead(this.sdkConfiguration);
 		
 		this.pipeline = new Pipeline(this.sdkConfiguration);
@@ -247,6 +245,8 @@ public class UnifiedTo {
 		this.passthrough = new Passthrough(this.sdkConfiguration);
 		
 		this.storage = new Storage(this.sdkConfiguration);
+		
+		this.file = new File(this.sdkConfiguration);
 		
 		this.ticketing = new Ticketing(this.sdkConfiguration);
 		
