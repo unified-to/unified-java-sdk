@@ -20,6 +20,15 @@ public class IntegrationSupport {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("list_account_id")
+    public Boolean listAccountId;
+
+    public IntegrationSupport withListAccountId(Boolean listAccountId) {
+        this.listAccountId = listAccountId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_application_id")
     public Boolean listApplicationId;
 
@@ -74,6 +83,15 @@ public class IntegrationSupport {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("list_interview_id")
+    public Boolean listInterviewId;
+
+    public IntegrationSupport withListInterviewId(Boolean listInterviewId) {
+        this.listInterviewId = listInterviewId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_invoice_id")
     public Boolean listInvoiceId;
 
@@ -97,6 +115,15 @@ public class IntegrationSupport {
 
     public IntegrationSupport withListLimit(Boolean listLimit) {
         this.listLimit = listLimit;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("list_list_id")
+    public Boolean listListId;
+
+    public IntegrationSupport withListListId(Boolean listListId) {
+        this.listListId = listListId;
         return this;
     }
     
