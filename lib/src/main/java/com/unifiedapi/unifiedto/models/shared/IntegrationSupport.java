@@ -191,6 +191,15 @@ public class IntegrationSupport {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("list_ticket_id")
+    public Boolean listTicketId;
+
+    public IntegrationSupport withListTicketId(Boolean listTicketId) {
+        this.listTicketId = listTicketId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_updated_gte")
     public Boolean listUpdatedGte;
 
