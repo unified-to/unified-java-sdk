@@ -36,15 +36,6 @@ public class HrisGroup {
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("employee_ids")
-    public String[] employeeIds;
-
-    public HrisGroup withEmployeeIds(String[] employeeIds) {
-        this.employeeIds = employeeIds;
-        return this;
-    }
-    
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
 
@@ -115,6 +106,15 @@ public class HrisGroup {
 
     public HrisGroup withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("user_ids")
+    public String[] userIds;
+
+    public HrisGroup withUserIds(String[] userIds) {
+        this.userIds = userIds;
         return this;
     }
     

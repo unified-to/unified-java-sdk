@@ -25,15 +25,6 @@ public class AccountingAccount {
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("bank_account_number")
-    public String bankAccountNumber;
-
-    public AccountingAccount withBankAccountNumber(String bankAccountNumber) {
-        this.bankAccountNumber = bankAccountNumber;
-        return this;
-    }
-    
-    @JsonInclude(Include.NON_ABSENT)
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")

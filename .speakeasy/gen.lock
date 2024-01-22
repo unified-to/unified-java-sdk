@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 87ac93817bed9842e1b2eb20030d9710
+  docChecksum: 7d5b03724fae01f8b6071020b3d073d9
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.237.2
-  releaseVersion: 0.13.4
-  configChecksum: a910dbb2c96ba613852ce25543a7687c
+  generationVersion: 2.237.3
+  releaseVersion: 0.13.5
+  configChecksum: 73a8b429ee87120630db115d3941c7f2
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -515,7 +515,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingPaymentRaw.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTaxrate.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingTaxrateRaw.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTransactionType.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTransaction.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingTransactionRaw.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTransactionLineitem.java
@@ -1078,7 +1077,6 @@ generatedFiles:
   - docs/models/shared/PropertyAccountingPaymentRaw.md
   - docs/models/shared/AccountingTaxrate.md
   - docs/models/shared/PropertyAccountingTaxrateRaw.md
-  - docs/models/shared/AccountingTransactionType.md
   - docs/models/shared/AccountingTransaction.md
   - docs/models/shared/PropertyAccountingTransactionRaw.md
   - docs/models/shared/AccountingTransactionLineitem.md

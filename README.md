@@ -12,7 +12,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.13.4'
+implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.13.5'
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -49,7 +49,6 @@ public class Application {
                 accountingAccount = new AccountingAccount(
                     "string"){{
                     balance = 6602.56d;
-                    bankAccountNumber = "string";
                     createdAt = OffsetDateTime.parse("2023-09-02T22:12:31.771Z");
                     currency = "Saint Helena Pound";
                     customerDefinedCode = "string";

@@ -44,7 +44,6 @@ public class Application {
                 accountingAccount = new AccountingAccount(
                     "string"){{
                     balance = 6602.56d;
-                    bankAccountNumber = "string";
                     createdAt = OffsetDateTime.parse("2023-09-02T22:12:31.771Z");
                     currency = "Saint Helena Pound";
                     customerDefinedCode = "string";
@@ -239,7 +238,6 @@ public class Application {
                 accountingAccount = new AccountingAccount(
                     "string"){{
                     balance = 1931.26d;
-                    bankAccountNumber = "string";
                     createdAt = OffsetDateTime.parse("2023-01-09T13:35:06.969Z");
                     currency = "Won";
                     customerDefinedCode = "string";
@@ -366,7 +364,6 @@ public class Application {
                 accountingAccount = new AccountingAccount(
                     "string"){{
                     balance = 5954.09d;
-                    bankAccountNumber = "string";
                     createdAt = OffsetDateTime.parse("2022-05-21T23:41:25.152Z");
                     currency = "Tanzanian Shilling";
                     customerDefinedCode = "string";

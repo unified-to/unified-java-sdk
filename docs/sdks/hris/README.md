@@ -166,9 +166,6 @@ public class Application {
 ){{
                     createdAt = OffsetDateTime.parse("2023-08-12T02:07:27.193Z");
                     description = "Self-enabling system-worthy collaboration";
-                    employeeIds = new String[]{{
-                        add("string"),
-                    }};
                     id = "<ID>";
                     isActive = false;
                     managerIds = new String[]{{
@@ -180,6 +177,9 @@ public class Application {
 );
                     type = HrisGroupType.TEAM;
                     updatedAt = OffsetDateTime.parse("2024-03-09T17:49:55.923Z");
+                    userIds = new String[]{{
+                        add("string"),
+                    }};
 
                 }};
 
@@ -601,9 +601,6 @@ public class Application {
 ){{
                     createdAt = OffsetDateTime.parse("2022-11-10T03:17:00.454Z");
                     description = "Compatible contextually-based local area network";
-                    employeeIds = new String[]{{
-                        add("string"),
-                    }};
                     id = "<ID>";
                     isActive = false;
                     managerIds = new String[]{{
@@ -615,6 +612,9 @@ public class Application {
 );
                     type = HrisGroupType.DIVISION;
                     updatedAt = OffsetDateTime.parse("2023-06-23T21:37:16.122Z");
+                    userIds = new String[]{{
+                        add("string"),
+                    }};
 
                 }};
 
@@ -900,9 +900,6 @@ public class Application {
 ){{
                     createdAt = OffsetDateTime.parse("2022-12-07T01:08:49.621Z");
                     description = "Integrated empowering productivity";
-                    employeeIds = new String[]{{
-                        add("string"),
-                    }};
                     id = "<ID>";
                     isActive = false;
                     managerIds = new String[]{{
@@ -914,6 +911,9 @@ public class Application {
 );
                     type = HrisGroupType.TEAM;
                     updatedAt = OffsetDateTime.parse("2024-09-12T13:33:00.416Z");
+                    userIds = new String[]{{
+                        add("string"),
+                    }};
 
                 }};
 

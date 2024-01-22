@@ -10,14 +10,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 public class AccountingTransaction {
-    @JsonProperty("account_id")
-    public String accountId;
-
-    public AccountingTransaction withAccountId(String accountId) {
-        this.accountId = accountId;
-        return this;
-    }
-    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
@@ -89,19 +81,12 @@ public class AccountingTransaction {
         return this;
     }
     
-    @JsonProperty("total_amount")
-    public Double totalAmount;
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("taxrate_id")
+    public String taxrateId;
 
-    public AccountingTransaction withTotalAmount(Double totalAmount) {
-        this.totalAmount = totalAmount;
-        return this;
-    }
-    
-    @JsonProperty("type")
-    public AccountingTransactionType type;
-
-    public AccountingTransaction withType(AccountingTransactionType type) {
-        this.type = type;
+    public AccountingTransaction withTaxrateId(String taxrateId) {
+        this.taxrateId = taxrateId;
         return this;
     }
     
@@ -114,10 +99,7 @@ public class AccountingTransaction {
         return this;
     }
     
-    public AccountingTransaction(@JsonProperty("account_id") String accountId, @JsonProperty("id") String id, @JsonProperty("total_amount") Double totalAmount, @JsonProperty("type") AccountingTransactionType type) {
-        this.accountId = accountId;
+    public AccountingTransaction(@JsonProperty("id") String id) {
         this.id = id;
-        this.totalAmount = totalAmount;
-        this.type = type;
   }
 }

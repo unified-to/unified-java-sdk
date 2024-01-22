@@ -10,6 +10,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 public class AccountingTransactionLineitem {
+    @JsonProperty("account_id")
+    public String accountId;
+
+    public AccountingTransactionLineitem withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_id")
     public String customerId;
@@ -72,7 +80,8 @@ public class AccountingTransactionLineitem {
         return this;
     }
     
-    public AccountingTransactionLineitem(@JsonProperty("total_amount") Double totalAmount) {
+    public AccountingTransactionLineitem(@JsonProperty("account_id") String accountId, @JsonProperty("total_amount") Double totalAmount) {
+        this.accountId = accountId;
         this.totalAmount = totalAmount;
   }
 }

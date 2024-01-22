@@ -82,7 +82,6 @@ public class Application {
                 accountingAccount = new AccountingAccount(
                     "string"){{
                     balance = 6602.56d;
-                    bankAccountNumber = "string";
                     createdAt = OffsetDateTime.parse("2023-09-02T22:12:31.771Z");
                     currency = "Saint Helena Pound";
                     customerDefinedCode = "string";
@@ -554,7 +553,6 @@ import com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionReq
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingTransaction;
 import com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineitem;
-import com.unifiedapi.unifiedto.models.shared.AccountingTransactionType;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingTransactionRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 
@@ -571,23 +569,23 @@ public class Application {
             com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionRequest req = new CreateAccountingTransactionRequest(
                 "string"){{
                 accountingTransaction = new AccountingTransaction(
-                    "string",
-                    "string",
-                    4969.62d,
-                    AccountingTransactionType.SPEND){{
+                    "string"){{
                     createdAt = "string";
-                    currency = "Pakistan Rupee";
-                    description = "Cross-platform dedicated policy";
+                    currency = "Libyan Dinar";
+                    description = "Pre-emptive multimedia benchmark";
                     lineItems = new com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineitem[]{{
                         add(new AccountingTransactionLineitem(
-                        4121.55d){{
-                            totalAmount = 8276.07d;
+                        "string",
+                        7389.88d){{
+                            accountId = "string";
+                            totalAmount = 2477.45d;
                         }}),
                     }};
                     raw = new PropertyAccountingTransactionRaw(
 );
                     reference = "string";
-                    taxAmount = 9038.49d;
+                    taxAmount = 8276.07d;
+                    taxrateId = "string";
                     updatedAt = "string";
 
                 }};
@@ -1616,7 +1614,6 @@ public class Application {
                 accountingAccount = new AccountingAccount(
                     "string"){{
                     balance = 1931.26d;
-                    bankAccountNumber = "string";
                     createdAt = OffsetDateTime.parse("2023-01-09T13:35:06.969Z");
                     currency = "Won";
                     customerDefinedCode = "string";
@@ -2093,7 +2090,6 @@ import com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionRequ
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingTransaction;
 import com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineitem;
-import com.unifiedapi.unifiedto.models.shared.AccountingTransactionType;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingTransactionRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 
@@ -2111,23 +2107,23 @@ public class Application {
                 "string",
                 "string"){{
                 accountingTransaction = new AccountingTransaction(
-                    "string",
-                    "string",
-                    5633.69d,
-                    AccountingTransactionType.RECEIVE){{
+                    "string"){{
                     createdAt = "string";
-                    currency = "European Monetary Unit (E.M.U.-6)";
-                    description = "Implemented 6th generation extranet";
+                    currency = "Kwacha";
+                    description = "Multi-channelled transitional function";
                     lineItems = new com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineitem[]{{
                         add(new AccountingTransactionLineitem(
-                        8716.58d){{
-                            totalAmount = 259.82d;
+                        "string",
+                        3153.09d){{
+                            accountId = "string";
+                            totalAmount = 535.65d;
                         }}),
                     }};
                     raw = new PropertyAccountingTransactionRaw(
 );
                     reference = "string";
-                    taxAmount = 1651.43d;
+                    taxAmount = 259.82d;
+                    taxrateId = "string";
                     updatedAt = "string";
 
                 }};
@@ -2557,7 +2553,6 @@ public class Application {
                 accountingAccount = new AccountingAccount(
                     "string"){{
                     balance = 5954.09d;
-                    bankAccountNumber = "string";
                     createdAt = OffsetDateTime.parse("2022-05-21T23:41:25.152Z");
                     currency = "Tanzanian Shilling";
                     customerDefinedCode = "string";
@@ -3034,7 +3029,6 @@ import com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionReq
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingTransaction;
 import com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineitem;
-import com.unifiedapi.unifiedto.models.shared.AccountingTransactionType;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingTransactionRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 
@@ -3052,23 +3046,23 @@ public class Application {
                 "string",
                 "string"){{
                 accountingTransaction = new AccountingTransaction(
-                    "string",
-                    "string",
-                    6498.37d,
-                    AccountingTransactionType.SPEND){{
+                    "string"){{
                     createdAt = "string";
-                    currency = "CFP Franc";
-                    description = "Reactive content-based collaboration";
+                    currency = "Zloty";
+                    description = "Organic web-enabled orchestration";
                     lineItems = new com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineitem[]{{
                         add(new AccountingTransactionLineitem(
-                        8603.41d){{
-                            totalAmount = 421.84d;
+                        "string",
+                        1897.48d){{
+                            accountId = "string";
+                            totalAmount = 2397.73d;
                         }}),
                     }};
                     raw = new PropertyAccountingTransactionRaw(
 );
                     reference = "string";
-                    taxAmount = 7972.27d;
+                    taxAmount = 421.84d;
+                    taxrateId = "string";
                     updatedAt = "string";
 
                 }};
