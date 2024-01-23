@@ -102,6 +102,15 @@ public class AtsCandidate {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("origin")
+    public Origin origin;
+
+    public AtsCandidate withOrigin(Origin origin) {
+        this.origin = origin;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     public PropertyAtsCandidateRaw raw;
 

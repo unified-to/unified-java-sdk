@@ -36,6 +36,15 @@ public class AccountingInvoice {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("contact_id")
+    public String contactId;
+
+    public AccountingInvoice withContactId(String contactId) {
+        this.contactId = contactId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
@@ -52,15 +61,6 @@ public class AccountingInvoice {
 
     public AccountingInvoice withCurrency(String currency) {
         this.currency = currency;
-        return this;
-    }
-    
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("customer_id")
-    public String customerId;
-
-    public AccountingInvoice withCustomerId(String customerId) {
-        this.customerId = customerId;
         return this;
     }
     

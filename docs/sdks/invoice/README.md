@@ -46,9 +46,9 @@ public class Application {
 ){{
                     balanceAmount = 6736.06d;
                     cancelledAt = OffsetDateTime.parse("2022-06-27T09:14:42.959Z");
+                    contactId = "string";
                     createdAt = OffsetDateTime.parse("2022-07-05T18:32:52.109Z");
                     currency = "Uzbekistan Sum";
-                    customerId = "string";
                     discountAmount = 259.66d;
                     dueAt = OffsetDateTime.parse("2023-04-30T15:54:59.455Z");
                     id = "<ID>";
@@ -186,7 +186,7 @@ public class Application {
 
             com.unifiedapi.unifiedto.models.operations.ListAccountingInvoicesRequest req = new ListAccountingInvoicesRequest(
                 "string"){{
-                customerId = "string";
+                contactId = "string";
                 fields = new String[]{{
                     add("string"),
                 }};
@@ -260,9 +260,9 @@ public class Application {
 ){{
                     balanceAmount = 7374.1d;
                     cancelledAt = OffsetDateTime.parse("2024-12-18T11:25:21.140Z");
+                    contactId = "string";
                     createdAt = OffsetDateTime.parse("2023-06-14T05:39:15.854Z");
                     currency = "Gold";
-                    customerId = "string";
                     discountAmount = 9127.96d;
                     dueAt = OffsetDateTime.parse("2024-07-05T05:55:55.560Z");
                     id = "<ID>";
@@ -405,9 +405,9 @@ public class Application {
 ){{
                     balanceAmount = 6974.28d;
                     cancelledAt = OffsetDateTime.parse("2023-06-03T06:46:26.704Z");
+                    contactId = "string";
                     createdAt = OffsetDateTime.parse("2022-07-10T23:29:44.275Z");
                     currency = "Forint";
-                    customerId = "string";
                     discountAmount = 2579.09d;
                     dueAt = OffsetDateTime.parse("2023-12-25T16:24:30.030Z");
                     id = "<ID>";

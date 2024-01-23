@@ -25,6 +25,15 @@ public class AccountingPayment {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("contact_id")
+    public String contactId;
+
+    public AccountingPayment withContactId(String contactId) {
+        this.contactId = contactId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
@@ -41,15 +50,6 @@ public class AccountingPayment {
 
     public AccountingPayment withCurrency(String currency) {
         this.currency = currency;
-        return this;
-    }
-    
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("customer_id")
-    public String customerId;
-
-    public AccountingPayment withCustomerId(String customerId) {
-        this.customerId = customerId;
         return this;
     }
     

@@ -27,6 +27,7 @@ import com.unifiedapi.unifiedto.models.shared.AtsEmail;
 import com.unifiedapi.unifiedto.models.shared.AtsEmailType;
 import com.unifiedapi.unifiedto.models.shared.AtsTelephone;
 import com.unifiedapi.unifiedto.models.shared.AtsTelephoneType;
+import com.unifiedapi.unifiedto.models.shared.Origin;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -73,6 +74,7 @@ public class Application {
                         add("string"),
                     }};
                     name = "string";
+                    origin = Origin.AGENCY;
                     raw = new PropertyAtsCandidateRaw(
 );
                     tags = new String[]{{
@@ -85,7 +87,7 @@ public class Application {
                         }}),
                     }};
                     title = "string";
-                    updatedAt = OffsetDateTime.parse("2022-03-24T00:07:47.521Z");
+                    updatedAt = OffsetDateTime.parse("2022-09-27T06:32:21.998Z");
 
                 }};
 
@@ -252,6 +254,7 @@ import com.unifiedapi.unifiedto.models.shared.AtsEmail;
 import com.unifiedapi.unifiedto.models.shared.AtsEmailType;
 import com.unifiedapi.unifiedto.models.shared.AtsTelephone;
 import com.unifiedapi.unifiedto.models.shared.AtsTelephoneType;
+import com.unifiedapi.unifiedto.models.shared.Origin;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -299,6 +302,7 @@ public class Application {
                         add("string"),
                     }};
                     name = "string";
+                    origin = Origin.INTERNAL;
                     raw = new PropertyAtsCandidateRaw(
 );
                     tags = new String[]{{
@@ -311,7 +315,7 @@ public class Application {
                         }}),
                     }};
                     title = "string";
-                    updatedAt = OffsetDateTime.parse("2023-01-30T15:05:49.494Z");
+                    updatedAt = OffsetDateTime.parse("2024-09-22T18:26:07.211Z");
 
                 }};
 
@@ -410,6 +414,7 @@ import com.unifiedapi.unifiedto.models.shared.AtsEmail;
 import com.unifiedapi.unifiedto.models.shared.AtsEmailType;
 import com.unifiedapi.unifiedto.models.shared.AtsTelephone;
 import com.unifiedapi.unifiedto.models.shared.AtsTelephoneType;
+import com.unifiedapi.unifiedto.models.shared.Origin;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -457,6 +462,7 @@ public class Application {
                         add("string"),
                     }};
                     name = "string";
+                    origin = Origin.UNIVERSITY;
                     raw = new PropertyAtsCandidateRaw(
 );
                     tags = new String[]{{
@@ -469,7 +475,7 @@ public class Application {
                         }}),
                     }};
                     title = "string";
-                    updatedAt = OffsetDateTime.parse("2024-12-25T00:59:29.785Z");
+                    updatedAt = OffsetDateTime.parse("2024-04-15T00:30:17.967Z");
 
                 }};
 

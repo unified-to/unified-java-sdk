@@ -42,9 +42,9 @@ public class Application {
                 accountingPayment = new AccountingPayment(
 ){{
                     accountId = "string";
+                    contactId = "string";
                     createdAt = OffsetDateTime.parse("2024-01-28T13:13:46.548Z");
                     currency = "Lari";
-                    customerId = "string";
                     id = "<ID>";
                     invoiceId = "string";
                     notes = "string";
@@ -167,7 +167,7 @@ public class Application {
 
             com.unifiedapi.unifiedto.models.operations.ListAccountingPaymentsRequest req = new ListAccountingPaymentsRequest(
                 "string"){{
-                customerId = "string";
+                contactId = "string";
                 fields = new String[]{{
                     add("string"),
                 }};
@@ -238,9 +238,9 @@ public class Application {
                 accountingPayment = new AccountingPayment(
 ){{
                     accountId = "string";
+                    contactId = "string";
                     createdAt = OffsetDateTime.parse("2022-02-25T02:56:43.385Z");
                     currency = "Boliviano boliviano";
-                    customerId = "string";
                     id = "<ID>";
                     invoiceId = "string";
                     notes = "string";
@@ -364,9 +364,9 @@ public class Application {
                 accountingPayment = new AccountingPayment(
 ){{
                     accountId = "string";
+                    contactId = "string";
                     createdAt = OffsetDateTime.parse("2022-01-04T17:30:16.475Z");
                     currency = "Sudanese Pound";
-                    customerId = "string";
                     id = "<ID>";
                     invoiceId = "string";
                     notes = "string";

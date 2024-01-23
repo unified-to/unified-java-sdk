@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 74c9cb4660cb247c06eff86dea00135b
+  docChecksum: 981c0e1adf4c484c9cc54a29b1e6b7a6
   docVersion: "1.0"
   speakeasyVersion: internal
   generationVersion: 2.237.3
-  releaseVersion: 0.13.6
-  configChecksum: 47fa8c03dbd92970bfae7d4f432da1b3
+  releaseVersion: 0.13.7
+  configChecksum: d93390b0e40d42c8504c120f2d5de367
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -19,7 +19,7 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/SDKConfiguration.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Accounting.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Account.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/Customer.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/Contact.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Invoice.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Item.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Organization.java
@@ -36,7 +36,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/Scorecard.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Crm.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Company.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/Contact.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Deal.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Event.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Lead.java
@@ -53,6 +52,7 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/Storage.java
   - lib/src/main/java/com/unifiedapi/unifiedto/File.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Ticketing.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/Customer.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Note.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Ticket.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Uc.java
@@ -96,8 +96,8 @@ generatedFiles:
   - settings.gradle
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingAccountRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingAccountResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingCustomerRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingCustomerResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingContactRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingContactResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingInvoiceRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingInvoiceResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingItemRequest.java
@@ -110,8 +110,8 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingTransactionResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingAccountRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingAccountResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingCustomerRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingCustomerResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingContactRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingContactResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingInvoiceRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingInvoiceResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingItemRequest.java
@@ -126,8 +126,8 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingTransactionResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingAccountsRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingAccountsResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingCustomersRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingCustomersResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingContactsRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingContactsResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingInvoicesRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingInvoicesResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingItemsRequest.java
@@ -142,8 +142,8 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingTransactionsResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingAccountRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingAccountResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingCustomerRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingCustomerResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingContactRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingContactResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingInvoiceRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingInvoiceResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingItemRequest.java
@@ -156,8 +156,8 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingTransactionResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingAccountRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingAccountResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingCustomerRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingCustomerResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingContactRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingContactResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingInvoiceRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingInvoiceResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingItemRequest.java
@@ -170,8 +170,8 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingTransactionResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingAccountRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingAccountResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingCustomerRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingCustomerResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingContactRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingContactResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingInvoiceRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingInvoiceResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingItemRequest.java
@@ -182,18 +182,30 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingTaxrateResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingTransactionRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingTransactionResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateTicketingCustomerRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateTicketingCustomerResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetTicketingCustomerRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetTicketingCustomerResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListTicketingCustomersRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListTicketingCustomersResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchTicketingCustomerRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchTicketingCustomerResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveTicketingCustomerRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveTicketingCustomerResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateTicketingCustomerRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateTicketingCustomerResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmContactRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmContactResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateUcContactRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateUcContactResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmContactRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmContactResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetUcContactRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetUcContactResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmContactsRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmContactsResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListUcContactsRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListUcContactsResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmContactRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmContactResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchUcContactRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchUcContactResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmContactRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmContactResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveUcContactRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveUcContactResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmContactRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmContactResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateUcContactRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateUcContactResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAtsApplicationRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAtsApplicationResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAtsCandidateRequest.java
@@ -270,8 +282,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAtsScorecardResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmCompanyRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmCompanyResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmContactRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmContactResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmDealRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmDealResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmEventRequest.java
@@ -282,8 +292,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmPipelineResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmCompanyRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmCompanyResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmContactRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmContactResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmDealRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmDealResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmEventRequest.java
@@ -294,8 +302,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmPipelineResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmCompaniesRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmCompaniesResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmContactsRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmContactsResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmDealsRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmDealsResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmEventsRequest.java
@@ -306,8 +312,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmPipelinesResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmCompanyRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmCompanyResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmContactRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmContactResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmDealRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmDealResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmEventRequest.java
@@ -318,8 +322,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmPipelineResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmCompanyRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmCompanyResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmContactRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmContactResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmDealRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmDealResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmEventRequest.java
@@ -330,8 +332,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmPipelineResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmCompanyRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmCompanyResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmContactRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmContactResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmDealRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmDealResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmEventRequest.java
@@ -342,18 +342,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmPipelineResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListEnrichCompaniesRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListEnrichCompaniesResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateUcContactRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateUcContactResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetUcContactRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetUcContactResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListUcContactsRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListUcContactsResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchUcContactRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchUcContactResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveUcContactRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveUcContactResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateUcContactRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateUcContactResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListEnrichPeopleRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListEnrichPeopleResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateHrisEmployeeRequest.java
@@ -426,26 +414,38 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveStorageFileResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateStorageFileRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateStorageFileResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateTicketingCustomerRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateTicketingCustomerResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateTicketingNoteRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateTicketingNoteResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateTicketingTicketRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateTicketingTicketResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetTicketingCustomerRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetTicketingCustomerResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetTicketingNoteRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetTicketingNoteResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetTicketingTicketRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetTicketingTicketResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListTicketingCustomersRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListTicketingCustomersResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListTicketingNotesRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListTicketingNotesResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListTicketingTicketsRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListTicketingTicketsResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchTicketingCustomerRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchTicketingCustomerResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchTicketingNoteRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchTicketingNoteResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchTicketingTicketRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchTicketingTicketResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveTicketingCustomerRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveTicketingCustomerResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveTicketingNoteRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveTicketingNoteResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveTicketingTicketRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveTicketingTicketResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateTicketingCustomerRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateTicketingCustomerResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateTicketingNoteRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateTicketingNoteResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateTicketingTicketRequest.java
@@ -496,14 +496,14 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingAccount.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingAccountRaw.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/TaxExemption.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingCustomer.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingContact.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTelephoneType.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTelephone.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingCustomerShippingAddress.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingCustomerRaw.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingContactShippingAddress.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingContactRaw.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingEmailType.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingEmail.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingCustomerBillingAddress.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingContactBillingAddress.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingInvoiceStatus.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingInvoice.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingInvoiceRaw.java
@@ -521,15 +521,23 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingOrganization.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingOrganizationRaw.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingOrganizationAddress.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/TicketingCustomer.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/TicketingTelephoneType.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/TicketingTelephone.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyTicketingCustomerRaw.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/TicketingEmailType.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/TicketingEmail.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmContact.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmTelephoneType.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmTelephone.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmContactRaw.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmEmailType.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmEmail.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmContactAddress.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/UcContact.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/UcTelephoneType.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/UcTelephone.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUcContactRaw.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/UcEmailType.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/UcEmail.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsApplicationStatus.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsApplication.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAtsApplicationRaw.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/Origin.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsCandidate.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsTelephoneType.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsTelephone.java
@@ -558,15 +566,8 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsStatus.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAtsStatusRaw.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmCompany.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmTelephoneType.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmTelephone.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmCompanyRaw.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmEmailType.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmEmail.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmCompanyAddress.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmContact.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmContactRaw.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmContactAddress.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmDeal.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmDealRaw.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmEventType.java
@@ -588,12 +589,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/EnrichTelephone.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyEnrichCompanyRaw.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyEnrichCompanyAddress.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/UcContact.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/UcTelephoneType.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/UcTelephone.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUcContactRaw.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/UcEmailType.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/UcEmail.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/Gender.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/EnrichPerson.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/EnrichPersonWorkHistory.java
@@ -627,6 +622,12 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyStorageFileRaw.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/StoragePermission.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyStoragePermissionRoles.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/TicketingCustomer.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/TicketingTelephoneType.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/TicketingTelephone.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyTicketingCustomerRaw.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/TicketingEmailType.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/TicketingEmail.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/TicketingNote.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyTicketingNoteRaw.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/TicketingTicketStatus.java
@@ -658,8 +659,8 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/Security.java
   - docs/models/operations/CreateAccountingAccountRequest.md
   - docs/models/operations/CreateAccountingAccountResponse.md
-  - docs/models/operations/CreateAccountingCustomerRequest.md
-  - docs/models/operations/CreateAccountingCustomerResponse.md
+  - docs/models/operations/CreateAccountingContactRequest.md
+  - docs/models/operations/CreateAccountingContactResponse.md
   - docs/models/operations/CreateAccountingInvoiceRequest.md
   - docs/models/operations/CreateAccountingInvoiceResponse.md
   - docs/models/operations/CreateAccountingItemRequest.md
@@ -672,8 +673,8 @@ generatedFiles:
   - docs/models/operations/CreateAccountingTransactionResponse.md
   - docs/models/operations/GetAccountingAccountRequest.md
   - docs/models/operations/GetAccountingAccountResponse.md
-  - docs/models/operations/GetAccountingCustomerRequest.md
-  - docs/models/operations/GetAccountingCustomerResponse.md
+  - docs/models/operations/GetAccountingContactRequest.md
+  - docs/models/operations/GetAccountingContactResponse.md
   - docs/models/operations/GetAccountingInvoiceRequest.md
   - docs/models/operations/GetAccountingInvoiceResponse.md
   - docs/models/operations/GetAccountingItemRequest.md
@@ -688,8 +689,8 @@ generatedFiles:
   - docs/models/operations/GetAccountingTransactionResponse.md
   - docs/models/operations/ListAccountingAccountsRequest.md
   - docs/models/operations/ListAccountingAccountsResponse.md
-  - docs/models/operations/ListAccountingCustomersRequest.md
-  - docs/models/operations/ListAccountingCustomersResponse.md
+  - docs/models/operations/ListAccountingContactsRequest.md
+  - docs/models/operations/ListAccountingContactsResponse.md
   - docs/models/operations/ListAccountingInvoicesRequest.md
   - docs/models/operations/ListAccountingInvoicesResponse.md
   - docs/models/operations/ListAccountingItemsRequest.md
@@ -704,8 +705,8 @@ generatedFiles:
   - docs/models/operations/ListAccountingTransactionsResponse.md
   - docs/models/operations/PatchAccountingAccountRequest.md
   - docs/models/operations/PatchAccountingAccountResponse.md
-  - docs/models/operations/PatchAccountingCustomerRequest.md
-  - docs/models/operations/PatchAccountingCustomerResponse.md
+  - docs/models/operations/PatchAccountingContactRequest.md
+  - docs/models/operations/PatchAccountingContactResponse.md
   - docs/models/operations/PatchAccountingInvoiceRequest.md
   - docs/models/operations/PatchAccountingInvoiceResponse.md
   - docs/models/operations/PatchAccountingItemRequest.md
@@ -718,8 +719,8 @@ generatedFiles:
   - docs/models/operations/PatchAccountingTransactionResponse.md
   - docs/models/operations/RemoveAccountingAccountRequest.md
   - docs/models/operations/RemoveAccountingAccountResponse.md
-  - docs/models/operations/RemoveAccountingCustomerRequest.md
-  - docs/models/operations/RemoveAccountingCustomerResponse.md
+  - docs/models/operations/RemoveAccountingContactRequest.md
+  - docs/models/operations/RemoveAccountingContactResponse.md
   - docs/models/operations/RemoveAccountingInvoiceRequest.md
   - docs/models/operations/RemoveAccountingInvoiceResponse.md
   - docs/models/operations/RemoveAccountingItemRequest.md
@@ -732,8 +733,8 @@ generatedFiles:
   - docs/models/operations/RemoveAccountingTransactionResponse.md
   - docs/models/operations/UpdateAccountingAccountRequest.md
   - docs/models/operations/UpdateAccountingAccountResponse.md
-  - docs/models/operations/UpdateAccountingCustomerRequest.md
-  - docs/models/operations/UpdateAccountingCustomerResponse.md
+  - docs/models/operations/UpdateAccountingContactRequest.md
+  - docs/models/operations/UpdateAccountingContactResponse.md
   - docs/models/operations/UpdateAccountingInvoiceRequest.md
   - docs/models/operations/UpdateAccountingInvoiceResponse.md
   - docs/models/operations/UpdateAccountingItemRequest.md
@@ -744,18 +745,30 @@ generatedFiles:
   - docs/models/operations/UpdateAccountingTaxrateResponse.md
   - docs/models/operations/UpdateAccountingTransactionRequest.md
   - docs/models/operations/UpdateAccountingTransactionResponse.md
-  - docs/models/operations/CreateTicketingCustomerRequest.md
-  - docs/models/operations/CreateTicketingCustomerResponse.md
-  - docs/models/operations/GetTicketingCustomerRequest.md
-  - docs/models/operations/GetTicketingCustomerResponse.md
-  - docs/models/operations/ListTicketingCustomersRequest.md
-  - docs/models/operations/ListTicketingCustomersResponse.md
-  - docs/models/operations/PatchTicketingCustomerRequest.md
-  - docs/models/operations/PatchTicketingCustomerResponse.md
-  - docs/models/operations/RemoveTicketingCustomerRequest.md
-  - docs/models/operations/RemoveTicketingCustomerResponse.md
-  - docs/models/operations/UpdateTicketingCustomerRequest.md
-  - docs/models/operations/UpdateTicketingCustomerResponse.md
+  - docs/models/operations/CreateCrmContactRequest.md
+  - docs/models/operations/CreateCrmContactResponse.md
+  - docs/models/operations/CreateUcContactRequest.md
+  - docs/models/operations/CreateUcContactResponse.md
+  - docs/models/operations/GetCrmContactRequest.md
+  - docs/models/operations/GetCrmContactResponse.md
+  - docs/models/operations/GetUcContactRequest.md
+  - docs/models/operations/GetUcContactResponse.md
+  - docs/models/operations/ListCrmContactsRequest.md
+  - docs/models/operations/ListCrmContactsResponse.md
+  - docs/models/operations/ListUcContactsRequest.md
+  - docs/models/operations/ListUcContactsResponse.md
+  - docs/models/operations/PatchCrmContactRequest.md
+  - docs/models/operations/PatchCrmContactResponse.md
+  - docs/models/operations/PatchUcContactRequest.md
+  - docs/models/operations/PatchUcContactResponse.md
+  - docs/models/operations/RemoveCrmContactRequest.md
+  - docs/models/operations/RemoveCrmContactResponse.md
+  - docs/models/operations/RemoveUcContactRequest.md
+  - docs/models/operations/RemoveUcContactResponse.md
+  - docs/models/operations/UpdateCrmContactRequest.md
+  - docs/models/operations/UpdateCrmContactResponse.md
+  - docs/models/operations/UpdateUcContactRequest.md
+  - docs/models/operations/UpdateUcContactResponse.md
   - docs/models/operations/CreateAtsApplicationRequest.md
   - docs/models/operations/CreateAtsApplicationResponse.md
   - docs/models/operations/CreateAtsCandidateRequest.md
@@ -832,8 +845,6 @@ generatedFiles:
   - docs/models/operations/UpdateAtsScorecardResponse.md
   - docs/models/operations/CreateCrmCompanyRequest.md
   - docs/models/operations/CreateCrmCompanyResponse.md
-  - docs/models/operations/CreateCrmContactRequest.md
-  - docs/models/operations/CreateCrmContactResponse.md
   - docs/models/operations/CreateCrmDealRequest.md
   - docs/models/operations/CreateCrmDealResponse.md
   - docs/models/operations/CreateCrmEventRequest.md
@@ -844,8 +855,6 @@ generatedFiles:
   - docs/models/operations/CreateCrmPipelineResponse.md
   - docs/models/operations/GetCrmCompanyRequest.md
   - docs/models/operations/GetCrmCompanyResponse.md
-  - docs/models/operations/GetCrmContactRequest.md
-  - docs/models/operations/GetCrmContactResponse.md
   - docs/models/operations/GetCrmDealRequest.md
   - docs/models/operations/GetCrmDealResponse.md
   - docs/models/operations/GetCrmEventRequest.md
@@ -856,8 +865,6 @@ generatedFiles:
   - docs/models/operations/GetCrmPipelineResponse.md
   - docs/models/operations/ListCrmCompaniesRequest.md
   - docs/models/operations/ListCrmCompaniesResponse.md
-  - docs/models/operations/ListCrmContactsRequest.md
-  - docs/models/operations/ListCrmContactsResponse.md
   - docs/models/operations/ListCrmDealsRequest.md
   - docs/models/operations/ListCrmDealsResponse.md
   - docs/models/operations/ListCrmEventsRequest.md
@@ -868,8 +875,6 @@ generatedFiles:
   - docs/models/operations/ListCrmPipelinesResponse.md
   - docs/models/operations/PatchCrmCompanyRequest.md
   - docs/models/operations/PatchCrmCompanyResponse.md
-  - docs/models/operations/PatchCrmContactRequest.md
-  - docs/models/operations/PatchCrmContactResponse.md
   - docs/models/operations/PatchCrmDealRequest.md
   - docs/models/operations/PatchCrmDealResponse.md
   - docs/models/operations/PatchCrmEventRequest.md
@@ -880,8 +885,6 @@ generatedFiles:
   - docs/models/operations/PatchCrmPipelineResponse.md
   - docs/models/operations/RemoveCrmCompanyRequest.md
   - docs/models/operations/RemoveCrmCompanyResponse.md
-  - docs/models/operations/RemoveCrmContactRequest.md
-  - docs/models/operations/RemoveCrmContactResponse.md
   - docs/models/operations/RemoveCrmDealRequest.md
   - docs/models/operations/RemoveCrmDealResponse.md
   - docs/models/operations/RemoveCrmEventRequest.md
@@ -892,8 +895,6 @@ generatedFiles:
   - docs/models/operations/RemoveCrmPipelineResponse.md
   - docs/models/operations/UpdateCrmCompanyRequest.md
   - docs/models/operations/UpdateCrmCompanyResponse.md
-  - docs/models/operations/UpdateCrmContactRequest.md
-  - docs/models/operations/UpdateCrmContactResponse.md
   - docs/models/operations/UpdateCrmDealRequest.md
   - docs/models/operations/UpdateCrmDealResponse.md
   - docs/models/operations/UpdateCrmEventRequest.md
@@ -904,18 +905,6 @@ generatedFiles:
   - docs/models/operations/UpdateCrmPipelineResponse.md
   - docs/models/operations/ListEnrichCompaniesRequest.md
   - docs/models/operations/ListEnrichCompaniesResponse.md
-  - docs/models/operations/CreateUcContactRequest.md
-  - docs/models/operations/CreateUcContactResponse.md
-  - docs/models/operations/GetUcContactRequest.md
-  - docs/models/operations/GetUcContactResponse.md
-  - docs/models/operations/ListUcContactsRequest.md
-  - docs/models/operations/ListUcContactsResponse.md
-  - docs/models/operations/PatchUcContactRequest.md
-  - docs/models/operations/PatchUcContactResponse.md
-  - docs/models/operations/RemoveUcContactRequest.md
-  - docs/models/operations/RemoveUcContactResponse.md
-  - docs/models/operations/UpdateUcContactRequest.md
-  - docs/models/operations/UpdateUcContactResponse.md
   - docs/models/operations/ListEnrichPeopleRequest.md
   - docs/models/operations/ListEnrichPeopleResponse.md
   - docs/models/operations/CreateHrisEmployeeRequest.md
@@ -988,26 +977,38 @@ generatedFiles:
   - docs/models/operations/RemoveStorageFileResponse.md
   - docs/models/operations/UpdateStorageFileRequest.md
   - docs/models/operations/UpdateStorageFileResponse.md
+  - docs/models/operations/CreateTicketingCustomerRequest.md
+  - docs/models/operations/CreateTicketingCustomerResponse.md
   - docs/models/operations/CreateTicketingNoteRequest.md
   - docs/models/operations/CreateTicketingNoteResponse.md
   - docs/models/operations/CreateTicketingTicketRequest.md
   - docs/models/operations/CreateTicketingTicketResponse.md
+  - docs/models/operations/GetTicketingCustomerRequest.md
+  - docs/models/operations/GetTicketingCustomerResponse.md
   - docs/models/operations/GetTicketingNoteRequest.md
   - docs/models/operations/GetTicketingNoteResponse.md
   - docs/models/operations/GetTicketingTicketRequest.md
   - docs/models/operations/GetTicketingTicketResponse.md
+  - docs/models/operations/ListTicketingCustomersRequest.md
+  - docs/models/operations/ListTicketingCustomersResponse.md
   - docs/models/operations/ListTicketingNotesRequest.md
   - docs/models/operations/ListTicketingNotesResponse.md
   - docs/models/operations/ListTicketingTicketsRequest.md
   - docs/models/operations/ListTicketingTicketsResponse.md
+  - docs/models/operations/PatchTicketingCustomerRequest.md
+  - docs/models/operations/PatchTicketingCustomerResponse.md
   - docs/models/operations/PatchTicketingNoteRequest.md
   - docs/models/operations/PatchTicketingNoteResponse.md
   - docs/models/operations/PatchTicketingTicketRequest.md
   - docs/models/operations/PatchTicketingTicketResponse.md
+  - docs/models/operations/RemoveTicketingCustomerRequest.md
+  - docs/models/operations/RemoveTicketingCustomerResponse.md
   - docs/models/operations/RemoveTicketingNoteRequest.md
   - docs/models/operations/RemoveTicketingNoteResponse.md
   - docs/models/operations/RemoveTicketingTicketRequest.md
   - docs/models/operations/RemoveTicketingTicketResponse.md
+  - docs/models/operations/UpdateTicketingCustomerRequest.md
+  - docs/models/operations/UpdateTicketingCustomerResponse.md
   - docs/models/operations/UpdateTicketingNoteRequest.md
   - docs/models/operations/UpdateTicketingNoteResponse.md
   - docs/models/operations/UpdateTicketingTicketRequest.md
@@ -1058,14 +1059,14 @@ generatedFiles:
   - docs/models/shared/AccountingAccount.md
   - docs/models/shared/PropertyAccountingAccountRaw.md
   - docs/models/shared/TaxExemption.md
-  - docs/models/shared/AccountingCustomer.md
+  - docs/models/shared/AccountingContact.md
   - docs/models/shared/AccountingTelephoneType.md
   - docs/models/shared/AccountingTelephone.md
-  - docs/models/shared/PropertyAccountingCustomerShippingAddress.md
-  - docs/models/shared/PropertyAccountingCustomerRaw.md
+  - docs/models/shared/PropertyAccountingContactShippingAddress.md
+  - docs/models/shared/PropertyAccountingContactRaw.md
   - docs/models/shared/AccountingEmailType.md
   - docs/models/shared/AccountingEmail.md
-  - docs/models/shared/PropertyAccountingCustomerBillingAddress.md
+  - docs/models/shared/PropertyAccountingContactBillingAddress.md
   - docs/models/shared/AccountingInvoiceStatus.md
   - docs/models/shared/AccountingInvoice.md
   - docs/models/shared/PropertyAccountingInvoiceRaw.md
@@ -1083,15 +1084,23 @@ generatedFiles:
   - docs/models/shared/AccountingOrganization.md
   - docs/models/shared/PropertyAccountingOrganizationRaw.md
   - docs/models/shared/PropertyAccountingOrganizationAddress.md
-  - docs/models/shared/TicketingCustomer.md
-  - docs/models/shared/TicketingTelephoneType.md
-  - docs/models/shared/TicketingTelephone.md
-  - docs/models/shared/PropertyTicketingCustomerRaw.md
-  - docs/models/shared/TicketingEmailType.md
-  - docs/models/shared/TicketingEmail.md
+  - docs/models/shared/CrmContact.md
+  - docs/models/shared/CrmTelephoneType.md
+  - docs/models/shared/CrmTelephone.md
+  - docs/models/shared/PropertyCrmContactRaw.md
+  - docs/models/shared/CrmEmailType.md
+  - docs/models/shared/CrmEmail.md
+  - docs/models/shared/PropertyCrmContactAddress.md
+  - docs/models/shared/UcContact.md
+  - docs/models/shared/UcTelephoneType.md
+  - docs/models/shared/UcTelephone.md
+  - docs/models/shared/PropertyUcContactRaw.md
+  - docs/models/shared/UcEmailType.md
+  - docs/models/shared/UcEmail.md
   - docs/models/shared/AtsApplicationStatus.md
   - docs/models/shared/AtsApplication.md
   - docs/models/shared/PropertyAtsApplicationRaw.md
+  - docs/models/shared/Origin.md
   - docs/models/shared/AtsCandidate.md
   - docs/models/shared/AtsTelephoneType.md
   - docs/models/shared/AtsTelephone.md
@@ -1120,15 +1129,8 @@ generatedFiles:
   - docs/models/shared/AtsStatus.md
   - docs/models/shared/PropertyAtsStatusRaw.md
   - docs/models/shared/CrmCompany.md
-  - docs/models/shared/CrmTelephoneType.md
-  - docs/models/shared/CrmTelephone.md
   - docs/models/shared/PropertyCrmCompanyRaw.md
-  - docs/models/shared/CrmEmailType.md
-  - docs/models/shared/CrmEmail.md
   - docs/models/shared/PropertyCrmCompanyAddress.md
-  - docs/models/shared/CrmContact.md
-  - docs/models/shared/PropertyCrmContactRaw.md
-  - docs/models/shared/PropertyCrmContactAddress.md
   - docs/models/shared/CrmDeal.md
   - docs/models/shared/PropertyCrmDealRaw.md
   - docs/models/shared/CrmEventType.md
@@ -1150,12 +1152,6 @@ generatedFiles:
   - docs/models/shared/EnrichTelephone.md
   - docs/models/shared/PropertyEnrichCompanyRaw.md
   - docs/models/shared/PropertyEnrichCompanyAddress.md
-  - docs/models/shared/UcContact.md
-  - docs/models/shared/UcTelephoneType.md
-  - docs/models/shared/UcTelephone.md
-  - docs/models/shared/PropertyUcContactRaw.md
-  - docs/models/shared/UcEmailType.md
-  - docs/models/shared/UcEmail.md
   - docs/models/shared/Gender.md
   - docs/models/shared/EnrichPerson.md
   - docs/models/shared/EnrichPersonWorkHistory.md
@@ -1189,6 +1185,12 @@ generatedFiles:
   - docs/models/shared/PropertyStorageFileRaw.md
   - docs/models/shared/StoragePermission.md
   - docs/models/shared/PropertyStoragePermissionRoles.md
+  - docs/models/shared/TicketingCustomer.md
+  - docs/models/shared/TicketingTelephoneType.md
+  - docs/models/shared/TicketingTelephone.md
+  - docs/models/shared/PropertyTicketingCustomerRaw.md
+  - docs/models/shared/TicketingEmailType.md
+  - docs/models/shared/TicketingEmail.md
   - docs/models/shared/TicketingNote.md
   - docs/models/shared/PropertyTicketingNoteRaw.md
   - docs/models/shared/TicketingTicketStatus.md
@@ -1221,7 +1223,7 @@ generatedFiles:
   - docs/sdks/unifiedto/README.md
   - docs/sdks/accounting/README.md
   - docs/sdks/account/README.md
-  - docs/sdks/customer/README.md
+  - docs/sdks/contact/README.md
   - docs/sdks/invoice/README.md
   - docs/sdks/item/README.md
   - docs/sdks/organization/README.md
@@ -1238,7 +1240,6 @@ generatedFiles:
   - docs/sdks/scorecard/README.md
   - docs/sdks/crm/README.md
   - docs/sdks/company/README.md
-  - docs/sdks/contact/README.md
   - docs/sdks/deal/README.md
   - docs/sdks/event/README.md
   - docs/sdks/lead/README.md
@@ -1255,6 +1256,7 @@ generatedFiles:
   - docs/sdks/storage/README.md
   - docs/sdks/file/README.md
   - docs/sdks/ticketing/README.md
+  - docs/sdks/customer/README.md
   - docs/sdks/note/README.md
   - docs/sdks/ticket/README.md
   - docs/sdks/uc/README.md

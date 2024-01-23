@@ -63,19 +63,19 @@ public class Accounting {
     }
 
     /**
-     * Create a customer
+     * Create a contact
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.CreateAccountingCustomerResponse createAccountingCustomer(com.unifiedapi.unifiedto.models.operations.CreateAccountingCustomerRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateAccountingContactResponse createAccountingContact(com.unifiedapi.unifiedto.models.operations.CreateAccountingContactRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateAccountingCustomerRequest.class, baseUrl, "/accounting/{connection_id}/customer", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateAccountingContactRequest.class, baseUrl, "/accounting/{connection_id}/contact", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "accountingCustomer", "json");
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "accountingContact", "json");
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
@@ -87,15 +87,15 @@ public class Accounting {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
-        com.unifiedapi.unifiedto.models.operations.CreateAccountingCustomerResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAccountingCustomerResponse(contentType, httpRes.statusCode(), httpRes) {{
-            accountingCustomer = null;
+        com.unifiedapi.unifiedto.models.operations.CreateAccountingContactResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAccountingContactResponse(contentType, httpRes.statusCode(), httpRes) {{
+            accountingContact = null;
         }};
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AccountingCustomer out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingCustomer.class);
-                res.accountingCustomer = out;
+                com.unifiedapi.unifiedto.models.shared.AccountingContact out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingContact.class);
+                res.accountingContact = out;
             }
         }
 
@@ -347,14 +347,14 @@ public class Accounting {
     }
 
     /**
-     * Retrieve a customer
+     * Retrieve a contact
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetAccountingCustomerResponse getAccountingCustomer(com.unifiedapi.unifiedto.models.operations.GetAccountingCustomerRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetAccountingContactResponse getAccountingContact(com.unifiedapi.unifiedto.models.operations.GetAccountingContactRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAccountingCustomerRequest.class, baseUrl, "/accounting/{connection_id}/customer/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAccountingContactRequest.class, baseUrl, "/accounting/{connection_id}/contact/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -362,7 +362,7 @@ public class Accounting {
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetAccountingCustomerRequest.class, request, null);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetAccountingContactRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -375,15 +375,15 @@ public class Accounting {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
-        com.unifiedapi.unifiedto.models.operations.GetAccountingCustomerResponse res = new com.unifiedapi.unifiedto.models.operations.GetAccountingCustomerResponse(contentType, httpRes.statusCode(), httpRes) {{
-            accountingCustomer = null;
+        com.unifiedapi.unifiedto.models.operations.GetAccountingContactResponse res = new com.unifiedapi.unifiedto.models.operations.GetAccountingContactResponse(contentType, httpRes.statusCode(), httpRes) {{
+            accountingContact = null;
         }};
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AccountingCustomer out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingCustomer.class);
-                res.accountingCustomer = out;
+                com.unifiedapi.unifiedto.models.shared.AccountingContact out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingContact.class);
+                res.accountingContact = out;
             }
         }
 
@@ -699,14 +699,14 @@ public class Accounting {
     }
 
     /**
-     * List all customers
+     * List all contacts
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListAccountingCustomersResponse listAccountingCustomers(com.unifiedapi.unifiedto.models.operations.ListAccountingCustomersRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListAccountingContactsResponse listAccountingContacts(com.unifiedapi.unifiedto.models.operations.ListAccountingContactsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListAccountingCustomersRequest.class, baseUrl, "/accounting/{connection_id}/customer", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListAccountingContactsRequest.class, baseUrl, "/accounting/{connection_id}/contact", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -714,7 +714,7 @@ public class Accounting {
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListAccountingCustomersRequest.class, request, null);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListAccountingContactsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -727,15 +727,15 @@ public class Accounting {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
-        com.unifiedapi.unifiedto.models.operations.ListAccountingCustomersResponse res = new com.unifiedapi.unifiedto.models.operations.ListAccountingCustomersResponse(contentType, httpRes.statusCode(), httpRes) {{
-            accountingCustomers = null;
+        com.unifiedapi.unifiedto.models.operations.ListAccountingContactsResponse res = new com.unifiedapi.unifiedto.models.operations.ListAccountingContactsResponse(contentType, httpRes.statusCode(), httpRes) {{
+            accountingContacts = null;
         }};
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AccountingCustomer[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingCustomer[].class);
-                res.accountingCustomers = out;
+                com.unifiedapi.unifiedto.models.shared.AccountingContact[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingContact[].class);
+                res.accountingContacts = out;
             }
         }
 
@@ -1047,19 +1047,19 @@ public class Accounting {
     }
 
     /**
-     * Update a customer
+     * Update a contact
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchAccountingCustomerResponse patchAccountingCustomer(com.unifiedapi.unifiedto.models.operations.PatchAccountingCustomerRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchAccountingContactResponse patchAccountingContact(com.unifiedapi.unifiedto.models.operations.PatchAccountingContactRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAccountingCustomerRequest.class, baseUrl, "/accounting/{connection_id}/customer/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAccountingContactRequest.class, baseUrl, "/accounting/{connection_id}/contact/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "accountingCustomer", "json");
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "accountingContact", "json");
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
@@ -1071,15 +1071,15 @@ public class Accounting {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
-        com.unifiedapi.unifiedto.models.operations.PatchAccountingCustomerResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAccountingCustomerResponse(contentType, httpRes.statusCode(), httpRes) {{
-            accountingCustomer = null;
+        com.unifiedapi.unifiedto.models.operations.PatchAccountingContactResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAccountingContactResponse(contentType, httpRes.statusCode(), httpRes) {{
+            accountingContact = null;
         }};
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AccountingCustomer out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingCustomer.class);
-                res.accountingCustomer = out;
+                com.unifiedapi.unifiedto.models.shared.AccountingContact out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingContact.class);
+                res.accountingContact = out;
             }
         }
 
@@ -1324,14 +1324,14 @@ public class Accounting {
     }
 
     /**
-     * Remove a customer
+     * Remove a contact
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.RemoveAccountingCustomerResponse removeAccountingCustomer(com.unifiedapi.unifiedto.models.operations.RemoveAccountingCustomerRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveAccountingContactResponse removeAccountingContact(com.unifiedapi.unifiedto.models.operations.RemoveAccountingContactRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveAccountingCustomerRequest.class, baseUrl, "/accounting/{connection_id}/customer/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveAccountingContactRequest.class, baseUrl, "/accounting/{connection_id}/contact/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1346,7 +1346,7 @@ public class Accounting {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
-        com.unifiedapi.unifiedto.models.operations.RemoveAccountingCustomerResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAccountingCustomerResponse(contentType, httpRes.statusCode(), httpRes) {{
+        com.unifiedapi.unifiedto.models.operations.RemoveAccountingContactResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAccountingContactResponse(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
         
@@ -1586,19 +1586,19 @@ public class Accounting {
     }
 
     /**
-     * Update a customer
+     * Update a contact
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.UpdateAccountingCustomerResponse updateAccountingCustomer(com.unifiedapi.unifiedto.models.operations.UpdateAccountingCustomerRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateAccountingContactResponse updateAccountingContact(com.unifiedapi.unifiedto.models.operations.UpdateAccountingContactRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateAccountingCustomerRequest.class, baseUrl, "/accounting/{connection_id}/customer/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateAccountingContactRequest.class, baseUrl, "/accounting/{connection_id}/contact/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "accountingCustomer", "json");
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "accountingContact", "json");
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
@@ -1610,15 +1610,15 @@ public class Accounting {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
-        com.unifiedapi.unifiedto.models.operations.UpdateAccountingCustomerResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAccountingCustomerResponse(contentType, httpRes.statusCode(), httpRes) {{
-            accountingCustomer = null;
+        com.unifiedapi.unifiedto.models.operations.UpdateAccountingContactResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAccountingContactResponse(contentType, httpRes.statusCode(), httpRes) {{
+            accountingContact = null;
         }};
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AccountingCustomer out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingCustomer.class);
-                res.accountingCustomer = out;
+                com.unifiedapi.unifiedto.models.shared.AccountingContact out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingContact.class);
+                res.accountingContact = out;
             }
         }
 

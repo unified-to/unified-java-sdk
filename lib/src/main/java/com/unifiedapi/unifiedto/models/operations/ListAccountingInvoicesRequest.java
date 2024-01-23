@@ -22,13 +22,13 @@ public class ListAccountingInvoicesRequest {
     }
     
     /**
-     * The customer ID to filter results
+     * The customer/supplier ID to filter results
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customer_id")
-    public String customerId;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contact_id")
+    public String contactId;
 
-    public ListAccountingInvoicesRequest withCustomerId(String customerId) {
-        this.customerId = customerId;
+    public ListAccountingInvoicesRequest withContactId(String contactId) {
+        this.contactId = contactId;
         return this;
     }
     

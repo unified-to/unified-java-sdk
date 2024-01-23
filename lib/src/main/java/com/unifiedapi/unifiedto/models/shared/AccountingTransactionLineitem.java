@@ -19,11 +19,11 @@ public class AccountingTransactionLineitem {
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("customer_id")
-    public String customerId;
+    @JsonProperty("contact_id")
+    public String contactId;
 
-    public AccountingTransactionLineitem withCustomerId(String customerId) {
-        this.customerId = customerId;
+    public AccountingTransactionLineitem withContactId(String contactId) {
+        this.contactId = contactId;
         return this;
     }
     

@@ -27,7 +27,7 @@ public class UnifiedTo {
   	
     public Accounting accounting;
     public Account account;
-    public Customer customer;
+    public Contact contact;
     public Invoice invoice;
     public Item item;
     public Organization organization;
@@ -44,7 +44,6 @@ public class UnifiedTo {
     public Scorecard scorecard;
     public Crm crm;
     public Company company;
-    public Contact contact;
     public Deal deal;
     public Event event;
     public Lead lead;
@@ -61,6 +60,7 @@ public class UnifiedTo {
     public Storage storage;
     public File file;
     public Ticketing ticketing;
+    public Customer customer;
     public Note note;
     public Ticket ticket;
     public Uc uc;
@@ -182,7 +182,7 @@ public class UnifiedTo {
 		
 		this.account = new Account(this.sdkConfiguration);
 		
-		this.customer = new Customer(this.sdkConfiguration);
+		this.contact = new Contact(this.sdkConfiguration);
 		
 		this.invoice = new Invoice(this.sdkConfiguration);
 		
@@ -216,8 +216,6 @@ public class UnifiedTo {
 		
 		this.company = new Company(this.sdkConfiguration);
 		
-		this.contact = new Contact(this.sdkConfiguration);
-		
 		this.deal = new Deal(this.sdkConfiguration);
 		
 		this.event = new Event(this.sdkConfiguration);
@@ -249,6 +247,8 @@ public class UnifiedTo {
 		this.file = new File(this.sdkConfiguration);
 		
 		this.ticketing = new Ticketing(this.sdkConfiguration);
+		
+		this.customer = new Customer(this.sdkConfiguration);
 		
 		this.note = new Note(this.sdkConfiguration);
 		

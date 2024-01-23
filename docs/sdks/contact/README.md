@@ -3,18 +3,139 @@
 
 ### Available Operations
 
+* [createAccountingContact](#createaccountingcontact) - Create a contact
 * [createCrmContact](#createcrmcontact) - Create a contact
 * [createUcContact](#createuccontact) - Create a contact
+* [getAccountingContact](#getaccountingcontact) - Retrieve a contact
 * [getCrmContact](#getcrmcontact) - Retrieve a contact
 * [getUcContact](#getuccontact) - Retrieve a contact
+* [listAccountingContacts](#listaccountingcontacts) - List all contacts
 * [listCrmContacts](#listcrmcontacts) - List all contacts
 * [listUcContacts](#listuccontacts) - List all contacts
+* [patchAccountingContact](#patchaccountingcontact) - Update a contact
 * [patchCrmContact](#patchcrmcontact) - Update a contact
 * [patchUcContact](#patchuccontact) - Update a contact
+* [removeAccountingContact](#removeaccountingcontact) - Remove a contact
 * [removeCrmContact](#removecrmcontact) - Remove a contact
 * [removeUcContact](#removeuccontact) - Remove a contact
+* [updateAccountingContact](#updateaccountingcontact) - Update a contact
 * [updateCrmContact](#updatecrmcontact) - Update a contact
 * [updateUcContact](#updateuccontact) - Update a contact
+
+## createAccountingContact
+
+Create a contact
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.CreateAccountingContactRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateAccountingContactResponse;
+import com.unifiedapi.unifiedto.models.shared.AccountingContact;
+import com.unifiedapi.unifiedto.models.shared.AccountingEmail;
+import com.unifiedapi.unifiedto.models.shared.AccountingEmailType;
+import com.unifiedapi.unifiedto.models.shared.AccountingTelephone;
+import com.unifiedapi.unifiedto.models.shared.AccountingTelephoneType;
+import com.unifiedapi.unifiedto.models.shared.PropertyAccountingContactBillingAddress;
+import com.unifiedapi.unifiedto.models.shared.PropertyAccountingContactRaw;
+import com.unifiedapi.unifiedto.models.shared.PropertyAccountingContactShippingAddress;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TaxExemption;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.CreateAccountingContactRequest req = new CreateAccountingContactRequest(
+                "string"){{
+                accountingContact = new AccountingContact(
+){{
+                    billingAddress = new PropertyAccountingContactBillingAddress(
+){{
+                        address1 = "string";
+                        address2 = "string";
+                        city = "Lake Benny";
+                        country = "Azerbaijan";
+                        countryCode = "GT";
+                        postalCode = "48359-3238";
+                        region = "string";
+                        regionCode = "string";
+
+                    }};
+                    createdAt = OffsetDateTime.parse("2024-02-19T03:22:44.048Z");
+                    currency = "Peso Uruguayo";
+                    emails = new com.unifiedapi.unifiedto.models.shared.AccountingEmail[]{{
+                        add(new AccountingEmail(
+                        "string"){{
+                            email = "Ubaldo_Cruickshank82@hotmail.com";
+                        }}),
+                    }};
+                    id = "<ID>";
+                    isActive = false;
+                    isCustomer = false;
+                    isSupplier = false;
+                    name = "string";
+                    raw = new PropertyAccountingContactRaw(
+);
+                    shippingAddress = new PropertyAccountingContactShippingAddress(
+){{
+                        address1 = "string";
+                        address2 = "string";
+                        city = "North Jazmynefurt";
+                        country = "France";
+                        countryCode = "BE";
+                        postalCode = "36835-6542";
+                        region = "string";
+                        regionCode = "string";
+
+                    }};
+                    taxExemption = TaxExemption.FEDERAL_GOV;
+                    taxNumber = "string";
+                    telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
+                        add(new AccountingTelephone(
+                        "string"){{
+                            telephone = "string";
+                        }}),
+                    }};
+                    updatedAt = OffsetDateTime.parse("2023-09-05T13:56:20.676Z");
+
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateAccountingContactResponse res = sdk.contact.createAccountingContact(req);
+
+            if (res.accountingContact != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.CreateAccountingContactRequest](../../models/operations/CreateAccountingContactRequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.CreateAccountingContactResponse](../../models/operations/CreateAccountingContactResponse.md)**
+
 
 ## createCrmContact
 
@@ -202,6 +323,63 @@ public class Application {
 **[com.unifiedapi.unifiedto.models.operations.CreateUcContactResponse](../../models/operations/CreateUcContactResponse.md)**
 
 
+## getAccountingContact
+
+Retrieve a contact
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.GetAccountingContactRequest;
+import com.unifiedapi.unifiedto.models.operations.GetAccountingContactResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.GetAccountingContactRequest req = new GetAccountingContactRequest(
+                "string",
+                "string"){{
+                fields = new String[]{{
+                    add("string"),
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetAccountingContactResponse res = sdk.contact.getAccountingContact(req);
+
+            if (res.accountingContact != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.GetAccountingContactRequest](../../models/operations/GetAccountingContactRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.GetAccountingContactResponse](../../models/operations/GetAccountingContactResponse.md)**
+
+
 ## getCrmContact
 
 Retrieve a contact
@@ -314,6 +492,70 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.GetUcContactResponse](../../models/operations/GetUcContactResponse.md)**
+
+
+## listAccountingContacts
+
+List all contacts
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.ListAccountingContactsRequest;
+import com.unifiedapi.unifiedto.models.operations.ListAccountingContactsResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.ListAccountingContactsRequest req = new ListAccountingContactsRequest(
+                "string"){{
+                fields = new String[]{{
+                    add("string"),
+                }};
+                limit = 4596.32d;
+                offset = 8881.9d;
+                order = "string";
+                query = "string";
+                sort = "string";
+                type = "string";
+                updatedGte = OffsetDateTime.parse("2023-09-26T14:00:38.736Z");
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListAccountingContactsResponse res = sdk.contact.listAccountingContacts(req);
+
+            if (res.accountingContacts != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.ListAccountingContactsRequest](../../models/operations/ListAccountingContactsRequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.ListAccountingContactsResponse](../../models/operations/ListAccountingContactsResponse.md)**
 
 
 ## listCrmContacts
@@ -444,6 +686,122 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.ListUcContactsResponse](../../models/operations/ListUcContactsResponse.md)**
+
+
+## patchAccountingContact
+
+Update a contact
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.PatchAccountingContactRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchAccountingContactResponse;
+import com.unifiedapi.unifiedto.models.shared.AccountingContact;
+import com.unifiedapi.unifiedto.models.shared.AccountingEmail;
+import com.unifiedapi.unifiedto.models.shared.AccountingEmailType;
+import com.unifiedapi.unifiedto.models.shared.AccountingTelephone;
+import com.unifiedapi.unifiedto.models.shared.AccountingTelephoneType;
+import com.unifiedapi.unifiedto.models.shared.PropertyAccountingContactBillingAddress;
+import com.unifiedapi.unifiedto.models.shared.PropertyAccountingContactRaw;
+import com.unifiedapi.unifiedto.models.shared.PropertyAccountingContactShippingAddress;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TaxExemption;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.PatchAccountingContactRequest req = new PatchAccountingContactRequest(
+                "string",
+                "string"){{
+                accountingContact = new AccountingContact(
+){{
+                    billingAddress = new PropertyAccountingContactBillingAddress(
+){{
+                        address1 = "string";
+                        address2 = "string";
+                        city = "Sylvestermouth";
+                        country = "Norfolk Island";
+                        countryCode = "BN";
+                        postalCode = "34531-3519";
+                        region = "string";
+                        regionCode = "string";
+
+                    }};
+                    createdAt = OffsetDateTime.parse("2024-02-14T18:48:39.369Z");
+                    currency = "Singapore Dollar";
+                    emails = new com.unifiedapi.unifiedto.models.shared.AccountingEmail[]{{
+                        add(new AccountingEmail(
+                        "string"){{
+                            email = "Anya_Murphy@yahoo.com";
+                        }}),
+                    }};
+                    id = "<ID>";
+                    isActive = false;
+                    isCustomer = false;
+                    isSupplier = false;
+                    name = "string";
+                    raw = new PropertyAccountingContactRaw(
+);
+                    shippingAddress = new PropertyAccountingContactShippingAddress(
+){{
+                        address1 = "string";
+                        address2 = "string";
+                        city = "O'Connellburgh";
+                        country = "Guinea-Bissau";
+                        countryCode = "MV";
+                        postalCode = "91251-4209";
+                        region = "string";
+                        regionCode = "string";
+
+                    }};
+                    taxExemption = TaxExemption.EDUCATIONAL_ORG;
+                    taxNumber = "string";
+                    telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
+                        add(new AccountingTelephone(
+                        "string"){{
+                            telephone = "string";
+                        }}),
+                    }};
+                    updatedAt = OffsetDateTime.parse("2022-01-11T11:33:25.380Z");
+
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.PatchAccountingContactResponse res = sdk.contact.patchAccountingContact(req);
+
+            if (res.accountingContact != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.PatchAccountingContactRequest](../../models/operations/PatchAccountingContactRequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.PatchAccountingContactResponse](../../models/operations/PatchAccountingContactResponse.md)**
 
 
 ## patchCrmContact
@@ -634,6 +992,58 @@ public class Application {
 **[com.unifiedapi.unifiedto.models.operations.PatchUcContactResponse](../../models/operations/PatchUcContactResponse.md)**
 
 
+## removeAccountingContact
+
+Remove a contact
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.RemoveAccountingContactRequest;
+import com.unifiedapi.unifiedto.models.operations.RemoveAccountingContactResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.RemoveAccountingContactRequest req = new RemoveAccountingContactRequest(
+                "string",
+                "string");
+
+            com.unifiedapi.unifiedto.models.operations.RemoveAccountingContactResponse res = sdk.contact.removeAccountingContact(req);
+
+            if (res.statusCode == 200) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.RemoveAccountingContactRequest](../../models/operations/RemoveAccountingContactRequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.RemoveAccountingContactResponse](../../models/operations/RemoveAccountingContactResponse.md)**
+
+
 ## removeCrmContact
 
 Remove a contact
@@ -736,6 +1146,122 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.RemoveUcContactResponse](../../models/operations/RemoveUcContactResponse.md)**
+
+
+## updateAccountingContact
+
+Update a contact
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.UpdateAccountingContactRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdateAccountingContactResponse;
+import com.unifiedapi.unifiedto.models.shared.AccountingContact;
+import com.unifiedapi.unifiedto.models.shared.AccountingEmail;
+import com.unifiedapi.unifiedto.models.shared.AccountingEmailType;
+import com.unifiedapi.unifiedto.models.shared.AccountingTelephone;
+import com.unifiedapi.unifiedto.models.shared.AccountingTelephoneType;
+import com.unifiedapi.unifiedto.models.shared.PropertyAccountingContactBillingAddress;
+import com.unifiedapi.unifiedto.models.shared.PropertyAccountingContactRaw;
+import com.unifiedapi.unifiedto.models.shared.PropertyAccountingContactShippingAddress;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.TaxExemption;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.UpdateAccountingContactRequest req = new UpdateAccountingContactRequest(
+                "string",
+                "string"){{
+                accountingContact = new AccountingContact(
+){{
+                    billingAddress = new PropertyAccountingContactBillingAddress(
+){{
+                        address1 = "string";
+                        address2 = "string";
+                        city = "Mayaguez";
+                        country = "Ghana";
+                        countryCode = "JE";
+                        postalCode = "16521-4269";
+                        region = "string";
+                        regionCode = "string";
+
+                    }};
+                    createdAt = OffsetDateTime.parse("2023-02-14T04:27:23.372Z");
+                    currency = "European Monetary Unit (E.M.U.-6)";
+                    emails = new com.unifiedapi.unifiedto.models.shared.AccountingEmail[]{{
+                        add(new AccountingEmail(
+                        "string"){{
+                            email = "Kevin.Leffler@gmail.com";
+                        }}),
+                    }};
+                    id = "<ID>";
+                    isActive = false;
+                    isCustomer = false;
+                    isSupplier = false;
+                    name = "string";
+                    raw = new PropertyAccountingContactRaw(
+);
+                    shippingAddress = new PropertyAccountingContactShippingAddress(
+){{
+                        address1 = "string";
+                        address2 = "string";
+                        city = "Port Arely";
+                        country = "Norway";
+                        countryCode = "GP";
+                        postalCode = "99093-9229";
+                        region = "string";
+                        regionCode = "string";
+
+                    }};
+                    taxExemption = TaxExemption.MEDICAL_ORG;
+                    taxNumber = "string";
+                    telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
+                        add(new AccountingTelephone(
+                        "string"){{
+                            telephone = "string";
+                        }}),
+                    }};
+                    updatedAt = OffsetDateTime.parse("2023-08-30T07:55:45.909Z");
+
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.UpdateAccountingContactResponse res = sdk.contact.updateAccountingContact(req);
+
+            if (res.accountingContact != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.UpdateAccountingContactRequest](../../models/operations/UpdateAccountingContactRequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.UpdateAccountingContactResponse](../../models/operations/UpdateAccountingContactResponse.md)**
 
 
 ## updateCrmContact
