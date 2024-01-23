@@ -28,9 +28,9 @@ public class CrmPipeline {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deal_probability")
-    public Boolean dealProbability;
+    public Double dealProbability;
 
-    public CrmPipeline withDealProbability(Boolean dealProbability) {
+    public CrmPipeline withDealProbability(Double dealProbability) {
         this.dealProbability = dealProbability;
         return this;
     }

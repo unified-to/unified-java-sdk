@@ -595,14 +595,14 @@ public class Application {
                 crmPipeline = new CrmPipeline(
 ){{
                     createdAt = OffsetDateTime.parse("2024-06-24T10:05:30.432Z");
-                    dealProbability = false;
-                    displayOrder = 6254.97d;
+                    dealProbability = 6254.97d;
+                    displayOrder = 3052.57d;
                     id = "<ID>";
                     isActive = false;
                     name = "string";
                     raw = new PropertyCrmPipelineRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2022-12-01T13:29:52.270Z");
+                    updatedAt = OffsetDateTime.parse("2022-06-06T17:15:48.268Z");
 
                 }};
 
@@ -1930,14 +1930,14 @@ public class Application {
                 crmPipeline = new CrmPipeline(
 ){{
                     createdAt = OffsetDateTime.parse("2024-08-26T14:31:39.156Z");
-                    dealProbability = false;
-                    displayOrder = 8620.92d;
+                    dealProbability = 8620.92d;
+                    displayOrder = 4178.43d;
                     id = "<ID>";
                     isActive = false;
                     name = "string";
                     raw = new PropertyCrmPipelineRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2023-04-03T22:57:09.090Z");
+                    updatedAt = OffsetDateTime.parse("2022-02-25T13:09:02.644Z");
 
                 }};
 
@@ -2840,14 +2840,14 @@ public class Application {
                 crmPipeline = new CrmPipeline(
 ){{
                     createdAt = OffsetDateTime.parse("2022-12-27T16:21:58.595Z");
-                    dealProbability = false;
-                    displayOrder = 8923.83d;
+                    dealProbability = 8923.83d;
+                    displayOrder = 5142.22d;
                     id = "<ID>";
                     isActive = false;
                     name = "string";
                     raw = new PropertyCrmPipelineRaw(
 );
-                    updatedAt = OffsetDateTime.parse("2023-07-18T14:05:49.227Z");
+                    updatedAt = OffsetDateTime.parse("2023-11-03T02:41:03.928Z");
 
                 }};
 
