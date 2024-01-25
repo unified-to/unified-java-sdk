@@ -71,6 +71,15 @@ public class AccountingAccount {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_payable")
+    public Boolean isPayable;
+
+    public AccountingAccount withIsPayable(Boolean isPayable) {
+        this.isPayable = isPayable;
+        return this;
+    }
+    
     @JsonProperty("name")
     public String name;
 

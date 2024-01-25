@@ -49,6 +49,7 @@ public class Application {
                     customerDefinedCode = "string";
                     description = "Cross-group zero defect task-force";
                     id = "<ID>";
+                    isPayable = false;
                     raw = new PropertyAccountingAccountRaw(
 );
                     status = Status.ACTIVE;
@@ -243,6 +244,7 @@ public class Application {
                     customerDefinedCode = "string";
                     description = "Quality-focused multimedia implementation";
                     id = "<ID>";
+                    isPayable = false;
                     raw = new PropertyAccountingAccountRaw(
 );
                     status = Status.ARCHIVED;
@@ -369,6 +371,7 @@ public class Application {
                     customerDefinedCode = "string";
                     description = "Stand-alone grid-enabled model";
                     id = "<ID>";
+                    isPayable = false;
                     raw = new PropertyAccountingAccountRaw(
 );
                     status = Status.ACTIVE;

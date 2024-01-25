@@ -10,7 +10,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.13.7'
+implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.13.8'
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -52,6 +52,7 @@ public class Application {
                     customerDefinedCode = "string";
                     description = "Cross-group zero defect task-force";
                     id = "<ID>";
+                    isPayable = false;
                     raw = new PropertyAccountingAccountRaw(
 );
                     status = Status.ACTIVE;

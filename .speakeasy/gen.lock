@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 981c0e1adf4c484c9cc54a29b1e6b7a6
+  docChecksum: 5160b83a94b66b2e0ad89d7f5d90cf8c
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.237.3
-  releaseVersion: 0.13.7
-  configChecksum: d93390b0e40d42c8504c120f2d5de367
+  generationVersion: 2.239.4
+  releaseVersion: 0.13.8
+  configChecksum: fd8c826b182ce02a544d29a25180c7c8
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true

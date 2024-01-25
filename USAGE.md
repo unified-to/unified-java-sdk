@@ -32,6 +32,7 @@ public class Application {
                     customerDefinedCode = "string";
                     description = "Cross-group zero defect task-force";
                     id = "<ID>";
+                    isPayable = false;
                     raw = new PropertyAccountingAccountRaw(
 );
                     status = Status.ACTIVE;
