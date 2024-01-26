@@ -26,7 +26,6 @@ import com.unifiedapi.unifiedto.models.shared.AccountingInvoice;
 import com.unifiedapi.unifiedto.models.shared.AccountingInvoiceStatus;
 import com.unifiedapi.unifiedto.models.shared.AccountingLineitem;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingInvoiceRaw;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingLineitemRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -56,8 +55,6 @@ public class Application {
                     lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingLineitem[]{{
                         add(new AccountingLineitem(
                         5685.15d){{
-                            raw = new PropertyAccountingLineitemRaw(
-                            ){{}};
                             totalAmount = 7142.37d;
                         }}),
                     }};
@@ -239,7 +236,6 @@ import com.unifiedapi.unifiedto.models.shared.AccountingInvoice;
 import com.unifiedapi.unifiedto.models.shared.AccountingInvoiceStatus;
 import com.unifiedapi.unifiedto.models.shared.AccountingLineitem;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingInvoiceRaw;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingLineitemRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -270,8 +266,6 @@ public class Application {
                     lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingLineitem[]{{
                         add(new AccountingLineitem(
                         3886.02d){{
-                            raw = new PropertyAccountingLineitemRaw(
-                            ){{}};
                             totalAmount = 7810.81d;
                         }}),
                     }};
@@ -384,7 +378,6 @@ import com.unifiedapi.unifiedto.models.shared.AccountingInvoice;
 import com.unifiedapi.unifiedto.models.shared.AccountingInvoiceStatus;
 import com.unifiedapi.unifiedto.models.shared.AccountingLineitem;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingInvoiceRaw;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingLineitemRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -415,8 +408,6 @@ public class Application {
                     lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingLineitem[]{{
                         add(new AccountingLineitem(
                         9127.85d){{
-                            raw = new PropertyAccountingLineitemRaw(
-                            ){{}};
                             totalAmount = 3682.14d;
                         }}),
                     }};

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 5160b83a94b66b2e0ad89d7f5d90cf8c
+  docChecksum: e6d7bb30e178bd0903f2f07c8ad4601f
   docVersion: "1.0"
   speakeasyVersion: internal
   generationVersion: 2.239.4
-  releaseVersion: 0.13.8
-  configChecksum: fd8c826b182ce02a544d29a25180c7c8
+  releaseVersion: 0.13.9
+  configChecksum: adf00261c30cc54c5ae846c5c47f5ab3
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -508,7 +508,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingInvoice.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingInvoiceRaw.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingLineitem.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingLineitemRaw.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingItem.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingItemRaw.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingPayment.java
@@ -1071,7 +1070,6 @@ generatedFiles:
   - docs/models/shared/AccountingInvoice.md
   - docs/models/shared/PropertyAccountingInvoiceRaw.md
   - docs/models/shared/AccountingLineitem.md
-  - docs/models/shared/PropertyAccountingLineitemRaw.md
   - docs/models/shared/AccountingItem.md
   - docs/models/shared/PropertyAccountingItemRaw.md
   - docs/models/shared/AccountingPayment.md

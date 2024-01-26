@@ -99,15 +99,6 @@ public class AccountingLineitem {
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("raw")
-    public PropertyAccountingLineitemRaw raw;
-
-    public AccountingLineitem withRaw(PropertyAccountingLineitemRaw raw) {
-        this.raw = raw;
-        return this;
-    }
-    
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_amount")
     public Double refundedAmount;
 
