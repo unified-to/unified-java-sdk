@@ -99,6 +99,15 @@ public class AccountingLineitem {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("refund_amount")
+    public Double refundAmount;
+
+    public AccountingLineitem withRefundAmount(Double refundAmount) {
+        this.refundAmount = refundAmount;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_amount")
     public Double refundedAmount;
 

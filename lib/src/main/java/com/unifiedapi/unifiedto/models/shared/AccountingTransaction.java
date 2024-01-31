@@ -54,6 +54,18 @@ public class AccountingTransaction {
         return this;
     }
     
+    /**
+     * new field name
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lineitems")
+    public AccountingTransactionLineitem[] lineitems;
+
+    public AccountingTransaction withLineitems(AccountingTransactionLineitem[] lineitems) {
+        this.lineitems = lineitems;
+        return this;
+    }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     public java.util.Map<String, java.lang.Object> raw;
