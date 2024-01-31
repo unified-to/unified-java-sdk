@@ -40,7 +40,6 @@ import com.unifiedapi.unifiedto.models.shared.AccountingEmailType;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephone;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingContactBillingAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingContactRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingContactShippingAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TaxExemption;
@@ -85,8 +84,10 @@ public class Application {
                     isCustomer = false;
                     isSupplier = false;
                     name = "string";
-                    raw = new PropertyAccountingContactRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     shippingAddress = new PropertyAccountingContactShippingAddress(
 ){{
                         address1 = "string";
@@ -155,7 +156,6 @@ import com.unifiedapi.unifiedto.models.shared.CrmEmailType;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -199,8 +199,10 @@ public class Application {
                     }};
                     id = "<ID>";
                     name = "string";
-                    raw = new PropertyCrmContactRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
                         add(new CrmTelephone(
                         "string"){{
@@ -251,7 +253,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateUcContactRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateUcContactResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyUcContactRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.UcContact;
 import com.unifiedapi.unifiedto.models.shared.UcEmail;
@@ -284,8 +285,10 @@ public class Application {
                     }};
                     id = "<ID>";
                     name = "string";
-                    raw = new PropertyUcContactRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
                         add(new UcTelephone(
                         "string"){{
@@ -706,7 +709,6 @@ import com.unifiedapi.unifiedto.models.shared.AccountingEmailType;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephone;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingContactBillingAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingContactRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingContactShippingAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TaxExemption;
@@ -752,8 +754,10 @@ public class Application {
                     isCustomer = false;
                     isSupplier = false;
                     name = "string";
-                    raw = new PropertyAccountingContactRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     shippingAddress = new PropertyAccountingContactShippingAddress(
 ){{
                         address1 = "string";
@@ -822,7 +826,6 @@ import com.unifiedapi.unifiedto.models.shared.CrmEmailType;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -867,8 +870,10 @@ public class Application {
                     }};
                     id = "<ID>";
                     name = "string";
-                    raw = new PropertyCrmContactRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
                         add(new CrmTelephone(
                         "string"){{
@@ -919,7 +924,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchUcContactRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchUcContactResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyUcContactRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.UcContact;
 import com.unifiedapi.unifiedto.models.shared.UcEmail;
@@ -953,8 +957,10 @@ public class Application {
                     }};
                     id = "<ID>";
                     name = "string";
-                    raw = new PropertyUcContactRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
                         add(new UcTelephone(
                         "string"){{
@@ -1166,7 +1172,6 @@ import com.unifiedapi.unifiedto.models.shared.AccountingEmailType;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephone;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingContactBillingAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingContactRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingContactShippingAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TaxExemption;
@@ -1212,8 +1217,10 @@ public class Application {
                     isCustomer = false;
                     isSupplier = false;
                     name = "string";
-                    raw = new PropertyAccountingContactRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     shippingAddress = new PropertyAccountingContactShippingAddress(
 ){{
                         address1 = "string";
@@ -1282,7 +1289,6 @@ import com.unifiedapi.unifiedto.models.shared.CrmEmailType;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -1327,8 +1333,10 @@ public class Application {
                     }};
                     id = "<ID>";
                     name = "string";
-                    raw = new PropertyCrmContactRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
                         add(new CrmTelephone(
                         "string"){{
@@ -1379,7 +1387,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateUcContactRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateUcContactResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyUcContactRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.UcContact;
 import com.unifiedapi.unifiedto.models.shared.UcEmail;
@@ -1413,8 +1420,10 @@ public class Application {
                     }};
                     id = "<ID>";
                     name = "string";
-                    raw = new PropertyUcContactRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
                         add(new UcTelephone(
                         "string"){{

@@ -23,7 +23,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingAccount;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingAccountRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.Status;
 import com.unifiedapi.unifiedto.models.shared.Type;
@@ -50,8 +49,10 @@ public class Application {
                     description = "Cross-group zero defect task-force";
                     id = "<ID>";
                     isPayable = false;
-                    raw = new PropertyAccountingAccountRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     status = Status.ACTIVE;
                     type = Type.EQUITY;
                     updatedAt = OffsetDateTime.parse("2023-09-09T23:41:51.681Z");
@@ -217,7 +218,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingAccountRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingAccountResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingAccount;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingAccountRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.Status;
 import com.unifiedapi.unifiedto.models.shared.Type;
@@ -245,8 +245,10 @@ public class Application {
                     description = "Quality-focused multimedia implementation";
                     id = "<ID>";
                     isPayable = false;
-                    raw = new PropertyAccountingAccountRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     status = Status.ARCHIVED;
                     type = Type.REVENUE;
                     updatedAt = OffsetDateTime.parse("2024-12-10T10:46:36.474Z");
@@ -344,7 +346,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingAccountRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingAccountResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingAccount;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingAccountRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.Status;
 import com.unifiedapi.unifiedto.models.shared.Type;
@@ -372,8 +373,10 @@ public class Application {
                     description = "Stand-alone grid-enabled model";
                     id = "<ID>";
                     isPayable = false;
-                    raw = new PropertyAccountingAccountRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     status = Status.ACTIVE;
                     type = Type.BANK;
                     updatedAt = OffsetDateTime.parse("2022-04-02T20:00:03.765Z");

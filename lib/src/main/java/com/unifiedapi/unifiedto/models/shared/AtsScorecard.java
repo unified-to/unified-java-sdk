@@ -91,9 +91,9 @@ public class AtsScorecard {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    public PropertyAtsScorecardRaw raw;
+    public java.util.Map<String, java.lang.Object> raw;
 
-    public AtsScorecard withRaw(PropertyAtsScorecardRaw raw) {
+    public AtsScorecard withRaw(java.util.Map<String, java.lang.Object> raw) {
         this.raw = raw;
         return this;
     }

@@ -24,7 +24,6 @@ import com.unifiedapi.unifiedto.models.operations.CreateAtsInterviewRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsInterviewResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsInterview;
 import com.unifiedapi.unifiedto.models.shared.AtsInterviewStatus;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsInterviewRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -50,8 +49,10 @@ public class Application {
                     id = "<ID>";
                     jobId = "string";
                     location = "string";
-                    raw = new PropertyAtsInterviewRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     startAt = OffsetDateTime.parse("2023-11-20T00:14:00.277Z");
                     status = AtsInterviewStatus.COMPLETE;
                     updatedAt = OffsetDateTime.parse("2022-02-07T15:15:23.855Z");
@@ -222,7 +223,6 @@ import com.unifiedapi.unifiedto.models.operations.PatchAtsInterviewRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsInterviewResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsInterview;
 import com.unifiedapi.unifiedto.models.shared.AtsInterviewStatus;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsInterviewRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -249,8 +249,10 @@ public class Application {
                     id = "<ID>";
                     jobId = "string";
                     location = "string";
-                    raw = new PropertyAtsInterviewRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     startAt = OffsetDateTime.parse("2022-09-10T07:32:43.966Z");
                     status = AtsInterviewStatus.COMPLETE;
                     updatedAt = OffsetDateTime.parse("2024-03-18T02:52:45.725Z");
@@ -352,7 +354,6 @@ import com.unifiedapi.unifiedto.models.operations.UpdateAtsInterviewRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsInterviewResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsInterview;
 import com.unifiedapi.unifiedto.models.shared.AtsInterviewStatus;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsInterviewRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -379,8 +380,10 @@ public class Application {
                     id = "<ID>";
                     jobId = "string";
                     location = "string";
-                    raw = new PropertyAtsInterviewRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     startAt = OffsetDateTime.parse("2024-05-05T07:21:58.674Z");
                     status = AtsInterviewStatus.AWAITING_FEEDBACK;
                     updatedAt = OffsetDateTime.parse("2022-05-01T17:04:47.962Z");

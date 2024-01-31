@@ -91,9 +91,9 @@ public class StorageFile {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    public PropertyStorageFileRaw raw;
+    public java.util.Map<String, java.lang.Object> raw;
 
-    public StorageFile withRaw(PropertyStorageFileRaw raw) {
+    public StorageFile withRaw(java.util.Map<String, java.lang.Object> raw) {
         this.raw = raw;
         return this;
     }

@@ -112,9 +112,9 @@ public class AtsCandidate {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    public PropertyAtsCandidateRaw raw;
+    public java.util.Map<String, java.lang.Object> raw;
 
-    public AtsCandidate withRaw(PropertyAtsCandidateRaw raw) {
+    public AtsCandidate withRaw(java.util.Map<String, java.lang.Object> raw) {
         this.raw = raw;
         return this;
     }

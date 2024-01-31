@@ -23,7 +23,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingTaxrateRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingTaxrateResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingTaxrate;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingTaxrateRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -46,8 +45,10 @@ public class Application {
                     description = "Ergonomic regional neural-net";
                     id = "<ID>";
                     isActive = false;
-                    raw = new PropertyAccountingTaxrateRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     updatedAt = OffsetDateTime.parse("2023-12-27T23:06:27.112Z");
 
                 }};
@@ -211,7 +212,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingTaxrateRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingTaxrateResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingTaxrate;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingTaxrateRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -235,8 +235,10 @@ public class Application {
                     description = "Upgradable coherent adapter";
                     id = "<ID>";
                     isActive = false;
-                    raw = new PropertyAccountingTaxrateRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     updatedAt = OffsetDateTime.parse("2024-01-17T10:44:31.599Z");
 
                 }};
@@ -332,7 +334,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingTaxrateRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingTaxrateResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingTaxrate;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingTaxrateRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -356,8 +357,10 @@ public class Application {
                     description = "Open-source human-resource database";
                     id = "<ID>";
                     isActive = false;
-                    raw = new PropertyAccountingTaxrateRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     updatedAt = OffsetDateTime.parse("2022-03-21T10:57:59.053Z");
 
                 }};

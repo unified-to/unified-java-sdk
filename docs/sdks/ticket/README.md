@@ -22,7 +22,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyTicketingTicketRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TicketingTicket;
 import com.unifiedapi.unifiedto.models.shared.TicketingTicketStatus;
@@ -49,8 +48,10 @@ public class Application {
                     description = "Automated composite productivity";
                     id = "<ID>";
                     priority = "string";
-                    raw = new PropertyTicketingTicketRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     source = "string";
                     sourceRef = "string";
                     status = TicketingTicketStatus.CLOSED;
@@ -223,7 +224,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyTicketingTicketRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TicketingTicket;
 import com.unifiedapi.unifiedto.models.shared.TicketingTicketStatus;
@@ -251,8 +251,10 @@ public class Application {
                     description = "Operative composite strategy";
                     id = "<ID>";
                     priority = "string";
-                    raw = new PropertyTicketingTicketRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     source = "string";
                     sourceRef = "string";
                     status = TicketingTicketStatus.CLOSED;
@@ -355,7 +357,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyTicketingTicketRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TicketingTicket;
 import com.unifiedapi.unifiedto.models.shared.TicketingTicketStatus;
@@ -383,8 +384,10 @@ public class Application {
                     description = "Configurable user-facing middleware";
                     id = "<ID>";
                     priority = "string";
-                    raw = new PropertyTicketingTicketRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     source = "string";
                     sourceRef = "string";
                     status = TicketingTicketStatus.ACTIVE;

@@ -58,7 +58,6 @@ import com.unifiedapi.unifiedto.models.shared.CrmEmailType;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmCompanyAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmCompanyRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -105,8 +104,10 @@ public class Application {
                         add("string"),
                     }};
                     name = "string";
-                    raw = new PropertyCrmCompanyRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     tags = new String[]{{
                         add("string"),
                     }};
@@ -169,7 +170,6 @@ import com.unifiedapi.unifiedto.models.shared.CrmEmailType;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -213,8 +213,10 @@ public class Application {
                     }};
                     id = "<ID>";
                     name = "string";
-                    raw = new PropertyCrmContactRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
                         add(new CrmTelephone(
                         "string"){{
@@ -266,7 +268,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmDealRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmDealResponse;
 import com.unifiedapi.unifiedto.models.shared.CrmDeal;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmDealRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -293,8 +294,10 @@ public class Application {
                     name = "string";
                     pipeline = "string";
                     probability = 1087.81d;
-                    raw = new PropertyCrmDealRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     source = "string";
                     stage = "string";
                     tags = new String[]{{
@@ -350,7 +353,6 @@ import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventCall;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventEmail;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventMeeting;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventNote;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTask;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTaskStatus;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -420,8 +422,10 @@ public class Application {
                         description = "Virtual asymmetric definition";
 
                     }};
-                    raw = new PropertyCrmEventRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     task = new PropertyCrmEventTask(
 ){{
                         description = "Automated attitude-oriented info-mediaries";
@@ -480,7 +484,6 @@ import com.unifiedapi.unifiedto.models.shared.CrmLead;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmLeadAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmLeadRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -522,8 +525,10 @@ public class Application {
                     id = "<ID>";
                     isActive = false;
                     name = "string";
-                    raw = new PropertyCrmLeadRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     source = "string";
                     status = "string";
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
@@ -576,7 +581,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineResponse;
 import com.unifiedapi.unifiedto.models.shared.CrmPipeline;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmPipelineRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -600,8 +604,10 @@ public class Application {
                     id = "<ID>";
                     isActive = false;
                     name = "string";
-                    raw = new PropertyCrmPipelineRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     updatedAt = OffsetDateTime.parse("2022-06-06T17:15:48.268Z");
 
                 }};
@@ -1387,7 +1393,6 @@ import com.unifiedapi.unifiedto.models.shared.CrmEmailType;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmCompanyAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmCompanyRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -1435,8 +1440,10 @@ public class Application {
                         add("string"),
                     }};
                     name = "string";
-                    raw = new PropertyCrmCompanyRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     tags = new String[]{{
                         add("string"),
                     }};
@@ -1499,7 +1506,6 @@ import com.unifiedapi.unifiedto.models.shared.CrmEmailType;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -1544,8 +1550,10 @@ public class Application {
                     }};
                     id = "<ID>";
                     name = "string";
-                    raw = new PropertyCrmContactRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
                         add(new CrmTelephone(
                         "string"){{
@@ -1597,7 +1605,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmDealRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmDealResponse;
 import com.unifiedapi.unifiedto.models.shared.CrmDeal;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmDealRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -1625,8 +1632,10 @@ public class Application {
                     name = "string";
                     pipeline = "string";
                     probability = 9555.58d;
-                    raw = new PropertyCrmDealRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     source = "string";
                     stage = "string";
                     tags = new String[]{{
@@ -1682,7 +1691,6 @@ import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventCall;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventEmail;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventMeeting;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventNote;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTask;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTaskStatus;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1753,8 +1761,10 @@ public class Application {
                         description = "Realigned composite benchmark";
 
                     }};
-                    raw = new PropertyCrmEventRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     task = new PropertyCrmEventTask(
 ){{
                         description = "Customer-focused needs-based groupware";
@@ -1813,7 +1823,6 @@ import com.unifiedapi.unifiedto.models.shared.CrmLead;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmLeadAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmLeadRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -1856,8 +1865,10 @@ public class Application {
                     id = "<ID>";
                     isActive = false;
                     name = "string";
-                    raw = new PropertyCrmLeadRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     source = "string";
                     status = "string";
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
@@ -1910,7 +1921,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineResponse;
 import com.unifiedapi.unifiedto.models.shared.CrmPipeline;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmPipelineRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -1935,8 +1945,10 @@ public class Application {
                     id = "<ID>";
                     isActive = false;
                     name = "string";
-                    raw = new PropertyCrmPipelineRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     updatedAt = OffsetDateTime.parse("2022-02-25T13:09:02.644Z");
 
                 }};
@@ -2297,7 +2309,6 @@ import com.unifiedapi.unifiedto.models.shared.CrmEmailType;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmCompanyAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmCompanyRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -2345,8 +2356,10 @@ public class Application {
                         add("string"),
                     }};
                     name = "string";
-                    raw = new PropertyCrmCompanyRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     tags = new String[]{{
                         add("string"),
                     }};
@@ -2409,7 +2422,6 @@ import com.unifiedapi.unifiedto.models.shared.CrmEmailType;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -2454,8 +2466,10 @@ public class Application {
                     }};
                     id = "<ID>";
                     name = "string";
-                    raw = new PropertyCrmContactRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
                         add(new CrmTelephone(
                         "string"){{
@@ -2507,7 +2521,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmDealRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmDealResponse;
 import com.unifiedapi.unifiedto.models.shared.CrmDeal;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmDealRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -2535,8 +2548,10 @@ public class Application {
                     name = "string";
                     pipeline = "string";
                     probability = 2970.01d;
-                    raw = new PropertyCrmDealRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     source = "string";
                     stage = "string";
                     tags = new String[]{{
@@ -2592,7 +2607,6 @@ import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventCall;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventEmail;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventMeeting;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventNote;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTask;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTaskStatus;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -2663,8 +2677,10 @@ public class Application {
                         description = "Visionary actuating migration";
 
                     }};
-                    raw = new PropertyCrmEventRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     task = new PropertyCrmEventTask(
 ){{
                         description = "Synergized neutral complexity";
@@ -2723,7 +2739,6 @@ import com.unifiedapi.unifiedto.models.shared.CrmLead;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
 import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmLeadAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmLeadRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -2766,8 +2781,10 @@ public class Application {
                     id = "<ID>";
                     isActive = false;
                     name = "string";
-                    raw = new PropertyCrmLeadRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     source = "string";
                     status = "string";
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
@@ -2820,7 +2837,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineResponse;
 import com.unifiedapi.unifiedto.models.shared.CrmPipeline;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmPipelineRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -2845,8 +2861,10 @@ public class Application {
                     id = "<ID>";
                     isActive = false;
                     name = "string";
-                    raw = new PropertyCrmPipelineRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     updatedAt = OffsetDateTime.parse("2023-11-03T02:41:03.928Z");
 
                 }};

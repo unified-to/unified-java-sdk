@@ -12,9 +12,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IntegrationSupport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inbound_fields")
-    public PropertyIntegrationSupportInboundFields inboundFields;
+    public java.util.Map<String, java.lang.Object> inboundFields;
 
-    public IntegrationSupport withInboundFields(PropertyIntegrationSupportInboundFields inboundFields) {
+    public IntegrationSupport withInboundFields(java.util.Map<String, java.lang.Object> inboundFields) {
         this.inboundFields = inboundFields;
         return this;
     }
@@ -228,9 +228,9 @@ public class IntegrationSupport {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outbound_fields")
-    public PropertyIntegrationSupportOutboundFields outboundFields;
+    public java.util.Map<String, java.lang.Object> outboundFields;
 
-    public IntegrationSupport withOutboundFields(PropertyIntegrationSupportOutboundFields outboundFields) {
+    public IntegrationSupport withOutboundFields(java.util.Map<String, java.lang.Object> outboundFields) {
         this.outboundFields = outboundFields;
         return this;
     }

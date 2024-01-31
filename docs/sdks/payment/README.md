@@ -23,7 +23,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingPaymentRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingPaymentResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingPayment;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingPaymentRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -49,8 +48,10 @@ public class Application {
                     invoiceId = "string";
                     notes = "string";
                     paymentMethod = "string";
-                    raw = new PropertyAccountingPaymentRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     reference = "string";
                     totalAmount = 291.36d;
                     updatedAt = OffsetDateTime.parse("2023-10-01T03:33:47.004Z");
@@ -218,7 +219,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingPaymentRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingPaymentResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingPayment;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingPaymentRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -245,8 +245,10 @@ public class Application {
                     invoiceId = "string";
                     notes = "string";
                     paymentMethod = "string";
-                    raw = new PropertyAccountingPaymentRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     reference = "string";
                     totalAmount = 8698.74d;
                     updatedAt = OffsetDateTime.parse("2023-11-08T12:40:48.671Z");
@@ -344,7 +346,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingPaymentRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingPaymentResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingPayment;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingPaymentRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -371,8 +372,10 @@ public class Application {
                     invoiceId = "string";
                     notes = "string";
                     paymentMethod = "string";
-                    raw = new PropertyAccountingPaymentRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     reference = "string";
                     totalAmount = 1869.63d;
                     updatedAt = OffsetDateTime.parse("2022-05-14T18:33:08.394Z");

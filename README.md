@@ -10,7 +10,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.13.9'
+implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.13.10'
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -26,7 +26,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingAccount;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingAccountRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.Status;
 import com.unifiedapi.unifiedto.models.shared.Type;
@@ -53,8 +52,10 @@ public class Application {
                     description = "Cross-group zero defect task-force";
                     id = "<ID>";
                     isPayable = false;
-                    raw = new PropertyAccountingAccountRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     status = Status.ACTIVE;
                     type = Type.EQUITY;
                     updatedAt = OffsetDateTime.parse("2023-09-09T23:41:51.681Z");

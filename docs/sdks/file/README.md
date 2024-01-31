@@ -22,7 +22,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateStorageFileRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateStorageFileResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyStorageFileRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyStoragePermissionRoles;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.StorageFile;
@@ -61,8 +60,10 @@ public class Application {
                             }};
                         }}),
                     }};
-                    raw = new PropertyStorageFileRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     size = 3999.85d;
                     type = StorageFileType.FOLDER;
                     updatedAt = OffsetDateTime.parse("2024-03-07T14:24:08.441Z");
@@ -229,7 +230,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchStorageFileRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchStorageFileResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyStorageFileRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyStoragePermissionRoles;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.StorageFile;
@@ -269,8 +269,10 @@ public class Application {
                             }};
                         }}),
                     }};
-                    raw = new PropertyStorageFileRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     size = 2253.31d;
                     type = StorageFileType.FILE;
                     updatedAt = OffsetDateTime.parse("2023-11-03T15:19:05.454Z");
@@ -368,7 +370,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateStorageFileRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateStorageFileResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyStorageFileRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyStoragePermissionRoles;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.StorageFile;
@@ -408,8 +409,10 @@ public class Application {
                             }};
                         }}),
                     }};
-                    raw = new PropertyStorageFileRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     size = 4091d;
                     type = StorageFileType.FOLDER;
                     updatedAt = OffsetDateTime.parse("2022-06-25T21:16:43.994Z");

@@ -22,7 +22,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateTicketingNoteRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateTicketingNoteResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyTicketingNoteRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TicketingNote;
 import java.time.OffsetDateTime;
@@ -45,8 +44,10 @@ public class Application {
                     customerId = "string";
                     description = "Distributed 4th generation portal";
                     id = "<ID>";
-                    raw = new PropertyTicketingNoteRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     ticketId = "string";
                     updatedAt = "string";
                     userId = "string";
@@ -212,7 +213,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingNoteRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingNoteResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyTicketingNoteRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TicketingNote;
 import java.time.OffsetDateTime;
@@ -236,8 +236,10 @@ public class Application {
                     customerId = "string";
                     description = "Right-sized national productivity";
                     id = "<ID>";
-                    raw = new PropertyTicketingNoteRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     ticketId = "string";
                     updatedAt = "string";
                     userId = "string";
@@ -334,7 +336,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateTicketingNoteRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateTicketingNoteResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyTicketingNoteRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TicketingNote;
 import java.time.OffsetDateTime;
@@ -358,8 +359,10 @@ public class Application {
                     customerId = "string";
                     description = "Versatile value-added utilisation";
                     id = "<ID>";
-                    raw = new PropertyTicketingNoteRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     ticketId = "string";
                     updatedAt = "string";
                     userId = "string";

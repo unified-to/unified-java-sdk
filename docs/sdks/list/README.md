@@ -23,7 +23,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateMartechListRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateMartechListResponse;
 import com.unifiedapi.unifiedto.models.shared.MarketingList;
-import com.unifiedapi.unifiedto.models.shared.PropertyMarketingListRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -44,8 +43,10 @@ public class Application {
                     createdAt = "string";
                     id = "<ID>";
                     name = "string";
-                    raw = new PropertyMarketingListRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     updatedAt = OffsetDateTime.parse("2023-10-16T01:36:06.349Z");
 
                 }};
@@ -209,7 +210,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchMartechListRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchMartechListResponse;
 import com.unifiedapi.unifiedto.models.shared.MarketingList;
-import com.unifiedapi.unifiedto.models.shared.PropertyMarketingListRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -231,8 +231,10 @@ public class Application {
                     createdAt = "string";
                     id = "<ID>";
                     name = "string";
-                    raw = new PropertyMarketingListRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     updatedAt = OffsetDateTime.parse("2023-10-08T11:05:46.244Z");
 
                 }};
@@ -328,7 +330,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateMartechListRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateMartechListResponse;
 import com.unifiedapi.unifiedto.models.shared.MarketingList;
-import com.unifiedapi.unifiedto.models.shared.PropertyMarketingListRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -350,8 +351,10 @@ public class Application {
                     createdAt = "string";
                     id = "<ID>";
                     name = "string";
-                    raw = new PropertyMarketingListRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     updatedAt = OffsetDateTime.parse("2024-09-02T03:22:31.192Z");
 
                 }};

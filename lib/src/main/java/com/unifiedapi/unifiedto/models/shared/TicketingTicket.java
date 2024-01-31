@@ -84,9 +84,9 @@ public class TicketingTicket {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    public PropertyTicketingTicketRaw raw;
+    public java.util.Map<String, java.lang.Object> raw;
 
-    public TicketingTicket withRaw(PropertyTicketingTicketRaw raw) {
+    public TicketingTicket withRaw(java.util.Map<String, java.lang.Object> raw) {
         this.raw = raw;
         return this;
     }

@@ -24,7 +24,6 @@ import com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsDocument;
 import com.unifiedapi.unifiedto.models.shared.AtsDocumentType;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsDocumentRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -50,8 +49,10 @@ public class Application {
                     filename = "mouse_per_missouri.mp4";
                     id = "<ID>";
                     jobId = "string";
-                    raw = new PropertyAtsDocumentRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     type = AtsDocumentType.OFFER_PACKET;
                     updatedAt = OffsetDateTime.parse("2022-12-28T17:22:48.342Z");
                     userId = "string";
@@ -219,7 +220,6 @@ import com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsDocument;
 import com.unifiedapi.unifiedto.models.shared.AtsDocumentType;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsDocumentRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -246,8 +246,10 @@ public class Application {
                     filename = "future_underpin.mp4v";
                     id = "<ID>";
                     jobId = "string";
-                    raw = new PropertyAtsDocumentRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     type = AtsDocumentType.OFFER_LETTER;
                     updatedAt = OffsetDateTime.parse("2023-02-14T10:37:18.255Z");
                     userId = "string";
@@ -346,7 +348,6 @@ import com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsDocument;
 import com.unifiedapi.unifiedto.models.shared.AtsDocumentType;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsDocumentRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -373,8 +374,10 @@ public class Application {
                     filename = "unbranded_reprehenderit.jpg";
                     id = "<ID>";
                     jobId = "string";
-                    raw = new PropertyAtsDocumentRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     type = AtsDocumentType.OFFER_PACKET;
                     updatedAt = OffsetDateTime.parse("2022-12-03T00:21:50.487Z");
                     userId = "string";

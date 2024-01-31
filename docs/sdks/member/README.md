@@ -25,7 +25,6 @@ import com.unifiedapi.unifiedto.models.operations.CreateMartechMemberResponse;
 import com.unifiedapi.unifiedto.models.shared.MarketingEmail;
 import com.unifiedapi.unifiedto.models.shared.MarketingEmailType;
 import com.unifiedapi.unifiedto.models.shared.MarketingMember;
-import com.unifiedapi.unifiedto.models.shared.PropertyMarketingMemberRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -55,8 +54,10 @@ public class Application {
                         add("string"),
                     }};
                     name = "string";
-                    raw = new PropertyMarketingMemberRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     tags = new String[]{{
                         add("string"),
                     }};
@@ -226,7 +227,6 @@ import com.unifiedapi.unifiedto.models.operations.PatchMartechMemberResponse;
 import com.unifiedapi.unifiedto.models.shared.MarketingEmail;
 import com.unifiedapi.unifiedto.models.shared.MarketingEmailType;
 import com.unifiedapi.unifiedto.models.shared.MarketingMember;
-import com.unifiedapi.unifiedto.models.shared.PropertyMarketingMemberRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -257,8 +257,10 @@ public class Application {
                         add("string"),
                     }};
                     name = "string";
-                    raw = new PropertyMarketingMemberRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     tags = new String[]{{
                         add("string"),
                     }};
@@ -359,7 +361,6 @@ import com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberResponse;
 import com.unifiedapi.unifiedto.models.shared.MarketingEmail;
 import com.unifiedapi.unifiedto.models.shared.MarketingEmailType;
 import com.unifiedapi.unifiedto.models.shared.MarketingMember;
-import com.unifiedapi.unifiedto.models.shared.PropertyMarketingMemberRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -390,8 +391,10 @@ public class Application {
                         add("string"),
                     }};
                     name = "string";
-                    raw = new PropertyMarketingMemberRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     tags = new String[]{{
                         add("string"),
                     }};

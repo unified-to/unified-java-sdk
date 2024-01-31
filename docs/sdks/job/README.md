@@ -29,7 +29,6 @@ import com.unifiedapi.unifiedto.models.shared.AtsJob;
 import com.unifiedapi.unifiedto.models.shared.AtsJobStatus;
 import com.unifiedapi.unifiedto.models.shared.EmploymentType;
 import com.unifiedapi.unifiedto.models.shared.Frequency;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsJobRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -73,8 +72,10 @@ public class Application {
                     publicJobUrls = new String[]{{
                         add("string"),
                     }};
-                    raw = new PropertyAtsJobRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     recruiterIds = new String[]{{
                         add("string"),
                     }};
@@ -249,7 +250,6 @@ import com.unifiedapi.unifiedto.models.shared.AtsJob;
 import com.unifiedapi.unifiedto.models.shared.AtsJobStatus;
 import com.unifiedapi.unifiedto.models.shared.EmploymentType;
 import com.unifiedapi.unifiedto.models.shared.Frequency;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsJobRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -294,8 +294,10 @@ public class Application {
                     publicJobUrls = new String[]{{
                         add("string"),
                     }};
-                    raw = new PropertyAtsJobRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     recruiterIds = new String[]{{
                         add("string"),
                     }};
@@ -402,7 +404,6 @@ import com.unifiedapi.unifiedto.models.shared.AtsJob;
 import com.unifiedapi.unifiedto.models.shared.AtsJobStatus;
 import com.unifiedapi.unifiedto.models.shared.EmploymentType;
 import com.unifiedapi.unifiedto.models.shared.Frequency;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsJobRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -447,8 +448,10 @@ public class Application {
                     publicJobUrls = new String[]{{
                         add("string"),
                     }};
-                    raw = new PropertyAtsJobRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     recruiterIds = new String[]{{
                         add("string"),
                     }};

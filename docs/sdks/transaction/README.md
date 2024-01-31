@@ -24,7 +24,6 @@ import com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionReq
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingTransaction;
 import com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineitem;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingTransactionRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
@@ -52,8 +51,10 @@ public class Application {
                             totalAmount = 2477.45d;
                         }}),
                     }};
-                    raw = new PropertyAccountingTransactionRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     reference = "string";
                     taxAmount = 8276.07d;
                     taxrateId = "string";
@@ -221,7 +222,6 @@ import com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionRequ
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingTransaction;
 import com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineitem;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingTransactionRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
@@ -250,8 +250,10 @@ public class Application {
                             totalAmount = 535.65d;
                         }}),
                     }};
-                    raw = new PropertyAccountingTransactionRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     reference = "string";
                     taxAmount = 259.82d;
                     taxrateId = "string";
@@ -351,7 +353,6 @@ import com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionReq
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingTransaction;
 import com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineitem;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingTransactionRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
@@ -380,8 +381,10 @@ public class Application {
                             totalAmount = 2397.73d;
                         }}),
                     }};
-                    raw = new PropertyAccountingTransactionRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     reference = "string";
                     taxAmount = 421.84d;
                     taxrateId = "string";

@@ -127,9 +127,9 @@ public class CrmCompany {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    public PropertyCrmCompanyRaw raw;
+    public java.util.Map<String, java.lang.Object> raw;
 
-    public CrmCompany withRaw(PropertyCrmCompanyRaw raw) {
+    public CrmCompany withRaw(java.util.Map<String, java.lang.Object> raw) {
         this.raw = raw;
         return this;
     }

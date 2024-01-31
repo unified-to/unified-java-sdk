@@ -119,9 +119,9 @@ public class Webhook {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
-    public PropertyWebhookMeta meta;
+    public java.util.Map<String, java.lang.Object> meta;
 
-    public Webhook withMeta(PropertyWebhookMeta meta) {
+    public Webhook withMeta(java.util.Map<String, java.lang.Object> meta) {
         this.meta = meta;
         return this;
     }

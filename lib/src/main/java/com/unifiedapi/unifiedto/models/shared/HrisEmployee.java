@@ -194,9 +194,9 @@ public class HrisEmployee {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    public PropertyHrisEmployeeRaw raw;
+    public java.util.Map<String, java.lang.Object> raw;
 
-    public HrisEmployee withRaw(PropertyHrisEmployeeRaw raw) {
+    public HrisEmployee withRaw(java.util.Map<String, java.lang.Object> raw) {
         this.raw = raw;
         return this;
     }

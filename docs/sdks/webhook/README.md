@@ -24,7 +24,6 @@ import com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookResponse;
 import com.unifiedapi.unifiedto.models.shared.Event;
 import com.unifiedapi.unifiedto.models.shared.ObjectType;
-import com.unifiedapi.unifiedto.models.shared.PropertyWebhookMeta;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.Webhook;
 import com.unifiedapi.unifiedto.models.shared.WebhookWebhookType;
@@ -55,8 +54,10 @@ public class Application {
                     id = "<ID>";
                     integrationType = "string";
                     isHealthy = false;
-                    meta = new PropertyWebhookMeta(
-);
+                    meta = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     runs = new String[]{{
                         add("string"),
                     }};

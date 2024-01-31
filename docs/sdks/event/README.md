@@ -28,7 +28,6 @@ import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventCall;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventEmail;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventMeeting;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventNote;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTask;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTaskStatus;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -98,8 +97,10 @@ public class Application {
                         description = "Virtual asymmetric definition";
 
                     }};
-                    raw = new PropertyCrmEventRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     task = new PropertyCrmEventTask(
 ){{
                         description = "Automated attitude-oriented info-mediaries";
@@ -283,7 +284,6 @@ import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventCall;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventEmail;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventMeeting;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventNote;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTask;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTaskStatus;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -354,8 +354,10 @@ public class Application {
                         description = "Realigned composite benchmark";
 
                     }};
-                    raw = new PropertyCrmEventRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     task = new PropertyCrmEventTask(
 ){{
                         description = "Customer-focused needs-based groupware";
@@ -466,7 +468,6 @@ import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventCall;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventEmail;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventMeeting;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventNote;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTask;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTaskStatus;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -537,8 +538,10 @@ public class Application {
                         description = "Visionary actuating migration";
 
                     }};
-                    raw = new PropertyCrmEventRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     task = new PropertyCrmEventTask(
 ){{
                         description = "Synergized neutral complexity";

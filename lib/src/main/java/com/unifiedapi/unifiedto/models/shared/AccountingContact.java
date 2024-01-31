@@ -100,9 +100,9 @@ public class AccountingContact {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    public PropertyAccountingContactRaw raw;
+    public java.util.Map<String, java.lang.Object> raw;
 
-    public AccountingContact withRaw(PropertyAccountingContactRaw raw) {
+    public AccountingContact withRaw(java.util.Map<String, java.lang.Object> raw) {
         this.raw = raw;
         return this;
     }

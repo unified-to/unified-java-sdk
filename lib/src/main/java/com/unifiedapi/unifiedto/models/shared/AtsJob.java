@@ -129,9 +129,9 @@ public class AtsJob {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    public PropertyAtsJobRaw raw;
+    public java.util.Map<String, java.lang.Object> raw;
 
-    public AtsJob withRaw(PropertyAtsJobRaw raw) {
+    public AtsJob withRaw(java.util.Map<String, java.lang.Object> raw) {
         this.raw = raw;
         return this;
     }

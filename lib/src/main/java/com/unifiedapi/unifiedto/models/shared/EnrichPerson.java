@@ -166,9 +166,9 @@ public class EnrichPerson {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    public PropertyEnrichPersonRaw raw;
+    public java.util.Map<String, java.lang.Object> raw;
 
-    public EnrichPerson withRaw(PropertyEnrichPersonRaw raw) {
+    public EnrichPerson withRaw(java.util.Map<String, java.lang.Object> raw) {
         this.raw = raw;
         return this;
     }

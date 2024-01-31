@@ -46,9 +46,9 @@ public class RemovePassthroughResponse {
      * Successful
      */
     
-    public com.unifiedapi.unifiedto.models.shared.Undefined undefined;
+    public java.util.Map<String, java.lang.Object> undefined;
 
-    public RemovePassthroughResponse withUndefined(com.unifiedapi.unifiedto.models.shared.Undefined undefined) {
+    public RemovePassthroughResponse withUndefined(java.util.Map<String, java.lang.Object> undefined) {
         this.undefined = undefined;
         return this;
     }

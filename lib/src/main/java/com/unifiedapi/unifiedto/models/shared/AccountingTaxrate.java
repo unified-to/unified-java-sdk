@@ -71,9 +71,9 @@ public class AccountingTaxrate {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    public PropertyAccountingTaxrateRaw raw;
+    public java.util.Map<String, java.lang.Object> raw;
 
-    public AccountingTaxrate withRaw(PropertyAccountingTaxrateRaw raw) {
+    public AccountingTaxrate withRaw(java.util.Map<String, java.lang.Object> raw) {
         this.raw = raw;
         return this;
     }

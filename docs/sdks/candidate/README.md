@@ -29,7 +29,6 @@ import com.unifiedapi.unifiedto.models.shared.AtsTelephone;
 import com.unifiedapi.unifiedto.models.shared.AtsTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.Origin;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -75,8 +74,10 @@ public class Application {
                     }};
                     name = "string";
                     origin = Origin.AGENCY;
-                    raw = new PropertyAtsCandidateRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     tags = new String[]{{
                         add("string"),
                     }};
@@ -256,7 +257,6 @@ import com.unifiedapi.unifiedto.models.shared.AtsTelephone;
 import com.unifiedapi.unifiedto.models.shared.AtsTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.Origin;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -303,8 +303,10 @@ public class Application {
                     }};
                     name = "string";
                     origin = Origin.INTERNAL;
-                    raw = new PropertyAtsCandidateRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     tags = new String[]{{
                         add("string"),
                     }};
@@ -416,7 +418,6 @@ import com.unifiedapi.unifiedto.models.shared.AtsTelephone;
 import com.unifiedapi.unifiedto.models.shared.AtsTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.Origin;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -463,8 +464,10 @@ public class Application {
                     }};
                     name = "string";
                     origin = Origin.UNIVERSITY;
-                    raw = new PropertyAtsCandidateRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     tags = new String[]{{
                         add("string"),
                     }};

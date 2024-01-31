@@ -32,7 +32,6 @@ import com.unifiedapi.unifiedto.models.shared.HrisTelephone;
 import com.unifiedapi.unifiedto.models.shared.HrisTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.MaritalStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -85,8 +84,10 @@ public class Application {
                     managerId = "string";
                     maritalStatus = MaritalStatus.MARRIED;
                     name = "string";
-                    raw = new PropertyHrisEmployeeRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.HrisTelephone[]{{
                         add(new HrisTelephone(
                         "string"){{
@@ -268,7 +269,6 @@ import com.unifiedapi.unifiedto.models.shared.HrisTelephone;
 import com.unifiedapi.unifiedto.models.shared.HrisTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.MaritalStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -322,8 +322,10 @@ public class Application {
                     managerId = "string";
                     maritalStatus = MaritalStatus.SINGLE;
                     name = "string";
-                    raw = new PropertyHrisEmployeeRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.HrisTelephone[]{{
                         add(new HrisTelephone(
                         "string"){{
@@ -437,7 +439,6 @@ import com.unifiedapi.unifiedto.models.shared.HrisTelephone;
 import com.unifiedapi.unifiedto.models.shared.HrisTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.MaritalStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -491,8 +492,10 @@ public class Application {
                     managerId = "string";
                     maritalStatus = MaritalStatus.MARRIED;
                     name = "string";
-                    raw = new PropertyHrisEmployeeRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.HrisTelephone[]{{
                         add(new HrisTelephone(
                         "string"){{

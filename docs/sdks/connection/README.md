@@ -25,9 +25,7 @@ import com.unifiedapi.unifiedto.models.shared.Connection;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionAuth;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions;
-import com.unifiedapi.unifiedto.models.shared.PropertyPropertyConnectionAuthMeta;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import com.unifiedapi.unifiedto.models.shared.Undefined;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -64,8 +62,10 @@ public class Application {
                     expiresIn = 4311.07d;
                     expiryDate = OffsetDateTime.parse("2024-01-24T16:22:59.867Z");
                     key = "<key>";
-                    meta = new PropertyPropertyConnectionAuthMeta(
-);
+                    meta = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     name = "string";
                     otherAuthInfo = new String[]{{
                         add("string"),
@@ -81,9 +81,11 @@ public class Application {
                 }};
                 authAwsArn = "string";
                 createdAt = OffsetDateTime.parse("2022-12-11T17:06:37.254Z");
-                cursorsCache = new com.unifiedapi.unifiedto.models.shared.Undefined[]{{
-                    add(new Undefined(
-                    ){{}}),
+                cursorsCache = new java.util.HashMap<String, java.lang.Object>[]{{
+                    add(new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }}),
                 }};
                 environment = "string";
                 externalXref = "string";
@@ -252,9 +254,7 @@ import com.unifiedapi.unifiedto.models.shared.Connection;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionAuth;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions;
-import com.unifiedapi.unifiedto.models.shared.PropertyPropertyConnectionAuthMeta;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import com.unifiedapi.unifiedto.models.shared.Undefined;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -293,8 +293,10 @@ public class Application {
                         expiresIn = 9973.13d;
                         expiryDate = OffsetDateTime.parse("2024-07-15T18:53:52.079Z");
                         key = "<key>";
-                        meta = new PropertyPropertyConnectionAuthMeta(
-);
+                        meta = new java.util.HashMap<String, java.lang.Object>(
+                        ){{
+                            put("key", "string");
+                        }};
                         name = "string";
                         otherAuthInfo = new String[]{{
                             add("string"),
@@ -310,9 +312,11 @@ public class Application {
                     }};
                     authAwsArn = "string";
                     createdAt = OffsetDateTime.parse("2022-05-14T12:46:18.750Z");
-                    cursorsCache = new com.unifiedapi.unifiedto.models.shared.Undefined[]{{
-                        add(new Undefined(
-                        ){{}}),
+                    cursorsCache = new java.util.HashMap<String, java.lang.Object>[]{{
+                        add(new java.util.HashMap<String, java.lang.Object>(
+                        ){{
+                            put("key", "string");
+                        }}),
                     }};
                     environment = "string";
                     externalXref = "string";
@@ -418,9 +422,7 @@ import com.unifiedapi.unifiedto.models.shared.Connection;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionAuth;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions;
-import com.unifiedapi.unifiedto.models.shared.PropertyPropertyConnectionAuthMeta;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import com.unifiedapi.unifiedto.models.shared.Undefined;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -459,8 +461,10 @@ public class Application {
                         expiresIn = 9842.07d;
                         expiryDate = OffsetDateTime.parse("2024-03-25T02:21:40.431Z");
                         key = "<key>";
-                        meta = new PropertyPropertyConnectionAuthMeta(
-);
+                        meta = new java.util.HashMap<String, java.lang.Object>(
+                        ){{
+                            put("key", "string");
+                        }};
                         name = "string";
                         otherAuthInfo = new String[]{{
                             add("string"),
@@ -476,9 +480,11 @@ public class Application {
                     }};
                     authAwsArn = "string";
                     createdAt = OffsetDateTime.parse("2024-11-26T11:11:59.157Z");
-                    cursorsCache = new com.unifiedapi.unifiedto.models.shared.Undefined[]{{
-                        add(new Undefined(
-                        ){{}}),
+                    cursorsCache = new java.util.HashMap<String, java.lang.Object>[]{{
+                        add(new java.util.HashMap<String, java.lang.Object>(
+                        ){{
+                            put("key", "string");
+                        }}),
                     }};
                     environment = "string";
                     externalXref = "string";

@@ -136,9 +136,9 @@ public class CrmEvent {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    public PropertyCrmEventRaw raw;
+    public java.util.Map<String, java.lang.Object> raw;
 
-    public CrmEvent withRaw(PropertyCrmEventRaw raw) {
+    public CrmEvent withRaw(java.util.Map<String, java.lang.Object> raw) {
         this.raw = raw;
         return this;
     }

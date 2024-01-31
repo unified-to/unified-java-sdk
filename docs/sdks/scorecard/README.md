@@ -23,7 +23,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsScorecardRaw;
 import com.unifiedapi.unifiedto.models.shared.Recommendation;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
@@ -50,8 +49,10 @@ public class Application {
                     interviewId = "string";
                     interviewerId = "string";
                     jobId = "string";
-                    raw = new PropertyAtsScorecardRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     recommendation = Recommendation.NO;
                     updatedAt = OffsetDateTime.parse("2023-04-02T03:31:06.456Z");
 
@@ -220,7 +221,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsScorecardRaw;
 import com.unifiedapi.unifiedto.models.shared.Recommendation;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
@@ -248,8 +248,10 @@ public class Application {
                     interviewId = "string";
                     interviewerId = "string";
                     jobId = "string";
-                    raw = new PropertyAtsScorecardRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     recommendation = Recommendation.YES;
                     updatedAt = OffsetDateTime.parse("2022-11-28T15:13:55.563Z");
 
@@ -346,7 +348,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsScorecardRaw;
 import com.unifiedapi.unifiedto.models.shared.Recommendation;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
@@ -374,8 +375,10 @@ public class Application {
                     interviewId = "string";
                     interviewerId = "string";
                     jobId = "string";
-                    raw = new PropertyAtsScorecardRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     recommendation = Recommendation.NO;
                     updatedAt = OffsetDateTime.parse("2022-07-26T09:16:55.761Z");
 

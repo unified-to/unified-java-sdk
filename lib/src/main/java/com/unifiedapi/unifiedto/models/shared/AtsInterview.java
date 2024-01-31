@@ -93,9 +93,9 @@ public class AtsInterview {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    public PropertyAtsInterviewRaw raw;
+    public java.util.Map<String, java.lang.Object> raw;
 
-    public AtsInterview withRaw(PropertyAtsInterviewRaw raw) {
+    public AtsInterview withRaw(java.util.Map<String, java.lang.Object> raw) {
         this.raw = raw;
         return this;
     }

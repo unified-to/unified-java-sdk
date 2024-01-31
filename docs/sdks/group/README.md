@@ -24,7 +24,6 @@ import com.unifiedapi.unifiedto.models.operations.CreateHrisGroupRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateHrisGroupResponse;
 import com.unifiedapi.unifiedto.models.shared.HrisGroup;
 import com.unifiedapi.unifiedto.models.shared.HrisGroupType;
-import com.unifiedapi.unifiedto.models.shared.PropertyHrisGroupRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -51,8 +50,10 @@ public class Application {
                     }};
                     name = "string";
                     parentId = "string";
-                    raw = new PropertyHrisGroupRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     type = HrisGroupType.TEAM;
                     updatedAt = OffsetDateTime.parse("2024-03-09T17:49:55.923Z");
                     userIds = new String[]{{
@@ -221,7 +222,6 @@ import com.unifiedapi.unifiedto.models.operations.PatchHrisGroupRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchHrisGroupResponse;
 import com.unifiedapi.unifiedto.models.shared.HrisGroup;
 import com.unifiedapi.unifiedto.models.shared.HrisGroupType;
-import com.unifiedapi.unifiedto.models.shared.PropertyHrisGroupRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -249,8 +249,10 @@ public class Application {
                     }};
                     name = "string";
                     parentId = "string";
-                    raw = new PropertyHrisGroupRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     type = HrisGroupType.DIVISION;
                     updatedAt = OffsetDateTime.parse("2023-06-23T21:37:16.122Z");
                     userIds = new String[]{{
@@ -351,7 +353,6 @@ import com.unifiedapi.unifiedto.models.operations.UpdateHrisGroupRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateHrisGroupResponse;
 import com.unifiedapi.unifiedto.models.shared.HrisGroup;
 import com.unifiedapi.unifiedto.models.shared.HrisGroupType;
-import com.unifiedapi.unifiedto.models.shared.PropertyHrisGroupRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -379,8 +380,10 @@ public class Application {
                     }};
                     name = "string";
                     parentId = "string";
-                    raw = new PropertyHrisGroupRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     type = HrisGroupType.TEAM;
                     updatedAt = OffsetDateTime.parse("2024-09-12T13:33:00.416Z");
                     userIds = new String[]{{

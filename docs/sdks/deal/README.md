@@ -23,7 +23,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmDealRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmDealResponse;
 import com.unifiedapi.unifiedto.models.shared.CrmDeal;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmDealRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -50,8 +49,10 @@ public class Application {
                     name = "string";
                     pipeline = "string";
                     probability = 1087.81d;
-                    raw = new PropertyCrmDealRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     source = "string";
                     stage = "string";
                     tags = new String[]{{
@@ -225,7 +226,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmDealRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmDealResponse;
 import com.unifiedapi.unifiedto.models.shared.CrmDeal;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmDealRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -253,8 +253,10 @@ public class Application {
                     name = "string";
                     pipeline = "string";
                     probability = 9555.58d;
-                    raw = new PropertyCrmDealRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     source = "string";
                     stage = "string";
                     tags = new String[]{{
@@ -357,7 +359,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmDealRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmDealResponse;
 import com.unifiedapi.unifiedto.models.shared.CrmDeal;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmDealRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -385,8 +386,10 @@ public class Application {
                     name = "string";
                     pipeline = "string";
                     probability = 2970.01d;
-                    raw = new PropertyCrmDealRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     source = "string";
                     stage = "string";
                     tags = new String[]{{

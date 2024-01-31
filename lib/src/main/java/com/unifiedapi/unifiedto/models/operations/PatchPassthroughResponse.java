@@ -46,9 +46,9 @@ public class PatchPassthroughResponse {
      * Successful
      */
     
-    public com.unifiedapi.unifiedto.models.shared.Undefined undefined;
+    public java.util.Map<String, java.lang.Object> undefined;
 
-    public PatchPassthroughResponse withUndefined(com.unifiedapi.unifiedto.models.shared.Undefined undefined) {
+    public PatchPassthroughResponse withUndefined(java.util.Map<String, java.lang.Object> undefined) {
         this.undefined = undefined;
         return this;
     }

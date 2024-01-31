@@ -73,9 +73,9 @@ public class UcContact {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    public PropertyUcContactRaw raw;
+    public java.util.Map<String, java.lang.Object> raw;
 
-    public UcContact withRaw(PropertyUcContactRaw raw) {
+    public UcContact withRaw(java.util.Map<String, java.lang.Object> raw) {
         this.raw = raw;
         return this;
     }

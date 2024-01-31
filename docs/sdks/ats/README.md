@@ -55,7 +55,6 @@ import com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsApplication;
 import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsApplicationRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -80,8 +79,10 @@ public class Application {
                     id = "<ID>";
                     jobId = "string";
                     originalStatus = "string";
-                    raw = new PropertyAtsApplicationRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     rejectedAt = OffsetDateTime.parse("2023-01-30T06:58:14.500Z");
                     rejectedReason = "string";
                     source = "string";
@@ -135,7 +136,6 @@ import com.unifiedapi.unifiedto.models.shared.AtsTelephone;
 import com.unifiedapi.unifiedto.models.shared.AtsTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.Origin;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -181,8 +181,10 @@ public class Application {
                     }};
                     name = "string";
                     origin = Origin.AGENCY;
-                    raw = new PropertyAtsCandidateRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     tags = new String[]{{
                         add("string"),
                     }};
@@ -237,7 +239,6 @@ import com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsDocument;
 import com.unifiedapi.unifiedto.models.shared.AtsDocumentType;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsDocumentRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -263,8 +264,10 @@ public class Application {
                     filename = "mouse_per_missouri.mp4";
                     id = "<ID>";
                     jobId = "string";
-                    raw = new PropertyAtsDocumentRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     type = AtsDocumentType.OFFER_PACKET;
                     updatedAt = OffsetDateTime.parse("2022-12-28T17:22:48.342Z");
                     userId = "string";
@@ -311,7 +314,6 @@ import com.unifiedapi.unifiedto.models.operations.CreateAtsInterviewRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsInterviewResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsInterview;
 import com.unifiedapi.unifiedto.models.shared.AtsInterviewStatus;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsInterviewRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -337,8 +339,10 @@ public class Application {
                     id = "<ID>";
                     jobId = "string";
                     location = "string";
-                    raw = new PropertyAtsInterviewRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     startAt = OffsetDateTime.parse("2023-11-20T00:14:00.277Z");
                     status = AtsInterviewStatus.COMPLETE;
                     updatedAt = OffsetDateTime.parse("2022-02-07T15:15:23.855Z");
@@ -393,7 +397,6 @@ import com.unifiedapi.unifiedto.models.shared.AtsJob;
 import com.unifiedapi.unifiedto.models.shared.AtsJobStatus;
 import com.unifiedapi.unifiedto.models.shared.EmploymentType;
 import com.unifiedapi.unifiedto.models.shared.Frequency;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsJobRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -437,8 +440,10 @@ public class Application {
                     publicJobUrls = new String[]{{
                         add("string"),
                     }};
-                    raw = new PropertyAtsJobRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     recruiterIds = new String[]{{
                         add("string"),
                     }};
@@ -487,7 +492,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsScorecardRaw;
 import com.unifiedapi.unifiedto.models.shared.Recommendation;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
@@ -514,8 +518,10 @@ public class Application {
                     interviewId = "string";
                     interviewerId = "string";
                     jobId = "string";
-                    raw = new PropertyAtsScorecardRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     recommendation = Recommendation.NO;
                     updatedAt = OffsetDateTime.parse("2023-04-02T03:31:06.456Z");
 
@@ -1352,7 +1358,6 @@ import com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsApplication;
 import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsApplicationRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -1378,8 +1383,10 @@ public class Application {
                     id = "<ID>";
                     jobId = "string";
                     originalStatus = "string";
-                    raw = new PropertyAtsApplicationRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     rejectedAt = OffsetDateTime.parse("2022-07-13T02:34:40.392Z");
                     rejectedReason = "string";
                     source = "string";
@@ -1433,7 +1440,6 @@ import com.unifiedapi.unifiedto.models.shared.AtsTelephone;
 import com.unifiedapi.unifiedto.models.shared.AtsTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.Origin;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -1480,8 +1486,10 @@ public class Application {
                     }};
                     name = "string";
                     origin = Origin.INTERNAL;
-                    raw = new PropertyAtsCandidateRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     tags = new String[]{{
                         add("string"),
                     }};
@@ -1536,7 +1544,6 @@ import com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsDocument;
 import com.unifiedapi.unifiedto.models.shared.AtsDocumentType;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsDocumentRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -1563,8 +1570,10 @@ public class Application {
                     filename = "future_underpin.mp4v";
                     id = "<ID>";
                     jobId = "string";
-                    raw = new PropertyAtsDocumentRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     type = AtsDocumentType.OFFER_LETTER;
                     updatedAt = OffsetDateTime.parse("2023-02-14T10:37:18.255Z");
                     userId = "string";
@@ -1611,7 +1620,6 @@ import com.unifiedapi.unifiedto.models.operations.PatchAtsInterviewRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsInterviewResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsInterview;
 import com.unifiedapi.unifiedto.models.shared.AtsInterviewStatus;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsInterviewRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -1638,8 +1646,10 @@ public class Application {
                     id = "<ID>";
                     jobId = "string";
                     location = "string";
-                    raw = new PropertyAtsInterviewRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     startAt = OffsetDateTime.parse("2022-09-10T07:32:43.966Z");
                     status = AtsInterviewStatus.COMPLETE;
                     updatedAt = OffsetDateTime.parse("2024-03-18T02:52:45.725Z");
@@ -1694,7 +1704,6 @@ import com.unifiedapi.unifiedto.models.shared.AtsJob;
 import com.unifiedapi.unifiedto.models.shared.AtsJobStatus;
 import com.unifiedapi.unifiedto.models.shared.EmploymentType;
 import com.unifiedapi.unifiedto.models.shared.Frequency;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsJobRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -1739,8 +1748,10 @@ public class Application {
                     publicJobUrls = new String[]{{
                         add("string"),
                     }};
-                    raw = new PropertyAtsJobRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     recruiterIds = new String[]{{
                         add("string"),
                     }};
@@ -1789,7 +1800,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsScorecardRaw;
 import com.unifiedapi.unifiedto.models.shared.Recommendation;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
@@ -1817,8 +1827,10 @@ public class Application {
                     interviewId = "string";
                     interviewerId = "string";
                     jobId = "string";
-                    raw = new PropertyAtsScorecardRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     recommendation = Recommendation.YES;
                     updatedAt = OffsetDateTime.parse("2022-11-28T15:13:55.563Z");
 
@@ -2176,7 +2188,6 @@ import com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsApplication;
 import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsApplicationRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -2202,8 +2213,10 @@ public class Application {
                     id = "<ID>";
                     jobId = "string";
                     originalStatus = "string";
-                    raw = new PropertyAtsApplicationRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     rejectedAt = OffsetDateTime.parse("2024-07-19T04:47:20.215Z");
                     rejectedReason = "string";
                     source = "string";
@@ -2257,7 +2270,6 @@ import com.unifiedapi.unifiedto.models.shared.AtsTelephone;
 import com.unifiedapi.unifiedto.models.shared.AtsTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.Origin;
 import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -2304,8 +2316,10 @@ public class Application {
                     }};
                     name = "string";
                     origin = Origin.UNIVERSITY;
-                    raw = new PropertyAtsCandidateRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     tags = new String[]{{
                         add("string"),
                     }};
@@ -2360,7 +2374,6 @@ import com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsDocument;
 import com.unifiedapi.unifiedto.models.shared.AtsDocumentType;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsDocumentRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -2387,8 +2400,10 @@ public class Application {
                     filename = "unbranded_reprehenderit.jpg";
                     id = "<ID>";
                     jobId = "string";
-                    raw = new PropertyAtsDocumentRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     type = AtsDocumentType.OFFER_PACKET;
                     updatedAt = OffsetDateTime.parse("2022-12-03T00:21:50.487Z");
                     userId = "string";
@@ -2435,7 +2450,6 @@ import com.unifiedapi.unifiedto.models.operations.UpdateAtsInterviewRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsInterviewResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsInterview;
 import com.unifiedapi.unifiedto.models.shared.AtsInterviewStatus;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsInterviewRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -2462,8 +2476,10 @@ public class Application {
                     id = "<ID>";
                     jobId = "string";
                     location = "string";
-                    raw = new PropertyAtsInterviewRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     startAt = OffsetDateTime.parse("2024-05-05T07:21:58.674Z");
                     status = AtsInterviewStatus.AWAITING_FEEDBACK;
                     updatedAt = OffsetDateTime.parse("2022-05-01T17:04:47.962Z");
@@ -2518,7 +2534,6 @@ import com.unifiedapi.unifiedto.models.shared.AtsJob;
 import com.unifiedapi.unifiedto.models.shared.AtsJobStatus;
 import com.unifiedapi.unifiedto.models.shared.EmploymentType;
 import com.unifiedapi.unifiedto.models.shared.Frequency;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsJobRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -2563,8 +2578,10 @@ public class Application {
                     publicJobUrls = new String[]{{
                         add("string"),
                     }};
-                    raw = new PropertyAtsJobRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     recruiterIds = new String[]{{
                         add("string"),
                     }};
@@ -2613,7 +2630,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsScorecardRaw;
 import com.unifiedapi.unifiedto.models.shared.Recommendation;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
@@ -2641,8 +2657,10 @@ public class Application {
                     interviewId = "string";
                     interviewerId = "string";
                     jobId = "string";
-                    raw = new PropertyAtsScorecardRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     recommendation = Recommendation.NO;
                     updatedAt = OffsetDateTime.parse("2022-07-26T09:16:55.761Z");
 

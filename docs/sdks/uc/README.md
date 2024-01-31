@@ -23,7 +23,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateUcContactRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateUcContactResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyUcContactRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.UcContact;
 import com.unifiedapi.unifiedto.models.shared.UcEmail;
@@ -56,8 +55,10 @@ public class Application {
                     }};
                     id = "<ID>";
                     name = "string";
-                    raw = new PropertyUcContactRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
                         add(new UcTelephone(
                         "string"){{
@@ -293,7 +294,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchUcContactRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchUcContactResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyUcContactRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.UcContact;
 import com.unifiedapi.unifiedto.models.shared.UcEmail;
@@ -327,8 +327,10 @@ public class Application {
                     }};
                     id = "<ID>";
                     name = "string";
-                    raw = new PropertyUcContactRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
                         add(new UcTelephone(
                         "string"){{
@@ -430,7 +432,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateUcContactRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateUcContactResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyUcContactRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.UcContact;
 import com.unifiedapi.unifiedto.models.shared.UcEmail;
@@ -464,8 +465,10 @@ public class Application {
                     }};
                     id = "<ID>";
                     name = "string";
-                    raw = new PropertyUcContactRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
                         add(new UcTelephone(
                         "string"){{

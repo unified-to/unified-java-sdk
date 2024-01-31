@@ -90,9 +90,9 @@ public class AccountingAccount {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    public PropertyAccountingAccountRaw raw;
+    public java.util.Map<String, java.lang.Object> raw;
 
-    public AccountingAccount withRaw(PropertyAccountingAccountRaw raw) {
+    public AccountingAccount withRaw(java.util.Map<String, java.lang.Object> raw) {
         this.raw = raw;
         return this;
     }

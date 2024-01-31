@@ -23,7 +23,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingItemRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingItemResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingItem;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingItemRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -49,8 +48,10 @@ public class Application {
                     price = 8182.36d;
                     publicDescription = "string";
                     quantityOnHand = 9042.97d;
-                    raw = new PropertyAccountingItemRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     sku = "string";
                     updatedAt = OffsetDateTime.parse("2024-04-05T08:21:06.807Z");
 
@@ -215,7 +216,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingItemRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingItemResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingItem;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingItemRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -242,8 +242,10 @@ public class Application {
                     price = 1007.53d;
                     publicDescription = "string";
                     quantityOnHand = 3510.34d;
-                    raw = new PropertyAccountingItemRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     sku = "string";
                     updatedAt = OffsetDateTime.parse("2023-11-19T01:12:30.848Z");
 
@@ -340,7 +342,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingItemRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingItemResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingItem;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingItemRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -367,8 +368,10 @@ public class Application {
                     price = 3314.34d;
                     publicDescription = "string";
                     quantityOnHand = 9226.47d;
-                    raw = new PropertyAccountingItemRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     sku = "string";
                     updatedAt = OffsetDateTime.parse("2022-12-09T06:37:51.326Z");
 

@@ -22,7 +22,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateTicketingCustomerRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateTicketingCustomerResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyTicketingCustomerRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TicketingCustomer;
 import com.unifiedapi.unifiedto.models.shared.TicketingEmail;
@@ -54,8 +53,10 @@ public class Application {
                     }};
                     id = "<ID>";
                     name = "string";
-                    raw = new PropertyTicketingCustomerRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     tags = new String[]{{
                         add("string"),
                     }};
@@ -227,7 +228,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingCustomerRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingCustomerResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyTicketingCustomerRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TicketingCustomer;
 import com.unifiedapi.unifiedto.models.shared.TicketingEmail;
@@ -260,8 +260,10 @@ public class Application {
                     }};
                     id = "<ID>";
                     name = "string";
-                    raw = new PropertyTicketingCustomerRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     tags = new String[]{{
                         add("string"),
                     }};
@@ -365,7 +367,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateTicketingCustomerRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateTicketingCustomerResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyTicketingCustomerRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TicketingCustomer;
 import com.unifiedapi.unifiedto.models.shared.TicketingEmail;
@@ -398,8 +399,10 @@ public class Application {
                     }};
                     id = "<ID>";
                     name = "string";
-                    raw = new PropertyTicketingCustomerRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     tags = new String[]{{
                         add("string"),
                     }};

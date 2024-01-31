@@ -50,9 +50,9 @@ public class MarketingList {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    public PropertyMarketingListRaw raw;
+    public java.util.Map<String, java.lang.Object> raw;
 
-    public MarketingList withRaw(PropertyMarketingListRaw raw) {
+    public MarketingList withRaw(java.util.Map<String, java.lang.Object> raw) {
         this.raw = raw;
         return this;
     }

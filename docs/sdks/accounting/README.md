@@ -61,7 +61,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingAccount;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingAccountRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.Status;
 import com.unifiedapi.unifiedto.models.shared.Type;
@@ -88,8 +87,10 @@ public class Application {
                     description = "Cross-group zero defect task-force";
                     id = "<ID>";
                     isPayable = false;
-                    raw = new PropertyAccountingAccountRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     status = Status.ACTIVE;
                     type = Type.EQUITY;
                     updatedAt = OffsetDateTime.parse("2023-09-09T23:41:51.681Z");
@@ -140,7 +141,6 @@ import com.unifiedapi.unifiedto.models.shared.AccountingEmailType;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephone;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingContactBillingAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingContactRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingContactShippingAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TaxExemption;
@@ -185,8 +185,10 @@ public class Application {
                     isCustomer = false;
                     isSupplier = false;
                     name = "string";
-                    raw = new PropertyAccountingContactRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     shippingAddress = new PropertyAccountingContactShippingAddress(
 ){{
                         address1 = "string";
@@ -252,7 +254,6 @@ import com.unifiedapi.unifiedto.models.operations.CreateAccountingInvoiceRespons
 import com.unifiedapi.unifiedto.models.shared.AccountingInvoice;
 import com.unifiedapi.unifiedto.models.shared.AccountingInvoiceStatus;
 import com.unifiedapi.unifiedto.models.shared.AccountingLineitem;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingInvoiceRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -288,8 +289,10 @@ public class Application {
                     notes = "string";
                     paidAmount = 6572.32d;
                     paidAt = OffsetDateTime.parse("2023-07-10T18:36:49.807Z");
-                    raw = new PropertyAccountingInvoiceRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     refundAmount = 1578.89d;
                     refundReason = "string";
                     refundedAt = OffsetDateTime.parse("2023-08-27T04:22:20.182Z");
@@ -339,7 +342,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingItemRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingItemResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingItem;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingItemRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -365,8 +367,10 @@ public class Application {
                     price = 8182.36d;
                     publicDescription = "string";
                     quantityOnHand = 9042.97d;
-                    raw = new PropertyAccountingItemRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     sku = "string";
                     updatedAt = OffsetDateTime.parse("2024-04-05T08:21:06.807Z");
 
@@ -411,7 +415,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingPaymentRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingPaymentResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingPayment;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingPaymentRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -437,8 +440,10 @@ public class Application {
                     invoiceId = "string";
                     notes = "string";
                     paymentMethod = "string";
-                    raw = new PropertyAccountingPaymentRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     reference = "string";
                     totalAmount = 291.36d;
                     updatedAt = OffsetDateTime.parse("2023-10-01T03:33:47.004Z");
@@ -484,7 +489,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingTaxrateRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingTaxrateResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingTaxrate;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingTaxrateRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -507,8 +511,10 @@ public class Application {
                     description = "Ergonomic regional neural-net";
                     id = "<ID>";
                     isActive = false;
-                    raw = new PropertyAccountingTaxrateRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     updatedAt = OffsetDateTime.parse("2023-12-27T23:06:27.112Z");
 
                 }};
@@ -553,7 +559,6 @@ import com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionReq
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingTransaction;
 import com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineitem;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingTransactionRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
@@ -581,8 +586,10 @@ public class Application {
                             totalAmount = 2477.45d;
                         }}),
                     }};
-                    raw = new PropertyAccountingTransactionRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     reference = "string";
                     taxAmount = 8276.07d;
                     taxrateId = "string";
@@ -1593,7 +1600,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingAccountRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingAccountResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingAccount;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingAccountRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.Status;
 import com.unifiedapi.unifiedto.models.shared.Type;
@@ -1621,8 +1627,10 @@ public class Application {
                     description = "Quality-focused multimedia implementation";
                     id = "<ID>";
                     isPayable = false;
-                    raw = new PropertyAccountingAccountRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     status = Status.ARCHIVED;
                     type = Type.REVENUE;
                     updatedAt = OffsetDateTime.parse("2024-12-10T10:46:36.474Z");
@@ -1673,7 +1681,6 @@ import com.unifiedapi.unifiedto.models.shared.AccountingEmailType;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephone;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingContactBillingAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingContactRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingContactShippingAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TaxExemption;
@@ -1719,8 +1726,10 @@ public class Application {
                     isCustomer = false;
                     isSupplier = false;
                     name = "string";
-                    raw = new PropertyAccountingContactRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     shippingAddress = new PropertyAccountingContactShippingAddress(
 ){{
                         address1 = "string";
@@ -1786,7 +1795,6 @@ import com.unifiedapi.unifiedto.models.operations.PatchAccountingInvoiceResponse
 import com.unifiedapi.unifiedto.models.shared.AccountingInvoice;
 import com.unifiedapi.unifiedto.models.shared.AccountingInvoiceStatus;
 import com.unifiedapi.unifiedto.models.shared.AccountingLineitem;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingInvoiceRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -1823,8 +1831,10 @@ public class Application {
                     notes = "string";
                     paidAmount = 1152.38d;
                     paidAt = OffsetDateTime.parse("2023-03-23T14:30:18.013Z");
-                    raw = new PropertyAccountingInvoiceRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     refundAmount = 6443.77d;
                     refundReason = "string";
                     refundedAt = OffsetDateTime.parse("2022-08-21T01:13:52.344Z");
@@ -1874,7 +1884,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingItemRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingItemResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingItem;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingItemRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -1901,8 +1910,10 @@ public class Application {
                     price = 1007.53d;
                     publicDescription = "string";
                     quantityOnHand = 3510.34d;
-                    raw = new PropertyAccountingItemRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     sku = "string";
                     updatedAt = OffsetDateTime.parse("2023-11-19T01:12:30.848Z");
 
@@ -1947,7 +1958,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingPaymentRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingPaymentResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingPayment;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingPaymentRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -1974,8 +1984,10 @@ public class Application {
                     invoiceId = "string";
                     notes = "string";
                     paymentMethod = "string";
-                    raw = new PropertyAccountingPaymentRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     reference = "string";
                     totalAmount = 8698.74d;
                     updatedAt = OffsetDateTime.parse("2023-11-08T12:40:48.671Z");
@@ -2021,7 +2033,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingTaxrateRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingTaxrateResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingTaxrate;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingTaxrateRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -2045,8 +2056,10 @@ public class Application {
                     description = "Upgradable coherent adapter";
                     id = "<ID>";
                     isActive = false;
-                    raw = new PropertyAccountingTaxrateRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     updatedAt = OffsetDateTime.parse("2024-01-17T10:44:31.599Z");
 
                 }};
@@ -2091,7 +2104,6 @@ import com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionRequ
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingTransaction;
 import com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineitem;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingTransactionRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
@@ -2120,8 +2132,10 @@ public class Application {
                             totalAmount = 535.65d;
                         }}),
                     }};
-                    raw = new PropertyAccountingTransactionRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     reference = "string";
                     taxAmount = 259.82d;
                     taxrateId = "string";
@@ -2532,7 +2546,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingAccountRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingAccountResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingAccount;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingAccountRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.Status;
 import com.unifiedapi.unifiedto.models.shared.Type;
@@ -2560,8 +2573,10 @@ public class Application {
                     description = "Stand-alone grid-enabled model";
                     id = "<ID>";
                     isPayable = false;
-                    raw = new PropertyAccountingAccountRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     status = Status.ACTIVE;
                     type = Type.BANK;
                     updatedAt = OffsetDateTime.parse("2022-04-02T20:00:03.765Z");
@@ -2612,7 +2627,6 @@ import com.unifiedapi.unifiedto.models.shared.AccountingEmailType;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephone;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingContactBillingAddress;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingContactRaw;
 import com.unifiedapi.unifiedto.models.shared.PropertyAccountingContactShippingAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TaxExemption;
@@ -2658,8 +2672,10 @@ public class Application {
                     isCustomer = false;
                     isSupplier = false;
                     name = "string";
-                    raw = new PropertyAccountingContactRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     shippingAddress = new PropertyAccountingContactShippingAddress(
 ){{
                         address1 = "string";
@@ -2725,7 +2741,6 @@ import com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceRespons
 import com.unifiedapi.unifiedto.models.shared.AccountingInvoice;
 import com.unifiedapi.unifiedto.models.shared.AccountingInvoiceStatus;
 import com.unifiedapi.unifiedto.models.shared.AccountingLineitem;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingInvoiceRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -2762,8 +2777,10 @@ public class Application {
                     notes = "string";
                     paidAmount = 2842.49d;
                     paidAt = OffsetDateTime.parse("2022-06-05T15:45:06.127Z");
-                    raw = new PropertyAccountingInvoiceRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     refundAmount = 3314.72d;
                     refundReason = "string";
                     refundedAt = OffsetDateTime.parse("2024-04-05T20:13:33.419Z");
@@ -2813,7 +2830,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingItemRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingItemResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingItem;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingItemRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -2840,8 +2856,10 @@ public class Application {
                     price = 3314.34d;
                     publicDescription = "string";
                     quantityOnHand = 9226.47d;
-                    raw = new PropertyAccountingItemRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     sku = "string";
                     updatedAt = OffsetDateTime.parse("2022-12-09T06:37:51.326Z");
 
@@ -2886,7 +2904,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingPaymentRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingPaymentResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingPayment;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingPaymentRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -2913,8 +2930,10 @@ public class Application {
                     invoiceId = "string";
                     notes = "string";
                     paymentMethod = "string";
-                    raw = new PropertyAccountingPaymentRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     reference = "string";
                     totalAmount = 1869.63d;
                     updatedAt = OffsetDateTime.parse("2022-05-14T18:33:08.394Z");
@@ -2960,7 +2979,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingTaxrateRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingTaxrateResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingTaxrate;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingTaxrateRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -2984,8 +3002,10 @@ public class Application {
                     description = "Open-source human-resource database";
                     id = "<ID>";
                     isActive = false;
-                    raw = new PropertyAccountingTaxrateRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     updatedAt = OffsetDateTime.parse("2022-03-21T10:57:59.053Z");
 
                 }};
@@ -3030,7 +3050,6 @@ import com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionReq
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingTransaction;
 import com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineitem;
-import com.unifiedapi.unifiedto.models.shared.PropertyAccountingTransactionRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
@@ -3059,8 +3078,10 @@ public class Application {
                             totalAmount = 2397.73d;
                         }}),
                     }};
-                    raw = new PropertyAccountingTransactionRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     reference = "string";
                     taxAmount = 421.84d;
                     taxrateId = "string";

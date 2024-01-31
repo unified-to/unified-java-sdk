@@ -10,6 +10,17 @@ import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 
 public class UpdatePassthroughRequest {
     /**
+     * integration-specific payload
+     */
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, java.lang.Object> requestBody;
+
+    public UpdatePassthroughRequest withRequestBody(java.util.Map<String, java.lang.Object> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
      * ID of the connection
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
@@ -25,17 +36,6 @@ public class UpdatePassthroughRequest {
 
     public UpdatePassthroughRequest withPath(String path) {
         this.path = path;
-        return this;
-    }
-    
-    /**
-     * integration-specific payload
-     */
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public com.unifiedapi.unifiedto.models.shared.Undefined undefined;
-
-    public UpdatePassthroughRequest withUndefined(com.unifiedapi.unifiedto.models.shared.Undefined undefined) {
-        this.undefined = undefined;
         return this;
     }
     

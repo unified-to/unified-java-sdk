@@ -22,7 +22,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreatePassthroughRequest;
 import com.unifiedapi.unifiedto.models.operations.CreatePassthroughResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import com.unifiedapi.unifiedto.models.shared.Undefined;
 
 public class Application {
     public static void main(String[] args) {
@@ -37,8 +36,10 @@ public class Application {
             com.unifiedapi.unifiedto.models.operations.CreatePassthroughRequest req = new CreatePassthroughRequest(
                 "string",
                 "string"){{
-                undefined = new Undefined(
-);
+                requestBody = new java.util.HashMap<String, java.lang.Object>(
+                ){{
+                    put("key", "string");
+                }};
 
             }};
 
@@ -131,7 +132,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchPassthroughRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchPassthroughResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import com.unifiedapi.unifiedto.models.shared.Undefined;
 
 public class Application {
     public static void main(String[] args) {
@@ -146,8 +146,10 @@ public class Application {
             com.unifiedapi.unifiedto.models.operations.PatchPassthroughRequest req = new PatchPassthroughRequest(
                 "string",
                 "string"){{
-                undefined = new Undefined(
-);
+                requestBody = new java.util.HashMap<String, java.lang.Object>(
+                ){{
+                    put("key", "string");
+                }};
 
             }};
 
@@ -240,7 +242,6 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdatePassthroughRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdatePassthroughResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import com.unifiedapi.unifiedto.models.shared.Undefined;
 
 public class Application {
     public static void main(String[] args) {
@@ -255,8 +256,10 @@ public class Application {
             com.unifiedapi.unifiedto.models.operations.UpdatePassthroughRequest req = new UpdatePassthroughRequest(
                 "string",
                 "string"){{
-                undefined = new Undefined(
-);
+                requestBody = new java.util.HashMap<String, java.lang.Object>(
+                ){{
+                    put("key", "string");
+                }};
 
             }};
 

@@ -82,9 +82,9 @@ public class HrisGroup {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    public PropertyHrisGroupRaw raw;
+    public java.util.Map<String, java.lang.Object> raw;
 
-    public HrisGroup withRaw(PropertyHrisGroupRaw raw) {
+    public HrisGroup withRaw(java.util.Map<String, java.lang.Object> raw) {
         this.raw = raw;
         return this;
     }

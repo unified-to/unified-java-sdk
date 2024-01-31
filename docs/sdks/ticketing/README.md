@@ -34,7 +34,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateTicketingCustomerRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateTicketingCustomerResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyTicketingCustomerRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TicketingCustomer;
 import com.unifiedapi.unifiedto.models.shared.TicketingEmail;
@@ -66,8 +65,10 @@ public class Application {
                     }};
                     id = "<ID>";
                     name = "string";
-                    raw = new PropertyTicketingCustomerRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     tags = new String[]{{
                         add("string"),
                     }};
@@ -119,7 +120,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateTicketingNoteRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateTicketingNoteResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyTicketingNoteRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TicketingNote;
 import java.time.OffsetDateTime;
@@ -142,8 +142,10 @@ public class Application {
                     customerId = "string";
                     description = "Distributed 4th generation portal";
                     id = "<ID>";
-                    raw = new PropertyTicketingNoteRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     ticketId = "string";
                     updatedAt = "string";
                     userId = "string";
@@ -188,7 +190,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyTicketingTicketRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TicketingTicket;
 import com.unifiedapi.unifiedto.models.shared.TicketingTicketStatus;
@@ -215,8 +216,10 @@ public class Application {
                     description = "Automated composite productivity";
                     id = "<ID>";
                     priority = "string";
-                    raw = new PropertyTicketingTicketRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     source = "string";
                     sourceRef = "string";
                     status = TicketingTicketStatus.CLOSED;
@@ -630,7 +633,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingCustomerRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingCustomerResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyTicketingCustomerRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TicketingCustomer;
 import com.unifiedapi.unifiedto.models.shared.TicketingEmail;
@@ -663,8 +665,10 @@ public class Application {
                     }};
                     id = "<ID>";
                     name = "string";
-                    raw = new PropertyTicketingCustomerRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     tags = new String[]{{
                         add("string"),
                     }};
@@ -716,7 +720,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingNoteRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingNoteResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyTicketingNoteRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TicketingNote;
 import java.time.OffsetDateTime;
@@ -740,8 +743,10 @@ public class Application {
                     customerId = "string";
                     description = "Right-sized national productivity";
                     id = "<ID>";
-                    raw = new PropertyTicketingNoteRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     ticketId = "string";
                     updatedAt = "string";
                     userId = "string";
@@ -786,7 +791,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyTicketingTicketRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TicketingTicket;
 import com.unifiedapi.unifiedto.models.shared.TicketingTicketStatus;
@@ -814,8 +818,10 @@ public class Application {
                     description = "Operative composite strategy";
                     id = "<ID>";
                     priority = "string";
-                    raw = new PropertyTicketingTicketRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     source = "string";
                     sourceRef = "string";
                     status = TicketingTicketStatus.CLOSED;
@@ -1022,7 +1028,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateTicketingCustomerRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateTicketingCustomerResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyTicketingCustomerRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TicketingCustomer;
 import com.unifiedapi.unifiedto.models.shared.TicketingEmail;
@@ -1055,8 +1060,10 @@ public class Application {
                     }};
                     id = "<ID>";
                     name = "string";
-                    raw = new PropertyTicketingCustomerRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     tags = new String[]{{
                         add("string"),
                     }};
@@ -1108,7 +1115,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateTicketingNoteRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateTicketingNoteResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyTicketingNoteRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TicketingNote;
 import java.time.OffsetDateTime;
@@ -1132,8 +1138,10 @@ public class Application {
                     customerId = "string";
                     description = "Versatile value-added utilisation";
                     id = "<ID>";
-                    raw = new PropertyTicketingNoteRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     ticketId = "string";
                     updatedAt = "string";
                     userId = "string";
@@ -1178,7 +1186,6 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyTicketingTicketRaw;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.TicketingTicket;
 import com.unifiedapi.unifiedto.models.shared.TicketingTicketStatus;
@@ -1206,8 +1213,10 @@ public class Application {
                     description = "Configurable user-facing middleware";
                     id = "<ID>";
                     priority = "string";
-                    raw = new PropertyTicketingTicketRaw(
-);
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
                     source = "string";
                     sourceRef = "string";
                     status = TicketingTicketStatus.ACTIVE;

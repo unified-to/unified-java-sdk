@@ -109,9 +109,9 @@ public class CrmLead {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    public PropertyCrmLeadRaw raw;
+    public java.util.Map<String, java.lang.Object> raw;
 
-    public CrmLead withRaw(PropertyCrmLeadRaw raw) {
+    public CrmLead withRaw(java.util.Map<String, java.lang.Object> raw) {
         this.raw = raw;
         return this;
     }

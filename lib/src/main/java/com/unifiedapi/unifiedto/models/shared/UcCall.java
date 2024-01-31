@@ -60,9 +60,9 @@ public class UcCall {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    public PropertyUcCallRaw raw;
+    public java.util.Map<String, java.lang.Object> raw;
 
-    public UcCall withRaw(PropertyUcCallRaw raw) {
+    public UcCall withRaw(java.util.Map<String, java.lang.Object> raw) {
         this.raw = raw;
         return this;
     }

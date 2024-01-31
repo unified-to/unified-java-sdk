@@ -130,9 +130,9 @@ public class PropertyConnectionAuth {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
-    public PropertyPropertyConnectionAuthMeta meta;
+    public java.util.Map<String, java.lang.Object> meta;
 
-    public PropertyConnectionAuth withMeta(PropertyPropertyConnectionAuthMeta meta) {
+    public PropertyConnectionAuth withMeta(java.util.Map<String, java.lang.Object> meta) {
         this.meta = meta;
         return this;
     }

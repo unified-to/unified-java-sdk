@@ -172,9 +172,9 @@ public class EnrichCompany {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    public PropertyEnrichCompanyRaw raw;
+    public java.util.Map<String, java.lang.Object> raw;
 
-    public EnrichCompany withRaw(PropertyEnrichCompanyRaw raw) {
+    public EnrichCompany withRaw(java.util.Map<String, java.lang.Object> raw) {
         this.raw = raw;
         return this;
     }

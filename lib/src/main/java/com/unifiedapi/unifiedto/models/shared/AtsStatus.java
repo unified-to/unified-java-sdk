@@ -39,9 +39,9 @@ public class AtsStatus {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    public PropertyAtsStatusRaw raw;
+    public java.util.Map<String, java.lang.Object> raw;
 
-    public AtsStatus withRaw(PropertyAtsStatusRaw raw) {
+    public AtsStatus withRaw(java.util.Map<String, java.lang.Object> raw) {
         this.raw = raw;
         return this;
     }

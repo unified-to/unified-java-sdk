@@ -76,9 +76,9 @@ public class MarketingMember {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    public PropertyMarketingMemberRaw raw;
+    public java.util.Map<String, java.lang.Object> raw;
 
-    public MarketingMember withRaw(PropertyMarketingMemberRaw raw) {
+    public MarketingMember withRaw(java.util.Map<String, java.lang.Object> raw) {
         this.raw = raw;
         return this;
     }
