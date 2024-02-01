@@ -17,7 +17,8 @@ public enum QueryParamCategories {
     TICKETING("ticketing"),
     UC("uc"),
     ACCOUNTING("accounting"),
-    STORAGE("storage");
+    STORAGE("storage"),
+    COMMERCE("commerce");
 
     @JsonValue
     public final String value;

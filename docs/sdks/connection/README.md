@@ -40,11 +40,11 @@ public class Application {
 
             com.unifiedapi.unifiedto.models.shared.Connection req = new Connection(
                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                    add(PropertyConnectionCategories.STORAGE),
+                    add(PropertyConnectionCategories.COMMERCE),
                 }},
                 "string",
                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                    add(PropertyConnectionPermissions.ATS_JOB_READ),
+                    add(PropertyConnectionPermissions.ATS_CANDIDATE_READ),
                 }}){{
                 auth = new PropertyConnectionAuth(
 ){{
@@ -202,7 +202,7 @@ public class Application {
             com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsRequest req = new ListUnifiedConnectionsRequest(
 ){{
                 categories = new com.unifiedapi.unifiedto.models.operations.Categories[]{{
-                    add(Categories.ENRICH),
+                    add(Categories.MARTECH),
                 }};
                 env = "string";
                 externalXref = "string";
@@ -275,7 +275,7 @@ public class Application {
                     }},
                     "string",
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                        add(PropertyConnectionPermissions.MARTECH_LIST_READ),
+                        add(PropertyConnectionPermissions.CRM_PIPELINE_READ),
                     }}){{
                     auth = new PropertyConnectionAuth(
 ){{
@@ -439,11 +439,11 @@ public class Application {
                 "string"){{
                 connection = new Connection(
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                        add(PropertyConnectionCategories.UC),
+                        add(PropertyConnectionCategories.ACCOUNTING),
                     }},
                     "string",
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                        add(PropertyConnectionPermissions.CRM_COMPANY_WRITE),
+                        add(PropertyConnectionPermissions.ATS_DOCUMENT_READ),
                     }}){{
                     auth = new PropertyConnectionAuth(
 ){{

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: dd7e435592a9ea6528f806cf1e9e4701
+  docChecksum: a19ba4935c486a523296da7841502792
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.239.4
-  releaseVersion: 0.13.11
-  configChecksum: 7fb4bad534baa749a823adc111ed3d0f
+  generationVersion: 2.246.3
+  releaseVersion: 0.13.12
+  configChecksum: f174036580ef106ed213707017671ab1
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -21,7 +21,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/Account.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Contact.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Invoice.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/Item.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Organization.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Payment.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Taxrate.java
@@ -34,6 +33,11 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/Interview.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Job.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Scorecard.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/Commerce.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/Collection.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/Inventory.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/Item.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/Location.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Crm.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Company.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Deal.java
@@ -100,8 +104,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingContactResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingInvoiceRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingInvoiceResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingItemRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingItemResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingPaymentRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingPaymentResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingTaxrateRequest.java
@@ -114,8 +116,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingContactResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingInvoiceRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingInvoiceResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingItemRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingItemResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingOrganizationRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingOrganizationResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingPaymentRequest.java
@@ -130,8 +130,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingContactsResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingInvoicesRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingInvoicesResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingItemsRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingItemsResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingOrganizationsRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingOrganizationsResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingPaymentsRequest.java
@@ -146,8 +144,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingContactResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingInvoiceRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingInvoiceResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingItemRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingItemResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingPaymentRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingPaymentResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingTaxrateRequest.java
@@ -160,8 +156,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingContactResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingInvoiceRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingInvoiceResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingItemRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingItemResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingPaymentRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingPaymentResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingTaxrateRequest.java
@@ -174,8 +168,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingContactResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingInvoiceRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingInvoiceResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingItemRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingItemResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingPaymentRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingPaymentResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingTaxrateRequest.java
@@ -280,6 +272,54 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAtsJobResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAtsScorecardRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAtsScorecardResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCommerceCollectionRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCommerceCollectionResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCommerceInventoryRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCommerceInventoryResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCommerceItemRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCommerceItemResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCommerceLocationRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCommerceLocationResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCommerceCollectionRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCommerceCollectionResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCommerceInventoryRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCommerceInventoryResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCommerceItemRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCommerceItemResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCommerceLocationRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCommerceLocationResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCommerceCollectionsRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCommerceCollectionsResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCommerceInventoriesRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCommerceInventoriesResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCommerceItemsRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCommerceItemsResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCommerceLocationsRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCommerceLocationsResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCommerceCollectionRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCommerceCollectionResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCommerceInventoryRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCommerceInventoryResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCommerceItemRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCommerceItemResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCommerceLocationRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCommerceLocationResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCommerceCollectionRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCommerceCollectionResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCommerceInventoryRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCommerceInventoryResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCommerceItemRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCommerceItemResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCommerceLocationRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCommerceLocationResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCommerceCollectionRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCommerceCollectionResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCommerceInventoryRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCommerceInventoryResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCommerceItemRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCommerceItemResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCommerceLocationRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCommerceLocationResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmCompanyRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmCompanyResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmDealRequest.java
@@ -505,7 +545,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingInvoiceStatus.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingInvoice.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingLineitem.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingItem.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingPayment.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTaxrate.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTransaction.java
@@ -547,6 +586,18 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsScorecard.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsStatusStatus.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsStatus.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceCollection.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceItemMediaType.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceItemMedia.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceInventory.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceItem.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/SizeUnit.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/WeightUnit.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceItemVariant.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceItemPrice.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceItemOption.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceLocation.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCommerceLocationAddress.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmCompany.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmCompanyAddress.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmDeal.java
@@ -624,8 +675,6 @@ generatedFiles:
   - docs/models/operations/CreateAccountingContactResponse.md
   - docs/models/operations/CreateAccountingInvoiceRequest.md
   - docs/models/operations/CreateAccountingInvoiceResponse.md
-  - docs/models/operations/CreateAccountingItemRequest.md
-  - docs/models/operations/CreateAccountingItemResponse.md
   - docs/models/operations/CreateAccountingPaymentRequest.md
   - docs/models/operations/CreateAccountingPaymentResponse.md
   - docs/models/operations/CreateAccountingTaxrateRequest.md
@@ -638,8 +687,6 @@ generatedFiles:
   - docs/models/operations/GetAccountingContactResponse.md
   - docs/models/operations/GetAccountingInvoiceRequest.md
   - docs/models/operations/GetAccountingInvoiceResponse.md
-  - docs/models/operations/GetAccountingItemRequest.md
-  - docs/models/operations/GetAccountingItemResponse.md
   - docs/models/operations/GetAccountingOrganizationRequest.md
   - docs/models/operations/GetAccountingOrganizationResponse.md
   - docs/models/operations/GetAccountingPaymentRequest.md
@@ -654,8 +701,6 @@ generatedFiles:
   - docs/models/operations/ListAccountingContactsResponse.md
   - docs/models/operations/ListAccountingInvoicesRequest.md
   - docs/models/operations/ListAccountingInvoicesResponse.md
-  - docs/models/operations/ListAccountingItemsRequest.md
-  - docs/models/operations/ListAccountingItemsResponse.md
   - docs/models/operations/ListAccountingOrganizationsRequest.md
   - docs/models/operations/ListAccountingOrganizationsResponse.md
   - docs/models/operations/ListAccountingPaymentsRequest.md
@@ -670,8 +715,6 @@ generatedFiles:
   - docs/models/operations/PatchAccountingContactResponse.md
   - docs/models/operations/PatchAccountingInvoiceRequest.md
   - docs/models/operations/PatchAccountingInvoiceResponse.md
-  - docs/models/operations/PatchAccountingItemRequest.md
-  - docs/models/operations/PatchAccountingItemResponse.md
   - docs/models/operations/PatchAccountingPaymentRequest.md
   - docs/models/operations/PatchAccountingPaymentResponse.md
   - docs/models/operations/PatchAccountingTaxrateRequest.md
@@ -684,8 +727,6 @@ generatedFiles:
   - docs/models/operations/RemoveAccountingContactResponse.md
   - docs/models/operations/RemoveAccountingInvoiceRequest.md
   - docs/models/operations/RemoveAccountingInvoiceResponse.md
-  - docs/models/operations/RemoveAccountingItemRequest.md
-  - docs/models/operations/RemoveAccountingItemResponse.md
   - docs/models/operations/RemoveAccountingPaymentRequest.md
   - docs/models/operations/RemoveAccountingPaymentResponse.md
   - docs/models/operations/RemoveAccountingTaxrateRequest.md
@@ -698,8 +739,6 @@ generatedFiles:
   - docs/models/operations/UpdateAccountingContactResponse.md
   - docs/models/operations/UpdateAccountingInvoiceRequest.md
   - docs/models/operations/UpdateAccountingInvoiceResponse.md
-  - docs/models/operations/UpdateAccountingItemRequest.md
-  - docs/models/operations/UpdateAccountingItemResponse.md
   - docs/models/operations/UpdateAccountingPaymentRequest.md
   - docs/models/operations/UpdateAccountingPaymentResponse.md
   - docs/models/operations/UpdateAccountingTaxrateRequest.md
@@ -804,6 +843,54 @@ generatedFiles:
   - docs/models/operations/UpdateAtsJobResponse.md
   - docs/models/operations/UpdateAtsScorecardRequest.md
   - docs/models/operations/UpdateAtsScorecardResponse.md
+  - docs/models/operations/CreateCommerceCollectionRequest.md
+  - docs/models/operations/CreateCommerceCollectionResponse.md
+  - docs/models/operations/CreateCommerceInventoryRequest.md
+  - docs/models/operations/CreateCommerceInventoryResponse.md
+  - docs/models/operations/CreateCommerceItemRequest.md
+  - docs/models/operations/CreateCommerceItemResponse.md
+  - docs/models/operations/CreateCommerceLocationRequest.md
+  - docs/models/operations/CreateCommerceLocationResponse.md
+  - docs/models/operations/GetCommerceCollectionRequest.md
+  - docs/models/operations/GetCommerceCollectionResponse.md
+  - docs/models/operations/GetCommerceInventoryRequest.md
+  - docs/models/operations/GetCommerceInventoryResponse.md
+  - docs/models/operations/GetCommerceItemRequest.md
+  - docs/models/operations/GetCommerceItemResponse.md
+  - docs/models/operations/GetCommerceLocationRequest.md
+  - docs/models/operations/GetCommerceLocationResponse.md
+  - docs/models/operations/ListCommerceCollectionsRequest.md
+  - docs/models/operations/ListCommerceCollectionsResponse.md
+  - docs/models/operations/ListCommerceInventoriesRequest.md
+  - docs/models/operations/ListCommerceInventoriesResponse.md
+  - docs/models/operations/ListCommerceItemsRequest.md
+  - docs/models/operations/ListCommerceItemsResponse.md
+  - docs/models/operations/ListCommerceLocationsRequest.md
+  - docs/models/operations/ListCommerceLocationsResponse.md
+  - docs/models/operations/PatchCommerceCollectionRequest.md
+  - docs/models/operations/PatchCommerceCollectionResponse.md
+  - docs/models/operations/PatchCommerceInventoryRequest.md
+  - docs/models/operations/PatchCommerceInventoryResponse.md
+  - docs/models/operations/PatchCommerceItemRequest.md
+  - docs/models/operations/PatchCommerceItemResponse.md
+  - docs/models/operations/PatchCommerceLocationRequest.md
+  - docs/models/operations/PatchCommerceLocationResponse.md
+  - docs/models/operations/RemoveCommerceCollectionRequest.md
+  - docs/models/operations/RemoveCommerceCollectionResponse.md
+  - docs/models/operations/RemoveCommerceInventoryRequest.md
+  - docs/models/operations/RemoveCommerceInventoryResponse.md
+  - docs/models/operations/RemoveCommerceItemRequest.md
+  - docs/models/operations/RemoveCommerceItemResponse.md
+  - docs/models/operations/RemoveCommerceLocationRequest.md
+  - docs/models/operations/RemoveCommerceLocationResponse.md
+  - docs/models/operations/UpdateCommerceCollectionRequest.md
+  - docs/models/operations/UpdateCommerceCollectionResponse.md
+  - docs/models/operations/UpdateCommerceInventoryRequest.md
+  - docs/models/operations/UpdateCommerceInventoryResponse.md
+  - docs/models/operations/UpdateCommerceItemRequest.md
+  - docs/models/operations/UpdateCommerceItemResponse.md
+  - docs/models/operations/UpdateCommerceLocationRequest.md
+  - docs/models/operations/UpdateCommerceLocationResponse.md
   - docs/models/operations/CreateCrmCompanyRequest.md
   - docs/models/operations/CreateCrmCompanyResponse.md
   - docs/models/operations/CreateCrmDealRequest.md
@@ -1029,7 +1116,6 @@ generatedFiles:
   - docs/models/shared/AccountingInvoiceStatus.md
   - docs/models/shared/AccountingInvoice.md
   - docs/models/shared/AccountingLineitem.md
-  - docs/models/shared/AccountingItem.md
   - docs/models/shared/AccountingPayment.md
   - docs/models/shared/AccountingTaxrate.md
   - docs/models/shared/AccountingTransaction.md
@@ -1071,6 +1157,18 @@ generatedFiles:
   - docs/models/shared/AtsScorecard.md
   - docs/models/shared/AtsStatusStatus.md
   - docs/models/shared/AtsStatus.md
+  - docs/models/shared/CommerceCollection.md
+  - docs/models/shared/CommerceItemMediaType.md
+  - docs/models/shared/CommerceItemMedia.md
+  - docs/models/shared/CommerceInventory.md
+  - docs/models/shared/CommerceItem.md
+  - docs/models/shared/SizeUnit.md
+  - docs/models/shared/WeightUnit.md
+  - docs/models/shared/CommerceItemVariant.md
+  - docs/models/shared/CommerceItemPrice.md
+  - docs/models/shared/CommerceItemOption.md
+  - docs/models/shared/CommerceLocation.md
+  - docs/models/shared/PropertyCommerceLocationAddress.md
   - docs/models/shared/CrmCompany.md
   - docs/models/shared/PropertyCrmCompanyAddress.md
   - docs/models/shared/CrmDeal.md
@@ -1147,7 +1245,6 @@ generatedFiles:
   - docs/sdks/account/README.md
   - docs/sdks/contact/README.md
   - docs/sdks/invoice/README.md
-  - docs/sdks/item/README.md
   - docs/sdks/organization/README.md
   - docs/sdks/payment/README.md
   - docs/sdks/taxrate/README.md
@@ -1160,6 +1257,11 @@ generatedFiles:
   - docs/sdks/interview/README.md
   - docs/sdks/job/README.md
   - docs/sdks/scorecard/README.md
+  - docs/sdks/commerce/README.md
+  - docs/sdks/collection/README.md
+  - docs/sdks/inventory/README.md
+  - docs/sdks/item/README.md
+  - docs/sdks/location/README.md
   - docs/sdks/crm/README.md
   - docs/sdks/company/README.md
   - docs/sdks/deal/README.md

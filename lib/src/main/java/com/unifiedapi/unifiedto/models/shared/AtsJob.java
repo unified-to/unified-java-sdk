@@ -119,6 +119,15 @@ public class AtsJob {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("number_of_openings")
+    public Double numberOfOpenings;
+
+    public AtsJob withNumberOfOpenings(Double numberOfOpenings) {
+        this.numberOfOpenings = numberOfOpenings;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_job_urls")
     public String[] publicJobUrls;
 

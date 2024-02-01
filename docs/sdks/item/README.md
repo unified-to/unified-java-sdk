@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [createAccountingItem](#createaccountingitem) - Create an item
-* [getAccountingItem](#getaccountingitem) - Retrieve an item
-* [listAccountingItems](#listaccountingitems) - List all items
-* [patchAccountingItem](#patchaccountingitem) - Update an item
-* [removeAccountingItem](#removeaccountingitem) - Remove an item
-* [updateAccountingItem](#updateaccountingitem) - Update an item
+* [createCommerceItem](#createcommerceitem) - Create an item/product
+* [getCommerceItem](#getcommerceitem) - Retrieve an item/product
+* [listCommerceItems](#listcommerceitems) - List all items/products
+* [patchCommerceItem](#patchcommerceitem) - Update an item/product
+* [removeCommerceItem](#removecommerceitem) - Remove an item/product
+* [updateCommerceItem](#updatecommerceitem) - Update an item/product
 
-## createAccountingItem
+## createCommerceItem
 
-Create an item
+Create an item/product
 
 ### Example Usage
 
@@ -20,9 +20,189 @@ Create an item
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingItemRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingItemResponse;
-import com.unifiedapi.unifiedto.models.shared.AccountingItem;
+import com.unifiedapi.unifiedto.models.operations.CreateCommerceItemRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateCommerceItemResponse;
+import com.unifiedapi.unifiedto.models.shared.CommerceItem;
+import com.unifiedapi.unifiedto.models.shared.CommerceItemMedia;
+import com.unifiedapi.unifiedto.models.shared.CommerceItemMediaType;
+import com.unifiedapi.unifiedto.models.shared.CommerceItemOption;
+import com.unifiedapi.unifiedto.models.shared.CommerceItemPrice;
+import com.unifiedapi.unifiedto.models.shared.CommerceItemVariant;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.SizeUnit;
+import com.unifiedapi.unifiedto.models.shared.WeightUnit;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.CreateCommerceItemRequest req = new CreateCommerceItemRequest(
+                "string"){{
+                commerceItem = new CommerceItem(
+                    "string"){{
+                    createdAt = OffsetDateTime.parse("2023-06-27T05:28:51.414Z");
+                    description = "Object-based local intranet";
+                    id = "<ID>";
+                    isActive = false;
+                    isTaxable = false;
+                    media = new com.unifiedapi.unifiedto.models.shared.CommerceItemMedia[]{{
+                        add(new CommerceItemMedia(
+                        "string"){{
+                            url = "http://other-external.info";
+                        }}),
+                    }};
+                    publicDescription = "string";
+                    publicName = "string";
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "string");
+                    }};
+                    tags = new String[]{{
+                        add("string"),
+                    }};
+                    type = "string";
+                    updatedAt = OffsetDateTime.parse("2023-01-01T01:10:35.262Z");
+                    variants = new com.unifiedapi.unifiedto.models.shared.CommerceItemVariant[]{{
+                        add(new CommerceItemVariant(
+                        "string"){{
+                            media = new com.unifiedapi.unifiedto.models.shared.CommerceItemMedia[]{{
+                                add(new CommerceItemMedia(
+                                "string"){{
+                                    url = "https://burdensome-pinecone.name";
+                                }}),
+                            }};
+                            name = "string";
+                            options = new com.unifiedapi.unifiedto.models.shared.CommerceItemOption[]{{
+                                add(new CommerceItemOption(
+                                "string",
+                                "string",
+                                new String[]{{
+                                    add("string"),
+                                }}){{
+                                    id = "<ID>";
+                                    name = "string";
+                                    values = new String[]{{
+                                        add("string"),
+                                    }};
+                                }}),
+                            }};
+                            prices = new com.unifiedapi.unifiedto.models.shared.CommerceItemPrice[]{{
+                                add(new CommerceItemPrice(
+                                6768.32d){{
+                                    price = 5559.73d;
+                                }}),
+                            }};
+                            tags = new String[]{{
+                                add("string"),
+                            }};
+                        }}),
+                    }};
+                    vendorName = "string";
+
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateCommerceItemResponse res = sdk.item.createCommerceItem(req);
+
+            if (res.commerceItem != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.CreateCommerceItemRequest](../../models/operations/CreateCommerceItemRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.CreateCommerceItemResponse](../../models/operations/CreateCommerceItemResponse.md)**
+
+
+## getCommerceItem
+
+Retrieve an item/product
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.GetCommerceItemRequest;
+import com.unifiedapi.unifiedto.models.operations.GetCommerceItemResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.GetCommerceItemRequest req = new GetCommerceItemRequest(
+                "string",
+                "string"){{
+                fields = new String[]{{
+                    add("string"),
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetCommerceItemResponse res = sdk.item.getCommerceItem(req);
+
+            if (res.commerceItem != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [com.unifiedapi.unifiedto.models.operations.GetCommerceItemRequest](../../models/operations/GetCommerceItemRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.GetCommerceItemResponse](../../models/operations/GetCommerceItemResponse.md)**
+
+
+## listCommerceItems
+
+List all items/products
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.ListCommerceItemsRequest;
+import com.unifiedapi.unifiedto.models.operations.ListCommerceItemsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -36,89 +216,23 @@ public class Application {
                 }})
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.CreateAccountingItemRequest req = new CreateAccountingItemRequest(
-                "string"){{
-                accountingItem = new AccountingItem(
-                    "string"){{
-                    createdAt = OffsetDateTime.parse("2022-11-04T21:45:18.227Z");
-                    description = "Team-oriented grid-enabled open system";
-                    id = "<ID>";
-                    isActive = false;
-                    isTaxable = false;
-                    price = 8182.36d;
-                    publicDescription = "string";
-                    quantityOnHand = 9042.97d;
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "string");
-                    }};
-                    sku = "string";
-                    updatedAt = OffsetDateTime.parse("2024-04-05T08:21:06.807Z");
-
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.CreateAccountingItemResponse res = sdk.item.createAccountingItem(req);
-
-            if (res.accountingItem != null) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.CreateAccountingItemRequest](../../models/operations/CreateAccountingItemRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-
-
-### Response
-
-**[com.unifiedapi.unifiedto.models.operations.CreateAccountingItemResponse](../../models/operations/CreateAccountingItemResponse.md)**
-
-
-## getAccountingItem
-
-Retrieve an item
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetAccountingItemRequest;
-import com.unifiedapi.unifiedto.models.operations.GetAccountingItemResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
-
-            com.unifiedapi.unifiedto.models.operations.GetAccountingItemRequest req = new GetAccountingItemRequest(
-                "string",
+            com.unifiedapi.unifiedto.models.operations.ListCommerceItemsRequest req = new ListCommerceItemsRequest(
                 "string"){{
                 fields = new String[]{{
                     add("string"),
                 }};
+                limit = 2553.93d;
+                offset = 4072.28d;
+                order = "string";
+                query = "string";
+                sort = "string";
+                updatedGte = OffsetDateTime.parse("2022-05-10T19:08:09.923Z");
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.GetAccountingItemResponse res = sdk.item.getAccountingItem(req);
+            com.unifiedapi.unifiedto.models.operations.ListCommerceItemsResponse res = sdk.item.listCommerceItems(req);
 
-            if (res.accountingItem != null) {
+            if (res.commerceItems != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -132,17 +246,17 @@ public class Application {
 
 | Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
 | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.GetAccountingItemRequest](../../models/operations/GetAccountingItemRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.ListCommerceItemsRequest](../../models/operations/ListCommerceItemsRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetAccountingItemResponse](../../models/operations/GetAccountingItemResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.ListCommerceItemsResponse](../../models/operations/ListCommerceItemsResponse.md)**
 
 
-## listAccountingItems
+## patchCommerceItem
 
-List all items
+Update an item/product
 
 ### Example Usage
 
@@ -150,9 +264,17 @@ List all items
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListAccountingItemsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListAccountingItemsResponse;
+import com.unifiedapi.unifiedto.models.operations.PatchCommerceItemRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchCommerceItemResponse;
+import com.unifiedapi.unifiedto.models.shared.CommerceItem;
+import com.unifiedapi.unifiedto.models.shared.CommerceItemMedia;
+import com.unifiedapi.unifiedto.models.shared.CommerceItemMediaType;
+import com.unifiedapi.unifiedto.models.shared.CommerceItemOption;
+import com.unifiedapi.unifiedto.models.shared.CommerceItemPrice;
+import com.unifiedapi.unifiedto.models.shared.CommerceItemVariant;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.SizeUnit;
+import com.unifiedapi.unifiedto.models.shared.WeightUnit;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -165,97 +287,77 @@ public class Application {
                 }})
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListAccountingItemsRequest req = new ListAccountingItemsRequest(
-                "string"){{
-                fields = new String[]{{
-                    add("string"),
-                }};
-                limit = 5739.49d;
-                offset = 6744.69d;
-                order = "string";
-                query = "string";
-                sort = "string";
-                updatedGte = OffsetDateTime.parse("2023-11-10T17:07:55.262Z");
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.ListAccountingItemsResponse res = sdk.item.listAccountingItems(req);
-
-            if (res.accountingItems != null) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.ListAccountingItemsRequest](../../models/operations/ListAccountingItemsRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-
-
-### Response
-
-**[com.unifiedapi.unifiedto.models.operations.ListAccountingItemsResponse](../../models/operations/ListAccountingItemsResponse.md)**
-
-
-## patchAccountingItem
-
-Update an item
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchAccountingItemRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchAccountingItemResponse;
-import com.unifiedapi.unifiedto.models.shared.AccountingItem;
-import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
-
-            com.unifiedapi.unifiedto.models.operations.PatchAccountingItemRequest req = new PatchAccountingItemRequest(
+            com.unifiedapi.unifiedto.models.operations.PatchCommerceItemRequest req = new PatchCommerceItemRequest(
                 "string",
                 "string"){{
-                accountingItem = new AccountingItem(
+                commerceItem = new CommerceItem(
                     "string"){{
-                    createdAt = OffsetDateTime.parse("2022-09-12T01:22:35.181Z");
-                    description = "Operative coherent forecast";
+                    createdAt = OffsetDateTime.parse("2023-06-21T03:47:22.544Z");
+                    description = "Front-line explicit circuit";
                     id = "<ID>";
                     isActive = false;
                     isTaxable = false;
-                    price = 1007.53d;
+                    media = new com.unifiedapi.unifiedto.models.shared.CommerceItemMedia[]{{
+                        add(new CommerceItemMedia(
+                        "string"){{
+                            url = "http://irresponsible-reason.biz";
+                        }}),
+                    }};
                     publicDescription = "string";
-                    quantityOnHand = 3510.34d;
+                    publicName = "string";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "string");
                     }};
-                    sku = "string";
-                    updatedAt = OffsetDateTime.parse("2023-11-19T01:12:30.848Z");
+                    tags = new String[]{{
+                        add("string"),
+                    }};
+                    type = "string";
+                    updatedAt = OffsetDateTime.parse("2023-05-09T22:12:43.888Z");
+                    variants = new com.unifiedapi.unifiedto.models.shared.CommerceItemVariant[]{{
+                        add(new CommerceItemVariant(
+                        "string"){{
+                            media = new com.unifiedapi.unifiedto.models.shared.CommerceItemMedia[]{{
+                                add(new CommerceItemMedia(
+                                "string"){{
+                                    url = "https://menacing-gratitude.name";
+                                }}),
+                            }};
+                            name = "string";
+                            options = new com.unifiedapi.unifiedto.models.shared.CommerceItemOption[]{{
+                                add(new CommerceItemOption(
+                                "string",
+                                "string",
+                                new String[]{{
+                                    add("string"),
+                                }}){{
+                                    id = "<ID>";
+                                    name = "string";
+                                    values = new String[]{{
+                                        add("string"),
+                                    }};
+                                }}),
+                            }};
+                            prices = new com.unifiedapi.unifiedto.models.shared.CommerceItemPrice[]{{
+                                add(new CommerceItemPrice(
+                                7589.73d){{
+                                    price = 6094.31d;
+                                }}),
+                            }};
+                            tags = new String[]{{
+                                add("string"),
+                            }};
+                        }}),
+                    }};
+                    vendorName = "string";
 
                 }};
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.PatchAccountingItemResponse res = sdk.item.patchAccountingItem(req);
+            com.unifiedapi.unifiedto.models.operations.PatchCommerceItemResponse res = sdk.item.patchCommerceItem(req);
 
-            if (res.accountingItem != null) {
+            if (res.commerceItem != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -267,19 +369,19 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.PatchAccountingItemRequest](../../models/operations/PatchAccountingItemRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.PatchCommerceItemRequest](../../models/operations/PatchCommerceItemRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchAccountingItemResponse](../../models/operations/PatchAccountingItemResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.PatchCommerceItemResponse](../../models/operations/PatchCommerceItemResponse.md)**
 
 
-## removeAccountingItem
+## removeCommerceItem
 
-Remove an item
+Remove an item/product
 
 ### Example Usage
 
@@ -287,8 +389,8 @@ Remove an item
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveAccountingItemRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveAccountingItemResponse;
+import com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemRequest;
+import com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
@@ -301,11 +403,11 @@ public class Application {
                 }})
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveAccountingItemRequest req = new RemoveAccountingItemRequest(
+            com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemRequest req = new RemoveCommerceItemRequest(
                 "string",
                 "string");
 
-            com.unifiedapi.unifiedto.models.operations.RemoveAccountingItemResponse res = sdk.item.removeAccountingItem(req);
+            com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemResponse res = sdk.item.removeCommerceItem(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -319,19 +421,19 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.RemoveAccountingItemRequest](../../models/operations/RemoveAccountingItemRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemRequest](../../models/operations/RemoveCommerceItemRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.RemoveAccountingItemResponse](../../models/operations/RemoveAccountingItemResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemResponse](../../models/operations/RemoveCommerceItemResponse.md)**
 
 
-## updateAccountingItem
+## updateCommerceItem
 
-Update an item
+Update an item/product
 
 ### Example Usage
 
@@ -339,10 +441,17 @@ Update an item
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateAccountingItemRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateAccountingItemResponse;
-import com.unifiedapi.unifiedto.models.shared.AccountingItem;
+import com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemResponse;
+import com.unifiedapi.unifiedto.models.shared.CommerceItem;
+import com.unifiedapi.unifiedto.models.shared.CommerceItemMedia;
+import com.unifiedapi.unifiedto.models.shared.CommerceItemMediaType;
+import com.unifiedapi.unifiedto.models.shared.CommerceItemOption;
+import com.unifiedapi.unifiedto.models.shared.CommerceItemPrice;
+import com.unifiedapi.unifiedto.models.shared.CommerceItemVariant;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.SizeUnit;
+import com.unifiedapi.unifiedto.models.shared.WeightUnit;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -355,33 +464,77 @@ public class Application {
                 }})
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.UpdateAccountingItemRequest req = new UpdateAccountingItemRequest(
+            com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemRequest req = new UpdateCommerceItemRequest(
                 "string",
                 "string"){{
-                accountingItem = new AccountingItem(
+                commerceItem = new CommerceItem(
                     "string"){{
-                    createdAt = OffsetDateTime.parse("2022-03-31T23:31:53.009Z");
-                    description = "Programmable modular artificial intelligence";
+                    createdAt = OffsetDateTime.parse("2023-12-27T01:13:33.758Z");
+                    description = "Advanced intangible toolset";
                     id = "<ID>";
                     isActive = false;
                     isTaxable = false;
-                    price = 3314.34d;
+                    media = new com.unifiedapi.unifiedto.models.shared.CommerceItemMedia[]{{
+                        add(new CommerceItemMedia(
+                        "string"){{
+                            url = "https://reasonable-cast.biz";
+                        }}),
+                    }};
                     publicDescription = "string";
-                    quantityOnHand = 9226.47d;
+                    publicName = "string";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "string");
                     }};
-                    sku = "string";
-                    updatedAt = OffsetDateTime.parse("2022-12-09T06:37:51.326Z");
+                    tags = new String[]{{
+                        add("string"),
+                    }};
+                    type = "string";
+                    updatedAt = OffsetDateTime.parse("2024-07-17T00:14:33.118Z");
+                    variants = new com.unifiedapi.unifiedto.models.shared.CommerceItemVariant[]{{
+                        add(new CommerceItemVariant(
+                        "string"){{
+                            media = new com.unifiedapi.unifiedto.models.shared.CommerceItemMedia[]{{
+                                add(new CommerceItemMedia(
+                                "string"){{
+                                    url = "http://adept-podcast.name";
+                                }}),
+                            }};
+                            name = "string";
+                            options = new com.unifiedapi.unifiedto.models.shared.CommerceItemOption[]{{
+                                add(new CommerceItemOption(
+                                "string",
+                                "string",
+                                new String[]{{
+                                    add("string"),
+                                }}){{
+                                    id = "<ID>";
+                                    name = "string";
+                                    values = new String[]{{
+                                        add("string"),
+                                    }};
+                                }}),
+                            }};
+                            prices = new com.unifiedapi.unifiedto.models.shared.CommerceItemPrice[]{{
+                                add(new CommerceItemPrice(
+                                2345.49d){{
+                                    price = 6332.36d;
+                                }}),
+                            }};
+                            tags = new String[]{{
+                                add("string"),
+                            }};
+                        }}),
+                    }};
+                    vendorName = "string";
 
                 }};
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.UpdateAccountingItemResponse res = sdk.item.updateAccountingItem(req);
+            com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemResponse res = sdk.item.updateCommerceItem(req);
 
-            if (res.accountingItem != null) {
+            if (res.commerceItem != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -393,12 +546,12 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.UpdateAccountingItemRequest](../../models/operations/UpdateAccountingItemRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemRequest](../../models/operations/UpdateCommerceItemRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.UpdateAccountingItemResponse](../../models/operations/UpdateAccountingItemResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemResponse](../../models/operations/UpdateCommerceItemResponse.md)**
 

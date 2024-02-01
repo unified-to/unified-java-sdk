@@ -108,15 +108,6 @@ public class AccountingLineitem {
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("refunded_amount")
-    public Double refundedAmount;
-
-    public AccountingLineitem withRefundedAmount(Double refundedAmount) {
-        this.refundedAmount = refundedAmount;
-        return this;
-    }
-    
-    @JsonInclude(Include.NON_ABSENT)
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("refunded_at")

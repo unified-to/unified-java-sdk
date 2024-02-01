@@ -45,15 +45,6 @@ public class AccountingTransaction {
         return this;
     }
     
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("line_items")
-    public AccountingTransactionLineitem[] lineItems;
-
-    public AccountingTransaction withLineItems(AccountingTransactionLineitem[] lineItems) {
-        this.lineItems = lineItems;
-        return this;
-    }
-    
     /**
      * new field name
      */

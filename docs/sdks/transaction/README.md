@@ -43,7 +43,7 @@ public class Application {
                     createdAt = "string";
                     currency = "Libyan Dinar";
                     description = "Pre-emptive multimedia benchmark";
-                    lineItems = new com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineitem[]{{
+                    lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineitem[]{{
                         add(new AccountingTransactionLineitem(
                         "string",
                         7389.88d){{
@@ -51,20 +51,12 @@ public class Application {
                             totalAmount = 2477.45d;
                         }}),
                     }};
-                    lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineitem[]{{
-                        add(new AccountingTransactionLineitem(
-                        "string",
-                        4121.55d){{
-                            accountId = "string";
-                            totalAmount = 8276.07d;
-                        }}),
-                    }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "string");
                     }};
                     reference = "string";
-                    taxAmount = 9038.49d;
+                    taxAmount = 8276.07d;
                     taxrateId = "string";
                     updatedAt = "string";
 
@@ -250,7 +242,7 @@ public class Application {
                     createdAt = "string";
                     currency = "Kwacha";
                     description = "Multi-channelled transitional function";
-                    lineItems = new com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineitem[]{{
+                    lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineitem[]{{
                         add(new AccountingTransactionLineitem(
                         "string",
                         3153.09d){{
@@ -258,20 +250,12 @@ public class Application {
                             totalAmount = 535.65d;
                         }}),
                     }};
-                    lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineitem[]{{
-                        add(new AccountingTransactionLineitem(
-                        "string",
-                        8716.58d){{
-                            accountId = "string";
-                            totalAmount = 259.82d;
-                        }}),
-                    }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "string");
                     }};
                     reference = "string";
-                    taxAmount = 1651.43d;
+                    taxAmount = 259.82d;
                     taxrateId = "string";
                     updatedAt = "string";
 
@@ -389,7 +373,7 @@ public class Application {
                     createdAt = "string";
                     currency = "Zloty";
                     description = "Organic web-enabled orchestration";
-                    lineItems = new com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineitem[]{{
+                    lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineitem[]{{
                         add(new AccountingTransactionLineitem(
                         "string",
                         1897.48d){{
@@ -397,20 +381,12 @@ public class Application {
                             totalAmount = 2397.73d;
                         }}),
                     }};
-                    lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineitem[]{{
-                        add(new AccountingTransactionLineitem(
-                        "string",
-                        8603.41d){{
-                            accountId = "string";
-                            totalAmount = 421.84d;
-                        }}),
-                    }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "string");
                     }};
                     reference = "string";
-                    taxAmount = 7972.27d;
+                    taxAmount = 421.84d;
                     taxrateId = "string";
                     updatedAt = "string";
 

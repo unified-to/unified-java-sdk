@@ -23,19 +23,19 @@ public class Item {
 	}
 
     /**
-     * Create an item
+     * Create an item/product
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.CreateAccountingItemResponse createAccountingItem(com.unifiedapi.unifiedto.models.operations.CreateAccountingItemRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateCommerceItemResponse createCommerceItem(com.unifiedapi.unifiedto.models.operations.CreateCommerceItemRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateAccountingItemRequest.class, baseUrl, "/accounting/{connection_id}/item", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateCommerceItemRequest.class, baseUrl, "/commerce/{connection_id}/item", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "accountingItem", "json");
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "commerceItem", "json");
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
@@ -47,15 +47,15 @@ public class Item {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
-        com.unifiedapi.unifiedto.models.operations.CreateAccountingItemResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAccountingItemResponse(contentType, httpRes.statusCode(), httpRes) {{
-            accountingItem = null;
+        com.unifiedapi.unifiedto.models.operations.CreateCommerceItemResponse res = new com.unifiedapi.unifiedto.models.operations.CreateCommerceItemResponse(contentType, httpRes.statusCode(), httpRes) {{
+            commerceItem = null;
         }};
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AccountingItem out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingItem.class);
-                res.accountingItem = out;
+                com.unifiedapi.unifiedto.models.shared.CommerceItem out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.CommerceItem.class);
+                res.commerceItem = out;
             }
         }
 
@@ -63,14 +63,14 @@ public class Item {
     }
 
     /**
-     * Retrieve an item
+     * Retrieve an item/product
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetAccountingItemResponse getAccountingItem(com.unifiedapi.unifiedto.models.operations.GetAccountingItemRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetCommerceItemResponse getCommerceItem(com.unifiedapi.unifiedto.models.operations.GetCommerceItemRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAccountingItemRequest.class, baseUrl, "/accounting/{connection_id}/item/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCommerceItemRequest.class, baseUrl, "/commerce/{connection_id}/item/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -78,7 +78,7 @@ public class Item {
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetAccountingItemRequest.class, request, null);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetCommerceItemRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -91,15 +91,15 @@ public class Item {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
-        com.unifiedapi.unifiedto.models.operations.GetAccountingItemResponse res = new com.unifiedapi.unifiedto.models.operations.GetAccountingItemResponse(contentType, httpRes.statusCode(), httpRes) {{
-            accountingItem = null;
+        com.unifiedapi.unifiedto.models.operations.GetCommerceItemResponse res = new com.unifiedapi.unifiedto.models.operations.GetCommerceItemResponse(contentType, httpRes.statusCode(), httpRes) {{
+            commerceItem = null;
         }};
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AccountingItem out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingItem.class);
-                res.accountingItem = out;
+                com.unifiedapi.unifiedto.models.shared.CommerceItem out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.CommerceItem.class);
+                res.commerceItem = out;
             }
         }
 
@@ -107,14 +107,14 @@ public class Item {
     }
 
     /**
-     * List all items
+     * List all items/products
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListAccountingItemsResponse listAccountingItems(com.unifiedapi.unifiedto.models.operations.ListAccountingItemsRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListCommerceItemsResponse listCommerceItems(com.unifiedapi.unifiedto.models.operations.ListCommerceItemsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListAccountingItemsRequest.class, baseUrl, "/accounting/{connection_id}/item", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListCommerceItemsRequest.class, baseUrl, "/commerce/{connection_id}/item", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -122,7 +122,7 @@ public class Item {
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListAccountingItemsRequest.class, request, null);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListCommerceItemsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -135,15 +135,15 @@ public class Item {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
-        com.unifiedapi.unifiedto.models.operations.ListAccountingItemsResponse res = new com.unifiedapi.unifiedto.models.operations.ListAccountingItemsResponse(contentType, httpRes.statusCode(), httpRes) {{
-            accountingItems = null;
+        com.unifiedapi.unifiedto.models.operations.ListCommerceItemsResponse res = new com.unifiedapi.unifiedto.models.operations.ListCommerceItemsResponse(contentType, httpRes.statusCode(), httpRes) {{
+            commerceItems = null;
         }};
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AccountingItem[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingItem[].class);
-                res.accountingItems = out;
+                com.unifiedapi.unifiedto.models.shared.CommerceItem[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.CommerceItem[].class);
+                res.commerceItems = out;
             }
         }
 
@@ -151,19 +151,19 @@ public class Item {
     }
 
     /**
-     * Update an item
+     * Update an item/product
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchAccountingItemResponse patchAccountingItem(com.unifiedapi.unifiedto.models.operations.PatchAccountingItemRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchCommerceItemResponse patchCommerceItem(com.unifiedapi.unifiedto.models.operations.PatchCommerceItemRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAccountingItemRequest.class, baseUrl, "/accounting/{connection_id}/item/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchCommerceItemRequest.class, baseUrl, "/commerce/{connection_id}/item/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "accountingItem", "json");
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "commerceItem", "json");
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
@@ -175,15 +175,15 @@ public class Item {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
-        com.unifiedapi.unifiedto.models.operations.PatchAccountingItemResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAccountingItemResponse(contentType, httpRes.statusCode(), httpRes) {{
-            accountingItem = null;
+        com.unifiedapi.unifiedto.models.operations.PatchCommerceItemResponse res = new com.unifiedapi.unifiedto.models.operations.PatchCommerceItemResponse(contentType, httpRes.statusCode(), httpRes) {{
+            commerceItem = null;
         }};
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AccountingItem out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingItem.class);
-                res.accountingItem = out;
+                com.unifiedapi.unifiedto.models.shared.CommerceItem out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.CommerceItem.class);
+                res.commerceItem = out;
             }
         }
 
@@ -191,14 +191,14 @@ public class Item {
     }
 
     /**
-     * Remove an item
+     * Remove an item/product
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.RemoveAccountingItemResponse removeAccountingItem(com.unifiedapi.unifiedto.models.operations.RemoveAccountingItemRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemResponse removeCommerceItem(com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveAccountingItemRequest.class, baseUrl, "/accounting/{connection_id}/item/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemRequest.class, baseUrl, "/commerce/{connection_id}/item/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -213,7 +213,7 @@ public class Item {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
-        com.unifiedapi.unifiedto.models.operations.RemoveAccountingItemResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAccountingItemResponse(contentType, httpRes.statusCode(), httpRes) {{
+        com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemResponse(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
         
@@ -228,19 +228,19 @@ public class Item {
     }
 
     /**
-     * Update an item
+     * Update an item/product
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.UpdateAccountingItemResponse updateAccountingItem(com.unifiedapi.unifiedto.models.operations.UpdateAccountingItemRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemResponse updateCommerceItem(com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateAccountingItemRequest.class, baseUrl, "/accounting/{connection_id}/item/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemRequest.class, baseUrl, "/commerce/{connection_id}/item/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "accountingItem", "json");
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "commerceItem", "json");
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
@@ -252,15 +252,15 @@ public class Item {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
-        com.unifiedapi.unifiedto.models.operations.UpdateAccountingItemResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAccountingItemResponse(contentType, httpRes.statusCode(), httpRes) {{
-            accountingItem = null;
+        com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemResponse(contentType, httpRes.statusCode(), httpRes) {{
+            commerceItem = null;
         }};
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AccountingItem out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingItem.class);
-                res.accountingItem = out;
+                com.unifiedapi.unifiedto.models.shared.CommerceItem out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.CommerceItem.class);
+                res.commerceItem = out;
             }
         }
 

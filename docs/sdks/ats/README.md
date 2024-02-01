@@ -437,6 +437,7 @@ public class Application {
                     id = "<ID>";
                     languageLocale = "string";
                     name = "string";
+                    numberOfOpenings = 8330.69d;
                     publicJobUrls = new String[]{{
                         add("string"),
                     }};
@@ -448,8 +449,8 @@ public class Application {
                         add("string"),
                     }};
                     remote = false;
-                    status = AtsJobStatus.CLOSED;
-                    updatedAt = OffsetDateTime.parse("2024-01-25T02:40:27.531Z");
+                    status = AtsJobStatus.OPEN;
+                    updatedAt = OffsetDateTime.parse("2024-11-18T02:03:06.250Z");
 
                 }};
 
@@ -1745,6 +1746,7 @@ public class Application {
                     id = "<ID>";
                     languageLocale = "string";
                     name = "string";
+                    numberOfOpenings = 238.34d;
                     publicJobUrls = new String[]{{
                         add("string"),
                     }};
@@ -1756,8 +1758,8 @@ public class Application {
                         add("string"),
                     }};
                     remote = false;
-                    status = AtsJobStatus.ARCHIVED;
-                    updatedAt = OffsetDateTime.parse("2024-10-30T00:43:07.001Z");
+                    status = AtsJobStatus.CLOSED;
+                    updatedAt = OffsetDateTime.parse("2023-08-08T17:34:59.133Z");
 
                 }};
 
@@ -2575,6 +2577,7 @@ public class Application {
                     id = "<ID>";
                     languageLocale = "string";
                     name = "string";
+                    numberOfOpenings = 983.08d;
                     publicJobUrls = new String[]{{
                         add("string"),
                     }};
@@ -2586,8 +2589,8 @@ public class Application {
                         add("string"),
                     }};
                     remote = false;
-                    status = AtsJobStatus.ARCHIVED;
-                    updatedAt = OffsetDateTime.parse("2023-05-27T07:16:42.656Z");
+                    status = AtsJobStatus.DRAFT;
+                    updatedAt = OffsetDateTime.parse("2024-01-04T04:44:52.139Z");
 
                 }};
 

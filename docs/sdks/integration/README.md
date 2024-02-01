@@ -102,7 +102,7 @@ public class Application {
                 "string"){{
                 active = false;
                 categories = new com.unifiedapi.unifiedto.models.operations.QueryParamCategories[]{{
-                    add(QueryParamCategories.UC),
+                    add(QueryParamCategories.ACCOUNTING),
                 }};
                 env = "string";
                 limit = 9072.99d;
@@ -165,7 +165,7 @@ public class Application {
 ){{
                 active = false;
                 categories = new com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsQueryParamCategories[]{{
-                    add(ListUnifiedIntegrationsQueryParamCategories.AUTH),
+                    add(ListUnifiedIntegrationsQueryParamCategories.CRM),
                 }};
                 env = "string";
                 limit = 7382.58d;

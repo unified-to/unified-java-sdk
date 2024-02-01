@@ -51,11 +51,11 @@ public class Application {
 
             com.unifiedapi.unifiedto.models.shared.Connection req = new Connection(
                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                    add(PropertyConnectionCategories.STORAGE),
+                    add(PropertyConnectionCategories.COMMERCE),
                 }},
                 "string",
                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                    add(PropertyConnectionPermissions.ATS_JOB_READ),
+                    add(PropertyConnectionPermissions.ATS_CANDIDATE_READ),
                 }}){{
                 auth = new PropertyConnectionAuth(
 ){{
@@ -169,7 +169,7 @@ public class Application {
                     Event.CREATED,
                     "string",
                     188.12d,
-                    ObjectType.CRM_COMPANY){{
+                    ObjectType.ATS_JOB){{
                     checkedAt = OffsetDateTime.parse("2023-11-05T05:21:48.024Z");
                     createdAt = OffsetDateTime.parse("2022-03-22T21:20:43.128Z");
                     environment = "string";
@@ -530,7 +530,7 @@ public class Application {
             com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsRequest req = new ListUnifiedConnectionsRequest(
 ){{
                 categories = new com.unifiedapi.unifiedto.models.operations.Categories[]{{
-                    add(Categories.ENRICH),
+                    add(Categories.MARTECH),
                 }};
                 env = "string";
                 externalXref = "string";
@@ -595,7 +595,7 @@ public class Application {
                 "string"){{
                 active = false;
                 categories = new com.unifiedapi.unifiedto.models.operations.QueryParamCategories[]{{
-                    add(QueryParamCategories.UC),
+                    add(QueryParamCategories.ACCOUNTING),
                 }};
                 env = "string";
                 limit = 9072.99d;
@@ -658,7 +658,7 @@ public class Application {
 ){{
                 active = false;
                 categories = new com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsQueryParamCategories[]{{
-                    add(ListUnifiedIntegrationsQueryParamCategories.AUTH),
+                    add(ListUnifiedIntegrationsQueryParamCategories.CRM),
                 }};
                 env = "string";
                 limit = 7382.58d;
@@ -793,7 +793,7 @@ public class Application {
                     }},
                     "string",
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                        add(PropertyConnectionPermissions.MARTECH_LIST_READ),
+                        add(PropertyConnectionPermissions.CRM_PIPELINE_READ),
                     }}){{
                     auth = new PropertyConnectionAuth(
 ){{
@@ -1059,11 +1059,11 @@ public class Application {
                 "string"){{
                 connection = new Connection(
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                        add(PropertyConnectionCategories.UC),
+                        add(PropertyConnectionCategories.ACCOUNTING),
                     }},
                     "string",
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                        add(PropertyConnectionPermissions.CRM_COMPANY_WRITE),
+                        add(PropertyConnectionPermissions.ATS_DOCUMENT_READ),
                     }}){{
                     auth = new PropertyConnectionAuth(
 ){{

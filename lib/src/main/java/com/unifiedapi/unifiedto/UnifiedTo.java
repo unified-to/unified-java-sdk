@@ -29,7 +29,6 @@ public class UnifiedTo {
     public Account account;
     public Contact contact;
     public Invoice invoice;
-    public Item item;
     public Organization organization;
     public Payment payment;
     public Taxrate taxrate;
@@ -42,6 +41,11 @@ public class UnifiedTo {
     public Interview interview;
     public Job job;
     public Scorecard scorecard;
+    public Commerce commerce;
+    public Collection collection;
+    public Inventory inventory;
+    public Item item;
+    public Location location;
     public Crm crm;
     public Company company;
     public Deal deal;
@@ -186,8 +190,6 @@ public class UnifiedTo {
 		
 		this.invoice = new Invoice(this.sdkConfiguration);
 		
-		this.item = new Item(this.sdkConfiguration);
-		
 		this.organization = new Organization(this.sdkConfiguration);
 		
 		this.payment = new Payment(this.sdkConfiguration);
@@ -211,6 +213,16 @@ public class UnifiedTo {
 		this.job = new Job(this.sdkConfiguration);
 		
 		this.scorecard = new Scorecard(this.sdkConfiguration);
+		
+		this.commerce = new Commerce(this.sdkConfiguration);
+		
+		this.collection = new Collection(this.sdkConfiguration);
+		
+		this.inventory = new Inventory(this.sdkConfiguration);
+		
+		this.item = new Item(this.sdkConfiguration);
+		
+		this.location = new Location(this.sdkConfiguration);
 		
 		this.crm = new Crm(this.sdkConfiguration);
 		
