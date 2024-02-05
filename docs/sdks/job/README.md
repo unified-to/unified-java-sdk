@@ -51,6 +51,7 @@ public class Application {
                         ){{}}),
                     }};
                     closedAt = OffsetDateTime.parse("2022-01-14T18:31:06.376Z");
+                    companyId = "string";
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(
                         AtsCompensationType.EQUITY){{
@@ -274,6 +275,7 @@ public class Application {
                         ){{}}),
                     }};
                     closedAt = OffsetDateTime.parse("2022-08-09T17:44:16.617Z");
+                    companyId = "string";
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(
                         AtsCompensationType.EQUITY){{
@@ -429,6 +431,7 @@ public class Application {
                         ){{}}),
                     }};
                     closedAt = OffsetDateTime.parse("2023-10-21T07:41:08.131Z");
+                    companyId = "string";
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(
                         AtsCompensationType.BONUS){{

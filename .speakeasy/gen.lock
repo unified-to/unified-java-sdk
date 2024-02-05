@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: a19ba4935c486a523296da7841502792
+  docChecksum: 18ccf953df89af94fa8ee7505288f024
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.246.3
-  releaseVersion: 0.13.12
-  configChecksum: f174036580ef106ed213707017671ab1
+  generationVersion: 2.249.1
+  releaseVersion: 0.14.0
+  configChecksum: 27388f42afe2e07ad7cd32372c919adc
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -29,6 +29,7 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/Application.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Applicationstatus.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Candidate.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/Company.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Document.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Interview.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Job.java
@@ -39,7 +40,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/Item.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Location.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Crm.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/Company.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Deal.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Event.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Lead.java
@@ -214,6 +214,8 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsApplicationResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsCandidateRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsCandidateResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsCompanyRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsCompanyResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsDocumentRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsDocumentResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsInterviewRequest.java
@@ -228,6 +230,8 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsApplicationstatusesResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsCandidatesRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsCandidatesResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsCompaniesRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsCompaniesResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsDocumentsRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsDocumentsResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsInterviewsRequest.java
@@ -272,6 +276,20 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAtsJobResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAtsScorecardRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAtsScorecardResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmCompanyRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmCompanyResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmCompanyRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmCompanyResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmCompaniesRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmCompaniesResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListEnrichCompaniesRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListEnrichCompaniesResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmCompanyRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmCompanyResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmCompanyRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmCompanyResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmCompanyRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmCompanyResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCommerceCollectionRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCommerceCollectionResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCommerceInventoryRequest.java
@@ -320,8 +338,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCommerceItemResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCommerceLocationRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCommerceLocationResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmCompanyRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmCompanyResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmDealRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmDealResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmEventRequest.java
@@ -330,8 +346,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmLeadResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmPipelineRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmPipelineResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmCompanyRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmCompanyResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmDealRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmDealResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmEventRequest.java
@@ -340,8 +354,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmLeadResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmPipelineRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmPipelineResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmCompaniesRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmCompaniesResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmDealsRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmDealsResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmEventsRequest.java
@@ -350,8 +362,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmLeadsResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmPipelinesRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmPipelinesResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmCompanyRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmCompanyResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmDealRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmDealResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmEventRequest.java
@@ -360,8 +370,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmLeadResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmPipelineRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmPipelineResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmCompanyRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmCompanyResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmDealRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmDealResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmEventRequest.java
@@ -370,8 +378,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmLeadResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmPipelineRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmPipelineResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmCompanyRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmCompanyResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmDealRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmDealResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmEventRequest.java
@@ -380,8 +386,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmLeadResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmPipelineRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmPipelineResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListEnrichCompaniesRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListEnrichCompaniesResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListEnrichPeopleRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListEnrichPeopleResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateHrisEmployeeRequest.java
@@ -584,8 +588,16 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsAddress.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/Recommendation.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsScorecard.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsCompany.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAtsCompanyAddress.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsStatusStatus.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsStatus.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmCompany.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmCompanyAddress.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/EnrichCompany.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/EnrichTelephoneType.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/EnrichTelephone.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyEnrichCompanyAddress.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceCollection.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceItemMediaType.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceItemMedia.java
@@ -598,8 +610,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceItemOption.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceLocation.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCommerceLocationAddress.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmCompany.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmCompanyAddress.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmDeal.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmEventType.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmEvent.java
@@ -612,10 +622,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmLead.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmLeadAddress.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmPipeline.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/EnrichCompany.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/EnrichTelephoneType.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/EnrichTelephone.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyEnrichCompanyAddress.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/Gender.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/EnrichPerson.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/EnrichPersonWorkHistory.java
@@ -785,6 +791,8 @@ generatedFiles:
   - docs/models/operations/GetAtsApplicationResponse.md
   - docs/models/operations/GetAtsCandidateRequest.md
   - docs/models/operations/GetAtsCandidateResponse.md
+  - docs/models/operations/GetAtsCompanyRequest.md
+  - docs/models/operations/GetAtsCompanyResponse.md
   - docs/models/operations/GetAtsDocumentRequest.md
   - docs/models/operations/GetAtsDocumentResponse.md
   - docs/models/operations/GetAtsInterviewRequest.md
@@ -799,6 +807,8 @@ generatedFiles:
   - docs/models/operations/ListAtsApplicationstatusesResponse.md
   - docs/models/operations/ListAtsCandidatesRequest.md
   - docs/models/operations/ListAtsCandidatesResponse.md
+  - docs/models/operations/ListAtsCompaniesRequest.md
+  - docs/models/operations/ListAtsCompaniesResponse.md
   - docs/models/operations/ListAtsDocumentsRequest.md
   - docs/models/operations/ListAtsDocumentsResponse.md
   - docs/models/operations/ListAtsInterviewsRequest.md
@@ -843,6 +853,20 @@ generatedFiles:
   - docs/models/operations/UpdateAtsJobResponse.md
   - docs/models/operations/UpdateAtsScorecardRequest.md
   - docs/models/operations/UpdateAtsScorecardResponse.md
+  - docs/models/operations/CreateCrmCompanyRequest.md
+  - docs/models/operations/CreateCrmCompanyResponse.md
+  - docs/models/operations/GetCrmCompanyRequest.md
+  - docs/models/operations/GetCrmCompanyResponse.md
+  - docs/models/operations/ListCrmCompaniesRequest.md
+  - docs/models/operations/ListCrmCompaniesResponse.md
+  - docs/models/operations/ListEnrichCompaniesRequest.md
+  - docs/models/operations/ListEnrichCompaniesResponse.md
+  - docs/models/operations/PatchCrmCompanyRequest.md
+  - docs/models/operations/PatchCrmCompanyResponse.md
+  - docs/models/operations/RemoveCrmCompanyRequest.md
+  - docs/models/operations/RemoveCrmCompanyResponse.md
+  - docs/models/operations/UpdateCrmCompanyRequest.md
+  - docs/models/operations/UpdateCrmCompanyResponse.md
   - docs/models/operations/CreateCommerceCollectionRequest.md
   - docs/models/operations/CreateCommerceCollectionResponse.md
   - docs/models/operations/CreateCommerceInventoryRequest.md
@@ -891,8 +915,6 @@ generatedFiles:
   - docs/models/operations/UpdateCommerceItemResponse.md
   - docs/models/operations/UpdateCommerceLocationRequest.md
   - docs/models/operations/UpdateCommerceLocationResponse.md
-  - docs/models/operations/CreateCrmCompanyRequest.md
-  - docs/models/operations/CreateCrmCompanyResponse.md
   - docs/models/operations/CreateCrmDealRequest.md
   - docs/models/operations/CreateCrmDealResponse.md
   - docs/models/operations/CreateCrmEventRequest.md
@@ -901,8 +923,6 @@ generatedFiles:
   - docs/models/operations/CreateCrmLeadResponse.md
   - docs/models/operations/CreateCrmPipelineRequest.md
   - docs/models/operations/CreateCrmPipelineResponse.md
-  - docs/models/operations/GetCrmCompanyRequest.md
-  - docs/models/operations/GetCrmCompanyResponse.md
   - docs/models/operations/GetCrmDealRequest.md
   - docs/models/operations/GetCrmDealResponse.md
   - docs/models/operations/GetCrmEventRequest.md
@@ -911,8 +931,6 @@ generatedFiles:
   - docs/models/operations/GetCrmLeadResponse.md
   - docs/models/operations/GetCrmPipelineRequest.md
   - docs/models/operations/GetCrmPipelineResponse.md
-  - docs/models/operations/ListCrmCompaniesRequest.md
-  - docs/models/operations/ListCrmCompaniesResponse.md
   - docs/models/operations/ListCrmDealsRequest.md
   - docs/models/operations/ListCrmDealsResponse.md
   - docs/models/operations/ListCrmEventsRequest.md
@@ -921,8 +939,6 @@ generatedFiles:
   - docs/models/operations/ListCrmLeadsResponse.md
   - docs/models/operations/ListCrmPipelinesRequest.md
   - docs/models/operations/ListCrmPipelinesResponse.md
-  - docs/models/operations/PatchCrmCompanyRequest.md
-  - docs/models/operations/PatchCrmCompanyResponse.md
   - docs/models/operations/PatchCrmDealRequest.md
   - docs/models/operations/PatchCrmDealResponse.md
   - docs/models/operations/PatchCrmEventRequest.md
@@ -931,8 +947,6 @@ generatedFiles:
   - docs/models/operations/PatchCrmLeadResponse.md
   - docs/models/operations/PatchCrmPipelineRequest.md
   - docs/models/operations/PatchCrmPipelineResponse.md
-  - docs/models/operations/RemoveCrmCompanyRequest.md
-  - docs/models/operations/RemoveCrmCompanyResponse.md
   - docs/models/operations/RemoveCrmDealRequest.md
   - docs/models/operations/RemoveCrmDealResponse.md
   - docs/models/operations/RemoveCrmEventRequest.md
@@ -941,8 +955,6 @@ generatedFiles:
   - docs/models/operations/RemoveCrmLeadResponse.md
   - docs/models/operations/RemoveCrmPipelineRequest.md
   - docs/models/operations/RemoveCrmPipelineResponse.md
-  - docs/models/operations/UpdateCrmCompanyRequest.md
-  - docs/models/operations/UpdateCrmCompanyResponse.md
   - docs/models/operations/UpdateCrmDealRequest.md
   - docs/models/operations/UpdateCrmDealResponse.md
   - docs/models/operations/UpdateCrmEventRequest.md
@@ -951,8 +963,6 @@ generatedFiles:
   - docs/models/operations/UpdateCrmLeadResponse.md
   - docs/models/operations/UpdateCrmPipelineRequest.md
   - docs/models/operations/UpdateCrmPipelineResponse.md
-  - docs/models/operations/ListEnrichCompaniesRequest.md
-  - docs/models/operations/ListEnrichCompaniesResponse.md
   - docs/models/operations/ListEnrichPeopleRequest.md
   - docs/models/operations/ListEnrichPeopleResponse.md
   - docs/models/operations/CreateHrisEmployeeRequest.md
@@ -1155,8 +1165,16 @@ generatedFiles:
   - docs/models/shared/AtsAddress.md
   - docs/models/shared/Recommendation.md
   - docs/models/shared/AtsScorecard.md
+  - docs/models/shared/AtsCompany.md
+  - docs/models/shared/PropertyAtsCompanyAddress.md
   - docs/models/shared/AtsStatusStatus.md
   - docs/models/shared/AtsStatus.md
+  - docs/models/shared/CrmCompany.md
+  - docs/models/shared/PropertyCrmCompanyAddress.md
+  - docs/models/shared/EnrichCompany.md
+  - docs/models/shared/EnrichTelephoneType.md
+  - docs/models/shared/EnrichTelephone.md
+  - docs/models/shared/PropertyEnrichCompanyAddress.md
   - docs/models/shared/CommerceCollection.md
   - docs/models/shared/CommerceItemMediaType.md
   - docs/models/shared/CommerceItemMedia.md
@@ -1169,8 +1187,6 @@ generatedFiles:
   - docs/models/shared/CommerceItemOption.md
   - docs/models/shared/CommerceLocation.md
   - docs/models/shared/PropertyCommerceLocationAddress.md
-  - docs/models/shared/CrmCompany.md
-  - docs/models/shared/PropertyCrmCompanyAddress.md
   - docs/models/shared/CrmDeal.md
   - docs/models/shared/CrmEventType.md
   - docs/models/shared/CrmEvent.md
@@ -1183,10 +1199,6 @@ generatedFiles:
   - docs/models/shared/CrmLead.md
   - docs/models/shared/PropertyCrmLeadAddress.md
   - docs/models/shared/CrmPipeline.md
-  - docs/models/shared/EnrichCompany.md
-  - docs/models/shared/EnrichTelephoneType.md
-  - docs/models/shared/EnrichTelephone.md
-  - docs/models/shared/PropertyEnrichCompanyAddress.md
   - docs/models/shared/Gender.md
   - docs/models/shared/EnrichPerson.md
   - docs/models/shared/EnrichPersonWorkHistory.md
@@ -1253,6 +1265,7 @@ generatedFiles:
   - docs/sdks/application/README.md
   - docs/sdks/applicationstatus/README.md
   - docs/sdks/candidate/README.md
+  - docs/sdks/company/README.md
   - docs/sdks/document/README.md
   - docs/sdks/interview/README.md
   - docs/sdks/job/README.md
@@ -1263,7 +1276,6 @@ generatedFiles:
   - docs/sdks/item/README.md
   - docs/sdks/location/README.md
   - docs/sdks/crm/README.md
-  - docs/sdks/company/README.md
   - docs/sdks/deal/README.md
   - docs/sdks/event/README.md
   - docs/sdks/lead/README.md

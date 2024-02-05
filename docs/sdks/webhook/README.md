@@ -46,7 +46,7 @@ public class Application {
                     Event.CREATED,
                     "string",
                     188.12d,
-                    ObjectType.ATS_JOB){{
+                    ObjectType.ATS_SCORECARD){{
                     checkedAt = OffsetDateTime.parse("2023-11-05T05:21:48.024Z");
                     createdAt = OffsetDateTime.parse("2022-03-22T21:20:43.128Z");
                     environment = "string";

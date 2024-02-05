@@ -36,6 +36,15 @@ public class AtsJob {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("company_id")
+    public String companyId;
+
+    public AtsJob withCompanyId(String companyId) {
+        this.companyId = companyId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compensation")
     public AtsCompensation[] compensation;
 

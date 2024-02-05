@@ -58,6 +58,7 @@ public class Application {
                         regionCode = "string";
 
                     }};
+                    companyId = "string";
                     companyName = "Pollich - Lubowitz";
                     createdAt = OffsetDateTime.parse("2022-03-06T00:47:39.352Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
@@ -287,6 +288,7 @@ public class Application {
                         regionCode = "string";
 
                     }};
+                    companyId = "string";
                     companyName = "Donnelly - Bartell";
                     createdAt = OffsetDateTime.parse("2024-01-07T04:20:35.612Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
@@ -448,6 +450,7 @@ public class Application {
                         regionCode = "string";
 
                     }};
+                    companyId = "string";
                     companyName = "O'Reilly Inc";
                     createdAt = OffsetDateTime.parse("2023-08-31T03:55:05.691Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{

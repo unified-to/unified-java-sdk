@@ -55,7 +55,7 @@ public class Application {
                 }},
                 "string",
                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                    add(PropertyConnectionPermissions.ATS_CANDIDATE_READ),
+                    add(PropertyConnectionPermissions.ATS_CANDIDATE_WRITE),
                 }}){{
                 auth = new PropertyConnectionAuth(
 ){{
@@ -169,7 +169,7 @@ public class Application {
                     Event.CREATED,
                     "string",
                     188.12d,
-                    ObjectType.ATS_JOB){{
+                    ObjectType.ATS_SCORECARD){{
                     checkedAt = OffsetDateTime.parse("2023-11-05T05:21:48.024Z");
                     createdAt = OffsetDateTime.parse("2022-03-22T21:20:43.128Z");
                     environment = "string";
@@ -353,7 +353,7 @@ public class Application {
                 lang = "string";
                 redirect = false;
                 scopes = new com.unifiedapi.unifiedto.models.operations.Scopes[]{{
-                    add(Scopes.HRIS_GROUP_READ),
+                    add(Scopes.HRIS_EMPLOYEE_WRITE),
                 }};
                 state = "string";
                 subdomain = "string";
@@ -1063,7 +1063,7 @@ public class Application {
                     }},
                     "string",
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                        add(PropertyConnectionPermissions.ATS_DOCUMENT_READ),
+                        add(PropertyConnectionPermissions.ATS_COMPANY_READ),
                     }}){{
                     auth = new PropertyConnectionAuth(
 ){{

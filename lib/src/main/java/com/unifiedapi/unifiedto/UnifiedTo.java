@@ -37,6 +37,7 @@ public class UnifiedTo {
     public Application application;
     public Applicationstatus applicationstatus;
     public Candidate candidate;
+    public Company company;
     public Document document;
     public Interview interview;
     public Job job;
@@ -47,7 +48,6 @@ public class UnifiedTo {
     public Item item;
     public Location location;
     public Crm crm;
-    public Company company;
     public Deal deal;
     public Event event;
     public Lead lead;
@@ -206,6 +206,8 @@ public class UnifiedTo {
 		
 		this.candidate = new Candidate(this.sdkConfiguration);
 		
+		this.company = new Company(this.sdkConfiguration);
+		
 		this.document = new Document(this.sdkConfiguration);
 		
 		this.interview = new Interview(this.sdkConfiguration);
@@ -225,8 +227,6 @@ public class UnifiedTo {
 		this.location = new Location(this.sdkConfiguration);
 		
 		this.crm = new Crm(this.sdkConfiguration);
-		
-		this.company = new Company(this.sdkConfiguration);
 		
 		this.deal = new Deal(this.sdkConfiguration);
 		

@@ -25,6 +25,15 @@ public class AtsCandidate {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("company_id")
+    public String companyId;
+
+    public AtsCandidate withCompanyId(String companyId) {
+        this.companyId = companyId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_name")
     public String companyName;
 

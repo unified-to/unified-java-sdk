@@ -11,6 +11,7 @@
 * [createAtsScorecard](#createatsscorecard) - Create a scorecard
 * [getAtsApplication](#getatsapplication) - Retrieve an application
 * [getAtsCandidate](#getatscandidate) - Retrieve a candidate
+* [getAtsCompany](#getatscompany) - Retrieve a company
 * [getAtsDocument](#getatsdocument) - Retrieve a document
 * [getAtsInterview](#getatsinterview) - Retrieve a interview
 * [getAtsJob](#getatsjob) - Retrieve a job
@@ -18,6 +19,7 @@
 * [listAtsApplications](#listatsapplications) - List all applications
 * [listAtsApplicationstatuses](#listatsapplicationstatuses) - List all application statuses
 * [listAtsCandidates](#listatscandidates) - List all candidates
+* [listAtsCompanies](#listatscompanies) - List all companies
 * [listAtsDocuments](#listatsdocuments) - List all documents
 * [listAtsInterviews](#listatsinterviews) - List all interviews
 * [listAtsJobs](#listatsjobs) - List all jobs
@@ -165,6 +167,7 @@ public class Application {
                         regionCode = "string";
 
                     }};
+                    companyId = "string";
                     companyName = "Pollich - Lubowitz";
                     createdAt = OffsetDateTime.parse("2022-03-06T00:47:39.352Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
@@ -419,6 +422,7 @@ public class Application {
                         ){{}}),
                     }};
                     closedAt = OffsetDateTime.parse("2022-01-14T18:31:06.376Z");
+                    companyId = "string";
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(
                         AtsCompensationType.EQUITY){{
@@ -666,6 +670,63 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.GetAtsCandidateResponse](../../models/operations/GetAtsCandidateResponse.md)**
+
+
+## getAtsCompany
+
+Retrieve a company
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.GetAtsCompanyRequest;
+import com.unifiedapi.unifiedto.models.operations.GetAtsCompanyResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.GetAtsCompanyRequest req = new GetAtsCompanyRequest(
+                "string",
+                "string"){{
+                fields = new String[]{{
+                    add("string"),
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetAtsCompanyResponse res = sdk.ats.getAtsCompany(req);
+
+            if (res.atsCompany != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [com.unifiedapi.unifiedto.models.operations.GetAtsCompanyRequest](../../models/operations/GetAtsCompanyRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.GetAtsCompanyResponse](../../models/operations/GetAtsCompanyResponse.md)**
 
 
 ## getAtsDocument
@@ -1087,6 +1148,69 @@ public class Application {
 **[com.unifiedapi.unifiedto.models.operations.ListAtsCandidatesResponse](../../models/operations/ListAtsCandidatesResponse.md)**
 
 
+## listAtsCompanies
+
+List all companies
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.ListAtsCompaniesRequest;
+import com.unifiedapi.unifiedto.models.operations.ListAtsCompaniesResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.ListAtsCompaniesRequest req = new ListAtsCompaniesRequest(
+                "string"){{
+                fields = new String[]{{
+                    add("string"),
+                }};
+                limit = 6933.84d;
+                offset = 7946.52d;
+                order = "string";
+                query = "string";
+                sort = "string";
+                updatedGte = OffsetDateTime.parse("2024-10-01T21:39:38.971Z");
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListAtsCompaniesResponse res = sdk.ats.listAtsCompanies(req);
+
+            if (res.atsCompanies != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.ListAtsCompaniesRequest](../../models/operations/ListAtsCompaniesRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.ListAtsCompaniesResponse](../../models/operations/ListAtsCompaniesResponse.md)**
+
+
 ## listAtsDocuments
 
 List all documents
@@ -1471,6 +1595,7 @@ public class Application {
                         regionCode = "string";
 
                     }};
+                    companyId = "string";
                     companyName = "Donnelly - Bartell";
                     createdAt = OffsetDateTime.parse("2024-01-07T04:20:35.612Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
@@ -1728,6 +1853,7 @@ public class Application {
                         ){{}}),
                     }};
                     closedAt = OffsetDateTime.parse("2022-08-09T17:44:16.617Z");
+                    companyId = "string";
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(
                         AtsCompensationType.EQUITY){{
@@ -2302,6 +2428,7 @@ public class Application {
                         regionCode = "string";
 
                     }};
+                    companyId = "string";
                     companyName = "O'Reilly Inc";
                     createdAt = OffsetDateTime.parse("2023-08-31T03:55:05.691Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
@@ -2559,6 +2686,7 @@ public class Application {
                         ){{}}),
                     }};
                     closedAt = OffsetDateTime.parse("2023-10-21T07:41:08.131Z");
+                    companyId = "string";
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(
                         AtsCompensationType.BONUS){{
