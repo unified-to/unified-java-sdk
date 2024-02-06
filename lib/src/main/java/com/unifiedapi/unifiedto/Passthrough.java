@@ -47,14 +47,14 @@ public class Passthrough {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
         com.unifiedapi.unifiedto.models.operations.CreatePassthroughResponse res = new com.unifiedapi.unifiedto.models.operations.CreatePassthroughResponse(contentType, httpRes.statusCode(), httpRes) {{
-            undefined = null;
+            result = null;
         }};
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, java.lang.Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, java.lang.Object>>() {});
-                res.undefined = out;
+                res.result = out;
             }
         }
 
@@ -85,14 +85,14 @@ public class Passthrough {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
         com.unifiedapi.unifiedto.models.operations.ListPassthroughsResponse res = new com.unifiedapi.unifiedto.models.operations.ListPassthroughsResponse(contentType, httpRes.statusCode(), httpRes) {{
-            undefined = null;
+            result = null;
         }};
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, java.lang.Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, java.lang.Object>>() {});
-                res.undefined = out;
+                res.result = out;
             }
         }
 
@@ -125,14 +125,14 @@ public class Passthrough {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
         com.unifiedapi.unifiedto.models.operations.PatchPassthroughResponse res = new com.unifiedapi.unifiedto.models.operations.PatchPassthroughResponse(contentType, httpRes.statusCode(), httpRes) {{
-            undefined = null;
+            result = null;
         }};
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, java.lang.Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, java.lang.Object>>() {});
-                res.undefined = out;
+                res.result = out;
             }
         }
 
@@ -163,14 +163,14 @@ public class Passthrough {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
         com.unifiedapi.unifiedto.models.operations.RemovePassthroughResponse res = new com.unifiedapi.unifiedto.models.operations.RemovePassthroughResponse(contentType, httpRes.statusCode(), httpRes) {{
-            undefined = null;
+            result = null;
         }};
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, java.lang.Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, java.lang.Object>>() {});
-                res.undefined = out;
+                res.result = out;
             }
         }
 
@@ -203,14 +203,14 @@ public class Passthrough {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
         com.unifiedapi.unifiedto.models.operations.UpdatePassthroughResponse res = new com.unifiedapi.unifiedto.models.operations.UpdatePassthroughResponse(contentType, httpRes.statusCode(), httpRes) {{
-            undefined = null;
+            result = null;
         }};
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, java.lang.Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, java.lang.Object>>() {});
-                res.undefined = out;
+                res.result = out;
             }
         }
 

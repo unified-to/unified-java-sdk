@@ -21,6 +21,17 @@ public class CreatePassthroughResponse {
     }
     
     /**
+     * Successful
+     */
+    
+    public java.util.Map<String, java.lang.Object> result;
+
+    public CreatePassthroughResponse withResult(java.util.Map<String, java.lang.Object> result) {
+        this.result = result;
+        return this;
+    }
+    
+    /**
      * HTTP response status code for this operation
      */
     
@@ -39,17 +50,6 @@ public class CreatePassthroughResponse {
 
     public CreatePassthroughResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
-        return this;
-    }
-    
-    /**
-     * Successful
-     */
-    
-    public java.util.Map<String, java.lang.Object> undefined;
-
-    public CreatePassthroughResponse withUndefined(java.util.Map<String, java.lang.Object> undefined) {
-        this.undefined = undefined;
         return this;
     }
     

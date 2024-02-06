@@ -45,7 +45,7 @@ public class Application {
 
             com.unifiedapi.unifiedto.models.operations.CreatePassthroughResponse res = sdk.passthrough.createPassthrough(req);
 
-            if (res.undefined != null) {
+            if (res.result != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -97,7 +97,7 @@ public class Application {
 
             com.unifiedapi.unifiedto.models.operations.ListPassthroughsResponse res = sdk.passthrough.listPassthroughs(req);
 
-            if (res.undefined != null) {
+            if (res.result != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -155,7 +155,7 @@ public class Application {
 
             com.unifiedapi.unifiedto.models.operations.PatchPassthroughResponse res = sdk.passthrough.patchPassthrough(req);
 
-            if (res.undefined != null) {
+            if (res.result != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -207,7 +207,7 @@ public class Application {
 
             com.unifiedapi.unifiedto.models.operations.RemovePassthroughResponse res = sdk.passthrough.removePassthrough(req);
 
-            if (res.undefined != null) {
+            if (res.result != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -265,7 +265,7 @@ public class Application {
 
             com.unifiedapi.unifiedto.models.operations.UpdatePassthroughResponse res = sdk.passthrough.updatePassthrough(req);
 
-            if (res.undefined != null) {
+            if (res.result != null) {
                 // handle response
             }
         } catch (Exception e) {

@@ -21,6 +21,17 @@ public class PatchPassthroughResponse {
     }
     
     /**
+     * Successful
+     */
+    
+    public java.util.Map<String, java.lang.Object> result;
+
+    public PatchPassthroughResponse withResult(java.util.Map<String, java.lang.Object> result) {
+        this.result = result;
+        return this;
+    }
+    
+    /**
      * HTTP response status code for this operation
      */
     
@@ -39,17 +50,6 @@ public class PatchPassthroughResponse {
 
     public PatchPassthroughResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
-        return this;
-    }
-    
-    /**
-     * Successful
-     */
-    
-    public java.util.Map<String, java.lang.Object> undefined;
-
-    public PatchPassthroughResponse withUndefined(java.util.Map<String, java.lang.Object> undefined) {
-        this.undefined = undefined;
         return this;
     }
     
