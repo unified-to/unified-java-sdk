@@ -58,10 +58,11 @@ public class Application {
                     ){{
                         put("key", "string");
                     }};
+                    pageMaxLimit = 5349.08d;
                     runs = new String[]{{
                         add("string"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-08-10T06:13:44.297Z");
+                    updatedAt = OffsetDateTime.parse("2024-01-16T23:55:52.787Z");
                     webhookType = WebhookWebhookType.NATIVE_;
                     workspaceId = "string";
 

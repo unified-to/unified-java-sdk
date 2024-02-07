@@ -134,6 +134,15 @@ public class Webhook {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("page_max_limit")
+    public Double pageMaxLimit;
+
+    public Webhook withPageMaxLimit(Double pageMaxLimit) {
+        this.pageMaxLimit = pageMaxLimit;
+        return this;
+    }
+    
     /**
      * An array of the most revent virtual webhook runs
      */
