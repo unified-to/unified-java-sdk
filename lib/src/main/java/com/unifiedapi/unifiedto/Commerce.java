@@ -103,7 +103,7 @@ public class Commerce {
     }
 
     /**
-     * Create an item/product
+     * Create an item
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -271,7 +271,7 @@ public class Commerce {
     }
 
     /**
-     * Retrieve an item/product
+     * Retrieve an item
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -447,7 +447,7 @@ public class Commerce {
     }
 
     /**
-     * List all items/products
+     * List all items
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -615,7 +615,7 @@ public class Commerce {
     }
 
     /**
-     * Update an item/product
+     * Update an item
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -769,7 +769,7 @@ public class Commerce {
     }
 
     /**
-     * Remove an item/product
+     * Remove an item
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -923,7 +923,7 @@ public class Commerce {
     }
 
     /**
-     * Update an item/product
+     * Update an item
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails

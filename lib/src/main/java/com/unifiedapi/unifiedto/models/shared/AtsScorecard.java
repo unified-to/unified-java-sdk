@@ -90,6 +90,15 @@ public class AtsScorecard {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("questions")
+    public AtsScorecardQuestion[] questions;
+
+    public AtsScorecard withQuestions(AtsScorecardQuestion[] questions) {
+        this.questions = questions;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     public java.util.Map<String, java.lang.Object> raw;
 

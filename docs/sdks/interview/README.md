@@ -54,7 +54,7 @@ public class Application {
                         put("key", "string");
                     }};
                     startAt = OffsetDateTime.parse("2023-11-20T00:14:00.277Z");
-                    status = AtsInterviewStatus.COMPLETE;
+                    status = AtsInterviewStatus.NEEDS_SCHEDULING;
                     updatedAt = OffsetDateTime.parse("2022-02-07T15:15:23.855Z");
                     userIds = new String[]{{
                         add("string"),
@@ -254,7 +254,7 @@ public class Application {
                         put("key", "string");
                     }};
                     startAt = OffsetDateTime.parse("2022-09-10T07:32:43.966Z");
-                    status = AtsInterviewStatus.COMPLETE;
+                    status = AtsInterviewStatus.CANCELED;
                     updatedAt = OffsetDateTime.parse("2024-03-18T02:52:45.725Z");
                     userIds = new String[]{{
                         add("string"),
@@ -385,7 +385,7 @@ public class Application {
                         put("key", "string");
                     }};
                     startAt = OffsetDateTime.parse("2024-05-05T07:21:58.674Z");
-                    status = AtsInterviewStatus.AWAITING_FEEDBACK;
+                    status = AtsInterviewStatus.COMPLETE;
                     updatedAt = OffsetDateTime.parse("2022-05-01T17:04:47.962Z");
                     userIds = new String[]{{
                         add("string"),

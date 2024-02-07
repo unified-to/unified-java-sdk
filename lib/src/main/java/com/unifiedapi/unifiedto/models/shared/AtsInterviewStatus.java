@@ -9,7 +9,9 @@ import com.fasterxml.jackson.annotation.JsonValue;
 public enum AtsInterviewStatus {
     SCHEDULED("SCHEDULED"),
     AWAITING_FEEDBACK("AWAITING_FEEDBACK"),
-    COMPLETE("COMPLETE");
+    COMPLETE("COMPLETE"),
+    CANCELED("CANCELED"),
+    NEEDS_SCHEDULING("NEEDS_SCHEDULING");
 
     @JsonValue
     public final String value;

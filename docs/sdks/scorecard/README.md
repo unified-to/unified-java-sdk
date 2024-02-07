@@ -23,6 +23,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
+import com.unifiedapi.unifiedto.models.shared.AtsScorecardQuestion;
 import com.unifiedapi.unifiedto.models.shared.Recommendation;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
@@ -49,6 +50,12 @@ public class Application {
                     interviewId = "string";
                     interviewerId = "string";
                     jobId = "string";
+                    questions = new com.unifiedapi.unifiedto.models.shared.AtsScorecardQuestion[]{{
+                        add(new AtsScorecardQuestion(
+                        "string"){{
+                            text = "string";
+                        }}),
+                    }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "string");
@@ -221,6 +228,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
+import com.unifiedapi.unifiedto.models.shared.AtsScorecardQuestion;
 import com.unifiedapi.unifiedto.models.shared.Recommendation;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
@@ -248,6 +256,12 @@ public class Application {
                     interviewId = "string";
                     interviewerId = "string";
                     jobId = "string";
+                    questions = new com.unifiedapi.unifiedto.models.shared.AtsScorecardQuestion[]{{
+                        add(new AtsScorecardQuestion(
+                        "string"){{
+                            text = "string";
+                        }}),
+                    }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "string");
@@ -348,6 +362,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
+import com.unifiedapi.unifiedto.models.shared.AtsScorecardQuestion;
 import com.unifiedapi.unifiedto.models.shared.Recommendation;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
@@ -375,6 +390,12 @@ public class Application {
                     interviewId = "string";
                     interviewerId = "string";
                     jobId = "string";
+                    questions = new com.unifiedapi.unifiedto.models.shared.AtsScorecardQuestion[]{{
+                        add(new AtsScorecardQuestion(
+                        "string"){{
+                            text = "string";
+                        }}),
+                    }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "string");

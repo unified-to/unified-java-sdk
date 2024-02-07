@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: e16aa34043cd80d620a23e298a14e5c0
+  docChecksum: 6de3144fa3dee858558168257bc841a5
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.250.12
-  releaseVersion: 0.15.1
-  configChecksum: 8c82c9cc782b64c9e487ee29645336ae
+  generationVersion: 2.250.16
+  releaseVersion: 0.15.2
+  configChecksum: 6e606fa57243fef2fd29961c11f760a8
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -588,6 +588,7 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsAddress.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/Recommendation.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsScorecard.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsScorecardQuestion.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsCompany.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAtsCompanyAddress.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsStatusStatus.java
@@ -1165,6 +1166,7 @@ generatedFiles:
   - docs/models/shared/AtsAddress.md
   - docs/models/shared/Recommendation.md
   - docs/models/shared/AtsScorecard.md
+  - docs/models/shared/AtsScorecardQuestion.md
   - docs/models/shared/AtsCompany.md
   - docs/models/shared/PropertyAtsCompanyAddress.md
   - docs/models/shared/AtsStatusStatus.md

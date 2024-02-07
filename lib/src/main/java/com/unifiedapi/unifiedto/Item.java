@@ -23,7 +23,7 @@ public class Item {
 	}
 
     /**
-     * Create an item/product
+     * Create an item
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -63,7 +63,7 @@ public class Item {
     }
 
     /**
-     * Retrieve an item/product
+     * Retrieve an item
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -107,7 +107,7 @@ public class Item {
     }
 
     /**
-     * List all items/products
+     * List all items
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -151,7 +151,7 @@ public class Item {
     }
 
     /**
-     * Update an item/product
+     * Update an item
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -191,7 +191,7 @@ public class Item {
     }
 
     /**
-     * Remove an item/product
+     * Remove an item
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -228,7 +228,7 @@ public class Item {
     }
 
     /**
-     * Update an item/product
+     * Update an item
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
