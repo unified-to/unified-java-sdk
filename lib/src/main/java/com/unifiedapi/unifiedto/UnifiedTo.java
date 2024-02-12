@@ -31,6 +31,8 @@ public class UnifiedTo {
     public Invoice invoice;
     public Organization organization;
     public Payment payment;
+    public Payout payout;
+    public Refund refund;
     public Taxrate taxrate;
     public Transaction transaction;
     public Ats ats;
@@ -75,6 +77,7 @@ public class UnifiedTo {
     public Integration integration;
     public Auth auth;
     public Login login;
+    public Issue issue;
     public Webhook webhook;	
 
 	private SDKConfiguration sdkConfiguration;
@@ -194,6 +197,10 @@ public class UnifiedTo {
 		
 		this.payment = new Payment(this.sdkConfiguration);
 		
+		this.payout = new Payout(this.sdkConfiguration);
+		
+		this.refund = new Refund(this.sdkConfiguration);
+		
 		this.taxrate = new Taxrate(this.sdkConfiguration);
 		
 		this.transaction = new Transaction(this.sdkConfiguration);
@@ -281,6 +288,8 @@ public class UnifiedTo {
 		this.auth = new Auth(this.sdkConfiguration);
 		
 		this.login = new Login(this.sdkConfiguration);
+		
+		this.issue = new Issue(this.sdkConfiguration);
 		
 		this.webhook = new Webhook(this.sdkConfiguration);
 	}

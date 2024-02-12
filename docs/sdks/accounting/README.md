@@ -14,6 +14,8 @@
 * [getAccountingInvoice](#getaccountinginvoice) - Retrieve a invoice
 * [getAccountingOrganization](#getaccountingorganization) - Retrieve an organization
 * [getAccountingPayment](#getaccountingpayment) - Retrieve a payment
+* [getAccountingPayout](#getaccountingpayout) - Retrieve a payout
+* [getAccountingRefund](#getaccountingrefund) - Retrieve a refund
 * [getAccountingTaxrate](#getaccountingtaxrate) - Retrieve a taxrate
 * [getAccountingTransaction](#getaccountingtransaction) - Retrieve a transaction
 * [listAccountingAccounts](#listaccountingaccounts) - List all accounts
@@ -21,6 +23,8 @@
 * [listAccountingInvoices](#listaccountinginvoices) - List all invoices
 * [listAccountingOrganizations](#listaccountingorganizations) - List all organizations
 * [listAccountingPayments](#listaccountingpayments) - List all payments
+* [listAccountingPayouts](#listaccountingpayouts) - List all payouts
+* [listAccountingRefunds](#listaccountingrefunds) - List all refunds
 * [listAccountingTaxrates](#listaccountingtaxrates) - List all taxrates
 * [listAccountingTransactions](#listaccountingtransactions) - List all transactions
 * [patchAccountingAccount](#patchaccountingaccount) - Update an account
@@ -829,6 +833,120 @@ public class Application {
 **[com.unifiedapi.unifiedto.models.operations.GetAccountingPaymentResponse](../../models/operations/GetAccountingPaymentResponse.md)**
 
 
+## getAccountingPayout
+
+Retrieve a payout
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutRequest;
+import com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutRequest req = new GetAccountingPayoutRequest(
+                "string",
+                "string"){{
+                fields = new String[]{{
+                    add("string"),
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutResponse res = sdk.accounting.getAccountingPayout(req);
+
+            if (res.accountingPayout != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutRequest](../../models/operations/GetAccountingPayoutRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutResponse](../../models/operations/GetAccountingPayoutResponse.md)**
+
+
+## getAccountingRefund
+
+Retrieve a refund
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.GetAccountingRefundRequest;
+import com.unifiedapi.unifiedto.models.operations.GetAccountingRefundResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.GetAccountingRefundRequest req = new GetAccountingRefundRequest(
+                "string",
+                "string"){{
+                fields = new String[]{{
+                    add("string"),
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetAccountingRefundResponse res = sdk.accounting.getAccountingRefund(req);
+
+            if (res.accountingRefund != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.GetAccountingRefundRequest](../../models/operations/GetAccountingRefundRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.GetAccountingRefundResponse](../../models/operations/GetAccountingRefundResponse.md)**
+
+
 ## getAccountingTaxrate
 
 Retrieve a taxrate
@@ -1260,6 +1378,133 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.ListAccountingPaymentsResponse](../../models/operations/ListAccountingPaymentsResponse.md)**
+
+
+## listAccountingPayouts
+
+List all payouts
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsRequest;
+import com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsRequest req = new ListAccountingPayoutsRequest(
+                "string"){{
+                fields = new String[]{{
+                    add("string"),
+                }};
+                limit = 6876.93d;
+                offset = 5.2d;
+                order = "string";
+                query = "string";
+                sort = "string";
+                updatedGte = OffsetDateTime.parse("2023-03-08T08:07:55.044Z");
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsResponse res = sdk.accounting.listAccountingPayouts(req);
+
+            if (res.accountingPayouts != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsRequest](../../models/operations/ListAccountingPayoutsRequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsResponse](../../models/operations/ListAccountingPayoutsResponse.md)**
+
+
+## listAccountingRefunds
+
+List all refunds
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsRequest;
+import com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsRequest req = new ListAccountingRefundsRequest(
+                "string"){{
+                fields = new String[]{{
+                    add("string"),
+                }};
+                limit = 8743.36d;
+                offset = 6995.02d;
+                order = "string";
+                paymentId = "string";
+                query = "string";
+                sort = "string";
+                updatedGte = OffsetDateTime.parse("2024-09-01T03:28:05.895Z");
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsResponse res = sdk.accounting.listAccountingRefunds(req);
+
+            if (res.accountingRefunds != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsRequest](../../models/operations/ListAccountingRefundsRequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsResponse](../../models/operations/ListAccountingRefundsResponse.md)**
 
 
 ## listAccountingTaxrates
