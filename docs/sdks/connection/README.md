@@ -44,7 +44,7 @@ public class Application {
                 }},
                 "string",
                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                    add(PropertyConnectionPermissions.ATS_CANDIDATE_WRITE),
+                    add(PropertyConnectionPermissions.ATS_APPLICATIONSTATUS_READ),
                 }}){{
                 auth = new PropertyConnectionAuth(
 ){{
@@ -275,7 +275,7 @@ public class Application {
                     }},
                     "string",
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                        add(PropertyConnectionPermissions.CRM_PIPELINE_READ),
+                        add(PropertyConnectionPermissions.CRM_LEAD_WRITE),
                     }}){{
                     auth = new PropertyConnectionAuth(
 ){{
@@ -443,7 +443,7 @@ public class Application {
                     }},
                     "string",
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                        add(PropertyConnectionPermissions.ATS_COMPANY_READ),
+                        add(PropertyConnectionPermissions.ATS_JOB_WRITE),
                     }}){{
                     auth = new PropertyConnectionAuth(
 ){{

@@ -45,14 +45,14 @@ public class Application {
                     "string",
                     Event.CREATED,
                     "string",
-                    188.12d,
-                    ObjectType.ATS_SCORECARD){{
-                    checkedAt = OffsetDateTime.parse("2023-11-05T05:21:48.024Z");
-                    createdAt = OffsetDateTime.parse("2022-03-22T21:20:43.128Z");
+                    ObjectType.ACCOUNTING_ACCOUNT){{
+                    checkedAt = OffsetDateTime.parse("2023-05-18T07:32:59.218Z");
+                    createdAt = OffsetDateTime.parse("2023-11-05T05:21:48.024Z");
                     environment = "string";
                     fields = "string";
                     id = "<ID>";
                     integrationType = "string";
+                    interval = 738.04d;
                     isHealthy = false;
                     meta = new java.util.HashMap<String, java.lang.Object>(
                     ){{

@@ -188,6 +188,9 @@ public class Application {
                     ){{
                         put("key", "string");
                     }};
+                    sources = new String[]{{
+                        add("string"),
+                    }};
                     tags = new String[]{{
                         add("string"),
                     }};
@@ -1623,6 +1626,9 @@ public class Application {
                     ){{
                         put("key", "string");
                     }};
+                    sources = new String[]{{
+                        add("string"),
+                    }};
                     tags = new String[]{{
                         add("string"),
                     }};
@@ -2462,6 +2468,9 @@ public class Application {
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "string");
+                    }};
+                    sources = new String[]{{
+                        add("string"),
                     }};
                     tags = new String[]{{
                         add("string"),

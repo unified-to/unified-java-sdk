@@ -245,36 +245,7 @@ public class Application {
                     variants = new com.unifiedapi.unifiedto.models.shared.CommerceItemVariant[]{{
                         add(new CommerceItemVariant(
                         "string"){{
-                            media = new com.unifiedapi.unifiedto.models.shared.CommerceItemMedia[]{{
-                                add(new CommerceItemMedia(
-                                "string"){{
-                                    url = "https://burdensome-pinecone.name";
-                                }}),
-                            }};
                             name = "string";
-                            options = new com.unifiedapi.unifiedto.models.shared.CommerceItemOption[]{{
-                                add(new CommerceItemOption(
-                                "string",
-                                "string",
-                                new String[]{{
-                                    add("string"),
-                                }}){{
-                                    id = "<ID>";
-                                    name = "string";
-                                    values = new String[]{{
-                                        add("string"),
-                                    }};
-                                }}),
-                            }};
-                            prices = new com.unifiedapi.unifiedto.models.shared.CommerceItemPrice[]{{
-                                add(new CommerceItemPrice(
-                                6768.32d){{
-                                    price = 5559.73d;
-                                }}),
-                            }};
-                            tags = new String[]{{
-                                add("string"),
-                            }};
                         }}),
                     }};
                     vendorName = "string";
@@ -1087,36 +1058,7 @@ public class Application {
                     variants = new com.unifiedapi.unifiedto.models.shared.CommerceItemVariant[]{{
                         add(new CommerceItemVariant(
                         "string"){{
-                            media = new com.unifiedapi.unifiedto.models.shared.CommerceItemMedia[]{{
-                                add(new CommerceItemMedia(
-                                "string"){{
-                                    url = "https://menacing-gratitude.name";
-                                }}),
-                            }};
                             name = "string";
-                            options = new com.unifiedapi.unifiedto.models.shared.CommerceItemOption[]{{
-                                add(new CommerceItemOption(
-                                "string",
-                                "string",
-                                new String[]{{
-                                    add("string"),
-                                }}){{
-                                    id = "<ID>";
-                                    name = "string";
-                                    values = new String[]{{
-                                        add("string"),
-                                    }};
-                                }}),
-                            }};
-                            prices = new com.unifiedapi.unifiedto.models.shared.CommerceItemPrice[]{{
-                                add(new CommerceItemPrice(
-                                7589.73d){{
-                                    price = 6094.31d;
-                                }}),
-                            }};
-                            tags = new String[]{{
-                                add("string"),
-                            }};
                         }}),
                     }};
                     vendorName = "string";
@@ -1658,36 +1600,7 @@ public class Application {
                     variants = new com.unifiedapi.unifiedto.models.shared.CommerceItemVariant[]{{
                         add(new CommerceItemVariant(
                         "string"){{
-                            media = new com.unifiedapi.unifiedto.models.shared.CommerceItemMedia[]{{
-                                add(new CommerceItemMedia(
-                                "string"){{
-                                    url = "http://adept-podcast.name";
-                                }}),
-                            }};
                             name = "string";
-                            options = new com.unifiedapi.unifiedto.models.shared.CommerceItemOption[]{{
-                                add(new CommerceItemOption(
-                                "string",
-                                "string",
-                                new String[]{{
-                                    add("string"),
-                                }}){{
-                                    id = "<ID>";
-                                    name = "string";
-                                    values = new String[]{{
-                                        add("string"),
-                                    }};
-                                }}),
-                            }};
-                            prices = new com.unifiedapi.unifiedto.models.shared.CommerceItemPrice[]{{
-                                add(new CommerceItemPrice(
-                                2345.49d){{
-                                    price = 6332.36d;
-                                }}),
-                            }};
-                            tags = new String[]{{
-                                add("string"),
-                            }};
                         }}),
                     }};
                     vendorName = "string";

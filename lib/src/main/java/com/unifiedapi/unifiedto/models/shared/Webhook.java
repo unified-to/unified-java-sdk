@@ -100,6 +100,7 @@ public class Webhook {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval")
     public Double interval;
 
@@ -184,11 +185,10 @@ public class Webhook {
         return this;
     }
     
-    public Webhook(@JsonProperty("connection_id") String connectionId, @JsonProperty("event") Event event, @JsonProperty("hook_url") String hookUrl, @JsonProperty("interval") Double interval, @JsonProperty("object_type") ObjectType objectType) {
+    public Webhook(@JsonProperty("connection_id") String connectionId, @JsonProperty("event") Event event, @JsonProperty("hook_url") String hookUrl, @JsonProperty("object_type") ObjectType objectType) {
         this.connectionId = connectionId;
         this.event = event;
         this.hookUrl = hookUrl;
-        this.interval = interval;
         this.objectType = objectType;
   }
 }

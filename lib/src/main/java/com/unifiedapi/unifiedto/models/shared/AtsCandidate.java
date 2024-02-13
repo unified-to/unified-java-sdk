@@ -129,6 +129,15 @@ public class AtsCandidate {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sources")
+    public String[] sources;
+
+    public AtsCandidate withSources(String[] sources) {
+        this.sources = sources;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
 

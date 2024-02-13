@@ -10,7 +10,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.15.3'
+implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.15.4'
 ```
 <!-- End SDK Installation [installation] -->
 
