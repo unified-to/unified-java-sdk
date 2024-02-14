@@ -679,7 +679,9 @@ public class Application {
                 fields = new String[]{{
                     add("string"),
                 }};
+                itemId = "string";
                 limit = 2481.16d;
+                locationId = "string";
                 offset = 9476.38d;
                 order = "string";
                 query = "string";

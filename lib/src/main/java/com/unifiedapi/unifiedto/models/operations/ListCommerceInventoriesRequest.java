@@ -32,11 +32,33 @@ public class ListCommerceInventoriesRequest {
         return this;
     }
     
+    /**
+     * The item/product ID to filter results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=item_id")
+    public String itemId;
+
+    public ListCommerceInventoriesRequest withItemId(String itemId) {
+        this.itemId = itemId;
+        return this;
+    }
+    
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Double limit;
 
     public ListCommerceInventoriesRequest withLimit(Double limit) {
         this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The location ID to filter results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
+    public String locationId;
+
+    public ListCommerceInventoriesRequest withLocationId(String locationId) {
+        this.locationId = locationId;
         return this;
     }
     
