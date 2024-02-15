@@ -31,15 +31,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAtsApplicationstatusesRequest req = new ListAtsApplicationstatusesRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 5199.96d;
                 offset = 7673.65d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2024-03-25T18:11:33.180Z");
 
             }};

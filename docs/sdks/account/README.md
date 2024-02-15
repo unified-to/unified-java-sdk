@@ -39,19 +39,19 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest req = new CreateAccountingAccountRequest(
-                "string"){{
+                "<value>"){{
                 accountingAccount = new AccountingAccount(
-                    "string"){{
+                    "<value>"){{
                     balance = 6602.56d;
                     createdAt = OffsetDateTime.parse("2023-09-02T22:12:31.771Z");
                     currency = "Saint Helena Pound";
-                    customerDefinedCode = "string";
+                    customerDefinedCode = "<value>";
                     description = "Cross-group zero defect task-force";
-                    id = "<ID>";
+                    id = "<id>";
                     isPayable = false;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     status = Status.ACTIVE;
                     type = Type.EQUITY;
@@ -110,10 +110,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAccountingAccountRequest req = new GetAccountingAccountRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -168,15 +168,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAccountingAccountsRequest req = new ListAccountingAccountsRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 9476.86d;
                 offset = 5444.77d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2024-04-19T21:33:28.191Z");
 
             }};
@@ -234,20 +234,20 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchAccountingAccountRequest req = new PatchAccountingAccountRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 accountingAccount = new AccountingAccount(
-                    "string"){{
+                    "<value>"){{
                     balance = 1931.26d;
                     createdAt = OffsetDateTime.parse("2023-01-09T13:35:06.969Z");
                     currency = "Won";
-                    customerDefinedCode = "string";
+                    customerDefinedCode = "<value>";
                     description = "Quality-focused multimedia implementation";
-                    id = "<ID>";
+                    id = "<id>";
                     isPayable = false;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     status = Status.ARCHIVED;
                     type = Type.REVENUE;
@@ -306,8 +306,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveAccountingAccountRequest req = new RemoveAccountingAccountRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveAccountingAccountResponse res = sdk.account.removeAccountingAccount(req);
 
@@ -362,20 +362,20 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateAccountingAccountRequest req = new UpdateAccountingAccountRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 accountingAccount = new AccountingAccount(
-                    "string"){{
+                    "<value>"){{
                     balance = 5954.09d;
                     createdAt = OffsetDateTime.parse("2022-05-21T23:41:25.152Z");
                     currency = "Tanzanian Shilling";
-                    customerDefinedCode = "string";
+                    customerDefinedCode = "<value>";
                     description = "Stand-alone grid-enabled model";
-                    id = "<ID>";
+                    id = "<id>";
                     isPayable = false;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     status = Status.ACTIVE;
                     type = Type.BANK;

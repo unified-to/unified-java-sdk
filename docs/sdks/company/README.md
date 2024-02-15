@@ -45,24 +45,24 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateCrmCompanyRequest req = new CreateCrmCompanyRequest(
-                "string"){{
+                "<value>"){{
                 crmCompany = new CrmCompany(
 ){{
                     address = new PropertyCrmCompanyAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "Joanieworth";
                         country = "Brazil";
                         countryCode = "CW";
                         postalCode = "39571";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
                     createdAt = OffsetDateTime.parse("2024-02-03T10:04:12.712Z");
                     dealIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     description = "Pre-emptive responsive task-force";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
@@ -70,31 +70,31 @@ public class Application {
                         ){{}}),
                     }};
                     employees = 4175.89d;
-                    id = "<ID>";
-                    industry = "string";
+                    id = "<id>";
+                    industry = "<value>";
                     isActive = false;
                     linkUrls = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    name = "string";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
                         add(new CrmTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
                     timezone = "Europe/Bucharest";
                     updatedAt = OffsetDateTime.parse("2023-10-03T19:32:53.625Z");
-                    userId = "string";
+                    userId = "<value>";
                     websites = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
 
                 }};
@@ -150,10 +150,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAtsCompanyRequest req = new GetAtsCompanyRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -207,10 +207,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetCrmCompanyRequest req = new GetCrmCompanyRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -265,15 +265,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAtsCompaniesRequest req = new ListAtsCompaniesRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 6933.84d;
                 offset = 7946.52d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2024-10-01T21:39:38.971Z");
 
             }};
@@ -328,19 +328,19 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListCrmCompaniesRequest req = new ListCrmCompaniesRequest(
-                "string"){{
-                contactId = "string";
-                dealId = "string";
+                "<value>"){{
+                contactId = "<value>";
+                dealId = "<value>";
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 9883.97d;
                 offset = 5913.88d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-05-02T17:52:08.731Z");
-                userId = "string";
+                userId = "<value>";
 
             }};
 
@@ -393,9 +393,9 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesRequest req = new ListEnrichCompaniesRequest(
-                "string"){{
+                "<value>"){{
                 domain = "dismal-cornmeal.org";
-                name = "string";
+                name = "<value>";
 
             }};
 
@@ -455,25 +455,25 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchCrmCompanyRequest req = new PatchCrmCompanyRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 crmCompany = new CrmCompany(
 ){{
                     address = new PropertyCrmCompanyAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "Rempelchester";
                         country = "Christmas Island";
                         countryCode = "LA";
                         postalCode = "53644";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
                     createdAt = OffsetDateTime.parse("2022-01-19T16:53:30.758Z");
                     dealIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     description = "Diverse mission-critical project";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
@@ -481,31 +481,31 @@ public class Application {
                         ){{}}),
                     }};
                     employees = 4128.78d;
-                    id = "<ID>";
-                    industry = "string";
+                    id = "<id>";
+                    industry = "<value>";
                     isActive = false;
                     linkUrls = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    name = "string";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
                         add(new CrmTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
                     timezone = "Europe/Skopje";
                     updatedAt = OffsetDateTime.parse("2022-04-08T08:19:54.922Z");
-                    userId = "string";
+                    userId = "<value>";
                     websites = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
 
                 }};
@@ -561,8 +561,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyRequest req = new RemoveCrmCompanyRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyResponse res = sdk.company.removeCrmCompany(req);
 
@@ -620,25 +620,25 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateCrmCompanyRequest req = new UpdateCrmCompanyRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 crmCompany = new CrmCompany(
 ){{
                     address = new PropertyCrmCompanyAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "Margeshire";
                         country = "Bahrain";
                         countryCode = "WS";
                         postalCode = "27563";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
                     createdAt = OffsetDateTime.parse("2023-06-19T10:10:37.376Z");
                     dealIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     description = "Future-proofed zero defect instruction set";
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
@@ -646,31 +646,31 @@ public class Application {
                         ){{}}),
                     }};
                     employees = 1100.41d;
-                    id = "<ID>";
-                    industry = "string";
+                    id = "<id>";
+                    industry = "<value>";
                     isActive = false;
                     linkUrls = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    name = "string";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
                         add(new CrmTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
                     timezone = "Africa/Harare";
                     updatedAt = OffsetDateTime.parse("2023-09-13T13:49:01.082Z");
-                    userId = "string";
+                    userId = "<value>";
                     websites = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
 
                 }};

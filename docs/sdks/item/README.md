@@ -44,38 +44,38 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateCommerceItemRequest req = new CreateCommerceItemRequest(
-                "string"){{
+                "<value>"){{
                 commerceItem = new CommerceItem(
-                    "string"){{
+                    "<value>"){{
                     createdAt = OffsetDateTime.parse("2023-06-27T05:28:51.414Z");
                     description = "Object-based local intranet";
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     isTaxable = false;
                     media = new com.unifiedapi.unifiedto.models.shared.CommerceItemMedia[]{{
                         add(new CommerceItemMedia(
-                        "string"){{
+                        "<value>"){{
                             url = "http://other-external.info";
                         }}),
                     }};
-                    publicDescription = "string";
-                    publicName = "string";
+                    publicDescription = "<value>";
+                    publicName = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    type = "string";
+                    type = "<value>";
                     updatedAt = OffsetDateTime.parse("2023-01-01T01:10:35.262Z");
                     variants = new com.unifiedapi.unifiedto.models.shared.CommerceItemVariant[]{{
                         add(new CommerceItemVariant(
-                        "string"){{
-                            name = "string";
+                        "<value>"){{
+                            name = "<value>";
                         }}),
                     }};
-                    vendorName = "string";
+                    vendorName = "<value>";
 
                 }};
 
@@ -130,10 +130,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetCommerceItemRequest req = new GetCommerceItemRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -188,15 +188,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListCommerceItemsRequest req = new ListCommerceItemsRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 2553.93d;
                 offset = 4072.28d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-05-10T19:08:09.923Z");
 
             }};
@@ -259,39 +259,39 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchCommerceItemRequest req = new PatchCommerceItemRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 commerceItem = new CommerceItem(
-                    "string"){{
+                    "<value>"){{
                     createdAt = OffsetDateTime.parse("2023-06-21T03:47:22.544Z");
                     description = "Front-line explicit circuit";
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     isTaxable = false;
                     media = new com.unifiedapi.unifiedto.models.shared.CommerceItemMedia[]{{
                         add(new CommerceItemMedia(
-                        "string"){{
+                        "<value>"){{
                             url = "http://irresponsible-reason.biz";
                         }}),
                     }};
-                    publicDescription = "string";
-                    publicName = "string";
+                    publicDescription = "<value>";
+                    publicName = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    type = "string";
+                    type = "<value>";
                     updatedAt = OffsetDateTime.parse("2023-05-09T22:12:43.888Z");
                     variants = new com.unifiedapi.unifiedto.models.shared.CommerceItemVariant[]{{
                         add(new CommerceItemVariant(
-                        "string"){{
-                            name = "string";
+                        "<value>"){{
+                            name = "<value>";
                         }}),
                     }};
-                    vendorName = "string";
+                    vendorName = "<value>";
 
                 }};
 
@@ -346,8 +346,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemRequest req = new RemoveCommerceItemRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemResponse res = sdk.item.removeCommerceItem(req);
 
@@ -407,39 +407,39 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemRequest req = new UpdateCommerceItemRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 commerceItem = new CommerceItem(
-                    "string"){{
+                    "<value>"){{
                     createdAt = OffsetDateTime.parse("2023-12-27T01:13:33.758Z");
                     description = "Advanced intangible toolset";
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     isTaxable = false;
                     media = new com.unifiedapi.unifiedto.models.shared.CommerceItemMedia[]{{
                         add(new CommerceItemMedia(
-                        "string"){{
+                        "<value>"){{
                             url = "https://reasonable-cast.biz";
                         }}),
                     }};
-                    publicDescription = "string";
-                    publicName = "string";
+                    publicDescription = "<value>";
+                    publicName = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    type = "string";
+                    type = "<value>";
                     updatedAt = OffsetDateTime.parse("2024-07-17T00:14:33.118Z");
                     variants = new com.unifiedapi.unifiedto.models.shared.CommerceItemVariant[]{{
                         add(new CommerceItemVariant(
-                        "string"){{
-                            name = "string";
+                        "<value>"){{
+                            name = "<value>";
                         }}),
                     }};
-                    vendorName = "string";
+                    vendorName = "<value>";
 
                 }};
 

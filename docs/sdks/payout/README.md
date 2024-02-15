@@ -31,10 +31,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutRequest req = new GetAccountingPayoutRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -89,15 +89,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsRequest req = new ListAccountingPayoutsRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 6876.93d;
                 offset = 5.2d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-03-08T08:07:55.044Z");
 
             }};

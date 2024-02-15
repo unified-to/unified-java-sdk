@@ -42,30 +42,30 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateUcContactRequest req = new CreateUcContactRequest(
-                "string"){{
+                "<value>"){{
                 ucContact = new UcContact(
 ){{
                     company = "Gottlieb - Becker";
                     createdAt = OffsetDateTime.parse("2024-07-20T15:00:17.424Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
                         add(new UcEmail(
-                        "string"){{
+                        "<value>"){{
                             email = "Elliot78@hotmail.com";
                         }}),
                     }};
-                    id = "<ID>";
-                    name = "string";
+                    id = "<id>";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
                         add(new UcTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
-                    title = "string";
+                    title = "<value>";
                     updatedAt = OffsetDateTime.parse("2024-09-27T22:23:04.622Z");
 
                 }};
@@ -121,10 +121,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetUcContactRequest req = new GetUcContactRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -179,18 +179,18 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListUcCallsRequest req = new ListUcCallsRequest(
-                "string"){{
-                contactId = "string";
+                "<value>"){{
+                contactId = "<value>";
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 465.25d;
                 offset = 4996.09d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2024-07-24T23:18:21.548Z");
-                userId = "string";
+                userId = "<value>";
 
             }};
 
@@ -244,17 +244,17 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListUcContactsRequest req = new ListUcContactsRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 5333.71d;
                 offset = 7775.9d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-10-26T05:35:01.805Z");
-                userId = "string";
+                userId = "<value>";
 
             }};
 
@@ -313,31 +313,31 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchUcContactRequest req = new PatchUcContactRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 ucContact = new UcContact(
 ){{
                     company = "Runolfsdottir, Boehm and Toy";
                     createdAt = OffsetDateTime.parse("2024-05-28T10:05:49.902Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
                         add(new UcEmail(
-                        "string"){{
+                        "<value>"){{
                             email = "Arlie78@hotmail.com";
                         }}),
                     }};
-                    id = "<ID>";
-                    name = "string";
+                    id = "<id>";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
                         add(new UcTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
-                    title = "string";
+                    title = "<value>";
                     updatedAt = OffsetDateTime.parse("2024-05-08T07:43:27.358Z");
 
                 }};
@@ -393,8 +393,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveUcContactRequest req = new RemoveUcContactRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveUcContactResponse res = sdk.uc.removeUcContact(req);
 
@@ -451,31 +451,31 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateUcContactRequest req = new UpdateUcContactRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 ucContact = new UcContact(
 ){{
                     company = "Marquardt Group";
                     createdAt = OffsetDateTime.parse("2024-02-21T18:47:57.314Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
                         add(new UcEmail(
-                        "string"){{
+                        "<value>"){{
                             email = "Stephany25@yahoo.com";
                         }}),
                     }};
-                    id = "<ID>";
-                    name = "string";
+                    id = "<id>";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
                         add(new UcTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
-                    title = "string";
+                    title = "<value>";
                     updatedAt = OffsetDateTime.parse("2022-09-20T18:11:34.218Z");
 
                 }};

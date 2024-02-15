@@ -33,19 +33,19 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest req = new GetUnifiedIntegrationAuthRequest(
-                "string",
-                "string"){{
-                env = "string";
-                externalXref = "string";
-                failureRedirect = "string";
-                lang = "string";
+                "<value>",
+                "<value>"){{
+                env = "<value>";
+                externalXref = "<value>";
+                failureRedirect = "<value>";
+                lang = "<value>";
                 redirect = false;
                 scopes = new com.unifiedapi.unifiedto.models.operations.Scopes[]{{
                     add(Scopes.HRIS_EMPLOYEE_WRITE),
                 }};
-                state = "string";
-                subdomain = "string";
-                successRedirect = "string";
+                state = "New Jersey";
+                subdomain = "<value>";
+                successRedirect = "<value>";
 
             }};
 
@@ -99,16 +99,16 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesRequest req = new ListUnifiedIntegrationWorkspacesRequest(
-                "string"){{
+                "<value>"){{
                 active = false;
                 categories = new com.unifiedapi.unifiedto.models.operations.QueryParamCategories[]{{
                     add(QueryParamCategories.ACCOUNTING),
                 }};
-                env = "string";
+                env = "<value>";
                 limit = 9072.99d;
                 offset = 5948.93d;
                 summary = false;
-                updatedGte = "string";
+                updatedGte = "<value>";
 
             }};
 
@@ -167,14 +167,14 @@ public class Application {
                 categories = new com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsQueryParamCategories[]{{
                     add(ListUnifiedIntegrationsQueryParamCategories.CRM),
                 }};
-                env = "string";
+                env = "<value>";
                 limit = 7382.58d;
                 offset = 353.99d;
-                order = "string";
-                sort = "string";
+                order = "<value>";
+                sort = "<value>";
                 summary = false;
-                type = "string";
-                updatedGte = "string";
+                type = "<value>";
+                updatedGte = "<value>";
 
             }};
 

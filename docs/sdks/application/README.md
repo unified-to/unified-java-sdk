@@ -38,23 +38,23 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationRequest req = new CreateAtsApplicationRequest(
-                "string"){{
+                "<value>"){{
                 atsApplication = new AtsApplication(
 ){{
                     appliedAt = OffsetDateTime.parse("2024-03-09T05:03:52.917Z");
-                    candidateId = "string";
+                    candidateId = "<value>";
                     createdAt = OffsetDateTime.parse("2024-09-22T12:50:56.305Z");
                     hiredAt = OffsetDateTime.parse("2023-01-19T06:26:51.678Z");
-                    id = "<ID>";
-                    jobId = "string";
-                    originalStatus = "string";
+                    id = "<id>";
+                    jobId = "<value>";
+                    originalStatus = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     rejectedAt = OffsetDateTime.parse("2023-01-30T06:58:14.500Z");
-                    rejectedReason = "string";
-                    source = "string";
+                    rejectedReason = "<value>";
+                    source = "<value>";
                     status = AtsApplicationStatus.SECOND_INTERVIEW;
                     updatedAt = OffsetDateTime.parse("2024-09-21T21:31:42.360Z");
 
@@ -111,10 +111,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAtsApplicationRequest req = new GetAtsApplicationRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -169,17 +169,17 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsRequest req = new ListAtsApplicationsRequest(
-                "string"){{
-                candidateId = "string";
+                "<value>"){{
+                candidateId = "<value>";
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
-                jobId = "string";
+                jobId = "<value>";
                 limit = 441.56d;
                 offset = 1448.74d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-12-21T20:30:01.596Z");
 
             }};
@@ -236,24 +236,24 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationRequest req = new PatchAtsApplicationRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 atsApplication = new AtsApplication(
 ){{
                     appliedAt = OffsetDateTime.parse("2023-12-15T20:36:09.499Z");
-                    candidateId = "string";
+                    candidateId = "<value>";
                     createdAt = OffsetDateTime.parse("2022-01-06T05:56:57.062Z");
                     hiredAt = OffsetDateTime.parse("2023-12-05T05:20:09.174Z");
-                    id = "<ID>";
-                    jobId = "string";
-                    originalStatus = "string";
+                    id = "<id>";
+                    jobId = "<value>";
+                    originalStatus = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     rejectedAt = OffsetDateTime.parse("2022-07-13T02:34:40.392Z");
-                    rejectedReason = "string";
-                    source = "string";
+                    rejectedReason = "<value>";
+                    source = "<value>";
                     status = AtsApplicationStatus.FIRST_INTERVIEW;
                     updatedAt = OffsetDateTime.parse("2024-01-24T17:35:54.628Z");
 
@@ -310,8 +310,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationRequest req = new RemoveAtsApplicationRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationResponse res = sdk.application.removeAtsApplication(req);
 
@@ -365,24 +365,24 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationRequest req = new UpdateAtsApplicationRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 atsApplication = new AtsApplication(
 ){{
                     appliedAt = OffsetDateTime.parse("2022-08-22T12:21:27.415Z");
-                    candidateId = "string";
+                    candidateId = "<value>";
                     createdAt = OffsetDateTime.parse("2022-06-04T12:46:09.878Z");
                     hiredAt = OffsetDateTime.parse("2022-02-09T08:57:01.906Z");
-                    id = "<ID>";
-                    jobId = "string";
-                    originalStatus = "string";
+                    id = "<id>";
+                    jobId = "<value>";
+                    originalStatus = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     rejectedAt = OffsetDateTime.parse("2024-07-19T04:47:20.215Z");
-                    rejectedReason = "string";
-                    source = "string";
+                    rejectedReason = "<value>";
+                    source = "<value>";
                     status = AtsApplicationStatus.OFFERED;
                     updatedAt = OffsetDateTime.parse("2023-03-17T03:12:00.865Z");
 

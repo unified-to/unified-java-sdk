@@ -44,7 +44,7 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateCrmEventRequest req = new CreateCrmEventRequest(
-                "string"){{
+                "<value>"){{
                 crmEvent = new CrmEvent(
 ){{
                     call = new PropertyCrmEventCall(
@@ -55,41 +55,41 @@ public class Application {
 
                     }};
                     companyIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     contactIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     createdAt = OffsetDateTime.parse("2024-08-20T19:58:06.686Z");
                     dealIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     email = new PropertyCrmEventEmail(
 ){{
                         attachmentFileIds = new String[]{{
-                            add("string"),
+                            add("<value>"),
                         }};
-                        body = "string";
+                        body = "<value>";
                         cc = new String[]{{
-                            add("string"),
+                            add("<value>"),
                         }};
-                        from = "string";
-                        subject = "string";
+                        from = "<value>";
+                        subject = "<value>";
                         to = new String[]{{
-                            add("string"),
+                            add("<value>"),
                         }};
 
                     }};
-                    id = "<ID>";
+                    id = "<id>";
                     leadIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     meeting = new PropertyCrmEventMeeting(
 ){{
                         description = "Synergistic 3rd generation capacity";
                         endAt = OffsetDateTime.parse("2023-08-07T03:26:53.520Z");
                         startAt = OffsetDateTime.parse("2023-02-09T03:55:08.657Z");
-                        title = "string";
+                        title = "<value>";
 
                     }};
                     note = new PropertyCrmEventNote(
@@ -99,19 +99,19 @@ public class Application {
                     }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     task = new PropertyCrmEventTask(
 ){{
                         description = "Automated attitude-oriented info-mediaries";
                         dueAt = OffsetDateTime.parse("2023-07-15T02:47:03.388Z");
-                        name = "string";
+                        name = "<value>";
                         status = PropertyCrmEventTaskStatus.COMPLETED;
 
                     }};
                     type = CrmEventType.TASK;
                     updatedAt = OffsetDateTime.parse("2022-07-19T04:33:06.810Z");
-                    userId = "string";
+                    userId = "<value>";
 
                 }};
 
@@ -166,10 +166,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetCrmEventRequest req = new GetCrmEventRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -224,21 +224,21 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListCrmEventsRequest req = new ListCrmEventsRequest(
-                "string"){{
-                companyId = "string";
-                contactId = "string";
-                dealId = "string";
+                "<value>"){{
+                companyId = "<value>";
+                contactId = "<value>";
+                dealId = "<value>";
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 4453.11d;
                 offset = 4555.2d;
-                order = "string";
-                query = "string";
-                sort = "string";
-                type = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
+                type = "<value>";
                 updatedGte = OffsetDateTime.parse("2024-04-30T03:39:38.103Z");
-                userId = "string";
+                userId = "<value>";
 
             }};
 
@@ -300,8 +300,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchCrmEventRequest req = new PatchCrmEventRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 crmEvent = new CrmEvent(
 ){{
                     call = new PropertyCrmEventCall(
@@ -312,41 +312,41 @@ public class Application {
 
                     }};
                     companyIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     contactIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     createdAt = OffsetDateTime.parse("2023-02-08T06:50:13.439Z");
                     dealIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     email = new PropertyCrmEventEmail(
 ){{
                         attachmentFileIds = new String[]{{
-                            add("string"),
+                            add("<value>"),
                         }};
-                        body = "string";
+                        body = "<value>";
                         cc = new String[]{{
-                            add("string"),
+                            add("<value>"),
                         }};
-                        from = "string";
-                        subject = "string";
+                        from = "<value>";
+                        subject = "<value>";
                         to = new String[]{{
-                            add("string"),
+                            add("<value>"),
                         }};
 
                     }};
-                    id = "<ID>";
+                    id = "<id>";
                     leadIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     meeting = new PropertyCrmEventMeeting(
 ){{
                         description = "Universal 24/7 migration";
                         endAt = OffsetDateTime.parse("2022-05-11T23:48:02.911Z");
                         startAt = OffsetDateTime.parse("2022-10-11T02:15:24.355Z");
-                        title = "string";
+                        title = "<value>";
 
                     }};
                     note = new PropertyCrmEventNote(
@@ -356,19 +356,19 @@ public class Application {
                     }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     task = new PropertyCrmEventTask(
 ){{
                         description = "Customer-focused needs-based groupware";
                         dueAt = OffsetDateTime.parse("2024-11-30T20:05:52.386Z");
-                        name = "string";
+                        name = "<value>";
                         status = PropertyCrmEventTaskStatus.COMPLETED;
 
                     }};
                     type = CrmEventType.EMAIL;
                     updatedAt = OffsetDateTime.parse("2022-07-15T05:10:26.446Z");
-                    userId = "string";
+                    userId = "<value>";
 
                 }};
 
@@ -423,8 +423,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveCrmEventRequest req = new RemoveCrmEventRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveCrmEventResponse res = sdk.event.removeCrmEvent(req);
 
@@ -484,8 +484,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateCrmEventRequest req = new UpdateCrmEventRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 crmEvent = new CrmEvent(
 ){{
                     call = new PropertyCrmEventCall(
@@ -496,41 +496,41 @@ public class Application {
 
                     }};
                     companyIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     contactIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     createdAt = OffsetDateTime.parse("2023-09-01T08:44:00.944Z");
                     dealIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     email = new PropertyCrmEventEmail(
 ){{
                         attachmentFileIds = new String[]{{
-                            add("string"),
+                            add("<value>"),
                         }};
-                        body = "string";
+                        body = "<value>";
                         cc = new String[]{{
-                            add("string"),
+                            add("<value>"),
                         }};
-                        from = "string";
-                        subject = "string";
+                        from = "<value>";
+                        subject = "<value>";
                         to = new String[]{{
-                            add("string"),
+                            add("<value>"),
                         }};
 
                     }};
-                    id = "<ID>";
+                    id = "<id>";
                     leadIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     meeting = new PropertyCrmEventMeeting(
 ){{
                         description = "Robust radical task-force";
                         endAt = OffsetDateTime.parse("2024-01-04T13:11:49.866Z");
                         startAt = OffsetDateTime.parse("2024-07-14T19:40:01.934Z");
-                        title = "string";
+                        title = "<value>";
 
                     }};
                     note = new PropertyCrmEventNote(
@@ -540,19 +540,19 @@ public class Application {
                     }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     task = new PropertyCrmEventTask(
 ){{
                         description = "Synergized neutral complexity";
                         dueAt = OffsetDateTime.parse("2022-06-26T11:53:18.745Z");
-                        name = "string";
+                        name = "<value>";
                         status = PropertyCrmEventTaskStatus.DEFERRED;
 
                     }};
                     type = CrmEventType.CALL;
                     updatedAt = OffsetDateTime.parse("2023-02-13T22:59:19.685Z");
-                    userId = "string";
+                    userId = "<value>";
 
                 }};
 

@@ -43,7 +43,7 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateAtsJobRequest req = new CreateAtsJobRequest(
-                "string"){{
+                "<value>"){{
                 atsJob = new AtsJob(
 ){{
                     addresses = new com.unifiedapi.unifiedto.models.shared.AtsAddress[]{{
@@ -51,7 +51,7 @@ public class Application {
                         ){{}}),
                     }};
                     closedAt = OffsetDateTime.parse("2022-01-14T18:31:06.376Z");
-                    companyId = "string";
+                    companyId = "<value>";
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(
                         AtsCompensationType.EQUITY){{
@@ -60,26 +60,26 @@ public class Application {
                     }};
                     createdAt = OffsetDateTime.parse("2023-03-05T16:04:54.121Z");
                     departments = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     description = "Operative 24 hour methodology";
                     employmentType = EmploymentType.OTHER;
                     hiringManagerIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    id = "<ID>";
-                    languageLocale = "string";
-                    name = "string";
+                    id = "<id>";
+                    languageLocale = "<value>";
+                    name = "<value>";
                     numberOfOpenings = 8330.69d;
                     publicJobUrls = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     recruiterIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     remote = false;
                     status = AtsJobStatus.OPEN;
@@ -138,10 +138,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAtsJobRequest req = new GetAtsJobRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -196,15 +196,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAtsJobsRequest req = new ListAtsJobsRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 3958.99d;
                 offset = 3223.84d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-03-04T01:14:05.456Z");
 
             }};
@@ -266,8 +266,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchAtsJobRequest req = new PatchAtsJobRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 atsJob = new AtsJob(
 ){{
                     addresses = new com.unifiedapi.unifiedto.models.shared.AtsAddress[]{{
@@ -275,7 +275,7 @@ public class Application {
                         ){{}}),
                     }};
                     closedAt = OffsetDateTime.parse("2022-08-09T17:44:16.617Z");
-                    companyId = "string";
+                    companyId = "<value>";
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(
                         AtsCompensationType.EQUITY){{
@@ -284,26 +284,26 @@ public class Application {
                     }};
                     createdAt = OffsetDateTime.parse("2022-03-27T20:59:56.374Z");
                     departments = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     description = "Extended empowering middleware";
                     employmentType = EmploymentType.FULL_TIME;
                     hiringManagerIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    id = "<ID>";
-                    languageLocale = "string";
-                    name = "string";
+                    id = "<id>";
+                    languageLocale = "<value>";
+                    name = "<value>";
                     numberOfOpenings = 238.34d;
                     publicJobUrls = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     recruiterIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     remote = false;
                     status = AtsJobStatus.CLOSED;
@@ -362,8 +362,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveAtsJobRequest req = new RemoveAtsJobRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveAtsJobResponse res = sdk.job.removeAtsJob(req);
 
@@ -422,8 +422,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateAtsJobRequest req = new UpdateAtsJobRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 atsJob = new AtsJob(
 ){{
                     addresses = new com.unifiedapi.unifiedto.models.shared.AtsAddress[]{{
@@ -431,7 +431,7 @@ public class Application {
                         ){{}}),
                     }};
                     closedAt = OffsetDateTime.parse("2023-10-21T07:41:08.131Z");
-                    companyId = "string";
+                    companyId = "<value>";
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(
                         AtsCompensationType.BONUS){{
@@ -440,26 +440,26 @@ public class Application {
                     }};
                     createdAt = OffsetDateTime.parse("2023-01-19T17:41:10.086Z");
                     departments = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     description = "Re-contextualized 24 hour support";
                     employmentType = EmploymentType.CASUAL;
                     hiringManagerIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    id = "<ID>";
-                    languageLocale = "string";
-                    name = "string";
+                    id = "<id>";
+                    languageLocale = "<value>";
+                    name = "<value>";
                     numberOfOpenings = 983.08d;
                     publicJobUrls = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     recruiterIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     remote = false;
                     status = AtsJobStatus.DRAFT;

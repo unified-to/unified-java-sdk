@@ -75,19 +75,19 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest req = new CreateAccountingAccountRequest(
-                "string"){{
+                "<value>"){{
                 accountingAccount = new AccountingAccount(
-                    "string"){{
+                    "<value>"){{
                     balance = 6602.56d;
                     createdAt = OffsetDateTime.parse("2023-09-02T22:12:31.771Z");
                     currency = "Saint Helena Pound";
-                    customerDefinedCode = "string";
+                    customerDefinedCode = "<value>";
                     description = "Cross-group zero defect task-force";
-                    id = "<ID>";
+                    id = "<id>";
                     isPayable = false;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     status = Status.ACTIVE;
                     type = Type.EQUITY;
@@ -155,56 +155,56 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateAccountingContactRequest req = new CreateAccountingContactRequest(
-                "string"){{
+                "<value>"){{
                 accountingContact = new AccountingContact(
 ){{
                     billingAddress = new PropertyAccountingContactBillingAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "Lake Benny";
                         country = "Azerbaijan";
                         countryCode = "GT";
                         postalCode = "48359-3238";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
                     createdAt = OffsetDateTime.parse("2024-02-19T03:22:44.048Z");
                     currency = "Peso Uruguayo";
                     emails = new com.unifiedapi.unifiedto.models.shared.AccountingEmail[]{{
                         add(new AccountingEmail(
-                        "string"){{
+                        "<value>"){{
                             email = "Ubaldo_Cruickshank82@hotmail.com";
                         }}),
                     }};
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     isCustomer = false;
                     isSupplier = false;
-                    name = "string";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     shippingAddress = new PropertyAccountingContactShippingAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "North Jazmynefurt";
                         country = "France";
                         countryCode = "BE";
                         postalCode = "36835-6542";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
                     taxExemption = TaxExemption.FEDERAL_GOV;
-                    taxNumber = "string";
+                    taxNumber = "<value>";
                     telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
                         add(new AccountingTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-09-05T13:56:20.676Z");
@@ -266,33 +266,33 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateAccountingInvoiceRequest req = new CreateAccountingInvoiceRequest(
-                "string"){{
+                "<value>"){{
                 accountingInvoice = new AccountingInvoice(
 ){{
                     balanceAmount = 6736.06d;
                     cancelledAt = OffsetDateTime.parse("2022-06-27T09:14:42.959Z");
-                    contactId = "string";
+                    contactId = "<value>";
                     createdAt = OffsetDateTime.parse("2022-07-05T18:32:52.109Z");
                     currency = "Uzbekistan Sum";
                     discountAmount = 259.66d;
                     dueAt = OffsetDateTime.parse("2023-04-30T15:54:59.455Z");
-                    id = "<ID>";
-                    invoiceNumber = "string";
+                    id = "<id>";
+                    invoiceNumber = "<value>";
                     lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingLineitem[]{{
                         add(new AccountingLineitem(
                         5685.15d){{
                             totalAmount = 7142.37d;
                         }}),
                     }};
-                    notes = "string";
+                    notes = "<value>";
                     paidAmount = 6572.32d;
                     paidAt = OffsetDateTime.parse("2023-07-10T18:36:49.807Z");
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     refundAmount = 1578.89d;
-                    refundReason = "string";
+                    refundReason = "<value>";
                     refundedAt = OffsetDateTime.parse("2023-08-27T04:22:20.182Z");
                     status = AccountingInvoiceStatus.AUTHORIZED;
                     taxAmount = 6864d;
@@ -354,22 +354,22 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateAccountingPaymentRequest req = new CreateAccountingPaymentRequest(
-                "string"){{
+                "<value>"){{
                 accountingPayment = new AccountingPayment(
 ){{
-                    accountId = "string";
-                    contactId = "string";
+                    accountId = "<value>";
+                    contactId = "<value>";
                     createdAt = OffsetDateTime.parse("2024-01-28T13:13:46.548Z");
                     currency = "Lari";
-                    id = "<ID>";
-                    invoiceId = "string";
-                    notes = "string";
-                    paymentMethod = "string";
+                    id = "<id>";
+                    invoiceId = "<value>";
+                    notes = "<value>";
+                    paymentMethod = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
-                    reference = "string";
+                    reference = "<value>";
                     totalAmount = 291.36d;
                     updatedAt = OffsetDateTime.parse("2023-10-01T03:33:47.004Z");
 
@@ -428,17 +428,17 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateAccountingTaxrateRequest req = new CreateAccountingTaxrateRequest(
-                "string"){{
+                "<value>"){{
                 accountingTaxrate = new AccountingTaxrate(
-                    "string",
+                    "<value>",
                     1719.1d){{
                     createdAt = OffsetDateTime.parse("2022-09-20T17:06:11.018Z");
                     description = "Ergonomic regional neural-net";
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     updatedAt = OffsetDateTime.parse("2023-12-27T23:06:27.112Z");
 
@@ -497,28 +497,28 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionRequest req = new CreateAccountingTransactionRequest(
-                "string"){{
+                "<value>"){{
                 accountingTransaction = new AccountingTransaction(
-                    "string"){{
-                    createdAt = "string";
+                    "<value>"){{
+                    createdAt = "<value>";
                     currency = "Libyan Dinar";
                     description = "Pre-emptive multimedia benchmark";
                     lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineitem[]{{
                         add(new AccountingTransactionLineitem(
-                        "string",
+                        "<value>",
                         7389.88d){{
-                            accountId = "string";
+                            accountId = "<value>";
                             totalAmount = 2477.45d;
                         }}),
                     }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
-                    reference = "string";
+                    reference = "<value>";
                     taxAmount = 8276.07d;
-                    taxrateId = "string";
-                    updatedAt = "string";
+                    taxrateId = "<value>";
+                    updatedAt = "<value>";
 
                 }};
 
@@ -573,10 +573,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAccountingAccountRequest req = new GetAccountingAccountRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -630,10 +630,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAccountingContactRequest req = new GetAccountingContactRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -687,10 +687,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAccountingInvoiceRequest req = new GetAccountingInvoiceRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -744,10 +744,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAccountingOrganizationRequest req = new GetAccountingOrganizationRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -801,10 +801,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAccountingPaymentRequest req = new GetAccountingPaymentRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -858,10 +858,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutRequest req = new GetAccountingPayoutRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -915,10 +915,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAccountingRefundRequest req = new GetAccountingRefundRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -972,10 +972,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAccountingTaxrateRequest req = new GetAccountingTaxrateRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -1029,10 +1029,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAccountingTransactionRequest req = new GetAccountingTransactionRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -1087,15 +1087,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAccountingAccountsRequest req = new ListAccountingAccountsRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 9476.86d;
                 offset = 5444.77d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2024-04-19T21:33:28.191Z");
 
             }};
@@ -1150,16 +1150,16 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAccountingContactsRequest req = new ListAccountingContactsRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 4596.32d;
                 offset = 8881.9d;
-                order = "string";
-                query = "string";
-                sort = "string";
-                type = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
+                type = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-09-26T14:00:38.736Z");
 
             }};
@@ -1214,16 +1214,16 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAccountingInvoicesRequest req = new ListAccountingInvoicesRequest(
-                "string"){{
-                contactId = "string";
+                "<value>"){{
+                contactId = "<value>";
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 6788.11d;
                 offset = 5122.49d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-05-23T19:02:52.454Z");
 
             }};
@@ -1278,15 +1278,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAccountingOrganizationsRequest req = new ListAccountingOrganizationsRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 4896.89d;
                 offset = 9817.05d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-04-02T18:55:09.644Z");
 
             }};
@@ -1341,17 +1341,17 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAccountingPaymentsRequest req = new ListAccountingPaymentsRequest(
-                "string"){{
-                contactId = "string";
+                "<value>"){{
+                contactId = "<value>";
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
-                invoiceId = "string";
+                invoiceId = "<value>";
                 limit = 487.78d;
                 offset = 9308.83d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2024-02-25T18:15:35.411Z");
 
             }};
@@ -1406,15 +1406,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsRequest req = new ListAccountingPayoutsRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 6876.93d;
                 offset = 5.2d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-03-08T08:07:55.044Z");
 
             }};
@@ -1469,16 +1469,16 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsRequest req = new ListAccountingRefundsRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 8743.36d;
                 offset = 6995.02d;
-                order = "string";
-                paymentId = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                paymentId = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2024-09-01T03:28:05.895Z");
 
             }};
@@ -1533,15 +1533,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAccountingTaxratesRequest req = new ListAccountingTaxratesRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 1599.19d;
                 offset = 1097.48d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-06-14T14:31:13.247Z");
 
             }};
@@ -1596,15 +1596,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAccountingTransactionsRequest req = new ListAccountingTransactionsRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 7894.5d;
                 offset = 4597.84d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2024-12-02T12:20:43.572Z");
 
             }};
@@ -1662,20 +1662,20 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchAccountingAccountRequest req = new PatchAccountingAccountRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 accountingAccount = new AccountingAccount(
-                    "string"){{
+                    "<value>"){{
                     balance = 1931.26d;
                     createdAt = OffsetDateTime.parse("2023-01-09T13:35:06.969Z");
                     currency = "Won";
-                    customerDefinedCode = "string";
+                    customerDefinedCode = "<value>";
                     description = "Quality-focused multimedia implementation";
-                    id = "<ID>";
+                    id = "<id>";
                     isPayable = false;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     status = Status.ARCHIVED;
                     type = Type.REVENUE;
@@ -1743,57 +1743,57 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchAccountingContactRequest req = new PatchAccountingContactRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 accountingContact = new AccountingContact(
 ){{
                     billingAddress = new PropertyAccountingContactBillingAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "Sylvestermouth";
                         country = "Norfolk Island";
                         countryCode = "BN";
                         postalCode = "34531-3519";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
                     createdAt = OffsetDateTime.parse("2024-02-14T18:48:39.369Z");
                     currency = "Singapore Dollar";
                     emails = new com.unifiedapi.unifiedto.models.shared.AccountingEmail[]{{
                         add(new AccountingEmail(
-                        "string"){{
+                        "<value>"){{
                             email = "Anya_Murphy@yahoo.com";
                         }}),
                     }};
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     isCustomer = false;
                     isSupplier = false;
-                    name = "string";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     shippingAddress = new PropertyAccountingContactShippingAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "O'Connellburgh";
                         country = "Guinea-Bissau";
                         countryCode = "MV";
                         postalCode = "91251-4209";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
                     taxExemption = TaxExemption.EDUCATIONAL_ORG;
-                    taxNumber = "string";
+                    taxNumber = "<value>";
                     telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
                         add(new AccountingTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
                     updatedAt = OffsetDateTime.parse("2022-01-11T11:33:25.380Z");
@@ -1855,34 +1855,34 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchAccountingInvoiceRequest req = new PatchAccountingInvoiceRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 accountingInvoice = new AccountingInvoice(
 ){{
                     balanceAmount = 7374.1d;
                     cancelledAt = OffsetDateTime.parse("2024-12-18T11:25:21.140Z");
-                    contactId = "string";
+                    contactId = "<value>";
                     createdAt = OffsetDateTime.parse("2023-06-14T05:39:15.854Z");
                     currency = "Gold";
                     discountAmount = 9127.96d;
                     dueAt = OffsetDateTime.parse("2024-07-05T05:55:55.560Z");
-                    id = "<ID>";
-                    invoiceNumber = "string";
+                    id = "<id>";
+                    invoiceNumber = "<value>";
                     lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingLineitem[]{{
                         add(new AccountingLineitem(
                         3886.02d){{
                             totalAmount = 7810.81d;
                         }}),
                     }};
-                    notes = "string";
+                    notes = "<value>";
                     paidAmount = 1152.38d;
                     paidAt = OffsetDateTime.parse("2023-03-23T14:30:18.013Z");
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     refundAmount = 6443.77d;
-                    refundReason = "string";
+                    refundReason = "<value>";
                     refundedAt = OffsetDateTime.parse("2022-08-21T01:13:52.344Z");
                     status = AccountingInvoiceStatus.DRAFT;
                     taxAmount = 1140.08d;
@@ -1944,23 +1944,23 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchAccountingPaymentRequest req = new PatchAccountingPaymentRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 accountingPayment = new AccountingPayment(
 ){{
-                    accountId = "string";
-                    contactId = "string";
+                    accountId = "<value>";
+                    contactId = "<value>";
                     createdAt = OffsetDateTime.parse("2022-02-25T02:56:43.385Z");
                     currency = "Boliviano boliviano";
-                    id = "<ID>";
-                    invoiceId = "string";
-                    notes = "string";
-                    paymentMethod = "string";
+                    id = "<id>";
+                    invoiceId = "<value>";
+                    notes = "<value>";
+                    paymentMethod = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
-                    reference = "string";
+                    reference = "<value>";
                     totalAmount = 8698.74d;
                     updatedAt = OffsetDateTime.parse("2023-11-08T12:40:48.671Z");
 
@@ -2019,18 +2019,18 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchAccountingTaxrateRequest req = new PatchAccountingTaxrateRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 accountingTaxrate = new AccountingTaxrate(
-                    "string",
+                    "<value>",
                     5991.47d){{
                     createdAt = OffsetDateTime.parse("2024-01-29T22:02:36.650Z");
                     description = "Upgradable coherent adapter";
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     updatedAt = OffsetDateTime.parse("2024-01-17T10:44:31.599Z");
 
@@ -2089,29 +2089,29 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionRequest req = new PatchAccountingTransactionRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 accountingTransaction = new AccountingTransaction(
-                    "string"){{
-                    createdAt = "string";
+                    "<value>"){{
+                    createdAt = "<value>";
                     currency = "Kwacha";
                     description = "Multi-channelled transitional function";
                     lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineitem[]{{
                         add(new AccountingTransactionLineitem(
-                        "string",
+                        "<value>",
                         3153.09d){{
-                            accountId = "string";
+                            accountId = "<value>";
                             totalAmount = 535.65d;
                         }}),
                     }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
-                    reference = "string";
+                    reference = "<value>";
                     taxAmount = 259.82d;
-                    taxrateId = "string";
-                    updatedAt = "string";
+                    taxrateId = "<value>";
+                    updatedAt = "<value>";
 
                 }};
 
@@ -2166,8 +2166,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveAccountingAccountRequest req = new RemoveAccountingAccountRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveAccountingAccountResponse res = sdk.accounting.removeAccountingAccount(req);
 
@@ -2218,8 +2218,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveAccountingContactRequest req = new RemoveAccountingContactRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveAccountingContactResponse res = sdk.accounting.removeAccountingContact(req);
 
@@ -2270,8 +2270,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveAccountingInvoiceRequest req = new RemoveAccountingInvoiceRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveAccountingInvoiceResponse res = sdk.accounting.removeAccountingInvoice(req);
 
@@ -2322,8 +2322,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveAccountingPaymentRequest req = new RemoveAccountingPaymentRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveAccountingPaymentResponse res = sdk.accounting.removeAccountingPayment(req);
 
@@ -2374,8 +2374,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveAccountingTaxrateRequest req = new RemoveAccountingTaxrateRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveAccountingTaxrateResponse res = sdk.accounting.removeAccountingTaxrate(req);
 
@@ -2426,8 +2426,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveAccountingTransactionRequest req = new RemoveAccountingTransactionRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveAccountingTransactionResponse res = sdk.accounting.removeAccountingTransaction(req);
 
@@ -2482,20 +2482,20 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateAccountingAccountRequest req = new UpdateAccountingAccountRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 accountingAccount = new AccountingAccount(
-                    "string"){{
+                    "<value>"){{
                     balance = 5954.09d;
                     createdAt = OffsetDateTime.parse("2022-05-21T23:41:25.152Z");
                     currency = "Tanzanian Shilling";
-                    customerDefinedCode = "string";
+                    customerDefinedCode = "<value>";
                     description = "Stand-alone grid-enabled model";
-                    id = "<ID>";
+                    id = "<id>";
                     isPayable = false;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     status = Status.ACTIVE;
                     type = Type.BANK;
@@ -2563,57 +2563,57 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateAccountingContactRequest req = new UpdateAccountingContactRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 accountingContact = new AccountingContact(
 ){{
                     billingAddress = new PropertyAccountingContactBillingAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "Mayaguez";
                         country = "Ghana";
                         countryCode = "JE";
                         postalCode = "16521-4269";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
                     createdAt = OffsetDateTime.parse("2023-02-14T04:27:23.372Z");
                     currency = "European Monetary Unit (E.M.U.-6)";
                     emails = new com.unifiedapi.unifiedto.models.shared.AccountingEmail[]{{
                         add(new AccountingEmail(
-                        "string"){{
+                        "<value>"){{
                             email = "Kevin.Leffler@gmail.com";
                         }}),
                     }};
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     isCustomer = false;
                     isSupplier = false;
-                    name = "string";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     shippingAddress = new PropertyAccountingContactShippingAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "Port Arely";
                         country = "Norway";
                         countryCode = "GP";
                         postalCode = "99093-9229";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
                     taxExemption = TaxExemption.MEDICAL_ORG;
-                    taxNumber = "string";
+                    taxNumber = "<value>";
                     telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
                         add(new AccountingTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-08-30T07:55:45.909Z");
@@ -2675,34 +2675,34 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceRequest req = new UpdateAccountingInvoiceRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 accountingInvoice = new AccountingInvoice(
 ){{
                     balanceAmount = 6974.28d;
                     cancelledAt = OffsetDateTime.parse("2023-06-03T06:46:26.704Z");
-                    contactId = "string";
+                    contactId = "<value>";
                     createdAt = OffsetDateTime.parse("2022-07-10T23:29:44.275Z");
                     currency = "Forint";
                     discountAmount = 2579.09d;
                     dueAt = OffsetDateTime.parse("2023-12-25T16:24:30.030Z");
-                    id = "<ID>";
-                    invoiceNumber = "string";
+                    id = "<id>";
+                    invoiceNumber = "<value>";
                     lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingLineitem[]{{
                         add(new AccountingLineitem(
                         9127.85d){{
                             totalAmount = 3682.14d;
                         }}),
                     }};
-                    notes = "string";
+                    notes = "<value>";
                     paidAmount = 2842.49d;
                     paidAt = OffsetDateTime.parse("2022-06-05T15:45:06.127Z");
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     refundAmount = 3314.72d;
-                    refundReason = "string";
+                    refundReason = "<value>";
                     refundedAt = OffsetDateTime.parse("2024-04-05T20:13:33.419Z");
                     status = AccountingInvoiceStatus.AUTHORIZED;
                     taxAmount = 3824.24d;
@@ -2764,23 +2764,23 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateAccountingPaymentRequest req = new UpdateAccountingPaymentRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 accountingPayment = new AccountingPayment(
 ){{
-                    accountId = "string";
-                    contactId = "string";
+                    accountId = "<value>";
+                    contactId = "<value>";
                     createdAt = OffsetDateTime.parse("2022-01-04T17:30:16.475Z");
                     currency = "Sudanese Pound";
-                    id = "<ID>";
-                    invoiceId = "string";
-                    notes = "string";
-                    paymentMethod = "string";
+                    id = "<id>";
+                    invoiceId = "<value>";
+                    notes = "<value>";
+                    paymentMethod = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
-                    reference = "string";
+                    reference = "<value>";
                     totalAmount = 1869.63d;
                     updatedAt = OffsetDateTime.parse("2022-05-14T18:33:08.394Z");
 
@@ -2839,18 +2839,18 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateAccountingTaxrateRequest req = new UpdateAccountingTaxrateRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 accountingTaxrate = new AccountingTaxrate(
-                    "string",
+                    "<value>",
                     3382.78d){{
                     createdAt = OffsetDateTime.parse("2024-07-16T01:24:36.188Z");
                     description = "Open-source human-resource database";
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     updatedAt = OffsetDateTime.parse("2022-03-21T10:57:59.053Z");
 
@@ -2909,29 +2909,29 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionRequest req = new UpdateAccountingTransactionRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 accountingTransaction = new AccountingTransaction(
-                    "string"){{
-                    createdAt = "string";
+                    "<value>"){{
+                    createdAt = "<value>";
                     currency = "Zloty";
                     description = "Organic web-enabled orchestration";
                     lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineitem[]{{
                         add(new AccountingTransactionLineitem(
-                        "string",
+                        "<value>",
                         1897.48d){{
-                            accountId = "string";
+                            accountId = "<value>";
                             totalAmount = 2397.73d;
                         }}),
                     }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
-                    reference = "string";
+                    reference = "<value>";
                     taxAmount = 421.84d;
-                    taxrateId = "string";
-                    updatedAt = "string";
+                    taxrateId = "<value>";
+                    updatedAt = "<value>";
 
                 }};
 

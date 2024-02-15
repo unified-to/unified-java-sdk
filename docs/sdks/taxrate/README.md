@@ -37,17 +37,17 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateAccountingTaxrateRequest req = new CreateAccountingTaxrateRequest(
-                "string"){{
+                "<value>"){{
                 accountingTaxrate = new AccountingTaxrate(
-                    "string",
+                    "<value>",
                     1719.1d){{
                     createdAt = OffsetDateTime.parse("2022-09-20T17:06:11.018Z");
                     description = "Ergonomic regional neural-net";
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     updatedAt = OffsetDateTime.parse("2023-12-27T23:06:27.112Z");
 
@@ -104,10 +104,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAccountingTaxrateRequest req = new GetAccountingTaxrateRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -162,15 +162,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAccountingTaxratesRequest req = new ListAccountingTaxratesRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 1599.19d;
                 offset = 1097.48d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-06-14T14:31:13.247Z");
 
             }};
@@ -226,18 +226,18 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchAccountingTaxrateRequest req = new PatchAccountingTaxrateRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 accountingTaxrate = new AccountingTaxrate(
-                    "string",
+                    "<value>",
                     5991.47d){{
                     createdAt = OffsetDateTime.parse("2024-01-29T22:02:36.650Z");
                     description = "Upgradable coherent adapter";
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     updatedAt = OffsetDateTime.parse("2024-01-17T10:44:31.599Z");
 
@@ -294,8 +294,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveAccountingTaxrateRequest req = new RemoveAccountingTaxrateRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveAccountingTaxrateResponse res = sdk.taxrate.removeAccountingTaxrate(req);
 
@@ -348,18 +348,18 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateAccountingTaxrateRequest req = new UpdateAccountingTaxrateRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 accountingTaxrate = new AccountingTaxrate(
-                    "string",
+                    "<value>",
                     3382.78d){{
                     createdAt = OffsetDateTime.parse("2024-07-16T01:24:36.188Z");
                     description = "Open-source human-resource database";
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     updatedAt = OffsetDateTime.parse("2022-03-21T10:57:59.053Z");
 

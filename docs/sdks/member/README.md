@@ -39,27 +39,27 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateMartechMemberRequest req = new CreateMartechMemberRequest(
-                "string"){{
+                "<value>"){{
                 marketingMember = new MarketingMember(
 ){{
                     createdAt = OffsetDateTime.parse("2022-07-29T17:00:36.055Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.MarketingEmail[]{{
                         add(new MarketingEmail(
-                        "string"){{
+                        "<value>"){{
                             email = "Kimberly55@gmail.com";
                         }}),
                     }};
-                    id = "<ID>";
+                    id = "<id>";
                     listIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    name = "string";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     updatedAt = OffsetDateTime.parse("2024-04-24T21:50:25.785Z");
 
@@ -116,10 +116,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetMartechMemberRequest req = new GetMartechMemberRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -174,16 +174,16 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListMartechMembersRequest req = new ListMartechMembersRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 1432.99d;
-                listId = "string";
+                listId = "<value>";
                 offset = 4150.29d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-02-09T12:30:23.054Z");
 
             }};
@@ -241,28 +241,28 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchMartechMemberRequest req = new PatchMartechMemberRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 marketingMember = new MarketingMember(
 ){{
                     createdAt = OffsetDateTime.parse("2023-11-02T21:05:12.012Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.MarketingEmail[]{{
                         add(new MarketingEmail(
-                        "string"){{
+                        "<value>"){{
                             email = "Avis.Nikolaus70@hotmail.com";
                         }}),
                     }};
-                    id = "<ID>";
+                    id = "<id>";
                     listIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    name = "string";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-01-22T06:50:35.956Z");
 
@@ -319,8 +319,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberRequest req = new RemoveMartechMemberRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberResponse res = sdk.member.removeMartechMember(req);
 
@@ -375,28 +375,28 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberRequest req = new UpdateMartechMemberRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 marketingMember = new MarketingMember(
 ){{
                     createdAt = OffsetDateTime.parse("2024-04-24T06:25:19.871Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.MarketingEmail[]{{
                         add(new MarketingEmail(
-                        "string"){{
+                        "<value>"){{
                             email = "Horacio55@gmail.com";
                         }}),
                     }};
-                    id = "<ID>";
+                    id = "<id>";
                     listIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    name = "string";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-06-16T19:01:37.959Z");
 

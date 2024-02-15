@@ -10,7 +10,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.15.5'
+implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.16.0'
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -42,19 +42,19 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest req = new CreateAccountingAccountRequest(
-                "string"){{
+                "<value>"){{
                 accountingAccount = new AccountingAccount(
-                    "string"){{
+                    "<value>"){{
                     balance = 6602.56d;
                     createdAt = OffsetDateTime.parse("2023-09-02T22:12:31.771Z");
                     currency = "Saint Helena Pound";
-                    customerDefinedCode = "string";
+                    customerDefinedCode = "<value>";
                     description = "Cross-group zero defect task-force";
-                    id = "<ID>";
+                    id = "<id>";
                     isPayable = false;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     status = Status.ACTIVE;
                     type = Type.EQUITY;

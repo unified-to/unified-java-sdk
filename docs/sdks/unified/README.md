@@ -54,59 +54,59 @@ public class Application {
                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
                     add(PropertyConnectionCategories.COMMERCE),
                 }},
-                "string",
+                "<value>",
                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
                     add(PropertyConnectionPermissions.ATS_APPLICATIONSTATUS_READ),
                 }}){{
                 auth = new PropertyConnectionAuth(
 ){{
-                    accessToken = "string";
-                    apiUrl = "string";
-                    appId = "string";
-                    authorizeUrl = "string";
-                    clientId = "string";
-                    clientSecret = "string";
-                    consumerKey = "string";
-                    consumerSecret = "string";
+                    accessToken = "<value>";
+                    apiUrl = "<value>";
+                    appId = "<value>";
+                    authorizeUrl = "<value>";
+                    clientId = "<value>";
+                    clientSecret = "<value>";
+                    consumerKey = "<value>";
+                    consumerSecret = "<value>";
                     emails = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     expiresIn = 4311.07d;
                     expiryDate = OffsetDateTime.parse("2024-01-24T16:22:59.867Z");
                     key = "<key>";
                     meta = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
-                    name = "string";
+                    name = "<value>";
                     otherAuthInfo = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    pem = "string";
-                    refreshToken = "string";
+                    pem = "<value>";
+                    refreshToken = "<value>";
                     refreshTokenExpiresDate = OffsetDateTime.parse("2022-12-09T09:37:28.071Z");
                     refreshTokenExpiresIn = 5012.48d;
-                    state = "string";
-                    token = "string";
-                    tokenUrl = "string";
+                    state = "Kansas";
+                    token = "<value>";
+                    tokenUrl = "<value>";
 
                 }};
-                authAwsArn = "string";
-                createdAt = OffsetDateTime.parse("2022-12-11T17:06:37.254Z");
+                authAwsArn = "<value>";
+                createdAt = OffsetDateTime.parse("2024-06-28T23:40:51.869Z");
                 cursorsCache = new java.util.HashMap<String, java.lang.Object>[]{{
                     add(new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }}),
                 }};
-                environment = "string";
-                externalXref = "string";
-                id = "<ID>";
+                environment = "<value>";
+                externalXref = "<value>";
+                id = "<id>";
                 isPaused = false;
-                lastHealthyAt = OffsetDateTime.parse("2024-06-28T23:40:51.869Z");
-                lastUnhealthyAt = OffsetDateTime.parse("2023-11-01T09:09:15.633Z");
-                updatedAt = OffsetDateTime.parse("2023-02-05T07:37:37.431Z");
-                workspaceId = "string";
+                lastHealthyAt = OffsetDateTime.parse("2023-11-01T09:09:15.633Z");
+                lastUnhealthyAt = OffsetDateTime.parse("2023-02-05T07:37:37.431Z");
+                updatedAt = OffsetDateTime.parse("2024-07-21T18:48:43.528Z");
+                workspaceId = "<value>";
 
             }};
 
@@ -166,29 +166,29 @@ public class Application {
             com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookRequest req = new CreateUnifiedWebhookRequest(
 ){{
                 webhook = new Webhook(
-                    "string",
+                    "<value>",
                     Event.CREATED,
-                    "string",
+                    "<value>",
                     ObjectType.ACCOUNTING_ACCOUNT){{
                     checkedAt = OffsetDateTime.parse("2023-05-18T07:32:59.218Z");
                     createdAt = OffsetDateTime.parse("2023-11-05T05:21:48.024Z");
-                    environment = "string";
-                    fields = "string";
-                    id = "<ID>";
-                    integrationType = "string";
+                    environment = "<value>";
+                    fields = "<value>";
+                    id = "<id>";
+                    integrationType = "<value>";
                     interval = 738.04d;
                     isHealthy = false;
                     meta = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     pageMaxLimit = 5349.08d;
                     runs = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     updatedAt = OffsetDateTime.parse("2024-01-16T23:55:52.787Z");
                     webhookType = WebhookWebhookType.NATIVE_;
-                    workspaceId = "string";
+                    workspaceId = "<value>";
 
                 }};
                 includeAll = false;
@@ -244,7 +244,7 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallRequest req = new GetUnifiedApicallRequest(
-                "string");
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallResponse res = sdk.unified.getUnifiedApicall(req);
 
@@ -295,7 +295,7 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionRequest req = new GetUnifiedConnectionRequest(
-                "string");
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionResponse res = sdk.unified.getUnifiedConnection(req);
 
@@ -347,19 +347,19 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest req = new GetUnifiedIntegrationAuthRequest(
-                "string",
-                "string"){{
-                env = "string";
-                externalXref = "string";
-                failureRedirect = "string";
-                lang = "string";
+                "<value>",
+                "<value>"){{
+                env = "<value>";
+                externalXref = "<value>";
+                failureRedirect = "<value>";
+                lang = "<value>";
                 redirect = false;
                 scopes = new com.unifiedapi.unifiedto.models.operations.Scopes[]{{
                     add(Scopes.HRIS_EMPLOYEE_WRITE),
                 }};
-                state = "string";
-                subdomain = "string";
-                successRedirect = "string";
+                state = "New Jersey";
+                subdomain = "<value>";
+                successRedirect = "<value>";
 
             }};
 
@@ -412,7 +412,7 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookRequest req = new GetUnifiedWebhookRequest(
-                "string");
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookResponse res = sdk.unified.getUnifiedWebhook(req);
 
@@ -465,16 +465,16 @@ public class Application {
 
             com.unifiedapi.unifiedto.models.operations.ListUnifiedApicallsRequest req = new ListUnifiedApicallsRequest(
 ){{
-                connectionId = "string";
+                connectionId = "<value>";
                 createdLte = OffsetDateTime.parse("2024-08-09T17:47:53.304Z");
-                env = "string";
+                env = "<value>";
                 error = false;
-                externalXref = "string";
-                integrationType = "string";
+                externalXref = "<value>";
+                integrationType = "<value>";
                 limit = 494.66d;
                 offset = 5267.27d;
-                order = "string";
-                sort = "string";
+                order = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2024-01-10T02:33:44.403Z");
 
             }};
@@ -534,12 +534,12 @@ public class Application {
                 categories = new com.unifiedapi.unifiedto.models.operations.Categories[]{{
                     add(Categories.MARTECH),
                 }};
-                env = "string";
-                externalXref = "string";
+                env = "<value>";
+                externalXref = "<value>";
                 limit = 9638.08d;
                 offset = 15.12d;
-                order = "string";
-                sort = "string";
+                order = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-06-20T13:59:12.388Z");
 
             }};
@@ -594,16 +594,16 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesRequest req = new ListUnifiedIntegrationWorkspacesRequest(
-                "string"){{
+                "<value>"){{
                 active = false;
                 categories = new com.unifiedapi.unifiedto.models.operations.QueryParamCategories[]{{
                     add(QueryParamCategories.ACCOUNTING),
                 }};
-                env = "string";
+                env = "<value>";
                 limit = 9072.99d;
                 offset = 5948.93d;
                 summary = false;
-                updatedGte = "string";
+                updatedGte = "<value>";
 
             }};
 
@@ -662,14 +662,14 @@ public class Application {
                 categories = new com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsQueryParamCategories[]{{
                     add(ListUnifiedIntegrationsQueryParamCategories.CRM),
                 }};
-                env = "string";
+                env = "<value>";
                 limit = 7382.58d;
                 offset = 353.99d;
-                order = "string";
-                sort = "string";
+                order = "<value>";
+                sort = "<value>";
                 summary = false;
-                type = "string";
-                updatedGte = "string";
+                type = "<value>";
+                updatedGte = "<value>";
 
             }};
 
@@ -726,8 +726,8 @@ public class Application {
 ){{
                 limit = 7069.08d;
                 offset = 7461.37d;
-                order = "string";
-                sort = "string";
+                order = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-01-21T01:55:24.746Z");
 
             }};
@@ -783,12 +783,12 @@ public class Application {
 
             com.unifiedapi.unifiedto.models.operations.ListUnifiedWebhooksRequest req = new ListUnifiedWebhooksRequest(
 ){{
-                env = "string";
+                env = "<value>";
                 limit = 1162.24d;
-                object = "string";
+                object = "<value>";
                 offset = 5094.7d;
-                order = "string";
-                sort = "string";
+                order = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-04-20T17:03:56.207Z");
 
             }};
@@ -847,64 +847,64 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchUnifiedConnectionRequest req = new PatchUnifiedConnectionRequest(
-                "string"){{
+                "<value>"){{
                 connection = new Connection(
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
                         add(PropertyConnectionCategories.TICKETING),
                     }},
-                    "string",
+                    "<value>",
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
                         add(PropertyConnectionPermissions.CRM_LEAD_WRITE),
                     }}){{
                     auth = new PropertyConnectionAuth(
 ){{
-                        accessToken = "string";
-                        apiUrl = "string";
-                        appId = "string";
-                        authorizeUrl = "string";
-                        clientId = "string";
-                        clientSecret = "string";
-                        consumerKey = "string";
-                        consumerSecret = "string";
+                        accessToken = "<value>";
+                        apiUrl = "<value>";
+                        appId = "<value>";
+                        authorizeUrl = "<value>";
+                        clientId = "<value>";
+                        clientSecret = "<value>";
+                        consumerKey = "<value>";
+                        consumerSecret = "<value>";
                         emails = new String[]{{
-                            add("string"),
+                            add("<value>"),
                         }};
                         expiresIn = 9973.13d;
                         expiryDate = OffsetDateTime.parse("2024-07-15T18:53:52.079Z");
                         key = "<key>";
                         meta = new java.util.HashMap<String, java.lang.Object>(
                         ){{
-                            put("key", "string");
+                            put("key", "<value>");
                         }};
-                        name = "string";
+                        name = "<value>";
                         otherAuthInfo = new String[]{{
-                            add("string"),
+                            add("<value>"),
                         }};
-                        pem = "string";
-                        refreshToken = "string";
+                        pem = "<value>";
+                        refreshToken = "<value>";
                         refreshTokenExpiresDate = OffsetDateTime.parse("2022-09-17T17:15:40.563Z");
                         refreshTokenExpiresIn = 1170.66d;
-                        state = "string";
-                        token = "string";
-                        tokenUrl = "string";
+                        state = "Connecticut";
+                        token = "<value>";
+                        tokenUrl = "<value>";
 
                     }};
-                    authAwsArn = "string";
-                    createdAt = OffsetDateTime.parse("2022-05-14T12:46:18.750Z");
+                    authAwsArn = "<value>";
+                    createdAt = OffsetDateTime.parse("2023-07-09T12:43:50.814Z");
                     cursorsCache = new java.util.HashMap<String, java.lang.Object>[]{{
                         add(new java.util.HashMap<String, java.lang.Object>(
                         ){{
-                            put("key", "string");
+                            put("key", "<value>");
                         }}),
                     }};
-                    environment = "string";
-                    externalXref = "string";
-                    id = "<ID>";
+                    environment = "<value>";
+                    externalXref = "<value>";
+                    id = "<id>";
                     isPaused = false;
-                    lastHealthyAt = OffsetDateTime.parse("2023-07-09T12:43:50.814Z");
-                    lastUnhealthyAt = OffsetDateTime.parse("2023-02-14T05:49:12.923Z");
-                    updatedAt = OffsetDateTime.parse("2024-06-03T13:20:07.463Z");
-                    workspaceId = "string";
+                    lastHealthyAt = OffsetDateTime.parse("2023-02-14T05:49:12.923Z");
+                    lastUnhealthyAt = OffsetDateTime.parse("2024-06-03T13:20:07.463Z");
+                    updatedAt = OffsetDateTime.parse("2024-03-09T11:43:14.112Z");
+                    workspaceId = "<value>";
 
                 }};
 
@@ -959,7 +959,7 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerRequest req = new PatchUnifiedWebhookTriggerRequest(
-                "string");
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerResponse res = sdk.unified.patchUnifiedWebhookTrigger(req);
 
@@ -1010,7 +1010,7 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveUnifiedConnectionRequest req = new RemoveUnifiedConnectionRequest(
-                "string");
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveUnifiedConnectionResponse res = sdk.unified.removeUnifiedConnection(req);
 
@@ -1061,7 +1061,7 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveUnifiedWebhookRequest req = new RemoveUnifiedWebhookRequest(
-                "string");
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveUnifiedWebhookResponse res = sdk.unified.removeUnifiedWebhook(req);
 
@@ -1117,64 +1117,64 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateUnifiedConnectionRequest req = new UpdateUnifiedConnectionRequest(
-                "string"){{
+                "<value>"){{
                 connection = new Connection(
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
                         add(PropertyConnectionCategories.ACCOUNTING),
                     }},
-                    "string",
+                    "<value>",
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
                         add(PropertyConnectionPermissions.ATS_JOB_WRITE),
                     }}){{
                     auth = new PropertyConnectionAuth(
 ){{
-                        accessToken = "string";
-                        apiUrl = "string";
-                        appId = "string";
-                        authorizeUrl = "string";
-                        clientId = "string";
-                        clientSecret = "string";
-                        consumerKey = "string";
-                        consumerSecret = "string";
+                        accessToken = "<value>";
+                        apiUrl = "<value>";
+                        appId = "<value>";
+                        authorizeUrl = "<value>";
+                        clientId = "<value>";
+                        clientSecret = "<value>";
+                        consumerKey = "<value>";
+                        consumerSecret = "<value>";
                         emails = new String[]{{
-                            add("string"),
+                            add("<value>"),
                         }};
                         expiresIn = 9842.07d;
                         expiryDate = OffsetDateTime.parse("2024-03-25T02:21:40.431Z");
                         key = "<key>";
                         meta = new java.util.HashMap<String, java.lang.Object>(
                         ){{
-                            put("key", "string");
+                            put("key", "<value>");
                         }};
-                        name = "string";
+                        name = "<value>";
                         otherAuthInfo = new String[]{{
-                            add("string"),
+                            add("<value>"),
                         }};
-                        pem = "string";
-                        refreshToken = "string";
+                        pem = "<value>";
+                        refreshToken = "<value>";
                         refreshTokenExpiresDate = OffsetDateTime.parse("2023-05-18T23:31:20.256Z");
                         refreshTokenExpiresIn = 618.81d;
-                        state = "string";
-                        token = "string";
-                        tokenUrl = "string";
+                        state = "Wisconsin";
+                        token = "<value>";
+                        tokenUrl = "<value>";
 
                     }};
-                    authAwsArn = "string";
-                    createdAt = OffsetDateTime.parse("2024-11-26T11:11:59.157Z");
+                    authAwsArn = "<value>";
+                    createdAt = OffsetDateTime.parse("2023-06-09T16:09:54.412Z");
                     cursorsCache = new java.util.HashMap<String, java.lang.Object>[]{{
                         add(new java.util.HashMap<String, java.lang.Object>(
                         ){{
-                            put("key", "string");
+                            put("key", "<value>");
                         }}),
                     }};
-                    environment = "string";
-                    externalXref = "string";
-                    id = "<ID>";
+                    environment = "<value>";
+                    externalXref = "<value>";
+                    id = "<id>";
                     isPaused = false;
-                    lastHealthyAt = OffsetDateTime.parse("2023-06-09T16:09:54.412Z");
-                    lastUnhealthyAt = OffsetDateTime.parse("2022-03-08T19:30:51.046Z");
-                    updatedAt = OffsetDateTime.parse("2023-01-09T16:11:04.721Z");
-                    workspaceId = "string";
+                    lastHealthyAt = OffsetDateTime.parse("2022-03-08T19:30:51.046Z");
+                    lastUnhealthyAt = OffsetDateTime.parse("2023-01-09T16:11:04.721Z");
+                    updatedAt = OffsetDateTime.parse("2023-03-20T19:30:15.010Z");
+                    workspaceId = "<value>";
 
                 }};
 
@@ -1229,7 +1229,7 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerRequest req = new UpdateUnifiedWebhookTriggerRequest(
-                "string");
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerResponse res = sdk.unified.updateUnifiedWebhookTrigger(req);
 

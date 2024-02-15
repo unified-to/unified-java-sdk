@@ -31,18 +31,18 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListUcCallsRequest req = new ListUcCallsRequest(
-                "string"){{
-                contactId = "string";
+                "<value>"){{
+                contactId = "<value>";
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 465.25d;
                 offset = 4996.09d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2024-07-24T23:18:21.548Z");
-                userId = "string";
+                userId = "<value>";
 
             }};
 

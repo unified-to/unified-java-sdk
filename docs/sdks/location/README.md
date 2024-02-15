@@ -38,27 +38,27 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationRequest req = new CreateCommerceLocationRequest(
-                "string"){{
+                "<value>"){{
                 commerceLocation = new CommerceLocation(
-                    "string"){{
+                    "<value>"){{
                     address = new PropertyCommerceLocationAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "North Marysecester";
                         country = "Maldives";
                         countryCode = "CU";
                         postalCode = "81935";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
                     createdAt = OffsetDateTime.parse("2024-01-11T11:46:34.114Z");
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     updatedAt = OffsetDateTime.parse("2023-10-08T09:24:33.872Z");
 
@@ -115,10 +115,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetCommerceLocationRequest req = new GetCommerceLocationRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -173,15 +173,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListCommerceLocationsRequest req = new ListCommerceLocationsRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 2087.22d;
                 offset = 1166.59d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-06-09T14:52:37.550Z");
 
             }};
@@ -238,28 +238,28 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationRequest req = new PatchCommerceLocationRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 commerceLocation = new CommerceLocation(
-                    "string"){{
+                    "<value>"){{
                     address = new PropertyCommerceLocationAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "Lonniefurt";
                         country = "Libyan Arab Jamahiriya";
                         countryCode = "KM";
                         postalCode = "64647";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
                     createdAt = OffsetDateTime.parse("2023-03-12T06:32:06.220Z");
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     updatedAt = OffsetDateTime.parse("2023-04-15T19:35:06.232Z");
 
@@ -316,8 +316,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationRequest req = new RemoveCommerceLocationRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationResponse res = sdk.location.removeCommerceLocation(req);
 
@@ -371,28 +371,28 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationRequest req = new UpdateCommerceLocationRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 commerceLocation = new CommerceLocation(
-                    "string"){{
+                    "<value>"){{
                     address = new PropertyCommerceLocationAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "Stillwater";
                         country = "Sierra Leone";
                         countryCode = "AL";
                         postalCode = "49876-8332";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
                     createdAt = OffsetDateTime.parse("2022-04-19T11:29:36.755Z");
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     updatedAt = OffsetDateTime.parse("2022-06-11T12:53:41.097Z");
 

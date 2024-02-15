@@ -42,29 +42,29 @@ public class Application {
             com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookRequest req = new CreateUnifiedWebhookRequest(
 ){{
                 webhook = new Webhook(
-                    "string",
+                    "<value>",
                     Event.CREATED,
-                    "string",
+                    "<value>",
                     ObjectType.ACCOUNTING_ACCOUNT){{
                     checkedAt = OffsetDateTime.parse("2023-05-18T07:32:59.218Z");
                     createdAt = OffsetDateTime.parse("2023-11-05T05:21:48.024Z");
-                    environment = "string";
-                    fields = "string";
-                    id = "<ID>";
-                    integrationType = "string";
+                    environment = "<value>";
+                    fields = "<value>";
+                    id = "<id>";
+                    integrationType = "<value>";
                     interval = 738.04d;
                     isHealthy = false;
                     meta = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     pageMaxLimit = 5349.08d;
                     runs = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     updatedAt = OffsetDateTime.parse("2024-01-16T23:55:52.787Z");
                     webhookType = WebhookWebhookType.NATIVE_;
-                    workspaceId = "string";
+                    workspaceId = "<value>";
 
                 }};
                 includeAll = false;
@@ -120,7 +120,7 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookRequest req = new GetUnifiedWebhookRequest(
-                "string");
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookResponse res = sdk.webhook.getUnifiedWebhook(req);
 
@@ -173,12 +173,12 @@ public class Application {
 
             com.unifiedapi.unifiedto.models.operations.ListUnifiedWebhooksRequest req = new ListUnifiedWebhooksRequest(
 ){{
-                env = "string";
+                env = "<value>";
                 limit = 1162.24d;
-                object = "string";
+                object = "<value>";
                 offset = 5094.7d;
-                order = "string";
-                sort = "string";
+                order = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-04-20T17:03:56.207Z");
 
             }};
@@ -232,7 +232,7 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerRequest req = new PatchUnifiedWebhookTriggerRequest(
-                "string");
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerResponse res = sdk.webhook.patchUnifiedWebhookTrigger(req);
 
@@ -283,7 +283,7 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveUnifiedWebhookRequest req = new RemoveUnifiedWebhookRequest(
-                "string");
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveUnifiedWebhookResponse res = sdk.webhook.removeUnifiedWebhook(req);
 
@@ -334,7 +334,7 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerRequest req = new UpdateUnifiedWebhookTriggerRequest(
-                "string");
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerResponse res = sdk.webhook.updateUnifiedWebhookTrigger(req);
 

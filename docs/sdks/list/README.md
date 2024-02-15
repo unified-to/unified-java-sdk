@@ -37,15 +37,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateMartechListRequest req = new CreateMartechListRequest(
-                "string"){{
+                "<value>"){{
                 marketingList = new MarketingList(
 ){{
-                    createdAt = "string";
-                    id = "<ID>";
-                    name = "string";
+                    createdAt = "<value>";
+                    id = "<id>";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     updatedAt = OffsetDateTime.parse("2023-10-16T01:36:06.349Z");
 
@@ -102,10 +102,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetMartechListRequest req = new GetMartechListRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -160,15 +160,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListMartechListsRequest req = new ListMartechListsRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 9665.22d;
                 offset = 367.94d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-09-12T12:19:08.506Z");
 
             }};
@@ -224,16 +224,16 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchMartechListRequest req = new PatchMartechListRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 marketingList = new MarketingList(
 ){{
-                    createdAt = "string";
-                    id = "<ID>";
-                    name = "string";
+                    createdAt = "<value>";
+                    id = "<id>";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     updatedAt = OffsetDateTime.parse("2023-10-08T11:05:46.244Z");
 
@@ -290,8 +290,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveMartechListRequest req = new RemoveMartechListRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveMartechListResponse res = sdk.list.removeMartechList(req);
 
@@ -344,16 +344,16 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateMartechListRequest req = new UpdateMartechListRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 marketingList = new MarketingList(
 ){{
-                    createdAt = "string";
-                    id = "<ID>";
-                    name = "string";
+                    createdAt = "<value>";
+                    id = "<id>";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     updatedAt = OffsetDateTime.parse("2024-09-02T03:22:31.192Z");
 

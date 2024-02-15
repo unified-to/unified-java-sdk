@@ -39,26 +39,26 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardRequest req = new CreateAtsScorecardRequest(
-                "string"){{
+                "<value>"){{
                 atsScorecard = new AtsScorecard(
 ){{
-                    applicationId = "string";
-                    candidateId = "string";
+                    applicationId = "<value>";
+                    candidateId = "<value>";
                     comment = "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J";
                     createdAt = OffsetDateTime.parse("2022-04-24T10:18:34.661Z");
-                    id = "<ID>";
-                    interviewId = "string";
-                    interviewerId = "string";
-                    jobId = "string";
+                    id = "<id>";
+                    interviewId = "<value>";
+                    interviewerId = "<value>";
+                    jobId = "<value>";
                     questions = new com.unifiedapi.unifiedto.models.shared.AtsScorecardQuestion[]{{
                         add(new AtsScorecardQuestion(
-                        "string"){{
-                            text = "string";
+                        "<value>"){{
+                            text = "<value>";
                         }}),
                     }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     recommendation = Recommendation.NO;
                     updatedAt = OffsetDateTime.parse("2023-04-02T03:31:06.456Z");
@@ -116,10 +116,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAtsScorecardRequest req = new GetAtsScorecardRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -174,19 +174,19 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsRequest req = new ListAtsScorecardsRequest(
-                "string"){{
-                applicationId = "string";
-                candidateId = "string";
+                "<value>"){{
+                applicationId = "<value>";
+                candidateId = "<value>";
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
-                interviewId = "string";
-                jobId = "string";
+                interviewId = "<value>";
+                jobId = "<value>";
                 limit = 5126.98d;
                 offset = 8077.44d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2024-08-19T14:46:22.333Z");
 
             }};
@@ -244,27 +244,27 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardRequest req = new PatchAtsScorecardRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 atsScorecard = new AtsScorecard(
 ){{
-                    applicationId = "string";
-                    candidateId = "string";
+                    applicationId = "<value>";
+                    candidateId = "<value>";
                     comment = "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support";
                     createdAt = OffsetDateTime.parse("2024-10-06T13:32:29.533Z");
-                    id = "<ID>";
-                    interviewId = "string";
-                    interviewerId = "string";
-                    jobId = "string";
+                    id = "<id>";
+                    interviewId = "<value>";
+                    interviewerId = "<value>";
+                    jobId = "<value>";
                     questions = new com.unifiedapi.unifiedto.models.shared.AtsScorecardQuestion[]{{
                         add(new AtsScorecardQuestion(
-                        "string"){{
-                            text = "string";
+                        "<value>"){{
+                            text = "<value>";
                         }}),
                     }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     recommendation = Recommendation.YES;
                     updatedAt = OffsetDateTime.parse("2022-11-28T15:13:55.563Z");
@@ -322,8 +322,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardRequest req = new RemoveAtsScorecardRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse res = sdk.scorecard.removeAtsScorecard(req);
 
@@ -378,27 +378,27 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardRequest req = new UpdateAtsScorecardRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 atsScorecard = new AtsScorecard(
 ){{
-                    applicationId = "string";
-                    candidateId = "string";
+                    applicationId = "<value>";
+                    candidateId = "<value>";
                     comment = "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive";
                     createdAt = OffsetDateTime.parse("2022-07-10T16:18:43.908Z");
-                    id = "<ID>";
-                    interviewId = "string";
-                    interviewerId = "string";
-                    jobId = "string";
+                    id = "<id>";
+                    interviewId = "<value>";
+                    interviewerId = "<value>";
+                    jobId = "<value>";
                     questions = new com.unifiedapi.unifiedto.models.shared.AtsScorecardQuestion[]{{
                         add(new AtsScorecardQuestion(
-                        "string"){{
-                            text = "string";
+                        "<value>"){{
+                            text = "<value>";
                         }}),
                     }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     recommendation = Recommendation.NO;
                     updatedAt = OffsetDateTime.parse("2022-07-26T09:16:55.761Z");

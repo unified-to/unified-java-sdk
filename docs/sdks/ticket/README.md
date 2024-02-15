@@ -38,29 +38,29 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketRequest req = new CreateTicketingTicketRequest(
-                "string"){{
+                "<value>"){{
                 ticketingTicket = new TicketingTicket(
 ){{
-                    category = "string";
+                    category = "<value>";
                     closedAt = OffsetDateTime.parse("2022-06-28T15:15:03.216Z");
                     createdAt = OffsetDateTime.parse("2023-08-20T11:30:17.210Z");
-                    customerId = "string";
+                    customerId = "<value>";
                     description = "Automated composite productivity";
-                    id = "<ID>";
-                    priority = "string";
+                    id = "<id>";
+                    priority = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
-                    source = "string";
-                    sourceRef = "string";
+                    source = "<value>";
+                    sourceRef = "<value>";
                     status = TicketingTicketStatus.CLOSED;
-                    subject = "string";
+                    subject = "<value>";
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     updatedAt = OffsetDateTime.parse("2024-05-06T20:46:58.372Z");
-                    userId = "string";
+                    userId = "<value>";
 
                 }};
 
@@ -115,10 +115,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetTicketingTicketRequest req = new GetTicketingTicketRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -173,18 +173,18 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsRequest req = new ListTicketingTicketsRequest(
-                "string"){{
-                customerId = "string";
+                "<value>"){{
+                customerId = "<value>";
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 6139.39d;
                 offset = 1839.22d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-02-28T23:31:15.090Z");
-                userId = "string";
+                userId = "<value>";
 
             }};
 
@@ -240,30 +240,30 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketRequest req = new PatchTicketingTicketRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 ticketingTicket = new TicketingTicket(
 ){{
-                    category = "string";
+                    category = "<value>";
                     closedAt = OffsetDateTime.parse("2022-09-14T17:48:05.161Z");
                     createdAt = OffsetDateTime.parse("2023-09-30T13:19:53.416Z");
-                    customerId = "string";
+                    customerId = "<value>";
                     description = "Operative composite strategy";
-                    id = "<ID>";
-                    priority = "string";
+                    id = "<id>";
+                    priority = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
-                    source = "string";
-                    sourceRef = "string";
+                    source = "<value>";
+                    sourceRef = "<value>";
                     status = TicketingTicketStatus.CLOSED;
-                    subject = "string";
+                    subject = "<value>";
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     updatedAt = OffsetDateTime.parse("2024-07-06T12:10:37.068Z");
-                    userId = "string";
+                    userId = "<value>";
 
                 }};
 
@@ -318,8 +318,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketRequest req = new RemoveTicketingTicketRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketResponse res = sdk.ticket.removeTicketingTicket(req);
 
@@ -373,30 +373,30 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketRequest req = new UpdateTicketingTicketRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 ticketingTicket = new TicketingTicket(
 ){{
-                    category = "string";
+                    category = "<value>";
                     closedAt = OffsetDateTime.parse("2022-05-31T01:36:42.106Z");
                     createdAt = OffsetDateTime.parse("2024-04-29T13:04:08.966Z");
-                    customerId = "string";
+                    customerId = "<value>";
                     description = "Configurable user-facing middleware";
-                    id = "<ID>";
-                    priority = "string";
+                    id = "<id>";
+                    priority = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
-                    source = "string";
-                    sourceRef = "string";
+                    source = "<value>";
+                    sourceRef = "<value>";
                     status = TicketingTicketStatus.ACTIVE;
-                    subject = "string";
+                    subject = "<value>";
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-01-17T01:38:48.188Z");
-                    userId = "string";
+                    userId = "<value>";
 
                 }};
 

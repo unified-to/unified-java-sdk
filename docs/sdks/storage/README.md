@@ -40,16 +40,16 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateStorageFileRequest req = new CreateStorageFileRequest(
-                "string"){{
+                "<value>"){{
                 storageFile = new StorageFile(
 ){{
                     createdAt = OffsetDateTime.parse("2024-11-26T17:10:46.324Z");
                     description = "Digitized systematic Graphic Interface";
-                    downloadUrl = "string";
-                    id = "<ID>";
-                    mimeType = "string";
-                    name = "string";
-                    parentId = "string";
+                    downloadUrl = "<value>";
+                    id = "<id>";
+                    mimeType = "<value>";
+                    name = "<value>";
+                    parentId = "<value>";
                     permissions = new com.unifiedapi.unifiedto.models.shared.StoragePermission[]{{
                         add(new StoragePermission(
                         new com.unifiedapi.unifiedto.models.shared.PropertyStoragePermissionRoles[]{{
@@ -62,12 +62,12 @@ public class Application {
                     }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     size = 3999.85d;
                     type = StorageFileType.FOLDER;
                     updatedAt = OffsetDateTime.parse("2024-03-07T14:24:08.441Z");
-                    userId = "string";
+                    userId = "<value>";
 
                 }};
 
@@ -122,10 +122,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetStorageFileRequest req = new GetStorageFileRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -180,16 +180,16 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListStorageFilesRequest req = new ListStorageFilesRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 1047.26d;
                 offset = 7962.22d;
-                order = "string";
-                parentId = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                parentId = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-01-28T04:36:03.817Z");
 
             }};
@@ -248,17 +248,17 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchStorageFileRequest req = new PatchStorageFileRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 storageFile = new StorageFile(
 ){{
                     createdAt = OffsetDateTime.parse("2022-03-01T13:48:26.867Z");
                     description = "Customer-focused mission-critical monitoring";
-                    downloadUrl = "string";
-                    id = "<ID>";
-                    mimeType = "string";
-                    name = "string";
-                    parentId = "string";
+                    downloadUrl = "<value>";
+                    id = "<id>";
+                    mimeType = "<value>";
+                    name = "<value>";
+                    parentId = "<value>";
                     permissions = new com.unifiedapi.unifiedto.models.shared.StoragePermission[]{{
                         add(new StoragePermission(
                         new com.unifiedapi.unifiedto.models.shared.PropertyStoragePermissionRoles[]{{
@@ -271,12 +271,12 @@ public class Application {
                     }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     size = 2253.31d;
                     type = StorageFileType.FILE;
                     updatedAt = OffsetDateTime.parse("2023-11-03T15:19:05.454Z");
-                    userId = "string";
+                    userId = "<value>";
 
                 }};
 
@@ -331,8 +331,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveStorageFileRequest req = new RemoveStorageFileRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveStorageFileResponse res = sdk.storage.removeStorageFile(req);
 
@@ -388,17 +388,17 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateStorageFileRequest req = new UpdateStorageFileRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 storageFile = new StorageFile(
 ){{
                     createdAt = OffsetDateTime.parse("2024-06-06T15:38:39.174Z");
                     description = "Polarised intangible architecture";
-                    downloadUrl = "string";
-                    id = "<ID>";
-                    mimeType = "string";
-                    name = "string";
-                    parentId = "string";
+                    downloadUrl = "<value>";
+                    id = "<id>";
+                    mimeType = "<value>";
+                    name = "<value>";
+                    parentId = "<value>";
                     permissions = new com.unifiedapi.unifiedto.models.shared.StoragePermission[]{{
                         add(new StoragePermission(
                         new com.unifiedapi.unifiedto.models.shared.PropertyStoragePermissionRoles[]{{
@@ -411,12 +411,12 @@ public class Application {
                     }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     size = 4091d;
                     type = StorageFileType.FOLDER;
                     updatedAt = OffsetDateTime.parse("2022-06-25T21:16:43.994Z");
-                    userId = "string";
+                    userId = "<value>";
 
                 }};
 

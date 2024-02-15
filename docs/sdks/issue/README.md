@@ -34,8 +34,8 @@ public class Application {
 ){{
                 limit = 7069.08d;
                 offset = 7461.37d;
-                order = "string";
-                sort = "string";
+                order = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-01-21T01:55:24.746Z");
 
             }};

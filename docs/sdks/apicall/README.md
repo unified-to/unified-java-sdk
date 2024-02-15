@@ -31,7 +31,7 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallRequest req = new GetUnifiedApicallRequest(
-                "string");
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallResponse res = sdk.apicall.getUnifiedApicall(req);
 
@@ -84,16 +84,16 @@ public class Application {
 
             com.unifiedapi.unifiedto.models.operations.ListUnifiedApicallsRequest req = new ListUnifiedApicallsRequest(
 ){{
-                connectionId = "string";
+                connectionId = "<value>";
                 createdLte = OffsetDateTime.parse("2024-08-09T17:47:53.304Z");
-                env = "string";
+                env = "<value>";
                 error = false;
-                externalXref = "string";
-                integrationType = "string";
+                externalXref = "<value>";
+                integrationType = "<value>";
                 limit = 494.66d;
                 offset = 5267.27d;
-                order = "string";
-                sort = "string";
+                order = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2024-01-10T02:33:44.403Z");
 
             }};

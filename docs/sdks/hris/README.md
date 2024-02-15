@@ -52,57 +52,57 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeRequest req = new CreateHrisEmployeeRequest(
-                "string"){{
+                "<value>"){{
                 hrisEmployee = new HrisEmployee(
 ){{
                     address = new PropertyHrisEmployeeAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "Armstrongborough";
                         country = "Indonesia";
                         countryCode = "MO";
                         postalCode = "23995";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
                     createdAt = OffsetDateTime.parse("2024-10-07T16:11:17.542Z");
                     currency = "Tunisian Dinar";
                     dateOfBirth = OffsetDateTime.parse("2022-09-15T21:52:09.133Z");
-                    department = "string";
-                    division = "string";
+                    department = "<value>";
+                    division = "<value>";
                     emails = new com.unifiedapi.unifiedto.models.shared.HrisEmail[]{{
                         add(new HrisEmail(
-                        "string"){{
+                        "<value>"){{
                             email = "Audrey.Wilkinson@yahoo.com";
                         }}),
                     }};
-                    employeeNumber = "string";
+                    employeeNumber = "<value>";
                     employmentStatus = EmploymentStatus.ACTIVE;
                     employmentType = HrisEmployeeEmploymentType.OTHER;
                     gender = HrisEmployeeGender.MALE;
                     hiredAt = OffsetDateTime.parse("2023-04-01T23:26:55.787Z");
-                    id = "<ID>";
-                    imageUrl = "string";
-                    languageLocale = "string";
-                    location = "string";
-                    managerId = "string";
+                    id = "<id>";
+                    imageUrl = "<value>";
+                    languageLocale = "<value>";
+                    location = "<value>";
+                    managerId = "<value>";
                     maritalStatus = MaritalStatus.MARRIED;
-                    name = "string";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.HrisTelephone[]{{
                         add(new HrisTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
                     terminatedAt = OffsetDateTime.parse("2022-06-06T17:06:15.004Z");
                     timezone = "Australia/Melbourne";
-                    title = "string";
+                    title = "<value>";
                     updatedAt = OffsetDateTime.parse("2023-02-26T16:14:34.561Z");
 
                 }};
@@ -161,26 +161,26 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateHrisGroupRequest req = new CreateHrisGroupRequest(
-                "string"){{
+                "<value>"){{
                 hrisGroup = new HrisGroup(
 ){{
                     createdAt = OffsetDateTime.parse("2023-08-12T02:07:27.193Z");
                     description = "Self-enabling system-worthy collaboration";
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     managerIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    name = "string";
-                    parentId = "string";
+                    name = "<value>";
+                    parentId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     type = HrisGroupType.TEAM;
                     updatedAt = OffsetDateTime.parse("2024-03-09T17:49:55.923Z");
                     userIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
 
                 }};
@@ -236,10 +236,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetHrisEmployeeRequest req = new GetHrisEmployeeRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -293,10 +293,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetHrisGroupRequest req = new GetHrisGroupRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -351,15 +351,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListHrisEmployeesRequest req = new ListHrisEmployeesRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 5148.12d;
                 offset = 2185.43d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-04-10T00:54:40.984Z");
 
             }};
@@ -414,15 +414,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListHrisGroupsRequest req = new ListHrisGroupsRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 4815.14d;
                 offset = 2554.75d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-04-30T00:40:26.357Z");
 
             }};
@@ -487,58 +487,58 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeRequest req = new PatchHrisEmployeeRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 hrisEmployee = new HrisEmployee(
 ){{
                     address = new PropertyHrisEmployeeAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "Zettaland";
                         country = "Mexico";
                         countryCode = "DJ";
                         postalCode = "87892";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
                     createdAt = OffsetDateTime.parse("2023-07-12T22:40:07.218Z");
                     currency = "Venezuelan bolívar";
                     dateOfBirth = OffsetDateTime.parse("2024-05-04T03:46:56.564Z");
-                    department = "string";
-                    division = "string";
+                    department = "<value>";
+                    division = "<value>";
                     emails = new com.unifiedapi.unifiedto.models.shared.HrisEmail[]{{
                         add(new HrisEmail(
-                        "string"){{
+                        "<value>"){{
                             email = "Bobby_Balistreri@yahoo.com";
                         }}),
                     }};
-                    employeeNumber = "string";
+                    employeeNumber = "<value>";
                     employmentStatus = EmploymentStatus.INACTIVE;
                     employmentType = HrisEmployeeEmploymentType.SEASONAL;
                     gender = HrisEmployeeGender.INTERSEX;
                     hiredAt = OffsetDateTime.parse("2022-10-18T06:05:07.523Z");
-                    id = "<ID>";
-                    imageUrl = "string";
-                    languageLocale = "string";
-                    location = "string";
-                    managerId = "string";
+                    id = "<id>";
+                    imageUrl = "<value>";
+                    languageLocale = "<value>";
+                    location = "<value>";
+                    managerId = "<value>";
                     maritalStatus = MaritalStatus.SINGLE;
-                    name = "string";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.HrisTelephone[]{{
                         add(new HrisTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
                     terminatedAt = OffsetDateTime.parse("2024-03-19T18:41:09.098Z");
                     timezone = "Australia/Darwin";
-                    title = "string";
+                    title = "<value>";
                     updatedAt = OffsetDateTime.parse("2024-05-06T18:18:28.829Z");
 
                 }};
@@ -597,27 +597,27 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchHrisGroupRequest req = new PatchHrisGroupRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 hrisGroup = new HrisGroup(
 ){{
                     createdAt = OffsetDateTime.parse("2022-11-10T03:17:00.454Z");
                     description = "Compatible contextually-based local area network";
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     managerIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    name = "string";
-                    parentId = "string";
+                    name = "<value>";
+                    parentId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     type = HrisGroupType.DIVISION;
                     updatedAt = OffsetDateTime.parse("2023-06-23T21:37:16.122Z");
                     userIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
 
                 }};
@@ -673,8 +673,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveHrisEmployeeRequest req = new RemoveHrisEmployeeRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveHrisEmployeeResponse res = sdk.hris.removeHrisEmployee(req);
 
@@ -725,8 +725,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveHrisGroupRequest req = new RemoveHrisGroupRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveHrisGroupResponse res = sdk.hris.removeHrisGroup(req);
 
@@ -788,58 +788,58 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeRequest req = new UpdateHrisEmployeeRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 hrisEmployee = new HrisEmployee(
 ){{
                     address = new PropertyHrisEmployeeAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "North Alfurt";
                         country = "Thailand";
                         countryCode = "ST";
                         postalCode = "60601-3179";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
                     createdAt = OffsetDateTime.parse("2024-06-07T16:21:55.126Z");
                     currency = "Zimbabwe Dollar";
                     dateOfBirth = OffsetDateTime.parse("2024-05-03T23:33:19.708Z");
-                    department = "string";
-                    division = "string";
+                    department = "<value>";
+                    division = "<value>";
                     emails = new com.unifiedapi.unifiedto.models.shared.HrisEmail[]{{
                         add(new HrisEmail(
-                        "string"){{
+                        "<value>"){{
                             email = "Larue_Schroeder65@gmail.com";
                         }}),
                     }};
-                    employeeNumber = "string";
+                    employeeNumber = "<value>";
                     employmentStatus = EmploymentStatus.ACTIVE;
                     employmentType = HrisEmployeeEmploymentType.CASUAL;
                     gender = HrisEmployeeGender.FEMALE;
                     hiredAt = OffsetDateTime.parse("2024-03-13T20:08:58.858Z");
-                    id = "<ID>";
-                    imageUrl = "string";
-                    languageLocale = "string";
-                    location = "string";
-                    managerId = "string";
+                    id = "<id>";
+                    imageUrl = "<value>";
+                    languageLocale = "<value>";
+                    location = "<value>";
+                    managerId = "<value>";
                     maritalStatus = MaritalStatus.MARRIED;
-                    name = "string";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.HrisTelephone[]{{
                         add(new HrisTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
                     terminatedAt = OffsetDateTime.parse("2023-01-08T01:17:38.194Z");
                     timezone = "Asia/Karachi";
-                    title = "string";
+                    title = "<value>";
                     updatedAt = OffsetDateTime.parse("2024-07-22T23:45:01.037Z");
 
                 }};
@@ -898,27 +898,27 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateHrisGroupRequest req = new UpdateHrisGroupRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 hrisGroup = new HrisGroup(
 ){{
                     createdAt = OffsetDateTime.parse("2022-12-07T01:08:49.621Z");
                     description = "Integrated empowering productivity";
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     managerIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    name = "string";
-                    parentId = "string";
+                    name = "<value>";
+                    parentId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     type = HrisGroupType.TEAM;
                     updatedAt = OffsetDateTime.parse("2024-09-12T13:33:00.416Z");
                     userIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
 
                 }};

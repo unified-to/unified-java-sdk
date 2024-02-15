@@ -31,9 +31,9 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesRequest req = new ListEnrichCompaniesRequest(
-                "string"){{
+                "<value>"){{
                 domain = "dismal-cornmeal.org";
-                name = "string";
+                name = "<value>";
 
             }};
 
@@ -86,11 +86,11 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleRequest req = new ListEnrichPeopleRequest(
-                "string"){{
+                "<value>"){{
                 email = "Rosendo53@gmail.com";
-                linkedinUrl = "string";
-                name = "string";
-                twitter = "string";
+                linkedinUrl = "<value>";
+                name = "<value>";
+                twitter = "<value>";
 
             }};
 

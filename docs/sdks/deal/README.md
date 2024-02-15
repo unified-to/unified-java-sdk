@@ -37,30 +37,30 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateCrmDealRequest req = new CreateCrmDealRequest(
-                "string"){{
+                "<value>"){{
                 crmDeal = new CrmDeal(
 ){{
                     amount = 1917.45d;
                     closedAt = OffsetDateTime.parse("2023-08-28T04:18:49.785Z");
                     createdAt = OffsetDateTime.parse("2023-07-23T15:31:52.925Z");
                     currency = "Cuban Peso";
-                    id = "<ID>";
-                    lostReason = "string";
-                    name = "string";
-                    pipeline = "string";
+                    id = "<id>";
+                    lostReason = "<value>";
+                    name = "<value>";
+                    pipeline = "<value>";
                     probability = 1087.81d;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
-                    source = "string";
-                    stage = "string";
+                    source = "<value>";
+                    stage = "<value>";
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-10-13T19:43:32.331Z");
-                    userId = "string";
-                    wonReason = "string";
+                    userId = "<value>";
+                    wonReason = "<value>";
 
                 }};
 
@@ -115,10 +115,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetCrmDealRequest req = new GetCrmDealRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -173,19 +173,19 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListCrmDealsRequest req = new ListCrmDealsRequest(
-                "string"){{
-                companyId = "string";
-                contactId = "string";
+                "<value>"){{
+                companyId = "<value>";
+                contactId = "<value>";
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 917.49d;
                 offset = 8216.92d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-09-04T01:39:26.472Z");
-                userId = "string";
+                userId = "<value>";
 
             }};
 
@@ -240,31 +240,31 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchCrmDealRequest req = new PatchCrmDealRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 crmDeal = new CrmDeal(
 ){{
                     amount = 9874.05d;
                     closedAt = OffsetDateTime.parse("2022-07-09T12:57:05.527Z");
                     createdAt = OffsetDateTime.parse("2023-04-30T17:40:39.112Z");
                     currency = "Riel";
-                    id = "<ID>";
-                    lostReason = "string";
-                    name = "string";
-                    pipeline = "string";
+                    id = "<id>";
+                    lostReason = "<value>";
+                    name = "<value>";
+                    pipeline = "<value>";
                     probability = 9555.58d;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
-                    source = "string";
-                    stage = "string";
+                    source = "<value>";
+                    stage = "<value>";
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     updatedAt = OffsetDateTime.parse("2024-02-22T07:49:20.306Z");
-                    userId = "string";
-                    wonReason = "string";
+                    userId = "<value>";
+                    wonReason = "<value>";
 
                 }};
 
@@ -319,8 +319,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveCrmDealRequest req = new RemoveCrmDealRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveCrmDealResponse res = sdk.deal.removeCrmDeal(req);
 
@@ -373,31 +373,31 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateCrmDealRequest req = new UpdateCrmDealRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 crmDeal = new CrmDeal(
 ){{
                     amount = 854.3d;
                     closedAt = OffsetDateTime.parse("2023-01-13T15:21:09.134Z");
                     createdAt = OffsetDateTime.parse("2022-11-20T23:55:13.334Z");
                     currency = "Pound Sterling";
-                    id = "<ID>";
-                    lostReason = "string";
-                    name = "string";
-                    pipeline = "string";
+                    id = "<id>";
+                    lostReason = "<value>";
+                    name = "<value>";
+                    pipeline = "<value>";
                     probability = 2970.01d;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
-                    source = "string";
-                    stage = "string";
+                    source = "<value>";
+                    stage = "<value>";
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-02-01T00:17:19.942Z");
-                    userId = "string";
-                    wonReason = "string";
+                    userId = "<value>";
+                    wonReason = "<value>";
 
                 }};
 

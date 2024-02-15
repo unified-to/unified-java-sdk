@@ -37,22 +37,22 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateAccountingPaymentRequest req = new CreateAccountingPaymentRequest(
-                "string"){{
+                "<value>"){{
                 accountingPayment = new AccountingPayment(
 ){{
-                    accountId = "string";
-                    contactId = "string";
+                    accountId = "<value>";
+                    contactId = "<value>";
                     createdAt = OffsetDateTime.parse("2024-01-28T13:13:46.548Z");
                     currency = "Lari";
-                    id = "<ID>";
-                    invoiceId = "string";
-                    notes = "string";
-                    paymentMethod = "string";
+                    id = "<id>";
+                    invoiceId = "<value>";
+                    notes = "<value>";
+                    paymentMethod = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
-                    reference = "string";
+                    reference = "<value>";
                     totalAmount = 291.36d;
                     updatedAt = OffsetDateTime.parse("2023-10-01T03:33:47.004Z");
 
@@ -109,10 +109,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAccountingPaymentRequest req = new GetAccountingPaymentRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -167,17 +167,17 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAccountingPaymentsRequest req = new ListAccountingPaymentsRequest(
-                "string"){{
-                contactId = "string";
+                "<value>"){{
+                contactId = "<value>";
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
-                invoiceId = "string";
+                invoiceId = "<value>";
                 limit = 487.78d;
                 offset = 9308.83d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2024-02-25T18:15:35.411Z");
 
             }};
@@ -233,23 +233,23 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchAccountingPaymentRequest req = new PatchAccountingPaymentRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 accountingPayment = new AccountingPayment(
 ){{
-                    accountId = "string";
-                    contactId = "string";
+                    accountId = "<value>";
+                    contactId = "<value>";
                     createdAt = OffsetDateTime.parse("2022-02-25T02:56:43.385Z");
                     currency = "Boliviano boliviano";
-                    id = "<ID>";
-                    invoiceId = "string";
-                    notes = "string";
-                    paymentMethod = "string";
+                    id = "<id>";
+                    invoiceId = "<value>";
+                    notes = "<value>";
+                    paymentMethod = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
-                    reference = "string";
+                    reference = "<value>";
                     totalAmount = 8698.74d;
                     updatedAt = OffsetDateTime.parse("2023-11-08T12:40:48.671Z");
 
@@ -306,8 +306,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveAccountingPaymentRequest req = new RemoveAccountingPaymentRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveAccountingPaymentResponse res = sdk.payment.removeAccountingPayment(req);
 
@@ -360,23 +360,23 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateAccountingPaymentRequest req = new UpdateAccountingPaymentRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 accountingPayment = new AccountingPayment(
 ){{
-                    accountId = "string";
-                    contactId = "string";
+                    accountId = "<value>";
+                    contactId = "<value>";
                     createdAt = OffsetDateTime.parse("2022-01-04T17:30:16.475Z");
                     currency = "Sudanese Pound";
-                    id = "<ID>";
-                    invoiceId = "string";
-                    notes = "string";
-                    paymentMethod = "string";
+                    id = "<id>";
+                    invoiceId = "<value>";
+                    notes = "<value>";
+                    paymentMethod = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
-                    reference = "string";
+                    reference = "<value>";
                     totalAmount = 1869.63d;
                     updatedAt = OffsetDateTime.parse("2022-05-14T18:33:08.394Z");
 

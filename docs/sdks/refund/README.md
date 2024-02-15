@@ -31,10 +31,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAccountingRefundRequest req = new GetAccountingRefundRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -89,16 +89,16 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsRequest req = new ListAccountingRefundsRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 8743.36d;
                 offset = 6995.02d;
-                order = "string";
-                paymentId = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                paymentId = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2024-09-01T03:28:05.895Z");
 
             }};

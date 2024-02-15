@@ -57,32 +57,32 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionRequest req = new CreateCommerceCollectionRequest(
-                "string"){{
+                "<value>"){{
                 commerceCollection = new CommerceCollection(
-                    "string",
-                    "string"){{
+                    "<value>",
+                    "<value>"){{
                     createdAt = OffsetDateTime.parse("2023-06-14T12:03:57.982Z");
                     description = "Team-oriented intermediate interface";
                     isActive = false;
                     isFeatured = false;
                     isVisible = false;
                     itemIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     media = new com.unifiedapi.unifiedto.models.shared.CommerceItemMedia[]{{
                         add(new CommerceItemMedia(
-                        "string"){{
+                        "<value>"){{
                             url = "https://vivid-slump.com";
                         }}),
                     }};
-                    publicDescription = "string";
-                    publicName = "string";
+                    publicDescription = "<value>";
+                    publicName = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-08-15T05:40:39.031Z");
 
@@ -141,17 +141,17 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryRequest req = new CreateCommerceInventoryRequest(
-                "string"){{
+                "<value>"){{
                 commerceInventory = new CommerceInventory(
                     5165.08d){{
-                    id = "<ID>";
-                    itemId = "string";
-                    itemOptionId = "string";
-                    itemVariantId = "string";
-                    locationId = "string";
+                    id = "<id>";
+                    itemId = "<value>";
+                    itemOptionId = "<value>";
+                    itemVariantId = "<value>";
+                    locationId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     updatedAt = OffsetDateTime.parse("2024-01-31T03:08:58.995Z");
 
@@ -217,38 +217,38 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateCommerceItemRequest req = new CreateCommerceItemRequest(
-                "string"){{
+                "<value>"){{
                 commerceItem = new CommerceItem(
-                    "string"){{
+                    "<value>"){{
                     createdAt = OffsetDateTime.parse("2023-06-27T05:28:51.414Z");
                     description = "Object-based local intranet";
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     isTaxable = false;
                     media = new com.unifiedapi.unifiedto.models.shared.CommerceItemMedia[]{{
                         add(new CommerceItemMedia(
-                        "string"){{
+                        "<value>"){{
                             url = "http://other-external.info";
                         }}),
                     }};
-                    publicDescription = "string";
-                    publicName = "string";
+                    publicDescription = "<value>";
+                    publicName = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    type = "string";
+                    type = "<value>";
                     updatedAt = OffsetDateTime.parse("2023-01-01T01:10:35.262Z");
                     variants = new com.unifiedapi.unifiedto.models.shared.CommerceItemVariant[]{{
                         add(new CommerceItemVariant(
-                        "string"){{
-                            name = "string";
+                        "<value>"){{
+                            name = "<value>";
                         }}),
                     }};
-                    vendorName = "string";
+                    vendorName = "<value>";
 
                 }};
 
@@ -306,27 +306,27 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationRequest req = new CreateCommerceLocationRequest(
-                "string"){{
+                "<value>"){{
                 commerceLocation = new CommerceLocation(
-                    "string"){{
+                    "<value>"){{
                     address = new PropertyCommerceLocationAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "North Marysecester";
                         country = "Maldives";
                         countryCode = "CU";
                         postalCode = "81935";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
                     createdAt = OffsetDateTime.parse("2024-01-11T11:46:34.114Z");
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     updatedAt = OffsetDateTime.parse("2023-10-08T09:24:33.872Z");
 
@@ -383,10 +383,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionRequest req = new GetCommerceCollectionRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -440,10 +440,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetCommerceInventoryRequest req = new GetCommerceInventoryRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -497,10 +497,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetCommerceItemRequest req = new GetCommerceItemRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -554,10 +554,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetCommerceLocationRequest req = new GetCommerceLocationRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -612,15 +612,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsRequest req = new ListCommerceCollectionsRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 2972.15d;
                 offset = 5933.83d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-08-08T20:40:35.103Z");
 
             }};
@@ -675,17 +675,17 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListCommerceInventoriesRequest req = new ListCommerceInventoriesRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
-                itemId = "string";
+                itemId = "<value>";
                 limit = 2481.16d;
-                locationId = "string";
+                locationId = "<value>";
                 offset = 9476.38d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-10-15T22:28:16.925Z");
 
             }};
@@ -740,15 +740,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListCommerceItemsRequest req = new ListCommerceItemsRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 2553.93d;
                 offset = 4072.28d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-05-10T19:08:09.923Z");
 
             }};
@@ -803,15 +803,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListCommerceLocationsRequest req = new ListCommerceLocationsRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 2087.22d;
                 offset = 1166.59d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-06-09T14:52:37.550Z");
 
             }};
@@ -869,33 +869,33 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionRequest req = new PatchCommerceCollectionRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 commerceCollection = new CommerceCollection(
-                    "string",
-                    "string"){{
+                    "<value>",
+                    "<value>"){{
                     createdAt = OffsetDateTime.parse("2022-12-27T01:30:16.292Z");
                     description = "Polarised solution-oriented analyzer";
                     isActive = false;
                     isFeatured = false;
                     isVisible = false;
                     itemIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     media = new com.unifiedapi.unifiedto.models.shared.CommerceItemMedia[]{{
                         add(new CommerceItemMedia(
-                        "string"){{
+                        "<value>"){{
                             url = "http://voluminous-airship.net";
                         }}),
                     }};
-                    publicDescription = "string";
-                    publicName = "string";
+                    publicDescription = "<value>";
+                    publicName = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     updatedAt = OffsetDateTime.parse("2024-11-07T01:43:06.402Z");
 
@@ -954,18 +954,18 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryRequest req = new PatchCommerceInventoryRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 commerceInventory = new CommerceInventory(
                     615.23d){{
-                    id = "<ID>";
-                    itemId = "string";
-                    itemOptionId = "string";
-                    itemVariantId = "string";
-                    locationId = "string";
+                    id = "<id>";
+                    itemId = "<value>";
+                    itemOptionId = "<value>";
+                    itemVariantId = "<value>";
+                    locationId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     updatedAt = OffsetDateTime.parse("2022-10-21T06:26:02.606Z");
 
@@ -1031,39 +1031,39 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchCommerceItemRequest req = new PatchCommerceItemRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 commerceItem = new CommerceItem(
-                    "string"){{
+                    "<value>"){{
                     createdAt = OffsetDateTime.parse("2023-06-21T03:47:22.544Z");
                     description = "Front-line explicit circuit";
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     isTaxable = false;
                     media = new com.unifiedapi.unifiedto.models.shared.CommerceItemMedia[]{{
                         add(new CommerceItemMedia(
-                        "string"){{
+                        "<value>"){{
                             url = "http://irresponsible-reason.biz";
                         }}),
                     }};
-                    publicDescription = "string";
-                    publicName = "string";
+                    publicDescription = "<value>";
+                    publicName = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    type = "string";
+                    type = "<value>";
                     updatedAt = OffsetDateTime.parse("2023-05-09T22:12:43.888Z");
                     variants = new com.unifiedapi.unifiedto.models.shared.CommerceItemVariant[]{{
                         add(new CommerceItemVariant(
-                        "string"){{
-                            name = "string";
+                        "<value>"){{
+                            name = "<value>";
                         }}),
                     }};
-                    vendorName = "string";
+                    vendorName = "<value>";
 
                 }};
 
@@ -1121,28 +1121,28 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationRequest req = new PatchCommerceLocationRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 commerceLocation = new CommerceLocation(
-                    "string"){{
+                    "<value>"){{
                     address = new PropertyCommerceLocationAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "Lonniefurt";
                         country = "Libyan Arab Jamahiriya";
                         countryCode = "KM";
                         postalCode = "64647";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
                     createdAt = OffsetDateTime.parse("2023-03-12T06:32:06.220Z");
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     updatedAt = OffsetDateTime.parse("2023-04-15T19:35:06.232Z");
 
@@ -1199,8 +1199,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionRequest req = new RemoveCommerceCollectionRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionResponse res = sdk.commerce.removeCommerceCollection(req);
 
@@ -1251,8 +1251,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryRequest req = new RemoveCommerceInventoryRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryResponse res = sdk.commerce.removeCommerceInventory(req);
 
@@ -1303,8 +1303,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemRequest req = new RemoveCommerceItemRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemResponse res = sdk.commerce.removeCommerceItem(req);
 
@@ -1355,8 +1355,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationRequest req = new RemoveCommerceLocationRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationResponse res = sdk.commerce.removeCommerceLocation(req);
 
@@ -1411,33 +1411,33 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionRequest req = new UpdateCommerceCollectionRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 commerceCollection = new CommerceCollection(
-                    "string",
-                    "string"){{
+                    "<value>",
+                    "<value>"){{
                     createdAt = OffsetDateTime.parse("2024-07-30T10:24:18.569Z");
                     description = "Sharable dynamic solution";
                     isActive = false;
                     isFeatured = false;
                     isVisible = false;
                     itemIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     media = new com.unifiedapi.unifiedto.models.shared.CommerceItemMedia[]{{
                         add(new CommerceItemMedia(
-                        "string"){{
+                        "<value>"){{
                             url = "http://irritating-competence.com";
                         }}),
                     }};
-                    publicDescription = "string";
-                    publicName = "string";
+                    publicDescription = "<value>";
+                    publicName = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     updatedAt = OffsetDateTime.parse("2022-06-03T01:49:37.651Z");
 
@@ -1496,18 +1496,18 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryRequest req = new UpdateCommerceInventoryRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 commerceInventory = new CommerceInventory(
                     9360.02d){{
-                    id = "<ID>";
-                    itemId = "string";
-                    itemOptionId = "string";
-                    itemVariantId = "string";
-                    locationId = "string";
+                    id = "<id>";
+                    itemId = "<value>";
+                    itemOptionId = "<value>";
+                    itemVariantId = "<value>";
+                    locationId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     updatedAt = OffsetDateTime.parse("2024-08-11T01:00:50.639Z");
 
@@ -1573,39 +1573,39 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemRequest req = new UpdateCommerceItemRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 commerceItem = new CommerceItem(
-                    "string"){{
+                    "<value>"){{
                     createdAt = OffsetDateTime.parse("2023-12-27T01:13:33.758Z");
                     description = "Advanced intangible toolset";
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     isTaxable = false;
                     media = new com.unifiedapi.unifiedto.models.shared.CommerceItemMedia[]{{
                         add(new CommerceItemMedia(
-                        "string"){{
+                        "<value>"){{
                             url = "https://reasonable-cast.biz";
                         }}),
                     }};
-                    publicDescription = "string";
-                    publicName = "string";
+                    publicDescription = "<value>";
+                    publicName = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    type = "string";
+                    type = "<value>";
                     updatedAt = OffsetDateTime.parse("2024-07-17T00:14:33.118Z");
                     variants = new com.unifiedapi.unifiedto.models.shared.CommerceItemVariant[]{{
                         add(new CommerceItemVariant(
-                        "string"){{
-                            name = "string";
+                        "<value>"){{
+                            name = "<value>";
                         }}),
                     }};
-                    vendorName = "string";
+                    vendorName = "<value>";
 
                 }};
 
@@ -1663,28 +1663,28 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationRequest req = new UpdateCommerceLocationRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 commerceLocation = new CommerceLocation(
-                    "string"){{
+                    "<value>"){{
                     address = new PropertyCommerceLocationAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "Stillwater";
                         country = "Sierra Leone";
                         countryCode = "AL";
                         postalCode = "49876-8332";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
                     createdAt = OffsetDateTime.parse("2022-04-19T11:29:36.755Z");
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     updatedAt = OffsetDateTime.parse("2022-06-11T12:53:41.097Z");
 

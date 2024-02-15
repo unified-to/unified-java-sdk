@@ -56,56 +56,56 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateAccountingContactRequest req = new CreateAccountingContactRequest(
-                "string"){{
+                "<value>"){{
                 accountingContact = new AccountingContact(
 ){{
                     billingAddress = new PropertyAccountingContactBillingAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "Lake Benny";
                         country = "Azerbaijan";
                         countryCode = "GT";
                         postalCode = "48359-3238";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
                     createdAt = OffsetDateTime.parse("2024-02-19T03:22:44.048Z");
                     currency = "Peso Uruguayo";
                     emails = new com.unifiedapi.unifiedto.models.shared.AccountingEmail[]{{
                         add(new AccountingEmail(
-                        "string"){{
+                        "<value>"){{
                             email = "Ubaldo_Cruickshank82@hotmail.com";
                         }}),
                     }};
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     isCustomer = false;
                     isSupplier = false;
-                    name = "string";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     shippingAddress = new PropertyAccountingContactShippingAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "North Jazmynefurt";
                         country = "France";
                         countryCode = "BE";
                         postalCode = "36835-6542";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
                     taxExemption = TaxExemption.FEDERAL_GOV;
-                    taxNumber = "string";
+                    taxNumber = "<value>";
                     telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
                         add(new AccountingTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-09-05T13:56:20.676Z");
@@ -170,48 +170,48 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateCrmContactRequest req = new CreateCrmContactRequest(
-                "string"){{
+                "<value>"){{
                 crmContact = new CrmContact(
 ){{
                     address = new PropertyCrmContactAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "Steuberview";
                         country = "Bulgaria";
                         countryCode = "QA";
                         postalCode = "98809";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
                     company = "Pollich, Emard and Parker";
                     companyIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     createdAt = OffsetDateTime.parse("2024-03-07T10:13:21.309Z");
                     dealIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(
                         ){{}}),
                     }};
-                    id = "<ID>";
-                    name = "string";
+                    id = "<id>";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
                         add(new CrmTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
-                    title = "string";
+                    title = "<value>";
                     updatedAt = OffsetDateTime.parse("2024-03-21T17:10:02.454Z");
-                    userId = "string";
+                    userId = "<value>";
 
                 }};
 
@@ -272,30 +272,30 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateUcContactRequest req = new CreateUcContactRequest(
-                "string"){{
+                "<value>"){{
                 ucContact = new UcContact(
 ){{
                     company = "Gottlieb - Becker";
                     createdAt = OffsetDateTime.parse("2024-07-20T15:00:17.424Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
                         add(new UcEmail(
-                        "string"){{
+                        "<value>"){{
                             email = "Elliot78@hotmail.com";
                         }}),
                     }};
-                    id = "<ID>";
-                    name = "string";
+                    id = "<id>";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
                         add(new UcTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
-                    title = "string";
+                    title = "<value>";
                     updatedAt = OffsetDateTime.parse("2024-09-27T22:23:04.622Z");
 
                 }};
@@ -351,10 +351,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAccountingContactRequest req = new GetAccountingContactRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -408,10 +408,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetCrmContactRequest req = new GetCrmContactRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -465,10 +465,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetUcContactRequest req = new GetUcContactRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -523,16 +523,16 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAccountingContactsRequest req = new ListAccountingContactsRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 4596.32d;
                 offset = 8881.9d;
-                order = "string";
-                query = "string";
-                sort = "string";
-                type = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
+                type = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-09-26T14:00:38.736Z");
 
             }};
@@ -587,19 +587,19 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListCrmContactsRequest req = new ListCrmContactsRequest(
-                "string"){{
-                companyId = "string";
-                dealId = "string";
+                "<value>"){{
+                companyId = "<value>";
+                dealId = "<value>";
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 7110.24d;
                 offset = 2657.43d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-11-15T19:36:59.401Z");
-                userId = "string";
+                userId = "<value>";
 
             }};
 
@@ -653,17 +653,17 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListUcContactsRequest req = new ListUcContactsRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 5333.71d;
                 offset = 7775.9d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-10-26T05:35:01.805Z");
-                userId = "string";
+                userId = "<value>";
 
             }};
 
@@ -725,57 +725,57 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchAccountingContactRequest req = new PatchAccountingContactRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 accountingContact = new AccountingContact(
 ){{
                     billingAddress = new PropertyAccountingContactBillingAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "Sylvestermouth";
                         country = "Norfolk Island";
                         countryCode = "BN";
                         postalCode = "34531-3519";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
                     createdAt = OffsetDateTime.parse("2024-02-14T18:48:39.369Z");
                     currency = "Singapore Dollar";
                     emails = new com.unifiedapi.unifiedto.models.shared.AccountingEmail[]{{
                         add(new AccountingEmail(
-                        "string"){{
+                        "<value>"){{
                             email = "Anya_Murphy@yahoo.com";
                         }}),
                     }};
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     isCustomer = false;
                     isSupplier = false;
-                    name = "string";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     shippingAddress = new PropertyAccountingContactShippingAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "O'Connellburgh";
                         country = "Guinea-Bissau";
                         countryCode = "MV";
                         postalCode = "91251-4209";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
                     taxExemption = TaxExemption.EDUCATIONAL_ORG;
-                    taxNumber = "string";
+                    taxNumber = "<value>";
                     telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
                         add(new AccountingTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
                     updatedAt = OffsetDateTime.parse("2022-01-11T11:33:25.380Z");
@@ -840,49 +840,49 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchCrmContactRequest req = new PatchCrmContactRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 crmContact = new CrmContact(
 ){{
                     address = new PropertyCrmContactAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "North Anne";
                         country = "Puerto Rico";
                         countryCode = "GD";
                         postalCode = "31015";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
                     company = "Goyette - Schultz";
                     companyIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     createdAt = OffsetDateTime.parse("2022-07-12T00:15:47.150Z");
                     dealIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(
                         ){{}}),
                     }};
-                    id = "<ID>";
-                    name = "string";
+                    id = "<id>";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
                         add(new CrmTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
-                    title = "string";
+                    title = "<value>";
                     updatedAt = OffsetDateTime.parse("2022-11-28T22:10:52.030Z");
-                    userId = "string";
+                    userId = "<value>";
 
                 }};
 
@@ -943,31 +943,31 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchUcContactRequest req = new PatchUcContactRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 ucContact = new UcContact(
 ){{
                     company = "Runolfsdottir, Boehm and Toy";
                     createdAt = OffsetDateTime.parse("2024-05-28T10:05:49.902Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
                         add(new UcEmail(
-                        "string"){{
+                        "<value>"){{
                             email = "Arlie78@hotmail.com";
                         }}),
                     }};
-                    id = "<ID>";
-                    name = "string";
+                    id = "<id>";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
                         add(new UcTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
-                    title = "string";
+                    title = "<value>";
                     updatedAt = OffsetDateTime.parse("2024-05-08T07:43:27.358Z");
 
                 }};
@@ -1023,8 +1023,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveAccountingContactRequest req = new RemoveAccountingContactRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveAccountingContactResponse res = sdk.contact.removeAccountingContact(req);
 
@@ -1075,8 +1075,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveCrmContactRequest req = new RemoveCrmContactRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveCrmContactResponse res = sdk.contact.removeCrmContact(req);
 
@@ -1127,8 +1127,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveUcContactRequest req = new RemoveUcContactRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveUcContactResponse res = sdk.contact.removeUcContact(req);
 
@@ -1188,57 +1188,57 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateAccountingContactRequest req = new UpdateAccountingContactRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 accountingContact = new AccountingContact(
 ){{
                     billingAddress = new PropertyAccountingContactBillingAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "Mayaguez";
                         country = "Ghana";
                         countryCode = "JE";
                         postalCode = "16521-4269";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
                     createdAt = OffsetDateTime.parse("2023-02-14T04:27:23.372Z");
                     currency = "European Monetary Unit (E.M.U.-6)";
                     emails = new com.unifiedapi.unifiedto.models.shared.AccountingEmail[]{{
                         add(new AccountingEmail(
-                        "string"){{
+                        "<value>"){{
                             email = "Kevin.Leffler@gmail.com";
                         }}),
                     }};
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     isCustomer = false;
                     isSupplier = false;
-                    name = "string";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     shippingAddress = new PropertyAccountingContactShippingAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "Port Arely";
                         country = "Norway";
                         countryCode = "GP";
                         postalCode = "99093-9229";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
                     taxExemption = TaxExemption.MEDICAL_ORG;
-                    taxNumber = "string";
+                    taxNumber = "<value>";
                     telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
                         add(new AccountingTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-08-30T07:55:45.909Z");
@@ -1303,49 +1303,49 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateCrmContactRequest req = new UpdateCrmContactRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 crmContact = new CrmContact(
 ){{
                     address = new PropertyCrmContactAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "Fort Carlee";
                         country = "Greenland";
                         countryCode = "AQ";
                         postalCode = "88650";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
                     company = "Hoeger Group";
                     companyIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     createdAt = OffsetDateTime.parse("2022-02-12T12:31:59.837Z");
                     dealIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
                         add(new CrmEmail(
                         ){{}}),
                     }};
-                    id = "<ID>";
-                    name = "string";
+                    id = "<id>";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
                         add(new CrmTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
-                    title = "string";
+                    title = "<value>";
                     updatedAt = OffsetDateTime.parse("2023-09-02T17:59:32.331Z");
-                    userId = "string";
+                    userId = "<value>";
 
                 }};
 
@@ -1406,31 +1406,31 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateUcContactRequest req = new UpdateUcContactRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 ucContact = new UcContact(
 ){{
                     company = "Marquardt Group";
                     createdAt = OffsetDateTime.parse("2024-02-21T18:47:57.314Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.UcEmail[]{{
                         add(new UcEmail(
-                        "string"){{
+                        "<value>"){{
                             email = "Stephany25@yahoo.com";
                         }}),
                     }};
-                    id = "<ID>";
-                    name = "string";
+                    id = "<id>";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.UcTelephone[]{{
                         add(new UcTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
-                    title = "string";
+                    title = "<value>";
                     updatedAt = OffsetDateTime.parse("2022-09-20T18:11:34.218Z");
 
                 }};

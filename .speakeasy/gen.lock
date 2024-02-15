@@ -4,15 +4,15 @@ management:
   docChecksum: 79b2d70f67c25556653550094e92a861
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.253.0
-  releaseVersion: 0.15.5
-  configChecksum: a56719f94d181acf2087f3f34cfe1c73
+  generationVersion: 2.258.0
+  releaseVersion: 0.16.0
+  configChecksum: de36210b8e7cee5d8b8242724535839f
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
 features:
   java:
-    core: 3.2.2
+    core: 3.5.0
     globalSecurity: 2.81.2
     globalServerURLs: 2.82.1
 generatedFiles:
@@ -77,6 +77,7 @@ generatedFiles:
   - gradle/wrapper/gradle-wrapper.properties
   - gradlew
   - gradlew.bat
+  - settings.gradle
   - lib/build.gradle
   - lib/src/main/java/com/unifiedapi/unifiedto/utils/DateTimeDeserializer.java
   - lib/src/main/java/com/unifiedapi/unifiedto/utils/DateTimeSerializer.java
@@ -100,7 +101,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/utils/SpeakeasyMetadata.java
   - lib/src/main/java/com/unifiedapi/unifiedto/utils/Types.java
   - lib/src/main/java/com/unifiedapi/unifiedto/utils/Utils.java
-  - settings.gradle
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingAccountRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingAccountResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingContactRequest.java

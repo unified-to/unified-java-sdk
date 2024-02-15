@@ -38,26 +38,26 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateAtsInterviewRequest req = new CreateAtsInterviewRequest(
-                "string"){{
+                "<value>"){{
                 atsInterview = new AtsInterview(
 ){{
-                    applicationId = "string";
-                    candidateId = "string";
+                    applicationId = "<value>";
+                    candidateId = "<value>";
                     createdAt = OffsetDateTime.parse("2023-01-11T04:08:22.567Z");
                     endAt = OffsetDateTime.parse("2024-12-21T08:47:56.138Z");
-                    externalEventXref = "string";
-                    id = "<ID>";
-                    jobId = "string";
-                    location = "string";
+                    externalEventXref = "<value>";
+                    id = "<id>";
+                    jobId = "<value>";
+                    location = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     startAt = OffsetDateTime.parse("2023-11-20T00:14:00.277Z");
                     status = AtsInterviewStatus.NEEDS_SCHEDULING;
                     updatedAt = OffsetDateTime.parse("2022-02-07T15:15:23.855Z");
                     userIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
 
                 }};
@@ -113,10 +113,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAtsInterviewRequest req = new GetAtsInterviewRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -171,16 +171,16 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAtsInterviewsRequest req = new ListAtsInterviewsRequest(
-                "string"){{
-                applicationId = "string";
+                "<value>"){{
+                applicationId = "<value>";
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 2562.12d;
                 offset = 1185.02d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-09-28T15:15:00.508Z");
 
             }};
@@ -237,27 +237,27 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchAtsInterviewRequest req = new PatchAtsInterviewRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 atsInterview = new AtsInterview(
 ){{
-                    applicationId = "string";
-                    candidateId = "string";
+                    applicationId = "<value>";
+                    candidateId = "<value>";
                     createdAt = OffsetDateTime.parse("2024-09-11T19:09:34.526Z");
                     endAt = OffsetDateTime.parse("2022-05-28T22:25:51.616Z");
-                    externalEventXref = "string";
-                    id = "<ID>";
-                    jobId = "string";
-                    location = "string";
+                    externalEventXref = "<value>";
+                    id = "<id>";
+                    jobId = "<value>";
+                    location = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     startAt = OffsetDateTime.parse("2022-09-10T07:32:43.966Z");
                     status = AtsInterviewStatus.CANCELED;
                     updatedAt = OffsetDateTime.parse("2024-03-18T02:52:45.725Z");
                     userIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
 
                 }};
@@ -313,8 +313,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveAtsInterviewRequest req = new RemoveAtsInterviewRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveAtsInterviewResponse res = sdk.interview.removeAtsInterview(req);
 
@@ -368,27 +368,27 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateAtsInterviewRequest req = new UpdateAtsInterviewRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 atsInterview = new AtsInterview(
 ){{
-                    applicationId = "string";
-                    candidateId = "string";
+                    applicationId = "<value>";
+                    candidateId = "<value>";
                     createdAt = OffsetDateTime.parse("2024-05-06T05:22:44.534Z");
                     endAt = OffsetDateTime.parse("2023-03-29T20:29:22.648Z");
-                    externalEventXref = "string";
-                    id = "<ID>";
-                    jobId = "string";
-                    location = "string";
+                    externalEventXref = "<value>";
+                    id = "<id>";
+                    jobId = "<value>";
+                    location = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     startAt = OffsetDateTime.parse("2024-05-05T07:21:58.674Z");
                     status = AtsInterviewStatus.COMPLETE;
                     updatedAt = OffsetDateTime.parse("2022-05-01T17:04:47.962Z");
                     userIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
 
                 }};

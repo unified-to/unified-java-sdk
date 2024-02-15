@@ -37,18 +37,18 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineRequest req = new CreateCrmPipelineRequest(
-                "string"){{
+                "<value>"){{
                 crmPipeline = new CrmPipeline(
 ){{
                     createdAt = OffsetDateTime.parse("2024-06-24T10:05:30.432Z");
                     dealProbability = 6254.97d;
                     displayOrder = 3052.57d;
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
-                    name = "string";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     updatedAt = OffsetDateTime.parse("2022-06-06T17:15:48.268Z");
 
@@ -105,10 +105,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetCrmPipelineRequest req = new GetCrmPipelineRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -163,15 +163,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesRequest req = new ListCrmPipelinesRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 3318.18d;
                 offset = 4834.28d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-04-29T18:23:30.472Z");
 
             }};
@@ -227,19 +227,19 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineRequest req = new PatchCrmPipelineRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 crmPipeline = new CrmPipeline(
 ){{
                     createdAt = OffsetDateTime.parse("2024-08-26T14:31:39.156Z");
                     dealProbability = 8620.92d;
                     displayOrder = 4178.43d;
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
-                    name = "string";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     updatedAt = OffsetDateTime.parse("2022-02-25T13:09:02.644Z");
 
@@ -296,8 +296,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineRequest req = new RemoveCrmPipelineRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineResponse res = sdk.pipeline.removeCrmPipeline(req);
 
@@ -350,19 +350,19 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineRequest req = new UpdateCrmPipelineRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 crmPipeline = new CrmPipeline(
 ){{
                     createdAt = OffsetDateTime.parse("2022-12-27T16:21:58.595Z");
                     dealProbability = 8923.83d;
                     displayOrder = 5142.22d;
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
-                    name = "string";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     updatedAt = OffsetDateTime.parse("2023-11-03T02:41:03.928Z");
 

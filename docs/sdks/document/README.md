@@ -38,24 +38,24 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentRequest req = new CreateAtsDocumentRequest(
-                "string"){{
+                "<value>"){{
                 atsDocument = new AtsDocument(
 ){{
-                    applicationId = "string";
-                    candidateId = "string";
+                    applicationId = "<value>";
+                    candidateId = "<value>";
                     createdAt = OffsetDateTime.parse("2022-04-25T01:00:46.478Z");
-                    documentData = "string";
-                    documentUrl = "string";
+                    documentData = "<value>";
+                    documentUrl = "<value>";
                     filename = "mouse_per_missouri.mp4";
-                    id = "<ID>";
-                    jobId = "string";
+                    id = "<id>";
+                    jobId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     type = AtsDocumentType.OFFER_PACKET;
                     updatedAt = OffsetDateTime.parse("2022-12-28T17:22:48.342Z");
-                    userId = "string";
+                    userId = "<value>";
 
                 }};
 
@@ -110,10 +110,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAtsDocumentRequest req = new GetAtsDocumentRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -168,16 +168,16 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsRequest req = new ListAtsDocumentsRequest(
-                "string"){{
-                applicationId = "string";
+                "<value>"){{
+                applicationId = "<value>";
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 9635.37d;
                 offset = 8402.77d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-08-31T00:55:54.895Z");
 
             }};
@@ -234,25 +234,25 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentRequest req = new PatchAtsDocumentRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 atsDocument = new AtsDocument(
 ){{
-                    applicationId = "string";
-                    candidateId = "string";
+                    applicationId = "<value>";
+                    candidateId = "<value>";
                     createdAt = OffsetDateTime.parse("2022-04-01T11:33:08.084Z");
-                    documentData = "string";
-                    documentUrl = "string";
+                    documentData = "<value>";
+                    documentUrl = "<value>";
                     filename = "future_underpin.mp4v";
-                    id = "<ID>";
-                    jobId = "string";
+                    id = "<id>";
+                    jobId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     type = AtsDocumentType.OFFER_LETTER;
                     updatedAt = OffsetDateTime.parse("2023-02-14T10:37:18.255Z");
-                    userId = "string";
+                    userId = "<value>";
 
                 }};
 
@@ -307,8 +307,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentRequest req = new RemoveAtsDocumentRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentResponse res = sdk.document.removeAtsDocument(req);
 
@@ -362,25 +362,25 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentRequest req = new UpdateAtsDocumentRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 atsDocument = new AtsDocument(
 ){{
-                    applicationId = "string";
-                    candidateId = "string";
+                    applicationId = "<value>";
+                    candidateId = "<value>";
                     createdAt = OffsetDateTime.parse("2022-07-05T17:05:49.106Z");
-                    documentData = "string";
-                    documentUrl = "string";
+                    documentData = "<value>";
+                    documentUrl = "<value>";
                     filename = "unbranded_reprehenderit.jpg";
-                    id = "<ID>";
-                    jobId = "string";
+                    id = "<id>";
+                    jobId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     type = AtsDocumentType.OFFER_PACKET;
                     updatedAt = OffsetDateTime.parse("2022-12-03T00:21:50.487Z");
-                    userId = "string";
+                    userId = "<value>";
 
                 }};
 

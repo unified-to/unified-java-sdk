@@ -32,19 +32,19 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest req = new GetUnifiedIntegrationAuthRequest(
-                "string",
-                "string"){{
-                env = "string";
-                externalXref = "string";
-                failureRedirect = "string";
-                lang = "string";
+                "<value>",
+                "<value>"){{
+                env = "<value>";
+                externalXref = "<value>";
+                failureRedirect = "<value>";
+                lang = "<value>";
                 redirect = false;
                 scopes = new com.unifiedapi.unifiedto.models.operations.Scopes[]{{
                     add(Scopes.HRIS_EMPLOYEE_WRITE),
                 }};
-                state = "string";
-                subdomain = "string";
-                successRedirect = "string";
+                state = "New Jersey";
+                subdomain = "<value>";
+                successRedirect = "<value>";
 
             }};
 
@@ -97,13 +97,13 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginRequest req = new GetUnifiedIntegrationLoginRequest(
-                "string",
-                "string"){{
-                env = "string";
-                failureRedirect = "string";
+                "<value>",
+                "<value>"){{
+                env = "<value>";
+                failureRedirect = "<value>";
                 redirect = false;
-                state = "string";
-                successRedirect = "string";
+                state = "Virginia";
+                successRedirect = "<value>";
 
             }};
 

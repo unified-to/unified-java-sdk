@@ -41,29 +41,29 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateTicketingCustomerRequest req = new CreateTicketingCustomerRequest(
-                "string"){{
+                "<value>"){{
                 ticketingCustomer = new TicketingCustomer(
 ){{
                     createdAt = OffsetDateTime.parse("2023-06-19T18:45:57.085Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
                         add(new TicketingEmail(
-                        "string"){{
+                        "<value>"){{
                             email = "Jenifer.Friesen50@yahoo.com";
                         }}),
                     }};
-                    id = "<ID>";
-                    name = "string";
+                    id = "<id>";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.TicketingTelephone[]{{
                         add(new TicketingTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
                     updatedAt = OffsetDateTime.parse("2024-08-22T08:59:42.052Z");
@@ -121,10 +121,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetTicketingCustomerRequest req = new GetTicketingCustomerRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -179,15 +179,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListTicketingCustomersRequest req = new ListTicketingCustomersRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 3917.11d;
                 offset = 274.81d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-06-05T19:45:16.674Z");
 
             }};
@@ -247,30 +247,30 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchTicketingCustomerRequest req = new PatchTicketingCustomerRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 ticketingCustomer = new TicketingCustomer(
 ){{
                     createdAt = OffsetDateTime.parse("2024-06-30T15:17:02.043Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
                         add(new TicketingEmail(
-                        "string"){{
+                        "<value>"){{
                             email = "Rosalinda.Abshire11@hotmail.com";
                         }}),
                     }};
-                    id = "<ID>";
-                    name = "string";
+                    id = "<id>";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.TicketingTelephone[]{{
                         add(new TicketingTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
                     updatedAt = OffsetDateTime.parse("2022-10-01T09:15:22.227Z");
@@ -328,8 +328,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveTicketingCustomerRequest req = new RemoveTicketingCustomerRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveTicketingCustomerResponse res = sdk.customer.removeTicketingCustomer(req);
 
@@ -386,30 +386,30 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateTicketingCustomerRequest req = new UpdateTicketingCustomerRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 ticketingCustomer = new TicketingCustomer(
 ){{
                     createdAt = OffsetDateTime.parse("2024-10-13T11:44:40.953Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.TicketingEmail[]{{
                         add(new TicketingEmail(
-                        "string"){{
+                        "<value>"){{
                             email = "Demetris72@hotmail.com";
                         }}),
                     }};
-                    id = "<ID>";
-                    name = "string";
+                    id = "<id>";
+                    name = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.TicketingTelephone[]{{
                         add(new TicketingTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-06-02T22:17:50.071Z");

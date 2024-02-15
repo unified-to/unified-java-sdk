@@ -43,55 +43,55 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateAtsCandidateRequest req = new CreateAtsCandidateRequest(
-                "string"){{
+                "<value>"){{
                 atsCandidate = new AtsCandidate(
 ){{
                     address = new PropertyAtsCandidateAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "South Hill";
                         country = "Denmark";
                         countryCode = "KM";
                         postalCode = "72991-5163";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
-                    companyId = "string";
+                    companyId = "<value>";
                     companyName = "Pollich - Lubowitz";
                     createdAt = OffsetDateTime.parse("2022-03-06T00:47:39.352Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
                         add(new AtsEmail(
-                        "string"){{
+                        "<value>"){{
                             email = "Ransom.OReilly99@yahoo.com";
                         }}),
                     }};
-                    externalId = "string";
-                    id = "<ID>";
-                    imageUrl = "string";
+                    externalId = "<value>";
+                    id = "<id>";
+                    imageUrl = "<value>";
                     linkUrls = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    name = "string";
+                    name = "<value>";
                     origin = Origin.AGENCY;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     sources = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.AtsTelephone[]{{
                         add(new AtsTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
-                    title = "string";
+                    title = "<value>";
                     updatedAt = OffsetDateTime.parse("2022-09-27T06:32:21.998Z");
 
                 }};
@@ -147,10 +147,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAtsCandidateRequest req = new GetAtsCandidateRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -205,15 +205,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAtsCandidatesRequest req = new ListAtsCandidatesRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 6384.09d;
                 offset = 7452.94d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-03-18T00:58:25.541Z");
 
             }};
@@ -275,56 +275,56 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchAtsCandidateRequest req = new PatchAtsCandidateRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 atsCandidate = new AtsCandidate(
 ){{
                     address = new PropertyAtsCandidateAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "Fort Bridget";
                         country = "Sri Lanka";
                         countryCode = "GI";
                         postalCode = "46054";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
-                    companyId = "string";
+                    companyId = "<value>";
                     companyName = "Donnelly - Bartell";
                     createdAt = OffsetDateTime.parse("2024-01-07T04:20:35.612Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
                         add(new AtsEmail(
-                        "string"){{
+                        "<value>"){{
                             email = "Elissa62@yahoo.com";
                         }}),
                     }};
-                    externalId = "string";
-                    id = "<ID>";
-                    imageUrl = "string";
+                    externalId = "<value>";
+                    id = "<id>";
+                    imageUrl = "<value>";
                     linkUrls = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    name = "string";
+                    name = "<value>";
                     origin = Origin.INTERNAL;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     sources = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.AtsTelephone[]{{
                         add(new AtsTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
-                    title = "string";
+                    title = "<value>";
                     updatedAt = OffsetDateTime.parse("2024-09-22T18:26:07.211Z");
 
                 }};
@@ -380,8 +380,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveAtsCandidateRequest req = new RemoveAtsCandidateRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveAtsCandidateResponse res = sdk.candidate.removeAtsCandidate(req);
 
@@ -440,56 +440,56 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateAtsCandidateRequest req = new UpdateAtsCandidateRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 atsCandidate = new AtsCandidate(
 ){{
                     address = new PropertyAtsCandidateAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "Hintzborough";
                         country = "Afghanistan";
                         countryCode = "TF";
                         postalCode = "39423";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
-                    companyId = "string";
+                    companyId = "<value>";
                     companyName = "O'Reilly Inc";
                     createdAt = OffsetDateTime.parse("2023-08-31T03:55:05.691Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
                         add(new AtsEmail(
-                        "string"){{
+                        "<value>"){{
                             email = "Cary37@yahoo.com";
                         }}),
                     }};
-                    externalId = "string";
-                    id = "<ID>";
-                    imageUrl = "string";
+                    externalId = "<value>";
+                    id = "<id>";
+                    imageUrl = "<value>";
                     linkUrls = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    name = "string";
+                    name = "<value>";
                     origin = Origin.UNIVERSITY;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     sources = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.AtsTelephone[]{{
                         add(new AtsTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
-                    title = "string";
+                    title = "<value>";
                     updatedAt = OffsetDateTime.parse("2024-04-15T00:30:17.967Z");
 
                 }};

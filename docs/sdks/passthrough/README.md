@@ -34,11 +34,11 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreatePassthroughRequest req = new CreatePassthroughRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 requestBody = new java.util.HashMap<String, java.lang.Object>(
                 ){{
-                    put("key", "string");
+                    put("key", "<value>");
                 }};
 
             }};
@@ -92,8 +92,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListPassthroughsRequest req = new ListPassthroughsRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.ListPassthroughsResponse res = sdk.passthrough.listPassthroughs(req);
 
@@ -144,11 +144,11 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchPassthroughRequest req = new PatchPassthroughRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 requestBody = new java.util.HashMap<String, java.lang.Object>(
                 ){{
-                    put("key", "string");
+                    put("key", "<value>");
                 }};
 
             }};
@@ -202,8 +202,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemovePassthroughRequest req = new RemovePassthroughRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemovePassthroughResponse res = sdk.passthrough.removePassthrough(req);
 
@@ -254,11 +254,11 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdatePassthroughRequest req = new UpdatePassthroughRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 requestBody = new java.util.HashMap<String, java.lang.Object>(
                 ){{
-                    put("key", "string");
+                    put("key", "<value>");
                 }};
 
             }};

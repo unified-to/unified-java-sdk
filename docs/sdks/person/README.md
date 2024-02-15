@@ -30,11 +30,11 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleRequest req = new ListEnrichPeopleRequest(
-                "string"){{
+                "<value>"){{
                 email = "Rosendo53@gmail.com";
-                linkedinUrl = "string";
-                name = "string";
-                twitter = "string";
+                linkedinUrl = "<value>";
+                name = "<value>";
+                twitter = "<value>";
 
             }};
 

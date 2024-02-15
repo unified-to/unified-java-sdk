@@ -71,23 +71,23 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationRequest req = new CreateAtsApplicationRequest(
-                "string"){{
+                "<value>"){{
                 atsApplication = new AtsApplication(
 ){{
                     appliedAt = OffsetDateTime.parse("2024-03-09T05:03:52.917Z");
-                    candidateId = "string";
+                    candidateId = "<value>";
                     createdAt = OffsetDateTime.parse("2024-09-22T12:50:56.305Z");
                     hiredAt = OffsetDateTime.parse("2023-01-19T06:26:51.678Z");
-                    id = "<ID>";
-                    jobId = "string";
-                    originalStatus = "string";
+                    id = "<id>";
+                    jobId = "<value>";
+                    originalStatus = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     rejectedAt = OffsetDateTime.parse("2023-01-30T06:58:14.500Z");
-                    rejectedReason = "string";
-                    source = "string";
+                    rejectedReason = "<value>";
+                    source = "<value>";
                     status = AtsApplicationStatus.SECOND_INTERVIEW;
                     updatedAt = OffsetDateTime.parse("2024-09-21T21:31:42.360Z");
 
@@ -152,55 +152,55 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateAtsCandidateRequest req = new CreateAtsCandidateRequest(
-                "string"){{
+                "<value>"){{
                 atsCandidate = new AtsCandidate(
 ){{
                     address = new PropertyAtsCandidateAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "South Hill";
                         country = "Denmark";
                         countryCode = "KM";
                         postalCode = "72991-5163";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
-                    companyId = "string";
+                    companyId = "<value>";
                     companyName = "Pollich - Lubowitz";
                     createdAt = OffsetDateTime.parse("2022-03-06T00:47:39.352Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
                         add(new AtsEmail(
-                        "string"){{
+                        "<value>"){{
                             email = "Ransom.OReilly99@yahoo.com";
                         }}),
                     }};
-                    externalId = "string";
-                    id = "<ID>";
-                    imageUrl = "string";
+                    externalId = "<value>";
+                    id = "<id>";
+                    imageUrl = "<value>";
                     linkUrls = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    name = "string";
+                    name = "<value>";
                     origin = Origin.AGENCY;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     sources = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.AtsTelephone[]{{
                         add(new AtsTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
-                    title = "string";
+                    title = "<value>";
                     updatedAt = OffsetDateTime.parse("2022-09-27T06:32:21.998Z");
 
                 }};
@@ -259,24 +259,24 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentRequest req = new CreateAtsDocumentRequest(
-                "string"){{
+                "<value>"){{
                 atsDocument = new AtsDocument(
 ){{
-                    applicationId = "string";
-                    candidateId = "string";
+                    applicationId = "<value>";
+                    candidateId = "<value>";
                     createdAt = OffsetDateTime.parse("2022-04-25T01:00:46.478Z");
-                    documentData = "string";
-                    documentUrl = "string";
+                    documentData = "<value>";
+                    documentUrl = "<value>";
                     filename = "mouse_per_missouri.mp4";
-                    id = "<ID>";
-                    jobId = "string";
+                    id = "<id>";
+                    jobId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     type = AtsDocumentType.OFFER_PACKET;
                     updatedAt = OffsetDateTime.parse("2022-12-28T17:22:48.342Z");
-                    userId = "string";
+                    userId = "<value>";
 
                 }};
 
@@ -334,26 +334,26 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateAtsInterviewRequest req = new CreateAtsInterviewRequest(
-                "string"){{
+                "<value>"){{
                 atsInterview = new AtsInterview(
 ){{
-                    applicationId = "string";
-                    candidateId = "string";
+                    applicationId = "<value>";
+                    candidateId = "<value>";
                     createdAt = OffsetDateTime.parse("2023-01-11T04:08:22.567Z");
                     endAt = OffsetDateTime.parse("2024-12-21T08:47:56.138Z");
-                    externalEventXref = "string";
-                    id = "<ID>";
-                    jobId = "string";
-                    location = "string";
+                    externalEventXref = "<value>";
+                    id = "<id>";
+                    jobId = "<value>";
+                    location = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     startAt = OffsetDateTime.parse("2023-11-20T00:14:00.277Z");
                     status = AtsInterviewStatus.NEEDS_SCHEDULING;
                     updatedAt = OffsetDateTime.parse("2022-02-07T15:15:23.855Z");
                     userIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
 
                 }};
@@ -417,7 +417,7 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateAtsJobRequest req = new CreateAtsJobRequest(
-                "string"){{
+                "<value>"){{
                 atsJob = new AtsJob(
 ){{
                     addresses = new com.unifiedapi.unifiedto.models.shared.AtsAddress[]{{
@@ -425,7 +425,7 @@ public class Application {
                         ){{}}),
                     }};
                     closedAt = OffsetDateTime.parse("2022-01-14T18:31:06.376Z");
-                    companyId = "string";
+                    companyId = "<value>";
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(
                         AtsCompensationType.EQUITY){{
@@ -434,26 +434,26 @@ public class Application {
                     }};
                     createdAt = OffsetDateTime.parse("2023-03-05T16:04:54.121Z");
                     departments = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     description = "Operative 24 hour methodology";
                     employmentType = EmploymentType.OTHER;
                     hiringManagerIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    id = "<ID>";
-                    languageLocale = "string";
-                    name = "string";
+                    id = "<id>";
+                    languageLocale = "<value>";
+                    name = "<value>";
                     numberOfOpenings = 8330.69d;
                     publicJobUrls = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     recruiterIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     remote = false;
                     status = AtsJobStatus.OPEN;
@@ -516,26 +516,26 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardRequest req = new CreateAtsScorecardRequest(
-                "string"){{
+                "<value>"){{
                 atsScorecard = new AtsScorecard(
 ){{
-                    applicationId = "string";
-                    candidateId = "string";
+                    applicationId = "<value>";
+                    candidateId = "<value>";
                     comment = "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J";
                     createdAt = OffsetDateTime.parse("2022-04-24T10:18:34.661Z");
-                    id = "<ID>";
-                    interviewId = "string";
-                    interviewerId = "string";
-                    jobId = "string";
+                    id = "<id>";
+                    interviewId = "<value>";
+                    interviewerId = "<value>";
+                    jobId = "<value>";
                     questions = new com.unifiedapi.unifiedto.models.shared.AtsScorecardQuestion[]{{
                         add(new AtsScorecardQuestion(
-                        "string"){{
-                            text = "string";
+                        "<value>"){{
+                            text = "<value>";
                         }}),
                     }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     recommendation = Recommendation.NO;
                     updatedAt = OffsetDateTime.parse("2023-04-02T03:31:06.456Z");
@@ -593,10 +593,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAtsApplicationRequest req = new GetAtsApplicationRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -650,10 +650,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAtsCandidateRequest req = new GetAtsCandidateRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -707,10 +707,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAtsCompanyRequest req = new GetAtsCompanyRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -764,10 +764,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAtsDocumentRequest req = new GetAtsDocumentRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -821,10 +821,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAtsInterviewRequest req = new GetAtsInterviewRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -878,10 +878,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAtsJobRequest req = new GetAtsJobRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -935,10 +935,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAtsScorecardRequest req = new GetAtsScorecardRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -993,17 +993,17 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsRequest req = new ListAtsApplicationsRequest(
-                "string"){{
-                candidateId = "string";
+                "<value>"){{
+                candidateId = "<value>";
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
-                jobId = "string";
+                jobId = "<value>";
                 limit = 441.56d;
                 offset = 1448.74d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-12-21T20:30:01.596Z");
 
             }};
@@ -1058,15 +1058,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAtsApplicationstatusesRequest req = new ListAtsApplicationstatusesRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 5199.96d;
                 offset = 7673.65d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2024-03-25T18:11:33.180Z");
 
             }};
@@ -1121,15 +1121,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAtsCandidatesRequest req = new ListAtsCandidatesRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 6384.09d;
                 offset = 7452.94d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-03-18T00:58:25.541Z");
 
             }};
@@ -1184,15 +1184,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAtsCompaniesRequest req = new ListAtsCompaniesRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 6933.84d;
                 offset = 7946.52d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2024-10-01T21:39:38.971Z");
 
             }};
@@ -1247,16 +1247,16 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsRequest req = new ListAtsDocumentsRequest(
-                "string"){{
-                applicationId = "string";
+                "<value>"){{
+                applicationId = "<value>";
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 9635.37d;
                 offset = 8402.77d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-08-31T00:55:54.895Z");
 
             }};
@@ -1311,16 +1311,16 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAtsInterviewsRequest req = new ListAtsInterviewsRequest(
-                "string"){{
-                applicationId = "string";
+                "<value>"){{
+                applicationId = "<value>";
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 2562.12d;
                 offset = 1185.02d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-09-28T15:15:00.508Z");
 
             }};
@@ -1375,15 +1375,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAtsJobsRequest req = new ListAtsJobsRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 3958.99d;
                 offset = 3223.84d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-03-04T01:14:05.456Z");
 
             }};
@@ -1438,19 +1438,19 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsRequest req = new ListAtsScorecardsRequest(
-                "string"){{
-                applicationId = "string";
-                candidateId = "string";
+                "<value>"){{
+                applicationId = "<value>";
+                candidateId = "<value>";
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
-                interviewId = "string";
-                jobId = "string";
+                interviewId = "<value>";
+                jobId = "<value>";
                 limit = 5126.98d;
                 offset = 8077.44d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2024-08-19T14:46:22.333Z");
 
             }};
@@ -1507,24 +1507,24 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationRequest req = new PatchAtsApplicationRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 atsApplication = new AtsApplication(
 ){{
                     appliedAt = OffsetDateTime.parse("2023-12-15T20:36:09.499Z");
-                    candidateId = "string";
+                    candidateId = "<value>";
                     createdAt = OffsetDateTime.parse("2022-01-06T05:56:57.062Z");
                     hiredAt = OffsetDateTime.parse("2023-12-05T05:20:09.174Z");
-                    id = "<ID>";
-                    jobId = "string";
-                    originalStatus = "string";
+                    id = "<id>";
+                    jobId = "<value>";
+                    originalStatus = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     rejectedAt = OffsetDateTime.parse("2022-07-13T02:34:40.392Z");
-                    rejectedReason = "string";
-                    source = "string";
+                    rejectedReason = "<value>";
+                    source = "<value>";
                     status = AtsApplicationStatus.FIRST_INTERVIEW;
                     updatedAt = OffsetDateTime.parse("2024-01-24T17:35:54.628Z");
 
@@ -1589,56 +1589,56 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchAtsCandidateRequest req = new PatchAtsCandidateRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 atsCandidate = new AtsCandidate(
 ){{
                     address = new PropertyAtsCandidateAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "Fort Bridget";
                         country = "Sri Lanka";
                         countryCode = "GI";
                         postalCode = "46054";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
-                    companyId = "string";
+                    companyId = "<value>";
                     companyName = "Donnelly - Bartell";
                     createdAt = OffsetDateTime.parse("2024-01-07T04:20:35.612Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
                         add(new AtsEmail(
-                        "string"){{
+                        "<value>"){{
                             email = "Elissa62@yahoo.com";
                         }}),
                     }};
-                    externalId = "string";
-                    id = "<ID>";
-                    imageUrl = "string";
+                    externalId = "<value>";
+                    id = "<id>";
+                    imageUrl = "<value>";
                     linkUrls = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    name = "string";
+                    name = "<value>";
                     origin = Origin.INTERNAL;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     sources = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.AtsTelephone[]{{
                         add(new AtsTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
-                    title = "string";
+                    title = "<value>";
                     updatedAt = OffsetDateTime.parse("2024-09-22T18:26:07.211Z");
 
                 }};
@@ -1697,25 +1697,25 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentRequest req = new PatchAtsDocumentRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 atsDocument = new AtsDocument(
 ){{
-                    applicationId = "string";
-                    candidateId = "string";
+                    applicationId = "<value>";
+                    candidateId = "<value>";
                     createdAt = OffsetDateTime.parse("2022-04-01T11:33:08.084Z");
-                    documentData = "string";
-                    documentUrl = "string";
+                    documentData = "<value>";
+                    documentUrl = "<value>";
                     filename = "future_underpin.mp4v";
-                    id = "<ID>";
-                    jobId = "string";
+                    id = "<id>";
+                    jobId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     type = AtsDocumentType.OFFER_LETTER;
                     updatedAt = OffsetDateTime.parse("2023-02-14T10:37:18.255Z");
-                    userId = "string";
+                    userId = "<value>";
 
                 }};
 
@@ -1773,27 +1773,27 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchAtsInterviewRequest req = new PatchAtsInterviewRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 atsInterview = new AtsInterview(
 ){{
-                    applicationId = "string";
-                    candidateId = "string";
+                    applicationId = "<value>";
+                    candidateId = "<value>";
                     createdAt = OffsetDateTime.parse("2024-09-11T19:09:34.526Z");
                     endAt = OffsetDateTime.parse("2022-05-28T22:25:51.616Z");
-                    externalEventXref = "string";
-                    id = "<ID>";
-                    jobId = "string";
-                    location = "string";
+                    externalEventXref = "<value>";
+                    id = "<id>";
+                    jobId = "<value>";
+                    location = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     startAt = OffsetDateTime.parse("2022-09-10T07:32:43.966Z");
                     status = AtsInterviewStatus.CANCELED;
                     updatedAt = OffsetDateTime.parse("2024-03-18T02:52:45.725Z");
                     userIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
 
                 }};
@@ -1857,8 +1857,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchAtsJobRequest req = new PatchAtsJobRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 atsJob = new AtsJob(
 ){{
                     addresses = new com.unifiedapi.unifiedto.models.shared.AtsAddress[]{{
@@ -1866,7 +1866,7 @@ public class Application {
                         ){{}}),
                     }};
                     closedAt = OffsetDateTime.parse("2022-08-09T17:44:16.617Z");
-                    companyId = "string";
+                    companyId = "<value>";
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(
                         AtsCompensationType.EQUITY){{
@@ -1875,26 +1875,26 @@ public class Application {
                     }};
                     createdAt = OffsetDateTime.parse("2022-03-27T20:59:56.374Z");
                     departments = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     description = "Extended empowering middleware";
                     employmentType = EmploymentType.FULL_TIME;
                     hiringManagerIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    id = "<ID>";
-                    languageLocale = "string";
-                    name = "string";
+                    id = "<id>";
+                    languageLocale = "<value>";
+                    name = "<value>";
                     numberOfOpenings = 238.34d;
                     publicJobUrls = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     recruiterIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     remote = false;
                     status = AtsJobStatus.CLOSED;
@@ -1957,27 +1957,27 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardRequest req = new PatchAtsScorecardRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 atsScorecard = new AtsScorecard(
 ){{
-                    applicationId = "string";
-                    candidateId = "string";
+                    applicationId = "<value>";
+                    candidateId = "<value>";
                     comment = "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support";
                     createdAt = OffsetDateTime.parse("2024-10-06T13:32:29.533Z");
-                    id = "<ID>";
-                    interviewId = "string";
-                    interviewerId = "string";
-                    jobId = "string";
+                    id = "<id>";
+                    interviewId = "<value>";
+                    interviewerId = "<value>";
+                    jobId = "<value>";
                     questions = new com.unifiedapi.unifiedto.models.shared.AtsScorecardQuestion[]{{
                         add(new AtsScorecardQuestion(
-                        "string"){{
-                            text = "string";
+                        "<value>"){{
+                            text = "<value>";
                         }}),
                     }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     recommendation = Recommendation.YES;
                     updatedAt = OffsetDateTime.parse("2022-11-28T15:13:55.563Z");
@@ -2035,8 +2035,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationRequest req = new RemoveAtsApplicationRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationResponse res = sdk.ats.removeAtsApplication(req);
 
@@ -2087,8 +2087,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveAtsCandidateRequest req = new RemoveAtsCandidateRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveAtsCandidateResponse res = sdk.ats.removeAtsCandidate(req);
 
@@ -2139,8 +2139,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentRequest req = new RemoveAtsDocumentRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentResponse res = sdk.ats.removeAtsDocument(req);
 
@@ -2191,8 +2191,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveAtsInterviewRequest req = new RemoveAtsInterviewRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveAtsInterviewResponse res = sdk.ats.removeAtsInterview(req);
 
@@ -2243,8 +2243,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveAtsJobRequest req = new RemoveAtsJobRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveAtsJobResponse res = sdk.ats.removeAtsJob(req);
 
@@ -2295,8 +2295,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardRequest req = new RemoveAtsScorecardRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse res = sdk.ats.removeAtsScorecard(req);
 
@@ -2350,24 +2350,24 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationRequest req = new UpdateAtsApplicationRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 atsApplication = new AtsApplication(
 ){{
                     appliedAt = OffsetDateTime.parse("2022-08-22T12:21:27.415Z");
-                    candidateId = "string";
+                    candidateId = "<value>";
                     createdAt = OffsetDateTime.parse("2022-06-04T12:46:09.878Z");
                     hiredAt = OffsetDateTime.parse("2022-02-09T08:57:01.906Z");
-                    id = "<ID>";
-                    jobId = "string";
-                    originalStatus = "string";
+                    id = "<id>";
+                    jobId = "<value>";
+                    originalStatus = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     rejectedAt = OffsetDateTime.parse("2024-07-19T04:47:20.215Z");
-                    rejectedReason = "string";
-                    source = "string";
+                    rejectedReason = "<value>";
+                    source = "<value>";
                     status = AtsApplicationStatus.OFFERED;
                     updatedAt = OffsetDateTime.parse("2023-03-17T03:12:00.865Z");
 
@@ -2432,56 +2432,56 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateAtsCandidateRequest req = new UpdateAtsCandidateRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 atsCandidate = new AtsCandidate(
 ){{
                     address = new PropertyAtsCandidateAddress(
 ){{
-                        address1 = "string";
-                        address2 = "string";
+                        address1 = "<value>";
+                        address2 = "<value>";
                         city = "Hintzborough";
                         country = "Afghanistan";
                         countryCode = "TF";
                         postalCode = "39423";
-                        region = "string";
-                        regionCode = "string";
+                        region = "<value>";
+                        regionCode = "<value>";
 
                     }};
-                    companyId = "string";
+                    companyId = "<value>";
                     companyName = "O'Reilly Inc";
                     createdAt = OffsetDateTime.parse("2023-08-31T03:55:05.691Z");
                     emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
                         add(new AtsEmail(
-                        "string"){{
+                        "<value>"){{
                             email = "Cary37@yahoo.com";
                         }}),
                     }};
-                    externalId = "string";
-                    id = "<ID>";
-                    imageUrl = "string";
+                    externalId = "<value>";
+                    id = "<id>";
+                    imageUrl = "<value>";
                     linkUrls = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    name = "string";
+                    name = "<value>";
                     origin = Origin.UNIVERSITY;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     sources = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     telephones = new com.unifiedapi.unifiedto.models.shared.AtsTelephone[]{{
                         add(new AtsTelephone(
-                        "string"){{
-                            telephone = "string";
+                        "<value>"){{
+                            telephone = "<value>";
                         }}),
                     }};
-                    title = "string";
+                    title = "<value>";
                     updatedAt = OffsetDateTime.parse("2024-04-15T00:30:17.967Z");
 
                 }};
@@ -2540,25 +2540,25 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentRequest req = new UpdateAtsDocumentRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 atsDocument = new AtsDocument(
 ){{
-                    applicationId = "string";
-                    candidateId = "string";
+                    applicationId = "<value>";
+                    candidateId = "<value>";
                     createdAt = OffsetDateTime.parse("2022-07-05T17:05:49.106Z");
-                    documentData = "string";
-                    documentUrl = "string";
+                    documentData = "<value>";
+                    documentUrl = "<value>";
                     filename = "unbranded_reprehenderit.jpg";
-                    id = "<ID>";
-                    jobId = "string";
+                    id = "<id>";
+                    jobId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     type = AtsDocumentType.OFFER_PACKET;
                     updatedAt = OffsetDateTime.parse("2022-12-03T00:21:50.487Z");
-                    userId = "string";
+                    userId = "<value>";
 
                 }};
 
@@ -2616,27 +2616,27 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateAtsInterviewRequest req = new UpdateAtsInterviewRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 atsInterview = new AtsInterview(
 ){{
-                    applicationId = "string";
-                    candidateId = "string";
+                    applicationId = "<value>";
+                    candidateId = "<value>";
                     createdAt = OffsetDateTime.parse("2024-05-06T05:22:44.534Z");
                     endAt = OffsetDateTime.parse("2023-03-29T20:29:22.648Z");
-                    externalEventXref = "string";
-                    id = "<ID>";
-                    jobId = "string";
-                    location = "string";
+                    externalEventXref = "<value>";
+                    id = "<id>";
+                    jobId = "<value>";
+                    location = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     startAt = OffsetDateTime.parse("2024-05-05T07:21:58.674Z");
                     status = AtsInterviewStatus.COMPLETE;
                     updatedAt = OffsetDateTime.parse("2022-05-01T17:04:47.962Z");
                     userIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
 
                 }};
@@ -2700,8 +2700,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateAtsJobRequest req = new UpdateAtsJobRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 atsJob = new AtsJob(
 ){{
                     addresses = new com.unifiedapi.unifiedto.models.shared.AtsAddress[]{{
@@ -2709,7 +2709,7 @@ public class Application {
                         ){{}}),
                     }};
                     closedAt = OffsetDateTime.parse("2023-10-21T07:41:08.131Z");
-                    companyId = "string";
+                    companyId = "<value>";
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(
                         AtsCompensationType.BONUS){{
@@ -2718,26 +2718,26 @@ public class Application {
                     }};
                     createdAt = OffsetDateTime.parse("2023-01-19T17:41:10.086Z");
                     departments = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     description = "Re-contextualized 24 hour support";
                     employmentType = EmploymentType.CASUAL;
                     hiringManagerIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    id = "<ID>";
-                    languageLocale = "string";
-                    name = "string";
+                    id = "<id>";
+                    languageLocale = "<value>";
+                    name = "<value>";
                     numberOfOpenings = 983.08d;
                     publicJobUrls = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     recruiterIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     remote = false;
                     status = AtsJobStatus.DRAFT;
@@ -2800,27 +2800,27 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardRequest req = new UpdateAtsScorecardRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 atsScorecard = new AtsScorecard(
 ){{
-                    applicationId = "string";
-                    candidateId = "string";
+                    applicationId = "<value>";
+                    candidateId = "<value>";
                     comment = "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive";
                     createdAt = OffsetDateTime.parse("2022-07-10T16:18:43.908Z");
-                    id = "<ID>";
-                    interviewId = "string";
-                    interviewerId = "string";
-                    jobId = "string";
+                    id = "<id>";
+                    interviewId = "<value>";
+                    interviewerId = "<value>";
+                    jobId = "<value>";
                     questions = new com.unifiedapi.unifiedto.models.shared.AtsScorecardQuestion[]{{
                         add(new AtsScorecardQuestion(
-                        "string"){{
-                            text = "string";
+                        "<value>"){{
+                            text = "<value>";
                         }}),
                     }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     recommendation = Recommendation.NO;
                     updatedAt = OffsetDateTime.parse("2022-07-26T09:16:55.761Z");

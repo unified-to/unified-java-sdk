@@ -38,26 +38,26 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateHrisGroupRequest req = new CreateHrisGroupRequest(
-                "string"){{
+                "<value>"){{
                 hrisGroup = new HrisGroup(
 ){{
                     createdAt = OffsetDateTime.parse("2023-08-12T02:07:27.193Z");
                     description = "Self-enabling system-worthy collaboration";
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     managerIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    name = "string";
-                    parentId = "string";
+                    name = "<value>";
+                    parentId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     type = HrisGroupType.TEAM;
                     updatedAt = OffsetDateTime.parse("2024-03-09T17:49:55.923Z");
                     userIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
 
                 }};
@@ -113,10 +113,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetHrisGroupRequest req = new GetHrisGroupRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -171,15 +171,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListHrisGroupsRequest req = new ListHrisGroupsRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 4815.14d;
                 offset = 2554.75d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-04-30T00:40:26.357Z");
 
             }};
@@ -236,27 +236,27 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchHrisGroupRequest req = new PatchHrisGroupRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 hrisGroup = new HrisGroup(
 ){{
                     createdAt = OffsetDateTime.parse("2022-11-10T03:17:00.454Z");
                     description = "Compatible contextually-based local area network";
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     managerIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    name = "string";
-                    parentId = "string";
+                    name = "<value>";
+                    parentId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     type = HrisGroupType.DIVISION;
                     updatedAt = OffsetDateTime.parse("2023-06-23T21:37:16.122Z");
                     userIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
 
                 }};
@@ -312,8 +312,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveHrisGroupRequest req = new RemoveHrisGroupRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveHrisGroupResponse res = sdk.group.removeHrisGroup(req);
 
@@ -367,27 +367,27 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateHrisGroupRequest req = new UpdateHrisGroupRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 hrisGroup = new HrisGroup(
 ){{
                     createdAt = OffsetDateTime.parse("2022-12-07T01:08:49.621Z");
                     description = "Integrated empowering productivity";
-                    id = "<ID>";
+                    id = "<id>";
                     isActive = false;
                     managerIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
-                    name = "string";
-                    parentId = "string";
+                    name = "<value>";
+                    parentId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     type = HrisGroupType.TEAM;
                     updatedAt = OffsetDateTime.parse("2024-09-12T13:33:00.416Z");
                     userIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
 
                 }};

@@ -37,17 +37,17 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryRequest req = new CreateCommerceInventoryRequest(
-                "string"){{
+                "<value>"){{
                 commerceInventory = new CommerceInventory(
                     5165.08d){{
-                    id = "<ID>";
-                    itemId = "string";
-                    itemOptionId = "string";
-                    itemVariantId = "string";
-                    locationId = "string";
+                    id = "<id>";
+                    itemId = "<value>";
+                    itemOptionId = "<value>";
+                    itemVariantId = "<value>";
+                    locationId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     updatedAt = OffsetDateTime.parse("2024-01-31T03:08:58.995Z");
 
@@ -104,10 +104,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetCommerceInventoryRequest req = new GetCommerceInventoryRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -162,17 +162,17 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListCommerceInventoriesRequest req = new ListCommerceInventoriesRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
-                itemId = "string";
+                itemId = "<value>";
                 limit = 2481.16d;
-                locationId = "string";
+                locationId = "<value>";
                 offset = 9476.38d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-10-15T22:28:16.925Z");
 
             }};
@@ -228,18 +228,18 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryRequest req = new PatchCommerceInventoryRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 commerceInventory = new CommerceInventory(
                     615.23d){{
-                    id = "<ID>";
-                    itemId = "string";
-                    itemOptionId = "string";
-                    itemVariantId = "string";
-                    locationId = "string";
+                    id = "<id>";
+                    itemId = "<value>";
+                    itemOptionId = "<value>";
+                    itemVariantId = "<value>";
+                    locationId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     updatedAt = OffsetDateTime.parse("2022-10-21T06:26:02.606Z");
 
@@ -296,8 +296,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryRequest req = new RemoveCommerceInventoryRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryResponse res = sdk.inventory.removeCommerceInventory(req);
 
@@ -350,18 +350,18 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryRequest req = new UpdateCommerceInventoryRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 commerceInventory = new CommerceInventory(
                     9360.02d){{
-                    id = "<ID>";
-                    itemId = "string";
-                    itemOptionId = "string";
-                    itemVariantId = "string";
-                    locationId = "string";
+                    id = "<id>";
+                    itemId = "<value>";
+                    itemOptionId = "<value>";
+                    itemVariantId = "<value>";
+                    locationId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     updatedAt = OffsetDateTime.parse("2024-08-11T01:00:50.639Z");
 

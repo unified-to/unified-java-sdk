@@ -39,32 +39,32 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionRequest req = new CreateCommerceCollectionRequest(
-                "string"){{
+                "<value>"){{
                 commerceCollection = new CommerceCollection(
-                    "string",
-                    "string"){{
+                    "<value>",
+                    "<value>"){{
                     createdAt = OffsetDateTime.parse("2023-06-14T12:03:57.982Z");
                     description = "Team-oriented intermediate interface";
                     isActive = false;
                     isFeatured = false;
                     isVisible = false;
                     itemIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     media = new com.unifiedapi.unifiedto.models.shared.CommerceItemMedia[]{{
                         add(new CommerceItemMedia(
-                        "string"){{
+                        "<value>"){{
                             url = "https://vivid-slump.com";
                         }}),
                     }};
-                    publicDescription = "string";
-                    publicName = "string";
+                    publicDescription = "<value>";
+                    publicName = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-08-15T05:40:39.031Z");
 
@@ -121,10 +121,10 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionRequest req = new GetCommerceCollectionRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -179,15 +179,15 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsRequest req = new ListCommerceCollectionsRequest(
-                "string"){{
+                "<value>"){{
                 fields = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 limit = 2972.15d;
                 offset = 5933.83d;
-                order = "string";
-                query = "string";
-                sort = "string";
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-08-08T20:40:35.103Z");
 
             }};
@@ -245,33 +245,33 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionRequest req = new PatchCommerceCollectionRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 commerceCollection = new CommerceCollection(
-                    "string",
-                    "string"){{
+                    "<value>",
+                    "<value>"){{
                     createdAt = OffsetDateTime.parse("2022-12-27T01:30:16.292Z");
                     description = "Polarised solution-oriented analyzer";
                     isActive = false;
                     isFeatured = false;
                     isVisible = false;
                     itemIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     media = new com.unifiedapi.unifiedto.models.shared.CommerceItemMedia[]{{
                         add(new CommerceItemMedia(
-                        "string"){{
+                        "<value>"){{
                             url = "http://voluminous-airship.net";
                         }}),
                     }};
-                    publicDescription = "string";
-                    publicName = "string";
+                    publicDescription = "<value>";
+                    publicName = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     updatedAt = OffsetDateTime.parse("2024-11-07T01:43:06.402Z");
 
@@ -328,8 +328,8 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionRequest req = new RemoveCommerceCollectionRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionResponse res = sdk.collection.removeCommerceCollection(req);
 
@@ -384,33 +384,33 @@ public class Application {
                 .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionRequest req = new UpdateCommerceCollectionRequest(
-                "string",
-                "string"){{
+                "<value>",
+                "<value>"){{
                 commerceCollection = new CommerceCollection(
-                    "string",
-                    "string"){{
+                    "<value>",
+                    "<value>"){{
                     createdAt = OffsetDateTime.parse("2024-07-30T10:24:18.569Z");
                     description = "Sharable dynamic solution";
                     isActive = false;
                     isFeatured = false;
                     isVisible = false;
                     itemIds = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     media = new com.unifiedapi.unifiedto.models.shared.CommerceItemMedia[]{{
                         add(new CommerceItemMedia(
-                        "string"){{
+                        "<value>"){{
                             url = "http://irritating-competence.com";
                         }}),
                     }};
-                    publicDescription = "string";
-                    publicName = "string";
+                    publicDescription = "<value>";
+                    publicName = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
-                        put("key", "string");
+                        put("key", "<value>");
                     }};
                     tags = new String[]{{
-                        add("string"),
+                        add("<value>"),
                     }};
                     updatedAt = OffsetDateTime.parse("2022-06-03T01:49:37.651Z");
 
