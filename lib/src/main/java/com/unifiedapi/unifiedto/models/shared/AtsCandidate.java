@@ -54,6 +54,17 @@ public class AtsCandidate {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
+    @JsonProperty("date_of_birth")
+    public OffsetDateTime dateOfBirth;
+
+    public AtsCandidate withDateOfBirth(OffsetDateTime dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     public AtsEmail[] emails;
 
