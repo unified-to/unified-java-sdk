@@ -16,6 +16,15 @@ import java.time.OffsetDateTime;
 
 public class AtsApplication {
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("answers")
+    public AtsApplicationAnswer[] answers;
+
+    public AtsApplication withAnswers(AtsApplicationAnswer[] answers) {
+        this.answers = answers;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("applied_at")

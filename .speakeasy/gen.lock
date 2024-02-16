@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 5c191fdb16f8d76a3eb09c714f56170d
+  docChecksum: 119b9584a5fe294470614e38361fae09
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.258.0
-  releaseVersion: 0.16.1
-  configChecksum: 3e98f17715662481b2a65542c8bdd9ee
+  generationVersion: 2.259.1
+  releaseVersion: 0.16.2
+  configChecksum: 8607792d1ab63ca15a10cd8e0ff4b3a2
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
 features:
   java:
-    core: 3.5.0
+    core: 3.5.1
     globalSecurity: 2.81.2
     globalServerURLs: 2.82.1
 generatedFiles:
@@ -585,6 +585,7 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/UcEmail.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsApplicationStatus.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsApplication.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsApplicationAnswer.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/Origin.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsCandidate.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsTelephoneType.java
@@ -599,6 +600,8 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/EmploymentType.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsJobStatus.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsJob.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsJobQuestionType.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsJobQuestion.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/Frequency.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsCompensationType.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsCompensation.java
@@ -1180,6 +1183,7 @@ generatedFiles:
   - docs/models/shared/UcEmail.md
   - docs/models/shared/AtsApplicationStatus.md
   - docs/models/shared/AtsApplication.md
+  - docs/models/shared/AtsApplicationAnswer.md
   - docs/models/shared/Origin.md
   - docs/models/shared/AtsCandidate.md
   - docs/models/shared/AtsTelephoneType.md
@@ -1194,6 +1198,8 @@ generatedFiles:
   - docs/models/shared/EmploymentType.md
   - docs/models/shared/AtsJobStatus.md
   - docs/models/shared/AtsJob.md
+  - docs/models/shared/AtsJobQuestionType.md
+  - docs/models/shared/AtsJobQuestion.md
   - docs/models/shared/Frequency.md
   - docs/models/shared/AtsCompensationType.md
   - docs/models/shared/AtsCompensation.md

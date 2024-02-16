@@ -23,6 +23,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsApplication;
+import com.unifiedapi.unifiedto.models.shared.AtsApplicationAnswer;
 import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
@@ -41,6 +42,14 @@ public class Application {
                 "<value>"){{
                 atsApplication = new AtsApplication(
 ){{
+                    answers = new com.unifiedapi.unifiedto.models.shared.AtsApplicationAnswer[]{{
+                        add(new AtsApplicationAnswer(
+                        "<value>",
+                        "<value>"){{
+                            answer = "<value>";
+                            questionId = "<value>";
+                        }}),
+                    }};
                     appliedAt = OffsetDateTime.parse("2024-03-09T05:03:52.917Z");
                     candidateId = "<value>";
                     createdAt = OffsetDateTime.parse("2024-09-22T12:50:56.305Z");
@@ -221,6 +230,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsApplication;
+import com.unifiedapi.unifiedto.models.shared.AtsApplicationAnswer;
 import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
@@ -240,6 +250,14 @@ public class Application {
                 "<value>"){{
                 atsApplication = new AtsApplication(
 ){{
+                    answers = new com.unifiedapi.unifiedto.models.shared.AtsApplicationAnswer[]{{
+                        add(new AtsApplicationAnswer(
+                        "<value>",
+                        "<value>"){{
+                            answer = "<value>";
+                            questionId = "<value>";
+                        }}),
+                    }};
                     appliedAt = OffsetDateTime.parse("2023-12-15T20:36:09.499Z");
                     candidateId = "<value>";
                     createdAt = OffsetDateTime.parse("2022-01-06T05:56:57.062Z");
@@ -350,6 +368,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationResponse;
 import com.unifiedapi.unifiedto.models.shared.AtsApplication;
+import com.unifiedapi.unifiedto.models.shared.AtsApplicationAnswer;
 import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
@@ -369,6 +388,14 @@ public class Application {
                 "<value>"){{
                 atsApplication = new AtsApplication(
 ){{
+                    answers = new com.unifiedapi.unifiedto.models.shared.AtsApplicationAnswer[]{{
+                        add(new AtsApplicationAnswer(
+                        "<value>",
+                        "<value>"){{
+                            answer = "<value>";
+                            questionId = "<value>";
+                        }}),
+                    }};
                     appliedAt = OffsetDateTime.parse("2022-08-22T12:21:27.415Z");
                     candidateId = "<value>";
                     createdAt = OffsetDateTime.parse("2022-06-04T12:46:09.878Z");

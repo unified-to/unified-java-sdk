@@ -26,6 +26,8 @@ import com.unifiedapi.unifiedto.models.shared.AtsAddress;
 import com.unifiedapi.unifiedto.models.shared.AtsCompensation;
 import com.unifiedapi.unifiedto.models.shared.AtsCompensationType;
 import com.unifiedapi.unifiedto.models.shared.AtsJob;
+import com.unifiedapi.unifiedto.models.shared.AtsJobQuestion;
+import com.unifiedapi.unifiedto.models.shared.AtsJobQuestionType;
 import com.unifiedapi.unifiedto.models.shared.AtsJobStatus;
 import com.unifiedapi.unifiedto.models.shared.EmploymentType;
 import com.unifiedapi.unifiedto.models.shared.Frequency;
@@ -74,6 +76,14 @@ public class Application {
                     publicJobUrls = new String[]{{
                         add("<value>"),
                     }};
+                    questions = new com.unifiedapi.unifiedto.models.shared.AtsJobQuestion[]{{
+                        add(new AtsJobQuestion(
+                        "<value>",
+                        AtsJobQuestionType.URL){{
+                            question = "<value>";
+                            type = AtsJobQuestionType.UNIVERSITY;
+                        }}),
+                    }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
@@ -82,8 +92,8 @@ public class Application {
                         add("<value>"),
                     }};
                     remote = false;
-                    status = AtsJobStatus.OPEN;
-                    updatedAt = OffsetDateTime.parse("2024-11-18T02:03:06.250Z");
+                    status = AtsJobStatus.DRAFT;
+                    updatedAt = OffsetDateTime.parse("2022-09-14T17:37:48.375Z");
 
                 }};
 
@@ -249,6 +259,8 @@ import com.unifiedapi.unifiedto.models.shared.AtsAddress;
 import com.unifiedapi.unifiedto.models.shared.AtsCompensation;
 import com.unifiedapi.unifiedto.models.shared.AtsCompensationType;
 import com.unifiedapi.unifiedto.models.shared.AtsJob;
+import com.unifiedapi.unifiedto.models.shared.AtsJobQuestion;
+import com.unifiedapi.unifiedto.models.shared.AtsJobQuestionType;
 import com.unifiedapi.unifiedto.models.shared.AtsJobStatus;
 import com.unifiedapi.unifiedto.models.shared.EmploymentType;
 import com.unifiedapi.unifiedto.models.shared.Frequency;
@@ -298,6 +310,14 @@ public class Application {
                     publicJobUrls = new String[]{{
                         add("<value>"),
                     }};
+                    questions = new com.unifiedapi.unifiedto.models.shared.AtsJobQuestion[]{{
+                        add(new AtsJobQuestion(
+                        "<value>",
+                        AtsJobQuestionType.TEXTAREA){{
+                            question = "<value>";
+                            type = AtsJobQuestionType.URL;
+                        }}),
+                    }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
@@ -306,8 +326,8 @@ public class Application {
                         add("<value>"),
                     }};
                     remote = false;
-                    status = AtsJobStatus.CLOSED;
-                    updatedAt = OffsetDateTime.parse("2023-08-08T17:34:59.133Z");
+                    status = AtsJobStatus.DRAFT;
+                    updatedAt = OffsetDateTime.parse("2022-07-04T19:22:46.036Z");
 
                 }};
 
@@ -405,6 +425,8 @@ import com.unifiedapi.unifiedto.models.shared.AtsAddress;
 import com.unifiedapi.unifiedto.models.shared.AtsCompensation;
 import com.unifiedapi.unifiedto.models.shared.AtsCompensationType;
 import com.unifiedapi.unifiedto.models.shared.AtsJob;
+import com.unifiedapi.unifiedto.models.shared.AtsJobQuestion;
+import com.unifiedapi.unifiedto.models.shared.AtsJobQuestionType;
 import com.unifiedapi.unifiedto.models.shared.AtsJobStatus;
 import com.unifiedapi.unifiedto.models.shared.EmploymentType;
 import com.unifiedapi.unifiedto.models.shared.Frequency;
@@ -454,6 +476,14 @@ public class Application {
                     publicJobUrls = new String[]{{
                         add("<value>"),
                     }};
+                    questions = new com.unifiedapi.unifiedto.models.shared.AtsJobQuestion[]{{
+                        add(new AtsJobQuestion(
+                        "<value>",
+                        AtsJobQuestionType.UNIVERSITY){{
+                            question = "<value>";
+                            type = AtsJobQuestionType.FILE;
+                        }}),
+                    }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
@@ -463,7 +493,7 @@ public class Application {
                     }};
                     remote = false;
                     status = AtsJobStatus.DRAFT;
-                    updatedAt = OffsetDateTime.parse("2024-01-04T04:44:52.139Z");
+                    updatedAt = OffsetDateTime.parse("2024-12-22T02:51:32.088Z");
 
                 }};
 
