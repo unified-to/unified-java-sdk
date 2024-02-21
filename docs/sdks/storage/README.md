@@ -46,6 +46,7 @@ public class Application {
                     createdAt = OffsetDateTime.parse("2024-11-26T17:10:46.324Z");
                     description = "Digitized systematic Graphic Interface";
                     downloadUrl = "<value>";
+                    hash = "<value>";
                     id = "<id>";
                     mimeType = "<value>";
                     name = "<value>";
@@ -255,6 +256,7 @@ public class Application {
                     createdAt = OffsetDateTime.parse("2022-03-01T13:48:26.867Z");
                     description = "Customer-focused mission-critical monitoring";
                     downloadUrl = "<value>";
+                    hash = "<value>";
                     id = "<id>";
                     mimeType = "<value>";
                     name = "<value>";
@@ -395,6 +397,7 @@ public class Application {
                     createdAt = OffsetDateTime.parse("2024-06-06T15:38:39.174Z");
                     description = "Polarised intangible architecture";
                     downloadUrl = "<value>";
+                    hash = "<value>";
                     id = "<id>";
                     mimeType = "<value>";
                     name = "<value>";

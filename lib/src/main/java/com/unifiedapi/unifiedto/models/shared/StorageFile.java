@@ -45,6 +45,15 @@ public class StorageFile {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("hash")
+    public String hash;
+
+    public StorageFile withHash(String hash) {
+        this.hash = hash;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
 
