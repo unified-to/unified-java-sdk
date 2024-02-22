@@ -639,3 +639,11 @@ Based on:
 - Speakeasy CLI 1.185.0 (2.263.3) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [java v0.16.3] .
+
+## 2024-02-22 00:03:43
+### Changes
+Based on:
+- OpenAPI Doc 1.0 
+- Speakeasy CLI 1.189.0 (2.263.3) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [java v0.16.4] .

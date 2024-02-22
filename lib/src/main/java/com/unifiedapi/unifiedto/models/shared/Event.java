@@ -8,7 +8,8 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum Event {
     UPDATED("updated"),
-    CREATED("created");
+    CREATED("created"),
+    DELETED("deleted");
 
     @JsonValue
     public final String value;
