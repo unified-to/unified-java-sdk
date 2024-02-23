@@ -3,12 +3,14 @@
 
 ### Available Operations
 
+* [createAtsActivity](#createatsactivity) - Create an activity
 * [createAtsApplication](#createatsapplication) - Create an application
 * [createAtsCandidate](#createatscandidate) - Create a candidate
 * [createAtsDocument](#createatsdocument) - Create a document
 * [createAtsInterview](#createatsinterview) - Create a interview
 * [createAtsJob](#createatsjob) - Create a job
 * [createAtsScorecard](#createatsscorecard) - Create a scorecard
+* [getAtsActivity](#getatsactivity) - Retrieve an activity
 * [getAtsApplication](#getatsapplication) - Retrieve an application
 * [getAtsCandidate](#getatscandidate) - Retrieve a candidate
 * [getAtsCompany](#getatscompany) - Retrieve a company
@@ -16,6 +18,7 @@
 * [getAtsInterview](#getatsinterview) - Retrieve a interview
 * [getAtsJob](#getatsjob) - Retrieve a job
 * [getAtsScorecard](#getatsscorecard) - Retrieve a scorecard
+* [listAtsActivities](#listatsactivities) - List all activities
 * [listAtsApplications](#listatsapplications) - List all applications
 * [listAtsApplicationstatuses](#listatsapplicationstatuses) - List all application statuses
 * [listAtsCandidates](#listatscandidates) - List all candidates
@@ -24,24 +27,105 @@
 * [listAtsInterviews](#listatsinterviews) - List all interviews
 * [listAtsJobs](#listatsjobs) - List all jobs
 * [listAtsScorecards](#listatsscorecards) - List all scorecards
+* [patchAtsActivity](#patchatsactivity) - Update an activity
 * [patchAtsApplication](#patchatsapplication) - Update an application
 * [patchAtsCandidate](#patchatscandidate) - Update a candidate
 * [patchAtsDocument](#patchatsdocument) - Update a document
 * [patchAtsInterview](#patchatsinterview) - Update a interview
 * [patchAtsJob](#patchatsjob) - Update a job
 * [patchAtsScorecard](#patchatsscorecard) - Update a scorecard
+* [removeAtsActivity](#removeatsactivity) - Remove an activity
 * [removeAtsApplication](#removeatsapplication) - Remove an application
 * [removeAtsCandidate](#removeatscandidate) - Remove a candidate
 * [removeAtsDocument](#removeatsdocument) - Remove a document
 * [removeAtsInterview](#removeatsinterview) - Remove a interview
 * [removeAtsJob](#removeatsjob) - Remove a job
 * [removeAtsScorecard](#removeatsscorecard) - Remove a scorecard
+* [updateAtsActivity](#updateatsactivity) - Update an activity
 * [updateAtsApplication](#updateatsapplication) - Update an application
 * [updateAtsCandidate](#updateatscandidate) - Update a candidate
 * [updateAtsDocument](#updateatsdocument) - Update a document
 * [updateAtsInterview](#updateatsinterview) - Update a interview
 * [updateAtsJob](#updateatsjob) - Update a job
 * [updateAtsScorecard](#updateatsscorecard) - Update a scorecard
+
+## createAtsActivity
+
+Create an activity
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.CreateAtsActivityRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateAtsActivityResponse;
+import com.unifiedapi.unifiedto.models.shared.AtsActivity;
+import com.unifiedapi.unifiedto.models.shared.AtsActivityType;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.CreateAtsActivityRequest req = new CreateAtsActivityRequest(
+                "<value>"){{
+                atsActivity = new AtsActivity(
+                    "<value>"){{
+                    applicationId = "<value>";
+                    candidateId = "<value>";
+                    createdAt = OffsetDateTime.parse("2022-11-03T02:06:02.932Z");
+                    description = "Future-proofed non-volatile artificial intelligence";
+                    documentId = "<value>";
+                    id = "<id>";
+                    interviewId = "<value>";
+                    isPrivate = false;
+                    jobId = "<value>";
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "<value>");
+                    }};
+                    type = AtsActivityType.NOTE;
+                    updatedAt = OffsetDateTime.parse("2023-01-22T20:04:14.417Z");
+                    userIds = new String[]{{
+                        add("<value>"),
+                    }};
+
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateAtsActivityResponse res = sdk.ats.createAtsActivity(req);
+
+            if (res.atsActivity != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.CreateAtsActivityRequest](../../models/operations/CreateAtsActivityRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.CreateAtsActivityResponse](../../models/operations/CreateAtsActivityResponse.md)**
+
 
 ## createAtsApplication
 
@@ -588,6 +672,63 @@ public class Application {
 **[com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse](../../models/operations/CreateAtsScorecardResponse.md)**
 
 
+## getAtsActivity
+
+Retrieve an activity
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.GetAtsActivityRequest;
+import com.unifiedapi.unifiedto.models.operations.GetAtsActivityResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.GetAtsActivityRequest req = new GetAtsActivityRequest(
+                "<value>",
+                "<value>"){{
+                fields = new String[]{{
+                    add("<value>"),
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetAtsActivityResponse res = sdk.ats.getAtsActivity(req);
+
+            if (res.atsActivity != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [com.unifiedapi.unifiedto.models.operations.GetAtsActivityRequest](../../models/operations/GetAtsActivityRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.GetAtsActivityResponse](../../models/operations/GetAtsActivityResponse.md)**
+
+
 ## getAtsApplication
 
 Retrieve an application
@@ -985,6 +1126,75 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.GetAtsScorecardResponse](../../models/operations/GetAtsScorecardResponse.md)**
+
+
+## listAtsActivities
+
+List all activities
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.ListAtsActivitiesRequest;
+import com.unifiedapi.unifiedto.models.operations.ListAtsActivitiesResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.ListAtsActivitiesRequest req = new ListAtsActivitiesRequest(
+                "<value>"){{
+                applicationId = "<value>";
+                candidateId = "<value>";
+                documentId = "<value>";
+                fields = new String[]{{
+                    add("<value>"),
+                }};
+                interviewId = "<value>";
+                jobId = "<value>";
+                limit = 2367.19d;
+                offset = 8254.25d;
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
+                updatedGte = OffsetDateTime.parse("2022-11-13T18:19:17.967Z");
+                userId = "<value>";
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListAtsActivitiesResponse res = sdk.ats.listAtsActivities(req);
+
+            if (res.atsActivities != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.ListAtsActivitiesRequest](../../models/operations/ListAtsActivitiesRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.ListAtsActivitiesResponse](../../models/operations/ListAtsActivitiesResponse.md)**
 
 
 ## listAtsApplications
@@ -1497,6 +1707,85 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsResponse](../../models/operations/ListAtsScorecardsResponse.md)**
+
+
+## patchAtsActivity
+
+Update an activity
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.PatchAtsActivityRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchAtsActivityResponse;
+import com.unifiedapi.unifiedto.models.shared.AtsActivity;
+import com.unifiedapi.unifiedto.models.shared.AtsActivityType;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.PatchAtsActivityRequest req = new PatchAtsActivityRequest(
+                "<value>",
+                "<value>"){{
+                atsActivity = new AtsActivity(
+                    "<value>"){{
+                    applicationId = "<value>";
+                    candidateId = "<value>";
+                    createdAt = OffsetDateTime.parse("2024-11-03T16:46:57.187Z");
+                    description = "Compatible reciprocal archive";
+                    documentId = "<value>";
+                    id = "<id>";
+                    interviewId = "<value>";
+                    isPrivate = false;
+                    jobId = "<value>";
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "<value>");
+                    }};
+                    type = AtsActivityType.NOTE;
+                    updatedAt = OffsetDateTime.parse("2022-05-17T01:47:31.125Z");
+                    userIds = new String[]{{
+                        add("<value>"),
+                    }};
+
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.PatchAtsActivityResponse res = sdk.ats.patchAtsActivity(req);
+
+            if (res.atsActivity != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.PatchAtsActivityRequest](../../models/operations/PatchAtsActivityRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.PatchAtsActivityResponse](../../models/operations/PatchAtsActivityResponse.md)**
 
 
 ## patchAtsApplication
@@ -2050,6 +2339,58 @@ public class Application {
 **[com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse](../../models/operations/PatchAtsScorecardResponse.md)**
 
 
+## removeAtsActivity
+
+Remove an activity
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.RemoveAtsActivityRequest;
+import com.unifiedapi.unifiedto.models.operations.RemoveAtsActivityResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.RemoveAtsActivityRequest req = new RemoveAtsActivityRequest(
+                "<value>",
+                "<value>");
+
+            com.unifiedapi.unifiedto.models.operations.RemoveAtsActivityResponse res = sdk.ats.removeAtsActivity(req);
+
+            if (res.statusCode == 200) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.RemoveAtsActivityRequest](../../models/operations/RemoveAtsActivityRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.RemoveAtsActivityResponse](../../models/operations/RemoveAtsActivityResponse.md)**
+
+
 ## removeAtsApplication
 
 Remove an application
@@ -2360,6 +2701,85 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse](../../models/operations/RemoveAtsScorecardResponse.md)**
+
+
+## updateAtsActivity
+
+Update an activity
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.UpdateAtsActivityRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdateAtsActivityResponse;
+import com.unifiedapi.unifiedto.models.shared.AtsActivity;
+import com.unifiedapi.unifiedto.models.shared.AtsActivityType;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.UpdateAtsActivityRequest req = new UpdateAtsActivityRequest(
+                "<value>",
+                "<value>"){{
+                atsActivity = new AtsActivity(
+                    "<value>"){{
+                    applicationId = "<value>";
+                    candidateId = "<value>";
+                    createdAt = OffsetDateTime.parse("2024-06-06T07:57:58.715Z");
+                    description = "Total fault-tolerant collaboration";
+                    documentId = "<value>";
+                    id = "<id>";
+                    interviewId = "<value>";
+                    isPrivate = false;
+                    jobId = "<value>";
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "<value>");
+                    }};
+                    type = AtsActivityType.NOTE;
+                    updatedAt = OffsetDateTime.parse("2022-10-09T08:30:27.721Z");
+                    userIds = new String[]{{
+                        add("<value>"),
+                    }};
+
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.UpdateAtsActivityResponse res = sdk.ats.updateAtsActivity(req);
+
+            if (res.atsActivity != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.UpdateAtsActivityRequest](../../models/operations/UpdateAtsActivityRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.UpdateAtsActivityResponse](../../models/operations/UpdateAtsActivityResponse.md)**
 
 
 ## updateAtsApplication

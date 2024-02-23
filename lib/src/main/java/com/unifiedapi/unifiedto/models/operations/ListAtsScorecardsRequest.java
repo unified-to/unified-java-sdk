@@ -66,7 +66,7 @@ public class ListAtsScorecardsRequest {
     }
     
     /**
-     * The job ID
+     * The job ID to filter results
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=job_id")
     public String jobId;

@@ -9,14 +9,25 @@ import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 import java.time.OffsetDateTime;
 
 
-public class ListAtsApplicationsRequest {
+public class ListAtsActivitiesRequest {
+    /**
+     * The application ID to filter results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=application_id")
+    public String applicationId;
+
+    public ListAtsActivitiesRequest withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+        return this;
+    }
+    
     /**
      * The candidate ID to filter results
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_id")
     public String candidateId;
 
-    public ListAtsApplicationsRequest withCandidateId(String candidateId) {
+    public ListAtsActivitiesRequest withCandidateId(String candidateId) {
         this.candidateId = candidateId;
         return this;
     }
@@ -27,8 +38,19 @@ public class ListAtsApplicationsRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
     public String connectionId;
 
-    public ListAtsApplicationsRequest withConnectionId(String connectionId) {
+    public ListAtsActivitiesRequest withConnectionId(String connectionId) {
         this.connectionId = connectionId;
+        return this;
+    }
+    
+    /**
+     * The document ID to filter results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=document_id")
+    public String documentId;
+
+    public ListAtsActivitiesRequest withDocumentId(String documentId) {
+        this.documentId = documentId;
         return this;
     }
     
@@ -38,8 +60,19 @@ public class ListAtsApplicationsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String[] fields;
 
-    public ListAtsApplicationsRequest withFields(String[] fields) {
+    public ListAtsActivitiesRequest withFields(String[] fields) {
         this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * The interview ID to filter results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interview_id")
+    public String interviewId;
+
+    public ListAtsActivitiesRequest withInterviewId(String interviewId) {
+        this.interviewId = interviewId;
         return this;
     }
     
@@ -49,7 +82,7 @@ public class ListAtsApplicationsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=job_id")
     public String jobId;
 
-    public ListAtsApplicationsRequest withJobId(String jobId) {
+    public ListAtsActivitiesRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
@@ -57,7 +90,7 @@ public class ListAtsApplicationsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Double limit;
 
-    public ListAtsApplicationsRequest withLimit(Double limit) {
+    public ListAtsActivitiesRequest withLimit(Double limit) {
         this.limit = limit;
         return this;
     }
@@ -65,7 +98,7 @@ public class ListAtsApplicationsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Double offset;
 
-    public ListAtsApplicationsRequest withOffset(Double offset) {
+    public ListAtsActivitiesRequest withOffset(Double offset) {
         this.offset = offset;
         return this;
     }
@@ -73,7 +106,7 @@ public class ListAtsApplicationsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public String order;
 
-    public ListAtsApplicationsRequest withOrder(String order) {
+    public ListAtsActivitiesRequest withOrder(String order) {
         this.order = order;
         return this;
     }
@@ -84,7 +117,7 @@ public class ListAtsApplicationsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
 
-    public ListAtsApplicationsRequest withQuery(String query) {
+    public ListAtsActivitiesRequest withQuery(String query) {
         this.query = query;
         return this;
     }
@@ -92,7 +125,7 @@ public class ListAtsApplicationsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
 
-    public ListAtsApplicationsRequest withSort(String sort) {
+    public ListAtsActivitiesRequest withSort(String sort) {
         this.sort = sort;
         return this;
     }
@@ -103,12 +136,23 @@ public class ListAtsApplicationsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     public OffsetDateTime updatedGte;
 
-    public ListAtsApplicationsRequest withUpdatedGte(OffsetDateTime updatedGte) {
+    public ListAtsActivitiesRequest withUpdatedGte(OffsetDateTime updatedGte) {
         this.updatedGte = updatedGte;
         return this;
     }
     
-    public ListAtsApplicationsRequest(@JsonProperty("connection_id") String connectionId) {
+    /**
+     * The user ID to filter results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
+    public String userId;
+
+    public ListAtsActivitiesRequest withUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    
+    public ListAtsActivitiesRequest(@JsonProperty("connection_id") String connectionId) {
         this.connectionId = connectionId;
   }
 }

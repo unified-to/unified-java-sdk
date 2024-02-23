@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 540edc51c35db4343817668bdfafdaa0
+  docChecksum: 7bd6e19ec36f960e56c7d65cda36a422
   docVersion: "1.0"
   speakeasyVersion: internal
   generationVersion: 2.269.0
-  releaseVersion: 0.16.5
-  configChecksum: 38622dfb6eeeb19472d73a3bfc8d2515
+  releaseVersion: 0.16.6
+  configChecksum: e5c99335025d6c630cc5961ef2e5fd1f
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -28,6 +28,7 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/Taxrate.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Transaction.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Ats.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/Activity.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Application.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Applicationstatus.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Candidate.java
@@ -209,6 +210,8 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmContactResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateUcContactRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateUcContactResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAtsActivityRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAtsActivityResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAtsApplicationRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAtsApplicationResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAtsCandidateRequest.java
@@ -221,6 +224,8 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAtsJobResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAtsScorecardRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAtsScorecardResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsActivityRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsActivityResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsApplicationRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsApplicationResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsCandidateRequest.java
@@ -235,6 +240,8 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsJobResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsScorecardRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAtsScorecardResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsActivitiesRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsActivitiesResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsApplicationsRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsApplicationsResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsApplicationstatusesRequest.java
@@ -251,6 +258,8 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsJobsResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsScorecardsRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAtsScorecardsResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAtsActivityRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAtsActivityResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAtsApplicationRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAtsApplicationResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAtsCandidateRequest.java
@@ -263,6 +272,8 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAtsJobResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAtsScorecardRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAtsScorecardResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAtsActivityRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAtsActivityResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAtsApplicationRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAtsApplicationResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAtsCandidateRequest.java
@@ -275,6 +286,8 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAtsJobResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAtsScorecardRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAtsScorecardResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAtsActivityRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAtsActivityResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAtsApplicationRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAtsApplicationResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAtsCandidateRequest.java
@@ -583,6 +596,8 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/UcTelephone.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/UcEmailType.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/UcEmail.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsActivityType.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsActivity.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsApplicationStatus.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsApplication.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsApplicationAnswer.java
@@ -807,6 +822,8 @@ generatedFiles:
   - docs/models/operations/UpdateCrmContactResponse.md
   - docs/models/operations/UpdateUcContactRequest.md
   - docs/models/operations/UpdateUcContactResponse.md
+  - docs/models/operations/CreateAtsActivityRequest.md
+  - docs/models/operations/CreateAtsActivityResponse.md
   - docs/models/operations/CreateAtsApplicationRequest.md
   - docs/models/operations/CreateAtsApplicationResponse.md
   - docs/models/operations/CreateAtsCandidateRequest.md
@@ -819,6 +836,8 @@ generatedFiles:
   - docs/models/operations/CreateAtsJobResponse.md
   - docs/models/operations/CreateAtsScorecardRequest.md
   - docs/models/operations/CreateAtsScorecardResponse.md
+  - docs/models/operations/GetAtsActivityRequest.md
+  - docs/models/operations/GetAtsActivityResponse.md
   - docs/models/operations/GetAtsApplicationRequest.md
   - docs/models/operations/GetAtsApplicationResponse.md
   - docs/models/operations/GetAtsCandidateRequest.md
@@ -833,6 +852,8 @@ generatedFiles:
   - docs/models/operations/GetAtsJobResponse.md
   - docs/models/operations/GetAtsScorecardRequest.md
   - docs/models/operations/GetAtsScorecardResponse.md
+  - docs/models/operations/ListAtsActivitiesRequest.md
+  - docs/models/operations/ListAtsActivitiesResponse.md
   - docs/models/operations/ListAtsApplicationsRequest.md
   - docs/models/operations/ListAtsApplicationsResponse.md
   - docs/models/operations/ListAtsApplicationstatusesRequest.md
@@ -849,6 +870,8 @@ generatedFiles:
   - docs/models/operations/ListAtsJobsResponse.md
   - docs/models/operations/ListAtsScorecardsRequest.md
   - docs/models/operations/ListAtsScorecardsResponse.md
+  - docs/models/operations/PatchAtsActivityRequest.md
+  - docs/models/operations/PatchAtsActivityResponse.md
   - docs/models/operations/PatchAtsApplicationRequest.md
   - docs/models/operations/PatchAtsApplicationResponse.md
   - docs/models/operations/PatchAtsCandidateRequest.md
@@ -861,6 +884,8 @@ generatedFiles:
   - docs/models/operations/PatchAtsJobResponse.md
   - docs/models/operations/PatchAtsScorecardRequest.md
   - docs/models/operations/PatchAtsScorecardResponse.md
+  - docs/models/operations/RemoveAtsActivityRequest.md
+  - docs/models/operations/RemoveAtsActivityResponse.md
   - docs/models/operations/RemoveAtsApplicationRequest.md
   - docs/models/operations/RemoveAtsApplicationResponse.md
   - docs/models/operations/RemoveAtsCandidateRequest.md
@@ -873,6 +898,8 @@ generatedFiles:
   - docs/models/operations/RemoveAtsJobResponse.md
   - docs/models/operations/RemoveAtsScorecardRequest.md
   - docs/models/operations/RemoveAtsScorecardResponse.md
+  - docs/models/operations/UpdateAtsActivityRequest.md
+  - docs/models/operations/UpdateAtsActivityResponse.md
   - docs/models/operations/UpdateAtsApplicationRequest.md
   - docs/models/operations/UpdateAtsApplicationResponse.md
   - docs/models/operations/UpdateAtsCandidateRequest.md
@@ -1181,6 +1208,8 @@ generatedFiles:
   - docs/models/shared/UcTelephone.md
   - docs/models/shared/UcEmailType.md
   - docs/models/shared/UcEmail.md
+  - docs/models/shared/AtsActivityType.md
+  - docs/models/shared/AtsActivity.md
   - docs/models/shared/AtsApplicationStatus.md
   - docs/models/shared/AtsApplication.md
   - docs/models/shared/AtsApplicationAnswer.md
@@ -1309,6 +1338,7 @@ generatedFiles:
   - docs/sdks/taxrate/README.md
   - docs/sdks/transaction/README.md
   - docs/sdks/ats/README.md
+  - docs/sdks/activity/README.md
   - docs/sdks/application/README.md
   - docs/sdks/applicationstatus/README.md
   - docs/sdks/candidate/README.md
