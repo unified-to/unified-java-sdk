@@ -91,6 +91,15 @@ public class PropertyConnectionAuth {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dev_api_key")
+    public String devApiKey;
+
+    public PropertyConnectionAuth withDevApiKey(String devApiKey) {
+        this.devApiKey = devApiKey;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     public String[] emails;
 

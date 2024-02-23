@@ -56,6 +56,7 @@ public class Application {
                     clientSecret = "<value>";
                     consumerKey = "<value>";
                     consumerSecret = "<value>";
+                    devApiKey = "<value>";
                     emails = new String[]{{
                         add("<value>"),
                     }};
@@ -287,6 +288,7 @@ public class Application {
                         clientSecret = "<value>";
                         consumerKey = "<value>";
                         consumerSecret = "<value>";
+                        devApiKey = "<value>";
                         emails = new String[]{{
                             add("<value>"),
                         }};
@@ -455,6 +457,7 @@ public class Application {
                         clientSecret = "<value>";
                         consumerKey = "<value>";
                         consumerSecret = "<value>";
+                        devApiKey = "<value>";
                         emails = new String[]{{
                             add("<value>"),
                         }};
