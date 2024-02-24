@@ -25,10 +25,11 @@ public class Taxrate {
     /**
      * Create a taxrate
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.CreateAccountingTaxrateResponse createAccountingTaxrate(com.unifiedapi.unifiedto.models.operations.CreateAccountingTaxrateRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateAccountingTaxrateResponse createAccountingTaxrate(com.unifiedapi.unifiedto.models.operations.CreateAccountingTaxrateRequest request, com.unifiedapi.unifiedto.models.operations.CreateAccountingTaxrateSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateAccountingTaxrateRequest.class, baseUrl, "/accounting/{connection_id}/taxrate", request, null);
         
@@ -41,7 +42,7 @@ public class Taxrate {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -65,10 +66,11 @@ public class Taxrate {
     /**
      * Retrieve a taxrate
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetAccountingTaxrateResponse getAccountingTaxrate(com.unifiedapi.unifiedto.models.operations.GetAccountingTaxrateRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetAccountingTaxrateResponse getAccountingTaxrate(com.unifiedapi.unifiedto.models.operations.GetAccountingTaxrateRequest request, com.unifiedapi.unifiedto.models.operations.GetAccountingTaxrateSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAccountingTaxrateRequest.class, baseUrl, "/accounting/{connection_id}/taxrate/{id}", request, null);
         
@@ -85,7 +87,7 @@ public class Taxrate {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -109,10 +111,11 @@ public class Taxrate {
     /**
      * List all taxrates
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListAccountingTaxratesResponse listAccountingTaxrates(com.unifiedapi.unifiedto.models.operations.ListAccountingTaxratesRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListAccountingTaxratesResponse listAccountingTaxrates(com.unifiedapi.unifiedto.models.operations.ListAccountingTaxratesRequest request, com.unifiedapi.unifiedto.models.operations.ListAccountingTaxratesSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListAccountingTaxratesRequest.class, baseUrl, "/accounting/{connection_id}/taxrate", request, null);
         
@@ -129,7 +132,7 @@ public class Taxrate {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -153,10 +156,11 @@ public class Taxrate {
     /**
      * Update a taxrate
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchAccountingTaxrateResponse patchAccountingTaxrate(com.unifiedapi.unifiedto.models.operations.PatchAccountingTaxrateRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchAccountingTaxrateResponse patchAccountingTaxrate(com.unifiedapi.unifiedto.models.operations.PatchAccountingTaxrateRequest request, com.unifiedapi.unifiedto.models.operations.PatchAccountingTaxrateSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAccountingTaxrateRequest.class, baseUrl, "/accounting/{connection_id}/taxrate/{id}", request, null);
         
@@ -169,7 +173,7 @@ public class Taxrate {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -193,10 +197,11 @@ public class Taxrate {
     /**
      * Remove a taxrate
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.RemoveAccountingTaxrateResponse removeAccountingTaxrate(com.unifiedapi.unifiedto.models.operations.RemoveAccountingTaxrateRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveAccountingTaxrateResponse removeAccountingTaxrate(com.unifiedapi.unifiedto.models.operations.RemoveAccountingTaxrateRequest request, com.unifiedapi.unifiedto.models.operations.RemoveAccountingTaxrateSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveAccountingTaxrateRequest.class, baseUrl, "/accounting/{connection_id}/taxrate/{id}", request, null);
         
@@ -207,7 +212,7 @@ public class Taxrate {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -230,10 +235,11 @@ public class Taxrate {
     /**
      * Update a taxrate
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.UpdateAccountingTaxrateResponse updateAccountingTaxrate(com.unifiedapi.unifiedto.models.operations.UpdateAccountingTaxrateRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateAccountingTaxrateResponse updateAccountingTaxrate(com.unifiedapi.unifiedto.models.operations.UpdateAccountingTaxrateRequest request, com.unifiedapi.unifiedto.models.operations.UpdateAccountingTaxrateSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateAccountingTaxrateRequest.class, baseUrl, "/accounting/{connection_id}/taxrate/{id}", request, null);
         
@@ -246,7 +252,7 @@ public class Taxrate {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

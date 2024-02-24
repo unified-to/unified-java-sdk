@@ -25,10 +25,11 @@ public class Commerce {
     /**
      * Create a collection
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionResponse createCommerceCollection(com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionResponse createCommerceCollection(com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionRequest request, com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionRequest.class, baseUrl, "/commerce/{connection_id}/collection", request, null);
         
@@ -41,7 +42,7 @@ public class Commerce {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -65,10 +66,11 @@ public class Commerce {
     /**
      * Create an inventory
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryResponse createCommerceInventory(com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryResponse createCommerceInventory(com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryRequest request, com.unifiedapi.unifiedto.models.operations.CreateCommerceInventorySecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryRequest.class, baseUrl, "/commerce/{connection_id}/inventory", request, null);
         
@@ -81,7 +83,7 @@ public class Commerce {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -105,10 +107,11 @@ public class Commerce {
     /**
      * Create an item
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.CreateCommerceItemResponse createCommerceItem(com.unifiedapi.unifiedto.models.operations.CreateCommerceItemRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateCommerceItemResponse createCommerceItem(com.unifiedapi.unifiedto.models.operations.CreateCommerceItemRequest request, com.unifiedapi.unifiedto.models.operations.CreateCommerceItemSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateCommerceItemRequest.class, baseUrl, "/commerce/{connection_id}/item", request, null);
         
@@ -121,7 +124,7 @@ public class Commerce {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -145,10 +148,11 @@ public class Commerce {
     /**
      * Create a location
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationResponse createCommerceLocation(com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationResponse createCommerceLocation(com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationRequest request, com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationRequest.class, baseUrl, "/commerce/{connection_id}/location", request, null);
         
@@ -161,7 +165,7 @@ public class Commerce {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -185,10 +189,11 @@ public class Commerce {
     /**
      * Retrieve a collection
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionResponse getCommerceCollection(com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionResponse getCommerceCollection(com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionRequest request, com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionRequest.class, baseUrl, "/commerce/{connection_id}/collection/{id}", request, null);
         
@@ -205,7 +210,7 @@ public class Commerce {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -229,10 +234,11 @@ public class Commerce {
     /**
      * Retrieve an inventory
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetCommerceInventoryResponse getCommerceInventory(com.unifiedapi.unifiedto.models.operations.GetCommerceInventoryRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetCommerceInventoryResponse getCommerceInventory(com.unifiedapi.unifiedto.models.operations.GetCommerceInventoryRequest request, com.unifiedapi.unifiedto.models.operations.GetCommerceInventorySecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCommerceInventoryRequest.class, baseUrl, "/commerce/{connection_id}/inventory/{id}", request, null);
         
@@ -249,7 +255,7 @@ public class Commerce {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -273,10 +279,11 @@ public class Commerce {
     /**
      * Retrieve an item
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetCommerceItemResponse getCommerceItem(com.unifiedapi.unifiedto.models.operations.GetCommerceItemRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetCommerceItemResponse getCommerceItem(com.unifiedapi.unifiedto.models.operations.GetCommerceItemRequest request, com.unifiedapi.unifiedto.models.operations.GetCommerceItemSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCommerceItemRequest.class, baseUrl, "/commerce/{connection_id}/item/{id}", request, null);
         
@@ -293,7 +300,7 @@ public class Commerce {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -317,10 +324,11 @@ public class Commerce {
     /**
      * Retrieve a location
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetCommerceLocationResponse getCommerceLocation(com.unifiedapi.unifiedto.models.operations.GetCommerceLocationRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetCommerceLocationResponse getCommerceLocation(com.unifiedapi.unifiedto.models.operations.GetCommerceLocationRequest request, com.unifiedapi.unifiedto.models.operations.GetCommerceLocationSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCommerceLocationRequest.class, baseUrl, "/commerce/{connection_id}/location/{id}", request, null);
         
@@ -337,7 +345,7 @@ public class Commerce {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -361,10 +369,11 @@ public class Commerce {
     /**
      * List all collections
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsResponse listCommerceCollections(com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsResponse listCommerceCollections(com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsRequest request, com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsRequest.class, baseUrl, "/commerce/{connection_id}/collection", request, null);
         
@@ -381,7 +390,7 @@ public class Commerce {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -405,10 +414,11 @@ public class Commerce {
     /**
      * List all inventories
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListCommerceInventoriesResponse listCommerceInventories(com.unifiedapi.unifiedto.models.operations.ListCommerceInventoriesRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListCommerceInventoriesResponse listCommerceInventories(com.unifiedapi.unifiedto.models.operations.ListCommerceInventoriesRequest request, com.unifiedapi.unifiedto.models.operations.ListCommerceInventoriesSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListCommerceInventoriesRequest.class, baseUrl, "/commerce/{connection_id}/inventory", request, null);
         
@@ -425,7 +435,7 @@ public class Commerce {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -449,10 +459,11 @@ public class Commerce {
     /**
      * List all items
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListCommerceItemsResponse listCommerceItems(com.unifiedapi.unifiedto.models.operations.ListCommerceItemsRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListCommerceItemsResponse listCommerceItems(com.unifiedapi.unifiedto.models.operations.ListCommerceItemsRequest request, com.unifiedapi.unifiedto.models.operations.ListCommerceItemsSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListCommerceItemsRequest.class, baseUrl, "/commerce/{connection_id}/item", request, null);
         
@@ -469,7 +480,7 @@ public class Commerce {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -493,10 +504,11 @@ public class Commerce {
     /**
      * List all locations
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListCommerceLocationsResponse listCommerceLocations(com.unifiedapi.unifiedto.models.operations.ListCommerceLocationsRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListCommerceLocationsResponse listCommerceLocations(com.unifiedapi.unifiedto.models.operations.ListCommerceLocationsRequest request, com.unifiedapi.unifiedto.models.operations.ListCommerceLocationsSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListCommerceLocationsRequest.class, baseUrl, "/commerce/{connection_id}/location", request, null);
         
@@ -513,7 +525,7 @@ public class Commerce {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -537,10 +549,11 @@ public class Commerce {
     /**
      * Update a collection
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionResponse patchCommerceCollection(com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionResponse patchCommerceCollection(com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionRequest request, com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionRequest.class, baseUrl, "/commerce/{connection_id}/collection/{id}", request, null);
         
@@ -553,7 +566,7 @@ public class Commerce {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -577,10 +590,11 @@ public class Commerce {
     /**
      * Update an inventory
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryResponse patchCommerceInventory(com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryResponse patchCommerceInventory(com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryRequest request, com.unifiedapi.unifiedto.models.operations.PatchCommerceInventorySecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryRequest.class, baseUrl, "/commerce/{connection_id}/inventory/{id}", request, null);
         
@@ -593,7 +607,7 @@ public class Commerce {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -617,10 +631,11 @@ public class Commerce {
     /**
      * Update an item
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchCommerceItemResponse patchCommerceItem(com.unifiedapi.unifiedto.models.operations.PatchCommerceItemRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchCommerceItemResponse patchCommerceItem(com.unifiedapi.unifiedto.models.operations.PatchCommerceItemRequest request, com.unifiedapi.unifiedto.models.operations.PatchCommerceItemSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchCommerceItemRequest.class, baseUrl, "/commerce/{connection_id}/item/{id}", request, null);
         
@@ -633,7 +648,7 @@ public class Commerce {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -657,10 +672,11 @@ public class Commerce {
     /**
      * Update a location
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationResponse patchCommerceLocation(com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationResponse patchCommerceLocation(com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationRequest request, com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationRequest.class, baseUrl, "/commerce/{connection_id}/location/{id}", request, null);
         
@@ -673,7 +689,7 @@ public class Commerce {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -697,10 +713,11 @@ public class Commerce {
     /**
      * Remove a collection
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionResponse removeCommerceCollection(com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionResponse removeCommerceCollection(com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionRequest request, com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionRequest.class, baseUrl, "/commerce/{connection_id}/collection/{id}", request, null);
         
@@ -711,7 +728,7 @@ public class Commerce {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -734,10 +751,11 @@ public class Commerce {
     /**
      * Remove an inventory
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryResponse removeCommerceInventory(com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryResponse removeCommerceInventory(com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryRequest request, com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventorySecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryRequest.class, baseUrl, "/commerce/{connection_id}/inventory/{id}", request, null);
         
@@ -748,7 +766,7 @@ public class Commerce {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -771,10 +789,11 @@ public class Commerce {
     /**
      * Remove an item
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemResponse removeCommerceItem(com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemResponse removeCommerceItem(com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemRequest request, com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemRequest.class, baseUrl, "/commerce/{connection_id}/item/{id}", request, null);
         
@@ -785,7 +804,7 @@ public class Commerce {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -808,10 +827,11 @@ public class Commerce {
     /**
      * Remove a location
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationResponse removeCommerceLocation(com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationResponse removeCommerceLocation(com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationRequest request, com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationRequest.class, baseUrl, "/commerce/{connection_id}/location/{id}", request, null);
         
@@ -822,7 +842,7 @@ public class Commerce {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -845,10 +865,11 @@ public class Commerce {
     /**
      * Update a collection
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionResponse updateCommerceCollection(com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionResponse updateCommerceCollection(com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionRequest request, com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionRequest.class, baseUrl, "/commerce/{connection_id}/collection/{id}", request, null);
         
@@ -861,7 +882,7 @@ public class Commerce {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -885,10 +906,11 @@ public class Commerce {
     /**
      * Update an inventory
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryResponse updateCommerceInventory(com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryResponse updateCommerceInventory(com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryRequest request, com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventorySecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryRequest.class, baseUrl, "/commerce/{connection_id}/inventory/{id}", request, null);
         
@@ -901,7 +923,7 @@ public class Commerce {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -925,10 +947,11 @@ public class Commerce {
     /**
      * Update an item
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemResponse updateCommerceItem(com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemResponse updateCommerceItem(com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemRequest request, com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemRequest.class, baseUrl, "/commerce/{connection_id}/item/{id}", request, null);
         
@@ -941,7 +964,7 @@ public class Commerce {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -965,10 +988,11 @@ public class Commerce {
     /**
      * Update a location
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationResponse updateCommerceLocation(com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationResponse updateCommerceLocation(com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationRequest request, com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationRequest.class, baseUrl, "/commerce/{connection_id}/location/{id}", request, null);
         
@@ -981,7 +1005,7 @@ public class Commerce {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

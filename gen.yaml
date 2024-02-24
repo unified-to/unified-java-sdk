@@ -8,10 +8,12 @@ generation:
     nameResolutionDec2023: false
     parameterOrderingFeb2024: false
     requestResponseComponentNamesFeb2024: false
+  auth:
+    oAuth2ClientCredentialsEnabled: false
   baseServerURL: ""
   flattenGlobalSecurity: true
 java:
-  version: 0.16.6
+  version: 0.17.0
   artifactID: unifiedto
   companyEmail: hello@unified.to
   companyName: Unified API Inc.

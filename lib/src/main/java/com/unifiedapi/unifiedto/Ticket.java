@@ -25,10 +25,11 @@ public class Ticket {
     /**
      * Create a ticket
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketResponse createTicketingTicket(com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketResponse createTicketingTicket(com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketRequest request, com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketRequest.class, baseUrl, "/ticketing/{connection_id}/ticket", request, null);
         
@@ -41,7 +42,7 @@ public class Ticket {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -65,10 +66,11 @@ public class Ticket {
     /**
      * Retrieve a ticket
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetTicketingTicketResponse getTicketingTicket(com.unifiedapi.unifiedto.models.operations.GetTicketingTicketRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetTicketingTicketResponse getTicketingTicket(com.unifiedapi.unifiedto.models.operations.GetTicketingTicketRequest request, com.unifiedapi.unifiedto.models.operations.GetTicketingTicketSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetTicketingTicketRequest.class, baseUrl, "/ticketing/{connection_id}/ticket/{id}", request, null);
         
@@ -85,7 +87,7 @@ public class Ticket {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -109,10 +111,11 @@ public class Ticket {
     /**
      * List all tickets
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsResponse listTicketingTickets(com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsResponse listTicketingTickets(com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsRequest request, com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsRequest.class, baseUrl, "/ticketing/{connection_id}/ticket", request, null);
         
@@ -129,7 +132,7 @@ public class Ticket {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -153,10 +156,11 @@ public class Ticket {
     /**
      * Update a ticket
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketResponse patchTicketingTicket(com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketResponse patchTicketingTicket(com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketRequest request, com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketRequest.class, baseUrl, "/ticketing/{connection_id}/ticket/{id}", request, null);
         
@@ -169,7 +173,7 @@ public class Ticket {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -193,10 +197,11 @@ public class Ticket {
     /**
      * Remove a ticket
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketResponse removeTicketingTicket(com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketResponse removeTicketingTicket(com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketRequest request, com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketRequest.class, baseUrl, "/ticketing/{connection_id}/ticket/{id}", request, null);
         
@@ -207,7 +212,7 @@ public class Ticket {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -230,10 +235,11 @@ public class Ticket {
     /**
      * Update a ticket
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketResponse updateTicketingTicket(com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketResponse updateTicketingTicket(com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketRequest request, com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketRequest.class, baseUrl, "/ticketing/{connection_id}/ticket/{id}", request, null);
         
@@ -246,7 +252,7 @@ public class Ticket {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

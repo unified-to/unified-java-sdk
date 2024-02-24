@@ -34,7 +34,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateTicketingCustomerRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateTicketingCustomerResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.operations.CreateTicketingCustomerSecurity;
 import com.unifiedapi.unifiedto.models.shared.TicketingCustomer;
 import com.unifiedapi.unifiedto.models.shared.TicketingEmail;
 import com.unifiedapi.unifiedto.models.shared.TicketingEmailType;
@@ -45,12 +45,7 @@ import java.time.OffsetDateTime;
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
+            UnifiedTo sdk = UnifiedTo.builder()            .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateTicketingCustomerRequest req = new CreateTicketingCustomerRequest(
                 "<value>"){{
@@ -84,7 +79,10 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.CreateTicketingCustomerResponse res = sdk.ticketing.createTicketingCustomer(req);
+            com.unifiedapi.unifiedto.models.operations.CreateTicketingCustomerResponse res = sdk.ticketing.createTicketingCustomer(req, new CreateTicketingCustomerSecurity(
+            "<value>"){{
+                jwt = "<YOUR_API_KEY_HERE>";
+            }});
 
             if (res.ticketingCustomer != null) {
                 // handle response
@@ -98,9 +96,10 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.CreateTicketingCustomerRequest](../../models/operations/CreateTicketingCustomerRequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.CreateTicketingCustomerRequest](../../models/operations/CreateTicketingCustomerRequest.md)   | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
+| `security`                                                                                                                               | [com.unifiedapi.unifiedto.models.operations.CreateTicketingCustomerSecurity](../../models/operations/CreateTicketingCustomerSecurity.md) | :heavy_check_mark:                                                                                                                       | The security requirements to use for the request.                                                                                        |
 
 
 ### Response
@@ -120,19 +119,14 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateTicketingNoteRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateTicketingNoteResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.operations.CreateTicketingNoteSecurity;
 import com.unifiedapi.unifiedto.models.shared.TicketingNote;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
+            UnifiedTo sdk = UnifiedTo.builder()            .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateTicketingNoteRequest req = new CreateTicketingNoteRequest(
                 "<value>"){{
@@ -154,7 +148,10 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.CreateTicketingNoteResponse res = sdk.ticketing.createTicketingNote(req);
+            com.unifiedapi.unifiedto.models.operations.CreateTicketingNoteResponse res = sdk.ticketing.createTicketingNote(req, new CreateTicketingNoteSecurity(
+            "<value>"){{
+                jwt = "<YOUR_API_KEY_HERE>";
+            }});
 
             if (res.ticketingNote != null) {
                 // handle response
@@ -168,9 +165,10 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.CreateTicketingNoteRequest](../../models/operations/CreateTicketingNoteRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.CreateTicketingNoteRequest](../../models/operations/CreateTicketingNoteRequest.md)   | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| `security`                                                                                                                       | [com.unifiedapi.unifiedto.models.operations.CreateTicketingNoteSecurity](../../models/operations/CreateTicketingNoteSecurity.md) | :heavy_check_mark:                                                                                                               | The security requirements to use for the request.                                                                                |
 
 
 ### Response
@@ -190,7 +188,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketSecurity;
 import com.unifiedapi.unifiedto.models.shared.TicketingTicket;
 import com.unifiedapi.unifiedto.models.shared.TicketingTicketStatus;
 import java.time.OffsetDateTime;
@@ -198,12 +196,7 @@ import java.time.OffsetDateTime;
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
+            UnifiedTo sdk = UnifiedTo.builder()            .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketRequest req = new CreateTicketingTicketRequest(
                 "<value>"){{
@@ -234,7 +227,10 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketResponse res = sdk.ticketing.createTicketingTicket(req);
+            com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketResponse res = sdk.ticketing.createTicketingTicket(req, new CreateTicketingTicketSecurity(
+            "<value>"){{
+                jwt = "<YOUR_API_KEY_HERE>";
+            }});
 
             if (res.ticketingTicket != null) {
                 // handle response
@@ -248,9 +244,10 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketRequest](../../models/operations/CreateTicketingTicketRequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketRequest](../../models/operations/CreateTicketingTicketRequest.md)   | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| `security`                                                                                                                           | [com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketSecurity](../../models/operations/CreateTicketingTicketSecurity.md) | :heavy_check_mark:                                                                                                                   | The security requirements to use for the request.                                                                                    |
 
 
 ### Response
@@ -270,17 +267,12 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingCustomerRequest;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingCustomerResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.operations.GetTicketingCustomerSecurity;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
+            UnifiedTo sdk = UnifiedTo.builder()            .build();
 
             com.unifiedapi.unifiedto.models.operations.GetTicketingCustomerRequest req = new GetTicketingCustomerRequest(
                 "<value>",
@@ -291,7 +283,10 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.GetTicketingCustomerResponse res = sdk.ticketing.getTicketingCustomer(req);
+            com.unifiedapi.unifiedto.models.operations.GetTicketingCustomerResponse res = sdk.ticketing.getTicketingCustomer(req, new GetTicketingCustomerSecurity(
+            "<value>"){{
+                jwt = "<YOUR_API_KEY_HERE>";
+            }});
 
             if (res.ticketingCustomer != null) {
                 // handle response
@@ -305,9 +300,10 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.GetTicketingCustomerRequest](../../models/operations/GetTicketingCustomerRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.GetTicketingCustomerRequest](../../models/operations/GetTicketingCustomerRequest.md)   | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| `security`                                                                                                                         | [com.unifiedapi.unifiedto.models.operations.GetTicketingCustomerSecurity](../../models/operations/GetTicketingCustomerSecurity.md) | :heavy_check_mark:                                                                                                                 | The security requirements to use for the request.                                                                                  |
 
 
 ### Response
@@ -327,17 +323,12 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingNoteRequest;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingNoteResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.operations.GetTicketingNoteSecurity;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
+            UnifiedTo sdk = UnifiedTo.builder()            .build();
 
             com.unifiedapi.unifiedto.models.operations.GetTicketingNoteRequest req = new GetTicketingNoteRequest(
                 "<value>",
@@ -348,7 +339,10 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.GetTicketingNoteResponse res = sdk.ticketing.getTicketingNote(req);
+            com.unifiedapi.unifiedto.models.operations.GetTicketingNoteResponse res = sdk.ticketing.getTicketingNote(req, new GetTicketingNoteSecurity(
+            "<value>"){{
+                jwt = "<YOUR_API_KEY_HERE>";
+            }});
 
             if (res.ticketingNote != null) {
                 // handle response
@@ -362,9 +356,10 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.GetTicketingNoteRequest](../../models/operations/GetTicketingNoteRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.GetTicketingNoteRequest](../../models/operations/GetTicketingNoteRequest.md)   | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| `security`                                                                                                                 | [com.unifiedapi.unifiedto.models.operations.GetTicketingNoteSecurity](../../models/operations/GetTicketingNoteSecurity.md) | :heavy_check_mark:                                                                                                         | The security requirements to use for the request.                                                                          |
 
 
 ### Response
@@ -384,17 +379,12 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingTicketRequest;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingTicketResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.operations.GetTicketingTicketSecurity;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
+            UnifiedTo sdk = UnifiedTo.builder()            .build();
 
             com.unifiedapi.unifiedto.models.operations.GetTicketingTicketRequest req = new GetTicketingTicketRequest(
                 "<value>",
@@ -405,7 +395,10 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.GetTicketingTicketResponse res = sdk.ticketing.getTicketingTicket(req);
+            com.unifiedapi.unifiedto.models.operations.GetTicketingTicketResponse res = sdk.ticketing.getTicketingTicket(req, new GetTicketingTicketSecurity(
+            "<value>"){{
+                jwt = "<YOUR_API_KEY_HERE>";
+            }});
 
             if (res.ticketingTicket != null) {
                 // handle response
@@ -419,9 +412,10 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.GetTicketingTicketRequest](../../models/operations/GetTicketingTicketRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.GetTicketingTicketRequest](../../models/operations/GetTicketingTicketRequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `security`                                                                                                                     | [com.unifiedapi.unifiedto.models.operations.GetTicketingTicketSecurity](../../models/operations/GetTicketingTicketSecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
 
 
 ### Response
@@ -441,18 +435,13 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.ListTicketingCustomersRequest;
 import com.unifiedapi.unifiedto.models.operations.ListTicketingCustomersResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.operations.ListTicketingCustomersSecurity;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
+            UnifiedTo sdk = UnifiedTo.builder()            .build();
 
             com.unifiedapi.unifiedto.models.operations.ListTicketingCustomersRequest req = new ListTicketingCustomersRequest(
                 "<value>"){{
@@ -468,7 +457,10 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.ListTicketingCustomersResponse res = sdk.ticketing.listTicketingCustomers(req);
+            com.unifiedapi.unifiedto.models.operations.ListTicketingCustomersResponse res = sdk.ticketing.listTicketingCustomers(req, new ListTicketingCustomersSecurity(
+            "<value>"){{
+                jwt = "<YOUR_API_KEY_HERE>";
+            }});
 
             if (res.ticketingCustomers != null) {
                 // handle response
@@ -482,9 +474,10 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.ListTicketingCustomersRequest](../../models/operations/ListTicketingCustomersRequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.ListTicketingCustomersRequest](../../models/operations/ListTicketingCustomersRequest.md)   | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| `security`                                                                                                                             | [com.unifiedapi.unifiedto.models.operations.ListTicketingCustomersSecurity](../../models/operations/ListTicketingCustomersSecurity.md) | :heavy_check_mark:                                                                                                                     | The security requirements to use for the request.                                                                                      |
 
 
 ### Response
@@ -504,18 +497,13 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.ListTicketingNotesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListTicketingNotesResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.operations.ListTicketingNotesSecurity;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
+            UnifiedTo sdk = UnifiedTo.builder()            .build();
 
             com.unifiedapi.unifiedto.models.operations.ListTicketingNotesRequest req = new ListTicketingNotesRequest(
                 "<value>"){{
@@ -532,7 +520,10 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.ListTicketingNotesResponse res = sdk.ticketing.listTicketingNotes(req);
+            com.unifiedapi.unifiedto.models.operations.ListTicketingNotesResponse res = sdk.ticketing.listTicketingNotes(req, new ListTicketingNotesSecurity(
+            "<value>"){{
+                jwt = "<YOUR_API_KEY_HERE>";
+            }});
 
             if (res.ticketingNotes != null) {
                 // handle response
@@ -546,9 +537,10 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.ListTicketingNotesRequest](../../models/operations/ListTicketingNotesRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.ListTicketingNotesRequest](../../models/operations/ListTicketingNotesRequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `security`                                                                                                                     | [com.unifiedapi.unifiedto.models.operations.ListTicketingNotesSecurity](../../models/operations/ListTicketingNotesSecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
 
 
 ### Response
@@ -568,18 +560,13 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsSecurity;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
+            UnifiedTo sdk = UnifiedTo.builder()            .build();
 
             com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsRequest req = new ListTicketingTicketsRequest(
                 "<value>"){{
@@ -597,7 +584,10 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsResponse res = sdk.ticketing.listTicketingTickets(req);
+            com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsResponse res = sdk.ticketing.listTicketingTickets(req, new ListTicketingTicketsSecurity(
+            "<value>"){{
+                jwt = "<YOUR_API_KEY_HERE>";
+            }});
 
             if (res.ticketingTickets != null) {
                 // handle response
@@ -611,9 +601,10 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsRequest](../../models/operations/ListTicketingTicketsRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsRequest](../../models/operations/ListTicketingTicketsRequest.md)   | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| `security`                                                                                                                         | [com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsSecurity](../../models/operations/ListTicketingTicketsSecurity.md) | :heavy_check_mark:                                                                                                                 | The security requirements to use for the request.                                                                                  |
 
 
 ### Response
@@ -633,7 +624,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingCustomerRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingCustomerResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.operations.PatchTicketingCustomerSecurity;
 import com.unifiedapi.unifiedto.models.shared.TicketingCustomer;
 import com.unifiedapi.unifiedto.models.shared.TicketingEmail;
 import com.unifiedapi.unifiedto.models.shared.TicketingEmailType;
@@ -644,12 +635,7 @@ import java.time.OffsetDateTime;
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
+            UnifiedTo sdk = UnifiedTo.builder()            .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchTicketingCustomerRequest req = new PatchTicketingCustomerRequest(
                 "<value>",
@@ -684,7 +670,10 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.PatchTicketingCustomerResponse res = sdk.ticketing.patchTicketingCustomer(req);
+            com.unifiedapi.unifiedto.models.operations.PatchTicketingCustomerResponse res = sdk.ticketing.patchTicketingCustomer(req, new PatchTicketingCustomerSecurity(
+            "<value>"){{
+                jwt = "<YOUR_API_KEY_HERE>";
+            }});
 
             if (res.ticketingCustomer != null) {
                 // handle response
@@ -698,9 +687,10 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.PatchTicketingCustomerRequest](../../models/operations/PatchTicketingCustomerRequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.PatchTicketingCustomerRequest](../../models/operations/PatchTicketingCustomerRequest.md)   | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| `security`                                                                                                                             | [com.unifiedapi.unifiedto.models.operations.PatchTicketingCustomerSecurity](../../models/operations/PatchTicketingCustomerSecurity.md) | :heavy_check_mark:                                                                                                                     | The security requirements to use for the request.                                                                                      |
 
 
 ### Response
@@ -720,19 +710,14 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingNoteRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingNoteResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.operations.PatchTicketingNoteSecurity;
 import com.unifiedapi.unifiedto.models.shared.TicketingNote;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
+            UnifiedTo sdk = UnifiedTo.builder()            .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchTicketingNoteRequest req = new PatchTicketingNoteRequest(
                 "<value>",
@@ -755,7 +740,10 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.PatchTicketingNoteResponse res = sdk.ticketing.patchTicketingNote(req);
+            com.unifiedapi.unifiedto.models.operations.PatchTicketingNoteResponse res = sdk.ticketing.patchTicketingNote(req, new PatchTicketingNoteSecurity(
+            "<value>"){{
+                jwt = "<YOUR_API_KEY_HERE>";
+            }});
 
             if (res.ticketingNote != null) {
                 // handle response
@@ -769,9 +757,10 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.PatchTicketingNoteRequest](../../models/operations/PatchTicketingNoteRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.PatchTicketingNoteRequest](../../models/operations/PatchTicketingNoteRequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `security`                                                                                                                     | [com.unifiedapi.unifiedto.models.operations.PatchTicketingNoteSecurity](../../models/operations/PatchTicketingNoteSecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
 
 
 ### Response
@@ -791,7 +780,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketSecurity;
 import com.unifiedapi.unifiedto.models.shared.TicketingTicket;
 import com.unifiedapi.unifiedto.models.shared.TicketingTicketStatus;
 import java.time.OffsetDateTime;
@@ -799,12 +788,7 @@ import java.time.OffsetDateTime;
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
+            UnifiedTo sdk = UnifiedTo.builder()            .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketRequest req = new PatchTicketingTicketRequest(
                 "<value>",
@@ -836,7 +820,10 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketResponse res = sdk.ticketing.patchTicketingTicket(req);
+            com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketResponse res = sdk.ticketing.patchTicketingTicket(req, new PatchTicketingTicketSecurity(
+            "<value>"){{
+                jwt = "<YOUR_API_KEY_HERE>";
+            }});
 
             if (res.ticketingTicket != null) {
                 // handle response
@@ -850,9 +837,10 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketRequest](../../models/operations/PatchTicketingTicketRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketRequest](../../models/operations/PatchTicketingTicketRequest.md)   | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| `security`                                                                                                                         | [com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketSecurity](../../models/operations/PatchTicketingTicketSecurity.md) | :heavy_check_mark:                                                                                                                 | The security requirements to use for the request.                                                                                  |
 
 
 ### Response
@@ -872,23 +860,21 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.RemoveTicketingCustomerRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveTicketingCustomerResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.operations.RemoveTicketingCustomerSecurity;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
+            UnifiedTo sdk = UnifiedTo.builder()            .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveTicketingCustomerRequest req = new RemoveTicketingCustomerRequest(
                 "<value>",
                 "<value>");
 
-            com.unifiedapi.unifiedto.models.operations.RemoveTicketingCustomerResponse res = sdk.ticketing.removeTicketingCustomer(req);
+            com.unifiedapi.unifiedto.models.operations.RemoveTicketingCustomerResponse res = sdk.ticketing.removeTicketingCustomer(req, new RemoveTicketingCustomerSecurity(
+            "<value>"){{
+                jwt = "<YOUR_API_KEY_HERE>";
+            }});
 
             if (res.statusCode == 200) {
                 // handle response
@@ -902,9 +888,10 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.RemoveTicketingCustomerRequest](../../models/operations/RemoveTicketingCustomerRequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.RemoveTicketingCustomerRequest](../../models/operations/RemoveTicketingCustomerRequest.md)   | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
+| `security`                                                                                                                               | [com.unifiedapi.unifiedto.models.operations.RemoveTicketingCustomerSecurity](../../models/operations/RemoveTicketingCustomerSecurity.md) | :heavy_check_mark:                                                                                                                       | The security requirements to use for the request.                                                                                        |
 
 
 ### Response
@@ -924,23 +911,21 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.RemoveTicketingNoteRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveTicketingNoteResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.operations.RemoveTicketingNoteSecurity;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
+            UnifiedTo sdk = UnifiedTo.builder()            .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveTicketingNoteRequest req = new RemoveTicketingNoteRequest(
                 "<value>",
                 "<value>");
 
-            com.unifiedapi.unifiedto.models.operations.RemoveTicketingNoteResponse res = sdk.ticketing.removeTicketingNote(req);
+            com.unifiedapi.unifiedto.models.operations.RemoveTicketingNoteResponse res = sdk.ticketing.removeTicketingNote(req, new RemoveTicketingNoteSecurity(
+            "<value>"){{
+                jwt = "<YOUR_API_KEY_HERE>";
+            }});
 
             if (res.statusCode == 200) {
                 // handle response
@@ -954,9 +939,10 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.RemoveTicketingNoteRequest](../../models/operations/RemoveTicketingNoteRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.RemoveTicketingNoteRequest](../../models/operations/RemoveTicketingNoteRequest.md)   | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| `security`                                                                                                                       | [com.unifiedapi.unifiedto.models.operations.RemoveTicketingNoteSecurity](../../models/operations/RemoveTicketingNoteSecurity.md) | :heavy_check_mark:                                                                                                               | The security requirements to use for the request.                                                                                |
 
 
 ### Response
@@ -976,23 +962,21 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketSecurity;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
+            UnifiedTo sdk = UnifiedTo.builder()            .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketRequest req = new RemoveTicketingTicketRequest(
                 "<value>",
                 "<value>");
 
-            com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketResponse res = sdk.ticketing.removeTicketingTicket(req);
+            com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketResponse res = sdk.ticketing.removeTicketingTicket(req, new RemoveTicketingTicketSecurity(
+            "<value>"){{
+                jwt = "<YOUR_API_KEY_HERE>";
+            }});
 
             if (res.statusCode == 200) {
                 // handle response
@@ -1006,9 +990,10 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketRequest](../../models/operations/RemoveTicketingTicketRequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketRequest](../../models/operations/RemoveTicketingTicketRequest.md)   | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| `security`                                                                                                                           | [com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketSecurity](../../models/operations/RemoveTicketingTicketSecurity.md) | :heavy_check_mark:                                                                                                                   | The security requirements to use for the request.                                                                                    |
 
 
 ### Response
@@ -1028,7 +1013,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateTicketingCustomerRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateTicketingCustomerResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.operations.UpdateTicketingCustomerSecurity;
 import com.unifiedapi.unifiedto.models.shared.TicketingCustomer;
 import com.unifiedapi.unifiedto.models.shared.TicketingEmail;
 import com.unifiedapi.unifiedto.models.shared.TicketingEmailType;
@@ -1039,12 +1024,7 @@ import java.time.OffsetDateTime;
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
+            UnifiedTo sdk = UnifiedTo.builder()            .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateTicketingCustomerRequest req = new UpdateTicketingCustomerRequest(
                 "<value>",
@@ -1079,7 +1059,10 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.UpdateTicketingCustomerResponse res = sdk.ticketing.updateTicketingCustomer(req);
+            com.unifiedapi.unifiedto.models.operations.UpdateTicketingCustomerResponse res = sdk.ticketing.updateTicketingCustomer(req, new UpdateTicketingCustomerSecurity(
+            "<value>"){{
+                jwt = "<YOUR_API_KEY_HERE>";
+            }});
 
             if (res.ticketingCustomer != null) {
                 // handle response
@@ -1093,9 +1076,10 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.UpdateTicketingCustomerRequest](../../models/operations/UpdateTicketingCustomerRequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.UpdateTicketingCustomerRequest](../../models/operations/UpdateTicketingCustomerRequest.md)   | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
+| `security`                                                                                                                               | [com.unifiedapi.unifiedto.models.operations.UpdateTicketingCustomerSecurity](../../models/operations/UpdateTicketingCustomerSecurity.md) | :heavy_check_mark:                                                                                                                       | The security requirements to use for the request.                                                                                        |
 
 
 ### Response
@@ -1115,19 +1099,14 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateTicketingNoteRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateTicketingNoteResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.operations.UpdateTicketingNoteSecurity;
 import com.unifiedapi.unifiedto.models.shared.TicketingNote;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
+            UnifiedTo sdk = UnifiedTo.builder()            .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateTicketingNoteRequest req = new UpdateTicketingNoteRequest(
                 "<value>",
@@ -1150,7 +1129,10 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.UpdateTicketingNoteResponse res = sdk.ticketing.updateTicketingNote(req);
+            com.unifiedapi.unifiedto.models.operations.UpdateTicketingNoteResponse res = sdk.ticketing.updateTicketingNote(req, new UpdateTicketingNoteSecurity(
+            "<value>"){{
+                jwt = "<YOUR_API_KEY_HERE>";
+            }});
 
             if (res.ticketingNote != null) {
                 // handle response
@@ -1164,9 +1146,10 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.UpdateTicketingNoteRequest](../../models/operations/UpdateTicketingNoteRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.UpdateTicketingNoteRequest](../../models/operations/UpdateTicketingNoteRequest.md)   | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| `security`                                                                                                                       | [com.unifiedapi.unifiedto.models.operations.UpdateTicketingNoteSecurity](../../models/operations/UpdateTicketingNoteSecurity.md) | :heavy_check_mark:                                                                                                               | The security requirements to use for the request.                                                                                |
 
 
 ### Response
@@ -1186,7 +1169,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketSecurity;
 import com.unifiedapi.unifiedto.models.shared.TicketingTicket;
 import com.unifiedapi.unifiedto.models.shared.TicketingTicketStatus;
 import java.time.OffsetDateTime;
@@ -1194,12 +1177,7 @@ import java.time.OffsetDateTime;
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
+            UnifiedTo sdk = UnifiedTo.builder()            .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketRequest req = new UpdateTicketingTicketRequest(
                 "<value>",
@@ -1231,7 +1209,10 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketResponse res = sdk.ticketing.updateTicketingTicket(req);
+            com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketResponse res = sdk.ticketing.updateTicketingTicket(req, new UpdateTicketingTicketSecurity(
+            "<value>"){{
+                jwt = "<YOUR_API_KEY_HERE>";
+            }});
 
             if (res.ticketingTicket != null) {
                 // handle response
@@ -1245,9 +1226,10 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketRequest](../../models/operations/UpdateTicketingTicketRequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketRequest](../../models/operations/UpdateTicketingTicketRequest.md)   | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| `security`                                                                                                                           | [com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketSecurity](../../models/operations/UpdateTicketingTicketSecurity.md) | :heavy_check_mark:                                                                                                                   | The security requirements to use for the request.                                                                                    |
 
 
 ### Response

@@ -23,10 +23,11 @@ public class Call {
     /**
      * List all calls
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListUcCallsResponse listUcCalls(com.unifiedapi.unifiedto.models.operations.ListUcCallsRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListUcCallsResponse listUcCalls(com.unifiedapi.unifiedto.models.operations.ListUcCallsRequest request, com.unifiedapi.unifiedto.models.operations.ListUcCallsSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListUcCallsRequest.class, baseUrl, "/uc/{connection_id}/call", request, null);
         
@@ -43,7 +44,7 @@ public class Call {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

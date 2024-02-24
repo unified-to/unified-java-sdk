@@ -25,10 +25,11 @@ public class Employee {
     /**
      * Create an employee
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeResponse createHrisEmployee(com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeResponse createHrisEmployee(com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeRequest request, com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeRequest.class, baseUrl, "/hris/{connection_id}/employee", request, null);
         
@@ -41,7 +42,7 @@ public class Employee {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -65,10 +66,11 @@ public class Employee {
     /**
      * Retrieve an employee
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetHrisEmployeeResponse getHrisEmployee(com.unifiedapi.unifiedto.models.operations.GetHrisEmployeeRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetHrisEmployeeResponse getHrisEmployee(com.unifiedapi.unifiedto.models.operations.GetHrisEmployeeRequest request, com.unifiedapi.unifiedto.models.operations.GetHrisEmployeeSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetHrisEmployeeRequest.class, baseUrl, "/hris/{connection_id}/employee/{id}", request, null);
         
@@ -85,7 +87,7 @@ public class Employee {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -109,10 +111,11 @@ public class Employee {
     /**
      * List all employees
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListHrisEmployeesResponse listHrisEmployees(com.unifiedapi.unifiedto.models.operations.ListHrisEmployeesRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListHrisEmployeesResponse listHrisEmployees(com.unifiedapi.unifiedto.models.operations.ListHrisEmployeesRequest request, com.unifiedapi.unifiedto.models.operations.ListHrisEmployeesSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListHrisEmployeesRequest.class, baseUrl, "/hris/{connection_id}/employee", request, null);
         
@@ -129,7 +132,7 @@ public class Employee {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -153,10 +156,11 @@ public class Employee {
     /**
      * Update an employee
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeResponse patchHrisEmployee(com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeResponse patchHrisEmployee(com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeRequest request, com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeRequest.class, baseUrl, "/hris/{connection_id}/employee/{id}", request, null);
         
@@ -169,7 +173,7 @@ public class Employee {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -193,10 +197,11 @@ public class Employee {
     /**
      * Remove an employee
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.RemoveHrisEmployeeResponse removeHrisEmployee(com.unifiedapi.unifiedto.models.operations.RemoveHrisEmployeeRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveHrisEmployeeResponse removeHrisEmployee(com.unifiedapi.unifiedto.models.operations.RemoveHrisEmployeeRequest request, com.unifiedapi.unifiedto.models.operations.RemoveHrisEmployeeSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveHrisEmployeeRequest.class, baseUrl, "/hris/{connection_id}/employee/{id}", request, null);
         
@@ -207,7 +212,7 @@ public class Employee {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -230,10 +235,11 @@ public class Employee {
     /**
      * Update an employee
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeResponse updateHrisEmployee(com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeResponse updateHrisEmployee(com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeRequest request, com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeRequest.class, baseUrl, "/hris/{connection_id}/employee/{id}", request, null);
         
@@ -246,7 +252,7 @@ public class Employee {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

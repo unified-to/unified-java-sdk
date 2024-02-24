@@ -18,17 +18,12 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutSecurity;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
+            UnifiedTo sdk = UnifiedTo.builder()            .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutRequest req = new GetAccountingPayoutRequest(
                 "<value>",
@@ -39,7 +34,10 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutResponse res = sdk.payout.getAccountingPayout(req);
+            com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutResponse res = sdk.payout.getAccountingPayout(req, new GetAccountingPayoutSecurity(
+            "<value>"){{
+                jwt = "<YOUR_API_KEY_HERE>";
+            }});
 
             if (res.accountingPayout != null) {
                 // handle response
@@ -53,9 +51,10 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutRequest](../../models/operations/GetAccountingPayoutRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutRequest](../../models/operations/GetAccountingPayoutRequest.md)   | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| `security`                                                                                                                       | [com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutSecurity](../../models/operations/GetAccountingPayoutSecurity.md) | :heavy_check_mark:                                                                                                               | The security requirements to use for the request.                                                                                |
 
 
 ### Response
@@ -75,18 +74,13 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsSecurity;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
+            UnifiedTo sdk = UnifiedTo.builder()            .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsRequest req = new ListAccountingPayoutsRequest(
                 "<value>"){{
@@ -102,7 +96,10 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsResponse res = sdk.payout.listAccountingPayouts(req);
+            com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsResponse res = sdk.payout.listAccountingPayouts(req, new ListAccountingPayoutsSecurity(
+            "<value>"){{
+                jwt = "<YOUR_API_KEY_HERE>";
+            }});
 
             if (res.accountingPayouts != null) {
                 // handle response
@@ -116,9 +113,10 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsRequest](../../models/operations/ListAccountingPayoutsRequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsRequest](../../models/operations/ListAccountingPayoutsRequest.md)   | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| `security`                                                                                                                           | [com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsSecurity](../../models/operations/ListAccountingPayoutsSecurity.md) | :heavy_check_mark:                                                                                                                   | The security requirements to use for the request.                                                                                    |
 
 
 ### Response

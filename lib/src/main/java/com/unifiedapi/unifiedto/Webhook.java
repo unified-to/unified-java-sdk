@@ -26,10 +26,11 @@ public class Webhook {
      * Create webhook subscription
      * The data payload received by your server is described at https://docs.unified.to/unified/overview.  The `interval` field can be set as low as 15 minutes for paid accounts, and 60 minutes for free accounts.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookResponse createUnifiedWebhook(com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookResponse createUnifiedWebhook(com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookRequest request, com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(baseUrl, "/unified/webhook");
         
@@ -48,7 +49,7 @@ public class Webhook {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -72,10 +73,11 @@ public class Webhook {
     /**
      * Retrieve webhook by its ID
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookResponse getUnifiedWebhook(com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookResponse getUnifiedWebhook(com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookRequest request, com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookRequest.class, baseUrl, "/unified/webhook/{id}", request, null);
         
@@ -86,7 +88,7 @@ public class Webhook {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -110,10 +112,11 @@ public class Webhook {
     /**
      * Returns all registered webhooks
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListUnifiedWebhooksResponse listUnifiedWebhooks(com.unifiedapi.unifiedto.models.operations.ListUnifiedWebhooksRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListUnifiedWebhooksResponse listUnifiedWebhooks(com.unifiedapi.unifiedto.models.operations.ListUnifiedWebhooksRequest request, com.unifiedapi.unifiedto.models.operations.ListUnifiedWebhooksSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(baseUrl, "/unified/webhook");
         
@@ -130,7 +133,7 @@ public class Webhook {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -154,10 +157,11 @@ public class Webhook {
     /**
      * Trigger webhook
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerResponse patchUnifiedWebhookTrigger(com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerResponse patchUnifiedWebhookTrigger(com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerRequest request, com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerRequest.class, baseUrl, "/unified/webhook/{id}/trigger", request, null);
         
@@ -168,7 +172,7 @@ public class Webhook {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -191,10 +195,11 @@ public class Webhook {
     /**
      * Remove webhook subscription
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.RemoveUnifiedWebhookResponse removeUnifiedWebhook(com.unifiedapi.unifiedto.models.operations.RemoveUnifiedWebhookRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveUnifiedWebhookResponse removeUnifiedWebhook(com.unifiedapi.unifiedto.models.operations.RemoveUnifiedWebhookRequest request, com.unifiedapi.unifiedto.models.operations.RemoveUnifiedWebhookSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveUnifiedWebhookRequest.class, baseUrl, "/unified/webhook/{id}", request, null);
         
@@ -205,7 +210,7 @@ public class Webhook {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -228,10 +233,11 @@ public class Webhook {
     /**
      * Trigger webhook
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerResponse updateUnifiedWebhookTrigger(com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerResponse updateUnifiedWebhookTrigger(com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerRequest request, com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerRequest.class, baseUrl, "/unified/webhook/{id}/trigger", request, null);
         
@@ -242,7 +248,7 @@ public class Webhook {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

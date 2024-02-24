@@ -22,21 +22,16 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationResponse;
+import com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationSecurity;
 import com.unifiedapi.unifiedto.models.shared.AtsApplication;
 import com.unifiedapi.unifiedto.models.shared.AtsApplicationAnswer;
 import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
+            UnifiedTo sdk = UnifiedTo.builder()            .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationRequest req = new CreateAtsApplicationRequest(
                 "<value>"){{
@@ -44,9 +39,13 @@ public class Application {
 ){{
                     answers = new com.unifiedapi.unifiedto.models.shared.AtsApplicationAnswer[]{{
                         add(new AtsApplicationAnswer(
-                        "<value>",
+                        new String[]{{
+                            add("<value>"),
+                        }},
                         "<value>"){{
-                            answer = "<value>";
+                            answers = new String[]{{
+                                add("<value>"),
+                            }};
                             questionId = "<value>";
                         }}),
                     }};
@@ -71,7 +70,10 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationResponse res = sdk.application.createAtsApplication(req);
+            com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationResponse res = sdk.application.createAtsApplication(req, new CreateAtsApplicationSecurity(
+            "<value>"){{
+                jwt = "<YOUR_API_KEY_HERE>";
+            }});
 
             if (res.atsApplication != null) {
                 // handle response
@@ -85,9 +87,10 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationRequest](../../models/operations/CreateAtsApplicationRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationRequest](../../models/operations/CreateAtsApplicationRequest.md)   | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| `security`                                                                                                                         | [com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationSecurity](../../models/operations/CreateAtsApplicationSecurity.md) | :heavy_check_mark:                                                                                                                 | The security requirements to use for the request.                                                                                  |
 
 
 ### Response
@@ -107,17 +110,12 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsApplicationResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.operations.GetAtsApplicationSecurity;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
+            UnifiedTo sdk = UnifiedTo.builder()            .build();
 
             com.unifiedapi.unifiedto.models.operations.GetAtsApplicationRequest req = new GetAtsApplicationRequest(
                 "<value>",
@@ -128,7 +126,10 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.GetAtsApplicationResponse res = sdk.application.getAtsApplication(req);
+            com.unifiedapi.unifiedto.models.operations.GetAtsApplicationResponse res = sdk.application.getAtsApplication(req, new GetAtsApplicationSecurity(
+            "<value>"){{
+                jwt = "<YOUR_API_KEY_HERE>";
+            }});
 
             if (res.atsApplication != null) {
                 // handle response
@@ -142,9 +143,10 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.GetAtsApplicationRequest](../../models/operations/GetAtsApplicationRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.GetAtsApplicationRequest](../../models/operations/GetAtsApplicationRequest.md)   | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| `security`                                                                                                                   | [com.unifiedapi.unifiedto.models.operations.GetAtsApplicationSecurity](../../models/operations/GetAtsApplicationSecurity.md) | :heavy_check_mark:                                                                                                           | The security requirements to use for the request.                                                                            |
 
 
 ### Response
@@ -164,18 +166,13 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsSecurity;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
+            UnifiedTo sdk = UnifiedTo.builder()            .build();
 
             com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsRequest req = new ListAtsApplicationsRequest(
                 "<value>"){{
@@ -193,7 +190,10 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsResponse res = sdk.application.listAtsApplications(req);
+            com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsResponse res = sdk.application.listAtsApplications(req, new ListAtsApplicationsSecurity(
+            "<value>"){{
+                jwt = "<YOUR_API_KEY_HERE>";
+            }});
 
             if (res.atsApplications != null) {
                 // handle response
@@ -207,9 +207,10 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsRequest](../../models/operations/ListAtsApplicationsRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsRequest](../../models/operations/ListAtsApplicationsRequest.md)   | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| `security`                                                                                                                       | [com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsSecurity](../../models/operations/ListAtsApplicationsSecurity.md) | :heavy_check_mark:                                                                                                               | The security requirements to use for the request.                                                                                |
 
 
 ### Response
@@ -229,21 +230,16 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationResponse;
+import com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationSecurity;
 import com.unifiedapi.unifiedto.models.shared.AtsApplication;
 import com.unifiedapi.unifiedto.models.shared.AtsApplicationAnswer;
 import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
+            UnifiedTo sdk = UnifiedTo.builder()            .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationRequest req = new PatchAtsApplicationRequest(
                 "<value>",
@@ -252,9 +248,13 @@ public class Application {
 ){{
                     answers = new com.unifiedapi.unifiedto.models.shared.AtsApplicationAnswer[]{{
                         add(new AtsApplicationAnswer(
-                        "<value>",
+                        new String[]{{
+                            add("<value>"),
+                        }},
                         "<value>"){{
-                            answer = "<value>";
+                            answers = new String[]{{
+                                add("<value>"),
+                            }};
                             questionId = "<value>";
                         }}),
                     }};
@@ -279,7 +279,10 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationResponse res = sdk.application.patchAtsApplication(req);
+            com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationResponse res = sdk.application.patchAtsApplication(req, new PatchAtsApplicationSecurity(
+            "<value>"){{
+                jwt = "<YOUR_API_KEY_HERE>";
+            }});
 
             if (res.atsApplication != null) {
                 // handle response
@@ -293,9 +296,10 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationRequest](../../models/operations/PatchAtsApplicationRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationRequest](../../models/operations/PatchAtsApplicationRequest.md)   | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| `security`                                                                                                                       | [com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationSecurity](../../models/operations/PatchAtsApplicationSecurity.md) | :heavy_check_mark:                                                                                                               | The security requirements to use for the request.                                                                                |
 
 
 ### Response
@@ -315,23 +319,21 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationSecurity;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
+            UnifiedTo sdk = UnifiedTo.builder()            .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationRequest req = new RemoveAtsApplicationRequest(
                 "<value>",
                 "<value>");
 
-            com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationResponse res = sdk.application.removeAtsApplication(req);
+            com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationResponse res = sdk.application.removeAtsApplication(req, new RemoveAtsApplicationSecurity(
+            "<value>"){{
+                jwt = "<YOUR_API_KEY_HERE>";
+            }});
 
             if (res.statusCode == 200) {
                 // handle response
@@ -345,9 +347,10 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationRequest](../../models/operations/RemoveAtsApplicationRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationRequest](../../models/operations/RemoveAtsApplicationRequest.md)   | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| `security`                                                                                                                         | [com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationSecurity](../../models/operations/RemoveAtsApplicationSecurity.md) | :heavy_check_mark:                                                                                                                 | The security requirements to use for the request.                                                                                  |
 
 
 ### Response
@@ -367,21 +370,16 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationResponse;
+import com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationSecurity;
 import com.unifiedapi.unifiedto.models.shared.AtsApplication;
 import com.unifiedapi.unifiedto.models.shared.AtsApplicationAnswer;
 import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
+            UnifiedTo sdk = UnifiedTo.builder()            .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationRequest req = new UpdateAtsApplicationRequest(
                 "<value>",
@@ -390,9 +388,13 @@ public class Application {
 ){{
                     answers = new com.unifiedapi.unifiedto.models.shared.AtsApplicationAnswer[]{{
                         add(new AtsApplicationAnswer(
-                        "<value>",
+                        new String[]{{
+                            add("<value>"),
+                        }},
                         "<value>"){{
-                            answer = "<value>";
+                            answers = new String[]{{
+                                add("<value>"),
+                            }};
                             questionId = "<value>";
                         }}),
                     }};
@@ -417,7 +419,10 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationResponse res = sdk.application.updateAtsApplication(req);
+            com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationResponse res = sdk.application.updateAtsApplication(req, new UpdateAtsApplicationSecurity(
+            "<value>"){{
+                jwt = "<YOUR_API_KEY_HERE>";
+            }});
 
             if (res.atsApplication != null) {
                 // handle response
@@ -431,9 +436,10 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationRequest](../../models/operations/UpdateAtsApplicationRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationRequest](../../models/operations/UpdateAtsApplicationRequest.md)   | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| `security`                                                                                                                         | [com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationSecurity](../../models/operations/UpdateAtsApplicationSecurity.md) | :heavy_check_mark:                                                                                                                 | The security requirements to use for the request.                                                                                  |
 
 
 ### Response

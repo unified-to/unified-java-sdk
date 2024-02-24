@@ -1,8 +1,8 @@
-# Security
+# RemoveHrisGroupSecurity
 
 
 ## Fields
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `jwt`              | *String*           | :heavy_minus_sign: | N/A                |
+| `jwt`              | *String*           | :heavy_check_mark: | N/A                |

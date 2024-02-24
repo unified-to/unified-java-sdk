@@ -24,10 +24,11 @@ public class Passthrough {
     /**
      * Passthrough POST
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.CreatePassthroughResponse createPassthrough(com.unifiedapi.unifiedto.models.operations.CreatePassthroughRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreatePassthroughResponse createPassthrough(com.unifiedapi.unifiedto.models.operations.CreatePassthroughRequest request, com.unifiedapi.unifiedto.models.operations.CreatePassthroughSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreatePassthroughRequest.class, baseUrl, "/passthrough/{connection_id}/{path}", request, null);
         
@@ -40,7 +41,7 @@ public class Passthrough {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -64,10 +65,11 @@ public class Passthrough {
     /**
      * Passthrough GET
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListPassthroughsResponse listPassthroughs(com.unifiedapi.unifiedto.models.operations.ListPassthroughsRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListPassthroughsResponse listPassthroughs(com.unifiedapi.unifiedto.models.operations.ListPassthroughsRequest request, com.unifiedapi.unifiedto.models.operations.ListPassthroughsSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListPassthroughsRequest.class, baseUrl, "/passthrough/{connection_id}/{path}", request, null);
         
@@ -78,7 +80,7 @@ public class Passthrough {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -102,10 +104,11 @@ public class Passthrough {
     /**
      * Passthrough PUT
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchPassthroughResponse patchPassthrough(com.unifiedapi.unifiedto.models.operations.PatchPassthroughRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchPassthroughResponse patchPassthrough(com.unifiedapi.unifiedto.models.operations.PatchPassthroughRequest request, com.unifiedapi.unifiedto.models.operations.PatchPassthroughSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchPassthroughRequest.class, baseUrl, "/passthrough/{connection_id}/{path}", request, null);
         
@@ -118,7 +121,7 @@ public class Passthrough {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -142,10 +145,11 @@ public class Passthrough {
     /**
      * Passthrough DELETE
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.RemovePassthroughResponse removePassthrough(com.unifiedapi.unifiedto.models.operations.RemovePassthroughRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemovePassthroughResponse removePassthrough(com.unifiedapi.unifiedto.models.operations.RemovePassthroughRequest request, com.unifiedapi.unifiedto.models.operations.RemovePassthroughSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemovePassthroughRequest.class, baseUrl, "/passthrough/{connection_id}/{path}", request, null);
         
@@ -156,7 +160,7 @@ public class Passthrough {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -180,10 +184,11 @@ public class Passthrough {
     /**
      * Passthrough PUT
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.UpdatePassthroughResponse updatePassthrough(com.unifiedapi.unifiedto.models.operations.UpdatePassthroughRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdatePassthroughResponse updatePassthrough(com.unifiedapi.unifiedto.models.operations.UpdatePassthroughRequest request, com.unifiedapi.unifiedto.models.operations.UpdatePassthroughSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdatePassthroughRequest.class, baseUrl, "/passthrough/{connection_id}/{path}", request, null);
         
@@ -196,7 +201,7 @@ public class Passthrough {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

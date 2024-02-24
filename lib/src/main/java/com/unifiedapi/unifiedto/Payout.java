@@ -23,10 +23,11 @@ public class Payout {
     /**
      * Retrieve a payout
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutResponse getAccountingPayout(com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutResponse getAccountingPayout(com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutRequest request, com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutRequest.class, baseUrl, "/accounting/{connection_id}/payout/{id}", request, null);
         
@@ -43,7 +44,7 @@ public class Payout {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -67,10 +68,11 @@ public class Payout {
     /**
      * List all payouts
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsResponse listAccountingPayouts(com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsResponse listAccountingPayouts(com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsRequest request, com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsRequest.class, baseUrl, "/accounting/{connection_id}/payout", request, null);
         
@@ -87,7 +89,7 @@ public class Payout {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

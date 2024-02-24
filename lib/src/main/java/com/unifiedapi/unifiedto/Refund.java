@@ -23,10 +23,11 @@ public class Refund {
     /**
      * Retrieve a refund
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetAccountingRefundResponse getAccountingRefund(com.unifiedapi.unifiedto.models.operations.GetAccountingRefundRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetAccountingRefundResponse getAccountingRefund(com.unifiedapi.unifiedto.models.operations.GetAccountingRefundRequest request, com.unifiedapi.unifiedto.models.operations.GetAccountingRefundSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAccountingRefundRequest.class, baseUrl, "/accounting/{connection_id}/refund/{id}", request, null);
         
@@ -43,7 +44,7 @@ public class Refund {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -67,10 +68,11 @@ public class Refund {
     /**
      * List all refunds
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsResponse listAccountingRefunds(com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsResponse listAccountingRefunds(com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsRequest request, com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsRequest.class, baseUrl, "/accounting/{connection_id}/refund", request, null);
         
@@ -87,7 +89,7 @@ public class Refund {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -24,10 +24,11 @@ public class Enrich {
     /**
      * Retrieve enrichment information for a company
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesResponse listEnrichCompanies(com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesResponse listEnrichCompanies(com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesRequest request, com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesRequest.class, baseUrl, "/enrich/{connection_id}/company", request, null);
         
@@ -44,7 +45,7 @@ public class Enrich {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -68,10 +69,11 @@ public class Enrich {
     /**
      * Retrieve enrichment information for a person
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleResponse listEnrichPeople(com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleResponse listEnrichPeople(com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleRequest request, com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleRequest.class, baseUrl, "/enrich/{connection_id}/person", request, null);
         
@@ -88,7 +90,7 @@ public class Enrich {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

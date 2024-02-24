@@ -5,19 +5,18 @@
 package com.unifiedapi.unifiedto;
 
 import com.unifiedapi.unifiedto.utils.HTTPClient;
-import com.unifiedapi.unifiedto.models.shared.Security;
 
 class SDKConfiguration {
 	public HTTPClient defaultClient;
 	public HTTPClient securityClient;
-	public Security security;
+	
 	public String serverUrl;
 	public int serverIdx = 0;
 	public String language = "java";
 	public String openapiDocVersion = "1.0";
-	public String sdkVersion = "0.16.6";
-	public String genVersion = "2.269.0";
-	public String userAgent = "speakeasy-sdk/java 0.16.6 2.269.0 1.0 com.unifiedapi.unifiedto";
+	public String sdkVersion = "0.17.0";
+	public String genVersion = "2.272.4";
+	public String userAgent = "speakeasy-sdk/java 0.17.0 2.272.4 1.0 com.unifiedapi.unifiedto";
 	
 	
 }

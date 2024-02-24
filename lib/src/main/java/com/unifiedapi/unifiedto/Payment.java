@@ -25,10 +25,11 @@ public class Payment {
     /**
      * Create a payment
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.CreateAccountingPaymentResponse createAccountingPayment(com.unifiedapi.unifiedto.models.operations.CreateAccountingPaymentRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateAccountingPaymentResponse createAccountingPayment(com.unifiedapi.unifiedto.models.operations.CreateAccountingPaymentRequest request, com.unifiedapi.unifiedto.models.operations.CreateAccountingPaymentSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateAccountingPaymentRequest.class, baseUrl, "/accounting/{connection_id}/payment", request, null);
         
@@ -41,7 +42,7 @@ public class Payment {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -65,10 +66,11 @@ public class Payment {
     /**
      * Retrieve a payment
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetAccountingPaymentResponse getAccountingPayment(com.unifiedapi.unifiedto.models.operations.GetAccountingPaymentRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetAccountingPaymentResponse getAccountingPayment(com.unifiedapi.unifiedto.models.operations.GetAccountingPaymentRequest request, com.unifiedapi.unifiedto.models.operations.GetAccountingPaymentSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAccountingPaymentRequest.class, baseUrl, "/accounting/{connection_id}/payment/{id}", request, null);
         
@@ -85,7 +87,7 @@ public class Payment {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -109,10 +111,11 @@ public class Payment {
     /**
      * List all payments
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListAccountingPaymentsResponse listAccountingPayments(com.unifiedapi.unifiedto.models.operations.ListAccountingPaymentsRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListAccountingPaymentsResponse listAccountingPayments(com.unifiedapi.unifiedto.models.operations.ListAccountingPaymentsRequest request, com.unifiedapi.unifiedto.models.operations.ListAccountingPaymentsSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListAccountingPaymentsRequest.class, baseUrl, "/accounting/{connection_id}/payment", request, null);
         
@@ -129,7 +132,7 @@ public class Payment {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -153,10 +156,11 @@ public class Payment {
     /**
      * Update a payment
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchAccountingPaymentResponse patchAccountingPayment(com.unifiedapi.unifiedto.models.operations.PatchAccountingPaymentRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchAccountingPaymentResponse patchAccountingPayment(com.unifiedapi.unifiedto.models.operations.PatchAccountingPaymentRequest request, com.unifiedapi.unifiedto.models.operations.PatchAccountingPaymentSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAccountingPaymentRequest.class, baseUrl, "/accounting/{connection_id}/payment/{id}", request, null);
         
@@ -169,7 +173,7 @@ public class Payment {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -193,10 +197,11 @@ public class Payment {
     /**
      * Remove a payment
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.RemoveAccountingPaymentResponse removeAccountingPayment(com.unifiedapi.unifiedto.models.operations.RemoveAccountingPaymentRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveAccountingPaymentResponse removeAccountingPayment(com.unifiedapi.unifiedto.models.operations.RemoveAccountingPaymentRequest request, com.unifiedapi.unifiedto.models.operations.RemoveAccountingPaymentSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveAccountingPaymentRequest.class, baseUrl, "/accounting/{connection_id}/payment/{id}", request, null);
         
@@ -207,7 +212,7 @@ public class Payment {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -230,10 +235,11 @@ public class Payment {
     /**
      * Update a payment
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.UpdateAccountingPaymentResponse updateAccountingPayment(com.unifiedapi.unifiedto.models.operations.UpdateAccountingPaymentRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateAccountingPaymentResponse updateAccountingPayment(com.unifiedapi.unifiedto.models.operations.UpdateAccountingPaymentRequest request, com.unifiedapi.unifiedto.models.operations.UpdateAccountingPaymentSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateAccountingPaymentRequest.class, baseUrl, "/accounting/{connection_id}/payment/{id}", request, null);
         
@@ -246,7 +252,7 @@ public class Payment {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

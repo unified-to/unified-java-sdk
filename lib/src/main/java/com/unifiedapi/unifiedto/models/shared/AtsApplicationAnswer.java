@@ -8,11 +8,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 public class AtsApplicationAnswer {
-    @JsonProperty("answer")
-    public String answer;
+    @JsonProperty("answers")
+    public String[] answers;
 
-    public AtsApplicationAnswer withAnswer(String answer) {
-        this.answer = answer;
+    public AtsApplicationAnswer withAnswers(String[] answers) {
+        this.answers = answers;
         return this;
     }
     
@@ -24,8 +24,8 @@ public class AtsApplicationAnswer {
         return this;
     }
     
-    public AtsApplicationAnswer(@JsonProperty("answer") String answer, @JsonProperty("question_id") String questionId) {
-        this.answer = answer;
+    public AtsApplicationAnswer(@JsonProperty("answers") String[] answers, @JsonProperty("question_id") String questionId) {
+        this.answers = answers;
         this.questionId = questionId;
   }
 }

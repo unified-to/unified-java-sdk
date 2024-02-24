@@ -24,10 +24,11 @@ public class Organization {
     /**
      * Retrieve an organization
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetAccountingOrganizationResponse getAccountingOrganization(com.unifiedapi.unifiedto.models.operations.GetAccountingOrganizationRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetAccountingOrganizationResponse getAccountingOrganization(com.unifiedapi.unifiedto.models.operations.GetAccountingOrganizationRequest request, com.unifiedapi.unifiedto.models.operations.GetAccountingOrganizationSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAccountingOrganizationRequest.class, baseUrl, "/accounting/{connection_id}/organization/{id}", request, null);
         
@@ -44,7 +45,7 @@ public class Organization {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -68,10 +69,11 @@ public class Organization {
     /**
      * List all organizations
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListAccountingOrganizationsResponse listAccountingOrganizations(com.unifiedapi.unifiedto.models.operations.ListAccountingOrganizationsRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListAccountingOrganizationsResponse listAccountingOrganizations(com.unifiedapi.unifiedto.models.operations.ListAccountingOrganizationsRequest request, com.unifiedapi.unifiedto.models.operations.ListAccountingOrganizationsSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListAccountingOrganizationsRequest.class, baseUrl, "/accounting/{connection_id}/organization", request, null);
         
@@ -88,7 +90,7 @@ public class Organization {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

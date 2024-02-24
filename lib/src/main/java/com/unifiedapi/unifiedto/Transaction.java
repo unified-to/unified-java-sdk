@@ -24,10 +24,11 @@ public class Transaction {
     /**
      * Create a transaction
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionResponse createAccountingTransaction(com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionResponse createAccountingTransaction(com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionRequest request, com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionRequest.class, baseUrl, "/accounting/{connection_id}/transaction", request, null);
         
@@ -40,7 +41,7 @@ public class Transaction {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -64,10 +65,11 @@ public class Transaction {
     /**
      * Retrieve a transaction
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetAccountingTransactionResponse getAccountingTransaction(com.unifiedapi.unifiedto.models.operations.GetAccountingTransactionRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetAccountingTransactionResponse getAccountingTransaction(com.unifiedapi.unifiedto.models.operations.GetAccountingTransactionRequest request, com.unifiedapi.unifiedto.models.operations.GetAccountingTransactionSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAccountingTransactionRequest.class, baseUrl, "/accounting/{connection_id}/transaction/{id}", request, null);
         
@@ -84,7 +86,7 @@ public class Transaction {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -108,10 +110,11 @@ public class Transaction {
     /**
      * List all transactions
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListAccountingTransactionsResponse listAccountingTransactions(com.unifiedapi.unifiedto.models.operations.ListAccountingTransactionsRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListAccountingTransactionsResponse listAccountingTransactions(com.unifiedapi.unifiedto.models.operations.ListAccountingTransactionsRequest request, com.unifiedapi.unifiedto.models.operations.ListAccountingTransactionsSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListAccountingTransactionsRequest.class, baseUrl, "/accounting/{connection_id}/transaction", request, null);
         
@@ -128,7 +131,7 @@ public class Transaction {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -152,10 +155,11 @@ public class Transaction {
     /**
      * Update a transaction
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionResponse patchAccountingTransaction(com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionResponse patchAccountingTransaction(com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionRequest request, com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionRequest.class, baseUrl, "/accounting/{connection_id}/transaction/{id}", request, null);
         
@@ -168,7 +172,7 @@ public class Transaction {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -192,10 +196,11 @@ public class Transaction {
     /**
      * Remove a transaction
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.RemoveAccountingTransactionResponse removeAccountingTransaction(com.unifiedapi.unifiedto.models.operations.RemoveAccountingTransactionRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveAccountingTransactionResponse removeAccountingTransaction(com.unifiedapi.unifiedto.models.operations.RemoveAccountingTransactionRequest request, com.unifiedapi.unifiedto.models.operations.RemoveAccountingTransactionSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveAccountingTransactionRequest.class, baseUrl, "/accounting/{connection_id}/transaction/{id}", request, null);
         
@@ -206,7 +211,7 @@ public class Transaction {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -229,10 +234,11 @@ public class Transaction {
     /**
      * Update a transaction
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionResponse updateAccountingTransaction(com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionResponse updateAccountingTransaction(com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionRequest request, com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionRequest.class, baseUrl, "/accounting/{connection_id}/transaction/{id}", request, null);
         
@@ -245,7 +251,7 @@ public class Transaction {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -5,8 +5,8 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse;
+import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountSecurity;
 import com.unifiedapi.unifiedto.models.shared.AccountingAccount;
-import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.Status;
 import com.unifiedapi.unifiedto.models.shared.Type;
 import java.time.OffsetDateTime;
@@ -14,12 +14,7 @@ import java.time.OffsetDateTime;
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
+            UnifiedTo sdk = UnifiedTo.builder()            .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest req = new CreateAccountingAccountRequest(
                 "<value>"){{
@@ -44,7 +39,10 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse res = sdk.accounting.createAccountingAccount(req);
+            com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse res = sdk.accounting.createAccountingAccount(req, new CreateAccountingAccountSecurity(
+            "<value>"){{
+                jwt = "<YOUR_API_KEY_HERE>";
+            }});
 
             if (res.accountingAccount != null) {
                 // handle response

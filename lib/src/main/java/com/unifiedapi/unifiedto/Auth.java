@@ -42,8 +42,7 @@ public class Auth {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
+        HTTPClient client = this.sdkConfiguration.defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -86,8 +85,7 @@ public class Auth {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
+        HTTPClient client = this.sdkConfiguration.defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");

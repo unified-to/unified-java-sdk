@@ -25,10 +25,11 @@ public class Location {
     /**
      * Create a location
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationResponse createCommerceLocation(com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationResponse createCommerceLocation(com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationRequest request, com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationRequest.class, baseUrl, "/commerce/{connection_id}/location", request, null);
         
@@ -41,7 +42,7 @@ public class Location {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -65,10 +66,11 @@ public class Location {
     /**
      * Retrieve a location
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetCommerceLocationResponse getCommerceLocation(com.unifiedapi.unifiedto.models.operations.GetCommerceLocationRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetCommerceLocationResponse getCommerceLocation(com.unifiedapi.unifiedto.models.operations.GetCommerceLocationRequest request, com.unifiedapi.unifiedto.models.operations.GetCommerceLocationSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCommerceLocationRequest.class, baseUrl, "/commerce/{connection_id}/location/{id}", request, null);
         
@@ -85,7 +87,7 @@ public class Location {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -109,10 +111,11 @@ public class Location {
     /**
      * List all locations
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListCommerceLocationsResponse listCommerceLocations(com.unifiedapi.unifiedto.models.operations.ListCommerceLocationsRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListCommerceLocationsResponse listCommerceLocations(com.unifiedapi.unifiedto.models.operations.ListCommerceLocationsRequest request, com.unifiedapi.unifiedto.models.operations.ListCommerceLocationsSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListCommerceLocationsRequest.class, baseUrl, "/commerce/{connection_id}/location", request, null);
         
@@ -129,7 +132,7 @@ public class Location {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -153,10 +156,11 @@ public class Location {
     /**
      * Update a location
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationResponse patchCommerceLocation(com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationResponse patchCommerceLocation(com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationRequest request, com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationRequest.class, baseUrl, "/commerce/{connection_id}/location/{id}", request, null);
         
@@ -169,7 +173,7 @@ public class Location {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -193,10 +197,11 @@ public class Location {
     /**
      * Remove a location
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationResponse removeCommerceLocation(com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationResponse removeCommerceLocation(com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationRequest request, com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationRequest.class, baseUrl, "/commerce/{connection_id}/location/{id}", request, null);
         
@@ -207,7 +212,7 @@ public class Location {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -230,10 +235,11 @@ public class Location {
     /**
      * Update a location
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationResponse updateCommerceLocation(com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationResponse updateCommerceLocation(com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationRequest request, com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationRequest.class, baseUrl, "/commerce/{connection_id}/location/{id}", request, null);
         
@@ -246,7 +252,7 @@ public class Location {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

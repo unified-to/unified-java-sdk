@@ -25,10 +25,11 @@ public class Invoice {
     /**
      * Create a invoice
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.CreateAccountingInvoiceResponse createAccountingInvoice(com.unifiedapi.unifiedto.models.operations.CreateAccountingInvoiceRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateAccountingInvoiceResponse createAccountingInvoice(com.unifiedapi.unifiedto.models.operations.CreateAccountingInvoiceRequest request, com.unifiedapi.unifiedto.models.operations.CreateAccountingInvoiceSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateAccountingInvoiceRequest.class, baseUrl, "/accounting/{connection_id}/invoice", request, null);
         
@@ -41,7 +42,7 @@ public class Invoice {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -65,10 +66,11 @@ public class Invoice {
     /**
      * Retrieve a invoice
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetAccountingInvoiceResponse getAccountingInvoice(com.unifiedapi.unifiedto.models.operations.GetAccountingInvoiceRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetAccountingInvoiceResponse getAccountingInvoice(com.unifiedapi.unifiedto.models.operations.GetAccountingInvoiceRequest request, com.unifiedapi.unifiedto.models.operations.GetAccountingInvoiceSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAccountingInvoiceRequest.class, baseUrl, "/accounting/{connection_id}/invoice/{id}", request, null);
         
@@ -85,7 +87,7 @@ public class Invoice {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -109,10 +111,11 @@ public class Invoice {
     /**
      * List all invoices
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListAccountingInvoicesResponse listAccountingInvoices(com.unifiedapi.unifiedto.models.operations.ListAccountingInvoicesRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListAccountingInvoicesResponse listAccountingInvoices(com.unifiedapi.unifiedto.models.operations.ListAccountingInvoicesRequest request, com.unifiedapi.unifiedto.models.operations.ListAccountingInvoicesSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListAccountingInvoicesRequest.class, baseUrl, "/accounting/{connection_id}/invoice", request, null);
         
@@ -129,7 +132,7 @@ public class Invoice {
             }
         }
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -153,10 +156,11 @@ public class Invoice {
     /**
      * Update a invoice
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchAccountingInvoiceResponse patchAccountingInvoice(com.unifiedapi.unifiedto.models.operations.PatchAccountingInvoiceRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchAccountingInvoiceResponse patchAccountingInvoice(com.unifiedapi.unifiedto.models.operations.PatchAccountingInvoiceRequest request, com.unifiedapi.unifiedto.models.operations.PatchAccountingInvoiceSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAccountingInvoiceRequest.class, baseUrl, "/accounting/{connection_id}/invoice/{id}", request, null);
         
@@ -169,7 +173,7 @@ public class Invoice {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -193,10 +197,11 @@ public class Invoice {
     /**
      * Remove a invoice
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.RemoveAccountingInvoiceResponse removeAccountingInvoice(com.unifiedapi.unifiedto.models.operations.RemoveAccountingInvoiceRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveAccountingInvoiceResponse removeAccountingInvoice(com.unifiedapi.unifiedto.models.operations.RemoveAccountingInvoiceRequest request, com.unifiedapi.unifiedto.models.operations.RemoveAccountingInvoiceSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveAccountingInvoiceRequest.class, baseUrl, "/accounting/{connection_id}/invoice/{id}", request, null);
         
@@ -207,7 +212,7 @@ public class Invoice {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -230,10 +235,11 @@ public class Invoice {
     /**
      * Update a invoice
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceResponse updateAccountingInvoice(com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceResponse updateAccountingInvoice(com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceRequest request, com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceRequest.class, baseUrl, "/accounting/{connection_id}/invoice/{id}", request, null);
         
@@ -246,7 +252,7 @@ public class Invoice {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = this.sdkConfiguration.securityClient;
+        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
