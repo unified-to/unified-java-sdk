@@ -25,11 +25,10 @@ public class Inventory {
     /**
      * Create an inventory
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryResponse createCommerceInventory(com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryRequest request, com.unifiedapi.unifiedto.models.operations.CreateCommerceInventorySecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryResponse createCommerceInventory(com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryRequest.class, baseUrl, "/commerce/{connection_id}/inventory", request, null);
         
@@ -42,7 +41,7 @@ public class Inventory {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -66,11 +65,10 @@ public class Inventory {
     /**
      * Retrieve an inventory
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetCommerceInventoryResponse getCommerceInventory(com.unifiedapi.unifiedto.models.operations.GetCommerceInventoryRequest request, com.unifiedapi.unifiedto.models.operations.GetCommerceInventorySecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetCommerceInventoryResponse getCommerceInventory(com.unifiedapi.unifiedto.models.operations.GetCommerceInventoryRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCommerceInventoryRequest.class, baseUrl, "/commerce/{connection_id}/inventory/{id}", request, null);
         
@@ -87,7 +85,7 @@ public class Inventory {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -111,11 +109,10 @@ public class Inventory {
     /**
      * List all inventories
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListCommerceInventoriesResponse listCommerceInventories(com.unifiedapi.unifiedto.models.operations.ListCommerceInventoriesRequest request, com.unifiedapi.unifiedto.models.operations.ListCommerceInventoriesSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListCommerceInventoriesResponse listCommerceInventories(com.unifiedapi.unifiedto.models.operations.ListCommerceInventoriesRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListCommerceInventoriesRequest.class, baseUrl, "/commerce/{connection_id}/inventory", request, null);
         
@@ -132,7 +129,7 @@ public class Inventory {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -156,11 +153,10 @@ public class Inventory {
     /**
      * Update an inventory
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryResponse patchCommerceInventory(com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryRequest request, com.unifiedapi.unifiedto.models.operations.PatchCommerceInventorySecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryResponse patchCommerceInventory(com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryRequest.class, baseUrl, "/commerce/{connection_id}/inventory/{id}", request, null);
         
@@ -173,7 +169,7 @@ public class Inventory {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -197,11 +193,10 @@ public class Inventory {
     /**
      * Remove an inventory
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryResponse removeCommerceInventory(com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryRequest request, com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventorySecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryResponse removeCommerceInventory(com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryRequest.class, baseUrl, "/commerce/{connection_id}/inventory/{id}", request, null);
         
@@ -212,7 +207,7 @@ public class Inventory {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -235,11 +230,10 @@ public class Inventory {
     /**
      * Update an inventory
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryResponse updateCommerceInventory(com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryRequest request, com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventorySecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryResponse updateCommerceInventory(com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryRequest.class, baseUrl, "/commerce/{connection_id}/inventory/{id}", request, null);
         
@@ -252,7 +246,7 @@ public class Inventory {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

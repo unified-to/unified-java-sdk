@@ -22,14 +22,19 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineResponse;
-import com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmPipeline;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()            .build();
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineRequest req = new CreateCrmPipelineRequest(
                 "<value>"){{
@@ -51,10 +56,7 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineResponse res = sdk.pipeline.createCrmPipeline(req, new CreateCrmPipelineSecurity(
-            "<value>"){{
-                jwt = "<YOUR_API_KEY_HERE>";
-            }});
+            com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineResponse res = sdk.pipeline.createCrmPipeline(req);
 
             if (res.crmPipeline != null) {
                 // handle response
@@ -68,10 +70,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineRequest](../../models/operations/CreateCrmPipelineRequest.md)   | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `security`                                                                                                                   | [com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineSecurity](../../models/operations/CreateCrmPipelineSecurity.md) | :heavy_check_mark:                                                                                                           | The security requirements to use for the request.                                                                            |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineRequest](../../models/operations/CreateCrmPipelineRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response
@@ -91,12 +92,17 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetCrmPipelineRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmPipelineResponse;
-import com.unifiedapi.unifiedto.models.operations.GetCrmPipelineSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()            .build();
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
 
             com.unifiedapi.unifiedto.models.operations.GetCrmPipelineRequest req = new GetCrmPipelineRequest(
                 "<value>",
@@ -107,10 +113,7 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.GetCrmPipelineResponse res = sdk.pipeline.getCrmPipeline(req, new GetCrmPipelineSecurity(
-            "<value>"){{
-                jwt = "<YOUR_API_KEY_HERE>";
-            }});
+            com.unifiedapi.unifiedto.models.operations.GetCrmPipelineResponse res = sdk.pipeline.getCrmPipeline(req);
 
             if (res.crmPipeline != null) {
                 // handle response
@@ -124,10 +127,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [com.unifiedapi.unifiedto.models.operations.GetCrmPipelineRequest](../../models/operations/GetCrmPipelineRequest.md)   | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-| `security`                                                                                                             | [com.unifiedapi.unifiedto.models.operations.GetCrmPipelineSecurity](../../models/operations/GetCrmPipelineSecurity.md) | :heavy_check_mark:                                                                                                     | The security requirements to use for the request.                                                                      |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [com.unifiedapi.unifiedto.models.operations.GetCrmPipelineRequest](../../models/operations/GetCrmPipelineRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
 
 
 ### Response
@@ -147,13 +149,18 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesResponse;
-import com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()            .build();
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
 
             com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesRequest req = new ListCrmPipelinesRequest(
                 "<value>"){{
@@ -169,10 +176,7 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesResponse res = sdk.pipeline.listCrmPipelines(req, new ListCrmPipelinesSecurity(
-            "<value>"){{
-                jwt = "<YOUR_API_KEY_HERE>";
-            }});
+            com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesResponse res = sdk.pipeline.listCrmPipelines(req);
 
             if (res.crmPipelines != null) {
                 // handle response
@@ -186,10 +190,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesRequest](../../models/operations/ListCrmPipelinesRequest.md)   | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
-| `security`                                                                                                                 | [com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesSecurity](../../models/operations/ListCrmPipelinesSecurity.md) | :heavy_check_mark:                                                                                                         | The security requirements to use for the request.                                                                          |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesRequest](../../models/operations/ListCrmPipelinesRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
 
 
 ### Response
@@ -209,14 +212,19 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineResponse;
-import com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmPipeline;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()            .build();
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineRequest req = new PatchCrmPipelineRequest(
                 "<value>",
@@ -239,10 +247,7 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineResponse res = sdk.pipeline.patchCrmPipeline(req, new PatchCrmPipelineSecurity(
-            "<value>"){{
-                jwt = "<YOUR_API_KEY_HERE>";
-            }});
+            com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineResponse res = sdk.pipeline.patchCrmPipeline(req);
 
             if (res.crmPipeline != null) {
                 // handle response
@@ -256,10 +261,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineRequest](../../models/operations/PatchCrmPipelineRequest.md)   | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
-| `security`                                                                                                                 | [com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineSecurity](../../models/operations/PatchCrmPipelineSecurity.md) | :heavy_check_mark:                                                                                                         | The security requirements to use for the request.                                                                          |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineRequest](../../models/operations/PatchCrmPipelineRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
 
 
 ### Response
@@ -279,21 +283,23 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineResponse;
-import com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()            .build();
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineRequest req = new RemoveCrmPipelineRequest(
                 "<value>",
                 "<value>");
 
-            com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineResponse res = sdk.pipeline.removeCrmPipeline(req, new RemoveCrmPipelineSecurity(
-            "<value>"){{
-                jwt = "<YOUR_API_KEY_HERE>";
-            }});
+            com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineResponse res = sdk.pipeline.removeCrmPipeline(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -307,10 +313,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineRequest](../../models/operations/RemoveCrmPipelineRequest.md)   | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `security`                                                                                                                   | [com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineSecurity](../../models/operations/RemoveCrmPipelineSecurity.md) | :heavy_check_mark:                                                                                                           | The security requirements to use for the request.                                                                            |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineRequest](../../models/operations/RemoveCrmPipelineRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response
@@ -330,14 +335,19 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineResponse;
-import com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineSecurity;
 import com.unifiedapi.unifiedto.models.shared.CrmPipeline;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()            .build();
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineRequest req = new UpdateCrmPipelineRequest(
                 "<value>",
@@ -360,10 +370,7 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineResponse res = sdk.pipeline.updateCrmPipeline(req, new UpdateCrmPipelineSecurity(
-            "<value>"){{
-                jwt = "<YOUR_API_KEY_HERE>";
-            }});
+            com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineResponse res = sdk.pipeline.updateCrmPipeline(req);
 
             if (res.crmPipeline != null) {
                 // handle response
@@ -377,10 +384,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineRequest](../../models/operations/UpdateCrmPipelineRequest.md)   | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `security`                                                                                                                   | [com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineSecurity](../../models/operations/UpdateCrmPipelineSecurity.md) | :heavy_check_mark:                                                                                                           | The security requirements to use for the request.                                                                            |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineRequest](../../models/operations/UpdateCrmPipelineRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response

@@ -22,16 +22,21 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionResponse;
-import com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionSecurity;
 import com.unifiedapi.unifiedto.models.shared.CommerceCollection;
 import com.unifiedapi.unifiedto.models.shared.CommerceItemMedia;
 import com.unifiedapi.unifiedto.models.shared.CommerceItemMediaType;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()            .build();
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionRequest req = new CreateCommerceCollectionRequest(
                 "<value>"){{
@@ -67,10 +72,7 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionResponse res = sdk.collection.createCommerceCollection(req, new CreateCommerceCollectionSecurity(
-            "<value>"){{
-                jwt = "<YOUR_API_KEY_HERE>";
-            }});
+            com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionResponse res = sdk.collection.createCommerceCollection(req);
 
             if (res.commerceCollection != null) {
                 // handle response
@@ -84,10 +86,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionRequest](../../models/operations/CreateCommerceCollectionRequest.md)   | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
-| `security`                                                                                                                                 | [com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionSecurity](../../models/operations/CreateCommerceCollectionSecurity.md) | :heavy_check_mark:                                                                                                                         | The security requirements to use for the request.                                                                                          |
+| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionRequest](../../models/operations/CreateCommerceCollectionRequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
 
 
 ### Response
@@ -107,12 +108,17 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionResponse;
-import com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()            .build();
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
 
             com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionRequest req = new GetCommerceCollectionRequest(
                 "<value>",
@@ -123,10 +129,7 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionResponse res = sdk.collection.getCommerceCollection(req, new GetCommerceCollectionSecurity(
-            "<value>"){{
-                jwt = "<YOUR_API_KEY_HERE>";
-            }});
+            com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionResponse res = sdk.collection.getCommerceCollection(req);
 
             if (res.commerceCollection != null) {
                 // handle response
@@ -140,10 +143,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionRequest](../../models/operations/GetCommerceCollectionRequest.md)   | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-| `security`                                                                                                                           | [com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionSecurity](../../models/operations/GetCommerceCollectionSecurity.md) | :heavy_check_mark:                                                                                                                   | The security requirements to use for the request.                                                                                    |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionRequest](../../models/operations/GetCommerceCollectionRequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
 
 
 ### Response
@@ -163,13 +165,18 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsResponse;
-import com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()            .build();
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
 
             com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsRequest req = new ListCommerceCollectionsRequest(
                 "<value>"){{
@@ -185,10 +192,7 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsResponse res = sdk.collection.listCommerceCollections(req, new ListCommerceCollectionsSecurity(
-            "<value>"){{
-                jwt = "<YOUR_API_KEY_HERE>";
-            }});
+            com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsResponse res = sdk.collection.listCommerceCollections(req);
 
             if (res.commerceCollections != null) {
                 // handle response
@@ -202,10 +206,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsRequest](../../models/operations/ListCommerceCollectionsRequest.md)   | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
-| `security`                                                                                                                               | [com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsSecurity](../../models/operations/ListCommerceCollectionsSecurity.md) | :heavy_check_mark:                                                                                                                       | The security requirements to use for the request.                                                                                        |
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsRequest](../../models/operations/ListCommerceCollectionsRequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
 
 
 ### Response
@@ -225,16 +228,21 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionResponse;
-import com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionSecurity;
 import com.unifiedapi.unifiedto.models.shared.CommerceCollection;
 import com.unifiedapi.unifiedto.models.shared.CommerceItemMedia;
 import com.unifiedapi.unifiedto.models.shared.CommerceItemMediaType;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()            .build();
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionRequest req = new PatchCommerceCollectionRequest(
                 "<value>",
@@ -271,10 +279,7 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionResponse res = sdk.collection.patchCommerceCollection(req, new PatchCommerceCollectionSecurity(
-            "<value>"){{
-                jwt = "<YOUR_API_KEY_HERE>";
-            }});
+            com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionResponse res = sdk.collection.patchCommerceCollection(req);
 
             if (res.commerceCollection != null) {
                 // handle response
@@ -288,10 +293,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionRequest](../../models/operations/PatchCommerceCollectionRequest.md)   | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
-| `security`                                                                                                                               | [com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionSecurity](../../models/operations/PatchCommerceCollectionSecurity.md) | :heavy_check_mark:                                                                                                                       | The security requirements to use for the request.                                                                                        |
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionRequest](../../models/operations/PatchCommerceCollectionRequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
 
 
 ### Response
@@ -311,21 +315,23 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionResponse;
-import com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()            .build();
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionRequest req = new RemoveCommerceCollectionRequest(
                 "<value>",
                 "<value>");
 
-            com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionResponse res = sdk.collection.removeCommerceCollection(req, new RemoveCommerceCollectionSecurity(
-            "<value>"){{
-                jwt = "<YOUR_API_KEY_HERE>";
-            }});
+            com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionResponse res = sdk.collection.removeCommerceCollection(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -339,10 +345,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionRequest](../../models/operations/RemoveCommerceCollectionRequest.md)   | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
-| `security`                                                                                                                                 | [com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionSecurity](../../models/operations/RemoveCommerceCollectionSecurity.md) | :heavy_check_mark:                                                                                                                         | The security requirements to use for the request.                                                                                          |
+| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionRequest](../../models/operations/RemoveCommerceCollectionRequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
 
 
 ### Response
@@ -362,16 +367,21 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionResponse;
-import com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionSecurity;
 import com.unifiedapi.unifiedto.models.shared.CommerceCollection;
 import com.unifiedapi.unifiedto.models.shared.CommerceItemMedia;
 import com.unifiedapi.unifiedto.models.shared.CommerceItemMediaType;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()            .build();
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionRequest req = new UpdateCommerceCollectionRequest(
                 "<value>",
@@ -408,10 +418,7 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionResponse res = sdk.collection.updateCommerceCollection(req, new UpdateCommerceCollectionSecurity(
-            "<value>"){{
-                jwt = "<YOUR_API_KEY_HERE>";
-            }});
+            com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionResponse res = sdk.collection.updateCommerceCollection(req);
 
             if (res.commerceCollection != null) {
                 // handle response
@@ -425,10 +432,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionRequest](../../models/operations/UpdateCommerceCollectionRequest.md)   | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
-| `security`                                                                                                                                 | [com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionSecurity](../../models/operations/UpdateCommerceCollectionSecurity.md) | :heavy_check_mark:                                                                                                                         | The security requirements to use for the request.                                                                                          |
+| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionRequest](../../models/operations/UpdateCommerceCollectionRequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
 
 
 ### Response

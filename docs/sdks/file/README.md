@@ -22,8 +22,8 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateStorageFileRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateStorageFileResponse;
-import com.unifiedapi.unifiedto.models.operations.CreateStorageFileSecurity;
 import com.unifiedapi.unifiedto.models.shared.PropertyStoragePermissionRoles;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.StorageFile;
 import com.unifiedapi.unifiedto.models.shared.StorageFileType;
 import com.unifiedapi.unifiedto.models.shared.StoragePermission;
@@ -32,7 +32,12 @@ import java.time.OffsetDateTime;
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()            .build();
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateStorageFileRequest req = new CreateStorageFileRequest(
                 "<value>"){{
@@ -69,10 +74,7 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.CreateStorageFileResponse res = sdk.file.createStorageFile(req, new CreateStorageFileSecurity(
-            "<value>"){{
-                jwt = "<YOUR_API_KEY_HERE>";
-            }});
+            com.unifiedapi.unifiedto.models.operations.CreateStorageFileResponse res = sdk.file.createStorageFile(req);
 
             if (res.storageFile != null) {
                 // handle response
@@ -86,10 +88,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.CreateStorageFileRequest](../../models/operations/CreateStorageFileRequest.md)   | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `security`                                                                                                                   | [com.unifiedapi.unifiedto.models.operations.CreateStorageFileSecurity](../../models/operations/CreateStorageFileSecurity.md) | :heavy_check_mark:                                                                                                           | The security requirements to use for the request.                                                                            |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.CreateStorageFileRequest](../../models/operations/CreateStorageFileRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response
@@ -109,12 +110,17 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetStorageFileRequest;
 import com.unifiedapi.unifiedto.models.operations.GetStorageFileResponse;
-import com.unifiedapi.unifiedto.models.operations.GetStorageFileSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()            .build();
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
 
             com.unifiedapi.unifiedto.models.operations.GetStorageFileRequest req = new GetStorageFileRequest(
                 "<value>",
@@ -125,10 +131,7 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.GetStorageFileResponse res = sdk.file.getStorageFile(req, new GetStorageFileSecurity(
-            "<value>"){{
-                jwt = "<YOUR_API_KEY_HERE>";
-            }});
+            com.unifiedapi.unifiedto.models.operations.GetStorageFileResponse res = sdk.file.getStorageFile(req);
 
             if (res.storageFile != null) {
                 // handle response
@@ -142,10 +145,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [com.unifiedapi.unifiedto.models.operations.GetStorageFileRequest](../../models/operations/GetStorageFileRequest.md)   | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-| `security`                                                                                                             | [com.unifiedapi.unifiedto.models.operations.GetStorageFileSecurity](../../models/operations/GetStorageFileSecurity.md) | :heavy_check_mark:                                                                                                     | The security requirements to use for the request.                                                                      |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [com.unifiedapi.unifiedto.models.operations.GetStorageFileRequest](../../models/operations/GetStorageFileRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
 
 
 ### Response
@@ -165,13 +167,18 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.ListStorageFilesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListStorageFilesResponse;
-import com.unifiedapi.unifiedto.models.operations.ListStorageFilesSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()            .build();
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
 
             com.unifiedapi.unifiedto.models.operations.ListStorageFilesRequest req = new ListStorageFilesRequest(
                 "<value>"){{
@@ -188,10 +195,7 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.ListStorageFilesResponse res = sdk.file.listStorageFiles(req, new ListStorageFilesSecurity(
-            "<value>"){{
-                jwt = "<YOUR_API_KEY_HERE>";
-            }});
+            com.unifiedapi.unifiedto.models.operations.ListStorageFilesResponse res = sdk.file.listStorageFiles(req);
 
             if (res.storageFiles != null) {
                 // handle response
@@ -205,10 +209,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.ListStorageFilesRequest](../../models/operations/ListStorageFilesRequest.md)   | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
-| `security`                                                                                                                 | [com.unifiedapi.unifiedto.models.operations.ListStorageFilesSecurity](../../models/operations/ListStorageFilesSecurity.md) | :heavy_check_mark:                                                                                                         | The security requirements to use for the request.                                                                          |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.ListStorageFilesRequest](../../models/operations/ListStorageFilesRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
 
 
 ### Response
@@ -228,8 +231,8 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchStorageFileRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchStorageFileResponse;
-import com.unifiedapi.unifiedto.models.operations.PatchStorageFileSecurity;
 import com.unifiedapi.unifiedto.models.shared.PropertyStoragePermissionRoles;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.StorageFile;
 import com.unifiedapi.unifiedto.models.shared.StorageFileType;
 import com.unifiedapi.unifiedto.models.shared.StoragePermission;
@@ -238,7 +241,12 @@ import java.time.OffsetDateTime;
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()            .build();
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
 
             com.unifiedapi.unifiedto.models.operations.PatchStorageFileRequest req = new PatchStorageFileRequest(
                 "<value>",
@@ -276,10 +284,7 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.PatchStorageFileResponse res = sdk.file.patchStorageFile(req, new PatchStorageFileSecurity(
-            "<value>"){{
-                jwt = "<YOUR_API_KEY_HERE>";
-            }});
+            com.unifiedapi.unifiedto.models.operations.PatchStorageFileResponse res = sdk.file.patchStorageFile(req);
 
             if (res.storageFile != null) {
                 // handle response
@@ -293,10 +298,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.PatchStorageFileRequest](../../models/operations/PatchStorageFileRequest.md)   | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
-| `security`                                                                                                                 | [com.unifiedapi.unifiedto.models.operations.PatchStorageFileSecurity](../../models/operations/PatchStorageFileSecurity.md) | :heavy_check_mark:                                                                                                         | The security requirements to use for the request.                                                                          |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.PatchStorageFileRequest](../../models/operations/PatchStorageFileRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
 
 
 ### Response
@@ -316,21 +320,23 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.RemoveStorageFileRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveStorageFileResponse;
-import com.unifiedapi.unifiedto.models.operations.RemoveStorageFileSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()            .build();
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
 
             com.unifiedapi.unifiedto.models.operations.RemoveStorageFileRequest req = new RemoveStorageFileRequest(
                 "<value>",
                 "<value>");
 
-            com.unifiedapi.unifiedto.models.operations.RemoveStorageFileResponse res = sdk.file.removeStorageFile(req, new RemoveStorageFileSecurity(
-            "<value>"){{
-                jwt = "<YOUR_API_KEY_HERE>";
-            }});
+            com.unifiedapi.unifiedto.models.operations.RemoveStorageFileResponse res = sdk.file.removeStorageFile(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -344,10 +350,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.RemoveStorageFileRequest](../../models/operations/RemoveStorageFileRequest.md)   | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `security`                                                                                                                   | [com.unifiedapi.unifiedto.models.operations.RemoveStorageFileSecurity](../../models/operations/RemoveStorageFileSecurity.md) | :heavy_check_mark:                                                                                                           | The security requirements to use for the request.                                                                            |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.RemoveStorageFileRequest](../../models/operations/RemoveStorageFileRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response
@@ -367,8 +372,8 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateStorageFileRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateStorageFileResponse;
-import com.unifiedapi.unifiedto.models.operations.UpdateStorageFileSecurity;
 import com.unifiedapi.unifiedto.models.shared.PropertyStoragePermissionRoles;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.StorageFile;
 import com.unifiedapi.unifiedto.models.shared.StorageFileType;
 import com.unifiedapi.unifiedto.models.shared.StoragePermission;
@@ -377,7 +382,12 @@ import java.time.OffsetDateTime;
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()            .build();
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
 
             com.unifiedapi.unifiedto.models.operations.UpdateStorageFileRequest req = new UpdateStorageFileRequest(
                 "<value>",
@@ -415,10 +425,7 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.UpdateStorageFileResponse res = sdk.file.updateStorageFile(req, new UpdateStorageFileSecurity(
-            "<value>"){{
-                jwt = "<YOUR_API_KEY_HERE>";
-            }});
+            com.unifiedapi.unifiedto.models.operations.UpdateStorageFileResponse res = sdk.file.updateStorageFile(req);
 
             if (res.storageFile != null) {
                 // handle response
@@ -432,10 +439,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.UpdateStorageFileRequest](../../models/operations/UpdateStorageFileRequest.md)   | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `security`                                                                                                                   | [com.unifiedapi.unifiedto.models.operations.UpdateStorageFileSecurity](../../models/operations/UpdateStorageFileSecurity.md) | :heavy_check_mark:                                                                                                           | The security requirements to use for the request.                                                                            |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.UpdateStorageFileRequest](../../models/operations/UpdateStorageFileRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response

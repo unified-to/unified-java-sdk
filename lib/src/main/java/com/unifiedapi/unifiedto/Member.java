@@ -25,11 +25,10 @@ public class Member {
     /**
      * Create a member
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.CreateMartechMemberResponse createMartechMember(com.unifiedapi.unifiedto.models.operations.CreateMartechMemberRequest request, com.unifiedapi.unifiedto.models.operations.CreateMartechMemberSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateMartechMemberResponse createMartechMember(com.unifiedapi.unifiedto.models.operations.CreateMartechMemberRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateMartechMemberRequest.class, baseUrl, "/martech/{connection_id}/member", request, null);
         
@@ -42,7 +41,7 @@ public class Member {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -66,11 +65,10 @@ public class Member {
     /**
      * Retrieve a member
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetMartechMemberResponse getMartechMember(com.unifiedapi.unifiedto.models.operations.GetMartechMemberRequest request, com.unifiedapi.unifiedto.models.operations.GetMartechMemberSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetMartechMemberResponse getMartechMember(com.unifiedapi.unifiedto.models.operations.GetMartechMemberRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetMartechMemberRequest.class, baseUrl, "/martech/{connection_id}/member/{id}", request, null);
         
@@ -87,7 +85,7 @@ public class Member {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -111,11 +109,10 @@ public class Member {
     /**
      * List all members
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListMartechMembersResponse listMartechMembers(com.unifiedapi.unifiedto.models.operations.ListMartechMembersRequest request, com.unifiedapi.unifiedto.models.operations.ListMartechMembersSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListMartechMembersResponse listMartechMembers(com.unifiedapi.unifiedto.models.operations.ListMartechMembersRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListMartechMembersRequest.class, baseUrl, "/martech/{connection_id}/member", request, null);
         
@@ -132,7 +129,7 @@ public class Member {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -156,11 +153,10 @@ public class Member {
     /**
      * Update a member
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchMartechMemberResponse patchMartechMember(com.unifiedapi.unifiedto.models.operations.PatchMartechMemberRequest request, com.unifiedapi.unifiedto.models.operations.PatchMartechMemberSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchMartechMemberResponse patchMartechMember(com.unifiedapi.unifiedto.models.operations.PatchMartechMemberRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchMartechMemberRequest.class, baseUrl, "/martech/{connection_id}/member/{id}", request, null);
         
@@ -173,7 +169,7 @@ public class Member {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -197,11 +193,10 @@ public class Member {
     /**
      * Remove member
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberResponse removeMartechMember(com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberRequest request, com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberResponse removeMartechMember(com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberRequest.class, baseUrl, "/martech/{connection_id}/member/{id}", request, null);
         
@@ -212,7 +207,7 @@ public class Member {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -235,11 +230,10 @@ public class Member {
     /**
      * Update a member
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberResponse updateMartechMember(com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberRequest request, com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberResponse updateMartechMember(com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberRequest.class, baseUrl, "/martech/{connection_id}/member/{id}", request, null);
         
@@ -252,7 +246,7 @@ public class Member {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

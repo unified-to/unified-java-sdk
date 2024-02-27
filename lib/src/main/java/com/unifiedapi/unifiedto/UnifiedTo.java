@@ -30,9 +30,6 @@ public class UnifiedTo {
     public Contact contact;
     public Invoice invoice;
     public Organization organization;
-    public Payment payment;
-    public Payout payout;
-    public Refund refund;
     public Taxrate taxrate;
     public Transaction transaction;
     public Ats ats;
@@ -64,6 +61,10 @@ public class UnifiedTo {
     public List list;
     public Member member;
     public Passthrough passthrough;
+    public Payment payment;
+    public Link link;
+    public Payout payout;
+    public Refund refund;
     public Storage storage;
     public File file;
     public Ticketing ticketing;
@@ -99,6 +100,16 @@ public class UnifiedTo {
 		 */
 		public Builder setClient(HTTPClient client) {
 			this.sdkConfiguration.defaultClient = client;
+			return this;
+		}
+		
+		/**
+		 * Configures the SDK to use the provided security details.
+		 * @param security The security details to use for all requests.
+		 * @return The builder instance.
+		 */
+		public Builder setSecurity(com.unifiedapi.unifiedto.models.shared.Security security) {
+			this.sdkConfiguration.security = security;
 			return this;
 		}
 		
@@ -144,6 +155,10 @@ public class UnifiedTo {
 				this.sdkConfiguration.defaultClient = new SpeakeasyHTTPClient();
 			}
 			
+			if (this.sdkConfiguration.security != null) {
+				this.sdkConfiguration.securityClient = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, this.sdkConfiguration.security);
+			}
+			
 			if (this.sdkConfiguration.securityClient == null) {
 				this.sdkConfiguration.securityClient = this.sdkConfiguration.defaultClient;
 			}
@@ -181,12 +196,6 @@ public class UnifiedTo {
 		this.invoice = new Invoice(this.sdkConfiguration);
 		
 		this.organization = new Organization(this.sdkConfiguration);
-		
-		this.payment = new Payment(this.sdkConfiguration);
-		
-		this.payout = new Payout(this.sdkConfiguration);
-		
-		this.refund = new Refund(this.sdkConfiguration);
 		
 		this.taxrate = new Taxrate(this.sdkConfiguration);
 		
@@ -249,6 +258,14 @@ public class UnifiedTo {
 		this.member = new Member(this.sdkConfiguration);
 		
 		this.passthrough = new Passthrough(this.sdkConfiguration);
+		
+		this.payment = new Payment(this.sdkConfiguration);
+		
+		this.link = new Link(this.sdkConfiguration);
+		
+		this.payout = new Payout(this.sdkConfiguration);
+		
+		this.refund = new Refund(this.sdkConfiguration);
 		
 		this.storage = new Storage(this.sdkConfiguration);
 		

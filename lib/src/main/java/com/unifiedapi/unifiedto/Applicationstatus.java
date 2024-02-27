@@ -23,11 +23,10 @@ public class Applicationstatus {
     /**
      * List all application statuses
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListAtsApplicationstatusesResponse listAtsApplicationstatuses(com.unifiedapi.unifiedto.models.operations.ListAtsApplicationstatusesRequest request, com.unifiedapi.unifiedto.models.operations.ListAtsApplicationstatusesSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListAtsApplicationstatusesResponse listAtsApplicationstatuses(com.unifiedapi.unifiedto.models.operations.ListAtsApplicationstatusesRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListAtsApplicationstatusesRequest.class, baseUrl, "/ats/{connection_id}/applicationstatus", request, null);
         
@@ -44,7 +43,7 @@ public class Applicationstatus {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

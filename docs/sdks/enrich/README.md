@@ -18,12 +18,17 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesResponse;
-import com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()            .build();
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
 
             com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesRequest req = new ListEnrichCompaniesRequest(
                 "<value>"){{
@@ -32,10 +37,7 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesResponse res = sdk.enrich.listEnrichCompanies(req, new ListEnrichCompaniesSecurity(
-            "<value>"){{
-                jwt = "<YOUR_API_KEY_HERE>";
-            }});
+            com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesResponse res = sdk.enrich.listEnrichCompanies(req);
 
             if (res.enrichCompany != null) {
                 // handle response
@@ -49,10 +51,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesRequest](../../models/operations/ListEnrichCompaniesRequest.md)   | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `security`                                                                                                                       | [com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesSecurity](../../models/operations/ListEnrichCompaniesSecurity.md) | :heavy_check_mark:                                                                                                               | The security requirements to use for the request.                                                                                |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesRequest](../../models/operations/ListEnrichCompaniesRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
 
 
 ### Response
@@ -72,12 +73,17 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleRequest;
 import com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleResponse;
-import com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()            .build();
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
 
             com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleRequest req = new ListEnrichPeopleRequest(
                 "<value>"){{
@@ -88,10 +94,7 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleResponse res = sdk.enrich.listEnrichPeople(req, new ListEnrichPeopleSecurity(
-            "<value>"){{
-                jwt = "<YOUR_API_KEY_HERE>";
-            }});
+            com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleResponse res = sdk.enrich.listEnrichPeople(req);
 
             if (res.enrichPerson != null) {
                 // handle response
@@ -105,10 +108,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleRequest](../../models/operations/ListEnrichPeopleRequest.md)   | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
-| `security`                                                                                                                 | [com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleSecurity](../../models/operations/ListEnrichPeopleSecurity.md) | :heavy_check_mark:                                                                                                         | The security requirements to use for the request.                                                                          |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleRequest](../../models/operations/ListEnrichPeopleRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
 
 
 ### Response

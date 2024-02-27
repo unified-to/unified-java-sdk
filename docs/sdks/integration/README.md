@@ -20,11 +20,17 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse;
 import com.unifiedapi.unifiedto.models.operations.Scopes;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()            .build();
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
 
             com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest req = new GetUnifiedIntegrationAuthRequest(
                 "<value>",
@@ -80,17 +86,23 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesResponse;
 import com.unifiedapi.unifiedto.models.operations.QueryParamCategories;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()            .build();
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
 
             com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesRequest req = new ListUnifiedIntegrationWorkspacesRequest(
                 "<value>"){{
                 active = false;
                 categories = new com.unifiedapi.unifiedto.models.operations.QueryParamCategories[]{{
-                    add(QueryParamCategories.ACCOUNTING),
+                    add(QueryParamCategories.STORAGE),
                 }};
                 env = "<value>";
                 limit = 9072.99d;
@@ -137,12 +149,17 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsQueryParamCategories;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsResponse;
-import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsSecurity;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()            .build();
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
 
             com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsRequest req = new ListUnifiedIntegrationsRequest(
 ){{
@@ -161,10 +178,7 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsResponse res = sdk.integration.listUnifiedIntegrations(req, new ListUnifiedIntegrationsSecurity(
-            "<value>"){{
-                jwt = "<YOUR_API_KEY_HERE>";
-            }});
+            com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsResponse res = sdk.integration.listUnifiedIntegrations(req);
 
             if (res.integrations != null) {
                 // handle response
@@ -178,10 +192,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsRequest](../../models/operations/ListUnifiedIntegrationsRequest.md)   | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
-| `security`                                                                                                                               | [com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsSecurity](../../models/operations/ListUnifiedIntegrationsSecurity.md) | :heavy_check_mark:                                                                                                                       | The security requirements to use for the request.                                                                                        |
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsRequest](../../models/operations/ListUnifiedIntegrationsRequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
 
 
 ### Response

@@ -25,11 +25,10 @@ public class Pipeline {
     /**
      * Create a pipeline
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineResponse createCrmPipeline(com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineRequest request, com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineResponse createCrmPipeline(com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineRequest.class, baseUrl, "/crm/{connection_id}/pipeline", request, null);
         
@@ -42,7 +41,7 @@ public class Pipeline {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -66,11 +65,10 @@ public class Pipeline {
     /**
      * Retrieve a pipeline
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetCrmPipelineResponse getCrmPipeline(com.unifiedapi.unifiedto.models.operations.GetCrmPipelineRequest request, com.unifiedapi.unifiedto.models.operations.GetCrmPipelineSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetCrmPipelineResponse getCrmPipeline(com.unifiedapi.unifiedto.models.operations.GetCrmPipelineRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCrmPipelineRequest.class, baseUrl, "/crm/{connection_id}/pipeline/{id}", request, null);
         
@@ -87,7 +85,7 @@ public class Pipeline {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -111,11 +109,10 @@ public class Pipeline {
     /**
      * List all pipelines
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesResponse listCrmPipelines(com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesRequest request, com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesResponse listCrmPipelines(com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesRequest.class, baseUrl, "/crm/{connection_id}/pipeline", request, null);
         
@@ -132,7 +129,7 @@ public class Pipeline {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -156,11 +153,10 @@ public class Pipeline {
     /**
      * Update a pipeline
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineResponse patchCrmPipeline(com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineRequest request, com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineResponse patchCrmPipeline(com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineRequest.class, baseUrl, "/crm/{connection_id}/pipeline/{id}", request, null);
         
@@ -173,7 +169,7 @@ public class Pipeline {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -197,11 +193,10 @@ public class Pipeline {
     /**
      * Remove a pipeline
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineResponse removeCrmPipeline(com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineRequest request, com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineResponse removeCrmPipeline(com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineRequest.class, baseUrl, "/crm/{connection_id}/pipeline/{id}", request, null);
         
@@ -212,7 +207,7 @@ public class Pipeline {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -235,11 +230,10 @@ public class Pipeline {
     /**
      * Update a pipeline
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineResponse updateCrmPipeline(com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineRequest request, com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineResponse updateCrmPipeline(com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineRequest.class, baseUrl, "/crm/{connection_id}/pipeline/{id}", request, null);
         
@@ -252,7 +246,7 @@ public class Pipeline {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

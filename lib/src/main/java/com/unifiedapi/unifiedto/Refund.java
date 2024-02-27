@@ -23,13 +23,12 @@ public class Refund {
     /**
      * Retrieve a refund
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetAccountingRefundResponse getAccountingRefund(com.unifiedapi.unifiedto.models.operations.GetAccountingRefundRequest request, com.unifiedapi.unifiedto.models.operations.GetAccountingRefundSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetPaymentRefundResponse getPaymentRefund(com.unifiedapi.unifiedto.models.operations.GetPaymentRefundRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAccountingRefundRequest.class, baseUrl, "/accounting/{connection_id}/refund/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetPaymentRefundRequest.class, baseUrl, "/payment/{connection_id}/refund/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -37,28 +36,28 @@ public class Refund {
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetAccountingRefundRequest.class, request, null);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetPaymentRefundRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
-        com.unifiedapi.unifiedto.models.operations.GetAccountingRefundResponse res = new com.unifiedapi.unifiedto.models.operations.GetAccountingRefundResponse(contentType, httpRes.statusCode(), httpRes) {{
-            accountingRefund = null;
+        com.unifiedapi.unifiedto.models.operations.GetPaymentRefundResponse res = new com.unifiedapi.unifiedto.models.operations.GetPaymentRefundResponse(contentType, httpRes.statusCode(), httpRes) {{
+            paymentRefund = null;
         }};
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AccountingRefund out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingRefund.class);
-                res.accountingRefund = out;
+                com.unifiedapi.unifiedto.models.shared.PaymentRefund out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.PaymentRefund.class);
+                res.paymentRefund = out;
             }
         }
 
@@ -68,13 +67,12 @@ public class Refund {
     /**
      * List all refunds
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsResponse listAccountingRefunds(com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsRequest request, com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListPaymentRefundsResponse listPaymentRefunds(com.unifiedapi.unifiedto.models.operations.ListPaymentRefundsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsRequest.class, baseUrl, "/accounting/{connection_id}/refund", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListPaymentRefundsRequest.class, baseUrl, "/payment/{connection_id}/refund", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -82,28 +80,28 @@ public class Refund {
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsRequest.class, request, null);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListPaymentRefundsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
-        com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsResponse res = new com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsResponse(contentType, httpRes.statusCode(), httpRes) {{
-            accountingRefunds = null;
+        com.unifiedapi.unifiedto.models.operations.ListPaymentRefundsResponse res = new com.unifiedapi.unifiedto.models.operations.ListPaymentRefundsResponse(contentType, httpRes.statusCode(), httpRes) {{
+            paymentRefunds = null;
         }};
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AccountingRefund[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingRefund[].class);
-                res.accountingRefunds = out;
+                com.unifiedapi.unifiedto.models.shared.PaymentRefund[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.PaymentRefund[].class);
+                res.paymentRefunds = out;
             }
         }
 

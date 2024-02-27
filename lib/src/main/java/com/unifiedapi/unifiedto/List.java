@@ -25,11 +25,10 @@ public class List {
     /**
      * Create a list
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.CreateMartechListResponse createMartechList(com.unifiedapi.unifiedto.models.operations.CreateMartechListRequest request, com.unifiedapi.unifiedto.models.operations.CreateMartechListSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateMartechListResponse createMartechList(com.unifiedapi.unifiedto.models.operations.CreateMartechListRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateMartechListRequest.class, baseUrl, "/martech/{connection_id}/list", request, null);
         
@@ -42,7 +41,7 @@ public class List {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -66,11 +65,10 @@ public class List {
     /**
      * Retrieve a list
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetMartechListResponse getMartechList(com.unifiedapi.unifiedto.models.operations.GetMartechListRequest request, com.unifiedapi.unifiedto.models.operations.GetMartechListSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetMartechListResponse getMartechList(com.unifiedapi.unifiedto.models.operations.GetMartechListRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetMartechListRequest.class, baseUrl, "/martech/{connection_id}/list/{id}", request, null);
         
@@ -87,7 +85,7 @@ public class List {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -111,11 +109,10 @@ public class List {
     /**
      * List all lists
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListMartechListsResponse listMartechLists(com.unifiedapi.unifiedto.models.operations.ListMartechListsRequest request, com.unifiedapi.unifiedto.models.operations.ListMartechListsSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListMartechListsResponse listMartechLists(com.unifiedapi.unifiedto.models.operations.ListMartechListsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListMartechListsRequest.class, baseUrl, "/martech/{connection_id}/list", request, null);
         
@@ -132,7 +129,7 @@ public class List {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -156,11 +153,10 @@ public class List {
     /**
      * Update a list
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchMartechListResponse patchMartechList(com.unifiedapi.unifiedto.models.operations.PatchMartechListRequest request, com.unifiedapi.unifiedto.models.operations.PatchMartechListSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchMartechListResponse patchMartechList(com.unifiedapi.unifiedto.models.operations.PatchMartechListRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchMartechListRequest.class, baseUrl, "/martech/{connection_id}/list/{id}", request, null);
         
@@ -173,7 +169,7 @@ public class List {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -197,11 +193,10 @@ public class List {
     /**
      * Remove a list
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.RemoveMartechListResponse removeMartechList(com.unifiedapi.unifiedto.models.operations.RemoveMartechListRequest request, com.unifiedapi.unifiedto.models.operations.RemoveMartechListSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveMartechListResponse removeMartechList(com.unifiedapi.unifiedto.models.operations.RemoveMartechListRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveMartechListRequest.class, baseUrl, "/martech/{connection_id}/list/{id}", request, null);
         
@@ -212,7 +207,7 @@ public class List {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -235,11 +230,10 @@ public class List {
     /**
      * Update a list
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.UpdateMartechListResponse updateMartechList(com.unifiedapi.unifiedto.models.operations.UpdateMartechListRequest request, com.unifiedapi.unifiedto.models.operations.UpdateMartechListSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateMartechListResponse updateMartechList(com.unifiedapi.unifiedto.models.operations.UpdateMartechListRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateMartechListRequest.class, baseUrl, "/martech/{connection_id}/list/{id}", request, null);
         
@@ -252,7 +246,7 @@ public class List {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

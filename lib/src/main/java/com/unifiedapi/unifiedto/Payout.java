@@ -23,13 +23,12 @@ public class Payout {
     /**
      * Retrieve a payout
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutResponse getAccountingPayout(com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutRequest request, com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetPaymentPayoutResponse getPaymentPayout(com.unifiedapi.unifiedto.models.operations.GetPaymentPayoutRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutRequest.class, baseUrl, "/accounting/{connection_id}/payout/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetPaymentPayoutRequest.class, baseUrl, "/payment/{connection_id}/payout/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -37,28 +36,28 @@ public class Payout {
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutRequest.class, request, null);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetPaymentPayoutRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
-        com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutResponse res = new com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutResponse(contentType, httpRes.statusCode(), httpRes) {{
-            accountingPayout = null;
+        com.unifiedapi.unifiedto.models.operations.GetPaymentPayoutResponse res = new com.unifiedapi.unifiedto.models.operations.GetPaymentPayoutResponse(contentType, httpRes.statusCode(), httpRes) {{
+            paymentPayout = null;
         }};
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AccountingPayout out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingPayout.class);
-                res.accountingPayout = out;
+                com.unifiedapi.unifiedto.models.shared.PaymentPayout out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.PaymentPayout.class);
+                res.paymentPayout = out;
             }
         }
 
@@ -68,13 +67,12 @@ public class Payout {
     /**
      * List all payouts
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsResponse listAccountingPayouts(com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsRequest request, com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListPaymentPayoutsResponse listPaymentPayouts(com.unifiedapi.unifiedto.models.operations.ListPaymentPayoutsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsRequest.class, baseUrl, "/accounting/{connection_id}/payout", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListPaymentPayoutsRequest.class, baseUrl, "/payment/{connection_id}/payout", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -82,28 +80,28 @@ public class Payout {
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsRequest.class, request, null);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListPaymentPayoutsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
-        com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsResponse res = new com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsResponse(contentType, httpRes.statusCode(), httpRes) {{
-            accountingPayouts = null;
+        com.unifiedapi.unifiedto.models.operations.ListPaymentPayoutsResponse res = new com.unifiedapi.unifiedto.models.operations.ListPaymentPayoutsResponse(contentType, httpRes.statusCode(), httpRes) {{
+            paymentPayouts = null;
         }};
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AccountingPayout[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingPayout[].class);
-                res.accountingPayouts = out;
+                com.unifiedapi.unifiedto.models.shared.PaymentPayout[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.PaymentPayout[].class);
+                res.paymentPayouts = out;
             }
         }
 

@@ -25,11 +25,10 @@ public class Storage {
     /**
      * Create a file
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.CreateStorageFileResponse createStorageFile(com.unifiedapi.unifiedto.models.operations.CreateStorageFileRequest request, com.unifiedapi.unifiedto.models.operations.CreateStorageFileSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateStorageFileResponse createStorageFile(com.unifiedapi.unifiedto.models.operations.CreateStorageFileRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateStorageFileRequest.class, baseUrl, "/storage/{connection_id}/file", request, null);
         
@@ -42,7 +41,7 @@ public class Storage {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -66,11 +65,10 @@ public class Storage {
     /**
      * Retrieve a file
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetStorageFileResponse getStorageFile(com.unifiedapi.unifiedto.models.operations.GetStorageFileRequest request, com.unifiedapi.unifiedto.models.operations.GetStorageFileSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetStorageFileResponse getStorageFile(com.unifiedapi.unifiedto.models.operations.GetStorageFileRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetStorageFileRequest.class, baseUrl, "/storage/{connection_id}/file/{id}", request, null);
         
@@ -87,7 +85,7 @@ public class Storage {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -111,11 +109,10 @@ public class Storage {
     /**
      * List all files
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListStorageFilesResponse listStorageFiles(com.unifiedapi.unifiedto.models.operations.ListStorageFilesRequest request, com.unifiedapi.unifiedto.models.operations.ListStorageFilesSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListStorageFilesResponse listStorageFiles(com.unifiedapi.unifiedto.models.operations.ListStorageFilesRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListStorageFilesRequest.class, baseUrl, "/storage/{connection_id}/file", request, null);
         
@@ -132,7 +129,7 @@ public class Storage {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -156,11 +153,10 @@ public class Storage {
     /**
      * Update a file
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchStorageFileResponse patchStorageFile(com.unifiedapi.unifiedto.models.operations.PatchStorageFileRequest request, com.unifiedapi.unifiedto.models.operations.PatchStorageFileSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchStorageFileResponse patchStorageFile(com.unifiedapi.unifiedto.models.operations.PatchStorageFileRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchStorageFileRequest.class, baseUrl, "/storage/{connection_id}/file/{id}", request, null);
         
@@ -173,7 +169,7 @@ public class Storage {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -197,11 +193,10 @@ public class Storage {
     /**
      * Remove a file
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.RemoveStorageFileResponse removeStorageFile(com.unifiedapi.unifiedto.models.operations.RemoveStorageFileRequest request, com.unifiedapi.unifiedto.models.operations.RemoveStorageFileSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveStorageFileResponse removeStorageFile(com.unifiedapi.unifiedto.models.operations.RemoveStorageFileRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveStorageFileRequest.class, baseUrl, "/storage/{connection_id}/file/{id}", request, null);
         
@@ -212,7 +207,7 @@ public class Storage {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -235,11 +230,10 @@ public class Storage {
     /**
      * Update a file
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.UpdateStorageFileResponse updateStorageFile(com.unifiedapi.unifiedto.models.operations.UpdateStorageFileRequest request, com.unifiedapi.unifiedto.models.operations.UpdateStorageFileSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateStorageFileResponse updateStorageFile(com.unifiedapi.unifiedto.models.operations.UpdateStorageFileRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateStorageFileRequest.class, baseUrl, "/storage/{connection_id}/file/{id}", request, null);
         
@@ -252,7 +246,7 @@ public class Storage {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

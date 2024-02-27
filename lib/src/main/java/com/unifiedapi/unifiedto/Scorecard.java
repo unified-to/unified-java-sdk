@@ -25,11 +25,10 @@ public class Scorecard {
     /**
      * Create a scorecard
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse createAtsScorecard(com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardRequest request, com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse createAtsScorecard(com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardRequest.class, baseUrl, "/ats/{connection_id}/scorecard", request, null);
         
@@ -42,7 +41,7 @@ public class Scorecard {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -66,11 +65,10 @@ public class Scorecard {
     /**
      * Retrieve a scorecard
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetAtsScorecardResponse getAtsScorecard(com.unifiedapi.unifiedto.models.operations.GetAtsScorecardRequest request, com.unifiedapi.unifiedto.models.operations.GetAtsScorecardSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetAtsScorecardResponse getAtsScorecard(com.unifiedapi.unifiedto.models.operations.GetAtsScorecardRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAtsScorecardRequest.class, baseUrl, "/ats/{connection_id}/scorecard/{id}", request, null);
         
@@ -87,7 +85,7 @@ public class Scorecard {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -111,11 +109,10 @@ public class Scorecard {
     /**
      * List all scorecards
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsResponse listAtsScorecards(com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsRequest request, com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsResponse listAtsScorecards(com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsRequest.class, baseUrl, "/ats/{connection_id}/scorecard", request, null);
         
@@ -132,7 +129,7 @@ public class Scorecard {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -156,11 +153,10 @@ public class Scorecard {
     /**
      * Update a scorecard
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse patchAtsScorecard(com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardRequest request, com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse patchAtsScorecard(com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardRequest.class, baseUrl, "/ats/{connection_id}/scorecard/{id}", request, null);
         
@@ -173,7 +169,7 @@ public class Scorecard {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -197,11 +193,10 @@ public class Scorecard {
     /**
      * Remove a scorecard
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse removeAtsScorecard(com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardRequest request, com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse removeAtsScorecard(com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardRequest.class, baseUrl, "/ats/{connection_id}/scorecard/{id}", request, null);
         
@@ -212,7 +207,7 @@ public class Scorecard {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -235,11 +230,10 @@ public class Scorecard {
     /**
      * Update a scorecard
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse updateAtsScorecard(com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardRequest request, com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse updateAtsScorecard(com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardRequest.class, baseUrl, "/ats/{connection_id}/scorecard/{id}", request, null);
         
@@ -252,7 +246,7 @@ public class Scorecard {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

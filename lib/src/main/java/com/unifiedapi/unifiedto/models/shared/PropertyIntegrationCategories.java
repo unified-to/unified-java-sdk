@@ -18,7 +18,8 @@ public enum PropertyIntegrationCategories {
     UC("uc"),
     ACCOUNTING("accounting"),
     STORAGE("storage"),
-    COMMERCE("commerce");
+    COMMERCE("commerce"),
+    PAYMENT("payment");
 
     @JsonValue
     public final String value;

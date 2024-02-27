@@ -25,11 +25,10 @@ public class Deal {
     /**
      * Create a deal
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.CreateCrmDealResponse createCrmDeal(com.unifiedapi.unifiedto.models.operations.CreateCrmDealRequest request, com.unifiedapi.unifiedto.models.operations.CreateCrmDealSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateCrmDealResponse createCrmDeal(com.unifiedapi.unifiedto.models.operations.CreateCrmDealRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateCrmDealRequest.class, baseUrl, "/crm/{connection_id}/deal", request, null);
         
@@ -42,7 +41,7 @@ public class Deal {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -66,11 +65,10 @@ public class Deal {
     /**
      * Retrieve a deal
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetCrmDealResponse getCrmDeal(com.unifiedapi.unifiedto.models.operations.GetCrmDealRequest request, com.unifiedapi.unifiedto.models.operations.GetCrmDealSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetCrmDealResponse getCrmDeal(com.unifiedapi.unifiedto.models.operations.GetCrmDealRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCrmDealRequest.class, baseUrl, "/crm/{connection_id}/deal/{id}", request, null);
         
@@ -87,7 +85,7 @@ public class Deal {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -111,11 +109,10 @@ public class Deal {
     /**
      * List all deals
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListCrmDealsResponse listCrmDeals(com.unifiedapi.unifiedto.models.operations.ListCrmDealsRequest request, com.unifiedapi.unifiedto.models.operations.ListCrmDealsSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListCrmDealsResponse listCrmDeals(com.unifiedapi.unifiedto.models.operations.ListCrmDealsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListCrmDealsRequest.class, baseUrl, "/crm/{connection_id}/deal", request, null);
         
@@ -132,7 +129,7 @@ public class Deal {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -156,11 +153,10 @@ public class Deal {
     /**
      * Update a deal
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchCrmDealResponse patchCrmDeal(com.unifiedapi.unifiedto.models.operations.PatchCrmDealRequest request, com.unifiedapi.unifiedto.models.operations.PatchCrmDealSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchCrmDealResponse patchCrmDeal(com.unifiedapi.unifiedto.models.operations.PatchCrmDealRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchCrmDealRequest.class, baseUrl, "/crm/{connection_id}/deal/{id}", request, null);
         
@@ -173,7 +169,7 @@ public class Deal {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -197,11 +193,10 @@ public class Deal {
     /**
      * Remove a deal
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.RemoveCrmDealResponse removeCrmDeal(com.unifiedapi.unifiedto.models.operations.RemoveCrmDealRequest request, com.unifiedapi.unifiedto.models.operations.RemoveCrmDealSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveCrmDealResponse removeCrmDeal(com.unifiedapi.unifiedto.models.operations.RemoveCrmDealRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveCrmDealRequest.class, baseUrl, "/crm/{connection_id}/deal/{id}", request, null);
         
@@ -212,7 +207,7 @@ public class Deal {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -235,11 +230,10 @@ public class Deal {
     /**
      * Update a deal
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.UpdateCrmDealResponse updateCrmDeal(com.unifiedapi.unifiedto.models.operations.UpdateCrmDealRequest request, com.unifiedapi.unifiedto.models.operations.UpdateCrmDealSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateCrmDealResponse updateCrmDeal(com.unifiedapi.unifiedto.models.operations.UpdateCrmDealRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateCrmDealRequest.class, baseUrl, "/crm/{connection_id}/deal/{id}", request, null);
         
@@ -252,7 +246,7 @@ public class Deal {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

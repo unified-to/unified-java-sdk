@@ -3,10 +3,10 @@
 
 ### Available Operations
 
-* [getAccountingRefund](#getaccountingrefund) - Retrieve a refund
-* [listAccountingRefunds](#listaccountingrefunds) - List all refunds
+* [getPaymentRefund](#getpaymentrefund) - Retrieve a refund
+* [listPaymentRefunds](#listpaymentrefunds) - List all refunds
 
-## getAccountingRefund
+## getPaymentRefund
 
 Retrieve a refund
 
@@ -16,16 +16,21 @@ Retrieve a refund
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetAccountingRefundRequest;
-import com.unifiedapi.unifiedto.models.operations.GetAccountingRefundResponse;
-import com.unifiedapi.unifiedto.models.operations.GetAccountingRefundSecurity;
+import com.unifiedapi.unifiedto.models.operations.GetPaymentRefundRequest;
+import com.unifiedapi.unifiedto.models.operations.GetPaymentRefundResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()            .build();
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetAccountingRefundRequest req = new GetAccountingRefundRequest(
+            com.unifiedapi.unifiedto.models.operations.GetPaymentRefundRequest req = new GetPaymentRefundRequest(
                 "<value>",
                 "<value>"){{
                 fields = new String[]{{
@@ -34,12 +39,9 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.GetAccountingRefundResponse res = sdk.refund.getAccountingRefund(req, new GetAccountingRefundSecurity(
-            "<value>"){{
-                jwt = "<YOUR_API_KEY_HERE>";
-            }});
+            com.unifiedapi.unifiedto.models.operations.GetPaymentRefundResponse res = sdk.refund.getPaymentRefund(req);
 
-            if (res.accountingRefund != null) {
+            if (res.paymentRefund != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -51,18 +53,17 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.GetAccountingRefundRequest](../../models/operations/GetAccountingRefundRequest.md)   | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `security`                                                                                                                       | [com.unifiedapi.unifiedto.models.operations.GetAccountingRefundSecurity](../../models/operations/GetAccountingRefundSecurity.md) | :heavy_check_mark:                                                                                                               | The security requirements to use for the request.                                                                                |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.GetPaymentRefundRequest](../../models/operations/GetPaymentRefundRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetAccountingRefundResponse](../../models/operations/GetAccountingRefundResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.GetPaymentRefundResponse](../../models/operations/GetPaymentRefundResponse.md)**
 
 
-## listAccountingRefunds
+## listPaymentRefunds
 
 List all refunds
 
@@ -72,37 +73,39 @@ List all refunds
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsResponse;
-import com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsSecurity;
+import com.unifiedapi.unifiedto.models.operations.ListPaymentRefundsRequest;
+import com.unifiedapi.unifiedto.models.operations.ListPaymentRefundsResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()            .build();
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsRequest req = new ListAccountingRefundsRequest(
+            com.unifiedapi.unifiedto.models.operations.ListPaymentRefundsRequest req = new ListPaymentRefundsRequest(
                 "<value>"){{
                 fields = new String[]{{
                     add("<value>"),
                 }};
-                limit = 8743.36d;
-                offset = 6995.02d;
+                limit = 5820.28d;
+                offset = 6141.19d;
                 order = "<value>";
                 paymentId = "<value>";
                 query = "<value>";
                 sort = "<value>";
-                updatedGte = OffsetDateTime.parse("2024-09-01T03:28:05.895Z");
+                updatedGte = OffsetDateTime.parse("2022-08-03T22:54:27.299Z");
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsResponse res = sdk.refund.listAccountingRefunds(req, new ListAccountingRefundsSecurity(
-            "<value>"){{
-                jwt = "<YOUR_API_KEY_HERE>";
-            }});
+            com.unifiedapi.unifiedto.models.operations.ListPaymentRefundsResponse res = sdk.refund.listPaymentRefunds(req);
 
-            if (res.accountingRefunds != null) {
+            if (res.paymentRefunds != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -114,13 +117,12 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsRequest](../../models/operations/ListAccountingRefundsRequest.md)   | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-| `security`                                                                                                                           | [com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsSecurity](../../models/operations/ListAccountingRefundsSecurity.md) | :heavy_check_mark:                                                                                                                   | The security requirements to use for the request.                                                                                    |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.ListPaymentRefundsRequest](../../models/operations/ListPaymentRefundsRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListAccountingRefundsResponse](../../models/operations/ListAccountingRefundsResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.ListPaymentRefundsResponse](../../models/operations/ListPaymentRefundsResponse.md)**
 

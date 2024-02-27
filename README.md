@@ -10,7 +10,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.17.1'
+implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.18.0'
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -25,8 +25,8 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse;
-import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountSecurity;
 import com.unifiedapi.unifiedto.models.shared.AccountingAccount;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.Status;
 import com.unifiedapi.unifiedto.models.shared.Type;
 import java.time.OffsetDateTime;
@@ -34,7 +34,12 @@ import java.time.OffsetDateTime;
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()            .build();
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
 
             com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest req = new CreateAccountingAccountRequest(
                 "<value>"){{
@@ -59,10 +64,7 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse res = sdk.accounting.createAccountingAccount(req, new CreateAccountingAccountSecurity(
-            "<value>"){{
-                jwt = "<YOUR_API_KEY_HERE>";
-            }});
+            com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse res = sdk.accounting.createAccountingAccount(req);
 
             if (res.accountingAccount != null) {
                 // handle response
@@ -83,43 +85,33 @@ public class Application {
 * [createAccountingAccount](docs/sdks/accounting/README.md#createaccountingaccount) - Create an account
 * [createAccountingContact](docs/sdks/accounting/README.md#createaccountingcontact) - Create a contact
 * [createAccountingInvoice](docs/sdks/accounting/README.md#createaccountinginvoice) - Create a invoice
-* [createAccountingPayment](docs/sdks/accounting/README.md#createaccountingpayment) - Create a payment
 * [createAccountingTaxrate](docs/sdks/accounting/README.md#createaccountingtaxrate) - Create a taxrate
 * [createAccountingTransaction](docs/sdks/accounting/README.md#createaccountingtransaction) - Create a transaction
 * [getAccountingAccount](docs/sdks/accounting/README.md#getaccountingaccount) - Retrieve an account
 * [getAccountingContact](docs/sdks/accounting/README.md#getaccountingcontact) - Retrieve a contact
 * [getAccountingInvoice](docs/sdks/accounting/README.md#getaccountinginvoice) - Retrieve a invoice
 * [getAccountingOrganization](docs/sdks/accounting/README.md#getaccountingorganization) - Retrieve an organization
-* [getAccountingPayment](docs/sdks/accounting/README.md#getaccountingpayment) - Retrieve a payment
-* [getAccountingPayout](docs/sdks/accounting/README.md#getaccountingpayout) - Retrieve a payout
-* [getAccountingRefund](docs/sdks/accounting/README.md#getaccountingrefund) - Retrieve a refund
 * [getAccountingTaxrate](docs/sdks/accounting/README.md#getaccountingtaxrate) - Retrieve a taxrate
 * [getAccountingTransaction](docs/sdks/accounting/README.md#getaccountingtransaction) - Retrieve a transaction
 * [listAccountingAccounts](docs/sdks/accounting/README.md#listaccountingaccounts) - List all accounts
 * [listAccountingContacts](docs/sdks/accounting/README.md#listaccountingcontacts) - List all contacts
 * [listAccountingInvoices](docs/sdks/accounting/README.md#listaccountinginvoices) - List all invoices
 * [listAccountingOrganizations](docs/sdks/accounting/README.md#listaccountingorganizations) - List all organizations
-* [listAccountingPayments](docs/sdks/accounting/README.md#listaccountingpayments) - List all payments
-* [listAccountingPayouts](docs/sdks/accounting/README.md#listaccountingpayouts) - List all payouts
-* [listAccountingRefunds](docs/sdks/accounting/README.md#listaccountingrefunds) - List all refunds
 * [listAccountingTaxrates](docs/sdks/accounting/README.md#listaccountingtaxrates) - List all taxrates
 * [listAccountingTransactions](docs/sdks/accounting/README.md#listaccountingtransactions) - List all transactions
 * [patchAccountingAccount](docs/sdks/accounting/README.md#patchaccountingaccount) - Update an account
 * [patchAccountingContact](docs/sdks/accounting/README.md#patchaccountingcontact) - Update a contact
 * [patchAccountingInvoice](docs/sdks/accounting/README.md#patchaccountinginvoice) - Update a invoice
-* [patchAccountingPayment](docs/sdks/accounting/README.md#patchaccountingpayment) - Update a payment
 * [patchAccountingTaxrate](docs/sdks/accounting/README.md#patchaccountingtaxrate) - Update a taxrate
 * [patchAccountingTransaction](docs/sdks/accounting/README.md#patchaccountingtransaction) - Update a transaction
 * [removeAccountingAccount](docs/sdks/accounting/README.md#removeaccountingaccount) - Remove an account
 * [removeAccountingContact](docs/sdks/accounting/README.md#removeaccountingcontact) - Remove a contact
 * [removeAccountingInvoice](docs/sdks/accounting/README.md#removeaccountinginvoice) - Remove a invoice
-* [removeAccountingPayment](docs/sdks/accounting/README.md#removeaccountingpayment) - Remove a payment
 * [removeAccountingTaxrate](docs/sdks/accounting/README.md#removeaccountingtaxrate) - Remove a taxrate
 * [removeAccountingTransaction](docs/sdks/accounting/README.md#removeaccountingtransaction) - Remove a transaction
 * [updateAccountingAccount](docs/sdks/accounting/README.md#updateaccountingaccount) - Update an account
 * [updateAccountingContact](docs/sdks/accounting/README.md#updateaccountingcontact) - Update a contact
 * [updateAccountingInvoice](docs/sdks/accounting/README.md#updateaccountinginvoice) - Update a invoice
-* [updateAccountingPayment](docs/sdks/accounting/README.md#updateaccountingpayment) - Update a payment
 * [updateAccountingTaxrate](docs/sdks/accounting/README.md#updateaccountingtaxrate) - Update a taxrate
 * [updateAccountingTransaction](docs/sdks/accounting/README.md#updateaccountingtransaction) - Update a transaction
 
@@ -166,25 +158,6 @@ public class Application {
 
 * [getAccountingOrganization](docs/sdks/organization/README.md#getaccountingorganization) - Retrieve an organization
 * [listAccountingOrganizations](docs/sdks/organization/README.md#listaccountingorganizations) - List all organizations
-
-### [payment](docs/sdks/payment/README.md)
-
-* [createAccountingPayment](docs/sdks/payment/README.md#createaccountingpayment) - Create a payment
-* [getAccountingPayment](docs/sdks/payment/README.md#getaccountingpayment) - Retrieve a payment
-* [listAccountingPayments](docs/sdks/payment/README.md#listaccountingpayments) - List all payments
-* [patchAccountingPayment](docs/sdks/payment/README.md#patchaccountingpayment) - Update a payment
-* [removeAccountingPayment](docs/sdks/payment/README.md#removeaccountingpayment) - Remove a payment
-* [updateAccountingPayment](docs/sdks/payment/README.md#updateaccountingpayment) - Update a payment
-
-### [payout](docs/sdks/payout/README.md)
-
-* [getAccountingPayout](docs/sdks/payout/README.md#getaccountingpayout) - Retrieve a payout
-* [listAccountingPayouts](docs/sdks/payout/README.md#listaccountingpayouts) - List all payouts
-
-### [refund](docs/sdks/refund/README.md)
-
-* [getAccountingRefund](docs/sdks/refund/README.md#getaccountingrefund) - Retrieve a refund
-* [listAccountingRefunds](docs/sdks/refund/README.md#listaccountingrefunds) - List all refunds
 
 ### [taxrate](docs/sdks/taxrate/README.md)
 
@@ -551,6 +524,44 @@ public class Application {
 * [patchPassthrough](docs/sdks/passthrough/README.md#patchpassthrough) - Passthrough PUT
 * [removePassthrough](docs/sdks/passthrough/README.md#removepassthrough) - Passthrough DELETE
 * [updatePassthrough](docs/sdks/passthrough/README.md#updatepassthrough) - Passthrough PUT
+
+### [payment](docs/sdks/payment/README.md)
+
+* [createPaymentLink](docs/sdks/payment/README.md#createpaymentlink) - Create a payment link
+* [createPaymentPayment](docs/sdks/payment/README.md#createpaymentpayment) - Create a payment
+* [getPaymentLink](docs/sdks/payment/README.md#getpaymentlink) - Retrieve a payment link
+* [getPaymentPayment](docs/sdks/payment/README.md#getpaymentpayment) - Retrieve a payment
+* [getPaymentPayout](docs/sdks/payment/README.md#getpaymentpayout) - Retrieve a payout
+* [getPaymentRefund](docs/sdks/payment/README.md#getpaymentrefund) - Retrieve a refund
+* [listPaymentLinks](docs/sdks/payment/README.md#listpaymentlinks) - List all payment links
+* [listPaymentPayments](docs/sdks/payment/README.md#listpaymentpayments) - List all payments
+* [listPaymentPayouts](docs/sdks/payment/README.md#listpaymentpayouts) - List all payouts
+* [listPaymentRefunds](docs/sdks/payment/README.md#listpaymentrefunds) - List all refunds
+* [patchPaymentLink](docs/sdks/payment/README.md#patchpaymentlink) - Update a payment link
+* [patchPaymentPayment](docs/sdks/payment/README.md#patchpaymentpayment) - Update a payment
+* [removePaymentLink](docs/sdks/payment/README.md#removepaymentlink) - Remove a payment link
+* [removePaymentPayment](docs/sdks/payment/README.md#removepaymentpayment) - Remove a payment
+* [updatePaymentLink](docs/sdks/payment/README.md#updatepaymentlink) - Update a payment link
+* [updatePaymentPayment](docs/sdks/payment/README.md#updatepaymentpayment) - Update a payment
+
+### [link](docs/sdks/link/README.md)
+
+* [createPaymentLink](docs/sdks/link/README.md#createpaymentlink) - Create a payment link
+* [getPaymentLink](docs/sdks/link/README.md#getpaymentlink) - Retrieve a payment link
+* [listPaymentLinks](docs/sdks/link/README.md#listpaymentlinks) - List all payment links
+* [patchPaymentLink](docs/sdks/link/README.md#patchpaymentlink) - Update a payment link
+* [removePaymentLink](docs/sdks/link/README.md#removepaymentlink) - Remove a payment link
+* [updatePaymentLink](docs/sdks/link/README.md#updatepaymentlink) - Update a payment link
+
+### [payout](docs/sdks/payout/README.md)
+
+* [getPaymentPayout](docs/sdks/payout/README.md#getpaymentpayout) - Retrieve a payout
+* [listPaymentPayouts](docs/sdks/payout/README.md#listpaymentpayouts) - List all payouts
+
+### [refund](docs/sdks/refund/README.md)
+
+* [getPaymentRefund](docs/sdks/refund/README.md#getpaymentrefund) - Retrieve a refund
+* [listPaymentRefunds](docs/sdks/refund/README.md#listpaymentrefunds) - List all refunds
 
 ### [storage](docs/sdks/storage/README.md)
 

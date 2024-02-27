@@ -25,11 +25,10 @@ public class Document {
     /**
      * Create a document
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentResponse createAtsDocument(com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentRequest request, com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentResponse createAtsDocument(com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentRequest.class, baseUrl, "/ats/{connection_id}/document", request, null);
         
@@ -42,7 +41,7 @@ public class Document {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -66,11 +65,10 @@ public class Document {
     /**
      * Retrieve a document
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetAtsDocumentResponse getAtsDocument(com.unifiedapi.unifiedto.models.operations.GetAtsDocumentRequest request, com.unifiedapi.unifiedto.models.operations.GetAtsDocumentSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetAtsDocumentResponse getAtsDocument(com.unifiedapi.unifiedto.models.operations.GetAtsDocumentRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAtsDocumentRequest.class, baseUrl, "/ats/{connection_id}/document/{id}", request, null);
         
@@ -87,7 +85,7 @@ public class Document {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -111,11 +109,10 @@ public class Document {
     /**
      * List all documents
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsResponse listAtsDocuments(com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsRequest request, com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsResponse listAtsDocuments(com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsRequest.class, baseUrl, "/ats/{connection_id}/document", request, null);
         
@@ -132,7 +129,7 @@ public class Document {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -156,11 +153,10 @@ public class Document {
     /**
      * Update a document
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentResponse patchAtsDocument(com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentRequest request, com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentResponse patchAtsDocument(com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentRequest.class, baseUrl, "/ats/{connection_id}/document/{id}", request, null);
         
@@ -173,7 +169,7 @@ public class Document {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -197,11 +193,10 @@ public class Document {
     /**
      * Remove a document
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentResponse removeAtsDocument(com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentRequest request, com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentResponse removeAtsDocument(com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentRequest.class, baseUrl, "/ats/{connection_id}/document/{id}", request, null);
         
@@ -212,7 +207,7 @@ public class Document {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -235,11 +230,10 @@ public class Document {
     /**
      * Update a document
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentResponse updateAtsDocument(com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentRequest request, com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentResponse updateAtsDocument(com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentRequest.class, baseUrl, "/ats/{connection_id}/document/{id}", request, null);
         
@@ -252,7 +246,7 @@ public class Document {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -25,11 +25,10 @@ public class Application {
     /**
      * Create an application
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationResponse createAtsApplication(com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationRequest request, com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationResponse createAtsApplication(com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationRequest.class, baseUrl, "/ats/{connection_id}/application", request, null);
         
@@ -42,7 +41,7 @@ public class Application {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -66,11 +65,10 @@ public class Application {
     /**
      * Retrieve an application
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetAtsApplicationResponse getAtsApplication(com.unifiedapi.unifiedto.models.operations.GetAtsApplicationRequest request, com.unifiedapi.unifiedto.models.operations.GetAtsApplicationSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetAtsApplicationResponse getAtsApplication(com.unifiedapi.unifiedto.models.operations.GetAtsApplicationRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAtsApplicationRequest.class, baseUrl, "/ats/{connection_id}/application/{id}", request, null);
         
@@ -87,7 +85,7 @@ public class Application {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -111,11 +109,10 @@ public class Application {
     /**
      * List all applications
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsResponse listAtsApplications(com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsRequest request, com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsResponse listAtsApplications(com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsRequest.class, baseUrl, "/ats/{connection_id}/application", request, null);
         
@@ -132,7 +129,7 @@ public class Application {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -156,11 +153,10 @@ public class Application {
     /**
      * Update an application
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationResponse patchAtsApplication(com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationRequest request, com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationResponse patchAtsApplication(com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationRequest.class, baseUrl, "/ats/{connection_id}/application/{id}", request, null);
         
@@ -173,7 +169,7 @@ public class Application {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -197,11 +193,10 @@ public class Application {
     /**
      * Remove an application
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationResponse removeAtsApplication(com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationRequest request, com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationResponse removeAtsApplication(com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationRequest.class, baseUrl, "/ats/{connection_id}/application/{id}", request, null);
         
@@ -212,7 +207,7 @@ public class Application {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -235,11 +230,10 @@ public class Application {
     /**
      * Update an application
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationResponse updateAtsApplication(com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationRequest request, com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationResponse updateAtsApplication(com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationRequest.class, baseUrl, "/ats/{connection_id}/application/{id}", request, null);
         
@@ -252,7 +246,7 @@ public class Application {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -3,10 +3,10 @@
 
 ### Available Operations
 
-* [getAccountingPayout](#getaccountingpayout) - Retrieve a payout
-* [listAccountingPayouts](#listaccountingpayouts) - List all payouts
+* [getPaymentPayout](#getpaymentpayout) - Retrieve a payout
+* [listPaymentPayouts](#listpaymentpayouts) - List all payouts
 
-## getAccountingPayout
+## getPaymentPayout
 
 Retrieve a payout
 
@@ -16,16 +16,21 @@ Retrieve a payout
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutRequest;
-import com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutResponse;
-import com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutSecurity;
+import com.unifiedapi.unifiedto.models.operations.GetPaymentPayoutRequest;
+import com.unifiedapi.unifiedto.models.operations.GetPaymentPayoutResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()            .build();
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutRequest req = new GetAccountingPayoutRequest(
+            com.unifiedapi.unifiedto.models.operations.GetPaymentPayoutRequest req = new GetPaymentPayoutRequest(
                 "<value>",
                 "<value>"){{
                 fields = new String[]{{
@@ -34,12 +39,9 @@ public class Application {
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutResponse res = sdk.payout.getAccountingPayout(req, new GetAccountingPayoutSecurity(
-            "<value>"){{
-                jwt = "<YOUR_API_KEY_HERE>";
-            }});
+            com.unifiedapi.unifiedto.models.operations.GetPaymentPayoutResponse res = sdk.payout.getPaymentPayout(req);
 
-            if (res.accountingPayout != null) {
+            if (res.paymentPayout != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -51,18 +53,17 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutRequest](../../models/operations/GetAccountingPayoutRequest.md)   | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `security`                                                                                                                       | [com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutSecurity](../../models/operations/GetAccountingPayoutSecurity.md) | :heavy_check_mark:                                                                                                               | The security requirements to use for the request.                                                                                |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.GetPaymentPayoutRequest](../../models/operations/GetPaymentPayoutRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetAccountingPayoutResponse](../../models/operations/GetAccountingPayoutResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.GetPaymentPayoutResponse](../../models/operations/GetPaymentPayoutResponse.md)**
 
 
-## listAccountingPayouts
+## listPaymentPayouts
 
 List all payouts
 
@@ -72,36 +73,38 @@ List all payouts
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsRequest;
-import com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsResponse;
-import com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsSecurity;
+import com.unifiedapi.unifiedto.models.operations.ListPaymentPayoutsRequest;
+import com.unifiedapi.unifiedto.models.operations.ListPaymentPayoutsResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            UnifiedTo sdk = UnifiedTo.builder()            .build();
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsRequest req = new ListAccountingPayoutsRequest(
+            com.unifiedapi.unifiedto.models.operations.ListPaymentPayoutsRequest req = new ListPaymentPayoutsRequest(
                 "<value>"){{
                 fields = new String[]{{
                     add("<value>"),
                 }};
-                limit = 6876.93d;
-                offset = 5.2d;
+                limit = 5474.75d;
+                offset = 586.95d;
                 order = "<value>";
                 query = "<value>";
                 sort = "<value>";
-                updatedGte = OffsetDateTime.parse("2023-03-08T08:07:55.044Z");
+                updatedGte = OffsetDateTime.parse("2023-12-05T08:15:58.034Z");
 
             }};
 
-            com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsResponse res = sdk.payout.listAccountingPayouts(req, new ListAccountingPayoutsSecurity(
-            "<value>"){{
-                jwt = "<YOUR_API_KEY_HERE>";
-            }});
+            com.unifiedapi.unifiedto.models.operations.ListPaymentPayoutsResponse res = sdk.payout.listPaymentPayouts(req);
 
-            if (res.accountingPayouts != null) {
+            if (res.paymentPayouts != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -113,13 +116,12 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsRequest](../../models/operations/ListAccountingPayoutsRequest.md)   | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-| `security`                                                                                                                           | [com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsSecurity](../../models/operations/ListAccountingPayoutsSecurity.md) | :heavy_check_mark:                                                                                                                   | The security requirements to use for the request.                                                                                    |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.ListPaymentPayoutsRequest](../../models/operations/ListPaymentPayoutsRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListAccountingPayoutsResponse](../../models/operations/ListAccountingPayoutsResponse.md)**
+**[com.unifiedapi.unifiedto.models.operations.ListPaymentPayoutsResponse](../../models/operations/ListPaymentPayoutsResponse.md)**
 

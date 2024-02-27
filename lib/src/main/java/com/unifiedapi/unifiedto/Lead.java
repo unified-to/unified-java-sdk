@@ -25,11 +25,10 @@ public class Lead {
     /**
      * Create a lead
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.CreateCrmLeadResponse createCrmLead(com.unifiedapi.unifiedto.models.operations.CreateCrmLeadRequest request, com.unifiedapi.unifiedto.models.operations.CreateCrmLeadSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateCrmLeadResponse createCrmLead(com.unifiedapi.unifiedto.models.operations.CreateCrmLeadRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateCrmLeadRequest.class, baseUrl, "/crm/{connection_id}/lead", request, null);
         
@@ -42,7 +41,7 @@ public class Lead {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -66,11 +65,10 @@ public class Lead {
     /**
      * Retrieve a lead
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetCrmLeadResponse getCrmLead(com.unifiedapi.unifiedto.models.operations.GetCrmLeadRequest request, com.unifiedapi.unifiedto.models.operations.GetCrmLeadSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetCrmLeadResponse getCrmLead(com.unifiedapi.unifiedto.models.operations.GetCrmLeadRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetCrmLeadRequest.class, baseUrl, "/crm/{connection_id}/lead/{id}", request, null);
         
@@ -87,7 +85,7 @@ public class Lead {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -111,11 +109,10 @@ public class Lead {
     /**
      * List all leads
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListCrmLeadsResponse listCrmLeads(com.unifiedapi.unifiedto.models.operations.ListCrmLeadsRequest request, com.unifiedapi.unifiedto.models.operations.ListCrmLeadsSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListCrmLeadsResponse listCrmLeads(com.unifiedapi.unifiedto.models.operations.ListCrmLeadsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListCrmLeadsRequest.class, baseUrl, "/crm/{connection_id}/lead", request, null);
         
@@ -132,7 +129,7 @@ public class Lead {
             }
         }
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -156,11 +153,10 @@ public class Lead {
     /**
      * Update a lead
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchCrmLeadResponse patchCrmLead(com.unifiedapi.unifiedto.models.operations.PatchCrmLeadRequest request, com.unifiedapi.unifiedto.models.operations.PatchCrmLeadSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchCrmLeadResponse patchCrmLead(com.unifiedapi.unifiedto.models.operations.PatchCrmLeadRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchCrmLeadRequest.class, baseUrl, "/crm/{connection_id}/lead/{id}", request, null);
         
@@ -173,7 +169,7 @@ public class Lead {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -197,11 +193,10 @@ public class Lead {
     /**
      * Remove a lead
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.RemoveCrmLeadResponse removeCrmLead(com.unifiedapi.unifiedto.models.operations.RemoveCrmLeadRequest request, com.unifiedapi.unifiedto.models.operations.RemoveCrmLeadSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveCrmLeadResponse removeCrmLead(com.unifiedapi.unifiedto.models.operations.RemoveCrmLeadRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveCrmLeadRequest.class, baseUrl, "/crm/{connection_id}/lead/{id}", request, null);
         
@@ -212,7 +207,7 @@ public class Lead {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -235,11 +230,10 @@ public class Lead {
     /**
      * Update a lead
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.UpdateCrmLeadResponse updateCrmLead(com.unifiedapi.unifiedto.models.operations.UpdateCrmLeadRequest request, com.unifiedapi.unifiedto.models.operations.UpdateCrmLeadSecurity security) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateCrmLeadResponse updateCrmLead(com.unifiedapi.unifiedto.models.operations.UpdateCrmLeadRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateCrmLeadRequest.class, baseUrl, "/crm/{connection_id}/lead/{id}", request, null);
         
@@ -252,7 +246,7 @@ public class Lead {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = com.unifiedapi.unifiedto.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
