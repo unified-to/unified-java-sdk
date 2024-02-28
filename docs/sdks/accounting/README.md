@@ -288,6 +288,7 @@ public class Application {
                     taxAmount = 6864d;
                     totalAmount = 6873.46d;
                     updatedAt = OffsetDateTime.parse("2023-11-19T22:49:02.835Z");
+                    url = "http://forked-idiom.biz";
 
                 }};
 
@@ -1441,6 +1442,7 @@ public class Application {
                     taxAmount = 1140.08d;
                     totalAmount = 4543.48d;
                     updatedAt = OffsetDateTime.parse("2024-02-02T12:10:13.037Z");
+                    url = "http://creepy-dart.org";
 
                 }};
 
@@ -2134,6 +2136,7 @@ public class Application {
                     taxAmount = 3824.24d;
                     totalAmount = 2939.97d;
                     updatedAt = OffsetDateTime.parse("2022-08-13T18:41:11.569Z");
+                    url = "https://admirable-suspension.org";
 
                 }};
 

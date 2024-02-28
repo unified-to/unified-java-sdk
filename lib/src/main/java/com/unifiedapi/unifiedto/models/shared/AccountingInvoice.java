@@ -216,5 +216,14 @@ public class AccountingInvoice {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("url")
+    public String url;
+
+    public AccountingInvoice withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    
     public AccountingInvoice(){}
 }
