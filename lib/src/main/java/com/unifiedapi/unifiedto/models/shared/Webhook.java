@@ -169,9 +169,9 @@ public class Webhook {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhook_type")
-    public WebhookWebhookType webhookType;
+    public WebhookType webhookType;
 
-    public Webhook withWebhookType(WebhookWebhookType webhookType) {
+    public Webhook withWebhookType(WebhookType webhookType) {
         this.webhookType = webhookType;
         return this;
     }

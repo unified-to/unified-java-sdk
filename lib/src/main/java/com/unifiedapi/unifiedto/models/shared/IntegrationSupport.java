@@ -282,19 +282,10 @@ public class IntegrationSupport {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhook_events")
-    public PropertyIntegrationSupportWebhookEvents[] webhookEvents;
+    public PropertyIntegrationSupportWebhookEvents webhookEvents;
 
-    public IntegrationSupport withWebhookEvents(PropertyIntegrationSupportWebhookEvents[] webhookEvents) {
+    public IntegrationSupport withWebhookEvents(PropertyIntegrationSupportWebhookEvents webhookEvents) {
         this.webhookEvents = webhookEvents;
-        return this;
-    }
-    
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("webhook_type")
-    public WebhookType webhookType;
-
-    public IntegrationSupport withWebhookType(WebhookType webhookType) {
-        this.webhookType = webhookType;
         return this;
     }
     

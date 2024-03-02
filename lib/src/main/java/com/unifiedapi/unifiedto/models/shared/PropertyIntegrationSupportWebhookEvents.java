@@ -4,17 +4,38 @@
 
 package com.unifiedapi.unifiedto.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-public enum PropertyIntegrationSupportWebhookEvents {
-    UPDATED("updated"),
-    CREATED("created"),
-    DELETED("deleted");
 
-    @JsonValue
-    public final String value;
+public class PropertyIntegrationSupportWebhookEvents {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("created")
+    public PropertyPropertyIntegrationSupportWebhookEventsCreated[] created;
 
-    private PropertyIntegrationSupportWebhookEvents(String value) {
-        this.value = value;
+    public PropertyIntegrationSupportWebhookEvents withCreated(PropertyPropertyIntegrationSupportWebhookEventsCreated[] created) {
+        this.created = created;
+        return this;
     }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("deleted")
+    public PropertyPropertyIntegrationSupportWebhookEventsDeleted[] deleted;
+
+    public PropertyIntegrationSupportWebhookEvents withDeleted(PropertyPropertyIntegrationSupportWebhookEventsDeleted[] deleted) {
+        this.deleted = deleted;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("updated")
+    public PropertyPropertyIntegrationSupportWebhookEventsUpdated[] updated;
+
+    public PropertyIntegrationSupportWebhookEvents withUpdated(PropertyPropertyIntegrationSupportWebhookEventsUpdated[] updated) {
+        this.updated = updated;
+        return this;
+    }
+    
+    public PropertyIntegrationSupportWebhookEvents(){}
 }

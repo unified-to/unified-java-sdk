@@ -84,6 +84,7 @@ public class Application {
                     isCustomer = false;
                     isSupplier = false;
                     name = "<value>";
+                    portalUrl = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
@@ -754,6 +755,7 @@ public class Application {
                     isCustomer = false;
                     isSupplier = false;
                     name = "<value>";
+                    portalUrl = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
@@ -1217,6 +1219,7 @@ public class Application {
                     isCustomer = false;
                     isSupplier = false;
                     name = "<value>";
+                    portalUrl = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");

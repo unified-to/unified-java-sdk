@@ -25,6 +25,7 @@ import com.unifiedapi.unifiedto.models.operations.CreateAccountingInvoiceRespons
 import com.unifiedapi.unifiedto.models.shared.AccountingInvoice;
 import com.unifiedapi.unifiedto.models.shared.AccountingInvoiceStatus;
 import com.unifiedapi.unifiedto.models.shared.AccountingLineitem;
+import com.unifiedapi.unifiedto.models.shared.PaymentCollectionMethod;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -60,18 +61,19 @@ public class Application {
                     notes = "<value>";
                     paidAmount = 6572.32d;
                     paidAt = OffsetDateTime.parse("2023-07-10T18:36:49.807Z");
+                    paymentCollectionMethod = PaymentCollectionMethod.SEND_INVOICE;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
                     }};
-                    refundAmount = 1578.89d;
+                    refundAmount = 5503.49d;
                     refundReason = "<value>";
-                    refundedAt = OffsetDateTime.parse("2023-08-27T04:22:20.182Z");
+                    refundedAt = OffsetDateTime.parse("2024-06-02T02:10:22.972Z");
                     status = AccountingInvoiceStatus.AUTHORIZED;
-                    taxAmount = 6864d;
-                    totalAmount = 6873.46d;
-                    updatedAt = OffsetDateTime.parse("2023-11-19T22:49:02.835Z");
-                    url = "http://forked-idiom.biz";
+                    taxAmount = 6873.46d;
+                    totalAmount = 6276.92d;
+                    updatedAt = OffsetDateTime.parse("2023-05-31T14:28:49.824Z");
+                    url = "http://irresponsible-elite.biz";
 
                 }};
 
@@ -237,6 +239,7 @@ import com.unifiedapi.unifiedto.models.operations.PatchAccountingInvoiceResponse
 import com.unifiedapi.unifiedto.models.shared.AccountingInvoice;
 import com.unifiedapi.unifiedto.models.shared.AccountingInvoiceStatus;
 import com.unifiedapi.unifiedto.models.shared.AccountingLineitem;
+import com.unifiedapi.unifiedto.models.shared.PaymentCollectionMethod;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -273,18 +276,19 @@ public class Application {
                     notes = "<value>";
                     paidAmount = 1152.38d;
                     paidAt = OffsetDateTime.parse("2023-03-23T14:30:18.013Z");
+                    paymentCollectionMethod = PaymentCollectionMethod.CHARGE_AUTOMATICALLY;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
                     }};
-                    refundAmount = 6443.77d;
+                    refundAmount = 2117.25d;
                     refundReason = "<value>";
-                    refundedAt = OffsetDateTime.parse("2022-08-21T01:13:52.344Z");
+                    refundedAt = OffsetDateTime.parse("2022-11-28T21:20:47.449Z");
                     status = AccountingInvoiceStatus.DRAFT;
-                    taxAmount = 1140.08d;
-                    totalAmount = 4543.48d;
-                    updatedAt = OffsetDateTime.parse("2024-02-02T12:10:13.037Z");
-                    url = "http://creepy-dart.org";
+                    taxAmount = 4543.48d;
+                    totalAmount = 6957.18d;
+                    updatedAt = OffsetDateTime.parse("2022-10-04T07:00:14.156Z");
+                    url = "http://envious-speech.info";
 
                 }};
 
@@ -381,6 +385,7 @@ import com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceRespons
 import com.unifiedapi.unifiedto.models.shared.AccountingInvoice;
 import com.unifiedapi.unifiedto.models.shared.AccountingInvoiceStatus;
 import com.unifiedapi.unifiedto.models.shared.AccountingLineitem;
+import com.unifiedapi.unifiedto.models.shared.PaymentCollectionMethod;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -417,18 +422,19 @@ public class Application {
                     notes = "<value>";
                     paidAmount = 2842.49d;
                     paidAt = OffsetDateTime.parse("2022-06-05T15:45:06.127Z");
+                    paymentCollectionMethod = PaymentCollectionMethod.SEND_INVOICE;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
                     }};
-                    refundAmount = 3314.72d;
+                    refundAmount = 7535.06d;
                     refundReason = "<value>";
-                    refundedAt = OffsetDateTime.parse("2024-04-05T20:13:33.419Z");
-                    status = AccountingInvoiceStatus.AUTHORIZED;
-                    taxAmount = 3824.24d;
-                    totalAmount = 2939.97d;
-                    updatedAt = OffsetDateTime.parse("2022-08-13T18:41:11.569Z");
-                    url = "https://admirable-suspension.org";
+                    refundedAt = OffsetDateTime.parse("2024-04-25T17:14:49.861Z");
+                    status = AccountingInvoiceStatus.VOIDED;
+                    taxAmount = 2939.97d;
+                    totalAmount = 2050.9d;
+                    updatedAt = OffsetDateTime.parse("2024-09-20T05:36:54.012Z");
+                    url = "http://tubby-switchboard.name";
 
                 }};
 

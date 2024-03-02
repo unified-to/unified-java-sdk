@@ -6,15 +6,14 @@ package com.unifiedapi.unifiedto.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
-public enum WebhookWebhookType {
-    VIRTUAL("virtual"),
-    NONE("none"),
-    NATIVE_("native");
+public enum PaymentCollectionMethod {
+    SEND_INVOICE("send_invoice"),
+    CHARGE_AUTOMATICALLY("charge_automatically");
 
     @JsonValue
     public final String value;
 
-    private WebhookWebhookType(String value) {
+    private PaymentCollectionMethod(String value) {
         this.value = value;
     }
 }

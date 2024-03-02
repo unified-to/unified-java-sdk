@@ -99,6 +99,15 @@ public class AccountingContact {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("portal_url")
+    public String portalUrl;
+
+    public AccountingContact withPortalUrl(String portalUrl) {
+        this.portalUrl = portalUrl;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     public java.util.Map<String, java.lang.Object> raw;
 

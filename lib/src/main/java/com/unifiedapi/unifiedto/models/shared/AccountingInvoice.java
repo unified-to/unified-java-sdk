@@ -141,6 +141,15 @@ public class AccountingInvoice {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("payment_collection_method")
+    public PaymentCollectionMethod paymentCollectionMethod;
+
+    public AccountingInvoice withPaymentCollectionMethod(PaymentCollectionMethod paymentCollectionMethod) {
+        this.paymentCollectionMethod = paymentCollectionMethod;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     public java.util.Map<String, java.lang.Object> raw;
 

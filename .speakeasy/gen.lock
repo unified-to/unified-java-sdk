@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 48060151324f197510525fbcfe544edc
+  docChecksum: 0793d7d9d65b0d606620076f43596338
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.272.7
-  releaseVersion: 0.18.1
-  configChecksum: 5c590eddf6e73a0760471083d11395ce
+  generationVersion: 2.277.0
+  releaseVersion: 0.18.2
+  configChecksum: 9e322eb3358882fad93e661eecc83f3a
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -585,6 +585,7 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingEmailType.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingEmail.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingContactBillingAddress.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PaymentCollectionMethod.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingInvoiceStatus.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingInvoice.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingLineitem.java
@@ -716,14 +717,16 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyConnectionAuth.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/Event.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/ObjectType.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/WebhookWebhookType.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/WebhookType.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/Webhook.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/ApiCallType.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/ApiCall.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/Integration.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/WebhookType.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/IntegrationSupport.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyIntegrationSupportWebhookEvents.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyPropertyIntegrationSupportWebhookEventsUpdated.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyPropertyIntegrationSupportWebhookEventsDeleted.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyPropertyIntegrationSupportWebhookEventsCreated.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyIntegrationCategories.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/IssueStatus.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/IssueType.java
@@ -1211,6 +1214,7 @@ generatedFiles:
   - docs/models/shared/AccountingEmailType.md
   - docs/models/shared/AccountingEmail.md
   - docs/models/shared/PropertyAccountingContactBillingAddress.md
+  - docs/models/shared/PaymentCollectionMethod.md
   - docs/models/shared/AccountingInvoiceStatus.md
   - docs/models/shared/AccountingInvoice.md
   - docs/models/shared/AccountingLineitem.md
@@ -1342,14 +1346,16 @@ generatedFiles:
   - docs/models/shared/PropertyConnectionAuth.md
   - docs/models/shared/Event.md
   - docs/models/shared/ObjectType.md
-  - docs/models/shared/WebhookWebhookType.md
+  - docs/models/shared/WebhookType.md
   - docs/models/shared/Webhook.md
   - docs/models/shared/ApiCallType.md
   - docs/models/shared/ApiCall.md
   - docs/models/shared/Integration.md
-  - docs/models/shared/WebhookType.md
   - docs/models/shared/IntegrationSupport.md
   - docs/models/shared/PropertyIntegrationSupportWebhookEvents.md
+  - docs/models/shared/PropertyPropertyIntegrationSupportWebhookEventsUpdated.md
+  - docs/models/shared/PropertyPropertyIntegrationSupportWebhookEventsDeleted.md
+  - docs/models/shared/PropertyPropertyIntegrationSupportWebhookEventsCreated.md
   - docs/models/shared/PropertyIntegrationCategories.md
   - docs/models/shared/IssueStatus.md
   - docs/models/shared/IssueType.md

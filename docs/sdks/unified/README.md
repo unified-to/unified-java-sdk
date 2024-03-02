@@ -151,7 +151,7 @@ import com.unifiedapi.unifiedto.models.shared.Event;
 import com.unifiedapi.unifiedto.models.shared.ObjectType;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import com.unifiedapi.unifiedto.models.shared.Webhook;
-import com.unifiedapi.unifiedto.models.shared.WebhookWebhookType;
+import com.unifiedapi.unifiedto.models.shared.WebhookType;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -188,7 +188,7 @@ public class Application {
                         add("<value>"),
                     }};
                     updatedAt = OffsetDateTime.parse("2024-01-16T23:55:52.787Z");
-                    webhookType = WebhookWebhookType.NATIVE_;
+                    webhookType = WebhookType.NATIVE_;
                     workspaceId = "<value>";
 
                 }};

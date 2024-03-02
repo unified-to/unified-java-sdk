@@ -6,14 +6,14 @@ package com.unifiedapi.unifiedto.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
-public enum WebhookType {
+public enum PropertyPropertyIntegrationSupportWebhookEventsCreated {
     VIRTUAL("virtual"),
     NATIVE_("native");
 
     @JsonValue
     public final String value;
 
-    private WebhookType(String value) {
+    private PropertyPropertyIntegrationSupportWebhookEventsCreated(String value) {
         this.value = value;
     }
 }
