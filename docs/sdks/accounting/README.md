@@ -124,6 +124,8 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingContactRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingContactResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingContact;
+import com.unifiedapi.unifiedto.models.shared.AccountingContactPaymentMethod;
+import com.unifiedapi.unifiedto.models.shared.AccountingContactPaymentMethodType;
 import com.unifiedapi.unifiedto.models.shared.AccountingEmail;
 import com.unifiedapi.unifiedto.models.shared.AccountingEmailType;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephone;
@@ -173,6 +175,12 @@ public class Application {
                     isCustomer = false;
                     isSupplier = false;
                     name = "<value>";
+                    paymentMethods = new com.unifiedapi.unifiedto.models.shared.AccountingContactPaymentMethod[]{{
+                        add(new AccountingContactPaymentMethod(
+                        AccountingContactPaymentMethodType.ACH){{
+                            type = AccountingContactPaymentMethodType.ACH;
+                        }}),
+                    }};
                     portalUrl = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
@@ -182,15 +190,15 @@ public class Application {
 ){{
                         address1 = "<value>";
                         address2 = "<value>";
-                        city = "North Jazmynefurt";
-                        country = "France";
-                        countryCode = "BE";
-                        postalCode = "36835-6542";
+                        city = "Macboro";
+                        country = "Barbados";
+                        countryCode = "TR";
+                        postalCode = "68356";
                         region = "<value>";
                         regionCode = "<value>";
 
                     }};
-                    taxExemption = TaxExemption.FEDERAL_GOV;
+                    taxExemption = TaxExemption.RELIGIOUS_ORG;
                     taxNumber = "<value>";
                     telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
                         add(new AccountingTelephone(
@@ -198,7 +206,7 @@ public class Application {
                             telephone = "<value>";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-09-05T13:56:20.676Z");
+                    updatedAt = OffsetDateTime.parse("2023-03-18T23:23:30.984Z");
 
                 }};
 
@@ -1279,6 +1287,8 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingContactRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingContactResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingContact;
+import com.unifiedapi.unifiedto.models.shared.AccountingContactPaymentMethod;
+import com.unifiedapi.unifiedto.models.shared.AccountingContactPaymentMethodType;
 import com.unifiedapi.unifiedto.models.shared.AccountingEmail;
 import com.unifiedapi.unifiedto.models.shared.AccountingEmailType;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephone;
@@ -1329,6 +1339,12 @@ public class Application {
                     isCustomer = false;
                     isSupplier = false;
                     name = "<value>";
+                    paymentMethods = new com.unifiedapi.unifiedto.models.shared.AccountingContactPaymentMethod[]{{
+                        add(new AccountingContactPaymentMethod(
+                        AccountingContactPaymentMethodType.IDEAL){{
+                            type = AccountingContactPaymentMethodType.IDEAL;
+                        }}),
+                    }};
                     portalUrl = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
@@ -1338,15 +1354,15 @@ public class Application {
 ){{
                         address1 = "<value>";
                         address2 = "<value>";
-                        city = "O'Connellburgh";
-                        country = "Guinea-Bissau";
-                        countryCode = "MV";
-                        postalCode = "91251-4209";
+                        city = "West Lilian";
+                        country = "Russian Federation";
+                        countryCode = "ZW";
+                        postalCode = "25142";
                         region = "<value>";
                         regionCode = "<value>";
 
                     }};
-                    taxExemption = TaxExemption.EDUCATIONAL_ORG;
+                    taxExemption = TaxExemption.FEDERAL_GOV;
                     taxNumber = "<value>";
                     telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
                         add(new AccountingTelephone(
@@ -1354,7 +1370,7 @@ public class Application {
                             telephone = "<value>";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-01-11T11:33:25.380Z");
+                    updatedAt = OffsetDateTime.parse("2024-10-04T12:05:57.585Z");
 
                 }};
 
@@ -1976,6 +1992,8 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingContactRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingContactResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingContact;
+import com.unifiedapi.unifiedto.models.shared.AccountingContactPaymentMethod;
+import com.unifiedapi.unifiedto.models.shared.AccountingContactPaymentMethodType;
 import com.unifiedapi.unifiedto.models.shared.AccountingEmail;
 import com.unifiedapi.unifiedto.models.shared.AccountingEmailType;
 import com.unifiedapi.unifiedto.models.shared.AccountingTelephone;
@@ -2026,6 +2044,12 @@ public class Application {
                     isCustomer = false;
                     isSupplier = false;
                     name = "<value>";
+                    paymentMethods = new com.unifiedapi.unifiedto.models.shared.AccountingContactPaymentMethod[]{{
+                        add(new AccountingContactPaymentMethod(
+                        AccountingContactPaymentMethodType.OTHER){{
+                            type = AccountingContactPaymentMethodType.ALIPAY;
+                        }}),
+                    }};
                     portalUrl = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
@@ -2035,15 +2059,15 @@ public class Application {
 ){{
                         address1 = "<value>";
                         address2 = "<value>";
-                        city = "Port Arely";
-                        country = "Norway";
-                        countryCode = "GP";
-                        postalCode = "99093-9229";
+                        city = "Lake Faustinohaven";
+                        country = "Venezuela";
+                        countryCode = "TV";
+                        postalCode = "93922";
                         region = "<value>";
                         regionCode = "<value>";
 
                     }};
-                    taxExemption = TaxExemption.MEDICAL_ORG;
+                    taxExemption = TaxExemption.OTHER;
                     taxNumber = "<value>";
                     telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
                         add(new AccountingTelephone(
@@ -2051,7 +2075,7 @@ public class Application {
                             telephone = "<value>";
                         }}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-08-30T07:55:45.909Z");
+                    updatedAt = OffsetDateTime.parse("2024-01-24T01:50:49.403Z");
 
                 }};
 

@@ -99,6 +99,15 @@ public class AccountingContact {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("payment_methods")
+    public AccountingContactPaymentMethod[] paymentMethods;
+
+    public AccountingContact withPaymentMethods(AccountingContactPaymentMethod[] paymentMethods) {
+        this.paymentMethods = paymentMethods;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portal_url")
     public String portalUrl;
 
