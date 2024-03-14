@@ -550,13 +550,14 @@ public class Contact {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
         com.unifiedapi.unifiedto.models.operations.RemoveAccountingContactResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAccountingContactResponse(contentType, httpRes.statusCode(), httpRes) {{
-            res = null;
+            string = null;
         }};
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.res = out;
+                ObjectMapper mapper = JSON.getMapper();
+                String out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), String.class);
+                res.string = out;
             }
         }
 
@@ -587,13 +588,14 @@ public class Contact {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
         com.unifiedapi.unifiedto.models.operations.RemoveCrmContactResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveCrmContactResponse(contentType, httpRes.statusCode(), httpRes) {{
-            res = null;
+            string = null;
         }};
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.res = out;
+                ObjectMapper mapper = JSON.getMapper();
+                String out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), String.class);
+                res.string = out;
             }
         }
 
@@ -624,13 +626,14 @@ public class Contact {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
         com.unifiedapi.unifiedto.models.operations.RemoveUcContactResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveUcContactResponse(contentType, httpRes.statusCode(), httpRes) {{
-            res = null;
+            string = null;
         }};
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.res = out;
+                ObjectMapper mapper = JSON.getMapper();
+                String out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), String.class);
+                res.string = out;
             }
         }
 

@@ -46,10 +46,10 @@ public class RemoveAccountingTaxrateResponse {
      * Successful
      */
     
-    public String res;
+    public String string;
 
-    public RemoveAccountingTaxrateResponse withRes(String res) {
-        this.res = res;
+    public RemoveAccountingTaxrateResponse withString(String string) {
+        this.string = string;
         return this;
     }
     

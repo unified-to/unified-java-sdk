@@ -46,10 +46,10 @@ public class RemoveCrmEventResponse {
      * Successful
      */
     
-    public String res;
+    public String string;
 
-    public RemoveCrmEventResponse withRes(String res) {
-        this.res = res;
+    public RemoveCrmEventResponse withString(String string) {
+        this.string = string;
         return this;
     }
     

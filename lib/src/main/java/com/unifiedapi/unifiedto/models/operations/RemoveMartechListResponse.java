@@ -46,10 +46,10 @@ public class RemoveMartechListResponse {
      * Successful
      */
     
-    public String res;
+    public String string;
 
-    public RemoveMartechListResponse withRes(String res) {
-        this.res = res;
+    public RemoveMartechListResponse withString(String string) {
+        this.string = string;
         return this;
     }
     

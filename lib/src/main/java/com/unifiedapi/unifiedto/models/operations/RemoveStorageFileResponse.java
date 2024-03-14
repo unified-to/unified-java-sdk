@@ -46,10 +46,10 @@ public class RemoveStorageFileResponse {
      * Successful
      */
     
-    public String res;
+    public String string;
 
-    public RemoveStorageFileResponse withRes(String res) {
-        this.res = res;
+    public RemoveStorageFileResponse withString(String string) {
+        this.string = string;
         return this;
     }
     

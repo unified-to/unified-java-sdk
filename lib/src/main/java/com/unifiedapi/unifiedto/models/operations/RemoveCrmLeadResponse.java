@@ -46,10 +46,10 @@ public class RemoveCrmLeadResponse {
      * Successful
      */
     
-    public String res;
+    public String string;
 
-    public RemoveCrmLeadResponse withRes(String res) {
-        this.res = res;
+    public RemoveCrmLeadResponse withString(String string) {
+        this.string = string;
         return this;
     }
     

@@ -46,10 +46,10 @@ public class RemovePaymentPaymentResponse {
      * Successful
      */
     
-    public String res;
+    public String string;
 
-    public RemovePaymentPaymentResponse withRes(String res) {
-        this.res = res;
+    public RemovePaymentPaymentResponse withString(String string) {
+        this.string = string;
         return this;
     }
     

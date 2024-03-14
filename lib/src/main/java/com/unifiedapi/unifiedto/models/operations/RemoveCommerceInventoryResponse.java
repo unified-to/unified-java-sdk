@@ -46,10 +46,10 @@ public class RemoveCommerceInventoryResponse {
      * Successful
      */
     
-    public String res;
+    public String string;
 
-    public RemoveCommerceInventoryResponse withRes(String res) {
-        this.res = res;
+    public RemoveCommerceInventoryResponse withString(String string) {
+        this.string = string;
         return this;
     }
     

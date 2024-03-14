@@ -46,10 +46,10 @@ public class RemoveAccountingTransactionResponse {
      * Successful
      */
     
-    public String res;
+    public String string;
 
-    public RemoveAccountingTransactionResponse withRes(String res) {
-        this.res = res;
+    public RemoveAccountingTransactionResponse withString(String string) {
+        this.string = string;
         return this;
     }
     

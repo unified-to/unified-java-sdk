@@ -718,13 +718,14 @@ public class Commerce {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
         com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionResponse(contentType, httpRes.statusCode(), httpRes) {{
-            res = null;
+            string = null;
         }};
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.res = out;
+                ObjectMapper mapper = JSON.getMapper();
+                String out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), String.class);
+                res.string = out;
             }
         }
 
@@ -755,13 +756,14 @@ public class Commerce {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
         com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryResponse(contentType, httpRes.statusCode(), httpRes) {{
-            res = null;
+            string = null;
         }};
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.res = out;
+                ObjectMapper mapper = JSON.getMapper();
+                String out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), String.class);
+                res.string = out;
             }
         }
 
@@ -792,13 +794,14 @@ public class Commerce {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
         com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemResponse(contentType, httpRes.statusCode(), httpRes) {{
-            res = null;
+            string = null;
         }};
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.res = out;
+                ObjectMapper mapper = JSON.getMapper();
+                String out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), String.class);
+                res.string = out;
             }
         }
 
@@ -829,13 +832,14 @@ public class Commerce {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
         com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationResponse(contentType, httpRes.statusCode(), httpRes) {{
-            res = null;
+            string = null;
         }};
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.res = out;
+                ObjectMapper mapper = JSON.getMapper();
+                String out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), String.class);
+                res.string = out;
             }
         }
 

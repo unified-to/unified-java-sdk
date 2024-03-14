@@ -46,10 +46,10 @@ public class RemoveAtsScorecardResponse {
      * Successful
      */
     
-    public String res;
+    public String string;
 
-    public RemoveAtsScorecardResponse withRes(String res) {
-        this.res = res;
+    public RemoveAtsScorecardResponse withString(String string) {
+        this.string = string;
         return this;
     }
     

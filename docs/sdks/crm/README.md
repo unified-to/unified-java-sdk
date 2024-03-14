@@ -420,6 +420,7 @@ public class Application {
                     note = new PropertyCrmEventNote(
 ){{
                         description = "Virtual asymmetric definition";
+                        title = "<value>";
 
                     }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
@@ -1759,6 +1760,7 @@ public class Application {
                     note = new PropertyCrmEventNote(
 ){{
                         description = "Realigned composite benchmark";
+                        title = "<value>";
 
                     }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
@@ -2675,6 +2677,7 @@ public class Application {
                     note = new PropertyCrmEventNote(
 ){{
                         description = "Visionary actuating migration";
+                        title = "<value>";
 
                     }};
                     raw = new java.util.HashMap<String, java.lang.Object>(

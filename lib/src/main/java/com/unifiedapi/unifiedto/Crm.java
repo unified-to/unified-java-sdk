@@ -1054,13 +1054,14 @@ public class Crm {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
         com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyResponse(contentType, httpRes.statusCode(), httpRes) {{
-            res = null;
+            string = null;
         }};
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.res = out;
+                ObjectMapper mapper = JSON.getMapper();
+                String out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), String.class);
+                res.string = out;
             }
         }
 
@@ -1091,13 +1092,14 @@ public class Crm {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
         com.unifiedapi.unifiedto.models.operations.RemoveCrmContactResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveCrmContactResponse(contentType, httpRes.statusCode(), httpRes) {{
-            res = null;
+            string = null;
         }};
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.res = out;
+                ObjectMapper mapper = JSON.getMapper();
+                String out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), String.class);
+                res.string = out;
             }
         }
 
@@ -1128,13 +1130,14 @@ public class Crm {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
         com.unifiedapi.unifiedto.models.operations.RemoveCrmDealResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveCrmDealResponse(contentType, httpRes.statusCode(), httpRes) {{
-            res = null;
+            string = null;
         }};
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.res = out;
+                ObjectMapper mapper = JSON.getMapper();
+                String out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), String.class);
+                res.string = out;
             }
         }
 
@@ -1165,13 +1168,14 @@ public class Crm {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
         com.unifiedapi.unifiedto.models.operations.RemoveCrmEventResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveCrmEventResponse(contentType, httpRes.statusCode(), httpRes) {{
-            res = null;
+            string = null;
         }};
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.res = out;
+                ObjectMapper mapper = JSON.getMapper();
+                String out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), String.class);
+                res.string = out;
             }
         }
 
@@ -1202,13 +1206,14 @@ public class Crm {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
         com.unifiedapi.unifiedto.models.operations.RemoveCrmLeadResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveCrmLeadResponse(contentType, httpRes.statusCode(), httpRes) {{
-            res = null;
+            string = null;
         }};
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.res = out;
+                ObjectMapper mapper = JSON.getMapper();
+                String out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), String.class);
+                res.string = out;
             }
         }
 
@@ -1239,13 +1244,14 @@ public class Crm {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
         com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineResponse(contentType, httpRes.statusCode(), httpRes) {{
-            res = null;
+            string = null;
         }};
         
         if (true) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.res = out;
+                ObjectMapper mapper = JSON.getMapper();
+                String out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), String.class);
+                res.string = out;
             }
         }
 

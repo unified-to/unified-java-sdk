@@ -46,10 +46,10 @@ public class RemoveAtsDocumentResponse {
      * Successful
      */
     
-    public String res;
+    public String string;
 
-    public RemoveAtsDocumentResponse withRes(String res) {
-        this.res = res;
+    public RemoveAtsDocumentResponse withString(String string) {
+        this.string = string;
         return this;
     }
     

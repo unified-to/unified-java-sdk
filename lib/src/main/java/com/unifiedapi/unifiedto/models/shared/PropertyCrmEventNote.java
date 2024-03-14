@@ -22,5 +22,14 @@ public class PropertyCrmEventNote {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("title")
+    public String title;
+
+    public PropertyCrmEventNote withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    
     public PropertyCrmEventNote(){}
 }

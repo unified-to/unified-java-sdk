@@ -46,10 +46,10 @@ public class RemoveUnifiedWebhookResponse {
      * Successful
      */
     
-    public String res;
+    public String string;
 
-    public RemoveUnifiedWebhookResponse withRes(String res) {
-        this.res = res;
+    public RemoveUnifiedWebhookResponse withString(String string) {
+        this.string = string;
         return this;
     }
     

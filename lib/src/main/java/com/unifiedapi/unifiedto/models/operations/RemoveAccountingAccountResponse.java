@@ -46,10 +46,10 @@ public class RemoveAccountingAccountResponse {
      * Successful
      */
     
-    public String res;
+    public String string;
 
-    public RemoveAccountingAccountResponse withRes(String res) {
-        this.res = res;
+    public RemoveAccountingAccountResponse withString(String string) {
+        this.string = string;
         return this;
     }
     

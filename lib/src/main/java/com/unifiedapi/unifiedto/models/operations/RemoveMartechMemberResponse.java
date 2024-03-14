@@ -46,10 +46,10 @@ public class RemoveMartechMemberResponse {
      * Successful
      */
     
-    public String res;
+    public String string;
 
-    public RemoveMartechMemberResponse withRes(String res) {
-        this.res = res;
+    public RemoveMartechMemberResponse withString(String string) {
+        this.string = string;
         return this;
     }
     

@@ -46,10 +46,10 @@ public class PatchUnifiedWebhookTriggerResponse {
      * Successful
      */
     
-    public String res;
+    public String string;
 
-    public PatchUnifiedWebhookTriggerResponse withRes(String res) {
-        this.res = res;
+    public PatchUnifiedWebhookTriggerResponse withString(String string) {
+        this.string = string;
         return this;
     }
     

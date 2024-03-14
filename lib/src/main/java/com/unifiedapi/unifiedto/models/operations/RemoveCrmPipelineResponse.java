@@ -46,10 +46,10 @@ public class RemoveCrmPipelineResponse {
      * Successful
      */
     
-    public String res;
+    public String string;
 
-    public RemoveCrmPipelineResponse withRes(String res) {
-        this.res = res;
+    public RemoveCrmPipelineResponse withString(String string) {
+        this.string = string;
         return this;
     }
     

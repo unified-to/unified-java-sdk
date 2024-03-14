@@ -46,10 +46,10 @@ public class RemoveCrmDealResponse {
      * Successful
      */
     
-    public String res;
+    public String string;
 
-    public RemoveCrmDealResponse withRes(String res) {
-        this.res = res;
+    public RemoveCrmDealResponse withString(String string) {
+        this.string = string;
         return this;
     }
     
