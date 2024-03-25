@@ -19,6 +19,15 @@ public class EnrichEmail {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_verified")
+    public Boolean isVerified;
+
+    public EnrichEmail withIsVerified(Boolean isVerified) {
+        this.isVerified = isVerified;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public EnrichEmailType type;
 
