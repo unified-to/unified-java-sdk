@@ -349,7 +349,9 @@ public class Company {
             string = null;
         }};
         
-        if (true) {
+        if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
+        }
+        else {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 String out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), String.class);

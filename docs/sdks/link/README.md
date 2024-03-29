@@ -22,8 +22,8 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreatePaymentLinkRequest;
 import com.unifiedapi.unifiedto.models.operations.CreatePaymentLinkResponse;
-import com.unifiedapi.unifiedto.models.shared.PaymenntLinkLineitem;
 import com.unifiedapi.unifiedto.models.shared.PaymentLink;
+import com.unifiedapi.unifiedto.models.shared.PaymentLinkLineitem;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -40,25 +40,25 @@ public class Application {
             com.unifiedapi.unifiedto.models.operations.CreatePaymentLinkRequest req = new CreatePaymentLinkRequest(
                 "<value>"){{
                 paymentLink = new PaymentLink(
-                    false,
-                    new com.unifiedapi.unifiedto.models.shared.PaymenntLinkLineitem[]{{
-                        add(new PaymenntLinkLineitem(
-                        7885.08d){{
-                            totalAmount = 8711.36d;
+                    8711.36d,
+                    new com.unifiedapi.unifiedto.models.shared.PaymentLinkLineitem[]{{
+                        add(new PaymentLinkLineitem(
+                        483.93d){{
+                            totalAmount = 7885.08d;
                         }}),
-                    }},
-                    "<value>"){{
-                    amount = 483.93d;
+                    }}){{
                     contactId = "<value>";
                     createdAt = OffsetDateTime.parse("2024-10-29T06:52:39.809Z");
                     currency = "Dong";
                     id = "<id>";
+                    isActive = false;
                     paymentId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
                     }};
                     updatedAt = OffsetDateTime.parse("2023-07-14T18:03:00.242Z");
+                    url = "http://baggy-shark.biz";
 
                 }};
 
@@ -222,8 +222,8 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchPaymentLinkRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchPaymentLinkResponse;
-import com.unifiedapi.unifiedto.models.shared.PaymenntLinkLineitem;
 import com.unifiedapi.unifiedto.models.shared.PaymentLink;
+import com.unifiedapi.unifiedto.models.shared.PaymentLinkLineitem;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -241,25 +241,25 @@ public class Application {
                 "<value>",
                 "<value>"){{
                 paymentLink = new PaymentLink(
-                    false,
-                    new com.unifiedapi.unifiedto.models.shared.PaymenntLinkLineitem[]{{
-                        add(new PaymenntLinkLineitem(
-                        4605.59d){{
-                            totalAmount = 2219.73d;
+                    2219.73d,
+                    new com.unifiedapi.unifiedto.models.shared.PaymentLinkLineitem[]{{
+                        add(new PaymentLinkLineitem(
+                        9294.81d){{
+                            totalAmount = 4605.59d;
                         }}),
-                    }},
-                    "<value>"){{
-                    amount = 9294.81d;
+                    }}){{
                     contactId = "<value>";
                     createdAt = OffsetDateTime.parse("2024-03-01T20:55:52.998Z");
                     currency = "North Korean Won";
                     id = "<id>";
+                    isActive = false;
                     paymentId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
                     }};
                     updatedAt = OffsetDateTime.parse("2023-07-20T09:13:52.888Z");
+                    url = "http://accurate-costume.org";
 
                 }};
 
@@ -353,8 +353,8 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdatePaymentLinkRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdatePaymentLinkResponse;
-import com.unifiedapi.unifiedto.models.shared.PaymenntLinkLineitem;
 import com.unifiedapi.unifiedto.models.shared.PaymentLink;
+import com.unifiedapi.unifiedto.models.shared.PaymentLinkLineitem;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -372,25 +372,25 @@ public class Application {
                 "<value>",
                 "<value>"){{
                 paymentLink = new PaymentLink(
-                    false,
-                    new com.unifiedapi.unifiedto.models.shared.PaymenntLinkLineitem[]{{
-                        add(new PaymenntLinkLineitem(
-                        4437.28d){{
-                            totalAmount = 6147.65d;
+                    6147.65d,
+                    new com.unifiedapi.unifiedto.models.shared.PaymentLinkLineitem[]{{
+                        add(new PaymentLinkLineitem(
+                        2903.18d){{
+                            totalAmount = 4437.28d;
                         }}),
-                    }},
-                    "<value>"){{
-                    amount = 2903.18d;
+                    }}){{
                     contactId = "<value>";
                     createdAt = OffsetDateTime.parse("2024-02-13T01:53:59.618Z");
                     currency = "Codes specifically reserved for testing purposes";
                     id = "<id>";
+                    isActive = false;
                     paymentId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
                     }};
                     updatedAt = OffsetDateTime.parse("2022-08-22T16:01:32.942Z");
+                    url = "https://complex-glove.com";
 
                 }};
 

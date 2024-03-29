@@ -14,12 +14,12 @@ import com.unifiedapi.unifiedto.utils.DateTimeSerializer;
 import java.time.OffsetDateTime;
 
 
-public class PaymenntLinkLineitem {
+public class PaymentLinkLineitem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     public String accountId;
 
-    public PaymenntLinkLineitem withAccountId(String accountId) {
+    public PaymentLinkLineitem withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
     }
@@ -30,7 +30,7 @@ public class PaymenntLinkLineitem {
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
 
-    public PaymenntLinkLineitem withCreatedAt(OffsetDateTime createdAt) {
+    public PaymentLinkLineitem withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
@@ -39,7 +39,7 @@ public class PaymenntLinkLineitem {
     @JsonProperty("discount_amount")
     public Double discountAmount;
 
-    public PaymenntLinkLineitem withDiscountAmount(Double discountAmount) {
+    public PaymentLinkLineitem withDiscountAmount(Double discountAmount) {
         this.discountAmount = discountAmount;
         return this;
     }
@@ -48,7 +48,7 @@ public class PaymenntLinkLineitem {
     @JsonProperty("id")
     public String id;
 
-    public PaymenntLinkLineitem withId(String id) {
+    public PaymentLinkLineitem withId(String id) {
         this.id = id;
         return this;
     }
@@ -57,7 +57,7 @@ public class PaymenntLinkLineitem {
     @JsonProperty("item_description")
     public String itemDescription;
 
-    public PaymenntLinkLineitem withItemDescription(String itemDescription) {
+    public PaymentLinkLineitem withItemDescription(String itemDescription) {
         this.itemDescription = itemDescription;
         return this;
     }
@@ -66,7 +66,7 @@ public class PaymenntLinkLineitem {
     @JsonProperty("item_id")
     public String itemId;
 
-    public PaymenntLinkLineitem withItemId(String itemId) {
+    public PaymentLinkLineitem withItemId(String itemId) {
         this.itemId = itemId;
         return this;
     }
@@ -75,7 +75,7 @@ public class PaymenntLinkLineitem {
     @JsonProperty("item_name")
     public String itemName;
 
-    public PaymenntLinkLineitem withItemName(String itemName) {
+    public PaymentLinkLineitem withItemName(String itemName) {
         this.itemName = itemName;
         return this;
     }
@@ -84,7 +84,7 @@ public class PaymenntLinkLineitem {
     @JsonProperty("item_sku")
     public String itemSku;
 
-    public PaymenntLinkLineitem withItemSku(String itemSku) {
+    public PaymentLinkLineitem withItemSku(String itemSku) {
         this.itemSku = itemSku;
         return this;
     }
@@ -93,7 +93,7 @@ public class PaymenntLinkLineitem {
     @JsonProperty("notes")
     public String notes;
 
-    public PaymenntLinkLineitem withNotes(String notes) {
+    public PaymentLinkLineitem withNotes(String notes) {
         this.notes = notes;
         return this;
     }
@@ -102,7 +102,7 @@ public class PaymenntLinkLineitem {
     @JsonProperty("refund_amount")
     public Double refundAmount;
 
-    public PaymenntLinkLineitem withRefundAmount(Double refundAmount) {
+    public PaymentLinkLineitem withRefundAmount(Double refundAmount) {
         this.refundAmount = refundAmount;
         return this;
     }
@@ -113,7 +113,7 @@ public class PaymenntLinkLineitem {
     @JsonProperty("refunded_at")
     public OffsetDateTime refundedAt;
 
-    public PaymenntLinkLineitem withRefundedAt(OffsetDateTime refundedAt) {
+    public PaymentLinkLineitem withRefundedAt(OffsetDateTime refundedAt) {
         this.refundedAt = refundedAt;
         return this;
     }
@@ -122,7 +122,7 @@ public class PaymenntLinkLineitem {
     @JsonProperty("tax_amount")
     public Double taxAmount;
 
-    public PaymenntLinkLineitem withTaxAmount(Double taxAmount) {
+    public PaymentLinkLineitem withTaxAmount(Double taxAmount) {
         this.taxAmount = taxAmount;
         return this;
     }
@@ -131,7 +131,7 @@ public class PaymenntLinkLineitem {
     @JsonProperty("taxrate_id")
     public String taxrateId;
 
-    public PaymenntLinkLineitem withTaxrateId(String taxrateId) {
+    public PaymentLinkLineitem withTaxrateId(String taxrateId) {
         this.taxrateId = taxrateId;
         return this;
     }
@@ -139,7 +139,7 @@ public class PaymenntLinkLineitem {
     @JsonProperty("total_amount")
     public Double totalAmount;
 
-    public PaymenntLinkLineitem withTotalAmount(Double totalAmount) {
+    public PaymentLinkLineitem withTotalAmount(Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
     }
@@ -148,7 +148,7 @@ public class PaymenntLinkLineitem {
     @JsonProperty("unit_amount")
     public Double unitAmount;
 
-    public PaymenntLinkLineitem withUnitAmount(Double unitAmount) {
+    public PaymentLinkLineitem withUnitAmount(Double unitAmount) {
         this.unitAmount = unitAmount;
         return this;
     }
@@ -157,7 +157,7 @@ public class PaymenntLinkLineitem {
     @JsonProperty("unit_quantity")
     public Double unitQuantity;
 
-    public PaymenntLinkLineitem withUnitQuantity(Double unitQuantity) {
+    public PaymentLinkLineitem withUnitQuantity(Double unitQuantity) {
         this.unitQuantity = unitQuantity;
         return this;
     }
@@ -168,12 +168,12 @@ public class PaymenntLinkLineitem {
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
 
-    public PaymenntLinkLineitem withUpdatedAt(OffsetDateTime updatedAt) {
+    public PaymentLinkLineitem withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
-    public PaymenntLinkLineitem(@JsonProperty("total_amount") Double totalAmount) {
+    public PaymentLinkLineitem(@JsonProperty("total_amount") Double totalAmount) {
         this.totalAmount = totalAmount;
   }
 }

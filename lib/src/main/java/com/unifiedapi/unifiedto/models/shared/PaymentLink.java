@@ -15,7 +15,6 @@ import java.time.OffsetDateTime;
 
 
 public class PaymentLink {
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
 
@@ -62,6 +61,7 @@ public class PaymentLink {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     public Boolean isActive;
 
@@ -71,9 +71,9 @@ public class PaymentLink {
     }
     
     @JsonProperty("lineitems")
-    public PaymenntLinkLineitem[] lineitems;
+    public PaymentLinkLineitem[] lineitems;
 
-    public PaymentLink withLineitems(PaymenntLinkLineitem[] lineitems) {
+    public PaymentLink withLineitems(PaymentLinkLineitem[] lineitems) {
         this.lineitems = lineitems;
         return this;
     }
@@ -107,6 +107,7 @@ public class PaymentLink {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
 
@@ -115,9 +116,8 @@ public class PaymentLink {
         return this;
     }
     
-    public PaymentLink(@JsonProperty("is_active") Boolean isActive, @JsonProperty("lineitems") PaymenntLinkLineitem[] lineitems, @JsonProperty("url") String url) {
-        this.isActive = isActive;
+    public PaymentLink(@JsonProperty("amount") Double amount, @JsonProperty("lineitems") PaymentLinkLineitem[] lineitems) {
+        this.amount = amount;
         this.lineitems = lineitems;
-        this.url = url;
   }
 }
