@@ -87,7 +87,8 @@ public class Application {
 
             com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleRequest req = new ListEnrichPeopleRequest(
                 "<value>"){{
-                email = "Rosendo53@gmail.com";
+                companyName = "Stanton LLC";
+                email = "Kamille53@gmail.com";
                 linkedinUrl = "<value>";
                 name = "<value>";
                 twitter = "<value>";

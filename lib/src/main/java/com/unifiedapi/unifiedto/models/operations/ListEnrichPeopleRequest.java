@@ -10,6 +10,17 @@ import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 
 public class ListEnrichPeopleRequest {
     /**
+     * The name of the company the person is associated with.  Not valid by itself.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=company_name")
+    public String companyName;
+
+    public ListEnrichPeopleRequest withCompanyName(String companyName) {
+        this.companyName = companyName;
+        return this;
+    }
+    
+    /**
      * ID of the connection
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
