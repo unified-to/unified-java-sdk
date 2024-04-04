@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: c0feefab18e1757955e61afa41102a4c
+  docChecksum: 2d9519a9ae45cc997b9772dfea3b96f5
   docVersion: "1.0"
-  speakeasyVersion: 1.228.1
-  generationVersion: 2.292.0
-  releaseVersion: 0.18.7
-  configChecksum: 51819ea028ea8a8e31958d7c7088b4f5
+  speakeasyVersion: 1.235.2
+  generationVersion: 2.298.2
+  releaseVersion: 0.18.8
+  configChecksum: e2d8e46a1ce10904981ef68ecb2e3154
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -49,6 +49,8 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/Hris.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Employee.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Group.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/Payslip.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/Timeoff.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Martech.java
   - lib/src/main/java/com/unifiedapi/unifiedto/List.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Member.java
@@ -401,10 +403,18 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetHrisEmployeeResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetHrisGroupRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetHrisGroupResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetHrisPayslipRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetHrisPayslipResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetHrisTimeoffRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetHrisTimeoffResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListHrisEmployeesRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListHrisEmployeesResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListHrisGroupsRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListHrisGroupsResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListHrisPayslipsRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListHrisPayslipsResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListHrisTimeoffsRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListHrisTimeoffsResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchHrisEmployeeRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchHrisEmployeeResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchHrisGroupRequest.java
@@ -687,6 +697,13 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyHrisEmployeeAddress.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/HrisGroupType.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/HrisGroup.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PaymentType.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/HrisPayslip.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/HrisPayslipDetailType.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/HrisPayslipDetail.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/HrisTimeoffStatus.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/HrisTimeoffType.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/HrisTimeoff.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/MarketingList.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/MarketingMember.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/MarketingEmailType.java
@@ -1032,10 +1049,18 @@ generatedFiles:
   - docs/models/operations/GetHrisEmployeeResponse.md
   - docs/models/operations/GetHrisGroupRequest.md
   - docs/models/operations/GetHrisGroupResponse.md
+  - docs/models/operations/GetHrisPayslipRequest.md
+  - docs/models/operations/GetHrisPayslipResponse.md
+  - docs/models/operations/GetHrisTimeoffRequest.md
+  - docs/models/operations/GetHrisTimeoffResponse.md
   - docs/models/operations/ListHrisEmployeesRequest.md
   - docs/models/operations/ListHrisEmployeesResponse.md
   - docs/models/operations/ListHrisGroupsRequest.md
   - docs/models/operations/ListHrisGroupsResponse.md
+  - docs/models/operations/ListHrisPayslipsRequest.md
+  - docs/models/operations/ListHrisPayslipsResponse.md
+  - docs/models/operations/ListHrisTimeoffsRequest.md
+  - docs/models/operations/ListHrisTimeoffsResponse.md
   - docs/models/operations/PatchHrisEmployeeRequest.md
   - docs/models/operations/PatchHrisEmployeeResponse.md
   - docs/models/operations/PatchHrisGroupRequest.md
@@ -1318,6 +1343,13 @@ generatedFiles:
   - docs/models/shared/PropertyHrisEmployeeAddress.md
   - docs/models/shared/HrisGroupType.md
   - docs/models/shared/HrisGroup.md
+  - docs/models/shared/PaymentType.md
+  - docs/models/shared/HrisPayslip.md
+  - docs/models/shared/HrisPayslipDetailType.md
+  - docs/models/shared/HrisPayslipDetail.md
+  - docs/models/shared/HrisTimeoffStatus.md
+  - docs/models/shared/HrisTimeoffType.md
+  - docs/models/shared/HrisTimeoff.md
   - docs/models/shared/MarketingList.md
   - docs/models/shared/MarketingMember.md
   - docs/models/shared/MarketingEmailType.md
@@ -1398,6 +1430,8 @@ generatedFiles:
   - docs/sdks/hris/README.md
   - docs/sdks/employee/README.md
   - docs/sdks/group/README.md
+  - docs/sdks/payslip/README.md
+  - docs/sdks/timeoff/README.md
   - docs/sdks/martech/README.md
   - docs/sdks/list/README.md
   - docs/sdks/member/README.md
