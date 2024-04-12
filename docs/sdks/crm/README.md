@@ -6,13 +6,13 @@
 * [createCrmCompany](#createcrmcompany) - Create a company
 * [createCrmContact](#createcrmcontact) - Create a contact
 * [createCrmDeal](#createcrmdeal) - Create a deal
-* [createCrmEvent](#createcrmevent) - Create a event
+* [createCrmEvent](#createcrmevent) - Create an event
 * [createCrmLead](#createcrmlead) - Create a lead
 * [createCrmPipeline](#createcrmpipeline) - Create a pipeline
 * [getCrmCompany](#getcrmcompany) - Retrieve a company
 * [getCrmContact](#getcrmcontact) - Retrieve a contact
 * [getCrmDeal](#getcrmdeal) - Retrieve a deal
-* [getCrmEvent](#getcrmevent) - Retrieve a event
+* [getCrmEvent](#getcrmevent) - Retrieve an event
 * [getCrmLead](#getcrmlead) - Retrieve a lead
 * [getCrmPipeline](#getcrmpipeline) - Retrieve a pipeline
 * [listCrmCompanies](#listcrmcompanies) - List all companies
@@ -24,19 +24,19 @@
 * [patchCrmCompany](#patchcrmcompany) - Update a company
 * [patchCrmContact](#patchcrmcontact) - Update a contact
 * [patchCrmDeal](#patchcrmdeal) - Update a deal
-* [patchCrmEvent](#patchcrmevent) - Update a event
+* [patchCrmEvent](#patchcrmevent) - Update an event
 * [patchCrmLead](#patchcrmlead) - Update a lead
 * [patchCrmPipeline](#patchcrmpipeline) - Update a pipeline
 * [removeCrmCompany](#removecrmcompany) - Remove a company
 * [removeCrmContact](#removecrmcontact) - Remove a contact
 * [removeCrmDeal](#removecrmdeal) - Remove a deal
-* [removeCrmEvent](#removecrmevent) - Remove a event
+* [removeCrmEvent](#removecrmevent) - Remove an event
 * [removeCrmLead](#removecrmlead) - Remove a lead
 * [removeCrmPipeline](#removecrmpipeline) - Remove a pipeline
 * [updateCrmCompany](#updatecrmcompany) - Update a company
 * [updateCrmContact](#updatecrmcontact) - Update a contact
 * [updateCrmDeal](#updatecrmdeal) - Update a deal
-* [updateCrmEvent](#updatecrmevent) - Update a event
+* [updateCrmEvent](#updatecrmevent) - Update an event
 * [updateCrmLead](#updatecrmlead) - Update a lead
 * [updateCrmPipeline](#updatecrmpipeline) - Update a pipeline
 
@@ -337,7 +337,7 @@ public class Application {
 
 ## createCrmEvent
 
-Create a event
+Create an event
 
 ### Example Usage
 
@@ -812,7 +812,7 @@ public class Application {
 
 ## getCrmEvent
 
-Retrieve a event
+Retrieve an event
 
 ### Example Usage
 
@@ -1676,7 +1676,7 @@ public class Application {
 
 ## patchCrmEvent
 
-Update a event
+Update an event
 
 ### Example Usage
 
@@ -2139,7 +2139,7 @@ public class Application {
 
 ## removeCrmEvent
 
-Remove a event
+Remove an event
 
 ### Example Usage
 
@@ -2593,7 +2593,7 @@ public class Application {
 
 ## updateCrmEvent
 
-Update a event
+Update an event
 
 ### Example Usage
 

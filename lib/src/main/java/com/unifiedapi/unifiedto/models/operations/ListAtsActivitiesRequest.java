@@ -10,9 +10,6 @@ import java.time.OffsetDateTime;
 
 
 public class ListAtsActivitiesRequest {
-    /**
-     * The application ID to filter results
-     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=application_id")
     public String applicationId;
 
@@ -21,9 +18,6 @@ public class ListAtsActivitiesRequest {
         return this;
     }
     
-    /**
-     * The candidate ID to filter results
-     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_id")
     public String candidateId;
 
@@ -43,9 +37,6 @@ public class ListAtsActivitiesRequest {
         return this;
     }
     
-    /**
-     * The document ID to filter results
-     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=document_id")
     public String documentId;
 
@@ -65,9 +56,6 @@ public class ListAtsActivitiesRequest {
         return this;
     }
     
-    /**
-     * The interview ID to filter results
-     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interview_id")
     public String interviewId;
 
@@ -76,9 +64,6 @@ public class ListAtsActivitiesRequest {
         return this;
     }
     
-    /**
-     * The job ID to filter results
-     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=job_id")
     public String jobId;
 
@@ -141,9 +126,6 @@ public class ListAtsActivitiesRequest {
         return this;
     }
     
-    /**
-     * The user ID to filter results
-     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
     public String userId;
 

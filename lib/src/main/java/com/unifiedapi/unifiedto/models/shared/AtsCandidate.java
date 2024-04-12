@@ -74,11 +74,11 @@ public class AtsCandidate {
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("external_id")
-    public String externalId;
+    @JsonProperty("external_identifier")
+    public String externalIdentifier;
 
-    public AtsCandidate withExternalId(String externalId) {
-        this.externalId = externalId;
+    public AtsCandidate withExternalIdentifier(String externalIdentifier) {
+        this.externalIdentifier = externalIdentifier;
         return this;
     }
     
@@ -183,6 +183,15 @@ public class AtsCandidate {
 
     public AtsCandidate withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("user_id")
+    public String userId;
+
+    public AtsCandidate withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

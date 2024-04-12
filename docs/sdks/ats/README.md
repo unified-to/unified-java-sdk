@@ -7,7 +7,7 @@
 * [createAtsApplication](#createatsapplication) - Create an application
 * [createAtsCandidate](#createatscandidate) - Create a candidate
 * [createAtsDocument](#createatsdocument) - Create a document
-* [createAtsInterview](#createatsinterview) - Create a interview
+* [createAtsInterview](#createatsinterview) - Create an interview
 * [createAtsJob](#createatsjob) - Create a job
 * [createAtsScorecard](#createatsscorecard) - Create a scorecard
 * [getAtsActivity](#getatsactivity) - Retrieve an activity
@@ -15,12 +15,12 @@
 * [getAtsCandidate](#getatscandidate) - Retrieve a candidate
 * [getAtsCompany](#getatscompany) - Retrieve a company
 * [getAtsDocument](#getatsdocument) - Retrieve a document
-* [getAtsInterview](#getatsinterview) - Retrieve a interview
+* [getAtsInterview](#getatsinterview) - Retrieve an interview
 * [getAtsJob](#getatsjob) - Retrieve a job
 * [getAtsScorecard](#getatsscorecard) - Retrieve a scorecard
 * [listAtsActivities](#listatsactivities) - List all activities
 * [listAtsApplications](#listatsapplications) - List all applications
-* [listAtsApplicationstatuses](#listatsapplicationstatuses) - List all application statuses
+* [listAtsApplicationstatuses](#listatsapplicationstatuses) - List all applicationstatuses
 * [listAtsCandidates](#listatscandidates) - List all candidates
 * [listAtsCompanies](#listatscompanies) - List all companies
 * [listAtsDocuments](#listatsdocuments) - List all documents
@@ -31,21 +31,21 @@
 * [patchAtsApplication](#patchatsapplication) - Update an application
 * [patchAtsCandidate](#patchatscandidate) - Update a candidate
 * [patchAtsDocument](#patchatsdocument) - Update a document
-* [patchAtsInterview](#patchatsinterview) - Update a interview
+* [patchAtsInterview](#patchatsinterview) - Update an interview
 * [patchAtsJob](#patchatsjob) - Update a job
 * [patchAtsScorecard](#patchatsscorecard) - Update a scorecard
 * [removeAtsActivity](#removeatsactivity) - Remove an activity
 * [removeAtsApplication](#removeatsapplication) - Remove an application
 * [removeAtsCandidate](#removeatscandidate) - Remove a candidate
 * [removeAtsDocument](#removeatsdocument) - Remove a document
-* [removeAtsInterview](#removeatsinterview) - Remove a interview
+* [removeAtsInterview](#removeatsinterview) - Remove an interview
 * [removeAtsJob](#removeatsjob) - Remove a job
 * [removeAtsScorecard](#removeatsscorecard) - Remove a scorecard
 * [updateAtsActivity](#updateatsactivity) - Update an activity
 * [updateAtsApplication](#updateatsapplication) - Update an application
 * [updateAtsCandidate](#updateatscandidate) - Update a candidate
 * [updateAtsDocument](#updateatsdocument) - Update a document
-* [updateAtsInterview](#updateatsinterview) - Update a interview
+* [updateAtsInterview](#updateatsinterview) - Update an interview
 * [updateAtsJob](#updateatsjob) - Update a job
 * [updateAtsScorecard](#updateatsscorecard) - Update a scorecard
 
@@ -274,7 +274,7 @@ public class Application {
                             email = "Mallory99@hotmail.com";
                         }}),
                     }};
-                    externalId = "<value>";
+                    externalIdentifier = "<value>";
                     id = "<id>";
                     imageUrl = "<value>";
                     linkUrls = new String[]{{
@@ -300,6 +300,7 @@ public class Application {
                     }};
                     title = "<value>";
                     updatedAt = OffsetDateTime.parse("2022-09-27T06:32:21.998Z");
+                    userId = "<value>";
 
                 }};
 
@@ -406,7 +407,7 @@ public class Application {
 
 ## createAtsInterview
 
-Create a interview
+Create an interview
 
 ### Example Usage
 
@@ -963,7 +964,7 @@ public class Application {
 
 ## getAtsInterview
 
-Retrieve a interview
+Retrieve an interview
 
 ### Example Usage
 
@@ -1268,7 +1269,7 @@ public class Application {
 
 ## listAtsApplicationstatuses
 
-List all application statuses
+List all applicationstatuses
 
 ### Example Usage
 
@@ -1941,7 +1942,7 @@ public class Application {
                             email = "Roslyn.Bergnaum@gmail.com";
                         }}),
                     }};
-                    externalId = "<value>";
+                    externalIdentifier = "<value>";
                     id = "<id>";
                     imageUrl = "<value>";
                     linkUrls = new String[]{{
@@ -1967,6 +1968,7 @@ public class Application {
                     }};
                     title = "<value>";
                     updatedAt = OffsetDateTime.parse("2024-05-16T04:49:59.355Z");
+                    userId = "<value>";
 
                 }};
 
@@ -2074,7 +2076,7 @@ public class Application {
 
 ## patchAtsInterview
 
-Update a interview
+Update an interview
 
 ### Example Usage
 
@@ -2557,7 +2559,7 @@ public class Application {
 
 ## removeAtsInterview
 
-Remove a interview
+Remove an interview
 
 ### Example Usage
 
@@ -2939,7 +2941,7 @@ public class Application {
                             email = "Mose_Cremin@gmail.com";
                         }}),
                     }};
-                    externalId = "<value>";
+                    externalIdentifier = "<value>";
                     id = "<id>";
                     imageUrl = "<value>";
                     linkUrls = new String[]{{
@@ -2965,6 +2967,7 @@ public class Application {
                     }};
                     title = "<value>";
                     updatedAt = OffsetDateTime.parse("2022-10-06T11:04:23.402Z");
+                    userId = "<value>";
 
                 }};
 
@@ -3072,7 +3075,7 @@ public class Application {
 
 ## updateAtsInterview
 
-Update a interview
+Update an interview
 
 ### Example Usage
 

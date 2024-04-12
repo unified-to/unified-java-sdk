@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [createCrmEvent](#createcrmevent) - Create a event
-* [getCrmEvent](#getcrmevent) - Retrieve a event
+* [createCrmEvent](#createcrmevent) - Create an event
+* [getCrmEvent](#getcrmevent) - Retrieve an event
 * [listCrmEvents](#listcrmevents) - List all events
-* [patchCrmEvent](#patchcrmevent) - Update a event
-* [removeCrmEvent](#removecrmevent) - Remove a event
-* [updateCrmEvent](#updatecrmevent) - Update a event
+* [patchCrmEvent](#patchcrmevent) - Update an event
+* [removeCrmEvent](#removecrmevent) - Remove an event
+* [updateCrmEvent](#updatecrmevent) - Update an event
 
 ## createCrmEvent
 
-Create a event
+Create an event
 
 ### Example Usage
 
@@ -144,7 +144,7 @@ public class Application {
 
 ## getCrmEvent
 
-Retrieve a event
+Retrieve an event
 
 ### Example Usage
 
@@ -269,7 +269,7 @@ public class Application {
 
 ## patchCrmEvent
 
-Update a event
+Update an event
 
 ### Example Usage
 
@@ -402,7 +402,7 @@ public class Application {
 
 ## removeCrmEvent
 
-Remove a event
+Remove an event
 
 ### Example Usage
 
@@ -454,7 +454,7 @@ public class Application {
 
 ## updateCrmEvent
 
-Update a event
+Update an event
 
 ### Example Usage
 

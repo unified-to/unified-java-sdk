@@ -74,15 +74,6 @@ public class CommerceCollection {
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("item_ids")
-    public String[] itemIds;
-
-    public CommerceCollection withItemIds(String[] itemIds) {
-        this.itemIds = itemIds;
-        return this;
-    }
-    
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media")
     public CommerceItemMedia[] media;
 
@@ -132,6 +123,15 @@ public class CommerceCollection {
 
     public CommerceCollection withTags(String[] tags) {
         this.tags = tags;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    public CommerceCollectionType type;
+
+    public CommerceCollection withType(CommerceCollectionType type) {
+        this.type = type;
         return this;
     }
     

@@ -21,9 +21,6 @@ public class ListTicketingTicketsRequest {
         return this;
     }
     
-    /**
-     * The customer ID to filter results
-     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customer_id")
     public String customerId;
 
@@ -97,9 +94,6 @@ public class ListTicketingTicketsRequest {
         return this;
     }
     
-    /**
-     * The user/agent ID to filter results
-     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
     public String userId;
 

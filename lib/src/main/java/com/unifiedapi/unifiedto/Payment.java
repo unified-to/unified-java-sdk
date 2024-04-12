@@ -23,7 +23,7 @@ public class Payment {
 	}
 
     /**
-     * Create a payment link
+     * Create a link
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -103,7 +103,7 @@ public class Payment {
     }
 
     /**
-     * Retrieve a payment link
+     * Retrieve a link
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -279,7 +279,7 @@ public class Payment {
     }
 
     /**
-     * List all payment links
+     * List all links
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -455,7 +455,7 @@ public class Payment {
     }
 
     /**
-     * Update a payment link
+     * Update a link
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -535,7 +535,7 @@ public class Payment {
     }
 
     /**
-     * Remove a payment link
+     * Remove a link
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -615,7 +615,7 @@ public class Payment {
     }
 
     /**
-     * Update a payment link
+     * Update a link
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails

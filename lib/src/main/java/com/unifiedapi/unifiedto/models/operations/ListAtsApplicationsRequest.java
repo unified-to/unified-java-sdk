@@ -10,9 +10,6 @@ import java.time.OffsetDateTime;
 
 
 public class ListAtsApplicationsRequest {
-    /**
-     * The candidate ID to filter results
-     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_id")
     public String candidateId;
 
@@ -43,9 +40,6 @@ public class ListAtsApplicationsRequest {
         return this;
     }
     
-    /**
-     * The job ID to filter results
-     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=job_id")
     public String jobId;
 

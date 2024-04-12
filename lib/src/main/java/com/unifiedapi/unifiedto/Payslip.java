@@ -66,7 +66,7 @@ public class Payslip {
     }
 
     /**
-     * List all payslip
+     * List all payslips
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails

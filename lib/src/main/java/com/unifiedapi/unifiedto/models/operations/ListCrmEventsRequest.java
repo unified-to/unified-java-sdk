@@ -10,9 +10,6 @@ import java.time.OffsetDateTime;
 
 
 public class ListCrmEventsRequest {
-    /**
-     * The company ID to filter results
-     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=company_id")
     public String companyId;
 
@@ -32,9 +29,6 @@ public class ListCrmEventsRequest {
         return this;
     }
     
-    /**
-     * The contact ID to filter results
-     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contact_id")
     public String contactId;
 
@@ -43,9 +37,6 @@ public class ListCrmEventsRequest {
         return this;
     }
     
-    /**
-     * The deal ID to filter results
-     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deal_id")
     public String dealId;
 
@@ -127,9 +118,6 @@ public class ListCrmEventsRequest {
         return this;
     }
     
-    /**
-     * The user/owner ID to filter results
-     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
     public String userId;
 

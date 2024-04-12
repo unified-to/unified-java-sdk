@@ -10,6 +10,14 @@ import java.time.OffsetDateTime;
 
 
 public class ListCommerceItemsRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=collection_id")
+    public String collectionId;
+
+    public ListCommerceItemsRequest withCollectionId(String collectionId) {
+        this.collectionId = collectionId;
+        return this;
+    }
+    
     /**
      * ID of the connection
      */

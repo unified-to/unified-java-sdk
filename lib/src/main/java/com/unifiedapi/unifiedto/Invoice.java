@@ -23,7 +23,7 @@ public class Invoice {
 	}
 
     /**
-     * Create a invoice
+     * Create an invoice
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -63,7 +63,7 @@ public class Invoice {
     }
 
     /**
-     * Retrieve a invoice
+     * Retrieve an invoice
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -151,7 +151,7 @@ public class Invoice {
     }
 
     /**
-     * Update a invoice
+     * Update an invoice
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -191,7 +191,7 @@ public class Invoice {
     }
 
     /**
-     * Remove a invoice
+     * Remove an invoice
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -231,7 +231,7 @@ public class Invoice {
     }
 
     /**
-     * Update a invoice
+     * Update an invoice
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails

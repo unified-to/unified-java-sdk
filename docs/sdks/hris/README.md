@@ -11,7 +11,7 @@
 * [getHrisTimeoff](#gethristimeoff) - Retrieve a timeoff
 * [listHrisEmployees](#listhrisemployees) - List all employees
 * [listHrisGroups](#listhrisgroups) - List all groups
-* [listHrisPayslips](#listhrispayslips) - List all payslip
+* [listHrisPayslips](#listhrispayslips) - List all payslips
 * [listHrisTimeoffs](#listhristimeoffs) - List all timeoffs
 * [patchHrisEmployee](#patchhrisemployee) - Update an employee
 * [patchHrisGroup](#patchhrisgroup) - Update a group
@@ -571,7 +571,7 @@ public class Application {
 
 ## listHrisPayslips
 
-List all payslip
+List all payslips
 
 ### Example Usage
 

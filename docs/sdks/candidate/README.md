@@ -68,7 +68,7 @@ public class Application {
                             email = "Mallory99@hotmail.com";
                         }}),
                     }};
-                    externalId = "<value>";
+                    externalIdentifier = "<value>";
                     id = "<id>";
                     imageUrl = "<value>";
                     linkUrls = new String[]{{
@@ -94,6 +94,7 @@ public class Application {
                     }};
                     title = "<value>";
                     updatedAt = OffsetDateTime.parse("2022-09-27T06:32:21.998Z");
+                    userId = "<value>";
 
                 }};
 
@@ -302,7 +303,7 @@ public class Application {
                             email = "Roslyn.Bergnaum@gmail.com";
                         }}),
                     }};
-                    externalId = "<value>";
+                    externalIdentifier = "<value>";
                     id = "<id>";
                     imageUrl = "<value>";
                     linkUrls = new String[]{{
@@ -328,6 +329,7 @@ public class Application {
                     }};
                     title = "<value>";
                     updatedAt = OffsetDateTime.parse("2024-05-16T04:49:59.355Z");
+                    userId = "<value>";
 
                 }};
 
@@ -468,7 +470,7 @@ public class Application {
                             email = "Mose_Cremin@gmail.com";
                         }}),
                     }};
-                    externalId = "<value>";
+                    externalIdentifier = "<value>";
                     id = "<id>";
                     imageUrl = "<value>";
                     linkUrls = new String[]{{
@@ -494,6 +496,7 @@ public class Application {
                     }};
                     title = "<value>";
                     updatedAt = OffsetDateTime.parse("2022-10-06T11:04:23.402Z");
+                    userId = "<value>";
 
                 }};
 

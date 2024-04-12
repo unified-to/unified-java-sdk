@@ -86,9 +86,6 @@ public class ListHrisTimeoffsRequest {
         return this;
     }
     
-    /**
-     * Employee ID
-     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
     public String userId;
 

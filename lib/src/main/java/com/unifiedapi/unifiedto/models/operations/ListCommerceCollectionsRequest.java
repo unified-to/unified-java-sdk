@@ -75,6 +75,14 @@ public class ListCommerceCollectionsRequest {
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+
+    public ListCommerceCollectionsRequest withType(String type) {
+        this.type = type;
+        return this;
+    }
+    
     /**
      * Return only results whose updated date is equal or greater to this value
      */

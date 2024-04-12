@@ -4,7 +4,7 @@
 ### Available Operations
 
 * [getHrisPayslip](#gethrispayslip) - Retrieve a payslip
-* [listHrisPayslips](#listhrispayslips) - List all payslip
+* [listHrisPayslips](#listhrispayslips) - List all payslips
 
 ## getHrisPayslip
 
@@ -65,7 +65,7 @@ public class Application {
 
 ## listHrisPayslips
 
-List all payslip
+List all payslips
 
 ### Example Usage
 

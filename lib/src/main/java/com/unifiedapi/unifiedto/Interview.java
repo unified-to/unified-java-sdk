@@ -23,7 +23,7 @@ public class Interview {
 	}
 
     /**
-     * Create a interview
+     * Create an interview
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -63,7 +63,7 @@ public class Interview {
     }
 
     /**
-     * Retrieve a interview
+     * Retrieve an interview
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -151,7 +151,7 @@ public class Interview {
     }
 
     /**
-     * Update a interview
+     * Update an interview
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -191,7 +191,7 @@ public class Interview {
     }
 
     /**
-     * Remove a interview
+     * Remove an interview
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -231,7 +231,7 @@ public class Interview {
     }
 
     /**
-     * Update a interview
+     * Update an interview
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails

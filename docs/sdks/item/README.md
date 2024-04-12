@@ -189,6 +189,7 @@ public class Application {
 
             com.unifiedapi.unifiedto.models.operations.ListCommerceItemsRequest req = new ListCommerceItemsRequest(
                 "<value>"){{
+                collectionId = "<value>";
                 fields = new String[]{{
                     add("<value>"),
                 }};

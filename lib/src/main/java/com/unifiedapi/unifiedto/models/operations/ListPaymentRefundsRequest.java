@@ -56,9 +56,6 @@ public class ListPaymentRefundsRequest {
         return this;
     }
     
-    /**
-     * The payment ID to filter results
-     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payment_id")
     public String paymentId;
 

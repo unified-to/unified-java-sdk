@@ -10,9 +10,6 @@ import java.time.OffsetDateTime;
 
 
 public class ListAtsDocumentsRequest {
-    /**
-     * The application ID to filter results
-     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=application_id")
     public String applicationId;
 

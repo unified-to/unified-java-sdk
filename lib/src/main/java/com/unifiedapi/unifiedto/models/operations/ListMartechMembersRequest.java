@@ -40,9 +40,6 @@ public class ListMartechMembersRequest {
         return this;
     }
     
-    /**
-     * Usually required
-     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=list_id")
     public String listId;
 

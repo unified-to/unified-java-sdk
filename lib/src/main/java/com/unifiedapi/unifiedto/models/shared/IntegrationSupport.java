@@ -47,6 +47,15 @@ public class IntegrationSupport {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("list_collection_id")
+    public Boolean listCollectionId;
+
+    public IntegrationSupport withListCollectionId(Boolean listCollectionId) {
+        this.listCollectionId = listCollectionId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_company_id")
     public Boolean listCompanyId;
 
@@ -101,6 +110,15 @@ public class IntegrationSupport {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("list_item_id")
+    public Boolean listItemId;
+
+    public IntegrationSupport withListItemId(Boolean listItemId) {
+        this.listItemId = listItemId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_job_id")
     public Boolean listJobId;
 
@@ -124,6 +142,15 @@ public class IntegrationSupport {
 
     public IntegrationSupport withListListId(Boolean listListId) {
         this.listListId = listListId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("list_location_id")
+    public Boolean listLocationId;
+
+    public IntegrationSupport withListLocationId(Boolean listLocationId) {
+        this.listLocationId = listLocationId;
         return this;
     }
     

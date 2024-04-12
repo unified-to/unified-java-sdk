@@ -75,9 +75,6 @@ public class ListTicketingNotesRequest {
         return this;
     }
     
-    /**
-     * Usually required
-     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ticket_id")
     public String ticketId;
 

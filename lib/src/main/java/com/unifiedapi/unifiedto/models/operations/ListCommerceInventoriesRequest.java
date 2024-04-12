@@ -32,9 +32,6 @@ public class ListCommerceInventoriesRequest {
         return this;
     }
     
-    /**
-     * The item/product ID to filter results
-     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=item_id")
     public String itemId;
 
@@ -51,9 +48,6 @@ public class ListCommerceInventoriesRequest {
         return this;
     }
     
-    /**
-     * The location ID to filter results
-     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
     public String locationId;
 

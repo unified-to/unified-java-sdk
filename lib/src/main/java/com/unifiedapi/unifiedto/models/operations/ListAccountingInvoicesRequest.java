@@ -21,9 +21,6 @@ public class ListAccountingInvoicesRequest {
         return this;
     }
     
-    /**
-     * The customer/supplier ID to filter results
-     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contact_id")
     public String contactId;
 

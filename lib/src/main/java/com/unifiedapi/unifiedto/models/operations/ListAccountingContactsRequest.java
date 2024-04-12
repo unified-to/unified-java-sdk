@@ -75,9 +75,6 @@ public class ListAccountingContactsRequest {
         return this;
     }
     
-    /**
-     * The type of contact to filter results
-     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
 

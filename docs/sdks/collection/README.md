@@ -23,6 +23,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionResponse;
 import com.unifiedapi.unifiedto.models.shared.CommerceCollection;
+import com.unifiedapi.unifiedto.models.shared.CommerceCollectionType;
 import com.unifiedapi.unifiedto.models.shared.CommerceItemMedia;
 import com.unifiedapi.unifiedto.models.shared.CommerceItemMediaType;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -48,9 +49,6 @@ public class Application {
                     isActive = false;
                     isFeatured = false;
                     isVisible = false;
-                    itemIds = new String[]{{
-                        add("<value>"),
-                    }};
                     media = new com.unifiedapi.unifiedto.models.shared.CommerceItemMedia[]{{
                         add(new CommerceItemMedia(
                         "<value>"){{
@@ -66,7 +64,8 @@ public class Application {
                     tags = new String[]{{
                         add("<value>"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-08-15T05:40:39.031Z");
+                    type = CommerceCollectionType.SAVED_SEARCH;
+                    updatedAt = OffsetDateTime.parse("2022-03-03T11:22:09.752Z");
 
                 }};
 
@@ -188,6 +187,7 @@ public class Application {
                 order = "<value>";
                 query = "<value>";
                 sort = "<value>";
+                type = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-08-08T20:40:35.103Z");
 
             }};
@@ -229,6 +229,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionResponse;
 import com.unifiedapi.unifiedto.models.shared.CommerceCollection;
+import com.unifiedapi.unifiedto.models.shared.CommerceCollectionType;
 import com.unifiedapi.unifiedto.models.shared.CommerceItemMedia;
 import com.unifiedapi.unifiedto.models.shared.CommerceItemMediaType;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -255,9 +256,6 @@ public class Application {
                     isActive = false;
                     isFeatured = false;
                     isVisible = false;
-                    itemIds = new String[]{{
-                        add("<value>"),
-                    }};
                     media = new com.unifiedapi.unifiedto.models.shared.CommerceItemMedia[]{{
                         add(new CommerceItemMedia(
                         "<value>"){{
@@ -273,7 +271,8 @@ public class Application {
                     tags = new String[]{{
                         add("<value>"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2024-11-07T01:43:06.402Z");
+                    type = CommerceCollectionType.CATEGORY;
+                    updatedAt = OffsetDateTime.parse("2023-08-29T23:35:48.700Z");
 
                 }};
 
@@ -368,6 +367,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionResponse;
 import com.unifiedapi.unifiedto.models.shared.CommerceCollection;
+import com.unifiedapi.unifiedto.models.shared.CommerceCollectionType;
 import com.unifiedapi.unifiedto.models.shared.CommerceItemMedia;
 import com.unifiedapi.unifiedto.models.shared.CommerceItemMediaType;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -394,9 +394,6 @@ public class Application {
                     isActive = false;
                     isFeatured = false;
                     isVisible = false;
-                    itemIds = new String[]{{
-                        add("<value>"),
-                    }};
                     media = new com.unifiedapi.unifiedto.models.shared.CommerceItemMedia[]{{
                         add(new CommerceItemMedia(
                         "<value>"){{
@@ -412,7 +409,8 @@ public class Application {
                     tags = new String[]{{
                         add("<value>"),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-06-03T01:49:37.651Z");
+                    type = CommerceCollectionType.COLLECTION;
+                    updatedAt = OffsetDateTime.parse("2022-05-08T04:19:59.358Z");
 
                 }};
 

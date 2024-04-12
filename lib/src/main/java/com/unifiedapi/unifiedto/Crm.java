@@ -143,7 +143,7 @@ public class Crm {
     }
 
     /**
-     * Create a event
+     * Create an event
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -395,7 +395,7 @@ public class Crm {
     }
 
     /**
-     * Retrieve a event
+     * Retrieve an event
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -911,7 +911,7 @@ public class Crm {
     }
 
     /**
-     * Update a event
+     * Update an event
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1151,7 +1151,7 @@ public class Crm {
     }
 
     /**
-     * Remove a event
+     * Remove an event
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1391,7 +1391,7 @@ public class Crm {
     }
 
     /**
-     * Update a event
+     * Update an event
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
