@@ -63,9 +63,9 @@ public class Connection {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursors_cache")
-    public java.util.Map<String, java.lang.Object>[] cursorsCache;
+    public Undefined[] cursorsCache;
 
-    public Connection withCursorsCache(java.util.Map<String, java.lang.Object>[] cursorsCache) {
+    public Connection withCursorsCache(Undefined[] cursorsCache) {
         this.cursorsCache = cursorsCache;
         return this;
     }

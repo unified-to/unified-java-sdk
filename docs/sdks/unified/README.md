@@ -14,6 +14,7 @@
 * [listUnifiedIntegrationWorkspaces](#listunifiedintegrationworkspaces) - Returns all activated integrations in a workspace
 * [listUnifiedIntegrations](#listunifiedintegrations) - Returns all integrations
 * [listUnifiedIssues](#listunifiedissues) - List support issues
+* [listUnifiedSupports](#listunifiedsupports) - Get support info
 * [listUnifiedWebhooks](#listunifiedwebhooks) - Returns all registered webhooks
 * [patchUnifiedConnection](#patchunifiedconnection) - Update connection
 * [patchUnifiedWebhookTrigger](#patchunifiedwebhooktrigger) - Trigger webhook
@@ -38,6 +39,7 @@ import com.unifiedapi.unifiedto.models.shared.PropertyConnectionAuth;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.Undefined;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -94,11 +96,9 @@ public class Application {
                 }};
                 authAwsArn = "<value>";
                 createdAt = OffsetDateTime.parse("2024-06-28T23:40:51.869Z");
-                cursorsCache = new java.util.HashMap<String, java.lang.Object>[]{{
-                    add(new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }}),
+                cursorsCache = new com.unifiedapi.unifiedto.models.shared.Undefined[]{{
+                    add(new Undefined(
+                    ){{}}),
                 }};
                 environment = "<value>";
                 externalXref = "<value>";
@@ -757,6 +757,47 @@ public class Application {
 **[com.unifiedapi.unifiedto.models.operations.ListUnifiedIssuesResponse](../../models/operations/ListUnifiedIssuesResponse.md)**
 
 
+## listUnifiedSupports
+
+Get support info
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.ListUnifiedSupportsResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.ListUnifiedSupportsResponse res = sdk.unified.listUnifiedSupports();
+
+            if (res.undefined != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.ListUnifiedSupportsResponse](../../models/operations/ListUnifiedSupportsResponse.md)**
+
+
 ## listUnifiedWebhooks
 
 Returns all registered webhooks
@@ -835,6 +876,7 @@ import com.unifiedapi.unifiedto.models.shared.PropertyConnectionAuth;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.Undefined;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -893,11 +935,9 @@ public class Application {
                     }};
                     authAwsArn = "<value>";
                     createdAt = OffsetDateTime.parse("2023-07-09T12:43:50.814Z");
-                    cursorsCache = new java.util.HashMap<String, java.lang.Object>[]{{
-                        add(new java.util.HashMap<String, java.lang.Object>(
-                        ){{
-                            put("key", "<value>");
-                        }}),
+                    cursorsCache = new com.unifiedapi.unifiedto.models.shared.Undefined[]{{
+                        add(new Undefined(
+                        ){{}}),
                     }};
                     environment = "<value>";
                     externalXref = "<value>";
@@ -1106,6 +1146,7 @@ import com.unifiedapi.unifiedto.models.shared.PropertyConnectionAuth;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.Undefined;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -1164,11 +1205,9 @@ public class Application {
                     }};
                     authAwsArn = "<value>";
                     createdAt = OffsetDateTime.parse("2023-06-09T16:09:54.412Z");
-                    cursorsCache = new java.util.HashMap<String, java.lang.Object>[]{{
-                        add(new java.util.HashMap<String, java.lang.Object>(
-                        ){{
-                            put("key", "<value>");
-                        }}),
+                    cursorsCache = new com.unifiedapi.unifiedto.models.shared.Undefined[]{{
+                        add(new Undefined(
+                        ){{}}),
                     }};
                     environment = "<value>";
                     externalXref = "<value>";

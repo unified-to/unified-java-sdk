@@ -26,6 +26,7 @@ import com.unifiedapi.unifiedto.models.shared.PropertyConnectionAuth;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.Undefined;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -82,11 +83,9 @@ public class Application {
                 }};
                 authAwsArn = "<value>";
                 createdAt = OffsetDateTime.parse("2024-06-28T23:40:51.869Z");
-                cursorsCache = new java.util.HashMap<String, java.lang.Object>[]{{
-                    add(new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }}),
+                cursorsCache = new com.unifiedapi.unifiedto.models.shared.Undefined[]{{
+                    add(new Undefined(
+                    ){{}}),
                 }};
                 environment = "<value>";
                 externalXref = "<value>";
@@ -256,6 +255,7 @@ import com.unifiedapi.unifiedto.models.shared.PropertyConnectionAuth;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.Undefined;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -314,11 +314,9 @@ public class Application {
                     }};
                     authAwsArn = "<value>";
                     createdAt = OffsetDateTime.parse("2023-07-09T12:43:50.814Z");
-                    cursorsCache = new java.util.HashMap<String, java.lang.Object>[]{{
-                        add(new java.util.HashMap<String, java.lang.Object>(
-                        ){{
-                            put("key", "<value>");
-                        }}),
+                    cursorsCache = new com.unifiedapi.unifiedto.models.shared.Undefined[]{{
+                        add(new Undefined(
+                        ){{}}),
                     }};
                     environment = "<value>";
                     externalXref = "<value>";
@@ -425,6 +423,7 @@ import com.unifiedapi.unifiedto.models.shared.PropertyConnectionAuth;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import com.unifiedapi.unifiedto.models.shared.Undefined;
 import java.time.OffsetDateTime;
 
 public class Application {
@@ -483,11 +482,9 @@ public class Application {
                     }};
                     authAwsArn = "<value>";
                     createdAt = OffsetDateTime.parse("2023-06-09T16:09:54.412Z");
-                    cursorsCache = new java.util.HashMap<String, java.lang.Object>[]{{
-                        add(new java.util.HashMap<String, java.lang.Object>(
-                        ){{
-                            put("key", "<value>");
-                        }}),
+                    cursorsCache = new com.unifiedapi.unifiedto.models.shared.Undefined[]{{
+                        add(new Undefined(
+                        ){{}}),
                     }};
                     environment = "<value>";
                     externalXref = "<value>";

@@ -227,6 +227,15 @@ public class IntegrationSupport {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("list_type")
+    public Boolean listType;
+
+    public IntegrationSupport withListType(Boolean listType) {
+        this.listType = listType;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_updated_gte")
     public Boolean listUpdatedGte;
 

@@ -489,6 +489,43 @@ public class Unified {
     }
 
     /**
+     * Get support info
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.ListUnifiedSupportsResponse listUnifiedSupports() throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(baseUrl, "/unified/support");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        com.unifiedapi.unifiedto.models.operations.ListUnifiedSupportsResponse res = new com.unifiedapi.unifiedto.models.operations.ListUnifiedSupportsResponse(contentType, httpRes.statusCode(), httpRes) {{
+            undefined = null;
+        }};
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.Undefined out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.Undefined.class);
+                res.undefined = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * Returns all registered webhooks
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call

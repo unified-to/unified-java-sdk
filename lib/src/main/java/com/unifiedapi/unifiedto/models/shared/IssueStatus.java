@@ -7,11 +7,12 @@ package com.unifiedapi.unifiedto.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum IssueStatus {
-    ON_HOLD("ON_HOLD"),
+    COMPLETED("COMPLETED"),
     NEW_("NEW"),
+    ROADMAP("ROADMAP"),
     IN_PROGRESS("IN_PROGRESS"),
+    ON_HOLD("ON_HOLD"),
     VALIDATING("VALIDATING"),
-    COMPLETE("COMPLETE"),
     REJECTED("REJECTED");
 
     @JsonValue
