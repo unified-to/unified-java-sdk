@@ -9,7 +9,11 @@ import com.fasterxml.jackson.annotation.JsonValue;
 public enum AccountingInvoiceStatus {
     DRAFT("DRAFT"),
     VOIDED("VOIDED"),
-    AUTHORIZED("AUTHORIZED");
+    AUTHORIZED("AUTHORIZED"),
+    PAID("PAID"),
+    PARTIALLY_PAID("PARTIALLY_PAID"),
+    PARTIALLY_REFUNDED("PARTIALLY_REFUNDED"),
+    REFUNDED("REFUNDED");
 
     @JsonValue
     public final String value;

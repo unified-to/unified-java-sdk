@@ -295,7 +295,7 @@ public class Application {
                     refundAmount = 5503.49d;
                     refundReason = "<value>";
                     refundedAt = OffsetDateTime.parse("2024-06-02T02:10:22.972Z");
-                    status = AccountingInvoiceStatus.AUTHORIZED;
+                    status = AccountingInvoiceStatus.PARTIALLY_PAID;
                     taxAmount = 6873.46d;
                     totalAmount = 6276.92d;
                     updatedAt = OffsetDateTime.parse("2023-05-31T14:28:49.824Z");
@@ -2165,7 +2165,7 @@ public class Application {
                     refundAmount = 7535.06d;
                     refundReason = "<value>";
                     refundedAt = OffsetDateTime.parse("2024-04-25T17:14:49.861Z");
-                    status = AccountingInvoiceStatus.VOIDED;
+                    status = AccountingInvoiceStatus.AUTHORIZED;
                     taxAmount = 2939.97d;
                     totalAmount = 2050.9d;
                     updatedAt = OffsetDateTime.parse("2024-09-20T05:36:54.012Z");

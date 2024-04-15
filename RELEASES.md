@@ -767,3 +767,11 @@ Based on:
 - Speakeasy CLI 1.252.0 (2.306.0) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [java v0.18.10] .
+
+## 2024-04-15 19:52:14
+### Changes
+Based on:
+- OpenAPI Doc 1.0 
+- Speakeasy CLI 1.253.1 (2.306.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [java v0.18.11] .
