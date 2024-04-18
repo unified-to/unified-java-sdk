@@ -290,11 +290,11 @@ public class IntegrationSupport {
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("search_linkedin_url")
-    public Boolean searchLinkedinUrl;
+    @JsonProperty("search_linkedinurl")
+    public Boolean searchLinkedinurl;
 
-    public IntegrationSupport withSearchLinkedinUrl(Boolean searchLinkedinUrl) {
-        this.searchLinkedinUrl = searchLinkedinUrl;
+    public IntegrationSupport withSearchLinkedinurl(Boolean searchLinkedinurl) {
+        this.searchLinkedinurl = searchLinkedinurl;
         return this;
     }
     
