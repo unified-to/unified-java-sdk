@@ -74,6 +74,15 @@ public class Webhook {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("filters")
+    public java.util.Map<String, String> filters;
+
+    public Webhook withFilters(java.util.Map<String, String> filters) {
+        this.filters = filters;
+        return this;
+    }
+    
     @JsonProperty("hook_url")
     public String hookUrl;
 

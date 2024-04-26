@@ -50,6 +50,10 @@ public class Application {
                     createdAt = OffsetDateTime.parse("2023-11-05T05:21:48.024Z");
                     environment = "<value>";
                     fields = "<value>";
+                    filters = new java.util.HashMap<String, String>(
+                    ){{
+                        put("key", "<value>");
+                    }};
                     id = "<id>";
                     integrationType = "<value>";
                     interval = 738.04d;
