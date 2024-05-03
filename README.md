@@ -10,7 +10,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.18.13'
+implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.18.14'
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -450,6 +450,19 @@ public class Application {
 ### [person](docs/sdks/person/README.md)
 
 * [listEnrichPeople](docs/sdks/person/README.md#listenrichpeople) - Retrieve enrichment information for a person
+
+### [genai](docs/sdks/genai/README.md)
+
+* [createGenaiPrompt](docs/sdks/genai/README.md#creategenaiprompt) - Create a prompt
+* [listGenaiModels](docs/sdks/genai/README.md#listgenaimodels) - List all models
+
+### [model](docs/sdks/model/README.md)
+
+* [listGenaiModels](docs/sdks/model/README.md#listgenaimodels) - List all models
+
+### [prompt](docs/sdks/prompt/README.md)
+
+* [createGenaiPrompt](docs/sdks/prompt/README.md#creategenaiprompt) - Create a prompt
 
 ### [hris](docs/sdks/hris/README.md)
 

@@ -19,7 +19,8 @@ public enum PropertyConnectionCategories {
     ACCOUNTING("accounting"),
     STORAGE("storage"),
     COMMERCE("commerce"),
-    PAYMENT("payment");
+    PAYMENT("payment"),
+    GENAI("genai");
 
     @JsonValue
     public final String value;

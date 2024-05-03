@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: fa589021db4663f2ad26cc32352a343e
+  docChecksum: e7d06a9f72eccefa7c7d5ca65b619e24
   docVersion: "1.0"
-  speakeasyVersion: 1.274.1
-  generationVersion: 2.314.0
-  releaseVersion: 0.18.13
-  configChecksum: b924fcfba1a44741711208f2f95e61d7
+  speakeasyVersion: 1.277.8
+  generationVersion: 2.319.10
+  releaseVersion: 0.18.14
+  configChecksum: 0c81778ed6da3bdc2efba0c5e0999a92
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
 features:
   java:
-    core: 3.5.2
+    core: 3.5.3
     globalSecurity: 2.81.5
     globalServerURLs: 2.82.1
 generatedFiles:
@@ -46,6 +46,9 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/Pipeline.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Enrich.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Person.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/Genai.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/Model.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/Prompt.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Hris.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Employee.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Group.java
@@ -395,6 +398,10 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmPipelineResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListEnrichPeopleRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListEnrichPeopleResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateGenaiPromptRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateGenaiPromptResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListGenaiModelsRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListGenaiModelsResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateHrisEmployeeRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateHrisEmployeeResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateHrisGroupRequest.java
@@ -687,6 +694,10 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/EnrichEmailType.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/EnrichEmail.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyEnrichPersonAddress.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/GenaiPrompt.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/Role.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/GenaiContent.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/GenaiModel.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/EmploymentStatus.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/HrisEmployeeEmploymentType.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/HrisEmployeeGender.java
@@ -1044,6 +1055,10 @@ generatedFiles:
   - docs/models/operations/UpdateCrmPipelineResponse.md
   - docs/models/operations/ListEnrichPeopleRequest.md
   - docs/models/operations/ListEnrichPeopleResponse.md
+  - docs/models/operations/CreateGenaiPromptRequest.md
+  - docs/models/operations/CreateGenaiPromptResponse.md
+  - docs/models/operations/ListGenaiModelsRequest.md
+  - docs/models/operations/ListGenaiModelsResponse.md
   - docs/models/operations/CreateHrisEmployeeRequest.md
   - docs/models/operations/CreateHrisEmployeeResponse.md
   - docs/models/operations/CreateHrisGroupRequest.md
@@ -1336,6 +1351,10 @@ generatedFiles:
   - docs/models/shared/EnrichEmailType.md
   - docs/models/shared/EnrichEmail.md
   - docs/models/shared/PropertyEnrichPersonAddress.md
+  - docs/models/shared/GenaiPrompt.md
+  - docs/models/shared/Role.md
+  - docs/models/shared/GenaiContent.md
+  - docs/models/shared/GenaiModel.md
   - docs/models/shared/EmploymentStatus.md
   - docs/models/shared/HrisEmployeeEmploymentType.md
   - docs/models/shared/HrisEmployeeGender.md
@@ -1433,6 +1452,9 @@ generatedFiles:
   - docs/sdks/pipeline/README.md
   - docs/sdks/enrich/README.md
   - docs/sdks/person/README.md
+  - docs/sdks/genai/README.md
+  - docs/sdks/model/README.md
+  - docs/sdks/prompt/README.md
   - docs/sdks/hris/README.md
   - docs/sdks/employee/README.md
   - docs/sdks/group/README.md

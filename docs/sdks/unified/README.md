@@ -54,11 +54,11 @@ public class Application {
 
             com.unifiedapi.unifiedto.models.shared.Connection req = new Connection(
                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                    add(PropertyConnectionCategories.COMMERCE),
+                    add(PropertyConnectionCategories.PAYMENT),
                 }},
                 "<value>",
                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                    add(PropertyConnectionPermissions.ATS_CANDIDATE_WRITE),
+                    add(PropertyConnectionPermissions.ATS_INTERVIEW_READ),
                 }}){{
                 auth = new PropertyConnectionAuth(
 ){{
@@ -360,7 +360,7 @@ public class Application {
                 lang = "<value>";
                 redirect = false;
                 scopes = new com.unifiedapi.unifiedto.models.operations.Scopes[]{{
-                    add(Scopes.HRIS_PAYSLIP_WRITE),
+                    add(Scopes.HRIS_TIMEOFF_WRITE),
                 }};
                 state = "New Jersey";
                 subdomain = "<value>";
@@ -537,7 +537,7 @@ public class Application {
             com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsRequest req = new ListUnifiedConnectionsRequest(
 ){{
                 categories = new com.unifiedapi.unifiedto.models.operations.Categories[]{{
-                    add(Categories.MARTECH),
+                    add(Categories.TICKETING),
                 }};
                 env = "<value>";
                 externalXref = "<value>";
@@ -665,7 +665,7 @@ public class Application {
 ){{
                 active = false;
                 categories = new com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsQueryParamCategories[]{{
-                    add(ListUnifiedIntegrationsQueryParamCategories.CRM),
+                    add(ListUnifiedIntegrationsQueryParamCategories.ENRICH),
                 }};
                 env = "<value>";
                 limit = 7382.58d;
@@ -897,11 +897,11 @@ public class Application {
                 "<value>"){{
                 connection = new Connection(
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                        add(PropertyConnectionCategories.UC),
+                        add(PropertyConnectionCategories.ACCOUNTING),
                     }},
                     "<value>",
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                        add(PropertyConnectionPermissions.CRM_PIPELINE_WRITE),
+                        add(PropertyConnectionPermissions.MARTECH_LIST_WRITE),
                     }}){{
                     auth = new PropertyConnectionAuth(
 ){{
@@ -1167,11 +1167,11 @@ public class Application {
                 "<value>"){{
                 connection = new Connection(
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                        add(PropertyConnectionCategories.STORAGE),
+                        add(PropertyConnectionCategories.COMMERCE),
                     }},
                     "<value>",
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                        add(PropertyConnectionPermissions.ATS_DOCUMENT_READ),
+                        add(PropertyConnectionPermissions.ATS_SCORECARD_READ),
                     }}){{
                     auth = new PropertyConnectionAuth(
 ){{

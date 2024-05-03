@@ -40,7 +40,7 @@ public class Application {
                 lang = "<value>";
                 redirect = false;
                 scopes = new com.unifiedapi.unifiedto.models.operations.Scopes[]{{
-                    add(Scopes.HRIS_PAYSLIP_WRITE),
+                    add(Scopes.HRIS_TIMEOFF_WRITE),
                 }};
                 state = "New Jersey";
                 subdomain = "<value>";

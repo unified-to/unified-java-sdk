@@ -82,7 +82,10 @@ public enum PropertyConnectionPermissions {
     UC_CALL_READ("uc_call_read"),
     STORAGE_FILE_READ("storage_file_read"),
     STORAGE_FILE_WRITE("storage_file_write"),
-    WEBHOOK("webhook");
+    WEBHOOK("webhook"),
+    GENAI_MODEL_READ("genai_model_read"),
+    GENAI_PROMPT_READ("genai_prompt_read"),
+    GENAI_PROMPT_WRITE("genai_prompt_write");
 
     @JsonValue
     public final String value;
