@@ -46,7 +46,7 @@ public class Application {
             com.unifiedapi.unifiedto.models.operations.CreateCommerceItemRequest req = new CreateCommerceItemRequest(
                 "<value>"){{
                 commerceItem = new CommerceItem(
-                    "<value>"){{
+){{
                     createdAt = OffsetDateTime.parse("2023-06-27T05:28:51.414Z");
                     description = "Object-based local intranet";
                     id = "<id>";
@@ -58,6 +58,7 @@ public class Application {
                             url = "http://other-external.info";
                         }}),
                     }};
+                    name = "<value>";
                     publicDescription = "<value>";
                     publicName = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
@@ -263,7 +264,7 @@ public class Application {
                 "<value>",
                 "<value>"){{
                 commerceItem = new CommerceItem(
-                    "<value>"){{
+){{
                     createdAt = OffsetDateTime.parse("2023-06-21T03:47:22.544Z");
                     description = "Front-line explicit circuit";
                     id = "<id>";
@@ -275,6 +276,7 @@ public class Application {
                             url = "http://irresponsible-reason.biz";
                         }}),
                     }};
+                    name = "<value>";
                     publicDescription = "<value>";
                     publicName = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
@@ -411,7 +413,7 @@ public class Application {
                 "<value>",
                 "<value>"){{
                 commerceItem = new CommerceItem(
-                    "<value>"){{
+){{
                     createdAt = OffsetDateTime.parse("2023-12-27T01:13:33.758Z");
                     description = "Advanced intangible toolset";
                     id = "<id>";
@@ -423,6 +425,7 @@ public class Application {
                             url = "https://reasonable-cast.biz";
                         }}),
                     }};
+                    name = "<value>";
                     publicDescription = "<value>";
                     publicName = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(

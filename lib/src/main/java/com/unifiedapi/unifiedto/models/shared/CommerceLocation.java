@@ -36,6 +36,15 @@ public class CommerceLocation {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+
+    public CommerceLocation withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
 

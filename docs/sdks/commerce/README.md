@@ -218,7 +218,7 @@ public class Application {
             com.unifiedapi.unifiedto.models.operations.CreateCommerceItemRequest req = new CreateCommerceItemRequest(
                 "<value>"){{
                 commerceItem = new CommerceItem(
-                    "<value>"){{
+){{
                     createdAt = OffsetDateTime.parse("2023-06-27T05:28:51.414Z");
                     description = "Object-based local intranet";
                     id = "<id>";
@@ -230,6 +230,7 @@ public class Application {
                             url = "http://other-external.info";
                         }}),
                     }};
+                    name = "<value>";
                     publicDescription = "<value>";
                     publicName = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
@@ -321,13 +322,14 @@ public class Application {
 
                     }};
                     createdAt = OffsetDateTime.parse("2024-01-11T11:46:34.114Z");
+                    description = "Persevering 5th generation capability";
                     id = "<id>";
                     isActive = false;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-10-08T09:24:33.872Z");
+                    updatedAt = OffsetDateTime.parse("2023-12-28T09:25:32.690Z");
 
                 }};
 
@@ -1034,7 +1036,7 @@ public class Application {
                 "<value>",
                 "<value>"){{
                 commerceItem = new CommerceItem(
-                    "<value>"){{
+){{
                     createdAt = OffsetDateTime.parse("2023-06-21T03:47:22.544Z");
                     description = "Front-line explicit circuit";
                     id = "<id>";
@@ -1046,6 +1048,7 @@ public class Application {
                             url = "http://irresponsible-reason.biz";
                         }}),
                     }};
+                    name = "<value>";
                     publicDescription = "<value>";
                     publicName = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
@@ -1138,13 +1141,14 @@ public class Application {
 
                     }};
                     createdAt = OffsetDateTime.parse("2023-03-12T06:32:06.220Z");
+                    description = "Managed real-time forecast";
                     id = "<id>";
                     isActive = false;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-04-15T19:35:06.232Z");
+                    updatedAt = OffsetDateTime.parse("2023-05-27T18:21:44.446Z");
 
                 }};
 
@@ -1575,7 +1579,7 @@ public class Application {
                 "<value>",
                 "<value>"){{
                 commerceItem = new CommerceItem(
-                    "<value>"){{
+){{
                     createdAt = OffsetDateTime.parse("2023-12-27T01:13:33.758Z");
                     description = "Advanced intangible toolset";
                     id = "<id>";
@@ -1587,6 +1591,7 @@ public class Application {
                             url = "https://reasonable-cast.biz";
                         }}),
                     }};
+                    name = "<value>";
                     publicDescription = "<value>";
                     publicName = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
@@ -1679,13 +1684,14 @@ public class Application {
 
                     }};
                     createdAt = OffsetDateTime.parse("2022-04-19T11:29:36.755Z");
+                    description = "Customizable interactive Graphic Interface";
                     id = "<id>";
                     isActive = false;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-06-11T12:53:41.097Z");
+                    updatedAt = OffsetDateTime.parse("2024-07-11T04:21:30.484Z");
 
                 }};
 

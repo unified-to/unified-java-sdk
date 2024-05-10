@@ -29,6 +29,15 @@ public class CommerceItemMedia {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    public String id;
+
+    public CommerceItemMedia withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public Double position;
 

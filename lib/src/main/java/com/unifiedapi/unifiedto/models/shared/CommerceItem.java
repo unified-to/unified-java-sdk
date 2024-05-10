@@ -71,6 +71,7 @@ public class CommerceItem {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
 
@@ -156,7 +157,5 @@ public class CommerceItem {
         return this;
     }
     
-    public CommerceItem(@JsonProperty("name") String name) {
-        this.name = name;
-  }
+    public CommerceItem(){}
 }
