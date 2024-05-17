@@ -32,11 +32,11 @@ public class ListCommerceInventoriesRequest {
         return this;
     }
     
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=item_id")
-    public String itemId;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=item_variant_id")
+    public String itemVariantId;
 
-    public ListCommerceInventoriesRequest withItemId(String itemId) {
-        this.itemId = itemId;
+    public ListCommerceInventoriesRequest withItemVariantId(String itemVariantId) {
+        this.itemVariantId = itemVariantId;
         return this;
     }
     

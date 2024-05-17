@@ -681,7 +681,7 @@ public class Application {
                 fields = new String[]{{
                     add("<value>"),
                 }};
-                itemId = "<value>";
+                itemVariantId = "<value>";
                 limit = 2481.16d;
                 locationId = "<value>";
                 offset = 9476.38d;
