@@ -136,6 +136,7 @@ public class AccountingLineitem {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
     public Double totalAmount;
 
@@ -173,7 +174,5 @@ public class AccountingLineitem {
         return this;
     }
     
-    public AccountingLineitem(@JsonProperty("total_amount") Double totalAmount) {
-        this.totalAmount = totalAmount;
-  }
+    public AccountingLineitem(){}
 }

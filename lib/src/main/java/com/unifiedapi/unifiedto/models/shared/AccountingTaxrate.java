@@ -53,6 +53,7 @@ public class AccountingTaxrate {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
 
@@ -61,6 +62,7 @@ public class AccountingTaxrate {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate")
     public Double rate;
 
@@ -89,8 +91,5 @@ public class AccountingTaxrate {
         return this;
     }
     
-    public AccountingTaxrate(@JsonProperty("name") String name, @JsonProperty("rate") Double rate) {
-        this.name = name;
-        this.rate = rate;
-  }
+    public AccountingTaxrate(){}
 }

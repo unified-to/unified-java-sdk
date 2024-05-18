@@ -10,6 +10,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 public class AccountingTelephone {
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephone")
     public String telephone;
 
@@ -27,7 +28,5 @@ public class AccountingTelephone {
         return this;
     }
     
-    public AccountingTelephone(@JsonProperty("telephone") String telephone) {
-        this.telephone = telephone;
-  }
+    public AccountingTelephone(){}
 }

@@ -41,7 +41,7 @@ public class Application {
             com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest req = new CreateAccountingAccountRequest(
                 "<value>"){{
                 accountingAccount = new AccountingAccount(
-                    "<value>"){{
+){{
                     balance = 6602.56d;
                     createdAt = OffsetDateTime.parse("2023-09-02T22:12:31.771Z");
                     currency = "Saint Helena Pound";
@@ -49,6 +49,8 @@ public class Application {
                     description = "Cross-group zero defect task-force";
                     id = "<id>";
                     isPayable = false;
+                    name = "<value>";
+                    parentAccountId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
@@ -237,7 +239,7 @@ public class Application {
                 "<value>",
                 "<value>"){{
                 accountingAccount = new AccountingAccount(
-                    "<value>"){{
+){{
                     balance = 1931.26d;
                     createdAt = OffsetDateTime.parse("2023-01-09T13:35:06.969Z");
                     currency = "Won";
@@ -245,6 +247,8 @@ public class Application {
                     description = "Quality-focused multimedia implementation";
                     id = "<id>";
                     isPayable = false;
+                    name = "<value>";
+                    parentAccountId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
@@ -365,7 +369,7 @@ public class Application {
                 "<value>",
                 "<value>"){{
                 accountingAccount = new AccountingAccount(
-                    "<value>"){{
+){{
                     balance = 5954.09d;
                     createdAt = OffsetDateTime.parse("2022-05-21T23:41:25.152Z");
                     currency = "Tanzanian Shilling";
@@ -373,6 +377,8 @@ public class Application {
                     description = "Stand-alone grid-enabled model";
                     id = "<id>";
                     isPayable = false;
+                    name = "<value>";
+                    parentAccountId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");

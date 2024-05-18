@@ -39,12 +39,13 @@ public class Application {
             com.unifiedapi.unifiedto.models.operations.CreateAccountingTaxrateRequest req = new CreateAccountingTaxrateRequest(
                 "<value>"){{
                 accountingTaxrate = new AccountingTaxrate(
-                    "<value>",
-                    1719.1d){{
-                    createdAt = OffsetDateTime.parse("2022-09-20T17:06:11.018Z");
-                    description = "Ergonomic regional neural-net";
+){{
+                    createdAt = OffsetDateTime.parse("2022-07-08T09:55:20.238Z");
+                    description = "Enterprise-wide content-based productivity";
                     id = "<id>";
                     isActive = false;
+                    name = "<value>";
+                    rate = 6789.7d;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
@@ -229,12 +230,13 @@ public class Application {
                 "<value>",
                 "<value>"){{
                 accountingTaxrate = new AccountingTaxrate(
-                    "<value>",
-                    5991.47d){{
-                    createdAt = OffsetDateTime.parse("2024-01-29T22:02:36.650Z");
-                    description = "Upgradable coherent adapter";
+){{
+                    createdAt = OffsetDateTime.parse("2023-10-19T15:57:03.731Z");
+                    description = "Quality-focused user-facing complexity";
                     id = "<id>";
                     isActive = false;
+                    name = "<value>";
+                    rate = 220.78d;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
@@ -351,12 +353,13 @@ public class Application {
                 "<value>",
                 "<value>"){{
                 accountingTaxrate = new AccountingTaxrate(
-                    "<value>",
-                    3382.78d){{
-                    createdAt = OffsetDateTime.parse("2024-07-16T01:24:36.188Z");
-                    description = "Open-source human-resource database";
+){{
+                    createdAt = OffsetDateTime.parse("2023-01-06T18:04:39.999Z");
+                    description = "Switchable intangible initiative";
                     id = "<id>";
                     isActive = false;
+                    name = "<value>";
+                    rate = 2580.61d;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");

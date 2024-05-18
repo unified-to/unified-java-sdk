@@ -37,6 +37,7 @@ public class AccountingTransaction {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
 
@@ -102,7 +103,5 @@ public class AccountingTransaction {
         return this;
     }
     
-    public AccountingTransaction(@JsonProperty("id") String id) {
-        this.id = id;
-  }
+    public AccountingTransaction(){}
 }

@@ -77,9 +77,7 @@ public class Application {
                     currency = "Peso Uruguayo";
                     emails = new com.unifiedapi.unifiedto.models.shared.AccountingEmail[]{{
                         add(new AccountingEmail(
-                        "<value>"){{
-                            email = "Ubaldo_Cruickshank82@hotmail.com";
-                        }}),
+                        ){{}}),
                     }};
                     id = "<id>";
                     isActive = false;
@@ -88,8 +86,8 @@ public class Application {
                     name = "<value>";
                     paymentMethods = new com.unifiedapi.unifiedto.models.shared.AccountingContactPaymentMethod[]{{
                         add(new AccountingContactPaymentMethod(
-                        AccountingContactPaymentMethodType.ACH){{
-                            type = AccountingContactPaymentMethodType.ACH;
+                        AccountingContactPaymentMethodType.PAYPAL){{
+                            type = AccountingContactPaymentMethodType.PAYPAL;
                         }}),
                     }};
                     portalUrl = "<value>";
@@ -101,23 +99,21 @@ public class Application {
 ){{
                         address1 = "<value>";
                         address2 = "<value>";
-                        city = "Macboro";
-                        country = "Barbados";
-                        countryCode = "TR";
-                        postalCode = "68356";
+                        city = "Port Wilberfield";
+                        country = "Bouvet Island (Bouvetoya)";
+                        countryCode = "AM";
+                        postalCode = "62093";
                         region = "<value>";
                         regionCode = "<value>";
 
                     }};
-                    taxExemption = TaxExemption.RELIGIOUS_ORG;
+                    taxExemption = TaxExemption.EDUCATIONAL_ORG;
                     taxNumber = "<value>";
                     telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
                         add(new AccountingTelephone(
-                        "<value>"){{
-                            telephone = "<value>";
-                        }}),
+                        ){{}}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-03-18T23:23:30.984Z");
+                    updatedAt = OffsetDateTime.parse("2024-05-29T11:32:51.059Z");
 
                 }};
 
@@ -756,9 +752,7 @@ public class Application {
                     currency = "Singapore Dollar";
                     emails = new com.unifiedapi.unifiedto.models.shared.AccountingEmail[]{{
                         add(new AccountingEmail(
-                        "<value>"){{
-                            email = "Anya_Murphy@yahoo.com";
-                        }}),
+                        ){{}}),
                     }};
                     id = "<id>";
                     isActive = false;
@@ -767,8 +761,8 @@ public class Application {
                     name = "<value>";
                     paymentMethods = new com.unifiedapi.unifiedto.models.shared.AccountingContactPaymentMethod[]{{
                         add(new AccountingContactPaymentMethod(
-                        AccountingContactPaymentMethodType.IDEAL){{
-                            type = AccountingContactPaymentMethodType.IDEAL;
+                        AccountingContactPaymentMethodType.ACH){{
+                            type = AccountingContactPaymentMethodType.GIROPAY;
                         }}),
                     }};
                     portalUrl = "<value>";
@@ -780,23 +774,21 @@ public class Application {
 ){{
                         address1 = "<value>";
                         address2 = "<value>";
-                        city = "West Lilian";
-                        country = "Russian Federation";
-                        countryCode = "ZW";
-                        postalCode = "25142";
+                        city = "Koeppfield";
+                        country = "Netherlands Antilles";
+                        countryCode = "NE";
+                        postalCode = "36791";
                         region = "<value>";
                         regionCode = "<value>";
 
                     }};
-                    taxExemption = TaxExemption.FEDERAL_GOV;
+                    taxExemption = TaxExemption.TRIBAL_GOV;
                     taxNumber = "<value>";
                     telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
                         add(new AccountingTelephone(
-                        "<value>"){{
-                            telephone = "<value>";
-                        }}),
+                        ){{}}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2024-10-04T12:05:57.585Z");
+                    updatedAt = OffsetDateTime.parse("2023-07-15T21:20:14.932Z");
 
                 }};
 
@@ -1228,9 +1220,7 @@ public class Application {
                     currency = "European Monetary Unit (E.M.U.-6)";
                     emails = new com.unifiedapi.unifiedto.models.shared.AccountingEmail[]{{
                         add(new AccountingEmail(
-                        "<value>"){{
-                            email = "Kevin.Leffler@gmail.com";
-                        }}),
+                        ){{}}),
                     }};
                     id = "<id>";
                     isActive = false;
@@ -1239,7 +1229,7 @@ public class Application {
                     name = "<value>";
                     paymentMethods = new com.unifiedapi.unifiedto.models.shared.AccountingContactPaymentMethod[]{{
                         add(new AccountingContactPaymentMethod(
-                        AccountingContactPaymentMethodType.OTHER){{
+                        AccountingContactPaymentMethodType.GIROPAY){{
                             type = AccountingContactPaymentMethodType.ALIPAY;
                         }}),
                     }};
@@ -1252,23 +1242,21 @@ public class Application {
 ){{
                         address1 = "<value>";
                         address2 = "<value>";
-                        city = "Lake Faustinohaven";
-                        country = "Venezuela";
-                        countryCode = "TV";
-                        postalCode = "93922";
+                        city = "Lelahport";
+                        country = "Dominica";
+                        countryCode = "SJ";
+                        postalCode = "63899";
                         region = "<value>";
                         regionCode = "<value>";
 
                     }};
-                    taxExemption = TaxExemption.OTHER;
+                    taxExemption = TaxExemption.FEDERAL_GOV;
                     taxNumber = "<value>";
                     telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
                         add(new AccountingTelephone(
-                        "<value>"){{
-                            telephone = "<value>";
-                        }}),
+                        ){{}}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2024-01-24T01:50:49.403Z");
+                    updatedAt = OffsetDateTime.parse("2024-09-28T03:42:59.577Z");
 
                 }};
 

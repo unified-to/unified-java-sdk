@@ -80,11 +80,21 @@ public class AccountingAccount {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
 
     public AccountingAccount withName(String name) {
         this.name = name;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("parent_account_id")
+    public String parentAccountId;
+
+    public AccountingAccount withParentAccountId(String parentAccountId) {
+        this.parentAccountId = parentAccountId;
         return this;
     }
     
@@ -126,7 +136,5 @@ public class AccountingAccount {
         return this;
     }
     
-    public AccountingAccount(@JsonProperty("name") String name) {
-        this.name = name;
-  }
+    public AccountingAccount(){}
 }

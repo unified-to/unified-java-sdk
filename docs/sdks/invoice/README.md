@@ -54,26 +54,24 @@ public class Application {
                     invoiceNumber = "<value>";
                     lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingLineitem[]{{
                         add(new AccountingLineitem(
-                        5685.15d){{
-                            totalAmount = 7142.37d;
-                        }}),
+                        ){{}}),
                     }};
                     notes = "<value>";
-                    paidAmount = 6572.32d;
-                    paidAt = OffsetDateTime.parse("2023-07-10T18:36:49.807Z");
-                    paymentCollectionMethod = PaymentCollectionMethod.SEND_INVOICE;
+                    paidAmount = 7142.37d;
+                    paidAt = OffsetDateTime.parse("2023-09-16T02:12:20.862Z");
+                    paymentCollectionMethod = PaymentCollectionMethod.CHARGE_AUTOMATICALLY;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
                     }};
-                    refundAmount = 5503.49d;
+                    refundAmount = 5070.95d;
                     refundReason = "<value>";
-                    refundedAt = OffsetDateTime.parse("2024-06-02T02:10:22.972Z");
-                    status = AccountingInvoiceStatus.PARTIALLY_PAID;
-                    taxAmount = 6873.46d;
-                    totalAmount = 6276.92d;
-                    updatedAt = OffsetDateTime.parse("2023-05-31T14:28:49.824Z");
-                    url = "http://irresponsible-elite.biz";
+                    refundedAt = OffsetDateTime.parse("2022-06-23T01:07:46.993Z");
+                    status = AccountingInvoiceStatus.PAID;
+                    taxAmount = 8057.4d;
+                    totalAmount = 6864d;
+                    updatedAt = OffsetDateTime.parse("2024-01-24T07:56:15.656Z");
+                    url = "https://knotty-elevator.info";
 
                 }};
 
@@ -269,26 +267,24 @@ public class Application {
                     invoiceNumber = "<value>";
                     lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingLineitem[]{{
                         add(new AccountingLineitem(
-                        3886.02d){{
-                            totalAmount = 7810.81d;
-                        }}),
+                        ){{}}),
                     }};
                     notes = "<value>";
-                    paidAmount = 1152.38d;
-                    paidAt = OffsetDateTime.parse("2023-03-23T14:30:18.013Z");
-                    paymentCollectionMethod = PaymentCollectionMethod.CHARGE_AUTOMATICALLY;
+                    paidAmount = 7810.81d;
+                    paidAt = OffsetDateTime.parse("2023-03-02T21:47:54.080Z");
+                    paymentCollectionMethod = PaymentCollectionMethod.SEND_INVOICE;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
                     }};
-                    refundAmount = 2117.25d;
+                    refundAmount = 4074.86d;
                     refundReason = "<value>";
-                    refundedAt = OffsetDateTime.parse("2022-11-28T21:20:47.449Z");
-                    status = AccountingInvoiceStatus.DRAFT;
-                    taxAmount = 4543.48d;
-                    totalAmount = 6957.18d;
-                    updatedAt = OffsetDateTime.parse("2022-10-04T07:00:14.156Z");
-                    url = "http://envious-speech.info";
+                    refundedAt = OffsetDateTime.parse("2023-12-08T05:40:51.844Z");
+                    status = AccountingInvoiceStatus.VOIDED;
+                    taxAmount = 3028.19d;
+                    totalAmount = 1140.08d;
+                    updatedAt = OffsetDateTime.parse("2023-05-13T23:10:36.341Z");
+                    url = "https://excited-cheddar.biz";
 
                 }};
 
@@ -415,26 +411,24 @@ public class Application {
                     invoiceNumber = "<value>";
                     lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingLineitem[]{{
                         add(new AccountingLineitem(
-                        9127.85d){{
-                            totalAmount = 3682.14d;
-                        }}),
+                        ){{}}),
                     }};
                     notes = "<value>";
-                    paidAmount = 2842.49d;
-                    paidAt = OffsetDateTime.parse("2022-06-05T15:45:06.127Z");
+                    paidAmount = 3682.14d;
+                    paidAt = OffsetDateTime.parse("2024-09-27T09:53:44.172Z");
                     paymentCollectionMethod = PaymentCollectionMethod.SEND_INVOICE;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
                     }};
-                    refundAmount = 7535.06d;
+                    refundAmount = 1420.22d;
                     refundReason = "<value>";
-                    refundedAt = OffsetDateTime.parse("2024-04-25T17:14:49.861Z");
-                    status = AccountingInvoiceStatus.AUTHORIZED;
-                    taxAmount = 2939.97d;
-                    totalAmount = 2050.9d;
-                    updatedAt = OffsetDateTime.parse("2024-09-20T05:36:54.012Z");
-                    url = "http://tubby-switchboard.name";
+                    refundedAt = OffsetDateTime.parse("2022-12-30T07:01:53.152Z");
+                    status = AccountingInvoiceStatus.PARTIALLY_REFUNDED;
+                    taxAmount = 7716.41d;
+                    totalAmount = 3824.24d;
+                    updatedAt = OffsetDateTime.parse("2022-11-19T05:18:11.782Z");
+                    url = "http://untrue-advocacy.org";
 
                 }};
 
