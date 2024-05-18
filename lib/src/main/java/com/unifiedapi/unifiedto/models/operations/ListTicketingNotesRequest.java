@@ -21,6 +21,14 @@ public class ListTicketingNotesRequest {
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customer_id")
+    public String customerId;
+
+    public ListTicketingNotesRequest withCustomerId(String customerId) {
+        this.customerId = customerId;
+        return this;
+    }
+    
     /**
      * Comma-delimited fields to return
      */

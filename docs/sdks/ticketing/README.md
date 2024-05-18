@@ -519,6 +519,7 @@ public class Application {
 
             com.unifiedapi.unifiedto.models.operations.ListTicketingNotesRequest req = new ListTicketingNotesRequest(
                 "<value>"){{
+                customerId = "<value>";
                 fields = new String[]{{
                     add("<value>"),
                 }};
