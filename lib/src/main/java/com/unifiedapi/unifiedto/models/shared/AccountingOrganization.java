@@ -71,7 +71,6 @@ public class AccountingOrganization {
         return this;
     }
     
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
 
@@ -127,5 +126,7 @@ public class AccountingOrganization {
         return this;
     }
     
-    public AccountingOrganization(){}
+    public AccountingOrganization(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

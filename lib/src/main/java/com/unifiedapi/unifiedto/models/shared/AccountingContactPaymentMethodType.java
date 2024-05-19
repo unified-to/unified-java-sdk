@@ -13,8 +13,7 @@ public enum AccountingContactPaymentMethodType {
     GIROPAY("GIROPAY"),
     IDEAL("IDEAL"),
     OTHER("OTHER"),
-    PAYPAL("PAYPAL"),
-    UNKNOWN("");
+    PAYPAL("PAYPAL");
 
     @JsonValue
     public final String value;

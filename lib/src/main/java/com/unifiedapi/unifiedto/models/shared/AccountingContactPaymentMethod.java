@@ -19,7 +19,6 @@ public class AccountingContactPaymentMethod {
         return this;
     }
     
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AccountingContactPaymentMethodType type;
 
@@ -28,5 +27,7 @@ public class AccountingContactPaymentMethod {
         return this;
     }
     
-    public AccountingContactPaymentMethod(){}
+    public AccountingContactPaymentMethod(@JsonProperty("type") AccountingContactPaymentMethodType type) {
+        this.type = type;
+  }
 }

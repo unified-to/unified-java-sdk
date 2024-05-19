@@ -177,7 +177,9 @@ public class Application {
                     name = "<value>";
                     paymentMethods = new com.unifiedapi.unifiedto.models.shared.AccountingContactPaymentMethod[]{{
                         add(new AccountingContactPaymentMethod(
-                        ){{}}),
+                        AccountingContactPaymentMethodType.PAYPAL){{
+                            type = AccountingContactPaymentMethodType.PAYPAL;
+                        }}),
                     }};
                     portalUrl = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
@@ -188,10 +190,10 @@ public class Application {
 ){{
                         address1 = "<value>";
                         address2 = "<value>";
-                        city = "Warren";
-                        country = "Cayman Islands";
-                        countryCode = "ST";
-                        postalCode = "81046-2093";
+                        city = "Port Wilberfield";
+                        country = "Bouvet Island (Bouvetoya)";
+                        countryCode = "AM";
+                        postalCode = "62093";
                         region = "<value>";
                         regionCode = "<value>";
 
@@ -1333,7 +1335,9 @@ public class Application {
                     name = "<value>";
                     paymentMethods = new com.unifiedapi.unifiedto.models.shared.AccountingContactPaymentMethod[]{{
                         add(new AccountingContactPaymentMethod(
-                        ){{}}),
+                        AccountingContactPaymentMethodType.ACH){{
+                            type = AccountingContactPaymentMethodType.GIROPAY;
+                        }}),
                     }};
                     portalUrl = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
@@ -1344,21 +1348,21 @@ public class Application {
 ){{
                         address1 = "<value>";
                         address2 = "<value>";
-                        city = "Anyafurt";
-                        country = "Kiribati";
-                        countryCode = "SE";
-                        postalCode = "62367-9125";
+                        city = "Koeppfield";
+                        country = "Netherlands Antilles";
+                        countryCode = "NE";
+                        postalCode = "36791";
                         region = "<value>";
                         regionCode = "<value>";
 
                     }};
-                    taxExemption = TaxExemption.REGION_GOV;
+                    taxExemption = TaxExemption.TRIBAL_GOV;
                     taxNumber = "<value>";
                     telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
                         add(new AccountingTelephone(
                         ){{}}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-04-05T14:47:27.816Z");
+                    updatedAt = OffsetDateTime.parse("2023-07-15T21:20:14.932Z");
 
                 }};
 
@@ -2030,7 +2034,9 @@ public class Application {
                     name = "<value>";
                     paymentMethods = new com.unifiedapi.unifiedto.models.shared.AccountingContactPaymentMethod[]{{
                         add(new AccountingContactPaymentMethod(
-                        ){{}}),
+                        AccountingContactPaymentMethodType.GIROPAY){{
+                            type = AccountingContactPaymentMethodType.ALIPAY;
+                        }}),
                     }};
                     portalUrl = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
@@ -2041,21 +2047,21 @@ public class Application {
 ){{
                         address1 = "<value>";
                         address2 = "<value>";
-                        city = "New Judgestead";
-                        country = "Kuwait";
-                        countryCode = "DO";
-                        postalCode = "06389-9093";
+                        city = "Lelahport";
+                        country = "Dominica";
+                        countryCode = "SJ";
+                        postalCode = "63899";
                         region = "<value>";
                         regionCode = "<value>";
 
                     }};
-                    taxExemption = TaxExemption.OTHER;
+                    taxExemption = TaxExemption.FEDERAL_GOV;
                     taxNumber = "<value>";
                     telephones = new com.unifiedapi.unifiedto.models.shared.AccountingTelephone[]{{
                         add(new AccountingTelephone(
                         ){{}}),
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-11-24T15:10:44.676Z");
+                    updatedAt = OffsetDateTime.parse("2024-09-28T03:42:59.577Z");
 
                 }};
 

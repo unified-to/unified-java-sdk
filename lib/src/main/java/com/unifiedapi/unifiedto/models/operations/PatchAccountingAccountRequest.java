@@ -9,6 +9,9 @@ import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 
 
 public class PatchAccountingAccountRequest {
+    /**
+     * Chart of accounts
+     */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.unifiedapi.unifiedto.models.shared.AccountingAccount accountingAccount;
 

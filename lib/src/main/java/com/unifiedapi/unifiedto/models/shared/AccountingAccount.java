@@ -13,6 +13,9 @@ import com.unifiedapi.unifiedto.utils.DateTimeDeserializer;
 import com.unifiedapi.unifiedto.utils.DateTimeSerializer;
 import java.time.OffsetDateTime;
 
+/**
+ * AccountingAccount - Chart of accounts
+ */
 
 public class AccountingAccount {
     @JsonInclude(Include.NON_ABSENT)
