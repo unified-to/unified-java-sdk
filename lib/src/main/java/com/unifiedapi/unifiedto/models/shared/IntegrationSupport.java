@@ -146,6 +146,15 @@ public class IntegrationSupport {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("list_link_id")
+    public Boolean listLinkId;
+
+    public IntegrationSupport withListLinkId(Boolean listLinkId) {
+        this.listLinkId = listLinkId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_list_id")
     public Boolean listListId;
 

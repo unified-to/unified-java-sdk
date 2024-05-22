@@ -135,6 +135,9 @@ public class AtsActivity {
         return this;
     }
     
+    /**
+     * id values of the recruiters associated with the activity.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_ids")
     public String[] userIds;
