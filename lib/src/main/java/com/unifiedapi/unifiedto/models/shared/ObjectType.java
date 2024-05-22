@@ -52,7 +52,11 @@ public enum ObjectType {
     ENRICH_COMPANY("enrich_company"),
     STORAGE_FILE("storage_file"),
     GENAI_MODEL("genai_model"),
-    GENAI_PROMPT("genai_prompt");
+    GENAI_PROMPT("genai_prompt"),
+    MESSAGING_MESSAGE("messaging_message"),
+    MESSAGING_CHANNEL("messaging_channel"),
+    KMS_SPACE("kms_space"),
+    KMS_PAGE("kms_page");
 
     @JsonValue
     public final String value;

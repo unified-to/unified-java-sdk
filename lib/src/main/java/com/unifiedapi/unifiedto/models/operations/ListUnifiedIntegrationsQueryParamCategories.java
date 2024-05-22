@@ -20,7 +20,9 @@ public enum ListUnifiedIntegrationsQueryParamCategories {
     STORAGE("storage"),
     COMMERCE("commerce"),
     PAYMENT("payment"),
-    GENAI("genai");
+    GENAI("genai"),
+    MESSAGING("messaging"),
+    KMS("kms");
 
     @JsonValue
     public final String value;

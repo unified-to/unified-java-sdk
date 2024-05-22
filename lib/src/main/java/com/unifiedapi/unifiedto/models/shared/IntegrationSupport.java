@@ -47,6 +47,15 @@ public class IntegrationSupport {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("list_channel_id")
+    public Boolean listChannelId;
+
+    public IntegrationSupport withListChannelId(Boolean listChannelId) {
+        this.listChannelId = listChannelId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_collection_id")
     public Boolean listCollectionId;
 
@@ -214,6 +223,15 @@ public class IntegrationSupport {
 
     public IntegrationSupport withListSortByUpdatedAt(Boolean listSortByUpdatedAt) {
         this.listSortByUpdatedAt = listSortByUpdatedAt;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("list_space_id")
+    public Boolean listSpaceId;
+
+    public IntegrationSupport withListSpaceId(Boolean listSpaceId) {
+        this.listSpaceId = listSpaceId;
         return this;
     }
     

@@ -10,7 +10,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.18.19'
+implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.18.20'
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -513,6 +513,39 @@ public class Application {
 * [getHrisTimeoff](docs/sdks/timeoff/README.md#gethristimeoff) - Retrieve a timeoff
 * [listHrisTimeoffs](docs/sdks/timeoff/README.md#listhristimeoffs) - List all timeoffs
 
+### [kms](docs/sdks/kms/README.md)
+
+* [createKmsPage](docs/sdks/kms/README.md#createkmspage) - Create a page
+* [createKmsSpace](docs/sdks/kms/README.md#createkmsspace) - Create a space
+* [getKmsPage](docs/sdks/kms/README.md#getkmspage) - Retrieve a page
+* [getKmsSpace](docs/sdks/kms/README.md#getkmsspace) - Retrieve a space
+* [listKmsPages](docs/sdks/kms/README.md#listkmspages) - List all pages
+* [listKmsSpaces](docs/sdks/kms/README.md#listkmsspaces) - List all spaces
+* [patchKmsPage](docs/sdks/kms/README.md#patchkmspage) - Update a page
+* [patchKmsSpace](docs/sdks/kms/README.md#patchkmsspace) - Update a space
+* [removeKmsPage](docs/sdks/kms/README.md#removekmspage) - Remove a page
+* [removeKmsSpace](docs/sdks/kms/README.md#removekmsspace) - Remove a space
+* [updateKmsPage](docs/sdks/kms/README.md#updatekmspage) - Update a page
+* [updateKmsSpace](docs/sdks/kms/README.md#updatekmsspace) - Update a space
+
+### [page](docs/sdks/page/README.md)
+
+* [createKmsPage](docs/sdks/page/README.md#createkmspage) - Create a page
+* [getKmsPage](docs/sdks/page/README.md#getkmspage) - Retrieve a page
+* [listKmsPages](docs/sdks/page/README.md#listkmspages) - List all pages
+* [patchKmsPage](docs/sdks/page/README.md#patchkmspage) - Update a page
+* [removeKmsPage](docs/sdks/page/README.md#removekmspage) - Remove a page
+* [updateKmsPage](docs/sdks/page/README.md#updatekmspage) - Update a page
+
+### [space](docs/sdks/space/README.md)
+
+* [createKmsSpace](docs/sdks/space/README.md#createkmsspace) - Create a space
+* [getKmsSpace](docs/sdks/space/README.md#getkmsspace) - Retrieve a space
+* [listKmsSpaces](docs/sdks/space/README.md#listkmsspaces) - List all spaces
+* [patchKmsSpace](docs/sdks/space/README.md#patchkmsspace) - Update a space
+* [removeKmsSpace](docs/sdks/space/README.md#removekmsspace) - Remove a space
+* [updateKmsSpace](docs/sdks/space/README.md#updatekmsspace) - Update a space
+
 ### [martech](docs/sdks/martech/README.md)
 
 * [createMartechList](docs/sdks/martech/README.md#createmartechlist) - Create a list
@@ -545,6 +578,31 @@ public class Application {
 * [patchMartechMember](docs/sdks/member/README.md#patchmartechmember) - Update a member
 * [removeMartechMember](docs/sdks/member/README.md#removemartechmember) - Remove a member
 * [updateMartechMember](docs/sdks/member/README.md#updatemartechmember) - Update a member
+
+### [messaging](docs/sdks/messaging/README.md)
+
+* [createMessagingMessage](docs/sdks/messaging/README.md#createmessagingmessage) - Create a message
+* [getMessagingChannel](docs/sdks/messaging/README.md#getmessagingchannel) - Retrieve a channel
+* [getMessagingMessage](docs/sdks/messaging/README.md#getmessagingmessage) - Retrieve a message
+* [listMessagingChannels](docs/sdks/messaging/README.md#listmessagingchannels) - List all channels
+* [listMessagingMessages](docs/sdks/messaging/README.md#listmessagingmessages) - List all messages
+* [patchMessagingMessage](docs/sdks/messaging/README.md#patchmessagingmessage) - Update a message
+* [removeMessagingMessage](docs/sdks/messaging/README.md#removemessagingmessage) - Remove a message
+* [updateMessagingMessage](docs/sdks/messaging/README.md#updatemessagingmessage) - Update a message
+
+### [channel](docs/sdks/channel/README.md)
+
+* [getMessagingChannel](docs/sdks/channel/README.md#getmessagingchannel) - Retrieve a channel
+* [listMessagingChannels](docs/sdks/channel/README.md#listmessagingchannels) - List all channels
+
+### [message](docs/sdks/message/README.md)
+
+* [createMessagingMessage](docs/sdks/message/README.md#createmessagingmessage) - Create a message
+* [getMessagingMessage](docs/sdks/message/README.md#getmessagingmessage) - Retrieve a message
+* [listMessagingMessages](docs/sdks/message/README.md#listmessagingmessages) - List all messages
+* [patchMessagingMessage](docs/sdks/message/README.md#patchmessagingmessage) - Update a message
+* [removeMessagingMessage](docs/sdks/message/README.md#removemessagingmessage) - Remove a message
+* [updateMessagingMessage](docs/sdks/message/README.md#updatemessagingmessage) - Update a message
 
 ### [passthrough](docs/sdks/passthrough/README.md)
 

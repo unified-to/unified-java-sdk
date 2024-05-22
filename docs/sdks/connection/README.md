@@ -41,11 +41,11 @@ public class Application {
 
             com.unifiedapi.unifiedto.models.shared.Connection req = new Connection(
                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                    add(PropertyConnectionCategories.PAYMENT),
+                    add(PropertyConnectionCategories.MESSAGING),
                 }},
                 "<value>",
                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                    add(PropertyConnectionPermissions.ATS_INTERVIEW_READ),
+                    add(PropertyConnectionPermissions.ATS_COMPANY_READ),
                 }}){{
                 auth = new PropertyConnectionAuth(
 ){{
@@ -202,7 +202,7 @@ public class Application {
             com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsRequest req = new ListUnifiedConnectionsRequest(
 ){{
                 categories = new com.unifiedapi.unifiedto.models.operations.Categories[]{{
-                    add(Categories.TICKETING),
+                    add(Categories.UC),
                 }};
                 env = "<value>";
                 externalXref = "<value>";
@@ -272,11 +272,11 @@ public class Application {
                 "<value>"){{
                 connection = new Connection(
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                        add(PropertyConnectionCategories.ACCOUNTING),
+                        add(PropertyConnectionCategories.STORAGE),
                     }},
                     "<value>",
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                        add(PropertyConnectionPermissions.MARTECH_LIST_WRITE),
+                        add(PropertyConnectionPermissions.TICKETING_TICKET_WRITE),
                     }}){{
                     auth = new PropertyConnectionAuth(
 ){{
@@ -440,11 +440,11 @@ public class Application {
                 "<value>"){{
                 connection = new Connection(
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories[]{{
-                        add(PropertyConnectionCategories.COMMERCE),
+                        add(PropertyConnectionCategories.PAYMENT),
                     }},
                     "<value>",
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                        add(PropertyConnectionPermissions.ATS_SCORECARD_READ),
+                        add(PropertyConnectionPermissions.CRM_CONTACT_READ),
                     }}){{
                     auth = new PropertyConnectionAuth(
 ){{

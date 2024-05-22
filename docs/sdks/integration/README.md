@@ -41,7 +41,7 @@ public class Application {
                 lang = "<value>";
                 redirect = false;
                 scopes = new com.unifiedapi.unifiedto.models.operations.Scopes[]{{
-                    add(Scopes.HRIS_TIMEOFF_WRITE),
+                    add(Scopes.MESSAGING_MESSAGE_READ),
                 }};
                 state = "New Jersey";
                 subdomain = "<value>";
@@ -102,7 +102,7 @@ public class Application {
                 "<value>"){{
                 active = false;
                 categories = new com.unifiedapi.unifiedto.models.operations.QueryParamCategories[]{{
-                    add(QueryParamCategories.STORAGE),
+                    add(QueryParamCategories.PAYMENT),
                 }};
                 env = "<value>";
                 limit = 9072.99d;
