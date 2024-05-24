@@ -298,6 +298,18 @@ public class IntegrationSupport {
         return this;
     }
     
+    /**
+     * objects that we map from in the integration
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("raw_objects")
+    public String[] rawObjects;
+
+    public IntegrationSupport withRawObjects(String[] rawObjects) {
+        this.rawObjects = rawObjects;
+        return this;
+    }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("search_domain")
     public Boolean searchDomain;

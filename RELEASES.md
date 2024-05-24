@@ -855,3 +855,11 @@ Based on:
 - Speakeasy CLI 1.295.1 (2.335.5) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [java v0.18.21] .
+
+## 2024-05-24 02:08:46
+### Changes
+Based on:
+- OpenAPI Doc 1.0 
+- Speakeasy CLI 1.295.2 (2.335.5) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [java v0.18.22] .
