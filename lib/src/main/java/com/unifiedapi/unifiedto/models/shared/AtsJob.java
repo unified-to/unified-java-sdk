@@ -136,6 +136,9 @@ public class AtsJob {
         return this;
     }
     
+    /**
+     * URLs for pages containing public listings for the job
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_job_urls")
     public String[] publicJobUrls;

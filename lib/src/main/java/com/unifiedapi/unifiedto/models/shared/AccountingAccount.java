@@ -101,6 +101,9 @@ public class AccountingAccount {
         return this;
     }
     
+    /**
+     * The original data from the integration's API
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     public java.util.Map<String, java.lang.Object> raw;

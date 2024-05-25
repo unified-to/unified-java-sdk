@@ -25,6 +25,15 @@ public class AccountingContact {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("company_name")
+    public String companyName;
+
+    public AccountingContact withCompanyName(String companyName) {
+        this.companyName = companyName;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
@@ -59,6 +68,15 @@ public class AccountingContact {
 
     public AccountingContact withId(String id) {
         this.id = id;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("identification")
+    public String identification;
+
+    public AccountingContact withIdentification(String identification) {
+        this.identification = identification;
         return this;
     }
     
