@@ -13,7 +13,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 java:
-  version: 0.18.23
+  version: 0.18.24
   artifactID: unifiedto
   companyEmail: hello@unified.to
   companyName: Unified API Inc.
