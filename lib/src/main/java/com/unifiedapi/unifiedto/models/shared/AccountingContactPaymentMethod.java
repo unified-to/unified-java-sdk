@@ -11,6 +11,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AccountingContactPaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("default")
+    public Boolean default_;
+
+    public AccountingContactPaymentMethod withDefault(Boolean default_) {
+        this.default_ = default_;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
 
