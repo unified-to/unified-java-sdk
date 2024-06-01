@@ -56,32 +56,30 @@ public class Application {
                     companyId = "<value>";
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(
-                        AtsCompensationType.EQUITY){{
-                            type = AtsCompensationType.STOCK_OPTIONS;
-                        }}),
+                        ){{}}),
                     }};
-                    createdAt = OffsetDateTime.parse("2023-03-05T16:04:54.121Z");
+                    createdAt = OffsetDateTime.parse("2023-04-05T09:16:07.639Z");
                     departments = new String[]{{
                         add("<value>"),
                     }};
-                    description = "Operative 24 hour methodology";
-                    employmentType = EmploymentType.OTHER;
+                    description = "Secured fault-tolerant internet solution";
+                    employmentType = EmploymentType.FULL_TIME;
                     hiringManagerIds = new String[]{{
                         add("<value>"),
                     }};
                     id = "<id>";
                     languageLocale = "<value>";
                     name = "<value>";
-                    numberOfOpenings = 8330.69d;
+                    numberOfOpenings = 6151.12d;
                     publicJobUrls = new String[]{{
                         add("<value>"),
                     }};
                     questions = new com.unifiedapi.unifiedto.models.shared.AtsJobQuestion[]{{
                         add(new AtsJobQuestion(
                         "<value>",
-                        AtsJobQuestionType.URL){{
+                        AtsJobQuestionType.YES_NO){{
                             question = "<value>";
-                            type = AtsJobQuestionType.UNIVERSITY;
+                            type = AtsJobQuestionType.CURRENCY;
                         }}),
                     }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
@@ -92,8 +90,8 @@ public class Application {
                         add("<value>"),
                     }};
                     remote = false;
-                    status = AtsJobStatus.DRAFT;
-                    updatedAt = OffsetDateTime.parse("2022-09-14T17:37:48.375Z");
+                    status = AtsJobStatus.OPEN;
+                    updatedAt = OffsetDateTime.parse("2024-11-18T02:03:06.250Z");
 
                 }};
 
@@ -290,32 +288,30 @@ public class Application {
                     companyId = "<value>";
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(
-                        AtsCompensationType.EQUITY){{
-                            type = AtsCompensationType.SALARY;
-                        }}),
+                        ){{}}),
                     }};
-                    createdAt = OffsetDateTime.parse("2022-03-27T20:59:56.374Z");
+                    createdAt = OffsetDateTime.parse("2022-07-09T17:48:14.891Z");
                     departments = new String[]{{
                         add("<value>"),
                     }};
-                    description = "Extended empowering middleware";
-                    employmentType = EmploymentType.FULL_TIME;
+                    description = "Seamless analyzing definition";
+                    employmentType = EmploymentType.INTERN;
                     hiringManagerIds = new String[]{{
                         add("<value>"),
                     }};
                     id = "<id>";
                     languageLocale = "<value>";
                     name = "<value>";
-                    numberOfOpenings = 238.34d;
+                    numberOfOpenings = 6182.06d;
                     publicJobUrls = new String[]{{
                         add("<value>"),
                     }};
                     questions = new com.unifiedapi.unifiedto.models.shared.AtsJobQuestion[]{{
                         add(new AtsJobQuestion(
                         "<value>",
-                        AtsJobQuestionType.TEXTAREA){{
+                        AtsJobQuestionType.TEXT){{
                             question = "<value>";
-                            type = AtsJobQuestionType.URL;
+                            type = AtsJobQuestionType.NUMBER;
                         }}),
                     }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
@@ -326,8 +322,8 @@ public class Application {
                         add("<value>"),
                     }};
                     remote = false;
-                    status = AtsJobStatus.DRAFT;
-                    updatedAt = OffsetDateTime.parse("2022-07-04T19:22:46.036Z");
+                    status = AtsJobStatus.CLOSED;
+                    updatedAt = OffsetDateTime.parse("2023-08-08T17:34:59.133Z");
 
                 }};
 
@@ -456,32 +452,30 @@ public class Application {
                     companyId = "<value>";
                     compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
                         add(new AtsCompensation(
-                        AtsCompensationType.BONUS){{
-                            type = AtsCompensationType.BONUS;
-                        }}),
+                        ){{}}),
                     }};
-                    createdAt = OffsetDateTime.parse("2023-01-19T17:41:10.086Z");
+                    createdAt = OffsetDateTime.parse("2022-09-28T21:47:53.309Z");
                     departments = new String[]{{
                         add("<value>"),
                     }};
-                    description = "Re-contextualized 24 hour support";
-                    employmentType = EmploymentType.CASUAL;
+                    description = "Implemented even-keeled parallelism";
+                    employmentType = EmploymentType.FULL_TIME;
                     hiringManagerIds = new String[]{{
                         add("<value>"),
                     }};
                     id = "<id>";
                     languageLocale = "<value>";
                     name = "<value>";
-                    numberOfOpenings = 983.08d;
+                    numberOfOpenings = 9080.02d;
                     publicJobUrls = new String[]{{
                         add("<value>"),
                     }};
                     questions = new com.unifiedapi.unifiedto.models.shared.AtsJobQuestion[]{{
                         add(new AtsJobQuestion(
                         "<value>",
-                        AtsJobQuestionType.UNIVERSITY){{
+                        AtsJobQuestionType.NUMBER){{
                             question = "<value>";
-                            type = AtsJobQuestionType.FILE;
+                            type = AtsJobQuestionType.MULTIPLE_SELECT;
                         }}),
                     }};
                     raw = new java.util.HashMap<String, java.lang.Object>(
@@ -493,7 +487,7 @@ public class Application {
                     }};
                     remote = false;
                     status = AtsJobStatus.DRAFT;
-                    updatedAt = OffsetDateTime.parse("2024-12-22T02:51:32.088Z");
+                    updatedAt = OffsetDateTime.parse("2024-01-04T04:44:52.139Z");
 
                 }};
 

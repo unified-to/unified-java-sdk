@@ -46,6 +46,7 @@ public class AtsCompensation {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AtsCompensationType type;
 
@@ -54,7 +55,5 @@ public class AtsCompensation {
         return this;
     }
     
-    public AtsCompensation(@JsonProperty("type") AtsCompensationType type) {
-        this.type = type;
-  }
+    public AtsCompensation(){}
 }
