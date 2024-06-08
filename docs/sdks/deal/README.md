@@ -48,6 +48,7 @@ public class Application {
                     lostReason = "<value>";
                     name = "<value>";
                     pipeline = "<value>";
+                    pipelineId = "<value>";
                     probability = 1087.81d;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
@@ -55,6 +56,7 @@ public class Application {
                     }};
                     source = "<value>";
                     stage = "<value>";
+                    stageId = "<value>";
                     tags = new String[]{{
                         add("<value>"),
                     }};
@@ -252,6 +254,7 @@ public class Application {
                     lostReason = "<value>";
                     name = "<value>";
                     pipeline = "<value>";
+                    pipelineId = "<value>";
                     probability = 9555.58d;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
@@ -259,6 +262,7 @@ public class Application {
                     }};
                     source = "<value>";
                     stage = "<value>";
+                    stageId = "<value>";
                     tags = new String[]{{
                         add("<value>"),
                     }};
@@ -385,6 +389,7 @@ public class Application {
                     lostReason = "<value>";
                     name = "<value>";
                     pipeline = "<value>";
+                    pipelineId = "<value>";
                     probability = 2970.01d;
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
@@ -392,6 +397,7 @@ public class Application {
                     }};
                     source = "<value>";
                     stage = "<value>";
+                    stageId = "<value>";
                     tags = new String[]{{
                         add("<value>"),
                     }};

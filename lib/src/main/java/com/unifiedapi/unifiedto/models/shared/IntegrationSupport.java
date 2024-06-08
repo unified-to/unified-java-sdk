@@ -209,6 +209,15 @@ public class IntegrationSupport {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("list_project_id")
+    public ListProjectId listProjectId;
+
+    public IntegrationSupport withListProjectId(ListProjectId listProjectId) {
+        this.listProjectId = listProjectId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_query")
     public ListQuery listQuery;
 

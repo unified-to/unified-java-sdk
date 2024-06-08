@@ -40,7 +40,7 @@ public class Application {
                 lang = "<value>";
                 redirect = false;
                 scopes = new com.unifiedapi.unifiedto.models.operations.Scopes[]{{
-                    add(Scopes.MESSAGING_MESSAGE_READ),
+                    add(Scopes.KMS_SPACE_WRITE),
                 }};
                 state = "New Jersey";
                 subdomain = "<value>";

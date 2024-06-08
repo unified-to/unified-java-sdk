@@ -911,3 +911,11 @@ Based on:
 - Speakeasy CLI 1.299.7 (2.338.12) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [java v0.18.28] .
+
+## 2024-06-08 00:04:11
+### Changes
+Based on:
+- OpenAPI Doc 1.0 
+- Speakeasy CLI 1.300.1 (2.339.1) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [java v0.18.29] .

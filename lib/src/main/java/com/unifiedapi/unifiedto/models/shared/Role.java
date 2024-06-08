@@ -7,8 +7,8 @@ package com.unifiedapi.unifiedto.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum Role {
-    SYSTEM("system"),
-    USER("user");
+    SYSTEM("SYSTEM"),
+    USER("USER");
 
     @JsonValue
     public final String value;

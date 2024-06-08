@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 9a5990618c970a819b6235d1b48f2259
+  docChecksum: 34d8e45448aaadab7271416cea77fcaf
   docVersion: "1.0"
-  speakeasyVersion: 1.299.7
-  generationVersion: 2.338.12
-  releaseVersion: 0.18.28
-  configChecksum: f70b6a761823aff8705f50ce452a11cb
+  speakeasyVersion: 1.300.1
+  generationVersion: 2.339.1
+  releaseVersion: 0.18.29
+  configChecksum: 16f9dd2729bd6e41f3ab6b1fd68124c2
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -70,6 +70,8 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/Refund.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Storage.java
   - lib/src/main/java/com/unifiedapi/unifiedto/File.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/Task.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/Project.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Ticketing.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Customer.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Note.java
@@ -558,6 +560,30 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveStorageFileResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateStorageFileRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateStorageFileResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateTaskProjectRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateTaskProjectResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateTaskTaskRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateTaskTaskResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetTaskProjectRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetTaskProjectResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetTaskTaskRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetTaskTaskResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListTaskProjectsRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListTaskProjectsResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListTaskTasksRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListTaskTasksResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchTaskProjectRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchTaskProjectResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchTaskTaskRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchTaskTaskResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveTaskProjectRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveTaskProjectResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveTaskTaskRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveTaskTaskResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateTaskProjectRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateTaskProjectResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateTaskTaskRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateTaskTaskResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateTicketingCustomerRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateTicketingCustomerResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateTicketingNoteRequest.java
@@ -734,6 +760,7 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmLead.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmLeadAddress.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmPipeline.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmStage.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/Gender.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/EnrichPerson.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/EnrichPersonWorkHistory.java
@@ -785,6 +812,9 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/StorageFile.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/StoragePermission.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyStoragePermissionRoles.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/TaskProject.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/TaskTaskStatus.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/TaskTask.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/TicketingCustomer.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/TicketingTelephoneType.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/TicketingTelephone.java
@@ -829,6 +859,7 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/ListOffset.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/ListOrder.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/ListParentId.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/ListProjectId.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/ListQuery.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/ListSortByCreatedAt.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/ListSortByName.java
@@ -1297,6 +1328,30 @@ generatedFiles:
   - docs/models/operations/RemoveStorageFileResponse.md
   - docs/models/operations/UpdateStorageFileRequest.md
   - docs/models/operations/UpdateStorageFileResponse.md
+  - docs/models/operations/CreateTaskProjectRequest.md
+  - docs/models/operations/CreateTaskProjectResponse.md
+  - docs/models/operations/CreateTaskTaskRequest.md
+  - docs/models/operations/CreateTaskTaskResponse.md
+  - docs/models/operations/GetTaskProjectRequest.md
+  - docs/models/operations/GetTaskProjectResponse.md
+  - docs/models/operations/GetTaskTaskRequest.md
+  - docs/models/operations/GetTaskTaskResponse.md
+  - docs/models/operations/ListTaskProjectsRequest.md
+  - docs/models/operations/ListTaskProjectsResponse.md
+  - docs/models/operations/ListTaskTasksRequest.md
+  - docs/models/operations/ListTaskTasksResponse.md
+  - docs/models/operations/PatchTaskProjectRequest.md
+  - docs/models/operations/PatchTaskProjectResponse.md
+  - docs/models/operations/PatchTaskTaskRequest.md
+  - docs/models/operations/PatchTaskTaskResponse.md
+  - docs/models/operations/RemoveTaskProjectRequest.md
+  - docs/models/operations/RemoveTaskProjectResponse.md
+  - docs/models/operations/RemoveTaskTaskRequest.md
+  - docs/models/operations/RemoveTaskTaskResponse.md
+  - docs/models/operations/UpdateTaskProjectRequest.md
+  - docs/models/operations/UpdateTaskProjectResponse.md
+  - docs/models/operations/UpdateTaskTaskRequest.md
+  - docs/models/operations/UpdateTaskTaskResponse.md
   - docs/models/operations/CreateTicketingCustomerRequest.md
   - docs/models/operations/CreateTicketingCustomerResponse.md
   - docs/models/operations/CreateTicketingNoteRequest.md
@@ -1473,6 +1528,7 @@ generatedFiles:
   - docs/models/shared/CrmLead.md
   - docs/models/shared/PropertyCrmLeadAddress.md
   - docs/models/shared/CrmPipeline.md
+  - docs/models/shared/CrmStage.md
   - docs/models/shared/Gender.md
   - docs/models/shared/EnrichPerson.md
   - docs/models/shared/EnrichPersonWorkHistory.md
@@ -1524,6 +1580,9 @@ generatedFiles:
   - docs/models/shared/StorageFile.md
   - docs/models/shared/StoragePermission.md
   - docs/models/shared/PropertyStoragePermissionRoles.md
+  - docs/models/shared/TaskProject.md
+  - docs/models/shared/TaskTaskStatus.md
+  - docs/models/shared/TaskTask.md
   - docs/models/shared/TicketingCustomer.md
   - docs/models/shared/TicketingTelephoneType.md
   - docs/models/shared/TicketingTelephone.md
@@ -1568,6 +1627,7 @@ generatedFiles:
   - docs/models/shared/ListOffset.md
   - docs/models/shared/ListOrder.md
   - docs/models/shared/ListParentId.md
+  - docs/models/shared/ListProjectId.md
   - docs/models/shared/ListQuery.md
   - docs/models/shared/ListSortByCreatedAt.md
   - docs/models/shared/ListSortByName.md
@@ -1646,6 +1706,8 @@ generatedFiles:
   - docs/sdks/refund/README.md
   - docs/sdks/storage/README.md
   - docs/sdks/file/README.md
+  - docs/sdks/task/README.md
+  - docs/sdks/project/README.md
   - docs/sdks/ticketing/README.md
   - docs/sdks/customer/README.md
   - docs/sdks/note/README.md

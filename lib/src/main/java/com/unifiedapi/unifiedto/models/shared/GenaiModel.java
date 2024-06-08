@@ -56,6 +56,15 @@ public class GenaiModel {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("raw")
+    public java.util.Map<String, java.lang.Object> raw;
+
+    public GenaiModel withRaw(java.util.Map<String, java.lang.Object> raw) {
+        this.raw = raw;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
     public String webUrl;
 

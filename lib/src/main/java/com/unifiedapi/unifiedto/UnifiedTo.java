@@ -78,6 +78,8 @@ public class UnifiedTo {
     public Refund refund;
     public Storage storage;
     public File file;
+    public Task task;
+    public Project project;
     public Ticketing ticketing;
     public Customer customer;
     public Note note;
@@ -303,6 +305,10 @@ public class UnifiedTo {
 		this.storage = new Storage(this.sdkConfiguration);
 		
 		this.file = new File(this.sdkConfiguration);
+		
+		this.task = new Task(this.sdkConfiguration);
+		
+		this.project = new Project(this.sdkConfiguration);
 		
 		this.ticketing = new Ticketing(this.sdkConfiguration);
 		

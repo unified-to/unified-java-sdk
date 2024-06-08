@@ -56,7 +56,9 @@ public enum ObjectType {
     MESSAGING_MESSAGE("messaging_message"),
     MESSAGING_CHANNEL("messaging_channel"),
     KMS_SPACE("kms_space"),
-    KMS_PAGE("kms_page");
+    KMS_PAGE("kms_page"),
+    TASK_PROJECT("task_project"),
+    TASK_TASK("task_task");
 
     @JsonValue
     public final String value;

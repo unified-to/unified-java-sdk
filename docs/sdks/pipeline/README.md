@@ -23,6 +23,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineResponse;
 import com.unifiedapi.unifiedto.models.shared.CrmPipeline;
+import com.unifiedapi.unifiedto.models.shared.CrmStage;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -49,6 +50,10 @@ public class Application {
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
+                    }};
+                    stages = new com.unifiedapi.unifiedto.models.shared.CrmStage[]{{
+                        add(new CrmStage(
+                        ){{}}),
                     }};
                     updatedAt = OffsetDateTime.parse("2022-06-06T17:15:48.268Z");
 
@@ -213,6 +218,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineResponse;
 import com.unifiedapi.unifiedto.models.shared.CrmPipeline;
+import com.unifiedapi.unifiedto.models.shared.CrmStage;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -240,6 +246,10 @@ public class Application {
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
+                    }};
+                    stages = new com.unifiedapi.unifiedto.models.shared.CrmStage[]{{
+                        add(new CrmStage(
+                        ){{}}),
                     }};
                     updatedAt = OffsetDateTime.parse("2022-02-25T13:09:02.644Z");
 
@@ -336,6 +346,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineResponse;
 import com.unifiedapi.unifiedto.models.shared.CrmPipeline;
+import com.unifiedapi.unifiedto.models.shared.CrmStage;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -363,6 +374,10 @@ public class Application {
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
+                    }};
+                    stages = new com.unifiedapi.unifiedto.models.shared.CrmStage[]{{
+                        add(new CrmStage(
+                        ){{}}),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-11-03T02:41:03.928Z");
 

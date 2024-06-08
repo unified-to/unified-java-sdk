@@ -22,7 +22,8 @@ public enum PropertyIntegrationCategories {
     PAYMENT("payment"),
     GENAI("genai"),
     MESSAGING("messaging"),
-    KMS("kms");
+    KMS("kms"),
+    TASK("task");
 
     @JsonValue
     public final String value;

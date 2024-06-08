@@ -81,6 +81,15 @@ public class CrmPipeline {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("stages")
+    public CrmStage[] stages;
+
+    public CrmPipeline withStages(CrmStage[] stages) {
+        this.stages = stages;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")

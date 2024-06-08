@@ -10,7 +10,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.18.28'
+implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.18.29'
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -667,6 +667,30 @@ public class Application {
 * [patchStorageFile](docs/sdks/file/README.md#patchstoragefile) - Update a file
 * [removeStorageFile](docs/sdks/file/README.md#removestoragefile) - Remove a file
 * [updateStorageFile](docs/sdks/file/README.md#updatestoragefile) - Update a file
+
+### [task](docs/sdks/task/README.md)
+
+* [createTaskProject](docs/sdks/task/README.md#createtaskproject) - Create a project
+* [createTaskTask](docs/sdks/task/README.md#createtasktask) - Create a task
+* [getTaskProject](docs/sdks/task/README.md#gettaskproject) - Retrieve a project
+* [getTaskTask](docs/sdks/task/README.md#gettasktask) - Retrieve a task
+* [listTaskProjects](docs/sdks/task/README.md#listtaskprojects) - List all projects
+* [listTaskTasks](docs/sdks/task/README.md#listtasktasks) - List all tasks
+* [patchTaskProject](docs/sdks/task/README.md#patchtaskproject) - Update a project
+* [patchTaskTask](docs/sdks/task/README.md#patchtasktask) - Update a task
+* [removeTaskProject](docs/sdks/task/README.md#removetaskproject) - Remove a project
+* [removeTaskTask](docs/sdks/task/README.md#removetasktask) - Remove a task
+* [updateTaskProject](docs/sdks/task/README.md#updatetaskproject) - Update a project
+* [updateTaskTask](docs/sdks/task/README.md#updatetasktask) - Update a task
+
+### [project](docs/sdks/project/README.md)
+
+* [createTaskProject](docs/sdks/project/README.md#createtaskproject) - Create a project
+* [getTaskProject](docs/sdks/project/README.md#gettaskproject) - Retrieve a project
+* [listTaskProjects](docs/sdks/project/README.md#listtaskprojects) - List all projects
+* [patchTaskProject](docs/sdks/project/README.md#patchtaskproject) - Update a project
+* [removeTaskProject](docs/sdks/project/README.md#removetaskproject) - Remove a project
+* [updateTaskProject](docs/sdks/project/README.md#updatetaskproject) - Update a project
 
 ### [ticketing](docs/sdks/ticketing/README.md)
 

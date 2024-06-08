@@ -95,6 +95,15 @@ public class CrmDeal {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pipeline_id")
+    public String pipelineId;
+
+    public CrmDeal withPipelineId(String pipelineId) {
+        this.pipelineId = pipelineId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("probability")
     public Double probability;
 
@@ -130,6 +139,15 @@ public class CrmDeal {
 
     public CrmDeal withStage(String stage) {
         this.stage = stage;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("stage_id")
+    public String stageId;
+
+    public CrmDeal withStageId(String stageId) {
+        this.stageId = stageId;
         return this;
     }
     
