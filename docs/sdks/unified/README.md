@@ -901,7 +901,7 @@ public class Application {
                     }},
                     "<value>",
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                        add(PropertyConnectionPermissions.HRIS_EMPLOYEE_READ),
+                        add(PropertyConnectionPermissions.HRIS_GROUP_READ),
                     }}){{
                     auth = new PropertyConnectionAuth(
 ){{
@@ -1171,7 +1171,7 @@ public class Application {
                     }},
                     "<value>",
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                        add(PropertyConnectionPermissions.CRM_DEAL_READ),
+                        add(PropertyConnectionPermissions.CRM_DEAL_WRITE),
                     }}){{
                     auth = new PropertyConnectionAuth(
 ){{

@@ -14,13 +14,13 @@ import com.unifiedapi.unifiedto.utils.DateTimeSerializer;
 import java.time.OffsetDateTime;
 
 
-public class HrisGroup {
+public class HrisCompany {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("company_id")
-    public String companyId;
+    @JsonProperty("address")
+    public PropertyHrisCompanyAddress address;
 
-    public HrisGroup withCompanyId(String companyId) {
-        this.companyId = companyId;
+    public HrisCompany withAddress(PropertyHrisCompanyAddress address) {
+        this.address = address;
         return this;
     }
     
@@ -30,17 +30,8 @@ public class HrisGroup {
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
 
-    public HrisGroup withCreatedAt(OffsetDateTime createdAt) {
+    public HrisCompany withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
-        return this;
-    }
-    
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("description")
-    public String description;
-
-    public HrisGroup withDescription(String description) {
-        this.description = description;
         return this;
     }
     
@@ -48,26 +39,17 @@ public class HrisGroup {
     @JsonProperty("id")
     public String id;
 
-    public HrisGroup withId(String id) {
+    public HrisCompany withId(String id) {
         this.id = id;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("is_active")
-    public Boolean isActive;
+    @JsonProperty("legal_name")
+    public String legalName;
 
-    public HrisGroup withIsActive(Boolean isActive) {
-        this.isActive = isActive;
-        return this;
-    }
-    
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("manager_ids")
-    public String[] managerIds;
-
-    public HrisGroup withManagerIds(String[] managerIds) {
-        this.managerIds = managerIds;
+    public HrisCompany withLegalName(String legalName) {
+        this.legalName = legalName;
         return this;
     }
     
@@ -75,17 +57,8 @@ public class HrisGroup {
     @JsonProperty("name")
     public String name;
 
-    public HrisGroup withName(String name) {
+    public HrisCompany withName(String name) {
         this.name = name;
-        return this;
-    }
-    
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("parent_id")
-    public String parentId;
-
-    public HrisGroup withParentId(String parentId) {
-        this.parentId = parentId;
         return this;
     }
     
@@ -93,17 +66,8 @@ public class HrisGroup {
     @JsonProperty("raw")
     public java.util.Map<String, java.lang.Object> raw;
 
-    public HrisGroup withRaw(java.util.Map<String, java.lang.Object> raw) {
+    public HrisCompany withRaw(java.util.Map<String, java.lang.Object> raw) {
         this.raw = raw;
-        return this;
-    }
-    
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("type")
-    public HrisGroupType type;
-
-    public HrisGroup withType(HrisGroupType type) {
-        this.type = type;
         return this;
     }
     
@@ -113,19 +77,10 @@ public class HrisGroup {
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
 
-    public HrisGroup withUpdatedAt(OffsetDateTime updatedAt) {
+    public HrisCompany withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("user_ids")
-    public String[] userIds;
-
-    public HrisGroup withUserIds(String[] userIds) {
-        this.userIds = userIds;
-        return this;
-    }
-    
-    public HrisGroup(){}
+    public HrisCompany(){}
 }

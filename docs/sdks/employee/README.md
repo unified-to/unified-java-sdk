@@ -61,6 +61,7 @@ public class Application {
                         regionCode = "<value>";
 
                     }};
+                    companyId = "<value>";
                     createdAt = OffsetDateTime.parse("2024-10-07T16:11:17.542Z");
                     currency = "Tunisian Dinar";
                     dateOfBirth = OffsetDateTime.parse("2022-09-15T21:52:09.133Z");
@@ -211,6 +212,7 @@ public class Application {
 
             com.unifiedapi.unifiedto.models.operations.ListHrisEmployeesRequest req = new ListHrisEmployeesRequest(
                 "<value>"){{
+                companyId = "<value>";
                 fields = new String[]{{
                     add("<value>"),
                 }};
@@ -299,6 +301,7 @@ public class Application {
                         regionCode = "<value>";
 
                     }};
+                    companyId = "<value>";
                     createdAt = OffsetDateTime.parse("2023-07-12T22:40:07.218Z");
                     currency = "Venezuelan bolívar";
                     dateOfBirth = OffsetDateTime.parse("2024-05-04T03:46:56.564Z");
@@ -469,6 +472,7 @@ public class Application {
                         regionCode = "<value>";
 
                     }};
+                    companyId = "<value>";
                     createdAt = OffsetDateTime.parse("2024-06-07T16:21:55.126Z");
                     currency = "Zimbabwe Dollar";
                     dateOfBirth = OffsetDateTime.parse("2024-05-03T23:33:19.708Z");

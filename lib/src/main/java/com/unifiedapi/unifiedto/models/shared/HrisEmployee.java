@@ -25,6 +25,15 @@ public class HrisEmployee {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("company_id")
+    public String companyId;
+
+    public HrisEmployee withCompanyId(String companyId) {
+        this.companyId = companyId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")

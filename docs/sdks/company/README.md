@@ -4,14 +4,20 @@
 ### Available Operations
 
 * [createCrmCompany](#createcrmcompany) - Create a company
+* [createHrisCompany](#createhriscompany) - Create a company
 * [getAtsCompany](#getatscompany) - Retrieve a company
 * [getCrmCompany](#getcrmcompany) - Retrieve a company
+* [getHrisCompany](#gethriscompany) - Retrieve a company
 * [listAtsCompanies](#listatscompanies) - List all companies
 * [listCrmCompanies](#listcrmcompanies) - List all companies
 * [listEnrichCompanies](#listenrichcompanies) - Retrieve enrichment information for a company
+* [listHrisCompanies](#listhriscompanies) - List all companies
 * [patchCrmCompany](#patchcrmcompany) - Update a company
+* [patchHrisCompany](#patchhriscompany) - Update a company
 * [removeCrmCompany](#removecrmcompany) - Remove a company
+* [removeHrisCompany](#removehriscompany) - Remove a company
 * [updateCrmCompany](#updatecrmcompany) - Update a company
+* [updateHrisCompany](#updatehriscompany) - Update a company
 
 ## createCrmCompany
 
@@ -123,6 +129,87 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.CreateCrmCompanyResponse](../../models/operations/CreateCrmCompanyResponse.md)**
+
+
+## createHrisCompany
+
+Create a company
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.CreateHrisCompanyRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateHrisCompanyResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisCompany;
+import com.unifiedapi.unifiedto.models.shared.PropertyHrisCompanyAddress;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.CreateHrisCompanyRequest req = new CreateHrisCompanyRequest(
+                "<value>"){{
+                hrisCompany = new HrisCompany(
+){{
+                    address = new PropertyHrisCompanyAddress(
+){{
+                        address1 = "<value>";
+                        address2 = "<value>";
+                        city = "Leuschketon";
+                        country = "Greenland";
+                        countryCode = "UG";
+                        postalCode = "28999";
+                        region = "<value>";
+                        regionCode = "<value>";
+
+                    }};
+                    createdAt = OffsetDateTime.parse("2024-11-26T14:41:42.849Z");
+                    id = "<id>";
+                    legalName = "<value>";
+                    name = "<value>";
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "<value>");
+                    }};
+                    updatedAt = OffsetDateTime.parse("2023-04-03T15:03:14.449Z");
+
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateHrisCompanyResponse res = sdk.company.createHrisCompany(req);
+
+            if (res.hrisCompany != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.CreateHrisCompanyRequest](../../models/operations/CreateHrisCompanyRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.CreateHrisCompanyResponse](../../models/operations/CreateHrisCompanyResponse.md)**
 
 
 ## getAtsCompany
@@ -237,6 +324,63 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.GetCrmCompanyResponse](../../models/operations/GetCrmCompanyResponse.md)**
+
+
+## getHrisCompany
+
+Retrieve a company
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.GetHrisCompanyRequest;
+import com.unifiedapi.unifiedto.models.operations.GetHrisCompanyResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.GetHrisCompanyRequest req = new GetHrisCompanyRequest(
+                "<value>",
+                "<value>"){{
+                fields = new String[]{{
+                    add("<value>"),
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetHrisCompanyResponse res = sdk.company.getHrisCompany(req);
+
+            if (res.hrisCompany != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [com.unifiedapi.unifiedto.models.operations.GetHrisCompanyRequest](../../models/operations/GetHrisCompanyRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.GetHrisCompanyResponse](../../models/operations/GetHrisCompanyResponse.md)**
 
 
 ## listAtsCompanies
@@ -423,6 +567,69 @@ public class Application {
 **[com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesResponse](../../models/operations/ListEnrichCompaniesResponse.md)**
 
 
+## listHrisCompanies
+
+List all companies
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.ListHrisCompaniesRequest;
+import com.unifiedapi.unifiedto.models.operations.ListHrisCompaniesResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.ListHrisCompaniesRequest req = new ListHrisCompaniesRequest(
+                "<value>"){{
+                fields = new String[]{{
+                    add("<value>"),
+                }};
+                limit = 9887.05d;
+                offset = 4708.81d;
+                order = "<value>";
+                query = "<value>";
+                sort = "<value>";
+                updatedGte = OffsetDateTime.parse("2024-12-23T09:20:33.437Z");
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListHrisCompaniesResponse res = sdk.company.listHrisCompanies(req);
+
+            if (res.hrisCompanies != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.ListHrisCompaniesRequest](../../models/operations/ListHrisCompaniesRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.ListHrisCompaniesResponse](../../models/operations/ListHrisCompaniesResponse.md)**
+
+
 ## patchCrmCompany
 
 Update a company
@@ -536,6 +743,88 @@ public class Application {
 **[com.unifiedapi.unifiedto.models.operations.PatchCrmCompanyResponse](../../models/operations/PatchCrmCompanyResponse.md)**
 
 
+## patchHrisCompany
+
+Update a company
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.PatchHrisCompanyRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchHrisCompanyResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisCompany;
+import com.unifiedapi.unifiedto.models.shared.PropertyHrisCompanyAddress;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.PatchHrisCompanyRequest req = new PatchHrisCompanyRequest(
+                "<value>",
+                "<value>"){{
+                hrisCompany = new HrisCompany(
+){{
+                    address = new PropertyHrisCompanyAddress(
+){{
+                        address1 = "<value>";
+                        address2 = "<value>";
+                        city = "West Tressashire";
+                        country = "Norfolk Island";
+                        countryCode = "MW";
+                        postalCode = "36009-7244";
+                        region = "<value>";
+                        regionCode = "<value>";
+
+                    }};
+                    createdAt = OffsetDateTime.parse("2023-12-23T19:08:18.404Z");
+                    id = "<id>";
+                    legalName = "<value>";
+                    name = "<value>";
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "<value>");
+                    }};
+                    updatedAt = OffsetDateTime.parse("2023-12-13T07:35:41.815Z");
+
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.PatchHrisCompanyResponse res = sdk.company.patchHrisCompany(req);
+
+            if (res.hrisCompany != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.PatchHrisCompanyRequest](../../models/operations/PatchHrisCompanyRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.PatchHrisCompanyResponse](../../models/operations/PatchHrisCompanyResponse.md)**
+
+
 ## removeCrmCompany
 
 Remove a company
@@ -586,6 +875,58 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyResponse](../../models/operations/RemoveCrmCompanyResponse.md)**
+
+
+## removeHrisCompany
+
+Remove a company
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.RemoveHrisCompanyRequest;
+import com.unifiedapi.unifiedto.models.operations.RemoveHrisCompanyResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.RemoveHrisCompanyRequest req = new RemoveHrisCompanyRequest(
+                "<value>",
+                "<value>");
+
+            com.unifiedapi.unifiedto.models.operations.RemoveHrisCompanyResponse res = sdk.company.removeHrisCompany(req);
+
+            if (res.statusCode == 200) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.RemoveHrisCompanyRequest](../../models/operations/RemoveHrisCompanyRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.RemoveHrisCompanyResponse](../../models/operations/RemoveHrisCompanyResponse.md)**
 
 
 ## updateCrmCompany
@@ -699,4 +1040,86 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.UpdateCrmCompanyResponse](../../models/operations/UpdateCrmCompanyResponse.md)**
+
+
+## updateHrisCompany
+
+Update a company
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.UpdateHrisCompanyRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdateHrisCompanyResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisCompany;
+import com.unifiedapi.unifiedto.models.shared.PropertyHrisCompanyAddress;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.UpdateHrisCompanyRequest req = new UpdateHrisCompanyRequest(
+                "<value>",
+                "<value>"){{
+                hrisCompany = new HrisCompany(
+){{
+                    address = new PropertyHrisCompanyAddress(
+){{
+                        address1 = "<value>";
+                        address2 = "<value>";
+                        city = "Rancho Santa Margarita";
+                        country = "Somalia";
+                        countryCode = "CL";
+                        postalCode = "49321";
+                        region = "<value>";
+                        regionCode = "<value>";
+
+                    }};
+                    createdAt = OffsetDateTime.parse("2023-11-24T00:12:57.019Z");
+                    id = "<id>";
+                    legalName = "<value>";
+                    name = "<value>";
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "<value>");
+                    }};
+                    updatedAt = OffsetDateTime.parse("2024-01-24T14:39:44.271Z");
+
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.UpdateHrisCompanyResponse res = sdk.company.updateHrisCompany(req);
+
+            if (res.hrisCompany != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.UpdateHrisCompanyRequest](../../models/operations/UpdateHrisCompanyRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.UpdateHrisCompanyResponse](../../models/operations/UpdateHrisCompanyResponse.md)**
 

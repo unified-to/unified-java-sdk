@@ -9,22 +9,14 @@ import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 import java.time.OffsetDateTime;
 
 
-public class ListHrisEmployeesRequest {
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=company_id")
-    public String companyId;
-
-    public ListHrisEmployeesRequest withCompanyId(String companyId) {
-        this.companyId = companyId;
-        return this;
-    }
-    
+public class ListHrisCompaniesRequest {
     /**
      * ID of the connection
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
     public String connectionId;
 
-    public ListHrisEmployeesRequest withConnectionId(String connectionId) {
+    public ListHrisCompaniesRequest withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
     }
@@ -35,7 +27,7 @@ public class ListHrisEmployeesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String[] fields;
 
-    public ListHrisEmployeesRequest withFields(String[] fields) {
+    public ListHrisCompaniesRequest withFields(String[] fields) {
         this.fields = fields;
         return this;
     }
@@ -43,7 +35,7 @@ public class ListHrisEmployeesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Double limit;
 
-    public ListHrisEmployeesRequest withLimit(Double limit) {
+    public ListHrisCompaniesRequest withLimit(Double limit) {
         this.limit = limit;
         return this;
     }
@@ -51,7 +43,7 @@ public class ListHrisEmployeesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Double offset;
 
-    public ListHrisEmployeesRequest withOffset(Double offset) {
+    public ListHrisCompaniesRequest withOffset(Double offset) {
         this.offset = offset;
         return this;
     }
@@ -59,7 +51,7 @@ public class ListHrisEmployeesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public String order;
 
-    public ListHrisEmployeesRequest withOrder(String order) {
+    public ListHrisCompaniesRequest withOrder(String order) {
         this.order = order;
         return this;
     }
@@ -70,7 +62,7 @@ public class ListHrisEmployeesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
 
-    public ListHrisEmployeesRequest withQuery(String query) {
+    public ListHrisCompaniesRequest withQuery(String query) {
         this.query = query;
         return this;
     }
@@ -78,7 +70,7 @@ public class ListHrisEmployeesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
 
-    public ListHrisEmployeesRequest withSort(String sort) {
+    public ListHrisCompaniesRequest withSort(String sort) {
         this.sort = sort;
         return this;
     }
@@ -89,12 +81,12 @@ public class ListHrisEmployeesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     public OffsetDateTime updatedGte;
 
-    public ListHrisEmployeesRequest withUpdatedGte(OffsetDateTime updatedGte) {
+    public ListHrisCompaniesRequest withUpdatedGte(OffsetDateTime updatedGte) {
         this.updatedGte = updatedGte;
         return this;
     }
     
-    public ListHrisEmployeesRequest(@JsonProperty("connection_id") String connectionId) {
+    public ListHrisCompaniesRequest(@JsonProperty("connection_id") String connectionId) {
         this.connectionId = connectionId;
   }
 }

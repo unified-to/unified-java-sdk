@@ -10,7 +10,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.18.29'
+implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.18.30'
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -261,14 +261,20 @@ public class Application {
 ### [company](docs/sdks/company/README.md)
 
 * [createCrmCompany](docs/sdks/company/README.md#createcrmcompany) - Create a company
+* [createHrisCompany](docs/sdks/company/README.md#createhriscompany) - Create a company
 * [getAtsCompany](docs/sdks/company/README.md#getatscompany) - Retrieve a company
 * [getCrmCompany](docs/sdks/company/README.md#getcrmcompany) - Retrieve a company
+* [getHrisCompany](docs/sdks/company/README.md#gethriscompany) - Retrieve a company
 * [listAtsCompanies](docs/sdks/company/README.md#listatscompanies) - List all companies
 * [listCrmCompanies](docs/sdks/company/README.md#listcrmcompanies) - List all companies
 * [listEnrichCompanies](docs/sdks/company/README.md#listenrichcompanies) - Retrieve enrichment information for a company
+* [listHrisCompanies](docs/sdks/company/README.md#listhriscompanies) - List all companies
 * [patchCrmCompany](docs/sdks/company/README.md#patchcrmcompany) - Update a company
+* [patchHrisCompany](docs/sdks/company/README.md#patchhriscompany) - Update a company
 * [removeCrmCompany](docs/sdks/company/README.md#removecrmcompany) - Remove a company
+* [removeHrisCompany](docs/sdks/company/README.md#removehriscompany) - Remove a company
 * [updateCrmCompany](docs/sdks/company/README.md#updatecrmcompany) - Update a company
+* [updateHrisCompany](docs/sdks/company/README.md#updatehriscompany) - Update a company
 
 ### [document](docs/sdks/document/README.md)
 
@@ -468,20 +474,26 @@ public class Application {
 
 ### [hris](docs/sdks/hris/README.md)
 
+* [createHrisCompany](docs/sdks/hris/README.md#createhriscompany) - Create a company
 * [createHrisEmployee](docs/sdks/hris/README.md#createhrisemployee) - Create an employee
 * [createHrisGroup](docs/sdks/hris/README.md#createhrisgroup) - Create a group
+* [getHrisCompany](docs/sdks/hris/README.md#gethriscompany) - Retrieve a company
 * [getHrisEmployee](docs/sdks/hris/README.md#gethrisemployee) - Retrieve an employee
 * [getHrisGroup](docs/sdks/hris/README.md#gethrisgroup) - Retrieve a group
 * [getHrisPayslip](docs/sdks/hris/README.md#gethrispayslip) - Retrieve a payslip
 * [getHrisTimeoff](docs/sdks/hris/README.md#gethristimeoff) - Retrieve a timeoff
+* [listHrisCompanies](docs/sdks/hris/README.md#listhriscompanies) - List all companies
 * [listHrisEmployees](docs/sdks/hris/README.md#listhrisemployees) - List all employees
 * [listHrisGroups](docs/sdks/hris/README.md#listhrisgroups) - List all groups
 * [listHrisPayslips](docs/sdks/hris/README.md#listhrispayslips) - List all payslips
 * [listHrisTimeoffs](docs/sdks/hris/README.md#listhristimeoffs) - List all timeoffs
+* [patchHrisCompany](docs/sdks/hris/README.md#patchhriscompany) - Update a company
 * [patchHrisEmployee](docs/sdks/hris/README.md#patchhrisemployee) - Update an employee
 * [patchHrisGroup](docs/sdks/hris/README.md#patchhrisgroup) - Update a group
+* [removeHrisCompany](docs/sdks/hris/README.md#removehriscompany) - Remove a company
 * [removeHrisEmployee](docs/sdks/hris/README.md#removehrisemployee) - Remove an employee
 * [removeHrisGroup](docs/sdks/hris/README.md#removehrisgroup) - Remove a group
+* [updateHrisCompany](docs/sdks/hris/README.md#updatehriscompany) - Update a company
 * [updateHrisEmployee](docs/sdks/hris/README.md#updatehrisemployee) - Update an employee
 * [updateHrisGroup](docs/sdks/hris/README.md#updatehrisgroup) - Update a group
 

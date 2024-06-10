@@ -41,6 +41,7 @@ public class Application {
                 "<value>"){{
                 hrisGroup = new HrisGroup(
 ){{
+                    companyId = "<value>";
                     createdAt = OffsetDateTime.parse("2023-08-12T02:07:27.193Z");
                     description = "Self-enabling system-worthy collaboration";
                     id = "<id>";
@@ -172,6 +173,7 @@ public class Application {
 
             com.unifiedapi.unifiedto.models.operations.ListHrisGroupsRequest req = new ListHrisGroupsRequest(
                 "<value>"){{
+                companyId = "<value>";
                 fields = new String[]{{
                     add("<value>"),
                 }};
@@ -240,6 +242,7 @@ public class Application {
                 "<value>"){{
                 hrisGroup = new HrisGroup(
 ){{
+                    companyId = "<value>";
                     createdAt = OffsetDateTime.parse("2022-11-10T03:17:00.454Z");
                     description = "Compatible contextually-based local area network";
                     id = "<id>";
@@ -371,6 +374,7 @@ public class Application {
                 "<value>"){{
                 hrisGroup = new HrisGroup(
 ){{
+                    companyId = "<value>";
                     createdAt = OffsetDateTime.parse("2022-12-07T01:08:49.621Z");
                     description = "Integrated empowering productivity";
                     id = "<id>";

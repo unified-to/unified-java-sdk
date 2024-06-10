@@ -10,6 +10,14 @@ import java.time.OffsetDateTime;
 
 
 public class ListHrisGroupsRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=company_id")
+    public String companyId;
+
+    public ListHrisGroupsRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
+        return this;
+    }
+    
     /**
      * ID of the connection
      */

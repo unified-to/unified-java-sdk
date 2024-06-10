@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 34d8e45448aaadab7271416cea77fcaf
+  docChecksum: b5e06f8290f506984cde8a37b4ebd06e
   docVersion: "1.0"
   speakeasyVersion: 1.300.1
   generationVersion: 2.339.1
-  releaseVersion: 0.18.29
-  configChecksum: 16f9dd2729bd6e41f3ab6b1fd68124c2
+  releaseVersion: 0.18.30
+  configChecksum: 6069e892fee6eeb089b3d7801bf24ca5
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -296,18 +296,30 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAtsScorecardResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmCompanyRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmCompanyResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateHrisCompanyRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateHrisCompanyResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmCompanyRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmCompanyResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetHrisCompanyRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetHrisCompanyResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmCompaniesRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmCompaniesResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListEnrichCompaniesRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListEnrichCompaniesResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListHrisCompaniesRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListHrisCompaniesResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmCompanyRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmCompanyResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchHrisCompanyRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchHrisCompanyResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmCompanyRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmCompanyResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveHrisCompanyRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveHrisCompanyResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmCompanyRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmCompanyResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateHrisCompanyRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateHrisCompanyResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCommerceCollectionRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCommerceCollectionResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCommerceInventoryRequest.java
@@ -731,6 +743,8 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AtsStatus.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmCompany.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmCompanyAddress.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/HrisCompany.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyHrisCompanyAddress.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/EnrichCompany.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/EnrichTelephoneType.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/EnrichTelephone.java
@@ -1064,18 +1078,30 @@ generatedFiles:
   - docs/models/operations/UpdateAtsScorecardResponse.md
   - docs/models/operations/CreateCrmCompanyRequest.md
   - docs/models/operations/CreateCrmCompanyResponse.md
+  - docs/models/operations/CreateHrisCompanyRequest.md
+  - docs/models/operations/CreateHrisCompanyResponse.md
   - docs/models/operations/GetCrmCompanyRequest.md
   - docs/models/operations/GetCrmCompanyResponse.md
+  - docs/models/operations/GetHrisCompanyRequest.md
+  - docs/models/operations/GetHrisCompanyResponse.md
   - docs/models/operations/ListCrmCompaniesRequest.md
   - docs/models/operations/ListCrmCompaniesResponse.md
   - docs/models/operations/ListEnrichCompaniesRequest.md
   - docs/models/operations/ListEnrichCompaniesResponse.md
+  - docs/models/operations/ListHrisCompaniesRequest.md
+  - docs/models/operations/ListHrisCompaniesResponse.md
   - docs/models/operations/PatchCrmCompanyRequest.md
   - docs/models/operations/PatchCrmCompanyResponse.md
+  - docs/models/operations/PatchHrisCompanyRequest.md
+  - docs/models/operations/PatchHrisCompanyResponse.md
   - docs/models/operations/RemoveCrmCompanyRequest.md
   - docs/models/operations/RemoveCrmCompanyResponse.md
+  - docs/models/operations/RemoveHrisCompanyRequest.md
+  - docs/models/operations/RemoveHrisCompanyResponse.md
   - docs/models/operations/UpdateCrmCompanyRequest.md
   - docs/models/operations/UpdateCrmCompanyResponse.md
+  - docs/models/operations/UpdateHrisCompanyRequest.md
+  - docs/models/operations/UpdateHrisCompanyResponse.md
   - docs/models/operations/CreateCommerceCollectionRequest.md
   - docs/models/operations/CreateCommerceCollectionResponse.md
   - docs/models/operations/CreateCommerceInventoryRequest.md
@@ -1499,6 +1525,8 @@ generatedFiles:
   - docs/models/shared/AtsStatus.md
   - docs/models/shared/CrmCompany.md
   - docs/models/shared/PropertyCrmCompanyAddress.md
+  - docs/models/shared/HrisCompany.md
+  - docs/models/shared/PropertyHrisCompanyAddress.md
   - docs/models/shared/EnrichCompany.md
   - docs/models/shared/EnrichTelephoneType.md
   - docs/models/shared/EnrichTelephone.md
