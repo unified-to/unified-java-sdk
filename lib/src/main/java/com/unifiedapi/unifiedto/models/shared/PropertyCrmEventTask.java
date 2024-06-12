@@ -48,6 +48,15 @@ public class PropertyCrmEventTask {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("priority")
+    public Priority priority;
+
+    public PropertyCrmEventTask withPriority(Priority priority) {
+        this.priority = priority;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PropertyCrmEventTaskStatus status;
 

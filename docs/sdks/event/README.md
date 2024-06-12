@@ -24,6 +24,7 @@ import com.unifiedapi.unifiedto.models.operations.CreateCrmEventRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmEventResponse;
 import com.unifiedapi.unifiedto.models.shared.CrmEvent;
 import com.unifiedapi.unifiedto.models.shared.CrmEventType;
+import com.unifiedapi.unifiedto.models.shared.Priority;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventCall;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventEmail;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventMeeting;
@@ -107,11 +108,12 @@ public class Application {
                         description = "Automated attitude-oriented info-mediaries";
                         dueAt = OffsetDateTime.parse("2023-07-15T02:47:03.388Z");
                         name = "<value>";
-                        status = PropertyCrmEventTaskStatus.COMPLETED;
+                        priority = Priority.HIGH;
+                        status = PropertyCrmEventTaskStatus.NOT_STARTED;
 
                     }};
-                    type = CrmEventType.TASK;
-                    updatedAt = OffsetDateTime.parse("2022-07-19T04:33:06.810Z");
+                    type = CrmEventType.NOTE;
+                    updatedAt = OffsetDateTime.parse("2022-01-03T22:33:38.901Z");
                     userId = "<value>";
 
                 }};
@@ -281,6 +283,7 @@ import com.unifiedapi.unifiedto.models.operations.PatchCrmEventRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmEventResponse;
 import com.unifiedapi.unifiedto.models.shared.CrmEvent;
 import com.unifiedapi.unifiedto.models.shared.CrmEventType;
+import com.unifiedapi.unifiedto.models.shared.Priority;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventCall;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventEmail;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventMeeting;
@@ -365,11 +368,12 @@ public class Application {
                         description = "Customer-focused needs-based groupware";
                         dueAt = OffsetDateTime.parse("2024-11-30T20:05:52.386Z");
                         name = "<value>";
+                        priority = Priority.HIGH;
                         status = PropertyCrmEventTaskStatus.COMPLETED;
 
                     }};
-                    type = CrmEventType.EMAIL;
-                    updatedAt = OffsetDateTime.parse("2022-07-15T05:10:26.446Z");
+                    type = CrmEventType.NOTE;
+                    updatedAt = OffsetDateTime.parse("2024-06-11T09:39:47.886Z");
                     userId = "<value>";
 
                 }};
@@ -466,6 +470,7 @@ import com.unifiedapi.unifiedto.models.operations.UpdateCrmEventRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmEventResponse;
 import com.unifiedapi.unifiedto.models.shared.CrmEvent;
 import com.unifiedapi.unifiedto.models.shared.CrmEventType;
+import com.unifiedapi.unifiedto.models.shared.Priority;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventCall;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventEmail;
 import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventMeeting;
@@ -550,11 +555,12 @@ public class Application {
                         description = "Synergized neutral complexity";
                         dueAt = OffsetDateTime.parse("2022-06-26T11:53:18.745Z");
                         name = "<value>";
+                        priority = Priority.LOW;
                         status = PropertyCrmEventTaskStatus.DEFERRED;
 
                     }};
-                    type = CrmEventType.CALL;
-                    updatedAt = OffsetDateTime.parse("2023-02-13T22:59:19.685Z");
+                    type = CrmEventType.EMAIL;
+                    updatedAt = OffsetDateTime.parse("2023-07-15T02:27:54.214Z");
                     userId = "<value>";
 
                 }};

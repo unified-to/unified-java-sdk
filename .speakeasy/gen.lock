@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: b5e06f8290f506984cde8a37b4ebd06e
+  docChecksum: f0fea8601a16d51b9c2316f7dec21d35
   docVersion: "1.0"
-  speakeasyVersion: 1.300.1
-  generationVersion: 2.339.1
-  releaseVersion: 0.18.30
-  configChecksum: 6069e892fee6eeb089b3d7801bf24ca5
+  speakeasyVersion: 1.305.0
+  generationVersion: 2.340.3
+  releaseVersion: 0.18.31
+  configChecksum: 3b5bc9061e0afe67f00a74c603ab6f64
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -765,6 +765,7 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmDeal.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmEventType.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmEvent.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/Priority.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmEventTaskStatus.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmEventTask.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmEventNote.java
@@ -1547,6 +1548,7 @@ generatedFiles:
   - docs/models/shared/CrmDeal.md
   - docs/models/shared/CrmEventType.md
   - docs/models/shared/CrmEvent.md
+  - docs/models/shared/Priority.md
   - docs/models/shared/PropertyCrmEventTaskStatus.md
   - docs/models/shared/PropertyCrmEventTask.md
   - docs/models/shared/PropertyCrmEventNote.md
