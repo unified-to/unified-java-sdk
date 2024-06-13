@@ -8,12 +8,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 
 
-public class UpdateAccountingTransactionRequest {
+public class UpdateAccountingJournalRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public com.unifiedapi.unifiedto.models.shared.AccountingTransaction accountingTransaction;
+    public com.unifiedapi.unifiedto.models.shared.AccountingJournal accountingJournal;
 
-    public UpdateAccountingTransactionRequest withAccountingTransaction(com.unifiedapi.unifiedto.models.shared.AccountingTransaction accountingTransaction) {
-        this.accountingTransaction = accountingTransaction;
+    public UpdateAccountingJournalRequest withAccountingJournal(com.unifiedapi.unifiedto.models.shared.AccountingJournal accountingJournal) {
+        this.accountingJournal = accountingJournal;
         return this;
     }
     
@@ -23,23 +23,23 @@ public class UpdateAccountingTransactionRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
     public String connectionId;
 
-    public UpdateAccountingTransactionRequest withConnectionId(String connectionId) {
+    public UpdateAccountingJournalRequest withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
     }
     
     /**
-     * ID of the Transaction
+     * ID of the Journal
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
 
-    public UpdateAccountingTransactionRequest withId(String id) {
+    public UpdateAccountingJournalRequest withId(String id) {
         this.id = id;
         return this;
     }
     
-    public UpdateAccountingTransactionRequest(@JsonProperty("connection_id") String connectionId, @JsonProperty("id") String id) {
+    public UpdateAccountingJournalRequest(@JsonProperty("connection_id") String connectionId, @JsonProperty("id") String id) {
         this.connectionId = connectionId;
         this.id = id;
   }

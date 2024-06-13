@@ -8,15 +8,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 
-public class ListAccountingTransactionsResponse {
+public class GetAccountingJournalResponse {
     /**
      * Successful
      */
     
-    public com.unifiedapi.unifiedto.models.shared.AccountingTransaction[] accountingTransactions;
+    public com.unifiedapi.unifiedto.models.shared.AccountingJournal accountingJournal;
 
-    public ListAccountingTransactionsResponse withAccountingTransactions(com.unifiedapi.unifiedto.models.shared.AccountingTransaction[] accountingTransactions) {
-        this.accountingTransactions = accountingTransactions;
+    public GetAccountingJournalResponse withAccountingJournal(com.unifiedapi.unifiedto.models.shared.AccountingJournal accountingJournal) {
+        this.accountingJournal = accountingJournal;
         return this;
     }
     
@@ -26,7 +26,7 @@ public class ListAccountingTransactionsResponse {
     
     public String contentType;
 
-    public ListAccountingTransactionsResponse withContentType(String contentType) {
+    public GetAccountingJournalResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
@@ -37,7 +37,7 @@ public class ListAccountingTransactionsResponse {
     
     public Integer statusCode;
 
-    public ListAccountingTransactionsResponse withStatusCode(Integer statusCode) {
+    public GetAccountingJournalResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -48,12 +48,12 @@ public class ListAccountingTransactionsResponse {
     
     public HttpResponse<byte[]> rawResponse;
 
-    public ListAccountingTransactionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
+    public GetAccountingJournalResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
-    public ListAccountingTransactionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode, @JsonProperty("RawResponse") HttpResponse<byte[]> rawResponse) {
+    public GetAccountingJournalResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode, @JsonProperty("RawResponse") HttpResponse<byte[]> rawResponse) {
         this.contentType = contentType;
         this.statusCode = statusCode;
         this.rawResponse = rawResponse;

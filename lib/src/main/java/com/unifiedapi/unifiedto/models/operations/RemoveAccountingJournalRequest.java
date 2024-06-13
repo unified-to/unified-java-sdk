@@ -8,30 +8,30 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 
 
-public class RemoveAccountingTransactionRequest {
+public class RemoveAccountingJournalRequest {
     /**
      * ID of the connection
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
     public String connectionId;
 
-    public RemoveAccountingTransactionRequest withConnectionId(String connectionId) {
+    public RemoveAccountingJournalRequest withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
     }
     
     /**
-     * ID of the Transaction
+     * ID of the Journal
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
 
-    public RemoveAccountingTransactionRequest withId(String id) {
+    public RemoveAccountingJournalRequest withId(String id) {
         this.id = id;
         return this;
     }
     
-    public RemoveAccountingTransactionRequest(@JsonProperty("connection_id") String connectionId, @JsonProperty("id") String id) {
+    public RemoveAccountingJournalRequest(@JsonProperty("connection_id") String connectionId, @JsonProperty("id") String id) {
         this.connectionId = connectionId;
         this.id = id;
   }

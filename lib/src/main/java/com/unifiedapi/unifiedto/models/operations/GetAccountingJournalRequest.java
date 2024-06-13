@@ -8,14 +8,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 
 
-public class GetAccountingTransactionRequest {
+public class GetAccountingJournalRequest {
     /**
      * ID of the connection
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
     public String connectionId;
 
-    public GetAccountingTransactionRequest withConnectionId(String connectionId) {
+    public GetAccountingJournalRequest withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
     }
@@ -26,23 +26,23 @@ public class GetAccountingTransactionRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String[] fields;
 
-    public GetAccountingTransactionRequest withFields(String[] fields) {
+    public GetAccountingJournalRequest withFields(String[] fields) {
         this.fields = fields;
         return this;
     }
     
     /**
-     * ID of the Transaction
+     * ID of the Journal
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
 
-    public GetAccountingTransactionRequest withId(String id) {
+    public GetAccountingJournalRequest withId(String id) {
         this.id = id;
         return this;
     }
     
-    public GetAccountingTransactionRequest(@JsonProperty("connection_id") String connectionId, @JsonProperty("id") String id) {
+    public GetAccountingJournalRequest(@JsonProperty("connection_id") String connectionId, @JsonProperty("id") String id) {
         this.connectionId = connectionId;
         this.id = id;
   }

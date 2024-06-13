@@ -45,7 +45,7 @@ public class Application {
                     "<value>",
                     Event.CREATED,
                     "<value>",
-                    ObjectType.ACCOUNTING_ACCOUNT){{
+                    ObjectType.ACCOUNTING_TRANSACTION){{
                     checkedAt = OffsetDateTime.parse("2023-05-18T07:32:59.218Z");
                     createdAt = OffsetDateTime.parse("2023-11-05T05:21:48.024Z");
                     environment = "<value>";

@@ -8,25 +8,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 
-public class GetAccountingTransactionResponse {
-    /**
-     * Successful
-     */
-    
-    public com.unifiedapi.unifiedto.models.shared.AccountingTransaction accountingTransaction;
-
-    public GetAccountingTransactionResponse withAccountingTransaction(com.unifiedapi.unifiedto.models.shared.AccountingTransaction accountingTransaction) {
-        this.accountingTransaction = accountingTransaction;
-        return this;
-    }
-    
+public class RemoveAccountingJournalResponse {
     /**
      * HTTP response content type for this operation
      */
     
     public String contentType;
 
-    public GetAccountingTransactionResponse withContentType(String contentType) {
+    public RemoveAccountingJournalResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
@@ -37,7 +26,7 @@ public class GetAccountingTransactionResponse {
     
     public Integer statusCode;
 
-    public GetAccountingTransactionResponse withStatusCode(Integer statusCode) {
+    public RemoveAccountingJournalResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -48,12 +37,23 @@ public class GetAccountingTransactionResponse {
     
     public HttpResponse<byte[]> rawResponse;
 
-    public GetAccountingTransactionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
+    public RemoveAccountingJournalResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
-    public GetAccountingTransactionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode, @JsonProperty("RawResponse") HttpResponse<byte[]> rawResponse) {
+    /**
+     * Successful
+     */
+    
+    public String string;
+
+    public RemoveAccountingJournalResponse withString(String string) {
+        this.string = string;
+        return this;
+    }
+    
+    public RemoveAccountingJournalResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode, @JsonProperty("RawResponse") HttpResponse<byte[]> rawResponse) {
         this.contentType = contentType;
         this.statusCode = statusCode;
         this.rawResponse = rawResponse;

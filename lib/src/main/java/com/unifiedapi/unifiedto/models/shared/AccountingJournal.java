@@ -9,12 +9,12 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 
-public class AccountingTransaction {
+public class AccountingJournal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
 
-    public AccountingTransaction withCreatedAt(String createdAt) {
+    public AccountingJournal withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
     }
@@ -23,7 +23,7 @@ public class AccountingTransaction {
     @JsonProperty("currency")
     public String currency;
 
-    public AccountingTransaction withCurrency(String currency) {
+    public AccountingJournal withCurrency(String currency) {
         this.currency = currency;
         return this;
     }
@@ -32,7 +32,7 @@ public class AccountingTransaction {
     @JsonProperty("description")
     public String description;
 
-    public AccountingTransaction withDescription(String description) {
+    public AccountingJournal withDescription(String description) {
         this.description = description;
         return this;
     }
@@ -41,7 +41,7 @@ public class AccountingTransaction {
     @JsonProperty("id")
     public String id;
 
-    public AccountingTransaction withId(String id) {
+    public AccountingJournal withId(String id) {
         this.id = id;
         return this;
     }
@@ -51,9 +51,9 @@ public class AccountingTransaction {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineitems")
-    public AccountingTransactionLineitem[] lineitems;
+    public AccountingJournalLineitem[] lineitems;
 
-    public AccountingTransaction withLineitems(AccountingTransactionLineitem[] lineitems) {
+    public AccountingJournal withLineitems(AccountingJournalLineitem[] lineitems) {
         this.lineitems = lineitems;
         return this;
     }
@@ -62,7 +62,7 @@ public class AccountingTransaction {
     @JsonProperty("raw")
     public java.util.Map<String, java.lang.Object> raw;
 
-    public AccountingTransaction withRaw(java.util.Map<String, java.lang.Object> raw) {
+    public AccountingJournal withRaw(java.util.Map<String, java.lang.Object> raw) {
         this.raw = raw;
         return this;
     }
@@ -71,7 +71,7 @@ public class AccountingTransaction {
     @JsonProperty("reference")
     public String reference;
 
-    public AccountingTransaction withReference(String reference) {
+    public AccountingJournal withReference(String reference) {
         this.reference = reference;
         return this;
     }
@@ -80,7 +80,7 @@ public class AccountingTransaction {
     @JsonProperty("tax_amount")
     public Double taxAmount;
 
-    public AccountingTransaction withTaxAmount(Double taxAmount) {
+    public AccountingJournal withTaxAmount(Double taxAmount) {
         this.taxAmount = taxAmount;
         return this;
     }
@@ -89,7 +89,7 @@ public class AccountingTransaction {
     @JsonProperty("taxrate_id")
     public String taxrateId;
 
-    public AccountingTransaction withTaxrateId(String taxrateId) {
+    public AccountingJournal withTaxrateId(String taxrateId) {
         this.taxrateId = taxrateId;
         return this;
     }
@@ -98,10 +98,10 @@ public class AccountingTransaction {
     @JsonProperty("updated_at")
     public String updatedAt;
 
-    public AccountingTransaction withUpdatedAt(String updatedAt) {
+    public AccountingJournal withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
-    public AccountingTransaction(){}
+    public AccountingJournal(){}
 }

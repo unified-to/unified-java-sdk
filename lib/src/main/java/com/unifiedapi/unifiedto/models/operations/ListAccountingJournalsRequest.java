@@ -9,14 +9,14 @@ import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 import java.time.OffsetDateTime;
 
 
-public class ListAccountingTransactionsRequest {
+public class ListAccountingJournalsRequest {
     /**
      * ID of the connection
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
     public String connectionId;
 
-    public ListAccountingTransactionsRequest withConnectionId(String connectionId) {
+    public ListAccountingJournalsRequest withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
     }
@@ -27,7 +27,7 @@ public class ListAccountingTransactionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String[] fields;
 
-    public ListAccountingTransactionsRequest withFields(String[] fields) {
+    public ListAccountingJournalsRequest withFields(String[] fields) {
         this.fields = fields;
         return this;
     }
@@ -35,7 +35,7 @@ public class ListAccountingTransactionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Double limit;
 
-    public ListAccountingTransactionsRequest withLimit(Double limit) {
+    public ListAccountingJournalsRequest withLimit(Double limit) {
         this.limit = limit;
         return this;
     }
@@ -43,7 +43,7 @@ public class ListAccountingTransactionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Double offset;
 
-    public ListAccountingTransactionsRequest withOffset(Double offset) {
+    public ListAccountingJournalsRequest withOffset(Double offset) {
         this.offset = offset;
         return this;
     }
@@ -51,7 +51,7 @@ public class ListAccountingTransactionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public String order;
 
-    public ListAccountingTransactionsRequest withOrder(String order) {
+    public ListAccountingJournalsRequest withOrder(String order) {
         this.order = order;
         return this;
     }
@@ -62,7 +62,7 @@ public class ListAccountingTransactionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
 
-    public ListAccountingTransactionsRequest withQuery(String query) {
+    public ListAccountingJournalsRequest withQuery(String query) {
         this.query = query;
         return this;
     }
@@ -70,7 +70,7 @@ public class ListAccountingTransactionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
 
-    public ListAccountingTransactionsRequest withSort(String sort) {
+    public ListAccountingJournalsRequest withSort(String sort) {
         this.sort = sort;
         return this;
     }
@@ -81,12 +81,12 @@ public class ListAccountingTransactionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     public OffsetDateTime updatedGte;
 
-    public ListAccountingTransactionsRequest withUpdatedGte(OffsetDateTime updatedGte) {
+    public ListAccountingJournalsRequest withUpdatedGte(OffsetDateTime updatedGte) {
         this.updatedGte = updatedGte;
         return this;
     }
     
-    public ListAccountingTransactionsRequest(@JsonProperty("connection_id") String connectionId) {
+    public ListAccountingJournalsRequest(@JsonProperty("connection_id") String connectionId) {
         this.connectionId = connectionId;
   }
 }

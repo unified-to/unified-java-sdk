@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: f0fea8601a16d51b9c2316f7dec21d35
+  docChecksum: 5644d053fad87c74eb97f4e8f727fa1d
   docVersion: "1.0"
-  speakeasyVersion: 1.305.0
+  speakeasyVersion: 1.306.0
   generationVersion: 2.340.3
-  releaseVersion: 0.18.31
-  configChecksum: 3b5bc9061e0afe67f00a74c603ab6f64
+  releaseVersion: 0.18.32
+  configChecksum: 63f5f4819237cd79d7f271defa3b1060
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -21,9 +21,9 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/Account.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Contact.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Invoice.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/Journal.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Organization.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Taxrate.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/Transaction.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Ats.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Activity.java
   - lib/src/main/java/com/unifiedapi/unifiedto/Application.java
@@ -122,64 +122,64 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingContactResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingInvoiceRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingInvoiceResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingJournalRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingJournalResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingTaxrateRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingTaxrateResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingTransactionRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingTransactionResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingAccountRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingAccountResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingContactRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingContactResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingInvoiceRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingInvoiceResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingJournalRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingJournalResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingOrganizationRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingOrganizationResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingTaxrateRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingTaxrateResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingTransactionRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingTransactionResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingAccountsRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingAccountsResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingContactsRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingContactsResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingInvoicesRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingInvoicesResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingJournalsRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingJournalsResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingOrganizationsRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingOrganizationsResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingTaxratesRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingTaxratesResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingTransactionsRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingTransactionsResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingAccountRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingAccountResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingContactRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingContactResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingInvoiceRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingInvoiceResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingJournalRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingJournalResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingTaxrateRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingTaxrateResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingTransactionRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingTransactionResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingAccountRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingAccountResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingContactRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingContactResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingInvoiceRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingInvoiceResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingJournalRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingJournalResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingTaxrateRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingTaxrateResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingTransactionRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingTransactionResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingAccountRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingAccountResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingContactRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingContactResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingInvoiceRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingInvoiceResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingJournalRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingJournalResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingTaxrateRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingTaxrateResponse.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingTransactionRequest.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingTransactionResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmContactRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmContactResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateUcContactRequest.java
@@ -693,9 +693,9 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingInvoiceStatus.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingInvoice.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingLineitem.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingJournal.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingJournalLineitem.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTaxrate.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTransaction.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTransactionLineitem.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingOrganization.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingOrganizationAddress.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmContact.java
@@ -905,64 +905,64 @@ generatedFiles:
   - docs/models/operations/CreateAccountingContactResponse.md
   - docs/models/operations/CreateAccountingInvoiceRequest.md
   - docs/models/operations/CreateAccountingInvoiceResponse.md
+  - docs/models/operations/CreateAccountingJournalRequest.md
+  - docs/models/operations/CreateAccountingJournalResponse.md
   - docs/models/operations/CreateAccountingTaxrateRequest.md
   - docs/models/operations/CreateAccountingTaxrateResponse.md
-  - docs/models/operations/CreateAccountingTransactionRequest.md
-  - docs/models/operations/CreateAccountingTransactionResponse.md
   - docs/models/operations/GetAccountingAccountRequest.md
   - docs/models/operations/GetAccountingAccountResponse.md
   - docs/models/operations/GetAccountingContactRequest.md
   - docs/models/operations/GetAccountingContactResponse.md
   - docs/models/operations/GetAccountingInvoiceRequest.md
   - docs/models/operations/GetAccountingInvoiceResponse.md
+  - docs/models/operations/GetAccountingJournalRequest.md
+  - docs/models/operations/GetAccountingJournalResponse.md
   - docs/models/operations/GetAccountingOrganizationRequest.md
   - docs/models/operations/GetAccountingOrganizationResponse.md
   - docs/models/operations/GetAccountingTaxrateRequest.md
   - docs/models/operations/GetAccountingTaxrateResponse.md
-  - docs/models/operations/GetAccountingTransactionRequest.md
-  - docs/models/operations/GetAccountingTransactionResponse.md
   - docs/models/operations/ListAccountingAccountsRequest.md
   - docs/models/operations/ListAccountingAccountsResponse.md
   - docs/models/operations/ListAccountingContactsRequest.md
   - docs/models/operations/ListAccountingContactsResponse.md
   - docs/models/operations/ListAccountingInvoicesRequest.md
   - docs/models/operations/ListAccountingInvoicesResponse.md
+  - docs/models/operations/ListAccountingJournalsRequest.md
+  - docs/models/operations/ListAccountingJournalsResponse.md
   - docs/models/operations/ListAccountingOrganizationsRequest.md
   - docs/models/operations/ListAccountingOrganizationsResponse.md
   - docs/models/operations/ListAccountingTaxratesRequest.md
   - docs/models/operations/ListAccountingTaxratesResponse.md
-  - docs/models/operations/ListAccountingTransactionsRequest.md
-  - docs/models/operations/ListAccountingTransactionsResponse.md
   - docs/models/operations/PatchAccountingAccountRequest.md
   - docs/models/operations/PatchAccountingAccountResponse.md
   - docs/models/operations/PatchAccountingContactRequest.md
   - docs/models/operations/PatchAccountingContactResponse.md
   - docs/models/operations/PatchAccountingInvoiceRequest.md
   - docs/models/operations/PatchAccountingInvoiceResponse.md
+  - docs/models/operations/PatchAccountingJournalRequest.md
+  - docs/models/operations/PatchAccountingJournalResponse.md
   - docs/models/operations/PatchAccountingTaxrateRequest.md
   - docs/models/operations/PatchAccountingTaxrateResponse.md
-  - docs/models/operations/PatchAccountingTransactionRequest.md
-  - docs/models/operations/PatchAccountingTransactionResponse.md
   - docs/models/operations/RemoveAccountingAccountRequest.md
   - docs/models/operations/RemoveAccountingAccountResponse.md
   - docs/models/operations/RemoveAccountingContactRequest.md
   - docs/models/operations/RemoveAccountingContactResponse.md
   - docs/models/operations/RemoveAccountingInvoiceRequest.md
   - docs/models/operations/RemoveAccountingInvoiceResponse.md
+  - docs/models/operations/RemoveAccountingJournalRequest.md
+  - docs/models/operations/RemoveAccountingJournalResponse.md
   - docs/models/operations/RemoveAccountingTaxrateRequest.md
   - docs/models/operations/RemoveAccountingTaxrateResponse.md
-  - docs/models/operations/RemoveAccountingTransactionRequest.md
-  - docs/models/operations/RemoveAccountingTransactionResponse.md
   - docs/models/operations/UpdateAccountingAccountRequest.md
   - docs/models/operations/UpdateAccountingAccountResponse.md
   - docs/models/operations/UpdateAccountingContactRequest.md
   - docs/models/operations/UpdateAccountingContactResponse.md
   - docs/models/operations/UpdateAccountingInvoiceRequest.md
   - docs/models/operations/UpdateAccountingInvoiceResponse.md
+  - docs/models/operations/UpdateAccountingJournalRequest.md
+  - docs/models/operations/UpdateAccountingJournalResponse.md
   - docs/models/operations/UpdateAccountingTaxrateRequest.md
   - docs/models/operations/UpdateAccountingTaxrateResponse.md
-  - docs/models/operations/UpdateAccountingTransactionRequest.md
-  - docs/models/operations/UpdateAccountingTransactionResponse.md
   - docs/models/operations/CreateCrmContactRequest.md
   - docs/models/operations/CreateCrmContactResponse.md
   - docs/models/operations/CreateUcContactRequest.md
@@ -1476,9 +1476,9 @@ generatedFiles:
   - docs/models/shared/AccountingInvoiceStatus.md
   - docs/models/shared/AccountingInvoice.md
   - docs/models/shared/AccountingLineitem.md
+  - docs/models/shared/AccountingJournal.md
+  - docs/models/shared/AccountingJournalLineitem.md
   - docs/models/shared/AccountingTaxrate.md
-  - docs/models/shared/AccountingTransaction.md
-  - docs/models/shared/AccountingTransactionLineitem.md
   - docs/models/shared/AccountingOrganization.md
   - docs/models/shared/PropertyAccountingOrganizationAddress.md
   - docs/models/shared/CrmContact.md
@@ -1687,9 +1687,9 @@ generatedFiles:
   - docs/sdks/account/README.md
   - docs/sdks/contact/README.md
   - docs/sdks/invoice/README.md
+  - docs/sdks/journal/README.md
   - docs/sdks/organization/README.md
   - docs/sdks/taxrate/README.md
-  - docs/sdks/transaction/README.md
   - docs/sdks/ats/README.md
   - docs/sdks/activity/README.md
   - docs/sdks/application/README.md

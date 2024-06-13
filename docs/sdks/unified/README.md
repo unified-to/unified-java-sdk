@@ -58,7 +58,7 @@ public class Application {
                 }},
                 "<value>",
                 new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                    add(PropertyConnectionPermissions.ATS_DOCUMENT_WRITE),
+                    add(PropertyConnectionPermissions.ATS_DOCUMENT_READ),
                 }}){{
                 auth = new PropertyConnectionAuth(
 ){{
@@ -170,7 +170,7 @@ public class Application {
                     "<value>",
                     Event.CREATED,
                     "<value>",
-                    ObjectType.ACCOUNTING_ACCOUNT){{
+                    ObjectType.ACCOUNTING_TRANSACTION){{
                     checkedAt = OffsetDateTime.parse("2023-05-18T07:32:59.218Z");
                     createdAt = OffsetDateTime.parse("2023-11-05T05:21:48.024Z");
                     environment = "<value>";
@@ -901,7 +901,7 @@ public class Application {
                     }},
                     "<value>",
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                        add(PropertyConnectionPermissions.HRIS_GROUP_READ),
+                        add(PropertyConnectionPermissions.HRIS_EMPLOYEE_WRITE),
                     }}){{
                     auth = new PropertyConnectionAuth(
 ){{
@@ -1171,7 +1171,7 @@ public class Application {
                     }},
                     "<value>",
                     new com.unifiedapi.unifiedto.models.shared.PropertyConnectionPermissions[]{{
-                        add(PropertyConnectionPermissions.CRM_DEAL_WRITE),
+                        add(PropertyConnectionPermissions.CRM_DEAL_READ),
                     }}){{
                     auth = new PropertyConnectionAuth(
 ){{

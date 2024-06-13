@@ -8,12 +8,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 
 
-public class PatchAccountingTransactionRequest {
+public class PatchAccountingJournalRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public com.unifiedapi.unifiedto.models.shared.AccountingTransaction accountingTransaction;
+    public com.unifiedapi.unifiedto.models.shared.AccountingJournal accountingJournal;
 
-    public PatchAccountingTransactionRequest withAccountingTransaction(com.unifiedapi.unifiedto.models.shared.AccountingTransaction accountingTransaction) {
-        this.accountingTransaction = accountingTransaction;
+    public PatchAccountingJournalRequest withAccountingJournal(com.unifiedapi.unifiedto.models.shared.AccountingJournal accountingJournal) {
+        this.accountingJournal = accountingJournal;
         return this;
     }
     
@@ -23,23 +23,23 @@ public class PatchAccountingTransactionRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
     public String connectionId;
 
-    public PatchAccountingTransactionRequest withConnectionId(String connectionId) {
+    public PatchAccountingJournalRequest withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
     }
     
     /**
-     * ID of the Transaction
+     * ID of the Journal
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
 
-    public PatchAccountingTransactionRequest withId(String id) {
+    public PatchAccountingJournalRequest withId(String id) {
         this.id = id;
         return this;
     }
     
-    public PatchAccountingTransactionRequest(@JsonProperty("connection_id") String connectionId, @JsonProperty("id") String id) {
+    public PatchAccountingJournalRequest(@JsonProperty("connection_id") String connectionId, @JsonProperty("id") String id) {
         this.connectionId = connectionId;
         this.id = id;
   }

@@ -13,28 +13,28 @@ import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
 import org.apache.http.NameValuePair;
 
-public class Transaction {
+public class Journal {
 	
 	private SDKConfiguration sdkConfiguration;
 
-	public Transaction(SDKConfiguration sdkConfiguration) {
+	public Journal(SDKConfiguration sdkConfiguration) {
 		this.sdkConfiguration = sdkConfiguration;
 	}
 
     /**
-     * Create a transaction
+     * Create a journal
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionResponse createAccountingTransaction(com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.CreateAccountingJournalResponse createAccountingJournal(com.unifiedapi.unifiedto.models.operations.CreateAccountingJournalRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionRequest.class, baseUrl, "/accounting/{connection_id}/transaction", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateAccountingJournalRequest.class, baseUrl, "/accounting/{connection_id}/journal", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "accountingTransaction", "json");
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "accountingJournal", "json");
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
@@ -46,15 +46,15 @@ public class Transaction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
-        com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionResponse(contentType, httpRes.statusCode(), httpRes) {{
-            accountingTransaction = null;
+        com.unifiedapi.unifiedto.models.operations.CreateAccountingJournalResponse res = new com.unifiedapi.unifiedto.models.operations.CreateAccountingJournalResponse(contentType, httpRes.statusCode(), httpRes) {{
+            accountingJournal = null;
         }};
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AccountingTransaction out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingTransaction.class);
-                res.accountingTransaction = out;
+                com.unifiedapi.unifiedto.models.shared.AccountingJournal out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingJournal.class);
+                res.accountingJournal = out;
             }
         }
 
@@ -62,14 +62,14 @@ public class Transaction {
     }
 
     /**
-     * Retrieve a transaction
+     * Retrieve a journal
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.GetAccountingTransactionResponse getAccountingTransaction(com.unifiedapi.unifiedto.models.operations.GetAccountingTransactionRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.GetAccountingJournalResponse getAccountingJournal(com.unifiedapi.unifiedto.models.operations.GetAccountingJournalRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAccountingTransactionRequest.class, baseUrl, "/accounting/{connection_id}/transaction/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetAccountingJournalRequest.class, baseUrl, "/accounting/{connection_id}/journal/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -77,7 +77,7 @@ public class Transaction {
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetAccountingTransactionRequest.class, request, null);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetAccountingJournalRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -90,15 +90,15 @@ public class Transaction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
-        com.unifiedapi.unifiedto.models.operations.GetAccountingTransactionResponse res = new com.unifiedapi.unifiedto.models.operations.GetAccountingTransactionResponse(contentType, httpRes.statusCode(), httpRes) {{
-            accountingTransaction = null;
+        com.unifiedapi.unifiedto.models.operations.GetAccountingJournalResponse res = new com.unifiedapi.unifiedto.models.operations.GetAccountingJournalResponse(contentType, httpRes.statusCode(), httpRes) {{
+            accountingJournal = null;
         }};
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AccountingTransaction out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingTransaction.class);
-                res.accountingTransaction = out;
+                com.unifiedapi.unifiedto.models.shared.AccountingJournal out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingJournal.class);
+                res.accountingJournal = out;
             }
         }
 
@@ -106,14 +106,14 @@ public class Transaction {
     }
 
     /**
-     * List all transactions
+     * List all journals
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.ListAccountingTransactionsResponse listAccountingTransactions(com.unifiedapi.unifiedto.models.operations.ListAccountingTransactionsRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.ListAccountingJournalsResponse listAccountingJournals(com.unifiedapi.unifiedto.models.operations.ListAccountingJournalsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListAccountingTransactionsRequest.class, baseUrl, "/accounting/{connection_id}/transaction", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListAccountingJournalsRequest.class, baseUrl, "/accounting/{connection_id}/journal", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -121,7 +121,7 @@ public class Transaction {
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListAccountingTransactionsRequest.class, request, null);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListAccountingJournalsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -134,15 +134,15 @@ public class Transaction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
-        com.unifiedapi.unifiedto.models.operations.ListAccountingTransactionsResponse res = new com.unifiedapi.unifiedto.models.operations.ListAccountingTransactionsResponse(contentType, httpRes.statusCode(), httpRes) {{
-            accountingTransactions = null;
+        com.unifiedapi.unifiedto.models.operations.ListAccountingJournalsResponse res = new com.unifiedapi.unifiedto.models.operations.ListAccountingJournalsResponse(contentType, httpRes.statusCode(), httpRes) {{
+            accountingJournals = null;
         }};
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AccountingTransaction[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingTransaction[].class);
-                res.accountingTransactions = out;
+                com.unifiedapi.unifiedto.models.shared.AccountingJournal[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingJournal[].class);
+                res.accountingJournals = out;
             }
         }
 
@@ -150,19 +150,19 @@ public class Transaction {
     }
 
     /**
-     * Update a transaction
+     * Update a journal
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionResponse patchAccountingTransaction(com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.PatchAccountingJournalResponse patchAccountingJournal(com.unifiedapi.unifiedto.models.operations.PatchAccountingJournalRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionRequest.class, baseUrl, "/accounting/{connection_id}/transaction/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchAccountingJournalRequest.class, baseUrl, "/accounting/{connection_id}/journal/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "accountingTransaction", "json");
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "accountingJournal", "json");
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
@@ -174,15 +174,15 @@ public class Transaction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
-        com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionResponse(contentType, httpRes.statusCode(), httpRes) {{
-            accountingTransaction = null;
+        com.unifiedapi.unifiedto.models.operations.PatchAccountingJournalResponse res = new com.unifiedapi.unifiedto.models.operations.PatchAccountingJournalResponse(contentType, httpRes.statusCode(), httpRes) {{
+            accountingJournal = null;
         }};
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AccountingTransaction out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingTransaction.class);
-                res.accountingTransaction = out;
+                com.unifiedapi.unifiedto.models.shared.AccountingJournal out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingJournal.class);
+                res.accountingJournal = out;
             }
         }
 
@@ -190,14 +190,14 @@ public class Transaction {
     }
 
     /**
-     * Remove a transaction
+     * Remove a journal
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.RemoveAccountingTransactionResponse removeAccountingTransaction(com.unifiedapi.unifiedto.models.operations.RemoveAccountingTransactionRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.RemoveAccountingJournalResponse removeAccountingJournal(com.unifiedapi.unifiedto.models.operations.RemoveAccountingJournalRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveAccountingTransactionRequest.class, baseUrl, "/accounting/{connection_id}/transaction/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveAccountingJournalRequest.class, baseUrl, "/accounting/{connection_id}/journal/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -212,7 +212,7 @@ public class Transaction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
-        com.unifiedapi.unifiedto.models.operations.RemoveAccountingTransactionResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAccountingTransactionResponse(contentType, httpRes.statusCode(), httpRes) {{
+        com.unifiedapi.unifiedto.models.operations.RemoveAccountingJournalResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveAccountingJournalResponse(contentType, httpRes.statusCode(), httpRes) {{
             string = null;
         }};
         
@@ -230,19 +230,19 @@ public class Transaction {
     }
 
     /**
-     * Update a transaction
+     * Update a journal
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionResponse updateAccountingTransaction(com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionRequest request) throws Exception {
+    public com.unifiedapi.unifiedto.models.operations.UpdateAccountingJournalResponse updateAccountingJournal(com.unifiedapi.unifiedto.models.operations.UpdateAccountingJournalRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionRequest.class, baseUrl, "/accounting/{connection_id}/transaction/{id}", request, null);
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateAccountingJournalRequest.class, baseUrl, "/accounting/{connection_id}/journal/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "accountingTransaction", "json");
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "accountingJournal", "json");
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
@@ -254,15 +254,15 @@ public class Transaction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
-        com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionResponse(contentType, httpRes.statusCode(), httpRes) {{
-            accountingTransaction = null;
+        com.unifiedapi.unifiedto.models.operations.UpdateAccountingJournalResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateAccountingJournalResponse(contentType, httpRes.statusCode(), httpRes) {{
+            accountingJournal = null;
         }};
         
         if (httpRes.statusCode() == 200) {
             if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.unifiedapi.unifiedto.models.shared.AccountingTransaction out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingTransaction.class);
-                res.accountingTransaction = out;
+                com.unifiedapi.unifiedto.models.shared.AccountingJournal out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.AccountingJournal.class);
+                res.accountingJournal = out;
             }
         }
 

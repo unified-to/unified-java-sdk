@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 public enum ObjectType {
     ACCOUNTING_ACCOUNT("accounting_account"),
     ACCOUNTING_TRANSACTION("accounting_transaction"),
+    ACCOUNTING_JOURNAL("accounting_journal"),
     ACCOUNTING_CONTACT("accounting_contact"),
     ACCOUNTING_INVOICE("accounting_invoice"),
     ACCOUNTING_TAXRATE("accounting_taxrate"),

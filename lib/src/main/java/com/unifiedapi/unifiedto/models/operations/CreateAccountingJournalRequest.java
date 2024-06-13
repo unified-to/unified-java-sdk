@@ -8,12 +8,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 
 
-public class CreateAccountingTransactionRequest {
+public class CreateAccountingJournalRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public com.unifiedapi.unifiedto.models.shared.AccountingTransaction accountingTransaction;
+    public com.unifiedapi.unifiedto.models.shared.AccountingJournal accountingJournal;
 
-    public CreateAccountingTransactionRequest withAccountingTransaction(com.unifiedapi.unifiedto.models.shared.AccountingTransaction accountingTransaction) {
-        this.accountingTransaction = accountingTransaction;
+    public CreateAccountingJournalRequest withAccountingJournal(com.unifiedapi.unifiedto.models.shared.AccountingJournal accountingJournal) {
+        this.accountingJournal = accountingJournal;
         return this;
     }
     
@@ -23,12 +23,12 @@ public class CreateAccountingTransactionRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
     public String connectionId;
 
-    public CreateAccountingTransactionRequest withConnectionId(String connectionId) {
+    public CreateAccountingJournalRequest withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
     }
     
-    public CreateAccountingTransactionRequest(@JsonProperty("connection_id") String connectionId) {
+    public CreateAccountingJournalRequest(@JsonProperty("connection_id") String connectionId) {
         this.connectionId = connectionId;
   }
 }

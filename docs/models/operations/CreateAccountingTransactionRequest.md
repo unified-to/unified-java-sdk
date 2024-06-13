@@ -1,9 +1,0 @@
-# CreateAccountingTransactionRequest
-
-
-## Fields
-
-| Field                                                                                                        | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `accountingTransaction`                                                                                      | [com.unifiedapi.unifiedto.models.shared.AccountingTransaction](../../models/shared/AccountingTransaction.md) | :heavy_minus_sign:                                                                                           | N/A                                                                                                          |
-| `connectionId`                                                                                               | *String*                                                                                                     | :heavy_check_mark:                                                                                           | ID of the connection                                                                                         |
