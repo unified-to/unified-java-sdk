@@ -943,3 +943,11 @@ Based on:
 - Speakeasy CLI 1.306.0 (2.340.3) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [java v0.18.32] .
+
+## 2024-06-14 00:04:03
+### Changes
+Based on:
+- OpenAPI Doc 1.0 
+- Speakeasy CLI 1.307.2 (2.342.2) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [java v0.18.33] .

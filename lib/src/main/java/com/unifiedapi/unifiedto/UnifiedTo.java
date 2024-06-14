@@ -32,6 +32,7 @@ public class UnifiedTo {
     public Journal journal;
     public Organization organization;
     public Taxrate taxrate;
+    public Transaction transaction;
     public Ats ats;
     public Activity activity;
     public Application application;
@@ -213,6 +214,8 @@ public class UnifiedTo {
 		this.organization = new Organization(this.sdkConfiguration);
 		
 		this.taxrate = new Taxrate(this.sdkConfiguration);
+		
+		this.transaction = new Transaction(this.sdkConfiguration);
 		
 		this.ats = new Ats(this.sdkConfiguration);
 		
