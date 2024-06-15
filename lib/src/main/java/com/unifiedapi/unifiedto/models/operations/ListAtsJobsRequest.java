@@ -86,6 +86,14 @@ public class ListAtsJobsRequest {
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
+    public String userId;
+
+    public ListAtsJobsRequest withUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    
     public ListAtsJobsRequest(@JsonProperty("connection_id") String connectionId) {
         this.connectionId = connectionId;
   }

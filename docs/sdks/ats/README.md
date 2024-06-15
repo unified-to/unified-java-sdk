@@ -1618,6 +1618,7 @@ public class Application {
                 query = "<value>";
                 sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-03-04T01:14:05.456Z");
+                userId = "<value>";
 
             }};
 
