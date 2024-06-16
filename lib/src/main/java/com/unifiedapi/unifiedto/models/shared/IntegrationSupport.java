@@ -137,6 +137,15 @@ public class IntegrationSupport {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("list_item_variant_id")
+    public ListItemVariantId listItemVariantId;
+
+    public IntegrationSupport withListItemVariantId(ListItemVariantId listItemVariantId) {
+        this.listItemVariantId = listItemVariantId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_job_id")
     public ListJobId listJobId;
 
