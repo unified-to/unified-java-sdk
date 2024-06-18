@@ -68,7 +68,7 @@ public class Application {
                     rejectedAt = OffsetDateTime.parse("2023-01-30T06:58:14.500Z");
                     rejectedReason = "<value>";
                     source = "<value>";
-                    status = AtsApplicationStatus.SECOND_INTERVIEW;
+                    status = AtsApplicationStatus.THIRD_INTERVIEW;
                     updatedAt = OffsetDateTime.parse("2024-09-21T21:31:42.360Z");
 
                 }};
@@ -280,7 +280,7 @@ public class Application {
                     rejectedAt = OffsetDateTime.parse("2022-07-13T02:34:40.392Z");
                     rejectedReason = "<value>";
                     source = "<value>";
-                    status = AtsApplicationStatus.FIRST_INTERVIEW;
+                    status = AtsApplicationStatus.SECOND_INTERVIEW;
                     updatedAt = OffsetDateTime.parse("2024-01-24T17:35:54.628Z");
 
                 }};

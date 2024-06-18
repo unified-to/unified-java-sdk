@@ -7,6 +7,7 @@ package com.unifiedapi.unifiedto.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum ListItemVariantId {
+    SUPPORTED_REQUIRED("supported-required"),
     SUPPORTED("supported"),
     NOT_SUPPORTED("not-supported");
 

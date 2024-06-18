@@ -73,6 +73,7 @@ public class Application {
                             url = "https://vivid-slump.com";
                         }}),
                     }};
+                    parentId = "<value>";
                     publicDescription = "<value>";
                     publicName = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
@@ -889,6 +890,7 @@ public class Application {
                             url = "http://voluminous-airship.net";
                         }}),
                     }};
+                    parentId = "<value>";
                     publicDescription = "<value>";
                     publicName = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
@@ -1432,6 +1434,7 @@ public class Application {
                             url = "http://irritating-competence.com";
                         }}),
                     }};
+                    parentId = "<value>";
                     publicDescription = "<value>";
                     publicName = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(

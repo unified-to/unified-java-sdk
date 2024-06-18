@@ -91,6 +91,15 @@ public class CommerceCollection {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("parent_id")
+    public String parentId;
+
+    public CommerceCollection withParentId(String parentId) {
+        this.parentId = parentId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_description")
     public String publicDescription;
 

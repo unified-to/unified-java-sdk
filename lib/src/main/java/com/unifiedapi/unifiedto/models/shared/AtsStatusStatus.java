@@ -19,6 +19,7 @@ public enum AtsStatusStatus {
     ACCEPTED("ACCEPTED"),
     HIRED("HIRED"),
     REJECTED("REJECTED"),
+    DECLINED("DECLINED"),
     WITHDRAWN("WITHDRAWN");
 
     @JsonValue
