@@ -65,6 +65,7 @@ public class Application {
                     ){{
                         put("key", "<value>");
                     }};
+                    slug = "<value>";
                     tags = new String[]{{
                         add("<value>"),
                     }};
@@ -283,6 +284,7 @@ public class Application {
                     ){{
                         put("key", "<value>");
                     }};
+                    slug = "<value>";
                     tags = new String[]{{
                         add("<value>"),
                     }};
@@ -432,6 +434,7 @@ public class Application {
                     ){{
                         put("key", "<value>");
                     }};
+                    slug = "<value>";
                     tags = new String[]{{
                         add("<value>"),
                     }};

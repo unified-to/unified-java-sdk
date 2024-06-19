@@ -108,6 +108,15 @@ public class CommerceItem {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("slug")
+    public String slug;
+
+    public CommerceItem withSlug(String slug) {
+        this.slug = slug;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
 
