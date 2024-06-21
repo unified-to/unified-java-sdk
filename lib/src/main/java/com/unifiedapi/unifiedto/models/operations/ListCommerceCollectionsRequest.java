@@ -56,6 +56,14 @@ public class ListCommerceCollectionsRequest {
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent_id")
+    public String parentId;
+
+    public ListCommerceCollectionsRequest withParentId(String parentId) {
+        this.parentId = parentId;
+        return this;
+    }
+    
     /**
      * Query string to search. eg. email address or name
      */
