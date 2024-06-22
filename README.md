@@ -10,7 +10,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.18.38'
+implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.18.39'
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -794,7 +794,6 @@ public class Application {
 * [listUnifiedIntegrationWorkspaces](docs/sdks/unified/README.md#listunifiedintegrationworkspaces) - Returns all activated integrations in a workspace
 * [listUnifiedIntegrations](docs/sdks/unified/README.md#listunifiedintegrations) - Returns all integrations
 * [listUnifiedIssues](docs/sdks/unified/README.md#listunifiedissues) - List support issues
-* [listUnifiedSupports](docs/sdks/unified/README.md#listunifiedsupports) - Get support info
 * [listUnifiedWebhooks](docs/sdks/unified/README.md#listunifiedwebhooks) - Returns all registered webhooks
 * [patchUnifiedConnection](docs/sdks/unified/README.md#patchunifiedconnection) - Update connection
 * [patchUnifiedWebhookTrigger](docs/sdks/unified/README.md#patchunifiedwebhooktrigger) - Trigger webhook
@@ -835,7 +834,6 @@ public class Application {
 ### [issue](docs/sdks/issue/README.md)
 
 * [listUnifiedIssues](docs/sdks/issue/README.md#listunifiedissues) - List support issues
-* [listUnifiedSupports](docs/sdks/issue/README.md#listunifiedsupports) - Get support info
 
 ### [webhook](docs/sdks/webhook/README.md)
 

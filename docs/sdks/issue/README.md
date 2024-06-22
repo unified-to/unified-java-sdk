@@ -4,7 +4,6 @@
 ### Available Operations
 
 * [listUnifiedIssues](#listunifiedissues) - List support issues
-* [listUnifiedSupports](#listunifiedsupports) - Get support info
 
 ## listUnifiedIssues
 
@@ -63,45 +62,4 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.ListUnifiedIssuesResponse](../../models/operations/ListUnifiedIssuesResponse.md)**
-
-
-## listUnifiedSupports
-
-Get support info
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListUnifiedSupportsResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
-                .build();
-
-            com.unifiedapi.unifiedto.models.operations.ListUnifiedSupportsResponse res = sdk.issue.listUnifiedSupports();
-
-            if (res.undefined != null) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-
-### Response
-
-**[com.unifiedapi.unifiedto.models.operations.ListUnifiedSupportsResponse](../../models/operations/ListUnifiedSupportsResponse.md)**
 
