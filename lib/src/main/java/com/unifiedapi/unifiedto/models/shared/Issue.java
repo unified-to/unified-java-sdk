@@ -45,6 +45,14 @@ public class Issue {
         return this;
     }
     
+    @JsonProperty("ticket_ref")
+    public String ticketRef;
+
+    public Issue withTicketRef(String ticketRef) {
+        this.ticketRef = ticketRef;
+        return this;
+    }
+    
     @JsonProperty("title")
     public String title;
 
@@ -53,10 +61,11 @@ public class Issue {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    public IssueType type;
+    public String[] type;
 
-    public Issue withType(IssueType type) {
+    public Issue withType(String[] type) {
         this.type = type;
         return this;
     }
@@ -87,10 +96,10 @@ public class Issue {
         return this;
     }
     
-    public Issue(@JsonProperty("status") IssueStatus status, @JsonProperty("title") String title, @JsonProperty("type") IssueType type, @JsonProperty("workspace_id") String workspaceId) {
+    public Issue(@JsonProperty("status") IssueStatus status, @JsonProperty("ticket_ref") String ticketRef, @JsonProperty("title") String title, @JsonProperty("workspace_id") String workspaceId) {
         this.status = status;
+        this.ticketRef = ticketRef;
         this.title = title;
-        this.type = type;
         this.workspaceId = workspaceId;
   }
 }
