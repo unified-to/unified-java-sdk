@@ -40,14 +40,14 @@ public class Application {
             com.unifiedapi.unifiedto.models.operations.CreateMessagingMessageRequest req = new CreateMessagingMessageRequest(
                 "<value>"){{
                 messagingMessage = new MessagingMessage(
-                    new PropertyMessagingMessageAuthorMember(
+                    "<value>"){{
+                    authorMember = new PropertyMessagingMessageAuthorMember(
 ){{
                         email = "Eugene54@gmail.com";
                         name = "<value>";
                         userId = "<value>";
 
-                    }},
-                    "<value>"){{
+                    }};
                     channelId = "<value>";
                     createdAt = "<value>";
                     destinationMembers = new com.unifiedapi.unifiedto.models.shared.MessagingMember[]{{
@@ -63,6 +63,7 @@ public class Application {
                         add(new MessagingMember(
                         ){{}}),
                     }};
+                    messageHtml = "<value>";
                     parentMessageId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
@@ -253,14 +254,14 @@ public class Application {
                 "<value>",
                 "<value>"){{
                 messagingMessage = new MessagingMessage(
-                    new PropertyMessagingMessageAuthorMember(
+                    "<value>"){{
+                    authorMember = new PropertyMessagingMessageAuthorMember(
 ){{
                         email = "Desmond.Pagac78@gmail.com";
                         name = "<value>";
                         userId = "<value>";
 
-                    }},
-                    "<value>"){{
+                    }};
                     channelId = "<value>";
                     createdAt = "<value>";
                     destinationMembers = new com.unifiedapi.unifiedto.models.shared.MessagingMember[]{{
@@ -276,6 +277,7 @@ public class Application {
                         add(new MessagingMember(
                         ){{}}),
                     }};
+                    messageHtml = "<value>";
                     parentMessageId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
@@ -396,14 +398,14 @@ public class Application {
                 "<value>",
                 "<value>"){{
                 messagingMessage = new MessagingMessage(
-                    new PropertyMessagingMessageAuthorMember(
+                    "<value>"){{
+                    authorMember = new PropertyMessagingMessageAuthorMember(
 ){{
                         email = "Johnpaul.Jenkins99@yahoo.com";
                         name = "<value>";
                         userId = "<value>";
 
-                    }},
-                    "<value>"){{
+                    }};
                     channelId = "<value>";
                     createdAt = "<value>";
                     destinationMembers = new com.unifiedapi.unifiedto.models.shared.MessagingMember[]{{
@@ -419,6 +421,7 @@ public class Application {
                         add(new MessagingMember(
                         ){{}}),
                     }};
+                    messageHtml = "<value>";
                     parentMessageId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{

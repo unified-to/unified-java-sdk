@@ -10,6 +10,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 public class MessagingMessage {
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author_member")
     public PropertyMessagingMessageAuthorMember authorMember;
 
@@ -81,6 +82,15 @@ public class MessagingMessage {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("message_html")
+    public String messageHtml;
+
+    public MessagingMessage withMessageHtml(String messageHtml) {
+        this.messageHtml = messageHtml;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_message_id")
     public String parentMessageId;
 
@@ -125,8 +135,7 @@ public class MessagingMessage {
         return this;
     }
     
-    public MessagingMessage(@JsonProperty("author_member") PropertyMessagingMessageAuthorMember authorMember, @JsonProperty("message") String message) {
-        this.authorMember = authorMember;
+    public MessagingMessage(@JsonProperty("message") String message) {
         this.message = message;
   }
 }
