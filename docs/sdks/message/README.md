@@ -22,6 +22,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateMessagingMessageRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateMessagingMessageResponse;
+import com.unifiedapi.unifiedto.models.shared.MessagingAttachment;
 import com.unifiedapi.unifiedto.models.shared.MessagingMember;
 import com.unifiedapi.unifiedto.models.shared.MessagingMessage;
 import com.unifiedapi.unifiedto.models.shared.PropertyMessagingMessageAuthorMember;
@@ -40,7 +41,11 @@ public class Application {
             com.unifiedapi.unifiedto.models.operations.CreateMessagingMessageRequest req = new CreateMessagingMessageRequest(
                 "<value>"){{
                 messagingMessage = new MessagingMessage(
-                    "<value>"){{
+){{
+                    attachments = new com.unifiedapi.unifiedto.models.shared.MessagingAttachment[]{{
+                        add(new MessagingAttachment(
+                        ){{}}),
+                    }};
                     authorMember = new PropertyMessagingMessageAuthorMember(
 ){{
                         email = "Eugene54@gmail.com";
@@ -63,6 +68,7 @@ public class Application {
                         add(new MessagingMember(
                         ){{}}),
                     }};
+                    message = "<value>";
                     messageHtml = "<value>";
                     parentMessageId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
@@ -235,6 +241,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchMessagingMessageRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchMessagingMessageResponse;
+import com.unifiedapi.unifiedto.models.shared.MessagingAttachment;
 import com.unifiedapi.unifiedto.models.shared.MessagingMember;
 import com.unifiedapi.unifiedto.models.shared.MessagingMessage;
 import com.unifiedapi.unifiedto.models.shared.PropertyMessagingMessageAuthorMember;
@@ -254,7 +261,11 @@ public class Application {
                 "<value>",
                 "<value>"){{
                 messagingMessage = new MessagingMessage(
-                    "<value>"){{
+){{
+                    attachments = new com.unifiedapi.unifiedto.models.shared.MessagingAttachment[]{{
+                        add(new MessagingAttachment(
+                        ){{}}),
+                    }};
                     authorMember = new PropertyMessagingMessageAuthorMember(
 ){{
                         email = "Desmond.Pagac78@gmail.com";
@@ -277,6 +288,7 @@ public class Application {
                         add(new MessagingMember(
                         ){{}}),
                     }};
+                    message = "<value>";
                     messageHtml = "<value>";
                     parentMessageId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
@@ -379,6 +391,7 @@ package hello.world;
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateMessagingMessageRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateMessagingMessageResponse;
+import com.unifiedapi.unifiedto.models.shared.MessagingAttachment;
 import com.unifiedapi.unifiedto.models.shared.MessagingMember;
 import com.unifiedapi.unifiedto.models.shared.MessagingMessage;
 import com.unifiedapi.unifiedto.models.shared.PropertyMessagingMessageAuthorMember;
@@ -398,7 +411,11 @@ public class Application {
                 "<value>",
                 "<value>"){{
                 messagingMessage = new MessagingMessage(
-                    "<value>"){{
+){{
+                    attachments = new com.unifiedapi.unifiedto.models.shared.MessagingAttachment[]{{
+                        add(new MessagingAttachment(
+                        ){{}}),
+                    }};
                     authorMember = new PropertyMessagingMessageAuthorMember(
 ){{
                         email = "Johnpaul.Jenkins99@yahoo.com";
@@ -421,6 +438,7 @@ public class Application {
                         add(new MessagingMember(
                         ){{}}),
                     }};
+                    message = "<value>";
                     messageHtml = "<value>";
                     parentMessageId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
