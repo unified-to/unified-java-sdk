@@ -120,6 +120,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeResponse;
 import com.unifiedapi.unifiedto.models.shared.EmploymentStatus;
+import com.unifiedapi.unifiedto.models.shared.HrisCompensation;
 import com.unifiedapi.unifiedto.models.shared.HrisEmail;
 import com.unifiedapi.unifiedto.models.shared.HrisEmailType;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployee;
@@ -129,6 +130,7 @@ import com.unifiedapi.unifiedto.models.shared.HrisTelephone;
 import com.unifiedapi.unifiedto.models.shared.HrisTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.MaritalStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeAddress;
+import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeEmployeeRoles;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -158,7 +160,12 @@ public class Application {
                         regionCode = "<value>";
 
                     }};
+                    bio = "<value>";
                     companyId = "<value>";
+                    compensation = new com.unifiedapi.unifiedto.models.shared.HrisCompensation[]{{
+                        add(new HrisCompensation(
+                        ){{}}),
+                    }};
                     createdAt = OffsetDateTime.parse("2024-10-07T16:11:17.542Z");
                     currency = "Tunisian Dinar";
                     dateOfBirth = OffsetDateTime.parse("2022-09-15T21:52:09.133Z");
@@ -171,10 +178,13 @@ public class Application {
                         }}),
                     }};
                     employeeNumber = "<value>";
-                    employmentStatus = EmploymentStatus.ACTIVE;
-                    employmentType = HrisEmployeeEmploymentType.OTHER;
-                    gender = HrisEmployeeGender.MALE;
-                    hiredAt = OffsetDateTime.parse("2023-04-01T23:26:55.787Z");
+                    employeeRoles = new com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeEmployeeRoles[]{{
+                        add(PropertyHrisEmployeeEmployeeRoles.ADMIN),
+                    }};
+                    employmentStatus = EmploymentStatus.INACTIVE;
+                    employmentType = HrisEmployeeEmploymentType.PART_TIME;
+                    gender = HrisEmployeeGender.INTERSEX;
+                    hiredAt = OffsetDateTime.parse("2023-02-04T07:13:32.548Z");
                     id = "<id>";
                     imageUrl = "<value>";
                     languageLocale = "<value>";
@@ -182,20 +192,23 @@ public class Application {
                     managerId = "<value>";
                     maritalStatus = MaritalStatus.MARRIED;
                     name = "<value>";
+                    pronouns = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
                     }};
+                    salutation = "<value>";
+                    ssnSin = "<value>";
                     telephones = new com.unifiedapi.unifiedto.models.shared.HrisTelephone[]{{
                         add(new HrisTelephone(
                         "<value>"){{
                             telephone = "<value>";
                         }}),
                     }};
-                    terminatedAt = OffsetDateTime.parse("2022-06-06T17:06:15.004Z");
-                    timezone = "Australia/Melbourne";
+                    terminatedAt = OffsetDateTime.parse("2024-08-22T00:48:11.323Z");
+                    timezone = "Europe/Madrid";
                     title = "<value>";
-                    updatedAt = OffsetDateTime.parse("2023-02-26T16:14:34.561Z");
+                    updatedAt = OffsetDateTime.parse("2024-06-06T14:46:00.678Z");
 
                 }};
 
@@ -1003,6 +1016,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeResponse;
 import com.unifiedapi.unifiedto.models.shared.EmploymentStatus;
+import com.unifiedapi.unifiedto.models.shared.HrisCompensation;
 import com.unifiedapi.unifiedto.models.shared.HrisEmail;
 import com.unifiedapi.unifiedto.models.shared.HrisEmailType;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployee;
@@ -1012,6 +1026,7 @@ import com.unifiedapi.unifiedto.models.shared.HrisTelephone;
 import com.unifiedapi.unifiedto.models.shared.HrisTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.MaritalStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeAddress;
+import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeEmployeeRoles;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -1042,7 +1057,12 @@ public class Application {
                         regionCode = "<value>";
 
                     }};
+                    bio = "<value>";
                     companyId = "<value>";
+                    compensation = new com.unifiedapi.unifiedto.models.shared.HrisCompensation[]{{
+                        add(new HrisCompensation(
+                        ){{}}),
+                    }};
                     createdAt = OffsetDateTime.parse("2023-07-12T22:40:07.218Z");
                     currency = "Venezuelan bolívar";
                     dateOfBirth = OffsetDateTime.parse("2024-05-04T03:46:56.564Z");
@@ -1055,10 +1075,13 @@ public class Application {
                         }}),
                     }};
                     employeeNumber = "<value>";
+                    employeeRoles = new com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeEmployeeRoles[]{{
+                        add(PropertyHrisEmployeeEmployeeRoles.INTERVIEWER),
+                    }};
                     employmentStatus = EmploymentStatus.INACTIVE;
-                    employmentType = HrisEmployeeEmploymentType.SEASONAL;
-                    gender = HrisEmployeeGender.INTERSEX;
-                    hiredAt = OffsetDateTime.parse("2022-10-18T06:05:07.523Z");
+                    employmentType = HrisEmployeeEmploymentType.VOLUNTEER;
+                    gender = HrisEmployeeGender.FEMALE;
+                    hiredAt = OffsetDateTime.parse("2024-12-01T15:09:08.937Z");
                     id = "<id>";
                     imageUrl = "<value>";
                     languageLocale = "<value>";
@@ -1066,20 +1089,23 @@ public class Application {
                     managerId = "<value>";
                     maritalStatus = MaritalStatus.SINGLE;
                     name = "<value>";
+                    pronouns = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
                     }};
+                    salutation = "<value>";
+                    ssnSin = "<value>";
                     telephones = new com.unifiedapi.unifiedto.models.shared.HrisTelephone[]{{
                         add(new HrisTelephone(
                         "<value>"){{
                             telephone = "<value>";
                         }}),
                     }};
-                    terminatedAt = OffsetDateTime.parse("2024-03-19T18:41:09.098Z");
-                    timezone = "Australia/Darwin";
+                    terminatedAt = OffsetDateTime.parse("2024-08-01T11:49:18.424Z");
+                    timezone = "Asia/Urumqi";
                     title = "<value>";
-                    updatedAt = OffsetDateTime.parse("2024-05-06T18:18:28.829Z");
+                    updatedAt = OffsetDateTime.parse("2024-03-12T16:01:13.505Z");
 
                 }};
 
@@ -1440,6 +1466,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeResponse;
 import com.unifiedapi.unifiedto.models.shared.EmploymentStatus;
+import com.unifiedapi.unifiedto.models.shared.HrisCompensation;
 import com.unifiedapi.unifiedto.models.shared.HrisEmail;
 import com.unifiedapi.unifiedto.models.shared.HrisEmailType;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployee;
@@ -1449,6 +1476,7 @@ import com.unifiedapi.unifiedto.models.shared.HrisTelephone;
 import com.unifiedapi.unifiedto.models.shared.HrisTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.MaritalStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeAddress;
+import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeEmployeeRoles;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -1479,7 +1507,12 @@ public class Application {
                         regionCode = "<value>";
 
                     }};
+                    bio = "<value>";
                     companyId = "<value>";
+                    compensation = new com.unifiedapi.unifiedto.models.shared.HrisCompensation[]{{
+                        add(new HrisCompensation(
+                        ){{}}),
+                    }};
                     createdAt = OffsetDateTime.parse("2024-06-07T16:21:55.126Z");
                     currency = "Zimbabwe Dollar";
                     dateOfBirth = OffsetDateTime.parse("2024-05-03T23:33:19.708Z");
@@ -1492,10 +1525,13 @@ public class Application {
                         }}),
                     }};
                     employeeNumber = "<value>";
-                    employmentStatus = EmploymentStatus.ACTIVE;
-                    employmentType = HrisEmployeeEmploymentType.CASUAL;
-                    gender = HrisEmployeeGender.FEMALE;
-                    hiredAt = OffsetDateTime.parse("2024-03-13T20:08:58.858Z");
+                    employeeRoles = new com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeEmployeeRoles[]{{
+                        add(PropertyHrisEmployeeEmployeeRoles.ADMIN),
+                    }};
+                    employmentStatus = EmploymentStatus.INACTIVE;
+                    employmentType = HrisEmployeeEmploymentType.CONTRACTOR;
+                    gender = HrisEmployeeGender.TRANS;
+                    hiredAt = OffsetDateTime.parse("2023-05-31T18:44:44.765Z");
                     id = "<id>";
                     imageUrl = "<value>";
                     languageLocale = "<value>";
@@ -1503,20 +1539,23 @@ public class Application {
                     managerId = "<value>";
                     maritalStatus = MaritalStatus.MARRIED;
                     name = "<value>";
+                    pronouns = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
                     }};
+                    salutation = "<value>";
+                    ssnSin = "<value>";
                     telephones = new com.unifiedapi.unifiedto.models.shared.HrisTelephone[]{{
                         add(new HrisTelephone(
                         "<value>"){{
                             telephone = "<value>";
                         }}),
                     }};
-                    terminatedAt = OffsetDateTime.parse("2023-01-08T01:17:38.194Z");
-                    timezone = "Asia/Karachi";
+                    terminatedAt = OffsetDateTime.parse("2023-12-23T19:07:50.425Z");
+                    timezone = "Asia/Yakutsk";
                     title = "<value>";
-                    updatedAt = OffsetDateTime.parse("2024-07-22T23:45:01.037Z");
+                    updatedAt = OffsetDateTime.parse("2022-03-08T08:58:17.351Z");
 
                 }};
 

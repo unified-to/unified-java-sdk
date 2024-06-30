@@ -4,9 +4,56 @@
 
 package com.unifiedapi.unifiedto.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 public class MessagingAttachment {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("content_type")
+    public String contentType;
+
+    public MessagingAttachment withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("download_url")
+    public String downloadUrl;
+
+    public MessagingAttachment withDownloadUrl(String downloadUrl) {
+        this.downloadUrl = downloadUrl;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("filename")
+    public String filename;
+
+    public MessagingAttachment withFilename(String filename) {
+        this.filename = filename;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("message_id")
+    public String messageId;
+
+    public MessagingAttachment withMessageId(String messageId) {
+        this.messageId = messageId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("size")
+    public Double size;
+
+    public MessagingAttachment withSize(Double size) {
+        this.size = size;
+        return this;
+    }
+    
     public MessagingAttachment(){}
 }

@@ -25,11 +25,29 @@ public class HrisEmployee {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("bio")
+    public String bio;
+
+    public HrisEmployee withBio(String bio) {
+        this.bio = bio;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
     public String companyId;
 
     public HrisEmployee withCompanyId(String companyId) {
         this.companyId = companyId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("compensation")
+    public HrisCompensation[] compensation;
+
+    public HrisEmployee withCompensation(HrisCompensation[] compensation) {
+        this.compensation = compensation;
         return this;
     }
     
@@ -97,6 +115,15 @@ public class HrisEmployee {
 
     public HrisEmployee withEmployeeNumber(String employeeNumber) {
         this.employeeNumber = employeeNumber;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("employee_roles")
+    public PropertyHrisEmployeeEmployeeRoles[] employeeRoles;
+
+    public HrisEmployee withEmployeeRoles(PropertyHrisEmployeeEmployeeRoles[] employeeRoles) {
+        this.employeeRoles = employeeRoles;
         return this;
     }
     
@@ -202,11 +229,38 @@ public class HrisEmployee {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pronouns")
+    public String pronouns;
+
+    public HrisEmployee withPronouns(String pronouns) {
+        this.pronouns = pronouns;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     public java.util.Map<String, java.lang.Object> raw;
 
     public HrisEmployee withRaw(java.util.Map<String, java.lang.Object> raw) {
         this.raw = raw;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("salutation")
+    public String salutation;
+
+    public HrisEmployee withSalutation(String salutation) {
+        this.salutation = salutation;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ssn_sin")
+    public String ssnSin;
+
+    public HrisEmployee withSsnSin(String ssnSin) {
+        this.ssnSin = ssnSin;
         return this;
     }
     
