@@ -148,6 +148,15 @@ public class TicketingTicket {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("url")
+    public String url;
+
+    public TicketingTicket withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public String userId;
 

@@ -1024,9 +1024,7 @@ public class Application {
                 }};
                 limit = 9883.97d;
                 offset = 5913.88d;
-                order = "<value>";
                 query = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-05-02T17:52:08.731Z");
                 userId = "<value>";
 
@@ -1090,9 +1088,7 @@ public class Application {
                 }};
                 limit = 7110.24d;
                 offset = 2657.43d;
-                order = "<value>";
                 query = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-11-15T19:36:59.401Z");
                 userId = "<value>";
 
@@ -1156,9 +1152,7 @@ public class Application {
                 }};
                 limit = 917.49d;
                 offset = 8216.92d;
-                order = "<value>";
                 query = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-09-04T01:39:26.472Z");
                 userId = "<value>";
 
@@ -1223,9 +1217,7 @@ public class Application {
                 }};
                 limit = 4453.11d;
                 offset = 4555.2d;
-                order = "<value>";
                 query = "<value>";
-                sort = "<value>";
                 type = "<value>";
                 updatedGte = OffsetDateTime.parse("2024-04-30T03:39:38.103Z");
                 userId = "<value>";
@@ -1290,9 +1282,7 @@ public class Application {
                 }};
                 limit = 2895.08d;
                 offset = 6446.8d;
-                order = "<value>";
                 query = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2024-01-12T07:27:29.016Z");
                 userId = "<value>";
 
@@ -1354,9 +1344,7 @@ public class Application {
                 }};
                 limit = 3318.18d;
                 offset = 4834.28d;
-                order = "<value>";
                 query = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-04-29T18:23:30.472Z");
 
             }};

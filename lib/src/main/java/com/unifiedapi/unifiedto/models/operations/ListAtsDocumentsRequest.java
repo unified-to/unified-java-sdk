@@ -56,14 +56,6 @@ public class ListAtsDocumentsRequest {
         return this;
     }
     
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
-    public String order;
-
-    public ListAtsDocumentsRequest withOrder(String order) {
-        this.order = order;
-        return this;
-    }
-    
     /**
      * Query string to search. eg. email address or name
      */
@@ -72,14 +64,6 @@ public class ListAtsDocumentsRequest {
 
     public ListAtsDocumentsRequest withQuery(String query) {
         this.query = query;
-        return this;
-    }
-    
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
-    public String sort;
-
-    public ListAtsDocumentsRequest withSort(String sort) {
-        this.sort = sort;
         return this;
     }
     

@@ -95,9 +95,7 @@ public class Application {
                 }};
                 limit = 1802.06d;
                 offset = 8928.71d;
-                order = "<value>";
                 query = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2024-11-20T05:14:17.047Z");
                 userId = "<value>";
 

@@ -56,14 +56,6 @@ public class ListPaymentLinksRequest {
         return this;
     }
     
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
-    public String order;
-
-    public ListPaymentLinksRequest withOrder(String order) {
-        this.order = order;
-        return this;
-    }
-    
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payment_id")
     public String paymentId;
 
@@ -80,14 +72,6 @@ public class ListPaymentLinksRequest {
 
     public ListPaymentLinksRequest withQuery(String query) {
         this.query = query;
-        return this;
-    }
-    
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
-    public String sort;
-
-    public ListPaymentLinksRequest withSort(String sort) {
-        this.sort = sort;
         return this;
     }
     

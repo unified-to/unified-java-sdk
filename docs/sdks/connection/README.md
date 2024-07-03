@@ -209,8 +209,6 @@ public class Application {
                 externalXref = "<value>";
                 limit = 9638.08d;
                 offset = 15.12d;
-                order = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-06-20T13:59:12.388Z");
 
             }};

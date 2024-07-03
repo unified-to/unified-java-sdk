@@ -170,9 +170,7 @@ public class Application {
                 }};
                 limit = 6345.23d;
                 offset = 8100.5d;
-                order = "<value>";
                 query = "<value>";
-                sort = "<value>";
                 ticketId = "<value>";
                 updatedGte = OffsetDateTime.parse("2024-09-20T16:07:42.054Z");
 

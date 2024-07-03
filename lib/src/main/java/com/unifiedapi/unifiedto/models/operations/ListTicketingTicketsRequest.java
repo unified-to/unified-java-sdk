@@ -56,14 +56,6 @@ public class ListTicketingTicketsRequest {
         return this;
     }
     
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
-    public String order;
-
-    public ListTicketingTicketsRequest withOrder(String order) {
-        this.order = order;
-        return this;
-    }
-    
     /**
      * Query string to search. eg. email address or name
      */
@@ -72,14 +64,6 @@ public class ListTicketingTicketsRequest {
 
     public ListTicketingTicketsRequest withQuery(String query) {
         this.query = query;
-        return this;
-    }
-    
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
-    public String sort;
-
-    public ListTicketingTicketsRequest withSort(String sort) {
-        this.sort = sort;
         return this;
     }
     

@@ -48,14 +48,6 @@ public class ListCommerceLocationsRequest {
         return this;
     }
     
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
-    public String order;
-
-    public ListCommerceLocationsRequest withOrder(String order) {
-        this.order = order;
-        return this;
-    }
-    
     /**
      * Query string to search. eg. email address or name
      */
@@ -64,14 +56,6 @@ public class ListCommerceLocationsRequest {
 
     public ListCommerceLocationsRequest withQuery(String query) {
         this.query = query;
-        return this;
-    }
-    
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
-    public String sort;
-
-    public ListCommerceLocationsRequest withSort(String sort) {
-        this.sort = sort;
         return this;
     }
     

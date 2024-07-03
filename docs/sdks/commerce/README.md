@@ -621,10 +621,8 @@ public class Application {
                 }};
                 limit = 2972.15d;
                 offset = 5933.83d;
-                order = "<value>";
                 parentId = "<value>";
                 query = "<value>";
-                sort = "<value>";
                 type = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-08-08T20:40:35.103Z");
 
@@ -688,9 +686,7 @@ public class Application {
                 limit = 2481.16d;
                 locationId = "<value>";
                 offset = 9476.38d;
-                order = "<value>";
                 query = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-10-15T22:28:16.925Z");
 
             }};
@@ -752,9 +748,7 @@ public class Application {
                 }};
                 limit = 2553.93d;
                 offset = 4072.28d;
-                order = "<value>";
                 query = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-05-10T19:08:09.923Z");
 
             }};
@@ -815,9 +809,7 @@ public class Application {
                 }};
                 limit = 2087.22d;
                 offset = 1166.59d;
-                order = "<value>";
                 query = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-06-09T14:52:37.550Z");
 
             }};

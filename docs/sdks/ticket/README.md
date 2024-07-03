@@ -60,6 +60,7 @@ public class Application {
                         add("<value>"),
                     }};
                     updatedAt = OffsetDateTime.parse("2024-05-06T20:46:58.372Z");
+                    url = "https://difficult-suite.name";
                     userId = "<value>";
 
                 }};
@@ -180,9 +181,7 @@ public class Application {
                 }};
                 limit = 6139.39d;
                 offset = 1839.22d;
-                order = "<value>";
                 query = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-02-28T23:31:15.090Z");
                 userId = "<value>";
 
@@ -263,6 +262,7 @@ public class Application {
                         add("<value>"),
                     }};
                     updatedAt = OffsetDateTime.parse("2024-07-06T12:10:37.068Z");
+                    url = "http://far-off-equation.org";
                     userId = "<value>";
 
                 }};
@@ -396,6 +396,7 @@ public class Application {
                         add("<value>"),
                     }};
                     updatedAt = OffsetDateTime.parse("2023-01-17T01:38:48.188Z");
+                    url = "http://truthful-brood.info";
                     userId = "<value>";
 
                 }};

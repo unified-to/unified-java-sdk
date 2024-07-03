@@ -166,6 +166,15 @@ public class TaskTask {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("url")
+    public String url;
+
+    public TaskTask withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    
     public TaskTask(@JsonProperty("name") String name) {
         this.name = name;
   }

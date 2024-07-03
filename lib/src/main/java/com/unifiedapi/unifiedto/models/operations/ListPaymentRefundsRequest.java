@@ -48,14 +48,6 @@ public class ListPaymentRefundsRequest {
         return this;
     }
     
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
-    public String order;
-
-    public ListPaymentRefundsRequest withOrder(String order) {
-        this.order = order;
-        return this;
-    }
-    
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payment_id")
     public String paymentId;
 
@@ -72,14 +64,6 @@ public class ListPaymentRefundsRequest {
 
     public ListPaymentRefundsRequest withQuery(String query) {
         this.query = query;
-        return this;
-    }
-    
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
-    public String sort;
-
-    public ListPaymentRefundsRequest withSort(String sort) {
-        this.sort = sort;
         return this;
     }
     

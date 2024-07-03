@@ -143,6 +143,7 @@ public class Application {
                         add("<value>"),
                     }};
                     updatedAt = OffsetDateTime.parse("2024-09-01T11:00:36.055Z");
+                    url = "https://sweaty-pop.biz";
 
                 }};
 
@@ -318,10 +319,8 @@ public class Application {
                 }};
                 limit = 8217.75d;
                 offset = 5158.61d;
-                order = "<value>";
                 parentId = "<value>";
                 query = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2024-08-11T05:04:28.347Z");
 
             }};
@@ -382,11 +381,9 @@ public class Application {
                 }};
                 limit = 1136.46d;
                 offset = 3107.28d;
-                order = "<value>";
                 parentId = "<value>";
                 projectId = "<value>";
                 query = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-01-31T09:49:07.594Z");
 
             }};
@@ -544,6 +541,7 @@ public class Application {
                         add("<value>"),
                     }};
                     updatedAt = OffsetDateTime.parse("2022-12-01T01:00:48.863Z");
+                    url = "http://wiry-fireplace.com";
 
                 }};
 
@@ -806,6 +804,7 @@ public class Application {
                         add("<value>"),
                     }};
                     updatedAt = OffsetDateTime.parse("2022-10-20T17:38:46.623Z");
+                    url = "https://misty-townhouse.org";
 
                 }};
 

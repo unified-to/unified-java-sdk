@@ -478,8 +478,6 @@ public class Application {
                 integrationType = "<value>";
                 limit = 494.66d;
                 offset = 5267.27d;
-                order = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2024-01-10T02:33:44.403Z");
 
             }};
@@ -543,8 +541,6 @@ public class Application {
                 externalXref = "<value>";
                 limit = 9638.08d;
                 offset = 15.12d;
-                order = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-06-20T13:59:12.388Z");
 
             }};
@@ -731,8 +727,6 @@ public class Application {
 ){{
                 limit = 7069.08d;
                 offset = 7461.37d;
-                order = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-01-21T01:55:24.746Z");
 
             }};
@@ -792,8 +786,6 @@ public class Application {
                 limit = 1162.24d;
                 object = "<value>";
                 offset = 5094.7d;
-                order = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-04-20T17:03:56.207Z");
 
             }};

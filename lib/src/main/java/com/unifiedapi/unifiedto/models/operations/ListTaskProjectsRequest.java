@@ -48,14 +48,6 @@ public class ListTaskProjectsRequest {
         return this;
     }
     
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
-    public String order;
-
-    public ListTaskProjectsRequest withOrder(String order) {
-        this.order = order;
-        return this;
-    }
-    
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent_id")
     public String parentId;
 
@@ -72,14 +64,6 @@ public class ListTaskProjectsRequest {
 
     public ListTaskProjectsRequest withQuery(String query) {
         this.query = query;
-        return this;
-    }
-    
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
-    public String sort;
-
-    public ListTaskProjectsRequest withSort(String sort) {
-        this.sort = sort;
         return this;
     }
     

@@ -48,14 +48,6 @@ public class ListAccountingContactsRequest {
         return this;
     }
     
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
-    public String order;
-
-    public ListAccountingContactsRequest withOrder(String order) {
-        this.order = order;
-        return this;
-    }
-    
     /**
      * Query string to search. eg. email address or name
      */
@@ -64,14 +56,6 @@ public class ListAccountingContactsRequest {
 
     public ListAccountingContactsRequest withQuery(String query) {
         this.query = query;
-        return this;
-    }
-    
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
-    public String sort;
-
-    public ListAccountingContactsRequest withSort(String sort) {
-        this.sort = sort;
         return this;
     }
     

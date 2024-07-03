@@ -92,8 +92,6 @@ public class Application {
                 integrationType = "<value>";
                 limit = 494.66d;
                 offset = 5267.27d;
-                order = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2024-01-10T02:33:44.403Z");
 
             }};

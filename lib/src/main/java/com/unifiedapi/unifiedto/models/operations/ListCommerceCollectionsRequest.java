@@ -48,14 +48,6 @@ public class ListCommerceCollectionsRequest {
         return this;
     }
     
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
-    public String order;
-
-    public ListCommerceCollectionsRequest withOrder(String order) {
-        this.order = order;
-        return this;
-    }
-    
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent_id")
     public String parentId;
 
@@ -72,14 +64,6 @@ public class ListCommerceCollectionsRequest {
 
     public ListCommerceCollectionsRequest withQuery(String query) {
         this.query = query;
-        return this;
-    }
-    
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
-    public String sort;
-
-    public ListCommerceCollectionsRequest withSort(String sort) {
-        this.sort = sort;
         return this;
     }
     

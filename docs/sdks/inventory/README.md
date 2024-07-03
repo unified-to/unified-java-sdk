@@ -170,9 +170,7 @@ public class Application {
                 limit = 2481.16d;
                 locationId = "<value>";
                 offset = 9476.38d;
-                order = "<value>";
                 query = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-10-15T22:28:16.925Z");
 
             }};

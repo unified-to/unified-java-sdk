@@ -1031,3 +1031,11 @@ Based on:
 - Speakeasy CLI 1.322.3 (2.354.2) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [java v0.18.43] .
+
+## 2024-07-03 00:04:10
+### Changes
+Based on:
+- OpenAPI Doc 1.0 
+- Speakeasy CLI 1.326.0 (2.359.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [java v0.18.44] .

@@ -178,9 +178,7 @@ public class Application {
                 }};
                 limit = 2562.12d;
                 offset = 1185.02d;
-                order = "<value>";
                 query = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-09-28T15:15:00.508Z");
 
             }};

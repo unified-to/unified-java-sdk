@@ -415,9 +415,7 @@ public class Application {
                 }};
                 limit = 6933.84d;
                 offset = 7946.52d;
-                order = "<value>";
                 query = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2024-10-01T21:39:38.971Z");
 
             }};
@@ -480,9 +478,7 @@ public class Application {
                 }};
                 limit = 9883.97d;
                 offset = 5913.88d;
-                order = "<value>";
                 query = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-05-02T17:52:08.731Z");
                 userId = "<value>";
 
@@ -599,9 +595,7 @@ public class Application {
                 }};
                 limit = 9887.05d;
                 offset = 4708.81d;
-                order = "<value>";
                 query = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2024-12-23T09:20:33.437Z");
 
             }};

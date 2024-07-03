@@ -433,10 +433,8 @@ public class Application {
                 }};
                 limit = 5840.47d;
                 offset = 2505.87d;
-                order = "<value>";
                 paymentId = "<value>";
                 query = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2024-12-19T04:38:46.756Z");
 
             }};
@@ -499,9 +497,7 @@ public class Application {
                 invoiceId = "<value>";
                 limit = 2381.17d;
                 offset = 837.03d;
-                order = "<value>";
                 query = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-06-25T04:38:11.791Z");
 
             }};
@@ -562,9 +558,7 @@ public class Application {
                 }};
                 limit = 5474.75d;
                 offset = 586.95d;
-                order = "<value>";
                 query = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-12-05T08:15:58.034Z");
 
             }};
@@ -625,10 +619,8 @@ public class Application {
                 }};
                 limit = 5820.28d;
                 offset = 6141.19d;
-                order = "<value>";
                 paymentId = "<value>";
                 query = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-08-03T22:54:27.299Z");
 
             }};

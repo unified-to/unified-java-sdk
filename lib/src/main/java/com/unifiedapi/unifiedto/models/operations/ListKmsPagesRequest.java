@@ -48,14 +48,6 @@ public class ListKmsPagesRequest {
         return this;
     }
     
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
-    public String order;
-
-    public ListKmsPagesRequest withOrder(String order) {
-        this.order = order;
-        return this;
-    }
-    
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent_id")
     public String parentId;
 
@@ -72,14 +64,6 @@ public class ListKmsPagesRequest {
 
     public ListKmsPagesRequest withQuery(String query) {
         this.query = query;
-        return this;
-    }
-    
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
-    public String sort;
-
-    public ListKmsPagesRequest withSort(String sort) {
-        this.sort = sort;
         return this;
     }
     

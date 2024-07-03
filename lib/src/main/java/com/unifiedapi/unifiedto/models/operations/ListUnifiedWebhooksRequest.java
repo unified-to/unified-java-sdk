@@ -44,22 +44,6 @@ public class ListUnifiedWebhooksRequest {
         return this;
     }
     
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
-    public String order;
-
-    public ListUnifiedWebhooksRequest withOrder(String order) {
-        this.order = order;
-        return this;
-    }
-    
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
-    public String sort;
-
-    public ListUnifiedWebhooksRequest withSort(String sort) {
-        this.sort = sort;
-        return this;
-    }
-    
     /**
      * Return only results whose updated date is equal or greater to this value
      */

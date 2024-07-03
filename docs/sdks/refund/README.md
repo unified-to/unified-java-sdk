@@ -95,10 +95,8 @@ public class Application {
                 }};
                 limit = 5820.28d;
                 offset = 6141.19d;
-                order = "<value>";
                 paymentId = "<value>";
                 query = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2022-08-03T22:54:27.299Z");
 
             }};

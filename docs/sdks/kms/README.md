@@ -305,10 +305,8 @@ public class Application {
                 }};
                 limit = 549.23d;
                 offset = 3993.53d;
-                order = "<value>";
                 parentId = "<value>";
                 query = "<value>";
-                sort = "<value>";
                 spaceId = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-09-01T15:54:02.024Z");
 
@@ -370,10 +368,8 @@ public class Application {
                 }};
                 limit = 9216.91d;
                 offset = 2110.39d;
-                order = "<value>";
                 parentId = "<value>";
                 query = "<value>";
-                sort = "<value>";
                 updatedGte = OffsetDateTime.parse("2023-12-18T23:16:42.907Z");
 
             }};
