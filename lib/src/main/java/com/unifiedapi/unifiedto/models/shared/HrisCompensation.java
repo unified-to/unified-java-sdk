@@ -4,9 +4,47 @@
 
 package com.unifiedapi.unifiedto.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 public class HrisCompensation {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("amount")
+    public Double amount;
+
+    public HrisCompensation withAmount(Double amount) {
+        this.amount = amount;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("currency")
+    public String currency;
+
+    public HrisCompensation withCurrency(String currency) {
+        this.currency = currency;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("frequency")
+    public HrisCompensationFrequency frequency;
+
+    public HrisCompensation withFrequency(HrisCompensationFrequency frequency) {
+        this.frequency = frequency;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    public HrisCompensationType type;
+
+    public HrisCompensation withType(HrisCompensationType type) {
+        this.type = type;
+        return this;
+    }
+    
     public HrisCompensation(){}
 }
