@@ -507,11 +507,11 @@ public class Application {
             com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionRequest req = new CreateAccountingTransactionRequest(
                 "<value>"){{
                 accountingTransaction = new AccountingTransaction(
-                    4969.62d){{
+){{
                     accountId = "<value>";
                     contactId = "<value>";
-                    createdAt = OffsetDateTime.parse("2023-11-18T23:09:46.500Z");
-                    currency = "Pakistan Rupee";
+                    createdAt = OffsetDateTime.parse("2023-06-29T16:05:10.534Z");
+                    currency = "Nuevo Sol";
                     customerMessage = "<value>";
                     id = "<id>";
                     memo = "<value>";
@@ -523,8 +523,9 @@ public class Application {
                     }};
                     reference = "<value>";
                     splitAccountId = "<value>";
-                    subTotalAmount = 1284.64d;
-                    taxAmount = 2477.45d;
+                    subTotalAmount = 6458.68d;
+                    taxAmount = 1284.64d;
+                    totalAmount = 2477.45d;
                     type = "<value>";
                     updatedAt = OffsetDateTime.parse("2024-03-20T22:20:27.161Z");
 
@@ -1856,11 +1857,11 @@ public class Application {
                 "<value>",
                 "<value>"){{
                 accountingTransaction = new AccountingTransaction(
-                    5633.69d){{
+){{
                     accountId = "<value>";
                     contactId = "<value>";
-                    createdAt = OffsetDateTime.parse("2023-05-15T15:00:47.285Z");
-                    currency = "European Monetary Unit (E.M.U.-6)";
+                    createdAt = OffsetDateTime.parse("2023-09-10T10:50:45.480Z");
+                    currency = "Tenge";
                     customerMessage = "<value>";
                     id = "<id>";
                     memo = "<value>";
@@ -1872,8 +1873,9 @@ public class Application {
                     }};
                     reference = "<value>";
                     splitAccountId = "<value>";
-                    subTotalAmount = 3798.28d;
-                    taxAmount = 535.65d;
+                    subTotalAmount = 9058.58d;
+                    taxAmount = 3798.28d;
+                    totalAmount = 535.65d;
                     type = "<value>";
                     updatedAt = OffsetDateTime.parse("2022-12-12T13:53:53.386Z");
 
@@ -2688,11 +2690,11 @@ public class Application {
                 "<value>",
                 "<value>"){{
                 accountingTransaction = new AccountingTransaction(
-                    6498.37d){{
+){{
                     accountId = "<value>";
                     contactId = "<value>";
-                    createdAt = OffsetDateTime.parse("2023-09-13T05:53:01.629Z");
-                    currency = "CFP Franc";
+                    createdAt = OffsetDateTime.parse("2023-12-14T05:18:27.688Z");
+                    currency = "Mexican Peso";
                     customerMessage = "<value>";
                     id = "<id>";
                     memo = "<value>";
@@ -2704,8 +2706,9 @@ public class Application {
                     }};
                     reference = "<value>";
                     splitAccountId = "<value>";
-                    subTotalAmount = 7024.11d;
-                    taxAmount = 2397.73d;
+                    subTotalAmount = 9512.07d;
+                    taxAmount = 7024.11d;
+                    totalAmount = 2397.73d;
                     type = "<value>";
                     updatedAt = OffsetDateTime.parse("2022-07-27T23:07:54.896Z");
 
