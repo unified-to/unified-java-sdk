@@ -15,6 +15,7 @@ import java.time.OffsetDateTime;
 
 
 public class PaymentLink {
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
 
@@ -70,6 +71,7 @@ public class PaymentLink {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineitems")
     public PaymentLinkLineitem[] lineitems;
 
@@ -116,8 +118,5 @@ public class PaymentLink {
         return this;
     }
     
-    public PaymentLink(@JsonProperty("amount") Double amount, @JsonProperty("lineitems") PaymentLinkLineitem[] lineitems) {
-        this.amount = amount;
-        this.lineitems = lineitems;
-  }
+    public PaymentLink(){}
 }

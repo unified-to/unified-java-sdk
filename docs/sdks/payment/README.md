@@ -50,18 +50,19 @@ public class Application {
             com.unifiedapi.unifiedto.models.operations.CreatePaymentLinkRequest req = new CreatePaymentLinkRequest(
                 "<value>"){{
                 paymentLink = new PaymentLink(
-                    8711.36d,
-                    new com.unifiedapi.unifiedto.models.shared.PaymentLinkLineitem[]{{
-                        add(new PaymentLinkLineitem(
-                        483.93d){{
-                            totalAmount = 7885.08d;
-                        }}),
-                    }}){{
+){{
+                    amount = 8711.36d;
                     contactId = "<value>";
-                    createdAt = OffsetDateTime.parse("2024-10-29T06:52:39.809Z");
-                    currency = "Dong";
+                    createdAt = OffsetDateTime.parse("2024-05-14T04:54:56.527Z");
+                    currency = "Aruban Guilder";
                     id = "<id>";
                     isActive = false;
+                    lineitems = new com.unifiedapi.unifiedto.models.shared.PaymentLinkLineitem[]{{
+                        add(new PaymentLinkLineitem(
+                        8624.97d){{
+                            totalAmount = 9418.68d;
+                        }}),
+                    }};
                     paymentId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
@@ -680,18 +681,19 @@ public class Application {
                 "<value>",
                 "<value>"){{
                 paymentLink = new PaymentLink(
-                    2219.73d,
-                    new com.unifiedapi.unifiedto.models.shared.PaymentLinkLineitem[]{{
-                        add(new PaymentLinkLineitem(
-                        9294.81d){{
-                            totalAmount = 4605.59d;
-                        }}),
-                    }}){{
+){{
+                    amount = 2219.73d;
                     contactId = "<value>";
-                    createdAt = OffsetDateTime.parse("2024-03-01T20:55:52.998Z");
-                    currency = "North Korean Won";
+                    createdAt = OffsetDateTime.parse("2023-05-20T18:32:48.667Z");
+                    currency = "UIC-Franc";
                     id = "<id>";
                     isActive = false;
+                    lineitems = new com.unifiedapi.unifiedto.models.shared.PaymentLinkLineitem[]{{
+                        add(new PaymentLinkLineitem(
+                        4326.68d){{
+                            totalAmount = 7215.99d;
+                        }}),
+                    }};
                     paymentId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
@@ -938,18 +940,19 @@ public class Application {
                 "<value>",
                 "<value>"){{
                 paymentLink = new PaymentLink(
-                    6147.65d,
-                    new com.unifiedapi.unifiedto.models.shared.PaymentLinkLineitem[]{{
-                        add(new PaymentLinkLineitem(
-                        2903.18d){{
-                            totalAmount = 4437.28d;
-                        }}),
-                    }}){{
+){{
+                    amount = 6147.65d;
                     contactId = "<value>";
-                    createdAt = OffsetDateTime.parse("2024-02-13T01:53:59.618Z");
-                    currency = "Codes specifically reserved for testing purposes";
+                    createdAt = OffsetDateTime.parse("2023-05-02T07:49:35.280Z");
+                    currency = "Gibraltar Pound";
                     id = "<id>";
                     isActive = false;
+                    lineitems = new com.unifiedapi.unifiedto.models.shared.PaymentLinkLineitem[]{{
+                        add(new PaymentLinkLineitem(
+                        9626.54d){{
+                            totalAmount = 7053.64d;
+                        }}),
+                    }};
                     paymentId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
