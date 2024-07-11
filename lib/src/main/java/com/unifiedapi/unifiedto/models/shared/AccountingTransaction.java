@@ -116,6 +116,18 @@ public class AccountingTransaction {
         return this;
     }
     
+    /**
+     * This is a unified object that this transaction references
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reference_object")
+    public java.util.Map<String, java.lang.Object> referenceObject;
+
+    public AccountingTransaction withReferenceObject(java.util.Map<String, java.lang.Object> referenceObject) {
+        this.referenceObject = referenceObject;
+        return this;
+    }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("split_account_id")
     public String splitAccountId;

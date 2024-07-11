@@ -522,6 +522,10 @@ public class Application {
                         put("key", "<value>");
                     }};
                     reference = "<value>";
+                    referenceObject = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "<value>");
+                    }};
                     splitAccountId = "<value>";
                     subTotalAmount = 6458.68d;
                     taxAmount = 1284.64d;
@@ -1872,6 +1876,10 @@ public class Application {
                         put("key", "<value>");
                     }};
                     reference = "<value>";
+                    referenceObject = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "<value>");
+                    }};
                     splitAccountId = "<value>";
                     subTotalAmount = 9058.58d;
                     taxAmount = 3798.28d;
@@ -2705,6 +2713,10 @@ public class Application {
                         put("key", "<value>");
                     }};
                     reference = "<value>";
+                    referenceObject = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "<value>");
+                    }};
                     splitAccountId = "<value>";
                     subTotalAmount = 9512.07d;
                     taxAmount = 7024.11d;
