@@ -1352,6 +1352,7 @@ public class Application {
                 fields = new String[]{{
                     add("<value>"),
                 }};
+                jobId = "<value>";
                 limit = 6384.09d;
                 offset = 7452.94d;
                 query = "<value>";
@@ -1472,6 +1473,7 @@ public class Application {
             com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsRequest req = new ListAtsDocumentsRequest(
                 "<value>"){{
                 applicationId = "<value>";
+                candidateId = "<value>";
                 fields = new String[]{{
                     add("<value>"),
                 }};

@@ -491,6 +491,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingTransaction;
+import com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineItem;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -514,6 +515,10 @@ public class Application {
                     currency = "Nuevo Sol";
                     customerMessage = "<value>";
                     id = "<id>";
+                    lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineItem[]{{
+                        add(new AccountingTransactionLineItem(
+                        ){{}}),
+                    }};
                     memo = "<value>";
                     paymentMethod = "<value>";
                     paymentTerms = "<value>";
@@ -522,10 +527,6 @@ public class Application {
                         put("key", "<value>");
                     }};
                     reference = "<value>";
-                    referenceObject = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
                     splitAccountId = "<value>";
                     subTotalAmount = 6458.68d;
                     taxAmount = 1284.64d;
@@ -1844,6 +1845,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingTransaction;
+import com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineItem;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -1868,6 +1870,10 @@ public class Application {
                     currency = "Tenge";
                     customerMessage = "<value>";
                     id = "<id>";
+                    lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineItem[]{{
+                        add(new AccountingTransactionLineItem(
+                        ){{}}),
+                    }};
                     memo = "<value>";
                     paymentMethod = "<value>";
                     paymentTerms = "<value>";
@@ -1876,10 +1882,6 @@ public class Application {
                         put("key", "<value>");
                     }};
                     reference = "<value>";
-                    referenceObject = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
                     splitAccountId = "<value>";
                     subTotalAmount = 9058.58d;
                     taxAmount = 3798.28d;
@@ -2681,6 +2683,7 @@ import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionResponse;
 import com.unifiedapi.unifiedto.models.shared.AccountingTransaction;
+import com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineItem;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -2705,6 +2708,10 @@ public class Application {
                     currency = "Mexican Peso";
                     customerMessage = "<value>";
                     id = "<id>";
+                    lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingTransactionLineItem[]{{
+                        add(new AccountingTransactionLineItem(
+                        ){{}}),
+                    }};
                     memo = "<value>";
                     paymentMethod = "<value>";
                     paymentTerms = "<value>";
@@ -2713,10 +2720,6 @@ public class Application {
                         put("key", "<value>");
                     }};
                     reference = "<value>";
-                    referenceObject = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
                     splitAccountId = "<value>";
                     subTotalAmount = 9512.07d;
                     taxAmount = 7024.11d;

@@ -170,6 +170,7 @@ public class Application {
             com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsRequest req = new ListAtsDocumentsRequest(
                 "<value>"){{
                 applicationId = "<value>";
+                candidateId = "<value>";
                 fields = new String[]{{
                     add("<value>"),
                 }};

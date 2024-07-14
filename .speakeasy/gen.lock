@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: b7d66c91464d8c38db3b3054c9cc94b2
+  docChecksum: 447f3fb120945ec501fc264fcc573697
   docVersion: "1.0"
-  speakeasyVersion: 1.331.0
-  generationVersion: 2.365.0
-  releaseVersion: 0.18.48
-  configChecksum: bfc3be38134d238fc592b0a3aff47b93
+  speakeasyVersion: 1.335.0
+  generationVersion: 2.370.2
+  releaseVersion: 0.18.49
+  configChecksum: fb0be621356cff725957413d20b4f6b1
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -709,6 +709,7 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingJournalLineitem.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTaxrate.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTransaction.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTransactionLineItem.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingOrganization.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingOrganizationAddress.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmContact.java
@@ -1508,6 +1509,7 @@ generatedFiles:
   - docs/models/shared/AccountingJournalLineitem.md
   - docs/models/shared/AccountingTaxrate.md
   - docs/models/shared/AccountingTransaction.md
+  - docs/models/shared/AccountingTransactionLineItem.md
   - docs/models/shared/AccountingOrganization.md
   - docs/models/shared/PropertyAccountingOrganizationAddress.md
   - docs/models/shared/CrmContact.md

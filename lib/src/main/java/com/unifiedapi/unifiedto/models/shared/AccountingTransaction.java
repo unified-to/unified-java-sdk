@@ -72,6 +72,15 @@ public class AccountingTransaction {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lineitems")
+    public AccountingTransactionLineItem[] lineitems;
+
+    public AccountingTransaction withLineitems(AccountingTransactionLineItem[] lineitems) {
+        this.lineitems = lineitems;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memo")
     public String memo;
 
@@ -113,18 +122,6 @@ public class AccountingTransaction {
 
     public AccountingTransaction withReference(String reference) {
         this.reference = reference;
-        return this;
-    }
-    
-    /**
-     * This is a unified object that this transaction references
-     */
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("reference_object")
-    public java.util.Map<String, java.lang.Object> referenceObject;
-
-    public AccountingTransaction withReferenceObject(java.util.Map<String, java.lang.Object> referenceObject) {
-        this.referenceObject = referenceObject;
         return this;
     }
     

@@ -211,6 +211,7 @@ public class Application {
                 fields = new String[]{{
                     add("<value>"),
                 }};
+                jobId = "<value>";
                 limit = 6384.09d;
                 offset = 7452.94d;
                 query = "<value>";

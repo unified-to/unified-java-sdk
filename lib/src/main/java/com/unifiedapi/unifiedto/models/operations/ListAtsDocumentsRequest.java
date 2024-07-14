@@ -18,6 +18,14 @@ public class ListAtsDocumentsRequest {
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_id")
+    public String candidateId;
+
+    public ListAtsDocumentsRequest withCandidateId(String candidateId) {
+        this.candidateId = candidateId;
+        return this;
+    }
+    
     /**
      * ID of the connection
      */
