@@ -118,7 +118,7 @@ public class Application {
             com.unifiedapi.unifiedto.models.operations.CreateTaskTaskRequest req = new CreateTaskTaskRequest(
                 "<value>"){{
                 taskTask = new TaskTask(
-                    "<value>"){{
+){{
                     assignedUserIds = new String[]{{
                         add("<value>"),
                     }};
@@ -130,6 +130,7 @@ public class Application {
                         add("<value>"),
                     }};
                     id = "<id>";
+                    name = "<value>";
                     notes = "<value>";
                     parentId = "<value>";
                     priority = "<value>";
@@ -516,7 +517,7 @@ public class Application {
                 "<value>",
                 "<value>"){{
                 taskTask = new TaskTask(
-                    "<value>"){{
+){{
                     assignedUserIds = new String[]{{
                         add("<value>"),
                     }};
@@ -528,6 +529,7 @@ public class Application {
                         add("<value>"),
                     }};
                     id = "<id>";
+                    name = "<value>";
                     notes = "<value>";
                     parentId = "<value>";
                     priority = "<value>";
@@ -779,7 +781,7 @@ public class Application {
                 "<value>",
                 "<value>"){{
                 taskTask = new TaskTask(
-                    "<value>"){{
+){{
                     assignedUserIds = new String[]{{
                         add("<value>"),
                     }};
@@ -791,6 +793,7 @@ public class Application {
                         add("<value>"),
                     }};
                     id = "<id>";
+                    name = "<value>";
                     notes = "<value>";
                     parentId = "<value>";
                     priority = "<value>";

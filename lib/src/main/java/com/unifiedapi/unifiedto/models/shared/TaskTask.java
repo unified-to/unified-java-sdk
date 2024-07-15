@@ -84,6 +84,7 @@ public class TaskTask {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
 
@@ -175,7 +176,5 @@ public class TaskTask {
         return this;
     }
     
-    public TaskTask(@JsonProperty("name") String name) {
-        this.name = name;
-  }
+    public TaskTask(){}
 }
