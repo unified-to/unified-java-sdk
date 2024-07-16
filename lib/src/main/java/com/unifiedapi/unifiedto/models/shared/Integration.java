@@ -19,6 +19,24 @@ import java.time.OffsetDateTime;
 
 public class Integration {
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("active_healthy_connections")
+    public Double activeHealthyConnections;
+
+    public Integration withActiveHealthyConnections(Double activeHealthyConnections) {
+        this.activeHealthyConnections = activeHealthyConnections;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("api")
+    public java.util.Map<String, java.lang.Object> api;
+
+    public Integration withApi(java.util.Map<String, java.lang.Object> api) {
+        this.api = api;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api_docs_url")
     public String apiDocsUrl;
 
@@ -66,11 +84,29 @@ public class Integration {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    public String description;
+
+    public Integration withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fa_icon")
     public String faIcon;
 
     public Integration withFaIcon(String faIcon) {
         this.faIcon = faIcon;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("featured")
+    public Boolean featured;
+
+    public Integration withFeatured(Boolean featured) {
+        this.featured = featured;
         return this;
     }
     
@@ -109,6 +145,15 @@ public class Integration {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("popularity")
+    public Double popularity;
+
+    public Integration withPopularity(Double popularity) {
+        this.popularity = popularity;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate_limit_description")
     public String rateLimitDescription;
 
@@ -117,6 +162,7 @@ public class Integration {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("support")
     public java.util.Map<String, IntegrationSupport> support;
 
@@ -195,11 +241,10 @@ public class Integration {
         return this;
     }
     
-    public Integration(@JsonProperty("categories") PropertyIntegrationCategories[] categories, @JsonProperty("in_progress") Boolean inProgress, @JsonProperty("name") String name, @JsonProperty("support") java.util.Map<String, IntegrationSupport> support, @JsonProperty("type") String type) {
+    public Integration(@JsonProperty("categories") PropertyIntegrationCategories[] categories, @JsonProperty("in_progress") Boolean inProgress, @JsonProperty("name") String name, @JsonProperty("type") String type) {
         this.categories = categories;
         this.inProgress = inProgress;
         this.name = name;
-        this.support = support;
         this.type = type;
   }
 }
