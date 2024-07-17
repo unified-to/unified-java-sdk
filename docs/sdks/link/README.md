@@ -47,19 +47,18 @@ public class Application {
                     currency = "Aruban Guilder";
                     id = "<id>";
                     isActive = false;
+                    isChargeableNow = false;
                     lineitems = new com.unifiedapi.unifiedto.models.shared.PaymentLinkLineitem[]{{
                         add(new PaymentLinkLineitem(
-                        8624.97d){{
-                            totalAmount = 9418.68d;
-                        }}),
+                        ){{}}),
                     }};
                     paymentId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-07-14T18:03:00.242Z");
-                    url = "http://baggy-shark.biz";
+                    updatedAt = OffsetDateTime.parse("2024-10-29T06:52:39.809Z");
+                    url = "https://luxurious-attenuation.com";
 
                 }};
 
@@ -247,19 +246,18 @@ public class Application {
                     currency = "UIC-Franc";
                     id = "<id>";
                     isActive = false;
+                    isChargeableNow = false;
                     lineitems = new com.unifiedapi.unifiedto.models.shared.PaymentLinkLineitem[]{{
                         add(new PaymentLinkLineitem(
-                        4326.68d){{
-                            totalAmount = 7215.99d;
-                        }}),
+                        ){{}}),
                     }};
                     paymentId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
                     }};
-                    updatedAt = OffsetDateTime.parse("2023-07-20T09:13:52.888Z");
-                    url = "http://accurate-costume.org";
+                    updatedAt = OffsetDateTime.parse("2024-03-01T20:55:52.998Z");
+                    url = "http://mammoth-doggie.com";
 
                 }};
 
@@ -379,19 +377,18 @@ public class Application {
                     currency = "Gibraltar Pound";
                     id = "<id>";
                     isActive = false;
+                    isChargeableNow = false;
                     lineitems = new com.unifiedapi.unifiedto.models.shared.PaymentLinkLineitem[]{{
                         add(new PaymentLinkLineitem(
-                        9626.54d){{
-                            totalAmount = 7053.64d;
-                        }}),
+                        ){{}}),
                     }};
                     paymentId = "<value>";
                     raw = new java.util.HashMap<String, java.lang.Object>(
                     ){{
                         put("key", "<value>");
                     }};
-                    updatedAt = OffsetDateTime.parse("2022-08-22T16:01:32.942Z");
-                    url = "https://complex-glove.com";
+                    updatedAt = OffsetDateTime.parse("2024-02-13T01:53:59.618Z");
+                    url = "https://dramatic-trolley.com";
 
                 }};
 

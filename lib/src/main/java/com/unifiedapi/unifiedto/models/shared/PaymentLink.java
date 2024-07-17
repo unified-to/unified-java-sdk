@@ -72,6 +72,15 @@ public class PaymentLink {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_chargeable_now")
+    public Boolean isChargeableNow;
+
+    public PaymentLink withIsChargeableNow(Boolean isChargeableNow) {
+        this.isChargeableNow = isChargeableNow;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineitems")
     public PaymentLinkLineitem[] lineitems;
 
