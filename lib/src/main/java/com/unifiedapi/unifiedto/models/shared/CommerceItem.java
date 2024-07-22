@@ -16,6 +16,15 @@ import java.time.OffsetDateTime;
 
 public class CommerceItem {
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("collection_ids")
+    public String[] collectionIds;
+
+    public CommerceItem withCollectionIds(String[] collectionIds) {
+        this.collectionIds = collectionIds;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")

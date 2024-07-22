@@ -47,6 +47,9 @@ public class Application {
                 "<value>"){{
                 commerceItem = new CommerceItem(
 ){{
+                    collectionIds = new String[]{{
+                        add("<value>"),
+                    }};
                     createdAt = OffsetDateTime.parse("2023-06-27T05:28:51.414Z");
                     description = "Object-based local intranet";
                     id = "<id>";
@@ -264,6 +267,9 @@ public class Application {
                 "<value>"){{
                 commerceItem = new CommerceItem(
 ){{
+                    collectionIds = new String[]{{
+                        add("<value>"),
+                    }};
                     createdAt = OffsetDateTime.parse("2023-06-21T03:47:22.544Z");
                     description = "Front-line explicit circuit";
                     id = "<id>";
@@ -414,6 +420,9 @@ public class Application {
                 "<value>"){{
                 commerceItem = new CommerceItem(
 ){{
+                    collectionIds = new String[]{{
+                        add("<value>"),
+                    }};
                     createdAt = OffsetDateTime.parse("2023-12-27T01:13:33.758Z");
                     description = "Advanced intangible toolset";
                     id = "<id>";
