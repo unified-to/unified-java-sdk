@@ -85,14 +85,13 @@ public class Application {
             com.unifiedapi.unifiedto.models.operations.ListUnifiedApicallsRequest req = new ListUnifiedApicallsRequest(
 ){{
                 connectionId = "<value>";
-                createdLte = OffsetDateTime.parse("2024-08-09T17:47:53.304Z");
                 env = "<value>";
                 error = false;
                 externalXref = "<value>";
                 integrationType = "<value>";
-                limit = 494.66d;
-                offset = 5267.27d;
-                updatedGte = OffsetDateTime.parse("2024-01-10T02:33:44.403Z");
+                limit = 8683.78d;
+                offset = 494.66d;
+                updatedGte = OffsetDateTime.parse("2023-08-01T07:02:03.842Z");
 
             }};
 

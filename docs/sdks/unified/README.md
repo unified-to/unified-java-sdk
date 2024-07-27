@@ -471,14 +471,13 @@ public class Application {
             com.unifiedapi.unifiedto.models.operations.ListUnifiedApicallsRequest req = new ListUnifiedApicallsRequest(
 ){{
                 connectionId = "<value>";
-                createdLte = OffsetDateTime.parse("2024-08-09T17:47:53.304Z");
                 env = "<value>";
                 error = false;
                 externalXref = "<value>";
                 integrationType = "<value>";
-                limit = 494.66d;
-                offset = 5267.27d;
-                updatedGte = OffsetDateTime.parse("2024-01-10T02:33:44.403Z");
+                limit = 8683.78d;
+                offset = 494.66d;
+                updatedGte = OffsetDateTime.parse("2023-08-01T07:02:03.842Z");
 
             }};
 
@@ -765,6 +764,8 @@ Returns all registered webhooks
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.ConnectionId;
+import com.unifiedapi.unifiedto.models.operations.IntegrationType;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedWebhooksRequest;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedWebhooksResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -782,11 +783,16 @@ public class Application {
 
             com.unifiedapi.unifiedto.models.operations.ListUnifiedWebhooksRequest req = new ListUnifiedWebhooksRequest(
 ){{
+                connectionId = new ConnectionId(
+);
+                createdLte = OffsetDateTime.parse("2022-05-08T09:09:29.992Z");
                 env = "<value>";
-                limit = 1162.24d;
+                integrationType = new IntegrationType(
+);
+                limit = 5094.7d;
                 object = "<value>";
-                offset = 5094.7d;
-                updatedGte = OffsetDateTime.parse("2022-04-20T17:03:56.207Z");
+                offset = 1001.01d;
+                updatedGte = OffsetDateTime.parse("2023-07-16T05:14:02.871Z");
 
             }};
 

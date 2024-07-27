@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: b51483e0ba5da702b0a6782d1c3502c1
+  docChecksum: 398329e502d5c762a74ed9d5f4600441
   docVersion: "1.0"
-  speakeasyVersion: 1.346.0
-  generationVersion: 2.379.3
-  releaseVersion: 0.18.54
-  configChecksum: 18dd4e21eeba4a122bd4c5d1aaded26e
+  speakeasyVersion: 1.346.3
+  generationVersion: 2.379.6
+  releaseVersion: 0.18.55
+  configChecksum: 77c04c2ff9d26db6f76abe060a46b7e0
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -672,6 +672,8 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListUnifiedIntegrationsResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListUnifiedIssuesRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListUnifiedIssuesResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ConnectionId.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/IntegrationType.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListUnifiedWebhooksRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListUnifiedWebhooksResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchUnifiedConnectionRequest.java
@@ -1472,6 +1474,8 @@ generatedFiles:
   - docs/models/operations/ListUnifiedIntegrationsResponse.md
   - docs/models/operations/ListUnifiedIssuesRequest.md
   - docs/models/operations/ListUnifiedIssuesResponse.md
+  - docs/models/operations/ConnectionId.md
+  - docs/models/operations/IntegrationType.md
   - docs/models/operations/ListUnifiedWebhooksRequest.md
   - docs/models/operations/ListUnifiedWebhooksResponse.md
   - docs/models/operations/PatchUnifiedConnectionRequest.md
