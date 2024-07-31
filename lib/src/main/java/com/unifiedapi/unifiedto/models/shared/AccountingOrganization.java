@@ -80,6 +80,15 @@ public class AccountingOrganization {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("organization_code")
+    public String organizationCode;
+
+    public AccountingOrganization withOrganizationCode(String organizationCode) {
+        this.organizationCode = organizationCode;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     public java.util.Map<String, java.lang.Object> raw;
 

@@ -249,9 +249,7 @@ public class Application {
                     updatedAt = OffsetDateTime.parse("2023-01-01T01:10:35.262Z");
                     variants = new com.unifiedapi.unifiedto.models.shared.CommerceItemVariant[]{{
                         add(new CommerceItemVariant(
-                        "<value>"){{
-                            name = "<value>";
-                        }}),
+                        ){{}}),
                     }};
                     vendorName = "<value>";
 
@@ -1065,9 +1063,7 @@ public class Application {
                     updatedAt = OffsetDateTime.parse("2023-05-09T22:12:43.888Z");
                     variants = new com.unifiedapi.unifiedto.models.shared.CommerceItemVariant[]{{
                         add(new CommerceItemVariant(
-                        "<value>"){{
-                            name = "<value>";
-                        }}),
+                        ){{}}),
                     }};
                     vendorName = "<value>";
 
@@ -1613,9 +1609,7 @@ public class Application {
                     updatedAt = OffsetDateTime.parse("2024-07-17T00:14:33.118Z");
                     variants = new com.unifiedapi.unifiedto.models.shared.CommerceItemVariant[]{{
                         add(new CommerceItemVariant(
-                        "<value>"){{
-                            name = "<value>";
-                        }}),
+                        ){{}}),
                     }};
                     vendorName = "<value>";
 
