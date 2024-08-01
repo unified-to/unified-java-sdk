@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 939256dd6599a9b1968cce234d1549cc
+  docChecksum: e746fd806f5907d68d5ba126113c72ae
   docVersion: "1.0"
-  speakeasyVersion: 1.349.0
-  generationVersion: 2.382.0
-  releaseVersion: 0.18.56
-  configChecksum: 79905a4f069a803cb090da4eff634b95
+  speakeasyVersion: 1.349.2
+  generationVersion: 2.382.2
+  releaseVersion: 0.18.57
+  configChecksum: 7ecacecccb76e80c1be50570567e2a1e
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -381,6 +381,18 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCommerceItemResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCommerceLocationRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCommerceLocationResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateHrisLocationRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateHrisLocationResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetHrisLocationRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/GetHrisLocationResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListHrisLocationsRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/ListHrisLocationsResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchHrisLocationRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/PatchHrisLocationResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveHrisLocationRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveHrisLocationResponse.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateHrisLocationRequest.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateHrisLocationResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmDealRequest.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmDealResponse.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmEventRequest.java
@@ -778,6 +790,10 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceItemOption.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceLocation.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCommerceLocationAddress.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/HrisLocation.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/HrisTelephoneType.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/HrisTelephone.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyHrisLocationAddress.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmDeal.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmEventType.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/CrmEvent.java
@@ -807,8 +823,8 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/HrisEmployeeGender.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/MaritalStatus.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/HrisEmployee.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/HrisTelephoneType.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/HrisTelephone.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/HrisGroupType.java
+  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/HrisGroup.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyHrisEmployeeEmployeeRoles.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/HrisEmailType.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/HrisEmail.java
@@ -816,8 +832,6 @@ generatedFiles:
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/HrisCompensationType.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/HrisCompensation.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyHrisEmployeeAddress.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/HrisGroupType.java
-  - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/HrisGroup.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/PaymentType.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/HrisPayslip.java
   - lib/src/main/java/com/unifiedapi/unifiedto/models/shared/HrisPayslipDetailType.java
@@ -1183,6 +1197,18 @@ generatedFiles:
   - docs/models/operations/UpdateCommerceItemResponse.md
   - docs/models/operations/UpdateCommerceLocationRequest.md
   - docs/models/operations/UpdateCommerceLocationResponse.md
+  - docs/models/operations/CreateHrisLocationRequest.md
+  - docs/models/operations/CreateHrisLocationResponse.md
+  - docs/models/operations/GetHrisLocationRequest.md
+  - docs/models/operations/GetHrisLocationResponse.md
+  - docs/models/operations/ListHrisLocationsRequest.md
+  - docs/models/operations/ListHrisLocationsResponse.md
+  - docs/models/operations/PatchHrisLocationRequest.md
+  - docs/models/operations/PatchHrisLocationResponse.md
+  - docs/models/operations/RemoveHrisLocationRequest.md
+  - docs/models/operations/RemoveHrisLocationResponse.md
+  - docs/models/operations/UpdateHrisLocationRequest.md
+  - docs/models/operations/UpdateHrisLocationResponse.md
   - docs/models/operations/CreateCrmDealRequest.md
   - docs/models/operations/CreateCrmDealResponse.md
   - docs/models/operations/CreateCrmEventRequest.md
@@ -1580,6 +1606,10 @@ generatedFiles:
   - docs/models/shared/CommerceItemOption.md
   - docs/models/shared/CommerceLocation.md
   - docs/models/shared/PropertyCommerceLocationAddress.md
+  - docs/models/shared/HrisLocation.md
+  - docs/models/shared/HrisTelephoneType.md
+  - docs/models/shared/HrisTelephone.md
+  - docs/models/shared/PropertyHrisLocationAddress.md
   - docs/models/shared/CrmDeal.md
   - docs/models/shared/CrmEventType.md
   - docs/models/shared/CrmEvent.md
@@ -1609,8 +1639,8 @@ generatedFiles:
   - docs/models/shared/HrisEmployeeGender.md
   - docs/models/shared/MaritalStatus.md
   - docs/models/shared/HrisEmployee.md
-  - docs/models/shared/HrisTelephoneType.md
-  - docs/models/shared/HrisTelephone.md
+  - docs/models/shared/HrisGroupType.md
+  - docs/models/shared/HrisGroup.md
   - docs/models/shared/PropertyHrisEmployeeEmployeeRoles.md
   - docs/models/shared/HrisEmailType.md
   - docs/models/shared/HrisEmail.md
@@ -1618,8 +1648,6 @@ generatedFiles:
   - docs/models/shared/HrisCompensationType.md
   - docs/models/shared/HrisCompensation.md
   - docs/models/shared/PropertyHrisEmployeeAddress.md
-  - docs/models/shared/HrisGroupType.md
-  - docs/models/shared/HrisGroup.md
   - docs/models/shared/PaymentType.md
   - docs/models/shared/HrisPayslip.md
   - docs/models/shared/HrisPayslipDetailType.md

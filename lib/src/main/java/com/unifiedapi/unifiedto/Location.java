@@ -63,6 +63,46 @@ public class Location {
     }
 
     /**
+     * Create a location
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.CreateHrisLocationResponse createHrisLocation(com.unifiedapi.unifiedto.models.operations.CreateHrisLocationRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.CreateHrisLocationRequest.class, baseUrl, "/hris/{connection_id}/location", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "hrisLocation", "json");
+        req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        com.unifiedapi.unifiedto.models.operations.CreateHrisLocationResponse res = new com.unifiedapi.unifiedto.models.operations.CreateHrisLocationResponse(contentType, httpRes.statusCode(), httpRes) {{
+            hrisLocation = null;
+        }};
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.HrisLocation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.HrisLocation.class);
+                res.hrisLocation = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * Retrieve a location
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
@@ -100,6 +140,50 @@ public class Location {
                 ObjectMapper mapper = JSON.getMapper();
                 com.unifiedapi.unifiedto.models.shared.CommerceLocation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.CommerceLocation.class);
                 res.commerceLocation = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Retrieve a location
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.GetHrisLocationResponse getHrisLocation(com.unifiedapi.unifiedto.models.operations.GetHrisLocationRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.GetHrisLocationRequest.class, baseUrl, "/hris/{connection_id}/location/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.GetHrisLocationRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        com.unifiedapi.unifiedto.models.operations.GetHrisLocationResponse res = new com.unifiedapi.unifiedto.models.operations.GetHrisLocationResponse(contentType, httpRes.statusCode(), httpRes) {{
+            hrisLocation = null;
+        }};
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.HrisLocation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.HrisLocation.class);
+                res.hrisLocation = out;
             }
         }
 
@@ -151,6 +235,50 @@ public class Location {
     }
 
     /**
+     * List all locations
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.ListHrisLocationsResponse listHrisLocations(com.unifiedapi.unifiedto.models.operations.ListHrisLocationsRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.ListHrisLocationsRequest.class, baseUrl, "/hris/{connection_id}/location", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        java.util.List<NameValuePair> queryParams = com.unifiedapi.unifiedto.utils.Utils.getQueryParams(com.unifiedapi.unifiedto.models.operations.ListHrisLocationsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        com.unifiedapi.unifiedto.models.operations.ListHrisLocationsResponse res = new com.unifiedapi.unifiedto.models.operations.ListHrisLocationsResponse(contentType, httpRes.statusCode(), httpRes) {{
+            hrisLocations = null;
+        }};
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.HrisLocation[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.HrisLocation[].class);
+                res.hrisLocations = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * Update a location
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
@@ -191,6 +319,46 @@ public class Location {
     }
 
     /**
+     * Update a location
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.PatchHrisLocationResponse patchHrisLocation(com.unifiedapi.unifiedto.models.operations.PatchHrisLocationRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.PatchHrisLocationRequest.class, baseUrl, "/hris/{connection_id}/location/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PATCH");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "hrisLocation", "json");
+        req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        com.unifiedapi.unifiedto.models.operations.PatchHrisLocationResponse res = new com.unifiedapi.unifiedto.models.operations.PatchHrisLocationResponse(contentType, httpRes.statusCode(), httpRes) {{
+            hrisLocation = null;
+        }};
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.HrisLocation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.HrisLocation.class);
+                res.hrisLocation = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * Remove a location
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
@@ -214,6 +382,44 @@ public class Location {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
         com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationResponse(contentType, httpRes.statusCode(), httpRes) {{
+            string = null;
+        }};
+        
+        if (true) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                String out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), String.class);
+                res.string = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Remove a location
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.RemoveHrisLocationResponse removeHrisLocation(com.unifiedapi.unifiedto.models.operations.RemoveHrisLocationRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.RemoveHrisLocationRequest.class, baseUrl, "/hris/{connection_id}/location/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("DELETE");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        com.unifiedapi.unifiedto.models.operations.RemoveHrisLocationResponse res = new com.unifiedapi.unifiedto.models.operations.RemoveHrisLocationResponse(contentType, httpRes.statusCode(), httpRes) {{
             string = null;
         }};
         
@@ -262,6 +468,46 @@ public class Location {
                 ObjectMapper mapper = JSON.getMapper();
                 com.unifiedapi.unifiedto.models.shared.CommerceLocation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.CommerceLocation.class);
                 res.commerceLocation = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Update a location
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public com.unifiedapi.unifiedto.models.operations.UpdateHrisLocationResponse updateHrisLocation(com.unifiedapi.unifiedto.models.operations.UpdateHrisLocationRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.unifiedapi.unifiedto.utils.Utils.generateURL(com.unifiedapi.unifiedto.models.operations.UpdateHrisLocationRequest.class, baseUrl, "/hris/{connection_id}/location/{id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PUT");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = com.unifiedapi.unifiedto.utils.Utils.serializeRequestBody(request, "hrisLocation", "json");
+        req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        com.unifiedapi.unifiedto.models.operations.UpdateHrisLocationResponse res = new com.unifiedapi.unifiedto.models.operations.UpdateHrisLocationResponse(contentType, httpRes.statusCode(), httpRes) {{
+            hrisLocation = null;
+        }};
+        
+        if (httpRes.statusCode() == 200) {
+            if (com.unifiedapi.unifiedto.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                com.unifiedapi.unifiedto.models.shared.HrisLocation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.unifiedapi.unifiedto.models.shared.HrisLocation.class);
+                res.hrisLocation = out;
             }
         }
 

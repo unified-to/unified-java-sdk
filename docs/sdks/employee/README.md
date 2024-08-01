@@ -31,11 +31,15 @@ import com.unifiedapi.unifiedto.models.shared.HrisEmailType;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployee;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployeeEmploymentType;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployeeGender;
+import com.unifiedapi.unifiedto.models.shared.HrisGroup;
+import com.unifiedapi.unifiedto.models.shared.HrisGroupType;
+import com.unifiedapi.unifiedto.models.shared.HrisLocation;
 import com.unifiedapi.unifiedto.models.shared.HrisTelephone;
 import com.unifiedapi.unifiedto.models.shared.HrisTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.MaritalStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeEmployeeRoles;
+import com.unifiedapi.unifiedto.models.shared.PropertyHrisLocationAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -89,11 +93,19 @@ public class Application {
                     employmentStatus = EmploymentStatus.INACTIVE;
                     employmentType = HrisEmployeeEmploymentType.PART_TIME;
                     gender = HrisEmployeeGender.INTERSEX;
+                    groups = new com.unifiedapi.unifiedto.models.shared.HrisGroup[]{{
+                        add(new HrisGroup(
+                        ){{}}),
+                    }};
                     hiredAt = OffsetDateTime.parse("2023-02-04T07:13:32.548Z");
                     id = "<id>";
                     imageUrl = "<value>";
                     languageLocale = "<value>";
                     location = "<value>";
+                    locations = new com.unifiedapi.unifiedto.models.shared.HrisLocation[]{{
+                        add(new HrisLocation(
+                        ){{}}),
+                    }};
                     managerId = "<value>";
                     maritalStatus = MaritalStatus.MARRIED;
                     name = "<value>";
@@ -283,11 +295,15 @@ import com.unifiedapi.unifiedto.models.shared.HrisEmailType;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployee;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployeeEmploymentType;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployeeGender;
+import com.unifiedapi.unifiedto.models.shared.HrisGroup;
+import com.unifiedapi.unifiedto.models.shared.HrisGroupType;
+import com.unifiedapi.unifiedto.models.shared.HrisLocation;
 import com.unifiedapi.unifiedto.models.shared.HrisTelephone;
 import com.unifiedapi.unifiedto.models.shared.HrisTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.MaritalStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeEmployeeRoles;
+import com.unifiedapi.unifiedto.models.shared.PropertyHrisLocationAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -342,11 +358,19 @@ public class Application {
                     employmentStatus = EmploymentStatus.INACTIVE;
                     employmentType = HrisEmployeeEmploymentType.VOLUNTEER;
                     gender = HrisEmployeeGender.FEMALE;
+                    groups = new com.unifiedapi.unifiedto.models.shared.HrisGroup[]{{
+                        add(new HrisGroup(
+                        ){{}}),
+                    }};
                     hiredAt = OffsetDateTime.parse("2024-12-01T15:09:08.937Z");
                     id = "<id>";
                     imageUrl = "<value>";
                     languageLocale = "<value>";
                     location = "<value>";
+                    locations = new com.unifiedapi.unifiedto.models.shared.HrisLocation[]{{
+                        add(new HrisLocation(
+                        ){{}}),
+                    }};
                     managerId = "<value>";
                     maritalStatus = MaritalStatus.SINGLE;
                     name = "<value>";
@@ -469,11 +493,15 @@ import com.unifiedapi.unifiedto.models.shared.HrisEmailType;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployee;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployeeEmploymentType;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployeeGender;
+import com.unifiedapi.unifiedto.models.shared.HrisGroup;
+import com.unifiedapi.unifiedto.models.shared.HrisGroupType;
+import com.unifiedapi.unifiedto.models.shared.HrisLocation;
 import com.unifiedapi.unifiedto.models.shared.HrisTelephone;
 import com.unifiedapi.unifiedto.models.shared.HrisTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.MaritalStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeEmployeeRoles;
+import com.unifiedapi.unifiedto.models.shared.PropertyHrisLocationAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -528,11 +556,19 @@ public class Application {
                     employmentStatus = EmploymentStatus.INACTIVE;
                     employmentType = HrisEmployeeEmploymentType.CONTRACTOR;
                     gender = HrisEmployeeGender.TRANS;
+                    groups = new com.unifiedapi.unifiedto.models.shared.HrisGroup[]{{
+                        add(new HrisGroup(
+                        ){{}}),
+                    }};
                     hiredAt = OffsetDateTime.parse("2023-05-31T18:44:44.765Z");
                     id = "<id>";
                     imageUrl = "<value>";
                     languageLocale = "<value>";
                     location = "<value>";
+                    locations = new com.unifiedapi.unifiedto.models.shared.HrisLocation[]{{
+                        add(new HrisLocation(
+                        ){{}}),
+                    }};
                     managerId = "<value>";
                     maritalStatus = MaritalStatus.MARRIED;
                     name = "<value>";

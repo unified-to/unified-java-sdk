@@ -10,7 +10,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.18.56'
+implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.18.57'
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -384,11 +384,17 @@ public class Application {
 ### [location](docs/sdks/location/README.md)
 
 * [createCommerceLocation](docs/sdks/location/README.md#createcommercelocation) - Create a location
+* [createHrisLocation](docs/sdks/location/README.md#createhrislocation) - Create a location
 * [getCommerceLocation](docs/sdks/location/README.md#getcommercelocation) - Retrieve a location
+* [getHrisLocation](docs/sdks/location/README.md#gethrislocation) - Retrieve a location
 * [listCommerceLocations](docs/sdks/location/README.md#listcommercelocations) - List all locations
+* [listHrisLocations](docs/sdks/location/README.md#listhrislocations) - List all locations
 * [patchCommerceLocation](docs/sdks/location/README.md#patchcommercelocation) - Update a location
+* [patchHrisLocation](docs/sdks/location/README.md#patchhrislocation) - Update a location
 * [removeCommerceLocation](docs/sdks/location/README.md#removecommercelocation) - Remove a location
+* [removeHrisLocation](docs/sdks/location/README.md#removehrislocation) - Remove a location
 * [updateCommerceLocation](docs/sdks/location/README.md#updatecommercelocation) - Update a location
+* [updateHrisLocation](docs/sdks/location/README.md#updatehrislocation) - Update a location
 
 ### [crm](docs/sdks/crm/README.md)
 
@@ -492,25 +498,31 @@ public class Application {
 * [createHrisCompany](docs/sdks/hris/README.md#createhriscompany) - Create a company
 * [createHrisEmployee](docs/sdks/hris/README.md#createhrisemployee) - Create an employee
 * [createHrisGroup](docs/sdks/hris/README.md#createhrisgroup) - Create a group
+* [createHrisLocation](docs/sdks/hris/README.md#createhrislocation) - Create a location
 * [getHrisCompany](docs/sdks/hris/README.md#gethriscompany) - Retrieve a company
 * [getHrisEmployee](docs/sdks/hris/README.md#gethrisemployee) - Retrieve an employee
 * [getHrisGroup](docs/sdks/hris/README.md#gethrisgroup) - Retrieve a group
+* [getHrisLocation](docs/sdks/hris/README.md#gethrislocation) - Retrieve a location
 * [getHrisPayslip](docs/sdks/hris/README.md#gethrispayslip) - Retrieve a payslip
 * [getHrisTimeoff](docs/sdks/hris/README.md#gethristimeoff) - Retrieve a timeoff
 * [listHrisCompanies](docs/sdks/hris/README.md#listhriscompanies) - List all companies
 * [listHrisEmployees](docs/sdks/hris/README.md#listhrisemployees) - List all employees
 * [listHrisGroups](docs/sdks/hris/README.md#listhrisgroups) - List all groups
+* [listHrisLocations](docs/sdks/hris/README.md#listhrislocations) - List all locations
 * [listHrisPayslips](docs/sdks/hris/README.md#listhrispayslips) - List all payslips
 * [listHrisTimeoffs](docs/sdks/hris/README.md#listhristimeoffs) - List all timeoffs
 * [patchHrisCompany](docs/sdks/hris/README.md#patchhriscompany) - Update a company
 * [patchHrisEmployee](docs/sdks/hris/README.md#patchhrisemployee) - Update an employee
 * [patchHrisGroup](docs/sdks/hris/README.md#patchhrisgroup) - Update a group
+* [patchHrisLocation](docs/sdks/hris/README.md#patchhrislocation) - Update a location
 * [removeHrisCompany](docs/sdks/hris/README.md#removehriscompany) - Remove a company
 * [removeHrisEmployee](docs/sdks/hris/README.md#removehrisemployee) - Remove an employee
 * [removeHrisGroup](docs/sdks/hris/README.md#removehrisgroup) - Remove a group
+* [removeHrisLocation](docs/sdks/hris/README.md#removehrislocation) - Remove a location
 * [updateHrisCompany](docs/sdks/hris/README.md#updatehriscompany) - Update a company
 * [updateHrisEmployee](docs/sdks/hris/README.md#updatehrisemployee) - Update an employee
 * [updateHrisGroup](docs/sdks/hris/README.md#updatehrisgroup) - Update a group
+* [updateHrisLocation](docs/sdks/hris/README.md#updatehrislocation) - Update a location
 
 ### [employee](docs/sdks/employee/README.md)
 

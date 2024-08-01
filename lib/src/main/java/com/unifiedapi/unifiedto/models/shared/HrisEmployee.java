@@ -154,6 +154,18 @@ public class HrisEmployee {
         return this;
     }
     
+    /**
+     * Which groups/teams/units that this employee/user belongs to.  May not have all of the Group fields present, but should have id, name, or email.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("groups")
+    public HrisGroup[] groups;
+
+    public HrisEmployee withGroups(HrisGroup[] groups) {
+        this.groups = groups;
+        return this;
+    }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
@@ -198,6 +210,15 @@ public class HrisEmployee {
 
     public HrisEmployee withLocation(String location) {
         this.location = location;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("locations")
+    public HrisLocation[] locations;
+
+    public HrisEmployee withLocations(HrisLocation[] locations) {
+        this.locations = locations;
         return this;
     }
     

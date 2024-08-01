@@ -6,25 +6,31 @@
 * [createHrisCompany](#createhriscompany) - Create a company
 * [createHrisEmployee](#createhrisemployee) - Create an employee
 * [createHrisGroup](#createhrisgroup) - Create a group
+* [createHrisLocation](#createhrislocation) - Create a location
 * [getHrisCompany](#gethriscompany) - Retrieve a company
 * [getHrisEmployee](#gethrisemployee) - Retrieve an employee
 * [getHrisGroup](#gethrisgroup) - Retrieve a group
+* [getHrisLocation](#gethrislocation) - Retrieve a location
 * [getHrisPayslip](#gethrispayslip) - Retrieve a payslip
 * [getHrisTimeoff](#gethristimeoff) - Retrieve a timeoff
 * [listHrisCompanies](#listhriscompanies) - List all companies
 * [listHrisEmployees](#listhrisemployees) - List all employees
 * [listHrisGroups](#listhrisgroups) - List all groups
+* [listHrisLocations](#listhrislocations) - List all locations
 * [listHrisPayslips](#listhrispayslips) - List all payslips
 * [listHrisTimeoffs](#listhristimeoffs) - List all timeoffs
 * [patchHrisCompany](#patchhriscompany) - Update a company
 * [patchHrisEmployee](#patchhrisemployee) - Update an employee
 * [patchHrisGroup](#patchhrisgroup) - Update a group
+* [patchHrisLocation](#patchhrislocation) - Update a location
 * [removeHrisCompany](#removehriscompany) - Remove a company
 * [removeHrisEmployee](#removehrisemployee) - Remove an employee
 * [removeHrisGroup](#removehrisgroup) - Remove a group
+* [removeHrisLocation](#removehrislocation) - Remove a location
 * [updateHrisCompany](#updatehriscompany) - Update a company
 * [updateHrisEmployee](#updatehrisemployee) - Update an employee
 * [updateHrisGroup](#updatehrisgroup) - Update a group
+* [updateHrisLocation](#updatehrislocation) - Update a location
 
 ## createHrisCompany
 
@@ -128,11 +134,15 @@ import com.unifiedapi.unifiedto.models.shared.HrisEmailType;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployee;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployeeEmploymentType;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployeeGender;
+import com.unifiedapi.unifiedto.models.shared.HrisGroup;
+import com.unifiedapi.unifiedto.models.shared.HrisGroupType;
+import com.unifiedapi.unifiedto.models.shared.HrisLocation;
 import com.unifiedapi.unifiedto.models.shared.HrisTelephone;
 import com.unifiedapi.unifiedto.models.shared.HrisTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.MaritalStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeEmployeeRoles;
+import com.unifiedapi.unifiedto.models.shared.PropertyHrisLocationAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -186,11 +196,19 @@ public class Application {
                     employmentStatus = EmploymentStatus.INACTIVE;
                     employmentType = HrisEmployeeEmploymentType.PART_TIME;
                     gender = HrisEmployeeGender.INTERSEX;
+                    groups = new com.unifiedapi.unifiedto.models.shared.HrisGroup[]{{
+                        add(new HrisGroup(
+                        ){{}}),
+                    }};
                     hiredAt = OffsetDateTime.parse("2023-02-04T07:13:32.548Z");
                     id = "<id>";
                     imageUrl = "<value>";
                     languageLocale = "<value>";
                     location = "<value>";
+                    locations = new com.unifiedapi.unifiedto.models.shared.HrisLocation[]{{
+                        add(new HrisLocation(
+                        ){{}}),
+                    }};
                     managerId = "<value>";
                     maritalStatus = MaritalStatus.MARRIED;
                     name = "<value>";
@@ -317,6 +335,102 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.CreateHrisGroupResponse](../../models/operations/CreateHrisGroupResponse.md)**
+
+
+## createHrisLocation
+
+Create a location
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.CreateHrisLocationRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateHrisLocationResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisLocation;
+import com.unifiedapi.unifiedto.models.shared.HrisTelephone;
+import com.unifiedapi.unifiedto.models.shared.HrisTelephoneType;
+import com.unifiedapi.unifiedto.models.shared.PropertyHrisLocationAddress;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.CreateHrisLocationRequest req = new CreateHrisLocationRequest(
+                "<value>"){{
+                hrisLocation = new HrisLocation(
+){{
+                    address = new PropertyHrisLocationAddress(
+){{
+                        address1 = "<value>";
+                        address2 = "<value>";
+                        city = "Port Trinityshire";
+                        country = "Saint Pierre and Miquelon";
+                        countryCode = "GE";
+                        postalCode = "72153";
+                        region = "<value>";
+                        regionCode = "<value>";
+
+                    }};
+                    createdAt = OffsetDateTime.parse("2023-11-01T01:29:28.442Z");
+                    currency = "CFA Franc BCEAO";
+                    description = "Persistent eco-centric pricing structure";
+                    externalIdentifier = "<value>";
+                    id = "<id>";
+                    isActive = false;
+                    isHq = false;
+                    languageLocale = "<value>";
+                    name = "<value>";
+                    parentId = "<value>";
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "<value>");
+                    }};
+                    telephones = new com.unifiedapi.unifiedto.models.shared.HrisTelephone[]{{
+                        add(new HrisTelephone(
+                        "<value>"){{
+                            telephone = "<value>";
+                        }}),
+                    }};
+                    timezone = "Asia/Almaty";
+                    updatedAt = OffsetDateTime.parse("2023-09-10T22:58:37.040Z");
+
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.CreateHrisLocationResponse res = sdk.hris.createHrisLocation(req);
+
+            if (res.hrisLocation != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.CreateHrisLocationRequest](../../models/operations/CreateHrisLocationRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.CreateHrisLocationResponse](../../models/operations/CreateHrisLocationResponse.md)**
 
 
 ## getHrisCompany
@@ -488,6 +602,63 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.GetHrisGroupResponse](../../models/operations/GetHrisGroupResponse.md)**
+
+
+## getHrisLocation
+
+Retrieve a location
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.GetHrisLocationRequest;
+import com.unifiedapi.unifiedto.models.operations.GetHrisLocationResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.GetHrisLocationRequest req = new GetHrisLocationRequest(
+                "<value>",
+                "<value>"){{
+                fields = new String[]{{
+                    add("<value>"),
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.GetHrisLocationResponse res = sdk.hris.getHrisLocation(req);
+
+            if (res.hrisLocation != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [com.unifiedapi.unifiedto.models.operations.GetHrisLocationRequest](../../models/operations/GetHrisLocationRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.GetHrisLocationResponse](../../models/operations/GetHrisLocationResponse.md)**
 
 
 ## getHrisPayslip
@@ -789,6 +960,67 @@ public class Application {
 **[com.unifiedapi.unifiedto.models.operations.ListHrisGroupsResponse](../../models/operations/ListHrisGroupsResponse.md)**
 
 
+## listHrisLocations
+
+List all locations
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.ListHrisLocationsRequest;
+import com.unifiedapi.unifiedto.models.operations.ListHrisLocationsResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.ListHrisLocationsRequest req = new ListHrisLocationsRequest(
+                "<value>"){{
+                fields = new String[]{{
+                    add("<value>"),
+                }};
+                limit = 5896.74d;
+                offset = 7281.87d;
+                query = "<value>";
+                updatedGte = OffsetDateTime.parse("2022-05-12T05:34:35.160Z");
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.ListHrisLocationsResponse res = sdk.hris.listHrisLocations(req);
+
+            if (res.hrisLocations != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.ListHrisLocationsRequest](../../models/operations/ListHrisLocationsRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.ListHrisLocationsResponse](../../models/operations/ListHrisLocationsResponse.md)**
+
+
 ## listHrisPayslips
 
 List all payslips
@@ -1016,11 +1248,15 @@ import com.unifiedapi.unifiedto.models.shared.HrisEmailType;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployee;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployeeEmploymentType;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployeeGender;
+import com.unifiedapi.unifiedto.models.shared.HrisGroup;
+import com.unifiedapi.unifiedto.models.shared.HrisGroupType;
+import com.unifiedapi.unifiedto.models.shared.HrisLocation;
 import com.unifiedapi.unifiedto.models.shared.HrisTelephone;
 import com.unifiedapi.unifiedto.models.shared.HrisTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.MaritalStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeEmployeeRoles;
+import com.unifiedapi.unifiedto.models.shared.PropertyHrisLocationAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -1075,11 +1311,19 @@ public class Application {
                     employmentStatus = EmploymentStatus.INACTIVE;
                     employmentType = HrisEmployeeEmploymentType.VOLUNTEER;
                     gender = HrisEmployeeGender.FEMALE;
+                    groups = new com.unifiedapi.unifiedto.models.shared.HrisGroup[]{{
+                        add(new HrisGroup(
+                        ){{}}),
+                    }};
                     hiredAt = OffsetDateTime.parse("2024-12-01T15:09:08.937Z");
                     id = "<id>";
                     imageUrl = "<value>";
                     languageLocale = "<value>";
                     location = "<value>";
+                    locations = new com.unifiedapi.unifiedto.models.shared.HrisLocation[]{{
+                        add(new HrisLocation(
+                        ){{}}),
+                    }};
                     managerId = "<value>";
                     maritalStatus = MaritalStatus.SINGLE;
                     name = "<value>";
@@ -1207,6 +1451,103 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.PatchHrisGroupResponse](../../models/operations/PatchHrisGroupResponse.md)**
+
+
+## patchHrisLocation
+
+Update a location
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.PatchHrisLocationRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchHrisLocationResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisLocation;
+import com.unifiedapi.unifiedto.models.shared.HrisTelephone;
+import com.unifiedapi.unifiedto.models.shared.HrisTelephoneType;
+import com.unifiedapi.unifiedto.models.shared.PropertyHrisLocationAddress;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.PatchHrisLocationRequest req = new PatchHrisLocationRequest(
+                "<value>",
+                "<value>"){{
+                hrisLocation = new HrisLocation(
+){{
+                    address = new PropertyHrisLocationAddress(
+){{
+                        address1 = "<value>";
+                        address2 = "<value>";
+                        city = "Jeanieshire";
+                        country = "Lao People's Democratic Republic";
+                        countryCode = "SA";
+                        postalCode = "01257-5261";
+                        region = "<value>";
+                        regionCode = "<value>";
+
+                    }};
+                    createdAt = OffsetDateTime.parse("2024-01-19T04:39:31.681Z");
+                    currency = "Swiss Franc";
+                    description = "Multi-lateral maximized website";
+                    externalIdentifier = "<value>";
+                    id = "<id>";
+                    isActive = false;
+                    isHq = false;
+                    languageLocale = "<value>";
+                    name = "<value>";
+                    parentId = "<value>";
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "<value>");
+                    }};
+                    telephones = new com.unifiedapi.unifiedto.models.shared.HrisTelephone[]{{
+                        add(new HrisTelephone(
+                        "<value>"){{
+                            telephone = "<value>";
+                        }}),
+                    }};
+                    timezone = "Pacific/Majuro";
+                    updatedAt = OffsetDateTime.parse("2023-08-27T05:06:26.200Z");
+
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.PatchHrisLocationResponse res = sdk.hris.patchHrisLocation(req);
+
+            if (res.hrisLocation != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.PatchHrisLocationRequest](../../models/operations/PatchHrisLocationRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.PatchHrisLocationResponse](../../models/operations/PatchHrisLocationResponse.md)**
 
 
 ## removeHrisCompany
@@ -1365,6 +1706,58 @@ public class Application {
 **[com.unifiedapi.unifiedto.models.operations.RemoveHrisGroupResponse](../../models/operations/RemoveHrisGroupResponse.md)**
 
 
+## removeHrisLocation
+
+Remove a location
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.RemoveHrisLocationRequest;
+import com.unifiedapi.unifiedto.models.operations.RemoveHrisLocationResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.RemoveHrisLocationRequest req = new RemoveHrisLocationRequest(
+                "<value>",
+                "<value>");
+
+            com.unifiedapi.unifiedto.models.operations.RemoveHrisLocationResponse res = sdk.hris.removeHrisLocation(req);
+
+            if (res.statusCode == 200) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.RemoveHrisLocationRequest](../../models/operations/RemoveHrisLocationRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.RemoveHrisLocationResponse](../../models/operations/RemoveHrisLocationResponse.md)**
+
+
 ## updateHrisCompany
 
 Update a company
@@ -1468,11 +1861,15 @@ import com.unifiedapi.unifiedto.models.shared.HrisEmailType;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployee;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployeeEmploymentType;
 import com.unifiedapi.unifiedto.models.shared.HrisEmployeeGender;
+import com.unifiedapi.unifiedto.models.shared.HrisGroup;
+import com.unifiedapi.unifiedto.models.shared.HrisGroupType;
+import com.unifiedapi.unifiedto.models.shared.HrisLocation;
 import com.unifiedapi.unifiedto.models.shared.HrisTelephone;
 import com.unifiedapi.unifiedto.models.shared.HrisTelephoneType;
 import com.unifiedapi.unifiedto.models.shared.MaritalStatus;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeAddress;
 import com.unifiedapi.unifiedto.models.shared.PropertyHrisEmployeeEmployeeRoles;
+import com.unifiedapi.unifiedto.models.shared.PropertyHrisLocationAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.time.OffsetDateTime;
 
@@ -1527,11 +1924,19 @@ public class Application {
                     employmentStatus = EmploymentStatus.INACTIVE;
                     employmentType = HrisEmployeeEmploymentType.CONTRACTOR;
                     gender = HrisEmployeeGender.TRANS;
+                    groups = new com.unifiedapi.unifiedto.models.shared.HrisGroup[]{{
+                        add(new HrisGroup(
+                        ){{}}),
+                    }};
                     hiredAt = OffsetDateTime.parse("2023-05-31T18:44:44.765Z");
                     id = "<id>";
                     imageUrl = "<value>";
                     languageLocale = "<value>";
                     location = "<value>";
+                    locations = new com.unifiedapi.unifiedto.models.shared.HrisLocation[]{{
+                        add(new HrisLocation(
+                        ){{}}),
+                    }};
                     managerId = "<value>";
                     maritalStatus = MaritalStatus.MARRIED;
                     name = "<value>";
@@ -1659,4 +2064,101 @@ public class Application {
 ### Response
 
 **[com.unifiedapi.unifiedto.models.operations.UpdateHrisGroupResponse](../../models/operations/UpdateHrisGroupResponse.md)**
+
+
+## updateHrisLocation
+
+Update a location
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.UpdateHrisLocationRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdateHrisLocationResponse;
+import com.unifiedapi.unifiedto.models.shared.HrisLocation;
+import com.unifiedapi.unifiedto.models.shared.HrisTelephone;
+import com.unifiedapi.unifiedto.models.shared.HrisTelephoneType;
+import com.unifiedapi.unifiedto.models.shared.PropertyHrisLocationAddress;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.time.OffsetDateTime;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .setSecurity(new Security(
+                ){{
+                    jwt = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            com.unifiedapi.unifiedto.models.operations.UpdateHrisLocationRequest req = new UpdateHrisLocationRequest(
+                "<value>",
+                "<value>"){{
+                hrisLocation = new HrisLocation(
+){{
+                    address = new PropertyHrisLocationAddress(
+){{
+                        address1 = "<value>";
+                        address2 = "<value>";
+                        city = "Willieton";
+                        country = "Antarctica (the territory South of 60 deg S)";
+                        countryCode = "AM";
+                        postalCode = "16560";
+                        region = "<value>";
+                        regionCode = "<value>";
+
+                    }};
+                    createdAt = OffsetDateTime.parse("2023-02-06T16:46:59.275Z");
+                    currency = "Guinea Franc";
+                    description = "Horizontal solution-oriented conglomeration";
+                    externalIdentifier = "<value>";
+                    id = "<id>";
+                    isActive = false;
+                    isHq = false;
+                    languageLocale = "<value>";
+                    name = "<value>";
+                    parentId = "<value>";
+                    raw = new java.util.HashMap<String, java.lang.Object>(
+                    ){{
+                        put("key", "<value>");
+                    }};
+                    telephones = new com.unifiedapi.unifiedto.models.shared.HrisTelephone[]{{
+                        add(new HrisTelephone(
+                        "<value>"){{
+                            telephone = "<value>";
+                        }}),
+                    }};
+                    timezone = "America/Regina";
+                    updatedAt = OffsetDateTime.parse("2023-06-07T06:13:58.473Z");
+
+                }};
+
+            }};
+
+            com.unifiedapi.unifiedto.models.operations.UpdateHrisLocationResponse res = sdk.hris.updateHrisLocation(req);
+
+            if (res.hrisLocation != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.UpdateHrisLocationRequest](../../models/operations/UpdateHrisLocationRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+
+
+### Response
+
+**[com.unifiedapi.unifiedto.models.operations.UpdateHrisLocationResponse](../../models/operations/UpdateHrisLocationResponse.md)**
 
