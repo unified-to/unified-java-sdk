@@ -1,5 +1,5 @@
 # Scorecard
-(*scorecard*)
+(*scorecard()*)
 
 ### Available Operations
 
@@ -20,76 +20,60 @@ Create a scorecard
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
-import com.unifiedapi.unifiedto.models.shared.AtsScorecardQuestion;
-import com.unifiedapi.unifiedto.models.shared.Recommendation;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardRequest req = new CreateAtsScorecardRequest(
-                "<value>"){{
-                atsScorecard = new AtsScorecard(
-){{
-                    applicationId = "<value>";
-                    candidateId = "<value>";
-                    comment = "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J";
-                    createdAt = OffsetDateTime.parse("2022-04-24T10:18:34.661Z");
-                    id = "<id>";
-                    interviewId = "<value>";
-                    interviewerId = "<value>";
-                    jobId = "<value>";
-                    questions = new com.unifiedapi.unifiedto.models.shared.AtsScorecardQuestion[]{{
-                        add(new AtsScorecardQuestion(
-                        "<value>"){{
-                            text = "<value>";
-                        }}),
-                    }};
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    recommendation = Recommendation.NO;
-                    updatedAt = OffsetDateTime.parse("2023-04-02T03:31:06.456Z");
+            CreateAtsScorecardRequest req = CreateAtsScorecardRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-                }};
+            CreateAtsScorecardResponse res = sdk.scorecard().createAtsScorecard()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse res = sdk.scorecard.createAtsScorecard(req);
-
-            if (res.atsScorecard != null) {
+            if (res.atsScorecard().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardRequest](../../models/operations/CreateAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [CreateAtsScorecardRequest](../../models/operations/CreateAtsScorecardRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse](../../models/operations/CreateAtsScorecardResponse.md)**
+**[CreateAtsScorecardResponse](../../models/operations/CreateAtsScorecardResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## getAtsScorecard
 
@@ -101,52 +85,61 @@ Retrieve a scorecard
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsScorecardResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetAtsScorecardRequest req = new GetAtsScorecardRequest(
-                "<value>",
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
+            GetAtsScorecardRequest req = GetAtsScorecardRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            }};
+            GetAtsScorecardResponse res = sdk.scorecard().getAtsScorecard()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.GetAtsScorecardResponse res = sdk.scorecard.getAtsScorecard(req);
-
-            if (res.atsScorecard != null) {
+            if (res.atsScorecard().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [com.unifiedapi.unifiedto.models.operations.GetAtsScorecardRequest](../../models/operations/GetAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetAtsScorecardRequest](../../models/operations/GetAtsScorecardRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetAtsScorecardResponse](../../models/operations/GetAtsScorecardResponse.md)**
+**[GetAtsScorecardResponse](../../models/operations/GetAtsScorecardResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listAtsScorecards
 
@@ -158,60 +151,60 @@ List all scorecards
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsRequest req = new ListAtsScorecardsRequest(
-                "<value>"){{
-                applicationId = "<value>";
-                candidateId = "<value>";
-                fields = new String[]{{
-                    add("<value>"),
-                }};
-                interviewId = "<value>";
-                jobId = "<value>";
-                limit = 5126.98d;
-                offset = 8077.44d;
-                query = "<value>";
-                updatedGte = OffsetDateTime.parse("2024-08-19T14:46:22.333Z");
+            ListAtsScorecardsRequest req = ListAtsScorecardsRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-            }};
+            ListAtsScorecardsResponse res = sdk.scorecard().listAtsScorecards()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsResponse res = sdk.scorecard.listAtsScorecards(req);
-
-            if (res.atsScorecards != null) {
+            if (res.atsScorecards().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsRequest](../../models/operations/ListAtsScorecardsRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListAtsScorecardsRequest](../../models/operations/ListAtsScorecardsRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsResponse](../../models/operations/ListAtsScorecardsResponse.md)**
+**[ListAtsScorecardsResponse](../../models/operations/ListAtsScorecardsResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## patchAtsScorecard
 
@@ -223,77 +216,61 @@ Update a scorecard
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
-import com.unifiedapi.unifiedto.models.shared.AtsScorecardQuestion;
-import com.unifiedapi.unifiedto.models.shared.Recommendation;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardRequest req = new PatchAtsScorecardRequest(
-                "<value>",
-                "<value>"){{
-                atsScorecard = new AtsScorecard(
-){{
-                    applicationId = "<value>";
-                    candidateId = "<value>";
-                    comment = "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support";
-                    createdAt = OffsetDateTime.parse("2024-10-06T13:32:29.533Z");
-                    id = "<id>";
-                    interviewId = "<value>";
-                    interviewerId = "<value>";
-                    jobId = "<value>";
-                    questions = new com.unifiedapi.unifiedto.models.shared.AtsScorecardQuestion[]{{
-                        add(new AtsScorecardQuestion(
-                        "<value>"){{
-                            text = "<value>";
-                        }}),
-                    }};
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    recommendation = Recommendation.YES;
-                    updatedAt = OffsetDateTime.parse("2022-11-28T15:13:55.563Z");
+            PatchAtsScorecardRequest req = PatchAtsScorecardRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                }};
+            PatchAtsScorecardResponse res = sdk.scorecard().patchAtsScorecard()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse res = sdk.scorecard.patchAtsScorecard(req);
-
-            if (res.atsScorecard != null) {
+            if (res.atsScorecard().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardRequest](../../models/operations/PatchAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [PatchAtsScorecardRequest](../../models/operations/PatchAtsScorecardRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse](../../models/operations/PatchAtsScorecardResponse.md)**
+**[PatchAtsScorecardResponse](../../models/operations/PatchAtsScorecardResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## removeAtsScorecard
 
@@ -305,47 +282,59 @@ Remove a scorecard
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardRequest req = new RemoveAtsScorecardRequest(
-                "<value>",
-                "<value>");
+            RemoveAtsScorecardRequest req = RemoveAtsScorecardRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse res = sdk.scorecard.removeAtsScorecard(req);
+            RemoveAtsScorecardResponse res = sdk.scorecard().removeAtsScorecard()
+                .request(req)
+                .call();
 
-            if (res.statusCode == 200) {
-                // handle response
-            }
+            // handle response
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardRequest](../../models/operations/RemoveAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [RemoveAtsScorecardRequest](../../models/operations/RemoveAtsScorecardRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse](../../models/operations/RemoveAtsScorecardResponse.md)**
+**[RemoveAtsScorecardResponse](../../models/operations/RemoveAtsScorecardResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## updateAtsScorecard
 
@@ -357,74 +346,58 @@ Update a scorecard
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
-import com.unifiedapi.unifiedto.models.shared.AtsScorecardQuestion;
-import com.unifiedapi.unifiedto.models.shared.Recommendation;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardRequest req = new UpdateAtsScorecardRequest(
-                "<value>",
-                "<value>"){{
-                atsScorecard = new AtsScorecard(
-){{
-                    applicationId = "<value>";
-                    candidateId = "<value>";
-                    comment = "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive";
-                    createdAt = OffsetDateTime.parse("2022-07-10T16:18:43.908Z");
-                    id = "<id>";
-                    interviewId = "<value>";
-                    interviewerId = "<value>";
-                    jobId = "<value>";
-                    questions = new com.unifiedapi.unifiedto.models.shared.AtsScorecardQuestion[]{{
-                        add(new AtsScorecardQuestion(
-                        "<value>"){{
-                            text = "<value>";
-                        }}),
-                    }};
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    recommendation = Recommendation.NO;
-                    updatedAt = OffsetDateTime.parse("2022-07-26T09:16:55.761Z");
+            UpdateAtsScorecardRequest req = UpdateAtsScorecardRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                }};
+            UpdateAtsScorecardResponse res = sdk.scorecard().updateAtsScorecard()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse res = sdk.scorecard.updateAtsScorecard(req);
-
-            if (res.atsScorecard != null) {
+            if (res.atsScorecard().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardRequest](../../models/operations/UpdateAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [UpdateAtsScorecardRequest](../../models/operations/UpdateAtsScorecardRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse](../../models/operations/UpdateAtsScorecardResponse.md)**
+**[UpdateAtsScorecardResponse](../../models/operations/UpdateAtsScorecardResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |

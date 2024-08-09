@@ -1,5 +1,5 @@
 # Journal
-(*journal*)
+(*journal()*)
 
 ### Available Operations
 
@@ -20,70 +20,60 @@ Create a journal
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingJournalRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingJournalResponse;
-import com.unifiedapi.unifiedto.models.shared.AccountingJournal;
-import com.unifiedapi.unifiedto.models.shared.AccountingJournalLineitem;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.CreateAccountingJournalRequest req = new CreateAccountingJournalRequest(
-                "<value>"){{
-                accountingJournal = new AccountingJournal(
-){{
-                    createdAt = "<value>";
-                    currency = "North Korean Won";
-                    description = "Polarised heuristic time-frame";
-                    id = "<id>";
-                    lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingJournalLineitem[]{{
-                        add(new AccountingJournalLineitem(
-                        ){{}}),
-                    }};
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    reference = "<value>";
-                    taxAmount = 3484.82d;
-                    taxrateId = "<value>";
-                    updatedAt = "<value>";
+            CreateAccountingJournalRequest req = CreateAccountingJournalRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-                }};
+            CreateAccountingJournalResponse res = sdk.journal().createAccountingJournal()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.CreateAccountingJournalResponse res = sdk.journal.createAccountingJournal(req);
-
-            if (res.accountingJournal != null) {
+            if (res.accountingJournal().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.CreateAccountingJournalRequest](../../models/operations/CreateAccountingJournalRequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [CreateAccountingJournalRequest](../../models/operations/CreateAccountingJournalRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.CreateAccountingJournalResponse](../../models/operations/CreateAccountingJournalResponse.md)**
+**[CreateAccountingJournalResponse](../../models/operations/CreateAccountingJournalResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## getAccountingJournal
 
@@ -95,52 +85,61 @@ Retrieve a journal
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingJournalRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingJournalResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetAccountingJournalRequest req = new GetAccountingJournalRequest(
-                "<value>",
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
+            GetAccountingJournalRequest req = GetAccountingJournalRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            }};
+            GetAccountingJournalResponse res = sdk.journal().getAccountingJournal()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.GetAccountingJournalResponse res = sdk.journal.getAccountingJournal(req);
-
-            if (res.accountingJournal != null) {
+            if (res.accountingJournal().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.GetAccountingJournalRequest](../../models/operations/GetAccountingJournalRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [GetAccountingJournalRequest](../../models/operations/GetAccountingJournalRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetAccountingJournalResponse](../../models/operations/GetAccountingJournalResponse.md)**
+**[GetAccountingJournalResponse](../../models/operations/GetAccountingJournalResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listAccountingJournals
 
@@ -152,56 +151,60 @@ List all journals
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingJournalsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingJournalsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListAccountingJournalsRequest req = new ListAccountingJournalsRequest(
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
-                limit = 3732.99d;
-                offset = 235.51d;
-                query = "<value>";
-                updatedGte = OffsetDateTime.parse("2022-08-02T07:29:24.179Z");
+            ListAccountingJournalsRequest req = ListAccountingJournalsRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-            }};
+            ListAccountingJournalsResponse res = sdk.journal().listAccountingJournals()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListAccountingJournalsResponse res = sdk.journal.listAccountingJournals(req);
-
-            if (res.accountingJournals != null) {
+            if (res.accountingJournals().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.ListAccountingJournalsRequest](../../models/operations/ListAccountingJournalsRequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [ListAccountingJournalsRequest](../../models/operations/ListAccountingJournalsRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListAccountingJournalsResponse](../../models/operations/ListAccountingJournalsResponse.md)**
+**[ListAccountingJournalsResponse](../../models/operations/ListAccountingJournalsResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## patchAccountingJournal
 
@@ -213,71 +216,61 @@ Update a journal
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingJournalRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingJournalResponse;
-import com.unifiedapi.unifiedto.models.shared.AccountingJournal;
-import com.unifiedapi.unifiedto.models.shared.AccountingJournalLineitem;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.PatchAccountingJournalRequest req = new PatchAccountingJournalRequest(
-                "<value>",
-                "<value>"){{
-                accountingJournal = new AccountingJournal(
-){{
-                    createdAt = "<value>";
-                    currency = "Malaysian Ringgit";
-                    description = "Digitized directional function";
-                    id = "<id>";
-                    lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingJournalLineitem[]{{
-                        add(new AccountingJournalLineitem(
-                        ){{}}),
-                    }};
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    reference = "<value>";
-                    taxAmount = 904d;
-                    taxrateId = "<value>";
-                    updatedAt = "<value>";
+            PatchAccountingJournalRequest req = PatchAccountingJournalRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                }};
+            PatchAccountingJournalResponse res = sdk.journal().patchAccountingJournal()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.PatchAccountingJournalResponse res = sdk.journal.patchAccountingJournal(req);
-
-            if (res.accountingJournal != null) {
+            if (res.accountingJournal().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.PatchAccountingJournalRequest](../../models/operations/PatchAccountingJournalRequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [PatchAccountingJournalRequest](../../models/operations/PatchAccountingJournalRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchAccountingJournalResponse](../../models/operations/PatchAccountingJournalResponse.md)**
+**[PatchAccountingJournalResponse](../../models/operations/PatchAccountingJournalResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## removeAccountingJournal
 
@@ -289,47 +282,59 @@ Remove a journal
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveAccountingJournalRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveAccountingJournalResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveAccountingJournalRequest req = new RemoveAccountingJournalRequest(
-                "<value>",
-                "<value>");
+            RemoveAccountingJournalRequest req = RemoveAccountingJournalRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveAccountingJournalResponse res = sdk.journal.removeAccountingJournal(req);
+            RemoveAccountingJournalResponse res = sdk.journal().removeAccountingJournal()
+                .request(req)
+                .call();
 
-            if (res.statusCode == 200) {
-                // handle response
-            }
+            // handle response
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.RemoveAccountingJournalRequest](../../models/operations/RemoveAccountingJournalRequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [RemoveAccountingJournalRequest](../../models/operations/RemoveAccountingJournalRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.RemoveAccountingJournalResponse](../../models/operations/RemoveAccountingJournalResponse.md)**
+**[RemoveAccountingJournalResponse](../../models/operations/RemoveAccountingJournalResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## updateAccountingJournal
 
@@ -341,68 +346,58 @@ Update a journal
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingJournalRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingJournalResponse;
-import com.unifiedapi.unifiedto.models.shared.AccountingJournal;
-import com.unifiedapi.unifiedto.models.shared.AccountingJournalLineitem;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.UpdateAccountingJournalRequest req = new UpdateAccountingJournalRequest(
-                "<value>",
-                "<value>"){{
-                accountingJournal = new AccountingJournal(
-){{
-                    createdAt = "<value>";
-                    currency = "Riel";
-                    description = "Fundamental contextually-based challenge";
-                    id = "<id>";
-                    lineitems = new com.unifiedapi.unifiedto.models.shared.AccountingJournalLineitem[]{{
-                        add(new AccountingJournalLineitem(
-                        ){{}}),
-                    }};
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    reference = "<value>";
-                    taxAmount = 6716.2d;
-                    taxrateId = "<value>";
-                    updatedAt = "<value>";
+            UpdateAccountingJournalRequest req = UpdateAccountingJournalRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                }};
+            UpdateAccountingJournalResponse res = sdk.journal().updateAccountingJournal()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.UpdateAccountingJournalResponse res = sdk.journal.updateAccountingJournal(req);
-
-            if (res.accountingJournal != null) {
+            if (res.accountingJournal().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.UpdateAccountingJournalRequest](../../models/operations/UpdateAccountingJournalRequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [UpdateAccountingJournalRequest](../../models/operations/UpdateAccountingJournalRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.UpdateAccountingJournalResponse](../../models/operations/UpdateAccountingJournalResponse.md)**
+**[UpdateAccountingJournalResponse](../../models/operations/UpdateAccountingJournalResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |

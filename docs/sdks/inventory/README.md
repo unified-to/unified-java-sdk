@@ -1,5 +1,5 @@
 # Inventory
-(*inventory*)
+(*inventory()*)
 
 ### Available Operations
 
@@ -20,64 +20,60 @@ Create an inventory
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryResponse;
-import com.unifiedapi.unifiedto.models.shared.CommerceInventory;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryRequest req = new CreateCommerceInventoryRequest(
-                "<value>"){{
-                commerceInventory = new CommerceInventory(
-                    5165.08d){{
-                    id = "<id>";
-                    itemId = "<value>";
-                    itemOptionId = "<value>";
-                    itemVariantId = "<value>";
-                    locationId = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    updatedAt = OffsetDateTime.parse("2024-01-31T03:08:58.995Z");
+            CreateCommerceInventoryRequest req = CreateCommerceInventoryRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-                }};
+            CreateCommerceInventoryResponse res = sdk.inventory().createCommerceInventory()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryResponse res = sdk.inventory.createCommerceInventory(req);
-
-            if (res.commerceInventory != null) {
+            if (res.commerceInventory().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryRequest](../../models/operations/CreateCommerceInventoryRequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [CreateCommerceInventoryRequest](../../models/operations/CreateCommerceInventoryRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryResponse](../../models/operations/CreateCommerceInventoryResponse.md)**
+**[CreateCommerceInventoryResponse](../../models/operations/CreateCommerceInventoryResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## getCommerceInventory
 
@@ -89,52 +85,61 @@ Retrieve an inventory
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetCommerceInventoryRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCommerceInventoryResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetCommerceInventoryRequest req = new GetCommerceInventoryRequest(
-                "<value>",
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
+            GetCommerceInventoryRequest req = GetCommerceInventoryRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            }};
+            GetCommerceInventoryResponse res = sdk.inventory().getCommerceInventory()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.GetCommerceInventoryResponse res = sdk.inventory.getCommerceInventory(req);
-
-            if (res.commerceInventory != null) {
+            if (res.commerceInventory().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.GetCommerceInventoryRequest](../../models/operations/GetCommerceInventoryRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [GetCommerceInventoryRequest](../../models/operations/GetCommerceInventoryRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetCommerceInventoryResponse](../../models/operations/GetCommerceInventoryResponse.md)**
+**[GetCommerceInventoryResponse](../../models/operations/GetCommerceInventoryResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listCommerceInventories
 
@@ -146,58 +151,60 @@ List all inventories
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListCommerceInventoriesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListCommerceInventoriesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListCommerceInventoriesRequest req = new ListCommerceInventoriesRequest(
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
-                itemVariantId = "<value>";
-                limit = 2481.16d;
-                locationId = "<value>";
-                offset = 9476.38d;
-                query = "<value>";
-                updatedGte = OffsetDateTime.parse("2022-10-15T22:28:16.925Z");
+            ListCommerceInventoriesRequest req = ListCommerceInventoriesRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-            }};
+            ListCommerceInventoriesResponse res = sdk.inventory().listCommerceInventories()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListCommerceInventoriesResponse res = sdk.inventory.listCommerceInventories(req);
-
-            if (res.commerceInventories != null) {
+            if (res.commerceInventories().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.ListCommerceInventoriesRequest](../../models/operations/ListCommerceInventoriesRequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [ListCommerceInventoriesRequest](../../models/operations/ListCommerceInventoriesRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListCommerceInventoriesResponse](../../models/operations/ListCommerceInventoriesResponse.md)**
+**[ListCommerceInventoriesResponse](../../models/operations/ListCommerceInventoriesResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## patchCommerceInventory
 
@@ -209,65 +216,61 @@ Update an inventory
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryResponse;
-import com.unifiedapi.unifiedto.models.shared.CommerceInventory;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryRequest req = new PatchCommerceInventoryRequest(
-                "<value>",
-                "<value>"){{
-                commerceInventory = new CommerceInventory(
-                    615.23d){{
-                    id = "<id>";
-                    itemId = "<value>";
-                    itemOptionId = "<value>";
-                    itemVariantId = "<value>";
-                    locationId = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    updatedAt = OffsetDateTime.parse("2022-10-21T06:26:02.606Z");
+            PatchCommerceInventoryRequest req = PatchCommerceInventoryRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                }};
+            PatchCommerceInventoryResponse res = sdk.inventory().patchCommerceInventory()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryResponse res = sdk.inventory.patchCommerceInventory(req);
-
-            if (res.commerceInventory != null) {
+            if (res.commerceInventory().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryRequest](../../models/operations/PatchCommerceInventoryRequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [PatchCommerceInventoryRequest](../../models/operations/PatchCommerceInventoryRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryResponse](../../models/operations/PatchCommerceInventoryResponse.md)**
+**[PatchCommerceInventoryResponse](../../models/operations/PatchCommerceInventoryResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## removeCommerceInventory
 
@@ -279,47 +282,59 @@ Remove an inventory
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryRequest req = new RemoveCommerceInventoryRequest(
-                "<value>",
-                "<value>");
+            RemoveCommerceInventoryRequest req = RemoveCommerceInventoryRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryResponse res = sdk.inventory.removeCommerceInventory(req);
+            RemoveCommerceInventoryResponse res = sdk.inventory().removeCommerceInventory()
+                .request(req)
+                .call();
 
-            if (res.statusCode == 200) {
-                // handle response
-            }
+            // handle response
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryRequest](../../models/operations/RemoveCommerceInventoryRequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [RemoveCommerceInventoryRequest](../../models/operations/RemoveCommerceInventoryRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryResponse](../../models/operations/RemoveCommerceInventoryResponse.md)**
+**[RemoveCommerceInventoryResponse](../../models/operations/RemoveCommerceInventoryResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## updateCommerceInventory
 
@@ -331,62 +346,58 @@ Update an inventory
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryResponse;
-import com.unifiedapi.unifiedto.models.shared.CommerceInventory;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryRequest req = new UpdateCommerceInventoryRequest(
-                "<value>",
-                "<value>"){{
-                commerceInventory = new CommerceInventory(
-                    9360.02d){{
-                    id = "<id>";
-                    itemId = "<value>";
-                    itemOptionId = "<value>";
-                    itemVariantId = "<value>";
-                    locationId = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    updatedAt = OffsetDateTime.parse("2024-08-11T01:00:50.639Z");
+            UpdateCommerceInventoryRequest req = UpdateCommerceInventoryRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                }};
+            UpdateCommerceInventoryResponse res = sdk.inventory().updateCommerceInventory()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryResponse res = sdk.inventory.updateCommerceInventory(req);
-
-            if (res.commerceInventory != null) {
+            if (res.commerceInventory().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryRequest](../../models/operations/UpdateCommerceInventoryRequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [UpdateCommerceInventoryRequest](../../models/operations/UpdateCommerceInventoryRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryResponse](../../models/operations/UpdateCommerceInventoryResponse.md)**
+**[UpdateCommerceInventoryResponse](../../models/operations/UpdateCommerceInventoryResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |

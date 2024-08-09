@@ -1,5 +1,5 @@
 # Storage
-(*storage*)
+(*storage()*)
 
 ### Available Operations
 
@@ -20,83 +20,60 @@ Create a file
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateStorageFileRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateStorageFileResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyStoragePermissionRoles;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import com.unifiedapi.unifiedto.models.shared.StorageFile;
-import com.unifiedapi.unifiedto.models.shared.StorageFileType;
-import com.unifiedapi.unifiedto.models.shared.StoragePermission;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.CreateStorageFileRequest req = new CreateStorageFileRequest(
-                "<value>"){{
-                storageFile = new StorageFile(
-){{
-                    createdAt = OffsetDateTime.parse("2024-11-26T17:10:46.324Z");
-                    description = "Digitized systematic Graphic Interface";
-                    downloadUrl = "<value>";
-                    hash = "<value>";
-                    id = "<id>";
-                    mimeType = "<value>";
-                    name = "<value>";
-                    parentId = "<value>";
-                    permissions = new com.unifiedapi.unifiedto.models.shared.StoragePermission[]{{
-                        add(new StoragePermission(
-                        new com.unifiedapi.unifiedto.models.shared.PropertyStoragePermissionRoles[]{{
-                            add(PropertyStoragePermissionRoles.OWNER),
-                        }}){{
-                            roles = new com.unifiedapi.unifiedto.models.shared.PropertyStoragePermissionRoles[]{{
-                                add(PropertyStoragePermissionRoles.WRITE),
-                            }};
-                        }}),
-                    }};
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    size = 3999.85d;
-                    type = StorageFileType.FOLDER;
-                    updatedAt = OffsetDateTime.parse("2024-03-07T14:24:08.441Z");
-                    userId = "<value>";
+            CreateStorageFileRequest req = CreateStorageFileRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-                }};
+            CreateStorageFileResponse res = sdk.storage().createStorageFile()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.CreateStorageFileResponse res = sdk.storage.createStorageFile(req);
-
-            if (res.storageFile != null) {
+            if (res.storageFile().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.CreateStorageFileRequest](../../models/operations/CreateStorageFileRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateStorageFileRequest](../../models/operations/CreateStorageFileRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.CreateStorageFileResponse](../../models/operations/CreateStorageFileResponse.md)**
+**[CreateStorageFileResponse](../../models/operations/CreateStorageFileResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## getStorageFile
 
@@ -108,52 +85,61 @@ Retrieve a file
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetStorageFileRequest;
 import com.unifiedapi.unifiedto.models.operations.GetStorageFileResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetStorageFileRequest req = new GetStorageFileRequest(
-                "<value>",
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
+            GetStorageFileRequest req = GetStorageFileRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            }};
+            GetStorageFileResponse res = sdk.storage().getStorageFile()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.GetStorageFileResponse res = sdk.storage.getStorageFile(req);
-
-            if (res.storageFile != null) {
+            if (res.storageFile().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [com.unifiedapi.unifiedto.models.operations.GetStorageFileRequest](../../models/operations/GetStorageFileRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetStorageFileRequest](../../models/operations/GetStorageFileRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetStorageFileResponse](../../models/operations/GetStorageFileResponse.md)**
+**[GetStorageFileResponse](../../models/operations/GetStorageFileResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listStorageFiles
 
@@ -165,57 +151,60 @@ List all files
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListStorageFilesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListStorageFilesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListStorageFilesRequest req = new ListStorageFilesRequest(
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
-                limit = 1047.26d;
-                offset = 7962.22d;
-                parentId = "<value>";
-                query = "<value>";
-                updatedGte = OffsetDateTime.parse("2022-01-28T04:36:03.817Z");
+            ListStorageFilesRequest req = ListStorageFilesRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-            }};
+            ListStorageFilesResponse res = sdk.storage().listStorageFiles()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListStorageFilesResponse res = sdk.storage.listStorageFiles(req);
-
-            if (res.storageFiles != null) {
+            if (res.storageFiles().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.ListStorageFilesRequest](../../models/operations/ListStorageFilesRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListStorageFilesRequest](../../models/operations/ListStorageFilesRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListStorageFilesResponse](../../models/operations/ListStorageFilesResponse.md)**
+**[ListStorageFilesResponse](../../models/operations/ListStorageFilesResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## patchStorageFile
 
@@ -227,84 +216,61 @@ Update a file
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchStorageFileRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchStorageFileResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyStoragePermissionRoles;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import com.unifiedapi.unifiedto.models.shared.StorageFile;
-import com.unifiedapi.unifiedto.models.shared.StorageFileType;
-import com.unifiedapi.unifiedto.models.shared.StoragePermission;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.PatchStorageFileRequest req = new PatchStorageFileRequest(
-                "<value>",
-                "<value>"){{
-                storageFile = new StorageFile(
-){{
-                    createdAt = OffsetDateTime.parse("2022-03-01T13:48:26.867Z");
-                    description = "Customer-focused mission-critical monitoring";
-                    downloadUrl = "<value>";
-                    hash = "<value>";
-                    id = "<id>";
-                    mimeType = "<value>";
-                    name = "<value>";
-                    parentId = "<value>";
-                    permissions = new com.unifiedapi.unifiedto.models.shared.StoragePermission[]{{
-                        add(new StoragePermission(
-                        new com.unifiedapi.unifiedto.models.shared.PropertyStoragePermissionRoles[]{{
-                            add(PropertyStoragePermissionRoles.OWNER),
-                        }}){{
-                            roles = new com.unifiedapi.unifiedto.models.shared.PropertyStoragePermissionRoles[]{{
-                                add(PropertyStoragePermissionRoles.OWNER),
-                            }};
-                        }}),
-                    }};
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    size = 2253.31d;
-                    type = StorageFileType.FILE;
-                    updatedAt = OffsetDateTime.parse("2023-11-03T15:19:05.454Z");
-                    userId = "<value>";
+            PatchStorageFileRequest req = PatchStorageFileRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                }};
+            PatchStorageFileResponse res = sdk.storage().patchStorageFile()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.PatchStorageFileResponse res = sdk.storage.patchStorageFile(req);
-
-            if (res.storageFile != null) {
+            if (res.storageFile().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.PatchStorageFileRequest](../../models/operations/PatchStorageFileRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [PatchStorageFileRequest](../../models/operations/PatchStorageFileRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchStorageFileResponse](../../models/operations/PatchStorageFileResponse.md)**
+**[PatchStorageFileResponse](../../models/operations/PatchStorageFileResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## removeStorageFile
 
@@ -316,47 +282,59 @@ Remove a file
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveStorageFileRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveStorageFileResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveStorageFileRequest req = new RemoveStorageFileRequest(
-                "<value>",
-                "<value>");
+            RemoveStorageFileRequest req = RemoveStorageFileRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveStorageFileResponse res = sdk.storage.removeStorageFile(req);
+            RemoveStorageFileResponse res = sdk.storage().removeStorageFile()
+                .request(req)
+                .call();
 
-            if (res.statusCode == 200) {
-                // handle response
-            }
+            // handle response
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.RemoveStorageFileRequest](../../models/operations/RemoveStorageFileRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemoveStorageFileRequest](../../models/operations/RemoveStorageFileRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.RemoveStorageFileResponse](../../models/operations/RemoveStorageFileResponse.md)**
+**[RemoveStorageFileResponse](../../models/operations/RemoveStorageFileResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## updateStorageFile
 
@@ -368,81 +346,58 @@ Update a file
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateStorageFileRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateStorageFileResponse;
-import com.unifiedapi.unifiedto.models.shared.PropertyStoragePermissionRoles;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import com.unifiedapi.unifiedto.models.shared.StorageFile;
-import com.unifiedapi.unifiedto.models.shared.StorageFileType;
-import com.unifiedapi.unifiedto.models.shared.StoragePermission;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.UpdateStorageFileRequest req = new UpdateStorageFileRequest(
-                "<value>",
-                "<value>"){{
-                storageFile = new StorageFile(
-){{
-                    createdAt = OffsetDateTime.parse("2024-06-06T15:38:39.174Z");
-                    description = "Polarised intangible architecture";
-                    downloadUrl = "<value>";
-                    hash = "<value>";
-                    id = "<id>";
-                    mimeType = "<value>";
-                    name = "<value>";
-                    parentId = "<value>";
-                    permissions = new com.unifiedapi.unifiedto.models.shared.StoragePermission[]{{
-                        add(new StoragePermission(
-                        new com.unifiedapi.unifiedto.models.shared.PropertyStoragePermissionRoles[]{{
-                            add(PropertyStoragePermissionRoles.READ),
-                        }}){{
-                            roles = new com.unifiedapi.unifiedto.models.shared.PropertyStoragePermissionRoles[]{{
-                                add(PropertyStoragePermissionRoles.WRITE),
-                            }};
-                        }}),
-                    }};
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    size = 4091d;
-                    type = StorageFileType.FOLDER;
-                    updatedAt = OffsetDateTime.parse("2022-06-25T21:16:43.994Z");
-                    userId = "<value>";
+            UpdateStorageFileRequest req = UpdateStorageFileRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                }};
+            UpdateStorageFileResponse res = sdk.storage().updateStorageFile()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.UpdateStorageFileResponse res = sdk.storage.updateStorageFile(req);
-
-            if (res.storageFile != null) {
+            if (res.storageFile().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.UpdateStorageFileRequest](../../models/operations/UpdateStorageFileRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [UpdateStorageFileRequest](../../models/operations/UpdateStorageFileRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.UpdateStorageFileResponse](../../models/operations/UpdateStorageFileResponse.md)**
+**[UpdateStorageFileResponse](../../models/operations/UpdateStorageFileResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |

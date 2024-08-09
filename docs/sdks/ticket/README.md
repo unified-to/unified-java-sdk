@@ -1,5 +1,5 @@
 # Ticket
-(*ticket*)
+(*ticket()*)
 
 ### Available Operations
 
@@ -20,76 +20,60 @@ Create a ticket
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import com.unifiedapi.unifiedto.models.shared.TicketingTicket;
-import com.unifiedapi.unifiedto.models.shared.TicketingTicketStatus;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketRequest req = new CreateTicketingTicketRequest(
-                "<value>"){{
-                ticketingTicket = new TicketingTicket(
-){{
-                    category = "<value>";
-                    closedAt = OffsetDateTime.parse("2022-06-28T15:15:03.216Z");
-                    createdAt = OffsetDateTime.parse("2023-08-20T11:30:17.210Z");
-                    customerId = "<value>";
-                    description = "Automated composite productivity";
-                    id = "<id>";
-                    priority = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    source = "<value>";
-                    sourceRef = "<value>";
-                    status = TicketingTicketStatus.CLOSED;
-                    subject = "<value>";
-                    tags = new String[]{{
-                        add("<value>"),
-                    }};
-                    updatedAt = OffsetDateTime.parse("2024-05-06T20:46:58.372Z");
-                    url = "https://difficult-suite.name";
-                    userId = "<value>";
+            CreateTicketingTicketRequest req = CreateTicketingTicketRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-                }};
+            CreateTicketingTicketResponse res = sdk.ticket().createTicketingTicket()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketResponse res = sdk.ticket.createTicketingTicket(req);
-
-            if (res.ticketingTicket != null) {
+            if (res.ticketingTicket().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketRequest](../../models/operations/CreateTicketingTicketRequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [CreateTicketingTicketRequest](../../models/operations/CreateTicketingTicketRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketResponse](../../models/operations/CreateTicketingTicketResponse.md)**
+**[CreateTicketingTicketResponse](../../models/operations/CreateTicketingTicketResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## getTicketingTicket
 
@@ -101,52 +85,61 @@ Retrieve a ticket
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingTicketRequest;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingTicketResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetTicketingTicketRequest req = new GetTicketingTicketRequest(
-                "<value>",
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
+            GetTicketingTicketRequest req = GetTicketingTicketRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            }};
+            GetTicketingTicketResponse res = sdk.ticket().getTicketingTicket()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.GetTicketingTicketResponse res = sdk.ticket.getTicketingTicket(req);
-
-            if (res.ticketingTicket != null) {
+            if (res.ticketingTicket().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.GetTicketingTicketRequest](../../models/operations/GetTicketingTicketRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [GetTicketingTicketRequest](../../models/operations/GetTicketingTicketRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetTicketingTicketResponse](../../models/operations/GetTicketingTicketResponse.md)**
+**[GetTicketingTicketResponse](../../models/operations/GetTicketingTicketResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listTicketingTickets
 
@@ -158,58 +151,60 @@ List all tickets
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsRequest req = new ListTicketingTicketsRequest(
-                "<value>"){{
-                customerId = "<value>";
-                fields = new String[]{{
-                    add("<value>"),
-                }};
-                limit = 6139.39d;
-                offset = 1839.22d;
-                query = "<value>";
-                updatedGte = OffsetDateTime.parse("2023-02-28T23:31:15.090Z");
-                userId = "<value>";
+            ListTicketingTicketsRequest req = ListTicketingTicketsRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-            }};
+            ListTicketingTicketsResponse res = sdk.ticket().listTicketingTickets()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsResponse res = sdk.ticket.listTicketingTickets(req);
-
-            if (res.ticketingTickets != null) {
+            if (res.ticketingTickets().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsRequest](../../models/operations/ListTicketingTicketsRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [ListTicketingTicketsRequest](../../models/operations/ListTicketingTicketsRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsResponse](../../models/operations/ListTicketingTicketsResponse.md)**
+**[ListTicketingTicketsResponse](../../models/operations/ListTicketingTicketsResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## patchTicketingTicket
 
@@ -221,77 +216,61 @@ Update a ticket
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import com.unifiedapi.unifiedto.models.shared.TicketingTicket;
-import com.unifiedapi.unifiedto.models.shared.TicketingTicketStatus;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketRequest req = new PatchTicketingTicketRequest(
-                "<value>",
-                "<value>"){{
-                ticketingTicket = new TicketingTicket(
-){{
-                    category = "<value>";
-                    closedAt = OffsetDateTime.parse("2022-09-14T17:48:05.161Z");
-                    createdAt = OffsetDateTime.parse("2023-09-30T13:19:53.416Z");
-                    customerId = "<value>";
-                    description = "Operative composite strategy";
-                    id = "<id>";
-                    priority = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    source = "<value>";
-                    sourceRef = "<value>";
-                    status = TicketingTicketStatus.CLOSED;
-                    subject = "<value>";
-                    tags = new String[]{{
-                        add("<value>"),
-                    }};
-                    updatedAt = OffsetDateTime.parse("2024-07-06T12:10:37.068Z");
-                    url = "http://far-off-equation.org";
-                    userId = "<value>";
+            PatchTicketingTicketRequest req = PatchTicketingTicketRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                }};
+            PatchTicketingTicketResponse res = sdk.ticket().patchTicketingTicket()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketResponse res = sdk.ticket.patchTicketingTicket(req);
-
-            if (res.ticketingTicket != null) {
+            if (res.ticketingTicket().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketRequest](../../models/operations/PatchTicketingTicketRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [PatchTicketingTicketRequest](../../models/operations/PatchTicketingTicketRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketResponse](../../models/operations/PatchTicketingTicketResponse.md)**
+**[PatchTicketingTicketResponse](../../models/operations/PatchTicketingTicketResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## removeTicketingTicket
 
@@ -303,47 +282,59 @@ Remove a ticket
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketRequest req = new RemoveTicketingTicketRequest(
-                "<value>",
-                "<value>");
+            RemoveTicketingTicketRequest req = RemoveTicketingTicketRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketResponse res = sdk.ticket.removeTicketingTicket(req);
+            RemoveTicketingTicketResponse res = sdk.ticket().removeTicketingTicket()
+                .request(req)
+                .call();
 
-            if (res.statusCode == 200) {
-                // handle response
-            }
+            // handle response
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketRequest](../../models/operations/RemoveTicketingTicketRequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [RemoveTicketingTicketRequest](../../models/operations/RemoveTicketingTicketRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketResponse](../../models/operations/RemoveTicketingTicketResponse.md)**
+**[RemoveTicketingTicketResponse](../../models/operations/RemoveTicketingTicketResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## updateTicketingTicket
 
@@ -355,74 +346,58 @@ Update a ticket
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import com.unifiedapi.unifiedto.models.shared.TicketingTicket;
-import com.unifiedapi.unifiedto.models.shared.TicketingTicketStatus;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketRequest req = new UpdateTicketingTicketRequest(
-                "<value>",
-                "<value>"){{
-                ticketingTicket = new TicketingTicket(
-){{
-                    category = "<value>";
-                    closedAt = OffsetDateTime.parse("2022-05-31T01:36:42.106Z");
-                    createdAt = OffsetDateTime.parse("2024-04-29T13:04:08.966Z");
-                    customerId = "<value>";
-                    description = "Configurable user-facing middleware";
-                    id = "<id>";
-                    priority = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    source = "<value>";
-                    sourceRef = "<value>";
-                    status = TicketingTicketStatus.ACTIVE;
-                    subject = "<value>";
-                    tags = new String[]{{
-                        add("<value>"),
-                    }};
-                    updatedAt = OffsetDateTime.parse("2023-01-17T01:38:48.188Z");
-                    url = "http://truthful-brood.info";
-                    userId = "<value>";
+            UpdateTicketingTicketRequest req = UpdateTicketingTicketRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                }};
+            UpdateTicketingTicketResponse res = sdk.ticket().updateTicketingTicket()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketResponse res = sdk.ticket.updateTicketingTicket(req);
-
-            if (res.ticketingTicket != null) {
+            if (res.ticketingTicket().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketRequest](../../models/operations/UpdateTicketingTicketRequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [UpdateTicketingTicketRequest](../../models/operations/UpdateTicketingTicketRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketResponse](../../models/operations/UpdateTicketingTicketResponse.md)**
+**[UpdateTicketingTicketResponse](../../models/operations/UpdateTicketingTicketResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |

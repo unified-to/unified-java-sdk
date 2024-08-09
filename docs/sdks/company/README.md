@@ -1,5 +1,5 @@
 # Company
-(*company*)
+(*company()*)
 
 ### Available Operations
 
@@ -29,107 +29,60 @@ Create a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmCompanyResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmCompany;
-import com.unifiedapi.unifiedto.models.shared.CrmEmail;
-import com.unifiedapi.unifiedto.models.shared.CrmEmailType;
-import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
-import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmCompanyAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.CreateCrmCompanyRequest req = new CreateCrmCompanyRequest(
-                "<value>"){{
-                crmCompany = new CrmCompany(
-){{
-                    address = new PropertyCrmCompanyAddress(
-){{
-                        address1 = "<value>";
-                        address2 = "<value>";
-                        city = "Joanieworth";
-                        country = "Brazil";
-                        countryCode = "CW";
-                        postalCode = "39571";
-                        region = "<value>";
-                        regionCode = "<value>";
+            CreateCrmCompanyRequest req = CreateCrmCompanyRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-                    }};
-                    createdAt = OffsetDateTime.parse("2024-02-03T10:04:12.712Z");
-                    dealIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    description = "Pre-emptive responsive task-force";
-                    emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
-                        add(new CrmEmail(
-                        ){{}}),
-                    }};
-                    employees = 4175.89d;
-                    id = "<id>";
-                    industry = "<value>";
-                    isActive = false;
-                    linkUrls = new String[]{{
-                        add("<value>"),
-                    }};
-                    name = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    tags = new String[]{{
-                        add("<value>"),
-                    }};
-                    telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone(
-                        "<value>"){{
-                            telephone = "<value>";
-                        }}),
-                    }};
-                    timezone = "Europe/Bucharest";
-                    updatedAt = OffsetDateTime.parse("2023-10-03T19:32:53.625Z");
-                    userId = "<value>";
-                    websites = new String[]{{
-                        add("<value>"),
-                    }};
+            CreateCrmCompanyResponse res = sdk.company().createCrmCompany()
+                .request(req)
+                .call();
 
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.CreateCrmCompanyResponse res = sdk.company.createCrmCompany(req);
-
-            if (res.crmCompany != null) {
+            if (res.crmCompany().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.CreateCrmCompanyRequest](../../models/operations/CreateCrmCompanyRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [CreateCrmCompanyRequest](../../models/operations/CreateCrmCompanyRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.CreateCrmCompanyResponse](../../models/operations/CreateCrmCompanyResponse.md)**
+**[CreateCrmCompanyResponse](../../models/operations/CreateCrmCompanyResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## createHrisCompany
 
@@ -141,76 +94,60 @@ Create a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateHrisCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateHrisCompanyResponse;
-import com.unifiedapi.unifiedto.models.shared.HrisCompany;
-import com.unifiedapi.unifiedto.models.shared.PropertyHrisCompanyAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.CreateHrisCompanyRequest req = new CreateHrisCompanyRequest(
-                "<value>"){{
-                hrisCompany = new HrisCompany(
-){{
-                    address = new PropertyHrisCompanyAddress(
-){{
-                        address1 = "<value>";
-                        address2 = "<value>";
-                        city = "Leuschketon";
-                        country = "Greenland";
-                        countryCode = "UG";
-                        postalCode = "28999";
-                        region = "<value>";
-                        regionCode = "<value>";
+            CreateHrisCompanyRequest req = CreateHrisCompanyRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-                    }};
-                    createdAt = OffsetDateTime.parse("2024-11-26T14:41:42.849Z");
-                    id = "<id>";
-                    legalName = "<value>";
-                    name = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    updatedAt = OffsetDateTime.parse("2023-04-03T15:03:14.449Z");
+            CreateHrisCompanyResponse res = sdk.company().createHrisCompany()
+                .request(req)
+                .call();
 
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.CreateHrisCompanyResponse res = sdk.company.createHrisCompany(req);
-
-            if (res.hrisCompany != null) {
+            if (res.hrisCompany().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.CreateHrisCompanyRequest](../../models/operations/CreateHrisCompanyRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateHrisCompanyRequest](../../models/operations/CreateHrisCompanyRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.CreateHrisCompanyResponse](../../models/operations/CreateHrisCompanyResponse.md)**
+**[CreateHrisCompanyResponse](../../models/operations/CreateHrisCompanyResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## getAtsCompany
 
@@ -222,52 +159,61 @@ Retrieve a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAtsCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsCompanyResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetAtsCompanyRequest req = new GetAtsCompanyRequest(
-                "<value>",
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
+            GetAtsCompanyRequest req = GetAtsCompanyRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            }};
+            GetAtsCompanyResponse res = sdk.company().getAtsCompany()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.GetAtsCompanyResponse res = sdk.company.getAtsCompany(req);
-
-            if (res.atsCompany != null) {
+            if (res.atsCompany().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [com.unifiedapi.unifiedto.models.operations.GetAtsCompanyRequest](../../models/operations/GetAtsCompanyRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [GetAtsCompanyRequest](../../models/operations/GetAtsCompanyRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetAtsCompanyResponse](../../models/operations/GetAtsCompanyResponse.md)**
+**[GetAtsCompanyResponse](../../models/operations/GetAtsCompanyResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## getCrmCompany
 
@@ -279,52 +225,61 @@ Retrieve a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetCrmCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmCompanyResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetCrmCompanyRequest req = new GetCrmCompanyRequest(
-                "<value>",
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
+            GetCrmCompanyRequest req = GetCrmCompanyRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            }};
+            GetCrmCompanyResponse res = sdk.company().getCrmCompany()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.GetCrmCompanyResponse res = sdk.company.getCrmCompany(req);
-
-            if (res.crmCompany != null) {
+            if (res.crmCompany().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [com.unifiedapi.unifiedto.models.operations.GetCrmCompanyRequest](../../models/operations/GetCrmCompanyRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [GetCrmCompanyRequest](../../models/operations/GetCrmCompanyRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetCrmCompanyResponse](../../models/operations/GetCrmCompanyResponse.md)**
+**[GetCrmCompanyResponse](../../models/operations/GetCrmCompanyResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## getHrisCompany
 
@@ -336,52 +291,61 @@ Retrieve a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetHrisCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.GetHrisCompanyResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetHrisCompanyRequest req = new GetHrisCompanyRequest(
-                "<value>",
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
+            GetHrisCompanyRequest req = GetHrisCompanyRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            }};
+            GetHrisCompanyResponse res = sdk.company().getHrisCompany()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.GetHrisCompanyResponse res = sdk.company.getHrisCompany(req);
-
-            if (res.hrisCompany != null) {
+            if (res.hrisCompany().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [com.unifiedapi.unifiedto.models.operations.GetHrisCompanyRequest](../../models/operations/GetHrisCompanyRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetHrisCompanyRequest](../../models/operations/GetHrisCompanyRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetHrisCompanyResponse](../../models/operations/GetHrisCompanyResponse.md)**
+**[GetHrisCompanyResponse](../../models/operations/GetHrisCompanyResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listAtsCompanies
 
@@ -393,56 +357,60 @@ List all companies
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAtsCompaniesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAtsCompaniesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListAtsCompaniesRequest req = new ListAtsCompaniesRequest(
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
-                limit = 6933.84d;
-                offset = 7946.52d;
-                query = "<value>";
-                updatedGte = OffsetDateTime.parse("2024-10-01T21:39:38.971Z");
+            ListAtsCompaniesRequest req = ListAtsCompaniesRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-            }};
+            ListAtsCompaniesResponse res = sdk.company().listAtsCompanies()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListAtsCompaniesResponse res = sdk.company.listAtsCompanies(req);
-
-            if (res.atsCompanies != null) {
+            if (res.atsCompanies().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.ListAtsCompaniesRequest](../../models/operations/ListAtsCompaniesRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListAtsCompaniesRequest](../../models/operations/ListAtsCompaniesRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListAtsCompaniesResponse](../../models/operations/ListAtsCompaniesResponse.md)**
+**[ListAtsCompaniesResponse](../../models/operations/ListAtsCompaniesResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listCrmCompanies
 
@@ -454,59 +422,60 @@ List all companies
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListCrmCompaniesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListCrmCompaniesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListCrmCompaniesRequest req = new ListCrmCompaniesRequest(
-                "<value>"){{
-                contactId = "<value>";
-                dealId = "<value>";
-                fields = new String[]{{
-                    add("<value>"),
-                }};
-                limit = 9883.97d;
-                offset = 5913.88d;
-                query = "<value>";
-                updatedGte = OffsetDateTime.parse("2023-05-02T17:52:08.731Z");
-                userId = "<value>";
+            ListCrmCompaniesRequest req = ListCrmCompaniesRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-            }};
+            ListCrmCompaniesResponse res = sdk.company().listCrmCompanies()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListCrmCompaniesResponse res = sdk.company.listCrmCompanies(req);
-
-            if (res.crmCompanies != null) {
+            if (res.crmCompanies().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.ListCrmCompaniesRequest](../../models/operations/ListCrmCompaniesRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListCrmCompaniesRequest](../../models/operations/ListCrmCompaniesRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListCrmCompaniesResponse](../../models/operations/ListCrmCompaniesResponse.md)**
+**[ListCrmCompaniesResponse](../../models/operations/ListCrmCompaniesResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listEnrichCompanies
 
@@ -518,50 +487,60 @@ Retrieve enrichment information for a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesRequest req = new ListEnrichCompaniesRequest(
-                "<value>"){{
-                domain = "dismal-cornmeal.org";
-                name = "<value>";
+            ListEnrichCompaniesRequest req = ListEnrichCompaniesRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-            }};
+            ListEnrichCompaniesResponse res = sdk.company().listEnrichCompanies()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesResponse res = sdk.company.listEnrichCompanies(req);
-
-            if (res.enrichCompany != null) {
+            if (res.enrichCompany().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesRequest](../../models/operations/ListEnrichCompaniesRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [ListEnrichCompaniesRequest](../../models/operations/ListEnrichCompaniesRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesResponse](../../models/operations/ListEnrichCompaniesResponse.md)**
+**[ListEnrichCompaniesResponse](../../models/operations/ListEnrichCompaniesResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listHrisCompanies
 
@@ -573,56 +552,60 @@ List all companies
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListHrisCompaniesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListHrisCompaniesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListHrisCompaniesRequest req = new ListHrisCompaniesRequest(
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
-                limit = 9887.05d;
-                offset = 4708.81d;
-                query = "<value>";
-                updatedGte = OffsetDateTime.parse("2024-12-23T09:20:33.437Z");
+            ListHrisCompaniesRequest req = ListHrisCompaniesRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-            }};
+            ListHrisCompaniesResponse res = sdk.company().listHrisCompanies()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListHrisCompaniesResponse res = sdk.company.listHrisCompanies(req);
-
-            if (res.hrisCompanies != null) {
+            if (res.hrisCompanies().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.ListHrisCompaniesRequest](../../models/operations/ListHrisCompaniesRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListHrisCompaniesRequest](../../models/operations/ListHrisCompaniesRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListHrisCompaniesResponse](../../models/operations/ListHrisCompaniesResponse.md)**
+**[ListHrisCompaniesResponse](../../models/operations/ListHrisCompaniesResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## patchCrmCompany
 
@@ -634,108 +617,61 @@ Update a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmCompanyResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmCompany;
-import com.unifiedapi.unifiedto.models.shared.CrmEmail;
-import com.unifiedapi.unifiedto.models.shared.CrmEmailType;
-import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
-import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmCompanyAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.PatchCrmCompanyRequest req = new PatchCrmCompanyRequest(
-                "<value>",
-                "<value>"){{
-                crmCompany = new CrmCompany(
-){{
-                    address = new PropertyCrmCompanyAddress(
-){{
-                        address1 = "<value>";
-                        address2 = "<value>";
-                        city = "Rempelchester";
-                        country = "Christmas Island";
-                        countryCode = "LA";
-                        postalCode = "53644";
-                        region = "<value>";
-                        regionCode = "<value>";
+            PatchCrmCompanyRequest req = PatchCrmCompanyRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                    }};
-                    createdAt = OffsetDateTime.parse("2022-01-19T16:53:30.758Z");
-                    dealIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    description = "Diverse mission-critical project";
-                    emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
-                        add(new CrmEmail(
-                        ){{}}),
-                    }};
-                    employees = 4128.78d;
-                    id = "<id>";
-                    industry = "<value>";
-                    isActive = false;
-                    linkUrls = new String[]{{
-                        add("<value>"),
-                    }};
-                    name = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    tags = new String[]{{
-                        add("<value>"),
-                    }};
-                    telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone(
-                        "<value>"){{
-                            telephone = "<value>";
-                        }}),
-                    }};
-                    timezone = "Europe/Skopje";
-                    updatedAt = OffsetDateTime.parse("2022-04-08T08:19:54.922Z");
-                    userId = "<value>";
-                    websites = new String[]{{
-                        add("<value>"),
-                    }};
+            PatchCrmCompanyResponse res = sdk.company().patchCrmCompany()
+                .request(req)
+                .call();
 
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.PatchCrmCompanyResponse res = sdk.company.patchCrmCompany(req);
-
-            if (res.crmCompany != null) {
+            if (res.crmCompany().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [com.unifiedapi.unifiedto.models.operations.PatchCrmCompanyRequest](../../models/operations/PatchCrmCompanyRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [PatchCrmCompanyRequest](../../models/operations/PatchCrmCompanyRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchCrmCompanyResponse](../../models/operations/PatchCrmCompanyResponse.md)**
+**[PatchCrmCompanyResponse](../../models/operations/PatchCrmCompanyResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## patchHrisCompany
 
@@ -747,77 +683,61 @@ Update a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchHrisCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchHrisCompanyResponse;
-import com.unifiedapi.unifiedto.models.shared.HrisCompany;
-import com.unifiedapi.unifiedto.models.shared.PropertyHrisCompanyAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.PatchHrisCompanyRequest req = new PatchHrisCompanyRequest(
-                "<value>",
-                "<value>"){{
-                hrisCompany = new HrisCompany(
-){{
-                    address = new PropertyHrisCompanyAddress(
-){{
-                        address1 = "<value>";
-                        address2 = "<value>";
-                        city = "West Tressashire";
-                        country = "Norfolk Island";
-                        countryCode = "MW";
-                        postalCode = "36009-7244";
-                        region = "<value>";
-                        regionCode = "<value>";
+            PatchHrisCompanyRequest req = PatchHrisCompanyRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                    }};
-                    createdAt = OffsetDateTime.parse("2023-12-23T19:08:18.404Z");
-                    id = "<id>";
-                    legalName = "<value>";
-                    name = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    updatedAt = OffsetDateTime.parse("2023-12-13T07:35:41.815Z");
+            PatchHrisCompanyResponse res = sdk.company().patchHrisCompany()
+                .request(req)
+                .call();
 
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.PatchHrisCompanyResponse res = sdk.company.patchHrisCompany(req);
-
-            if (res.hrisCompany != null) {
+            if (res.hrisCompany().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.PatchHrisCompanyRequest](../../models/operations/PatchHrisCompanyRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [PatchHrisCompanyRequest](../../models/operations/PatchHrisCompanyRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchHrisCompanyResponse](../../models/operations/PatchHrisCompanyResponse.md)**
+**[PatchHrisCompanyResponse](../../models/operations/PatchHrisCompanyResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## removeCrmCompany
 
@@ -829,47 +749,59 @@ Remove a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyRequest req = new RemoveCrmCompanyRequest(
-                "<value>",
-                "<value>");
+            RemoveCrmCompanyRequest req = RemoveCrmCompanyRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyResponse res = sdk.company.removeCrmCompany(req);
+            RemoveCrmCompanyResponse res = sdk.company().removeCrmCompany()
+                .request(req)
+                .call();
 
-            if (res.statusCode == 200) {
-                // handle response
-            }
+            // handle response
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyRequest](../../models/operations/RemoveCrmCompanyRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [RemoveCrmCompanyRequest](../../models/operations/RemoveCrmCompanyRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyResponse](../../models/operations/RemoveCrmCompanyResponse.md)**
+**[RemoveCrmCompanyResponse](../../models/operations/RemoveCrmCompanyResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## removeHrisCompany
 
@@ -881,47 +813,59 @@ Remove a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveHrisCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveHrisCompanyResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveHrisCompanyRequest req = new RemoveHrisCompanyRequest(
-                "<value>",
-                "<value>");
+            RemoveHrisCompanyRequest req = RemoveHrisCompanyRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveHrisCompanyResponse res = sdk.company.removeHrisCompany(req);
+            RemoveHrisCompanyResponse res = sdk.company().removeHrisCompany()
+                .request(req)
+                .call();
 
-            if (res.statusCode == 200) {
-                // handle response
-            }
+            // handle response
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.RemoveHrisCompanyRequest](../../models/operations/RemoveHrisCompanyRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemoveHrisCompanyRequest](../../models/operations/RemoveHrisCompanyRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.RemoveHrisCompanyResponse](../../models/operations/RemoveHrisCompanyResponse.md)**
+**[RemoveHrisCompanyResponse](../../models/operations/RemoveHrisCompanyResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## updateCrmCompany
 
@@ -933,108 +877,61 @@ Update a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmCompanyResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmCompany;
-import com.unifiedapi.unifiedto.models.shared.CrmEmail;
-import com.unifiedapi.unifiedto.models.shared.CrmEmailType;
-import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
-import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmCompanyAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.UpdateCrmCompanyRequest req = new UpdateCrmCompanyRequest(
-                "<value>",
-                "<value>"){{
-                crmCompany = new CrmCompany(
-){{
-                    address = new PropertyCrmCompanyAddress(
-){{
-                        address1 = "<value>";
-                        address2 = "<value>";
-                        city = "Margeshire";
-                        country = "Bahrain";
-                        countryCode = "WS";
-                        postalCode = "27563";
-                        region = "<value>";
-                        regionCode = "<value>";
+            UpdateCrmCompanyRequest req = UpdateCrmCompanyRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                    }};
-                    createdAt = OffsetDateTime.parse("2023-06-19T10:10:37.376Z");
-                    dealIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    description = "Future-proofed zero defect instruction set";
-                    emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
-                        add(new CrmEmail(
-                        ){{}}),
-                    }};
-                    employees = 1100.41d;
-                    id = "<id>";
-                    industry = "<value>";
-                    isActive = false;
-                    linkUrls = new String[]{{
-                        add("<value>"),
-                    }};
-                    name = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    tags = new String[]{{
-                        add("<value>"),
-                    }};
-                    telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone(
-                        "<value>"){{
-                            telephone = "<value>";
-                        }}),
-                    }};
-                    timezone = "Africa/Harare";
-                    updatedAt = OffsetDateTime.parse("2023-09-13T13:49:01.082Z");
-                    userId = "<value>";
-                    websites = new String[]{{
-                        add("<value>"),
-                    }};
+            UpdateCrmCompanyResponse res = sdk.company().updateCrmCompany()
+                .request(req)
+                .call();
 
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.UpdateCrmCompanyResponse res = sdk.company.updateCrmCompany(req);
-
-            if (res.crmCompany != null) {
+            if (res.crmCompany().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.UpdateCrmCompanyRequest](../../models/operations/UpdateCrmCompanyRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [UpdateCrmCompanyRequest](../../models/operations/UpdateCrmCompanyRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.UpdateCrmCompanyResponse](../../models/operations/UpdateCrmCompanyResponse.md)**
+**[UpdateCrmCompanyResponse](../../models/operations/UpdateCrmCompanyResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## updateHrisCompany
 
@@ -1046,74 +943,58 @@ Update a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateHrisCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateHrisCompanyResponse;
-import com.unifiedapi.unifiedto.models.shared.HrisCompany;
-import com.unifiedapi.unifiedto.models.shared.PropertyHrisCompanyAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.UpdateHrisCompanyRequest req = new UpdateHrisCompanyRequest(
-                "<value>",
-                "<value>"){{
-                hrisCompany = new HrisCompany(
-){{
-                    address = new PropertyHrisCompanyAddress(
-){{
-                        address1 = "<value>";
-                        address2 = "<value>";
-                        city = "Rancho Santa Margarita";
-                        country = "Somalia";
-                        countryCode = "CL";
-                        postalCode = "49321";
-                        region = "<value>";
-                        regionCode = "<value>";
+            UpdateHrisCompanyRequest req = UpdateHrisCompanyRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                    }};
-                    createdAt = OffsetDateTime.parse("2023-11-24T00:12:57.019Z");
-                    id = "<id>";
-                    legalName = "<value>";
-                    name = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    updatedAt = OffsetDateTime.parse("2024-01-24T14:39:44.271Z");
+            UpdateHrisCompanyResponse res = sdk.company().updateHrisCompany()
+                .request(req)
+                .call();
 
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.UpdateHrisCompanyResponse res = sdk.company.updateHrisCompany(req);
-
-            if (res.hrisCompany != null) {
+            if (res.hrisCompany().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.UpdateHrisCompanyRequest](../../models/operations/UpdateHrisCompanyRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [UpdateHrisCompanyRequest](../../models/operations/UpdateHrisCompanyRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.UpdateHrisCompanyResponse](../../models/operations/UpdateHrisCompanyResponse.md)**
+**[UpdateHrisCompanyResponse](../../models/operations/UpdateHrisCompanyResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |

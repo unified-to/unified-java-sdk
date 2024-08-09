@@ -1,5 +1,5 @@
 # Login
-(*login*)
+(*login()*)
 
 ### Available Operations
 
@@ -15,51 +15,58 @@ Returns an authentication URL for the specified integration.  Once a successful 
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginRequest req = new GetUnifiedIntegrationLoginRequest(
-                "<value>",
-                "<value>"){{
-                env = "<value>";
-                failureRedirect = "<value>";
-                redirect = false;
-                state = "Virginia";
-                successRedirect = "<value>";
+            GetUnifiedIntegrationLoginRequest req = GetUnifiedIntegrationLoginRequest.builder()
+                .integrationType("<value>")
+                .workspaceId("<value>")
+                .build();
 
-            }};
+            GetUnifiedIntegrationLoginResponse res = sdk.login().getUnifiedIntegrationLogin()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginResponse res = sdk.login.getUnifiedIntegrationLogin(req);
-
-            if (res.res != null) {
+            if (res.res().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginRequest](../../models/operations/GetUnifiedIntegrationLoginRequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [GetUnifiedIntegrationLoginRequest](../../models/operations/GetUnifiedIntegrationLoginRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginResponse](../../models/operations/GetUnifiedIntegrationLoginResponse.md)**
+**[GetUnifiedIntegrationLoginResponse](../../models/operations/GetUnifiedIntegrationLoginResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |

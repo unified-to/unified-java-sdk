@@ -1,5 +1,5 @@
 # Crm
-(*crm*)
+(*crm()*)
 
 ### Available Operations
 
@@ -50,107 +50,60 @@ Create a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmCompanyResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmCompany;
-import com.unifiedapi.unifiedto.models.shared.CrmEmail;
-import com.unifiedapi.unifiedto.models.shared.CrmEmailType;
-import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
-import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmCompanyAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.CreateCrmCompanyRequest req = new CreateCrmCompanyRequest(
-                "<value>"){{
-                crmCompany = new CrmCompany(
-){{
-                    address = new PropertyCrmCompanyAddress(
-){{
-                        address1 = "<value>";
-                        address2 = "<value>";
-                        city = "Joanieworth";
-                        country = "Brazil";
-                        countryCode = "CW";
-                        postalCode = "39571";
-                        region = "<value>";
-                        regionCode = "<value>";
+            CreateCrmCompanyRequest req = CreateCrmCompanyRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-                    }};
-                    createdAt = OffsetDateTime.parse("2024-02-03T10:04:12.712Z");
-                    dealIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    description = "Pre-emptive responsive task-force";
-                    emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
-                        add(new CrmEmail(
-                        ){{}}),
-                    }};
-                    employees = 4175.89d;
-                    id = "<id>";
-                    industry = "<value>";
-                    isActive = false;
-                    linkUrls = new String[]{{
-                        add("<value>"),
-                    }};
-                    name = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    tags = new String[]{{
-                        add("<value>"),
-                    }};
-                    telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone(
-                        "<value>"){{
-                            telephone = "<value>";
-                        }}),
-                    }};
-                    timezone = "Europe/Bucharest";
-                    updatedAt = OffsetDateTime.parse("2023-10-03T19:32:53.625Z");
-                    userId = "<value>";
-                    websites = new String[]{{
-                        add("<value>"),
-                    }};
+            CreateCrmCompanyResponse res = sdk.crm().createCrmCompany()
+                .request(req)
+                .call();
 
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.CreateCrmCompanyResponse res = sdk.crm.createCrmCompany(req);
-
-            if (res.crmCompany != null) {
+            if (res.crmCompany().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.CreateCrmCompanyRequest](../../models/operations/CreateCrmCompanyRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [CreateCrmCompanyRequest](../../models/operations/CreateCrmCompanyRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.CreateCrmCompanyResponse](../../models/operations/CreateCrmCompanyResponse.md)**
+**[CreateCrmCompanyResponse](../../models/operations/CreateCrmCompanyResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## createCrmContact
 
@@ -162,98 +115,60 @@ Create a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmContactRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmContactResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmContact;
-import com.unifiedapi.unifiedto.models.shared.CrmEmail;
-import com.unifiedapi.unifiedto.models.shared.CrmEmailType;
-import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
-import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.CreateCrmContactRequest req = new CreateCrmContactRequest(
-                "<value>"){{
-                crmContact = new CrmContact(
-){{
-                    address = new PropertyCrmContactAddress(
-){{
-                        address1 = "<value>";
-                        address2 = "<value>";
-                        city = "Steuberview";
-                        country = "Bulgaria";
-                        countryCode = "QA";
-                        postalCode = "98809";
-                        region = "<value>";
-                        regionCode = "<value>";
+            CreateCrmContactRequest req = CreateCrmContactRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-                    }};
-                    company = "Pollich, Emard and Parker";
-                    companyIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    createdAt = OffsetDateTime.parse("2024-03-07T10:13:21.309Z");
-                    dealIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
-                        add(new CrmEmail(
-                        ){{}}),
-                    }};
-                    id = "<id>";
-                    name = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone(
-                        "<value>"){{
-                            telephone = "<value>";
-                        }}),
-                    }};
-                    title = "<value>";
-                    updatedAt = OffsetDateTime.parse("2024-03-21T17:10:02.454Z");
-                    userId = "<value>";
+            CreateCrmContactResponse res = sdk.crm().createCrmContact()
+                .request(req)
+                .call();
 
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.CreateCrmContactResponse res = sdk.crm.createCrmContact(req);
-
-            if (res.crmContact != null) {
+            if (res.crmContact().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.CreateCrmContactRequest](../../models/operations/CreateCrmContactRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [CreateCrmContactRequest](../../models/operations/CreateCrmContactRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.CreateCrmContactResponse](../../models/operations/CreateCrmContactResponse.md)**
+**[CreateCrmContactResponse](../../models/operations/CreateCrmContactResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## createCrmDeal
 
@@ -265,77 +180,60 @@ Create a deal
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmDealRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmDealResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmDeal;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.CreateCrmDealRequest req = new CreateCrmDealRequest(
-                "<value>"){{
-                crmDeal = new CrmDeal(
-){{
-                    amount = 1917.45d;
-                    closedAt = OffsetDateTime.parse("2023-08-28T04:18:49.785Z");
-                    createdAt = OffsetDateTime.parse("2023-07-23T15:31:52.925Z");
-                    currency = "Cuban Peso";
-                    id = "<id>";
-                    lostReason = "<value>";
-                    name = "<value>";
-                    pipeline = "<value>";
-                    pipelineId = "<value>";
-                    probability = 1087.81d;
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    source = "<value>";
-                    stage = "<value>";
-                    stageId = "<value>";
-                    tags = new String[]{{
-                        add("<value>"),
-                    }};
-                    updatedAt = OffsetDateTime.parse("2023-10-13T19:43:32.331Z");
-                    userId = "<value>";
-                    wonReason = "<value>";
+            CreateCrmDealRequest req = CreateCrmDealRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-                }};
+            CreateCrmDealResponse res = sdk.crm().createCrmDeal()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.CreateCrmDealResponse res = sdk.crm.createCrmDeal(req);
-
-            if (res.crmDeal != null) {
+            if (res.crmDeal().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [com.unifiedapi.unifiedto.models.operations.CreateCrmDealRequest](../../models/operations/CreateCrmDealRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [CreateCrmDealRequest](../../models/operations/CreateCrmDealRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.CreateCrmDealResponse](../../models/operations/CreateCrmDealResponse.md)**
+**[CreateCrmDealResponse](../../models/operations/CreateCrmDealResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## createCrmEvent
 
@@ -347,129 +245,60 @@ Create an event
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmEventRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmEventResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmEvent;
-import com.unifiedapi.unifiedto.models.shared.CrmEventType;
-import com.unifiedapi.unifiedto.models.shared.Priority;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventCall;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventEmail;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventMeeting;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventNote;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTask;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTaskStatus;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.CreateCrmEventRequest req = new CreateCrmEventRequest(
-                "<value>"){{
-                crmEvent = new CrmEvent(
-){{
-                    call = new PropertyCrmEventCall(
-){{
-                        description = "Grass-roots intangible superstructure";
-                        duration = 6684.26d;
-                        startAt = OffsetDateTime.parse("2024-07-14T22:05:40.365Z");
+            CreateCrmEventRequest req = CreateCrmEventRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-                    }};
-                    companyIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    contactIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    createdAt = OffsetDateTime.parse("2024-08-20T19:58:06.686Z");
-                    dealIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    email = new PropertyCrmEventEmail(
-){{
-                        attachmentFileIds = new String[]{{
-                            add("<value>"),
-                        }};
-                        body = "<value>";
-                        cc = new String[]{{
-                            add("<value>"),
-                        }};
-                        from = "<value>";
-                        subject = "<value>";
-                        to = new String[]{{
-                            add("<value>"),
-                        }};
+            CreateCrmEventResponse res = sdk.crm().createCrmEvent()
+                .request(req)
+                .call();
 
-                    }};
-                    id = "<id>";
-                    leadIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    meeting = new PropertyCrmEventMeeting(
-){{
-                        description = "Synergistic 3rd generation capacity";
-                        endAt = OffsetDateTime.parse("2023-08-07T03:26:53.520Z");
-                        startAt = OffsetDateTime.parse("2023-02-09T03:55:08.657Z");
-                        title = "<value>";
-
-                    }};
-                    note = new PropertyCrmEventNote(
-){{
-                        description = "Virtual asymmetric definition";
-                        title = "<value>";
-
-                    }};
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    task = new PropertyCrmEventTask(
-){{
-                        description = "Automated attitude-oriented info-mediaries";
-                        dueAt = OffsetDateTime.parse("2023-07-15T02:47:03.388Z");
-                        name = "<value>";
-                        priority = Priority.HIGH;
-                        status = PropertyCrmEventTaskStatus.NOT_STARTED;
-
-                    }};
-                    type = CrmEventType.NOTE;
-                    updatedAt = OffsetDateTime.parse("2022-01-03T22:33:38.901Z");
-                    userId = "<value>";
-
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.CreateCrmEventResponse res = sdk.crm.createCrmEvent(req);
-
-            if (res.crmEvent != null) {
+            if (res.crmEvent().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [com.unifiedapi.unifiedto.models.operations.CreateCrmEventRequest](../../models/operations/CreateCrmEventRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [CreateCrmEventRequest](../../models/operations/CreateCrmEventRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.CreateCrmEventResponse](../../models/operations/CreateCrmEventResponse.md)**
+**[CreateCrmEventResponse](../../models/operations/CreateCrmEventResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## createCrmLead
 
@@ -481,97 +310,60 @@ Create a lead
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmLeadRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmLeadResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmEmail;
-import com.unifiedapi.unifiedto.models.shared.CrmEmailType;
-import com.unifiedapi.unifiedto.models.shared.CrmLead;
-import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
-import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmLeadAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.CreateCrmLeadRequest req = new CreateCrmLeadRequest(
-                "<value>"){{
-                crmLead = new CrmLead(
-){{
-                    address = new PropertyCrmLeadAddress(
-){{
-                        address1 = "<value>";
-                        address2 = "<value>";
-                        city = "Lindboro";
-                        country = "Saint Barthelemy";
-                        countryCode = "SG";
-                        postalCode = "67307-8667";
-                        region = "<value>";
-                        regionCode = "<value>";
+            CreateCrmLeadRequest req = CreateCrmLeadRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-                    }};
-                    companyId = "<value>";
-                    companyName = "Langosh - Fritsch";
-                    contactId = "<value>";
-                    createdAt = OffsetDateTime.parse("2023-12-23T15:29:07.093Z");
-                    creatorUserId = "<value>";
-                    emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
-                        add(new CrmEmail(
-                        ){{}}),
-                    }};
-                    id = "<id>";
-                    isActive = false;
-                    name = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    source = "<value>";
-                    status = "<value>";
-                    telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone(
-                        "<value>"){{
-                            telephone = "<value>";
-                        }}),
-                    }};
-                    updatedAt = OffsetDateTime.parse("2024-09-01T18:33:52.670Z");
-                    userId = "<value>";
+            CreateCrmLeadResponse res = sdk.crm().createCrmLead()
+                .request(req)
+                .call();
 
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.CreateCrmLeadResponse res = sdk.crm.createCrmLead(req);
-
-            if (res.crmLead != null) {
+            if (res.crmLead().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [com.unifiedapi.unifiedto.models.operations.CreateCrmLeadRequest](../../models/operations/CreateCrmLeadRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [CreateCrmLeadRequest](../../models/operations/CreateCrmLeadRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.CreateCrmLeadResponse](../../models/operations/CreateCrmLeadResponse.md)**
+**[CreateCrmLeadResponse](../../models/operations/CreateCrmLeadResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## createCrmPipeline
 
@@ -583,70 +375,60 @@ Create a pipeline
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmPipeline;
-import com.unifiedapi.unifiedto.models.shared.CrmStage;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineRequest req = new CreateCrmPipelineRequest(
-                "<value>"){{
-                crmPipeline = new CrmPipeline(
-){{
-                    createdAt = OffsetDateTime.parse("2024-06-24T10:05:30.432Z");
-                    dealProbability = 6254.97d;
-                    displayOrder = 3052.57d;
-                    id = "<id>";
-                    isActive = false;
-                    name = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    stages = new com.unifiedapi.unifiedto.models.shared.CrmStage[]{{
-                        add(new CrmStage(
-                        ){{}}),
-                    }};
-                    updatedAt = OffsetDateTime.parse("2022-06-06T17:15:48.268Z");
+            CreateCrmPipelineRequest req = CreateCrmPipelineRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-                }};
+            CreateCrmPipelineResponse res = sdk.crm().createCrmPipeline()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineResponse res = sdk.crm.createCrmPipeline(req);
-
-            if (res.crmPipeline != null) {
+            if (res.crmPipeline().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineRequest](../../models/operations/CreateCrmPipelineRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateCrmPipelineRequest](../../models/operations/CreateCrmPipelineRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineResponse](../../models/operations/CreateCrmPipelineResponse.md)**
+**[CreateCrmPipelineResponse](../../models/operations/CreateCrmPipelineResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## getCrmCompany
 
@@ -658,52 +440,61 @@ Retrieve a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetCrmCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmCompanyResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetCrmCompanyRequest req = new GetCrmCompanyRequest(
-                "<value>",
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
+            GetCrmCompanyRequest req = GetCrmCompanyRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            }};
+            GetCrmCompanyResponse res = sdk.crm().getCrmCompany()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.GetCrmCompanyResponse res = sdk.crm.getCrmCompany(req);
-
-            if (res.crmCompany != null) {
+            if (res.crmCompany().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [com.unifiedapi.unifiedto.models.operations.GetCrmCompanyRequest](../../models/operations/GetCrmCompanyRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [GetCrmCompanyRequest](../../models/operations/GetCrmCompanyRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetCrmCompanyResponse](../../models/operations/GetCrmCompanyResponse.md)**
+**[GetCrmCompanyResponse](../../models/operations/GetCrmCompanyResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## getCrmContact
 
@@ -715,52 +506,61 @@ Retrieve a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetCrmContactRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmContactResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetCrmContactRequest req = new GetCrmContactRequest(
-                "<value>",
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
+            GetCrmContactRequest req = GetCrmContactRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            }};
+            GetCrmContactResponse res = sdk.crm().getCrmContact()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.GetCrmContactResponse res = sdk.crm.getCrmContact(req);
-
-            if (res.crmContact != null) {
+            if (res.crmContact().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [com.unifiedapi.unifiedto.models.operations.GetCrmContactRequest](../../models/operations/GetCrmContactRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [GetCrmContactRequest](../../models/operations/GetCrmContactRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetCrmContactResponse](../../models/operations/GetCrmContactResponse.md)**
+**[GetCrmContactResponse](../../models/operations/GetCrmContactResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## getCrmDeal
 
@@ -772,52 +572,61 @@ Retrieve a deal
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetCrmDealRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmDealResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetCrmDealRequest req = new GetCrmDealRequest(
-                "<value>",
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
+            GetCrmDealRequest req = GetCrmDealRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            }};
+            GetCrmDealResponse res = sdk.crm().getCrmDeal()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.GetCrmDealResponse res = sdk.crm.getCrmDeal(req);
-
-            if (res.crmDeal != null) {
+            if (res.crmDeal().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [com.unifiedapi.unifiedto.models.operations.GetCrmDealRequest](../../models/operations/GetCrmDealRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `request`                                                         | [GetCrmDealRequest](../../models/operations/GetCrmDealRequest.md) | :heavy_check_mark:                                                | The request object to use for the request.                        |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetCrmDealResponse](../../models/operations/GetCrmDealResponse.md)**
+**[GetCrmDealResponse](../../models/operations/GetCrmDealResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## getCrmEvent
 
@@ -829,52 +638,61 @@ Retrieve an event
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetCrmEventRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmEventResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetCrmEventRequest req = new GetCrmEventRequest(
-                "<value>",
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
+            GetCrmEventRequest req = GetCrmEventRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            }};
+            GetCrmEventResponse res = sdk.crm().getCrmEvent()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.GetCrmEventResponse res = sdk.crm.getCrmEvent(req);
-
-            if (res.crmEvent != null) {
+            if (res.crmEvent().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [com.unifiedapi.unifiedto.models.operations.GetCrmEventRequest](../../models/operations/GetCrmEventRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `request`                                                           | [GetCrmEventRequest](../../models/operations/GetCrmEventRequest.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetCrmEventResponse](../../models/operations/GetCrmEventResponse.md)**
+**[GetCrmEventResponse](../../models/operations/GetCrmEventResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## getCrmLead
 
@@ -886,52 +704,61 @@ Retrieve a lead
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetCrmLeadRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmLeadResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetCrmLeadRequest req = new GetCrmLeadRequest(
-                "<value>",
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
+            GetCrmLeadRequest req = GetCrmLeadRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            }};
+            GetCrmLeadResponse res = sdk.crm().getCrmLead()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.GetCrmLeadResponse res = sdk.crm.getCrmLead(req);
-
-            if (res.crmLead != null) {
+            if (res.crmLead().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [com.unifiedapi.unifiedto.models.operations.GetCrmLeadRequest](../../models/operations/GetCrmLeadRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `request`                                                         | [GetCrmLeadRequest](../../models/operations/GetCrmLeadRequest.md) | :heavy_check_mark:                                                | The request object to use for the request.                        |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetCrmLeadResponse](../../models/operations/GetCrmLeadResponse.md)**
+**[GetCrmLeadResponse](../../models/operations/GetCrmLeadResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## getCrmPipeline
 
@@ -943,52 +770,61 @@ Retrieve a pipeline
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetCrmPipelineRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmPipelineResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetCrmPipelineRequest req = new GetCrmPipelineRequest(
-                "<value>",
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
+            GetCrmPipelineRequest req = GetCrmPipelineRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            }};
+            GetCrmPipelineResponse res = sdk.crm().getCrmPipeline()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.GetCrmPipelineResponse res = sdk.crm.getCrmPipeline(req);
-
-            if (res.crmPipeline != null) {
+            if (res.crmPipeline().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [com.unifiedapi.unifiedto.models.operations.GetCrmPipelineRequest](../../models/operations/GetCrmPipelineRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetCrmPipelineRequest](../../models/operations/GetCrmPipelineRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetCrmPipelineResponse](../../models/operations/GetCrmPipelineResponse.md)**
+**[GetCrmPipelineResponse](../../models/operations/GetCrmPipelineResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listCrmCompanies
 
@@ -1000,59 +836,60 @@ List all companies
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListCrmCompaniesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListCrmCompaniesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListCrmCompaniesRequest req = new ListCrmCompaniesRequest(
-                "<value>"){{
-                contactId = "<value>";
-                dealId = "<value>";
-                fields = new String[]{{
-                    add("<value>"),
-                }};
-                limit = 9883.97d;
-                offset = 5913.88d;
-                query = "<value>";
-                updatedGte = OffsetDateTime.parse("2023-05-02T17:52:08.731Z");
-                userId = "<value>";
+            ListCrmCompaniesRequest req = ListCrmCompaniesRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-            }};
+            ListCrmCompaniesResponse res = sdk.crm().listCrmCompanies()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListCrmCompaniesResponse res = sdk.crm.listCrmCompanies(req);
-
-            if (res.crmCompanies != null) {
+            if (res.crmCompanies().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.ListCrmCompaniesRequest](../../models/operations/ListCrmCompaniesRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListCrmCompaniesRequest](../../models/operations/ListCrmCompaniesRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListCrmCompaniesResponse](../../models/operations/ListCrmCompaniesResponse.md)**
+**[ListCrmCompaniesResponse](../../models/operations/ListCrmCompaniesResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listCrmContacts
 
@@ -1064,59 +901,60 @@ List all contacts
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListCrmContactsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListCrmContactsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListCrmContactsRequest req = new ListCrmContactsRequest(
-                "<value>"){{
-                companyId = "<value>";
-                dealId = "<value>";
-                fields = new String[]{{
-                    add("<value>"),
-                }};
-                limit = 7110.24d;
-                offset = 2657.43d;
-                query = "<value>";
-                updatedGte = OffsetDateTime.parse("2023-11-15T19:36:59.401Z");
-                userId = "<value>";
+            ListCrmContactsRequest req = ListCrmContactsRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-            }};
+            ListCrmContactsResponse res = sdk.crm().listCrmContacts()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListCrmContactsResponse res = sdk.crm.listCrmContacts(req);
-
-            if (res.crmContacts != null) {
+            if (res.crmContacts().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [com.unifiedapi.unifiedto.models.operations.ListCrmContactsRequest](../../models/operations/ListCrmContactsRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [ListCrmContactsRequest](../../models/operations/ListCrmContactsRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListCrmContactsResponse](../../models/operations/ListCrmContactsResponse.md)**
+**[ListCrmContactsResponse](../../models/operations/ListCrmContactsResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listCrmDeals
 
@@ -1128,59 +966,60 @@ List all deals
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListCrmDealsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListCrmDealsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListCrmDealsRequest req = new ListCrmDealsRequest(
-                "<value>"){{
-                companyId = "<value>";
-                contactId = "<value>";
-                fields = new String[]{{
-                    add("<value>"),
-                }};
-                limit = 917.49d;
-                offset = 8216.92d;
-                query = "<value>";
-                updatedGte = OffsetDateTime.parse("2023-09-04T01:39:26.472Z");
-                userId = "<value>";
+            ListCrmDealsRequest req = ListCrmDealsRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-            }};
+            ListCrmDealsResponse res = sdk.crm().listCrmDeals()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListCrmDealsResponse res = sdk.crm.listCrmDeals(req);
-
-            if (res.crmDeals != null) {
+            if (res.crmDeals().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [com.unifiedapi.unifiedto.models.operations.ListCrmDealsRequest](../../models/operations/ListCrmDealsRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [ListCrmDealsRequest](../../models/operations/ListCrmDealsRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListCrmDealsResponse](../../models/operations/ListCrmDealsResponse.md)**
+**[ListCrmDealsResponse](../../models/operations/ListCrmDealsResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listCrmEvents
 
@@ -1192,61 +1031,60 @@ List all events
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListCrmEventsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListCrmEventsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListCrmEventsRequest req = new ListCrmEventsRequest(
-                "<value>"){{
-                companyId = "<value>";
-                contactId = "<value>";
-                dealId = "<value>";
-                fields = new String[]{{
-                    add("<value>"),
-                }};
-                limit = 4453.11d;
-                offset = 4555.2d;
-                query = "<value>";
-                type = "<value>";
-                updatedGte = OffsetDateTime.parse("2024-04-30T03:39:38.103Z");
-                userId = "<value>";
+            ListCrmEventsRequest req = ListCrmEventsRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-            }};
+            ListCrmEventsResponse res = sdk.crm().listCrmEvents()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListCrmEventsResponse res = sdk.crm.listCrmEvents(req);
-
-            if (res.crmEvents != null) {
+            if (res.crmEvents().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [com.unifiedapi.unifiedto.models.operations.ListCrmEventsRequest](../../models/operations/ListCrmEventsRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [ListCrmEventsRequest](../../models/operations/ListCrmEventsRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListCrmEventsResponse](../../models/operations/ListCrmEventsResponse.md)**
+**[ListCrmEventsResponse](../../models/operations/ListCrmEventsResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listCrmLeads
 
@@ -1258,59 +1096,60 @@ List all leads
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListCrmLeadsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListCrmLeadsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListCrmLeadsRequest req = new ListCrmLeadsRequest(
-                "<value>"){{
-                companyId = "<value>";
-                contactId = "<value>";
-                fields = new String[]{{
-                    add("<value>"),
-                }};
-                limit = 2895.08d;
-                offset = 6446.8d;
-                query = "<value>";
-                updatedGte = OffsetDateTime.parse("2024-01-12T07:27:29.016Z");
-                userId = "<value>";
+            ListCrmLeadsRequest req = ListCrmLeadsRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-            }};
+            ListCrmLeadsResponse res = sdk.crm().listCrmLeads()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListCrmLeadsResponse res = sdk.crm.listCrmLeads(req);
-
-            if (res.crmLeads != null) {
+            if (res.crmLeads().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [com.unifiedapi.unifiedto.models.operations.ListCrmLeadsRequest](../../models/operations/ListCrmLeadsRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [ListCrmLeadsRequest](../../models/operations/ListCrmLeadsRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListCrmLeadsResponse](../../models/operations/ListCrmLeadsResponse.md)**
+**[ListCrmLeadsResponse](../../models/operations/ListCrmLeadsResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listCrmPipelines
 
@@ -1322,56 +1161,60 @@ List all pipelines
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesRequest req = new ListCrmPipelinesRequest(
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
-                limit = 3318.18d;
-                offset = 4834.28d;
-                query = "<value>";
-                updatedGte = OffsetDateTime.parse("2022-04-29T18:23:30.472Z");
+            ListCrmPipelinesRequest req = ListCrmPipelinesRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-            }};
+            ListCrmPipelinesResponse res = sdk.crm().listCrmPipelines()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesResponse res = sdk.crm.listCrmPipelines(req);
-
-            if (res.crmPipelines != null) {
+            if (res.crmPipelines().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesRequest](../../models/operations/ListCrmPipelinesRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListCrmPipelinesRequest](../../models/operations/ListCrmPipelinesRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesResponse](../../models/operations/ListCrmPipelinesResponse.md)**
+**[ListCrmPipelinesResponse](../../models/operations/ListCrmPipelinesResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## patchCrmCompany
 
@@ -1383,108 +1226,61 @@ Update a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmCompanyResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmCompany;
-import com.unifiedapi.unifiedto.models.shared.CrmEmail;
-import com.unifiedapi.unifiedto.models.shared.CrmEmailType;
-import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
-import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmCompanyAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.PatchCrmCompanyRequest req = new PatchCrmCompanyRequest(
-                "<value>",
-                "<value>"){{
-                crmCompany = new CrmCompany(
-){{
-                    address = new PropertyCrmCompanyAddress(
-){{
-                        address1 = "<value>";
-                        address2 = "<value>";
-                        city = "Rempelchester";
-                        country = "Christmas Island";
-                        countryCode = "LA";
-                        postalCode = "53644";
-                        region = "<value>";
-                        regionCode = "<value>";
+            PatchCrmCompanyRequest req = PatchCrmCompanyRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                    }};
-                    createdAt = OffsetDateTime.parse("2022-01-19T16:53:30.758Z");
-                    dealIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    description = "Diverse mission-critical project";
-                    emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
-                        add(new CrmEmail(
-                        ){{}}),
-                    }};
-                    employees = 4128.78d;
-                    id = "<id>";
-                    industry = "<value>";
-                    isActive = false;
-                    linkUrls = new String[]{{
-                        add("<value>"),
-                    }};
-                    name = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    tags = new String[]{{
-                        add("<value>"),
-                    }};
-                    telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone(
-                        "<value>"){{
-                            telephone = "<value>";
-                        }}),
-                    }};
-                    timezone = "Europe/Skopje";
-                    updatedAt = OffsetDateTime.parse("2022-04-08T08:19:54.922Z");
-                    userId = "<value>";
-                    websites = new String[]{{
-                        add("<value>"),
-                    }};
+            PatchCrmCompanyResponse res = sdk.crm().patchCrmCompany()
+                .request(req)
+                .call();
 
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.PatchCrmCompanyResponse res = sdk.crm.patchCrmCompany(req);
-
-            if (res.crmCompany != null) {
+            if (res.crmCompany().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [com.unifiedapi.unifiedto.models.operations.PatchCrmCompanyRequest](../../models/operations/PatchCrmCompanyRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [PatchCrmCompanyRequest](../../models/operations/PatchCrmCompanyRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchCrmCompanyResponse](../../models/operations/PatchCrmCompanyResponse.md)**
+**[PatchCrmCompanyResponse](../../models/operations/PatchCrmCompanyResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## patchCrmContact
 
@@ -1496,99 +1292,61 @@ Update a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmContactRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmContactResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmContact;
-import com.unifiedapi.unifiedto.models.shared.CrmEmail;
-import com.unifiedapi.unifiedto.models.shared.CrmEmailType;
-import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
-import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.PatchCrmContactRequest req = new PatchCrmContactRequest(
-                "<value>",
-                "<value>"){{
-                crmContact = new CrmContact(
-){{
-                    address = new PropertyCrmContactAddress(
-){{
-                        address1 = "<value>";
-                        address2 = "<value>";
-                        city = "North Anne";
-                        country = "Puerto Rico";
-                        countryCode = "GD";
-                        postalCode = "31015";
-                        region = "<value>";
-                        regionCode = "<value>";
+            PatchCrmContactRequest req = PatchCrmContactRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                    }};
-                    company = "Goyette - Schultz";
-                    companyIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    createdAt = OffsetDateTime.parse("2022-07-12T00:15:47.150Z");
-                    dealIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
-                        add(new CrmEmail(
-                        ){{}}),
-                    }};
-                    id = "<id>";
-                    name = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone(
-                        "<value>"){{
-                            telephone = "<value>";
-                        }}),
-                    }};
-                    title = "<value>";
-                    updatedAt = OffsetDateTime.parse("2022-11-28T22:10:52.030Z");
-                    userId = "<value>";
+            PatchCrmContactResponse res = sdk.crm().patchCrmContact()
+                .request(req)
+                .call();
 
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.PatchCrmContactResponse res = sdk.crm.patchCrmContact(req);
-
-            if (res.crmContact != null) {
+            if (res.crmContact().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [com.unifiedapi.unifiedto.models.operations.PatchCrmContactRequest](../../models/operations/PatchCrmContactRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [PatchCrmContactRequest](../../models/operations/PatchCrmContactRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchCrmContactResponse](../../models/operations/PatchCrmContactResponse.md)**
+**[PatchCrmContactResponse](../../models/operations/PatchCrmContactResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## patchCrmDeal
 
@@ -1600,78 +1358,61 @@ Update a deal
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmDealRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmDealResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmDeal;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.PatchCrmDealRequest req = new PatchCrmDealRequest(
-                "<value>",
-                "<value>"){{
-                crmDeal = new CrmDeal(
-){{
-                    amount = 9874.05d;
-                    closedAt = OffsetDateTime.parse("2022-07-09T12:57:05.527Z");
-                    createdAt = OffsetDateTime.parse("2023-04-30T17:40:39.112Z");
-                    currency = "Riel";
-                    id = "<id>";
-                    lostReason = "<value>";
-                    name = "<value>";
-                    pipeline = "<value>";
-                    pipelineId = "<value>";
-                    probability = 9555.58d;
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    source = "<value>";
-                    stage = "<value>";
-                    stageId = "<value>";
-                    tags = new String[]{{
-                        add("<value>"),
-                    }};
-                    updatedAt = OffsetDateTime.parse("2024-02-22T07:49:20.306Z");
-                    userId = "<value>";
-                    wonReason = "<value>";
+            PatchCrmDealRequest req = PatchCrmDealRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                }};
+            PatchCrmDealResponse res = sdk.crm().patchCrmDeal()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.PatchCrmDealResponse res = sdk.crm.patchCrmDeal(req);
-
-            if (res.crmDeal != null) {
+            if (res.crmDeal().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [com.unifiedapi.unifiedto.models.operations.PatchCrmDealRequest](../../models/operations/PatchCrmDealRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [PatchCrmDealRequest](../../models/operations/PatchCrmDealRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchCrmDealResponse](../../models/operations/PatchCrmDealResponse.md)**
+**[PatchCrmDealResponse](../../models/operations/PatchCrmDealResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## patchCrmEvent
 
@@ -1683,130 +1424,61 @@ Update an event
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmEventRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmEventResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmEvent;
-import com.unifiedapi.unifiedto.models.shared.CrmEventType;
-import com.unifiedapi.unifiedto.models.shared.Priority;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventCall;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventEmail;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventMeeting;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventNote;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTask;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTaskStatus;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.PatchCrmEventRequest req = new PatchCrmEventRequest(
-                "<value>",
-                "<value>"){{
-                crmEvent = new CrmEvent(
-){{
-                    call = new PropertyCrmEventCall(
-){{
-                        description = "Multi-layered well-modulated middleware";
-                        duration = 8718.07d;
-                        startAt = OffsetDateTime.parse("2023-07-21T08:28:33.501Z");
+            PatchCrmEventRequest req = PatchCrmEventRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                    }};
-                    companyIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    contactIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    createdAt = OffsetDateTime.parse("2023-02-08T06:50:13.439Z");
-                    dealIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    email = new PropertyCrmEventEmail(
-){{
-                        attachmentFileIds = new String[]{{
-                            add("<value>"),
-                        }};
-                        body = "<value>";
-                        cc = new String[]{{
-                            add("<value>"),
-                        }};
-                        from = "<value>";
-                        subject = "<value>";
-                        to = new String[]{{
-                            add("<value>"),
-                        }};
+            PatchCrmEventResponse res = sdk.crm().patchCrmEvent()
+                .request(req)
+                .call();
 
-                    }};
-                    id = "<id>";
-                    leadIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    meeting = new PropertyCrmEventMeeting(
-){{
-                        description = "Universal 24/7 migration";
-                        endAt = OffsetDateTime.parse("2022-05-11T23:48:02.911Z");
-                        startAt = OffsetDateTime.parse("2022-10-11T02:15:24.355Z");
-                        title = "<value>";
-
-                    }};
-                    note = new PropertyCrmEventNote(
-){{
-                        description = "Realigned composite benchmark";
-                        title = "<value>";
-
-                    }};
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    task = new PropertyCrmEventTask(
-){{
-                        description = "Customer-focused needs-based groupware";
-                        dueAt = OffsetDateTime.parse("2024-11-30T20:05:52.386Z");
-                        name = "<value>";
-                        priority = Priority.HIGH;
-                        status = PropertyCrmEventTaskStatus.COMPLETED;
-
-                    }};
-                    type = CrmEventType.NOTE;
-                    updatedAt = OffsetDateTime.parse("2024-06-11T09:39:47.886Z");
-                    userId = "<value>";
-
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.PatchCrmEventResponse res = sdk.crm.patchCrmEvent(req);
-
-            if (res.crmEvent != null) {
+            if (res.crmEvent().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [com.unifiedapi.unifiedto.models.operations.PatchCrmEventRequest](../../models/operations/PatchCrmEventRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [PatchCrmEventRequest](../../models/operations/PatchCrmEventRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchCrmEventResponse](../../models/operations/PatchCrmEventResponse.md)**
+**[PatchCrmEventResponse](../../models/operations/PatchCrmEventResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## patchCrmLead
 
@@ -1818,98 +1490,61 @@ Update a lead
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmLeadRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmLeadResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmEmail;
-import com.unifiedapi.unifiedto.models.shared.CrmEmailType;
-import com.unifiedapi.unifiedto.models.shared.CrmLead;
-import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
-import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmLeadAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.PatchCrmLeadRequest req = new PatchCrmLeadRequest(
-                "<value>",
-                "<value>"){{
-                crmLead = new CrmLead(
-){{
-                    address = new PropertyCrmLeadAddress(
-){{
-                        address1 = "<value>";
-                        address2 = "<value>";
-                        city = "Caseyberg";
-                        country = "Cote d'Ivoire";
-                        countryCode = "LK";
-                        postalCode = "22291";
-                        region = "<value>";
-                        regionCode = "<value>";
+            PatchCrmLeadRequest req = PatchCrmLeadRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                    }};
-                    companyId = "<value>";
-                    companyName = "Altenwerth, Lebsack and Wintheiser";
-                    contactId = "<value>";
-                    createdAt = OffsetDateTime.parse("2023-12-16T13:33:21.530Z");
-                    creatorUserId = "<value>";
-                    emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
-                        add(new CrmEmail(
-                        ){{}}),
-                    }};
-                    id = "<id>";
-                    isActive = false;
-                    name = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    source = "<value>";
-                    status = "<value>";
-                    telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone(
-                        "<value>"){{
-                            telephone = "<value>";
-                        }}),
-                    }};
-                    updatedAt = OffsetDateTime.parse("2022-10-10T11:36:08.811Z");
-                    userId = "<value>";
+            PatchCrmLeadResponse res = sdk.crm().patchCrmLead()
+                .request(req)
+                .call();
 
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.PatchCrmLeadResponse res = sdk.crm.patchCrmLead(req);
-
-            if (res.crmLead != null) {
+            if (res.crmLead().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [com.unifiedapi.unifiedto.models.operations.PatchCrmLeadRequest](../../models/operations/PatchCrmLeadRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [PatchCrmLeadRequest](../../models/operations/PatchCrmLeadRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchCrmLeadResponse](../../models/operations/PatchCrmLeadResponse.md)**
+**[PatchCrmLeadResponse](../../models/operations/PatchCrmLeadResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## patchCrmPipeline
 
@@ -1921,71 +1556,61 @@ Update a pipeline
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmPipeline;
-import com.unifiedapi.unifiedto.models.shared.CrmStage;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineRequest req = new PatchCrmPipelineRequest(
-                "<value>",
-                "<value>"){{
-                crmPipeline = new CrmPipeline(
-){{
-                    createdAt = OffsetDateTime.parse("2024-08-26T14:31:39.156Z");
-                    dealProbability = 8620.92d;
-                    displayOrder = 4178.43d;
-                    id = "<id>";
-                    isActive = false;
-                    name = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    stages = new com.unifiedapi.unifiedto.models.shared.CrmStage[]{{
-                        add(new CrmStage(
-                        ){{}}),
-                    }};
-                    updatedAt = OffsetDateTime.parse("2022-02-25T13:09:02.644Z");
+            PatchCrmPipelineRequest req = PatchCrmPipelineRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                }};
+            PatchCrmPipelineResponse res = sdk.crm().patchCrmPipeline()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineResponse res = sdk.crm.patchCrmPipeline(req);
-
-            if (res.crmPipeline != null) {
+            if (res.crmPipeline().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineRequest](../../models/operations/PatchCrmPipelineRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [PatchCrmPipelineRequest](../../models/operations/PatchCrmPipelineRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineResponse](../../models/operations/PatchCrmPipelineResponse.md)**
+**[PatchCrmPipelineResponse](../../models/operations/PatchCrmPipelineResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## removeCrmCompany
 
@@ -1997,47 +1622,59 @@ Remove a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyRequest req = new RemoveCrmCompanyRequest(
-                "<value>",
-                "<value>");
+            RemoveCrmCompanyRequest req = RemoveCrmCompanyRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyResponse res = sdk.crm.removeCrmCompany(req);
+            RemoveCrmCompanyResponse res = sdk.crm().removeCrmCompany()
+                .request(req)
+                .call();
 
-            if (res.statusCode == 200) {
-                // handle response
-            }
+            // handle response
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyRequest](../../models/operations/RemoveCrmCompanyRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [RemoveCrmCompanyRequest](../../models/operations/RemoveCrmCompanyRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyResponse](../../models/operations/RemoveCrmCompanyResponse.md)**
+**[RemoveCrmCompanyResponse](../../models/operations/RemoveCrmCompanyResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## removeCrmContact
 
@@ -2049,47 +1686,59 @@ Remove a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveCrmContactRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveCrmContactResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveCrmContactRequest req = new RemoveCrmContactRequest(
-                "<value>",
-                "<value>");
+            RemoveCrmContactRequest req = RemoveCrmContactRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveCrmContactResponse res = sdk.crm.removeCrmContact(req);
+            RemoveCrmContactResponse res = sdk.crm().removeCrmContact()
+                .request(req)
+                .call();
 
-            if (res.statusCode == 200) {
-                // handle response
-            }
+            // handle response
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.RemoveCrmContactRequest](../../models/operations/RemoveCrmContactRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [RemoveCrmContactRequest](../../models/operations/RemoveCrmContactRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.RemoveCrmContactResponse](../../models/operations/RemoveCrmContactResponse.md)**
+**[RemoveCrmContactResponse](../../models/operations/RemoveCrmContactResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## removeCrmDeal
 
@@ -2101,47 +1750,59 @@ Remove a deal
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveCrmDealRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveCrmDealResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveCrmDealRequest req = new RemoveCrmDealRequest(
-                "<value>",
-                "<value>");
+            RemoveCrmDealRequest req = RemoveCrmDealRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveCrmDealResponse res = sdk.crm.removeCrmDeal(req);
+            RemoveCrmDealResponse res = sdk.crm().removeCrmDeal()
+                .request(req)
+                .call();
 
-            if (res.statusCode == 200) {
-                // handle response
-            }
+            // handle response
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [com.unifiedapi.unifiedto.models.operations.RemoveCrmDealRequest](../../models/operations/RemoveCrmDealRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [RemoveCrmDealRequest](../../models/operations/RemoveCrmDealRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.RemoveCrmDealResponse](../../models/operations/RemoveCrmDealResponse.md)**
+**[RemoveCrmDealResponse](../../models/operations/RemoveCrmDealResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## removeCrmEvent
 
@@ -2153,47 +1814,59 @@ Remove an event
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveCrmEventRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveCrmEventResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveCrmEventRequest req = new RemoveCrmEventRequest(
-                "<value>",
-                "<value>");
+            RemoveCrmEventRequest req = RemoveCrmEventRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveCrmEventResponse res = sdk.crm.removeCrmEvent(req);
+            RemoveCrmEventResponse res = sdk.crm().removeCrmEvent()
+                .request(req)
+                .call();
 
-            if (res.statusCode == 200) {
-                // handle response
-            }
+            // handle response
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [com.unifiedapi.unifiedto.models.operations.RemoveCrmEventRequest](../../models/operations/RemoveCrmEventRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [RemoveCrmEventRequest](../../models/operations/RemoveCrmEventRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.RemoveCrmEventResponse](../../models/operations/RemoveCrmEventResponse.md)**
+**[RemoveCrmEventResponse](../../models/operations/RemoveCrmEventResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## removeCrmLead
 
@@ -2205,47 +1878,59 @@ Remove a lead
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveCrmLeadRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveCrmLeadResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveCrmLeadRequest req = new RemoveCrmLeadRequest(
-                "<value>",
-                "<value>");
+            RemoveCrmLeadRequest req = RemoveCrmLeadRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveCrmLeadResponse res = sdk.crm.removeCrmLead(req);
+            RemoveCrmLeadResponse res = sdk.crm().removeCrmLead()
+                .request(req)
+                .call();
 
-            if (res.statusCode == 200) {
-                // handle response
-            }
+            // handle response
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [com.unifiedapi.unifiedto.models.operations.RemoveCrmLeadRequest](../../models/operations/RemoveCrmLeadRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [RemoveCrmLeadRequest](../../models/operations/RemoveCrmLeadRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.RemoveCrmLeadResponse](../../models/operations/RemoveCrmLeadResponse.md)**
+**[RemoveCrmLeadResponse](../../models/operations/RemoveCrmLeadResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## removeCrmPipeline
 
@@ -2257,47 +1942,59 @@ Remove a pipeline
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineRequest req = new RemoveCrmPipelineRequest(
-                "<value>",
-                "<value>");
+            RemoveCrmPipelineRequest req = RemoveCrmPipelineRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineResponse res = sdk.crm.removeCrmPipeline(req);
+            RemoveCrmPipelineResponse res = sdk.crm().removeCrmPipeline()
+                .request(req)
+                .call();
 
-            if (res.statusCode == 200) {
-                // handle response
-            }
+            // handle response
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineRequest](../../models/operations/RemoveCrmPipelineRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemoveCrmPipelineRequest](../../models/operations/RemoveCrmPipelineRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineResponse](../../models/operations/RemoveCrmPipelineResponse.md)**
+**[RemoveCrmPipelineResponse](../../models/operations/RemoveCrmPipelineResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## updateCrmCompany
 
@@ -2309,108 +2006,61 @@ Update a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmCompanyResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmCompany;
-import com.unifiedapi.unifiedto.models.shared.CrmEmail;
-import com.unifiedapi.unifiedto.models.shared.CrmEmailType;
-import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
-import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmCompanyAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.UpdateCrmCompanyRequest req = new UpdateCrmCompanyRequest(
-                "<value>",
-                "<value>"){{
-                crmCompany = new CrmCompany(
-){{
-                    address = new PropertyCrmCompanyAddress(
-){{
-                        address1 = "<value>";
-                        address2 = "<value>";
-                        city = "Margeshire";
-                        country = "Bahrain";
-                        countryCode = "WS";
-                        postalCode = "27563";
-                        region = "<value>";
-                        regionCode = "<value>";
+            UpdateCrmCompanyRequest req = UpdateCrmCompanyRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                    }};
-                    createdAt = OffsetDateTime.parse("2023-06-19T10:10:37.376Z");
-                    dealIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    description = "Future-proofed zero defect instruction set";
-                    emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
-                        add(new CrmEmail(
-                        ){{}}),
-                    }};
-                    employees = 1100.41d;
-                    id = "<id>";
-                    industry = "<value>";
-                    isActive = false;
-                    linkUrls = new String[]{{
-                        add("<value>"),
-                    }};
-                    name = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    tags = new String[]{{
-                        add("<value>"),
-                    }};
-                    telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone(
-                        "<value>"){{
-                            telephone = "<value>";
-                        }}),
-                    }};
-                    timezone = "Africa/Harare";
-                    updatedAt = OffsetDateTime.parse("2023-09-13T13:49:01.082Z");
-                    userId = "<value>";
-                    websites = new String[]{{
-                        add("<value>"),
-                    }};
+            UpdateCrmCompanyResponse res = sdk.crm().updateCrmCompany()
+                .request(req)
+                .call();
 
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.UpdateCrmCompanyResponse res = sdk.crm.updateCrmCompany(req);
-
-            if (res.crmCompany != null) {
+            if (res.crmCompany().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.UpdateCrmCompanyRequest](../../models/operations/UpdateCrmCompanyRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [UpdateCrmCompanyRequest](../../models/operations/UpdateCrmCompanyRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.UpdateCrmCompanyResponse](../../models/operations/UpdateCrmCompanyResponse.md)**
+**[UpdateCrmCompanyResponse](../../models/operations/UpdateCrmCompanyResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## updateCrmContact
 
@@ -2422,99 +2072,61 @@ Update a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmContactRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmContactResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmContact;
-import com.unifiedapi.unifiedto.models.shared.CrmEmail;
-import com.unifiedapi.unifiedto.models.shared.CrmEmailType;
-import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
-import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmContactAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.UpdateCrmContactRequest req = new UpdateCrmContactRequest(
-                "<value>",
-                "<value>"){{
-                crmContact = new CrmContact(
-){{
-                    address = new PropertyCrmContactAddress(
-){{
-                        address1 = "<value>";
-                        address2 = "<value>";
-                        city = "Fort Carlee";
-                        country = "Greenland";
-                        countryCode = "AQ";
-                        postalCode = "88650";
-                        region = "<value>";
-                        regionCode = "<value>";
+            UpdateCrmContactRequest req = UpdateCrmContactRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                    }};
-                    company = "Hoeger Group";
-                    companyIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    createdAt = OffsetDateTime.parse("2022-02-12T12:31:59.837Z");
-                    dealIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
-                        add(new CrmEmail(
-                        ){{}}),
-                    }};
-                    id = "<id>";
-                    name = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone(
-                        "<value>"){{
-                            telephone = "<value>";
-                        }}),
-                    }};
-                    title = "<value>";
-                    updatedAt = OffsetDateTime.parse("2023-09-02T17:59:32.331Z");
-                    userId = "<value>";
+            UpdateCrmContactResponse res = sdk.crm().updateCrmContact()
+                .request(req)
+                .call();
 
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.UpdateCrmContactResponse res = sdk.crm.updateCrmContact(req);
-
-            if (res.crmContact != null) {
+            if (res.crmContact().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.UpdateCrmContactRequest](../../models/operations/UpdateCrmContactRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [UpdateCrmContactRequest](../../models/operations/UpdateCrmContactRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.UpdateCrmContactResponse](../../models/operations/UpdateCrmContactResponse.md)**
+**[UpdateCrmContactResponse](../../models/operations/UpdateCrmContactResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## updateCrmDeal
 
@@ -2526,78 +2138,61 @@ Update a deal
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmDealRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmDealResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmDeal;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.UpdateCrmDealRequest req = new UpdateCrmDealRequest(
-                "<value>",
-                "<value>"){{
-                crmDeal = new CrmDeal(
-){{
-                    amount = 854.3d;
-                    closedAt = OffsetDateTime.parse("2023-01-13T15:21:09.134Z");
-                    createdAt = OffsetDateTime.parse("2022-11-20T23:55:13.334Z");
-                    currency = "Pound Sterling";
-                    id = "<id>";
-                    lostReason = "<value>";
-                    name = "<value>";
-                    pipeline = "<value>";
-                    pipelineId = "<value>";
-                    probability = 2970.01d;
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    source = "<value>";
-                    stage = "<value>";
-                    stageId = "<value>";
-                    tags = new String[]{{
-                        add("<value>"),
-                    }};
-                    updatedAt = OffsetDateTime.parse("2023-02-01T00:17:19.942Z");
-                    userId = "<value>";
-                    wonReason = "<value>";
+            UpdateCrmDealRequest req = UpdateCrmDealRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                }};
+            UpdateCrmDealResponse res = sdk.crm().updateCrmDeal()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.UpdateCrmDealResponse res = sdk.crm.updateCrmDeal(req);
-
-            if (res.crmDeal != null) {
+            if (res.crmDeal().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [com.unifiedapi.unifiedto.models.operations.UpdateCrmDealRequest](../../models/operations/UpdateCrmDealRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [UpdateCrmDealRequest](../../models/operations/UpdateCrmDealRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.UpdateCrmDealResponse](../../models/operations/UpdateCrmDealResponse.md)**
+**[UpdateCrmDealResponse](../../models/operations/UpdateCrmDealResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## updateCrmEvent
 
@@ -2609,130 +2204,61 @@ Update an event
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmEventRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmEventResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmEvent;
-import com.unifiedapi.unifiedto.models.shared.CrmEventType;
-import com.unifiedapi.unifiedto.models.shared.Priority;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventCall;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventEmail;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventMeeting;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventNote;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTask;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTaskStatus;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.UpdateCrmEventRequest req = new UpdateCrmEventRequest(
-                "<value>",
-                "<value>"){{
-                crmEvent = new CrmEvent(
-){{
-                    call = new PropertyCrmEventCall(
-){{
-                        description = "Intuitive incremental orchestration";
-                        duration = 4665.81d;
-                        startAt = OffsetDateTime.parse("2022-09-01T05:59:54.461Z");
+            UpdateCrmEventRequest req = UpdateCrmEventRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                    }};
-                    companyIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    contactIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    createdAt = OffsetDateTime.parse("2023-09-01T08:44:00.944Z");
-                    dealIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    email = new PropertyCrmEventEmail(
-){{
-                        attachmentFileIds = new String[]{{
-                            add("<value>"),
-                        }};
-                        body = "<value>";
-                        cc = new String[]{{
-                            add("<value>"),
-                        }};
-                        from = "<value>";
-                        subject = "<value>";
-                        to = new String[]{{
-                            add("<value>"),
-                        }};
+            UpdateCrmEventResponse res = sdk.crm().updateCrmEvent()
+                .request(req)
+                .call();
 
-                    }};
-                    id = "<id>";
-                    leadIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    meeting = new PropertyCrmEventMeeting(
-){{
-                        description = "Robust radical task-force";
-                        endAt = OffsetDateTime.parse("2024-01-04T13:11:49.866Z");
-                        startAt = OffsetDateTime.parse("2024-07-14T19:40:01.934Z");
-                        title = "<value>";
-
-                    }};
-                    note = new PropertyCrmEventNote(
-){{
-                        description = "Visionary actuating migration";
-                        title = "<value>";
-
-                    }};
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    task = new PropertyCrmEventTask(
-){{
-                        description = "Synergized neutral complexity";
-                        dueAt = OffsetDateTime.parse("2022-06-26T11:53:18.745Z");
-                        name = "<value>";
-                        priority = Priority.LOW;
-                        status = PropertyCrmEventTaskStatus.DEFERRED;
-
-                    }};
-                    type = CrmEventType.EMAIL;
-                    updatedAt = OffsetDateTime.parse("2023-07-15T02:27:54.214Z");
-                    userId = "<value>";
-
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.UpdateCrmEventResponse res = sdk.crm.updateCrmEvent(req);
-
-            if (res.crmEvent != null) {
+            if (res.crmEvent().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [com.unifiedapi.unifiedto.models.operations.UpdateCrmEventRequest](../../models/operations/UpdateCrmEventRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [UpdateCrmEventRequest](../../models/operations/UpdateCrmEventRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.UpdateCrmEventResponse](../../models/operations/UpdateCrmEventResponse.md)**
+**[UpdateCrmEventResponse](../../models/operations/UpdateCrmEventResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## updateCrmLead
 
@@ -2744,98 +2270,61 @@ Update a lead
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmLeadRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmLeadResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmEmail;
-import com.unifiedapi.unifiedto.models.shared.CrmEmailType;
-import com.unifiedapi.unifiedto.models.shared.CrmLead;
-import com.unifiedapi.unifiedto.models.shared.CrmTelephone;
-import com.unifiedapi.unifiedto.models.shared.CrmTelephoneType;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmLeadAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.UpdateCrmLeadRequest req = new UpdateCrmLeadRequest(
-                "<value>",
-                "<value>"){{
-                crmLead = new CrmLead(
-){{
-                    address = new PropertyCrmLeadAddress(
-){{
-                        address1 = "<value>";
-                        address2 = "<value>";
-                        city = "West Vernerworth";
-                        country = "Suriname";
-                        countryCode = "ID";
-                        postalCode = "87400-2256";
-                        region = "<value>";
-                        regionCode = "<value>";
+            UpdateCrmLeadRequest req = UpdateCrmLeadRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                    }};
-                    companyId = "<value>";
-                    companyName = "Gibson - Cummings";
-                    contactId = "<value>";
-                    createdAt = OffsetDateTime.parse("2024-12-12T08:55:32.549Z");
-                    creatorUserId = "<value>";
-                    emails = new com.unifiedapi.unifiedto.models.shared.CrmEmail[]{{
-                        add(new CrmEmail(
-                        ){{}}),
-                    }};
-                    id = "<id>";
-                    isActive = false;
-                    name = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    source = "<value>";
-                    status = "<value>";
-                    telephones = new com.unifiedapi.unifiedto.models.shared.CrmTelephone[]{{
-                        add(new CrmTelephone(
-                        "<value>"){{
-                            telephone = "<value>";
-                        }}),
-                    }};
-                    updatedAt = OffsetDateTime.parse("2023-06-14T10:08:49.472Z");
-                    userId = "<value>";
+            UpdateCrmLeadResponse res = sdk.crm().updateCrmLead()
+                .request(req)
+                .call();
 
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.UpdateCrmLeadResponse res = sdk.crm.updateCrmLead(req);
-
-            if (res.crmLead != null) {
+            if (res.crmLead().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [com.unifiedapi.unifiedto.models.operations.UpdateCrmLeadRequest](../../models/operations/UpdateCrmLeadRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [UpdateCrmLeadRequest](../../models/operations/UpdateCrmLeadRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.UpdateCrmLeadResponse](../../models/operations/UpdateCrmLeadResponse.md)**
+**[UpdateCrmLeadResponse](../../models/operations/UpdateCrmLeadResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## updateCrmPipeline
 
@@ -2847,68 +2336,58 @@ Update a pipeline
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmPipeline;
-import com.unifiedapi.unifiedto.models.shared.CrmStage;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineRequest req = new UpdateCrmPipelineRequest(
-                "<value>",
-                "<value>"){{
-                crmPipeline = new CrmPipeline(
-){{
-                    createdAt = OffsetDateTime.parse("2022-12-27T16:21:58.595Z");
-                    dealProbability = 8923.83d;
-                    displayOrder = 5142.22d;
-                    id = "<id>";
-                    isActive = false;
-                    name = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    stages = new com.unifiedapi.unifiedto.models.shared.CrmStage[]{{
-                        add(new CrmStage(
-                        ){{}}),
-                    }};
-                    updatedAt = OffsetDateTime.parse("2023-11-03T02:41:03.928Z");
+            UpdateCrmPipelineRequest req = UpdateCrmPipelineRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                }};
+            UpdateCrmPipelineResponse res = sdk.crm().updateCrmPipeline()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineResponse res = sdk.crm.updateCrmPipeline(req);
-
-            if (res.crmPipeline != null) {
+            if (res.crmPipeline().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineRequest](../../models/operations/UpdateCrmPipelineRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [UpdateCrmPipelineRequest](../../models/operations/UpdateCrmPipelineRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineResponse](../../models/operations/UpdateCrmPipelineResponse.md)**
+**[UpdateCrmPipelineResponse](../../models/operations/UpdateCrmPipelineResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |

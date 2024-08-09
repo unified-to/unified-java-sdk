@@ -1,5 +1,5 @@
 # Ats
-(*ats*)
+(*ats()*)
 
 ### Available Operations
 
@@ -59,73 +59,60 @@ Create an activity
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsActivityRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsActivityResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsActivity;
-import com.unifiedapi.unifiedto.models.shared.AtsActivityType;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.CreateAtsActivityRequest req = new CreateAtsActivityRequest(
-                "<value>"){{
-                atsActivity = new AtsActivity(
-                    "<value>"){{
-                    applicationId = "<value>";
-                    candidateId = "<value>";
-                    createdAt = OffsetDateTime.parse("2022-11-03T02:06:02.932Z");
-                    description = "Future-proofed non-volatile artificial intelligence";
-                    documentId = "<value>";
-                    id = "<id>";
-                    interviewId = "<value>";
-                    isPrivate = false;
-                    jobId = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    type = AtsActivityType.NOTE;
-                    updatedAt = OffsetDateTime.parse("2023-01-22T20:04:14.417Z");
-                    userIds = new String[]{{
-                        add("<value>"),
-                    }};
+            CreateAtsActivityRequest req = CreateAtsActivityRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-                }};
+            CreateAtsActivityResponse res = sdk.ats().createAtsActivity()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.CreateAtsActivityResponse res = sdk.ats.createAtsActivity(req);
-
-            if (res.atsActivity != null) {
+            if (res.atsActivity().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.CreateAtsActivityRequest](../../models/operations/CreateAtsActivityRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateAtsActivityRequest](../../models/operations/CreateAtsActivityRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.CreateAtsActivityResponse](../../models/operations/CreateAtsActivityResponse.md)**
+**[CreateAtsActivityResponse](../../models/operations/CreateAtsActivityResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## createAtsApplication
 
@@ -137,84 +124,60 @@ Create an application
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsApplication;
-import com.unifiedapi.unifiedto.models.shared.AtsApplicationAnswer;
-import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationRequest req = new CreateAtsApplicationRequest(
-                "<value>"){{
-                atsApplication = new AtsApplication(
-){{
-                    answers = new com.unifiedapi.unifiedto.models.shared.AtsApplicationAnswer[]{{
-                        add(new AtsApplicationAnswer(
-                        new String[]{{
-                            add("<value>"),
-                        }},
-                        "<value>"){{
-                            answers = new String[]{{
-                                add("<value>"),
-                            }};
-                            questionId = "<value>";
-                        }}),
-                    }};
-                    appliedAt = OffsetDateTime.parse("2024-03-09T05:03:52.917Z");
-                    candidateId = "<value>";
-                    createdAt = OffsetDateTime.parse("2024-09-22T12:50:56.305Z");
-                    hiredAt = OffsetDateTime.parse("2023-01-19T06:26:51.678Z");
-                    id = "<id>";
-                    jobId = "<value>";
-                    originalStatus = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    rejectedAt = OffsetDateTime.parse("2023-01-30T06:58:14.500Z");
-                    rejectedReason = "<value>";
-                    source = "<value>";
-                    status = AtsApplicationStatus.THIRD_INTERVIEW;
-                    updatedAt = OffsetDateTime.parse("2024-09-21T21:31:42.360Z");
+            CreateAtsApplicationRequest req = CreateAtsApplicationRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-                }};
+            CreateAtsApplicationResponse res = sdk.ats().createAtsApplication()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationResponse res = sdk.ats.createAtsApplication(req);
-
-            if (res.atsApplication != null) {
+            if (res.atsApplication().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationRequest](../../models/operations/CreateAtsApplicationRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [CreateAtsApplicationRequest](../../models/operations/CreateAtsApplicationRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationResponse](../../models/operations/CreateAtsApplicationResponse.md)**
+**[CreateAtsApplicationResponse](../../models/operations/CreateAtsApplicationResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## createAtsCandidate
 
@@ -226,109 +189,60 @@ Create a candidate
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsCandidateRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsCandidateResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsCandidate;
-import com.unifiedapi.unifiedto.models.shared.AtsEmail;
-import com.unifiedapi.unifiedto.models.shared.AtsEmailType;
-import com.unifiedapi.unifiedto.models.shared.AtsTelephone;
-import com.unifiedapi.unifiedto.models.shared.AtsTelephoneType;
-import com.unifiedapi.unifiedto.models.shared.Origin;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.CreateAtsCandidateRequest req = new CreateAtsCandidateRequest(
-                "<value>"){{
-                atsCandidate = new AtsCandidate(
-){{
-                    address = new PropertyAtsCandidateAddress(
-){{
-                        address1 = "<value>";
-                        address2 = "<value>";
-                        city = "South Hill";
-                        country = "Denmark";
-                        countryCode = "KM";
-                        postalCode = "72991-5163";
-                        region = "<value>";
-                        regionCode = "<value>";
+            CreateAtsCandidateRequest req = CreateAtsCandidateRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-                    }};
-                    companyId = "<value>";
-                    companyName = "Pollich - Lubowitz";
-                    createdAt = OffsetDateTime.parse("2022-03-06T00:47:39.352Z");
-                    dateOfBirth = OffsetDateTime.parse("2023-11-19T09:25:00.753Z");
-                    emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
-                        add(new AtsEmail(
-                        "<value>"){{
-                            email = "Mallory99@hotmail.com";
-                        }}),
-                    }};
-                    externalIdentifier = "<value>";
-                    id = "<id>";
-                    imageUrl = "<value>";
-                    linkUrls = new String[]{{
-                        add("<value>"),
-                    }};
-                    name = "<value>";
-                    origin = Origin.AGENCY;
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    sources = new String[]{{
-                        add("<value>"),
-                    }};
-                    tags = new String[]{{
-                        add("<value>"),
-                    }};
-                    telephones = new com.unifiedapi.unifiedto.models.shared.AtsTelephone[]{{
-                        add(new AtsTelephone(
-                        "<value>"){{
-                            telephone = "<value>";
-                        }}),
-                    }};
-                    title = "<value>";
-                    updatedAt = OffsetDateTime.parse("2022-09-27T06:32:21.998Z");
-                    userId = "<value>";
+            CreateAtsCandidateResponse res = sdk.ats().createAtsCandidate()
+                .request(req)
+                .call();
 
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.CreateAtsCandidateResponse res = sdk.ats.createAtsCandidate(req);
-
-            if (res.atsCandidate != null) {
+            if (res.atsCandidate().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.CreateAtsCandidateRequest](../../models/operations/CreateAtsCandidateRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [CreateAtsCandidateRequest](../../models/operations/CreateAtsCandidateRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.CreateAtsCandidateResponse](../../models/operations/CreateAtsCandidateResponse.md)**
+**[CreateAtsCandidateResponse](../../models/operations/CreateAtsCandidateResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## createAtsDocument
 
@@ -340,70 +254,60 @@ Create a document
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsDocument;
-import com.unifiedapi.unifiedto.models.shared.AtsDocumentType;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentRequest req = new CreateAtsDocumentRequest(
-                "<value>"){{
-                atsDocument = new AtsDocument(
-){{
-                    applicationId = "<value>";
-                    candidateId = "<value>";
-                    createdAt = OffsetDateTime.parse("2022-04-25T01:00:46.478Z");
-                    documentData = "<value>";
-                    documentUrl = "<value>";
-                    filename = "your_file_here";
-                    id = "<id>";
-                    jobId = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    type = AtsDocumentType.TAKE_HOME_TEST;
-                    updatedAt = OffsetDateTime.parse("2022-08-14T16:41:18.140Z");
-                    userId = "<value>";
+            CreateAtsDocumentRequest req = CreateAtsDocumentRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-                }};
+            CreateAtsDocumentResponse res = sdk.ats().createAtsDocument()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentResponse res = sdk.ats.createAtsDocument(req);
-
-            if (res.atsDocument != null) {
+            if (res.atsDocument().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentRequest](../../models/operations/CreateAtsDocumentRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateAtsDocumentRequest](../../models/operations/CreateAtsDocumentRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentResponse](../../models/operations/CreateAtsDocumentResponse.md)**
+**[CreateAtsDocumentResponse](../../models/operations/CreateAtsDocumentResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## createAtsInterview
 
@@ -415,73 +319,60 @@ Create an interview
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsInterviewRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsInterviewResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsInterview;
-import com.unifiedapi.unifiedto.models.shared.AtsInterviewStatus;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.CreateAtsInterviewRequest req = new CreateAtsInterviewRequest(
-                "<value>"){{
-                atsInterview = new AtsInterview(
-){{
-                    applicationId = "<value>";
-                    candidateId = "<value>";
-                    createdAt = OffsetDateTime.parse("2023-01-11T04:08:22.567Z");
-                    endAt = OffsetDateTime.parse("2024-12-21T08:47:56.138Z");
-                    externalEventXref = "<value>";
-                    id = "<id>";
-                    jobId = "<value>";
-                    location = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    startAt = OffsetDateTime.parse("2023-11-20T00:14:00.277Z");
-                    status = AtsInterviewStatus.NEEDS_SCHEDULING;
-                    updatedAt = OffsetDateTime.parse("2022-02-07T15:15:23.855Z");
-                    userIds = new String[]{{
-                        add("<value>"),
-                    }};
+            CreateAtsInterviewRequest req = CreateAtsInterviewRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-                }};
+            CreateAtsInterviewResponse res = sdk.ats().createAtsInterview()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.CreateAtsInterviewResponse res = sdk.ats.createAtsInterview(req);
-
-            if (res.atsInterview != null) {
+            if (res.atsInterview().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.CreateAtsInterviewRequest](../../models/operations/CreateAtsInterviewRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [CreateAtsInterviewRequest](../../models/operations/CreateAtsInterviewRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.CreateAtsInterviewResponse](../../models/operations/CreateAtsInterviewResponse.md)**
+**[CreateAtsInterviewResponse](../../models/operations/CreateAtsInterviewResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## createAtsJob
 
@@ -493,106 +384,60 @@ Create a job
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsJobRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsJobResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsAddress;
-import com.unifiedapi.unifiedto.models.shared.AtsCompensation;
-import com.unifiedapi.unifiedto.models.shared.AtsCompensationType;
-import com.unifiedapi.unifiedto.models.shared.AtsJob;
-import com.unifiedapi.unifiedto.models.shared.AtsJobQuestion;
-import com.unifiedapi.unifiedto.models.shared.AtsJobQuestionType;
-import com.unifiedapi.unifiedto.models.shared.AtsJobStatus;
-import com.unifiedapi.unifiedto.models.shared.EmploymentType;
-import com.unifiedapi.unifiedto.models.shared.Frequency;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.CreateAtsJobRequest req = new CreateAtsJobRequest(
-                "<value>"){{
-                atsJob = new AtsJob(
-){{
-                    addresses = new com.unifiedapi.unifiedto.models.shared.AtsAddress[]{{
-                        add(new AtsAddress(
-                        ){{}}),
-                    }};
-                    closedAt = OffsetDateTime.parse("2022-01-14T18:31:06.376Z");
-                    companyId = "<value>";
-                    compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
-                        add(new AtsCompensation(
-                        ){{}}),
-                    }};
-                    createdAt = OffsetDateTime.parse("2023-04-05T09:16:07.639Z");
-                    departments = new String[]{{
-                        add("<value>"),
-                    }};
-                    description = "Secured fault-tolerant internet solution";
-                    employmentType = EmploymentType.FULL_TIME;
-                    hiringManagerIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    id = "<id>";
-                    languageLocale = "<value>";
-                    name = "<value>";
-                    numberOfOpenings = 6151.12d;
-                    publicJobUrls = new String[]{{
-                        add("<value>"),
-                    }};
-                    questions = new com.unifiedapi.unifiedto.models.shared.AtsJobQuestion[]{{
-                        add(new AtsJobQuestion(
-                        "<value>",
-                        AtsJobQuestionType.YES_NO){{
-                            question = "<value>";
-                            type = AtsJobQuestionType.CURRENCY;
-                        }}),
-                    }};
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    recruiterIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    remote = false;
-                    status = AtsJobStatus.OPEN;
-                    updatedAt = OffsetDateTime.parse("2024-11-18T02:03:06.250Z");
+            CreateAtsJobRequest req = CreateAtsJobRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-                }};
+            CreateAtsJobResponse res = sdk.ats().createAtsJob()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.CreateAtsJobResponse res = sdk.ats.createAtsJob(req);
-
-            if (res.atsJob != null) {
+            if (res.atsJob().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [com.unifiedapi.unifiedto.models.operations.CreateAtsJobRequest](../../models/operations/CreateAtsJobRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [CreateAtsJobRequest](../../models/operations/CreateAtsJobRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.CreateAtsJobResponse](../../models/operations/CreateAtsJobResponse.md)**
+**[CreateAtsJobResponse](../../models/operations/CreateAtsJobResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## createAtsScorecard
 
@@ -604,76 +449,60 @@ Create a scorecard
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
-import com.unifiedapi.unifiedto.models.shared.AtsScorecardQuestion;
-import com.unifiedapi.unifiedto.models.shared.Recommendation;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardRequest req = new CreateAtsScorecardRequest(
-                "<value>"){{
-                atsScorecard = new AtsScorecard(
-){{
-                    applicationId = "<value>";
-                    candidateId = "<value>";
-                    comment = "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J";
-                    createdAt = OffsetDateTime.parse("2022-04-24T10:18:34.661Z");
-                    id = "<id>";
-                    interviewId = "<value>";
-                    interviewerId = "<value>";
-                    jobId = "<value>";
-                    questions = new com.unifiedapi.unifiedto.models.shared.AtsScorecardQuestion[]{{
-                        add(new AtsScorecardQuestion(
-                        "<value>"){{
-                            text = "<value>";
-                        }}),
-                    }};
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    recommendation = Recommendation.NO;
-                    updatedAt = OffsetDateTime.parse("2023-04-02T03:31:06.456Z");
+            CreateAtsScorecardRequest req = CreateAtsScorecardRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-                }};
+            CreateAtsScorecardResponse res = sdk.ats().createAtsScorecard()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse res = sdk.ats.createAtsScorecard(req);
-
-            if (res.atsScorecard != null) {
+            if (res.atsScorecard().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardRequest](../../models/operations/CreateAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [CreateAtsScorecardRequest](../../models/operations/CreateAtsScorecardRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse](../../models/operations/CreateAtsScorecardResponse.md)**
+**[CreateAtsScorecardResponse](../../models/operations/CreateAtsScorecardResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## getAtsActivity
 
@@ -685,52 +514,61 @@ Retrieve an activity
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAtsActivityRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsActivityResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetAtsActivityRequest req = new GetAtsActivityRequest(
-                "<value>",
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
+            GetAtsActivityRequest req = GetAtsActivityRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            }};
+            GetAtsActivityResponse res = sdk.ats().getAtsActivity()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.GetAtsActivityResponse res = sdk.ats.getAtsActivity(req);
-
-            if (res.atsActivity != null) {
+            if (res.atsActivity().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [com.unifiedapi.unifiedto.models.operations.GetAtsActivityRequest](../../models/operations/GetAtsActivityRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetAtsActivityRequest](../../models/operations/GetAtsActivityRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetAtsActivityResponse](../../models/operations/GetAtsActivityResponse.md)**
+**[GetAtsActivityResponse](../../models/operations/GetAtsActivityResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## getAtsApplication
 
@@ -742,52 +580,61 @@ Retrieve an application
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsApplicationResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetAtsApplicationRequest req = new GetAtsApplicationRequest(
-                "<value>",
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
+            GetAtsApplicationRequest req = GetAtsApplicationRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            }};
+            GetAtsApplicationResponse res = sdk.ats().getAtsApplication()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.GetAtsApplicationResponse res = sdk.ats.getAtsApplication(req);
-
-            if (res.atsApplication != null) {
+            if (res.atsApplication().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.GetAtsApplicationRequest](../../models/operations/GetAtsApplicationRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [GetAtsApplicationRequest](../../models/operations/GetAtsApplicationRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetAtsApplicationResponse](../../models/operations/GetAtsApplicationResponse.md)**
+**[GetAtsApplicationResponse](../../models/operations/GetAtsApplicationResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## getAtsCandidate
 
@@ -799,52 +646,61 @@ Retrieve a candidate
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAtsCandidateRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsCandidateResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetAtsCandidateRequest req = new GetAtsCandidateRequest(
-                "<value>",
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
+            GetAtsCandidateRequest req = GetAtsCandidateRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            }};
+            GetAtsCandidateResponse res = sdk.ats().getAtsCandidate()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.GetAtsCandidateResponse res = sdk.ats.getAtsCandidate(req);
-
-            if (res.atsCandidate != null) {
+            if (res.atsCandidate().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [com.unifiedapi.unifiedto.models.operations.GetAtsCandidateRequest](../../models/operations/GetAtsCandidateRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetAtsCandidateRequest](../../models/operations/GetAtsCandidateRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetAtsCandidateResponse](../../models/operations/GetAtsCandidateResponse.md)**
+**[GetAtsCandidateResponse](../../models/operations/GetAtsCandidateResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## getAtsCompany
 
@@ -856,52 +712,61 @@ Retrieve a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAtsCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsCompanyResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetAtsCompanyRequest req = new GetAtsCompanyRequest(
-                "<value>",
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
+            GetAtsCompanyRequest req = GetAtsCompanyRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            }};
+            GetAtsCompanyResponse res = sdk.ats().getAtsCompany()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.GetAtsCompanyResponse res = sdk.ats.getAtsCompany(req);
-
-            if (res.atsCompany != null) {
+            if (res.atsCompany().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [com.unifiedapi.unifiedto.models.operations.GetAtsCompanyRequest](../../models/operations/GetAtsCompanyRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [GetAtsCompanyRequest](../../models/operations/GetAtsCompanyRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetAtsCompanyResponse](../../models/operations/GetAtsCompanyResponse.md)**
+**[GetAtsCompanyResponse](../../models/operations/GetAtsCompanyResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## getAtsDocument
 
@@ -913,52 +778,61 @@ Retrieve a document
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAtsDocumentRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsDocumentResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetAtsDocumentRequest req = new GetAtsDocumentRequest(
-                "<value>",
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
+            GetAtsDocumentRequest req = GetAtsDocumentRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            }};
+            GetAtsDocumentResponse res = sdk.ats().getAtsDocument()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.GetAtsDocumentResponse res = sdk.ats.getAtsDocument(req);
-
-            if (res.atsDocument != null) {
+            if (res.atsDocument().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [com.unifiedapi.unifiedto.models.operations.GetAtsDocumentRequest](../../models/operations/GetAtsDocumentRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetAtsDocumentRequest](../../models/operations/GetAtsDocumentRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetAtsDocumentResponse](../../models/operations/GetAtsDocumentResponse.md)**
+**[GetAtsDocumentResponse](../../models/operations/GetAtsDocumentResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## getAtsInterview
 
@@ -970,52 +844,61 @@ Retrieve an interview
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAtsInterviewRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsInterviewResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetAtsInterviewRequest req = new GetAtsInterviewRequest(
-                "<value>",
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
+            GetAtsInterviewRequest req = GetAtsInterviewRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            }};
+            GetAtsInterviewResponse res = sdk.ats().getAtsInterview()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.GetAtsInterviewResponse res = sdk.ats.getAtsInterview(req);
-
-            if (res.atsInterview != null) {
+            if (res.atsInterview().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [com.unifiedapi.unifiedto.models.operations.GetAtsInterviewRequest](../../models/operations/GetAtsInterviewRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetAtsInterviewRequest](../../models/operations/GetAtsInterviewRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetAtsInterviewResponse](../../models/operations/GetAtsInterviewResponse.md)**
+**[GetAtsInterviewResponse](../../models/operations/GetAtsInterviewResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## getAtsJob
 
@@ -1027,52 +910,61 @@ Retrieve a job
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAtsJobRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsJobResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetAtsJobRequest req = new GetAtsJobRequest(
-                "<value>",
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
+            GetAtsJobRequest req = GetAtsJobRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            }};
+            GetAtsJobResponse res = sdk.ats().getAtsJob()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.GetAtsJobResponse res = sdk.ats.getAtsJob(req);
-
-            if (res.atsJob != null) {
+            if (res.atsJob().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [com.unifiedapi.unifiedto.models.operations.GetAtsJobRequest](../../models/operations/GetAtsJobRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                       | Type                                                            | Required                                                        | Description                                                     |
+| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| `request`                                                       | [GetAtsJobRequest](../../models/operations/GetAtsJobRequest.md) | :heavy_check_mark:                                              | The request object to use for the request.                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetAtsJobResponse](../../models/operations/GetAtsJobResponse.md)**
+**[GetAtsJobResponse](../../models/operations/GetAtsJobResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## getAtsScorecard
 
@@ -1084,52 +976,61 @@ Retrieve a scorecard
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsScorecardResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetAtsScorecardRequest req = new GetAtsScorecardRequest(
-                "<value>",
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
+            GetAtsScorecardRequest req = GetAtsScorecardRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            }};
+            GetAtsScorecardResponse res = sdk.ats().getAtsScorecard()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.GetAtsScorecardResponse res = sdk.ats.getAtsScorecard(req);
-
-            if (res.atsScorecard != null) {
+            if (res.atsScorecard().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [com.unifiedapi.unifiedto.models.operations.GetAtsScorecardRequest](../../models/operations/GetAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetAtsScorecardRequest](../../models/operations/GetAtsScorecardRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetAtsScorecardResponse](../../models/operations/GetAtsScorecardResponse.md)**
+**[GetAtsScorecardResponse](../../models/operations/GetAtsScorecardResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listAtsActivities
 
@@ -1141,62 +1042,60 @@ List all activities
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAtsActivitiesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAtsActivitiesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListAtsActivitiesRequest req = new ListAtsActivitiesRequest(
-                "<value>"){{
-                applicationId = "<value>";
-                candidateId = "<value>";
-                documentId = "<value>";
-                fields = new String[]{{
-                    add("<value>"),
-                }};
-                interviewId = "<value>";
-                jobId = "<value>";
-                limit = 2367.19d;
-                offset = 8254.25d;
-                query = "<value>";
-                updatedGte = OffsetDateTime.parse("2022-11-13T18:19:17.967Z");
-                userId = "<value>";
+            ListAtsActivitiesRequest req = ListAtsActivitiesRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-            }};
+            ListAtsActivitiesResponse res = sdk.ats().listAtsActivities()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListAtsActivitiesResponse res = sdk.ats.listAtsActivities(req);
-
-            if (res.atsActivities != null) {
+            if (res.atsActivities().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.ListAtsActivitiesRequest](../../models/operations/ListAtsActivitiesRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListAtsActivitiesRequest](../../models/operations/ListAtsActivitiesRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListAtsActivitiesResponse](../../models/operations/ListAtsActivitiesResponse.md)**
+**[ListAtsActivitiesResponse](../../models/operations/ListAtsActivitiesResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listAtsApplications
 
@@ -1208,58 +1107,60 @@ List all applications
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsRequest req = new ListAtsApplicationsRequest(
-                "<value>"){{
-                candidateId = "<value>";
-                fields = new String[]{{
-                    add("<value>"),
-                }};
-                jobId = "<value>";
-                limit = 441.56d;
-                offset = 1448.74d;
-                query = "<value>";
-                updatedGte = OffsetDateTime.parse("2022-12-21T20:30:01.596Z");
+            ListAtsApplicationsRequest req = ListAtsApplicationsRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-            }};
+            ListAtsApplicationsResponse res = sdk.ats().listAtsApplications()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsResponse res = sdk.ats.listAtsApplications(req);
-
-            if (res.atsApplications != null) {
+            if (res.atsApplications().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsRequest](../../models/operations/ListAtsApplicationsRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [ListAtsApplicationsRequest](../../models/operations/ListAtsApplicationsRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsResponse](../../models/operations/ListAtsApplicationsResponse.md)**
+**[ListAtsApplicationsResponse](../../models/operations/ListAtsApplicationsResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listAtsApplicationstatuses
 
@@ -1271,56 +1172,60 @@ List all applicationstatuses
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAtsApplicationstatusesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAtsApplicationstatusesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListAtsApplicationstatusesRequest req = new ListAtsApplicationstatusesRequest(
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
-                limit = 5199.96d;
-                offset = 7673.65d;
-                query = "<value>";
-                updatedGte = OffsetDateTime.parse("2024-03-25T18:11:33.180Z");
+            ListAtsApplicationstatusesRequest req = ListAtsApplicationstatusesRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-            }};
+            ListAtsApplicationstatusesResponse res = sdk.ats().listAtsApplicationstatuses()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListAtsApplicationstatusesResponse res = sdk.ats.listAtsApplicationstatuses(req);
-
-            if (res.atsStatuses != null) {
+            if (res.atsStatuses().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.ListAtsApplicationstatusesRequest](../../models/operations/ListAtsApplicationstatusesRequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [ListAtsApplicationstatusesRequest](../../models/operations/ListAtsApplicationstatusesRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListAtsApplicationstatusesResponse](../../models/operations/ListAtsApplicationstatusesResponse.md)**
+**[ListAtsApplicationstatusesResponse](../../models/operations/ListAtsApplicationstatusesResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listAtsCandidates
 
@@ -1332,57 +1237,60 @@ List all candidates
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAtsCandidatesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAtsCandidatesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListAtsCandidatesRequest req = new ListAtsCandidatesRequest(
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
-                jobId = "<value>";
-                limit = 6384.09d;
-                offset = 7452.94d;
-                query = "<value>";
-                updatedGte = OffsetDateTime.parse("2022-03-18T00:58:25.541Z");
+            ListAtsCandidatesRequest req = ListAtsCandidatesRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-            }};
+            ListAtsCandidatesResponse res = sdk.ats().listAtsCandidates()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListAtsCandidatesResponse res = sdk.ats.listAtsCandidates(req);
-
-            if (res.atsCandidates != null) {
+            if (res.atsCandidates().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.ListAtsCandidatesRequest](../../models/operations/ListAtsCandidatesRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListAtsCandidatesRequest](../../models/operations/ListAtsCandidatesRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListAtsCandidatesResponse](../../models/operations/ListAtsCandidatesResponse.md)**
+**[ListAtsCandidatesResponse](../../models/operations/ListAtsCandidatesResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listAtsCompanies
 
@@ -1394,56 +1302,60 @@ List all companies
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAtsCompaniesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAtsCompaniesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListAtsCompaniesRequest req = new ListAtsCompaniesRequest(
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
-                limit = 6933.84d;
-                offset = 7946.52d;
-                query = "<value>";
-                updatedGte = OffsetDateTime.parse("2024-10-01T21:39:38.971Z");
+            ListAtsCompaniesRequest req = ListAtsCompaniesRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-            }};
+            ListAtsCompaniesResponse res = sdk.ats().listAtsCompanies()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListAtsCompaniesResponse res = sdk.ats.listAtsCompanies(req);
-
-            if (res.atsCompanies != null) {
+            if (res.atsCompanies().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.ListAtsCompaniesRequest](../../models/operations/ListAtsCompaniesRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListAtsCompaniesRequest](../../models/operations/ListAtsCompaniesRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListAtsCompaniesResponse](../../models/operations/ListAtsCompaniesResponse.md)**
+**[ListAtsCompaniesResponse](../../models/operations/ListAtsCompaniesResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listAtsDocuments
 
@@ -1455,58 +1367,60 @@ List all documents
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsRequest req = new ListAtsDocumentsRequest(
-                "<value>"){{
-                applicationId = "<value>";
-                candidateId = "<value>";
-                fields = new String[]{{
-                    add("<value>"),
-                }};
-                limit = 9635.37d;
-                offset = 8402.77d;
-                query = "<value>";
-                updatedGte = OffsetDateTime.parse("2023-08-31T00:55:54.895Z");
+            ListAtsDocumentsRequest req = ListAtsDocumentsRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-            }};
+            ListAtsDocumentsResponse res = sdk.ats().listAtsDocuments()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsResponse res = sdk.ats.listAtsDocuments(req);
-
-            if (res.atsDocuments != null) {
+            if (res.atsDocuments().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsRequest](../../models/operations/ListAtsDocumentsRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListAtsDocumentsRequest](../../models/operations/ListAtsDocumentsRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsResponse](../../models/operations/ListAtsDocumentsResponse.md)**
+**[ListAtsDocumentsResponse](../../models/operations/ListAtsDocumentsResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listAtsInterviews
 
@@ -1518,57 +1432,60 @@ List all interviews
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAtsInterviewsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAtsInterviewsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListAtsInterviewsRequest req = new ListAtsInterviewsRequest(
-                "<value>"){{
-                applicationId = "<value>";
-                fields = new String[]{{
-                    add("<value>"),
-                }};
-                limit = 2562.12d;
-                offset = 1185.02d;
-                query = "<value>";
-                updatedGte = OffsetDateTime.parse("2022-09-28T15:15:00.508Z");
+            ListAtsInterviewsRequest req = ListAtsInterviewsRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-            }};
+            ListAtsInterviewsResponse res = sdk.ats().listAtsInterviews()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListAtsInterviewsResponse res = sdk.ats.listAtsInterviews(req);
-
-            if (res.atsInterviews != null) {
+            if (res.atsInterviews().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.ListAtsInterviewsRequest](../../models/operations/ListAtsInterviewsRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListAtsInterviewsRequest](../../models/operations/ListAtsInterviewsRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListAtsInterviewsResponse](../../models/operations/ListAtsInterviewsResponse.md)**
+**[ListAtsInterviewsResponse](../../models/operations/ListAtsInterviewsResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listAtsJobs
 
@@ -1580,57 +1497,60 @@ List all jobs
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAtsJobsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAtsJobsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListAtsJobsRequest req = new ListAtsJobsRequest(
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
-                limit = 3958.99d;
-                offset = 3223.84d;
-                query = "<value>";
-                updatedGte = OffsetDateTime.parse("2023-03-04T01:14:05.456Z");
-                userId = "<value>";
+            ListAtsJobsRequest req = ListAtsJobsRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-            }};
+            ListAtsJobsResponse res = sdk.ats().listAtsJobs()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListAtsJobsResponse res = sdk.ats.listAtsJobs(req);
-
-            if (res.atsJobs != null) {
+            if (res.atsJobs().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [com.unifiedapi.unifiedto.models.operations.ListAtsJobsRequest](../../models/operations/ListAtsJobsRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `request`                                                           | [ListAtsJobsRequest](../../models/operations/ListAtsJobsRequest.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListAtsJobsResponse](../../models/operations/ListAtsJobsResponse.md)**
+**[ListAtsJobsResponse](../../models/operations/ListAtsJobsResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listAtsScorecards
 
@@ -1642,60 +1562,60 @@ List all scorecards
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsRequest req = new ListAtsScorecardsRequest(
-                "<value>"){{
-                applicationId = "<value>";
-                candidateId = "<value>";
-                fields = new String[]{{
-                    add("<value>"),
-                }};
-                interviewId = "<value>";
-                jobId = "<value>";
-                limit = 5126.98d;
-                offset = 8077.44d;
-                query = "<value>";
-                updatedGte = OffsetDateTime.parse("2024-08-19T14:46:22.333Z");
+            ListAtsScorecardsRequest req = ListAtsScorecardsRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-            }};
+            ListAtsScorecardsResponse res = sdk.ats().listAtsScorecards()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsResponse res = sdk.ats.listAtsScorecards(req);
-
-            if (res.atsScorecards != null) {
+            if (res.atsScorecards().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsRequest](../../models/operations/ListAtsScorecardsRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListAtsScorecardsRequest](../../models/operations/ListAtsScorecardsRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsResponse](../../models/operations/ListAtsScorecardsResponse.md)**
+**[ListAtsScorecardsResponse](../../models/operations/ListAtsScorecardsResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## patchAtsActivity
 
@@ -1707,74 +1627,61 @@ Update an activity
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsActivityRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsActivityResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsActivity;
-import com.unifiedapi.unifiedto.models.shared.AtsActivityType;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.PatchAtsActivityRequest req = new PatchAtsActivityRequest(
-                "<value>",
-                "<value>"){{
-                atsActivity = new AtsActivity(
-                    "<value>"){{
-                    applicationId = "<value>";
-                    candidateId = "<value>";
-                    createdAt = OffsetDateTime.parse("2024-11-03T16:46:57.187Z");
-                    description = "Compatible reciprocal archive";
-                    documentId = "<value>";
-                    id = "<id>";
-                    interviewId = "<value>";
-                    isPrivate = false;
-                    jobId = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    type = AtsActivityType.NOTE;
-                    updatedAt = OffsetDateTime.parse("2022-05-17T01:47:31.125Z");
-                    userIds = new String[]{{
-                        add("<value>"),
-                    }};
+            PatchAtsActivityRequest req = PatchAtsActivityRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                }};
+            PatchAtsActivityResponse res = sdk.ats().patchAtsActivity()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.PatchAtsActivityResponse res = sdk.ats.patchAtsActivity(req);
-
-            if (res.atsActivity != null) {
+            if (res.atsActivity().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.PatchAtsActivityRequest](../../models/operations/PatchAtsActivityRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [PatchAtsActivityRequest](../../models/operations/PatchAtsActivityRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchAtsActivityResponse](../../models/operations/PatchAtsActivityResponse.md)**
+**[PatchAtsActivityResponse](../../models/operations/PatchAtsActivityResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## patchAtsApplication
 
@@ -1786,85 +1693,61 @@ Update an application
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsApplication;
-import com.unifiedapi.unifiedto.models.shared.AtsApplicationAnswer;
-import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationRequest req = new PatchAtsApplicationRequest(
-                "<value>",
-                "<value>"){{
-                atsApplication = new AtsApplication(
-){{
-                    answers = new com.unifiedapi.unifiedto.models.shared.AtsApplicationAnswer[]{{
-                        add(new AtsApplicationAnswer(
-                        new String[]{{
-                            add("<value>"),
-                        }},
-                        "<value>"){{
-                            answers = new String[]{{
-                                add("<value>"),
-                            }};
-                            questionId = "<value>";
-                        }}),
-                    }};
-                    appliedAt = OffsetDateTime.parse("2023-12-15T20:36:09.499Z");
-                    candidateId = "<value>";
-                    createdAt = OffsetDateTime.parse("2022-01-06T05:56:57.062Z");
-                    hiredAt = OffsetDateTime.parse("2023-12-05T05:20:09.174Z");
-                    id = "<id>";
-                    jobId = "<value>";
-                    originalStatus = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    rejectedAt = OffsetDateTime.parse("2022-07-13T02:34:40.392Z");
-                    rejectedReason = "<value>";
-                    source = "<value>";
-                    status = AtsApplicationStatus.SECOND_INTERVIEW;
-                    updatedAt = OffsetDateTime.parse("2024-01-24T17:35:54.628Z");
+            PatchAtsApplicationRequest req = PatchAtsApplicationRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                }};
+            PatchAtsApplicationResponse res = sdk.ats().patchAtsApplication()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationResponse res = sdk.ats.patchAtsApplication(req);
-
-            if (res.atsApplication != null) {
+            if (res.atsApplication().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationRequest](../../models/operations/PatchAtsApplicationRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [PatchAtsApplicationRequest](../../models/operations/PatchAtsApplicationRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationResponse](../../models/operations/PatchAtsApplicationResponse.md)**
+**[PatchAtsApplicationResponse](../../models/operations/PatchAtsApplicationResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## patchAtsCandidate
 
@@ -1876,110 +1759,61 @@ Update a candidate
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsCandidateRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsCandidateResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsCandidate;
-import com.unifiedapi.unifiedto.models.shared.AtsEmail;
-import com.unifiedapi.unifiedto.models.shared.AtsEmailType;
-import com.unifiedapi.unifiedto.models.shared.AtsTelephone;
-import com.unifiedapi.unifiedto.models.shared.AtsTelephoneType;
-import com.unifiedapi.unifiedto.models.shared.Origin;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.PatchAtsCandidateRequest req = new PatchAtsCandidateRequest(
-                "<value>",
-                "<value>"){{
-                atsCandidate = new AtsCandidate(
-){{
-                    address = new PropertyAtsCandidateAddress(
-){{
-                        address1 = "<value>";
-                        address2 = "<value>";
-                        city = "Fort Bridget";
-                        country = "Sri Lanka";
-                        countryCode = "GI";
-                        postalCode = "46054";
-                        region = "<value>";
-                        regionCode = "<value>";
+            PatchAtsCandidateRequest req = PatchAtsCandidateRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                    }};
-                    companyId = "<value>";
-                    companyName = "Donnelly - Bartell";
-                    createdAt = OffsetDateTime.parse("2024-01-07T04:20:35.612Z");
-                    dateOfBirth = OffsetDateTime.parse("2023-10-20T03:10:26.424Z");
-                    emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
-                        add(new AtsEmail(
-                        "<value>"){{
-                            email = "Roslyn.Bergnaum@gmail.com";
-                        }}),
-                    }};
-                    externalIdentifier = "<value>";
-                    id = "<id>";
-                    imageUrl = "<value>";
-                    linkUrls = new String[]{{
-                        add("<value>"),
-                    }};
-                    name = "<value>";
-                    origin = Origin.UNIVERSITY;
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    sources = new String[]{{
-                        add("<value>"),
-                    }};
-                    tags = new String[]{{
-                        add("<value>"),
-                    }};
-                    telephones = new com.unifiedapi.unifiedto.models.shared.AtsTelephone[]{{
-                        add(new AtsTelephone(
-                        "<value>"){{
-                            telephone = "<value>";
-                        }}),
-                    }};
-                    title = "<value>";
-                    updatedAt = OffsetDateTime.parse("2024-05-16T04:49:59.355Z");
-                    userId = "<value>";
+            PatchAtsCandidateResponse res = sdk.ats().patchAtsCandidate()
+                .request(req)
+                .call();
 
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.PatchAtsCandidateResponse res = sdk.ats.patchAtsCandidate(req);
-
-            if (res.atsCandidate != null) {
+            if (res.atsCandidate().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.PatchAtsCandidateRequest](../../models/operations/PatchAtsCandidateRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [PatchAtsCandidateRequest](../../models/operations/PatchAtsCandidateRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchAtsCandidateResponse](../../models/operations/PatchAtsCandidateResponse.md)**
+**[PatchAtsCandidateResponse](../../models/operations/PatchAtsCandidateResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## patchAtsDocument
 
@@ -1991,71 +1825,61 @@ Update a document
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsDocument;
-import com.unifiedapi.unifiedto.models.shared.AtsDocumentType;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentRequest req = new PatchAtsDocumentRequest(
-                "<value>",
-                "<value>"){{
-                atsDocument = new AtsDocument(
-){{
-                    applicationId = "<value>";
-                    candidateId = "<value>";
-                    createdAt = OffsetDateTime.parse("2022-04-01T11:33:08.084Z");
-                    documentData = "<value>";
-                    documentUrl = "<value>";
-                    filename = "your_file_here";
-                    id = "<id>";
-                    jobId = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    type = AtsDocumentType.OFFER_LETTER;
-                    updatedAt = OffsetDateTime.parse("2023-12-28T07:18:15.589Z");
-                    userId = "<value>";
+            PatchAtsDocumentRequest req = PatchAtsDocumentRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                }};
+            PatchAtsDocumentResponse res = sdk.ats().patchAtsDocument()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentResponse res = sdk.ats.patchAtsDocument(req);
-
-            if (res.atsDocument != null) {
+            if (res.atsDocument().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentRequest](../../models/operations/PatchAtsDocumentRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [PatchAtsDocumentRequest](../../models/operations/PatchAtsDocumentRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentResponse](../../models/operations/PatchAtsDocumentResponse.md)**
+**[PatchAtsDocumentResponse](../../models/operations/PatchAtsDocumentResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## patchAtsInterview
 
@@ -2067,74 +1891,61 @@ Update an interview
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsInterviewRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsInterviewResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsInterview;
-import com.unifiedapi.unifiedto.models.shared.AtsInterviewStatus;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.PatchAtsInterviewRequest req = new PatchAtsInterviewRequest(
-                "<value>",
-                "<value>"){{
-                atsInterview = new AtsInterview(
-){{
-                    applicationId = "<value>";
-                    candidateId = "<value>";
-                    createdAt = OffsetDateTime.parse("2024-09-11T19:09:34.526Z");
-                    endAt = OffsetDateTime.parse("2022-05-28T22:25:51.616Z");
-                    externalEventXref = "<value>";
-                    id = "<id>";
-                    jobId = "<value>";
-                    location = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    startAt = OffsetDateTime.parse("2022-09-10T07:32:43.966Z");
-                    status = AtsInterviewStatus.CANCELED;
-                    updatedAt = OffsetDateTime.parse("2024-03-18T02:52:45.725Z");
-                    userIds = new String[]{{
-                        add("<value>"),
-                    }};
+            PatchAtsInterviewRequest req = PatchAtsInterviewRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                }};
+            PatchAtsInterviewResponse res = sdk.ats().patchAtsInterview()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.PatchAtsInterviewResponse res = sdk.ats.patchAtsInterview(req);
-
-            if (res.atsInterview != null) {
+            if (res.atsInterview().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.PatchAtsInterviewRequest](../../models/operations/PatchAtsInterviewRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [PatchAtsInterviewRequest](../../models/operations/PatchAtsInterviewRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchAtsInterviewResponse](../../models/operations/PatchAtsInterviewResponse.md)**
+**[PatchAtsInterviewResponse](../../models/operations/PatchAtsInterviewResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## patchAtsJob
 
@@ -2146,107 +1957,61 @@ Update a job
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsJobRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsJobResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsAddress;
-import com.unifiedapi.unifiedto.models.shared.AtsCompensation;
-import com.unifiedapi.unifiedto.models.shared.AtsCompensationType;
-import com.unifiedapi.unifiedto.models.shared.AtsJob;
-import com.unifiedapi.unifiedto.models.shared.AtsJobQuestion;
-import com.unifiedapi.unifiedto.models.shared.AtsJobQuestionType;
-import com.unifiedapi.unifiedto.models.shared.AtsJobStatus;
-import com.unifiedapi.unifiedto.models.shared.EmploymentType;
-import com.unifiedapi.unifiedto.models.shared.Frequency;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.PatchAtsJobRequest req = new PatchAtsJobRequest(
-                "<value>",
-                "<value>"){{
-                atsJob = new AtsJob(
-){{
-                    addresses = new com.unifiedapi.unifiedto.models.shared.AtsAddress[]{{
-                        add(new AtsAddress(
-                        ){{}}),
-                    }};
-                    closedAt = OffsetDateTime.parse("2022-08-09T17:44:16.617Z");
-                    companyId = "<value>";
-                    compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
-                        add(new AtsCompensation(
-                        ){{}}),
-                    }};
-                    createdAt = OffsetDateTime.parse("2022-07-09T17:48:14.891Z");
-                    departments = new String[]{{
-                        add("<value>"),
-                    }};
-                    description = "Seamless analyzing definition";
-                    employmentType = EmploymentType.INTERN;
-                    hiringManagerIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    id = "<id>";
-                    languageLocale = "<value>";
-                    name = "<value>";
-                    numberOfOpenings = 6182.06d;
-                    publicJobUrls = new String[]{{
-                        add("<value>"),
-                    }};
-                    questions = new com.unifiedapi.unifiedto.models.shared.AtsJobQuestion[]{{
-                        add(new AtsJobQuestion(
-                        "<value>",
-                        AtsJobQuestionType.TEXT){{
-                            question = "<value>";
-                            type = AtsJobQuestionType.NUMBER;
-                        }}),
-                    }};
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    recruiterIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    remote = false;
-                    status = AtsJobStatus.CLOSED;
-                    updatedAt = OffsetDateTime.parse("2023-08-08T17:34:59.133Z");
+            PatchAtsJobRequest req = PatchAtsJobRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                }};
+            PatchAtsJobResponse res = sdk.ats().patchAtsJob()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.PatchAtsJobResponse res = sdk.ats.patchAtsJob(req);
-
-            if (res.atsJob != null) {
+            if (res.atsJob().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [com.unifiedapi.unifiedto.models.operations.PatchAtsJobRequest](../../models/operations/PatchAtsJobRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `request`                                                           | [PatchAtsJobRequest](../../models/operations/PatchAtsJobRequest.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchAtsJobResponse](../../models/operations/PatchAtsJobResponse.md)**
+**[PatchAtsJobResponse](../../models/operations/PatchAtsJobResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## patchAtsScorecard
 
@@ -2258,77 +2023,61 @@ Update a scorecard
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
-import com.unifiedapi.unifiedto.models.shared.AtsScorecardQuestion;
-import com.unifiedapi.unifiedto.models.shared.Recommendation;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardRequest req = new PatchAtsScorecardRequest(
-                "<value>",
-                "<value>"){{
-                atsScorecard = new AtsScorecard(
-){{
-                    applicationId = "<value>";
-                    candidateId = "<value>";
-                    comment = "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support";
-                    createdAt = OffsetDateTime.parse("2024-10-06T13:32:29.533Z");
-                    id = "<id>";
-                    interviewId = "<value>";
-                    interviewerId = "<value>";
-                    jobId = "<value>";
-                    questions = new com.unifiedapi.unifiedto.models.shared.AtsScorecardQuestion[]{{
-                        add(new AtsScorecardQuestion(
-                        "<value>"){{
-                            text = "<value>";
-                        }}),
-                    }};
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    recommendation = Recommendation.YES;
-                    updatedAt = OffsetDateTime.parse("2022-11-28T15:13:55.563Z");
+            PatchAtsScorecardRequest req = PatchAtsScorecardRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                }};
+            PatchAtsScorecardResponse res = sdk.ats().patchAtsScorecard()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse res = sdk.ats.patchAtsScorecard(req);
-
-            if (res.atsScorecard != null) {
+            if (res.atsScorecard().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardRequest](../../models/operations/PatchAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [PatchAtsScorecardRequest](../../models/operations/PatchAtsScorecardRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse](../../models/operations/PatchAtsScorecardResponse.md)**
+**[PatchAtsScorecardResponse](../../models/operations/PatchAtsScorecardResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## removeAtsActivity
 
@@ -2340,47 +2089,59 @@ Remove an activity
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsActivityRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsActivityResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveAtsActivityRequest req = new RemoveAtsActivityRequest(
-                "<value>",
-                "<value>");
+            RemoveAtsActivityRequest req = RemoveAtsActivityRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveAtsActivityResponse res = sdk.ats.removeAtsActivity(req);
+            RemoveAtsActivityResponse res = sdk.ats().removeAtsActivity()
+                .request(req)
+                .call();
 
-            if (res.statusCode == 200) {
-                // handle response
-            }
+            // handle response
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.RemoveAtsActivityRequest](../../models/operations/RemoveAtsActivityRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemoveAtsActivityRequest](../../models/operations/RemoveAtsActivityRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.RemoveAtsActivityResponse](../../models/operations/RemoveAtsActivityResponse.md)**
+**[RemoveAtsActivityResponse](../../models/operations/RemoveAtsActivityResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## removeAtsApplication
 
@@ -2392,47 +2153,59 @@ Remove an application
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationRequest req = new RemoveAtsApplicationRequest(
-                "<value>",
-                "<value>");
+            RemoveAtsApplicationRequest req = RemoveAtsApplicationRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationResponse res = sdk.ats.removeAtsApplication(req);
+            RemoveAtsApplicationResponse res = sdk.ats().removeAtsApplication()
+                .request(req)
+                .call();
 
-            if (res.statusCode == 200) {
-                // handle response
-            }
+            // handle response
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationRequest](../../models/operations/RemoveAtsApplicationRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [RemoveAtsApplicationRequest](../../models/operations/RemoveAtsApplicationRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationResponse](../../models/operations/RemoveAtsApplicationResponse.md)**
+**[RemoveAtsApplicationResponse](../../models/operations/RemoveAtsApplicationResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## removeAtsCandidate
 
@@ -2444,47 +2217,59 @@ Remove a candidate
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsCandidateRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsCandidateResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveAtsCandidateRequest req = new RemoveAtsCandidateRequest(
-                "<value>",
-                "<value>");
+            RemoveAtsCandidateRequest req = RemoveAtsCandidateRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveAtsCandidateResponse res = sdk.ats.removeAtsCandidate(req);
+            RemoveAtsCandidateResponse res = sdk.ats().removeAtsCandidate()
+                .request(req)
+                .call();
 
-            if (res.statusCode == 200) {
-                // handle response
-            }
+            // handle response
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.RemoveAtsCandidateRequest](../../models/operations/RemoveAtsCandidateRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [RemoveAtsCandidateRequest](../../models/operations/RemoveAtsCandidateRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.RemoveAtsCandidateResponse](../../models/operations/RemoveAtsCandidateResponse.md)**
+**[RemoveAtsCandidateResponse](../../models/operations/RemoveAtsCandidateResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## removeAtsDocument
 
@@ -2496,47 +2281,59 @@ Remove a document
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentRequest req = new RemoveAtsDocumentRequest(
-                "<value>",
-                "<value>");
+            RemoveAtsDocumentRequest req = RemoveAtsDocumentRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentResponse res = sdk.ats.removeAtsDocument(req);
+            RemoveAtsDocumentResponse res = sdk.ats().removeAtsDocument()
+                .request(req)
+                .call();
 
-            if (res.statusCode == 200) {
-                // handle response
-            }
+            // handle response
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentRequest](../../models/operations/RemoveAtsDocumentRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemoveAtsDocumentRequest](../../models/operations/RemoveAtsDocumentRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentResponse](../../models/operations/RemoveAtsDocumentResponse.md)**
+**[RemoveAtsDocumentResponse](../../models/operations/RemoveAtsDocumentResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## removeAtsInterview
 
@@ -2548,47 +2345,59 @@ Remove an interview
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsInterviewRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsInterviewResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveAtsInterviewRequest req = new RemoveAtsInterviewRequest(
-                "<value>",
-                "<value>");
+            RemoveAtsInterviewRequest req = RemoveAtsInterviewRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveAtsInterviewResponse res = sdk.ats.removeAtsInterview(req);
+            RemoveAtsInterviewResponse res = sdk.ats().removeAtsInterview()
+                .request(req)
+                .call();
 
-            if (res.statusCode == 200) {
-                // handle response
-            }
+            // handle response
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.RemoveAtsInterviewRequest](../../models/operations/RemoveAtsInterviewRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [RemoveAtsInterviewRequest](../../models/operations/RemoveAtsInterviewRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.RemoveAtsInterviewResponse](../../models/operations/RemoveAtsInterviewResponse.md)**
+**[RemoveAtsInterviewResponse](../../models/operations/RemoveAtsInterviewResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## removeAtsJob
 
@@ -2600,47 +2409,59 @@ Remove a job
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsJobRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsJobResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveAtsJobRequest req = new RemoveAtsJobRequest(
-                "<value>",
-                "<value>");
+            RemoveAtsJobRequest req = RemoveAtsJobRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveAtsJobResponse res = sdk.ats.removeAtsJob(req);
+            RemoveAtsJobResponse res = sdk.ats().removeAtsJob()
+                .request(req)
+                .call();
 
-            if (res.statusCode == 200) {
-                // handle response
-            }
+            // handle response
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [com.unifiedapi.unifiedto.models.operations.RemoveAtsJobRequest](../../models/operations/RemoveAtsJobRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [RemoveAtsJobRequest](../../models/operations/RemoveAtsJobRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.RemoveAtsJobResponse](../../models/operations/RemoveAtsJobResponse.md)**
+**[RemoveAtsJobResponse](../../models/operations/RemoveAtsJobResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## removeAtsScorecard
 
@@ -2652,47 +2473,59 @@ Remove a scorecard
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardRequest req = new RemoveAtsScorecardRequest(
-                "<value>",
-                "<value>");
+            RemoveAtsScorecardRequest req = RemoveAtsScorecardRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse res = sdk.ats.removeAtsScorecard(req);
+            RemoveAtsScorecardResponse res = sdk.ats().removeAtsScorecard()
+                .request(req)
+                .call();
 
-            if (res.statusCode == 200) {
-                // handle response
-            }
+            // handle response
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardRequest](../../models/operations/RemoveAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [RemoveAtsScorecardRequest](../../models/operations/RemoveAtsScorecardRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse](../../models/operations/RemoveAtsScorecardResponse.md)**
+**[RemoveAtsScorecardResponse](../../models/operations/RemoveAtsScorecardResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## updateAtsActivity
 
@@ -2704,74 +2537,61 @@ Update an activity
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsActivityRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsActivityResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsActivity;
-import com.unifiedapi.unifiedto.models.shared.AtsActivityType;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.UpdateAtsActivityRequest req = new UpdateAtsActivityRequest(
-                "<value>",
-                "<value>"){{
-                atsActivity = new AtsActivity(
-                    "<value>"){{
-                    applicationId = "<value>";
-                    candidateId = "<value>";
-                    createdAt = OffsetDateTime.parse("2024-06-06T07:57:58.715Z");
-                    description = "Total fault-tolerant collaboration";
-                    documentId = "<value>";
-                    id = "<id>";
-                    interviewId = "<value>";
-                    isPrivate = false;
-                    jobId = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    type = AtsActivityType.NOTE;
-                    updatedAt = OffsetDateTime.parse("2022-10-09T08:30:27.721Z");
-                    userIds = new String[]{{
-                        add("<value>"),
-                    }};
+            UpdateAtsActivityRequest req = UpdateAtsActivityRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                }};
+            UpdateAtsActivityResponse res = sdk.ats().updateAtsActivity()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.UpdateAtsActivityResponse res = sdk.ats.updateAtsActivity(req);
-
-            if (res.atsActivity != null) {
+            if (res.atsActivity().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.UpdateAtsActivityRequest](../../models/operations/UpdateAtsActivityRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [UpdateAtsActivityRequest](../../models/operations/UpdateAtsActivityRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.UpdateAtsActivityResponse](../../models/operations/UpdateAtsActivityResponse.md)**
+**[UpdateAtsActivityResponse](../../models/operations/UpdateAtsActivityResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## updateAtsApplication
 
@@ -2783,85 +2603,61 @@ Update an application
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsApplication;
-import com.unifiedapi.unifiedto.models.shared.AtsApplicationAnswer;
-import com.unifiedapi.unifiedto.models.shared.AtsApplicationStatus;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationRequest req = new UpdateAtsApplicationRequest(
-                "<value>",
-                "<value>"){{
-                atsApplication = new AtsApplication(
-){{
-                    answers = new com.unifiedapi.unifiedto.models.shared.AtsApplicationAnswer[]{{
-                        add(new AtsApplicationAnswer(
-                        new String[]{{
-                            add("<value>"),
-                        }},
-                        "<value>"){{
-                            answers = new String[]{{
-                                add("<value>"),
-                            }};
-                            questionId = "<value>";
-                        }}),
-                    }};
-                    appliedAt = OffsetDateTime.parse("2022-08-22T12:21:27.415Z");
-                    candidateId = "<value>";
-                    createdAt = OffsetDateTime.parse("2022-06-04T12:46:09.878Z");
-                    hiredAt = OffsetDateTime.parse("2022-02-09T08:57:01.906Z");
-                    id = "<id>";
-                    jobId = "<value>";
-                    originalStatus = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    rejectedAt = OffsetDateTime.parse("2024-07-19T04:47:20.215Z");
-                    rejectedReason = "<value>";
-                    source = "<value>";
-                    status = AtsApplicationStatus.OFFERED;
-                    updatedAt = OffsetDateTime.parse("2023-03-17T03:12:00.865Z");
+            UpdateAtsApplicationRequest req = UpdateAtsApplicationRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                }};
+            UpdateAtsApplicationResponse res = sdk.ats().updateAtsApplication()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationResponse res = sdk.ats.updateAtsApplication(req);
-
-            if (res.atsApplication != null) {
+            if (res.atsApplication().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationRequest](../../models/operations/UpdateAtsApplicationRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [UpdateAtsApplicationRequest](../../models/operations/UpdateAtsApplicationRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationResponse](../../models/operations/UpdateAtsApplicationResponse.md)**
+**[UpdateAtsApplicationResponse](../../models/operations/UpdateAtsApplicationResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## updateAtsCandidate
 
@@ -2873,110 +2669,61 @@ Update a candidate
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsCandidateRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsCandidateResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsCandidate;
-import com.unifiedapi.unifiedto.models.shared.AtsEmail;
-import com.unifiedapi.unifiedto.models.shared.AtsEmailType;
-import com.unifiedapi.unifiedto.models.shared.AtsTelephone;
-import com.unifiedapi.unifiedto.models.shared.AtsTelephoneType;
-import com.unifiedapi.unifiedto.models.shared.Origin;
-import com.unifiedapi.unifiedto.models.shared.PropertyAtsCandidateAddress;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.UpdateAtsCandidateRequest req = new UpdateAtsCandidateRequest(
-                "<value>",
-                "<value>"){{
-                atsCandidate = new AtsCandidate(
-){{
-                    address = new PropertyAtsCandidateAddress(
-){{
-                        address1 = "<value>";
-                        address2 = "<value>";
-                        city = "Hintzborough";
-                        country = "Afghanistan";
-                        countryCode = "TF";
-                        postalCode = "39423";
-                        region = "<value>";
-                        regionCode = "<value>";
+            UpdateAtsCandidateRequest req = UpdateAtsCandidateRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                    }};
-                    companyId = "<value>";
-                    companyName = "O'Reilly Inc";
-                    createdAt = OffsetDateTime.parse("2023-08-31T03:55:05.691Z");
-                    dateOfBirth = OffsetDateTime.parse("2023-12-18T17:01:22.026Z");
-                    emails = new com.unifiedapi.unifiedto.models.shared.AtsEmail[]{{
-                        add(new AtsEmail(
-                        "<value>"){{
-                            email = "Mose_Cremin@gmail.com";
-                        }}),
-                    }};
-                    externalIdentifier = "<value>";
-                    id = "<id>";
-                    imageUrl = "<value>";
-                    linkUrls = new String[]{{
-                        add("<value>"),
-                    }};
-                    name = "<value>";
-                    origin = Origin.SOURCED;
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    sources = new String[]{{
-                        add("<value>"),
-                    }};
-                    tags = new String[]{{
-                        add("<value>"),
-                    }};
-                    telephones = new com.unifiedapi.unifiedto.models.shared.AtsTelephone[]{{
-                        add(new AtsTelephone(
-                        "<value>"){{
-                            telephone = "<value>";
-                        }}),
-                    }};
-                    title = "<value>";
-                    updatedAt = OffsetDateTime.parse("2022-10-06T11:04:23.402Z");
-                    userId = "<value>";
+            UpdateAtsCandidateResponse res = sdk.ats().updateAtsCandidate()
+                .request(req)
+                .call();
 
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.UpdateAtsCandidateResponse res = sdk.ats.updateAtsCandidate(req);
-
-            if (res.atsCandidate != null) {
+            if (res.atsCandidate().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.UpdateAtsCandidateRequest](../../models/operations/UpdateAtsCandidateRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [UpdateAtsCandidateRequest](../../models/operations/UpdateAtsCandidateRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.UpdateAtsCandidateResponse](../../models/operations/UpdateAtsCandidateResponse.md)**
+**[UpdateAtsCandidateResponse](../../models/operations/UpdateAtsCandidateResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## updateAtsDocument
 
@@ -2988,71 +2735,61 @@ Update a document
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsDocument;
-import com.unifiedapi.unifiedto.models.shared.AtsDocumentType;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentRequest req = new UpdateAtsDocumentRequest(
-                "<value>",
-                "<value>"){{
-                atsDocument = new AtsDocument(
-){{
-                    applicationId = "<value>";
-                    candidateId = "<value>";
-                    createdAt = OffsetDateTime.parse("2022-07-05T17:05:49.106Z");
-                    documentData = "<value>";
-                    documentUrl = "<value>";
-                    filename = "your_file_here";
-                    id = "<id>";
-                    jobId = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    type = AtsDocumentType.OFFER_PACKET;
-                    updatedAt = OffsetDateTime.parse("2022-09-10T22:23:01.760Z");
-                    userId = "<value>";
+            UpdateAtsDocumentRequest req = UpdateAtsDocumentRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                }};
+            UpdateAtsDocumentResponse res = sdk.ats().updateAtsDocument()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentResponse res = sdk.ats.updateAtsDocument(req);
-
-            if (res.atsDocument != null) {
+            if (res.atsDocument().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentRequest](../../models/operations/UpdateAtsDocumentRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [UpdateAtsDocumentRequest](../../models/operations/UpdateAtsDocumentRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentResponse](../../models/operations/UpdateAtsDocumentResponse.md)**
+**[UpdateAtsDocumentResponse](../../models/operations/UpdateAtsDocumentResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## updateAtsInterview
 
@@ -3064,74 +2801,61 @@ Update an interview
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsInterviewRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsInterviewResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsInterview;
-import com.unifiedapi.unifiedto.models.shared.AtsInterviewStatus;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.UpdateAtsInterviewRequest req = new UpdateAtsInterviewRequest(
-                "<value>",
-                "<value>"){{
-                atsInterview = new AtsInterview(
-){{
-                    applicationId = "<value>";
-                    candidateId = "<value>";
-                    createdAt = OffsetDateTime.parse("2024-05-06T05:22:44.534Z");
-                    endAt = OffsetDateTime.parse("2023-03-29T20:29:22.648Z");
-                    externalEventXref = "<value>";
-                    id = "<id>";
-                    jobId = "<value>";
-                    location = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    startAt = OffsetDateTime.parse("2024-05-05T07:21:58.674Z");
-                    status = AtsInterviewStatus.COMPLETE;
-                    updatedAt = OffsetDateTime.parse("2022-05-01T17:04:47.962Z");
-                    userIds = new String[]{{
-                        add("<value>"),
-                    }};
+            UpdateAtsInterviewRequest req = UpdateAtsInterviewRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                }};
+            UpdateAtsInterviewResponse res = sdk.ats().updateAtsInterview()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.UpdateAtsInterviewResponse res = sdk.ats.updateAtsInterview(req);
-
-            if (res.atsInterview != null) {
+            if (res.atsInterview().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.UpdateAtsInterviewRequest](../../models/operations/UpdateAtsInterviewRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [UpdateAtsInterviewRequest](../../models/operations/UpdateAtsInterviewRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.UpdateAtsInterviewResponse](../../models/operations/UpdateAtsInterviewResponse.md)**
+**[UpdateAtsInterviewResponse](../../models/operations/UpdateAtsInterviewResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## updateAtsJob
 
@@ -3143,107 +2867,61 @@ Update a job
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsJobRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsJobResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsAddress;
-import com.unifiedapi.unifiedto.models.shared.AtsCompensation;
-import com.unifiedapi.unifiedto.models.shared.AtsCompensationType;
-import com.unifiedapi.unifiedto.models.shared.AtsJob;
-import com.unifiedapi.unifiedto.models.shared.AtsJobQuestion;
-import com.unifiedapi.unifiedto.models.shared.AtsJobQuestionType;
-import com.unifiedapi.unifiedto.models.shared.AtsJobStatus;
-import com.unifiedapi.unifiedto.models.shared.EmploymentType;
-import com.unifiedapi.unifiedto.models.shared.Frequency;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.UpdateAtsJobRequest req = new UpdateAtsJobRequest(
-                "<value>",
-                "<value>"){{
-                atsJob = new AtsJob(
-){{
-                    addresses = new com.unifiedapi.unifiedto.models.shared.AtsAddress[]{{
-                        add(new AtsAddress(
-                        ){{}}),
-                    }};
-                    closedAt = OffsetDateTime.parse("2023-10-21T07:41:08.131Z");
-                    companyId = "<value>";
-                    compensation = new com.unifiedapi.unifiedto.models.shared.AtsCompensation[]{{
-                        add(new AtsCompensation(
-                        ){{}}),
-                    }};
-                    createdAt = OffsetDateTime.parse("2022-09-28T21:47:53.309Z");
-                    departments = new String[]{{
-                        add("<value>"),
-                    }};
-                    description = "Implemented even-keeled parallelism";
-                    employmentType = EmploymentType.FULL_TIME;
-                    hiringManagerIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    id = "<id>";
-                    languageLocale = "<value>";
-                    name = "<value>";
-                    numberOfOpenings = 9080.02d;
-                    publicJobUrls = new String[]{{
-                        add("<value>"),
-                    }};
-                    questions = new com.unifiedapi.unifiedto.models.shared.AtsJobQuestion[]{{
-                        add(new AtsJobQuestion(
-                        "<value>",
-                        AtsJobQuestionType.NUMBER){{
-                            question = "<value>";
-                            type = AtsJobQuestionType.MULTIPLE_SELECT;
-                        }}),
-                    }};
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    recruiterIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    remote = false;
-                    status = AtsJobStatus.DRAFT;
-                    updatedAt = OffsetDateTime.parse("2024-01-04T04:44:52.139Z");
+            UpdateAtsJobRequest req = UpdateAtsJobRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                }};
+            UpdateAtsJobResponse res = sdk.ats().updateAtsJob()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.UpdateAtsJobResponse res = sdk.ats.updateAtsJob(req);
-
-            if (res.atsJob != null) {
+            if (res.atsJob().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [com.unifiedapi.unifiedto.models.operations.UpdateAtsJobRequest](../../models/operations/UpdateAtsJobRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [UpdateAtsJobRequest](../../models/operations/UpdateAtsJobRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.UpdateAtsJobResponse](../../models/operations/UpdateAtsJobResponse.md)**
+**[UpdateAtsJobResponse](../../models/operations/UpdateAtsJobResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## updateAtsScorecard
 
@@ -3255,74 +2933,58 @@ Update a scorecard
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse;
-import com.unifiedapi.unifiedto.models.shared.AtsScorecard;
-import com.unifiedapi.unifiedto.models.shared.AtsScorecardQuestion;
-import com.unifiedapi.unifiedto.models.shared.Recommendation;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardRequest req = new UpdateAtsScorecardRequest(
-                "<value>",
-                "<value>"){{
-                atsScorecard = new AtsScorecard(
-){{
-                    applicationId = "<value>";
-                    candidateId = "<value>";
-                    comment = "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive";
-                    createdAt = OffsetDateTime.parse("2022-07-10T16:18:43.908Z");
-                    id = "<id>";
-                    interviewId = "<value>";
-                    interviewerId = "<value>";
-                    jobId = "<value>";
-                    questions = new com.unifiedapi.unifiedto.models.shared.AtsScorecardQuestion[]{{
-                        add(new AtsScorecardQuestion(
-                        "<value>"){{
-                            text = "<value>";
-                        }}),
-                    }};
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    recommendation = Recommendation.NO;
-                    updatedAt = OffsetDateTime.parse("2022-07-26T09:16:55.761Z");
+            UpdateAtsScorecardRequest req = UpdateAtsScorecardRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                }};
+            UpdateAtsScorecardResponse res = sdk.ats().updateAtsScorecard()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse res = sdk.ats.updateAtsScorecard(req);
-
-            if (res.atsScorecard != null) {
+            if (res.atsScorecard().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardRequest](../../models/operations/UpdateAtsScorecardRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [UpdateAtsScorecardRequest](../../models/operations/UpdateAtsScorecardRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse](../../models/operations/UpdateAtsScorecardResponse.md)**
+**[UpdateAtsScorecardResponse](../../models/operations/UpdateAtsScorecardResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |

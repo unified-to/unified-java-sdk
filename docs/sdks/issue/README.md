@@ -1,5 +1,5 @@
 # Issue
-(*issue*)
+(*issue()*)
 
 ### Available Operations
 
@@ -15,49 +15,56 @@ List support issues
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedIssuesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedIssuesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListUnifiedIssuesRequest req = new ListUnifiedIssuesRequest(
-){{
-                limit = 7069.08d;
-                offset = 7461.37d;
-                updatedGte = OffsetDateTime.parse("2022-01-21T01:55:24.746Z");
+            ListUnifiedIssuesRequest req = ListUnifiedIssuesRequest.builder()
+                .build();
 
-            }};
+            ListUnifiedIssuesResponse res = sdk.issue().listUnifiedIssues()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListUnifiedIssuesResponse res = sdk.issue.listUnifiedIssues(req);
-
-            if (res.issues != null) {
+            if (res.issues().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.ListUnifiedIssuesRequest](../../models/operations/ListUnifiedIssuesRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListUnifiedIssuesRequest](../../models/operations/ListUnifiedIssuesRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListUnifiedIssuesResponse](../../models/operations/ListUnifiedIssuesResponse.md)**
+**[ListUnifiedIssuesResponse](../../models/operations/ListUnifiedIssuesResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |

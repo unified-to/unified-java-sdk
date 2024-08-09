@@ -5,6 +5,6 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `answer`           | *String*           | :heavy_minus_sign: | N/A                |
-| `description`      | *String*           | :heavy_minus_sign: | N/A                |
+| `answer`           | *Optional<String>* | :heavy_minus_sign: | N/A                |
+| `description`      | *Optional<String>* | :heavy_minus_sign: | N/A                |
 | `text`             | *String*           | :heavy_check_mark: | N/A                |

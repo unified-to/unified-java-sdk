@@ -1,5 +1,5 @@
 # Passthrough
-(*passthrough*)
+(*passthrough()*)
 
 ### Available Operations
 
@@ -19,53 +19,61 @@ Passthrough POST
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreatePassthroughRequest;
 import com.unifiedapi.unifiedto.models.operations.CreatePassthroughResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.CreatePassthroughRequest req = new CreatePassthroughRequest(
-                "<value>",
-                "<value>"){{
-                requestBody = new java.util.HashMap<String, java.lang.Object>(
-                ){{
-                    put("key", "<value>");
-                }};
+            CreatePassthroughRequest req = CreatePassthroughRequest.builder()
+                .connectionId("<value>")
+                .path("<value>")
+                .build();
 
-            }};
+            CreatePassthroughResponse res = sdk.passthrough().createPassthrough()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.CreatePassthroughResponse res = sdk.passthrough.createPassthrough(req);
-
-            if (res.result != null) {
+            if (res.result().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.CreatePassthroughRequest](../../models/operations/CreatePassthroughRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreatePassthroughRequest](../../models/operations/CreatePassthroughRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.CreatePassthroughResponse](../../models/operations/CreatePassthroughResponse.md)**
+**[CreatePassthroughResponse](../../models/operations/CreatePassthroughResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listPassthroughs
 
@@ -77,47 +85,61 @@ Passthrough GET
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListPassthroughsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListPassthroughsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListPassthroughsRequest req = new ListPassthroughsRequest(
-                "<value>",
-                "<value>");
+            ListPassthroughsRequest req = ListPassthroughsRequest.builder()
+                .connectionId("<value>")
+                .path("<value>")
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListPassthroughsResponse res = sdk.passthrough.listPassthroughs(req);
+            ListPassthroughsResponse res = sdk.passthrough().listPassthroughs()
+                .request(req)
+                .call();
 
-            if (res.result != null) {
+            if (res.result().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.ListPassthroughsRequest](../../models/operations/ListPassthroughsRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListPassthroughsRequest](../../models/operations/ListPassthroughsRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListPassthroughsResponse](../../models/operations/ListPassthroughsResponse.md)**
+**[ListPassthroughsResponse](../../models/operations/ListPassthroughsResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## patchPassthrough
 
@@ -129,53 +151,61 @@ Passthrough PUT
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchPassthroughRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchPassthroughResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.PatchPassthroughRequest req = new PatchPassthroughRequest(
-                "<value>",
-                "<value>"){{
-                requestBody = new java.util.HashMap<String, java.lang.Object>(
-                ){{
-                    put("key", "<value>");
-                }};
+            PatchPassthroughRequest req = PatchPassthroughRequest.builder()
+                .connectionId("<value>")
+                .path("<value>")
+                .build();
 
-            }};
+            PatchPassthroughResponse res = sdk.passthrough().patchPassthrough()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.PatchPassthroughResponse res = sdk.passthrough.patchPassthrough(req);
-
-            if (res.result != null) {
+            if (res.result().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [com.unifiedapi.unifiedto.models.operations.PatchPassthroughRequest](../../models/operations/PatchPassthroughRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [PatchPassthroughRequest](../../models/operations/PatchPassthroughRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchPassthroughResponse](../../models/operations/PatchPassthroughResponse.md)**
+**[PatchPassthroughResponse](../../models/operations/PatchPassthroughResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## removePassthrough
 
@@ -187,47 +217,61 @@ Passthrough DELETE
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemovePassthroughRequest;
 import com.unifiedapi.unifiedto.models.operations.RemovePassthroughResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemovePassthroughRequest req = new RemovePassthroughRequest(
-                "<value>",
-                "<value>");
+            RemovePassthroughRequest req = RemovePassthroughRequest.builder()
+                .connectionId("<value>")
+                .path("<value>")
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemovePassthroughResponse res = sdk.passthrough.removePassthrough(req);
+            RemovePassthroughResponse res = sdk.passthrough().removePassthrough()
+                .request(req)
+                .call();
 
-            if (res.result != null) {
+            if (res.result().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.RemovePassthroughRequest](../../models/operations/RemovePassthroughRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemovePassthroughRequest](../../models/operations/RemovePassthroughRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.RemovePassthroughResponse](../../models/operations/RemovePassthroughResponse.md)**
+**[RemovePassthroughResponse](../../models/operations/RemovePassthroughResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## updatePassthrough
 
@@ -239,50 +283,58 @@ Passthrough PUT
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdatePassthroughRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdatePassthroughResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.UpdatePassthroughRequest req = new UpdatePassthroughRequest(
-                "<value>",
-                "<value>"){{
-                requestBody = new java.util.HashMap<String, java.lang.Object>(
-                ){{
-                    put("key", "<value>");
-                }};
+            UpdatePassthroughRequest req = UpdatePassthroughRequest.builder()
+                .connectionId("<value>")
+                .path("<value>")
+                .build();
 
-            }};
+            UpdatePassthroughResponse res = sdk.passthrough().updatePassthrough()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.UpdatePassthroughResponse res = sdk.passthrough.updatePassthrough(req);
-
-            if (res.result != null) {
+            if (res.result().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [com.unifiedapi.unifiedto.models.operations.UpdatePassthroughRequest](../../models/operations/UpdatePassthroughRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [UpdatePassthroughRequest](../../models/operations/UpdatePassthroughRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.UpdatePassthroughResponse](../../models/operations/UpdatePassthroughResponse.md)**
+**[UpdatePassthroughResponse](../../models/operations/UpdatePassthroughResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |

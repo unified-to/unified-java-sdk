@@ -1,5 +1,5 @@
 # Collection
-(*collection*)
+(*collection()*)
 
 ### Available Operations
 
@@ -20,81 +20,60 @@ Create a collection
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionResponse;
-import com.unifiedapi.unifiedto.models.shared.CommerceCollection;
-import com.unifiedapi.unifiedto.models.shared.CommerceCollectionType;
-import com.unifiedapi.unifiedto.models.shared.CommerceItemMedia;
-import com.unifiedapi.unifiedto.models.shared.CommerceItemMediaType;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionRequest req = new CreateCommerceCollectionRequest(
-                "<value>"){{
-                commerceCollection = new CommerceCollection(
-                    "<value>",
-                    "<value>"){{
-                    createdAt = OffsetDateTime.parse("2023-06-14T12:03:57.982Z");
-                    description = "Team-oriented intermediate interface";
-                    isActive = false;
-                    isFeatured = false;
-                    isVisible = false;
-                    media = new com.unifiedapi.unifiedto.models.shared.CommerceItemMedia[]{{
-                        add(new CommerceItemMedia(
-                        "<value>"){{
-                            url = "https://vivid-slump.com";
-                        }}),
-                    }};
-                    parentId = "<value>";
-                    publicDescription = "<value>";
-                    publicName = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    tags = new String[]{{
-                        add("<value>"),
-                    }};
-                    type = CommerceCollectionType.SAVED_SEARCH;
-                    updatedAt = OffsetDateTime.parse("2022-03-03T11:22:09.752Z");
+            CreateCommerceCollectionRequest req = CreateCommerceCollectionRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-                }};
+            CreateCommerceCollectionResponse res = sdk.collection().createCommerceCollection()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionResponse res = sdk.collection.createCommerceCollection(req);
-
-            if (res.commerceCollection != null) {
+            if (res.commerceCollection().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionRequest](../../models/operations/CreateCommerceCollectionRequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [CreateCommerceCollectionRequest](../../models/operations/CreateCommerceCollectionRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionResponse](../../models/operations/CreateCommerceCollectionResponse.md)**
+**[CreateCommerceCollectionResponse](../../models/operations/CreateCommerceCollectionResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## getCommerceCollection
 
@@ -106,52 +85,61 @@ Retrieve a collection
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionRequest req = new GetCommerceCollectionRequest(
-                "<value>",
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
+            GetCommerceCollectionRequest req = GetCommerceCollectionRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            }};
+            GetCommerceCollectionResponse res = sdk.collection().getCommerceCollection()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionResponse res = sdk.collection.getCommerceCollection(req);
-
-            if (res.commerceCollection != null) {
+            if (res.commerceCollection().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionRequest](../../models/operations/GetCommerceCollectionRequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [GetCommerceCollectionRequest](../../models/operations/GetCommerceCollectionRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionResponse](../../models/operations/GetCommerceCollectionResponse.md)**
+**[GetCommerceCollectionResponse](../../models/operations/GetCommerceCollectionResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listCommerceCollections
 
@@ -163,58 +151,60 @@ List all collections
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsRequest req = new ListCommerceCollectionsRequest(
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
-                limit = 2972.15d;
-                offset = 5933.83d;
-                parentId = "<value>";
-                query = "<value>";
-                type = "<value>";
-                updatedGte = OffsetDateTime.parse("2023-08-08T20:40:35.103Z");
+            ListCommerceCollectionsRequest req = ListCommerceCollectionsRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-            }};
+            ListCommerceCollectionsResponse res = sdk.collection().listCommerceCollections()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsResponse res = sdk.collection.listCommerceCollections(req);
-
-            if (res.commerceCollections != null) {
+            if (res.commerceCollections().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsRequest](../../models/operations/ListCommerceCollectionsRequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [ListCommerceCollectionsRequest](../../models/operations/ListCommerceCollectionsRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsResponse](../../models/operations/ListCommerceCollectionsResponse.md)**
+**[ListCommerceCollectionsResponse](../../models/operations/ListCommerceCollectionsResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## patchCommerceCollection
 
@@ -226,82 +216,61 @@ Update a collection
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionResponse;
-import com.unifiedapi.unifiedto.models.shared.CommerceCollection;
-import com.unifiedapi.unifiedto.models.shared.CommerceCollectionType;
-import com.unifiedapi.unifiedto.models.shared.CommerceItemMedia;
-import com.unifiedapi.unifiedto.models.shared.CommerceItemMediaType;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionRequest req = new PatchCommerceCollectionRequest(
-                "<value>",
-                "<value>"){{
-                commerceCollection = new CommerceCollection(
-                    "<value>",
-                    "<value>"){{
-                    createdAt = OffsetDateTime.parse("2022-12-27T01:30:16.292Z");
-                    description = "Polarised solution-oriented analyzer";
-                    isActive = false;
-                    isFeatured = false;
-                    isVisible = false;
-                    media = new com.unifiedapi.unifiedto.models.shared.CommerceItemMedia[]{{
-                        add(new CommerceItemMedia(
-                        "<value>"){{
-                            url = "http://voluminous-airship.net";
-                        }}),
-                    }};
-                    parentId = "<value>";
-                    publicDescription = "<value>";
-                    publicName = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    tags = new String[]{{
-                        add("<value>"),
-                    }};
-                    type = CommerceCollectionType.CATEGORY;
-                    updatedAt = OffsetDateTime.parse("2023-08-29T23:35:48.700Z");
+            PatchCommerceCollectionRequest req = PatchCommerceCollectionRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                }};
+            PatchCommerceCollectionResponse res = sdk.collection().patchCommerceCollection()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionResponse res = sdk.collection.patchCommerceCollection(req);
-
-            if (res.commerceCollection != null) {
+            if (res.commerceCollection().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionRequest](../../models/operations/PatchCommerceCollectionRequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [PatchCommerceCollectionRequest](../../models/operations/PatchCommerceCollectionRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionResponse](../../models/operations/PatchCommerceCollectionResponse.md)**
+**[PatchCommerceCollectionResponse](../../models/operations/PatchCommerceCollectionResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## removeCommerceCollection
 
@@ -313,47 +282,59 @@ Remove a collection
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionRequest req = new RemoveCommerceCollectionRequest(
-                "<value>",
-                "<value>");
+            RemoveCommerceCollectionRequest req = RemoveCommerceCollectionRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionResponse res = sdk.collection.removeCommerceCollection(req);
+            RemoveCommerceCollectionResponse res = sdk.collection().removeCommerceCollection()
+                .request(req)
+                .call();
 
-            if (res.statusCode == 200) {
-                // handle response
-            }
+            // handle response
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionRequest](../../models/operations/RemoveCommerceCollectionRequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [RemoveCommerceCollectionRequest](../../models/operations/RemoveCommerceCollectionRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionResponse](../../models/operations/RemoveCommerceCollectionResponse.md)**
+**[RemoveCommerceCollectionResponse](../../models/operations/RemoveCommerceCollectionResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## updateCommerceCollection
 
@@ -365,79 +346,58 @@ Update a collection
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionResponse;
-import com.unifiedapi.unifiedto.models.shared.CommerceCollection;
-import com.unifiedapi.unifiedto.models.shared.CommerceCollectionType;
-import com.unifiedapi.unifiedto.models.shared.CommerceItemMedia;
-import com.unifiedapi.unifiedto.models.shared.CommerceItemMediaType;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionRequest req = new UpdateCommerceCollectionRequest(
-                "<value>",
-                "<value>"){{
-                commerceCollection = new CommerceCollection(
-                    "<value>",
-                    "<value>"){{
-                    createdAt = OffsetDateTime.parse("2024-07-30T10:24:18.569Z");
-                    description = "Sharable dynamic solution";
-                    isActive = false;
-                    isFeatured = false;
-                    isVisible = false;
-                    media = new com.unifiedapi.unifiedto.models.shared.CommerceItemMedia[]{{
-                        add(new CommerceItemMedia(
-                        "<value>"){{
-                            url = "http://irritating-competence.com";
-                        }}),
-                    }};
-                    parentId = "<value>";
-                    publicDescription = "<value>";
-                    publicName = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    tags = new String[]{{
-                        add("<value>"),
-                    }};
-                    type = CommerceCollectionType.COLLECTION;
-                    updatedAt = OffsetDateTime.parse("2022-05-08T04:19:59.358Z");
+            UpdateCommerceCollectionRequest req = UpdateCommerceCollectionRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                }};
+            UpdateCommerceCollectionResponse res = sdk.collection().updateCommerceCollection()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionResponse res = sdk.collection.updateCommerceCollection(req);
-
-            if (res.commerceCollection != null) {
+            if (res.commerceCollection().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                | [com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionRequest](../../models/operations/UpdateCommerceCollectionRequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [UpdateCommerceCollectionRequest](../../models/operations/UpdateCommerceCollectionRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionResponse](../../models/operations/UpdateCommerceCollectionResponse.md)**
+**[UpdateCommerceCollectionResponse](../../models/operations/UpdateCommerceCollectionResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |

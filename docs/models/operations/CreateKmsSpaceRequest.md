@@ -3,7 +3,7 @@
 
 ## Fields
 
-| Field                                                                              | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `kmsSpace`                                                                         | [com.unifiedapi.unifiedto.models.shared.KmsSpace](../../models/shared/KmsSpace.md) | :heavy_minus_sign:                                                                 | N/A                                                                                |
-| `connectionId`                                                                     | *String*                                                                           | :heavy_check_mark:                                                                 | ID of the connection                                                               |
+| Field                                                 | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `kmsSpace`                                            | [Optional<KmsSpace>](../../models/shared/KmsSpace.md) | :heavy_minus_sign:                                    | N/A                                                   |
+| `connectionId`                                        | *String*                                              | :heavy_check_mark:                                    | ID of the connection                                  |

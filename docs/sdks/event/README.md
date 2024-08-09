@@ -1,5 +1,5 @@
 # Event
-(*event*)
+(*event()*)
 
 ### Available Operations
 
@@ -20,129 +20,60 @@ Create an event
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmEventRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmEventResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmEvent;
-import com.unifiedapi.unifiedto.models.shared.CrmEventType;
-import com.unifiedapi.unifiedto.models.shared.Priority;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventCall;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventEmail;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventMeeting;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventNote;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTask;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTaskStatus;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.CreateCrmEventRequest req = new CreateCrmEventRequest(
-                "<value>"){{
-                crmEvent = new CrmEvent(
-){{
-                    call = new PropertyCrmEventCall(
-){{
-                        description = "Grass-roots intangible superstructure";
-                        duration = 6684.26d;
-                        startAt = OffsetDateTime.parse("2024-07-14T22:05:40.365Z");
+            CreateCrmEventRequest req = CreateCrmEventRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-                    }};
-                    companyIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    contactIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    createdAt = OffsetDateTime.parse("2024-08-20T19:58:06.686Z");
-                    dealIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    email = new PropertyCrmEventEmail(
-){{
-                        attachmentFileIds = new String[]{{
-                            add("<value>"),
-                        }};
-                        body = "<value>";
-                        cc = new String[]{{
-                            add("<value>"),
-                        }};
-                        from = "<value>";
-                        subject = "<value>";
-                        to = new String[]{{
-                            add("<value>"),
-                        }};
+            CreateCrmEventResponse res = sdk.event().createCrmEvent()
+                .request(req)
+                .call();
 
-                    }};
-                    id = "<id>";
-                    leadIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    meeting = new PropertyCrmEventMeeting(
-){{
-                        description = "Synergistic 3rd generation capacity";
-                        endAt = OffsetDateTime.parse("2023-08-07T03:26:53.520Z");
-                        startAt = OffsetDateTime.parse("2023-02-09T03:55:08.657Z");
-                        title = "<value>";
-
-                    }};
-                    note = new PropertyCrmEventNote(
-){{
-                        description = "Virtual asymmetric definition";
-                        title = "<value>";
-
-                    }};
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    task = new PropertyCrmEventTask(
-){{
-                        description = "Automated attitude-oriented info-mediaries";
-                        dueAt = OffsetDateTime.parse("2023-07-15T02:47:03.388Z");
-                        name = "<value>";
-                        priority = Priority.HIGH;
-                        status = PropertyCrmEventTaskStatus.NOT_STARTED;
-
-                    }};
-                    type = CrmEventType.NOTE;
-                    updatedAt = OffsetDateTime.parse("2022-01-03T22:33:38.901Z");
-                    userId = "<value>";
-
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.CreateCrmEventResponse res = sdk.event.createCrmEvent(req);
-
-            if (res.crmEvent != null) {
+            if (res.crmEvent().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [com.unifiedapi.unifiedto.models.operations.CreateCrmEventRequest](../../models/operations/CreateCrmEventRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [CreateCrmEventRequest](../../models/operations/CreateCrmEventRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.CreateCrmEventResponse](../../models/operations/CreateCrmEventResponse.md)**
+**[CreateCrmEventResponse](../../models/operations/CreateCrmEventResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## getCrmEvent
 
@@ -154,52 +85,61 @@ Retrieve an event
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetCrmEventRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmEventResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetCrmEventRequest req = new GetCrmEventRequest(
-                "<value>",
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
+            GetCrmEventRequest req = GetCrmEventRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            }};
+            GetCrmEventResponse res = sdk.event().getCrmEvent()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.GetCrmEventResponse res = sdk.event.getCrmEvent(req);
-
-            if (res.crmEvent != null) {
+            if (res.crmEvent().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [com.unifiedapi.unifiedto.models.operations.GetCrmEventRequest](../../models/operations/GetCrmEventRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `request`                                                           | [GetCrmEventRequest](../../models/operations/GetCrmEventRequest.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetCrmEventResponse](../../models/operations/GetCrmEventResponse.md)**
+**[GetCrmEventResponse](../../models/operations/GetCrmEventResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listCrmEvents
 
@@ -211,61 +151,60 @@ List all events
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListCrmEventsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListCrmEventsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListCrmEventsRequest req = new ListCrmEventsRequest(
-                "<value>"){{
-                companyId = "<value>";
-                contactId = "<value>";
-                dealId = "<value>";
-                fields = new String[]{{
-                    add("<value>"),
-                }};
-                limit = 4453.11d;
-                offset = 4555.2d;
-                query = "<value>";
-                type = "<value>";
-                updatedGte = OffsetDateTime.parse("2024-04-30T03:39:38.103Z");
-                userId = "<value>";
+            ListCrmEventsRequest req = ListCrmEventsRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-            }};
+            ListCrmEventsResponse res = sdk.event().listCrmEvents()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListCrmEventsResponse res = sdk.event.listCrmEvents(req);
-
-            if (res.crmEvents != null) {
+            if (res.crmEvents().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [com.unifiedapi.unifiedto.models.operations.ListCrmEventsRequest](../../models/operations/ListCrmEventsRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [ListCrmEventsRequest](../../models/operations/ListCrmEventsRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListCrmEventsResponse](../../models/operations/ListCrmEventsResponse.md)**
+**[ListCrmEventsResponse](../../models/operations/ListCrmEventsResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## patchCrmEvent
 
@@ -277,130 +216,61 @@ Update an event
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmEventRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmEventResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmEvent;
-import com.unifiedapi.unifiedto.models.shared.CrmEventType;
-import com.unifiedapi.unifiedto.models.shared.Priority;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventCall;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventEmail;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventMeeting;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventNote;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTask;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTaskStatus;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.PatchCrmEventRequest req = new PatchCrmEventRequest(
-                "<value>",
-                "<value>"){{
-                crmEvent = new CrmEvent(
-){{
-                    call = new PropertyCrmEventCall(
-){{
-                        description = "Multi-layered well-modulated middleware";
-                        duration = 8718.07d;
-                        startAt = OffsetDateTime.parse("2023-07-21T08:28:33.501Z");
+            PatchCrmEventRequest req = PatchCrmEventRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                    }};
-                    companyIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    contactIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    createdAt = OffsetDateTime.parse("2023-02-08T06:50:13.439Z");
-                    dealIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    email = new PropertyCrmEventEmail(
-){{
-                        attachmentFileIds = new String[]{{
-                            add("<value>"),
-                        }};
-                        body = "<value>";
-                        cc = new String[]{{
-                            add("<value>"),
-                        }};
-                        from = "<value>";
-                        subject = "<value>";
-                        to = new String[]{{
-                            add("<value>"),
-                        }};
+            PatchCrmEventResponse res = sdk.event().patchCrmEvent()
+                .request(req)
+                .call();
 
-                    }};
-                    id = "<id>";
-                    leadIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    meeting = new PropertyCrmEventMeeting(
-){{
-                        description = "Universal 24/7 migration";
-                        endAt = OffsetDateTime.parse("2022-05-11T23:48:02.911Z");
-                        startAt = OffsetDateTime.parse("2022-10-11T02:15:24.355Z");
-                        title = "<value>";
-
-                    }};
-                    note = new PropertyCrmEventNote(
-){{
-                        description = "Realigned composite benchmark";
-                        title = "<value>";
-
-                    }};
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    task = new PropertyCrmEventTask(
-){{
-                        description = "Customer-focused needs-based groupware";
-                        dueAt = OffsetDateTime.parse("2024-11-30T20:05:52.386Z");
-                        name = "<value>";
-                        priority = Priority.HIGH;
-                        status = PropertyCrmEventTaskStatus.COMPLETED;
-
-                    }};
-                    type = CrmEventType.NOTE;
-                    updatedAt = OffsetDateTime.parse("2024-06-11T09:39:47.886Z");
-                    userId = "<value>";
-
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.PatchCrmEventResponse res = sdk.event.patchCrmEvent(req);
-
-            if (res.crmEvent != null) {
+            if (res.crmEvent().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [com.unifiedapi.unifiedto.models.operations.PatchCrmEventRequest](../../models/operations/PatchCrmEventRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [PatchCrmEventRequest](../../models/operations/PatchCrmEventRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchCrmEventResponse](../../models/operations/PatchCrmEventResponse.md)**
+**[PatchCrmEventResponse](../../models/operations/PatchCrmEventResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## removeCrmEvent
 
@@ -412,47 +282,59 @@ Remove an event
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveCrmEventRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveCrmEventResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveCrmEventRequest req = new RemoveCrmEventRequest(
-                "<value>",
-                "<value>");
+            RemoveCrmEventRequest req = RemoveCrmEventRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveCrmEventResponse res = sdk.event.removeCrmEvent(req);
+            RemoveCrmEventResponse res = sdk.event().removeCrmEvent()
+                .request(req)
+                .call();
 
-            if (res.statusCode == 200) {
-                // handle response
-            }
+            // handle response
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [com.unifiedapi.unifiedto.models.operations.RemoveCrmEventRequest](../../models/operations/RemoveCrmEventRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [RemoveCrmEventRequest](../../models/operations/RemoveCrmEventRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.RemoveCrmEventResponse](../../models/operations/RemoveCrmEventResponse.md)**
+**[RemoveCrmEventResponse](../../models/operations/RemoveCrmEventResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## updateCrmEvent
 
@@ -464,127 +346,58 @@ Update an event
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmEventRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmEventResponse;
-import com.unifiedapi.unifiedto.models.shared.CrmEvent;
-import com.unifiedapi.unifiedto.models.shared.CrmEventType;
-import com.unifiedapi.unifiedto.models.shared.Priority;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventCall;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventEmail;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventMeeting;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventNote;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTask;
-import com.unifiedapi.unifiedto.models.shared.PropertyCrmEventTaskStatus;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.UpdateCrmEventRequest req = new UpdateCrmEventRequest(
-                "<value>",
-                "<value>"){{
-                crmEvent = new CrmEvent(
-){{
-                    call = new PropertyCrmEventCall(
-){{
-                        description = "Intuitive incremental orchestration";
-                        duration = 4665.81d;
-                        startAt = OffsetDateTime.parse("2022-09-01T05:59:54.461Z");
+            UpdateCrmEventRequest req = UpdateCrmEventRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                    }};
-                    companyIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    contactIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    createdAt = OffsetDateTime.parse("2023-09-01T08:44:00.944Z");
-                    dealIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    email = new PropertyCrmEventEmail(
-){{
-                        attachmentFileIds = new String[]{{
-                            add("<value>"),
-                        }};
-                        body = "<value>";
-                        cc = new String[]{{
-                            add("<value>"),
-                        }};
-                        from = "<value>";
-                        subject = "<value>";
-                        to = new String[]{{
-                            add("<value>"),
-                        }};
+            UpdateCrmEventResponse res = sdk.event().updateCrmEvent()
+                .request(req)
+                .call();
 
-                    }};
-                    id = "<id>";
-                    leadIds = new String[]{{
-                        add("<value>"),
-                    }};
-                    meeting = new PropertyCrmEventMeeting(
-){{
-                        description = "Robust radical task-force";
-                        endAt = OffsetDateTime.parse("2024-01-04T13:11:49.866Z");
-                        startAt = OffsetDateTime.parse("2024-07-14T19:40:01.934Z");
-                        title = "<value>";
-
-                    }};
-                    note = new PropertyCrmEventNote(
-){{
-                        description = "Visionary actuating migration";
-                        title = "<value>";
-
-                    }};
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    task = new PropertyCrmEventTask(
-){{
-                        description = "Synergized neutral complexity";
-                        dueAt = OffsetDateTime.parse("2022-06-26T11:53:18.745Z");
-                        name = "<value>";
-                        priority = Priority.LOW;
-                        status = PropertyCrmEventTaskStatus.DEFERRED;
-
-                    }};
-                    type = CrmEventType.EMAIL;
-                    updatedAt = OffsetDateTime.parse("2023-07-15T02:27:54.214Z");
-                    userId = "<value>";
-
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.UpdateCrmEventResponse res = sdk.event.updateCrmEvent(req);
-
-            if (res.crmEvent != null) {
+            if (res.crmEvent().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [com.unifiedapi.unifiedto.models.operations.UpdateCrmEventRequest](../../models/operations/UpdateCrmEventRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [UpdateCrmEventRequest](../../models/operations/UpdateCrmEventRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.UpdateCrmEventResponse](../../models/operations/UpdateCrmEventResponse.md)**
+**[UpdateCrmEventResponse](../../models/operations/UpdateCrmEventResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |

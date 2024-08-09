@@ -1,5 +1,5 @@
 # Messaging
-(*messaging*)
+(*messaging()*)
 
 ### Available Operations
 
@@ -22,92 +22,60 @@ Create a message
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateMessagingMessageRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateMessagingMessageResponse;
-import com.unifiedapi.unifiedto.models.shared.MessagingAttachment;
-import com.unifiedapi.unifiedto.models.shared.MessagingMember;
-import com.unifiedapi.unifiedto.models.shared.MessagingMessage;
-import com.unifiedapi.unifiedto.models.shared.PropertyMessagingMessageAuthorMember;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.CreateMessagingMessageRequest req = new CreateMessagingMessageRequest(
-                "<value>"){{
-                messagingMessage = new MessagingMessage(
-){{
-                    attachments = new com.unifiedapi.unifiedto.models.shared.MessagingAttachment[]{{
-                        add(new MessagingAttachment(
-                        ){{}}),
-                    }};
-                    authorMember = new PropertyMessagingMessageAuthorMember(
-){{
-                        email = "Eugene54@gmail.com";
-                        name = "<value>";
-                        userId = "<value>";
+            CreateMessagingMessageRequest req = CreateMessagingMessageRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-                    }};
-                    channelId = "<value>";
-                    createdAt = "<value>";
-                    destinationMembers = new com.unifiedapi.unifiedto.models.shared.MessagingMember[]{{
-                        add(new MessagingMember(
-                        ){{}}),
-                    }};
-                    hiddenMembers = new com.unifiedapi.unifiedto.models.shared.MessagingMember[]{{
-                        add(new MessagingMember(
-                        ){{}}),
-                    }};
-                    id = "<id>";
-                    mentionedMembers = new com.unifiedapi.unifiedto.models.shared.MessagingMember[]{{
-                        add(new MessagingMember(
-                        ){{}}),
-                    }};
-                    message = "<value>";
-                    messageHtml = "<value>";
-                    parentMessageId = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    subject = "<value>";
-                    updatedAt = "<value>";
-                    webUrl = "<value>";
+            CreateMessagingMessageResponse res = sdk.messaging().createMessagingMessage()
+                .request(req)
+                .call();
 
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.CreateMessagingMessageResponse res = sdk.messaging.createMessagingMessage(req);
-
-            if (res.messagingMessage != null) {
+            if (res.messagingMessage().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.CreateMessagingMessageRequest](../../models/operations/CreateMessagingMessageRequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [CreateMessagingMessageRequest](../../models/operations/CreateMessagingMessageRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.CreateMessagingMessageResponse](../../models/operations/CreateMessagingMessageResponse.md)**
+**[CreateMessagingMessageResponse](../../models/operations/CreateMessagingMessageResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## getMessagingChannel
 
@@ -119,52 +87,61 @@ Retrieve a channel
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetMessagingChannelRequest;
 import com.unifiedapi.unifiedto.models.operations.GetMessagingChannelResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetMessagingChannelRequest req = new GetMessagingChannelRequest(
-                "<value>",
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
+            GetMessagingChannelRequest req = GetMessagingChannelRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            }};
+            GetMessagingChannelResponse res = sdk.messaging().getMessagingChannel()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.GetMessagingChannelResponse res = sdk.messaging.getMessagingChannel(req);
-
-            if (res.messagingChannel != null) {
+            if (res.messagingChannel().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.GetMessagingChannelRequest](../../models/operations/GetMessagingChannelRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [GetMessagingChannelRequest](../../models/operations/GetMessagingChannelRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetMessagingChannelResponse](../../models/operations/GetMessagingChannelResponse.md)**
+**[GetMessagingChannelResponse](../../models/operations/GetMessagingChannelResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## getMessagingMessage
 
@@ -176,52 +153,61 @@ Retrieve a message
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetMessagingMessageRequest;
 import com.unifiedapi.unifiedto.models.operations.GetMessagingMessageResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.GetMessagingMessageRequest req = new GetMessagingMessageRequest(
-                "<value>",
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
+            GetMessagingMessageRequest req = GetMessagingMessageRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            }};
+            GetMessagingMessageResponse res = sdk.messaging().getMessagingMessage()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.GetMessagingMessageResponse res = sdk.messaging.getMessagingMessage(req);
-
-            if (res.messagingMessage != null) {
+            if (res.messagingMessage().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [com.unifiedapi.unifiedto.models.operations.GetMessagingMessageRequest](../../models/operations/GetMessagingMessageRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [GetMessagingMessageRequest](../../models/operations/GetMessagingMessageRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.GetMessagingMessageResponse](../../models/operations/GetMessagingMessageResponse.md)**
+**[GetMessagingMessageResponse](../../models/operations/GetMessagingMessageResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listMessagingChannels
 
@@ -233,57 +219,60 @@ List all channels
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListMessagingChannelsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListMessagingChannelsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListMessagingChannelsRequest req = new ListMessagingChannelsRequest(
-                "<value>"){{
-                fields = new String[]{{
-                    add("<value>"),
-                }};
-                limit = 8836d;
-                offset = 9706.94d;
-                parentId = "<value>";
-                query = "<value>";
-                updatedGte = OffsetDateTime.parse("2022-12-12T05:55:39.243Z");
+            ListMessagingChannelsRequest req = ListMessagingChannelsRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-            }};
+            ListMessagingChannelsResponse res = sdk.messaging().listMessagingChannels()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListMessagingChannelsResponse res = sdk.messaging.listMessagingChannels(req);
-
-            if (res.messagingChannels != null) {
+            if (res.messagingChannels().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.ListMessagingChannelsRequest](../../models/operations/ListMessagingChannelsRequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [ListMessagingChannelsRequest](../../models/operations/ListMessagingChannelsRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListMessagingChannelsResponse](../../models/operations/ListMessagingChannelsResponse.md)**
+**[ListMessagingChannelsResponse](../../models/operations/ListMessagingChannelsResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## listMessagingMessages
 
@@ -295,58 +284,60 @@ List all messages
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListMessagingMessagesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListMessagingMessagesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.ListMessagingMessagesRequest req = new ListMessagingMessagesRequest(
-                "<value>"){{
-                channelId = "<value>";
-                fields = new String[]{{
-                    add("<value>"),
-                }};
-                limit = 4272.96d;
-                offset = 6110.39d;
-                parentId = "<value>";
-                query = "<value>";
-                updatedGte = OffsetDateTime.parse("2022-11-14T22:11:58.965Z");
+            ListMessagingMessagesRequest req = ListMessagingMessagesRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-            }};
+            ListMessagingMessagesResponse res = sdk.messaging().listMessagingMessages()
+                .request(req)
+                .call();
 
-            com.unifiedapi.unifiedto.models.operations.ListMessagingMessagesResponse res = sdk.messaging.listMessagingMessages(req);
-
-            if (res.messagingMessages != null) {
+            if (res.messagingMessages().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.ListMessagingMessagesRequest](../../models/operations/ListMessagingMessagesRequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [ListMessagingMessagesRequest](../../models/operations/ListMessagingMessagesRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.ListMessagingMessagesResponse](../../models/operations/ListMessagingMessagesResponse.md)**
+**[ListMessagingMessagesResponse](../../models/operations/ListMessagingMessagesResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## patchMessagingMessage
 
@@ -358,93 +349,61 @@ Update a message
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchMessagingMessageRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchMessagingMessageResponse;
-import com.unifiedapi.unifiedto.models.shared.MessagingAttachment;
-import com.unifiedapi.unifiedto.models.shared.MessagingMember;
-import com.unifiedapi.unifiedto.models.shared.MessagingMessage;
-import com.unifiedapi.unifiedto.models.shared.PropertyMessagingMessageAuthorMember;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.PatchMessagingMessageRequest req = new PatchMessagingMessageRequest(
-                "<value>",
-                "<value>"){{
-                messagingMessage = new MessagingMessage(
-){{
-                    attachments = new com.unifiedapi.unifiedto.models.shared.MessagingAttachment[]{{
-                        add(new MessagingAttachment(
-                        ){{}}),
-                    }};
-                    authorMember = new PropertyMessagingMessageAuthorMember(
-){{
-                        email = "Desmond.Pagac78@gmail.com";
-                        name = "<value>";
-                        userId = "<value>";
+            PatchMessagingMessageRequest req = PatchMessagingMessageRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                    }};
-                    channelId = "<value>";
-                    createdAt = "<value>";
-                    destinationMembers = new com.unifiedapi.unifiedto.models.shared.MessagingMember[]{{
-                        add(new MessagingMember(
-                        ){{}}),
-                    }};
-                    hiddenMembers = new com.unifiedapi.unifiedto.models.shared.MessagingMember[]{{
-                        add(new MessagingMember(
-                        ){{}}),
-                    }};
-                    id = "<id>";
-                    mentionedMembers = new com.unifiedapi.unifiedto.models.shared.MessagingMember[]{{
-                        add(new MessagingMember(
-                        ){{}}),
-                    }};
-                    message = "<value>";
-                    messageHtml = "<value>";
-                    parentMessageId = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    subject = "<value>";
-                    updatedAt = "<value>";
-                    webUrl = "<value>";
+            PatchMessagingMessageResponse res = sdk.messaging().patchMessagingMessage()
+                .request(req)
+                .call();
 
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.PatchMessagingMessageResponse res = sdk.messaging.patchMessagingMessage(req);
-
-            if (res.messagingMessage != null) {
+            if (res.messagingMessage().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [com.unifiedapi.unifiedto.models.operations.PatchMessagingMessageRequest](../../models/operations/PatchMessagingMessageRequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [PatchMessagingMessageRequest](../../models/operations/PatchMessagingMessageRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.PatchMessagingMessageResponse](../../models/operations/PatchMessagingMessageResponse.md)**
+**[PatchMessagingMessageResponse](../../models/operations/PatchMessagingMessageResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## removeMessagingMessage
 
@@ -456,47 +415,59 @@ Remove a message
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveMessagingMessageRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveMessagingMessageResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveMessagingMessageRequest req = new RemoveMessagingMessageRequest(
-                "<value>",
-                "<value>");
+            RemoveMessagingMessageRequest req = RemoveMessagingMessageRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-            com.unifiedapi.unifiedto.models.operations.RemoveMessagingMessageResponse res = sdk.messaging.removeMessagingMessage(req);
+            RemoveMessagingMessageResponse res = sdk.messaging().removeMessagingMessage()
+                .request(req)
+                .call();
 
-            if (res.statusCode == 200) {
-                // handle response
-            }
+            // handle response
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.RemoveMessagingMessageRequest](../../models/operations/RemoveMessagingMessageRequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [RemoveMessagingMessageRequest](../../models/operations/RemoveMessagingMessageRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.RemoveMessagingMessageResponse](../../models/operations/RemoveMessagingMessageResponse.md)**
+**[RemoveMessagingMessageResponse](../../models/operations/RemoveMessagingMessageResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 ## updateMessagingMessage
 
@@ -508,90 +479,58 @@ Update a message
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateMessagingMessageRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateMessagingMessageResponse;
-import com.unifiedapi.unifiedto.models.shared.MessagingAttachment;
-import com.unifiedapi.unifiedto.models.shared.MessagingMember;
-import com.unifiedapi.unifiedto.models.shared.MessagingMessage;
-import com.unifiedapi.unifiedto.models.shared.PropertyMessagingMessageAuthorMember;
 import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.UpdateMessagingMessageRequest req = new UpdateMessagingMessageRequest(
-                "<value>",
-                "<value>"){{
-                messagingMessage = new MessagingMessage(
-){{
-                    attachments = new com.unifiedapi.unifiedto.models.shared.MessagingAttachment[]{{
-                        add(new MessagingAttachment(
-                        ){{}}),
-                    }};
-                    authorMember = new PropertyMessagingMessageAuthorMember(
-){{
-                        email = "Johnpaul.Jenkins99@yahoo.com";
-                        name = "<value>";
-                        userId = "<value>";
+            UpdateMessagingMessageRequest req = UpdateMessagingMessageRequest.builder()
+                .connectionId("<value>")
+                .id("<value>")
+                .build();
 
-                    }};
-                    channelId = "<value>";
-                    createdAt = "<value>";
-                    destinationMembers = new com.unifiedapi.unifiedto.models.shared.MessagingMember[]{{
-                        add(new MessagingMember(
-                        ){{}}),
-                    }};
-                    hiddenMembers = new com.unifiedapi.unifiedto.models.shared.MessagingMember[]{{
-                        add(new MessagingMember(
-                        ){{}}),
-                    }};
-                    id = "<id>";
-                    mentionedMembers = new com.unifiedapi.unifiedto.models.shared.MessagingMember[]{{
-                        add(new MessagingMember(
-                        ){{}}),
-                    }};
-                    message = "<value>";
-                    messageHtml = "<value>";
-                    parentMessageId = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    subject = "<value>";
-                    updatedAt = "<value>";
-                    webUrl = "<value>";
+            UpdateMessagingMessageResponse res = sdk.messaging().updateMessagingMessage()
+                .request(req)
+                .call();
 
-                }};
-
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.UpdateMessagingMessageResponse res = sdk.messaging.updateMessagingMessage(req);
-
-            if (res.messagingMessage != null) {
+            if (res.messagingMessage().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [com.unifiedapi.unifiedto.models.operations.UpdateMessagingMessageRequest](../../models/operations/UpdateMessagingMessageRequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [UpdateMessagingMessageRequest](../../models/operations/UpdateMessagingMessageRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 
 ### Response
 
-**[com.unifiedapi.unifiedto.models.operations.UpdateMessagingMessageResponse](../../models/operations/UpdateMessagingMessageResponse.md)**
+**[UpdateMessagingMessageResponse](../../models/operations/UpdateMessagingMessageResponse.md)**
+### Errors
 
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |

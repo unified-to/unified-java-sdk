@@ -7,10 +7,38 @@
 <!-- Start SDK Installation [installation] -->
 ## SDK Installation
 
-### Gradle
+### Getting started
 
+JDK 11 or later is required.
+
+The samples below show how a published SDK artifact is used:
+
+Gradle:
 ```groovy
-implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.18.57'
+implementation 'com.unifiedapi:unifiedto:0.19.0'
+```
+
+Maven:
+```xml
+<dependency>
+    <groupId>com.unifiedapi</groupId>
+    <artifactId>unifiedto</artifactId>
+    <version>0.19.0</version>
+</dependency>
+```
+
+### How to build
+After cloning the git repository to your file system you can build the SDK artifact from source to the `build` directory by running `./gradlew build` on *nix systems or `gradlew.bat` on Windows systems.
+
+If you wish to build from source and publish the SDK artifact to your local Maven repository (on your filesystem) then use the following command (after cloning the git repo locally):
+
+On *nix:
+```bash
+./gradlew publishToMavenLocal -Pskip.signing
+```
+On Windows:
+```bash
+gradlew.bat publishToMavenLocal -Pskip.signing
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -23,57 +51,41 @@ implementation 'com.unifiedapi.unifiedto:Unified-java-sdk:0.18.57'
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse;
-import com.unifiedapi.unifiedto.models.shared.AccountingAccount;
 import com.unifiedapi.unifiedto.models.shared.Security;
-import com.unifiedapi.unifiedto.models.shared.Status;
-import com.unifiedapi.unifiedto.models.shared.Type;
-import java.time.OffsetDateTime;
+import java.lang.Exception;
 
 public class Application {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         try {
             UnifiedTo sdk = UnifiedTo.builder()
-                .setSecurity(new Security(
-                ){{
-                    jwt = "<YOUR_API_KEY_HERE>";
-                }})
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
                 .build();
 
-            com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest req = new CreateAccountingAccountRequest(
-                "<value>"){{
-                accountingAccount = new AccountingAccount(
-){{
-                    balance = 6602.56d;
-                    createdAt = OffsetDateTime.parse("2023-09-02T22:12:31.771Z");
-                    currency = "Saint Helena Pound";
-                    customerDefinedCode = "<value>";
-                    description = "Cross-group zero defect task-force";
-                    id = "<id>";
-                    isPayable = false;
-                    name = "<value>";
-                    parentAccountId = "<value>";
-                    raw = new java.util.HashMap<String, java.lang.Object>(
-                    ){{
-                        put("key", "<value>");
-                    }};
-                    status = Status.ACTIVE;
-                    type = Type.EQUITY;
-                    updatedAt = OffsetDateTime.parse("2023-09-09T23:41:51.681Z");
+            CreateAccountingAccountRequest req = CreateAccountingAccountRequest.builder()
+                .connectionId("<value>")
+                .build();
 
-                }};
+            CreateAccountingAccountResponse res = sdk.accounting().createAccountingAccount()
+                .request(req)
+                .call();
 
-            }};
-
-            com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse res = sdk.accounting.createAccountingAccount(req);
-
-            if (res.accountingAccount != null) {
+            if (res.accountingAccount().isPresent()) {
                 // handle response
             }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
         } catch (Exception e) {
             // handle exception
+            throw e;
         }
+
     }
 }
 ```
@@ -82,7 +94,7 @@ public class Application {
 <!-- Start Available Resources and Operations [operations] -->
 ## Available Resources and Operations
 
-### [accounting](docs/sdks/accounting/README.md)
+### [accounting()](docs/sdks/accounting/README.md)
 
 * [createAccountingAccount](docs/sdks/accounting/README.md#createaccountingaccount) - Create an account
 * [createAccountingContact](docs/sdks/accounting/README.md#createaccountingcontact) - Create a contact
@@ -123,7 +135,7 @@ public class Application {
 * [updateAccountingTaxrate](docs/sdks/accounting/README.md#updateaccountingtaxrate) - Update a taxrate
 * [updateAccountingTransaction](docs/sdks/accounting/README.md#updateaccountingtransaction) - Update a transaction
 
-### [account](docs/sdks/account/README.md)
+### [account()](docs/sdks/account/README.md)
 
 * [createAccountingAccount](docs/sdks/account/README.md#createaccountingaccount) - Create an account
 * [getAccountingAccount](docs/sdks/account/README.md#getaccountingaccount) - Retrieve an account
@@ -132,7 +144,7 @@ public class Application {
 * [removeAccountingAccount](docs/sdks/account/README.md#removeaccountingaccount) - Remove an account
 * [updateAccountingAccount](docs/sdks/account/README.md#updateaccountingaccount) - Update an account
 
-### [contact](docs/sdks/contact/README.md)
+### [contact()](docs/sdks/contact/README.md)
 
 * [createAccountingContact](docs/sdks/contact/README.md#createaccountingcontact) - Create a contact
 * [createCrmContact](docs/sdks/contact/README.md#createcrmcontact) - Create a contact
@@ -153,7 +165,7 @@ public class Application {
 * [updateCrmContact](docs/sdks/contact/README.md#updatecrmcontact) - Update a contact
 * [updateUcContact](docs/sdks/contact/README.md#updateuccontact) - Update a contact
 
-### [invoice](docs/sdks/invoice/README.md)
+### [invoice()](docs/sdks/invoice/README.md)
 
 * [createAccountingInvoice](docs/sdks/invoice/README.md#createaccountinginvoice) - Create an invoice
 * [getAccountingInvoice](docs/sdks/invoice/README.md#getaccountinginvoice) - Retrieve an invoice
@@ -162,7 +174,7 @@ public class Application {
 * [removeAccountingInvoice](docs/sdks/invoice/README.md#removeaccountinginvoice) - Remove an invoice
 * [updateAccountingInvoice](docs/sdks/invoice/README.md#updateaccountinginvoice) - Update an invoice
 
-### [journal](docs/sdks/journal/README.md)
+### [journal()](docs/sdks/journal/README.md)
 
 * [createAccountingJournal](docs/sdks/journal/README.md#createaccountingjournal) - Create a journal
 * [getAccountingJournal](docs/sdks/journal/README.md#getaccountingjournal) - Retrieve a journal
@@ -171,12 +183,12 @@ public class Application {
 * [removeAccountingJournal](docs/sdks/journal/README.md#removeaccountingjournal) - Remove a journal
 * [updateAccountingJournal](docs/sdks/journal/README.md#updateaccountingjournal) - Update a journal
 
-### [organization](docs/sdks/organization/README.md)
+### [organization()](docs/sdks/organization/README.md)
 
 * [getAccountingOrganization](docs/sdks/organization/README.md#getaccountingorganization) - Retrieve an organization
 * [listAccountingOrganizations](docs/sdks/organization/README.md#listaccountingorganizations) - List all organizations
 
-### [taxrate](docs/sdks/taxrate/README.md)
+### [taxrate()](docs/sdks/taxrate/README.md)
 
 * [createAccountingTaxrate](docs/sdks/taxrate/README.md#createaccountingtaxrate) - Create a taxrate
 * [getAccountingTaxrate](docs/sdks/taxrate/README.md#getaccountingtaxrate) - Retrieve a taxrate
@@ -185,7 +197,7 @@ public class Application {
 * [removeAccountingTaxrate](docs/sdks/taxrate/README.md#removeaccountingtaxrate) - Remove a taxrate
 * [updateAccountingTaxrate](docs/sdks/taxrate/README.md#updateaccountingtaxrate) - Update a taxrate
 
-### [transaction](docs/sdks/transaction/README.md)
+### [transaction()](docs/sdks/transaction/README.md)
 
 * [createAccountingTransaction](docs/sdks/transaction/README.md#createaccountingtransaction) - Create a transaction
 * [getAccountingTransaction](docs/sdks/transaction/README.md#getaccountingtransaction) - Retrieve a transaction
@@ -194,7 +206,7 @@ public class Application {
 * [removeAccountingTransaction](docs/sdks/transaction/README.md#removeaccountingtransaction) - Remove a transaction
 * [updateAccountingTransaction](docs/sdks/transaction/README.md#updateaccountingtransaction) - Update a transaction
 
-### [ats](docs/sdks/ats/README.md)
+### [ats()](docs/sdks/ats/README.md)
 
 * [createAtsActivity](docs/sdks/ats/README.md#createatsactivity) - Create an activity
 * [createAtsApplication](docs/sdks/ats/README.md#createatsapplication) - Create an application
@@ -242,7 +254,7 @@ public class Application {
 * [updateAtsJob](docs/sdks/ats/README.md#updateatsjob) - Update a job
 * [updateAtsScorecard](docs/sdks/ats/README.md#updateatsscorecard) - Update a scorecard
 
-### [activity](docs/sdks/activity/README.md)
+### [activity()](docs/sdks/activity/README.md)
 
 * [createAtsActivity](docs/sdks/activity/README.md#createatsactivity) - Create an activity
 * [getAtsActivity](docs/sdks/activity/README.md#getatsactivity) - Retrieve an activity
@@ -251,7 +263,7 @@ public class Application {
 * [removeAtsActivity](docs/sdks/activity/README.md#removeatsactivity) - Remove an activity
 * [updateAtsActivity](docs/sdks/activity/README.md#updateatsactivity) - Update an activity
 
-### [application](docs/sdks/application/README.md)
+### [application()](docs/sdks/application/README.md)
 
 * [createAtsApplication](docs/sdks/application/README.md#createatsapplication) - Create an application
 * [getAtsApplication](docs/sdks/application/README.md#getatsapplication) - Retrieve an application
@@ -260,11 +272,11 @@ public class Application {
 * [removeAtsApplication](docs/sdks/application/README.md#removeatsapplication) - Remove an application
 * [updateAtsApplication](docs/sdks/application/README.md#updateatsapplication) - Update an application
 
-### [applicationstatus](docs/sdks/applicationstatus/README.md)
+### [applicationstatus()](docs/sdks/applicationstatus/README.md)
 
 * [listAtsApplicationstatuses](docs/sdks/applicationstatus/README.md#listatsapplicationstatuses) - List all applicationstatuses
 
-### [candidate](docs/sdks/candidate/README.md)
+### [candidate()](docs/sdks/candidate/README.md)
 
 * [createAtsCandidate](docs/sdks/candidate/README.md#createatscandidate) - Create a candidate
 * [getAtsCandidate](docs/sdks/candidate/README.md#getatscandidate) - Retrieve a candidate
@@ -273,7 +285,7 @@ public class Application {
 * [removeAtsCandidate](docs/sdks/candidate/README.md#removeatscandidate) - Remove a candidate
 * [updateAtsCandidate](docs/sdks/candidate/README.md#updateatscandidate) - Update a candidate
 
-### [company](docs/sdks/company/README.md)
+### [company()](docs/sdks/company/README.md)
 
 * [createCrmCompany](docs/sdks/company/README.md#createcrmcompany) - Create a company
 * [createHrisCompany](docs/sdks/company/README.md#createhriscompany) - Create a company
@@ -291,7 +303,7 @@ public class Application {
 * [updateCrmCompany](docs/sdks/company/README.md#updatecrmcompany) - Update a company
 * [updateHrisCompany](docs/sdks/company/README.md#updatehriscompany) - Update a company
 
-### [document](docs/sdks/document/README.md)
+### [document()](docs/sdks/document/README.md)
 
 * [createAtsDocument](docs/sdks/document/README.md#createatsdocument) - Create a document
 * [getAtsDocument](docs/sdks/document/README.md#getatsdocument) - Retrieve a document
@@ -300,7 +312,7 @@ public class Application {
 * [removeAtsDocument](docs/sdks/document/README.md#removeatsdocument) - Remove a document
 * [updateAtsDocument](docs/sdks/document/README.md#updateatsdocument) - Update a document
 
-### [interview](docs/sdks/interview/README.md)
+### [interview()](docs/sdks/interview/README.md)
 
 * [createAtsInterview](docs/sdks/interview/README.md#createatsinterview) - Create an interview
 * [getAtsInterview](docs/sdks/interview/README.md#getatsinterview) - Retrieve an interview
@@ -309,7 +321,7 @@ public class Application {
 * [removeAtsInterview](docs/sdks/interview/README.md#removeatsinterview) - Remove an interview
 * [updateAtsInterview](docs/sdks/interview/README.md#updateatsinterview) - Update an interview
 
-### [job](docs/sdks/job/README.md)
+### [job()](docs/sdks/job/README.md)
 
 * [createAtsJob](docs/sdks/job/README.md#createatsjob) - Create a job
 * [getAtsJob](docs/sdks/job/README.md#getatsjob) - Retrieve a job
@@ -318,7 +330,7 @@ public class Application {
 * [removeAtsJob](docs/sdks/job/README.md#removeatsjob) - Remove a job
 * [updateAtsJob](docs/sdks/job/README.md#updateatsjob) - Update a job
 
-### [scorecard](docs/sdks/scorecard/README.md)
+### [scorecard()](docs/sdks/scorecard/README.md)
 
 * [createAtsScorecard](docs/sdks/scorecard/README.md#createatsscorecard) - Create a scorecard
 * [getAtsScorecard](docs/sdks/scorecard/README.md#getatsscorecard) - Retrieve a scorecard
@@ -327,7 +339,7 @@ public class Application {
 * [removeAtsScorecard](docs/sdks/scorecard/README.md#removeatsscorecard) - Remove a scorecard
 * [updateAtsScorecard](docs/sdks/scorecard/README.md#updateatsscorecard) - Update a scorecard
 
-### [commerce](docs/sdks/commerce/README.md)
+### [commerce()](docs/sdks/commerce/README.md)
 
 * [createCommerceCollection](docs/sdks/commerce/README.md#createcommercecollection) - Create a collection
 * [createCommerceInventory](docs/sdks/commerce/README.md#createcommerceinventory) - Create an inventory
@@ -354,7 +366,7 @@ public class Application {
 * [updateCommerceItem](docs/sdks/commerce/README.md#updatecommerceitem) - Update an item
 * [updateCommerceLocation](docs/sdks/commerce/README.md#updatecommercelocation) - Update a location
 
-### [collection](docs/sdks/collection/README.md)
+### [collection()](docs/sdks/collection/README.md)
 
 * [createCommerceCollection](docs/sdks/collection/README.md#createcommercecollection) - Create a collection
 * [getCommerceCollection](docs/sdks/collection/README.md#getcommercecollection) - Retrieve a collection
@@ -363,7 +375,7 @@ public class Application {
 * [removeCommerceCollection](docs/sdks/collection/README.md#removecommercecollection) - Remove a collection
 * [updateCommerceCollection](docs/sdks/collection/README.md#updatecommercecollection) - Update a collection
 
-### [inventory](docs/sdks/inventory/README.md)
+### [inventory()](docs/sdks/inventory/README.md)
 
 * [createCommerceInventory](docs/sdks/inventory/README.md#createcommerceinventory) - Create an inventory
 * [getCommerceInventory](docs/sdks/inventory/README.md#getcommerceinventory) - Retrieve an inventory
@@ -372,7 +384,7 @@ public class Application {
 * [removeCommerceInventory](docs/sdks/inventory/README.md#removecommerceinventory) - Remove an inventory
 * [updateCommerceInventory](docs/sdks/inventory/README.md#updatecommerceinventory) - Update an inventory
 
-### [item](docs/sdks/item/README.md)
+### [item()](docs/sdks/item/README.md)
 
 * [createCommerceItem](docs/sdks/item/README.md#createcommerceitem) - Create an item
 * [getCommerceItem](docs/sdks/item/README.md#getcommerceitem) - Retrieve an item
@@ -381,7 +393,7 @@ public class Application {
 * [removeCommerceItem](docs/sdks/item/README.md#removecommerceitem) - Remove an item
 * [updateCommerceItem](docs/sdks/item/README.md#updatecommerceitem) - Update an item
 
-### [location](docs/sdks/location/README.md)
+### [location()](docs/sdks/location/README.md)
 
 * [createCommerceLocation](docs/sdks/location/README.md#createcommercelocation) - Create a location
 * [createHrisLocation](docs/sdks/location/README.md#createhrislocation) - Create a location
@@ -396,7 +408,7 @@ public class Application {
 * [updateCommerceLocation](docs/sdks/location/README.md#updatecommercelocation) - Update a location
 * [updateHrisLocation](docs/sdks/location/README.md#updatehrislocation) - Update a location
 
-### [crm](docs/sdks/crm/README.md)
+### [crm()](docs/sdks/crm/README.md)
 
 * [createCrmCompany](docs/sdks/crm/README.md#createcrmcompany) - Create a company
 * [createCrmContact](docs/sdks/crm/README.md#createcrmcontact) - Create a contact
@@ -435,7 +447,7 @@ public class Application {
 * [updateCrmLead](docs/sdks/crm/README.md#updatecrmlead) - Update a lead
 * [updateCrmPipeline](docs/sdks/crm/README.md#updatecrmpipeline) - Update a pipeline
 
-### [deal](docs/sdks/deal/README.md)
+### [deal()](docs/sdks/deal/README.md)
 
 * [createCrmDeal](docs/sdks/deal/README.md#createcrmdeal) - Create a deal
 * [getCrmDeal](docs/sdks/deal/README.md#getcrmdeal) - Retrieve a deal
@@ -444,7 +456,7 @@ public class Application {
 * [removeCrmDeal](docs/sdks/deal/README.md#removecrmdeal) - Remove a deal
 * [updateCrmDeal](docs/sdks/deal/README.md#updatecrmdeal) - Update a deal
 
-### [event](docs/sdks/event/README.md)
+### [event()](docs/sdks/event/README.md)
 
 * [createCrmEvent](docs/sdks/event/README.md#createcrmevent) - Create an event
 * [getCrmEvent](docs/sdks/event/README.md#getcrmevent) - Retrieve an event
@@ -453,7 +465,7 @@ public class Application {
 * [removeCrmEvent](docs/sdks/event/README.md#removecrmevent) - Remove an event
 * [updateCrmEvent](docs/sdks/event/README.md#updatecrmevent) - Update an event
 
-### [lead](docs/sdks/lead/README.md)
+### [lead()](docs/sdks/lead/README.md)
 
 * [createCrmLead](docs/sdks/lead/README.md#createcrmlead) - Create a lead
 * [getCrmLead](docs/sdks/lead/README.md#getcrmlead) - Retrieve a lead
@@ -462,7 +474,7 @@ public class Application {
 * [removeCrmLead](docs/sdks/lead/README.md#removecrmlead) - Remove a lead
 * [updateCrmLead](docs/sdks/lead/README.md#updatecrmlead) - Update a lead
 
-### [pipeline](docs/sdks/pipeline/README.md)
+### [pipeline()](docs/sdks/pipeline/README.md)
 
 * [createCrmPipeline](docs/sdks/pipeline/README.md#createcrmpipeline) - Create a pipeline
 * [getCrmPipeline](docs/sdks/pipeline/README.md#getcrmpipeline) - Retrieve a pipeline
@@ -471,29 +483,29 @@ public class Application {
 * [removeCrmPipeline](docs/sdks/pipeline/README.md#removecrmpipeline) - Remove a pipeline
 * [updateCrmPipeline](docs/sdks/pipeline/README.md#updatecrmpipeline) - Update a pipeline
 
-### [enrich](docs/sdks/enrich/README.md)
+### [enrich()](docs/sdks/enrich/README.md)
 
 * [listEnrichCompanies](docs/sdks/enrich/README.md#listenrichcompanies) - Retrieve enrichment information for a company
 * [listEnrichPeople](docs/sdks/enrich/README.md#listenrichpeople) - Retrieve enrichment information for a person
 
-### [person](docs/sdks/person/README.md)
+### [person()](docs/sdks/person/README.md)
 
 * [listEnrichPeople](docs/sdks/person/README.md#listenrichpeople) - Retrieve enrichment information for a person
 
-### [genai](docs/sdks/genai/README.md)
+### [genai()](docs/sdks/genai/README.md)
 
 * [createGenaiPrompt](docs/sdks/genai/README.md#creategenaiprompt) - Create a prompt
 * [listGenaiModels](docs/sdks/genai/README.md#listgenaimodels) - List all models
 
-### [model](docs/sdks/model/README.md)
+### [model()](docs/sdks/model/README.md)
 
 * [listGenaiModels](docs/sdks/model/README.md#listgenaimodels) - List all models
 
-### [prompt](docs/sdks/prompt/README.md)
+### [prompt()](docs/sdks/prompt/README.md)
 
 * [createGenaiPrompt](docs/sdks/prompt/README.md#creategenaiprompt) - Create a prompt
 
-### [hris](docs/sdks/hris/README.md)
+### [hris()](docs/sdks/hris/README.md)
 
 * [createHrisCompany](docs/sdks/hris/README.md#createhriscompany) - Create a company
 * [createHrisEmployee](docs/sdks/hris/README.md#createhrisemployee) - Create an employee
@@ -524,7 +536,7 @@ public class Application {
 * [updateHrisGroup](docs/sdks/hris/README.md#updatehrisgroup) - Update a group
 * [updateHrisLocation](docs/sdks/hris/README.md#updatehrislocation) - Update a location
 
-### [employee](docs/sdks/employee/README.md)
+### [employee()](docs/sdks/employee/README.md)
 
 * [createHrisEmployee](docs/sdks/employee/README.md#createhrisemployee) - Create an employee
 * [getHrisEmployee](docs/sdks/employee/README.md#gethrisemployee) - Retrieve an employee
@@ -533,7 +545,7 @@ public class Application {
 * [removeHrisEmployee](docs/sdks/employee/README.md#removehrisemployee) - Remove an employee
 * [updateHrisEmployee](docs/sdks/employee/README.md#updatehrisemployee) - Update an employee
 
-### [group](docs/sdks/group/README.md)
+### [group()](docs/sdks/group/README.md)
 
 * [createHrisGroup](docs/sdks/group/README.md#createhrisgroup) - Create a group
 * [getHrisGroup](docs/sdks/group/README.md#gethrisgroup) - Retrieve a group
@@ -542,17 +554,17 @@ public class Application {
 * [removeHrisGroup](docs/sdks/group/README.md#removehrisgroup) - Remove a group
 * [updateHrisGroup](docs/sdks/group/README.md#updatehrisgroup) - Update a group
 
-### [payslip](docs/sdks/payslip/README.md)
+### [payslip()](docs/sdks/payslip/README.md)
 
 * [getHrisPayslip](docs/sdks/payslip/README.md#gethrispayslip) - Retrieve a payslip
 * [listHrisPayslips](docs/sdks/payslip/README.md#listhrispayslips) - List all payslips
 
-### [timeoff](docs/sdks/timeoff/README.md)
+### [timeoff()](docs/sdks/timeoff/README.md)
 
 * [getHrisTimeoff](docs/sdks/timeoff/README.md#gethristimeoff) - Retrieve a timeoff
 * [listHrisTimeoffs](docs/sdks/timeoff/README.md#listhristimeoffs) - List all timeoffs
 
-### [kms](docs/sdks/kms/README.md)
+### [kms()](docs/sdks/kms/README.md)
 
 * [createKmsPage](docs/sdks/kms/README.md#createkmspage) - Create a page
 * [createKmsSpace](docs/sdks/kms/README.md#createkmsspace) - Create a space
@@ -567,7 +579,7 @@ public class Application {
 * [updateKmsPage](docs/sdks/kms/README.md#updatekmspage) - Update a page
 * [updateKmsSpace](docs/sdks/kms/README.md#updatekmsspace) - Update a space
 
-### [page](docs/sdks/page/README.md)
+### [page()](docs/sdks/page/README.md)
 
 * [createKmsPage](docs/sdks/page/README.md#createkmspage) - Create a page
 * [getKmsPage](docs/sdks/page/README.md#getkmspage) - Retrieve a page
@@ -576,7 +588,7 @@ public class Application {
 * [removeKmsPage](docs/sdks/page/README.md#removekmspage) - Remove a page
 * [updateKmsPage](docs/sdks/page/README.md#updatekmspage) - Update a page
 
-### [space](docs/sdks/space/README.md)
+### [space()](docs/sdks/space/README.md)
 
 * [createKmsSpace](docs/sdks/space/README.md#createkmsspace) - Create a space
 * [getKmsSpace](docs/sdks/space/README.md#getkmsspace) - Retrieve a space
@@ -585,7 +597,7 @@ public class Application {
 * [removeKmsSpace](docs/sdks/space/README.md#removekmsspace) - Remove a space
 * [updateKmsSpace](docs/sdks/space/README.md#updatekmsspace) - Update a space
 
-### [martech](docs/sdks/martech/README.md)
+### [martech()](docs/sdks/martech/README.md)
 
 * [createMartechList](docs/sdks/martech/README.md#createmartechlist) - Create a list
 * [createMartechMember](docs/sdks/martech/README.md#createmartechmember) - Create a member
@@ -600,7 +612,7 @@ public class Application {
 * [updateMartechList](docs/sdks/martech/README.md#updatemartechlist) - Update a list
 * [updateMartechMember](docs/sdks/martech/README.md#updatemartechmember) - Update a member
 
-### [list](docs/sdks/list/README.md)
+### [list()](docs/sdks/list/README.md)
 
 * [createMartechList](docs/sdks/list/README.md#createmartechlist) - Create a list
 * [getMartechList](docs/sdks/list/README.md#getmartechlist) - Retrieve a list
@@ -609,7 +621,7 @@ public class Application {
 * [removeMartechList](docs/sdks/list/README.md#removemartechlist) - Remove a list
 * [updateMartechList](docs/sdks/list/README.md#updatemartechlist) - Update a list
 
-### [member](docs/sdks/member/README.md)
+### [member()](docs/sdks/member/README.md)
 
 * [createMartechMember](docs/sdks/member/README.md#createmartechmember) - Create a member
 * [getMartechMember](docs/sdks/member/README.md#getmartechmember) - Retrieve a member
@@ -618,7 +630,7 @@ public class Application {
 * [removeMartechMember](docs/sdks/member/README.md#removemartechmember) - Remove a member
 * [updateMartechMember](docs/sdks/member/README.md#updatemartechmember) - Update a member
 
-### [messaging](docs/sdks/messaging/README.md)
+### [messaging()](docs/sdks/messaging/README.md)
 
 * [createMessagingMessage](docs/sdks/messaging/README.md#createmessagingmessage) - Create a message
 * [getMessagingChannel](docs/sdks/messaging/README.md#getmessagingchannel) - Retrieve a channel
@@ -629,12 +641,12 @@ public class Application {
 * [removeMessagingMessage](docs/sdks/messaging/README.md#removemessagingmessage) - Remove a message
 * [updateMessagingMessage](docs/sdks/messaging/README.md#updatemessagingmessage) - Update a message
 
-### [channel](docs/sdks/channel/README.md)
+### [channel()](docs/sdks/channel/README.md)
 
 * [getMessagingChannel](docs/sdks/channel/README.md#getmessagingchannel) - Retrieve a channel
 * [listMessagingChannels](docs/sdks/channel/README.md#listmessagingchannels) - List all channels
 
-### [message](docs/sdks/message/README.md)
+### [message()](docs/sdks/message/README.md)
 
 * [createMessagingMessage](docs/sdks/message/README.md#createmessagingmessage) - Create a message
 * [getMessagingMessage](docs/sdks/message/README.md#getmessagingmessage) - Retrieve a message
@@ -643,7 +655,7 @@ public class Application {
 * [removeMessagingMessage](docs/sdks/message/README.md#removemessagingmessage) - Remove a message
 * [updateMessagingMessage](docs/sdks/message/README.md#updatemessagingmessage) - Update a message
 
-### [passthrough](docs/sdks/passthrough/README.md)
+### [passthrough()](docs/sdks/passthrough/README.md)
 
 * [createPassthrough](docs/sdks/passthrough/README.md#createpassthrough) - Passthrough POST
 * [listPassthroughs](docs/sdks/passthrough/README.md#listpassthroughs) - Passthrough GET
@@ -651,7 +663,7 @@ public class Application {
 * [removePassthrough](docs/sdks/passthrough/README.md#removepassthrough) - Passthrough DELETE
 * [updatePassthrough](docs/sdks/passthrough/README.md#updatepassthrough) - Passthrough PUT
 
-### [payment](docs/sdks/payment/README.md)
+### [payment()](docs/sdks/payment/README.md)
 
 * [createPaymentLink](docs/sdks/payment/README.md#createpaymentlink) - Create a link
 * [createPaymentPayment](docs/sdks/payment/README.md#createpaymentpayment) - Create a payment
@@ -670,7 +682,7 @@ public class Application {
 * [updatePaymentLink](docs/sdks/payment/README.md#updatepaymentlink) - Update a link
 * [updatePaymentPayment](docs/sdks/payment/README.md#updatepaymentpayment) - Update a payment
 
-### [link](docs/sdks/link/README.md)
+### [link()](docs/sdks/link/README.md)
 
 * [createPaymentLink](docs/sdks/link/README.md#createpaymentlink) - Create a link
 * [getPaymentLink](docs/sdks/link/README.md#getpaymentlink) - Retrieve a link
@@ -679,17 +691,17 @@ public class Application {
 * [removePaymentLink](docs/sdks/link/README.md#removepaymentlink) - Remove a link
 * [updatePaymentLink](docs/sdks/link/README.md#updatepaymentlink) - Update a link
 
-### [payout](docs/sdks/payout/README.md)
+### [payout()](docs/sdks/payout/README.md)
 
 * [getPaymentPayout](docs/sdks/payout/README.md#getpaymentpayout) - Retrieve a payout
 * [listPaymentPayouts](docs/sdks/payout/README.md#listpaymentpayouts) - List all payouts
 
-### [refund](docs/sdks/refund/README.md)
+### [refund()](docs/sdks/refund/README.md)
 
 * [getPaymentRefund](docs/sdks/refund/README.md#getpaymentrefund) - Retrieve a refund
 * [listPaymentRefunds](docs/sdks/refund/README.md#listpaymentrefunds) - List all refunds
 
-### [storage](docs/sdks/storage/README.md)
+### [storage()](docs/sdks/storage/README.md)
 
 * [createStorageFile](docs/sdks/storage/README.md#createstoragefile) - Create a file
 * [getStorageFile](docs/sdks/storage/README.md#getstoragefile) - Retrieve a file
@@ -698,7 +710,7 @@ public class Application {
 * [removeStorageFile](docs/sdks/storage/README.md#removestoragefile) - Remove a file
 * [updateStorageFile](docs/sdks/storage/README.md#updatestoragefile) - Update a file
 
-### [file](docs/sdks/file/README.md)
+### [file()](docs/sdks/file/README.md)
 
 * [createStorageFile](docs/sdks/file/README.md#createstoragefile) - Create a file
 * [getStorageFile](docs/sdks/file/README.md#getstoragefile) - Retrieve a file
@@ -707,7 +719,7 @@ public class Application {
 * [removeStorageFile](docs/sdks/file/README.md#removestoragefile) - Remove a file
 * [updateStorageFile](docs/sdks/file/README.md#updatestoragefile) - Update a file
 
-### [task](docs/sdks/task/README.md)
+### [task()](docs/sdks/task/README.md)
 
 * [createTaskProject](docs/sdks/task/README.md#createtaskproject) - Create a project
 * [createTaskTask](docs/sdks/task/README.md#createtasktask) - Create a task
@@ -722,7 +734,7 @@ public class Application {
 * [updateTaskProject](docs/sdks/task/README.md#updatetaskproject) - Update a project
 * [updateTaskTask](docs/sdks/task/README.md#updatetasktask) - Update a task
 
-### [project](docs/sdks/project/README.md)
+### [project()](docs/sdks/project/README.md)
 
 * [createTaskProject](docs/sdks/project/README.md#createtaskproject) - Create a project
 * [getTaskProject](docs/sdks/project/README.md#gettaskproject) - Retrieve a project
@@ -731,7 +743,7 @@ public class Application {
 * [removeTaskProject](docs/sdks/project/README.md#removetaskproject) - Remove a project
 * [updateTaskProject](docs/sdks/project/README.md#updatetaskproject) - Update a project
 
-### [ticketing](docs/sdks/ticketing/README.md)
+### [ticketing()](docs/sdks/ticketing/README.md)
 
 * [createTicketingCustomer](docs/sdks/ticketing/README.md#createticketingcustomer) - Create a customer
 * [createTicketingNote](docs/sdks/ticketing/README.md#createticketingnote) - Create a note
@@ -752,7 +764,7 @@ public class Application {
 * [updateTicketingNote](docs/sdks/ticketing/README.md#updateticketingnote) - Update a note
 * [updateTicketingTicket](docs/sdks/ticketing/README.md#updateticketingticket) - Update a ticket
 
-### [customer](docs/sdks/customer/README.md)
+### [customer()](docs/sdks/customer/README.md)
 
 * [createTicketingCustomer](docs/sdks/customer/README.md#createticketingcustomer) - Create a customer
 * [getTicketingCustomer](docs/sdks/customer/README.md#getticketingcustomer) - Retrieve a customer
@@ -761,7 +773,7 @@ public class Application {
 * [removeTicketingCustomer](docs/sdks/customer/README.md#removeticketingcustomer) - Remove a customer
 * [updateTicketingCustomer](docs/sdks/customer/README.md#updateticketingcustomer) - Update a customer
 
-### [note](docs/sdks/note/README.md)
+### [note()](docs/sdks/note/README.md)
 
 * [createTicketingNote](docs/sdks/note/README.md#createticketingnote) - Create a note
 * [getTicketingNote](docs/sdks/note/README.md#getticketingnote) - Retrieve a note
@@ -770,7 +782,7 @@ public class Application {
 * [removeTicketingNote](docs/sdks/note/README.md#removeticketingnote) - Remove a note
 * [updateTicketingNote](docs/sdks/note/README.md#updateticketingnote) - Update a note
 
-### [ticket](docs/sdks/ticket/README.md)
+### [ticket()](docs/sdks/ticket/README.md)
 
 * [createTicketingTicket](docs/sdks/ticket/README.md#createticketingticket) - Create a ticket
 * [getTicketingTicket](docs/sdks/ticket/README.md#getticketingticket) - Retrieve a ticket
@@ -779,7 +791,7 @@ public class Application {
 * [removeTicketingTicket](docs/sdks/ticket/README.md#removeticketingticket) - Remove a ticket
 * [updateTicketingTicket](docs/sdks/ticket/README.md#updateticketingticket) - Update a ticket
 
-### [uc](docs/sdks/uc/README.md)
+### [uc()](docs/sdks/uc/README.md)
 
 * [createUcContact](docs/sdks/uc/README.md#createuccontact) - Create a contact
 * [getUcContact](docs/sdks/uc/README.md#getuccontact) - Retrieve a contact
@@ -789,11 +801,11 @@ public class Application {
 * [removeUcContact](docs/sdks/uc/README.md#removeuccontact) - Remove a contact
 * [updateUcContact](docs/sdks/uc/README.md#updateuccontact) - Update a contact
 
-### [call](docs/sdks/call/README.md)
+### [call()](docs/sdks/call/README.md)
 
 * [listUcCalls](docs/sdks/call/README.md#listuccalls) - List all calls
 
-### [unified](docs/sdks/unified/README.md)
+### [unified()](docs/sdks/unified/README.md)
 
 * [createUnifiedConnection](docs/sdks/unified/README.md#createunifiedconnection) - Create connection
 * [createUnifiedWebhook](docs/sdks/unified/README.md#createunifiedwebhook) - Create webhook subscription
@@ -814,12 +826,12 @@ public class Application {
 * [updateUnifiedConnection](docs/sdks/unified/README.md#updateunifiedconnection) - Update connection
 * [updateUnifiedWebhookTrigger](docs/sdks/unified/README.md#updateunifiedwebhooktrigger) - Trigger webhook
 
-### [apicall](docs/sdks/apicall/README.md)
+### [apicall()](docs/sdks/apicall/README.md)
 
 * [getUnifiedApicall](docs/sdks/apicall/README.md#getunifiedapicall) - Retrieve specific API Call by its ID
 * [listUnifiedApicalls](docs/sdks/apicall/README.md#listunifiedapicalls) - Returns API Calls
 
-### [connection](docs/sdks/connection/README.md)
+### [connection()](docs/sdks/connection/README.md)
 
 * [createUnifiedConnection](docs/sdks/connection/README.md#createunifiedconnection) - Create connection
 * [getUnifiedConnection](docs/sdks/connection/README.md#getunifiedconnection) - Retrieve connection
@@ -828,26 +840,26 @@ public class Application {
 * [removeUnifiedConnection](docs/sdks/connection/README.md#removeunifiedconnection) - Remove connection
 * [updateUnifiedConnection](docs/sdks/connection/README.md#updateunifiedconnection) - Update connection
 
-### [integration](docs/sdks/integration/README.md)
+### [integration()](docs/sdks/integration/README.md)
 
 * [getUnifiedIntegrationAuth](docs/sdks/integration/README.md#getunifiedintegrationauth) - Create connection indirectly
 * [listUnifiedIntegrationWorkspaces](docs/sdks/integration/README.md#listunifiedintegrationworkspaces) - Returns all activated integrations in a workspace
 * [listUnifiedIntegrations](docs/sdks/integration/README.md#listunifiedintegrations) - Returns all integrations
 
-### [auth](docs/sdks/auth/README.md)
+### [auth()](docs/sdks/auth/README.md)
 
 * [getUnifiedIntegrationAuth](docs/sdks/auth/README.md#getunifiedintegrationauth) - Create connection indirectly
 * [getUnifiedIntegrationLogin](docs/sdks/auth/README.md#getunifiedintegrationlogin) - Sign in a user
 
-### [login](docs/sdks/login/README.md)
+### [login()](docs/sdks/login/README.md)
 
 * [getUnifiedIntegrationLogin](docs/sdks/login/README.md#getunifiedintegrationlogin) - Sign in a user
 
-### [issue](docs/sdks/issue/README.md)
+### [issue()](docs/sdks/issue/README.md)
 
 * [listUnifiedIssues](docs/sdks/issue/README.md#listunifiedissues) - List support issues
 
-### [webhook](docs/sdks/webhook/README.md)
+### [webhook()](docs/sdks/webhook/README.md)
 
 * [createUnifiedWebhook](docs/sdks/webhook/README.md#createunifiedwebhook) - Create webhook subscription
 * [getUnifiedWebhook](docs/sdks/webhook/README.md#getunifiedwebhook) - Retrieve webhook by its ID
@@ -862,24 +874,220 @@ public class Application {
 <!-- Start Server Selection [server] -->
 ## Server Selection
 
-## Server Selection
-
 ### Select Server by Index
 
-You can override the default server globally using the `setServerIndex` option when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
+You can override the default server globally by passing a server index to the `serverIndex` builder method when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
 
 | # | Server | Variables |
 | - | ------ | --------- |
 | 0 | `https://api.unified.to` | None |
 | 1 | `https://api-eu.unified.to` | None |
 
+#### Example
 
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
+import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .serverIndex(1)
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+                .build();
+
+            CreateAccountingAccountRequest req = CreateAccountingAccountRequest.builder()
+                .connectionId("<value>")
+                .build();
+
+            CreateAccountingAccountResponse res = sdk.accounting().createAccountingAccount()
+                .request(req)
+                .call();
+
+            if (res.accountingAccount().isPresent()) {
+                // handle response
+            }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
+        } catch (Exception e) {
+            // handle exception
+            throw e;
+        }
+
+    }
+}
+```
 
 
 ### Override Server URL Per-Client
 
-The default server can also be overridden globally using the `setServerURL` option when initializing the SDK client instance. For example:
+The default server can also be overridden globally by passing a URL to the `serverURL` builder method when initializing the SDK client instance. For example:
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
+import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .serverURL("https://api.unified.to")
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+                .build();
+
+            CreateAccountingAccountRequest req = CreateAccountingAccountRequest.builder()
+                .connectionId("<value>")
+                .build();
+
+            CreateAccountingAccountResponse res = sdk.accounting().createAccountingAccount()
+                .request(req)
+                .call();
+
+            if (res.accountingAccount().isPresent()) {
+                // handle response
+            }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
+        } catch (Exception e) {
+            // handle exception
+            throw e;
+        }
+
+    }
+}
+```
 <!-- End Server Selection [server] -->
+
+<!-- Start Error Handling [errors] -->
+## Error Handling
+
+Handling errors in this SDK should largely match your expectations.  All operations return a response object or raise an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Exception type.
+
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+
+### Example
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
+import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+                .build();
+
+            CreateAccountingAccountRequest req = CreateAccountingAccountRequest.builder()
+                .connectionId("<value>")
+                .build();
+
+            CreateAccountingAccountResponse res = sdk.accounting().createAccountingAccount()
+                .request(req)
+                .call();
+
+            if (res.accountingAccount().isPresent()) {
+                // handle response
+            }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
+        } catch (Exception e) {
+            // handle exception
+            throw e;
+        }
+
+    }
+}
+```
+<!-- End Error Handling [errors] -->
+
+<!-- Start Authentication [security] -->
+## Authentication
+
+### Per-Client Security Schemes
+
+This SDK supports the following security scheme globally:
+
+| Name    | Type    | Scheme  |
+| ------- | ------- | ------- |
+| `jwt`   | apiKey  | API key |
+
+You can set the security parameters through the `security` builder method when initializing the SDK client instance. For example:
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
+import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+                .build();
+
+            CreateAccountingAccountRequest req = CreateAccountingAccountRequest.builder()
+                .connectionId("<value>")
+                .build();
+
+            CreateAccountingAccountResponse res = sdk.accounting().createAccountingAccount()
+                .request(req)
+                .call();
+
+            if (res.accountingAccount().isPresent()) {
+                // handle response
+            }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
+        } catch (Exception e) {
+            // handle exception
+            throw e;
+        }
+
+    }
+}
+```
+<!-- End Authentication [security] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 
