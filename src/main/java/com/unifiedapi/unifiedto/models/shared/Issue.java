@@ -31,8 +31,16 @@ public class Issue {
     private Optional<String> id;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("importance")
+    private Optional<Double> importance;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolution_time")
     private Optional<Double> resolutionTime;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("size")
+    private Optional<Double> size;
 
     @JsonProperty("status")
     private IssueStatus status;
@@ -62,7 +70,9 @@ public class Issue {
     public Issue(
             @JsonProperty("created_at") Optional<String> createdAt,
             @JsonProperty("id") Optional<String> id,
+            @JsonProperty("importance") Optional<Double> importance,
             @JsonProperty("resolution_time") Optional<Double> resolutionTime,
+            @JsonProperty("size") Optional<Double> size,
             @JsonProperty("status") IssueStatus status,
             @JsonProperty("ticket_ref") String ticketRef,
             @JsonProperty("title") String title,
@@ -72,7 +82,9 @@ public class Issue {
             @JsonProperty("workspace_id") String workspaceId) {
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(id, "id");
+        Utils.checkNotNull(importance, "importance");
         Utils.checkNotNull(resolutionTime, "resolutionTime");
+        Utils.checkNotNull(size, "size");
         Utils.checkNotNull(status, "status");
         Utils.checkNotNull(ticketRef, "ticketRef");
         Utils.checkNotNull(title, "title");
@@ -82,7 +94,9 @@ public class Issue {
         Utils.checkNotNull(workspaceId, "workspaceId");
         this.createdAt = createdAt;
         this.id = id;
+        this.importance = importance;
         this.resolutionTime = resolutionTime;
+        this.size = size;
         this.status = status;
         this.ticketRef = ticketRef;
         this.title = title;
@@ -97,7 +111,7 @@ public class Issue {
             String ticketRef,
             String title,
             String workspaceId) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), status, ticketRef, title, Optional.empty(), Optional.empty(), Optional.empty(), workspaceId);
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), status, ticketRef, title, Optional.empty(), Optional.empty(), Optional.empty(), workspaceId);
     }
 
     @JsonIgnore
@@ -111,8 +125,18 @@ public class Issue {
     }
 
     @JsonIgnore
+    public Optional<Double> importance() {
+        return importance;
+    }
+
+    @JsonIgnore
     public Optional<Double> resolutionTime() {
         return resolutionTime;
+    }
+
+    @JsonIgnore
+    public Optional<Double> size() {
+        return size;
     }
 
     @JsonIgnore
@@ -179,6 +203,18 @@ public class Issue {
         return this;
     }
 
+    public Issue withImportance(double importance) {
+        Utils.checkNotNull(importance, "importance");
+        this.importance = Optional.ofNullable(importance);
+        return this;
+    }
+
+    public Issue withImportance(Optional<Double> importance) {
+        Utils.checkNotNull(importance, "importance");
+        this.importance = importance;
+        return this;
+    }
+
     public Issue withResolutionTime(double resolutionTime) {
         Utils.checkNotNull(resolutionTime, "resolutionTime");
         this.resolutionTime = Optional.ofNullable(resolutionTime);
@@ -188,6 +224,18 @@ public class Issue {
     public Issue withResolutionTime(Optional<Double> resolutionTime) {
         Utils.checkNotNull(resolutionTime, "resolutionTime");
         this.resolutionTime = resolutionTime;
+        return this;
+    }
+
+    public Issue withSize(double size) {
+        Utils.checkNotNull(size, "size");
+        this.size = Optional.ofNullable(size);
+        return this;
+    }
+
+    public Issue withSize(Optional<Double> size) {
+        Utils.checkNotNull(size, "size");
+        this.size = size;
         return this;
     }
 
@@ -263,7 +311,9 @@ public class Issue {
         return 
             Objects.deepEquals(this.createdAt, other.createdAt) &&
             Objects.deepEquals(this.id, other.id) &&
+            Objects.deepEquals(this.importance, other.importance) &&
             Objects.deepEquals(this.resolutionTime, other.resolutionTime) &&
+            Objects.deepEquals(this.size, other.size) &&
             Objects.deepEquals(this.status, other.status) &&
             Objects.deepEquals(this.ticketRef, other.ticketRef) &&
             Objects.deepEquals(this.title, other.title) &&
@@ -278,7 +328,9 @@ public class Issue {
         return Objects.hash(
             createdAt,
             id,
+            importance,
             resolutionTime,
+            size,
             status,
             ticketRef,
             title,
@@ -293,7 +345,9 @@ public class Issue {
         return Utils.toString(Issue.class,
                 "createdAt", createdAt,
                 "id", id,
+                "importance", importance,
                 "resolutionTime", resolutionTime,
+                "size", size,
                 "status", status,
                 "ticketRef", ticketRef,
                 "title", title,
@@ -309,7 +363,11 @@ public class Issue {
  
         private Optional<String> id = Optional.empty();
  
+        private Optional<Double> importance = Optional.empty();
+ 
         private Optional<Double> resolutionTime = Optional.empty();
+ 
+        private Optional<Double> size = Optional.empty();
  
         private IssueStatus status;
  
@@ -353,6 +411,18 @@ public class Issue {
             return this;
         }
 
+        public Builder importance(double importance) {
+            Utils.checkNotNull(importance, "importance");
+            this.importance = Optional.ofNullable(importance);
+            return this;
+        }
+
+        public Builder importance(Optional<Double> importance) {
+            Utils.checkNotNull(importance, "importance");
+            this.importance = importance;
+            return this;
+        }
+
         public Builder resolutionTime(double resolutionTime) {
             Utils.checkNotNull(resolutionTime, "resolutionTime");
             this.resolutionTime = Optional.ofNullable(resolutionTime);
@@ -362,6 +432,18 @@ public class Issue {
         public Builder resolutionTime(Optional<Double> resolutionTime) {
             Utils.checkNotNull(resolutionTime, "resolutionTime");
             this.resolutionTime = resolutionTime;
+            return this;
+        }
+
+        public Builder size(double size) {
+            Utils.checkNotNull(size, "size");
+            this.size = Optional.ofNullable(size);
+            return this;
+        }
+
+        public Builder size(Optional<Double> size) {
+            Utils.checkNotNull(size, "size");
+            this.size = size;
             return this;
         }
 
@@ -429,7 +511,9 @@ public class Issue {
             return new Issue(
                 createdAt,
                 id,
+                importance,
                 resolutionTime,
+                size,
                 status,
                 ticketRef,
                 title,

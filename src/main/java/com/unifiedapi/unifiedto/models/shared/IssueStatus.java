@@ -15,7 +15,8 @@ public enum IssueStatus {
     IN_PROGRESS("IN_PROGRESS"),
     ON_HOLD("ON_HOLD"),
     VALIDATING("VALIDATING"),
-    REJECTED("REJECTED");
+    REJECTED("REJECTED"),
+    UP_NEXT("UP_NEXT");
 
     @JsonValue
     private final String value;
