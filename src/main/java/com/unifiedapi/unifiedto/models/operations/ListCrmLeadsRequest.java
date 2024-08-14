@@ -45,11 +45,17 @@ public class ListCrmLeadsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     private Optional<Double> offset;
 
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    private Optional<String> order;
+
     /**
      * Query string to search. eg. email address or name
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     private Optional<String> query;
+
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    private Optional<String> sort;
 
     /**
      * Return only results whose updated date is equal or greater to this value
@@ -68,7 +74,9 @@ public class ListCrmLeadsRequest {
             Optional<? extends List<String>> fields,
             Optional<Double> limit,
             Optional<Double> offset,
+            Optional<String> order,
             Optional<String> query,
+            Optional<String> sort,
             Optional<OffsetDateTime> updatedGte,
             Optional<String> userId) {
         Utils.checkNotNull(companyId, "companyId");
@@ -77,7 +85,9 @@ public class ListCrmLeadsRequest {
         Utils.checkNotNull(fields, "fields");
         Utils.checkNotNull(limit, "limit");
         Utils.checkNotNull(offset, "offset");
+        Utils.checkNotNull(order, "order");
         Utils.checkNotNull(query, "query");
+        Utils.checkNotNull(sort, "sort");
         Utils.checkNotNull(updatedGte, "updatedGte");
         Utils.checkNotNull(userId, "userId");
         this.companyId = companyId;
@@ -86,14 +96,16 @@ public class ListCrmLeadsRequest {
         this.fields = fields;
         this.limit = limit;
         this.offset = offset;
+        this.order = order;
         this.query = query;
+        this.sort = sort;
         this.updatedGte = updatedGte;
         this.userId = userId;
     }
     
     public ListCrmLeadsRequest(
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -133,12 +145,22 @@ public class ListCrmLeadsRequest {
         return offset;
     }
 
+    @JsonIgnore
+    public Optional<String> order() {
+        return order;
+    }
+
     /**
      * Query string to search. eg. email address or name
      */
     @JsonIgnore
     public Optional<String> query() {
         return query;
+    }
+
+    @JsonIgnore
+    public Optional<String> sort() {
+        return sort;
     }
 
     /**
@@ -233,6 +255,18 @@ public class ListCrmLeadsRequest {
         return this;
     }
 
+    public ListCrmLeadsRequest withOrder(String order) {
+        Utils.checkNotNull(order, "order");
+        this.order = Optional.ofNullable(order);
+        return this;
+    }
+
+    public ListCrmLeadsRequest withOrder(Optional<String> order) {
+        Utils.checkNotNull(order, "order");
+        this.order = order;
+        return this;
+    }
+
     /**
      * Query string to search. eg. email address or name
      */
@@ -248,6 +282,18 @@ public class ListCrmLeadsRequest {
     public ListCrmLeadsRequest withQuery(Optional<String> query) {
         Utils.checkNotNull(query, "query");
         this.query = query;
+        return this;
+    }
+
+    public ListCrmLeadsRequest withSort(String sort) {
+        Utils.checkNotNull(sort, "sort");
+        this.sort = Optional.ofNullable(sort);
+        return this;
+    }
+
+    public ListCrmLeadsRequest withSort(Optional<String> sort) {
+        Utils.checkNotNull(sort, "sort");
+        this.sort = sort;
         return this;
     }
 
@@ -297,7 +343,9 @@ public class ListCrmLeadsRequest {
             Objects.deepEquals(this.fields, other.fields) &&
             Objects.deepEquals(this.limit, other.limit) &&
             Objects.deepEquals(this.offset, other.offset) &&
+            Objects.deepEquals(this.order, other.order) &&
             Objects.deepEquals(this.query, other.query) &&
+            Objects.deepEquals(this.sort, other.sort) &&
             Objects.deepEquals(this.updatedGte, other.updatedGte) &&
             Objects.deepEquals(this.userId, other.userId);
     }
@@ -311,7 +359,9 @@ public class ListCrmLeadsRequest {
             fields,
             limit,
             offset,
+            order,
             query,
+            sort,
             updatedGte,
             userId);
     }
@@ -325,7 +375,9 @@ public class ListCrmLeadsRequest {
                 "fields", fields,
                 "limit", limit,
                 "offset", offset,
+                "order", order,
                 "query", query,
+                "sort", sort,
                 "updatedGte", updatedGte,
                 "userId", userId);
     }
@@ -344,7 +396,11 @@ public class ListCrmLeadsRequest {
  
         private Optional<Double> offset = Optional.empty();
  
+        private Optional<String> order = Optional.empty();
+ 
         private Optional<String> query = Optional.empty();
+ 
+        private Optional<String> sort = Optional.empty();
  
         private Optional<OffsetDateTime> updatedGte = Optional.empty();
  
@@ -429,6 +485,18 @@ public class ListCrmLeadsRequest {
             return this;
         }
 
+        public Builder order(String order) {
+            Utils.checkNotNull(order, "order");
+            this.order = Optional.ofNullable(order);
+            return this;
+        }
+
+        public Builder order(Optional<String> order) {
+            Utils.checkNotNull(order, "order");
+            this.order = order;
+            return this;
+        }
+
         /**
          * Query string to search. eg. email address or name
          */
@@ -444,6 +512,18 @@ public class ListCrmLeadsRequest {
         public Builder query(Optional<String> query) {
             Utils.checkNotNull(query, "query");
             this.query = query;
+            return this;
+        }
+
+        public Builder sort(String sort) {
+            Utils.checkNotNull(sort, "sort");
+            this.sort = Optional.ofNullable(sort);
+            return this;
+        }
+
+        public Builder sort(Optional<String> sort) {
+            Utils.checkNotNull(sort, "sort");
+            this.sort = sort;
             return this;
         }
 
@@ -485,7 +565,9 @@ public class ListCrmLeadsRequest {
                 fields,
                 limit,
                 offset,
+                order,
                 query,
+                sort,
                 updatedGte,
                 userId);
         }

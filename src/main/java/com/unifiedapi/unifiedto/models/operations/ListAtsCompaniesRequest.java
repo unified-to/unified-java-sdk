@@ -39,11 +39,17 @@ public class ListAtsCompaniesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     private Optional<Double> offset;
 
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    private Optional<String> order;
+
     /**
      * Query string to search. eg. email address or name
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     private Optional<String> query;
+
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    private Optional<String> sort;
 
     /**
      * Return only results whose updated date is equal or greater to this value
@@ -57,25 +63,31 @@ public class ListAtsCompaniesRequest {
             Optional<? extends List<String>> fields,
             Optional<Double> limit,
             Optional<Double> offset,
+            Optional<String> order,
             Optional<String> query,
+            Optional<String> sort,
             Optional<OffsetDateTime> updatedGte) {
         Utils.checkNotNull(connectionId, "connectionId");
         Utils.checkNotNull(fields, "fields");
         Utils.checkNotNull(limit, "limit");
         Utils.checkNotNull(offset, "offset");
+        Utils.checkNotNull(order, "order");
         Utils.checkNotNull(query, "query");
+        Utils.checkNotNull(sort, "sort");
         Utils.checkNotNull(updatedGte, "updatedGte");
         this.connectionId = connectionId;
         this.fields = fields;
         this.limit = limit;
         this.offset = offset;
+        this.order = order;
         this.query = query;
+        this.sort = sort;
         this.updatedGte = updatedGte;
     }
     
     public ListAtsCompaniesRequest(
             String connectionId) {
-        this(connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     /**
@@ -105,12 +117,22 @@ public class ListAtsCompaniesRequest {
         return offset;
     }
 
+    @JsonIgnore
+    public Optional<String> order() {
+        return order;
+    }
+
     /**
      * Query string to search. eg. email address or name
      */
     @JsonIgnore
     public Optional<String> query() {
         return query;
+    }
+
+    @JsonIgnore
+    public Optional<String> sort() {
+        return sort;
     }
 
     /**
@@ -176,6 +198,18 @@ public class ListAtsCompaniesRequest {
         return this;
     }
 
+    public ListAtsCompaniesRequest withOrder(String order) {
+        Utils.checkNotNull(order, "order");
+        this.order = Optional.ofNullable(order);
+        return this;
+    }
+
+    public ListAtsCompaniesRequest withOrder(Optional<String> order) {
+        Utils.checkNotNull(order, "order");
+        this.order = order;
+        return this;
+    }
+
     /**
      * Query string to search. eg. email address or name
      */
@@ -191,6 +225,18 @@ public class ListAtsCompaniesRequest {
     public ListAtsCompaniesRequest withQuery(Optional<String> query) {
         Utils.checkNotNull(query, "query");
         this.query = query;
+        return this;
+    }
+
+    public ListAtsCompaniesRequest withSort(String sort) {
+        Utils.checkNotNull(sort, "sort");
+        this.sort = Optional.ofNullable(sort);
+        return this;
+    }
+
+    public ListAtsCompaniesRequest withSort(Optional<String> sort) {
+        Utils.checkNotNull(sort, "sort");
+        this.sort = sort;
         return this;
     }
 
@@ -226,7 +272,9 @@ public class ListAtsCompaniesRequest {
             Objects.deepEquals(this.fields, other.fields) &&
             Objects.deepEquals(this.limit, other.limit) &&
             Objects.deepEquals(this.offset, other.offset) &&
+            Objects.deepEquals(this.order, other.order) &&
             Objects.deepEquals(this.query, other.query) &&
+            Objects.deepEquals(this.sort, other.sort) &&
             Objects.deepEquals(this.updatedGte, other.updatedGte);
     }
     
@@ -237,7 +285,9 @@ public class ListAtsCompaniesRequest {
             fields,
             limit,
             offset,
+            order,
             query,
+            sort,
             updatedGte);
     }
     
@@ -248,7 +298,9 @@ public class ListAtsCompaniesRequest {
                 "fields", fields,
                 "limit", limit,
                 "offset", offset,
+                "order", order,
                 "query", query,
+                "sort", sort,
                 "updatedGte", updatedGte);
     }
     
@@ -262,7 +314,11 @@ public class ListAtsCompaniesRequest {
  
         private Optional<Double> offset = Optional.empty();
  
+        private Optional<String> order = Optional.empty();
+ 
         private Optional<String> query = Optional.empty();
+ 
+        private Optional<String> sort = Optional.empty();
  
         private Optional<OffsetDateTime> updatedGte = Optional.empty();  
         
@@ -321,6 +377,18 @@ public class ListAtsCompaniesRequest {
             return this;
         }
 
+        public Builder order(String order) {
+            Utils.checkNotNull(order, "order");
+            this.order = Optional.ofNullable(order);
+            return this;
+        }
+
+        public Builder order(Optional<String> order) {
+            Utils.checkNotNull(order, "order");
+            this.order = order;
+            return this;
+        }
+
         /**
          * Query string to search. eg. email address or name
          */
@@ -336,6 +404,18 @@ public class ListAtsCompaniesRequest {
         public Builder query(Optional<String> query) {
             Utils.checkNotNull(query, "query");
             this.query = query;
+            return this;
+        }
+
+        public Builder sort(String sort) {
+            Utils.checkNotNull(sort, "sort");
+            this.sort = Optional.ofNullable(sort);
+            return this;
+        }
+
+        public Builder sort(Optional<String> sort) {
+            Utils.checkNotNull(sort, "sort");
+            this.sort = sort;
             return this;
         }
 
@@ -363,7 +443,9 @@ public class ListAtsCompaniesRequest {
                 fields,
                 limit,
                 offset,
+                order,
                 query,
+                sort,
                 updatedGte);
         }
     }

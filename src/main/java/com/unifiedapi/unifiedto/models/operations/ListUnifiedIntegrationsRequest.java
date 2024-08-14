@@ -42,12 +42,6 @@ public class ListUnifiedIntegrationsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     private Optional<Double> offset;
 
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
-    private Optional<String> order;
-
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
-    private Optional<String> sort;
-
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=summary")
     private Optional<Boolean> summary;
 
@@ -67,8 +61,6 @@ public class ListUnifiedIntegrationsRequest {
             Optional<String> env,
             Optional<Double> limit,
             Optional<Double> offset,
-            Optional<String> order,
-            Optional<String> sort,
             Optional<Boolean> summary,
             Optional<String> type,
             Optional<String> updatedGte) {
@@ -77,8 +69,6 @@ public class ListUnifiedIntegrationsRequest {
         Utils.checkNotNull(env, "env");
         Utils.checkNotNull(limit, "limit");
         Utils.checkNotNull(offset, "offset");
-        Utils.checkNotNull(order, "order");
-        Utils.checkNotNull(sort, "sort");
         Utils.checkNotNull(summary, "summary");
         Utils.checkNotNull(type, "type");
         Utils.checkNotNull(updatedGte, "updatedGte");
@@ -87,15 +77,13 @@ public class ListUnifiedIntegrationsRequest {
         this.env = env;
         this.limit = limit;
         this.offset = offset;
-        this.order = order;
-        this.sort = sort;
         this.summary = summary;
         this.type = type;
         this.updatedGte = updatedGte;
     }
     
     public ListUnifiedIntegrationsRequest() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     /**
@@ -128,16 +116,6 @@ public class ListUnifiedIntegrationsRequest {
     @JsonIgnore
     public Optional<Double> offset() {
         return offset;
-    }
-
-    @JsonIgnore
-    public Optional<String> order() {
-        return order;
-    }
-
-    @JsonIgnore
-    public Optional<String> sort() {
-        return sort;
     }
 
     @JsonIgnore
@@ -234,30 +212,6 @@ public class ListUnifiedIntegrationsRequest {
         return this;
     }
 
-    public ListUnifiedIntegrationsRequest withOrder(String order) {
-        Utils.checkNotNull(order, "order");
-        this.order = Optional.ofNullable(order);
-        return this;
-    }
-
-    public ListUnifiedIntegrationsRequest withOrder(Optional<String> order) {
-        Utils.checkNotNull(order, "order");
-        this.order = order;
-        return this;
-    }
-
-    public ListUnifiedIntegrationsRequest withSort(String sort) {
-        Utils.checkNotNull(sort, "sort");
-        this.sort = Optional.ofNullable(sort);
-        return this;
-    }
-
-    public ListUnifiedIntegrationsRequest withSort(Optional<String> sort) {
-        Utils.checkNotNull(sort, "sort");
-        this.sort = sort;
-        return this;
-    }
-
     public ListUnifiedIntegrationsRequest withSummary(boolean summary) {
         Utils.checkNotNull(summary, "summary");
         this.summary = Optional.ofNullable(summary);
@@ -315,8 +269,6 @@ public class ListUnifiedIntegrationsRequest {
             Objects.deepEquals(this.env, other.env) &&
             Objects.deepEquals(this.limit, other.limit) &&
             Objects.deepEquals(this.offset, other.offset) &&
-            Objects.deepEquals(this.order, other.order) &&
-            Objects.deepEquals(this.sort, other.sort) &&
             Objects.deepEquals(this.summary, other.summary) &&
             Objects.deepEquals(this.type, other.type) &&
             Objects.deepEquals(this.updatedGte, other.updatedGte);
@@ -330,8 +282,6 @@ public class ListUnifiedIntegrationsRequest {
             env,
             limit,
             offset,
-            order,
-            sort,
             summary,
             type,
             updatedGte);
@@ -345,8 +295,6 @@ public class ListUnifiedIntegrationsRequest {
                 "env", env,
                 "limit", limit,
                 "offset", offset,
-                "order", order,
-                "sort", sort,
                 "summary", summary,
                 "type", type,
                 "updatedGte", updatedGte);
@@ -363,10 +311,6 @@ public class ListUnifiedIntegrationsRequest {
         private Optional<Double> limit = Optional.empty();
  
         private Optional<Double> offset = Optional.empty();
- 
-        private Optional<String> order = Optional.empty();
- 
-        private Optional<String> sort = Optional.empty();
  
         private Optional<Boolean> summary = Optional.empty();
  
@@ -450,30 +394,6 @@ public class ListUnifiedIntegrationsRequest {
             return this;
         }
 
-        public Builder order(String order) {
-            Utils.checkNotNull(order, "order");
-            this.order = Optional.ofNullable(order);
-            return this;
-        }
-
-        public Builder order(Optional<String> order) {
-            Utils.checkNotNull(order, "order");
-            this.order = order;
-            return this;
-        }
-
-        public Builder sort(String sort) {
-            Utils.checkNotNull(sort, "sort");
-            this.sort = Optional.ofNullable(sort);
-            return this;
-        }
-
-        public Builder sort(Optional<String> sort) {
-            Utils.checkNotNull(sort, "sort");
-            this.sort = sort;
-            return this;
-        }
-
         public Builder summary(boolean summary) {
             Utils.checkNotNull(summary, "summary");
             this.summary = Optional.ofNullable(summary);
@@ -523,8 +443,6 @@ public class ListUnifiedIntegrationsRequest {
                 env,
                 limit,
                 offset,
-                order,
-                sort,
                 summary,
                 type,
                 updatedGte);

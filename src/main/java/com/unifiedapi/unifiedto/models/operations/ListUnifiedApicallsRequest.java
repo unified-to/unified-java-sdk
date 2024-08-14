@@ -53,6 +53,12 @@ public class ListUnifiedApicallsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     private Optional<Double> offset;
 
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    private Optional<String> order;
+
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    private Optional<String> sort;
+
     /**
      * Return only results whose updated date is equal or greater to this value
      */
@@ -68,6 +74,8 @@ public class ListUnifiedApicallsRequest {
             Optional<String> integrationType,
             Optional<Double> limit,
             Optional<Double> offset,
+            Optional<String> order,
+            Optional<String> sort,
             Optional<OffsetDateTime> updatedGte) {
         Utils.checkNotNull(connectionId, "connectionId");
         Utils.checkNotNull(env, "env");
@@ -76,6 +84,8 @@ public class ListUnifiedApicallsRequest {
         Utils.checkNotNull(integrationType, "integrationType");
         Utils.checkNotNull(limit, "limit");
         Utils.checkNotNull(offset, "offset");
+        Utils.checkNotNull(order, "order");
+        Utils.checkNotNull(sort, "sort");
         Utils.checkNotNull(updatedGte, "updatedGte");
         this.connectionId = connectionId;
         this.env = env;
@@ -84,11 +94,13 @@ public class ListUnifiedApicallsRequest {
         this.integrationType = integrationType;
         this.limit = limit;
         this.offset = offset;
+        this.order = order;
+        this.sort = sort;
         this.updatedGte = updatedGte;
     }
     
     public ListUnifiedApicallsRequest() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     /**
@@ -136,6 +148,16 @@ public class ListUnifiedApicallsRequest {
     @JsonIgnore
     public Optional<Double> offset() {
         return offset;
+    }
+
+    @JsonIgnore
+    public Optional<String> order() {
+        return order;
+    }
+
+    @JsonIgnore
+    public Optional<String> sort() {
+        return sort;
     }
 
     /**
@@ -258,6 +280,30 @@ public class ListUnifiedApicallsRequest {
         return this;
     }
 
+    public ListUnifiedApicallsRequest withOrder(String order) {
+        Utils.checkNotNull(order, "order");
+        this.order = Optional.ofNullable(order);
+        return this;
+    }
+
+    public ListUnifiedApicallsRequest withOrder(Optional<String> order) {
+        Utils.checkNotNull(order, "order");
+        this.order = order;
+        return this;
+    }
+
+    public ListUnifiedApicallsRequest withSort(String sort) {
+        Utils.checkNotNull(sort, "sort");
+        this.sort = Optional.ofNullable(sort);
+        return this;
+    }
+
+    public ListUnifiedApicallsRequest withSort(Optional<String> sort) {
+        Utils.checkNotNull(sort, "sort");
+        this.sort = sort;
+        return this;
+    }
+
     /**
      * Return only results whose updated date is equal or greater to this value
      */
@@ -293,6 +339,8 @@ public class ListUnifiedApicallsRequest {
             Objects.deepEquals(this.integrationType, other.integrationType) &&
             Objects.deepEquals(this.limit, other.limit) &&
             Objects.deepEquals(this.offset, other.offset) &&
+            Objects.deepEquals(this.order, other.order) &&
+            Objects.deepEquals(this.sort, other.sort) &&
             Objects.deepEquals(this.updatedGte, other.updatedGte);
     }
     
@@ -306,6 +354,8 @@ public class ListUnifiedApicallsRequest {
             integrationType,
             limit,
             offset,
+            order,
+            sort,
             updatedGte);
     }
     
@@ -319,6 +369,8 @@ public class ListUnifiedApicallsRequest {
                 "integrationType", integrationType,
                 "limit", limit,
                 "offset", offset,
+                "order", order,
+                "sort", sort,
                 "updatedGte", updatedGte);
     }
     
@@ -337,6 +389,10 @@ public class ListUnifiedApicallsRequest {
         private Optional<Double> limit = Optional.empty();
  
         private Optional<Double> offset = Optional.empty();
+ 
+        private Optional<String> order = Optional.empty();
+ 
+        private Optional<String> sort = Optional.empty();
  
         private Optional<OffsetDateTime> updatedGte = Optional.empty();  
         
@@ -452,6 +508,30 @@ public class ListUnifiedApicallsRequest {
             return this;
         }
 
+        public Builder order(String order) {
+            Utils.checkNotNull(order, "order");
+            this.order = Optional.ofNullable(order);
+            return this;
+        }
+
+        public Builder order(Optional<String> order) {
+            Utils.checkNotNull(order, "order");
+            this.order = order;
+            return this;
+        }
+
+        public Builder sort(String sort) {
+            Utils.checkNotNull(sort, "sort");
+            this.sort = Optional.ofNullable(sort);
+            return this;
+        }
+
+        public Builder sort(Optional<String> sort) {
+            Utils.checkNotNull(sort, "sort");
+            this.sort = sort;
+            return this;
+        }
+
         /**
          * Return only results whose updated date is equal or greater to this value
          */
@@ -479,6 +559,8 @@ public class ListUnifiedApicallsRequest {
                 integrationType,
                 limit,
                 offset,
+                order,
+                sort,
                 updatedGte);
         }
     }

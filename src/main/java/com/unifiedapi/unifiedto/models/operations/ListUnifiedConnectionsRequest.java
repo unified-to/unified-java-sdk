@@ -42,6 +42,12 @@ public class ListUnifiedConnectionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     private Optional<Double> offset;
 
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    private Optional<String> order;
+
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    private Optional<String> sort;
+
     /**
      * Return only results whose updated date is equal or greater to this value
      */
@@ -55,23 +61,29 @@ public class ListUnifiedConnectionsRequest {
             Optional<String> externalXref,
             Optional<Double> limit,
             Optional<Double> offset,
+            Optional<String> order,
+            Optional<String> sort,
             Optional<OffsetDateTime> updatedGte) {
         Utils.checkNotNull(categories, "categories");
         Utils.checkNotNull(env, "env");
         Utils.checkNotNull(externalXref, "externalXref");
         Utils.checkNotNull(limit, "limit");
         Utils.checkNotNull(offset, "offset");
+        Utils.checkNotNull(order, "order");
+        Utils.checkNotNull(sort, "sort");
         Utils.checkNotNull(updatedGte, "updatedGte");
         this.categories = categories;
         this.env = env;
         this.externalXref = externalXref;
         this.limit = limit;
         this.offset = offset;
+        this.order = order;
+        this.sort = sort;
         this.updatedGte = updatedGte;
     }
     
     public ListUnifiedConnectionsRequest() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     /**
@@ -104,6 +116,16 @@ public class ListUnifiedConnectionsRequest {
     @JsonIgnore
     public Optional<Double> offset() {
         return offset;
+    }
+
+    @JsonIgnore
+    public Optional<String> order() {
+        return order;
+    }
+
+    @JsonIgnore
+    public Optional<String> sort() {
+        return sort;
     }
 
     /**
@@ -190,6 +212,30 @@ public class ListUnifiedConnectionsRequest {
         return this;
     }
 
+    public ListUnifiedConnectionsRequest withOrder(String order) {
+        Utils.checkNotNull(order, "order");
+        this.order = Optional.ofNullable(order);
+        return this;
+    }
+
+    public ListUnifiedConnectionsRequest withOrder(Optional<String> order) {
+        Utils.checkNotNull(order, "order");
+        this.order = order;
+        return this;
+    }
+
+    public ListUnifiedConnectionsRequest withSort(String sort) {
+        Utils.checkNotNull(sort, "sort");
+        this.sort = Optional.ofNullable(sort);
+        return this;
+    }
+
+    public ListUnifiedConnectionsRequest withSort(Optional<String> sort) {
+        Utils.checkNotNull(sort, "sort");
+        this.sort = sort;
+        return this;
+    }
+
     /**
      * Return only results whose updated date is equal or greater to this value
      */
@@ -223,6 +269,8 @@ public class ListUnifiedConnectionsRequest {
             Objects.deepEquals(this.externalXref, other.externalXref) &&
             Objects.deepEquals(this.limit, other.limit) &&
             Objects.deepEquals(this.offset, other.offset) &&
+            Objects.deepEquals(this.order, other.order) &&
+            Objects.deepEquals(this.sort, other.sort) &&
             Objects.deepEquals(this.updatedGte, other.updatedGte);
     }
     
@@ -234,6 +282,8 @@ public class ListUnifiedConnectionsRequest {
             externalXref,
             limit,
             offset,
+            order,
+            sort,
             updatedGte);
     }
     
@@ -245,6 +295,8 @@ public class ListUnifiedConnectionsRequest {
                 "externalXref", externalXref,
                 "limit", limit,
                 "offset", offset,
+                "order", order,
+                "sort", sort,
                 "updatedGte", updatedGte);
     }
     
@@ -259,6 +311,10 @@ public class ListUnifiedConnectionsRequest {
         private Optional<Double> limit = Optional.empty();
  
         private Optional<Double> offset = Optional.empty();
+ 
+        private Optional<String> order = Optional.empty();
+ 
+        private Optional<String> sort = Optional.empty();
  
         private Optional<OffsetDateTime> updatedGte = Optional.empty();  
         
@@ -338,6 +394,30 @@ public class ListUnifiedConnectionsRequest {
             return this;
         }
 
+        public Builder order(String order) {
+            Utils.checkNotNull(order, "order");
+            this.order = Optional.ofNullable(order);
+            return this;
+        }
+
+        public Builder order(Optional<String> order) {
+            Utils.checkNotNull(order, "order");
+            this.order = order;
+            return this;
+        }
+
+        public Builder sort(String sort) {
+            Utils.checkNotNull(sort, "sort");
+            this.sort = Optional.ofNullable(sort);
+            return this;
+        }
+
+        public Builder sort(Optional<String> sort) {
+            Utils.checkNotNull(sort, "sort");
+            this.sort = sort;
+            return this;
+        }
+
         /**
          * Return only results whose updated date is equal or greater to this value
          */
@@ -363,6 +443,8 @@ public class ListUnifiedConnectionsRequest {
                 externalXref,
                 limit,
                 offset,
+                order,
+                sort,
                 updatedGte);
         }
     }

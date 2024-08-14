@@ -25,6 +25,12 @@ public class ListUnifiedIssuesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     private Optional<Double> offset;
 
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    private Optional<String> order;
+
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    private Optional<String> sort;
+
     /**
      * Return only results whose updated date is equal or greater to this value
      */
@@ -35,17 +41,23 @@ public class ListUnifiedIssuesRequest {
     public ListUnifiedIssuesRequest(
             Optional<Double> limit,
             Optional<Double> offset,
+            Optional<String> order,
+            Optional<String> sort,
             Optional<OffsetDateTime> updatedGte) {
         Utils.checkNotNull(limit, "limit");
         Utils.checkNotNull(offset, "offset");
+        Utils.checkNotNull(order, "order");
+        Utils.checkNotNull(sort, "sort");
         Utils.checkNotNull(updatedGte, "updatedGte");
         this.limit = limit;
         this.offset = offset;
+        this.order = order;
+        this.sort = sort;
         this.updatedGte = updatedGte;
     }
     
     public ListUnifiedIssuesRequest() {
-        this(Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -56,6 +68,16 @@ public class ListUnifiedIssuesRequest {
     @JsonIgnore
     public Optional<Double> offset() {
         return offset;
+    }
+
+    @JsonIgnore
+    public Optional<String> order() {
+        return order;
+    }
+
+    @JsonIgnore
+    public Optional<String> sort() {
+        return sort;
     }
 
     /**
@@ -94,6 +116,30 @@ public class ListUnifiedIssuesRequest {
         return this;
     }
 
+    public ListUnifiedIssuesRequest withOrder(String order) {
+        Utils.checkNotNull(order, "order");
+        this.order = Optional.ofNullable(order);
+        return this;
+    }
+
+    public ListUnifiedIssuesRequest withOrder(Optional<String> order) {
+        Utils.checkNotNull(order, "order");
+        this.order = order;
+        return this;
+    }
+
+    public ListUnifiedIssuesRequest withSort(String sort) {
+        Utils.checkNotNull(sort, "sort");
+        this.sort = Optional.ofNullable(sort);
+        return this;
+    }
+
+    public ListUnifiedIssuesRequest withSort(Optional<String> sort) {
+        Utils.checkNotNull(sort, "sort");
+        this.sort = sort;
+        return this;
+    }
+
     /**
      * Return only results whose updated date is equal or greater to this value
      */
@@ -124,6 +170,8 @@ public class ListUnifiedIssuesRequest {
         return 
             Objects.deepEquals(this.limit, other.limit) &&
             Objects.deepEquals(this.offset, other.offset) &&
+            Objects.deepEquals(this.order, other.order) &&
+            Objects.deepEquals(this.sort, other.sort) &&
             Objects.deepEquals(this.updatedGte, other.updatedGte);
     }
     
@@ -132,6 +180,8 @@ public class ListUnifiedIssuesRequest {
         return Objects.hash(
             limit,
             offset,
+            order,
+            sort,
             updatedGte);
     }
     
@@ -140,6 +190,8 @@ public class ListUnifiedIssuesRequest {
         return Utils.toString(ListUnifiedIssuesRequest.class,
                 "limit", limit,
                 "offset", offset,
+                "order", order,
+                "sort", sort,
                 "updatedGte", updatedGte);
     }
     
@@ -148,6 +200,10 @@ public class ListUnifiedIssuesRequest {
         private Optional<Double> limit = Optional.empty();
  
         private Optional<Double> offset = Optional.empty();
+ 
+        private Optional<String> order = Optional.empty();
+ 
+        private Optional<String> sort = Optional.empty();
  
         private Optional<OffsetDateTime> updatedGte = Optional.empty();  
         
@@ -179,6 +235,30 @@ public class ListUnifiedIssuesRequest {
             return this;
         }
 
+        public Builder order(String order) {
+            Utils.checkNotNull(order, "order");
+            this.order = Optional.ofNullable(order);
+            return this;
+        }
+
+        public Builder order(Optional<String> order) {
+            Utils.checkNotNull(order, "order");
+            this.order = order;
+            return this;
+        }
+
+        public Builder sort(String sort) {
+            Utils.checkNotNull(sort, "sort");
+            this.sort = Optional.ofNullable(sort);
+            return this;
+        }
+
+        public Builder sort(Optional<String> sort) {
+            Utils.checkNotNull(sort, "sort");
+            this.sort = sort;
+            return this;
+        }
+
         /**
          * Return only results whose updated date is equal or greater to this value
          */
@@ -201,6 +281,8 @@ public class ListUnifiedIssuesRequest {
             return new ListUnifiedIssuesRequest(
                 limit,
                 offset,
+                order,
+                sort,
                 updatedGte);
         }
     }
