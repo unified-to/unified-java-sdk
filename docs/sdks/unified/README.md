@@ -16,10 +16,12 @@
 * [listUnifiedIssues](#listunifiedissues) - List support issues
 * [listUnifiedWebhooks](#listunifiedwebhooks) - Returns all registered webhooks
 * [patchUnifiedConnection](#patchunifiedconnection) - Update connection
+* [patchUnifiedWebhook](#patchunifiedwebhook) - Update webhook subscription
 * [patchUnifiedWebhookTrigger](#patchunifiedwebhooktrigger) - Trigger webhook
 * [removeUnifiedConnection](#removeunifiedconnection) - Remove connection
 * [removeUnifiedWebhook](#removeunifiedwebhook) - Remove webhook subscription
 * [updateUnifiedConnection](#updateunifiedconnection) - Update connection
+* [updateUnifiedWebhook](#updateunifiedwebhook) - Update webhook subscription
 * [updateUnifiedWebhookTrigger](#updateunifiedwebhooktrigger) - Trigger webhook
 
 ## createUnifiedConnection
@@ -895,6 +897,73 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
+## patchUnifiedWebhook
+
+Update webhook subscription
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
+import com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+                .build();
+
+            PatchUnifiedWebhookRequest req = PatchUnifiedWebhookRequest.builder()
+                .id("<value>")
+                .build();
+
+            PatchUnifiedWebhookResponse res = sdk.unified().patchUnifiedWebhook()
+                .request(req)
+                .call();
+
+            if (res.webhook().isPresent()) {
+                // handle response
+            }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
+        } catch (Exception e) {
+            // handle exception
+            throw e;
+        }
+
+    }
+}
+```
+
+
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [PatchUnifiedWebhookRequest](../../models/operations/PatchUnifiedWebhookRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+
+### Response
+
+**[PatchUnifiedWebhookResponse](../../models/operations/PatchUnifiedWebhookResponse.md)**
+### Errors
+
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+
 ## patchUnifiedWebhookTrigger
 
 Trigger webhook
@@ -1151,6 +1220,73 @@ public class Application {
 ### Response
 
 **[UpdateUnifiedConnectionResponse](../../models/operations/UpdateUnifiedConnectionResponse.md)**
+### Errors
+
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+
+## updateUnifiedWebhook
+
+Update webhook subscription
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
+import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+                .build();
+
+            UpdateUnifiedWebhookRequest req = UpdateUnifiedWebhookRequest.builder()
+                .id("<value>")
+                .build();
+
+            UpdateUnifiedWebhookResponse res = sdk.unified().updateUnifiedWebhook()
+                .request(req)
+                .call();
+
+            if (res.webhook().isPresent()) {
+                // handle response
+            }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
+        } catch (Exception e) {
+            // handle exception
+            throw e;
+        }
+
+    }
+}
+```
+
+
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [UpdateUnifiedWebhookRequest](../../models/operations/UpdateUnifiedWebhookRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+
+### Response
+
+**[UpdateUnifiedWebhookResponse](../../models/operations/UpdateUnifiedWebhookResponse.md)**
 ### Errors
 
 | Error Object           | Status Code            | Content Type           |

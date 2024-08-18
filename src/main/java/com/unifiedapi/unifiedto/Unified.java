@@ -44,6 +44,9 @@ import com.unifiedapi.unifiedto.models.operations.ListUnifiedWebhooksResponse;
 import com.unifiedapi.unifiedto.models.operations.PatchUnifiedConnectionRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchUnifiedConnectionRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.PatchUnifiedConnectionResponse;
+import com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookResponse;
 import com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerResponse;
@@ -57,6 +60,9 @@ import com.unifiedapi.unifiedto.models.operations.SDKMethodInterfaces.*;
 import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedConnectionRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedConnectionRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedConnectionResponse;
+import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookResponse;
 import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerResponse;
@@ -96,10 +102,12 @@ public class Unified implements
             MethodCallListUnifiedIssues,
             MethodCallListUnifiedWebhooks,
             MethodCallPatchUnifiedConnection,
+            MethodCallPatchUnifiedWebhook,
             MethodCallPatchUnifiedWebhookTrigger,
             MethodCallRemoveUnifiedConnection,
             MethodCallRemoveUnifiedWebhook,
             MethodCallUpdateUnifiedConnection,
+            MethodCallUpdateUnifiedWebhook,
             MethodCallUpdateUnifiedWebhookTrigger {
 
     private final SDKConfiguration sdkConfiguration;
@@ -1687,6 +1695,132 @@ public class Unified implements
 
 
     /**
+     * Update webhook subscription
+     * @return The call builder
+     */
+    public PatchUnifiedWebhookRequestBuilder patchUnifiedWebhook() {
+        return new PatchUnifiedWebhookRequestBuilder(this);
+    }
+
+    /**
+     * Update webhook subscription
+     * @param request The request object containing all of the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public PatchUnifiedWebhookResponse patchUnifiedWebhook(
+            PatchUnifiedWebhookRequest request) throws Exception {
+        String _baseUrl = this.sdkConfiguration.serverUrl;
+        String _url = Utils.generateURL(
+                PatchUnifiedWebhookRequest.class,
+                _baseUrl,
+                "/unified/webhook/{id}",
+                request, null);
+        
+        HTTPRequest _req = new HTTPRequest(_url, "PATCH");
+        Object _convertedRequest = Utils.convertToShape(
+                request, 
+                JsonShape.DEFAULT,
+                new TypeReference<PatchUnifiedWebhookRequest>() {});
+        SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
+                _convertedRequest, 
+                "webhook",
+                "json",
+                false);
+        _req.setBody(Optional.ofNullable(_serializedRequestBody));
+        _req.addHeader("Accept", "application/json")
+            .addHeader("user-agent", 
+                this.sdkConfiguration.userAgent);
+
+        Utils.configureSecurity(_req,  
+                this.sdkConfiguration.securitySource.getSecurity());
+
+        HTTPClient _client = this.sdkConfiguration.defaultClient;
+        HttpRequest _r = 
+            sdkConfiguration.hooks()
+               .beforeRequest(
+                  new BeforeRequestContextImpl(
+                      "patchUnifiedWebhook", 
+                      Optional.of(List.of()), 
+                      sdkConfiguration.securitySource()),
+                  _req.build());
+        HttpResponse<InputStream> _httpRes;
+        try {
+            _httpRes = _client.send(_r);
+            if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "patchUnifiedWebhook",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()),
+                        Optional.of(_httpRes),
+                        Optional.empty());
+            } else {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterSuccess(
+                        new AfterSuccessContextImpl(
+                            "patchUnifiedWebhook",
+                            Optional.of(List.of()), 
+                            sdkConfiguration.securitySource()),
+                         _httpRes);
+            }
+        } catch (Exception _e) {
+            _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "patchUnifiedWebhook",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()), 
+                        Optional.empty(),
+                        Optional.of(_e));
+        }
+        String _contentType = _httpRes
+            .headers()
+            .firstValue("Content-Type")
+            .orElse("application/octet-stream");
+        PatchUnifiedWebhookResponse.Builder _resBuilder = 
+            PatchUnifiedWebhookResponse
+                .builder()
+                .contentType(_contentType)
+                .statusCode(_httpRes.statusCode())
+                .rawResponse(_httpRes);
+
+        PatchUnifiedWebhookResponse _res = _resBuilder.build();
+        
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            if (Utils.contentTypeMatches(_contentType, "application/json")) {
+                Webhook _out = Utils.mapper().readValue(
+                    Utils.toUtf8AndClose(_httpRes.body()),
+                    new TypeReference<Webhook>() {});
+                _res.withWebhook(Optional.ofNullable(_out));
+                return _res;
+            } else {
+                throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "Unexpected content-type received: " + _contentType, 
+                    Utils.extractByteArrayFromBody(_httpRes));
+            }
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        throw new SDKError(
+            _httpRes, 
+            _httpRes.statusCode(), 
+            "Unexpected status code received: " + _httpRes.statusCode(), 
+            Utils.extractByteArrayFromBody(_httpRes));
+    }
+
+
+
+    /**
      * Trigger webhook
      * @return The call builder
      */
@@ -2101,6 +2235,132 @@ public class Unified implements
                     Utils.toUtf8AndClose(_httpRes.body()),
                     new TypeReference<Connection>() {});
                 _res.withConnection(Optional.ofNullable(_out));
+                return _res;
+            } else {
+                throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "Unexpected content-type received: " + _contentType, 
+                    Utils.extractByteArrayFromBody(_httpRes));
+            }
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        throw new SDKError(
+            _httpRes, 
+            _httpRes.statusCode(), 
+            "Unexpected status code received: " + _httpRes.statusCode(), 
+            Utils.extractByteArrayFromBody(_httpRes));
+    }
+
+
+
+    /**
+     * Update webhook subscription
+     * @return The call builder
+     */
+    public UpdateUnifiedWebhookRequestBuilder updateUnifiedWebhook() {
+        return new UpdateUnifiedWebhookRequestBuilder(this);
+    }
+
+    /**
+     * Update webhook subscription
+     * @param request The request object containing all of the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public UpdateUnifiedWebhookResponse updateUnifiedWebhook(
+            UpdateUnifiedWebhookRequest request) throws Exception {
+        String _baseUrl = this.sdkConfiguration.serverUrl;
+        String _url = Utils.generateURL(
+                UpdateUnifiedWebhookRequest.class,
+                _baseUrl,
+                "/unified/webhook/{id}",
+                request, null);
+        
+        HTTPRequest _req = new HTTPRequest(_url, "PUT");
+        Object _convertedRequest = Utils.convertToShape(
+                request, 
+                JsonShape.DEFAULT,
+                new TypeReference<UpdateUnifiedWebhookRequest>() {});
+        SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
+                _convertedRequest, 
+                "webhook",
+                "json",
+                false);
+        _req.setBody(Optional.ofNullable(_serializedRequestBody));
+        _req.addHeader("Accept", "application/json")
+            .addHeader("user-agent", 
+                this.sdkConfiguration.userAgent);
+
+        Utils.configureSecurity(_req,  
+                this.sdkConfiguration.securitySource.getSecurity());
+
+        HTTPClient _client = this.sdkConfiguration.defaultClient;
+        HttpRequest _r = 
+            sdkConfiguration.hooks()
+               .beforeRequest(
+                  new BeforeRequestContextImpl(
+                      "updateUnifiedWebhook", 
+                      Optional.of(List.of()), 
+                      sdkConfiguration.securitySource()),
+                  _req.build());
+        HttpResponse<InputStream> _httpRes;
+        try {
+            _httpRes = _client.send(_r);
+            if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "updateUnifiedWebhook",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()),
+                        Optional.of(_httpRes),
+                        Optional.empty());
+            } else {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterSuccess(
+                        new AfterSuccessContextImpl(
+                            "updateUnifiedWebhook",
+                            Optional.of(List.of()), 
+                            sdkConfiguration.securitySource()),
+                         _httpRes);
+            }
+        } catch (Exception _e) {
+            _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "updateUnifiedWebhook",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()), 
+                        Optional.empty(),
+                        Optional.of(_e));
+        }
+        String _contentType = _httpRes
+            .headers()
+            .firstValue("Content-Type")
+            .orElse("application/octet-stream");
+        UpdateUnifiedWebhookResponse.Builder _resBuilder = 
+            UpdateUnifiedWebhookResponse
+                .builder()
+                .contentType(_contentType)
+                .statusCode(_httpRes.statusCode())
+                .rawResponse(_httpRes);
+
+        UpdateUnifiedWebhookResponse _res = _resBuilder.build();
+        
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            if (Utils.contentTypeMatches(_contentType, "application/json")) {
+                Webhook _out = Utils.mapper().readValue(
+                    Utils.toUtf8AndClose(_httpRes.body()),
+                    new TypeReference<Webhook>() {});
+                _res.withWebhook(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(

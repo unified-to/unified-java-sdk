@@ -1714,6 +1714,12 @@ public class SDKMethodInterfaces {
     }
 
 
+    public interface MethodCallPatchUnifiedWebhook {
+        com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookResponse patchUnifiedWebhook(
+            PatchUnifiedWebhookRequest request) throws Exception;
+    }
+
+
     public interface MethodCallPatchUnifiedWebhookTrigger {
         com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerResponse patchUnifiedWebhookTrigger(
             PatchUnifiedWebhookTriggerRequest request) throws Exception;
@@ -1735,6 +1741,12 @@ public class SDKMethodInterfaces {
     public interface MethodCallUpdateUnifiedConnection {
         com.unifiedapi.unifiedto.models.operations.UpdateUnifiedConnectionResponse updateUnifiedConnection(
             UpdateUnifiedConnectionRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallUpdateUnifiedWebhook {
+        com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookResponse updateUnifiedWebhook(
+            UpdateUnifiedWebhookRequest request) throws Exception;
     }
 
 
