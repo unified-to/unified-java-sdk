@@ -4,7 +4,6 @@
 
 package com.unifiedapi.unifiedto.models.operations;
 
-
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
 

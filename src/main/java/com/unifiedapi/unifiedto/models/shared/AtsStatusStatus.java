@@ -4,12 +4,11 @@
 
 package com.unifiedapi.unifiedto.models.shared;
 
-
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
 
 public enum AtsStatusStatus {
-    NEW_("NEW"),
+    NEW("NEW"),
     REVIEWING("REVIEWING"),
     SCREENING("SCREENING"),
     SUBMITTED("SUBMITTED"),

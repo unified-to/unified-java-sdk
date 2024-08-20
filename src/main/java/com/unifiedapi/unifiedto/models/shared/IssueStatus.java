@@ -4,13 +4,12 @@
 
 package com.unifiedapi.unifiedto.models.shared;
 
-
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
 
 public enum IssueStatus {
     COMPLETED("COMPLETED"),
-    NEW_("NEW"),
+    NEW("NEW"),
     ROADMAP("ROADMAP"),
     IN_PROGRESS("IN_PROGRESS"),
     ON_HOLD("ON_HOLD"),

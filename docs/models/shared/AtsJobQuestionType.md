@@ -8,7 +8,7 @@
 | `TEXT`            | TEXT              |
 | `NUMBER`          | NUMBER            |
 | `DATE`            | DATE              |
-| `BOOLEAN_`        | BOOLEAN           |
+| `BOOLEAN`         | BOOLEAN           |
 | `MULTIPLE_CHOICE` | MULTIPLE_CHOICE   |
 | `FILE`            | FILE              |
 | `TEXTAREA`        | TEXTAREA          |

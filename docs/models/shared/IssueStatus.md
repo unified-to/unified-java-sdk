@@ -6,7 +6,7 @@
 | Name          | Value         |
 | ------------- | ------------- |
 | `COMPLETED`   | COMPLETED     |
-| `NEW_`        | NEW           |
+| `NEW`         | NEW           |
 | `ROADMAP`     | ROADMAP       |
 | `IN_PROGRESS` | IN_PROGRESS   |
 | `ON_HOLD`     | ON_HOLD       |

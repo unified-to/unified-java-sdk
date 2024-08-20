@@ -5,7 +5,7 @@
 
 | Name               | Value              |
 | ------------------ | ------------------ |
-| `NEW_`             | NEW                |
+| `NEW`              | NEW                |
 | `REVIEWING`        | REVIEWING          |
 | `SCREENING`        | SCREENING          |
 | `SUBMITTED`        | SUBMITTED          |

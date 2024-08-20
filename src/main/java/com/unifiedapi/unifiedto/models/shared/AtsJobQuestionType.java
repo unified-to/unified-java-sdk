@@ -4,7 +4,6 @@
 
 package com.unifiedapi.unifiedto.models.shared;
 
-
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
 
@@ -12,7 +11,7 @@ public enum AtsJobQuestionType {
     TEXT("TEXT"),
     NUMBER("NUMBER"),
     DATE("DATE"),
-    BOOLEAN_("BOOLEAN"),
+    BOOLEAN("BOOLEAN"),
     MULTIPLE_CHOICE("MULTIPLE_CHOICE"),
     FILE("FILE"),
     TEXTAREA("TEXTAREA"),

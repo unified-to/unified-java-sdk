@@ -103,6 +103,10 @@ public class AtsCandidate {
     @JsonProperty("user_id")
     private Optional<String> userId;
 
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("web_url")
+    private Optional<String> webUrl;
+
     @JsonCreator
     public AtsCandidate(
             @JsonProperty("address") Optional<? extends PropertyAtsCandidateAddress> address,
@@ -123,7 +127,8 @@ public class AtsCandidate {
             @JsonProperty("telephones") Optional<? extends List<AtsTelephone>> telephones,
             @JsonProperty("title") Optional<String> title,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("user_id") Optional<String> userId) {
+            @JsonProperty("user_id") Optional<String> userId,
+            @JsonProperty("web_url") Optional<String> webUrl) {
         Utils.checkNotNull(address, "address");
         Utils.checkNotNull(companyId, "companyId");
         Utils.checkNotNull(companyName, "companyName");
@@ -143,6 +148,7 @@ public class AtsCandidate {
         Utils.checkNotNull(title, "title");
         Utils.checkNotNull(updatedAt, "updatedAt");
         Utils.checkNotNull(userId, "userId");
+        Utils.checkNotNull(webUrl, "webUrl");
         this.address = address;
         this.companyId = companyId;
         this.companyName = companyName;
@@ -162,10 +168,11 @@ public class AtsCandidate {
         this.title = title;
         this.updatedAt = updatedAt;
         this.userId = userId;
+        this.webUrl = webUrl;
     }
     
     public AtsCandidate() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -272,6 +279,11 @@ public class AtsCandidate {
     @JsonIgnore
     public Optional<String> userId() {
         return userId;
+    }
+
+    @JsonIgnore
+    public Optional<String> webUrl() {
+        return webUrl;
     }
 
     public final static Builder builder() {
@@ -511,6 +523,18 @@ public class AtsCandidate {
         this.userId = userId;
         return this;
     }
+
+    public AtsCandidate withWebUrl(String webUrl) {
+        Utils.checkNotNull(webUrl, "webUrl");
+        this.webUrl = Optional.ofNullable(webUrl);
+        return this;
+    }
+
+    public AtsCandidate withWebUrl(Optional<String> webUrl) {
+        Utils.checkNotNull(webUrl, "webUrl");
+        this.webUrl = webUrl;
+        return this;
+    }
     
     @Override
     public boolean equals(java.lang.Object o) {
@@ -540,7 +564,8 @@ public class AtsCandidate {
             Objects.deepEquals(this.telephones, other.telephones) &&
             Objects.deepEquals(this.title, other.title) &&
             Objects.deepEquals(this.updatedAt, other.updatedAt) &&
-            Objects.deepEquals(this.userId, other.userId);
+            Objects.deepEquals(this.userId, other.userId) &&
+            Objects.deepEquals(this.webUrl, other.webUrl);
     }
     
     @Override
@@ -564,7 +589,8 @@ public class AtsCandidate {
             telephones,
             title,
             updatedAt,
-            userId);
+            userId,
+            webUrl);
     }
     
     @Override
@@ -588,7 +614,8 @@ public class AtsCandidate {
                 "telephones", telephones,
                 "title", title,
                 "updatedAt", updatedAt,
-                "userId", userId);
+                "userId", userId,
+                "webUrl", webUrl);
     }
     
     public final static class Builder {
@@ -629,7 +656,9 @@ public class AtsCandidate {
  
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
  
-        private Optional<String> userId = Optional.empty();  
+        private Optional<String> userId = Optional.empty();
+ 
+        private Optional<String> webUrl = Optional.empty();  
         
         private Builder() {
           // force use of static builder() method
@@ -868,6 +897,18 @@ public class AtsCandidate {
             this.userId = userId;
             return this;
         }
+
+        public Builder webUrl(String webUrl) {
+            Utils.checkNotNull(webUrl, "webUrl");
+            this.webUrl = Optional.ofNullable(webUrl);
+            return this;
+        }
+
+        public Builder webUrl(Optional<String> webUrl) {
+            Utils.checkNotNull(webUrl, "webUrl");
+            this.webUrl = webUrl;
+            return this;
+        }
         
         public AtsCandidate build() {
             return new AtsCandidate(
@@ -889,7 +930,8 @@ public class AtsCandidate {
                 telephones,
                 title,
                 updatedAt,
-                userId);
+                userId,
+                webUrl);
         }
     }
 }

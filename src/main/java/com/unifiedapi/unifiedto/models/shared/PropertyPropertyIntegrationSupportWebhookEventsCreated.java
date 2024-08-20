@@ -4,13 +4,12 @@
 
 package com.unifiedapi.unifiedto.models.shared;
 
-
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
 
 public enum PropertyPropertyIntegrationSupportWebhookEventsCreated {
     VIRTUAL("virtual"),
-    NATIVE_("native");
+    NATIVE("native");
 
     @JsonValue
     private final String value;

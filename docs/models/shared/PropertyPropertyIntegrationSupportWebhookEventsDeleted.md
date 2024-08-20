@@ -6,4 +6,4 @@
 | Name      | Value     |
 | --------- | --------- |
 | `VIRTUAL` | virtual   |
-| `NATIVE_` | native    |
+| `NATIVE`  | native    |
