@@ -1,6 +1,8 @@
 # Model
 (*model()*)
 
+## Overview
+
 ### Available Operations
 
 * [listGenaiModels](#listgenaimodels) - List all models
@@ -54,18 +56,16 @@ public class Application {
 }
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
 | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | `request`                                                                   | [ListGenaiModelsRequest](../../models/operations/ListGenaiModelsRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
-
 ### Response
 
 **[ListGenaiModelsResponse](../../models/operations/ListGenaiModelsResponse.md)**
+
 ### Errors
 
 | Error Object           | Status Code            | Content Type           |

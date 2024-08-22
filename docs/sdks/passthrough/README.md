@@ -1,6 +1,8 @@
 # Passthrough
 (*passthrough()*)
 
+## Overview
+
 ### Available Operations
 
 * [createPassthrough](#createpassthrough) - Passthrough POST
@@ -59,23 +61,22 @@ public class Application {
 }
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | `request`                                                                       | [CreatePassthroughRequest](../../models/operations/CreatePassthroughRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
-
 ### Response
 
 **[CreatePassthroughResponse](../../models/operations/CreatePassthroughResponse.md)**
+
 ### Errors
 
 | Error Object           | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+
 
 ## listPassthroughs
 
@@ -127,23 +128,22 @@ public class Application {
 }
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | `request`                                                                     | [ListPassthroughsRequest](../../models/operations/ListPassthroughsRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
-
 ### Response
 
 **[ListPassthroughsResponse](../../models/operations/ListPassthroughsResponse.md)**
+
 ### Errors
 
 | Error Object           | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+
 
 ## patchPassthrough
 
@@ -195,23 +195,22 @@ public class Application {
 }
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | `request`                                                                     | [PatchPassthroughRequest](../../models/operations/PatchPassthroughRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
-
 ### Response
 
 **[PatchPassthroughResponse](../../models/operations/PatchPassthroughResponse.md)**
+
 ### Errors
 
 | Error Object           | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+
 
 ## removePassthrough
 
@@ -263,23 +262,22 @@ public class Application {
 }
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | `request`                                                                       | [RemovePassthroughRequest](../../models/operations/RemovePassthroughRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
-
 ### Response
 
 **[RemovePassthroughResponse](../../models/operations/RemovePassthroughResponse.md)**
+
 ### Errors
 
 | Error Object           | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+
 
 ## updatePassthrough
 
@@ -331,18 +329,16 @@ public class Application {
 }
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | `request`                                                                       | [UpdatePassthroughRequest](../../models/operations/UpdatePassthroughRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
-
 ### Response
 
 **[UpdatePassthroughResponse](../../models/operations/UpdatePassthroughResponse.md)**
+
 ### Errors
 
 | Error Object           | Status Code            | Content Type           |

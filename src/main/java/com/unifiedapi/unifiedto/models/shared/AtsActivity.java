@@ -30,8 +30,16 @@ public class AtsActivity {
     private Optional<String> applicationId;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("bcc")
+    private Optional<? extends List<AtsEmail>> bcc;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_id")
     private Optional<String> candidateId;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cc")
+    private Optional<? extends List<AtsEmail>> cc;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
@@ -44,6 +52,10 @@ public class AtsActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document_id")
     private Optional<String> documentId;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("from")
+    private Optional<? extends PropertyAtsActivityFrom> from;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
@@ -69,6 +81,10 @@ public class AtsActivity {
     private String title;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("to")
+    private Optional<? extends List<AtsEmail>> to;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private Optional<? extends AtsActivityType> type;
 
@@ -86,44 +102,56 @@ public class AtsActivity {
     @JsonCreator
     public AtsActivity(
             @JsonProperty("application_id") Optional<String> applicationId,
+            @JsonProperty("bcc") Optional<? extends List<AtsEmail>> bcc,
             @JsonProperty("candidate_id") Optional<String> candidateId,
+            @JsonProperty("cc") Optional<? extends List<AtsEmail>> cc,
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("description") Optional<String> description,
             @JsonProperty("document_id") Optional<String> documentId,
+            @JsonProperty("from") Optional<? extends PropertyAtsActivityFrom> from,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("interview_id") Optional<String> interviewId,
             @JsonProperty("is_private") Optional<Boolean> isPrivate,
             @JsonProperty("job_id") Optional<String> jobId,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
             @JsonProperty("title") String title,
+            @JsonProperty("to") Optional<? extends List<AtsEmail>> to,
             @JsonProperty("type") Optional<? extends AtsActivityType> type,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
             @JsonProperty("user_ids") Optional<? extends List<String>> userIds) {
         Utils.checkNotNull(applicationId, "applicationId");
+        Utils.checkNotNull(bcc, "bcc");
         Utils.checkNotNull(candidateId, "candidateId");
+        Utils.checkNotNull(cc, "cc");
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(description, "description");
         Utils.checkNotNull(documentId, "documentId");
+        Utils.checkNotNull(from, "from");
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(interviewId, "interviewId");
         Utils.checkNotNull(isPrivate, "isPrivate");
         Utils.checkNotNull(jobId, "jobId");
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(title, "title");
+        Utils.checkNotNull(to, "to");
         Utils.checkNotNull(type, "type");
         Utils.checkNotNull(updatedAt, "updatedAt");
         Utils.checkNotNull(userIds, "userIds");
         this.applicationId = applicationId;
+        this.bcc = bcc;
         this.candidateId = candidateId;
+        this.cc = cc;
         this.createdAt = createdAt;
         this.description = description;
         this.documentId = documentId;
+        this.from = from;
         this.id = id;
         this.interviewId = interviewId;
         this.isPrivate = isPrivate;
         this.jobId = jobId;
         this.raw = raw;
         this.title = title;
+        this.to = to;
         this.type = type;
         this.updatedAt = updatedAt;
         this.userIds = userIds;
@@ -131,7 +159,7 @@ public class AtsActivity {
     
     public AtsActivity(
             String title) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), title, Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), title, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -139,9 +167,21 @@ public class AtsActivity {
         return applicationId;
     }
 
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<AtsEmail>> bcc() {
+        return (Optional<List<AtsEmail>>) bcc;
+    }
+
     @JsonIgnore
     public Optional<String> candidateId() {
         return candidateId;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<AtsEmail>> cc() {
+        return (Optional<List<AtsEmail>>) cc;
     }
 
     @JsonIgnore
@@ -157,6 +197,12 @@ public class AtsActivity {
     @JsonIgnore
     public Optional<String> documentId() {
         return documentId;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<PropertyAtsActivityFrom> from() {
+        return (Optional<PropertyAtsActivityFrom>) from;
     }
 
     @JsonIgnore
@@ -188,6 +234,12 @@ public class AtsActivity {
     @JsonIgnore
     public String title() {
         return title;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<AtsEmail>> to() {
+        return (Optional<List<AtsEmail>>) to;
     }
 
     @SuppressWarnings("unchecked")
@@ -226,6 +278,18 @@ public class AtsActivity {
         return this;
     }
 
+    public AtsActivity withBcc(List<AtsEmail> bcc) {
+        Utils.checkNotNull(bcc, "bcc");
+        this.bcc = Optional.ofNullable(bcc);
+        return this;
+    }
+
+    public AtsActivity withBcc(Optional<? extends List<AtsEmail>> bcc) {
+        Utils.checkNotNull(bcc, "bcc");
+        this.bcc = bcc;
+        return this;
+    }
+
     public AtsActivity withCandidateId(String candidateId) {
         Utils.checkNotNull(candidateId, "candidateId");
         this.candidateId = Optional.ofNullable(candidateId);
@@ -235,6 +299,18 @@ public class AtsActivity {
     public AtsActivity withCandidateId(Optional<String> candidateId) {
         Utils.checkNotNull(candidateId, "candidateId");
         this.candidateId = candidateId;
+        return this;
+    }
+
+    public AtsActivity withCc(List<AtsEmail> cc) {
+        Utils.checkNotNull(cc, "cc");
+        this.cc = Optional.ofNullable(cc);
+        return this;
+    }
+
+    public AtsActivity withCc(Optional<? extends List<AtsEmail>> cc) {
+        Utils.checkNotNull(cc, "cc");
+        this.cc = cc;
         return this;
     }
 
@@ -271,6 +347,18 @@ public class AtsActivity {
     public AtsActivity withDocumentId(Optional<String> documentId) {
         Utils.checkNotNull(documentId, "documentId");
         this.documentId = documentId;
+        return this;
+    }
+
+    public AtsActivity withFrom(PropertyAtsActivityFrom from) {
+        Utils.checkNotNull(from, "from");
+        this.from = Optional.ofNullable(from);
+        return this;
+    }
+
+    public AtsActivity withFrom(Optional<? extends PropertyAtsActivityFrom> from) {
+        Utils.checkNotNull(from, "from");
+        this.from = from;
         return this;
     }
 
@@ -340,6 +428,18 @@ public class AtsActivity {
         return this;
     }
 
+    public AtsActivity withTo(List<AtsEmail> to) {
+        Utils.checkNotNull(to, "to");
+        this.to = Optional.ofNullable(to);
+        return this;
+    }
+
+    public AtsActivity withTo(Optional<? extends List<AtsEmail>> to) {
+        Utils.checkNotNull(to, "to");
+        this.to = to;
+        return this;
+    }
+
     public AtsActivity withType(AtsActivityType type) {
         Utils.checkNotNull(type, "type");
         this.type = Optional.ofNullable(type);
@@ -393,16 +493,20 @@ public class AtsActivity {
         AtsActivity other = (AtsActivity) o;
         return 
             Objects.deepEquals(this.applicationId, other.applicationId) &&
+            Objects.deepEquals(this.bcc, other.bcc) &&
             Objects.deepEquals(this.candidateId, other.candidateId) &&
+            Objects.deepEquals(this.cc, other.cc) &&
             Objects.deepEquals(this.createdAt, other.createdAt) &&
             Objects.deepEquals(this.description, other.description) &&
             Objects.deepEquals(this.documentId, other.documentId) &&
+            Objects.deepEquals(this.from, other.from) &&
             Objects.deepEquals(this.id, other.id) &&
             Objects.deepEquals(this.interviewId, other.interviewId) &&
             Objects.deepEquals(this.isPrivate, other.isPrivate) &&
             Objects.deepEquals(this.jobId, other.jobId) &&
             Objects.deepEquals(this.raw, other.raw) &&
             Objects.deepEquals(this.title, other.title) &&
+            Objects.deepEquals(this.to, other.to) &&
             Objects.deepEquals(this.type, other.type) &&
             Objects.deepEquals(this.updatedAt, other.updatedAt) &&
             Objects.deepEquals(this.userIds, other.userIds);
@@ -412,16 +516,20 @@ public class AtsActivity {
     public int hashCode() {
         return Objects.hash(
             applicationId,
+            bcc,
             candidateId,
+            cc,
             createdAt,
             description,
             documentId,
+            from,
             id,
             interviewId,
             isPrivate,
             jobId,
             raw,
             title,
+            to,
             type,
             updatedAt,
             userIds);
@@ -431,16 +539,20 @@ public class AtsActivity {
     public String toString() {
         return Utils.toString(AtsActivity.class,
                 "applicationId", applicationId,
+                "bcc", bcc,
                 "candidateId", candidateId,
+                "cc", cc,
                 "createdAt", createdAt,
                 "description", description,
                 "documentId", documentId,
+                "from", from,
                 "id", id,
                 "interviewId", interviewId,
                 "isPrivate", isPrivate,
                 "jobId", jobId,
                 "raw", raw,
                 "title", title,
+                "to", to,
                 "type", type,
                 "updatedAt", updatedAt,
                 "userIds", userIds);
@@ -450,13 +562,19 @@ public class AtsActivity {
  
         private Optional<String> applicationId = Optional.empty();
  
+        private Optional<? extends List<AtsEmail>> bcc = Optional.empty();
+ 
         private Optional<String> candidateId = Optional.empty();
+ 
+        private Optional<? extends List<AtsEmail>> cc = Optional.empty();
  
         private Optional<OffsetDateTime> createdAt = Optional.empty();
  
         private Optional<String> description = Optional.empty();
  
         private Optional<String> documentId = Optional.empty();
+ 
+        private Optional<? extends PropertyAtsActivityFrom> from = Optional.empty();
  
         private Optional<String> id = Optional.empty();
  
@@ -469,6 +587,8 @@ public class AtsActivity {
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
  
         private String title;
+ 
+        private Optional<? extends List<AtsEmail>> to = Optional.empty();
  
         private Optional<? extends AtsActivityType> type = Optional.empty();
  
@@ -492,6 +612,18 @@ public class AtsActivity {
             return this;
         }
 
+        public Builder bcc(List<AtsEmail> bcc) {
+            Utils.checkNotNull(bcc, "bcc");
+            this.bcc = Optional.ofNullable(bcc);
+            return this;
+        }
+
+        public Builder bcc(Optional<? extends List<AtsEmail>> bcc) {
+            Utils.checkNotNull(bcc, "bcc");
+            this.bcc = bcc;
+            return this;
+        }
+
         public Builder candidateId(String candidateId) {
             Utils.checkNotNull(candidateId, "candidateId");
             this.candidateId = Optional.ofNullable(candidateId);
@@ -501,6 +633,18 @@ public class AtsActivity {
         public Builder candidateId(Optional<String> candidateId) {
             Utils.checkNotNull(candidateId, "candidateId");
             this.candidateId = candidateId;
+            return this;
+        }
+
+        public Builder cc(List<AtsEmail> cc) {
+            Utils.checkNotNull(cc, "cc");
+            this.cc = Optional.ofNullable(cc);
+            return this;
+        }
+
+        public Builder cc(Optional<? extends List<AtsEmail>> cc) {
+            Utils.checkNotNull(cc, "cc");
+            this.cc = cc;
             return this;
         }
 
@@ -537,6 +681,18 @@ public class AtsActivity {
         public Builder documentId(Optional<String> documentId) {
             Utils.checkNotNull(documentId, "documentId");
             this.documentId = documentId;
+            return this;
+        }
+
+        public Builder from(PropertyAtsActivityFrom from) {
+            Utils.checkNotNull(from, "from");
+            this.from = Optional.ofNullable(from);
+            return this;
+        }
+
+        public Builder from(Optional<? extends PropertyAtsActivityFrom> from) {
+            Utils.checkNotNull(from, "from");
+            this.from = from;
             return this;
         }
 
@@ -606,6 +762,18 @@ public class AtsActivity {
             return this;
         }
 
+        public Builder to(List<AtsEmail> to) {
+            Utils.checkNotNull(to, "to");
+            this.to = Optional.ofNullable(to);
+            return this;
+        }
+
+        public Builder to(Optional<? extends List<AtsEmail>> to) {
+            Utils.checkNotNull(to, "to");
+            this.to = to;
+            return this;
+        }
+
         public Builder type(AtsActivityType type) {
             Utils.checkNotNull(type, "type");
             this.type = Optional.ofNullable(type);
@@ -651,16 +819,20 @@ public class AtsActivity {
         public AtsActivity build() {
             return new AtsActivity(
                 applicationId,
+                bcc,
                 candidateId,
+                cc,
                 createdAt,
                 description,
                 documentId,
+                from,
                 id,
                 interviewId,
                 isPrivate,
                 jobId,
                 raw,
                 title,
+                to,
                 type,
                 updatedAt,
                 userIds);

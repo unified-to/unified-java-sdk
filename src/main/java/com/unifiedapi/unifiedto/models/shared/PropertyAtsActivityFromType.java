@@ -7,15 +7,15 @@ package com.unifiedapi.unifiedto.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
 
-public enum AtsActivityType {
-    NOTE("NOTE"),
-    TASK("TASK"),
-    EMAIL("EMAIL");
+public enum PropertyAtsActivityFromType {
+    WORK("WORK"),
+    HOME("HOME"),
+    OTHER("OTHER");
 
     @JsonValue
     private final String value;
 
-    private AtsActivityType(String value) {
+    private PropertyAtsActivityFromType(String value) {
         this.value = value;
     }
     

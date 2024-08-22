@@ -1,6 +1,8 @@
 # Login
 (*login()*)
 
+## Overview
+
 ### Available Operations
 
 * [getUnifiedIntegrationLogin](#getunifiedintegrationlogin) - Sign in a user
@@ -55,18 +57,16 @@ public class Application {
 }
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
 | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | `request`                                                                                         | [GetUnifiedIntegrationLoginRequest](../../models/operations/GetUnifiedIntegrationLoginRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
-
 ### Response
 
 **[GetUnifiedIntegrationLoginResponse](../../models/operations/GetUnifiedIntegrationLoginResponse.md)**
+
 ### Errors
 
 | Error Object           | Status Code            | Content Type           |

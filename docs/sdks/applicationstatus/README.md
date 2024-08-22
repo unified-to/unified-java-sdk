@@ -1,6 +1,8 @@
 # Applicationstatus
 (*applicationstatus()*)
 
+## Overview
+
 ### Available Operations
 
 * [listAtsApplicationstatuses](#listatsapplicationstatuses) - List all applicationstatuses
@@ -54,18 +56,16 @@ public class Application {
 }
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
 | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | `request`                                                                                         | [ListAtsApplicationstatusesRequest](../../models/operations/ListAtsApplicationstatusesRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
-
 ### Response
 
 **[ListAtsApplicationstatusesResponse](../../models/operations/ListAtsApplicationstatusesResponse.md)**
+
 ### Errors
 
 | Error Object           | Status Code            | Content Type           |

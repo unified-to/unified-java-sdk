@@ -1,6 +1,8 @@
 # Call
 (*call()*)
 
+## Overview
+
 ### Available Operations
 
 * [listUcCalls](#listuccalls) - List all calls
@@ -54,18 +56,16 @@ public class Application {
 }
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | `request`                                                           | [ListUcCallsRequest](../../models/operations/ListUcCallsRequest.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
 
-
 ### Response
 
 **[ListUcCallsResponse](../../models/operations/ListUcCallsResponse.md)**
+
 ### Errors
 
 | Error Object           | Status Code            | Content Type           |

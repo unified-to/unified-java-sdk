@@ -1,6 +1,8 @@
 # Issue
 (*issue()*)
 
+## Overview
+
 ### Available Operations
 
 * [listUnifiedIssues](#listunifiedissues) - List support issues
@@ -53,18 +55,16 @@ public class Application {
 }
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | `request`                                                                       | [ListUnifiedIssuesRequest](../../models/operations/ListUnifiedIssuesRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
-
 ### Response
 
 **[ListUnifiedIssuesResponse](../../models/operations/ListUnifiedIssuesResponse.md)**
+
 ### Errors
 
 | Error Object           | Status Code            | Content Type           |

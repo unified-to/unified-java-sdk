@@ -1,6 +1,8 @@
 # Prompt
 (*prompt()*)
 
+## Overview
+
 ### Available Operations
 
 * [createGenaiPrompt](#creategenaiprompt) - Create a prompt
@@ -54,18 +56,16 @@ public class Application {
 }
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | `request`                                                                       | [CreateGenaiPromptRequest](../../models/operations/CreateGenaiPromptRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
-
 ### Response
 
 **[CreateGenaiPromptResponse](../../models/operations/CreateGenaiPromptResponse.md)**
+
 ### Errors
 
 | Error Object           | Status Code            | Content Type           |
