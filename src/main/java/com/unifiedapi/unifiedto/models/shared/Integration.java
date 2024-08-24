@@ -71,8 +71,9 @@ public class Integration {
     @JsonProperty("featured")
     private Optional<Boolean> featured;
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("in_progress")
-    private boolean inProgress;
+    private Optional<Boolean> inProgress;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
@@ -142,7 +143,7 @@ public class Integration {
             @JsonProperty("description") Optional<String> description,
             @JsonProperty("fa_icon") Optional<String> faIcon,
             @JsonProperty("featured") Optional<Boolean> featured,
-            @JsonProperty("in_progress") boolean inProgress,
+            @JsonProperty("in_progress") Optional<Boolean> inProgress,
             @JsonProperty("is_active") Optional<Boolean> isActive,
             @JsonProperty("logo_url") Optional<String> logoUrl,
             @JsonProperty("name") String name,
@@ -208,10 +209,9 @@ public class Integration {
     
     public Integration(
             List<PropertyIntegrationCategories> categories,
-            boolean inProgress,
             String name,
             String type) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), categories, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), inProgress, Optional.empty(), Optional.empty(), name, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), type, Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), categories, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), name, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), type, Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -269,7 +269,7 @@ public class Integration {
     }
 
     @JsonIgnore
-    public boolean inProgress() {
+    public Optional<Boolean> inProgress() {
         return inProgress;
     }
 
@@ -469,6 +469,12 @@ public class Integration {
     }
 
     public Integration withInProgress(boolean inProgress) {
+        Utils.checkNotNull(inProgress, "inProgress");
+        this.inProgress = Optional.ofNullable(inProgress);
+        return this;
+    }
+
+    public Integration withInProgress(Optional<Boolean> inProgress) {
         Utils.checkNotNull(inProgress, "inProgress");
         this.inProgress = inProgress;
         return this;
@@ -746,7 +752,7 @@ public class Integration {
  
         private Optional<Boolean> featured = Optional.empty();
  
-        private Boolean inProgress;
+        private Optional<Boolean> inProgress = Optional.empty();
  
         private Optional<Boolean> isActive = Optional.empty();
  
@@ -896,6 +902,12 @@ public class Integration {
         }
 
         public Builder inProgress(boolean inProgress) {
+            Utils.checkNotNull(inProgress, "inProgress");
+            this.inProgress = Optional.ofNullable(inProgress);
+            return this;
+        }
+
+        public Builder inProgress(Optional<Boolean> inProgress) {
             Utils.checkNotNull(inProgress, "inProgress");
             this.inProgress = inProgress;
             return this;
