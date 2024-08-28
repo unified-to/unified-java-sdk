@@ -20,6 +20,9 @@ import java.util.Optional;
 
 public class CreateUnifiedWebhookRequest {
 
+    /**
+     * A webhook is used to POST new/updated information to your server.
+     */
     @SpeakeasyMetadata("request:mediaType=application/json")
     private Optional<? extends Webhook> webhook;
 
@@ -43,6 +46,9 @@ public class CreateUnifiedWebhookRequest {
         this(Optional.empty(), Optional.empty());
     }
 
+    /**
+     * A webhook is used to POST new/updated information to your server.
+     */
     @SuppressWarnings("unchecked")
     @JsonIgnore
     public Optional<Webhook> webhook() {
@@ -61,12 +67,18 @@ public class CreateUnifiedWebhookRequest {
         return new Builder();
     }
 
+    /**
+     * A webhook is used to POST new/updated information to your server.
+     */
     public CreateUnifiedWebhookRequest withWebhook(Webhook webhook) {
         Utils.checkNotNull(webhook, "webhook");
         this.webhook = Optional.ofNullable(webhook);
         return this;
     }
 
+    /**
+     * A webhook is used to POST new/updated information to your server.
+     */
     public CreateUnifiedWebhookRequest withWebhook(Optional<? extends Webhook> webhook) {
         Utils.checkNotNull(webhook, "webhook");
         this.webhook = webhook;
@@ -129,12 +141,18 @@ public class CreateUnifiedWebhookRequest {
           // force use of static builder() method
         }
 
+        /**
+         * A webhook is used to POST new/updated information to your server.
+         */
         public Builder webhook(Webhook webhook) {
             Utils.checkNotNull(webhook, "webhook");
             this.webhook = Optional.ofNullable(webhook);
             return this;
         }
 
+        /**
+         * A webhook is used to POST new/updated information to your server.
+         */
         public Builder webhook(Optional<? extends Webhook> webhook) {
             Utils.checkNotNull(webhook, "webhook");
             this.webhook = webhook;
