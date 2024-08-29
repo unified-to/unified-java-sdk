@@ -49,6 +49,10 @@ public class AccountingAccount {
     private Optional<String> description;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("group")
+    private Optional<String> group;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
@@ -72,8 +76,20 @@ public class AccountingAccount {
     private Optional<? extends Map<String, Object>> raw;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("section")
+    private Optional<String> section;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private Optional<? extends Status> status;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("subgroup")
+    private Optional<String> subgroup;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("subsection")
+    private Optional<String> subsection;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
@@ -90,12 +106,16 @@ public class AccountingAccount {
             @JsonProperty("currency") Optional<String> currency,
             @JsonProperty("customer_defined_code") Optional<String> customerDefinedCode,
             @JsonProperty("description") Optional<String> description,
+            @JsonProperty("group") Optional<String> group,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("is_payable") Optional<Boolean> isPayable,
             @JsonProperty("name") Optional<String> name,
             @JsonProperty("parent_account_id") Optional<String> parentAccountId,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("section") Optional<String> section,
             @JsonProperty("status") Optional<? extends Status> status,
+            @JsonProperty("subgroup") Optional<String> subgroup,
+            @JsonProperty("subsection") Optional<String> subsection,
             @JsonProperty("type") Optional<? extends Type> type,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(balance, "balance");
@@ -103,12 +123,16 @@ public class AccountingAccount {
         Utils.checkNotNull(currency, "currency");
         Utils.checkNotNull(customerDefinedCode, "customerDefinedCode");
         Utils.checkNotNull(description, "description");
+        Utils.checkNotNull(group, "group");
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(isPayable, "isPayable");
         Utils.checkNotNull(name, "name");
         Utils.checkNotNull(parentAccountId, "parentAccountId");
         Utils.checkNotNull(raw, "raw");
+        Utils.checkNotNull(section, "section");
         Utils.checkNotNull(status, "status");
+        Utils.checkNotNull(subgroup, "subgroup");
+        Utils.checkNotNull(subsection, "subsection");
         Utils.checkNotNull(type, "type");
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.balance = balance;
@@ -116,18 +140,22 @@ public class AccountingAccount {
         this.currency = currency;
         this.customerDefinedCode = customerDefinedCode;
         this.description = description;
+        this.group = group;
         this.id = id;
         this.isPayable = isPayable;
         this.name = name;
         this.parentAccountId = parentAccountId;
         this.raw = raw;
+        this.section = section;
         this.status = status;
+        this.subgroup = subgroup;
+        this.subsection = subsection;
         this.type = type;
         this.updatedAt = updatedAt;
     }
     
     public AccountingAccount() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -153,6 +181,11 @@ public class AccountingAccount {
     @JsonIgnore
     public Optional<String> description() {
         return description;
+    }
+
+    @JsonIgnore
+    public Optional<String> group() {
+        return group;
     }
 
     @JsonIgnore
@@ -184,10 +217,25 @@ public class AccountingAccount {
         return (Optional<Map<String, Object>>) raw;
     }
 
+    @JsonIgnore
+    public Optional<String> section() {
+        return section;
+    }
+
     @SuppressWarnings("unchecked")
     @JsonIgnore
     public Optional<Status> status() {
         return (Optional<Status>) status;
+    }
+
+    @JsonIgnore
+    public Optional<String> subgroup() {
+        return subgroup;
+    }
+
+    @JsonIgnore
+    public Optional<String> subsection() {
+        return subsection;
     }
 
     @SuppressWarnings("unchecked")
@@ -265,6 +313,18 @@ public class AccountingAccount {
         return this;
     }
 
+    public AccountingAccount withGroup(String group) {
+        Utils.checkNotNull(group, "group");
+        this.group = Optional.ofNullable(group);
+        return this;
+    }
+
+    public AccountingAccount withGroup(Optional<String> group) {
+        Utils.checkNotNull(group, "group");
+        this.group = group;
+        return this;
+    }
+
     public AccountingAccount withId(String id) {
         Utils.checkNotNull(id, "id");
         this.id = Optional.ofNullable(id);
@@ -331,6 +391,18 @@ public class AccountingAccount {
         return this;
     }
 
+    public AccountingAccount withSection(String section) {
+        Utils.checkNotNull(section, "section");
+        this.section = Optional.ofNullable(section);
+        return this;
+    }
+
+    public AccountingAccount withSection(Optional<String> section) {
+        Utils.checkNotNull(section, "section");
+        this.section = section;
+        return this;
+    }
+
     public AccountingAccount withStatus(Status status) {
         Utils.checkNotNull(status, "status");
         this.status = Optional.ofNullable(status);
@@ -340,6 +412,30 @@ public class AccountingAccount {
     public AccountingAccount withStatus(Optional<? extends Status> status) {
         Utils.checkNotNull(status, "status");
         this.status = status;
+        return this;
+    }
+
+    public AccountingAccount withSubgroup(String subgroup) {
+        Utils.checkNotNull(subgroup, "subgroup");
+        this.subgroup = Optional.ofNullable(subgroup);
+        return this;
+    }
+
+    public AccountingAccount withSubgroup(Optional<String> subgroup) {
+        Utils.checkNotNull(subgroup, "subgroup");
+        this.subgroup = subgroup;
+        return this;
+    }
+
+    public AccountingAccount withSubsection(String subsection) {
+        Utils.checkNotNull(subsection, "subsection");
+        this.subsection = Optional.ofNullable(subsection);
+        return this;
+    }
+
+    public AccountingAccount withSubsection(Optional<String> subsection) {
+        Utils.checkNotNull(subsection, "subsection");
+        this.subsection = subsection;
         return this;
     }
 
@@ -382,12 +478,16 @@ public class AccountingAccount {
             Objects.deepEquals(this.currency, other.currency) &&
             Objects.deepEquals(this.customerDefinedCode, other.customerDefinedCode) &&
             Objects.deepEquals(this.description, other.description) &&
+            Objects.deepEquals(this.group, other.group) &&
             Objects.deepEquals(this.id, other.id) &&
             Objects.deepEquals(this.isPayable, other.isPayable) &&
             Objects.deepEquals(this.name, other.name) &&
             Objects.deepEquals(this.parentAccountId, other.parentAccountId) &&
             Objects.deepEquals(this.raw, other.raw) &&
+            Objects.deepEquals(this.section, other.section) &&
             Objects.deepEquals(this.status, other.status) &&
+            Objects.deepEquals(this.subgroup, other.subgroup) &&
+            Objects.deepEquals(this.subsection, other.subsection) &&
             Objects.deepEquals(this.type, other.type) &&
             Objects.deepEquals(this.updatedAt, other.updatedAt);
     }
@@ -400,12 +500,16 @@ public class AccountingAccount {
             currency,
             customerDefinedCode,
             description,
+            group,
             id,
             isPayable,
             name,
             parentAccountId,
             raw,
+            section,
             status,
+            subgroup,
+            subsection,
             type,
             updatedAt);
     }
@@ -418,12 +522,16 @@ public class AccountingAccount {
                 "currency", currency,
                 "customerDefinedCode", customerDefinedCode,
                 "description", description,
+                "group", group,
                 "id", id,
                 "isPayable", isPayable,
                 "name", name,
                 "parentAccountId", parentAccountId,
                 "raw", raw,
+                "section", section,
                 "status", status,
+                "subgroup", subgroup,
+                "subsection", subsection,
                 "type", type,
                 "updatedAt", updatedAt);
     }
@@ -440,6 +548,8 @@ public class AccountingAccount {
  
         private Optional<String> description = Optional.empty();
  
+        private Optional<String> group = Optional.empty();
+ 
         private Optional<String> id = Optional.empty();
  
         private Optional<Boolean> isPayable = Optional.empty();
@@ -450,7 +560,13 @@ public class AccountingAccount {
  
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
  
+        private Optional<String> section = Optional.empty();
+ 
         private Optional<? extends Status> status = Optional.empty();
+ 
+        private Optional<String> subgroup = Optional.empty();
+ 
+        private Optional<String> subsection = Optional.empty();
  
         private Optional<? extends Type> type = Optional.empty();
  
@@ -520,6 +636,18 @@ public class AccountingAccount {
             return this;
         }
 
+        public Builder group(String group) {
+            Utils.checkNotNull(group, "group");
+            this.group = Optional.ofNullable(group);
+            return this;
+        }
+
+        public Builder group(Optional<String> group) {
+            Utils.checkNotNull(group, "group");
+            this.group = group;
+            return this;
+        }
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -586,6 +714,18 @@ public class AccountingAccount {
             return this;
         }
 
+        public Builder section(String section) {
+            Utils.checkNotNull(section, "section");
+            this.section = Optional.ofNullable(section);
+            return this;
+        }
+
+        public Builder section(Optional<String> section) {
+            Utils.checkNotNull(section, "section");
+            this.section = section;
+            return this;
+        }
+
         public Builder status(Status status) {
             Utils.checkNotNull(status, "status");
             this.status = Optional.ofNullable(status);
@@ -595,6 +735,30 @@ public class AccountingAccount {
         public Builder status(Optional<? extends Status> status) {
             Utils.checkNotNull(status, "status");
             this.status = status;
+            return this;
+        }
+
+        public Builder subgroup(String subgroup) {
+            Utils.checkNotNull(subgroup, "subgroup");
+            this.subgroup = Optional.ofNullable(subgroup);
+            return this;
+        }
+
+        public Builder subgroup(Optional<String> subgroup) {
+            Utils.checkNotNull(subgroup, "subgroup");
+            this.subgroup = subgroup;
+            return this;
+        }
+
+        public Builder subsection(String subsection) {
+            Utils.checkNotNull(subsection, "subsection");
+            this.subsection = Optional.ofNullable(subsection);
+            return this;
+        }
+
+        public Builder subsection(Optional<String> subsection) {
+            Utils.checkNotNull(subsection, "subsection");
+            this.subsection = subsection;
             return this;
         }
 
@@ -629,12 +793,16 @@ public class AccountingAccount {
                 currency,
                 customerDefinedCode,
                 description,
+                group,
                 id,
                 isPayable,
                 name,
                 parentAccountId,
                 raw,
+                section,
                 status,
+                subgroup,
+                subsection,
                 type,
                 updatedAt);
         }
