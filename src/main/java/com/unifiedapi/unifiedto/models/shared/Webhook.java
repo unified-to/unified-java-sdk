@@ -827,8 +827,7 @@ public class Webhook {
         public Webhook build() {
             if (environment == null) {
                 environment = _SINGLETON_VALUE_Environment.value();
-            }
-            return new Webhook(
+            }            return new Webhook(
                 checkedAt,
                 connectionId,
                 createdAt,

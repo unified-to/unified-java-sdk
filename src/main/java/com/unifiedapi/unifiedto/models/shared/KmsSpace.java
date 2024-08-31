@@ -415,8 +415,7 @@ public class KmsSpace {
         public KmsSpace build() {
             if (parentSpaceId == null) {
                 parentSpaceId = _SINGLETON_VALUE_ParentSpaceId.value();
-            }
-            return new KmsSpace(
+            }            return new KmsSpace(
                 createdAt,
                 description,
                 id,

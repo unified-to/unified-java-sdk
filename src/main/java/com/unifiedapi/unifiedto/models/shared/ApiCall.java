@@ -73,8 +73,9 @@ public class ApiCall {
     @JsonProperty("type")
     private ApiCallType type;
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspace_id")
-    private String workspaceId;
+    private Optional<String> workspaceId;
 
     @JsonCreator
     public ApiCall(
@@ -92,7 +93,7 @@ public class ApiCall {
             @JsonProperty("size") Optional<Double> size,
             @JsonProperty("status") String status,
             @JsonProperty("type") ApiCallType type,
-            @JsonProperty("workspace_id") String workspaceId) {
+            @JsonProperty("workspace_id") Optional<String> workspaceId) {
         Utils.checkNotNull(connectionId, "connectionId");
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(environment, "environment");
@@ -131,9 +132,8 @@ public class ApiCall {
             String name,
             String path,
             String status,
-            ApiCallType type,
-            String workspaceId) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), integrationType, Optional.empty(), method, name, path, Optional.empty(), status, type, workspaceId);
+            ApiCallType type) {
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), integrationType, Optional.empty(), method, name, path, Optional.empty(), status, type, Optional.empty());
     }
 
     @JsonIgnore
@@ -207,7 +207,7 @@ public class ApiCall {
     }
 
     @JsonIgnore
-    public String workspaceId() {
+    public Optional<String> workspaceId() {
         return workspaceId;
     }
 
@@ -349,6 +349,12 @@ public class ApiCall {
 
     public ApiCall withWorkspaceId(String workspaceId) {
         Utils.checkNotNull(workspaceId, "workspaceId");
+        this.workspaceId = Optional.ofNullable(workspaceId);
+        return this;
+    }
+
+    public ApiCall withWorkspaceId(Optional<String> workspaceId) {
+        Utils.checkNotNull(workspaceId, "workspaceId");
         this.workspaceId = workspaceId;
         return this;
     }
@@ -450,7 +456,7 @@ public class ApiCall {
  
         private ApiCallType type;
  
-        private String workspaceId;  
+        private Optional<String> workspaceId = Optional.empty();  
         
         private Builder() {
           // force use of static builder() method
@@ -590,6 +596,12 @@ public class ApiCall {
 
         public Builder workspaceId(String workspaceId) {
             Utils.checkNotNull(workspaceId, "workspaceId");
+            this.workspaceId = Optional.ofNullable(workspaceId);
+            return this;
+        }
+
+        public Builder workspaceId(Optional<String> workspaceId) {
+            Utils.checkNotNull(workspaceId, "workspaceId");
             this.workspaceId = workspaceId;
             return this;
         }
@@ -597,8 +609,7 @@ public class ApiCall {
         public ApiCall build() {
             if (environment == null) {
                 environment = _SINGLETON_VALUE_Environment.value();
-            }
-            return new ApiCall(
+            }            return new ApiCall(
                 connectionId,
                 createdAt,
                 environment,

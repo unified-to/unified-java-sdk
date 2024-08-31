@@ -856,8 +856,7 @@ public class AccountingContact {
         public AccountingContact build() {
             if (currency == null) {
                 currency = _SINGLETON_VALUE_Currency.value();
-            }
-            return new AccountingContact(
+            }            return new AccountingContact(
                 billingAddress,
                 companyName,
                 createdAt,

@@ -562,8 +562,7 @@ public class PaymentPayment {
         public PaymentPayment build() {
             if (currency == null) {
                 currency = _SINGLETON_VALUE_Currency.value();
-            }
-            return new PaymentPayment(
+            }            return new PaymentPayment(
                 accountId,
                 contactId,
                 createdAt,

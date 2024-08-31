@@ -684,8 +684,7 @@ public class Connection {
         public Connection build() {
             if (environment == null) {
                 environment = _SINGLETON_VALUE_Environment.value();
-            }
-            return new Connection(
+            }            return new Connection(
                 auth,
                 authAwsArn,
                 categories,

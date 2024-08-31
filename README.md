@@ -4,6 +4,23 @@
     
 </div>
 
+<!-- Start Summary [summary] -->
+## Summary
+
+Unified.to API: One API to Rule Them All
+<!-- End Summary [summary] -->
+
+<!-- Start Table of Contents [toc] -->
+## Table of Contents
+
+* [SDK Installation](#sdk-installation)
+* [SDK Example Usage](#sdk-example-usage)
+* [Available Resources and Operations](#available-resources-and-operations)
+* [Error Handling](#error-handling)
+* [Server Selection](#server-selection)
+* [Authentication](#authentication)
+<!-- End Table of Contents [toc] -->
+
 <!-- Start SDK Installation [installation] -->
 ## SDK Installation
 
@@ -15,7 +32,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'com.unifiedapi:unifiedto:0.20.6'
+implementation 'com.unifiedapi:unifiedto:0.20.7'
 ```
 
 Maven:
@@ -23,7 +40,7 @@ Maven:
 <dependency>
     <groupId>com.unifiedapi</groupId>
     <artifactId>unifiedto</artifactId>
-    <version>0.20.6</version>
+    <version>0.20.7</version>
 </dependency>
 ```
 

@@ -63,6 +63,9 @@ public class ListTaskTasksRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<OffsetDateTime> updatedGte;
 
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
+    private Optional<String> userId;
+
     @JsonCreator
     public ListTaskTasksRequest(
             String connectionId,
@@ -74,7 +77,8 @@ public class ListTaskTasksRequest {
             Optional<String> projectId,
             Optional<String> query,
             Optional<String> sort,
-            Optional<OffsetDateTime> updatedGte) {
+            Optional<OffsetDateTime> updatedGte,
+            Optional<String> userId) {
         Utils.checkNotNull(connectionId, "connectionId");
         Utils.checkNotNull(fields, "fields");
         Utils.checkNotNull(limit, "limit");
@@ -85,6 +89,7 @@ public class ListTaskTasksRequest {
         Utils.checkNotNull(query, "query");
         Utils.checkNotNull(sort, "sort");
         Utils.checkNotNull(updatedGte, "updatedGte");
+        Utils.checkNotNull(userId, "userId");
         this.connectionId = connectionId;
         this.fields = fields;
         this.limit = limit;
@@ -95,11 +100,12 @@ public class ListTaskTasksRequest {
         this.query = query;
         this.sort = sort;
         this.updatedGte = updatedGte;
+        this.userId = userId;
     }
     
     public ListTaskTasksRequest(
             String connectionId) {
-        this(connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     /**
@@ -163,6 +169,11 @@ public class ListTaskTasksRequest {
     @JsonIgnore
     public Optional<OffsetDateTime> updatedGte() {
         return updatedGte;
+    }
+
+    @JsonIgnore
+    public Optional<String> userId() {
+        return userId;
     }
 
     public final static Builder builder() {
@@ -303,6 +314,18 @@ public class ListTaskTasksRequest {
         this.updatedGte = updatedGte;
         return this;
     }
+
+    public ListTaskTasksRequest withUserId(String userId) {
+        Utils.checkNotNull(userId, "userId");
+        this.userId = Optional.ofNullable(userId);
+        return this;
+    }
+
+    public ListTaskTasksRequest withUserId(Optional<String> userId) {
+        Utils.checkNotNull(userId, "userId");
+        this.userId = userId;
+        return this;
+    }
     
     @Override
     public boolean equals(java.lang.Object o) {
@@ -323,7 +346,8 @@ public class ListTaskTasksRequest {
             Objects.deepEquals(this.projectId, other.projectId) &&
             Objects.deepEquals(this.query, other.query) &&
             Objects.deepEquals(this.sort, other.sort) &&
-            Objects.deepEquals(this.updatedGte, other.updatedGte);
+            Objects.deepEquals(this.updatedGte, other.updatedGte) &&
+            Objects.deepEquals(this.userId, other.userId);
     }
     
     @Override
@@ -338,7 +362,8 @@ public class ListTaskTasksRequest {
             projectId,
             query,
             sort,
-            updatedGte);
+            updatedGte,
+            userId);
     }
     
     @Override
@@ -353,7 +378,8 @@ public class ListTaskTasksRequest {
                 "projectId", projectId,
                 "query", query,
                 "sort", sort,
-                "updatedGte", updatedGte);
+                "updatedGte", updatedGte,
+                "userId", userId);
     }
     
     public final static class Builder {
@@ -376,7 +402,9 @@ public class ListTaskTasksRequest {
  
         private Optional<String> sort = Optional.empty();
  
-        private Optional<OffsetDateTime> updatedGte = Optional.empty();  
+        private Optional<OffsetDateTime> updatedGte = Optional.empty();
+ 
+        private Optional<String> userId = Optional.empty();  
         
         private Builder() {
           // force use of static builder() method
@@ -516,6 +544,18 @@ public class ListTaskTasksRequest {
             this.updatedGte = updatedGte;
             return this;
         }
+
+        public Builder userId(String userId) {
+            Utils.checkNotNull(userId, "userId");
+            this.userId = Optional.ofNullable(userId);
+            return this;
+        }
+
+        public Builder userId(Optional<String> userId) {
+            Utils.checkNotNull(userId, "userId");
+            this.userId = userId;
+            return this;
+        }
         
         public ListTaskTasksRequest build() {
             return new ListTaskTasksRequest(
@@ -528,7 +568,8 @@ public class ListTaskTasksRequest {
                 projectId,
                 query,
                 sort,
-                updatedGte);
+                updatedGte,
+                userId);
         }
     }
 }
