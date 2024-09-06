@@ -28,7 +28,7 @@
 
 ## createUnifiedConnection
 
-Create connection
+Used only to import existing customer credentials; use "Create connection indirectly" instead
 
 ### Example Usage
 

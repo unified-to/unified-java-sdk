@@ -119,6 +119,7 @@ public class Unified implements
 
     /**
      * Create connection
+     * Used only to import existing customer credentials; use "Create connection indirectly" instead
      * @return The call builder
      */
     public CreateUnifiedConnectionRequestBuilder createUnifiedConnection() {
@@ -127,6 +128,7 @@ public class Unified implements
 
     /**
      * Create connection
+     * Used only to import existing customer credentials; use "Create connection indirectly" instead
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
@@ -136,6 +138,7 @@ public class Unified implements
     
     /**
      * Create connection
+     * Used only to import existing customer credentials; use "Create connection indirectly" instead
      * @param request The request object containing all of the parameters for the API call.
      * @return The response from the API call
      * @throws Exception if the API call fails
