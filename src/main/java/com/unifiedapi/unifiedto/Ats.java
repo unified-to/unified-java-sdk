@@ -260,6 +260,11 @@ public class Ats implements
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
 
+        _req.addQueryParams(Utils.getQueryParams(
+                CreateAtsActivityRequest.class,
+                request, 
+                null));
+
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
 
@@ -385,6 +390,11 @@ public class Ats implements
         _req.addHeader("Accept", "application/json")
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                CreateAtsApplicationRequest.class,
+                request, 
+                null));
 
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
@@ -512,6 +522,11 @@ public class Ats implements
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
 
+        _req.addQueryParams(Utils.getQueryParams(
+                CreateAtsCandidateRequest.class,
+                request, 
+                null));
+
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
 
@@ -637,6 +652,11 @@ public class Ats implements
         _req.addHeader("Accept", "application/json")
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                CreateAtsDocumentRequest.class,
+                request, 
+                null));
 
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
@@ -764,6 +784,11 @@ public class Ats implements
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
 
+        _req.addQueryParams(Utils.getQueryParams(
+                CreateAtsInterviewRequest.class,
+                request, 
+                null));
+
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
 
@@ -890,6 +915,11 @@ public class Ats implements
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
 
+        _req.addQueryParams(Utils.getQueryParams(
+                CreateAtsJobRequest.class,
+                request, 
+                null));
+
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
 
@@ -1015,6 +1045,11 @@ public class Ats implements
         _req.addHeader("Accept", "application/json")
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                CreateAtsScorecardRequest.class,
+                request, 
+                null));
 
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
@@ -3199,6 +3234,11 @@ public class Ats implements
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
 
+        _req.addQueryParams(Utils.getQueryParams(
+                PatchAtsActivityRequest.class,
+                request, 
+                null));
+
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
 
@@ -3324,6 +3364,11 @@ public class Ats implements
         _req.addHeader("Accept", "application/json")
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                PatchAtsApplicationRequest.class,
+                request, 
+                null));
 
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
@@ -3451,6 +3496,11 @@ public class Ats implements
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
 
+        _req.addQueryParams(Utils.getQueryParams(
+                PatchAtsCandidateRequest.class,
+                request, 
+                null));
+
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
 
@@ -3576,6 +3626,11 @@ public class Ats implements
         _req.addHeader("Accept", "application/json")
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                PatchAtsDocumentRequest.class,
+                request, 
+                null));
 
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
@@ -3703,6 +3758,11 @@ public class Ats implements
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
 
+        _req.addQueryParams(Utils.getQueryParams(
+                PatchAtsInterviewRequest.class,
+                request, 
+                null));
+
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
 
@@ -3829,6 +3889,11 @@ public class Ats implements
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
 
+        _req.addQueryParams(Utils.getQueryParams(
+                PatchAtsJobRequest.class,
+                request, 
+                null));
+
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
 
@@ -3954,6 +4019,11 @@ public class Ats implements
         _req.addHeader("Accept", "application/json")
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                PatchAtsScorecardRequest.class,
+                request, 
+                null));
 
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
@@ -4816,6 +4886,11 @@ public class Ats implements
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
 
+        _req.addQueryParams(Utils.getQueryParams(
+                UpdateAtsActivityRequest.class,
+                request, 
+                null));
+
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
 
@@ -4941,6 +5016,11 @@ public class Ats implements
         _req.addHeader("Accept", "application/json")
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                UpdateAtsApplicationRequest.class,
+                request, 
+                null));
 
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
@@ -5068,6 +5148,11 @@ public class Ats implements
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
 
+        _req.addQueryParams(Utils.getQueryParams(
+                UpdateAtsCandidateRequest.class,
+                request, 
+                null));
+
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
 
@@ -5193,6 +5278,11 @@ public class Ats implements
         _req.addHeader("Accept", "application/json")
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                UpdateAtsDocumentRequest.class,
+                request, 
+                null));
 
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
@@ -5320,6 +5410,11 @@ public class Ats implements
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
 
+        _req.addQueryParams(Utils.getQueryParams(
+                UpdateAtsInterviewRequest.class,
+                request, 
+                null));
+
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
 
@@ -5446,6 +5541,11 @@ public class Ats implements
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
 
+        _req.addQueryParams(Utils.getQueryParams(
+                UpdateAtsJobRequest.class,
+                request, 
+                null));
+
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
 
@@ -5571,6 +5671,11 @@ public class Ats implements
         _req.addHeader("Accept", "application/json")
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                UpdateAtsScorecardRequest.class,
+                request, 
+                null));
 
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());

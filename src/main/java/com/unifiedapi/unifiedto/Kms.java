@@ -121,6 +121,11 @@ public class Kms implements
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
 
+        _req.addQueryParams(Utils.getQueryParams(
+                CreateKmsPageRequest.class,
+                request, 
+                null));
+
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
 
@@ -246,6 +251,11 @@ public class Kms implements
         _req.addHeader("Accept", "application/json")
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                CreateKmsSpaceRequest.class,
+                request, 
+                null));
 
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
@@ -857,6 +867,11 @@ public class Kms implements
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
 
+        _req.addQueryParams(Utils.getQueryParams(
+                PatchKmsPageRequest.class,
+                request, 
+                null));
+
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
 
@@ -982,6 +997,11 @@ public class Kms implements
         _req.addHeader("Accept", "application/json")
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                PatchKmsSpaceRequest.class,
+                request, 
+                null));
 
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
@@ -1319,6 +1339,11 @@ public class Kms implements
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
 
+        _req.addQueryParams(Utils.getQueryParams(
+                UpdateKmsPageRequest.class,
+                request, 
+                null));
+
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
 
@@ -1444,6 +1469,11 @@ public class Kms implements
         _req.addHeader("Accept", "application/json")
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                UpdateKmsSpaceRequest.class,
+                request, 
+                null));
 
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());

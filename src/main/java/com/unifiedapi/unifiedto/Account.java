@@ -96,6 +96,11 @@ public class Account implements
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
 
+        _req.addQueryParams(Utils.getQueryParams(
+                CreateAccountingAccountRequest.class,
+                request, 
+                null));
+
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
 
@@ -464,6 +469,11 @@ public class Account implements
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
 
+        _req.addQueryParams(Utils.getQueryParams(
+                PatchAccountingAccountRequest.class,
+                request, 
+                null));
+
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
 
@@ -694,6 +704,11 @@ public class Account implements
         _req.addHeader("Accept", "application/json")
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                UpdateAccountingAccountRequest.class,
+                request, 
+                null));
 
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());

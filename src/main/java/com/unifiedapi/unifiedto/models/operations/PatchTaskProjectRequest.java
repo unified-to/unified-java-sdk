@@ -13,6 +13,7 @@ import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -29,6 +30,12 @@ public class PatchTaskProjectRequest {
     private String connectionId;
 
     /**
+     * Comma-delimited fields to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    private Optional<? extends List<String>> fields;
+
+    /**
      * ID of the Project
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
@@ -38,19 +45,22 @@ public class PatchTaskProjectRequest {
     public PatchTaskProjectRequest(
             Optional<? extends TaskProject> taskProject,
             String connectionId,
+            Optional<? extends List<String>> fields,
             String id) {
         Utils.checkNotNull(taskProject, "taskProject");
         Utils.checkNotNull(connectionId, "connectionId");
+        Utils.checkNotNull(fields, "fields");
         Utils.checkNotNull(id, "id");
         this.taskProject = taskProject;
         this.connectionId = connectionId;
+        this.fields = fields;
         this.id = id;
     }
     
     public PatchTaskProjectRequest(
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, id);
+        this(Optional.empty(), connectionId, Optional.empty(), id);
     }
 
     @SuppressWarnings("unchecked")
@@ -65,6 +75,15 @@ public class PatchTaskProjectRequest {
     @JsonIgnore
     public String connectionId() {
         return connectionId;
+    }
+
+    /**
+     * Comma-delimited fields to return
+     */
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<String>> fields() {
+        return (Optional<List<String>>) fields;
     }
 
     /**
@@ -101,6 +120,24 @@ public class PatchTaskProjectRequest {
     }
 
     /**
+     * Comma-delimited fields to return
+     */
+    public PatchTaskProjectRequest withFields(List<String> fields) {
+        Utils.checkNotNull(fields, "fields");
+        this.fields = Optional.ofNullable(fields);
+        return this;
+    }
+
+    /**
+     * Comma-delimited fields to return
+     */
+    public PatchTaskProjectRequest withFields(Optional<? extends List<String>> fields) {
+        Utils.checkNotNull(fields, "fields");
+        this.fields = fields;
+        return this;
+    }
+
+    /**
      * ID of the Project
      */
     public PatchTaskProjectRequest withId(String id) {
@@ -121,6 +158,7 @@ public class PatchTaskProjectRequest {
         return 
             Objects.deepEquals(this.taskProject, other.taskProject) &&
             Objects.deepEquals(this.connectionId, other.connectionId) &&
+            Objects.deepEquals(this.fields, other.fields) &&
             Objects.deepEquals(this.id, other.id);
     }
     
@@ -129,6 +167,7 @@ public class PatchTaskProjectRequest {
         return Objects.hash(
             taskProject,
             connectionId,
+            fields,
             id);
     }
     
@@ -137,6 +176,7 @@ public class PatchTaskProjectRequest {
         return Utils.toString(PatchTaskProjectRequest.class,
                 "taskProject", taskProject,
                 "connectionId", connectionId,
+                "fields", fields,
                 "id", id);
     }
     
@@ -145,6 +185,8 @@ public class PatchTaskProjectRequest {
         private Optional<? extends TaskProject> taskProject = Optional.empty();
  
         private String connectionId;
+ 
+        private Optional<? extends List<String>> fields = Optional.empty();
  
         private String id;  
         
@@ -174,6 +216,24 @@ public class PatchTaskProjectRequest {
         }
 
         /**
+         * Comma-delimited fields to return
+         */
+        public Builder fields(List<String> fields) {
+            Utils.checkNotNull(fields, "fields");
+            this.fields = Optional.ofNullable(fields);
+            return this;
+        }
+
+        /**
+         * Comma-delimited fields to return
+         */
+        public Builder fields(Optional<? extends List<String>> fields) {
+            Utils.checkNotNull(fields, "fields");
+            this.fields = fields;
+            return this;
+        }
+
+        /**
          * ID of the Project
          */
         public Builder id(String id) {
@@ -186,6 +246,7 @@ public class PatchTaskProjectRequest {
             return new PatchTaskProjectRequest(
                 taskProject,
                 connectionId,
+                fields,
                 id);
         }
     }

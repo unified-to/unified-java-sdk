@@ -96,6 +96,11 @@ public class Invoice implements
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
 
+        _req.addQueryParams(Utils.getQueryParams(
+                CreateAccountingInvoiceRequest.class,
+                request, 
+                null));
+
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
 
@@ -464,6 +469,11 @@ public class Invoice implements
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
 
+        _req.addQueryParams(Utils.getQueryParams(
+                PatchAccountingInvoiceRequest.class,
+                request, 
+                null));
+
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
 
@@ -694,6 +704,11 @@ public class Invoice implements
         _req.addHeader("Accept", "application/json")
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                UpdateAccountingInvoiceRequest.class,
+                request, 
+                null));
 
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());

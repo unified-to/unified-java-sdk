@@ -121,6 +121,11 @@ public class Task implements
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
 
+        _req.addQueryParams(Utils.getQueryParams(
+                CreateTaskProjectRequest.class,
+                request, 
+                null));
+
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
 
@@ -246,6 +251,11 @@ public class Task implements
         _req.addHeader("Accept", "application/json")
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                CreateTaskTaskRequest.class,
+                request, 
+                null));
 
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
@@ -857,6 +867,11 @@ public class Task implements
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
 
+        _req.addQueryParams(Utils.getQueryParams(
+                PatchTaskProjectRequest.class,
+                request, 
+                null));
+
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
 
@@ -982,6 +997,11 @@ public class Task implements
         _req.addHeader("Accept", "application/json")
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                PatchTaskTaskRequest.class,
+                request, 
+                null));
 
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
@@ -1319,6 +1339,11 @@ public class Task implements
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
 
+        _req.addQueryParams(Utils.getQueryParams(
+                UpdateTaskProjectRequest.class,
+                request, 
+                null));
+
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
 
@@ -1444,6 +1469,11 @@ public class Task implements
         _req.addHeader("Accept", "application/json")
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                UpdateTaskTaskRequest.class,
+                request, 
+                null));
 
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());

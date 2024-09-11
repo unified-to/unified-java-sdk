@@ -13,6 +13,7 @@ import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -29,6 +30,12 @@ public class UpdateTicketingCustomerRequest {
     private String connectionId;
 
     /**
+     * Comma-delimited fields to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    private Optional<? extends List<String>> fields;
+
+    /**
      * ID of the Customer
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
@@ -38,19 +45,22 @@ public class UpdateTicketingCustomerRequest {
     public UpdateTicketingCustomerRequest(
             Optional<? extends TicketingCustomer> ticketingCustomer,
             String connectionId,
+            Optional<? extends List<String>> fields,
             String id) {
         Utils.checkNotNull(ticketingCustomer, "ticketingCustomer");
         Utils.checkNotNull(connectionId, "connectionId");
+        Utils.checkNotNull(fields, "fields");
         Utils.checkNotNull(id, "id");
         this.ticketingCustomer = ticketingCustomer;
         this.connectionId = connectionId;
+        this.fields = fields;
         this.id = id;
     }
     
     public UpdateTicketingCustomerRequest(
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, id);
+        this(Optional.empty(), connectionId, Optional.empty(), id);
     }
 
     @SuppressWarnings("unchecked")
@@ -65,6 +75,15 @@ public class UpdateTicketingCustomerRequest {
     @JsonIgnore
     public String connectionId() {
         return connectionId;
+    }
+
+    /**
+     * Comma-delimited fields to return
+     */
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<String>> fields() {
+        return (Optional<List<String>>) fields;
     }
 
     /**
@@ -101,6 +120,24 @@ public class UpdateTicketingCustomerRequest {
     }
 
     /**
+     * Comma-delimited fields to return
+     */
+    public UpdateTicketingCustomerRequest withFields(List<String> fields) {
+        Utils.checkNotNull(fields, "fields");
+        this.fields = Optional.ofNullable(fields);
+        return this;
+    }
+
+    /**
+     * Comma-delimited fields to return
+     */
+    public UpdateTicketingCustomerRequest withFields(Optional<? extends List<String>> fields) {
+        Utils.checkNotNull(fields, "fields");
+        this.fields = fields;
+        return this;
+    }
+
+    /**
      * ID of the Customer
      */
     public UpdateTicketingCustomerRequest withId(String id) {
@@ -121,6 +158,7 @@ public class UpdateTicketingCustomerRequest {
         return 
             Objects.deepEquals(this.ticketingCustomer, other.ticketingCustomer) &&
             Objects.deepEquals(this.connectionId, other.connectionId) &&
+            Objects.deepEquals(this.fields, other.fields) &&
             Objects.deepEquals(this.id, other.id);
     }
     
@@ -129,6 +167,7 @@ public class UpdateTicketingCustomerRequest {
         return Objects.hash(
             ticketingCustomer,
             connectionId,
+            fields,
             id);
     }
     
@@ -137,6 +176,7 @@ public class UpdateTicketingCustomerRequest {
         return Utils.toString(UpdateTicketingCustomerRequest.class,
                 "ticketingCustomer", ticketingCustomer,
                 "connectionId", connectionId,
+                "fields", fields,
                 "id", id);
     }
     
@@ -145,6 +185,8 @@ public class UpdateTicketingCustomerRequest {
         private Optional<? extends TicketingCustomer> ticketingCustomer = Optional.empty();
  
         private String connectionId;
+ 
+        private Optional<? extends List<String>> fields = Optional.empty();
  
         private String id;  
         
@@ -174,6 +216,24 @@ public class UpdateTicketingCustomerRequest {
         }
 
         /**
+         * Comma-delimited fields to return
+         */
+        public Builder fields(List<String> fields) {
+            Utils.checkNotNull(fields, "fields");
+            this.fields = Optional.ofNullable(fields);
+            return this;
+        }
+
+        /**
+         * Comma-delimited fields to return
+         */
+        public Builder fields(Optional<? extends List<String>> fields) {
+            Utils.checkNotNull(fields, "fields");
+            this.fields = fields;
+            return this;
+        }
+
+        /**
          * ID of the Customer
          */
         public Builder id(String id) {
@@ -186,6 +246,7 @@ public class UpdateTicketingCustomerRequest {
             return new UpdateTicketingCustomerRequest(
                 ticketingCustomer,
                 connectionId,
+                fields,
                 id);
         }
     }

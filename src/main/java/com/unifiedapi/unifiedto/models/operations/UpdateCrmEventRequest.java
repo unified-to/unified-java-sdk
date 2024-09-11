@@ -13,6 +13,7 @@ import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -32,6 +33,12 @@ public class UpdateCrmEventRequest {
     private String connectionId;
 
     /**
+     * Comma-delimited fields to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    private Optional<? extends List<String>> fields;
+
+    /**
      * ID of the Event
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
@@ -41,19 +48,22 @@ public class UpdateCrmEventRequest {
     public UpdateCrmEventRequest(
             Optional<? extends CrmEvent> crmEvent,
             String connectionId,
+            Optional<? extends List<String>> fields,
             String id) {
         Utils.checkNotNull(crmEvent, "crmEvent");
         Utils.checkNotNull(connectionId, "connectionId");
+        Utils.checkNotNull(fields, "fields");
         Utils.checkNotNull(id, "id");
         this.crmEvent = crmEvent;
         this.connectionId = connectionId;
+        this.fields = fields;
         this.id = id;
     }
     
     public UpdateCrmEventRequest(
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, id);
+        this(Optional.empty(), connectionId, Optional.empty(), id);
     }
 
     /**
@@ -71,6 +81,15 @@ public class UpdateCrmEventRequest {
     @JsonIgnore
     public String connectionId() {
         return connectionId;
+    }
+
+    /**
+     * Comma-delimited fields to return
+     */
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<String>> fields() {
+        return (Optional<List<String>>) fields;
     }
 
     /**
@@ -113,6 +132,24 @@ public class UpdateCrmEventRequest {
     }
 
     /**
+     * Comma-delimited fields to return
+     */
+    public UpdateCrmEventRequest withFields(List<String> fields) {
+        Utils.checkNotNull(fields, "fields");
+        this.fields = Optional.ofNullable(fields);
+        return this;
+    }
+
+    /**
+     * Comma-delimited fields to return
+     */
+    public UpdateCrmEventRequest withFields(Optional<? extends List<String>> fields) {
+        Utils.checkNotNull(fields, "fields");
+        this.fields = fields;
+        return this;
+    }
+
+    /**
      * ID of the Event
      */
     public UpdateCrmEventRequest withId(String id) {
@@ -133,6 +170,7 @@ public class UpdateCrmEventRequest {
         return 
             Objects.deepEquals(this.crmEvent, other.crmEvent) &&
             Objects.deepEquals(this.connectionId, other.connectionId) &&
+            Objects.deepEquals(this.fields, other.fields) &&
             Objects.deepEquals(this.id, other.id);
     }
     
@@ -141,6 +179,7 @@ public class UpdateCrmEventRequest {
         return Objects.hash(
             crmEvent,
             connectionId,
+            fields,
             id);
     }
     
@@ -149,6 +188,7 @@ public class UpdateCrmEventRequest {
         return Utils.toString(UpdateCrmEventRequest.class,
                 "crmEvent", crmEvent,
                 "connectionId", connectionId,
+                "fields", fields,
                 "id", id);
     }
     
@@ -157,6 +197,8 @@ public class UpdateCrmEventRequest {
         private Optional<? extends CrmEvent> crmEvent = Optional.empty();
  
         private String connectionId;
+ 
+        private Optional<? extends List<String>> fields = Optional.empty();
  
         private String id;  
         
@@ -192,6 +234,24 @@ public class UpdateCrmEventRequest {
         }
 
         /**
+         * Comma-delimited fields to return
+         */
+        public Builder fields(List<String> fields) {
+            Utils.checkNotNull(fields, "fields");
+            this.fields = Optional.ofNullable(fields);
+            return this;
+        }
+
+        /**
+         * Comma-delimited fields to return
+         */
+        public Builder fields(Optional<? extends List<String>> fields) {
+            Utils.checkNotNull(fields, "fields");
+            this.fields = fields;
+            return this;
+        }
+
+        /**
          * ID of the Event
          */
         public Builder id(String id) {
@@ -204,6 +264,7 @@ public class UpdateCrmEventRequest {
             return new UpdateCrmEventRequest(
                 crmEvent,
                 connectionId,
+                fields,
                 id);
         }
     }

@@ -53,6 +53,10 @@ public class AtsApplication {
     private Optional<String> jobId;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("offers")
+    private Optional<? extends List<AtsOffer>> offers;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_status")
     private Optional<String> originalStatus;
 
@@ -89,6 +93,7 @@ public class AtsApplication {
             @JsonProperty("hired_at") Optional<OffsetDateTime> hiredAt,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("job_id") Optional<String> jobId,
+            @JsonProperty("offers") Optional<? extends List<AtsOffer>> offers,
             @JsonProperty("original_status") Optional<String> originalStatus,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
             @JsonProperty("rejected_at") Optional<OffsetDateTime> rejectedAt,
@@ -103,6 +108,7 @@ public class AtsApplication {
         Utils.checkNotNull(hiredAt, "hiredAt");
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(jobId, "jobId");
+        Utils.checkNotNull(offers, "offers");
         Utils.checkNotNull(originalStatus, "originalStatus");
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(rejectedAt, "rejectedAt");
@@ -117,6 +123,7 @@ public class AtsApplication {
         this.hiredAt = hiredAt;
         this.id = id;
         this.jobId = jobId;
+        this.offers = offers;
         this.originalStatus = originalStatus;
         this.raw = raw;
         this.rejectedAt = rejectedAt;
@@ -127,7 +134,7 @@ public class AtsApplication {
     }
     
     public AtsApplication() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -164,6 +171,12 @@ public class AtsApplication {
     @JsonIgnore
     public Optional<String> jobId() {
         return jobId;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<AtsOffer>> offers() {
+        return (Optional<List<AtsOffer>>) offers;
     }
 
     @JsonIgnore
@@ -291,6 +304,18 @@ public class AtsApplication {
         return this;
     }
 
+    public AtsApplication withOffers(List<AtsOffer> offers) {
+        Utils.checkNotNull(offers, "offers");
+        this.offers = Optional.ofNullable(offers);
+        return this;
+    }
+
+    public AtsApplication withOffers(Optional<? extends List<AtsOffer>> offers) {
+        Utils.checkNotNull(offers, "offers");
+        this.offers = offers;
+        return this;
+    }
+
     public AtsApplication withOriginalStatus(String originalStatus) {
         Utils.checkNotNull(originalStatus, "originalStatus");
         this.originalStatus = Optional.ofNullable(originalStatus);
@@ -392,6 +417,7 @@ public class AtsApplication {
             Objects.deepEquals(this.hiredAt, other.hiredAt) &&
             Objects.deepEquals(this.id, other.id) &&
             Objects.deepEquals(this.jobId, other.jobId) &&
+            Objects.deepEquals(this.offers, other.offers) &&
             Objects.deepEquals(this.originalStatus, other.originalStatus) &&
             Objects.deepEquals(this.raw, other.raw) &&
             Objects.deepEquals(this.rejectedAt, other.rejectedAt) &&
@@ -411,6 +437,7 @@ public class AtsApplication {
             hiredAt,
             id,
             jobId,
+            offers,
             originalStatus,
             raw,
             rejectedAt,
@@ -430,6 +457,7 @@ public class AtsApplication {
                 "hiredAt", hiredAt,
                 "id", id,
                 "jobId", jobId,
+                "offers", offers,
                 "originalStatus", originalStatus,
                 "raw", raw,
                 "rejectedAt", rejectedAt,
@@ -454,6 +482,8 @@ public class AtsApplication {
         private Optional<String> id = Optional.empty();
  
         private Optional<String> jobId = Optional.empty();
+ 
+        private Optional<? extends List<AtsOffer>> offers = Optional.empty();
  
         private Optional<String> originalStatus = Optional.empty();
  
@@ -557,6 +587,18 @@ public class AtsApplication {
             return this;
         }
 
+        public Builder offers(List<AtsOffer> offers) {
+            Utils.checkNotNull(offers, "offers");
+            this.offers = Optional.ofNullable(offers);
+            return this;
+        }
+
+        public Builder offers(Optional<? extends List<AtsOffer>> offers) {
+            Utils.checkNotNull(offers, "offers");
+            this.offers = offers;
+            return this;
+        }
+
         public Builder originalStatus(String originalStatus) {
             Utils.checkNotNull(originalStatus, "originalStatus");
             this.originalStatus = Optional.ofNullable(originalStatus);
@@ -650,6 +692,7 @@ public class AtsApplication {
                 hiredAt,
                 id,
                 jobId,
+                offers,
                 originalStatus,
                 raw,
                 rejectedAt,

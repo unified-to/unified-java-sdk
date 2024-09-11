@@ -13,6 +13,7 @@ import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -31,19 +32,28 @@ public class CreateCrmDealRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
     private String connectionId;
 
+    /**
+     * Comma-delimited fields to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    private Optional<? extends List<String>> fields;
+
     @JsonCreator
     public CreateCrmDealRequest(
             Optional<? extends CrmDeal> crmDeal,
-            String connectionId) {
+            String connectionId,
+            Optional<? extends List<String>> fields) {
         Utils.checkNotNull(crmDeal, "crmDeal");
         Utils.checkNotNull(connectionId, "connectionId");
+        Utils.checkNotNull(fields, "fields");
         this.crmDeal = crmDeal;
         this.connectionId = connectionId;
+        this.fields = fields;
     }
     
     public CreateCrmDealRequest(
             String connectionId) {
-        this(Optional.empty(), connectionId);
+        this(Optional.empty(), connectionId, Optional.empty());
     }
 
     /**
@@ -61,6 +71,15 @@ public class CreateCrmDealRequest {
     @JsonIgnore
     public String connectionId() {
         return connectionId;
+    }
+
+    /**
+     * Comma-delimited fields to return
+     */
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<String>> fields() {
+        return (Optional<List<String>>) fields;
     }
 
     public final static Builder builder() {
@@ -93,6 +112,24 @@ public class CreateCrmDealRequest {
         this.connectionId = connectionId;
         return this;
     }
+
+    /**
+     * Comma-delimited fields to return
+     */
+    public CreateCrmDealRequest withFields(List<String> fields) {
+        Utils.checkNotNull(fields, "fields");
+        this.fields = Optional.ofNullable(fields);
+        return this;
+    }
+
+    /**
+     * Comma-delimited fields to return
+     */
+    public CreateCrmDealRequest withFields(Optional<? extends List<String>> fields) {
+        Utils.checkNotNull(fields, "fields");
+        this.fields = fields;
+        return this;
+    }
     
     @Override
     public boolean equals(java.lang.Object o) {
@@ -105,28 +142,33 @@ public class CreateCrmDealRequest {
         CreateCrmDealRequest other = (CreateCrmDealRequest) o;
         return 
             Objects.deepEquals(this.crmDeal, other.crmDeal) &&
-            Objects.deepEquals(this.connectionId, other.connectionId);
+            Objects.deepEquals(this.connectionId, other.connectionId) &&
+            Objects.deepEquals(this.fields, other.fields);
     }
     
     @Override
     public int hashCode() {
         return Objects.hash(
             crmDeal,
-            connectionId);
+            connectionId,
+            fields);
     }
     
     @Override
     public String toString() {
         return Utils.toString(CreateCrmDealRequest.class,
                 "crmDeal", crmDeal,
-                "connectionId", connectionId);
+                "connectionId", connectionId,
+                "fields", fields);
     }
     
     public final static class Builder {
  
         private Optional<? extends CrmDeal> crmDeal = Optional.empty();
  
-        private String connectionId;  
+        private String connectionId;
+ 
+        private Optional<? extends List<String>> fields = Optional.empty();  
         
         private Builder() {
           // force use of static builder() method
@@ -158,11 +200,30 @@ public class CreateCrmDealRequest {
             this.connectionId = connectionId;
             return this;
         }
+
+        /**
+         * Comma-delimited fields to return
+         */
+        public Builder fields(List<String> fields) {
+            Utils.checkNotNull(fields, "fields");
+            this.fields = Optional.ofNullable(fields);
+            return this;
+        }
+
+        /**
+         * Comma-delimited fields to return
+         */
+        public Builder fields(Optional<? extends List<String>> fields) {
+            Utils.checkNotNull(fields, "fields");
+            this.fields = fields;
+            return this;
+        }
         
         public CreateCrmDealRequest build() {
             return new CreateCrmDealRequest(
                 crmDeal,
-                connectionId);
+                connectionId,
+                fields);
         }
     }
 }

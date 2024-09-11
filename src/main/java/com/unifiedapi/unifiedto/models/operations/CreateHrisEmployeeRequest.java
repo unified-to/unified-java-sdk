@@ -13,6 +13,7 @@ import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -28,19 +29,28 @@ public class CreateHrisEmployeeRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
     private String connectionId;
 
+    /**
+     * Comma-delimited fields to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    private Optional<? extends List<String>> fields;
+
     @JsonCreator
     public CreateHrisEmployeeRequest(
             Optional<? extends HrisEmployee> hrisEmployee,
-            String connectionId) {
+            String connectionId,
+            Optional<? extends List<String>> fields) {
         Utils.checkNotNull(hrisEmployee, "hrisEmployee");
         Utils.checkNotNull(connectionId, "connectionId");
+        Utils.checkNotNull(fields, "fields");
         this.hrisEmployee = hrisEmployee;
         this.connectionId = connectionId;
+        this.fields = fields;
     }
     
     public CreateHrisEmployeeRequest(
             String connectionId) {
-        this(Optional.empty(), connectionId);
+        this(Optional.empty(), connectionId, Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -55,6 +65,15 @@ public class CreateHrisEmployeeRequest {
     @JsonIgnore
     public String connectionId() {
         return connectionId;
+    }
+
+    /**
+     * Comma-delimited fields to return
+     */
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<String>> fields() {
+        return (Optional<List<String>>) fields;
     }
 
     public final static Builder builder() {
@@ -81,6 +100,24 @@ public class CreateHrisEmployeeRequest {
         this.connectionId = connectionId;
         return this;
     }
+
+    /**
+     * Comma-delimited fields to return
+     */
+    public CreateHrisEmployeeRequest withFields(List<String> fields) {
+        Utils.checkNotNull(fields, "fields");
+        this.fields = Optional.ofNullable(fields);
+        return this;
+    }
+
+    /**
+     * Comma-delimited fields to return
+     */
+    public CreateHrisEmployeeRequest withFields(Optional<? extends List<String>> fields) {
+        Utils.checkNotNull(fields, "fields");
+        this.fields = fields;
+        return this;
+    }
     
     @Override
     public boolean equals(java.lang.Object o) {
@@ -93,28 +130,33 @@ public class CreateHrisEmployeeRequest {
         CreateHrisEmployeeRequest other = (CreateHrisEmployeeRequest) o;
         return 
             Objects.deepEquals(this.hrisEmployee, other.hrisEmployee) &&
-            Objects.deepEquals(this.connectionId, other.connectionId);
+            Objects.deepEquals(this.connectionId, other.connectionId) &&
+            Objects.deepEquals(this.fields, other.fields);
     }
     
     @Override
     public int hashCode() {
         return Objects.hash(
             hrisEmployee,
-            connectionId);
+            connectionId,
+            fields);
     }
     
     @Override
     public String toString() {
         return Utils.toString(CreateHrisEmployeeRequest.class,
                 "hrisEmployee", hrisEmployee,
-                "connectionId", connectionId);
+                "connectionId", connectionId,
+                "fields", fields);
     }
     
     public final static class Builder {
  
         private Optional<? extends HrisEmployee> hrisEmployee = Optional.empty();
  
-        private String connectionId;  
+        private String connectionId;
+ 
+        private Optional<? extends List<String>> fields = Optional.empty();  
         
         private Builder() {
           // force use of static builder() method
@@ -140,11 +182,30 @@ public class CreateHrisEmployeeRequest {
             this.connectionId = connectionId;
             return this;
         }
+
+        /**
+         * Comma-delimited fields to return
+         */
+        public Builder fields(List<String> fields) {
+            Utils.checkNotNull(fields, "fields");
+            this.fields = Optional.ofNullable(fields);
+            return this;
+        }
+
+        /**
+         * Comma-delimited fields to return
+         */
+        public Builder fields(Optional<? extends List<String>> fields) {
+            Utils.checkNotNull(fields, "fields");
+            this.fields = fields;
+            return this;
+        }
         
         public CreateHrisEmployeeRequest build() {
             return new CreateHrisEmployeeRequest(
                 hrisEmployee,
-                connectionId);
+                connectionId,
+                fields);
         }
     }
 }

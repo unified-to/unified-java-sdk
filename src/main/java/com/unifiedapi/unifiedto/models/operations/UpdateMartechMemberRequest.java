@@ -13,6 +13,7 @@ import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -32,6 +33,12 @@ public class UpdateMartechMemberRequest {
     private String connectionId;
 
     /**
+     * Comma-delimited fields to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    private Optional<? extends List<String>> fields;
+
+    /**
      * ID of the Member
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
@@ -41,19 +48,22 @@ public class UpdateMartechMemberRequest {
     public UpdateMartechMemberRequest(
             Optional<? extends MarketingMember> marketingMember,
             String connectionId,
+            Optional<? extends List<String>> fields,
             String id) {
         Utils.checkNotNull(marketingMember, "marketingMember");
         Utils.checkNotNull(connectionId, "connectionId");
+        Utils.checkNotNull(fields, "fields");
         Utils.checkNotNull(id, "id");
         this.marketingMember = marketingMember;
         this.connectionId = connectionId;
+        this.fields = fields;
         this.id = id;
     }
     
     public UpdateMartechMemberRequest(
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, id);
+        this(Optional.empty(), connectionId, Optional.empty(), id);
     }
 
     /**
@@ -71,6 +81,15 @@ public class UpdateMartechMemberRequest {
     @JsonIgnore
     public String connectionId() {
         return connectionId;
+    }
+
+    /**
+     * Comma-delimited fields to return
+     */
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<String>> fields() {
+        return (Optional<List<String>>) fields;
     }
 
     /**
@@ -113,6 +132,24 @@ public class UpdateMartechMemberRequest {
     }
 
     /**
+     * Comma-delimited fields to return
+     */
+    public UpdateMartechMemberRequest withFields(List<String> fields) {
+        Utils.checkNotNull(fields, "fields");
+        this.fields = Optional.ofNullable(fields);
+        return this;
+    }
+
+    /**
+     * Comma-delimited fields to return
+     */
+    public UpdateMartechMemberRequest withFields(Optional<? extends List<String>> fields) {
+        Utils.checkNotNull(fields, "fields");
+        this.fields = fields;
+        return this;
+    }
+
+    /**
      * ID of the Member
      */
     public UpdateMartechMemberRequest withId(String id) {
@@ -133,6 +170,7 @@ public class UpdateMartechMemberRequest {
         return 
             Objects.deepEquals(this.marketingMember, other.marketingMember) &&
             Objects.deepEquals(this.connectionId, other.connectionId) &&
+            Objects.deepEquals(this.fields, other.fields) &&
             Objects.deepEquals(this.id, other.id);
     }
     
@@ -141,6 +179,7 @@ public class UpdateMartechMemberRequest {
         return Objects.hash(
             marketingMember,
             connectionId,
+            fields,
             id);
     }
     
@@ -149,6 +188,7 @@ public class UpdateMartechMemberRequest {
         return Utils.toString(UpdateMartechMemberRequest.class,
                 "marketingMember", marketingMember,
                 "connectionId", connectionId,
+                "fields", fields,
                 "id", id);
     }
     
@@ -157,6 +197,8 @@ public class UpdateMartechMemberRequest {
         private Optional<? extends MarketingMember> marketingMember = Optional.empty();
  
         private String connectionId;
+ 
+        private Optional<? extends List<String>> fields = Optional.empty();
  
         private String id;  
         
@@ -192,6 +234,24 @@ public class UpdateMartechMemberRequest {
         }
 
         /**
+         * Comma-delimited fields to return
+         */
+        public Builder fields(List<String> fields) {
+            Utils.checkNotNull(fields, "fields");
+            this.fields = Optional.ofNullable(fields);
+            return this;
+        }
+
+        /**
+         * Comma-delimited fields to return
+         */
+        public Builder fields(Optional<? extends List<String>> fields) {
+            Utils.checkNotNull(fields, "fields");
+            this.fields = fields;
+            return this;
+        }
+
+        /**
          * ID of the Member
          */
         public Builder id(String id) {
@@ -204,6 +264,7 @@ public class UpdateMartechMemberRequest {
             return new UpdateMartechMemberRequest(
                 marketingMember,
                 connectionId,
+                fields,
                 id);
         }
     }

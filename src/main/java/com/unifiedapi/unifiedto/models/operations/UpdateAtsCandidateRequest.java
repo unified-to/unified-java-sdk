@@ -13,6 +13,7 @@ import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -29,6 +30,12 @@ public class UpdateAtsCandidateRequest {
     private String connectionId;
 
     /**
+     * Comma-delimited fields to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    private Optional<? extends List<String>> fields;
+
+    /**
      * ID of the Candidate
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
@@ -38,19 +45,22 @@ public class UpdateAtsCandidateRequest {
     public UpdateAtsCandidateRequest(
             Optional<? extends AtsCandidate> atsCandidate,
             String connectionId,
+            Optional<? extends List<String>> fields,
             String id) {
         Utils.checkNotNull(atsCandidate, "atsCandidate");
         Utils.checkNotNull(connectionId, "connectionId");
+        Utils.checkNotNull(fields, "fields");
         Utils.checkNotNull(id, "id");
         this.atsCandidate = atsCandidate;
         this.connectionId = connectionId;
+        this.fields = fields;
         this.id = id;
     }
     
     public UpdateAtsCandidateRequest(
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, id);
+        this(Optional.empty(), connectionId, Optional.empty(), id);
     }
 
     @SuppressWarnings("unchecked")
@@ -65,6 +75,15 @@ public class UpdateAtsCandidateRequest {
     @JsonIgnore
     public String connectionId() {
         return connectionId;
+    }
+
+    /**
+     * Comma-delimited fields to return
+     */
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<String>> fields() {
+        return (Optional<List<String>>) fields;
     }
 
     /**
@@ -101,6 +120,24 @@ public class UpdateAtsCandidateRequest {
     }
 
     /**
+     * Comma-delimited fields to return
+     */
+    public UpdateAtsCandidateRequest withFields(List<String> fields) {
+        Utils.checkNotNull(fields, "fields");
+        this.fields = Optional.ofNullable(fields);
+        return this;
+    }
+
+    /**
+     * Comma-delimited fields to return
+     */
+    public UpdateAtsCandidateRequest withFields(Optional<? extends List<String>> fields) {
+        Utils.checkNotNull(fields, "fields");
+        this.fields = fields;
+        return this;
+    }
+
+    /**
      * ID of the Candidate
      */
     public UpdateAtsCandidateRequest withId(String id) {
@@ -121,6 +158,7 @@ public class UpdateAtsCandidateRequest {
         return 
             Objects.deepEquals(this.atsCandidate, other.atsCandidate) &&
             Objects.deepEquals(this.connectionId, other.connectionId) &&
+            Objects.deepEquals(this.fields, other.fields) &&
             Objects.deepEquals(this.id, other.id);
     }
     
@@ -129,6 +167,7 @@ public class UpdateAtsCandidateRequest {
         return Objects.hash(
             atsCandidate,
             connectionId,
+            fields,
             id);
     }
     
@@ -137,6 +176,7 @@ public class UpdateAtsCandidateRequest {
         return Utils.toString(UpdateAtsCandidateRequest.class,
                 "atsCandidate", atsCandidate,
                 "connectionId", connectionId,
+                "fields", fields,
                 "id", id);
     }
     
@@ -145,6 +185,8 @@ public class UpdateAtsCandidateRequest {
         private Optional<? extends AtsCandidate> atsCandidate = Optional.empty();
  
         private String connectionId;
+ 
+        private Optional<? extends List<String>> fields = Optional.empty();
  
         private String id;  
         
@@ -174,6 +216,24 @@ public class UpdateAtsCandidateRequest {
         }
 
         /**
+         * Comma-delimited fields to return
+         */
+        public Builder fields(List<String> fields) {
+            Utils.checkNotNull(fields, "fields");
+            this.fields = Optional.ofNullable(fields);
+            return this;
+        }
+
+        /**
+         * Comma-delimited fields to return
+         */
+        public Builder fields(Optional<? extends List<String>> fields) {
+            Utils.checkNotNull(fields, "fields");
+            this.fields = fields;
+            return this;
+        }
+
+        /**
          * ID of the Candidate
          */
         public Builder id(String id) {
@@ -186,6 +246,7 @@ public class UpdateAtsCandidateRequest {
             return new UpdateAtsCandidateRequest(
                 atsCandidate,
                 connectionId,
+                fields,
                 id);
         }
     }

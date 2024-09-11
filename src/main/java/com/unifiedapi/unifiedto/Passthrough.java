@@ -148,7 +148,7 @@ public class Passthrough implements
 
         CreatePassthroughResponse _res = _resBuilder.build();
         
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "2XX")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
                 Map<String, Object> _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
@@ -264,7 +264,7 @@ public class Passthrough implements
 
         ListPassthroughsResponse _res = _resBuilder.build();
         
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "2XX")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
                 Map<String, Object> _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
@@ -390,7 +390,7 @@ public class Passthrough implements
 
         PatchPassthroughResponse _res = _resBuilder.build();
         
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "2XX")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
                 Map<String, Object> _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
@@ -506,7 +506,7 @@ public class Passthrough implements
 
         RemovePassthroughResponse _res = _resBuilder.build();
         
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "2XX")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
                 Map<String, Object> _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
@@ -632,7 +632,7 @@ public class Passthrough implements
 
         UpdatePassthroughResponse _res = _resBuilder.build();
         
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "2XX")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
                 Map<String, Object> _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),

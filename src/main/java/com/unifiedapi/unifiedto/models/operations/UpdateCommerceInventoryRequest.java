@@ -13,6 +13,7 @@ import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -29,6 +30,12 @@ public class UpdateCommerceInventoryRequest {
     private String connectionId;
 
     /**
+     * Comma-delimited fields to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    private Optional<? extends List<String>> fields;
+
+    /**
      * ID of the Inventory
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
@@ -38,19 +45,22 @@ public class UpdateCommerceInventoryRequest {
     public UpdateCommerceInventoryRequest(
             Optional<? extends CommerceInventory> commerceInventory,
             String connectionId,
+            Optional<? extends List<String>> fields,
             String id) {
         Utils.checkNotNull(commerceInventory, "commerceInventory");
         Utils.checkNotNull(connectionId, "connectionId");
+        Utils.checkNotNull(fields, "fields");
         Utils.checkNotNull(id, "id");
         this.commerceInventory = commerceInventory;
         this.connectionId = connectionId;
+        this.fields = fields;
         this.id = id;
     }
     
     public UpdateCommerceInventoryRequest(
             String connectionId,
             String id) {
-        this(Optional.empty(), connectionId, id);
+        this(Optional.empty(), connectionId, Optional.empty(), id);
     }
 
     @SuppressWarnings("unchecked")
@@ -65,6 +75,15 @@ public class UpdateCommerceInventoryRequest {
     @JsonIgnore
     public String connectionId() {
         return connectionId;
+    }
+
+    /**
+     * Comma-delimited fields to return
+     */
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<String>> fields() {
+        return (Optional<List<String>>) fields;
     }
 
     /**
@@ -101,6 +120,24 @@ public class UpdateCommerceInventoryRequest {
     }
 
     /**
+     * Comma-delimited fields to return
+     */
+    public UpdateCommerceInventoryRequest withFields(List<String> fields) {
+        Utils.checkNotNull(fields, "fields");
+        this.fields = Optional.ofNullable(fields);
+        return this;
+    }
+
+    /**
+     * Comma-delimited fields to return
+     */
+    public UpdateCommerceInventoryRequest withFields(Optional<? extends List<String>> fields) {
+        Utils.checkNotNull(fields, "fields");
+        this.fields = fields;
+        return this;
+    }
+
+    /**
      * ID of the Inventory
      */
     public UpdateCommerceInventoryRequest withId(String id) {
@@ -121,6 +158,7 @@ public class UpdateCommerceInventoryRequest {
         return 
             Objects.deepEquals(this.commerceInventory, other.commerceInventory) &&
             Objects.deepEquals(this.connectionId, other.connectionId) &&
+            Objects.deepEquals(this.fields, other.fields) &&
             Objects.deepEquals(this.id, other.id);
     }
     
@@ -129,6 +167,7 @@ public class UpdateCommerceInventoryRequest {
         return Objects.hash(
             commerceInventory,
             connectionId,
+            fields,
             id);
     }
     
@@ -137,6 +176,7 @@ public class UpdateCommerceInventoryRequest {
         return Utils.toString(UpdateCommerceInventoryRequest.class,
                 "commerceInventory", commerceInventory,
                 "connectionId", connectionId,
+                "fields", fields,
                 "id", id);
     }
     
@@ -145,6 +185,8 @@ public class UpdateCommerceInventoryRequest {
         private Optional<? extends CommerceInventory> commerceInventory = Optional.empty();
  
         private String connectionId;
+ 
+        private Optional<? extends List<String>> fields = Optional.empty();
  
         private String id;  
         
@@ -174,6 +216,24 @@ public class UpdateCommerceInventoryRequest {
         }
 
         /**
+         * Comma-delimited fields to return
+         */
+        public Builder fields(List<String> fields) {
+            Utils.checkNotNull(fields, "fields");
+            this.fields = Optional.ofNullable(fields);
+            return this;
+        }
+
+        /**
+         * Comma-delimited fields to return
+         */
+        public Builder fields(Optional<? extends List<String>> fields) {
+            Utils.checkNotNull(fields, "fields");
+            this.fields = fields;
+            return this;
+        }
+
+        /**
          * ID of the Inventory
          */
         public Builder id(String id) {
@@ -186,6 +246,7 @@ public class UpdateCommerceInventoryRequest {
             return new UpdateCommerceInventoryRequest(
                 commerceInventory,
                 connectionId,
+                fields,
                 id);
         }
     }

@@ -125,6 +125,10 @@ public class IntegrationSupport {
     private Optional<? extends ListQuery> listQuery;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("list_raw_fields")
+    private Optional<? extends ListRawFields> listRawFields;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_sort_by_created_at")
     private Optional<? extends ListSortByCreatedAt> listSortByCreatedAt;
 
@@ -222,6 +226,7 @@ public class IntegrationSupport {
             @JsonProperty("list_parent_id") Optional<? extends ListParentId> listParentId,
             @JsonProperty("list_project_id") Optional<? extends ListProjectId> listProjectId,
             @JsonProperty("list_query") Optional<? extends ListQuery> listQuery,
+            @JsonProperty("list_raw_fields") Optional<? extends ListRawFields> listRawFields,
             @JsonProperty("list_sort_by_created_at") Optional<? extends ListSortByCreatedAt> listSortByCreatedAt,
             @JsonProperty("list_sort_by_name") Optional<? extends ListSortByName> listSortByName,
             @JsonProperty("list_sort_by_updated_at") Optional<? extends ListSortByUpdatedAt> listSortByUpdatedAt,
@@ -264,6 +269,7 @@ public class IntegrationSupport {
         Utils.checkNotNull(listParentId, "listParentId");
         Utils.checkNotNull(listProjectId, "listProjectId");
         Utils.checkNotNull(listQuery, "listQuery");
+        Utils.checkNotNull(listRawFields, "listRawFields");
         Utils.checkNotNull(listSortByCreatedAt, "listSortByCreatedAt");
         Utils.checkNotNull(listSortByName, "listSortByName");
         Utils.checkNotNull(listSortByUpdatedAt, "listSortByUpdatedAt");
@@ -306,6 +312,7 @@ public class IntegrationSupport {
         this.listParentId = listParentId;
         this.listProjectId = listProjectId;
         this.listQuery = listQuery;
+        this.listRawFields = listRawFields;
         this.listSortByCreatedAt = listSortByCreatedAt;
         this.listSortByName = listSortByName;
         this.listSortByUpdatedAt = listSortByUpdatedAt;
@@ -326,7 +333,7 @@ public class IntegrationSupport {
     }
     
     public IntegrationSupport() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -477,6 +484,12 @@ public class IntegrationSupport {
     @JsonIgnore
     public Optional<ListQuery> listQuery() {
         return (Optional<ListQuery>) listQuery;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<ListRawFields> listRawFields() {
+        return (Optional<ListRawFields>) listRawFields;
     }
 
     @SuppressWarnings("unchecked")
@@ -888,6 +901,18 @@ public class IntegrationSupport {
         return this;
     }
 
+    public IntegrationSupport withListRawFields(ListRawFields listRawFields) {
+        Utils.checkNotNull(listRawFields, "listRawFields");
+        this.listRawFields = Optional.ofNullable(listRawFields);
+        return this;
+    }
+
+    public IntegrationSupport withListRawFields(Optional<? extends ListRawFields> listRawFields) {
+        Utils.checkNotNull(listRawFields, "listRawFields");
+        this.listRawFields = listRawFields;
+        return this;
+    }
+
     public IntegrationSupport withListSortByCreatedAt(ListSortByCreatedAt listSortByCreatedAt) {
         Utils.checkNotNull(listSortByCreatedAt, "listSortByCreatedAt");
         this.listSortByCreatedAt = Optional.ofNullable(listSortByCreatedAt);
@@ -1133,6 +1158,7 @@ public class IntegrationSupport {
             Objects.deepEquals(this.listParentId, other.listParentId) &&
             Objects.deepEquals(this.listProjectId, other.listProjectId) &&
             Objects.deepEquals(this.listQuery, other.listQuery) &&
+            Objects.deepEquals(this.listRawFields, other.listRawFields) &&
             Objects.deepEquals(this.listSortByCreatedAt, other.listSortByCreatedAt) &&
             Objects.deepEquals(this.listSortByName, other.listSortByName) &&
             Objects.deepEquals(this.listSortByUpdatedAt, other.listSortByUpdatedAt) &&
@@ -1180,6 +1206,7 @@ public class IntegrationSupport {
             listParentId,
             listProjectId,
             listQuery,
+            listRawFields,
             listSortByCreatedAt,
             listSortByName,
             listSortByUpdatedAt,
@@ -1227,6 +1254,7 @@ public class IntegrationSupport {
                 "listParentId", listParentId,
                 "listProjectId", listProjectId,
                 "listQuery", listQuery,
+                "listRawFields", listRawFields,
                 "listSortByCreatedAt", listSortByCreatedAt,
                 "listSortByName", listSortByName,
                 "listSortByUpdatedAt", listSortByUpdatedAt,
@@ -1297,6 +1325,8 @@ public class IntegrationSupport {
         private Optional<? extends ListProjectId> listProjectId = Optional.empty();
  
         private Optional<? extends ListQuery> listQuery = Optional.empty();
+ 
+        private Optional<? extends ListRawFields> listRawFields = Optional.empty();
  
         private Optional<? extends ListSortByCreatedAt> listSortByCreatedAt = Optional.empty();
  
@@ -1636,6 +1666,18 @@ public class IntegrationSupport {
             return this;
         }
 
+        public Builder listRawFields(ListRawFields listRawFields) {
+            Utils.checkNotNull(listRawFields, "listRawFields");
+            this.listRawFields = Optional.ofNullable(listRawFields);
+            return this;
+        }
+
+        public Builder listRawFields(Optional<? extends ListRawFields> listRawFields) {
+            Utils.checkNotNull(listRawFields, "listRawFields");
+            this.listRawFields = listRawFields;
+            return this;
+        }
+
         public Builder listSortByCreatedAt(ListSortByCreatedAt listSortByCreatedAt) {
             Utils.checkNotNull(listSortByCreatedAt, "listSortByCreatedAt");
             this.listSortByCreatedAt = Optional.ofNullable(listSortByCreatedAt);
@@ -1873,6 +1915,7 @@ public class IntegrationSupport {
                 listParentId,
                 listProjectId,
                 listQuery,
+                listRawFields,
                 listSortByCreatedAt,
                 listSortByName,
                 listSortByUpdatedAt,
