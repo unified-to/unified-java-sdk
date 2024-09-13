@@ -106,7 +106,7 @@ public class Application {
 
             GetAccountingTransactionRequest req = GetAccountingTransactionRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetAccountingTransactionResponse res = sdk.transaction().getAccountingTransaction()
@@ -239,7 +239,7 @@ public class Application {
 
             PatchAccountingTransactionRequest req = PatchAccountingTransactionRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchAccountingTransactionResponse res = sdk.transaction().patchAccountingTransaction()
@@ -306,7 +306,7 @@ public class Application {
 
             RemoveAccountingTransactionRequest req = RemoveAccountingTransactionRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveAccountingTransactionResponse res = sdk.transaction().removeAccountingTransaction()
@@ -371,7 +371,7 @@ public class Application {
 
             UpdateAccountingTransactionRequest req = UpdateAccountingTransactionRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateAccountingTransactionResponse res = sdk.transaction().updateAccountingTransaction()

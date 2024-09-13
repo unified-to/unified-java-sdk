@@ -106,7 +106,7 @@ public class Application {
 
             GetKmsSpaceRequest req = GetKmsSpaceRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetKmsSpaceResponse res = sdk.space().getKmsSpace()
@@ -239,7 +239,7 @@ public class Application {
 
             PatchKmsSpaceRequest req = PatchKmsSpaceRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchKmsSpaceResponse res = sdk.space().patchKmsSpace()
@@ -306,7 +306,7 @@ public class Application {
 
             RemoveKmsSpaceRequest req = RemoveKmsSpaceRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveKmsSpaceResponse res = sdk.space().removeKmsSpace()
@@ -371,7 +371,7 @@ public class Application {
 
             UpdateKmsSpaceRequest req = UpdateKmsSpaceRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateKmsSpaceResponse res = sdk.space().updateKmsSpace()

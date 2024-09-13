@@ -322,7 +322,7 @@ public class Application {
 
             GetCommerceCollectionRequest req = GetCommerceCollectionRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetCommerceCollectionResponse res = sdk.commerce().getCommerceCollection()
@@ -389,7 +389,7 @@ public class Application {
 
             GetCommerceInventoryRequest req = GetCommerceInventoryRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetCommerceInventoryResponse res = sdk.commerce().getCommerceInventory()
@@ -456,7 +456,7 @@ public class Application {
 
             GetCommerceItemRequest req = GetCommerceItemRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetCommerceItemResponse res = sdk.commerce().getCommerceItem()
@@ -523,7 +523,7 @@ public class Application {
 
             GetCommerceLocationRequest req = GetCommerceLocationRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetCommerceLocationResponse res = sdk.commerce().getCommerceLocation()
@@ -854,7 +854,7 @@ public class Application {
 
             PatchCommerceCollectionRequest req = PatchCommerceCollectionRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchCommerceCollectionResponse res = sdk.commerce().patchCommerceCollection()
@@ -921,7 +921,7 @@ public class Application {
 
             PatchCommerceInventoryRequest req = PatchCommerceInventoryRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchCommerceInventoryResponse res = sdk.commerce().patchCommerceInventory()
@@ -988,7 +988,7 @@ public class Application {
 
             PatchCommerceItemRequest req = PatchCommerceItemRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchCommerceItemResponse res = sdk.commerce().patchCommerceItem()
@@ -1055,7 +1055,7 @@ public class Application {
 
             PatchCommerceLocationRequest req = PatchCommerceLocationRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchCommerceLocationResponse res = sdk.commerce().patchCommerceLocation()
@@ -1122,7 +1122,7 @@ public class Application {
 
             RemoveCommerceCollectionRequest req = RemoveCommerceCollectionRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveCommerceCollectionResponse res = sdk.commerce().removeCommerceCollection()
@@ -1187,7 +1187,7 @@ public class Application {
 
             RemoveCommerceInventoryRequest req = RemoveCommerceInventoryRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveCommerceInventoryResponse res = sdk.commerce().removeCommerceInventory()
@@ -1252,7 +1252,7 @@ public class Application {
 
             RemoveCommerceItemRequest req = RemoveCommerceItemRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveCommerceItemResponse res = sdk.commerce().removeCommerceItem()
@@ -1317,7 +1317,7 @@ public class Application {
 
             RemoveCommerceLocationRequest req = RemoveCommerceLocationRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveCommerceLocationResponse res = sdk.commerce().removeCommerceLocation()
@@ -1382,7 +1382,7 @@ public class Application {
 
             UpdateCommerceCollectionRequest req = UpdateCommerceCollectionRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateCommerceCollectionResponse res = sdk.commerce().updateCommerceCollection()
@@ -1449,7 +1449,7 @@ public class Application {
 
             UpdateCommerceInventoryRequest req = UpdateCommerceInventoryRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateCommerceInventoryResponse res = sdk.commerce().updateCommerceInventory()
@@ -1516,7 +1516,7 @@ public class Application {
 
             UpdateCommerceItemRequest req = UpdateCommerceItemRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateCommerceItemResponse res = sdk.commerce().updateCommerceItem()
@@ -1583,7 +1583,7 @@ public class Application {
 
             UpdateCommerceLocationRequest req = UpdateCommerceLocationRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateCommerceLocationResponse res = sdk.commerce().updateCommerceLocation()

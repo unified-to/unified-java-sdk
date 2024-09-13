@@ -6,22 +6,31 @@ package com.unifiedapi.unifiedto;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.unifiedapi.unifiedto.models.errors.SDKError;
-import com.unifiedapi.unifiedto.models.operations.CreatePassthroughRequest;
-import com.unifiedapi.unifiedto.models.operations.CreatePassthroughRequestBuilder;
-import com.unifiedapi.unifiedto.models.operations.CreatePassthroughResponse;
+import com.unifiedapi.unifiedto.models.operations.CreatePassthroughJsonRequest;
+import com.unifiedapi.unifiedto.models.operations.CreatePassthroughJsonRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.CreatePassthroughJsonResponse;
+import com.unifiedapi.unifiedto.models.operations.CreatePassthroughRawRequest;
+import com.unifiedapi.unifiedto.models.operations.CreatePassthroughRawRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.CreatePassthroughRawResponse;
 import com.unifiedapi.unifiedto.models.operations.ListPassthroughsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListPassthroughsRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.ListPassthroughsResponse;
-import com.unifiedapi.unifiedto.models.operations.PatchPassthroughRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchPassthroughRequestBuilder;
-import com.unifiedapi.unifiedto.models.operations.PatchPassthroughResponse;
+import com.unifiedapi.unifiedto.models.operations.PatchPassthroughJsonRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchPassthroughJsonRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.PatchPassthroughJsonResponse;
+import com.unifiedapi.unifiedto.models.operations.PatchPassthroughRawRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchPassthroughRawRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.PatchPassthroughRawResponse;
 import com.unifiedapi.unifiedto.models.operations.RemovePassthroughRequest;
 import com.unifiedapi.unifiedto.models.operations.RemovePassthroughRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.RemovePassthroughResponse;
 import com.unifiedapi.unifiedto.models.operations.SDKMethodInterfaces.*;
-import com.unifiedapi.unifiedto.models.operations.UpdatePassthroughRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdatePassthroughRequestBuilder;
-import com.unifiedapi.unifiedto.models.operations.UpdatePassthroughResponse;
+import com.unifiedapi.unifiedto.models.operations.UpdatePassthroughJsonRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdatePassthroughJsonRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.UpdatePassthroughJsonResponse;
+import com.unifiedapi.unifiedto.models.operations.UpdatePassthroughRawRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdatePassthroughRawRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.UpdatePassthroughRawResponse;
 import com.unifiedapi.unifiedto.utils.HTTPClient;
 import com.unifiedapi.unifiedto.utils.HTTPRequest;
 import com.unifiedapi.unifiedto.utils.Hook.AfterErrorContextImpl;
@@ -37,15 +46,17 @@ import java.lang.String;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional; 
 
 public class Passthrough implements
-            MethodCallCreatePassthrough,
+            MethodCallCreatePassthroughJson,
+            MethodCallCreatePassthroughRaw,
             MethodCallListPassthroughs,
-            MethodCallPatchPassthrough,
+            MethodCallPatchPassthroughJson,
+            MethodCallPatchPassthroughRaw,
             MethodCallRemovePassthrough,
-            MethodCallUpdatePassthrough {
+            MethodCallUpdatePassthroughJson,
+            MethodCallUpdatePassthroughRaw {
 
     private final SDKConfiguration sdkConfiguration;
 
@@ -58,8 +69,8 @@ public class Passthrough implements
      * Passthrough POST
      * @return The call builder
      */
-    public CreatePassthroughRequestBuilder createPassthrough() {
-        return new CreatePassthroughRequestBuilder(this);
+    public CreatePassthroughJsonRequestBuilder createPassthroughJson() {
+        return new CreatePassthroughJsonRequestBuilder(this);
     }
 
     /**
@@ -68,11 +79,11 @@ public class Passthrough implements
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreatePassthroughResponse createPassthrough(
-            CreatePassthroughRequest request) throws Exception {
+    public CreatePassthroughJsonResponse createPassthroughJson(
+            CreatePassthroughJsonRequest request) throws Exception {
         String _baseUrl = this.sdkConfiguration.serverUrl;
         String _url = Utils.generateURL(
-                CreatePassthroughRequest.class,
+                CreatePassthroughJsonRequest.class,
                 _baseUrl,
                 "/passthrough/{connection_id}/{path}",
                 request, null);
@@ -81,14 +92,14 @@ public class Passthrough implements
         Object _convertedRequest = Utils.convertToShape(
                 request, 
                 JsonShape.DEFAULT,
-                new TypeReference<CreatePassthroughRequest>() {});
+                new TypeReference<CreatePassthroughJsonRequest>() {});
         SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
                 _convertedRequest, 
                 "requestBody",
                 "json",
                 false);
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
-        _req.addHeader("Accept", "application/json")
+        _req.addHeader("Accept", "application/json;q=1, text/plain;q=0.7, */*;q=0")
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
 
@@ -100,7 +111,7 @@ public class Passthrough implements
             sdkConfiguration.hooks()
                .beforeRequest(
                   new BeforeRequestContextImpl(
-                      "createPassthrough", 
+                      "createPassthrough_json", 
                       Optional.of(List.of()), 
                       sdkConfiguration.securitySource()),
                   _req.build());
@@ -111,7 +122,7 @@ public class Passthrough implements
                 _httpRes = sdkConfiguration.hooks()
                     .afterError(
                         new AfterErrorContextImpl(
-                            "createPassthrough",
+                            "createPassthrough_json",
                             Optional.of(List.of()),
                             sdkConfiguration.securitySource()),
                         Optional.of(_httpRes),
@@ -120,7 +131,7 @@ public class Passthrough implements
                 _httpRes = sdkConfiguration.hooks()
                     .afterSuccess(
                         new AfterSuccessContextImpl(
-                            "createPassthrough",
+                            "createPassthrough_json",
                             Optional.of(List.of()), 
                             sdkConfiguration.securitySource()),
                          _httpRes);
@@ -129,7 +140,7 @@ public class Passthrough implements
             _httpRes = sdkConfiguration.hooks()
                     .afterError(
                         new AfterErrorContextImpl(
-                            "createPassthrough",
+                            "createPassthrough_json",
                             Optional.of(List.of()),
                             sdkConfiguration.securitySource()), 
                         Optional.empty(),
@@ -139,21 +150,169 @@ public class Passthrough implements
             .headers()
             .firstValue("Content-Type")
             .orElse("application/octet-stream");
-        CreatePassthroughResponse.Builder _resBuilder = 
-            CreatePassthroughResponse
+        CreatePassthroughJsonResponse.Builder _resBuilder = 
+            CreatePassthroughJsonResponse
                 .builder()
                 .contentType(_contentType)
                 .statusCode(_httpRes.statusCode())
                 .rawResponse(_httpRes);
 
-        CreatePassthroughResponse _res = _resBuilder.build();
+        CreatePassthroughJsonResponse _res = _resBuilder.build();
         
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "204", "205", "304")) {
+            _res.withHeaders(_httpRes.headers().map());
+            // no content 
+            return _res;
+        }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "2XX")) {
-            if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                Map<String, Object> _out = Utils.mapper().readValue(
+            if (Utils.contentTypeMatches(_contentType, "*/*")) {
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "application/json")) {
+                Object _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<Map<String, Object>>() {});
-                _res.withResult(Optional.ofNullable(_out));
+                    new TypeReference<Object>() {});
+                _res.withTwoXXApplicationJsonAny(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "text/plain")) {
+                String _out = Utils.toUtf8AndClose(_httpRes.body());
+                _res.withTwoXXTextPlainRes(Optional.ofNullable(_out));
+                return _res;
+            } else {
+                throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "Unexpected content-type received: " + _contentType, 
+                    Utils.extractByteArrayFromBody(_httpRes));
+            }
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        throw new SDKError(
+            _httpRes, 
+            _httpRes.statusCode(), 
+            "Unexpected status code received: " + _httpRes.statusCode(), 
+            Utils.extractByteArrayFromBody(_httpRes));
+    }
+
+
+
+    /**
+     * Passthrough POST
+     * @return The call builder
+     */
+    public CreatePassthroughRawRequestBuilder createPassthroughRaw() {
+        return new CreatePassthroughRawRequestBuilder(this);
+    }
+
+    /**
+     * Passthrough POST
+     * @param request The request object containing all of the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public CreatePassthroughRawResponse createPassthroughRaw(
+            CreatePassthroughRawRequest request) throws Exception {
+        String _baseUrl = this.sdkConfiguration.serverUrl;
+        String _url = Utils.generateURL(
+                CreatePassthroughRawRequest.class,
+                _baseUrl,
+                "/passthrough/{connection_id}/{path}",
+                request, null);
+        
+        HTTPRequest _req = new HTTPRequest(_url, "POST");
+        Object _convertedRequest = Utils.convertToShape(
+                request, 
+                JsonShape.DEFAULT,
+                new TypeReference<CreatePassthroughRawRequest>() {});
+        SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
+                _convertedRequest, 
+                "requestBody",
+                "raw",
+                false);
+        _req.setBody(Optional.ofNullable(_serializedRequestBody));
+        _req.addHeader("Accept", "application/json;q=1, text/plain;q=0.7, */*;q=0")
+            .addHeader("user-agent", 
+                this.sdkConfiguration.userAgent);
+
+        Utils.configureSecurity(_req,  
+                this.sdkConfiguration.securitySource.getSecurity());
+
+        HTTPClient _client = this.sdkConfiguration.defaultClient;
+        HttpRequest _r = 
+            sdkConfiguration.hooks()
+               .beforeRequest(
+                  new BeforeRequestContextImpl(
+                      "createPassthrough_raw", 
+                      Optional.of(List.of()), 
+                      sdkConfiguration.securitySource()),
+                  _req.build());
+        HttpResponse<InputStream> _httpRes;
+        try {
+            _httpRes = _client.send(_r);
+            if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "createPassthrough_raw",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()),
+                        Optional.of(_httpRes),
+                        Optional.empty());
+            } else {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterSuccess(
+                        new AfterSuccessContextImpl(
+                            "createPassthrough_raw",
+                            Optional.of(List.of()), 
+                            sdkConfiguration.securitySource()),
+                         _httpRes);
+            }
+        } catch (Exception _e) {
+            _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "createPassthrough_raw",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()), 
+                        Optional.empty(),
+                        Optional.of(_e));
+        }
+        String _contentType = _httpRes
+            .headers()
+            .firstValue("Content-Type")
+            .orElse("application/octet-stream");
+        CreatePassthroughRawResponse.Builder _resBuilder = 
+            CreatePassthroughRawResponse
+                .builder()
+                .contentType(_contentType)
+                .statusCode(_httpRes.statusCode())
+                .rawResponse(_httpRes);
+
+        CreatePassthroughRawResponse _res = _resBuilder.build();
+        
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "204", "205", "304")) {
+            _res.withHeaders(_httpRes.headers().map());
+            // no content 
+            return _res;
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "2XX")) {
+            if (Utils.contentTypeMatches(_contentType, "*/*")) {
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "application/json")) {
+                Object _out = Utils.mapper().readValue(
+                    Utils.toUtf8AndClose(_httpRes.body()),
+                    new TypeReference<Object>() {});
+                _res.withTwoXXApplicationJsonAny(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "text/plain")) {
+                String _out = Utils.toUtf8AndClose(_httpRes.body());
+                _res.withTwoXXTextPlainRes(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -204,7 +363,7 @@ public class Passthrough implements
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "GET");
-        _req.addHeader("Accept", "application/json")
+        _req.addHeader("Accept", "application/json;q=1, text/plain;q=0.7, */*;q=0")
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
 
@@ -264,12 +423,23 @@ public class Passthrough implements
 
         ListPassthroughsResponse _res = _resBuilder.build();
         
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "204", "205", "304")) {
+            _res.withHeaders(_httpRes.headers().map());
+            // no content 
+            return _res;
+        }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "2XX")) {
-            if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                Map<String, Object> _out = Utils.mapper().readValue(
+            if (Utils.contentTypeMatches(_contentType, "*/*")) {
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "application/json")) {
+                Object _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<Map<String, Object>>() {});
-                _res.withResult(Optional.ofNullable(_out));
+                    new TypeReference<Object>() {});
+                _res.withTwoXXApplicationJsonAny(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "text/plain")) {
+                String _out = Utils.toUtf8AndClose(_httpRes.body());
+                _res.withTwoXXTextPlainRes(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -300,8 +470,8 @@ public class Passthrough implements
      * Passthrough PUT
      * @return The call builder
      */
-    public PatchPassthroughRequestBuilder patchPassthrough() {
-        return new PatchPassthroughRequestBuilder(this);
+    public PatchPassthroughJsonRequestBuilder patchPassthroughJson() {
+        return new PatchPassthroughJsonRequestBuilder(this);
     }
 
     /**
@@ -310,11 +480,11 @@ public class Passthrough implements
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchPassthroughResponse patchPassthrough(
-            PatchPassthroughRequest request) throws Exception {
+    public PatchPassthroughJsonResponse patchPassthroughJson(
+            PatchPassthroughJsonRequest request) throws Exception {
         String _baseUrl = this.sdkConfiguration.serverUrl;
         String _url = Utils.generateURL(
-                PatchPassthroughRequest.class,
+                PatchPassthroughJsonRequest.class,
                 _baseUrl,
                 "/passthrough/{connection_id}/{path}",
                 request, null);
@@ -323,14 +493,14 @@ public class Passthrough implements
         Object _convertedRequest = Utils.convertToShape(
                 request, 
                 JsonShape.DEFAULT,
-                new TypeReference<PatchPassthroughRequest>() {});
+                new TypeReference<PatchPassthroughJsonRequest>() {});
         SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
                 _convertedRequest, 
                 "requestBody",
                 "json",
                 false);
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
-        _req.addHeader("Accept", "application/json")
+        _req.addHeader("Accept", "application/json;q=1, text/plain;q=0.7, */*;q=0")
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
 
@@ -342,7 +512,7 @@ public class Passthrough implements
             sdkConfiguration.hooks()
                .beforeRequest(
                   new BeforeRequestContextImpl(
-                      "patchPassthrough", 
+                      "patchPassthrough_json", 
                       Optional.of(List.of()), 
                       sdkConfiguration.securitySource()),
                   _req.build());
@@ -353,7 +523,7 @@ public class Passthrough implements
                 _httpRes = sdkConfiguration.hooks()
                     .afterError(
                         new AfterErrorContextImpl(
-                            "patchPassthrough",
+                            "patchPassthrough_json",
                             Optional.of(List.of()),
                             sdkConfiguration.securitySource()),
                         Optional.of(_httpRes),
@@ -362,7 +532,7 @@ public class Passthrough implements
                 _httpRes = sdkConfiguration.hooks()
                     .afterSuccess(
                         new AfterSuccessContextImpl(
-                            "patchPassthrough",
+                            "patchPassthrough_json",
                             Optional.of(List.of()), 
                             sdkConfiguration.securitySource()),
                          _httpRes);
@@ -371,7 +541,7 @@ public class Passthrough implements
             _httpRes = sdkConfiguration.hooks()
                     .afterError(
                         new AfterErrorContextImpl(
-                            "patchPassthrough",
+                            "patchPassthrough_json",
                             Optional.of(List.of()),
                             sdkConfiguration.securitySource()), 
                         Optional.empty(),
@@ -381,21 +551,169 @@ public class Passthrough implements
             .headers()
             .firstValue("Content-Type")
             .orElse("application/octet-stream");
-        PatchPassthroughResponse.Builder _resBuilder = 
-            PatchPassthroughResponse
+        PatchPassthroughJsonResponse.Builder _resBuilder = 
+            PatchPassthroughJsonResponse
                 .builder()
                 .contentType(_contentType)
                 .statusCode(_httpRes.statusCode())
                 .rawResponse(_httpRes);
 
-        PatchPassthroughResponse _res = _resBuilder.build();
+        PatchPassthroughJsonResponse _res = _resBuilder.build();
         
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "204", "205", "304")) {
+            _res.withHeaders(_httpRes.headers().map());
+            // no content 
+            return _res;
+        }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "2XX")) {
-            if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                Map<String, Object> _out = Utils.mapper().readValue(
+            if (Utils.contentTypeMatches(_contentType, "*/*")) {
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "application/json")) {
+                Object _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<Map<String, Object>>() {});
-                _res.withResult(Optional.ofNullable(_out));
+                    new TypeReference<Object>() {});
+                _res.withTwoXXApplicationJsonAny(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "text/plain")) {
+                String _out = Utils.toUtf8AndClose(_httpRes.body());
+                _res.withTwoXXTextPlainRes(Optional.ofNullable(_out));
+                return _res;
+            } else {
+                throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "Unexpected content-type received: " + _contentType, 
+                    Utils.extractByteArrayFromBody(_httpRes));
+            }
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        throw new SDKError(
+            _httpRes, 
+            _httpRes.statusCode(), 
+            "Unexpected status code received: " + _httpRes.statusCode(), 
+            Utils.extractByteArrayFromBody(_httpRes));
+    }
+
+
+
+    /**
+     * Passthrough PUT
+     * @return The call builder
+     */
+    public PatchPassthroughRawRequestBuilder patchPassthroughRaw() {
+        return new PatchPassthroughRawRequestBuilder(this);
+    }
+
+    /**
+     * Passthrough PUT
+     * @param request The request object containing all of the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public PatchPassthroughRawResponse patchPassthroughRaw(
+            PatchPassthroughRawRequest request) throws Exception {
+        String _baseUrl = this.sdkConfiguration.serverUrl;
+        String _url = Utils.generateURL(
+                PatchPassthroughRawRequest.class,
+                _baseUrl,
+                "/passthrough/{connection_id}/{path}",
+                request, null);
+        
+        HTTPRequest _req = new HTTPRequest(_url, "PATCH");
+        Object _convertedRequest = Utils.convertToShape(
+                request, 
+                JsonShape.DEFAULT,
+                new TypeReference<PatchPassthroughRawRequest>() {});
+        SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
+                _convertedRequest, 
+                "requestBody",
+                "raw",
+                false);
+        _req.setBody(Optional.ofNullable(_serializedRequestBody));
+        _req.addHeader("Accept", "application/json;q=1, text/plain;q=0.7, */*;q=0")
+            .addHeader("user-agent", 
+                this.sdkConfiguration.userAgent);
+
+        Utils.configureSecurity(_req,  
+                this.sdkConfiguration.securitySource.getSecurity());
+
+        HTTPClient _client = this.sdkConfiguration.defaultClient;
+        HttpRequest _r = 
+            sdkConfiguration.hooks()
+               .beforeRequest(
+                  new BeforeRequestContextImpl(
+                      "patchPassthrough_raw", 
+                      Optional.of(List.of()), 
+                      sdkConfiguration.securitySource()),
+                  _req.build());
+        HttpResponse<InputStream> _httpRes;
+        try {
+            _httpRes = _client.send(_r);
+            if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "patchPassthrough_raw",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()),
+                        Optional.of(_httpRes),
+                        Optional.empty());
+            } else {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterSuccess(
+                        new AfterSuccessContextImpl(
+                            "patchPassthrough_raw",
+                            Optional.of(List.of()), 
+                            sdkConfiguration.securitySource()),
+                         _httpRes);
+            }
+        } catch (Exception _e) {
+            _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "patchPassthrough_raw",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()), 
+                        Optional.empty(),
+                        Optional.of(_e));
+        }
+        String _contentType = _httpRes
+            .headers()
+            .firstValue("Content-Type")
+            .orElse("application/octet-stream");
+        PatchPassthroughRawResponse.Builder _resBuilder = 
+            PatchPassthroughRawResponse
+                .builder()
+                .contentType(_contentType)
+                .statusCode(_httpRes.statusCode())
+                .rawResponse(_httpRes);
+
+        PatchPassthroughRawResponse _res = _resBuilder.build();
+        
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "204", "205", "304")) {
+            _res.withHeaders(_httpRes.headers().map());
+            // no content 
+            return _res;
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "2XX")) {
+            if (Utils.contentTypeMatches(_contentType, "*/*")) {
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "application/json")) {
+                Object _out = Utils.mapper().readValue(
+                    Utils.toUtf8AndClose(_httpRes.body()),
+                    new TypeReference<Object>() {});
+                _res.withTwoXXApplicationJsonAny(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "text/plain")) {
+                String _out = Utils.toUtf8AndClose(_httpRes.body());
+                _res.withTwoXXTextPlainRes(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -446,7 +764,7 @@ public class Passthrough implements
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "DELETE");
-        _req.addHeader("Accept", "application/json")
+        _req.addHeader("Accept", "application/json;q=1, text/plain;q=0.7, */*;q=0")
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
 
@@ -506,12 +824,23 @@ public class Passthrough implements
 
         RemovePassthroughResponse _res = _resBuilder.build();
         
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "204", "205", "304")) {
+            _res.withHeaders(_httpRes.headers().map());
+            // no content 
+            return _res;
+        }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "2XX")) {
-            if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                Map<String, Object> _out = Utils.mapper().readValue(
+            if (Utils.contentTypeMatches(_contentType, "*/*")) {
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "application/json")) {
+                Object _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<Map<String, Object>>() {});
-                _res.withResult(Optional.ofNullable(_out));
+                    new TypeReference<Object>() {});
+                _res.withTwoXXApplicationJsonAny(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "text/plain")) {
+                String _out = Utils.toUtf8AndClose(_httpRes.body());
+                _res.withTwoXXTextPlainRes(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -542,8 +871,8 @@ public class Passthrough implements
      * Passthrough PUT
      * @return The call builder
      */
-    public UpdatePassthroughRequestBuilder updatePassthrough() {
-        return new UpdatePassthroughRequestBuilder(this);
+    public UpdatePassthroughJsonRequestBuilder updatePassthroughJson() {
+        return new UpdatePassthroughJsonRequestBuilder(this);
     }
 
     /**
@@ -552,11 +881,11 @@ public class Passthrough implements
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdatePassthroughResponse updatePassthrough(
-            UpdatePassthroughRequest request) throws Exception {
+    public UpdatePassthroughJsonResponse updatePassthroughJson(
+            UpdatePassthroughJsonRequest request) throws Exception {
         String _baseUrl = this.sdkConfiguration.serverUrl;
         String _url = Utils.generateURL(
-                UpdatePassthroughRequest.class,
+                UpdatePassthroughJsonRequest.class,
                 _baseUrl,
                 "/passthrough/{connection_id}/{path}",
                 request, null);
@@ -565,14 +894,14 @@ public class Passthrough implements
         Object _convertedRequest = Utils.convertToShape(
                 request, 
                 JsonShape.DEFAULT,
-                new TypeReference<UpdatePassthroughRequest>() {});
+                new TypeReference<UpdatePassthroughJsonRequest>() {});
         SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
                 _convertedRequest, 
                 "requestBody",
                 "json",
                 false);
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
-        _req.addHeader("Accept", "application/json")
+        _req.addHeader("Accept", "application/json;q=1, text/plain;q=0.7, */*;q=0")
             .addHeader("user-agent", 
                 this.sdkConfiguration.userAgent);
 
@@ -584,7 +913,7 @@ public class Passthrough implements
             sdkConfiguration.hooks()
                .beforeRequest(
                   new BeforeRequestContextImpl(
-                      "updatePassthrough", 
+                      "updatePassthrough_json", 
                       Optional.of(List.of()), 
                       sdkConfiguration.securitySource()),
                   _req.build());
@@ -595,7 +924,7 @@ public class Passthrough implements
                 _httpRes = sdkConfiguration.hooks()
                     .afterError(
                         new AfterErrorContextImpl(
-                            "updatePassthrough",
+                            "updatePassthrough_json",
                             Optional.of(List.of()),
                             sdkConfiguration.securitySource()),
                         Optional.of(_httpRes),
@@ -604,7 +933,7 @@ public class Passthrough implements
                 _httpRes = sdkConfiguration.hooks()
                     .afterSuccess(
                         new AfterSuccessContextImpl(
-                            "updatePassthrough",
+                            "updatePassthrough_json",
                             Optional.of(List.of()), 
                             sdkConfiguration.securitySource()),
                          _httpRes);
@@ -613,7 +942,7 @@ public class Passthrough implements
             _httpRes = sdkConfiguration.hooks()
                     .afterError(
                         new AfterErrorContextImpl(
-                            "updatePassthrough",
+                            "updatePassthrough_json",
                             Optional.of(List.of()),
                             sdkConfiguration.securitySource()), 
                         Optional.empty(),
@@ -623,21 +952,169 @@ public class Passthrough implements
             .headers()
             .firstValue("Content-Type")
             .orElse("application/octet-stream");
-        UpdatePassthroughResponse.Builder _resBuilder = 
-            UpdatePassthroughResponse
+        UpdatePassthroughJsonResponse.Builder _resBuilder = 
+            UpdatePassthroughJsonResponse
                 .builder()
                 .contentType(_contentType)
                 .statusCode(_httpRes.statusCode())
                 .rawResponse(_httpRes);
 
-        UpdatePassthroughResponse _res = _resBuilder.build();
+        UpdatePassthroughJsonResponse _res = _resBuilder.build();
         
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "204", "205", "304")) {
+            _res.withHeaders(_httpRes.headers().map());
+            // no content 
+            return _res;
+        }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "2XX")) {
-            if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                Map<String, Object> _out = Utils.mapper().readValue(
+            if (Utils.contentTypeMatches(_contentType, "*/*")) {
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "application/json")) {
+                Object _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<Map<String, Object>>() {});
-                _res.withResult(Optional.ofNullable(_out));
+                    new TypeReference<Object>() {});
+                _res.withTwoXXApplicationJsonAny(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "text/plain")) {
+                String _out = Utils.toUtf8AndClose(_httpRes.body());
+                _res.withTwoXXTextPlainRes(Optional.ofNullable(_out));
+                return _res;
+            } else {
+                throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "Unexpected content-type received: " + _contentType, 
+                    Utils.extractByteArrayFromBody(_httpRes));
+            }
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        throw new SDKError(
+            _httpRes, 
+            _httpRes.statusCode(), 
+            "Unexpected status code received: " + _httpRes.statusCode(), 
+            Utils.extractByteArrayFromBody(_httpRes));
+    }
+
+
+
+    /**
+     * Passthrough PUT
+     * @return The call builder
+     */
+    public UpdatePassthroughRawRequestBuilder updatePassthroughRaw() {
+        return new UpdatePassthroughRawRequestBuilder(this);
+    }
+
+    /**
+     * Passthrough PUT
+     * @param request The request object containing all of the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public UpdatePassthroughRawResponse updatePassthroughRaw(
+            UpdatePassthroughRawRequest request) throws Exception {
+        String _baseUrl = this.sdkConfiguration.serverUrl;
+        String _url = Utils.generateURL(
+                UpdatePassthroughRawRequest.class,
+                _baseUrl,
+                "/passthrough/{connection_id}/{path}",
+                request, null);
+        
+        HTTPRequest _req = new HTTPRequest(_url, "PUT");
+        Object _convertedRequest = Utils.convertToShape(
+                request, 
+                JsonShape.DEFAULT,
+                new TypeReference<UpdatePassthroughRawRequest>() {});
+        SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
+                _convertedRequest, 
+                "requestBody",
+                "raw",
+                false);
+        _req.setBody(Optional.ofNullable(_serializedRequestBody));
+        _req.addHeader("Accept", "application/json;q=1, text/plain;q=0.7, */*;q=0")
+            .addHeader("user-agent", 
+                this.sdkConfiguration.userAgent);
+
+        Utils.configureSecurity(_req,  
+                this.sdkConfiguration.securitySource.getSecurity());
+
+        HTTPClient _client = this.sdkConfiguration.defaultClient;
+        HttpRequest _r = 
+            sdkConfiguration.hooks()
+               .beforeRequest(
+                  new BeforeRequestContextImpl(
+                      "updatePassthrough_raw", 
+                      Optional.of(List.of()), 
+                      sdkConfiguration.securitySource()),
+                  _req.build());
+        HttpResponse<InputStream> _httpRes;
+        try {
+            _httpRes = _client.send(_r);
+            if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "updatePassthrough_raw",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()),
+                        Optional.of(_httpRes),
+                        Optional.empty());
+            } else {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterSuccess(
+                        new AfterSuccessContextImpl(
+                            "updatePassthrough_raw",
+                            Optional.of(List.of()), 
+                            sdkConfiguration.securitySource()),
+                         _httpRes);
+            }
+        } catch (Exception _e) {
+            _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "updatePassthrough_raw",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()), 
+                        Optional.empty(),
+                        Optional.of(_e));
+        }
+        String _contentType = _httpRes
+            .headers()
+            .firstValue("Content-Type")
+            .orElse("application/octet-stream");
+        UpdatePassthroughRawResponse.Builder _resBuilder = 
+            UpdatePassthroughRawResponse
+                .builder()
+                .contentType(_contentType)
+                .statusCode(_httpRes.statusCode())
+                .rawResponse(_httpRes);
+
+        UpdatePassthroughRawResponse _res = _resBuilder.build();
+        
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "204", "205", "304")) {
+            _res.withHeaders(_httpRes.headers().map());
+            // no content 
+            return _res;
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "2XX")) {
+            if (Utils.contentTypeMatches(_contentType, "*/*")) {
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "application/json")) {
+                Object _out = Utils.mapper().readValue(
+                    Utils.toUtf8AndClose(_httpRes.body()),
+                    new TypeReference<Object>() {});
+                _res.withTwoXXApplicationJsonAny(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "text/plain")) {
+                String _out = Utils.toUtf8AndClose(_httpRes.body());
+                _res.withTwoXXTextPlainRes(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(

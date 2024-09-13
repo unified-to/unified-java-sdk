@@ -106,7 +106,7 @@ public class Application {
 
             GetHrisGroupRequest req = GetHrisGroupRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetHrisGroupResponse res = sdk.group().getHrisGroup()
@@ -239,7 +239,7 @@ public class Application {
 
             PatchHrisGroupRequest req = PatchHrisGroupRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchHrisGroupResponse res = sdk.group().patchHrisGroup()
@@ -306,7 +306,7 @@ public class Application {
 
             RemoveHrisGroupRequest req = RemoveHrisGroupRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveHrisGroupResponse res = sdk.group().removeHrisGroup()
@@ -371,7 +371,7 @@ public class Application {
 
             UpdateHrisGroupRequest req = UpdateHrisGroupRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateHrisGroupResponse res = sdk.group().updateHrisGroup()

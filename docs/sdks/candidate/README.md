@@ -106,7 +106,7 @@ public class Application {
 
             GetAtsCandidateRequest req = GetAtsCandidateRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetAtsCandidateResponse res = sdk.candidate().getAtsCandidate()
@@ -239,7 +239,7 @@ public class Application {
 
             PatchAtsCandidateRequest req = PatchAtsCandidateRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchAtsCandidateResponse res = sdk.candidate().patchAtsCandidate()
@@ -306,7 +306,7 @@ public class Application {
 
             RemoveAtsCandidateRequest req = RemoveAtsCandidateRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveAtsCandidateResponse res = sdk.candidate().removeAtsCandidate()
@@ -371,7 +371,7 @@ public class Application {
 
             UpdateAtsCandidateRequest req = UpdateAtsCandidateRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateAtsCandidateResponse res = sdk.candidate().updateAtsCandidate()

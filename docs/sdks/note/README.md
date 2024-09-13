@@ -106,7 +106,7 @@ public class Application {
 
             GetTicketingNoteRequest req = GetTicketingNoteRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetTicketingNoteResponse res = sdk.note().getTicketingNote()
@@ -239,7 +239,7 @@ public class Application {
 
             PatchTicketingNoteRequest req = PatchTicketingNoteRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchTicketingNoteResponse res = sdk.note().patchTicketingNote()
@@ -306,7 +306,7 @@ public class Application {
 
             RemoveTicketingNoteRequest req = RemoveTicketingNoteRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveTicketingNoteResponse res = sdk.note().removeTicketingNote()
@@ -371,7 +371,7 @@ public class Application {
 
             UpdateTicketingNoteRequest req = UpdateTicketingNoteRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateTicketingNoteResponse res = sdk.note().updateTicketingNote()

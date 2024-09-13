@@ -178,7 +178,7 @@ public class Application {
 
             GetKmsPageRequest req = GetKmsPageRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetKmsPageResponse res = sdk.kms().getKmsPage()
@@ -245,7 +245,7 @@ public class Application {
 
             GetKmsSpaceRequest req = GetKmsSpaceRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetKmsSpaceResponse res = sdk.kms().getKmsSpace()
@@ -444,7 +444,7 @@ public class Application {
 
             PatchKmsPageRequest req = PatchKmsPageRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchKmsPageResponse res = sdk.kms().patchKmsPage()
@@ -511,7 +511,7 @@ public class Application {
 
             PatchKmsSpaceRequest req = PatchKmsSpaceRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchKmsSpaceResponse res = sdk.kms().patchKmsSpace()
@@ -578,7 +578,7 @@ public class Application {
 
             RemoveKmsPageRequest req = RemoveKmsPageRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveKmsPageResponse res = sdk.kms().removeKmsPage()
@@ -643,7 +643,7 @@ public class Application {
 
             RemoveKmsSpaceRequest req = RemoveKmsSpaceRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveKmsSpaceResponse res = sdk.kms().removeKmsSpace()
@@ -708,7 +708,7 @@ public class Application {
 
             UpdateKmsPageRequest req = UpdateKmsPageRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateKmsPageResponse res = sdk.kms().updateKmsPage()
@@ -775,7 +775,7 @@ public class Application {
 
             UpdateKmsSpaceRequest req = UpdateKmsSpaceRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateKmsSpaceResponse res = sdk.kms().updateKmsSpace()

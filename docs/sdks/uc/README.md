@@ -107,7 +107,7 @@ public class Application {
 
             GetUcContactRequest req = GetUcContactRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetUcContactResponse res = sdk.uc().getUcContact()
@@ -306,7 +306,7 @@ public class Application {
 
             PatchUcContactRequest req = PatchUcContactRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchUcContactResponse res = sdk.uc().patchUcContact()
@@ -373,7 +373,7 @@ public class Application {
 
             RemoveUcContactRequest req = RemoveUcContactRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveUcContactResponse res = sdk.uc().removeUcContact()
@@ -438,7 +438,7 @@ public class Application {
 
             UpdateUcContactRequest req = UpdateUcContactRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateUcContactResponse res = sdk.uc().updateUcContact()

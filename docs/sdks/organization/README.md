@@ -36,7 +36,7 @@ public class Application {
 
             GetAccountingOrganizationRequest req = GetAccountingOrganizationRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetAccountingOrganizationResponse res = sdk.organization().getAccountingOrganization()

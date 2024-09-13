@@ -13,18 +13,17 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
 
-public class PatchPassthroughRequest {
+public class CreatePassthroughJsonRequest {
 
     /**
      * integration-specific payload
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends Map<String, Object>> requestBody;
+    private Optional<? extends Object> requestBody;
 
     /**
      * ID of the connection
@@ -36,8 +35,8 @@ public class PatchPassthroughRequest {
     private String path;
 
     @JsonCreator
-    public PatchPassthroughRequest(
-            Optional<? extends Map<String, Object>> requestBody,
+    public CreatePassthroughJsonRequest(
+            Optional<? extends Object> requestBody,
             String connectionId,
             String path) {
         Utils.checkNotNull(requestBody, "requestBody");
@@ -48,7 +47,7 @@ public class PatchPassthroughRequest {
         this.path = path;
     }
     
-    public PatchPassthroughRequest(
+    public CreatePassthroughJsonRequest(
             String connectionId,
             String path) {
         this(Optional.empty(), connectionId, path);
@@ -59,8 +58,8 @@ public class PatchPassthroughRequest {
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> requestBody() {
-        return (Optional<Map<String, Object>>) requestBody;
+    public Optional<Object> requestBody() {
+        return (Optional<Object>) requestBody;
     }
 
     /**
@@ -83,7 +82,7 @@ public class PatchPassthroughRequest {
     /**
      * integration-specific payload
      */
-    public PatchPassthroughRequest withRequestBody(Map<String, Object> requestBody) {
+    public CreatePassthroughJsonRequest withRequestBody(Object requestBody) {
         Utils.checkNotNull(requestBody, "requestBody");
         this.requestBody = Optional.ofNullable(requestBody);
         return this;
@@ -92,7 +91,7 @@ public class PatchPassthroughRequest {
     /**
      * integration-specific payload
      */
-    public PatchPassthroughRequest withRequestBody(Optional<? extends Map<String, Object>> requestBody) {
+    public CreatePassthroughJsonRequest withRequestBody(Optional<? extends Object> requestBody) {
         Utils.checkNotNull(requestBody, "requestBody");
         this.requestBody = requestBody;
         return this;
@@ -101,13 +100,13 @@ public class PatchPassthroughRequest {
     /**
      * ID of the connection
      */
-    public PatchPassthroughRequest withConnectionId(String connectionId) {
+    public CreatePassthroughJsonRequest withConnectionId(String connectionId) {
         Utils.checkNotNull(connectionId, "connectionId");
         this.connectionId = connectionId;
         return this;
     }
 
-    public PatchPassthroughRequest withPath(String path) {
+    public CreatePassthroughJsonRequest withPath(String path) {
         Utils.checkNotNull(path, "path");
         this.path = path;
         return this;
@@ -121,7 +120,7 @@ public class PatchPassthroughRequest {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        PatchPassthroughRequest other = (PatchPassthroughRequest) o;
+        CreatePassthroughJsonRequest other = (CreatePassthroughJsonRequest) o;
         return 
             Objects.deepEquals(this.requestBody, other.requestBody) &&
             Objects.deepEquals(this.connectionId, other.connectionId) &&
@@ -138,7 +137,7 @@ public class PatchPassthroughRequest {
     
     @Override
     public String toString() {
-        return Utils.toString(PatchPassthroughRequest.class,
+        return Utils.toString(CreatePassthroughJsonRequest.class,
                 "requestBody", requestBody,
                 "connectionId", connectionId,
                 "path", path);
@@ -146,7 +145,7 @@ public class PatchPassthroughRequest {
     
     public final static class Builder {
  
-        private Optional<? extends Map<String, Object>> requestBody = Optional.empty();
+        private Optional<? extends Object> requestBody = Optional.empty();
  
         private String connectionId;
  
@@ -159,7 +158,7 @@ public class PatchPassthroughRequest {
         /**
          * integration-specific payload
          */
-        public Builder requestBody(Map<String, Object> requestBody) {
+        public Builder requestBody(Object requestBody) {
             Utils.checkNotNull(requestBody, "requestBody");
             this.requestBody = Optional.ofNullable(requestBody);
             return this;
@@ -168,7 +167,7 @@ public class PatchPassthroughRequest {
         /**
          * integration-specific payload
          */
-        public Builder requestBody(Optional<? extends Map<String, Object>> requestBody) {
+        public Builder requestBody(Optional<? extends Object> requestBody) {
             Utils.checkNotNull(requestBody, "requestBody");
             this.requestBody = requestBody;
             return this;
@@ -189,8 +188,8 @@ public class PatchPassthroughRequest {
             return this;
         }
         
-        public PatchPassthroughRequest build() {
-            return new PatchPassthroughRequest(
+        public CreatePassthroughJsonRequest build() {
+            return new CreatePassthroughJsonRequest(
                 requestBody,
                 connectionId,
                 path);

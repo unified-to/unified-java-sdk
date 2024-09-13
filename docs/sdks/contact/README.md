@@ -250,7 +250,7 @@ public class Application {
 
             GetAccountingContactRequest req = GetAccountingContactRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetAccountingContactResponse res = sdk.contact().getAccountingContact()
@@ -317,7 +317,7 @@ public class Application {
 
             GetCrmContactRequest req = GetCrmContactRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetCrmContactResponse res = sdk.contact().getCrmContact()
@@ -384,7 +384,7 @@ public class Application {
 
             GetUcContactRequest req = GetUcContactRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetUcContactResponse res = sdk.contact().getUcContact()
@@ -649,7 +649,7 @@ public class Application {
 
             PatchAccountingContactRequest req = PatchAccountingContactRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchAccountingContactResponse res = sdk.contact().patchAccountingContact()
@@ -716,7 +716,7 @@ public class Application {
 
             PatchCrmContactRequest req = PatchCrmContactRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchCrmContactResponse res = sdk.contact().patchCrmContact()
@@ -783,7 +783,7 @@ public class Application {
 
             PatchUcContactRequest req = PatchUcContactRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchUcContactResponse res = sdk.contact().patchUcContact()
@@ -850,7 +850,7 @@ public class Application {
 
             RemoveAccountingContactRequest req = RemoveAccountingContactRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveAccountingContactResponse res = sdk.contact().removeAccountingContact()
@@ -915,7 +915,7 @@ public class Application {
 
             RemoveCrmContactRequest req = RemoveCrmContactRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveCrmContactResponse res = sdk.contact().removeCrmContact()
@@ -980,7 +980,7 @@ public class Application {
 
             RemoveUcContactRequest req = RemoveUcContactRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveUcContactResponse res = sdk.contact().removeUcContact()
@@ -1045,7 +1045,7 @@ public class Application {
 
             UpdateAccountingContactRequest req = UpdateAccountingContactRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateAccountingContactResponse res = sdk.contact().updateAccountingContact()
@@ -1112,7 +1112,7 @@ public class Application {
 
             UpdateCrmContactRequest req = UpdateCrmContactRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateCrmContactResponse res = sdk.contact().updateCrmContact()
@@ -1179,7 +1179,7 @@ public class Application {
 
             UpdateUcContactRequest req = UpdateUcContactRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateUcContactResponse res = sdk.contact().updateUcContact()

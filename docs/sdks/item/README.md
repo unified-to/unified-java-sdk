@@ -106,7 +106,7 @@ public class Application {
 
             GetCommerceItemRequest req = GetCommerceItemRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetCommerceItemResponse res = sdk.item().getCommerceItem()
@@ -239,7 +239,7 @@ public class Application {
 
             PatchCommerceItemRequest req = PatchCommerceItemRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchCommerceItemResponse res = sdk.item().patchCommerceItem()
@@ -306,7 +306,7 @@ public class Application {
 
             RemoveCommerceItemRequest req = RemoveCommerceItemRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveCommerceItemResponse res = sdk.item().removeCommerceItem()
@@ -371,7 +371,7 @@ public class Application {
 
             UpdateCommerceItemRequest req = UpdateCommerceItemRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateCommerceItemResponse res = sdk.item().updateCommerceItem()

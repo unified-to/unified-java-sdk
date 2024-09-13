@@ -106,7 +106,7 @@ public class Application {
 
             GetStorageFileRequest req = GetStorageFileRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetStorageFileResponse res = sdk.file().getStorageFile()
@@ -239,7 +239,7 @@ public class Application {
 
             PatchStorageFileRequest req = PatchStorageFileRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchStorageFileResponse res = sdk.file().patchStorageFile()
@@ -306,7 +306,7 @@ public class Application {
 
             RemoveStorageFileRequest req = RemoveStorageFileRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveStorageFileResponse res = sdk.file().removeStorageFile()
@@ -371,7 +371,7 @@ public class Application {
 
             UpdateStorageFileRequest req = UpdateStorageFileRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateStorageFileResponse res = sdk.file().updateStorageFile()

@@ -106,7 +106,7 @@ public class Application {
 
             GetCrmLeadRequest req = GetCrmLeadRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetCrmLeadResponse res = sdk.lead().getCrmLead()
@@ -239,7 +239,7 @@ public class Application {
 
             PatchCrmLeadRequest req = PatchCrmLeadRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchCrmLeadResponse res = sdk.lead().patchCrmLead()
@@ -306,7 +306,7 @@ public class Application {
 
             RemoveCrmLeadRequest req = RemoveCrmLeadRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveCrmLeadResponse res = sdk.lead().removeCrmLead()
@@ -371,7 +371,7 @@ public class Application {
 
             UpdateCrmLeadRequest req = UpdateCrmLeadRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateCrmLeadResponse res = sdk.lead().updateCrmLead()

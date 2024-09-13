@@ -36,7 +36,7 @@ public class Application {
 
             GetMessagingChannelRequest req = GetMessagingChannelRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetMessagingChannelResponse res = sdk.channel().getMessagingChannel()

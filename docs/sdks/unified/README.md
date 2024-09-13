@@ -57,10 +57,10 @@ public class Application {
 
             Connection req = Connection.builder()
                 .categories(List.of(
-                        PropertyConnectionCategories.KMS))
+                    PropertyConnectionCategories.KMS))
                 .integrationType("<value>")
                 .permissions(List.of(
-                        PropertyConnectionPermissions.ATS_DOCUMENT_WRITE))
+                    PropertyConnectionPermissions.ATS_DOCUMENT_WRITE))
                 .build();
 
             CreateUnifiedConnectionResponse res = sdk.unified().createUnifiedConnection()
@@ -191,7 +191,7 @@ public class Application {
                 .build();
 
             GetUnifiedApicallRequest req = GetUnifiedApicallRequest.builder()
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetUnifiedApicallResponse res = sdk.unified().getUnifiedApicall()
@@ -257,7 +257,7 @@ public class Application {
                 .build();
 
             GetUnifiedConnectionRequest req = GetUnifiedConnectionRequest.builder()
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetUnifiedConnectionResponse res = sdk.unified().getUnifiedConnection()
@@ -390,7 +390,7 @@ public class Application {
                 .build();
 
             GetUnifiedWebhookRequest req = GetUnifiedWebhookRequest.builder()
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetUnifiedWebhookResponse res = sdk.unified().getUnifiedWebhook()
@@ -847,7 +847,7 @@ public class Application {
                 .build();
 
             PatchUnifiedConnectionRequest req = PatchUnifiedConnectionRequest.builder()
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchUnifiedConnectionResponse res = sdk.unified().patchUnifiedConnection()
@@ -913,7 +913,7 @@ public class Application {
                 .build();
 
             PatchUnifiedWebhookRequest req = PatchUnifiedWebhookRequest.builder()
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchUnifiedWebhookResponse res = sdk.unified().patchUnifiedWebhook()
@@ -979,7 +979,7 @@ public class Application {
                 .build();
 
             PatchUnifiedWebhookTriggerRequest req = PatchUnifiedWebhookTriggerRequest.builder()
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchUnifiedWebhookTriggerResponse res = sdk.unified().patchUnifiedWebhookTrigger()
@@ -1043,7 +1043,7 @@ public class Application {
                 .build();
 
             RemoveUnifiedConnectionRequest req = RemoveUnifiedConnectionRequest.builder()
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveUnifiedConnectionResponse res = sdk.unified().removeUnifiedConnection()
@@ -1107,7 +1107,7 @@ public class Application {
                 .build();
 
             RemoveUnifiedWebhookRequest req = RemoveUnifiedWebhookRequest.builder()
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveUnifiedWebhookResponse res = sdk.unified().removeUnifiedWebhook()
@@ -1171,7 +1171,7 @@ public class Application {
                 .build();
 
             UpdateUnifiedConnectionRequest req = UpdateUnifiedConnectionRequest.builder()
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateUnifiedConnectionResponse res = sdk.unified().updateUnifiedConnection()
@@ -1237,7 +1237,7 @@ public class Application {
                 .build();
 
             UpdateUnifiedWebhookRequest req = UpdateUnifiedWebhookRequest.builder()
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateUnifiedWebhookResponse res = sdk.unified().updateUnifiedWebhook()
@@ -1303,7 +1303,7 @@ public class Application {
                 .build();
 
             UpdateUnifiedWebhookTriggerRequest req = UpdateUnifiedWebhookTriggerRequest.builder()
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateUnifiedWebhookTriggerResponse res = sdk.unified().updateUnifiedWebhookTrigger()

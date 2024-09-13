@@ -106,7 +106,7 @@ public class Application {
                 .build();
 
             GetUnifiedWebhookRequest req = GetUnifiedWebhookRequest.builder()
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetUnifiedWebhookResponse res = sdk.webhook().getUnifiedWebhook()
@@ -237,7 +237,7 @@ public class Application {
                 .build();
 
             PatchUnifiedWebhookRequest req = PatchUnifiedWebhookRequest.builder()
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchUnifiedWebhookResponse res = sdk.webhook().patchUnifiedWebhook()
@@ -303,7 +303,7 @@ public class Application {
                 .build();
 
             PatchUnifiedWebhookTriggerRequest req = PatchUnifiedWebhookTriggerRequest.builder()
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchUnifiedWebhookTriggerResponse res = sdk.webhook().patchUnifiedWebhookTrigger()
@@ -367,7 +367,7 @@ public class Application {
                 .build();
 
             RemoveUnifiedWebhookRequest req = RemoveUnifiedWebhookRequest.builder()
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveUnifiedWebhookResponse res = sdk.webhook().removeUnifiedWebhook()
@@ -431,7 +431,7 @@ public class Application {
                 .build();
 
             UpdateUnifiedWebhookRequest req = UpdateUnifiedWebhookRequest.builder()
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateUnifiedWebhookResponse res = sdk.webhook().updateUnifiedWebhook()
@@ -497,7 +497,7 @@ public class Application {
                 .build();
 
             UpdateUnifiedWebhookTriggerRequest req = UpdateUnifiedWebhookTriggerRequest.builder()
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateUnifiedWebhookTriggerResponse res = sdk.webhook().updateUnifiedWebhookTrigger()

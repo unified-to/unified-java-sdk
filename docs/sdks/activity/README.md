@@ -106,7 +106,7 @@ public class Application {
 
             GetAtsActivityRequest req = GetAtsActivityRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetAtsActivityResponse res = sdk.activity().getAtsActivity()
@@ -239,7 +239,7 @@ public class Application {
 
             PatchAtsActivityRequest req = PatchAtsActivityRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchAtsActivityResponse res = sdk.activity().patchAtsActivity()
@@ -306,7 +306,7 @@ public class Application {
 
             RemoveAtsActivityRequest req = RemoveAtsActivityRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveAtsActivityResponse res = sdk.activity().removeAtsActivity()
@@ -371,7 +371,7 @@ public class Application {
 
             UpdateAtsActivityRequest req = UpdateAtsActivityRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateAtsActivityResponse res = sdk.activity().updateAtsActivity()

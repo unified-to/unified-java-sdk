@@ -106,7 +106,7 @@ public class Application {
 
             GetTaskProjectRequest req = GetTaskProjectRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetTaskProjectResponse res = sdk.project().getTaskProject()
@@ -239,7 +239,7 @@ public class Application {
 
             PatchTaskProjectRequest req = PatchTaskProjectRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchTaskProjectResponse res = sdk.project().patchTaskProject()
@@ -306,7 +306,7 @@ public class Application {
 
             RemoveTaskProjectRequest req = RemoveTaskProjectRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveTaskProjectResponse res = sdk.project().removeTaskProject()
@@ -371,7 +371,7 @@ public class Application {
 
             UpdateTaskProjectRequest req = UpdateTaskProjectRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateTaskProjectResponse res = sdk.project().updateTaskProject()

@@ -106,7 +106,7 @@ public class Application {
 
             GetAtsInterviewRequest req = GetAtsInterviewRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetAtsInterviewResponse res = sdk.interview().getAtsInterview()
@@ -239,7 +239,7 @@ public class Application {
 
             PatchAtsInterviewRequest req = PatchAtsInterviewRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchAtsInterviewResponse res = sdk.interview().patchAtsInterview()
@@ -306,7 +306,7 @@ public class Application {
 
             RemoveAtsInterviewRequest req = RemoveAtsInterviewRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveAtsInterviewResponse res = sdk.interview().removeAtsInterview()
@@ -371,7 +371,7 @@ public class Application {
 
             UpdateAtsInterviewRequest req = UpdateAtsInterviewRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateAtsInterviewResponse res = sdk.interview().updateAtsInterview()

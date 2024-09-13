@@ -43,10 +43,10 @@ public class Application {
 
             Connection req = Connection.builder()
                 .categories(List.of(
-                        PropertyConnectionCategories.KMS))
+                    PropertyConnectionCategories.KMS))
                 .integrationType("<value>")
                 .permissions(List.of(
-                        PropertyConnectionPermissions.ATS_DOCUMENT_WRITE))
+                    PropertyConnectionPermissions.ATS_DOCUMENT_WRITE))
                 .build();
 
             CreateUnifiedConnectionResponse res = sdk.connection().createUnifiedConnection()
@@ -112,7 +112,7 @@ public class Application {
                 .build();
 
             GetUnifiedConnectionRequest req = GetUnifiedConnectionRequest.builder()
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetUnifiedConnectionResponse res = sdk.connection().getUnifiedConnection()
@@ -243,7 +243,7 @@ public class Application {
                 .build();
 
             PatchUnifiedConnectionRequest req = PatchUnifiedConnectionRequest.builder()
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchUnifiedConnectionResponse res = sdk.connection().patchUnifiedConnection()
@@ -309,7 +309,7 @@ public class Application {
                 .build();
 
             RemoveUnifiedConnectionRequest req = RemoveUnifiedConnectionRequest.builder()
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveUnifiedConnectionResponse res = sdk.connection().removeUnifiedConnection()
@@ -373,7 +373,7 @@ public class Application {
                 .build();
 
             UpdateUnifiedConnectionRequest req = UpdateUnifiedConnectionRequest.builder()
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateUnifiedConnectionResponse res = sdk.connection().updateUnifiedConnection()

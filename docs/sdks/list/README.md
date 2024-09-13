@@ -106,7 +106,7 @@ public class Application {
 
             GetMartechListRequest req = GetMartechListRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetMartechListResponse res = sdk.list().getMartechList()
@@ -239,7 +239,7 @@ public class Application {
 
             PatchMartechListRequest req = PatchMartechListRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchMartechListResponse res = sdk.list().patchMartechList()
@@ -306,7 +306,7 @@ public class Application {
 
             RemoveMartechListRequest req = RemoveMartechListRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveMartechListResponse res = sdk.list().removeMartechList()
@@ -371,7 +371,7 @@ public class Application {
 
             UpdateMartechListRequest req = UpdateMartechListRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateMartechListResponse res = sdk.list().updateMartechList()

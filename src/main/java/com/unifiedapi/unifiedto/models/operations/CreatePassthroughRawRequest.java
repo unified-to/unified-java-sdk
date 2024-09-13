@@ -9,22 +9,20 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 import com.unifiedapi.unifiedto.utils.Utils;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
 
-public class UpdatePassthroughRequest {
+public class CreatePassthroughRawRequest {
 
     /**
      * integration-specific payload
      */
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends Map<String, Object>> requestBody;
+    @SpeakeasyMetadata("request:mediaType=text/plain")
+    private Optional<? extends byte[]> requestBody;
 
     /**
      * ID of the connection
@@ -36,8 +34,8 @@ public class UpdatePassthroughRequest {
     private String path;
 
     @JsonCreator
-    public UpdatePassthroughRequest(
-            Optional<? extends Map<String, Object>> requestBody,
+    public CreatePassthroughRawRequest(
+            Optional<? extends byte[]> requestBody,
             String connectionId,
             String path) {
         Utils.checkNotNull(requestBody, "requestBody");
@@ -48,7 +46,7 @@ public class UpdatePassthroughRequest {
         this.path = path;
     }
     
-    public UpdatePassthroughRequest(
+    public CreatePassthroughRawRequest(
             String connectionId,
             String path) {
         this(Optional.empty(), connectionId, path);
@@ -59,8 +57,8 @@ public class UpdatePassthroughRequest {
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> requestBody() {
-        return (Optional<Map<String, Object>>) requestBody;
+    public Optional<byte[]> requestBody() {
+        return (Optional<byte[]>) requestBody;
     }
 
     /**
@@ -83,7 +81,7 @@ public class UpdatePassthroughRequest {
     /**
      * integration-specific payload
      */
-    public UpdatePassthroughRequest withRequestBody(Map<String, Object> requestBody) {
+    public CreatePassthroughRawRequest withRequestBody(byte[] requestBody) {
         Utils.checkNotNull(requestBody, "requestBody");
         this.requestBody = Optional.ofNullable(requestBody);
         return this;
@@ -92,7 +90,7 @@ public class UpdatePassthroughRequest {
     /**
      * integration-specific payload
      */
-    public UpdatePassthroughRequest withRequestBody(Optional<? extends Map<String, Object>> requestBody) {
+    public CreatePassthroughRawRequest withRequestBody(Optional<? extends byte[]> requestBody) {
         Utils.checkNotNull(requestBody, "requestBody");
         this.requestBody = requestBody;
         return this;
@@ -101,13 +99,13 @@ public class UpdatePassthroughRequest {
     /**
      * ID of the connection
      */
-    public UpdatePassthroughRequest withConnectionId(String connectionId) {
+    public CreatePassthroughRawRequest withConnectionId(String connectionId) {
         Utils.checkNotNull(connectionId, "connectionId");
         this.connectionId = connectionId;
         return this;
     }
 
-    public UpdatePassthroughRequest withPath(String path) {
+    public CreatePassthroughRawRequest withPath(String path) {
         Utils.checkNotNull(path, "path");
         this.path = path;
         return this;
@@ -121,7 +119,7 @@ public class UpdatePassthroughRequest {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        UpdatePassthroughRequest other = (UpdatePassthroughRequest) o;
+        CreatePassthroughRawRequest other = (CreatePassthroughRawRequest) o;
         return 
             Objects.deepEquals(this.requestBody, other.requestBody) &&
             Objects.deepEquals(this.connectionId, other.connectionId) &&
@@ -138,7 +136,7 @@ public class UpdatePassthroughRequest {
     
     @Override
     public String toString() {
-        return Utils.toString(UpdatePassthroughRequest.class,
+        return Utils.toString(CreatePassthroughRawRequest.class,
                 "requestBody", requestBody,
                 "connectionId", connectionId,
                 "path", path);
@@ -146,7 +144,7 @@ public class UpdatePassthroughRequest {
     
     public final static class Builder {
  
-        private Optional<? extends Map<String, Object>> requestBody = Optional.empty();
+        private Optional<? extends byte[]> requestBody = Optional.empty();
  
         private String connectionId;
  
@@ -159,7 +157,7 @@ public class UpdatePassthroughRequest {
         /**
          * integration-specific payload
          */
-        public Builder requestBody(Map<String, Object> requestBody) {
+        public Builder requestBody(byte[] requestBody) {
             Utils.checkNotNull(requestBody, "requestBody");
             this.requestBody = Optional.ofNullable(requestBody);
             return this;
@@ -168,7 +166,7 @@ public class UpdatePassthroughRequest {
         /**
          * integration-specific payload
          */
-        public Builder requestBody(Optional<? extends Map<String, Object>> requestBody) {
+        public Builder requestBody(Optional<? extends byte[]> requestBody) {
             Utils.checkNotNull(requestBody, "requestBody");
             this.requestBody = requestBody;
             return this;
@@ -189,8 +187,8 @@ public class UpdatePassthroughRequest {
             return this;
         }
         
-        public UpdatePassthroughRequest build() {
-            return new UpdatePassthroughRequest(
+        public CreatePassthroughRawRequest build() {
+            return new CreatePassthroughRawRequest(
                 requestBody,
                 connectionId,
                 path);

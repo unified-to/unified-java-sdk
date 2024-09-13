@@ -181,7 +181,7 @@ public class Application {
 
             GetAtsCompanyRequest req = GetAtsCompanyRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetAtsCompanyResponse res = sdk.company().getAtsCompany()
@@ -248,7 +248,7 @@ public class Application {
 
             GetCrmCompanyRequest req = GetCrmCompanyRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetCrmCompanyResponse res = sdk.company().getCrmCompany()
@@ -315,7 +315,7 @@ public class Application {
 
             GetHrisCompanyRequest req = GetHrisCompanyRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetHrisCompanyResponse res = sdk.company().getHrisCompany()
@@ -646,7 +646,7 @@ public class Application {
 
             PatchCrmCompanyRequest req = PatchCrmCompanyRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchCrmCompanyResponse res = sdk.company().patchCrmCompany()
@@ -713,7 +713,7 @@ public class Application {
 
             PatchHrisCompanyRequest req = PatchHrisCompanyRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchHrisCompanyResponse res = sdk.company().patchHrisCompany()
@@ -780,7 +780,7 @@ public class Application {
 
             RemoveCrmCompanyRequest req = RemoveCrmCompanyRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveCrmCompanyResponse res = sdk.company().removeCrmCompany()
@@ -845,7 +845,7 @@ public class Application {
 
             RemoveHrisCompanyRequest req = RemoveHrisCompanyRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveHrisCompanyResponse res = sdk.company().removeHrisCompany()
@@ -910,7 +910,7 @@ public class Application {
 
             UpdateCrmCompanyRequest req = UpdateCrmCompanyRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateCrmCompanyResponse res = sdk.company().updateCrmCompany()
@@ -977,7 +977,7 @@ public class Application {
 
             UpdateHrisCompanyRequest req = UpdateHrisCompanyRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateHrisCompanyResponse res = sdk.company().updateHrisCompany()

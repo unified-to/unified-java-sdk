@@ -1,20 +1,21 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: cf72c39f8e74a269aab0cb250423c99a
+  docChecksum: 0d6e24164cc3d7a1033d4f9883eb8f98
   docVersion: "1.0"
-  speakeasyVersion: 1.395.1
-  generationVersion: 2.415.0
-  releaseVersion: 0.20.9
-  configChecksum: 4931eb370e06f3a417838d0488efdc02
+  speakeasyVersion: 1.396.6
+  generationVersion: 2.415.6
+  releaseVersion: 0.21.0
+  configChecksum: 00b396c8e1ca5532207507441bb59cdd
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
 features:
   java:
+    acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.1
-    core: 3.29.5
+    core: 3.29.7
     globalSecurity: 2.82.7
     globalSecurityCallbacks: 0.1.0
     globalServerURLs: 2.82.1
@@ -92,8 +93,10 @@ generatedFiles:
   - docs/models/operations/CreateMartechMemberResponse.md
   - docs/models/operations/CreateMessagingMessageRequest.md
   - docs/models/operations/CreateMessagingMessageResponse.md
-  - docs/models/operations/CreatePassthroughRequest.md
-  - docs/models/operations/CreatePassthroughResponse.md
+  - docs/models/operations/CreatePassthroughJsonRequest.md
+  - docs/models/operations/CreatePassthroughJsonResponse.md
+  - docs/models/operations/CreatePassthroughRawRequest.md
+  - docs/models/operations/CreatePassthroughRawResponse.md
   - docs/models/operations/CreatePaymentLinkRequest.md
   - docs/models/operations/CreatePaymentLinkResponse.md
   - docs/models/operations/CreatePaymentPaymentRequest.md
@@ -407,8 +410,10 @@ generatedFiles:
   - docs/models/operations/PatchMartechMemberResponse.md
   - docs/models/operations/PatchMessagingMessageRequest.md
   - docs/models/operations/PatchMessagingMessageResponse.md
-  - docs/models/operations/PatchPassthroughRequest.md
-  - docs/models/operations/PatchPassthroughResponse.md
+  - docs/models/operations/PatchPassthroughJsonRequest.md
+  - docs/models/operations/PatchPassthroughJsonResponse.md
+  - docs/models/operations/PatchPassthroughRawRequest.md
+  - docs/models/operations/PatchPassthroughRawResponse.md
   - docs/models/operations/PatchPaymentLinkRequest.md
   - docs/models/operations/PatchPaymentLinkResponse.md
   - docs/models/operations/PatchPaymentPaymentRequest.md
@@ -587,8 +592,10 @@ generatedFiles:
   - docs/models/operations/UpdateMartechMemberResponse.md
   - docs/models/operations/UpdateMessagingMessageRequest.md
   - docs/models/operations/UpdateMessagingMessageResponse.md
-  - docs/models/operations/UpdatePassthroughRequest.md
-  - docs/models/operations/UpdatePassthroughResponse.md
+  - docs/models/operations/UpdatePassthroughJsonRequest.md
+  - docs/models/operations/UpdatePassthroughJsonResponse.md
+  - docs/models/operations/UpdatePassthroughRawRequest.md
+  - docs/models/operations/UpdatePassthroughRawResponse.md
   - docs/models/operations/UpdatePaymentLinkRequest.md
   - docs/models/operations/UpdatePaymentLinkResponse.md
   - docs/models/operations/UpdatePaymentPaymentRequest.md
@@ -1100,9 +1107,12 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateMessagingMessageRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateMessagingMessageRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateMessagingMessageResponse.java
-  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreatePassthroughRequest.java
-  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreatePassthroughRequestBuilder.java
-  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreatePassthroughResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreatePassthroughJsonRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreatePassthroughJsonRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreatePassthroughJsonResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreatePassthroughRawRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreatePassthroughRawRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreatePassthroughRawResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreatePaymentLinkRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreatePaymentLinkRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreatePaymentLinkResponse.java
@@ -1572,9 +1582,12 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchMessagingMessageRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchMessagingMessageRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchMessagingMessageResponse.java
-  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchPassthroughRequest.java
-  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchPassthroughRequestBuilder.java
-  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchPassthroughResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchPassthroughJsonRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchPassthroughJsonRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchPassthroughJsonResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchPassthroughRawRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchPassthroughRawRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchPassthroughRawResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchPaymentLinkRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchPaymentLinkRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchPaymentLinkResponse.java
@@ -1842,9 +1855,12 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateMessagingMessageRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateMessagingMessageRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateMessagingMessageResponse.java
-  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePassthroughRequest.java
-  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePassthroughRequestBuilder.java
-  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePassthroughResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePassthroughJsonRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePassthroughJsonRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePassthroughJsonResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePassthroughRawRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePassthroughRawRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePassthroughRawResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePaymentLinkRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePaymentLinkRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePaymentLinkResponse.java
@@ -3752,6 +3768,26 @@ examples:
       responses:
         2XX:
           application/json: {"key": "<value>"}
+    speakeasy-default-create-passthrough-json:
+      parameters:
+        path:
+          connection_id: "<value>"
+          path: "/opt/lib"
+      responses:
+        2XX:
+          '*/*': "0x3CbcA7c7be"
+          application/json: "<value>"
+          text/plain: "<value>"
+    speakeasy-default-create-passthrough-raw:
+      parameters:
+        path:
+          connection_id: "<value>"
+          path: "/etc/namedb"
+      responses:
+        2XX:
+          '*/*': "0x34ABa9b31D"
+          application/json: "<value>"
+          text/plain: "<value>"
   listPassthroughs:
     speakeasy-default-list-passthroughs:
       parameters:
@@ -3761,6 +3797,8 @@ examples:
       responses:
         2XX:
           application/json: {"key": "<value>"}
+          '*/*': "0xc838beeAd7"
+          text/plain: "<value>"
   patchPassthrough:
     speakeasy-default-patch-passthrough:
       parameters:
@@ -3770,6 +3808,26 @@ examples:
       responses:
         2XX:
           application/json: {"key": "<value>"}
+    speakeasy-default-patch-passthrough-json:
+      parameters:
+        path:
+          connection_id: "<value>"
+          path: "/home/user"
+      responses:
+        2XX:
+          '*/*': "0x4fb8209099"
+          application/json: "<value>"
+          text/plain: "<value>"
+    speakeasy-default-patch-passthrough-raw:
+      parameters:
+        path:
+          connection_id: "<value>"
+          path: "/etc/mail"
+      responses:
+        2XX:
+          '*/*': "0x7CEb8f75C6"
+          application/json: "<value>"
+          text/plain: "<value>"
   removePassthrough:
     speakeasy-default-remove-passthrough:
       parameters:
@@ -3779,6 +3837,8 @@ examples:
       responses:
         2XX:
           application/json: {}
+          '*/*': "0x0280cc8bc1"
+          text/plain: "<value>"
   updatePassthrough:
     speakeasy-default-update-passthrough:
       parameters:
@@ -3788,6 +3848,26 @@ examples:
       responses:
         2XX:
           application/json: {"key": "<value>", "key1": "<value>"}
+    speakeasy-default-update-passthrough-json:
+      parameters:
+        path:
+          connection_id: "<value>"
+          path: "/etc/namedb"
+      responses:
+        2XX:
+          '*/*': "0xDa7dcaB8ab"
+          application/json: "<value>"
+          text/plain: "<value>"
+    speakeasy-default-update-passthrough-raw:
+      parameters:
+        path:
+          connection_id: "<value>"
+          path: "/System"
+      responses:
+        2XX:
+          '*/*': "0x5587B3b9f8"
+          application/json: "<value>"
+          text/plain: "<value>"
   createPaymentLink:
     speakeasy-default-create-payment-link:
       parameters:

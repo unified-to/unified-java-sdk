@@ -36,7 +36,7 @@ public class Application {
 
             GetPaymentPayoutRequest req = GetPaymentPayoutRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetPaymentPayoutResponse res = sdk.payout().getPaymentPayout()

@@ -106,7 +106,7 @@ public class Application {
 
             GetCrmPipelineRequest req = GetCrmPipelineRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetCrmPipelineResponse res = sdk.pipeline().getCrmPipeline()
@@ -239,7 +239,7 @@ public class Application {
 
             PatchCrmPipelineRequest req = PatchCrmPipelineRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchCrmPipelineResponse res = sdk.pipeline().patchCrmPipeline()
@@ -306,7 +306,7 @@ public class Application {
 
             RemoveCrmPipelineRequest req = RemoveCrmPipelineRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveCrmPipelineResponse res = sdk.pipeline().removeCrmPipeline()
@@ -371,7 +371,7 @@ public class Application {
 
             UpdateCrmPipelineRequest req = UpdateCrmPipelineRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateCrmPipelineResponse res = sdk.pipeline().updateCrmPipeline()

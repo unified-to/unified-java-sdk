@@ -35,7 +35,7 @@ public class Application {
                 .build();
 
             GetUnifiedApicallRequest req = GetUnifiedApicallRequest.builder()
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetUnifiedApicallResponse res = sdk.apicall().getUnifiedApicall()

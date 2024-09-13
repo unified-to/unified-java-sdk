@@ -178,7 +178,7 @@ public class Application {
 
             GetCommerceLocationRequest req = GetCommerceLocationRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetCommerceLocationResponse res = sdk.location().getCommerceLocation()
@@ -245,7 +245,7 @@ public class Application {
 
             GetHrisLocationRequest req = GetHrisLocationRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetHrisLocationResponse res = sdk.location().getHrisLocation()
@@ -444,7 +444,7 @@ public class Application {
 
             PatchCommerceLocationRequest req = PatchCommerceLocationRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchCommerceLocationResponse res = sdk.location().patchCommerceLocation()
@@ -511,7 +511,7 @@ public class Application {
 
             PatchHrisLocationRequest req = PatchHrisLocationRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchHrisLocationResponse res = sdk.location().patchHrisLocation()
@@ -578,7 +578,7 @@ public class Application {
 
             RemoveCommerceLocationRequest req = RemoveCommerceLocationRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveCommerceLocationResponse res = sdk.location().removeCommerceLocation()
@@ -643,7 +643,7 @@ public class Application {
 
             RemoveHrisLocationRequest req = RemoveHrisLocationRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveHrisLocationResponse res = sdk.location().removeHrisLocation()
@@ -708,7 +708,7 @@ public class Application {
 
             UpdateCommerceLocationRequest req = UpdateCommerceLocationRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateCommerceLocationResponse res = sdk.location().updateCommerceLocation()
@@ -775,7 +775,7 @@ public class Application {
 
             UpdateHrisLocationRequest req = UpdateHrisLocationRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateHrisLocationResponse res = sdk.location().updateHrisLocation()

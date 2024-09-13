@@ -106,7 +106,7 @@ public class Application {
 
             GetAtsScorecardRequest req = GetAtsScorecardRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetAtsScorecardResponse res = sdk.scorecard().getAtsScorecard()
@@ -239,7 +239,7 @@ public class Application {
 
             PatchAtsScorecardRequest req = PatchAtsScorecardRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchAtsScorecardResponse res = sdk.scorecard().patchAtsScorecard()
@@ -306,7 +306,7 @@ public class Application {
 
             RemoveAtsScorecardRequest req = RemoveAtsScorecardRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveAtsScorecardResponse res = sdk.scorecard().removeAtsScorecard()
@@ -371,7 +371,7 @@ public class Application {
 
             UpdateAtsScorecardRequest req = UpdateAtsScorecardRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateAtsScorecardResponse res = sdk.scorecard().updateAtsScorecard()

@@ -106,7 +106,7 @@ public class Application {
 
             GetCrmDealRequest req = GetCrmDealRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetCrmDealResponse res = sdk.deal().getCrmDeal()
@@ -239,7 +239,7 @@ public class Application {
 
             PatchCrmDealRequest req = PatchCrmDealRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchCrmDealResponse res = sdk.deal().patchCrmDeal()
@@ -306,7 +306,7 @@ public class Application {
 
             RemoveCrmDealRequest req = RemoveCrmDealRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveCrmDealResponse res = sdk.deal().removeCrmDeal()
@@ -371,7 +371,7 @@ public class Application {
 
             UpdateCrmDealRequest req = UpdateCrmDealRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateCrmDealResponse res = sdk.deal().updateCrmDeal()

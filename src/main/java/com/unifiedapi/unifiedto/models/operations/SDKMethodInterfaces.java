@@ -1288,9 +1288,15 @@ public class SDKMethodInterfaces {
     }
 
 
-    public interface MethodCallCreatePassthrough {
-        com.unifiedapi.unifiedto.models.operations.CreatePassthroughResponse createPassthrough(
-            CreatePassthroughRequest request) throws Exception;
+    public interface MethodCallCreatePassthroughJson {
+        com.unifiedapi.unifiedto.models.operations.CreatePassthroughJsonResponse createPassthroughJson(
+            CreatePassthroughJsonRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallCreatePassthroughRaw {
+        com.unifiedapi.unifiedto.models.operations.CreatePassthroughRawResponse createPassthroughRaw(
+            CreatePassthroughRawRequest request) throws Exception;
     }
 
 
@@ -1300,9 +1306,15 @@ public class SDKMethodInterfaces {
     }
 
 
-    public interface MethodCallPatchPassthrough {
-        com.unifiedapi.unifiedto.models.operations.PatchPassthroughResponse patchPassthrough(
-            PatchPassthroughRequest request) throws Exception;
+    public interface MethodCallPatchPassthroughJson {
+        com.unifiedapi.unifiedto.models.operations.PatchPassthroughJsonResponse patchPassthroughJson(
+            PatchPassthroughJsonRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallPatchPassthroughRaw {
+        com.unifiedapi.unifiedto.models.operations.PatchPassthroughRawResponse patchPassthroughRaw(
+            PatchPassthroughRawRequest request) throws Exception;
     }
 
 
@@ -1312,9 +1324,15 @@ public class SDKMethodInterfaces {
     }
 
 
-    public interface MethodCallUpdatePassthrough {
-        com.unifiedapi.unifiedto.models.operations.UpdatePassthroughResponse updatePassthrough(
-            UpdatePassthroughRequest request) throws Exception;
+    public interface MethodCallUpdatePassthroughJson {
+        com.unifiedapi.unifiedto.models.operations.UpdatePassthroughJsonResponse updatePassthroughJson(
+            UpdatePassthroughJsonRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallUpdatePassthroughRaw {
+        com.unifiedapi.unifiedto.models.operations.UpdatePassthroughRawResponse updatePassthroughRaw(
+            UpdatePassthroughRawRequest request) throws Exception;
     }
 
 

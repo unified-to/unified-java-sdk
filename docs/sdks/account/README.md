@@ -106,7 +106,7 @@ public class Application {
 
             GetAccountingAccountRequest req = GetAccountingAccountRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetAccountingAccountResponse res = sdk.account().getAccountingAccount()
@@ -239,7 +239,7 @@ public class Application {
 
             PatchAccountingAccountRequest req = PatchAccountingAccountRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchAccountingAccountResponse res = sdk.account().patchAccountingAccount()
@@ -306,7 +306,7 @@ public class Application {
 
             RemoveAccountingAccountRequest req = RemoveAccountingAccountRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveAccountingAccountResponse res = sdk.account().removeAccountingAccount()
@@ -371,7 +371,7 @@ public class Application {
 
             UpdateAccountingAccountRequest req = UpdateAccountingAccountRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateAccountingAccountResponse res = sdk.account().updateAccountingAccount()

@@ -108,7 +108,7 @@ public class Application {
 
             GetMessagingChannelRequest req = GetMessagingChannelRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetMessagingChannelResponse res = sdk.messaging().getMessagingChannel()
@@ -175,7 +175,7 @@ public class Application {
 
             GetMessagingMessageRequest req = GetMessagingMessageRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetMessagingMessageResponse res = sdk.messaging().getMessagingMessage()
@@ -374,7 +374,7 @@ public class Application {
 
             PatchMessagingMessageRequest req = PatchMessagingMessageRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchMessagingMessageResponse res = sdk.messaging().patchMessagingMessage()
@@ -441,7 +441,7 @@ public class Application {
 
             RemoveMessagingMessageRequest req = RemoveMessagingMessageRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveMessagingMessageResponse res = sdk.messaging().removeMessagingMessage()
@@ -506,7 +506,7 @@ public class Application {
 
             UpdateMessagingMessageRequest req = UpdateMessagingMessageRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateMessagingMessageResponse res = sdk.messaging().updateMessagingMessage()

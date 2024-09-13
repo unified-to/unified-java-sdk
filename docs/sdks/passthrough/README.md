@@ -5,13 +5,16 @@
 
 ### Available Operations
 
-* [createPassthrough](#createpassthrough) - Passthrough POST
+* [createPassthroughJson](#createpassthroughjson) - Passthrough POST
+* [createPassthroughRaw](#createpassthroughraw) - Passthrough POST
 * [listPassthroughs](#listpassthroughs) - Passthrough GET
-* [patchPassthrough](#patchpassthrough) - Passthrough PUT
+* [patchPassthroughJson](#patchpassthroughjson) - Passthrough PUT
+* [patchPassthroughRaw](#patchpassthroughraw) - Passthrough PUT
 * [removePassthrough](#removepassthrough) - Passthrough DELETE
-* [updatePassthrough](#updatepassthrough) - Passthrough PUT
+* [updatePassthroughJson](#updatepassthroughjson) - Passthrough PUT
+* [updatePassthroughRaw](#updatepassthroughraw) - Passthrough PUT
 
-## createPassthrough
+## createPassthroughJson
 
 Passthrough POST
 
@@ -22,8 +25,8 @@ package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.errors.SDKError;
-import com.unifiedapi.unifiedto.models.operations.CreatePassthroughRequest;
-import com.unifiedapi.unifiedto.models.operations.CreatePassthroughResponse;
+import com.unifiedapi.unifiedto.models.operations.CreatePassthroughJsonRequest;
+import com.unifiedapi.unifiedto.models.operations.CreatePassthroughJsonResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -37,16 +40,16 @@ public class Application {
                     .build())
                 .build();
 
-            CreatePassthroughRequest req = CreatePassthroughRequest.builder()
+            CreatePassthroughJsonRequest req = CreatePassthroughJsonRequest.builder()
                 .connectionId("<value>")
-                .path("<value>")
+                .path("/opt/lib")
                 .build();
 
-            CreatePassthroughResponse res = sdk.passthrough().createPassthrough()
+            CreatePassthroughJsonResponse res = sdk.passthrough().createPassthroughJson()
                 .request(req)
                 .call();
 
-            if (res.result().isPresent()) {
+            if (res.body().isPresent()) {
                 // handle response
             }
         } catch (SDKError e) {
@@ -63,13 +66,80 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [CreatePassthroughRequest](../../models/operations/CreatePassthroughRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [CreatePassthroughJsonRequest](../../models/operations/CreatePassthroughJsonRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[CreatePassthroughResponse](../../models/operations/CreatePassthroughResponse.md)**
+**[CreatePassthroughJsonResponse](../../models/operations/CreatePassthroughJsonResponse.md)**
+
+### Errors
+
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+
+
+## createPassthroughRaw
+
+Passthrough POST
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
+import com.unifiedapi.unifiedto.models.operations.CreatePassthroughRawRequest;
+import com.unifiedapi.unifiedto.models.operations.CreatePassthroughRawResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+                .build();
+
+            CreatePassthroughRawRequest req = CreatePassthroughRawRequest.builder()
+                .connectionId("<value>")
+                .path("/etc/namedb")
+                .build();
+
+            CreatePassthroughRawResponse res = sdk.passthrough().createPassthroughRaw()
+                .request(req)
+                .call();
+
+            if (res.body().isPresent()) {
+                // handle response
+            }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
+        } catch (Exception e) {
+            // handle exception
+            throw e;
+        }
+
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [CreatePassthroughRawRequest](../../models/operations/CreatePassthroughRawRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[CreatePassthroughRawResponse](../../models/operations/CreatePassthroughRawResponse.md)**
 
 ### Errors
 
@@ -106,14 +176,14 @@ public class Application {
 
             ListPassthroughsRequest req = ListPassthroughsRequest.builder()
                 .connectionId("<value>")
-                .path("<value>")
+                .path("/selinux")
                 .build();
 
             ListPassthroughsResponse res = sdk.passthrough().listPassthroughs()
                 .request(req)
                 .call();
 
-            if (res.result().isPresent()) {
+            if (res.body().isPresent()) {
                 // handle response
             }
         } catch (SDKError e) {
@@ -145,7 +215,7 @@ public class Application {
 | models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 
-## patchPassthrough
+## patchPassthroughJson
 
 Passthrough PUT
 
@@ -156,8 +226,8 @@ package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.errors.SDKError;
-import com.unifiedapi.unifiedto.models.operations.PatchPassthroughRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchPassthroughResponse;
+import com.unifiedapi.unifiedto.models.operations.PatchPassthroughJsonRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchPassthroughJsonResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -171,16 +241,16 @@ public class Application {
                     .build())
                 .build();
 
-            PatchPassthroughRequest req = PatchPassthroughRequest.builder()
+            PatchPassthroughJsonRequest req = PatchPassthroughJsonRequest.builder()
                 .connectionId("<value>")
-                .path("<value>")
+                .path("/home/user")
                 .build();
 
-            PatchPassthroughResponse res = sdk.passthrough().patchPassthrough()
+            PatchPassthroughJsonResponse res = sdk.passthrough().patchPassthroughJson()
                 .request(req)
                 .call();
 
-            if (res.result().isPresent()) {
+            if (res.body().isPresent()) {
                 // handle response
             }
         } catch (SDKError e) {
@@ -197,13 +267,80 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [PatchPassthroughRequest](../../models/operations/PatchPassthroughRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [PatchPassthroughJsonRequest](../../models/operations/PatchPassthroughJsonRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[PatchPassthroughResponse](../../models/operations/PatchPassthroughResponse.md)**
+**[PatchPassthroughJsonResponse](../../models/operations/PatchPassthroughJsonResponse.md)**
+
+### Errors
+
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+
+
+## patchPassthroughRaw
+
+Passthrough PUT
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
+import com.unifiedapi.unifiedto.models.operations.PatchPassthroughRawRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchPassthroughRawResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+                .build();
+
+            PatchPassthroughRawRequest req = PatchPassthroughRawRequest.builder()
+                .connectionId("<value>")
+                .path("/etc/mail")
+                .build();
+
+            PatchPassthroughRawResponse res = sdk.passthrough().patchPassthroughRaw()
+                .request(req)
+                .call();
+
+            if (res.body().isPresent()) {
+                // handle response
+            }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
+        } catch (Exception e) {
+            // handle exception
+            throw e;
+        }
+
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [PatchPassthroughRawRequest](../../models/operations/PatchPassthroughRawRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[PatchPassthroughRawResponse](../../models/operations/PatchPassthroughRawResponse.md)**
 
 ### Errors
 
@@ -240,14 +377,14 @@ public class Application {
 
             RemovePassthroughRequest req = RemovePassthroughRequest.builder()
                 .connectionId("<value>")
-                .path("<value>")
+                .path("/Applications")
                 .build();
 
             RemovePassthroughResponse res = sdk.passthrough().removePassthrough()
                 .request(req)
                 .call();
 
-            if (res.result().isPresent()) {
+            if (res.body().isPresent()) {
                 // handle response
             }
         } catch (SDKError e) {
@@ -279,7 +416,7 @@ public class Application {
 | models/errors/SDKError | 4xx-5xx                | \*\/*                  |
 
 
-## updatePassthrough
+## updatePassthroughJson
 
 Passthrough PUT
 
@@ -290,8 +427,8 @@ package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
 import com.unifiedapi.unifiedto.models.errors.SDKError;
-import com.unifiedapi.unifiedto.models.operations.UpdatePassthroughRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdatePassthroughResponse;
+import com.unifiedapi.unifiedto.models.operations.UpdatePassthroughJsonRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdatePassthroughJsonResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
 import java.lang.Exception;
 
@@ -305,16 +442,16 @@ public class Application {
                     .build())
                 .build();
 
-            UpdatePassthroughRequest req = UpdatePassthroughRequest.builder()
+            UpdatePassthroughJsonRequest req = UpdatePassthroughJsonRequest.builder()
                 .connectionId("<value>")
-                .path("<value>")
+                .path("/etc/namedb")
                 .build();
 
-            UpdatePassthroughResponse res = sdk.passthrough().updatePassthrough()
+            UpdatePassthroughJsonResponse res = sdk.passthrough().updatePassthroughJson()
                 .request(req)
                 .call();
 
-            if (res.result().isPresent()) {
+            if (res.body().isPresent()) {
                 // handle response
             }
         } catch (SDKError e) {
@@ -331,13 +468,80 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [UpdatePassthroughRequest](../../models/operations/UpdatePassthroughRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [UpdatePassthroughJsonRequest](../../models/operations/UpdatePassthroughJsonRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[UpdatePassthroughResponse](../../models/operations/UpdatePassthroughResponse.md)**
+**[UpdatePassthroughJsonResponse](../../models/operations/UpdatePassthroughJsonResponse.md)**
+
+### Errors
+
+| Error Object           | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+
+
+## updatePassthroughRaw
+
+Passthrough PUT
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.errors.SDKError;
+import com.unifiedapi.unifiedto.models.operations.UpdatePassthroughRawRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdatePassthroughRawResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+        try {
+            UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+                .build();
+
+            UpdatePassthroughRawRequest req = UpdatePassthroughRawRequest.builder()
+                .connectionId("<value>")
+                .path("/System")
+                .build();
+
+            UpdatePassthroughRawResponse res = sdk.passthrough().updatePassthroughRaw()
+                .request(req)
+                .call();
+
+            if (res.body().isPresent()) {
+                // handle response
+            }
+        } catch (SDKError e) {
+            // handle exception
+            throw e;
+        } catch (Exception e) {
+            // handle exception
+            throw e;
+        }
+
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [UpdatePassthroughRawRequest](../../models/operations/UpdatePassthroughRawRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[UpdatePassthroughRawResponse](../../models/operations/UpdatePassthroughRawResponse.md)**
 
 ### Errors
 

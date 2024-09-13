@@ -16,6 +16,7 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,14 +25,23 @@ import java.util.Optional;
 public class ListPassthroughsResponse implements Response {
 
     /**
-     * HTTP response content type for this operation
+     * Successful
      */
-    private String contentType;
+    private Optional<? extends Object> twoXXApplicationJsonAny;
 
     /**
      * Successful
      */
-    private Optional<? extends Map<String, Object>> result;
+    private Optional<String> twoXXTextPlainRes;
+
+    private Optional<? extends byte[]> body;
+
+    /**
+     * HTTP response content type for this operation
+     */
+    private String contentType;
+
+    private Map<String, List<String>> headers;
 
     /**
      * HTTP response status code for this operation
@@ -45,25 +55,58 @@ public class ListPassthroughsResponse implements Response {
 
     @JsonCreator
     public ListPassthroughsResponse(
+            Optional<? extends Object> twoXXApplicationJsonAny,
+            Optional<String> twoXXTextPlainRes,
+            Optional<? extends byte[]> body,
             String contentType,
-            Optional<? extends Map<String, Object>> result,
+            Map<String, List<String>> headers,
             int statusCode,
             HttpResponse<InputStream> rawResponse) {
+        Utils.checkNotNull(twoXXApplicationJsonAny, "twoXXApplicationJsonAny");
+        Utils.checkNotNull(twoXXTextPlainRes, "twoXXTextPlainRes");
+        Utils.checkNotNull(body, "body");
         Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(result, "result");
+        headers = Utils.emptyMapIfNull(headers);
         Utils.checkNotNull(statusCode, "statusCode");
         Utils.checkNotNull(rawResponse, "rawResponse");
+        this.twoXXApplicationJsonAny = twoXXApplicationJsonAny;
+        this.twoXXTextPlainRes = twoXXTextPlainRes;
+        this.body = body;
         this.contentType = contentType;
-        this.result = result;
+        this.headers = headers;
         this.statusCode = statusCode;
         this.rawResponse = rawResponse;
     }
     
     public ListPassthroughsResponse(
             String contentType,
+            Map<String, List<String>> headers,
             int statusCode,
             HttpResponse<InputStream> rawResponse) {
-        this(contentType, Optional.empty(), statusCode, rawResponse);
+        this(Optional.empty(), Optional.empty(), Optional.empty(), contentType, headers, statusCode, rawResponse);
+    }
+
+    /**
+     * Successful
+     */
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<Object> twoXXApplicationJsonAny() {
+        return (Optional<Object>) twoXXApplicationJsonAny;
+    }
+
+    /**
+     * Successful
+     */
+    @JsonIgnore
+    public Optional<String> twoXXTextPlainRes() {
+        return twoXXTextPlainRes;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<byte[]> body() {
+        return (Optional<byte[]>) body;
     }
 
     /**
@@ -74,13 +117,9 @@ public class ListPassthroughsResponse implements Response {
         return contentType;
     }
 
-    /**
-     * Successful
-     */
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> result() {
-        return (Optional<Map<String, Object>>) result;
+    public Map<String, List<String>> headers() {
+        return headers;
     }
 
     /**
@@ -104,6 +143,54 @@ public class ListPassthroughsResponse implements Response {
     }
 
     /**
+     * Successful
+     */
+    public ListPassthroughsResponse withTwoXXApplicationJsonAny(Object twoXXApplicationJsonAny) {
+        Utils.checkNotNull(twoXXApplicationJsonAny, "twoXXApplicationJsonAny");
+        this.twoXXApplicationJsonAny = Optional.ofNullable(twoXXApplicationJsonAny);
+        return this;
+    }
+
+    /**
+     * Successful
+     */
+    public ListPassthroughsResponse withTwoXXApplicationJsonAny(Optional<? extends Object> twoXXApplicationJsonAny) {
+        Utils.checkNotNull(twoXXApplicationJsonAny, "twoXXApplicationJsonAny");
+        this.twoXXApplicationJsonAny = twoXXApplicationJsonAny;
+        return this;
+    }
+
+    /**
+     * Successful
+     */
+    public ListPassthroughsResponse withTwoXXTextPlainRes(String twoXXTextPlainRes) {
+        Utils.checkNotNull(twoXXTextPlainRes, "twoXXTextPlainRes");
+        this.twoXXTextPlainRes = Optional.ofNullable(twoXXTextPlainRes);
+        return this;
+    }
+
+    /**
+     * Successful
+     */
+    public ListPassthroughsResponse withTwoXXTextPlainRes(Optional<String> twoXXTextPlainRes) {
+        Utils.checkNotNull(twoXXTextPlainRes, "twoXXTextPlainRes");
+        this.twoXXTextPlainRes = twoXXTextPlainRes;
+        return this;
+    }
+
+    public ListPassthroughsResponse withBody(byte[] body) {
+        Utils.checkNotNull(body, "body");
+        this.body = Optional.ofNullable(body);
+        return this;
+    }
+
+    public ListPassthroughsResponse withBody(Optional<? extends byte[]> body) {
+        Utils.checkNotNull(body, "body");
+        this.body = body;
+        return this;
+    }
+
+    /**
      * HTTP response content type for this operation
      */
     public ListPassthroughsResponse withContentType(String contentType) {
@@ -112,21 +199,9 @@ public class ListPassthroughsResponse implements Response {
         return this;
     }
 
-    /**
-     * Successful
-     */
-    public ListPassthroughsResponse withResult(Map<String, Object> result) {
-        Utils.checkNotNull(result, "result");
-        this.result = Optional.ofNullable(result);
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public ListPassthroughsResponse withResult(Optional<? extends Map<String, Object>> result) {
-        Utils.checkNotNull(result, "result");
-        this.result = result;
+    public ListPassthroughsResponse withHeaders(Map<String, List<String>> headers) {
+        Utils.checkNotNull(headers, "headers");
+        this.headers = headers;
         return this;
     }
 
@@ -158,8 +233,11 @@ public class ListPassthroughsResponse implements Response {
         }
         ListPassthroughsResponse other = (ListPassthroughsResponse) o;
         return 
+            Objects.deepEquals(this.twoXXApplicationJsonAny, other.twoXXApplicationJsonAny) &&
+            Objects.deepEquals(this.twoXXTextPlainRes, other.twoXXTextPlainRes) &&
+            Objects.deepEquals(this.body, other.body) &&
             Objects.deepEquals(this.contentType, other.contentType) &&
-            Objects.deepEquals(this.result, other.result) &&
+            Objects.deepEquals(this.headers, other.headers) &&
             Objects.deepEquals(this.statusCode, other.statusCode) &&
             Objects.deepEquals(this.rawResponse, other.rawResponse);
     }
@@ -167,8 +245,11 @@ public class ListPassthroughsResponse implements Response {
     @Override
     public int hashCode() {
         return Objects.hash(
+            twoXXApplicationJsonAny,
+            twoXXTextPlainRes,
+            body,
             contentType,
-            result,
+            headers,
             statusCode,
             rawResponse);
     }
@@ -176,17 +257,26 @@ public class ListPassthroughsResponse implements Response {
     @Override
     public String toString() {
         return Utils.toString(ListPassthroughsResponse.class,
+                "twoXXApplicationJsonAny", twoXXApplicationJsonAny,
+                "twoXXTextPlainRes", twoXXTextPlainRes,
+                "body", body,
                 "contentType", contentType,
-                "result", result,
+                "headers", headers,
                 "statusCode", statusCode,
                 "rawResponse", rawResponse);
     }
     
     public final static class Builder {
  
+        private Optional<? extends Object> twoXXApplicationJsonAny = Optional.empty();
+ 
+        private Optional<String> twoXXTextPlainRes = Optional.empty();
+ 
+        private Optional<? extends byte[]> body = Optional.empty();
+ 
         private String contentType;
  
-        private Optional<? extends Map<String, Object>> result = Optional.empty();
+        private Map<String, List<String>> headers;
  
         private Integer statusCode;
  
@@ -194,6 +284,54 @@ public class ListPassthroughsResponse implements Response {
         
         private Builder() {
           // force use of static builder() method
+        }
+
+        /**
+         * Successful
+         */
+        public Builder twoXXApplicationJsonAny(Object twoXXApplicationJsonAny) {
+            Utils.checkNotNull(twoXXApplicationJsonAny, "twoXXApplicationJsonAny");
+            this.twoXXApplicationJsonAny = Optional.ofNullable(twoXXApplicationJsonAny);
+            return this;
+        }
+
+        /**
+         * Successful
+         */
+        public Builder twoXXApplicationJsonAny(Optional<? extends Object> twoXXApplicationJsonAny) {
+            Utils.checkNotNull(twoXXApplicationJsonAny, "twoXXApplicationJsonAny");
+            this.twoXXApplicationJsonAny = twoXXApplicationJsonAny;
+            return this;
+        }
+
+        /**
+         * Successful
+         */
+        public Builder twoXXTextPlainRes(String twoXXTextPlainRes) {
+            Utils.checkNotNull(twoXXTextPlainRes, "twoXXTextPlainRes");
+            this.twoXXTextPlainRes = Optional.ofNullable(twoXXTextPlainRes);
+            return this;
+        }
+
+        /**
+         * Successful
+         */
+        public Builder twoXXTextPlainRes(Optional<String> twoXXTextPlainRes) {
+            Utils.checkNotNull(twoXXTextPlainRes, "twoXXTextPlainRes");
+            this.twoXXTextPlainRes = twoXXTextPlainRes;
+            return this;
+        }
+
+        public Builder body(byte[] body) {
+            Utils.checkNotNull(body, "body");
+            this.body = Optional.ofNullable(body);
+            return this;
+        }
+
+        public Builder body(Optional<? extends byte[]> body) {
+            Utils.checkNotNull(body, "body");
+            this.body = body;
+            return this;
         }
 
         /**
@@ -205,21 +343,9 @@ public class ListPassthroughsResponse implements Response {
             return this;
         }
 
-        /**
-         * Successful
-         */
-        public Builder result(Map<String, Object> result) {
-            Utils.checkNotNull(result, "result");
-            this.result = Optional.ofNullable(result);
-            return this;
-        }
-
-        /**
-         * Successful
-         */
-        public Builder result(Optional<? extends Map<String, Object>> result) {
-            Utils.checkNotNull(result, "result");
-            this.result = result;
+        public Builder headers(Map<String, List<String>> headers) {
+            Utils.checkNotNull(headers, "headers");
+            this.headers = headers;
             return this;
         }
 
@@ -243,8 +369,11 @@ public class ListPassthroughsResponse implements Response {
         
         public ListPassthroughsResponse build() {
             return new ListPassthroughsResponse(
+                twoXXApplicationJsonAny,
+                twoXXTextPlainRes,
+                body,
                 contentType,
-                result,
+                headers,
                 statusCode,
                 rawResponse);
         }

@@ -36,7 +36,7 @@ public class Application {
 
             GetHrisPayslipRequest req = GetHrisPayslipRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetHrisPayslipResponse res = sdk.payslip().getHrisPayslip()

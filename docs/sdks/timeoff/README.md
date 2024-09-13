@@ -36,7 +36,7 @@ public class Application {
 
             GetHrisTimeoffRequest req = GetHrisTimeoffRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetHrisTimeoffResponse res = sdk.timeoff().getHrisTimeoff()

@@ -178,7 +178,7 @@ public class Application {
 
             GetMartechListRequest req = GetMartechListRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetMartechListResponse res = sdk.martech().getMartechList()
@@ -245,7 +245,7 @@ public class Application {
 
             GetMartechMemberRequest req = GetMartechMemberRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             GetMartechMemberResponse res = sdk.martech().getMartechMember()
@@ -444,7 +444,7 @@ public class Application {
 
             PatchMartechListRequest req = PatchMartechListRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchMartechListResponse res = sdk.martech().patchMartechList()
@@ -511,7 +511,7 @@ public class Application {
 
             PatchMartechMemberRequest req = PatchMartechMemberRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             PatchMartechMemberResponse res = sdk.martech().patchMartechMember()
@@ -578,7 +578,7 @@ public class Application {
 
             RemoveMartechListRequest req = RemoveMartechListRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveMartechListResponse res = sdk.martech().removeMartechList()
@@ -643,7 +643,7 @@ public class Application {
 
             RemoveMartechMemberRequest req = RemoveMartechMemberRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             RemoveMartechMemberResponse res = sdk.martech().removeMartechMember()
@@ -708,7 +708,7 @@ public class Application {
 
             UpdateMartechListRequest req = UpdateMartechListRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateMartechListResponse res = sdk.martech().updateMartechList()
@@ -775,7 +775,7 @@ public class Application {
 
             UpdateMartechMemberRequest req = UpdateMartechMemberRequest.builder()
                 .connectionId("<value>")
-                .id("<value>")
+                .id("<id>")
                 .build();
 
             UpdateMartechMemberResponse res = sdk.martech().updateMartechMember()
