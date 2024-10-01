@@ -15,7 +15,7 @@ public class GetUcContactRequestBuilder {
         this.sdk = sdk;
     }
 
-    public GetUcContactRequestBuilder request(com.unifiedapi.unifiedto.models.operations.GetUcContactRequest request) {
+    public GetUcContactRequestBuilder request(GetUcContactRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

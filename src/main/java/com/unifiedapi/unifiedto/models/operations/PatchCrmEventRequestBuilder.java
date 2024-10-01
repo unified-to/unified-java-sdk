@@ -15,7 +15,7 @@ public class PatchCrmEventRequestBuilder {
         this.sdk = sdk;
     }
 
-    public PatchCrmEventRequestBuilder request(com.unifiedapi.unifiedto.models.operations.PatchCrmEventRequest request) {
+    public PatchCrmEventRequestBuilder request(PatchCrmEventRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

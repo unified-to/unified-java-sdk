@@ -22,7 +22,6 @@ Create a project
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateTaskProjectRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateTaskProjectResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -31,32 +30,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateTaskProjectRequest req = CreateTaskProjectRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateTaskProjectRequest req = CreateTaskProjectRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateTaskProjectResponse res = sdk.project().createTaskProject()
+        CreateTaskProjectResponse res = sdk.project().createTaskProject()
                 .request(req)
                 .call();
 
-            if (res.taskProject().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.taskProject().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -73,10 +64,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getTaskProject
 
@@ -88,7 +78,6 @@ Retrieve a project
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetTaskProjectRequest;
 import com.unifiedapi.unifiedto.models.operations.GetTaskProjectResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -97,33 +86,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetTaskProjectRequest req = GetTaskProjectRequest.builder()
-                .connectionId("<value>")
+        GetTaskProjectRequest req = GetTaskProjectRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetTaskProjectResponse res = sdk.project().getTaskProject()
+        GetTaskProjectResponse res = sdk.project().getTaskProject()
                 .request(req)
                 .call();
 
-            if (res.taskProject().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.taskProject().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -140,10 +121,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listTaskProjects
 
@@ -155,7 +135,6 @@ List all projects
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListTaskProjectsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListTaskProjectsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -164,32 +143,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListTaskProjectsRequest req = ListTaskProjectsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListTaskProjectsRequest req = ListTaskProjectsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListTaskProjectsResponse res = sdk.project().listTaskProjects()
+        ListTaskProjectsResponse res = sdk.project().listTaskProjects()
                 .request(req)
                 .call();
 
-            if (res.taskProjects().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.taskProjects().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -206,10 +177,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchTaskProject
 
@@ -221,7 +191,6 @@ Update a project
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchTaskProjectRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchTaskProjectResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -230,33 +199,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchTaskProjectRequest req = PatchTaskProjectRequest.builder()
-                .connectionId("<value>")
+        PatchTaskProjectRequest req = PatchTaskProjectRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchTaskProjectResponse res = sdk.project().patchTaskProject()
+        PatchTaskProjectResponse res = sdk.project().patchTaskProject()
                 .request(req)
                 .call();
 
-            if (res.taskProject().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.taskProject().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -273,10 +234,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeTaskProject
 
@@ -288,7 +248,6 @@ Remove a project
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveTaskProjectRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveTaskProjectResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -297,31 +256,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveTaskProjectRequest req = RemoveTaskProjectRequest.builder()
-                .connectionId("<value>")
+        RemoveTaskProjectRequest req = RemoveTaskProjectRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveTaskProjectResponse res = sdk.project().removeTaskProject()
+        RemoveTaskProjectResponse res = sdk.project().removeTaskProject()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -338,10 +289,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateTaskProject
 
@@ -353,7 +303,6 @@ Update a project
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateTaskProjectRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateTaskProjectResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -362,33 +311,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateTaskProjectRequest req = UpdateTaskProjectRequest.builder()
-                .connectionId("<value>")
+        UpdateTaskProjectRequest req = UpdateTaskProjectRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateTaskProjectResponse res = sdk.project().updateTaskProject()
+        UpdateTaskProjectResponse res = sdk.project().updateTaskProject()
                 .request(req)
                 .call();
 
-            if (res.taskProject().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.taskProject().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -405,6 +346,6 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |

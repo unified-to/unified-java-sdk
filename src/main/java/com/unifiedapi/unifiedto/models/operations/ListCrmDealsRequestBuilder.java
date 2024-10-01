@@ -15,7 +15,7 @@ public class ListCrmDealsRequestBuilder {
         this.sdk = sdk;
     }
 
-    public ListCrmDealsRequestBuilder request(com.unifiedapi.unifiedto.models.operations.ListCrmDealsRequest request) {
+    public ListCrmDealsRequestBuilder request(ListCrmDealsRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

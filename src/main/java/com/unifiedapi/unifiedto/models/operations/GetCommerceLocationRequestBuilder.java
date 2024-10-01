@@ -15,7 +15,7 @@ public class GetCommerceLocationRequestBuilder {
         this.sdk = sdk;
     }
 
-    public GetCommerceLocationRequestBuilder request(com.unifiedapi.unifiedto.models.operations.GetCommerceLocationRequest request) {
+    public GetCommerceLocationRequestBuilder request(GetCommerceLocationRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

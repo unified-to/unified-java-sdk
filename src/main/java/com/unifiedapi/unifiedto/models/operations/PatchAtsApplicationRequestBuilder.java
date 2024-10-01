@@ -15,7 +15,7 @@ public class PatchAtsApplicationRequestBuilder {
         this.sdk = sdk;
     }
 
-    public PatchAtsApplicationRequestBuilder request(com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationRequest request) {
+    public PatchAtsApplicationRequestBuilder request(PatchAtsApplicationRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

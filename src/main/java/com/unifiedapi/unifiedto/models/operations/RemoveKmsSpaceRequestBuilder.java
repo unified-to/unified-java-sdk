@@ -15,7 +15,7 @@ public class RemoveKmsSpaceRequestBuilder {
         this.sdk = sdk;
     }
 
-    public RemoveKmsSpaceRequestBuilder request(com.unifiedapi.unifiedto.models.operations.RemoveKmsSpaceRequest request) {
+    public RemoveKmsSpaceRequestBuilder request(RemoveKmsSpaceRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

@@ -18,7 +18,6 @@ Create a prompt
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateGenaiPromptRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateGenaiPromptResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -27,32 +26,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateGenaiPromptRequest req = CreateGenaiPromptRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateGenaiPromptRequest req = CreateGenaiPromptRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateGenaiPromptResponse res = sdk.genai().createGenaiPrompt()
+        CreateGenaiPromptResponse res = sdk.genai().createGenaiPrompt()
                 .request(req)
                 .call();
 
-            if (res.genaiPrompt().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.genaiPrompt().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -69,10 +60,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listGenaiModels
 
@@ -84,7 +74,6 @@ List all models
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListGenaiModelsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListGenaiModelsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -93,32 +82,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListGenaiModelsRequest req = ListGenaiModelsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListGenaiModelsRequest req = ListGenaiModelsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListGenaiModelsResponse res = sdk.genai().listGenaiModels()
+        ListGenaiModelsResponse res = sdk.genai().listGenaiModels()
                 .request(req)
                 .call();
 
-            if (res.genaiModels().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.genaiModels().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -135,6 +116,6 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |

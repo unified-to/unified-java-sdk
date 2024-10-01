@@ -15,7 +15,7 @@ public class RemoveAccountingTaxrateRequestBuilder {
         this.sdk = sdk;
     }
 
-    public RemoveAccountingTaxrateRequestBuilder request(com.unifiedapi.unifiedto.models.operations.RemoveAccountingTaxrateRequest request) {
+    public RemoveAccountingTaxrateRequestBuilder request(RemoveAccountingTaxrateRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

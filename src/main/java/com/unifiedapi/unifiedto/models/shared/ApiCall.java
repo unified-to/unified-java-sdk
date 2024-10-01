@@ -13,6 +13,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.unifiedapi.unifiedto.utils.LazySingletonValue;
 import com.unifiedapi.unifiedto.utils.Utils;
+import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
@@ -54,6 +55,10 @@ public class ApiCall {
     @JsonProperty("ip_address")
     private Optional<String> ipAddress;
 
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_billable")
+    private Optional<Boolean> isBillable;
+
     @JsonProperty("method")
     private String method;
 
@@ -74,6 +79,10 @@ public class ApiCall {
     private ApiCallType type;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("webhook_id")
+    private Optional<String> webhookId;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspace_id")
     private Optional<String> workspaceId;
 
@@ -87,12 +96,14 @@ public class ApiCall {
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("integration_type") String integrationType,
             @JsonProperty("ip_address") Optional<String> ipAddress,
+            @JsonProperty("is_billable") Optional<Boolean> isBillable,
             @JsonProperty("method") String method,
             @JsonProperty("name") String name,
             @JsonProperty("path") String path,
             @JsonProperty("size") Optional<Double> size,
             @JsonProperty("status") String status,
             @JsonProperty("type") ApiCallType type,
+            @JsonProperty("webhook_id") Optional<String> webhookId,
             @JsonProperty("workspace_id") Optional<String> workspaceId) {
         Utils.checkNotNull(connectionId, "connectionId");
         Utils.checkNotNull(createdAt, "createdAt");
@@ -102,12 +113,14 @@ public class ApiCall {
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(integrationType, "integrationType");
         Utils.checkNotNull(ipAddress, "ipAddress");
+        Utils.checkNotNull(isBillable, "isBillable");
         Utils.checkNotNull(method, "method");
         Utils.checkNotNull(name, "name");
         Utils.checkNotNull(path, "path");
         Utils.checkNotNull(size, "size");
         Utils.checkNotNull(status, "status");
         Utils.checkNotNull(type, "type");
+        Utils.checkNotNull(webhookId, "webhookId");
         Utils.checkNotNull(workspaceId, "workspaceId");
         this.connectionId = connectionId;
         this.createdAt = createdAt;
@@ -117,12 +130,14 @@ public class ApiCall {
         this.id = id;
         this.integrationType = integrationType;
         this.ipAddress = ipAddress;
+        this.isBillable = isBillable;
         this.method = method;
         this.name = name;
         this.path = path;
         this.size = size;
         this.status = status;
         this.type = type;
+        this.webhookId = webhookId;
         this.workspaceId = workspaceId;
     }
     
@@ -133,7 +148,7 @@ public class ApiCall {
             String path,
             String status,
             ApiCallType type) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), integrationType, Optional.empty(), method, name, path, Optional.empty(), status, type, Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), integrationType, Optional.empty(), Optional.empty(), method, name, path, Optional.empty(), status, type, Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -177,6 +192,11 @@ public class ApiCall {
     }
 
     @JsonIgnore
+    public Optional<Boolean> isBillable() {
+        return isBillable;
+    }
+
+    @JsonIgnore
     public String method() {
         return method;
     }
@@ -204,6 +224,11 @@ public class ApiCall {
     @JsonIgnore
     public ApiCallType type() {
         return type;
+    }
+
+    @JsonIgnore
+    public Optional<String> webhookId() {
+        return webhookId;
     }
 
     @JsonIgnore
@@ -305,6 +330,18 @@ public class ApiCall {
         return this;
     }
 
+    public ApiCall withIsBillable(boolean isBillable) {
+        Utils.checkNotNull(isBillable, "isBillable");
+        this.isBillable = Optional.ofNullable(isBillable);
+        return this;
+    }
+
+    public ApiCall withIsBillable(Optional<Boolean> isBillable) {
+        Utils.checkNotNull(isBillable, "isBillable");
+        this.isBillable = isBillable;
+        return this;
+    }
+
     public ApiCall withMethod(String method) {
         Utils.checkNotNull(method, "method");
         this.method = method;
@@ -347,6 +384,18 @@ public class ApiCall {
         return this;
     }
 
+    public ApiCall withWebhookId(String webhookId) {
+        Utils.checkNotNull(webhookId, "webhookId");
+        this.webhookId = Optional.ofNullable(webhookId);
+        return this;
+    }
+
+    public ApiCall withWebhookId(Optional<String> webhookId) {
+        Utils.checkNotNull(webhookId, "webhookId");
+        this.webhookId = webhookId;
+        return this;
+    }
+
     public ApiCall withWorkspaceId(String workspaceId) {
         Utils.checkNotNull(workspaceId, "workspaceId");
         this.workspaceId = Optional.ofNullable(workspaceId);
@@ -377,12 +426,14 @@ public class ApiCall {
             Objects.deepEquals(this.id, other.id) &&
             Objects.deepEquals(this.integrationType, other.integrationType) &&
             Objects.deepEquals(this.ipAddress, other.ipAddress) &&
+            Objects.deepEquals(this.isBillable, other.isBillable) &&
             Objects.deepEquals(this.method, other.method) &&
             Objects.deepEquals(this.name, other.name) &&
             Objects.deepEquals(this.path, other.path) &&
             Objects.deepEquals(this.size, other.size) &&
             Objects.deepEquals(this.status, other.status) &&
             Objects.deepEquals(this.type, other.type) &&
+            Objects.deepEquals(this.webhookId, other.webhookId) &&
             Objects.deepEquals(this.workspaceId, other.workspaceId);
     }
     
@@ -397,12 +448,14 @@ public class ApiCall {
             id,
             integrationType,
             ipAddress,
+            isBillable,
             method,
             name,
             path,
             size,
             status,
             type,
+            webhookId,
             workspaceId);
     }
     
@@ -417,12 +470,14 @@ public class ApiCall {
                 "id", id,
                 "integrationType", integrationType,
                 "ipAddress", ipAddress,
+                "isBillable", isBillable,
                 "method", method,
                 "name", name,
                 "path", path,
                 "size", size,
                 "status", status,
                 "type", type,
+                "webhookId", webhookId,
                 "workspaceId", workspaceId);
     }
     
@@ -444,6 +499,8 @@ public class ApiCall {
  
         private Optional<String> ipAddress = Optional.empty();
  
+        private Optional<Boolean> isBillable = Optional.empty();
+ 
         private String method;
  
         private String name;
@@ -455,6 +512,8 @@ public class ApiCall {
         private String status;
  
         private ApiCallType type;
+ 
+        private Optional<String> webhookId = Optional.empty();
  
         private Optional<String> workspaceId = Optional.empty();  
         
@@ -552,6 +611,18 @@ public class ApiCall {
             return this;
         }
 
+        public Builder isBillable(boolean isBillable) {
+            Utils.checkNotNull(isBillable, "isBillable");
+            this.isBillable = Optional.ofNullable(isBillable);
+            return this;
+        }
+
+        public Builder isBillable(Optional<Boolean> isBillable) {
+            Utils.checkNotNull(isBillable, "isBillable");
+            this.isBillable = isBillable;
+            return this;
+        }
+
         public Builder method(String method) {
             Utils.checkNotNull(method, "method");
             this.method = method;
@@ -594,6 +665,18 @@ public class ApiCall {
             return this;
         }
 
+        public Builder webhookId(String webhookId) {
+            Utils.checkNotNull(webhookId, "webhookId");
+            this.webhookId = Optional.ofNullable(webhookId);
+            return this;
+        }
+
+        public Builder webhookId(Optional<String> webhookId) {
+            Utils.checkNotNull(webhookId, "webhookId");
+            this.webhookId = webhookId;
+            return this;
+        }
+
         public Builder workspaceId(String workspaceId) {
             Utils.checkNotNull(workspaceId, "workspaceId");
             this.workspaceId = Optional.ofNullable(workspaceId);
@@ -618,12 +701,14 @@ public class ApiCall {
                 id,
                 integrationType,
                 ipAddress,
+                isBillable,
                 method,
                 name,
                 path,
                 size,
                 status,
                 type,
+                webhookId,
                 workspaceId);
         }
 

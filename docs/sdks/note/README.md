@@ -22,7 +22,6 @@ Create a note
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateTicketingNoteRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateTicketingNoteResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -31,32 +30,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateTicketingNoteRequest req = CreateTicketingNoteRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateTicketingNoteRequest req = CreateTicketingNoteRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateTicketingNoteResponse res = sdk.note().createTicketingNote()
+        CreateTicketingNoteResponse res = sdk.note().createTicketingNote()
                 .request(req)
                 .call();
 
-            if (res.ticketingNote().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.ticketingNote().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -73,10 +64,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getTicketingNote
 
@@ -88,7 +78,6 @@ Retrieve a note
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingNoteRequest;
 import com.unifiedapi.unifiedto.models.operations.GetTicketingNoteResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -97,33 +86,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetTicketingNoteRequest req = GetTicketingNoteRequest.builder()
-                .connectionId("<value>")
+        GetTicketingNoteRequest req = GetTicketingNoteRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetTicketingNoteResponse res = sdk.note().getTicketingNote()
+        GetTicketingNoteResponse res = sdk.note().getTicketingNote()
                 .request(req)
                 .call();
 
-            if (res.ticketingNote().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.ticketingNote().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -140,10 +121,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listTicketingNotes
 
@@ -155,7 +135,6 @@ List all notes
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListTicketingNotesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListTicketingNotesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -164,32 +143,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListTicketingNotesRequest req = ListTicketingNotesRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListTicketingNotesRequest req = ListTicketingNotesRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListTicketingNotesResponse res = sdk.note().listTicketingNotes()
+        ListTicketingNotesResponse res = sdk.note().listTicketingNotes()
                 .request(req)
                 .call();
 
-            if (res.ticketingNotes().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.ticketingNotes().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -206,10 +177,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchTicketingNote
 
@@ -221,7 +191,6 @@ Update a note
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingNoteRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchTicketingNoteResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -230,33 +199,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchTicketingNoteRequest req = PatchTicketingNoteRequest.builder()
-                .connectionId("<value>")
+        PatchTicketingNoteRequest req = PatchTicketingNoteRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchTicketingNoteResponse res = sdk.note().patchTicketingNote()
+        PatchTicketingNoteResponse res = sdk.note().patchTicketingNote()
                 .request(req)
                 .call();
 
-            if (res.ticketingNote().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.ticketingNote().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -273,10 +234,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeTicketingNote
 
@@ -288,7 +248,6 @@ Remove a note
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveTicketingNoteRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveTicketingNoteResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -297,31 +256,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveTicketingNoteRequest req = RemoveTicketingNoteRequest.builder()
-                .connectionId("<value>")
+        RemoveTicketingNoteRequest req = RemoveTicketingNoteRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveTicketingNoteResponse res = sdk.note().removeTicketingNote()
+        RemoveTicketingNoteResponse res = sdk.note().removeTicketingNote()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -338,10 +289,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateTicketingNote
 
@@ -353,7 +303,6 @@ Update a note
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateTicketingNoteRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateTicketingNoteResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -362,33 +311,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateTicketingNoteRequest req = UpdateTicketingNoteRequest.builder()
-                .connectionId("<value>")
+        UpdateTicketingNoteRequest req = UpdateTicketingNoteRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateTicketingNoteResponse res = sdk.note().updateTicketingNote()
+        UpdateTicketingNoteResponse res = sdk.note().updateTicketingNote()
                 .request(req)
                 .call();
 
-            if (res.ticketingNote().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.ticketingNote().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -405,6 +346,6 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |

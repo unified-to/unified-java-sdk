@@ -15,7 +15,7 @@ public class ListMessagingChannelsRequestBuilder {
         this.sdk = sdk;
     }
 
-    public ListMessagingChannelsRequestBuilder request(com.unifiedapi.unifiedto.models.operations.ListMessagingChannelsRequest request) {
+    public ListMessagingChannelsRequestBuilder request(ListMessagingChannelsRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

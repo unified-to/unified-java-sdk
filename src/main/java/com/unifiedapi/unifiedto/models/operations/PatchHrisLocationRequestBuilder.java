@@ -15,7 +15,7 @@ public class PatchHrisLocationRequestBuilder {
         this.sdk = sdk;
     }
 
-    public PatchHrisLocationRequestBuilder request(com.unifiedapi.unifiedto.models.operations.PatchHrisLocationRequest request) {
+    public PatchHrisLocationRequestBuilder request(PatchHrisLocationRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

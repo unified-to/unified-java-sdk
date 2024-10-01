@@ -15,7 +15,7 @@ public class RemoveMessagingMessageRequestBuilder {
         this.sdk = sdk;
     }
 
-    public RemoveMessagingMessageRequestBuilder request(com.unifiedapi.unifiedto.models.operations.RemoveMessagingMessageRequest request) {
+    public RemoveMessagingMessageRequestBuilder request(RemoveMessagingMessageRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

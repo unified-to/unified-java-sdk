@@ -15,7 +15,7 @@ public class ListUnifiedIssuesRequestBuilder {
         this.sdk = sdk;
     }
 
-    public ListUnifiedIssuesRequestBuilder request(com.unifiedapi.unifiedto.models.operations.ListUnifiedIssuesRequest request) {
+    public ListUnifiedIssuesRequestBuilder request(ListUnifiedIssuesRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

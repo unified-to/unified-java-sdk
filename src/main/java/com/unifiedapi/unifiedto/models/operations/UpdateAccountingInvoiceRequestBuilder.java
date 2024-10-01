@@ -15,7 +15,7 @@ public class UpdateAccountingInvoiceRequestBuilder {
         this.sdk = sdk;
     }
 
-    public UpdateAccountingInvoiceRequestBuilder request(com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceRequest request) {
+    public UpdateAccountingInvoiceRequestBuilder request(UpdateAccountingInvoiceRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

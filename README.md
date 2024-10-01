@@ -32,7 +32,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'com.unifiedapi:unifiedto:0.21.0'
+implementation 'com.unifiedapi:unifiedto:0.22.0'
 ```
 
 Maven:
@@ -40,7 +40,7 @@ Maven:
 <dependency>
     <groupId>com.unifiedapi</groupId>
     <artifactId>unifiedto</artifactId>
-    <version>0.21.0</version>
+    <version>0.22.0</version>
 </dependency>
 ```
 
@@ -68,7 +68,6 @@ gradlew.bat publishToMavenLocal -Pskip.signing
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -77,32 +76,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateAccountingAccountRequest req = CreateAccountingAccountRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateAccountingAccountRequest req = CreateAccountingAccountRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateAccountingAccountResponse res = sdk.accounting().createAccountingAccount()
+        CreateAccountingAccountResponse res = sdk.accounting().createAccountingAccount()
                 .request(req)
                 .call();
 
-            if (res.accountingAccount().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingAccount().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -919,7 +910,6 @@ You can override the default server globally by passing a server index to the `s
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -928,33 +918,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .serverIndex(1)
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateAccountingAccountRequest req = CreateAccountingAccountRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateAccountingAccountRequest req = CreateAccountingAccountRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateAccountingAccountResponse res = sdk.accounting().createAccountingAccount()
+        CreateAccountingAccountResponse res = sdk.accounting().createAccountingAccount()
                 .request(req)
                 .call();
 
-            if (res.accountingAccount().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingAccount().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -967,7 +949,6 @@ The default server can also be overridden globally by passing a URL to the `serv
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -976,33 +957,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .serverURL("https://api.unified.to")
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateAccountingAccountRequest req = CreateAccountingAccountRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateAccountingAccountRequest req = CreateAccountingAccountRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateAccountingAccountResponse res = sdk.accounting().createAccountingAccount()
+        CreateAccountingAccountResponse res = sdk.accounting().createAccountingAccount()
                 .request(req)
                 .call();
 
-            if (res.accountingAccount().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingAccount().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1011,11 +984,13 @@ public class Application {
 <!-- Start Error Handling [errors] -->
 ## Error Handling
 
-Handling errors in this SDK should largely match your expectations.  All operations return a response object or raise an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Exception type.
+Handling errors in this SDK should largely match your expectations. All operations return a response object or raise an exception.
 
-| Error Object           | Status Code            | Content Type           |
+By default, an API error will throw a `models/errors/SDKError` exception. When custom error responses are specified for an operation, the SDK may also throw their associated exception. You can refer to respective *Errors* tables in SDK docs for more details on possible exception types for each operation. For example, the `createAccountingAccount` method throws the following exceptions:
+
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ### Example
 
@@ -1023,7 +998,6 @@ Handling errors in this SDK should largely match your expectations.  All operati
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1032,32 +1006,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateAccountingAccountRequest req = CreateAccountingAccountRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateAccountingAccountRequest req = CreateAccountingAccountRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateAccountingAccountResponse res = sdk.accounting().createAccountingAccount()
+        CreateAccountingAccountResponse res = sdk.accounting().createAccountingAccount()
                 .request(req)
                 .call();
 
-            if (res.accountingAccount().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingAccount().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1079,7 +1045,6 @@ You can set the security parameters through the `security` builder method when i
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1088,32 +1053,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateAccountingAccountRequest req = CreateAccountingAccountRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateAccountingAccountRequest req = CreateAccountingAccountRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateAccountingAccountResponse res = sdk.accounting().createAccountingAccount()
+        CreateAccountingAccountResponse res = sdk.accounting().createAccountingAccount()
                 .request(req)
                 .call();
 
-            if (res.accountingAccount().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingAccount().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```

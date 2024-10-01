@@ -15,7 +15,7 @@ public class RemoveHrisGroupRequestBuilder {
         this.sdk = sdk;
     }
 
-    public RemoveHrisGroupRequestBuilder request(com.unifiedapi.unifiedto.models.operations.RemoveHrisGroupRequest request) {
+    public RemoveHrisGroupRequestBuilder request(RemoveHrisGroupRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

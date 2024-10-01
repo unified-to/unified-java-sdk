@@ -22,7 +22,6 @@ Create a deal
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmDealRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmDealResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -31,32 +30,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateCrmDealRequest req = CreateCrmDealRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateCrmDealRequest req = CreateCrmDealRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateCrmDealResponse res = sdk.deal().createCrmDeal()
+        CreateCrmDealResponse res = sdk.deal().createCrmDeal()
                 .request(req)
                 .call();
 
-            if (res.crmDeal().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.crmDeal().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -73,10 +64,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getCrmDeal
 
@@ -88,7 +78,6 @@ Retrieve a deal
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetCrmDealRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmDealResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -97,33 +86,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetCrmDealRequest req = GetCrmDealRequest.builder()
-                .connectionId("<value>")
+        GetCrmDealRequest req = GetCrmDealRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetCrmDealResponse res = sdk.deal().getCrmDeal()
+        GetCrmDealResponse res = sdk.deal().getCrmDeal()
                 .request(req)
                 .call();
 
-            if (res.crmDeal().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.crmDeal().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -140,10 +121,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listCrmDeals
 
@@ -155,7 +135,6 @@ List all deals
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListCrmDealsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListCrmDealsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -164,32 +143,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListCrmDealsRequest req = ListCrmDealsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListCrmDealsRequest req = ListCrmDealsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListCrmDealsResponse res = sdk.deal().listCrmDeals()
+        ListCrmDealsResponse res = sdk.deal().listCrmDeals()
                 .request(req)
                 .call();
 
-            if (res.crmDeals().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.crmDeals().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -206,10 +177,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchCrmDeal
 
@@ -221,7 +191,6 @@ Update a deal
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmDealRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmDealResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -230,33 +199,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchCrmDealRequest req = PatchCrmDealRequest.builder()
-                .connectionId("<value>")
+        PatchCrmDealRequest req = PatchCrmDealRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchCrmDealResponse res = sdk.deal().patchCrmDeal()
+        PatchCrmDealResponse res = sdk.deal().patchCrmDeal()
                 .request(req)
                 .call();
 
-            if (res.crmDeal().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.crmDeal().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -273,10 +234,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeCrmDeal
 
@@ -288,7 +248,6 @@ Remove a deal
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveCrmDealRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveCrmDealResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -297,31 +256,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveCrmDealRequest req = RemoveCrmDealRequest.builder()
-                .connectionId("<value>")
+        RemoveCrmDealRequest req = RemoveCrmDealRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveCrmDealResponse res = sdk.deal().removeCrmDeal()
+        RemoveCrmDealResponse res = sdk.deal().removeCrmDeal()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -338,10 +289,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateCrmDeal
 
@@ -353,7 +303,6 @@ Update a deal
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmDealRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmDealResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -362,33 +311,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateCrmDealRequest req = UpdateCrmDealRequest.builder()
-                .connectionId("<value>")
+        UpdateCrmDealRequest req = UpdateCrmDealRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateCrmDealResponse res = sdk.deal().updateCrmDeal()
+        UpdateCrmDealResponse res = sdk.deal().updateCrmDeal()
                 .request(req)
                 .call();
 
-            if (res.crmDeal().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.crmDeal().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -405,6 +346,6 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |

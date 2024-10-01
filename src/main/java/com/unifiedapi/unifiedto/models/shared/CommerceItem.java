@@ -54,6 +54,10 @@ public class CommerceItem {
     private Optional<? extends List<CommerceItemMedia>> media;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private Optional<? extends List<CommerceMetadata>> metadata;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
 
@@ -105,6 +109,7 @@ public class CommerceItem {
             @JsonProperty("is_active") Optional<Boolean> isActive,
             @JsonProperty("is_taxable") Optional<Boolean> isTaxable,
             @JsonProperty("media") Optional<? extends List<CommerceItemMedia>> media,
+            @JsonProperty("metadata") Optional<? extends List<CommerceMetadata>> metadata,
             @JsonProperty("name") Optional<String> name,
             @JsonProperty("public_description") Optional<String> publicDescription,
             @JsonProperty("public_name") Optional<String> publicName,
@@ -122,6 +127,7 @@ public class CommerceItem {
         Utils.checkNotNull(isActive, "isActive");
         Utils.checkNotNull(isTaxable, "isTaxable");
         Utils.checkNotNull(media, "media");
+        Utils.checkNotNull(metadata, "metadata");
         Utils.checkNotNull(name, "name");
         Utils.checkNotNull(publicDescription, "publicDescription");
         Utils.checkNotNull(publicName, "publicName");
@@ -139,6 +145,7 @@ public class CommerceItem {
         this.isActive = isActive;
         this.isTaxable = isTaxable;
         this.media = media;
+        this.metadata = metadata;
         this.name = name;
         this.publicDescription = publicDescription;
         this.publicName = publicName;
@@ -152,7 +159,7 @@ public class CommerceItem {
     }
     
     public CommerceItem() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -190,6 +197,12 @@ public class CommerceItem {
     @JsonIgnore
     public Optional<List<CommerceItemMedia>> media() {
         return (Optional<List<CommerceItemMedia>>) media;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<CommerceMetadata>> metadata() {
+        return (Optional<List<CommerceMetadata>>) metadata;
     }
 
     @JsonIgnore
@@ -336,6 +349,18 @@ public class CommerceItem {
         return this;
     }
 
+    public CommerceItem withMetadata(List<CommerceMetadata> metadata) {
+        Utils.checkNotNull(metadata, "metadata");
+        this.metadata = Optional.ofNullable(metadata);
+        return this;
+    }
+
+    public CommerceItem withMetadata(Optional<? extends List<CommerceMetadata>> metadata) {
+        Utils.checkNotNull(metadata, "metadata");
+        this.metadata = metadata;
+        return this;
+    }
+
     public CommerceItem withName(String name) {
         Utils.checkNotNull(name, "name");
         this.name = Optional.ofNullable(name);
@@ -479,6 +504,7 @@ public class CommerceItem {
             Objects.deepEquals(this.isActive, other.isActive) &&
             Objects.deepEquals(this.isTaxable, other.isTaxable) &&
             Objects.deepEquals(this.media, other.media) &&
+            Objects.deepEquals(this.metadata, other.metadata) &&
             Objects.deepEquals(this.name, other.name) &&
             Objects.deepEquals(this.publicDescription, other.publicDescription) &&
             Objects.deepEquals(this.publicName, other.publicName) &&
@@ -501,6 +527,7 @@ public class CommerceItem {
             isActive,
             isTaxable,
             media,
+            metadata,
             name,
             publicDescription,
             publicName,
@@ -523,6 +550,7 @@ public class CommerceItem {
                 "isActive", isActive,
                 "isTaxable", isTaxable,
                 "media", media,
+                "metadata", metadata,
                 "name", name,
                 "publicDescription", publicDescription,
                 "publicName", publicName,
@@ -550,6 +578,8 @@ public class CommerceItem {
         private Optional<Boolean> isTaxable = Optional.empty();
  
         private Optional<? extends List<CommerceItemMedia>> media = Optional.empty();
+ 
+        private Optional<? extends List<CommerceMetadata>> metadata = Optional.empty();
  
         private Optional<String> name = Optional.empty();
  
@@ -656,6 +686,18 @@ public class CommerceItem {
         public Builder media(Optional<? extends List<CommerceItemMedia>> media) {
             Utils.checkNotNull(media, "media");
             this.media = media;
+            return this;
+        }
+
+        public Builder metadata(List<CommerceMetadata> metadata) {
+            Utils.checkNotNull(metadata, "metadata");
+            this.metadata = Optional.ofNullable(metadata);
+            return this;
+        }
+
+        public Builder metadata(Optional<? extends List<CommerceMetadata>> metadata) {
+            Utils.checkNotNull(metadata, "metadata");
+            this.metadata = metadata;
             return this;
         }
 
@@ -794,6 +836,7 @@ public class CommerceItem {
                 isActive,
                 isTaxable,
                 media,
+                metadata,
                 name,
                 publicDescription,
                 publicName,

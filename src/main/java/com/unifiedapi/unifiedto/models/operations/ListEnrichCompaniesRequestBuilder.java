@@ -15,7 +15,7 @@ public class ListEnrichCompaniesRequestBuilder {
         this.sdk = sdk;
     }
 
-    public ListEnrichCompaniesRequestBuilder request(com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesRequest request) {
+    public ListEnrichCompaniesRequestBuilder request(ListEnrichCompaniesRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

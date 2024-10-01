@@ -15,6 +15,7 @@ import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -32,6 +33,10 @@ public class CommerceItemMedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private Optional<? extends List<CommerceMetadata>> metadata;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
@@ -53,6 +58,7 @@ public class CommerceItemMedia {
             @JsonProperty("alt") Optional<String> alt,
             @JsonProperty("height") Optional<Double> height,
             @JsonProperty("id") Optional<String> id,
+            @JsonProperty("metadata") Optional<? extends List<CommerceMetadata>> metadata,
             @JsonProperty("position") Optional<Double> position,
             @JsonProperty("type") Optional<? extends CommerceItemMediaType> type,
             @JsonProperty("url") String url,
@@ -60,6 +66,7 @@ public class CommerceItemMedia {
         Utils.checkNotNull(alt, "alt");
         Utils.checkNotNull(height, "height");
         Utils.checkNotNull(id, "id");
+        Utils.checkNotNull(metadata, "metadata");
         Utils.checkNotNull(position, "position");
         Utils.checkNotNull(type, "type");
         Utils.checkNotNull(url, "url");
@@ -67,6 +74,7 @@ public class CommerceItemMedia {
         this.alt = alt;
         this.height = height;
         this.id = id;
+        this.metadata = metadata;
         this.position = position;
         this.type = type;
         this.url = url;
@@ -75,7 +83,7 @@ public class CommerceItemMedia {
     
     public CommerceItemMedia(
             String url) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), url, Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), url, Optional.empty());
     }
 
     @JsonIgnore
@@ -91,6 +99,12 @@ public class CommerceItemMedia {
     @JsonIgnore
     public Optional<String> id() {
         return id;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<CommerceMetadata>> metadata() {
+        return (Optional<List<CommerceMetadata>>) metadata;
     }
 
     @JsonIgnore
@@ -154,6 +168,18 @@ public class CommerceItemMedia {
         return this;
     }
 
+    public CommerceItemMedia withMetadata(List<CommerceMetadata> metadata) {
+        Utils.checkNotNull(metadata, "metadata");
+        this.metadata = Optional.ofNullable(metadata);
+        return this;
+    }
+
+    public CommerceItemMedia withMetadata(Optional<? extends List<CommerceMetadata>> metadata) {
+        Utils.checkNotNull(metadata, "metadata");
+        this.metadata = metadata;
+        return this;
+    }
+
     public CommerceItemMedia withPosition(double position) {
         Utils.checkNotNull(position, "position");
         this.position = Optional.ofNullable(position);
@@ -209,6 +235,7 @@ public class CommerceItemMedia {
             Objects.deepEquals(this.alt, other.alt) &&
             Objects.deepEquals(this.height, other.height) &&
             Objects.deepEquals(this.id, other.id) &&
+            Objects.deepEquals(this.metadata, other.metadata) &&
             Objects.deepEquals(this.position, other.position) &&
             Objects.deepEquals(this.type, other.type) &&
             Objects.deepEquals(this.url, other.url) &&
@@ -221,6 +248,7 @@ public class CommerceItemMedia {
             alt,
             height,
             id,
+            metadata,
             position,
             type,
             url,
@@ -233,6 +261,7 @@ public class CommerceItemMedia {
                 "alt", alt,
                 "height", height,
                 "id", id,
+                "metadata", metadata,
                 "position", position,
                 "type", type,
                 "url", url,
@@ -246,6 +275,8 @@ public class CommerceItemMedia {
         private Optional<Double> height = Optional.empty();
  
         private Optional<String> id = Optional.empty();
+ 
+        private Optional<? extends List<CommerceMetadata>> metadata = Optional.empty();
  
         private Optional<Double> position = Optional.empty();
  
@@ -292,6 +323,18 @@ public class CommerceItemMedia {
         public Builder id(Optional<String> id) {
             Utils.checkNotNull(id, "id");
             this.id = id;
+            return this;
+        }
+
+        public Builder metadata(List<CommerceMetadata> metadata) {
+            Utils.checkNotNull(metadata, "metadata");
+            this.metadata = Optional.ofNullable(metadata);
+            return this;
+        }
+
+        public Builder metadata(Optional<? extends List<CommerceMetadata>> metadata) {
+            Utils.checkNotNull(metadata, "metadata");
+            this.metadata = metadata;
             return this;
         }
 
@@ -342,6 +385,7 @@ public class CommerceItemMedia {
                 alt,
                 height,
                 id,
+                metadata,
                 position,
                 type,
                 url,

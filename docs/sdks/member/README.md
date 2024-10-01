@@ -22,7 +22,6 @@ Create a member
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateMartechMemberRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateMartechMemberResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -31,32 +30,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateMartechMemberRequest req = CreateMartechMemberRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateMartechMemberRequest req = CreateMartechMemberRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateMartechMemberResponse res = sdk.member().createMartechMember()
+        CreateMartechMemberResponse res = sdk.member().createMartechMember()
                 .request(req)
                 .call();
 
-            if (res.marketingMember().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.marketingMember().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -73,10 +64,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getMartechMember
 
@@ -88,7 +78,6 @@ Retrieve a member
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetMartechMemberRequest;
 import com.unifiedapi.unifiedto.models.operations.GetMartechMemberResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -97,33 +86,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetMartechMemberRequest req = GetMartechMemberRequest.builder()
-                .connectionId("<value>")
+        GetMartechMemberRequest req = GetMartechMemberRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetMartechMemberResponse res = sdk.member().getMartechMember()
+        GetMartechMemberResponse res = sdk.member().getMartechMember()
                 .request(req)
                 .call();
 
-            if (res.marketingMember().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.marketingMember().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -140,10 +121,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listMartechMembers
 
@@ -155,7 +135,6 @@ List all members
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListMartechMembersRequest;
 import com.unifiedapi.unifiedto.models.operations.ListMartechMembersResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -164,32 +143,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListMartechMembersRequest req = ListMartechMembersRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListMartechMembersRequest req = ListMartechMembersRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListMartechMembersResponse res = sdk.member().listMartechMembers()
+        ListMartechMembersResponse res = sdk.member().listMartechMembers()
                 .request(req)
                 .call();
 
-            if (res.marketingMembers().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.marketingMembers().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -206,10 +177,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchMartechMember
 
@@ -221,7 +191,6 @@ Update a member
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchMartechMemberRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchMartechMemberResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -230,33 +199,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchMartechMemberRequest req = PatchMartechMemberRequest.builder()
-                .connectionId("<value>")
+        PatchMartechMemberRequest req = PatchMartechMemberRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchMartechMemberResponse res = sdk.member().patchMartechMember()
+        PatchMartechMemberResponse res = sdk.member().patchMartechMember()
                 .request(req)
                 .call();
 
-            if (res.marketingMember().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.marketingMember().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -273,10 +234,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeMartechMember
 
@@ -288,7 +248,6 @@ Remove a member
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -297,31 +256,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveMartechMemberRequest req = RemoveMartechMemberRequest.builder()
-                .connectionId("<value>")
+        RemoveMartechMemberRequest req = RemoveMartechMemberRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveMartechMemberResponse res = sdk.member().removeMartechMember()
+        RemoveMartechMemberResponse res = sdk.member().removeMartechMember()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -338,10 +289,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateMartechMember
 
@@ -353,7 +303,6 @@ Update a member
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -362,33 +311,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateMartechMemberRequest req = UpdateMartechMemberRequest.builder()
-                .connectionId("<value>")
+        UpdateMartechMemberRequest req = UpdateMartechMemberRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateMartechMemberResponse res = sdk.member().updateMartechMember()
+        UpdateMartechMemberResponse res = sdk.member().updateMartechMember()
                 .request(req)
                 .call();
 
-            if (res.marketingMember().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.marketingMember().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -405,6 +346,6 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |

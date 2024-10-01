@@ -15,7 +15,7 @@ public class UpdateCommerceLocationRequestBuilder {
         this.sdk = sdk;
     }
 
-    public UpdateCommerceLocationRequestBuilder request(com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationRequest request) {
+    public UpdateCommerceLocationRequestBuilder request(UpdateCommerceLocationRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

@@ -18,7 +18,6 @@ Retrieve enrichment information for a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -27,32 +26,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListEnrichCompaniesRequest req = ListEnrichCompaniesRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListEnrichCompaniesRequest req = ListEnrichCompaniesRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListEnrichCompaniesResponse res = sdk.enrich().listEnrichCompanies()
+        ListEnrichCompaniesResponse res = sdk.enrich().listEnrichCompanies()
                 .request(req)
                 .call();
 
-            if (res.enrichCompany().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.enrichCompany().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -69,10 +60,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listEnrichPeople
 
@@ -84,7 +74,6 @@ Retrieve enrichment information for a person
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleRequest;
 import com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -93,32 +82,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListEnrichPeopleRequest req = ListEnrichPeopleRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListEnrichPeopleRequest req = ListEnrichPeopleRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListEnrichPeopleResponse res = sdk.enrich().listEnrichPeople()
+        ListEnrichPeopleResponse res = sdk.enrich().listEnrichPeople()
                 .request(req)
                 .call();
 
-            if (res.enrichPerson().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.enrichPerson().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -135,6 +116,6 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |

@@ -15,7 +15,7 @@ public class ListHrisCompaniesRequestBuilder {
         this.sdk = sdk;
     }
 
-    public ListHrisCompaniesRequestBuilder request(com.unifiedapi.unifiedto.models.operations.ListHrisCompaniesRequest request) {
+    public ListHrisCompaniesRequestBuilder request(ListHrisCompaniesRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

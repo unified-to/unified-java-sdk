@@ -22,7 +22,6 @@ Create an interview
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsInterviewRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsInterviewResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -31,32 +30,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateAtsInterviewRequest req = CreateAtsInterviewRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateAtsInterviewRequest req = CreateAtsInterviewRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateAtsInterviewResponse res = sdk.interview().createAtsInterview()
+        CreateAtsInterviewResponse res = sdk.interview().createAtsInterview()
                 .request(req)
                 .call();
 
-            if (res.atsInterview().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsInterview().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -73,10 +64,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getAtsInterview
 
@@ -88,7 +78,6 @@ Retrieve an interview
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAtsInterviewRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsInterviewResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -97,33 +86,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetAtsInterviewRequest req = GetAtsInterviewRequest.builder()
-                .connectionId("<value>")
+        GetAtsInterviewRequest req = GetAtsInterviewRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetAtsInterviewResponse res = sdk.interview().getAtsInterview()
+        GetAtsInterviewResponse res = sdk.interview().getAtsInterview()
                 .request(req)
                 .call();
 
-            if (res.atsInterview().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsInterview().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -140,10 +121,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listAtsInterviews
 
@@ -155,7 +135,6 @@ List all interviews
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAtsInterviewsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAtsInterviewsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -164,32 +143,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListAtsInterviewsRequest req = ListAtsInterviewsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListAtsInterviewsRequest req = ListAtsInterviewsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListAtsInterviewsResponse res = sdk.interview().listAtsInterviews()
+        ListAtsInterviewsResponse res = sdk.interview().listAtsInterviews()
                 .request(req)
                 .call();
 
-            if (res.atsInterviews().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsInterviews().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -206,10 +177,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchAtsInterview
 
@@ -221,7 +191,6 @@ Update an interview
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsInterviewRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsInterviewResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -230,33 +199,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchAtsInterviewRequest req = PatchAtsInterviewRequest.builder()
-                .connectionId("<value>")
+        PatchAtsInterviewRequest req = PatchAtsInterviewRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchAtsInterviewResponse res = sdk.interview().patchAtsInterview()
+        PatchAtsInterviewResponse res = sdk.interview().patchAtsInterview()
                 .request(req)
                 .call();
 
-            if (res.atsInterview().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsInterview().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -273,10 +234,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeAtsInterview
 
@@ -288,7 +248,6 @@ Remove an interview
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsInterviewRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsInterviewResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -297,31 +256,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveAtsInterviewRequest req = RemoveAtsInterviewRequest.builder()
-                .connectionId("<value>")
+        RemoveAtsInterviewRequest req = RemoveAtsInterviewRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveAtsInterviewResponse res = sdk.interview().removeAtsInterview()
+        RemoveAtsInterviewResponse res = sdk.interview().removeAtsInterview()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -338,10 +289,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateAtsInterview
 
@@ -353,7 +303,6 @@ Update an interview
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsInterviewRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsInterviewResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -362,33 +311,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateAtsInterviewRequest req = UpdateAtsInterviewRequest.builder()
-                .connectionId("<value>")
+        UpdateAtsInterviewRequest req = UpdateAtsInterviewRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateAtsInterviewResponse res = sdk.interview().updateAtsInterview()
+        UpdateAtsInterviewResponse res = sdk.interview().updateAtsInterview()
                 .request(req)
                 .call();
 
-            if (res.atsInterview().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsInterview().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -405,6 +346,6 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |

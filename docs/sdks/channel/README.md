@@ -18,7 +18,6 @@ Retrieve a channel
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetMessagingChannelRequest;
 import com.unifiedapi.unifiedto.models.operations.GetMessagingChannelResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -27,33 +26,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetMessagingChannelRequest req = GetMessagingChannelRequest.builder()
-                .connectionId("<value>")
+        GetMessagingChannelRequest req = GetMessagingChannelRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetMessagingChannelResponse res = sdk.channel().getMessagingChannel()
+        GetMessagingChannelResponse res = sdk.channel().getMessagingChannel()
                 .request(req)
                 .call();
 
-            if (res.messagingChannel().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.messagingChannel().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -70,10 +61,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listMessagingChannels
 
@@ -85,7 +75,6 @@ List all channels
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListMessagingChannelsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListMessagingChannelsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -94,32 +83,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListMessagingChannelsRequest req = ListMessagingChannelsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListMessagingChannelsRequest req = ListMessagingChannelsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListMessagingChannelsResponse res = sdk.channel().listMessagingChannels()
+        ListMessagingChannelsResponse res = sdk.channel().listMessagingChannels()
                 .request(req)
                 .call();
 
-            if (res.messagingChannels().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.messagingChannels().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -136,6 +117,6 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |

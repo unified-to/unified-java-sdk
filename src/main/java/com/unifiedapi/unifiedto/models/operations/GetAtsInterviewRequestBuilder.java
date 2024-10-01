@@ -15,7 +15,7 @@ public class GetAtsInterviewRequestBuilder {
         this.sdk = sdk;
     }
 
-    public GetAtsInterviewRequestBuilder request(com.unifiedapi.unifiedto.models.operations.GetAtsInterviewRequest request) {
+    public GetAtsInterviewRequestBuilder request(GetAtsInterviewRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

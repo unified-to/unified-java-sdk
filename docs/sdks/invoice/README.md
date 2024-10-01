@@ -22,7 +22,6 @@ Create an invoice
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingInvoiceRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingInvoiceResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -31,32 +30,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateAccountingInvoiceRequest req = CreateAccountingInvoiceRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateAccountingInvoiceRequest req = CreateAccountingInvoiceRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateAccountingInvoiceResponse res = sdk.invoice().createAccountingInvoice()
+        CreateAccountingInvoiceResponse res = sdk.invoice().createAccountingInvoice()
                 .request(req)
                 .call();
 
-            if (res.accountingInvoice().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingInvoice().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -73,10 +64,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getAccountingInvoice
 
@@ -88,7 +78,6 @@ Retrieve an invoice
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingInvoiceRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingInvoiceResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -97,33 +86,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetAccountingInvoiceRequest req = GetAccountingInvoiceRequest.builder()
-                .connectionId("<value>")
+        GetAccountingInvoiceRequest req = GetAccountingInvoiceRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetAccountingInvoiceResponse res = sdk.invoice().getAccountingInvoice()
+        GetAccountingInvoiceResponse res = sdk.invoice().getAccountingInvoice()
                 .request(req)
                 .call();
 
-            if (res.accountingInvoice().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingInvoice().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -140,10 +121,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listAccountingInvoices
 
@@ -155,7 +135,6 @@ List all invoices
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingInvoicesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingInvoicesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -164,32 +143,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListAccountingInvoicesRequest req = ListAccountingInvoicesRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListAccountingInvoicesRequest req = ListAccountingInvoicesRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListAccountingInvoicesResponse res = sdk.invoice().listAccountingInvoices()
+        ListAccountingInvoicesResponse res = sdk.invoice().listAccountingInvoices()
                 .request(req)
                 .call();
 
-            if (res.accountingInvoices().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingInvoices().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -206,10 +177,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchAccountingInvoice
 
@@ -221,7 +191,6 @@ Update an invoice
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingInvoiceRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingInvoiceResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -230,33 +199,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchAccountingInvoiceRequest req = PatchAccountingInvoiceRequest.builder()
-                .connectionId("<value>")
+        PatchAccountingInvoiceRequest req = PatchAccountingInvoiceRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchAccountingInvoiceResponse res = sdk.invoice().patchAccountingInvoice()
+        PatchAccountingInvoiceResponse res = sdk.invoice().patchAccountingInvoice()
                 .request(req)
                 .call();
 
-            if (res.accountingInvoice().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingInvoice().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -273,10 +234,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeAccountingInvoice
 
@@ -288,7 +248,6 @@ Remove an invoice
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveAccountingInvoiceRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveAccountingInvoiceResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -297,31 +256,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveAccountingInvoiceRequest req = RemoveAccountingInvoiceRequest.builder()
-                .connectionId("<value>")
+        RemoveAccountingInvoiceRequest req = RemoveAccountingInvoiceRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveAccountingInvoiceResponse res = sdk.invoice().removeAccountingInvoice()
+        RemoveAccountingInvoiceResponse res = sdk.invoice().removeAccountingInvoice()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -338,10 +289,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateAccountingInvoice
 
@@ -353,7 +303,6 @@ Update an invoice
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -362,33 +311,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateAccountingInvoiceRequest req = UpdateAccountingInvoiceRequest.builder()
-                .connectionId("<value>")
+        UpdateAccountingInvoiceRequest req = UpdateAccountingInvoiceRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateAccountingInvoiceResponse res = sdk.invoice().updateAccountingInvoice()
+        UpdateAccountingInvoiceResponse res = sdk.invoice().updateAccountingInvoice()
                 .request(req)
                 .call();
 
-            if (res.accountingInvoice().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingInvoice().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -405,6 +346,6 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |

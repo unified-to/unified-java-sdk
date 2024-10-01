@@ -15,7 +15,7 @@ public class PatchUnifiedConnectionRequestBuilder {
         this.sdk = sdk;
     }
 
-    public PatchUnifiedConnectionRequestBuilder request(com.unifiedapi.unifiedto.models.operations.PatchUnifiedConnectionRequest request) {
+    public PatchUnifiedConnectionRequestBuilder request(PatchUnifiedConnectionRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

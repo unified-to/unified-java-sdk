@@ -15,7 +15,7 @@ public class GetCommerceInventoryRequestBuilder {
         this.sdk = sdk;
     }
 
-    public GetCommerceInventoryRequestBuilder request(com.unifiedapi.unifiedto.models.operations.GetCommerceInventoryRequest request) {
+    public GetCommerceInventoryRequestBuilder request(GetCommerceInventoryRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

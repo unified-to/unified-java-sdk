@@ -15,7 +15,7 @@ public class PatchCommerceItemRequestBuilder {
         this.sdk = sdk;
     }
 
-    public PatchCommerceItemRequestBuilder request(com.unifiedapi.unifiedto.models.operations.PatchCommerceItemRequest request) {
+    public PatchCommerceItemRequestBuilder request(PatchCommerceItemRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

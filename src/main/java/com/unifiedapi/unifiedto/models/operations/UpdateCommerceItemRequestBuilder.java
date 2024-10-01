@@ -15,7 +15,7 @@ public class UpdateCommerceItemRequestBuilder {
         this.sdk = sdk;
     }
 
-    public UpdateCommerceItemRequestBuilder request(com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemRequest request) {
+    public UpdateCommerceItemRequestBuilder request(UpdateCommerceItemRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

@@ -15,7 +15,7 @@ public class PatchCrmContactRequestBuilder {
         this.sdk = sdk;
     }
 
-    public PatchCrmContactRequestBuilder request(com.unifiedapi.unifiedto.models.operations.PatchCrmContactRequest request) {
+    public PatchCrmContactRequestBuilder request(PatchCrmContactRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

@@ -15,7 +15,7 @@ public class ListAccountingTransactionsRequestBuilder {
         this.sdk = sdk;
     }
 
-    public ListAccountingTransactionsRequestBuilder request(com.unifiedapi.unifiedto.models.operations.ListAccountingTransactionsRequest request) {
+    public ListAccountingTransactionsRequestBuilder request(ListAccountingTransactionsRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

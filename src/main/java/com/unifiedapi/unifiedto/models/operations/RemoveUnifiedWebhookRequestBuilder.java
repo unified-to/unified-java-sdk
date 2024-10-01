@@ -15,7 +15,7 @@ public class RemoveUnifiedWebhookRequestBuilder {
         this.sdk = sdk;
     }
 
-    public RemoveUnifiedWebhookRequestBuilder request(com.unifiedapi.unifiedto.models.operations.RemoveUnifiedWebhookRequest request) {
+    public RemoveUnifiedWebhookRequestBuilder request(RemoveUnifiedWebhookRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

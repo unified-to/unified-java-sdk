@@ -15,7 +15,7 @@ public class RemoveAtsCandidateRequestBuilder {
         this.sdk = sdk;
     }
 
-    public RemoveAtsCandidateRequestBuilder request(com.unifiedapi.unifiedto.models.operations.RemoveAtsCandidateRequest request) {
+    public RemoveAtsCandidateRequestBuilder request(RemoveAtsCandidateRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

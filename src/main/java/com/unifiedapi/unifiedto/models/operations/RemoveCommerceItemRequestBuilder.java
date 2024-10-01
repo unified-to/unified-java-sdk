@@ -15,7 +15,7 @@ public class RemoveCommerceItemRequestBuilder {
         this.sdk = sdk;
     }
 
-    public RemoveCommerceItemRequestBuilder request(com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemRequest request) {
+    public RemoveCommerceItemRequestBuilder request(RemoveCommerceItemRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

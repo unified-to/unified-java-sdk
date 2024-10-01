@@ -18,7 +18,6 @@ Retrieve specific API Call by its ID
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -27,32 +26,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetUnifiedApicallRequest req = GetUnifiedApicallRequest.builder()
+        GetUnifiedApicallRequest req = GetUnifiedApicallRequest.builder()
                 .id("<id>")
                 .build();
 
-            GetUnifiedApicallResponse res = sdk.apicall().getUnifiedApicall()
+        GetUnifiedApicallResponse res = sdk.apicall().getUnifiedApicall()
                 .request(req)
                 .call();
 
-            if (res.apiCall().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.apiCall().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -69,10 +60,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listUnifiedApicalls
 
@@ -84,7 +74,6 @@ Returns API Calls
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedApicallsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedApicallsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -93,31 +82,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListUnifiedApicallsRequest req = ListUnifiedApicallsRequest.builder()
                 .build();
 
-            ListUnifiedApicallsRequest req = ListUnifiedApicallsRequest.builder()
-                .build();
-
-            ListUnifiedApicallsResponse res = sdk.apicall().listUnifiedApicalls()
+        ListUnifiedApicallsResponse res = sdk.apicall().listUnifiedApicalls()
                 .request(req)
                 .call();
 
-            if (res.apiCalls().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.apiCalls().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -134,6 +115,6 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |

@@ -15,7 +15,7 @@ public class ListUnifiedIntegrationsRequestBuilder {
         this.sdk = sdk;
     }
 
-    public ListUnifiedIntegrationsRequestBuilder request(com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsRequest request) {
+    public ListUnifiedIntegrationsRequestBuilder request(ListUnifiedIntegrationsRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

@@ -15,7 +15,7 @@ public class UpdateStorageFileRequestBuilder {
         this.sdk = sdk;
     }
 
-    public UpdateStorageFileRequestBuilder request(com.unifiedapi.unifiedto.models.operations.UpdateStorageFileRequest request) {
+    public UpdateStorageFileRequestBuilder request(UpdateStorageFileRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

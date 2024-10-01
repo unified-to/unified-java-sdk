@@ -15,7 +15,7 @@ public class PatchCrmDealRequestBuilder {
         this.sdk = sdk;
     }
 
-    public PatchCrmDealRequestBuilder request(com.unifiedapi.unifiedto.models.operations.PatchCrmDealRequest request) {
+    public PatchCrmDealRequestBuilder request(PatchCrmDealRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

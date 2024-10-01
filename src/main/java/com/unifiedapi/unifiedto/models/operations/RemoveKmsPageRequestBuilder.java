@@ -15,7 +15,7 @@ public class RemoveKmsPageRequestBuilder {
         this.sdk = sdk;
     }
 
-    public RemoveKmsPageRequestBuilder request(com.unifiedapi.unifiedto.models.operations.RemoveKmsPageRequest request) {
+    public RemoveKmsPageRequestBuilder request(RemoveKmsPageRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

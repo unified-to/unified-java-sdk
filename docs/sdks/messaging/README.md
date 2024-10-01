@@ -24,7 +24,6 @@ Create a message
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateMessagingMessageRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateMessagingMessageResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -33,32 +32,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateMessagingMessageRequest req = CreateMessagingMessageRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateMessagingMessageRequest req = CreateMessagingMessageRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateMessagingMessageResponse res = sdk.messaging().createMessagingMessage()
+        CreateMessagingMessageResponse res = sdk.messaging().createMessagingMessage()
                 .request(req)
                 .call();
 
-            if (res.messagingMessage().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.messagingMessage().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -75,10 +66,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getMessagingChannel
 
@@ -90,7 +80,6 @@ Retrieve a channel
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetMessagingChannelRequest;
 import com.unifiedapi.unifiedto.models.operations.GetMessagingChannelResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -99,33 +88,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetMessagingChannelRequest req = GetMessagingChannelRequest.builder()
-                .connectionId("<value>")
+        GetMessagingChannelRequest req = GetMessagingChannelRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetMessagingChannelResponse res = sdk.messaging().getMessagingChannel()
+        GetMessagingChannelResponse res = sdk.messaging().getMessagingChannel()
                 .request(req)
                 .call();
 
-            if (res.messagingChannel().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.messagingChannel().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -142,10 +123,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getMessagingMessage
 
@@ -157,7 +137,6 @@ Retrieve a message
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetMessagingMessageRequest;
 import com.unifiedapi.unifiedto.models.operations.GetMessagingMessageResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -166,33 +145,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetMessagingMessageRequest req = GetMessagingMessageRequest.builder()
-                .connectionId("<value>")
+        GetMessagingMessageRequest req = GetMessagingMessageRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetMessagingMessageResponse res = sdk.messaging().getMessagingMessage()
+        GetMessagingMessageResponse res = sdk.messaging().getMessagingMessage()
                 .request(req)
                 .call();
 
-            if (res.messagingMessage().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.messagingMessage().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -209,10 +180,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listMessagingChannels
 
@@ -224,7 +194,6 @@ List all channels
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListMessagingChannelsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListMessagingChannelsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -233,32 +202,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListMessagingChannelsRequest req = ListMessagingChannelsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListMessagingChannelsRequest req = ListMessagingChannelsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListMessagingChannelsResponse res = sdk.messaging().listMessagingChannels()
+        ListMessagingChannelsResponse res = sdk.messaging().listMessagingChannels()
                 .request(req)
                 .call();
 
-            if (res.messagingChannels().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.messagingChannels().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -275,10 +236,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listMessagingMessages
 
@@ -290,7 +250,6 @@ List all messages
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListMessagingMessagesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListMessagingMessagesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -299,32 +258,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListMessagingMessagesRequest req = ListMessagingMessagesRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListMessagingMessagesRequest req = ListMessagingMessagesRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListMessagingMessagesResponse res = sdk.messaging().listMessagingMessages()
+        ListMessagingMessagesResponse res = sdk.messaging().listMessagingMessages()
                 .request(req)
                 .call();
 
-            if (res.messagingMessages().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.messagingMessages().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -341,10 +292,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchMessagingMessage
 
@@ -356,7 +306,6 @@ Update a message
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchMessagingMessageRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchMessagingMessageResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -365,33 +314,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchMessagingMessageRequest req = PatchMessagingMessageRequest.builder()
-                .connectionId("<value>")
+        PatchMessagingMessageRequest req = PatchMessagingMessageRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchMessagingMessageResponse res = sdk.messaging().patchMessagingMessage()
+        PatchMessagingMessageResponse res = sdk.messaging().patchMessagingMessage()
                 .request(req)
                 .call();
 
-            if (res.messagingMessage().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.messagingMessage().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -408,10 +349,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeMessagingMessage
 
@@ -423,7 +363,6 @@ Remove a message
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveMessagingMessageRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveMessagingMessageResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -432,31 +371,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveMessagingMessageRequest req = RemoveMessagingMessageRequest.builder()
-                .connectionId("<value>")
+        RemoveMessagingMessageRequest req = RemoveMessagingMessageRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveMessagingMessageResponse res = sdk.messaging().removeMessagingMessage()
+        RemoveMessagingMessageResponse res = sdk.messaging().removeMessagingMessage()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -473,10 +404,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateMessagingMessage
 
@@ -488,7 +418,6 @@ Update a message
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateMessagingMessageRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateMessagingMessageResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -497,33 +426,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateMessagingMessageRequest req = UpdateMessagingMessageRequest.builder()
-                .connectionId("<value>")
+        UpdateMessagingMessageRequest req = UpdateMessagingMessageRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateMessagingMessageResponse res = sdk.messaging().updateMessagingMessage()
+        UpdateMessagingMessageResponse res = sdk.messaging().updateMessagingMessage()
                 .request(req)
                 .call();
 
-            if (res.messagingMessage().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.messagingMessage().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -540,6 +461,6 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |

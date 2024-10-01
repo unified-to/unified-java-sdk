@@ -15,7 +15,7 @@ public class ListUnifiedIntegrationWorkspacesRequestBuilder {
         this.sdk = sdk;
     }
 
-    public ListUnifiedIntegrationWorkspacesRequestBuilder request(com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesRequest request) {
+    public ListUnifiedIntegrationWorkspacesRequestBuilder request(ListUnifiedIntegrationWorkspacesRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

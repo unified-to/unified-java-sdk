@@ -15,7 +15,7 @@ public class ListAtsCandidatesRequestBuilder {
         this.sdk = sdk;
     }
 
-    public ListAtsCandidatesRequestBuilder request(com.unifiedapi.unifiedto.models.operations.ListAtsCandidatesRequest request) {
+    public ListAtsCandidatesRequestBuilder request(ListAtsCandidatesRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

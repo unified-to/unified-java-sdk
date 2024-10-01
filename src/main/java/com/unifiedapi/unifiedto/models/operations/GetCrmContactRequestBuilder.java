@@ -15,7 +15,7 @@ public class GetCrmContactRequestBuilder {
         this.sdk = sdk;
     }
 
-    public GetCrmContactRequestBuilder request(com.unifiedapi.unifiedto.models.operations.GetCrmContactRequest request) {
+    public GetCrmContactRequestBuilder request(GetCrmContactRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

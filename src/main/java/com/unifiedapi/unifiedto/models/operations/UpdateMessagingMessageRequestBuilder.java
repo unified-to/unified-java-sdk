@@ -15,7 +15,7 @@ public class UpdateMessagingMessageRequestBuilder {
         this.sdk = sdk;
     }
 
-    public UpdateMessagingMessageRequestBuilder request(com.unifiedapi.unifiedto.models.operations.UpdateMessagingMessageRequest request) {
+    public UpdateMessagingMessageRequestBuilder request(UpdateMessagingMessageRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

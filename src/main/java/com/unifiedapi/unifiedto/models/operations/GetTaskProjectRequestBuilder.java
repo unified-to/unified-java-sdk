@@ -15,7 +15,7 @@ public class GetTaskProjectRequestBuilder {
         this.sdk = sdk;
     }
 
-    public GetTaskProjectRequestBuilder request(com.unifiedapi.unifiedto.models.operations.GetTaskProjectRequest request) {
+    public GetTaskProjectRequestBuilder request(GetTaskProjectRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

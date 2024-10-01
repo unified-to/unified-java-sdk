@@ -15,7 +15,7 @@ public class RemoveAccountingInvoiceRequestBuilder {
         this.sdk = sdk;
     }
 
-    public RemoveAccountingInvoiceRequestBuilder request(com.unifiedapi.unifiedto.models.operations.RemoveAccountingInvoiceRequest request) {
+    public RemoveAccountingInvoiceRequestBuilder request(RemoveAccountingInvoiceRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

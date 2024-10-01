@@ -15,7 +15,7 @@ public class ListTicketingNotesRequestBuilder {
         this.sdk = sdk;
     }
 
-    public ListTicketingNotesRequestBuilder request(com.unifiedapi.unifiedto.models.operations.ListTicketingNotesRequest request) {
+    public ListTicketingNotesRequestBuilder request(ListTicketingNotesRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

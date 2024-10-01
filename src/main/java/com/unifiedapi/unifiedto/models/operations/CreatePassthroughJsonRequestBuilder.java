@@ -15,7 +15,7 @@ public class CreatePassthroughJsonRequestBuilder {
         this.sdk = sdk;
     }
 
-    public CreatePassthroughJsonRequestBuilder request(com.unifiedapi.unifiedto.models.operations.CreatePassthroughJsonRequest request) {
+    public CreatePassthroughJsonRequestBuilder request(CreatePassthroughJsonRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

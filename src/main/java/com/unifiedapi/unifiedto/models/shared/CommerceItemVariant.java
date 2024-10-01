@@ -65,6 +65,10 @@ public class CommerceItemVariant {
     private Optional<? extends List<CommerceItemMedia>> media;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private Optional<? extends List<CommerceMetadata>> metadata;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
 
@@ -128,6 +132,7 @@ public class CommerceItemVariant {
             @JsonProperty("is_visible") Optional<Boolean> isVisible,
             @JsonProperty("length") Optional<Double> length,
             @JsonProperty("media") Optional<? extends List<CommerceItemMedia>> media,
+            @JsonProperty("metadata") Optional<? extends List<CommerceMetadata>> metadata,
             @JsonProperty("name") Optional<String> name,
             @JsonProperty("options") Optional<? extends List<CommerceItemOption>> options,
             @JsonProperty("prices") Optional<? extends List<CommerceItemPrice>> prices,
@@ -151,6 +156,7 @@ public class CommerceItemVariant {
         Utils.checkNotNull(isVisible, "isVisible");
         Utils.checkNotNull(length, "length");
         Utils.checkNotNull(media, "media");
+        Utils.checkNotNull(metadata, "metadata");
         Utils.checkNotNull(name, "name");
         Utils.checkNotNull(options, "options");
         Utils.checkNotNull(prices, "prices");
@@ -174,6 +180,7 @@ public class CommerceItemVariant {
         this.isVisible = isVisible;
         this.length = length;
         this.media = media;
+        this.metadata = metadata;
         this.name = name;
         this.options = options;
         this.prices = prices;
@@ -190,7 +197,7 @@ public class CommerceItemVariant {
     }
     
     public CommerceItemVariant() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -242,6 +249,12 @@ public class CommerceItemVariant {
     @JsonIgnore
     public Optional<List<CommerceItemMedia>> media() {
         return (Optional<List<CommerceItemMedia>>) media;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<CommerceMetadata>> metadata() {
+        return (Optional<List<CommerceMetadata>>) metadata;
     }
 
     @JsonIgnore
@@ -438,6 +451,18 @@ public class CommerceItemVariant {
         return this;
     }
 
+    public CommerceItemVariant withMetadata(List<CommerceMetadata> metadata) {
+        Utils.checkNotNull(metadata, "metadata");
+        this.metadata = Optional.ofNullable(metadata);
+        return this;
+    }
+
+    public CommerceItemVariant withMetadata(Optional<? extends List<CommerceMetadata>> metadata) {
+        Utils.checkNotNull(metadata, "metadata");
+        this.metadata = metadata;
+        return this;
+    }
+
     public CommerceItemVariant withName(String name) {
         Utils.checkNotNull(name, "name");
         this.name = Optional.ofNullable(name);
@@ -614,6 +639,7 @@ public class CommerceItemVariant {
             Objects.deepEquals(this.isVisible, other.isVisible) &&
             Objects.deepEquals(this.length, other.length) &&
             Objects.deepEquals(this.media, other.media) &&
+            Objects.deepEquals(this.metadata, other.metadata) &&
             Objects.deepEquals(this.name, other.name) &&
             Objects.deepEquals(this.options, other.options) &&
             Objects.deepEquals(this.prices, other.prices) &&
@@ -642,6 +668,7 @@ public class CommerceItemVariant {
             isVisible,
             length,
             media,
+            metadata,
             name,
             options,
             prices,
@@ -670,6 +697,7 @@ public class CommerceItemVariant {
                 "isVisible", isVisible,
                 "length", length,
                 "media", media,
+                "metadata", metadata,
                 "name", name,
                 "options", options,
                 "prices", prices,
@@ -706,6 +734,8 @@ public class CommerceItemVariant {
         private Optional<Double> length = Optional.empty();
  
         private Optional<? extends List<CommerceItemMedia>> media = Optional.empty();
+ 
+        private Optional<? extends List<CommerceMetadata>> metadata = Optional.empty();
  
         private Optional<String> name = Optional.empty();
  
@@ -854,6 +884,18 @@ public class CommerceItemVariant {
         public Builder media(Optional<? extends List<CommerceItemMedia>> media) {
             Utils.checkNotNull(media, "media");
             this.media = media;
+            return this;
+        }
+
+        public Builder metadata(List<CommerceMetadata> metadata) {
+            Utils.checkNotNull(metadata, "metadata");
+            this.metadata = Optional.ofNullable(metadata);
+            return this;
+        }
+
+        public Builder metadata(Optional<? extends List<CommerceMetadata>> metadata) {
+            Utils.checkNotNull(metadata, "metadata");
+            this.metadata = metadata;
             return this;
         }
 
@@ -1025,6 +1067,7 @@ public class CommerceItemVariant {
                 isVisible,
                 length,
                 media,
+                metadata,
                 name,
                 options,
                 prices,

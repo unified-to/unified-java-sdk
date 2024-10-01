@@ -15,7 +15,7 @@ public class UpdateHrisEmployeeRequestBuilder {
         this.sdk = sdk;
     }
 
-    public UpdateHrisEmployeeRequestBuilder request(com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeRequest request) {
+    public UpdateHrisEmployeeRequestBuilder request(UpdateHrisEmployeeRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

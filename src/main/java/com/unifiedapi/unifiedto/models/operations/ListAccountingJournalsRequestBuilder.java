@@ -15,7 +15,7 @@ public class ListAccountingJournalsRequestBuilder {
         this.sdk = sdk;
     }
 
-    public ListAccountingJournalsRequestBuilder request(com.unifiedapi.unifiedto.models.operations.ListAccountingJournalsRequest request) {
+    public ListAccountingJournalsRequestBuilder request(ListAccountingJournalsRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

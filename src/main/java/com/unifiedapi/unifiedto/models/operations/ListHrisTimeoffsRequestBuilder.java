@@ -15,7 +15,7 @@ public class ListHrisTimeoffsRequestBuilder {
         this.sdk = sdk;
     }
 
-    public ListHrisTimeoffsRequestBuilder request(com.unifiedapi.unifiedto.models.operations.ListHrisTimeoffsRequest request) {
+    public ListHrisTimeoffsRequestBuilder request(ListHrisTimeoffsRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

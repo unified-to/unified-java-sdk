@@ -15,7 +15,7 @@ public class PatchUnifiedWebhookTriggerRequestBuilder {
         this.sdk = sdk;
     }
 
-    public PatchUnifiedWebhookTriggerRequestBuilder request(com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerRequest request) {
+    public PatchUnifiedWebhookTriggerRequestBuilder request(PatchUnifiedWebhookTriggerRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

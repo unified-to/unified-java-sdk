@@ -15,7 +15,7 @@ public class ListPaymentRefundsRequestBuilder {
         this.sdk = sdk;
     }
 
-    public ListPaymentRefundsRequestBuilder request(com.unifiedapi.unifiedto.models.operations.ListPaymentRefundsRequest request) {
+    public ListPaymentRefundsRequestBuilder request(ListPaymentRefundsRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

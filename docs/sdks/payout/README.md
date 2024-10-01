@@ -18,7 +18,6 @@ Retrieve a payout
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetPaymentPayoutRequest;
 import com.unifiedapi.unifiedto.models.operations.GetPaymentPayoutResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -27,33 +26,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetPaymentPayoutRequest req = GetPaymentPayoutRequest.builder()
-                .connectionId("<value>")
+        GetPaymentPayoutRequest req = GetPaymentPayoutRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetPaymentPayoutResponse res = sdk.payout().getPaymentPayout()
+        GetPaymentPayoutResponse res = sdk.payout().getPaymentPayout()
                 .request(req)
                 .call();
 
-            if (res.paymentPayout().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.paymentPayout().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -70,10 +61,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listPaymentPayouts
 
@@ -85,7 +75,6 @@ List all payouts
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListPaymentPayoutsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListPaymentPayoutsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -94,32 +83,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListPaymentPayoutsRequest req = ListPaymentPayoutsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListPaymentPayoutsRequest req = ListPaymentPayoutsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListPaymentPayoutsResponse res = sdk.payout().listPaymentPayouts()
+        ListPaymentPayoutsResponse res = sdk.payout().listPaymentPayouts()
                 .request(req)
                 .call();
 
-            if (res.paymentPayouts().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.paymentPayouts().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -136,6 +117,6 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |

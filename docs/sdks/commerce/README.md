@@ -40,7 +40,6 @@ Create a collection
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -49,32 +48,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateCommerceCollectionRequest req = CreateCommerceCollectionRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateCommerceCollectionRequest req = CreateCommerceCollectionRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateCommerceCollectionResponse res = sdk.commerce().createCommerceCollection()
+        CreateCommerceCollectionResponse res = sdk.commerce().createCommerceCollection()
                 .request(req)
                 .call();
 
-            if (res.commerceCollection().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceCollection().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -91,10 +82,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createCommerceInventory
 
@@ -106,7 +96,6 @@ Create an inventory
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -115,32 +104,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateCommerceInventoryRequest req = CreateCommerceInventoryRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateCommerceInventoryRequest req = CreateCommerceInventoryRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateCommerceInventoryResponse res = sdk.commerce().createCommerceInventory()
+        CreateCommerceInventoryResponse res = sdk.commerce().createCommerceInventory()
                 .request(req)
                 .call();
 
-            if (res.commerceInventory().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceInventory().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -157,10 +138,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createCommerceItem
 
@@ -172,7 +152,6 @@ Create an item
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceItemRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceItemResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -181,32 +160,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateCommerceItemRequest req = CreateCommerceItemRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateCommerceItemRequest req = CreateCommerceItemRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateCommerceItemResponse res = sdk.commerce().createCommerceItem()
+        CreateCommerceItemResponse res = sdk.commerce().createCommerceItem()
                 .request(req)
                 .call();
 
-            if (res.commerceItem().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceItem().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -223,10 +194,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createCommerceLocation
 
@@ -238,7 +208,6 @@ Create a location
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -247,32 +216,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateCommerceLocationRequest req = CreateCommerceLocationRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateCommerceLocationRequest req = CreateCommerceLocationRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateCommerceLocationResponse res = sdk.commerce().createCommerceLocation()
+        CreateCommerceLocationResponse res = sdk.commerce().createCommerceLocation()
                 .request(req)
                 .call();
 
-            if (res.commerceLocation().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceLocation().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -289,10 +250,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getCommerceCollection
 
@@ -304,7 +264,6 @@ Retrieve a collection
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -313,33 +272,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetCommerceCollectionRequest req = GetCommerceCollectionRequest.builder()
-                .connectionId("<value>")
+        GetCommerceCollectionRequest req = GetCommerceCollectionRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetCommerceCollectionResponse res = sdk.commerce().getCommerceCollection()
+        GetCommerceCollectionResponse res = sdk.commerce().getCommerceCollection()
                 .request(req)
                 .call();
 
-            if (res.commerceCollection().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceCollection().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -356,10 +307,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getCommerceInventory
 
@@ -371,7 +321,6 @@ Retrieve an inventory
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetCommerceInventoryRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCommerceInventoryResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -380,33 +329,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetCommerceInventoryRequest req = GetCommerceInventoryRequest.builder()
-                .connectionId("<value>")
+        GetCommerceInventoryRequest req = GetCommerceInventoryRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetCommerceInventoryResponse res = sdk.commerce().getCommerceInventory()
+        GetCommerceInventoryResponse res = sdk.commerce().getCommerceInventory()
                 .request(req)
                 .call();
 
-            if (res.commerceInventory().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceInventory().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -423,10 +364,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getCommerceItem
 
@@ -438,7 +378,6 @@ Retrieve an item
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetCommerceItemRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCommerceItemResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -447,33 +386,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetCommerceItemRequest req = GetCommerceItemRequest.builder()
-                .connectionId("<value>")
+        GetCommerceItemRequest req = GetCommerceItemRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetCommerceItemResponse res = sdk.commerce().getCommerceItem()
+        GetCommerceItemResponse res = sdk.commerce().getCommerceItem()
                 .request(req)
                 .call();
 
-            if (res.commerceItem().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceItem().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -490,10 +421,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getCommerceLocation
 
@@ -505,7 +435,6 @@ Retrieve a location
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetCommerceLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCommerceLocationResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -514,33 +443,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetCommerceLocationRequest req = GetCommerceLocationRequest.builder()
-                .connectionId("<value>")
+        GetCommerceLocationRequest req = GetCommerceLocationRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetCommerceLocationResponse res = sdk.commerce().getCommerceLocation()
+        GetCommerceLocationResponse res = sdk.commerce().getCommerceLocation()
                 .request(req)
                 .call();
 
-            if (res.commerceLocation().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceLocation().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -557,10 +478,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listCommerceCollections
 
@@ -572,7 +492,6 @@ List all collections
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -581,32 +500,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListCommerceCollectionsRequest req = ListCommerceCollectionsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListCommerceCollectionsRequest req = ListCommerceCollectionsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListCommerceCollectionsResponse res = sdk.commerce().listCommerceCollections()
+        ListCommerceCollectionsResponse res = sdk.commerce().listCommerceCollections()
                 .request(req)
                 .call();
 
-            if (res.commerceCollections().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceCollections().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -623,10 +534,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listCommerceInventories
 
@@ -638,7 +548,6 @@ List all inventories
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListCommerceInventoriesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListCommerceInventoriesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -647,32 +556,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListCommerceInventoriesRequest req = ListCommerceInventoriesRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListCommerceInventoriesRequest req = ListCommerceInventoriesRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListCommerceInventoriesResponse res = sdk.commerce().listCommerceInventories()
+        ListCommerceInventoriesResponse res = sdk.commerce().listCommerceInventories()
                 .request(req)
                 .call();
 
-            if (res.commerceInventories().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceInventories().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -689,10 +590,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listCommerceItems
 
@@ -704,7 +604,6 @@ List all items
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListCommerceItemsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListCommerceItemsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -713,32 +612,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListCommerceItemsRequest req = ListCommerceItemsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListCommerceItemsRequest req = ListCommerceItemsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListCommerceItemsResponse res = sdk.commerce().listCommerceItems()
+        ListCommerceItemsResponse res = sdk.commerce().listCommerceItems()
                 .request(req)
                 .call();
 
-            if (res.commerceItems().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceItems().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -755,10 +646,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listCommerceLocations
 
@@ -770,7 +660,6 @@ List all locations
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListCommerceLocationsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListCommerceLocationsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -779,32 +668,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListCommerceLocationsRequest req = ListCommerceLocationsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListCommerceLocationsRequest req = ListCommerceLocationsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListCommerceLocationsResponse res = sdk.commerce().listCommerceLocations()
+        ListCommerceLocationsResponse res = sdk.commerce().listCommerceLocations()
                 .request(req)
                 .call();
 
-            if (res.commerceLocations().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceLocations().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -821,10 +702,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchCommerceCollection
 
@@ -836,7 +716,6 @@ Update a collection
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -845,33 +724,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchCommerceCollectionRequest req = PatchCommerceCollectionRequest.builder()
-                .connectionId("<value>")
+        PatchCommerceCollectionRequest req = PatchCommerceCollectionRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchCommerceCollectionResponse res = sdk.commerce().patchCommerceCollection()
+        PatchCommerceCollectionResponse res = sdk.commerce().patchCommerceCollection()
                 .request(req)
                 .call();
 
-            if (res.commerceCollection().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceCollection().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -888,10 +759,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchCommerceInventory
 
@@ -903,7 +773,6 @@ Update an inventory
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -912,33 +781,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchCommerceInventoryRequest req = PatchCommerceInventoryRequest.builder()
-                .connectionId("<value>")
+        PatchCommerceInventoryRequest req = PatchCommerceInventoryRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchCommerceInventoryResponse res = sdk.commerce().patchCommerceInventory()
+        PatchCommerceInventoryResponse res = sdk.commerce().patchCommerceInventory()
                 .request(req)
                 .call();
 
-            if (res.commerceInventory().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceInventory().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -955,10 +816,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchCommerceItem
 
@@ -970,7 +830,6 @@ Update an item
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceItemRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceItemResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -979,33 +838,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchCommerceItemRequest req = PatchCommerceItemRequest.builder()
-                .connectionId("<value>")
+        PatchCommerceItemRequest req = PatchCommerceItemRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchCommerceItemResponse res = sdk.commerce().patchCommerceItem()
+        PatchCommerceItemResponse res = sdk.commerce().patchCommerceItem()
                 .request(req)
                 .call();
 
-            if (res.commerceItem().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceItem().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1022,10 +873,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchCommerceLocation
 
@@ -1037,7 +887,6 @@ Update a location
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1046,33 +895,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchCommerceLocationRequest req = PatchCommerceLocationRequest.builder()
-                .connectionId("<value>")
+        PatchCommerceLocationRequest req = PatchCommerceLocationRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchCommerceLocationResponse res = sdk.commerce().patchCommerceLocation()
+        PatchCommerceLocationResponse res = sdk.commerce().patchCommerceLocation()
                 .request(req)
                 .call();
 
-            if (res.commerceLocation().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceLocation().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1089,10 +930,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeCommerceCollection
 
@@ -1104,7 +944,6 @@ Remove a collection
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1113,31 +952,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveCommerceCollectionRequest req = RemoveCommerceCollectionRequest.builder()
-                .connectionId("<value>")
+        RemoveCommerceCollectionRequest req = RemoveCommerceCollectionRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveCommerceCollectionResponse res = sdk.commerce().removeCommerceCollection()
+        RemoveCommerceCollectionResponse res = sdk.commerce().removeCommerceCollection()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -1154,10 +985,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeCommerceInventory
 
@@ -1169,7 +999,6 @@ Remove an inventory
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1178,31 +1007,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveCommerceInventoryRequest req = RemoveCommerceInventoryRequest.builder()
-                .connectionId("<value>")
+        RemoveCommerceInventoryRequest req = RemoveCommerceInventoryRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveCommerceInventoryResponse res = sdk.commerce().removeCommerceInventory()
+        RemoveCommerceInventoryResponse res = sdk.commerce().removeCommerceInventory()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -1219,10 +1040,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeCommerceItem
 
@@ -1234,7 +1054,6 @@ Remove an item
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1243,31 +1062,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveCommerceItemRequest req = RemoveCommerceItemRequest.builder()
-                .connectionId("<value>")
+        RemoveCommerceItemRequest req = RemoveCommerceItemRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveCommerceItemResponse res = sdk.commerce().removeCommerceItem()
+        RemoveCommerceItemResponse res = sdk.commerce().removeCommerceItem()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -1284,10 +1095,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeCommerceLocation
 
@@ -1299,7 +1109,6 @@ Remove a location
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1308,31 +1117,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveCommerceLocationRequest req = RemoveCommerceLocationRequest.builder()
-                .connectionId("<value>")
+        RemoveCommerceLocationRequest req = RemoveCommerceLocationRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveCommerceLocationResponse res = sdk.commerce().removeCommerceLocation()
+        RemoveCommerceLocationResponse res = sdk.commerce().removeCommerceLocation()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -1349,10 +1150,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateCommerceCollection
 
@@ -1364,7 +1164,6 @@ Update a collection
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1373,33 +1172,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateCommerceCollectionRequest req = UpdateCommerceCollectionRequest.builder()
-                .connectionId("<value>")
+        UpdateCommerceCollectionRequest req = UpdateCommerceCollectionRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateCommerceCollectionResponse res = sdk.commerce().updateCommerceCollection()
+        UpdateCommerceCollectionResponse res = sdk.commerce().updateCommerceCollection()
                 .request(req)
                 .call();
 
-            if (res.commerceCollection().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceCollection().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1416,10 +1207,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateCommerceInventory
 
@@ -1431,7 +1221,6 @@ Update an inventory
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1440,33 +1229,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateCommerceInventoryRequest req = UpdateCommerceInventoryRequest.builder()
-                .connectionId("<value>")
+        UpdateCommerceInventoryRequest req = UpdateCommerceInventoryRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateCommerceInventoryResponse res = sdk.commerce().updateCommerceInventory()
+        UpdateCommerceInventoryResponse res = sdk.commerce().updateCommerceInventory()
                 .request(req)
                 .call();
 
-            if (res.commerceInventory().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceInventory().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1483,10 +1264,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateCommerceItem
 
@@ -1498,7 +1278,6 @@ Update an item
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1507,33 +1286,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateCommerceItemRequest req = UpdateCommerceItemRequest.builder()
-                .connectionId("<value>")
+        UpdateCommerceItemRequest req = UpdateCommerceItemRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateCommerceItemResponse res = sdk.commerce().updateCommerceItem()
+        UpdateCommerceItemResponse res = sdk.commerce().updateCommerceItem()
                 .request(req)
                 .call();
 
-            if (res.commerceItem().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceItem().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1550,10 +1321,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateCommerceLocation
 
@@ -1565,7 +1335,6 @@ Update a location
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1574,33 +1343,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateCommerceLocationRequest req = UpdateCommerceLocationRequest.builder()
-                .connectionId("<value>")
+        UpdateCommerceLocationRequest req = UpdateCommerceLocationRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateCommerceLocationResponse res = sdk.commerce().updateCommerceLocation()
+        UpdateCommerceLocationResponse res = sdk.commerce().updateCommerceLocation()
                 .request(req)
                 .call();
 
-            if (res.commerceLocation().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceLocation().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1617,6 +1378,6 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |

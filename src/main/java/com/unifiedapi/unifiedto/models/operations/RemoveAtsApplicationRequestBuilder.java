@@ -15,7 +15,7 @@ public class RemoveAtsApplicationRequestBuilder {
         this.sdk = sdk;
     }
 
-    public RemoveAtsApplicationRequestBuilder request(com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationRequest request) {
+    public RemoveAtsApplicationRequestBuilder request(RemoveAtsApplicationRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

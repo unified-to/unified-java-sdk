@@ -15,7 +15,7 @@ public class UpdateAtsScorecardRequestBuilder {
         this.sdk = sdk;
     }
 
-    public UpdateAtsScorecardRequestBuilder request(com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardRequest request) {
+    public UpdateAtsScorecardRequestBuilder request(UpdateAtsScorecardRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

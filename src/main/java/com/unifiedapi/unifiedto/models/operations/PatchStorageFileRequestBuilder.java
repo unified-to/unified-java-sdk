@@ -15,7 +15,7 @@ public class PatchStorageFileRequestBuilder {
         this.sdk = sdk;
     }
 
-    public PatchStorageFileRequestBuilder request(com.unifiedapi.unifiedto.models.operations.PatchStorageFileRequest request) {
+    public PatchStorageFileRequestBuilder request(PatchStorageFileRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

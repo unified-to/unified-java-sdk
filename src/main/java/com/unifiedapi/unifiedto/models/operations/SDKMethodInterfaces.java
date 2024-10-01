@@ -5,1777 +5,1778 @@
 package com.unifiedapi.unifiedto.models.operations;
 
 import com.unifiedapi.unifiedto.models.shared.Connection;
+import java.lang.Exception;
 import java.util.Optional;
 
 public class SDKMethodInterfaces {
 
 
     public interface MethodCallCreateAccountingAccount {
-        com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse createAccountingAccount(
+        CreateAccountingAccountResponse createAccountingAccount(
             CreateAccountingAccountRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateAccountingContact {
-        com.unifiedapi.unifiedto.models.operations.CreateAccountingContactResponse createAccountingContact(
+        CreateAccountingContactResponse createAccountingContact(
             CreateAccountingContactRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateAccountingInvoice {
-        com.unifiedapi.unifiedto.models.operations.CreateAccountingInvoiceResponse createAccountingInvoice(
+        CreateAccountingInvoiceResponse createAccountingInvoice(
             CreateAccountingInvoiceRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateAccountingJournal {
-        com.unifiedapi.unifiedto.models.operations.CreateAccountingJournalResponse createAccountingJournal(
+        CreateAccountingJournalResponse createAccountingJournal(
             CreateAccountingJournalRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateAccountingTaxrate {
-        com.unifiedapi.unifiedto.models.operations.CreateAccountingTaxrateResponse createAccountingTaxrate(
+        CreateAccountingTaxrateResponse createAccountingTaxrate(
             CreateAccountingTaxrateRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateAccountingTransaction {
-        com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionResponse createAccountingTransaction(
+        CreateAccountingTransactionResponse createAccountingTransaction(
             CreateAccountingTransactionRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetAccountingAccount {
-        com.unifiedapi.unifiedto.models.operations.GetAccountingAccountResponse getAccountingAccount(
+        GetAccountingAccountResponse getAccountingAccount(
             GetAccountingAccountRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetAccountingContact {
-        com.unifiedapi.unifiedto.models.operations.GetAccountingContactResponse getAccountingContact(
+        GetAccountingContactResponse getAccountingContact(
             GetAccountingContactRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetAccountingInvoice {
-        com.unifiedapi.unifiedto.models.operations.GetAccountingInvoiceResponse getAccountingInvoice(
+        GetAccountingInvoiceResponse getAccountingInvoice(
             GetAccountingInvoiceRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetAccountingJournal {
-        com.unifiedapi.unifiedto.models.operations.GetAccountingJournalResponse getAccountingJournal(
+        GetAccountingJournalResponse getAccountingJournal(
             GetAccountingJournalRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetAccountingOrganization {
-        com.unifiedapi.unifiedto.models.operations.GetAccountingOrganizationResponse getAccountingOrganization(
+        GetAccountingOrganizationResponse getAccountingOrganization(
             GetAccountingOrganizationRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetAccountingTaxrate {
-        com.unifiedapi.unifiedto.models.operations.GetAccountingTaxrateResponse getAccountingTaxrate(
+        GetAccountingTaxrateResponse getAccountingTaxrate(
             GetAccountingTaxrateRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetAccountingTransaction {
-        com.unifiedapi.unifiedto.models.operations.GetAccountingTransactionResponse getAccountingTransaction(
+        GetAccountingTransactionResponse getAccountingTransaction(
             GetAccountingTransactionRequest request) throws Exception;
     }
 
 
     public interface MethodCallListAccountingAccounts {
-        com.unifiedapi.unifiedto.models.operations.ListAccountingAccountsResponse listAccountingAccounts(
+        ListAccountingAccountsResponse listAccountingAccounts(
             ListAccountingAccountsRequest request) throws Exception;
     }
 
 
     public interface MethodCallListAccountingContacts {
-        com.unifiedapi.unifiedto.models.operations.ListAccountingContactsResponse listAccountingContacts(
+        ListAccountingContactsResponse listAccountingContacts(
             ListAccountingContactsRequest request) throws Exception;
     }
 
 
     public interface MethodCallListAccountingInvoices {
-        com.unifiedapi.unifiedto.models.operations.ListAccountingInvoicesResponse listAccountingInvoices(
+        ListAccountingInvoicesResponse listAccountingInvoices(
             ListAccountingInvoicesRequest request) throws Exception;
     }
 
 
     public interface MethodCallListAccountingJournals {
-        com.unifiedapi.unifiedto.models.operations.ListAccountingJournalsResponse listAccountingJournals(
+        ListAccountingJournalsResponse listAccountingJournals(
             ListAccountingJournalsRequest request) throws Exception;
     }
 
 
     public interface MethodCallListAccountingOrganizations {
-        com.unifiedapi.unifiedto.models.operations.ListAccountingOrganizationsResponse listAccountingOrganizations(
+        ListAccountingOrganizationsResponse listAccountingOrganizations(
             ListAccountingOrganizationsRequest request) throws Exception;
     }
 
 
     public interface MethodCallListAccountingTaxrates {
-        com.unifiedapi.unifiedto.models.operations.ListAccountingTaxratesResponse listAccountingTaxrates(
+        ListAccountingTaxratesResponse listAccountingTaxrates(
             ListAccountingTaxratesRequest request) throws Exception;
     }
 
 
     public interface MethodCallListAccountingTransactions {
-        com.unifiedapi.unifiedto.models.operations.ListAccountingTransactionsResponse listAccountingTransactions(
+        ListAccountingTransactionsResponse listAccountingTransactions(
             ListAccountingTransactionsRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchAccountingAccount {
-        com.unifiedapi.unifiedto.models.operations.PatchAccountingAccountResponse patchAccountingAccount(
+        PatchAccountingAccountResponse patchAccountingAccount(
             PatchAccountingAccountRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchAccountingContact {
-        com.unifiedapi.unifiedto.models.operations.PatchAccountingContactResponse patchAccountingContact(
+        PatchAccountingContactResponse patchAccountingContact(
             PatchAccountingContactRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchAccountingInvoice {
-        com.unifiedapi.unifiedto.models.operations.PatchAccountingInvoiceResponse patchAccountingInvoice(
+        PatchAccountingInvoiceResponse patchAccountingInvoice(
             PatchAccountingInvoiceRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchAccountingJournal {
-        com.unifiedapi.unifiedto.models.operations.PatchAccountingJournalResponse patchAccountingJournal(
+        PatchAccountingJournalResponse patchAccountingJournal(
             PatchAccountingJournalRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchAccountingTaxrate {
-        com.unifiedapi.unifiedto.models.operations.PatchAccountingTaxrateResponse patchAccountingTaxrate(
+        PatchAccountingTaxrateResponse patchAccountingTaxrate(
             PatchAccountingTaxrateRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchAccountingTransaction {
-        com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionResponse patchAccountingTransaction(
+        PatchAccountingTransactionResponse patchAccountingTransaction(
             PatchAccountingTransactionRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveAccountingAccount {
-        com.unifiedapi.unifiedto.models.operations.RemoveAccountingAccountResponse removeAccountingAccount(
+        RemoveAccountingAccountResponse removeAccountingAccount(
             RemoveAccountingAccountRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveAccountingContact {
-        com.unifiedapi.unifiedto.models.operations.RemoveAccountingContactResponse removeAccountingContact(
+        RemoveAccountingContactResponse removeAccountingContact(
             RemoveAccountingContactRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveAccountingInvoice {
-        com.unifiedapi.unifiedto.models.operations.RemoveAccountingInvoiceResponse removeAccountingInvoice(
+        RemoveAccountingInvoiceResponse removeAccountingInvoice(
             RemoveAccountingInvoiceRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveAccountingJournal {
-        com.unifiedapi.unifiedto.models.operations.RemoveAccountingJournalResponse removeAccountingJournal(
+        RemoveAccountingJournalResponse removeAccountingJournal(
             RemoveAccountingJournalRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveAccountingTaxrate {
-        com.unifiedapi.unifiedto.models.operations.RemoveAccountingTaxrateResponse removeAccountingTaxrate(
+        RemoveAccountingTaxrateResponse removeAccountingTaxrate(
             RemoveAccountingTaxrateRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveAccountingTransaction {
-        com.unifiedapi.unifiedto.models.operations.RemoveAccountingTransactionResponse removeAccountingTransaction(
+        RemoveAccountingTransactionResponse removeAccountingTransaction(
             RemoveAccountingTransactionRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateAccountingAccount {
-        com.unifiedapi.unifiedto.models.operations.UpdateAccountingAccountResponse updateAccountingAccount(
+        UpdateAccountingAccountResponse updateAccountingAccount(
             UpdateAccountingAccountRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateAccountingContact {
-        com.unifiedapi.unifiedto.models.operations.UpdateAccountingContactResponse updateAccountingContact(
+        UpdateAccountingContactResponse updateAccountingContact(
             UpdateAccountingContactRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateAccountingInvoice {
-        com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceResponse updateAccountingInvoice(
+        UpdateAccountingInvoiceResponse updateAccountingInvoice(
             UpdateAccountingInvoiceRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateAccountingJournal {
-        com.unifiedapi.unifiedto.models.operations.UpdateAccountingJournalResponse updateAccountingJournal(
+        UpdateAccountingJournalResponse updateAccountingJournal(
             UpdateAccountingJournalRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateAccountingTaxrate {
-        com.unifiedapi.unifiedto.models.operations.UpdateAccountingTaxrateResponse updateAccountingTaxrate(
+        UpdateAccountingTaxrateResponse updateAccountingTaxrate(
             UpdateAccountingTaxrateRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateAccountingTransaction {
-        com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionResponse updateAccountingTransaction(
+        UpdateAccountingTransactionResponse updateAccountingTransaction(
             UpdateAccountingTransactionRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateCrmContact {
-        com.unifiedapi.unifiedto.models.operations.CreateCrmContactResponse createCrmContact(
+        CreateCrmContactResponse createCrmContact(
             CreateCrmContactRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateUcContact {
-        com.unifiedapi.unifiedto.models.operations.CreateUcContactResponse createUcContact(
+        CreateUcContactResponse createUcContact(
             CreateUcContactRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetCrmContact {
-        com.unifiedapi.unifiedto.models.operations.GetCrmContactResponse getCrmContact(
+        GetCrmContactResponse getCrmContact(
             GetCrmContactRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetUcContact {
-        com.unifiedapi.unifiedto.models.operations.GetUcContactResponse getUcContact(
+        GetUcContactResponse getUcContact(
             GetUcContactRequest request) throws Exception;
     }
 
 
     public interface MethodCallListCrmContacts {
-        com.unifiedapi.unifiedto.models.operations.ListCrmContactsResponse listCrmContacts(
+        ListCrmContactsResponse listCrmContacts(
             ListCrmContactsRequest request) throws Exception;
     }
 
 
     public interface MethodCallListUcContacts {
-        com.unifiedapi.unifiedto.models.operations.ListUcContactsResponse listUcContacts(
+        ListUcContactsResponse listUcContacts(
             ListUcContactsRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchCrmContact {
-        com.unifiedapi.unifiedto.models.operations.PatchCrmContactResponse patchCrmContact(
+        PatchCrmContactResponse patchCrmContact(
             PatchCrmContactRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchUcContact {
-        com.unifiedapi.unifiedto.models.operations.PatchUcContactResponse patchUcContact(
+        PatchUcContactResponse patchUcContact(
             PatchUcContactRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveCrmContact {
-        com.unifiedapi.unifiedto.models.operations.RemoveCrmContactResponse removeCrmContact(
+        RemoveCrmContactResponse removeCrmContact(
             RemoveCrmContactRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveUcContact {
-        com.unifiedapi.unifiedto.models.operations.RemoveUcContactResponse removeUcContact(
+        RemoveUcContactResponse removeUcContact(
             RemoveUcContactRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateCrmContact {
-        com.unifiedapi.unifiedto.models.operations.UpdateCrmContactResponse updateCrmContact(
+        UpdateCrmContactResponse updateCrmContact(
             UpdateCrmContactRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateUcContact {
-        com.unifiedapi.unifiedto.models.operations.UpdateUcContactResponse updateUcContact(
+        UpdateUcContactResponse updateUcContact(
             UpdateUcContactRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateAtsActivity {
-        com.unifiedapi.unifiedto.models.operations.CreateAtsActivityResponse createAtsActivity(
+        CreateAtsActivityResponse createAtsActivity(
             CreateAtsActivityRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateAtsApplication {
-        com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationResponse createAtsApplication(
+        CreateAtsApplicationResponse createAtsApplication(
             CreateAtsApplicationRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateAtsCandidate {
-        com.unifiedapi.unifiedto.models.operations.CreateAtsCandidateResponse createAtsCandidate(
+        CreateAtsCandidateResponse createAtsCandidate(
             CreateAtsCandidateRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateAtsDocument {
-        com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentResponse createAtsDocument(
+        CreateAtsDocumentResponse createAtsDocument(
             CreateAtsDocumentRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateAtsInterview {
-        com.unifiedapi.unifiedto.models.operations.CreateAtsInterviewResponse createAtsInterview(
+        CreateAtsInterviewResponse createAtsInterview(
             CreateAtsInterviewRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateAtsJob {
-        com.unifiedapi.unifiedto.models.operations.CreateAtsJobResponse createAtsJob(
+        CreateAtsJobResponse createAtsJob(
             CreateAtsJobRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateAtsScorecard {
-        com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse createAtsScorecard(
+        CreateAtsScorecardResponse createAtsScorecard(
             CreateAtsScorecardRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetAtsActivity {
-        com.unifiedapi.unifiedto.models.operations.GetAtsActivityResponse getAtsActivity(
+        GetAtsActivityResponse getAtsActivity(
             GetAtsActivityRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetAtsApplication {
-        com.unifiedapi.unifiedto.models.operations.GetAtsApplicationResponse getAtsApplication(
+        GetAtsApplicationResponse getAtsApplication(
             GetAtsApplicationRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetAtsCandidate {
-        com.unifiedapi.unifiedto.models.operations.GetAtsCandidateResponse getAtsCandidate(
+        GetAtsCandidateResponse getAtsCandidate(
             GetAtsCandidateRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetAtsCompany {
-        com.unifiedapi.unifiedto.models.operations.GetAtsCompanyResponse getAtsCompany(
+        GetAtsCompanyResponse getAtsCompany(
             GetAtsCompanyRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetAtsDocument {
-        com.unifiedapi.unifiedto.models.operations.GetAtsDocumentResponse getAtsDocument(
+        GetAtsDocumentResponse getAtsDocument(
             GetAtsDocumentRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetAtsInterview {
-        com.unifiedapi.unifiedto.models.operations.GetAtsInterviewResponse getAtsInterview(
+        GetAtsInterviewResponse getAtsInterview(
             GetAtsInterviewRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetAtsJob {
-        com.unifiedapi.unifiedto.models.operations.GetAtsJobResponse getAtsJob(
+        GetAtsJobResponse getAtsJob(
             GetAtsJobRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetAtsScorecard {
-        com.unifiedapi.unifiedto.models.operations.GetAtsScorecardResponse getAtsScorecard(
+        GetAtsScorecardResponse getAtsScorecard(
             GetAtsScorecardRequest request) throws Exception;
     }
 
 
     public interface MethodCallListAtsActivities {
-        com.unifiedapi.unifiedto.models.operations.ListAtsActivitiesResponse listAtsActivities(
+        ListAtsActivitiesResponse listAtsActivities(
             ListAtsActivitiesRequest request) throws Exception;
     }
 
 
     public interface MethodCallListAtsApplications {
-        com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsResponse listAtsApplications(
+        ListAtsApplicationsResponse listAtsApplications(
             ListAtsApplicationsRequest request) throws Exception;
     }
 
 
     public interface MethodCallListAtsApplicationstatuses {
-        com.unifiedapi.unifiedto.models.operations.ListAtsApplicationstatusesResponse listAtsApplicationstatuses(
+        ListAtsApplicationstatusesResponse listAtsApplicationstatuses(
             ListAtsApplicationstatusesRequest request) throws Exception;
     }
 
 
     public interface MethodCallListAtsCandidates {
-        com.unifiedapi.unifiedto.models.operations.ListAtsCandidatesResponse listAtsCandidates(
+        ListAtsCandidatesResponse listAtsCandidates(
             ListAtsCandidatesRequest request) throws Exception;
     }
 
 
     public interface MethodCallListAtsCompanies {
-        com.unifiedapi.unifiedto.models.operations.ListAtsCompaniesResponse listAtsCompanies(
+        ListAtsCompaniesResponse listAtsCompanies(
             ListAtsCompaniesRequest request) throws Exception;
     }
 
 
     public interface MethodCallListAtsDocuments {
-        com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsResponse listAtsDocuments(
+        ListAtsDocumentsResponse listAtsDocuments(
             ListAtsDocumentsRequest request) throws Exception;
     }
 
 
     public interface MethodCallListAtsInterviews {
-        com.unifiedapi.unifiedto.models.operations.ListAtsInterviewsResponse listAtsInterviews(
+        ListAtsInterviewsResponse listAtsInterviews(
             ListAtsInterviewsRequest request) throws Exception;
     }
 
 
     public interface MethodCallListAtsJobs {
-        com.unifiedapi.unifiedto.models.operations.ListAtsJobsResponse listAtsJobs(
+        ListAtsJobsResponse listAtsJobs(
             ListAtsJobsRequest request) throws Exception;
     }
 
 
     public interface MethodCallListAtsScorecards {
-        com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsResponse listAtsScorecards(
+        ListAtsScorecardsResponse listAtsScorecards(
             ListAtsScorecardsRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchAtsActivity {
-        com.unifiedapi.unifiedto.models.operations.PatchAtsActivityResponse patchAtsActivity(
+        PatchAtsActivityResponse patchAtsActivity(
             PatchAtsActivityRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchAtsApplication {
-        com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationResponse patchAtsApplication(
+        PatchAtsApplicationResponse patchAtsApplication(
             PatchAtsApplicationRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchAtsCandidate {
-        com.unifiedapi.unifiedto.models.operations.PatchAtsCandidateResponse patchAtsCandidate(
+        PatchAtsCandidateResponse patchAtsCandidate(
             PatchAtsCandidateRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchAtsDocument {
-        com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentResponse patchAtsDocument(
+        PatchAtsDocumentResponse patchAtsDocument(
             PatchAtsDocumentRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchAtsInterview {
-        com.unifiedapi.unifiedto.models.operations.PatchAtsInterviewResponse patchAtsInterview(
+        PatchAtsInterviewResponse patchAtsInterview(
             PatchAtsInterviewRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchAtsJob {
-        com.unifiedapi.unifiedto.models.operations.PatchAtsJobResponse patchAtsJob(
+        PatchAtsJobResponse patchAtsJob(
             PatchAtsJobRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchAtsScorecard {
-        com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse patchAtsScorecard(
+        PatchAtsScorecardResponse patchAtsScorecard(
             PatchAtsScorecardRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveAtsActivity {
-        com.unifiedapi.unifiedto.models.operations.RemoveAtsActivityResponse removeAtsActivity(
+        RemoveAtsActivityResponse removeAtsActivity(
             RemoveAtsActivityRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveAtsApplication {
-        com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationResponse removeAtsApplication(
+        RemoveAtsApplicationResponse removeAtsApplication(
             RemoveAtsApplicationRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveAtsCandidate {
-        com.unifiedapi.unifiedto.models.operations.RemoveAtsCandidateResponse removeAtsCandidate(
+        RemoveAtsCandidateResponse removeAtsCandidate(
             RemoveAtsCandidateRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveAtsDocument {
-        com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentResponse removeAtsDocument(
+        RemoveAtsDocumentResponse removeAtsDocument(
             RemoveAtsDocumentRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveAtsInterview {
-        com.unifiedapi.unifiedto.models.operations.RemoveAtsInterviewResponse removeAtsInterview(
+        RemoveAtsInterviewResponse removeAtsInterview(
             RemoveAtsInterviewRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveAtsJob {
-        com.unifiedapi.unifiedto.models.operations.RemoveAtsJobResponse removeAtsJob(
+        RemoveAtsJobResponse removeAtsJob(
             RemoveAtsJobRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveAtsScorecard {
-        com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse removeAtsScorecard(
+        RemoveAtsScorecardResponse removeAtsScorecard(
             RemoveAtsScorecardRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateAtsActivity {
-        com.unifiedapi.unifiedto.models.operations.UpdateAtsActivityResponse updateAtsActivity(
+        UpdateAtsActivityResponse updateAtsActivity(
             UpdateAtsActivityRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateAtsApplication {
-        com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationResponse updateAtsApplication(
+        UpdateAtsApplicationResponse updateAtsApplication(
             UpdateAtsApplicationRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateAtsCandidate {
-        com.unifiedapi.unifiedto.models.operations.UpdateAtsCandidateResponse updateAtsCandidate(
+        UpdateAtsCandidateResponse updateAtsCandidate(
             UpdateAtsCandidateRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateAtsDocument {
-        com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentResponse updateAtsDocument(
+        UpdateAtsDocumentResponse updateAtsDocument(
             UpdateAtsDocumentRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateAtsInterview {
-        com.unifiedapi.unifiedto.models.operations.UpdateAtsInterviewResponse updateAtsInterview(
+        UpdateAtsInterviewResponse updateAtsInterview(
             UpdateAtsInterviewRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateAtsJob {
-        com.unifiedapi.unifiedto.models.operations.UpdateAtsJobResponse updateAtsJob(
+        UpdateAtsJobResponse updateAtsJob(
             UpdateAtsJobRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateAtsScorecard {
-        com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse updateAtsScorecard(
+        UpdateAtsScorecardResponse updateAtsScorecard(
             UpdateAtsScorecardRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateCrmCompany {
-        com.unifiedapi.unifiedto.models.operations.CreateCrmCompanyResponse createCrmCompany(
+        CreateCrmCompanyResponse createCrmCompany(
             CreateCrmCompanyRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateHrisCompany {
-        com.unifiedapi.unifiedto.models.operations.CreateHrisCompanyResponse createHrisCompany(
+        CreateHrisCompanyResponse createHrisCompany(
             CreateHrisCompanyRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetCrmCompany {
-        com.unifiedapi.unifiedto.models.operations.GetCrmCompanyResponse getCrmCompany(
+        GetCrmCompanyResponse getCrmCompany(
             GetCrmCompanyRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetHrisCompany {
-        com.unifiedapi.unifiedto.models.operations.GetHrisCompanyResponse getHrisCompany(
+        GetHrisCompanyResponse getHrisCompany(
             GetHrisCompanyRequest request) throws Exception;
     }
 
 
     public interface MethodCallListCrmCompanies {
-        com.unifiedapi.unifiedto.models.operations.ListCrmCompaniesResponse listCrmCompanies(
+        ListCrmCompaniesResponse listCrmCompanies(
             ListCrmCompaniesRequest request) throws Exception;
     }
 
 
     public interface MethodCallListEnrichCompanies {
-        com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesResponse listEnrichCompanies(
+        ListEnrichCompaniesResponse listEnrichCompanies(
             ListEnrichCompaniesRequest request) throws Exception;
     }
 
 
     public interface MethodCallListHrisCompanies {
-        com.unifiedapi.unifiedto.models.operations.ListHrisCompaniesResponse listHrisCompanies(
+        ListHrisCompaniesResponse listHrisCompanies(
             ListHrisCompaniesRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchCrmCompany {
-        com.unifiedapi.unifiedto.models.operations.PatchCrmCompanyResponse patchCrmCompany(
+        PatchCrmCompanyResponse patchCrmCompany(
             PatchCrmCompanyRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchHrisCompany {
-        com.unifiedapi.unifiedto.models.operations.PatchHrisCompanyResponse patchHrisCompany(
+        PatchHrisCompanyResponse patchHrisCompany(
             PatchHrisCompanyRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveCrmCompany {
-        com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyResponse removeCrmCompany(
+        RemoveCrmCompanyResponse removeCrmCompany(
             RemoveCrmCompanyRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveHrisCompany {
-        com.unifiedapi.unifiedto.models.operations.RemoveHrisCompanyResponse removeHrisCompany(
+        RemoveHrisCompanyResponse removeHrisCompany(
             RemoveHrisCompanyRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateCrmCompany {
-        com.unifiedapi.unifiedto.models.operations.UpdateCrmCompanyResponse updateCrmCompany(
+        UpdateCrmCompanyResponse updateCrmCompany(
             UpdateCrmCompanyRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateHrisCompany {
-        com.unifiedapi.unifiedto.models.operations.UpdateHrisCompanyResponse updateHrisCompany(
+        UpdateHrisCompanyResponse updateHrisCompany(
             UpdateHrisCompanyRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateCommerceCollection {
-        com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionResponse createCommerceCollection(
+        CreateCommerceCollectionResponse createCommerceCollection(
             CreateCommerceCollectionRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateCommerceInventory {
-        com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryResponse createCommerceInventory(
+        CreateCommerceInventoryResponse createCommerceInventory(
             CreateCommerceInventoryRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateCommerceItem {
-        com.unifiedapi.unifiedto.models.operations.CreateCommerceItemResponse createCommerceItem(
+        CreateCommerceItemResponse createCommerceItem(
             CreateCommerceItemRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateCommerceLocation {
-        com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationResponse createCommerceLocation(
+        CreateCommerceLocationResponse createCommerceLocation(
             CreateCommerceLocationRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetCommerceCollection {
-        com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionResponse getCommerceCollection(
+        GetCommerceCollectionResponse getCommerceCollection(
             GetCommerceCollectionRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetCommerceInventory {
-        com.unifiedapi.unifiedto.models.operations.GetCommerceInventoryResponse getCommerceInventory(
+        GetCommerceInventoryResponse getCommerceInventory(
             GetCommerceInventoryRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetCommerceItem {
-        com.unifiedapi.unifiedto.models.operations.GetCommerceItemResponse getCommerceItem(
+        GetCommerceItemResponse getCommerceItem(
             GetCommerceItemRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetCommerceLocation {
-        com.unifiedapi.unifiedto.models.operations.GetCommerceLocationResponse getCommerceLocation(
+        GetCommerceLocationResponse getCommerceLocation(
             GetCommerceLocationRequest request) throws Exception;
     }
 
 
     public interface MethodCallListCommerceCollections {
-        com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsResponse listCommerceCollections(
+        ListCommerceCollectionsResponse listCommerceCollections(
             ListCommerceCollectionsRequest request) throws Exception;
     }
 
 
     public interface MethodCallListCommerceInventories {
-        com.unifiedapi.unifiedto.models.operations.ListCommerceInventoriesResponse listCommerceInventories(
+        ListCommerceInventoriesResponse listCommerceInventories(
             ListCommerceInventoriesRequest request) throws Exception;
     }
 
 
     public interface MethodCallListCommerceItems {
-        com.unifiedapi.unifiedto.models.operations.ListCommerceItemsResponse listCommerceItems(
+        ListCommerceItemsResponse listCommerceItems(
             ListCommerceItemsRequest request) throws Exception;
     }
 
 
     public interface MethodCallListCommerceLocations {
-        com.unifiedapi.unifiedto.models.operations.ListCommerceLocationsResponse listCommerceLocations(
+        ListCommerceLocationsResponse listCommerceLocations(
             ListCommerceLocationsRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchCommerceCollection {
-        com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionResponse patchCommerceCollection(
+        PatchCommerceCollectionResponse patchCommerceCollection(
             PatchCommerceCollectionRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchCommerceInventory {
-        com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryResponse patchCommerceInventory(
+        PatchCommerceInventoryResponse patchCommerceInventory(
             PatchCommerceInventoryRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchCommerceItem {
-        com.unifiedapi.unifiedto.models.operations.PatchCommerceItemResponse patchCommerceItem(
+        PatchCommerceItemResponse patchCommerceItem(
             PatchCommerceItemRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchCommerceLocation {
-        com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationResponse patchCommerceLocation(
+        PatchCommerceLocationResponse patchCommerceLocation(
             PatchCommerceLocationRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveCommerceCollection {
-        com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionResponse removeCommerceCollection(
+        RemoveCommerceCollectionResponse removeCommerceCollection(
             RemoveCommerceCollectionRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveCommerceInventory {
-        com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryResponse removeCommerceInventory(
+        RemoveCommerceInventoryResponse removeCommerceInventory(
             RemoveCommerceInventoryRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveCommerceItem {
-        com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemResponse removeCommerceItem(
+        RemoveCommerceItemResponse removeCommerceItem(
             RemoveCommerceItemRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveCommerceLocation {
-        com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationResponse removeCommerceLocation(
+        RemoveCommerceLocationResponse removeCommerceLocation(
             RemoveCommerceLocationRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateCommerceCollection {
-        com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionResponse updateCommerceCollection(
+        UpdateCommerceCollectionResponse updateCommerceCollection(
             UpdateCommerceCollectionRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateCommerceInventory {
-        com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryResponse updateCommerceInventory(
+        UpdateCommerceInventoryResponse updateCommerceInventory(
             UpdateCommerceInventoryRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateCommerceItem {
-        com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemResponse updateCommerceItem(
+        UpdateCommerceItemResponse updateCommerceItem(
             UpdateCommerceItemRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateCommerceLocation {
-        com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationResponse updateCommerceLocation(
+        UpdateCommerceLocationResponse updateCommerceLocation(
             UpdateCommerceLocationRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateHrisLocation {
-        com.unifiedapi.unifiedto.models.operations.CreateHrisLocationResponse createHrisLocation(
+        CreateHrisLocationResponse createHrisLocation(
             CreateHrisLocationRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetHrisLocation {
-        com.unifiedapi.unifiedto.models.operations.GetHrisLocationResponse getHrisLocation(
+        GetHrisLocationResponse getHrisLocation(
             GetHrisLocationRequest request) throws Exception;
     }
 
 
     public interface MethodCallListHrisLocations {
-        com.unifiedapi.unifiedto.models.operations.ListHrisLocationsResponse listHrisLocations(
+        ListHrisLocationsResponse listHrisLocations(
             ListHrisLocationsRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchHrisLocation {
-        com.unifiedapi.unifiedto.models.operations.PatchHrisLocationResponse patchHrisLocation(
+        PatchHrisLocationResponse patchHrisLocation(
             PatchHrisLocationRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveHrisLocation {
-        com.unifiedapi.unifiedto.models.operations.RemoveHrisLocationResponse removeHrisLocation(
+        RemoveHrisLocationResponse removeHrisLocation(
             RemoveHrisLocationRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateHrisLocation {
-        com.unifiedapi.unifiedto.models.operations.UpdateHrisLocationResponse updateHrisLocation(
+        UpdateHrisLocationResponse updateHrisLocation(
             UpdateHrisLocationRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateCrmDeal {
-        com.unifiedapi.unifiedto.models.operations.CreateCrmDealResponse createCrmDeal(
+        CreateCrmDealResponse createCrmDeal(
             CreateCrmDealRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateCrmEvent {
-        com.unifiedapi.unifiedto.models.operations.CreateCrmEventResponse createCrmEvent(
+        CreateCrmEventResponse createCrmEvent(
             CreateCrmEventRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateCrmLead {
-        com.unifiedapi.unifiedto.models.operations.CreateCrmLeadResponse createCrmLead(
+        CreateCrmLeadResponse createCrmLead(
             CreateCrmLeadRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateCrmPipeline {
-        com.unifiedapi.unifiedto.models.operations.CreateCrmPipelineResponse createCrmPipeline(
+        CreateCrmPipelineResponse createCrmPipeline(
             CreateCrmPipelineRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetCrmDeal {
-        com.unifiedapi.unifiedto.models.operations.GetCrmDealResponse getCrmDeal(
+        GetCrmDealResponse getCrmDeal(
             GetCrmDealRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetCrmEvent {
-        com.unifiedapi.unifiedto.models.operations.GetCrmEventResponse getCrmEvent(
+        GetCrmEventResponse getCrmEvent(
             GetCrmEventRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetCrmLead {
-        com.unifiedapi.unifiedto.models.operations.GetCrmLeadResponse getCrmLead(
+        GetCrmLeadResponse getCrmLead(
             GetCrmLeadRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetCrmPipeline {
-        com.unifiedapi.unifiedto.models.operations.GetCrmPipelineResponse getCrmPipeline(
+        GetCrmPipelineResponse getCrmPipeline(
             GetCrmPipelineRequest request) throws Exception;
     }
 
 
     public interface MethodCallListCrmDeals {
-        com.unifiedapi.unifiedto.models.operations.ListCrmDealsResponse listCrmDeals(
+        ListCrmDealsResponse listCrmDeals(
             ListCrmDealsRequest request) throws Exception;
     }
 
 
     public interface MethodCallListCrmEvents {
-        com.unifiedapi.unifiedto.models.operations.ListCrmEventsResponse listCrmEvents(
+        ListCrmEventsResponse listCrmEvents(
             ListCrmEventsRequest request) throws Exception;
     }
 
 
     public interface MethodCallListCrmLeads {
-        com.unifiedapi.unifiedto.models.operations.ListCrmLeadsResponse listCrmLeads(
+        ListCrmLeadsResponse listCrmLeads(
             ListCrmLeadsRequest request) throws Exception;
     }
 
 
     public interface MethodCallListCrmPipelines {
-        com.unifiedapi.unifiedto.models.operations.ListCrmPipelinesResponse listCrmPipelines(
+        ListCrmPipelinesResponse listCrmPipelines(
             ListCrmPipelinesRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchCrmDeal {
-        com.unifiedapi.unifiedto.models.operations.PatchCrmDealResponse patchCrmDeal(
+        PatchCrmDealResponse patchCrmDeal(
             PatchCrmDealRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchCrmEvent {
-        com.unifiedapi.unifiedto.models.operations.PatchCrmEventResponse patchCrmEvent(
+        PatchCrmEventResponse patchCrmEvent(
             PatchCrmEventRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchCrmLead {
-        com.unifiedapi.unifiedto.models.operations.PatchCrmLeadResponse patchCrmLead(
+        PatchCrmLeadResponse patchCrmLead(
             PatchCrmLeadRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchCrmPipeline {
-        com.unifiedapi.unifiedto.models.operations.PatchCrmPipelineResponse patchCrmPipeline(
+        PatchCrmPipelineResponse patchCrmPipeline(
             PatchCrmPipelineRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveCrmDeal {
-        com.unifiedapi.unifiedto.models.operations.RemoveCrmDealResponse removeCrmDeal(
+        RemoveCrmDealResponse removeCrmDeal(
             RemoveCrmDealRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveCrmEvent {
-        com.unifiedapi.unifiedto.models.operations.RemoveCrmEventResponse removeCrmEvent(
+        RemoveCrmEventResponse removeCrmEvent(
             RemoveCrmEventRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveCrmLead {
-        com.unifiedapi.unifiedto.models.operations.RemoveCrmLeadResponse removeCrmLead(
+        RemoveCrmLeadResponse removeCrmLead(
             RemoveCrmLeadRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveCrmPipeline {
-        com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineResponse removeCrmPipeline(
+        RemoveCrmPipelineResponse removeCrmPipeline(
             RemoveCrmPipelineRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateCrmDeal {
-        com.unifiedapi.unifiedto.models.operations.UpdateCrmDealResponse updateCrmDeal(
+        UpdateCrmDealResponse updateCrmDeal(
             UpdateCrmDealRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateCrmEvent {
-        com.unifiedapi.unifiedto.models.operations.UpdateCrmEventResponse updateCrmEvent(
+        UpdateCrmEventResponse updateCrmEvent(
             UpdateCrmEventRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateCrmLead {
-        com.unifiedapi.unifiedto.models.operations.UpdateCrmLeadResponse updateCrmLead(
+        UpdateCrmLeadResponse updateCrmLead(
             UpdateCrmLeadRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateCrmPipeline {
-        com.unifiedapi.unifiedto.models.operations.UpdateCrmPipelineResponse updateCrmPipeline(
+        UpdateCrmPipelineResponse updateCrmPipeline(
             UpdateCrmPipelineRequest request) throws Exception;
     }
 
 
     public interface MethodCallListEnrichPeople {
-        com.unifiedapi.unifiedto.models.operations.ListEnrichPeopleResponse listEnrichPeople(
+        ListEnrichPeopleResponse listEnrichPeople(
             ListEnrichPeopleRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateGenaiPrompt {
-        com.unifiedapi.unifiedto.models.operations.CreateGenaiPromptResponse createGenaiPrompt(
+        CreateGenaiPromptResponse createGenaiPrompt(
             CreateGenaiPromptRequest request) throws Exception;
     }
 
 
     public interface MethodCallListGenaiModels {
-        com.unifiedapi.unifiedto.models.operations.ListGenaiModelsResponse listGenaiModels(
+        ListGenaiModelsResponse listGenaiModels(
             ListGenaiModelsRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateHrisEmployee {
-        com.unifiedapi.unifiedto.models.operations.CreateHrisEmployeeResponse createHrisEmployee(
+        CreateHrisEmployeeResponse createHrisEmployee(
             CreateHrisEmployeeRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateHrisGroup {
-        com.unifiedapi.unifiedto.models.operations.CreateHrisGroupResponse createHrisGroup(
+        CreateHrisGroupResponse createHrisGroup(
             CreateHrisGroupRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetHrisEmployee {
-        com.unifiedapi.unifiedto.models.operations.GetHrisEmployeeResponse getHrisEmployee(
+        GetHrisEmployeeResponse getHrisEmployee(
             GetHrisEmployeeRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetHrisGroup {
-        com.unifiedapi.unifiedto.models.operations.GetHrisGroupResponse getHrisGroup(
+        GetHrisGroupResponse getHrisGroup(
             GetHrisGroupRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetHrisPayslip {
-        com.unifiedapi.unifiedto.models.operations.GetHrisPayslipResponse getHrisPayslip(
+        GetHrisPayslipResponse getHrisPayslip(
             GetHrisPayslipRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetHrisTimeoff {
-        com.unifiedapi.unifiedto.models.operations.GetHrisTimeoffResponse getHrisTimeoff(
+        GetHrisTimeoffResponse getHrisTimeoff(
             GetHrisTimeoffRequest request) throws Exception;
     }
 
 
     public interface MethodCallListHrisEmployees {
-        com.unifiedapi.unifiedto.models.operations.ListHrisEmployeesResponse listHrisEmployees(
+        ListHrisEmployeesResponse listHrisEmployees(
             ListHrisEmployeesRequest request) throws Exception;
     }
 
 
     public interface MethodCallListHrisGroups {
-        com.unifiedapi.unifiedto.models.operations.ListHrisGroupsResponse listHrisGroups(
+        ListHrisGroupsResponse listHrisGroups(
             ListHrisGroupsRequest request) throws Exception;
     }
 
 
     public interface MethodCallListHrisPayslips {
-        com.unifiedapi.unifiedto.models.operations.ListHrisPayslipsResponse listHrisPayslips(
+        ListHrisPayslipsResponse listHrisPayslips(
             ListHrisPayslipsRequest request) throws Exception;
     }
 
 
     public interface MethodCallListHrisTimeoffs {
-        com.unifiedapi.unifiedto.models.operations.ListHrisTimeoffsResponse listHrisTimeoffs(
+        ListHrisTimeoffsResponse listHrisTimeoffs(
             ListHrisTimeoffsRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchHrisEmployee {
-        com.unifiedapi.unifiedto.models.operations.PatchHrisEmployeeResponse patchHrisEmployee(
+        PatchHrisEmployeeResponse patchHrisEmployee(
             PatchHrisEmployeeRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchHrisGroup {
-        com.unifiedapi.unifiedto.models.operations.PatchHrisGroupResponse patchHrisGroup(
+        PatchHrisGroupResponse patchHrisGroup(
             PatchHrisGroupRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveHrisEmployee {
-        com.unifiedapi.unifiedto.models.operations.RemoveHrisEmployeeResponse removeHrisEmployee(
+        RemoveHrisEmployeeResponse removeHrisEmployee(
             RemoveHrisEmployeeRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveHrisGroup {
-        com.unifiedapi.unifiedto.models.operations.RemoveHrisGroupResponse removeHrisGroup(
+        RemoveHrisGroupResponse removeHrisGroup(
             RemoveHrisGroupRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateHrisEmployee {
-        com.unifiedapi.unifiedto.models.operations.UpdateHrisEmployeeResponse updateHrisEmployee(
+        UpdateHrisEmployeeResponse updateHrisEmployee(
             UpdateHrisEmployeeRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateHrisGroup {
-        com.unifiedapi.unifiedto.models.operations.UpdateHrisGroupResponse updateHrisGroup(
+        UpdateHrisGroupResponse updateHrisGroup(
             UpdateHrisGroupRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateKmsPage {
-        com.unifiedapi.unifiedto.models.operations.CreateKmsPageResponse createKmsPage(
+        CreateKmsPageResponse createKmsPage(
             CreateKmsPageRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateKmsSpace {
-        com.unifiedapi.unifiedto.models.operations.CreateKmsSpaceResponse createKmsSpace(
+        CreateKmsSpaceResponse createKmsSpace(
             CreateKmsSpaceRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetKmsPage {
-        com.unifiedapi.unifiedto.models.operations.GetKmsPageResponse getKmsPage(
+        GetKmsPageResponse getKmsPage(
             GetKmsPageRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetKmsSpace {
-        com.unifiedapi.unifiedto.models.operations.GetKmsSpaceResponse getKmsSpace(
+        GetKmsSpaceResponse getKmsSpace(
             GetKmsSpaceRequest request) throws Exception;
     }
 
 
     public interface MethodCallListKmsPages {
-        com.unifiedapi.unifiedto.models.operations.ListKmsPagesResponse listKmsPages(
+        ListKmsPagesResponse listKmsPages(
             ListKmsPagesRequest request) throws Exception;
     }
 
 
     public interface MethodCallListKmsSpaces {
-        com.unifiedapi.unifiedto.models.operations.ListKmsSpacesResponse listKmsSpaces(
+        ListKmsSpacesResponse listKmsSpaces(
             ListKmsSpacesRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchKmsPage {
-        com.unifiedapi.unifiedto.models.operations.PatchKmsPageResponse patchKmsPage(
+        PatchKmsPageResponse patchKmsPage(
             PatchKmsPageRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchKmsSpace {
-        com.unifiedapi.unifiedto.models.operations.PatchKmsSpaceResponse patchKmsSpace(
+        PatchKmsSpaceResponse patchKmsSpace(
             PatchKmsSpaceRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveKmsPage {
-        com.unifiedapi.unifiedto.models.operations.RemoveKmsPageResponse removeKmsPage(
+        RemoveKmsPageResponse removeKmsPage(
             RemoveKmsPageRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveKmsSpace {
-        com.unifiedapi.unifiedto.models.operations.RemoveKmsSpaceResponse removeKmsSpace(
+        RemoveKmsSpaceResponse removeKmsSpace(
             RemoveKmsSpaceRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateKmsPage {
-        com.unifiedapi.unifiedto.models.operations.UpdateKmsPageResponse updateKmsPage(
+        UpdateKmsPageResponse updateKmsPage(
             UpdateKmsPageRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateKmsSpace {
-        com.unifiedapi.unifiedto.models.operations.UpdateKmsSpaceResponse updateKmsSpace(
+        UpdateKmsSpaceResponse updateKmsSpace(
             UpdateKmsSpaceRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateMartechList {
-        com.unifiedapi.unifiedto.models.operations.CreateMartechListResponse createMartechList(
+        CreateMartechListResponse createMartechList(
             CreateMartechListRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateMartechMember {
-        com.unifiedapi.unifiedto.models.operations.CreateMartechMemberResponse createMartechMember(
+        CreateMartechMemberResponse createMartechMember(
             CreateMartechMemberRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetMartechList {
-        com.unifiedapi.unifiedto.models.operations.GetMartechListResponse getMartechList(
+        GetMartechListResponse getMartechList(
             GetMartechListRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetMartechMember {
-        com.unifiedapi.unifiedto.models.operations.GetMartechMemberResponse getMartechMember(
+        GetMartechMemberResponse getMartechMember(
             GetMartechMemberRequest request) throws Exception;
     }
 
 
     public interface MethodCallListMartechLists {
-        com.unifiedapi.unifiedto.models.operations.ListMartechListsResponse listMartechLists(
+        ListMartechListsResponse listMartechLists(
             ListMartechListsRequest request) throws Exception;
     }
 
 
     public interface MethodCallListMartechMembers {
-        com.unifiedapi.unifiedto.models.operations.ListMartechMembersResponse listMartechMembers(
+        ListMartechMembersResponse listMartechMembers(
             ListMartechMembersRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchMartechList {
-        com.unifiedapi.unifiedto.models.operations.PatchMartechListResponse patchMartechList(
+        PatchMartechListResponse patchMartechList(
             PatchMartechListRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchMartechMember {
-        com.unifiedapi.unifiedto.models.operations.PatchMartechMemberResponse patchMartechMember(
+        PatchMartechMemberResponse patchMartechMember(
             PatchMartechMemberRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveMartechList {
-        com.unifiedapi.unifiedto.models.operations.RemoveMartechListResponse removeMartechList(
+        RemoveMartechListResponse removeMartechList(
             RemoveMartechListRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveMartechMember {
-        com.unifiedapi.unifiedto.models.operations.RemoveMartechMemberResponse removeMartechMember(
+        RemoveMartechMemberResponse removeMartechMember(
             RemoveMartechMemberRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateMartechList {
-        com.unifiedapi.unifiedto.models.operations.UpdateMartechListResponse updateMartechList(
+        UpdateMartechListResponse updateMartechList(
             UpdateMartechListRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateMartechMember {
-        com.unifiedapi.unifiedto.models.operations.UpdateMartechMemberResponse updateMartechMember(
+        UpdateMartechMemberResponse updateMartechMember(
             UpdateMartechMemberRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateMessagingMessage {
-        com.unifiedapi.unifiedto.models.operations.CreateMessagingMessageResponse createMessagingMessage(
+        CreateMessagingMessageResponse createMessagingMessage(
             CreateMessagingMessageRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetMessagingChannel {
-        com.unifiedapi.unifiedto.models.operations.GetMessagingChannelResponse getMessagingChannel(
+        GetMessagingChannelResponse getMessagingChannel(
             GetMessagingChannelRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetMessagingMessage {
-        com.unifiedapi.unifiedto.models.operations.GetMessagingMessageResponse getMessagingMessage(
+        GetMessagingMessageResponse getMessagingMessage(
             GetMessagingMessageRequest request) throws Exception;
     }
 
 
     public interface MethodCallListMessagingChannels {
-        com.unifiedapi.unifiedto.models.operations.ListMessagingChannelsResponse listMessagingChannels(
+        ListMessagingChannelsResponse listMessagingChannels(
             ListMessagingChannelsRequest request) throws Exception;
     }
 
 
     public interface MethodCallListMessagingMessages {
-        com.unifiedapi.unifiedto.models.operations.ListMessagingMessagesResponse listMessagingMessages(
+        ListMessagingMessagesResponse listMessagingMessages(
             ListMessagingMessagesRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchMessagingMessage {
-        com.unifiedapi.unifiedto.models.operations.PatchMessagingMessageResponse patchMessagingMessage(
+        PatchMessagingMessageResponse patchMessagingMessage(
             PatchMessagingMessageRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveMessagingMessage {
-        com.unifiedapi.unifiedto.models.operations.RemoveMessagingMessageResponse removeMessagingMessage(
+        RemoveMessagingMessageResponse removeMessagingMessage(
             RemoveMessagingMessageRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateMessagingMessage {
-        com.unifiedapi.unifiedto.models.operations.UpdateMessagingMessageResponse updateMessagingMessage(
+        UpdateMessagingMessageResponse updateMessagingMessage(
             UpdateMessagingMessageRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreatePassthroughJson {
-        com.unifiedapi.unifiedto.models.operations.CreatePassthroughJsonResponse createPassthroughJson(
+        CreatePassthroughJsonResponse createPassthroughJson(
             CreatePassthroughJsonRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreatePassthroughRaw {
-        com.unifiedapi.unifiedto.models.operations.CreatePassthroughRawResponse createPassthroughRaw(
+        CreatePassthroughRawResponse createPassthroughRaw(
             CreatePassthroughRawRequest request) throws Exception;
     }
 
 
     public interface MethodCallListPassthroughs {
-        com.unifiedapi.unifiedto.models.operations.ListPassthroughsResponse listPassthroughs(
+        ListPassthroughsResponse listPassthroughs(
             ListPassthroughsRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchPassthroughJson {
-        com.unifiedapi.unifiedto.models.operations.PatchPassthroughJsonResponse patchPassthroughJson(
+        PatchPassthroughJsonResponse patchPassthroughJson(
             PatchPassthroughJsonRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchPassthroughRaw {
-        com.unifiedapi.unifiedto.models.operations.PatchPassthroughRawResponse patchPassthroughRaw(
+        PatchPassthroughRawResponse patchPassthroughRaw(
             PatchPassthroughRawRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemovePassthrough {
-        com.unifiedapi.unifiedto.models.operations.RemovePassthroughResponse removePassthrough(
+        RemovePassthroughResponse removePassthrough(
             RemovePassthroughRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdatePassthroughJson {
-        com.unifiedapi.unifiedto.models.operations.UpdatePassthroughJsonResponse updatePassthroughJson(
+        UpdatePassthroughJsonResponse updatePassthroughJson(
             UpdatePassthroughJsonRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdatePassthroughRaw {
-        com.unifiedapi.unifiedto.models.operations.UpdatePassthroughRawResponse updatePassthroughRaw(
+        UpdatePassthroughRawResponse updatePassthroughRaw(
             UpdatePassthroughRawRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreatePaymentLink {
-        com.unifiedapi.unifiedto.models.operations.CreatePaymentLinkResponse createPaymentLink(
+        CreatePaymentLinkResponse createPaymentLink(
             CreatePaymentLinkRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreatePaymentPayment {
-        com.unifiedapi.unifiedto.models.operations.CreatePaymentPaymentResponse createPaymentPayment(
+        CreatePaymentPaymentResponse createPaymentPayment(
             CreatePaymentPaymentRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetPaymentLink {
-        com.unifiedapi.unifiedto.models.operations.GetPaymentLinkResponse getPaymentLink(
+        GetPaymentLinkResponse getPaymentLink(
             GetPaymentLinkRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetPaymentPayment {
-        com.unifiedapi.unifiedto.models.operations.GetPaymentPaymentResponse getPaymentPayment(
+        GetPaymentPaymentResponse getPaymentPayment(
             GetPaymentPaymentRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetPaymentPayout {
-        com.unifiedapi.unifiedto.models.operations.GetPaymentPayoutResponse getPaymentPayout(
+        GetPaymentPayoutResponse getPaymentPayout(
             GetPaymentPayoutRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetPaymentRefund {
-        com.unifiedapi.unifiedto.models.operations.GetPaymentRefundResponse getPaymentRefund(
+        GetPaymentRefundResponse getPaymentRefund(
             GetPaymentRefundRequest request) throws Exception;
     }
 
 
     public interface MethodCallListPaymentLinks {
-        com.unifiedapi.unifiedto.models.operations.ListPaymentLinksResponse listPaymentLinks(
+        ListPaymentLinksResponse listPaymentLinks(
             ListPaymentLinksRequest request) throws Exception;
     }
 
 
     public interface MethodCallListPaymentPayments {
-        com.unifiedapi.unifiedto.models.operations.ListPaymentPaymentsResponse listPaymentPayments(
+        ListPaymentPaymentsResponse listPaymentPayments(
             ListPaymentPaymentsRequest request) throws Exception;
     }
 
 
     public interface MethodCallListPaymentPayouts {
-        com.unifiedapi.unifiedto.models.operations.ListPaymentPayoutsResponse listPaymentPayouts(
+        ListPaymentPayoutsResponse listPaymentPayouts(
             ListPaymentPayoutsRequest request) throws Exception;
     }
 
 
     public interface MethodCallListPaymentRefunds {
-        com.unifiedapi.unifiedto.models.operations.ListPaymentRefundsResponse listPaymentRefunds(
+        ListPaymentRefundsResponse listPaymentRefunds(
             ListPaymentRefundsRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchPaymentLink {
-        com.unifiedapi.unifiedto.models.operations.PatchPaymentLinkResponse patchPaymentLink(
+        PatchPaymentLinkResponse patchPaymentLink(
             PatchPaymentLinkRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchPaymentPayment {
-        com.unifiedapi.unifiedto.models.operations.PatchPaymentPaymentResponse patchPaymentPayment(
+        PatchPaymentPaymentResponse patchPaymentPayment(
             PatchPaymentPaymentRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemovePaymentLink {
-        com.unifiedapi.unifiedto.models.operations.RemovePaymentLinkResponse removePaymentLink(
+        RemovePaymentLinkResponse removePaymentLink(
             RemovePaymentLinkRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemovePaymentPayment {
-        com.unifiedapi.unifiedto.models.operations.RemovePaymentPaymentResponse removePaymentPayment(
+        RemovePaymentPaymentResponse removePaymentPayment(
             RemovePaymentPaymentRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdatePaymentLink {
-        com.unifiedapi.unifiedto.models.operations.UpdatePaymentLinkResponse updatePaymentLink(
+        UpdatePaymentLinkResponse updatePaymentLink(
             UpdatePaymentLinkRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdatePaymentPayment {
-        com.unifiedapi.unifiedto.models.operations.UpdatePaymentPaymentResponse updatePaymentPayment(
+        UpdatePaymentPaymentResponse updatePaymentPayment(
             UpdatePaymentPaymentRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateStorageFile {
-        com.unifiedapi.unifiedto.models.operations.CreateStorageFileResponse createStorageFile(
+        CreateStorageFileResponse createStorageFile(
             CreateStorageFileRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetStorageFile {
-        com.unifiedapi.unifiedto.models.operations.GetStorageFileResponse getStorageFile(
+        GetStorageFileResponse getStorageFile(
             GetStorageFileRequest request) throws Exception;
     }
 
 
     public interface MethodCallListStorageFiles {
-        com.unifiedapi.unifiedto.models.operations.ListStorageFilesResponse listStorageFiles(
+        ListStorageFilesResponse listStorageFiles(
             ListStorageFilesRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchStorageFile {
-        com.unifiedapi.unifiedto.models.operations.PatchStorageFileResponse patchStorageFile(
+        PatchStorageFileResponse patchStorageFile(
             PatchStorageFileRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveStorageFile {
-        com.unifiedapi.unifiedto.models.operations.RemoveStorageFileResponse removeStorageFile(
+        RemoveStorageFileResponse removeStorageFile(
             RemoveStorageFileRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateStorageFile {
-        com.unifiedapi.unifiedto.models.operations.UpdateStorageFileResponse updateStorageFile(
+        UpdateStorageFileResponse updateStorageFile(
             UpdateStorageFileRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateTaskProject {
-        com.unifiedapi.unifiedto.models.operations.CreateTaskProjectResponse createTaskProject(
+        CreateTaskProjectResponse createTaskProject(
             CreateTaskProjectRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateTaskTask {
-        com.unifiedapi.unifiedto.models.operations.CreateTaskTaskResponse createTaskTask(
+        CreateTaskTaskResponse createTaskTask(
             CreateTaskTaskRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetTaskProject {
-        com.unifiedapi.unifiedto.models.operations.GetTaskProjectResponse getTaskProject(
+        GetTaskProjectResponse getTaskProject(
             GetTaskProjectRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetTaskTask {
-        com.unifiedapi.unifiedto.models.operations.GetTaskTaskResponse getTaskTask(
+        GetTaskTaskResponse getTaskTask(
             GetTaskTaskRequest request) throws Exception;
     }
 
 
     public interface MethodCallListTaskProjects {
-        com.unifiedapi.unifiedto.models.operations.ListTaskProjectsResponse listTaskProjects(
+        ListTaskProjectsResponse listTaskProjects(
             ListTaskProjectsRequest request) throws Exception;
     }
 
 
     public interface MethodCallListTaskTasks {
-        com.unifiedapi.unifiedto.models.operations.ListTaskTasksResponse listTaskTasks(
+        ListTaskTasksResponse listTaskTasks(
             ListTaskTasksRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchTaskProject {
-        com.unifiedapi.unifiedto.models.operations.PatchTaskProjectResponse patchTaskProject(
+        PatchTaskProjectResponse patchTaskProject(
             PatchTaskProjectRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchTaskTask {
-        com.unifiedapi.unifiedto.models.operations.PatchTaskTaskResponse patchTaskTask(
+        PatchTaskTaskResponse patchTaskTask(
             PatchTaskTaskRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveTaskProject {
-        com.unifiedapi.unifiedto.models.operations.RemoveTaskProjectResponse removeTaskProject(
+        RemoveTaskProjectResponse removeTaskProject(
             RemoveTaskProjectRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveTaskTask {
-        com.unifiedapi.unifiedto.models.operations.RemoveTaskTaskResponse removeTaskTask(
+        RemoveTaskTaskResponse removeTaskTask(
             RemoveTaskTaskRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateTaskProject {
-        com.unifiedapi.unifiedto.models.operations.UpdateTaskProjectResponse updateTaskProject(
+        UpdateTaskProjectResponse updateTaskProject(
             UpdateTaskProjectRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateTaskTask {
-        com.unifiedapi.unifiedto.models.operations.UpdateTaskTaskResponse updateTaskTask(
+        UpdateTaskTaskResponse updateTaskTask(
             UpdateTaskTaskRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateTicketingCustomer {
-        com.unifiedapi.unifiedto.models.operations.CreateTicketingCustomerResponse createTicketingCustomer(
+        CreateTicketingCustomerResponse createTicketingCustomer(
             CreateTicketingCustomerRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateTicketingNote {
-        com.unifiedapi.unifiedto.models.operations.CreateTicketingNoteResponse createTicketingNote(
+        CreateTicketingNoteResponse createTicketingNote(
             CreateTicketingNoteRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateTicketingTicket {
-        com.unifiedapi.unifiedto.models.operations.CreateTicketingTicketResponse createTicketingTicket(
+        CreateTicketingTicketResponse createTicketingTicket(
             CreateTicketingTicketRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetTicketingCustomer {
-        com.unifiedapi.unifiedto.models.operations.GetTicketingCustomerResponse getTicketingCustomer(
+        GetTicketingCustomerResponse getTicketingCustomer(
             GetTicketingCustomerRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetTicketingNote {
-        com.unifiedapi.unifiedto.models.operations.GetTicketingNoteResponse getTicketingNote(
+        GetTicketingNoteResponse getTicketingNote(
             GetTicketingNoteRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetTicketingTicket {
-        com.unifiedapi.unifiedto.models.operations.GetTicketingTicketResponse getTicketingTicket(
+        GetTicketingTicketResponse getTicketingTicket(
             GetTicketingTicketRequest request) throws Exception;
     }
 
 
     public interface MethodCallListTicketingCustomers {
-        com.unifiedapi.unifiedto.models.operations.ListTicketingCustomersResponse listTicketingCustomers(
+        ListTicketingCustomersResponse listTicketingCustomers(
             ListTicketingCustomersRequest request) throws Exception;
     }
 
 
     public interface MethodCallListTicketingNotes {
-        com.unifiedapi.unifiedto.models.operations.ListTicketingNotesResponse listTicketingNotes(
+        ListTicketingNotesResponse listTicketingNotes(
             ListTicketingNotesRequest request) throws Exception;
     }
 
 
     public interface MethodCallListTicketingTickets {
-        com.unifiedapi.unifiedto.models.operations.ListTicketingTicketsResponse listTicketingTickets(
+        ListTicketingTicketsResponse listTicketingTickets(
             ListTicketingTicketsRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchTicketingCustomer {
-        com.unifiedapi.unifiedto.models.operations.PatchTicketingCustomerResponse patchTicketingCustomer(
+        PatchTicketingCustomerResponse patchTicketingCustomer(
             PatchTicketingCustomerRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchTicketingNote {
-        com.unifiedapi.unifiedto.models.operations.PatchTicketingNoteResponse patchTicketingNote(
+        PatchTicketingNoteResponse patchTicketingNote(
             PatchTicketingNoteRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchTicketingTicket {
-        com.unifiedapi.unifiedto.models.operations.PatchTicketingTicketResponse patchTicketingTicket(
+        PatchTicketingTicketResponse patchTicketingTicket(
             PatchTicketingTicketRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveTicketingCustomer {
-        com.unifiedapi.unifiedto.models.operations.RemoveTicketingCustomerResponse removeTicketingCustomer(
+        RemoveTicketingCustomerResponse removeTicketingCustomer(
             RemoveTicketingCustomerRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveTicketingNote {
-        com.unifiedapi.unifiedto.models.operations.RemoveTicketingNoteResponse removeTicketingNote(
+        RemoveTicketingNoteResponse removeTicketingNote(
             RemoveTicketingNoteRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveTicketingTicket {
-        com.unifiedapi.unifiedto.models.operations.RemoveTicketingTicketResponse removeTicketingTicket(
+        RemoveTicketingTicketResponse removeTicketingTicket(
             RemoveTicketingTicketRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateTicketingCustomer {
-        com.unifiedapi.unifiedto.models.operations.UpdateTicketingCustomerResponse updateTicketingCustomer(
+        UpdateTicketingCustomerResponse updateTicketingCustomer(
             UpdateTicketingCustomerRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateTicketingNote {
-        com.unifiedapi.unifiedto.models.operations.UpdateTicketingNoteResponse updateTicketingNote(
+        UpdateTicketingNoteResponse updateTicketingNote(
             UpdateTicketingNoteRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateTicketingTicket {
-        com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketResponse updateTicketingTicket(
+        UpdateTicketingTicketResponse updateTicketingTicket(
             UpdateTicketingTicketRequest request) throws Exception;
     }
 
 
     public interface MethodCallListUcCalls {
-        com.unifiedapi.unifiedto.models.operations.ListUcCallsResponse listUcCalls(
+        ListUcCallsResponse listUcCalls(
             ListUcCallsRequest request) throws Exception;
     }
 
 
     public interface MethodCallCreateUnifiedConnection {
-        com.unifiedapi.unifiedto.models.operations.CreateUnifiedConnectionResponse createUnifiedConnection(
+        CreateUnifiedConnectionResponse createUnifiedConnection(
             Optional<? extends Connection> request) throws Exception;
     }
 
 
     public interface MethodCallCreateUnifiedWebhook {
-        com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookResponse createUnifiedWebhook(
+        CreateUnifiedWebhookResponse createUnifiedWebhook(
             CreateUnifiedWebhookRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetUnifiedApicall {
-        com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallResponse getUnifiedApicall(
+        GetUnifiedApicallResponse getUnifiedApicall(
             GetUnifiedApicallRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetUnifiedConnection {
-        com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionResponse getUnifiedConnection(
+        GetUnifiedConnectionResponse getUnifiedConnection(
             GetUnifiedConnectionRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetUnifiedIntegrationAuth {
-        com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse getUnifiedIntegrationAuth(
+        GetUnifiedIntegrationAuthResponse getUnifiedIntegrationAuth(
             GetUnifiedIntegrationAuthRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetUnifiedWebhook {
-        com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookResponse getUnifiedWebhook(
+        GetUnifiedWebhookResponse getUnifiedWebhook(
             GetUnifiedWebhookRequest request) throws Exception;
     }
 
 
     public interface MethodCallListUnifiedApicalls {
-        com.unifiedapi.unifiedto.models.operations.ListUnifiedApicallsResponse listUnifiedApicalls(
+        ListUnifiedApicallsResponse listUnifiedApicalls(
             ListUnifiedApicallsRequest request) throws Exception;
     }
 
 
     public interface MethodCallListUnifiedConnections {
-        com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsResponse listUnifiedConnections(
+        ListUnifiedConnectionsResponse listUnifiedConnections(
             ListUnifiedConnectionsRequest request) throws Exception;
     }
 
 
     public interface MethodCallListUnifiedIntegrationWorkspaces {
-        com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesResponse listUnifiedIntegrationWorkspaces(
+        ListUnifiedIntegrationWorkspacesResponse listUnifiedIntegrationWorkspaces(
             ListUnifiedIntegrationWorkspacesRequest request) throws Exception;
     }
 
 
     public interface MethodCallListUnifiedIntegrations {
-        com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsResponse listUnifiedIntegrations(
+        ListUnifiedIntegrationsResponse listUnifiedIntegrations(
             ListUnifiedIntegrationsRequest request) throws Exception;
     }
 
 
     public interface MethodCallListUnifiedIssues {
-        com.unifiedapi.unifiedto.models.operations.ListUnifiedIssuesResponse listUnifiedIssues(
+        ListUnifiedIssuesResponse listUnifiedIssues(
             ListUnifiedIssuesRequest request) throws Exception;
     }
 
 
     public interface MethodCallListUnifiedWebhooks {
-        com.unifiedapi.unifiedto.models.operations.ListUnifiedWebhooksResponse listUnifiedWebhooks(
+        ListUnifiedWebhooksResponse listUnifiedWebhooks(
             ListUnifiedWebhooksRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchUnifiedConnection {
-        com.unifiedapi.unifiedto.models.operations.PatchUnifiedConnectionResponse patchUnifiedConnection(
+        PatchUnifiedConnectionResponse patchUnifiedConnection(
             PatchUnifiedConnectionRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchUnifiedWebhook {
-        com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookResponse patchUnifiedWebhook(
+        PatchUnifiedWebhookResponse patchUnifiedWebhook(
             PatchUnifiedWebhookRequest request) throws Exception;
     }
 
 
     public interface MethodCallPatchUnifiedWebhookTrigger {
-        com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerResponse patchUnifiedWebhookTrigger(
+        PatchUnifiedWebhookTriggerResponse patchUnifiedWebhookTrigger(
             PatchUnifiedWebhookTriggerRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveUnifiedConnection {
-        com.unifiedapi.unifiedto.models.operations.RemoveUnifiedConnectionResponse removeUnifiedConnection(
+        RemoveUnifiedConnectionResponse removeUnifiedConnection(
             RemoveUnifiedConnectionRequest request) throws Exception;
     }
 
 
     public interface MethodCallRemoveUnifiedWebhook {
-        com.unifiedapi.unifiedto.models.operations.RemoveUnifiedWebhookResponse removeUnifiedWebhook(
+        RemoveUnifiedWebhookResponse removeUnifiedWebhook(
             RemoveUnifiedWebhookRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateUnifiedConnection {
-        com.unifiedapi.unifiedto.models.operations.UpdateUnifiedConnectionResponse updateUnifiedConnection(
+        UpdateUnifiedConnectionResponse updateUnifiedConnection(
             UpdateUnifiedConnectionRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateUnifiedWebhook {
-        com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookResponse updateUnifiedWebhook(
+        UpdateUnifiedWebhookResponse updateUnifiedWebhook(
             UpdateUnifiedWebhookRequest request) throws Exception;
     }
 
 
     public interface MethodCallUpdateUnifiedWebhookTrigger {
-        com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerResponse updateUnifiedWebhookTrigger(
+        UpdateUnifiedWebhookTriggerResponse updateUnifiedWebhookTrigger(
             UpdateUnifiedWebhookTriggerRequest request) throws Exception;
     }
 
 
     public interface MethodCallGetUnifiedIntegrationLogin {
-        com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationLoginResponse getUnifiedIntegrationLogin(
+        GetUnifiedIntegrationLoginResponse getUnifiedIntegrationLogin(
             GetUnifiedIntegrationLoginRequest request) throws Exception;
     }
 

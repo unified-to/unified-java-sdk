@@ -15,7 +15,7 @@ public class CreateGenaiPromptRequestBuilder {
         this.sdk = sdk;
     }
 
-    public CreateGenaiPromptRequestBuilder request(com.unifiedapi.unifiedto.models.operations.CreateGenaiPromptRequest request) {
+    public CreateGenaiPromptRequestBuilder request(CreateGenaiPromptRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

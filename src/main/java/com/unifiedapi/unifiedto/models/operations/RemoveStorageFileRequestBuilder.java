@@ -15,7 +15,7 @@ public class RemoveStorageFileRequestBuilder {
         this.sdk = sdk;
     }
 
-    public RemoveStorageFileRequestBuilder request(com.unifiedapi.unifiedto.models.operations.RemoveStorageFileRequest request) {
+    public RemoveStorageFileRequestBuilder request(RemoveStorageFileRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

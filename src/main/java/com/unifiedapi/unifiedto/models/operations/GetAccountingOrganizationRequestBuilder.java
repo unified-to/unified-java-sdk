@@ -15,7 +15,7 @@ public class GetAccountingOrganizationRequestBuilder {
         this.sdk = sdk;
     }
 
-    public GetAccountingOrganizationRequestBuilder request(com.unifiedapi.unifiedto.models.operations.GetAccountingOrganizationRequest request) {
+    public GetAccountingOrganizationRequestBuilder request(GetAccountingOrganizationRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

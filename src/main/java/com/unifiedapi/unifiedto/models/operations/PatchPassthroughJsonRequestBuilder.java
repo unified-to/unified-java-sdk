@@ -15,7 +15,7 @@ public class PatchPassthroughJsonRequestBuilder {
         this.sdk = sdk;
     }
 
-    public PatchPassthroughJsonRequestBuilder request(com.unifiedapi.unifiedto.models.operations.PatchPassthroughJsonRequest request) {
+    public PatchPassthroughJsonRequestBuilder request(PatchPassthroughJsonRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

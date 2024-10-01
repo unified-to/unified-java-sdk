@@ -18,7 +18,6 @@ Retrieve an organization
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingOrganizationRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingOrganizationResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -27,33 +26,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetAccountingOrganizationRequest req = GetAccountingOrganizationRequest.builder()
-                .connectionId("<value>")
+        GetAccountingOrganizationRequest req = GetAccountingOrganizationRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetAccountingOrganizationResponse res = sdk.organization().getAccountingOrganization()
+        GetAccountingOrganizationResponse res = sdk.organization().getAccountingOrganization()
                 .request(req)
                 .call();
 
-            if (res.accountingOrganization().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingOrganization().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -70,10 +61,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listAccountingOrganizations
 
@@ -85,7 +75,6 @@ List all organizations
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingOrganizationsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingOrganizationsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -94,32 +83,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListAccountingOrganizationsRequest req = ListAccountingOrganizationsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListAccountingOrganizationsRequest req = ListAccountingOrganizationsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListAccountingOrganizationsResponse res = sdk.organization().listAccountingOrganizations()
+        ListAccountingOrganizationsResponse res = sdk.organization().listAccountingOrganizations()
                 .request(req)
                 .call();
 
-            if (res.accountingOrganizations().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingOrganizations().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -136,6 +117,6 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |

@@ -15,7 +15,7 @@ public class RemoveAtsInterviewRequestBuilder {
         this.sdk = sdk;
     }
 
-    public RemoveAtsInterviewRequestBuilder request(com.unifiedapi.unifiedto.models.operations.RemoveAtsInterviewRequest request) {
+    public RemoveAtsInterviewRequestBuilder request(RemoveAtsInterviewRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

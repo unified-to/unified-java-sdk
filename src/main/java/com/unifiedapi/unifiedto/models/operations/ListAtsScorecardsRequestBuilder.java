@@ -15,7 +15,7 @@ public class ListAtsScorecardsRequestBuilder {
         this.sdk = sdk;
     }
 
-    public ListAtsScorecardsRequestBuilder request(com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsRequest request) {
+    public ListAtsScorecardsRequestBuilder request(ListAtsScorecardsRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

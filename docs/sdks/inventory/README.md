@@ -22,7 +22,6 @@ Create an inventory
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceInventoryResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -31,32 +30,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateCommerceInventoryRequest req = CreateCommerceInventoryRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateCommerceInventoryRequest req = CreateCommerceInventoryRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateCommerceInventoryResponse res = sdk.inventory().createCommerceInventory()
+        CreateCommerceInventoryResponse res = sdk.inventory().createCommerceInventory()
                 .request(req)
                 .call();
 
-            if (res.commerceInventory().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceInventory().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -73,10 +64,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getCommerceInventory
 
@@ -88,7 +78,6 @@ Retrieve an inventory
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetCommerceInventoryRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCommerceInventoryResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -97,33 +86,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetCommerceInventoryRequest req = GetCommerceInventoryRequest.builder()
-                .connectionId("<value>")
+        GetCommerceInventoryRequest req = GetCommerceInventoryRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetCommerceInventoryResponse res = sdk.inventory().getCommerceInventory()
+        GetCommerceInventoryResponse res = sdk.inventory().getCommerceInventory()
                 .request(req)
                 .call();
 
-            if (res.commerceInventory().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceInventory().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -140,10 +121,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listCommerceInventories
 
@@ -155,7 +135,6 @@ List all inventories
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListCommerceInventoriesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListCommerceInventoriesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -164,32 +143,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListCommerceInventoriesRequest req = ListCommerceInventoriesRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListCommerceInventoriesRequest req = ListCommerceInventoriesRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListCommerceInventoriesResponse res = sdk.inventory().listCommerceInventories()
+        ListCommerceInventoriesResponse res = sdk.inventory().listCommerceInventories()
                 .request(req)
                 .call();
 
-            if (res.commerceInventories().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceInventories().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -206,10 +177,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchCommerceInventory
 
@@ -221,7 +191,6 @@ Update an inventory
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceInventoryResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -230,33 +199,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchCommerceInventoryRequest req = PatchCommerceInventoryRequest.builder()
-                .connectionId("<value>")
+        PatchCommerceInventoryRequest req = PatchCommerceInventoryRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchCommerceInventoryResponse res = sdk.inventory().patchCommerceInventory()
+        PatchCommerceInventoryResponse res = sdk.inventory().patchCommerceInventory()
                 .request(req)
                 .call();
 
-            if (res.commerceInventory().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceInventory().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -273,10 +234,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeCommerceInventory
 
@@ -288,7 +248,6 @@ Remove an inventory
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveCommerceInventoryResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -297,31 +256,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveCommerceInventoryRequest req = RemoveCommerceInventoryRequest.builder()
-                .connectionId("<value>")
+        RemoveCommerceInventoryRequest req = RemoveCommerceInventoryRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveCommerceInventoryResponse res = sdk.inventory().removeCommerceInventory()
+        RemoveCommerceInventoryResponse res = sdk.inventory().removeCommerceInventory()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -338,10 +289,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateCommerceInventory
 
@@ -353,7 +303,6 @@ Update an inventory
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceInventoryResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -362,33 +311,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateCommerceInventoryRequest req = UpdateCommerceInventoryRequest.builder()
-                .connectionId("<value>")
+        UpdateCommerceInventoryRequest req = UpdateCommerceInventoryRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateCommerceInventoryResponse res = sdk.inventory().updateCommerceInventory()
+        UpdateCommerceInventoryResponse res = sdk.inventory().updateCommerceInventory()
                 .request(req)
                 .call();
 
-            if (res.commerceInventory().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceInventory().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -405,6 +346,6 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |

@@ -15,7 +15,7 @@ public class RemoveAtsScorecardRequestBuilder {
         this.sdk = sdk;
     }
 
-    public RemoveAtsScorecardRequestBuilder request(com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardRequest request) {
+    public RemoveAtsScorecardRequestBuilder request(RemoveAtsScorecardRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

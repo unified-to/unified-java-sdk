@@ -15,7 +15,7 @@ public class CreateStorageFileRequestBuilder {
         this.sdk = sdk;
     }
 
-    public CreateStorageFileRequestBuilder request(com.unifiedapi.unifiedto.models.operations.CreateStorageFileRequest request) {
+    public CreateStorageFileRequestBuilder request(CreateStorageFileRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

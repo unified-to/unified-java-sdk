@@ -15,7 +15,7 @@ public class CreateKmsPageRequestBuilder {
         this.sdk = sdk;
     }
 
-    public CreateKmsPageRequestBuilder request(com.unifiedapi.unifiedto.models.operations.CreateKmsPageRequest request) {
+    public CreateKmsPageRequestBuilder request(CreateKmsPageRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

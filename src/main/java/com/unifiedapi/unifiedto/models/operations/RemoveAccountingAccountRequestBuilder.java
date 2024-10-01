@@ -15,7 +15,7 @@ public class RemoveAccountingAccountRequestBuilder {
         this.sdk = sdk;
     }
 
-    public RemoveAccountingAccountRequestBuilder request(com.unifiedapi.unifiedto.models.operations.RemoveAccountingAccountRequest request) {
+    public RemoveAccountingAccountRequestBuilder request(RemoveAccountingAccountRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

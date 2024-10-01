@@ -15,7 +15,7 @@ public class RemoveTaskTaskRequestBuilder {
         this.sdk = sdk;
     }
 
-    public RemoveTaskTaskRequestBuilder request(com.unifiedapi.unifiedto.models.operations.RemoveTaskTaskRequest request) {
+    public RemoveTaskTaskRequestBuilder request(RemoveTaskTaskRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

@@ -15,7 +15,7 @@ public class RemoveMartechListRequestBuilder {
         this.sdk = sdk;
     }
 
-    public RemoveMartechListRequestBuilder request(com.unifiedapi.unifiedto.models.operations.RemoveMartechListRequest request) {
+    public RemoveMartechListRequestBuilder request(RemoveMartechListRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

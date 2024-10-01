@@ -15,7 +15,7 @@ public class GetMessagingChannelRequestBuilder {
         this.sdk = sdk;
     }
 
-    public GetMessagingChannelRequestBuilder request(com.unifiedapi.unifiedto.models.operations.GetMessagingChannelRequest request) {
+    public GetMessagingChannelRequestBuilder request(GetMessagingChannelRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

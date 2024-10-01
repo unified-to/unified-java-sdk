@@ -15,7 +15,7 @@ public class ListCrmEventsRequestBuilder {
         this.sdk = sdk;
     }
 
-    public ListCrmEventsRequestBuilder request(com.unifiedapi.unifiedto.models.operations.ListCrmEventsRequest request) {
+    public ListCrmEventsRequestBuilder request(ListCrmEventsRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

@@ -15,7 +15,7 @@ public class PatchPaymentLinkRequestBuilder {
         this.sdk = sdk;
     }
 
-    public PatchPaymentLinkRequestBuilder request(com.unifiedapi.unifiedto.models.operations.PatchPaymentLinkRequest request) {
+    public PatchPaymentLinkRequestBuilder request(PatchPaymentLinkRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

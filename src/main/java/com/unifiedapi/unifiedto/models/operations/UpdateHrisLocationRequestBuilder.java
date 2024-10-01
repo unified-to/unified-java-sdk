@@ -15,7 +15,7 @@ public class UpdateHrisLocationRequestBuilder {
         this.sdk = sdk;
     }
 
-    public UpdateHrisLocationRequestBuilder request(com.unifiedapi.unifiedto.models.operations.UpdateHrisLocationRequest request) {
+    public UpdateHrisLocationRequestBuilder request(UpdateHrisLocationRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

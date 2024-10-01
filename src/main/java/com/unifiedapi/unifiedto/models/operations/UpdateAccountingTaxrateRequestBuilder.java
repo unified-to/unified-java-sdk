@@ -15,7 +15,7 @@ public class UpdateAccountingTaxrateRequestBuilder {
         this.sdk = sdk;
     }
 
-    public UpdateAccountingTaxrateRequestBuilder request(com.unifiedapi.unifiedto.models.operations.UpdateAccountingTaxrateRequest request) {
+    public UpdateAccountingTaxrateRequestBuilder request(UpdateAccountingTaxrateRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

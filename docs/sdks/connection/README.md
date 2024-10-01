@@ -22,7 +22,6 @@ Used only to import existing customer credentials; use "Create connection indire
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateUnifiedConnectionResponse;
 import com.unifiedapi.unifiedto.models.shared.Connection;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
@@ -34,36 +33,28 @@ import java.util.List;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            Connection req = Connection.builder()
+        Connection req = Connection.builder()
                 .categories(List.of(
                     PropertyConnectionCategories.KMS))
                 .integrationType("<value>")
                 .permissions(List.of(
-                    PropertyConnectionPermissions.ATS_DOCUMENT_WRITE))
+                    PropertyConnectionPermissions.ATS_SCORECARD_READ))
                 .build();
 
-            CreateUnifiedConnectionResponse res = sdk.connection().createUnifiedConnection()
+        CreateUnifiedConnectionResponse res = sdk.connection().createUnifiedConnection()
                 .request(req)
                 .call();
 
-            if (res.connection().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.connection().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -80,10 +71,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getUnifiedConnection
 
@@ -95,7 +85,6 @@ Retrieve connection
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -104,32 +93,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetUnifiedConnectionRequest req = GetUnifiedConnectionRequest.builder()
+        GetUnifiedConnectionRequest req = GetUnifiedConnectionRequest.builder()
                 .id("<id>")
                 .build();
 
-            GetUnifiedConnectionResponse res = sdk.connection().getUnifiedConnection()
+        GetUnifiedConnectionResponse res = sdk.connection().getUnifiedConnection()
                 .request(req)
                 .call();
 
-            if (res.connection().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.connection().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -146,10 +127,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listUnifiedConnections
 
@@ -161,7 +141,6 @@ List all connections
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -170,31 +149,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListUnifiedConnectionsRequest req = ListUnifiedConnectionsRequest.builder()
                 .build();
 
-            ListUnifiedConnectionsRequest req = ListUnifiedConnectionsRequest.builder()
-                .build();
-
-            ListUnifiedConnectionsResponse res = sdk.connection().listUnifiedConnections()
+        ListUnifiedConnectionsResponse res = sdk.connection().listUnifiedConnections()
                 .request(req)
                 .call();
 
-            if (res.connections().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.connections().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -211,10 +182,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchUnifiedConnection
 
@@ -226,7 +196,6 @@ Update connection
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchUnifiedConnectionRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchUnifiedConnectionResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -235,32 +204,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchUnifiedConnectionRequest req = PatchUnifiedConnectionRequest.builder()
+        PatchUnifiedConnectionRequest req = PatchUnifiedConnectionRequest.builder()
                 .id("<id>")
                 .build();
 
-            PatchUnifiedConnectionResponse res = sdk.connection().patchUnifiedConnection()
+        PatchUnifiedConnectionResponse res = sdk.connection().patchUnifiedConnection()
                 .request(req)
                 .call();
 
-            if (res.connection().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.connection().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -277,10 +238,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeUnifiedConnection
 
@@ -292,7 +252,6 @@ Remove connection
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveUnifiedConnectionRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveUnifiedConnectionResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -301,30 +260,22 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveUnifiedConnectionRequest req = RemoveUnifiedConnectionRequest.builder()
+        RemoveUnifiedConnectionRequest req = RemoveUnifiedConnectionRequest.builder()
                 .id("<id>")
                 .build();
 
-            RemoveUnifiedConnectionResponse res = sdk.connection().removeUnifiedConnection()
+        RemoveUnifiedConnectionResponse res = sdk.connection().removeUnifiedConnection()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -341,10 +292,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateUnifiedConnection
 
@@ -356,7 +306,6 @@ Update connection
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedConnectionRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedConnectionResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -365,32 +314,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateUnifiedConnectionRequest req = UpdateUnifiedConnectionRequest.builder()
+        UpdateUnifiedConnectionRequest req = UpdateUnifiedConnectionRequest.builder()
                 .id("<id>")
                 .build();
 
-            UpdateUnifiedConnectionResponse res = sdk.connection().updateUnifiedConnection()
+        UpdateUnifiedConnectionResponse res = sdk.connection().updateUnifiedConnection()
                 .request(req)
                 .call();
 
-            if (res.connection().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.connection().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -407,6 +348,6 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |

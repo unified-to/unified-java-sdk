@@ -15,7 +15,7 @@ public class PatchPassthroughRawRequestBuilder {
         this.sdk = sdk;
     }
 
-    public PatchPassthroughRawRequestBuilder request(com.unifiedapi.unifiedto.models.operations.PatchPassthroughRawRequest request) {
+    public PatchPassthroughRawRequestBuilder request(PatchPassthroughRawRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

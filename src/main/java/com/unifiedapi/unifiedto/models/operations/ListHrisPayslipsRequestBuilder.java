@@ -15,7 +15,7 @@ public class ListHrisPayslipsRequestBuilder {
         this.sdk = sdk;
     }
 
-    public ListHrisPayslipsRequestBuilder request(com.unifiedapi.unifiedto.models.operations.ListHrisPayslipsRequest request) {
+    public ListHrisPayslipsRequestBuilder request(ListHrisPayslipsRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

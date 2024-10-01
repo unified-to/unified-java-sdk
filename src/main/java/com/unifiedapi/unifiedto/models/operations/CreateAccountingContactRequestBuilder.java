@@ -15,7 +15,7 @@ public class CreateAccountingContactRequestBuilder {
         this.sdk = sdk;
     }
 
-    public CreateAccountingContactRequestBuilder request(com.unifiedapi.unifiedto.models.operations.CreateAccountingContactRequest request) {
+    public CreateAccountingContactRequestBuilder request(CreateAccountingContactRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

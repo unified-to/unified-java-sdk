@@ -15,7 +15,7 @@ public class GetCrmPipelineRequestBuilder {
         this.sdk = sdk;
     }
 
-    public GetCrmPipelineRequestBuilder request(com.unifiedapi.unifiedto.models.operations.GetCrmPipelineRequest request) {
+    public GetCrmPipelineRequestBuilder request(GetCrmPipelineRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

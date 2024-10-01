@@ -15,7 +15,7 @@ public class ListUcCallsRequestBuilder {
         this.sdk = sdk;
     }
 
-    public ListUcCallsRequestBuilder request(com.unifiedapi.unifiedto.models.operations.ListUcCallsRequest request) {
+    public ListUcCallsRequestBuilder request(ListUcCallsRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

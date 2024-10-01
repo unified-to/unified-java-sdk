@@ -15,7 +15,7 @@ public class PatchMessagingMessageRequestBuilder {
         this.sdk = sdk;
     }
 
-    public PatchMessagingMessageRequestBuilder request(com.unifiedapi.unifiedto.models.operations.PatchMessagingMessageRequest request) {
+    public PatchMessagingMessageRequestBuilder request(PatchMessagingMessageRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

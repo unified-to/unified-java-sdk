@@ -15,7 +15,7 @@ public class PatchCommerceLocationRequestBuilder {
         this.sdk = sdk;
     }
 
-    public PatchCommerceLocationRequestBuilder request(com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationRequest request) {
+    public PatchCommerceLocationRequestBuilder request(PatchCommerceLocationRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

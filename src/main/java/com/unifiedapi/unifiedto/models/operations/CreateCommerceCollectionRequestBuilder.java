@@ -15,7 +15,7 @@ public class CreateCommerceCollectionRequestBuilder {
         this.sdk = sdk;
     }
 
-    public CreateCommerceCollectionRequestBuilder request(com.unifiedapi.unifiedto.models.operations.CreateCommerceCollectionRequest request) {
+    public CreateCommerceCollectionRequestBuilder request(CreateCommerceCollectionRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

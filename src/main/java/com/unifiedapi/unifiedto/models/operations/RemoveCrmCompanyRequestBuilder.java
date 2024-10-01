@@ -15,7 +15,7 @@ public class RemoveCrmCompanyRequestBuilder {
         this.sdk = sdk;
     }
 
-    public RemoveCrmCompanyRequestBuilder request(com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyRequest request) {
+    public RemoveCrmCompanyRequestBuilder request(RemoveCrmCompanyRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

@@ -15,7 +15,7 @@ public class UpdateTicketingTicketRequestBuilder {
         this.sdk = sdk;
     }
 
-    public UpdateTicketingTicketRequestBuilder request(com.unifiedapi.unifiedto.models.operations.UpdateTicketingTicketRequest request) {
+    public UpdateTicketingTicketRequestBuilder request(UpdateTicketingTicketRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

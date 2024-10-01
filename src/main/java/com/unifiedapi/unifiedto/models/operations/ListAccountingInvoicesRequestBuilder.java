@@ -15,7 +15,7 @@ public class ListAccountingInvoicesRequestBuilder {
         this.sdk = sdk;
     }
 
-    public ListAccountingInvoicesRequestBuilder request(com.unifiedapi.unifiedto.models.operations.ListAccountingInvoicesRequest request) {
+    public ListAccountingInvoicesRequestBuilder request(ListAccountingInvoicesRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

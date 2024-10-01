@@ -34,7 +34,6 @@ Create a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingContactRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingContactResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -43,32 +42,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateAccountingContactRequest req = CreateAccountingContactRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateAccountingContactRequest req = CreateAccountingContactRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateAccountingContactResponse res = sdk.contact().createAccountingContact()
+        CreateAccountingContactResponse res = sdk.contact().createAccountingContact()
                 .request(req)
                 .call();
 
-            if (res.accountingContact().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingContact().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -85,10 +76,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createCrmContact
 
@@ -100,7 +90,6 @@ Create a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmContactRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmContactResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -109,32 +98,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateCrmContactRequest req = CreateCrmContactRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateCrmContactRequest req = CreateCrmContactRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateCrmContactResponse res = sdk.contact().createCrmContact()
+        CreateCrmContactResponse res = sdk.contact().createCrmContact()
                 .request(req)
                 .call();
 
-            if (res.crmContact().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.crmContact().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -151,10 +132,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createUcContact
 
@@ -166,7 +146,6 @@ Create a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateUcContactRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateUcContactResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -175,32 +154,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateUcContactRequest req = CreateUcContactRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateUcContactRequest req = CreateUcContactRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateUcContactResponse res = sdk.contact().createUcContact()
+        CreateUcContactResponse res = sdk.contact().createUcContact()
                 .request(req)
                 .call();
 
-            if (res.ucContact().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.ucContact().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -217,10 +188,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getAccountingContact
 
@@ -232,7 +202,6 @@ Retrieve a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingContactRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingContactResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -241,33 +210,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetAccountingContactRequest req = GetAccountingContactRequest.builder()
-                .connectionId("<value>")
+        GetAccountingContactRequest req = GetAccountingContactRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetAccountingContactResponse res = sdk.contact().getAccountingContact()
+        GetAccountingContactResponse res = sdk.contact().getAccountingContact()
                 .request(req)
                 .call();
 
-            if (res.accountingContact().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingContact().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -284,10 +245,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getCrmContact
 
@@ -299,7 +259,6 @@ Retrieve a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetCrmContactRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmContactResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -308,33 +267,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetCrmContactRequest req = GetCrmContactRequest.builder()
-                .connectionId("<value>")
+        GetCrmContactRequest req = GetCrmContactRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetCrmContactResponse res = sdk.contact().getCrmContact()
+        GetCrmContactResponse res = sdk.contact().getCrmContact()
                 .request(req)
                 .call();
 
-            if (res.crmContact().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.crmContact().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -351,10 +302,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getUcContact
 
@@ -366,7 +316,6 @@ Retrieve a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetUcContactRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUcContactResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -375,33 +324,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetUcContactRequest req = GetUcContactRequest.builder()
-                .connectionId("<value>")
+        GetUcContactRequest req = GetUcContactRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetUcContactResponse res = sdk.contact().getUcContact()
+        GetUcContactResponse res = sdk.contact().getUcContact()
                 .request(req)
                 .call();
 
-            if (res.ucContact().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.ucContact().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -418,10 +359,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listAccountingContacts
 
@@ -433,7 +373,6 @@ List all contacts
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingContactsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingContactsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -442,32 +381,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListAccountingContactsRequest req = ListAccountingContactsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListAccountingContactsRequest req = ListAccountingContactsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListAccountingContactsResponse res = sdk.contact().listAccountingContacts()
+        ListAccountingContactsResponse res = sdk.contact().listAccountingContacts()
                 .request(req)
                 .call();
 
-            if (res.accountingContacts().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingContacts().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -484,10 +415,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listCrmContacts
 
@@ -499,7 +429,6 @@ List all contacts
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListCrmContactsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListCrmContactsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -508,32 +437,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListCrmContactsRequest req = ListCrmContactsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListCrmContactsRequest req = ListCrmContactsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListCrmContactsResponse res = sdk.contact().listCrmContacts()
+        ListCrmContactsResponse res = sdk.contact().listCrmContacts()
                 .request(req)
                 .call();
 
-            if (res.crmContacts().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.crmContacts().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -550,10 +471,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listUcContacts
 
@@ -565,7 +485,6 @@ List all contacts
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListUcContactsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListUcContactsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -574,32 +493,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListUcContactsRequest req = ListUcContactsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListUcContactsRequest req = ListUcContactsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListUcContactsResponse res = sdk.contact().listUcContacts()
+        ListUcContactsResponse res = sdk.contact().listUcContacts()
                 .request(req)
                 .call();
 
-            if (res.ucContacts().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.ucContacts().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -616,10 +527,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchAccountingContact
 
@@ -631,7 +541,6 @@ Update a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingContactRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingContactResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -640,33 +549,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchAccountingContactRequest req = PatchAccountingContactRequest.builder()
-                .connectionId("<value>")
+        PatchAccountingContactRequest req = PatchAccountingContactRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchAccountingContactResponse res = sdk.contact().patchAccountingContact()
+        PatchAccountingContactResponse res = sdk.contact().patchAccountingContact()
                 .request(req)
                 .call();
 
-            if (res.accountingContact().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingContact().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -683,10 +584,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchCrmContact
 
@@ -698,7 +598,6 @@ Update a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmContactRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmContactResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -707,33 +606,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchCrmContactRequest req = PatchCrmContactRequest.builder()
-                .connectionId("<value>")
+        PatchCrmContactRequest req = PatchCrmContactRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchCrmContactResponse res = sdk.contact().patchCrmContact()
+        PatchCrmContactResponse res = sdk.contact().patchCrmContact()
                 .request(req)
                 .call();
 
-            if (res.crmContact().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.crmContact().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -750,10 +641,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchUcContact
 
@@ -765,7 +655,6 @@ Update a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchUcContactRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchUcContactResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -774,33 +663,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchUcContactRequest req = PatchUcContactRequest.builder()
-                .connectionId("<value>")
+        PatchUcContactRequest req = PatchUcContactRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchUcContactResponse res = sdk.contact().patchUcContact()
+        PatchUcContactResponse res = sdk.contact().patchUcContact()
                 .request(req)
                 .call();
 
-            if (res.ucContact().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.ucContact().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -817,10 +698,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeAccountingContact
 
@@ -832,7 +712,6 @@ Remove a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveAccountingContactRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveAccountingContactResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -841,31 +720,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveAccountingContactRequest req = RemoveAccountingContactRequest.builder()
-                .connectionId("<value>")
+        RemoveAccountingContactRequest req = RemoveAccountingContactRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveAccountingContactResponse res = sdk.contact().removeAccountingContact()
+        RemoveAccountingContactResponse res = sdk.contact().removeAccountingContact()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -882,10 +753,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeCrmContact
 
@@ -897,7 +767,6 @@ Remove a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveCrmContactRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveCrmContactResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -906,31 +775,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveCrmContactRequest req = RemoveCrmContactRequest.builder()
-                .connectionId("<value>")
+        RemoveCrmContactRequest req = RemoveCrmContactRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveCrmContactResponse res = sdk.contact().removeCrmContact()
+        RemoveCrmContactResponse res = sdk.contact().removeCrmContact()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -947,10 +808,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeUcContact
 
@@ -962,7 +822,6 @@ Remove a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveUcContactRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveUcContactResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -971,31 +830,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveUcContactRequest req = RemoveUcContactRequest.builder()
-                .connectionId("<value>")
+        RemoveUcContactRequest req = RemoveUcContactRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveUcContactResponse res = sdk.contact().removeUcContact()
+        RemoveUcContactResponse res = sdk.contact().removeUcContact()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -1012,10 +863,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateAccountingContact
 
@@ -1027,7 +877,6 @@ Update a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingContactRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingContactResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1036,33 +885,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateAccountingContactRequest req = UpdateAccountingContactRequest.builder()
-                .connectionId("<value>")
+        UpdateAccountingContactRequest req = UpdateAccountingContactRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateAccountingContactResponse res = sdk.contact().updateAccountingContact()
+        UpdateAccountingContactResponse res = sdk.contact().updateAccountingContact()
                 .request(req)
                 .call();
 
-            if (res.accountingContact().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingContact().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1079,10 +920,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateCrmContact
 
@@ -1094,7 +934,6 @@ Update a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmContactRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmContactResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1103,33 +942,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateCrmContactRequest req = UpdateCrmContactRequest.builder()
-                .connectionId("<value>")
+        UpdateCrmContactRequest req = UpdateCrmContactRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateCrmContactResponse res = sdk.contact().updateCrmContact()
+        UpdateCrmContactResponse res = sdk.contact().updateCrmContact()
                 .request(req)
                 .call();
 
-            if (res.crmContact().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.crmContact().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1146,10 +977,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateUcContact
 
@@ -1161,7 +991,6 @@ Update a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateUcContactRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateUcContactResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1170,33 +999,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateUcContactRequest req = UpdateUcContactRequest.builder()
-                .connectionId("<value>")
+        UpdateUcContactRequest req = UpdateUcContactRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateUcContactResponse res = sdk.contact().updateUcContact()
+        UpdateUcContactResponse res = sdk.contact().updateUcContact()
                 .request(req)
                 .call();
 
-            if (res.ucContact().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.ucContact().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1213,6 +1034,6 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |

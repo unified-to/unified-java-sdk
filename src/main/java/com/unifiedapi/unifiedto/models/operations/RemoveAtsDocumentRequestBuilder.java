@@ -15,7 +15,7 @@ public class RemoveAtsDocumentRequestBuilder {
         this.sdk = sdk;
     }
 
-    public RemoveAtsDocumentRequestBuilder request(com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentRequest request) {
+    public RemoveAtsDocumentRequestBuilder request(RemoveAtsDocumentRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

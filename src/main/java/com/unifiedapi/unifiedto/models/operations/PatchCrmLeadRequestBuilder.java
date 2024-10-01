@@ -15,7 +15,7 @@ public class PatchCrmLeadRequestBuilder {
         this.sdk = sdk;
     }
 
-    public PatchCrmLeadRequestBuilder request(com.unifiedapi.unifiedto.models.operations.PatchCrmLeadRequest request) {
+    public PatchCrmLeadRequestBuilder request(PatchCrmLeadRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

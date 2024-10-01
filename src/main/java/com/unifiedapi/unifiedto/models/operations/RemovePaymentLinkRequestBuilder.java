@@ -15,7 +15,7 @@ public class RemovePaymentLinkRequestBuilder {
         this.sdk = sdk;
     }
 
-    public RemovePaymentLinkRequestBuilder request(com.unifiedapi.unifiedto.models.operations.RemovePaymentLinkRequest request) {
+    public RemovePaymentLinkRequestBuilder request(RemovePaymentLinkRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

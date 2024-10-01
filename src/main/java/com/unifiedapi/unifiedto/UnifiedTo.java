@@ -8,6 +8,7 @@ import com.unifiedapi.unifiedto.models.operations.SDKMethodInterfaces.*;
 import com.unifiedapi.unifiedto.utils.HTTPClient;
 import com.unifiedapi.unifiedto.utils.RetryConfig;
 import com.unifiedapi.unifiedto.utils.SpeakeasyHTTPClient;
+import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.String;
 import java.util.Map;
 import java.util.Optional;
@@ -515,7 +516,7 @@ public class UnifiedTo {
          * @return The builder instance.
          */
         public Builder serverURL(String serverUrl, Map<String, String> params) {
-            this.sdkConfiguration.serverUrl = com.unifiedapi.unifiedto.utils.Utils.templateUrl(serverUrl, params);
+            this.sdkConfiguration.serverUrl = Utils.templateUrl(serverUrl, params);
             return this;
         }
         

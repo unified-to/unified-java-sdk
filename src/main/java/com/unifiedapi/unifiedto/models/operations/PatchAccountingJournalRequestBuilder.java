@@ -15,7 +15,7 @@ public class PatchAccountingJournalRequestBuilder {
         this.sdk = sdk;
     }
 
-    public PatchAccountingJournalRequestBuilder request(com.unifiedapi.unifiedto.models.operations.PatchAccountingJournalRequest request) {
+    public PatchAccountingJournalRequestBuilder request(PatchAccountingJournalRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

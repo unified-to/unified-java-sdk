@@ -15,7 +15,7 @@ public class ListCommerceLocationsRequestBuilder {
         this.sdk = sdk;
     }
 
-    public ListCommerceLocationsRequestBuilder request(com.unifiedapi.unifiedto.models.operations.ListCommerceLocationsRequest request) {
+    public ListCommerceLocationsRequestBuilder request(ListCommerceLocationsRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

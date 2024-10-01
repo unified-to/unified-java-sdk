@@ -15,7 +15,7 @@ public class ListGenaiModelsRequestBuilder {
         this.sdk = sdk;
     }
 
-    public ListGenaiModelsRequestBuilder request(com.unifiedapi.unifiedto.models.operations.ListGenaiModelsRequest request) {
+    public ListGenaiModelsRequestBuilder request(ListGenaiModelsRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

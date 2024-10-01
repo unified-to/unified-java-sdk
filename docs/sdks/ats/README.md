@@ -61,7 +61,6 @@ Create an activity
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsActivityRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsActivityResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -70,32 +69,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateAtsActivityRequest req = CreateAtsActivityRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateAtsActivityRequest req = CreateAtsActivityRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateAtsActivityResponse res = sdk.ats().createAtsActivity()
+        CreateAtsActivityResponse res = sdk.ats().createAtsActivity()
                 .request(req)
                 .call();
 
-            if (res.atsActivity().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsActivity().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -112,10 +103,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createAtsApplication
 
@@ -127,7 +117,6 @@ Create an application
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsApplicationResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -136,32 +125,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateAtsApplicationRequest req = CreateAtsApplicationRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateAtsApplicationRequest req = CreateAtsApplicationRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateAtsApplicationResponse res = sdk.ats().createAtsApplication()
+        CreateAtsApplicationResponse res = sdk.ats().createAtsApplication()
                 .request(req)
                 .call();
 
-            if (res.atsApplication().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsApplication().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -178,10 +159,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createAtsCandidate
 
@@ -193,7 +173,6 @@ Create a candidate
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsCandidateRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsCandidateResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -202,32 +181,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateAtsCandidateRequest req = CreateAtsCandidateRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateAtsCandidateRequest req = CreateAtsCandidateRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateAtsCandidateResponse res = sdk.ats().createAtsCandidate()
+        CreateAtsCandidateResponse res = sdk.ats().createAtsCandidate()
                 .request(req)
                 .call();
 
-            if (res.atsCandidate().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsCandidate().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -244,10 +215,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createAtsDocument
 
@@ -259,7 +229,6 @@ Create a document
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsDocumentResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -268,32 +237,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateAtsDocumentRequest req = CreateAtsDocumentRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateAtsDocumentRequest req = CreateAtsDocumentRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateAtsDocumentResponse res = sdk.ats().createAtsDocument()
+        CreateAtsDocumentResponse res = sdk.ats().createAtsDocument()
                 .request(req)
                 .call();
 
-            if (res.atsDocument().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsDocument().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -310,10 +271,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createAtsInterview
 
@@ -325,7 +285,6 @@ Create an interview
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsInterviewRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsInterviewResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -334,32 +293,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateAtsInterviewRequest req = CreateAtsInterviewRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateAtsInterviewRequest req = CreateAtsInterviewRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateAtsInterviewResponse res = sdk.ats().createAtsInterview()
+        CreateAtsInterviewResponse res = sdk.ats().createAtsInterview()
                 .request(req)
                 .call();
 
-            if (res.atsInterview().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsInterview().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -376,10 +327,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createAtsJob
 
@@ -391,7 +341,6 @@ Create a job
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsJobRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsJobResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -400,32 +349,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateAtsJobRequest req = CreateAtsJobRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateAtsJobRequest req = CreateAtsJobRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateAtsJobResponse res = sdk.ats().createAtsJob()
+        CreateAtsJobResponse res = sdk.ats().createAtsJob()
                 .request(req)
                 .call();
 
-            if (res.atsJob().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsJob().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -442,10 +383,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createAtsScorecard
 
@@ -457,7 +397,6 @@ Create a scorecard
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAtsScorecardResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -466,32 +405,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateAtsScorecardRequest req = CreateAtsScorecardRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateAtsScorecardRequest req = CreateAtsScorecardRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateAtsScorecardResponse res = sdk.ats().createAtsScorecard()
+        CreateAtsScorecardResponse res = sdk.ats().createAtsScorecard()
                 .request(req)
                 .call();
 
-            if (res.atsScorecard().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsScorecard().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -508,10 +439,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getAtsActivity
 
@@ -523,7 +453,6 @@ Retrieve an activity
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAtsActivityRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsActivityResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -532,33 +461,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetAtsActivityRequest req = GetAtsActivityRequest.builder()
-                .connectionId("<value>")
+        GetAtsActivityRequest req = GetAtsActivityRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetAtsActivityResponse res = sdk.ats().getAtsActivity()
+        GetAtsActivityResponse res = sdk.ats().getAtsActivity()
                 .request(req)
                 .call();
 
-            if (res.atsActivity().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsActivity().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -575,10 +496,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getAtsApplication
 
@@ -590,7 +510,6 @@ Retrieve an application
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsApplicationResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -599,33 +518,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetAtsApplicationRequest req = GetAtsApplicationRequest.builder()
-                .connectionId("<value>")
+        GetAtsApplicationRequest req = GetAtsApplicationRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetAtsApplicationResponse res = sdk.ats().getAtsApplication()
+        GetAtsApplicationResponse res = sdk.ats().getAtsApplication()
                 .request(req)
                 .call();
 
-            if (res.atsApplication().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsApplication().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -642,10 +553,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getAtsCandidate
 
@@ -657,7 +567,6 @@ Retrieve a candidate
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAtsCandidateRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsCandidateResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -666,33 +575,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetAtsCandidateRequest req = GetAtsCandidateRequest.builder()
-                .connectionId("<value>")
+        GetAtsCandidateRequest req = GetAtsCandidateRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetAtsCandidateResponse res = sdk.ats().getAtsCandidate()
+        GetAtsCandidateResponse res = sdk.ats().getAtsCandidate()
                 .request(req)
                 .call();
 
-            if (res.atsCandidate().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsCandidate().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -709,10 +610,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getAtsCompany
 
@@ -724,7 +624,6 @@ Retrieve a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAtsCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsCompanyResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -733,33 +632,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetAtsCompanyRequest req = GetAtsCompanyRequest.builder()
-                .connectionId("<value>")
+        GetAtsCompanyRequest req = GetAtsCompanyRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetAtsCompanyResponse res = sdk.ats().getAtsCompany()
+        GetAtsCompanyResponse res = sdk.ats().getAtsCompany()
                 .request(req)
                 .call();
 
-            if (res.atsCompany().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsCompany().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -776,10 +667,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getAtsDocument
 
@@ -791,7 +681,6 @@ Retrieve a document
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAtsDocumentRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsDocumentResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -800,33 +689,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetAtsDocumentRequest req = GetAtsDocumentRequest.builder()
-                .connectionId("<value>")
+        GetAtsDocumentRequest req = GetAtsDocumentRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetAtsDocumentResponse res = sdk.ats().getAtsDocument()
+        GetAtsDocumentResponse res = sdk.ats().getAtsDocument()
                 .request(req)
                 .call();
 
-            if (res.atsDocument().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsDocument().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -843,10 +724,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getAtsInterview
 
@@ -858,7 +738,6 @@ Retrieve an interview
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAtsInterviewRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsInterviewResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -867,33 +746,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetAtsInterviewRequest req = GetAtsInterviewRequest.builder()
-                .connectionId("<value>")
+        GetAtsInterviewRequest req = GetAtsInterviewRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetAtsInterviewResponse res = sdk.ats().getAtsInterview()
+        GetAtsInterviewResponse res = sdk.ats().getAtsInterview()
                 .request(req)
                 .call();
 
-            if (res.atsInterview().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsInterview().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -910,10 +781,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getAtsJob
 
@@ -925,7 +795,6 @@ Retrieve a job
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAtsJobRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsJobResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -934,33 +803,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetAtsJobRequest req = GetAtsJobRequest.builder()
-                .connectionId("<value>")
+        GetAtsJobRequest req = GetAtsJobRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetAtsJobResponse res = sdk.ats().getAtsJob()
+        GetAtsJobResponse res = sdk.ats().getAtsJob()
                 .request(req)
                 .call();
 
-            if (res.atsJob().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsJob().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -977,10 +838,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getAtsScorecard
 
@@ -992,7 +852,6 @@ Retrieve a scorecard
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsScorecardResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1001,33 +860,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetAtsScorecardRequest req = GetAtsScorecardRequest.builder()
-                .connectionId("<value>")
+        GetAtsScorecardRequest req = GetAtsScorecardRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetAtsScorecardResponse res = sdk.ats().getAtsScorecard()
+        GetAtsScorecardResponse res = sdk.ats().getAtsScorecard()
                 .request(req)
                 .call();
 
-            if (res.atsScorecard().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsScorecard().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1044,10 +895,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listAtsActivities
 
@@ -1059,7 +909,6 @@ List all activities
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAtsActivitiesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAtsActivitiesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1068,32 +917,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListAtsActivitiesRequest req = ListAtsActivitiesRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListAtsActivitiesRequest req = ListAtsActivitiesRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListAtsActivitiesResponse res = sdk.ats().listAtsActivities()
+        ListAtsActivitiesResponse res = sdk.ats().listAtsActivities()
                 .request(req)
                 .call();
 
-            if (res.atsActivities().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsActivities().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1110,10 +951,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listAtsApplications
 
@@ -1125,7 +965,6 @@ List all applications
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAtsApplicationsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1134,32 +973,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListAtsApplicationsRequest req = ListAtsApplicationsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListAtsApplicationsRequest req = ListAtsApplicationsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListAtsApplicationsResponse res = sdk.ats().listAtsApplications()
+        ListAtsApplicationsResponse res = sdk.ats().listAtsApplications()
                 .request(req)
                 .call();
 
-            if (res.atsApplications().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsApplications().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1176,10 +1007,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listAtsApplicationstatuses
 
@@ -1191,7 +1021,6 @@ List all applicationstatuses
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAtsApplicationstatusesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAtsApplicationstatusesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1200,32 +1029,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListAtsApplicationstatusesRequest req = ListAtsApplicationstatusesRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListAtsApplicationstatusesRequest req = ListAtsApplicationstatusesRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListAtsApplicationstatusesResponse res = sdk.ats().listAtsApplicationstatuses()
+        ListAtsApplicationstatusesResponse res = sdk.ats().listAtsApplicationstatuses()
                 .request(req)
                 .call();
 
-            if (res.atsStatuses().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsStatuses().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1242,10 +1063,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listAtsCandidates
 
@@ -1257,7 +1077,6 @@ List all candidates
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAtsCandidatesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAtsCandidatesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1266,32 +1085,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListAtsCandidatesRequest req = ListAtsCandidatesRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListAtsCandidatesRequest req = ListAtsCandidatesRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListAtsCandidatesResponse res = sdk.ats().listAtsCandidates()
+        ListAtsCandidatesResponse res = sdk.ats().listAtsCandidates()
                 .request(req)
                 .call();
 
-            if (res.atsCandidates().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsCandidates().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1308,10 +1119,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listAtsCompanies
 
@@ -1323,7 +1133,6 @@ List all companies
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAtsCompaniesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAtsCompaniesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1332,32 +1141,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListAtsCompaniesRequest req = ListAtsCompaniesRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListAtsCompaniesRequest req = ListAtsCompaniesRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListAtsCompaniesResponse res = sdk.ats().listAtsCompanies()
+        ListAtsCompaniesResponse res = sdk.ats().listAtsCompanies()
                 .request(req)
                 .call();
 
-            if (res.atsCompanies().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsCompanies().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1374,10 +1175,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listAtsDocuments
 
@@ -1389,7 +1189,6 @@ List all documents
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAtsDocumentsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1398,32 +1197,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListAtsDocumentsRequest req = ListAtsDocumentsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListAtsDocumentsRequest req = ListAtsDocumentsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListAtsDocumentsResponse res = sdk.ats().listAtsDocuments()
+        ListAtsDocumentsResponse res = sdk.ats().listAtsDocuments()
                 .request(req)
                 .call();
 
-            if (res.atsDocuments().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsDocuments().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1440,10 +1231,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listAtsInterviews
 
@@ -1455,7 +1245,6 @@ List all interviews
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAtsInterviewsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAtsInterviewsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1464,32 +1253,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListAtsInterviewsRequest req = ListAtsInterviewsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListAtsInterviewsRequest req = ListAtsInterviewsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListAtsInterviewsResponse res = sdk.ats().listAtsInterviews()
+        ListAtsInterviewsResponse res = sdk.ats().listAtsInterviews()
                 .request(req)
                 .call();
 
-            if (res.atsInterviews().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsInterviews().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1506,10 +1287,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listAtsJobs
 
@@ -1521,7 +1301,6 @@ List all jobs
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAtsJobsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAtsJobsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1530,32 +1309,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListAtsJobsRequest req = ListAtsJobsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListAtsJobsRequest req = ListAtsJobsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListAtsJobsResponse res = sdk.ats().listAtsJobs()
+        ListAtsJobsResponse res = sdk.ats().listAtsJobs()
                 .request(req)
                 .call();
 
-            if (res.atsJobs().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsJobs().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1572,10 +1343,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listAtsScorecards
 
@@ -1587,7 +1357,6 @@ List all scorecards
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAtsScorecardsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1596,32 +1365,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListAtsScorecardsRequest req = ListAtsScorecardsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListAtsScorecardsRequest req = ListAtsScorecardsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListAtsScorecardsResponse res = sdk.ats().listAtsScorecards()
+        ListAtsScorecardsResponse res = sdk.ats().listAtsScorecards()
                 .request(req)
                 .call();
 
-            if (res.atsScorecards().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsScorecards().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1638,10 +1399,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchAtsActivity
 
@@ -1653,7 +1413,6 @@ Update an activity
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsActivityRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsActivityResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1662,33 +1421,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchAtsActivityRequest req = PatchAtsActivityRequest.builder()
-                .connectionId("<value>")
+        PatchAtsActivityRequest req = PatchAtsActivityRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchAtsActivityResponse res = sdk.ats().patchAtsActivity()
+        PatchAtsActivityResponse res = sdk.ats().patchAtsActivity()
                 .request(req)
                 .call();
 
-            if (res.atsActivity().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsActivity().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1705,10 +1456,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchAtsApplication
 
@@ -1720,7 +1470,6 @@ Update an application
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsApplicationResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1729,33 +1478,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchAtsApplicationRequest req = PatchAtsApplicationRequest.builder()
-                .connectionId("<value>")
+        PatchAtsApplicationRequest req = PatchAtsApplicationRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchAtsApplicationResponse res = sdk.ats().patchAtsApplication()
+        PatchAtsApplicationResponse res = sdk.ats().patchAtsApplication()
                 .request(req)
                 .call();
 
-            if (res.atsApplication().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsApplication().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1772,10 +1513,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchAtsCandidate
 
@@ -1787,7 +1527,6 @@ Update a candidate
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsCandidateRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsCandidateResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1796,33 +1535,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchAtsCandidateRequest req = PatchAtsCandidateRequest.builder()
-                .connectionId("<value>")
+        PatchAtsCandidateRequest req = PatchAtsCandidateRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchAtsCandidateResponse res = sdk.ats().patchAtsCandidate()
+        PatchAtsCandidateResponse res = sdk.ats().patchAtsCandidate()
                 .request(req)
                 .call();
 
-            if (res.atsCandidate().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsCandidate().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1839,10 +1570,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchAtsDocument
 
@@ -1854,7 +1584,6 @@ Update a document
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsDocumentResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1863,33 +1592,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchAtsDocumentRequest req = PatchAtsDocumentRequest.builder()
-                .connectionId("<value>")
+        PatchAtsDocumentRequest req = PatchAtsDocumentRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchAtsDocumentResponse res = sdk.ats().patchAtsDocument()
+        PatchAtsDocumentResponse res = sdk.ats().patchAtsDocument()
                 .request(req)
                 .call();
 
-            if (res.atsDocument().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsDocument().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1906,10 +1627,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchAtsInterview
 
@@ -1921,7 +1641,6 @@ Update an interview
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsInterviewRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsInterviewResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1930,33 +1649,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchAtsInterviewRequest req = PatchAtsInterviewRequest.builder()
-                .connectionId("<value>")
+        PatchAtsInterviewRequest req = PatchAtsInterviewRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchAtsInterviewResponse res = sdk.ats().patchAtsInterview()
+        PatchAtsInterviewResponse res = sdk.ats().patchAtsInterview()
                 .request(req)
                 .call();
 
-            if (res.atsInterview().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsInterview().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1973,10 +1684,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchAtsJob
 
@@ -1988,7 +1698,6 @@ Update a job
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsJobRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsJobResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1997,33 +1706,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchAtsJobRequest req = PatchAtsJobRequest.builder()
-                .connectionId("<value>")
+        PatchAtsJobRequest req = PatchAtsJobRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchAtsJobResponse res = sdk.ats().patchAtsJob()
+        PatchAtsJobResponse res = sdk.ats().patchAtsJob()
                 .request(req)
                 .call();
 
-            if (res.atsJob().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsJob().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -2040,10 +1741,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchAtsScorecard
 
@@ -2055,7 +1755,6 @@ Update a scorecard
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAtsScorecardResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -2064,33 +1763,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchAtsScorecardRequest req = PatchAtsScorecardRequest.builder()
-                .connectionId("<value>")
+        PatchAtsScorecardRequest req = PatchAtsScorecardRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchAtsScorecardResponse res = sdk.ats().patchAtsScorecard()
+        PatchAtsScorecardResponse res = sdk.ats().patchAtsScorecard()
                 .request(req)
                 .call();
 
-            if (res.atsScorecard().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsScorecard().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -2107,10 +1798,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeAtsActivity
 
@@ -2122,7 +1812,6 @@ Remove an activity
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsActivityRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsActivityResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -2131,31 +1820,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveAtsActivityRequest req = RemoveAtsActivityRequest.builder()
-                .connectionId("<value>")
+        RemoveAtsActivityRequest req = RemoveAtsActivityRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveAtsActivityResponse res = sdk.ats().removeAtsActivity()
+        RemoveAtsActivityResponse res = sdk.ats().removeAtsActivity()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -2172,10 +1853,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeAtsApplication
 
@@ -2187,7 +1867,6 @@ Remove an application
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsApplicationResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -2196,31 +1875,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveAtsApplicationRequest req = RemoveAtsApplicationRequest.builder()
-                .connectionId("<value>")
+        RemoveAtsApplicationRequest req = RemoveAtsApplicationRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveAtsApplicationResponse res = sdk.ats().removeAtsApplication()
+        RemoveAtsApplicationResponse res = sdk.ats().removeAtsApplication()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -2237,10 +1908,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeAtsCandidate
 
@@ -2252,7 +1922,6 @@ Remove a candidate
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsCandidateRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsCandidateResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -2261,31 +1930,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveAtsCandidateRequest req = RemoveAtsCandidateRequest.builder()
-                .connectionId("<value>")
+        RemoveAtsCandidateRequest req = RemoveAtsCandidateRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveAtsCandidateResponse res = sdk.ats().removeAtsCandidate()
+        RemoveAtsCandidateResponse res = sdk.ats().removeAtsCandidate()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -2302,10 +1963,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeAtsDocument
 
@@ -2317,7 +1977,6 @@ Remove a document
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsDocumentResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -2326,31 +1985,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveAtsDocumentRequest req = RemoveAtsDocumentRequest.builder()
-                .connectionId("<value>")
+        RemoveAtsDocumentRequest req = RemoveAtsDocumentRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveAtsDocumentResponse res = sdk.ats().removeAtsDocument()
+        RemoveAtsDocumentResponse res = sdk.ats().removeAtsDocument()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -2367,10 +2018,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeAtsInterview
 
@@ -2382,7 +2032,6 @@ Remove an interview
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsInterviewRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsInterviewResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -2391,31 +2040,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveAtsInterviewRequest req = RemoveAtsInterviewRequest.builder()
-                .connectionId("<value>")
+        RemoveAtsInterviewRequest req = RemoveAtsInterviewRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveAtsInterviewResponse res = sdk.ats().removeAtsInterview()
+        RemoveAtsInterviewResponse res = sdk.ats().removeAtsInterview()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -2432,10 +2073,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeAtsJob
 
@@ -2447,7 +2087,6 @@ Remove a job
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsJobRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsJobResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -2456,31 +2095,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveAtsJobRequest req = RemoveAtsJobRequest.builder()
-                .connectionId("<value>")
+        RemoveAtsJobRequest req = RemoveAtsJobRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveAtsJobResponse res = sdk.ats().removeAtsJob()
+        RemoveAtsJobResponse res = sdk.ats().removeAtsJob()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -2497,10 +2128,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeAtsScorecard
 
@@ -2512,7 +2142,6 @@ Remove a scorecard
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveAtsScorecardResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -2521,31 +2150,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveAtsScorecardRequest req = RemoveAtsScorecardRequest.builder()
-                .connectionId("<value>")
+        RemoveAtsScorecardRequest req = RemoveAtsScorecardRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveAtsScorecardResponse res = sdk.ats().removeAtsScorecard()
+        RemoveAtsScorecardResponse res = sdk.ats().removeAtsScorecard()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -2562,10 +2183,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateAtsActivity
 
@@ -2577,7 +2197,6 @@ Update an activity
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsActivityRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsActivityResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -2586,33 +2205,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateAtsActivityRequest req = UpdateAtsActivityRequest.builder()
-                .connectionId("<value>")
+        UpdateAtsActivityRequest req = UpdateAtsActivityRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateAtsActivityResponse res = sdk.ats().updateAtsActivity()
+        UpdateAtsActivityResponse res = sdk.ats().updateAtsActivity()
                 .request(req)
                 .call();
 
-            if (res.atsActivity().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsActivity().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -2629,10 +2240,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateAtsApplication
 
@@ -2644,7 +2254,6 @@ Update an application
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsApplicationResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -2653,33 +2262,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateAtsApplicationRequest req = UpdateAtsApplicationRequest.builder()
-                .connectionId("<value>")
+        UpdateAtsApplicationRequest req = UpdateAtsApplicationRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateAtsApplicationResponse res = sdk.ats().updateAtsApplication()
+        UpdateAtsApplicationResponse res = sdk.ats().updateAtsApplication()
                 .request(req)
                 .call();
 
-            if (res.atsApplication().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsApplication().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -2696,10 +2297,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateAtsCandidate
 
@@ -2711,7 +2311,6 @@ Update a candidate
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsCandidateRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsCandidateResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -2720,33 +2319,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateAtsCandidateRequest req = UpdateAtsCandidateRequest.builder()
-                .connectionId("<value>")
+        UpdateAtsCandidateRequest req = UpdateAtsCandidateRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateAtsCandidateResponse res = sdk.ats().updateAtsCandidate()
+        UpdateAtsCandidateResponse res = sdk.ats().updateAtsCandidate()
                 .request(req)
                 .call();
 
-            if (res.atsCandidate().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsCandidate().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -2763,10 +2354,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateAtsDocument
 
@@ -2778,7 +2368,6 @@ Update a document
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -2787,33 +2376,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateAtsDocumentRequest req = UpdateAtsDocumentRequest.builder()
-                .connectionId("<value>")
+        UpdateAtsDocumentRequest req = UpdateAtsDocumentRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateAtsDocumentResponse res = sdk.ats().updateAtsDocument()
+        UpdateAtsDocumentResponse res = sdk.ats().updateAtsDocument()
                 .request(req)
                 .call();
 
-            if (res.atsDocument().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsDocument().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -2830,10 +2411,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateAtsInterview
 
@@ -2845,7 +2425,6 @@ Update an interview
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsInterviewRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsInterviewResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -2854,33 +2433,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateAtsInterviewRequest req = UpdateAtsInterviewRequest.builder()
-                .connectionId("<value>")
+        UpdateAtsInterviewRequest req = UpdateAtsInterviewRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateAtsInterviewResponse res = sdk.ats().updateAtsInterview()
+        UpdateAtsInterviewResponse res = sdk.ats().updateAtsInterview()
                 .request(req)
                 .call();
 
-            if (res.atsInterview().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsInterview().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -2897,10 +2468,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateAtsJob
 
@@ -2912,7 +2482,6 @@ Update a job
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsJobRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsJobResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -2921,33 +2490,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateAtsJobRequest req = UpdateAtsJobRequest.builder()
-                .connectionId("<value>")
+        UpdateAtsJobRequest req = UpdateAtsJobRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateAtsJobResponse res = sdk.ats().updateAtsJob()
+        UpdateAtsJobResponse res = sdk.ats().updateAtsJob()
                 .request(req)
                 .call();
 
-            if (res.atsJob().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsJob().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -2964,10 +2525,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateAtsScorecard
 
@@ -2979,7 +2539,6 @@ Update a scorecard
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAtsScorecardResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -2988,33 +2547,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateAtsScorecardRequest req = UpdateAtsScorecardRequest.builder()
-                .connectionId("<value>")
+        UpdateAtsScorecardRequest req = UpdateAtsScorecardRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateAtsScorecardResponse res = sdk.ats().updateAtsScorecard()
+        UpdateAtsScorecardResponse res = sdk.ats().updateAtsScorecard()
                 .request(req)
                 .call();
 
-            if (res.atsScorecard().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsScorecard().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -3031,6 +2582,6 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |

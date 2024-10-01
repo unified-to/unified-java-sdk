@@ -15,7 +15,7 @@ public class PatchUnifiedWebhookRequestBuilder {
         this.sdk = sdk;
     }
 
-    public PatchUnifiedWebhookRequestBuilder request(com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookRequest request) {
+    public PatchUnifiedWebhookRequestBuilder request(PatchUnifiedWebhookRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

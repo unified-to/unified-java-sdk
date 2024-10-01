@@ -15,7 +15,7 @@ public class PatchAccountingContactRequestBuilder {
         this.sdk = sdk;
     }
 
-    public PatchAccountingContactRequestBuilder request(com.unifiedapi.unifiedto.models.operations.PatchAccountingContactRequest request) {
+    public PatchAccountingContactRequestBuilder request(PatchAccountingContactRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

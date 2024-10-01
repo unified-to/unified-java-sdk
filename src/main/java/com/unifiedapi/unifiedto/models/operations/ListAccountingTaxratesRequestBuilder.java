@@ -15,7 +15,7 @@ public class ListAccountingTaxratesRequestBuilder {
         this.sdk = sdk;
     }
 
-    public ListAccountingTaxratesRequestBuilder request(com.unifiedapi.unifiedto.models.operations.ListAccountingTaxratesRequest request) {
+    public ListAccountingTaxratesRequestBuilder request(ListAccountingTaxratesRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

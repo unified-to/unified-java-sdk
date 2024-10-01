@@ -15,7 +15,7 @@ public class UpdateKmsPageRequestBuilder {
         this.sdk = sdk;
     }
 
-    public UpdateKmsPageRequestBuilder request(com.unifiedapi.unifiedto.models.operations.UpdateKmsPageRequest request) {
+    public UpdateKmsPageRequestBuilder request(UpdateKmsPageRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

@@ -15,7 +15,7 @@ public class RemoveAccountingContactRequestBuilder {
         this.sdk = sdk;
     }
 
-    public RemoveAccountingContactRequestBuilder request(com.unifiedapi.unifiedto.models.operations.RemoveAccountingContactRequest request) {
+    public RemoveAccountingContactRequestBuilder request(RemoveAccountingContactRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

@@ -17,7 +17,6 @@ List all calls
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListUcCallsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListUcCallsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -26,32 +25,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListUcCallsRequest req = ListUcCallsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListUcCallsRequest req = ListUcCallsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListUcCallsResponse res = sdk.call().listUcCalls()
+        ListUcCallsResponse res = sdk.call().listUcCalls()
                 .request(req)
                 .call();
 
-            if (res.ucCalls().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.ucCalls().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -68,6 +59,6 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |

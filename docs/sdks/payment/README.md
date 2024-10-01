@@ -32,7 +32,6 @@ Create a link
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreatePaymentLinkRequest;
 import com.unifiedapi.unifiedto.models.operations.CreatePaymentLinkResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -41,32 +40,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreatePaymentLinkRequest req = CreatePaymentLinkRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreatePaymentLinkRequest req = CreatePaymentLinkRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreatePaymentLinkResponse res = sdk.payment().createPaymentLink()
+        CreatePaymentLinkResponse res = sdk.payment().createPaymentLink()
                 .request(req)
                 .call();
 
-            if (res.paymentLink().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.paymentLink().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -83,10 +74,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createPaymentPayment
 
@@ -98,7 +88,6 @@ Create a payment
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreatePaymentPaymentRequest;
 import com.unifiedapi.unifiedto.models.operations.CreatePaymentPaymentResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -107,32 +96,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreatePaymentPaymentRequest req = CreatePaymentPaymentRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreatePaymentPaymentRequest req = CreatePaymentPaymentRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreatePaymentPaymentResponse res = sdk.payment().createPaymentPayment()
+        CreatePaymentPaymentResponse res = sdk.payment().createPaymentPayment()
                 .request(req)
                 .call();
 
-            if (res.paymentPayment().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.paymentPayment().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -149,10 +130,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getPaymentLink
 
@@ -164,7 +144,6 @@ Retrieve a link
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetPaymentLinkRequest;
 import com.unifiedapi.unifiedto.models.operations.GetPaymentLinkResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -173,33 +152,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetPaymentLinkRequest req = GetPaymentLinkRequest.builder()
-                .connectionId("<value>")
+        GetPaymentLinkRequest req = GetPaymentLinkRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetPaymentLinkResponse res = sdk.payment().getPaymentLink()
+        GetPaymentLinkResponse res = sdk.payment().getPaymentLink()
                 .request(req)
                 .call();
 
-            if (res.paymentLink().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.paymentLink().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -216,10 +187,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getPaymentPayment
 
@@ -231,7 +201,6 @@ Retrieve a payment
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetPaymentPaymentRequest;
 import com.unifiedapi.unifiedto.models.operations.GetPaymentPaymentResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -240,33 +209,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetPaymentPaymentRequest req = GetPaymentPaymentRequest.builder()
-                .connectionId("<value>")
+        GetPaymentPaymentRequest req = GetPaymentPaymentRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetPaymentPaymentResponse res = sdk.payment().getPaymentPayment()
+        GetPaymentPaymentResponse res = sdk.payment().getPaymentPayment()
                 .request(req)
                 .call();
 
-            if (res.paymentPayment().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.paymentPayment().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -283,10 +244,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getPaymentPayout
 
@@ -298,7 +258,6 @@ Retrieve a payout
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetPaymentPayoutRequest;
 import com.unifiedapi.unifiedto.models.operations.GetPaymentPayoutResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -307,33 +266,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetPaymentPayoutRequest req = GetPaymentPayoutRequest.builder()
-                .connectionId("<value>")
+        GetPaymentPayoutRequest req = GetPaymentPayoutRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetPaymentPayoutResponse res = sdk.payment().getPaymentPayout()
+        GetPaymentPayoutResponse res = sdk.payment().getPaymentPayout()
                 .request(req)
                 .call();
 
-            if (res.paymentPayout().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.paymentPayout().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -350,10 +301,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getPaymentRefund
 
@@ -365,7 +315,6 @@ Retrieve a refund
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetPaymentRefundRequest;
 import com.unifiedapi.unifiedto.models.operations.GetPaymentRefundResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -374,33 +323,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetPaymentRefundRequest req = GetPaymentRefundRequest.builder()
-                .connectionId("<value>")
+        GetPaymentRefundRequest req = GetPaymentRefundRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetPaymentRefundResponse res = sdk.payment().getPaymentRefund()
+        GetPaymentRefundResponse res = sdk.payment().getPaymentRefund()
                 .request(req)
                 .call();
 
-            if (res.paymentRefund().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.paymentRefund().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -417,10 +358,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listPaymentLinks
 
@@ -432,7 +372,6 @@ List all links
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListPaymentLinksRequest;
 import com.unifiedapi.unifiedto.models.operations.ListPaymentLinksResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -441,32 +380,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListPaymentLinksRequest req = ListPaymentLinksRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListPaymentLinksRequest req = ListPaymentLinksRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListPaymentLinksResponse res = sdk.payment().listPaymentLinks()
+        ListPaymentLinksResponse res = sdk.payment().listPaymentLinks()
                 .request(req)
                 .call();
 
-            if (res.paymentLinks().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.paymentLinks().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -483,10 +414,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listPaymentPayments
 
@@ -498,7 +428,6 @@ List all payments
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListPaymentPaymentsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListPaymentPaymentsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -507,32 +436,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListPaymentPaymentsRequest req = ListPaymentPaymentsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListPaymentPaymentsRequest req = ListPaymentPaymentsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListPaymentPaymentsResponse res = sdk.payment().listPaymentPayments()
+        ListPaymentPaymentsResponse res = sdk.payment().listPaymentPayments()
                 .request(req)
                 .call();
 
-            if (res.paymentPayments().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.paymentPayments().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -549,10 +470,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listPaymentPayouts
 
@@ -564,7 +484,6 @@ List all payouts
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListPaymentPayoutsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListPaymentPayoutsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -573,32 +492,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListPaymentPayoutsRequest req = ListPaymentPayoutsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListPaymentPayoutsRequest req = ListPaymentPayoutsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListPaymentPayoutsResponse res = sdk.payment().listPaymentPayouts()
+        ListPaymentPayoutsResponse res = sdk.payment().listPaymentPayouts()
                 .request(req)
                 .call();
 
-            if (res.paymentPayouts().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.paymentPayouts().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -615,10 +526,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listPaymentRefunds
 
@@ -630,7 +540,6 @@ List all refunds
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListPaymentRefundsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListPaymentRefundsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -639,32 +548,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListPaymentRefundsRequest req = ListPaymentRefundsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListPaymentRefundsRequest req = ListPaymentRefundsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListPaymentRefundsResponse res = sdk.payment().listPaymentRefunds()
+        ListPaymentRefundsResponse res = sdk.payment().listPaymentRefunds()
                 .request(req)
                 .call();
 
-            if (res.paymentRefunds().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.paymentRefunds().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -681,10 +582,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchPaymentLink
 
@@ -696,7 +596,6 @@ Update a link
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchPaymentLinkRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchPaymentLinkResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -705,33 +604,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchPaymentLinkRequest req = PatchPaymentLinkRequest.builder()
-                .connectionId("<value>")
+        PatchPaymentLinkRequest req = PatchPaymentLinkRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchPaymentLinkResponse res = sdk.payment().patchPaymentLink()
+        PatchPaymentLinkResponse res = sdk.payment().patchPaymentLink()
                 .request(req)
                 .call();
 
-            if (res.paymentLink().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.paymentLink().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -748,10 +639,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchPaymentPayment
 
@@ -763,7 +653,6 @@ Update a payment
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchPaymentPaymentRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchPaymentPaymentResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -772,33 +661,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchPaymentPaymentRequest req = PatchPaymentPaymentRequest.builder()
-                .connectionId("<value>")
+        PatchPaymentPaymentRequest req = PatchPaymentPaymentRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchPaymentPaymentResponse res = sdk.payment().patchPaymentPayment()
+        PatchPaymentPaymentResponse res = sdk.payment().patchPaymentPayment()
                 .request(req)
                 .call();
 
-            if (res.paymentPayment().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.paymentPayment().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -815,10 +696,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removePaymentLink
 
@@ -830,7 +710,6 @@ Remove a link
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemovePaymentLinkRequest;
 import com.unifiedapi.unifiedto.models.operations.RemovePaymentLinkResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -839,31 +718,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemovePaymentLinkRequest req = RemovePaymentLinkRequest.builder()
-                .connectionId("<value>")
+        RemovePaymentLinkRequest req = RemovePaymentLinkRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemovePaymentLinkResponse res = sdk.payment().removePaymentLink()
+        RemovePaymentLinkResponse res = sdk.payment().removePaymentLink()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -880,10 +751,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removePaymentPayment
 
@@ -895,7 +765,6 @@ Remove a payment
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemovePaymentPaymentRequest;
 import com.unifiedapi.unifiedto.models.operations.RemovePaymentPaymentResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -904,31 +773,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemovePaymentPaymentRequest req = RemovePaymentPaymentRequest.builder()
-                .connectionId("<value>")
+        RemovePaymentPaymentRequest req = RemovePaymentPaymentRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemovePaymentPaymentResponse res = sdk.payment().removePaymentPayment()
+        RemovePaymentPaymentResponse res = sdk.payment().removePaymentPayment()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -945,10 +806,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updatePaymentLink
 
@@ -960,7 +820,6 @@ Update a link
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdatePaymentLinkRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdatePaymentLinkResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -969,33 +828,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdatePaymentLinkRequest req = UpdatePaymentLinkRequest.builder()
-                .connectionId("<value>")
+        UpdatePaymentLinkRequest req = UpdatePaymentLinkRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdatePaymentLinkResponse res = sdk.payment().updatePaymentLink()
+        UpdatePaymentLinkResponse res = sdk.payment().updatePaymentLink()
                 .request(req)
                 .call();
 
-            if (res.paymentLink().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.paymentLink().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1012,10 +863,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updatePaymentPayment
 
@@ -1027,7 +877,6 @@ Update a payment
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdatePaymentPaymentRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdatePaymentPaymentResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1036,33 +885,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdatePaymentPaymentRequest req = UpdatePaymentPaymentRequest.builder()
-                .connectionId("<value>")
+        UpdatePaymentPaymentRequest req = UpdatePaymentPaymentRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdatePaymentPaymentResponse res = sdk.payment().updatePaymentPayment()
+        UpdatePaymentPaymentResponse res = sdk.payment().updatePaymentPayment()
                 .request(req)
                 .call();
 
-            if (res.paymentPayment().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.paymentPayment().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1079,6 +920,6 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |

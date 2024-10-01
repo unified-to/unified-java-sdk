@@ -17,13 +17,13 @@ public class CreateUnifiedConnectionRequestBuilder {
         this.sdk = sdk;
     }
                 
-    public CreateUnifiedConnectionRequestBuilder request(com.unifiedapi.unifiedto.models.shared.Connection request) {
+    public CreateUnifiedConnectionRequestBuilder request(Connection request) {
         Utils.checkNotNull(request, "request");
         this.request = Optional.of(request);
         return this;
     }
 
-    public CreateUnifiedConnectionRequestBuilder request(java.util.Optional<? extends com.unifiedapi.unifiedto.models.shared.Connection> request) {
+    public CreateUnifiedConnectionRequestBuilder request(Optional<? extends Connection> request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

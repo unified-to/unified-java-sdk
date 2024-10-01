@@ -15,7 +15,7 @@ public class ListPaymentLinksRequestBuilder {
         this.sdk = sdk;
     }
 
-    public ListPaymentLinksRequestBuilder request(com.unifiedapi.unifiedto.models.operations.ListPaymentLinksRequest request) {
+    public ListPaymentLinksRequestBuilder request(ListPaymentLinksRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

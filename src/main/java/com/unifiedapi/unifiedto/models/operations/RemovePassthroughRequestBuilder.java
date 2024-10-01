@@ -15,7 +15,7 @@ public class RemovePassthroughRequestBuilder {
         this.sdk = sdk;
     }
 
-    public RemovePassthroughRequestBuilder request(com.unifiedapi.unifiedto.models.operations.RemovePassthroughRequest request) {
+    public RemovePassthroughRequestBuilder request(RemovePassthroughRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

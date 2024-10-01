@@ -24,7 +24,6 @@ Passthrough POST
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreatePassthroughJsonRequest;
 import com.unifiedapi.unifiedto.models.operations.CreatePassthroughJsonResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -33,33 +32,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            CreatePassthroughJsonRequest req = CreatePassthroughJsonRequest.builder()
-                .connectionId("<value>")
+        CreatePassthroughJsonRequest req = CreatePassthroughJsonRequest.builder()
+                .connectionId("<id>")
                 .path("/opt/lib")
                 .build();
 
-            CreatePassthroughJsonResponse res = sdk.passthrough().createPassthroughJson()
+        CreatePassthroughJsonResponse res = sdk.passthrough().createPassthroughJson()
                 .request(req)
                 .call();
 
-            if (res.body().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.body().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -76,10 +67,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createPassthroughRaw
 
@@ -91,7 +81,6 @@ Passthrough POST
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreatePassthroughRawRequest;
 import com.unifiedapi.unifiedto.models.operations.CreatePassthroughRawResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -100,33 +89,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            CreatePassthroughRawRequest req = CreatePassthroughRawRequest.builder()
-                .connectionId("<value>")
+        CreatePassthroughRawRequest req = CreatePassthroughRawRequest.builder()
+                .connectionId("<id>")
                 .path("/etc/namedb")
                 .build();
 
-            CreatePassthroughRawResponse res = sdk.passthrough().createPassthroughRaw()
+        CreatePassthroughRawResponse res = sdk.passthrough().createPassthroughRaw()
                 .request(req)
                 .call();
 
-            if (res.body().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.body().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -143,10 +124,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listPassthroughs
 
@@ -158,7 +138,6 @@ Passthrough GET
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListPassthroughsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListPassthroughsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -167,33 +146,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            ListPassthroughsRequest req = ListPassthroughsRequest.builder()
-                .connectionId("<value>")
+        ListPassthroughsRequest req = ListPassthroughsRequest.builder()
+                .connectionId("<id>")
                 .path("/selinux")
                 .build();
 
-            ListPassthroughsResponse res = sdk.passthrough().listPassthroughs()
+        ListPassthroughsResponse res = sdk.passthrough().listPassthroughs()
                 .request(req)
                 .call();
 
-            if (res.body().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.body().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -210,10 +181,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchPassthroughJson
 
@@ -225,7 +195,6 @@ Passthrough PUT
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchPassthroughJsonRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchPassthroughJsonResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -234,33 +203,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchPassthroughJsonRequest req = PatchPassthroughJsonRequest.builder()
-                .connectionId("<value>")
+        PatchPassthroughJsonRequest req = PatchPassthroughJsonRequest.builder()
+                .connectionId("<id>")
                 .path("/home/user")
                 .build();
 
-            PatchPassthroughJsonResponse res = sdk.passthrough().patchPassthroughJson()
+        PatchPassthroughJsonResponse res = sdk.passthrough().patchPassthroughJson()
                 .request(req)
                 .call();
 
-            if (res.body().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.body().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -277,10 +238,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchPassthroughRaw
 
@@ -292,7 +252,6 @@ Passthrough PUT
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchPassthroughRawRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchPassthroughRawResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -301,33 +260,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchPassthroughRawRequest req = PatchPassthroughRawRequest.builder()
-                .connectionId("<value>")
+        PatchPassthroughRawRequest req = PatchPassthroughRawRequest.builder()
+                .connectionId("<id>")
                 .path("/etc/mail")
                 .build();
 
-            PatchPassthroughRawResponse res = sdk.passthrough().patchPassthroughRaw()
+        PatchPassthroughRawResponse res = sdk.passthrough().patchPassthroughRaw()
                 .request(req)
                 .call();
 
-            if (res.body().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.body().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -344,10 +295,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removePassthrough
 
@@ -359,7 +309,6 @@ Passthrough DELETE
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemovePassthroughRequest;
 import com.unifiedapi.unifiedto.models.operations.RemovePassthroughResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -368,33 +317,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemovePassthroughRequest req = RemovePassthroughRequest.builder()
-                .connectionId("<value>")
+        RemovePassthroughRequest req = RemovePassthroughRequest.builder()
+                .connectionId("<id>")
                 .path("/Applications")
                 .build();
 
-            RemovePassthroughResponse res = sdk.passthrough().removePassthrough()
+        RemovePassthroughResponse res = sdk.passthrough().removePassthrough()
                 .request(req)
                 .call();
 
-            if (res.body().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.body().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -411,10 +352,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updatePassthroughJson
 
@@ -426,7 +366,6 @@ Passthrough PUT
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdatePassthroughJsonRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdatePassthroughJsonResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -435,33 +374,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdatePassthroughJsonRequest req = UpdatePassthroughJsonRequest.builder()
-                .connectionId("<value>")
+        UpdatePassthroughJsonRequest req = UpdatePassthroughJsonRequest.builder()
+                .connectionId("<id>")
                 .path("/etc/namedb")
                 .build();
 
-            UpdatePassthroughJsonResponse res = sdk.passthrough().updatePassthroughJson()
+        UpdatePassthroughJsonResponse res = sdk.passthrough().updatePassthroughJson()
                 .request(req)
                 .call();
 
-            if (res.body().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.body().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -478,10 +409,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updatePassthroughRaw
 
@@ -493,7 +423,6 @@ Passthrough PUT
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdatePassthroughRawRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdatePassthroughRawResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -502,33 +431,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdatePassthroughRawRequest req = UpdatePassthroughRawRequest.builder()
-                .connectionId("<value>")
+        UpdatePassthroughRawRequest req = UpdatePassthroughRawRequest.builder()
+                .connectionId("<id>")
                 .path("/System")
                 .build();
 
-            UpdatePassthroughRawResponse res = sdk.passthrough().updatePassthroughRaw()
+        UpdatePassthroughRawResponse res = sdk.passthrough().updatePassthroughRaw()
                 .request(req)
                 .call();
 
-            if (res.body().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.body().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -545,6 +466,6 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |

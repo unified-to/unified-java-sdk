@@ -15,7 +15,7 @@ public class PatchTaskTaskRequestBuilder {
         this.sdk = sdk;
     }
 
-    public PatchTaskTaskRequestBuilder request(com.unifiedapi.unifiedto.models.operations.PatchTaskTaskRequest request) {
+    public PatchTaskTaskRequestBuilder request(PatchTaskTaskRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

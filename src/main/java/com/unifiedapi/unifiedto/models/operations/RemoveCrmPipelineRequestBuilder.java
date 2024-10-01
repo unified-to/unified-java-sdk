@@ -15,7 +15,7 @@ public class RemoveCrmPipelineRequestBuilder {
         this.sdk = sdk;
     }
 
-    public RemoveCrmPipelineRequestBuilder request(com.unifiedapi.unifiedto.models.operations.RemoveCrmPipelineRequest request) {
+    public RemoveCrmPipelineRequestBuilder request(RemoveCrmPipelineRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

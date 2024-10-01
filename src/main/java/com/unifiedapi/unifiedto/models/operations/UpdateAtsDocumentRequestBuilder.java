@@ -15,7 +15,7 @@ public class UpdateAtsDocumentRequestBuilder {
         this.sdk = sdk;
     }
 
-    public UpdateAtsDocumentRequestBuilder request(com.unifiedapi.unifiedto.models.operations.UpdateAtsDocumentRequest request) {
+    public UpdateAtsDocumentRequestBuilder request(UpdateAtsDocumentRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

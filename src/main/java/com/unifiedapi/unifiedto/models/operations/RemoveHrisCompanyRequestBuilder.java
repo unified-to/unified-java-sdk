@@ -15,7 +15,7 @@ public class RemoveHrisCompanyRequestBuilder {
         this.sdk = sdk;
     }
 
-    public RemoveHrisCompanyRequestBuilder request(com.unifiedapi.unifiedto.models.operations.RemoveHrisCompanyRequest request) {
+    public RemoveHrisCompanyRequestBuilder request(RemoveHrisCompanyRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

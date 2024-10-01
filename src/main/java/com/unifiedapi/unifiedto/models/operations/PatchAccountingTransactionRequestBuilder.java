@@ -15,7 +15,7 @@ public class PatchAccountingTransactionRequestBuilder {
         this.sdk = sdk;
     }
 
-    public PatchAccountingTransactionRequestBuilder request(com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionRequest request) {
+    public PatchAccountingTransactionRequestBuilder request(PatchAccountingTransactionRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

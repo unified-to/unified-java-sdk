@@ -15,7 +15,7 @@ public class ListStorageFilesRequestBuilder {
         this.sdk = sdk;
     }
 
-    public ListStorageFilesRequestBuilder request(com.unifiedapi.unifiedto.models.operations.ListStorageFilesRequest request) {
+    public ListStorageFilesRequestBuilder request(ListStorageFilesRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

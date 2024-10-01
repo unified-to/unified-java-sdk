@@ -15,7 +15,7 @@ public class RemoveCommerceLocationRequestBuilder {
         this.sdk = sdk;
     }
 
-    public RemoveCommerceLocationRequestBuilder request(com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationRequest request) {
+    public RemoveCommerceLocationRequestBuilder request(RemoveCommerceLocationRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

@@ -15,7 +15,7 @@ public class ListHrisGroupsRequestBuilder {
         this.sdk = sdk;
     }
 
-    public ListHrisGroupsRequestBuilder request(com.unifiedapi.unifiedto.models.operations.ListHrisGroupsRequest request) {
+    public ListHrisGroupsRequestBuilder request(ListHrisGroupsRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

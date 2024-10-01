@@ -15,7 +15,7 @@ public class ListCrmLeadsRequestBuilder {
         this.sdk = sdk;
     }
 
-    public ListCrmLeadsRequestBuilder request(com.unifiedapi.unifiedto.models.operations.ListCrmLeadsRequest request) {
+    public ListCrmLeadsRequestBuilder request(ListCrmLeadsRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

@@ -15,7 +15,7 @@ public class GetCrmDealRequestBuilder {
         this.sdk = sdk;
     }
 
-    public GetCrmDealRequestBuilder request(com.unifiedapi.unifiedto.models.operations.GetCrmDealRequest request) {
+    public GetCrmDealRequestBuilder request(GetCrmDealRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

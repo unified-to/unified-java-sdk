@@ -28,7 +28,6 @@ Create a location
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -37,32 +36,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateCommerceLocationRequest req = CreateCommerceLocationRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateCommerceLocationRequest req = CreateCommerceLocationRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateCommerceLocationResponse res = sdk.location().createCommerceLocation()
+        CreateCommerceLocationResponse res = sdk.location().createCommerceLocation()
                 .request(req)
                 .call();
 
-            if (res.commerceLocation().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceLocation().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -79,10 +70,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createHrisLocation
 
@@ -94,7 +84,6 @@ Create a location
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateHrisLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateHrisLocationResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -103,32 +92,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateHrisLocationRequest req = CreateHrisLocationRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateHrisLocationRequest req = CreateHrisLocationRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateHrisLocationResponse res = sdk.location().createHrisLocation()
+        CreateHrisLocationResponse res = sdk.location().createHrisLocation()
                 .request(req)
                 .call();
 
-            if (res.hrisLocation().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.hrisLocation().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -145,10 +126,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getCommerceLocation
 
@@ -160,7 +140,6 @@ Retrieve a location
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetCommerceLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCommerceLocationResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -169,33 +148,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetCommerceLocationRequest req = GetCommerceLocationRequest.builder()
-                .connectionId("<value>")
+        GetCommerceLocationRequest req = GetCommerceLocationRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetCommerceLocationResponse res = sdk.location().getCommerceLocation()
+        GetCommerceLocationResponse res = sdk.location().getCommerceLocation()
                 .request(req)
                 .call();
 
-            if (res.commerceLocation().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceLocation().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -212,10 +183,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getHrisLocation
 
@@ -227,7 +197,6 @@ Retrieve a location
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetHrisLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.GetHrisLocationResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -236,33 +205,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetHrisLocationRequest req = GetHrisLocationRequest.builder()
-                .connectionId("<value>")
+        GetHrisLocationRequest req = GetHrisLocationRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetHrisLocationResponse res = sdk.location().getHrisLocation()
+        GetHrisLocationResponse res = sdk.location().getHrisLocation()
                 .request(req)
                 .call();
 
-            if (res.hrisLocation().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.hrisLocation().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -279,10 +240,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listCommerceLocations
 
@@ -294,7 +254,6 @@ List all locations
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListCommerceLocationsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListCommerceLocationsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -303,32 +262,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListCommerceLocationsRequest req = ListCommerceLocationsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListCommerceLocationsRequest req = ListCommerceLocationsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListCommerceLocationsResponse res = sdk.location().listCommerceLocations()
+        ListCommerceLocationsResponse res = sdk.location().listCommerceLocations()
                 .request(req)
                 .call();
 
-            if (res.commerceLocations().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceLocations().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -345,10 +296,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listHrisLocations
 
@@ -360,7 +310,6 @@ List all locations
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListHrisLocationsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListHrisLocationsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -369,32 +318,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListHrisLocationsRequest req = ListHrisLocationsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListHrisLocationsRequest req = ListHrisLocationsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListHrisLocationsResponse res = sdk.location().listHrisLocations()
+        ListHrisLocationsResponse res = sdk.location().listHrisLocations()
                 .request(req)
                 .call();
 
-            if (res.hrisLocations().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.hrisLocations().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -411,10 +352,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchCommerceLocation
 
@@ -426,7 +366,6 @@ Update a location
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -435,33 +374,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchCommerceLocationRequest req = PatchCommerceLocationRequest.builder()
-                .connectionId("<value>")
+        PatchCommerceLocationRequest req = PatchCommerceLocationRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchCommerceLocationResponse res = sdk.location().patchCommerceLocation()
+        PatchCommerceLocationResponse res = sdk.location().patchCommerceLocation()
                 .request(req)
                 .call();
 
-            if (res.commerceLocation().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceLocation().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -478,10 +409,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchHrisLocation
 
@@ -493,7 +423,6 @@ Update a location
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchHrisLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchHrisLocationResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -502,33 +431,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchHrisLocationRequest req = PatchHrisLocationRequest.builder()
-                .connectionId("<value>")
+        PatchHrisLocationRequest req = PatchHrisLocationRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchHrisLocationResponse res = sdk.location().patchHrisLocation()
+        PatchHrisLocationResponse res = sdk.location().patchHrisLocation()
                 .request(req)
                 .call();
 
-            if (res.hrisLocation().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.hrisLocation().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -545,10 +466,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeCommerceLocation
 
@@ -560,7 +480,6 @@ Remove a location
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -569,31 +488,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveCommerceLocationRequest req = RemoveCommerceLocationRequest.builder()
-                .connectionId("<value>")
+        RemoveCommerceLocationRequest req = RemoveCommerceLocationRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveCommerceLocationResponse res = sdk.location().removeCommerceLocation()
+        RemoveCommerceLocationResponse res = sdk.location().removeCommerceLocation()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -610,10 +521,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeHrisLocation
 
@@ -625,7 +535,6 @@ Remove a location
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveHrisLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveHrisLocationResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -634,31 +543,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveHrisLocationRequest req = RemoveHrisLocationRequest.builder()
-                .connectionId("<value>")
+        RemoveHrisLocationRequest req = RemoveHrisLocationRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveHrisLocationResponse res = sdk.location().removeHrisLocation()
+        RemoveHrisLocationResponse res = sdk.location().removeHrisLocation()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -675,10 +576,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateCommerceLocation
 
@@ -690,7 +590,6 @@ Update a location
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -699,33 +598,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateCommerceLocationRequest req = UpdateCommerceLocationRequest.builder()
-                .connectionId("<value>")
+        UpdateCommerceLocationRequest req = UpdateCommerceLocationRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateCommerceLocationResponse res = sdk.location().updateCommerceLocation()
+        UpdateCommerceLocationResponse res = sdk.location().updateCommerceLocation()
                 .request(req)
                 .call();
 
-            if (res.commerceLocation().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.commerceLocation().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -742,10 +633,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateHrisLocation
 
@@ -757,7 +647,6 @@ Update a location
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateHrisLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateHrisLocationResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -766,33 +655,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateHrisLocationRequest req = UpdateHrisLocationRequest.builder()
-                .connectionId("<value>")
+        UpdateHrisLocationRequest req = UpdateHrisLocationRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateHrisLocationResponse res = sdk.location().updateHrisLocation()
+        UpdateHrisLocationResponse res = sdk.location().updateHrisLocation()
                 .request(req)
                 .call();
 
-            if (res.hrisLocation().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.hrisLocation().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -809,6 +690,6 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |

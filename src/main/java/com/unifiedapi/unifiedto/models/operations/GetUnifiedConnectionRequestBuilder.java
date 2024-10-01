@@ -15,7 +15,7 @@ public class GetUnifiedConnectionRequestBuilder {
         this.sdk = sdk;
     }
 
-    public GetUnifiedConnectionRequestBuilder request(com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionRequest request) {
+    public GetUnifiedConnectionRequestBuilder request(GetUnifiedConnectionRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

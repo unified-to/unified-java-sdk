@@ -15,7 +15,7 @@ public class GetUnifiedIntegrationAuthRequestBuilder {
         this.sdk = sdk;
     }
 
-    public GetUnifiedIntegrationAuthRequestBuilder request(com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest request) {
+    public GetUnifiedIntegrationAuthRequestBuilder request(GetUnifiedIntegrationAuthRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

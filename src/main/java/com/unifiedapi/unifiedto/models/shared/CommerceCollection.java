@@ -55,6 +55,10 @@ public class CommerceCollection {
     @JsonProperty("media")
     private Optional<? extends List<CommerceItemMedia>> media;
 
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private Optional<? extends List<CommerceMetadata>> metadata;
+
     @JsonProperty("name")
     private String name;
 
@@ -95,6 +99,7 @@ public class CommerceCollection {
             @JsonProperty("is_featured") Optional<Boolean> isFeatured,
             @JsonProperty("is_visible") Optional<Boolean> isVisible,
             @JsonProperty("media") Optional<? extends List<CommerceItemMedia>> media,
+            @JsonProperty("metadata") Optional<? extends List<CommerceMetadata>> metadata,
             @JsonProperty("name") String name,
             @JsonProperty("parent_id") Optional<String> parentId,
             @JsonProperty("public_description") Optional<String> publicDescription,
@@ -110,6 +115,7 @@ public class CommerceCollection {
         Utils.checkNotNull(isFeatured, "isFeatured");
         Utils.checkNotNull(isVisible, "isVisible");
         Utils.checkNotNull(media, "media");
+        Utils.checkNotNull(metadata, "metadata");
         Utils.checkNotNull(name, "name");
         Utils.checkNotNull(parentId, "parentId");
         Utils.checkNotNull(publicDescription, "publicDescription");
@@ -125,6 +131,7 @@ public class CommerceCollection {
         this.isFeatured = isFeatured;
         this.isVisible = isVisible;
         this.media = media;
+        this.metadata = metadata;
         this.name = name;
         this.parentId = parentId;
         this.publicDescription = publicDescription;
@@ -138,7 +145,7 @@ public class CommerceCollection {
     public CommerceCollection(
             String id,
             String name) {
-        this(Optional.empty(), Optional.empty(), id, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), name, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), id, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), name, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -175,6 +182,12 @@ public class CommerceCollection {
     @JsonIgnore
     public Optional<List<CommerceItemMedia>> media() {
         return (Optional<List<CommerceItemMedia>>) media;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<CommerceMetadata>> metadata() {
+        return (Optional<List<CommerceMetadata>>) metadata;
     }
 
     @JsonIgnore
@@ -302,6 +315,18 @@ public class CommerceCollection {
         return this;
     }
 
+    public CommerceCollection withMetadata(List<CommerceMetadata> metadata) {
+        Utils.checkNotNull(metadata, "metadata");
+        this.metadata = Optional.ofNullable(metadata);
+        return this;
+    }
+
+    public CommerceCollection withMetadata(Optional<? extends List<CommerceMetadata>> metadata) {
+        Utils.checkNotNull(metadata, "metadata");
+        this.metadata = metadata;
+        return this;
+    }
+
     public CommerceCollection withName(String name) {
         Utils.checkNotNull(name, "name");
         this.name = name;
@@ -409,6 +434,7 @@ public class CommerceCollection {
             Objects.deepEquals(this.isFeatured, other.isFeatured) &&
             Objects.deepEquals(this.isVisible, other.isVisible) &&
             Objects.deepEquals(this.media, other.media) &&
+            Objects.deepEquals(this.metadata, other.metadata) &&
             Objects.deepEquals(this.name, other.name) &&
             Objects.deepEquals(this.parentId, other.parentId) &&
             Objects.deepEquals(this.publicDescription, other.publicDescription) &&
@@ -429,6 +455,7 @@ public class CommerceCollection {
             isFeatured,
             isVisible,
             media,
+            metadata,
             name,
             parentId,
             publicDescription,
@@ -449,6 +476,7 @@ public class CommerceCollection {
                 "isFeatured", isFeatured,
                 "isVisible", isVisible,
                 "media", media,
+                "metadata", metadata,
                 "name", name,
                 "parentId", parentId,
                 "publicDescription", publicDescription,
@@ -474,6 +502,8 @@ public class CommerceCollection {
         private Optional<Boolean> isVisible = Optional.empty();
  
         private Optional<? extends List<CommerceItemMedia>> media = Optional.empty();
+ 
+        private Optional<? extends List<CommerceMetadata>> metadata = Optional.empty();
  
         private String name;
  
@@ -570,6 +600,18 @@ public class CommerceCollection {
         public Builder media(Optional<? extends List<CommerceItemMedia>> media) {
             Utils.checkNotNull(media, "media");
             this.media = media;
+            return this;
+        }
+
+        public Builder metadata(List<CommerceMetadata> metadata) {
+            Utils.checkNotNull(metadata, "metadata");
+            this.metadata = Optional.ofNullable(metadata);
+            return this;
+        }
+
+        public Builder metadata(Optional<? extends List<CommerceMetadata>> metadata) {
+            Utils.checkNotNull(metadata, "metadata");
+            this.metadata = metadata;
             return this;
         }
 
@@ -672,6 +714,7 @@ public class CommerceCollection {
                 isFeatured,
                 isVisible,
                 media,
+                metadata,
                 name,
                 parentId,
                 publicDescription,

@@ -15,7 +15,7 @@ public class UpdateUnifiedWebhookRequestBuilder {
         this.sdk = sdk;
     }
 
-    public UpdateUnifiedWebhookRequestBuilder request(com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookRequest request) {
+    public UpdateUnifiedWebhookRequestBuilder request(UpdateUnifiedWebhookRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

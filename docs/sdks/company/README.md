@@ -31,7 +31,6 @@ Create a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCrmCompanyResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -40,32 +39,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateCrmCompanyRequest req = CreateCrmCompanyRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateCrmCompanyRequest req = CreateCrmCompanyRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateCrmCompanyResponse res = sdk.company().createCrmCompany()
+        CreateCrmCompanyResponse res = sdk.company().createCrmCompany()
                 .request(req)
                 .call();
 
-            if (res.crmCompany().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.crmCompany().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -82,10 +73,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createHrisCompany
 
@@ -97,7 +87,6 @@ Create a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateHrisCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateHrisCompanyResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -106,32 +95,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateHrisCompanyRequest req = CreateHrisCompanyRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateHrisCompanyRequest req = CreateHrisCompanyRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateHrisCompanyResponse res = sdk.company().createHrisCompany()
+        CreateHrisCompanyResponse res = sdk.company().createHrisCompany()
                 .request(req)
                 .call();
 
-            if (res.hrisCompany().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.hrisCompany().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -148,10 +129,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getAtsCompany
 
@@ -163,7 +143,6 @@ Retrieve a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAtsCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAtsCompanyResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -172,33 +151,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetAtsCompanyRequest req = GetAtsCompanyRequest.builder()
-                .connectionId("<value>")
+        GetAtsCompanyRequest req = GetAtsCompanyRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetAtsCompanyResponse res = sdk.company().getAtsCompany()
+        GetAtsCompanyResponse res = sdk.company().getAtsCompany()
                 .request(req)
                 .call();
 
-            if (res.atsCompany().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsCompany().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -215,10 +186,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getCrmCompany
 
@@ -230,7 +200,6 @@ Retrieve a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetCrmCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCrmCompanyResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -239,33 +208,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetCrmCompanyRequest req = GetCrmCompanyRequest.builder()
-                .connectionId("<value>")
+        GetCrmCompanyRequest req = GetCrmCompanyRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetCrmCompanyResponse res = sdk.company().getCrmCompany()
+        GetCrmCompanyResponse res = sdk.company().getCrmCompany()
                 .request(req)
                 .call();
 
-            if (res.crmCompany().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.crmCompany().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -282,10 +243,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getHrisCompany
 
@@ -297,7 +257,6 @@ Retrieve a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetHrisCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.GetHrisCompanyResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -306,33 +265,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetHrisCompanyRequest req = GetHrisCompanyRequest.builder()
-                .connectionId("<value>")
+        GetHrisCompanyRequest req = GetHrisCompanyRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetHrisCompanyResponse res = sdk.company().getHrisCompany()
+        GetHrisCompanyResponse res = sdk.company().getHrisCompany()
                 .request(req)
                 .call();
 
-            if (res.hrisCompany().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.hrisCompany().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -349,10 +300,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listAtsCompanies
 
@@ -364,7 +314,6 @@ List all companies
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAtsCompaniesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAtsCompaniesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -373,32 +322,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListAtsCompaniesRequest req = ListAtsCompaniesRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListAtsCompaniesRequest req = ListAtsCompaniesRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListAtsCompaniesResponse res = sdk.company().listAtsCompanies()
+        ListAtsCompaniesResponse res = sdk.company().listAtsCompanies()
                 .request(req)
                 .call();
 
-            if (res.atsCompanies().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.atsCompanies().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -415,10 +356,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listCrmCompanies
 
@@ -430,7 +370,6 @@ List all companies
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListCrmCompaniesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListCrmCompaniesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -439,32 +378,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListCrmCompaniesRequest req = ListCrmCompaniesRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListCrmCompaniesRequest req = ListCrmCompaniesRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListCrmCompaniesResponse res = sdk.company().listCrmCompanies()
+        ListCrmCompaniesResponse res = sdk.company().listCrmCompanies()
                 .request(req)
                 .call();
 
-            if (res.crmCompanies().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.crmCompanies().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -481,10 +412,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listEnrichCompanies
 
@@ -496,7 +426,6 @@ Retrieve enrichment information for a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListEnrichCompaniesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -505,32 +434,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListEnrichCompaniesRequest req = ListEnrichCompaniesRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListEnrichCompaniesRequest req = ListEnrichCompaniesRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListEnrichCompaniesResponse res = sdk.company().listEnrichCompanies()
+        ListEnrichCompaniesResponse res = sdk.company().listEnrichCompanies()
                 .request(req)
                 .call();
 
-            if (res.enrichCompany().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.enrichCompany().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -547,10 +468,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listHrisCompanies
 
@@ -562,7 +482,6 @@ List all companies
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListHrisCompaniesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListHrisCompaniesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -571,32 +490,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListHrisCompaniesRequest req = ListHrisCompaniesRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListHrisCompaniesRequest req = ListHrisCompaniesRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListHrisCompaniesResponse res = sdk.company().listHrisCompanies()
+        ListHrisCompaniesResponse res = sdk.company().listHrisCompanies()
                 .request(req)
                 .call();
 
-            if (res.hrisCompanies().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.hrisCompanies().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -613,10 +524,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchCrmCompany
 
@@ -628,7 +538,6 @@ Update a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCrmCompanyResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -637,33 +546,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchCrmCompanyRequest req = PatchCrmCompanyRequest.builder()
-                .connectionId("<value>")
+        PatchCrmCompanyRequest req = PatchCrmCompanyRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchCrmCompanyResponse res = sdk.company().patchCrmCompany()
+        PatchCrmCompanyResponse res = sdk.company().patchCrmCompany()
                 .request(req)
                 .call();
 
-            if (res.crmCompany().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.crmCompany().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -680,10 +581,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchHrisCompany
 
@@ -695,7 +595,6 @@ Update a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchHrisCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchHrisCompanyResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -704,33 +603,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchHrisCompanyRequest req = PatchHrisCompanyRequest.builder()
-                .connectionId("<value>")
+        PatchHrisCompanyRequest req = PatchHrisCompanyRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchHrisCompanyResponse res = sdk.company().patchHrisCompany()
+        PatchHrisCompanyResponse res = sdk.company().patchHrisCompany()
                 .request(req)
                 .call();
 
-            if (res.hrisCompany().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.hrisCompany().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -747,10 +638,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeCrmCompany
 
@@ -762,7 +652,6 @@ Remove a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveCrmCompanyResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -771,31 +660,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveCrmCompanyRequest req = RemoveCrmCompanyRequest.builder()
-                .connectionId("<value>")
+        RemoveCrmCompanyRequest req = RemoveCrmCompanyRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveCrmCompanyResponse res = sdk.company().removeCrmCompany()
+        RemoveCrmCompanyResponse res = sdk.company().removeCrmCompany()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -812,10 +693,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeHrisCompany
 
@@ -827,7 +707,6 @@ Remove a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveHrisCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveHrisCompanyResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -836,31 +715,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveHrisCompanyRequest req = RemoveHrisCompanyRequest.builder()
-                .connectionId("<value>")
+        RemoveHrisCompanyRequest req = RemoveHrisCompanyRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveHrisCompanyResponse res = sdk.company().removeHrisCompany()
+        RemoveHrisCompanyResponse res = sdk.company().removeHrisCompany()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -877,10 +748,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateCrmCompany
 
@@ -892,7 +762,6 @@ Update a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCrmCompanyResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -901,33 +770,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateCrmCompanyRequest req = UpdateCrmCompanyRequest.builder()
-                .connectionId("<value>")
+        UpdateCrmCompanyRequest req = UpdateCrmCompanyRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateCrmCompanyResponse res = sdk.company().updateCrmCompany()
+        UpdateCrmCompanyResponse res = sdk.company().updateCrmCompany()
                 .request(req)
                 .call();
 
-            if (res.crmCompany().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.crmCompany().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -944,10 +805,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateHrisCompany
 
@@ -959,7 +819,6 @@ Update a company
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateHrisCompanyRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateHrisCompanyResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -968,33 +827,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateHrisCompanyRequest req = UpdateHrisCompanyRequest.builder()
-                .connectionId("<value>")
+        UpdateHrisCompanyRequest req = UpdateHrisCompanyRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateHrisCompanyResponse res = sdk.company().updateHrisCompany()
+        UpdateHrisCompanyResponse res = sdk.company().updateHrisCompany()
                 .request(req)
                 .call();
 
-            if (res.hrisCompany().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.hrisCompany().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1011,6 +862,6 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |

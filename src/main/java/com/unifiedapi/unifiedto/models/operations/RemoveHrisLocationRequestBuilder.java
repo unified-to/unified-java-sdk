@@ -15,7 +15,7 @@ public class RemoveHrisLocationRequestBuilder {
         this.sdk = sdk;
     }
 
-    public RemoveHrisLocationRequestBuilder request(com.unifiedapi.unifiedto.models.operations.RemoveHrisLocationRequest request) {
+    public RemoveHrisLocationRequestBuilder request(RemoveHrisLocationRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

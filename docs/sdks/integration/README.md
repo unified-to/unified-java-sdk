@@ -19,7 +19,6 @@ Returns an authorization URL for the specified integration.  Once a successful a
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -28,33 +27,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetUnifiedIntegrationAuthRequest req = GetUnifiedIntegrationAuthRequest.builder()
+        GetUnifiedIntegrationAuthRequest req = GetUnifiedIntegrationAuthRequest.builder()
                 .integrationType("<value>")
-                .workspaceId("<value>")
+                .workspaceId("<id>")
                 .build();
 
-            GetUnifiedIntegrationAuthResponse res = sdk.integration().getUnifiedIntegrationAuth()
+        GetUnifiedIntegrationAuthResponse res = sdk.integration().getUnifiedIntegrationAuth()
                 .request(req)
                 .call();
 
-            if (res.res().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.res().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -71,10 +62,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listUnifiedIntegrationWorkspaces
 
@@ -86,7 +76,6 @@ No authentication required as this is to be used by front-end interface
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -95,32 +84,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListUnifiedIntegrationWorkspacesRequest req = ListUnifiedIntegrationWorkspacesRequest.builder()
+                .workspaceId("<id>")
                 .build();
 
-            ListUnifiedIntegrationWorkspacesRequest req = ListUnifiedIntegrationWorkspacesRequest.builder()
-                .workspaceId("<value>")
-                .build();
-
-            ListUnifiedIntegrationWorkspacesResponse res = sdk.integration().listUnifiedIntegrationWorkspaces()
+        ListUnifiedIntegrationWorkspacesResponse res = sdk.integration().listUnifiedIntegrationWorkspaces()
                 .request(req)
                 .call();
 
-            if (res.integrations().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.integrations().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -137,10 +118,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listUnifiedIntegrations
 
@@ -152,7 +132,6 @@ Returns all integrations
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -161,31 +140,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListUnifiedIntegrationsRequest req = ListUnifiedIntegrationsRequest.builder()
                 .build();
 
-            ListUnifiedIntegrationsRequest req = ListUnifiedIntegrationsRequest.builder()
-                .build();
-
-            ListUnifiedIntegrationsResponse res = sdk.integration().listUnifiedIntegrations()
+        ListUnifiedIntegrationsResponse res = sdk.integration().listUnifiedIntegrations()
                 .request(req)
                 .call();
 
-            if (res.integrations().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.integrations().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -202,6 +173,6 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |

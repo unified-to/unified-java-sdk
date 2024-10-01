@@ -22,7 +22,6 @@ Create a space
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateKmsSpaceRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateKmsSpaceResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -31,32 +30,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateKmsSpaceRequest req = CreateKmsSpaceRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateKmsSpaceRequest req = CreateKmsSpaceRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateKmsSpaceResponse res = sdk.space().createKmsSpace()
+        CreateKmsSpaceResponse res = sdk.space().createKmsSpace()
                 .request(req)
                 .call();
 
-            if (res.kmsSpace().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.kmsSpace().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -73,10 +64,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getKmsSpace
 
@@ -88,7 +78,6 @@ Retrieve a space
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetKmsSpaceRequest;
 import com.unifiedapi.unifiedto.models.operations.GetKmsSpaceResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -97,33 +86,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetKmsSpaceRequest req = GetKmsSpaceRequest.builder()
-                .connectionId("<value>")
+        GetKmsSpaceRequest req = GetKmsSpaceRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetKmsSpaceResponse res = sdk.space().getKmsSpace()
+        GetKmsSpaceResponse res = sdk.space().getKmsSpace()
                 .request(req)
                 .call();
 
-            if (res.kmsSpace().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.kmsSpace().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -140,10 +121,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listKmsSpaces
 
@@ -155,7 +135,6 @@ List all spaces
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListKmsSpacesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListKmsSpacesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -164,32 +143,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListKmsSpacesRequest req = ListKmsSpacesRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListKmsSpacesRequest req = ListKmsSpacesRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListKmsSpacesResponse res = sdk.space().listKmsSpaces()
+        ListKmsSpacesResponse res = sdk.space().listKmsSpaces()
                 .request(req)
                 .call();
 
-            if (res.kmsSpaces().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.kmsSpaces().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -206,10 +177,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchKmsSpace
 
@@ -221,7 +191,6 @@ Update a space
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchKmsSpaceRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchKmsSpaceResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -230,33 +199,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchKmsSpaceRequest req = PatchKmsSpaceRequest.builder()
-                .connectionId("<value>")
+        PatchKmsSpaceRequest req = PatchKmsSpaceRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchKmsSpaceResponse res = sdk.space().patchKmsSpace()
+        PatchKmsSpaceResponse res = sdk.space().patchKmsSpace()
                 .request(req)
                 .call();
 
-            if (res.kmsSpace().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.kmsSpace().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -273,10 +234,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeKmsSpace
 
@@ -288,7 +248,6 @@ Remove a space
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveKmsSpaceRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveKmsSpaceResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -297,31 +256,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveKmsSpaceRequest req = RemoveKmsSpaceRequest.builder()
-                .connectionId("<value>")
+        RemoveKmsSpaceRequest req = RemoveKmsSpaceRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveKmsSpaceResponse res = sdk.space().removeKmsSpace()
+        RemoveKmsSpaceResponse res = sdk.space().removeKmsSpace()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -338,10 +289,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateKmsSpace
 
@@ -353,7 +303,6 @@ Update a space
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateKmsSpaceRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateKmsSpaceResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -362,33 +311,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateKmsSpaceRequest req = UpdateKmsSpaceRequest.builder()
-                .connectionId("<value>")
+        UpdateKmsSpaceRequest req = UpdateKmsSpaceRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateKmsSpaceResponse res = sdk.space().updateKmsSpace()
+        UpdateKmsSpaceResponse res = sdk.space().updateKmsSpace()
                 .request(req)
                 .call();
 
-            if (res.kmsSpace().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.kmsSpace().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -405,6 +346,6 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |

@@ -36,7 +36,6 @@ Used only to import existing customer credentials; use "Create connection indire
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateUnifiedConnectionResponse;
 import com.unifiedapi.unifiedto.models.shared.Connection;
 import com.unifiedapi.unifiedto.models.shared.PropertyConnectionCategories;
@@ -48,36 +47,28 @@ import java.util.List;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            Connection req = Connection.builder()
+        Connection req = Connection.builder()
                 .categories(List.of(
                     PropertyConnectionCategories.KMS))
                 .integrationType("<value>")
                 .permissions(List.of(
-                    PropertyConnectionPermissions.ATS_DOCUMENT_WRITE))
+                    PropertyConnectionPermissions.ATS_SCORECARD_READ))
                 .build();
 
-            CreateUnifiedConnectionResponse res = sdk.unified().createUnifiedConnection()
+        CreateUnifiedConnectionResponse res = sdk.unified().createUnifiedConnection()
                 .request(req)
                 .call();
 
-            if (res.connection().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.connection().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -94,10 +85,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createUnifiedWebhook
 
@@ -109,7 +99,6 @@ The data payload received by your server is described at https://docs.unified.to
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateUnifiedWebhookResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -118,31 +107,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateUnifiedWebhookRequest req = CreateUnifiedWebhookRequest.builder()
                 .build();
 
-            CreateUnifiedWebhookRequest req = CreateUnifiedWebhookRequest.builder()
-                .build();
-
-            CreateUnifiedWebhookResponse res = sdk.unified().createUnifiedWebhook()
+        CreateUnifiedWebhookResponse res = sdk.unified().createUnifiedWebhook()
                 .request(req)
                 .call();
 
-            if (res.webhook().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.webhook().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -159,10 +140,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getUnifiedApicall
 
@@ -174,7 +154,6 @@ Retrieve specific API Call by its ID
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedApicallResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -183,32 +162,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetUnifiedApicallRequest req = GetUnifiedApicallRequest.builder()
+        GetUnifiedApicallRequest req = GetUnifiedApicallRequest.builder()
                 .id("<id>")
                 .build();
 
-            GetUnifiedApicallResponse res = sdk.unified().getUnifiedApicall()
+        GetUnifiedApicallResponse res = sdk.unified().getUnifiedApicall()
                 .request(req)
                 .call();
 
-            if (res.apiCall().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.apiCall().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -225,10 +196,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getUnifiedConnection
 
@@ -240,7 +210,6 @@ Retrieve connection
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedConnectionResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -249,32 +218,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetUnifiedConnectionRequest req = GetUnifiedConnectionRequest.builder()
+        GetUnifiedConnectionRequest req = GetUnifiedConnectionRequest.builder()
                 .id("<id>")
                 .build();
 
-            GetUnifiedConnectionResponse res = sdk.unified().getUnifiedConnection()
+        GetUnifiedConnectionResponse res = sdk.unified().getUnifiedConnection()
                 .request(req)
                 .call();
 
-            if (res.connection().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.connection().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -291,10 +252,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getUnifiedIntegrationAuth
 
@@ -306,7 +266,6 @@ Returns an authorization URL for the specified integration.  Once a successful a
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedIntegrationAuthResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -315,33 +274,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetUnifiedIntegrationAuthRequest req = GetUnifiedIntegrationAuthRequest.builder()
+        GetUnifiedIntegrationAuthRequest req = GetUnifiedIntegrationAuthRequest.builder()
                 .integrationType("<value>")
-                .workspaceId("<value>")
+                .workspaceId("<id>")
                 .build();
 
-            GetUnifiedIntegrationAuthResponse res = sdk.unified().getUnifiedIntegrationAuth()
+        GetUnifiedIntegrationAuthResponse res = sdk.unified().getUnifiedIntegrationAuth()
                 .request(req)
                 .call();
 
-            if (res.res().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.res().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -358,10 +309,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getUnifiedWebhook
 
@@ -373,7 +323,6 @@ Retrieve webhook by its ID
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookRequest;
 import com.unifiedapi.unifiedto.models.operations.GetUnifiedWebhookResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -382,32 +331,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetUnifiedWebhookRequest req = GetUnifiedWebhookRequest.builder()
+        GetUnifiedWebhookRequest req = GetUnifiedWebhookRequest.builder()
                 .id("<id>")
                 .build();
 
-            GetUnifiedWebhookResponse res = sdk.unified().getUnifiedWebhook()
+        GetUnifiedWebhookResponse res = sdk.unified().getUnifiedWebhook()
                 .request(req)
                 .call();
 
-            if (res.webhook().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.webhook().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -424,10 +365,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listUnifiedApicalls
 
@@ -439,7 +379,6 @@ Returns API Calls
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedApicallsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedApicallsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -448,31 +387,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListUnifiedApicallsRequest req = ListUnifiedApicallsRequest.builder()
                 .build();
 
-            ListUnifiedApicallsRequest req = ListUnifiedApicallsRequest.builder()
-                .build();
-
-            ListUnifiedApicallsResponse res = sdk.unified().listUnifiedApicalls()
+        ListUnifiedApicallsResponse res = sdk.unified().listUnifiedApicalls()
                 .request(req)
                 .call();
 
-            if (res.apiCalls().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.apiCalls().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -489,10 +420,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listUnifiedConnections
 
@@ -504,7 +434,6 @@ List all connections
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedConnectionsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -513,31 +442,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListUnifiedConnectionsRequest req = ListUnifiedConnectionsRequest.builder()
                 .build();
 
-            ListUnifiedConnectionsRequest req = ListUnifiedConnectionsRequest.builder()
-                .build();
-
-            ListUnifiedConnectionsResponse res = sdk.unified().listUnifiedConnections()
+        ListUnifiedConnectionsResponse res = sdk.unified().listUnifiedConnections()
                 .request(req)
                 .call();
 
-            if (res.connections().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.connections().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -554,10 +475,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listUnifiedIntegrationWorkspaces
 
@@ -569,7 +489,6 @@ No authentication required as this is to be used by front-end interface
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationWorkspacesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -578,32 +497,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListUnifiedIntegrationWorkspacesRequest req = ListUnifiedIntegrationWorkspacesRequest.builder()
+                .workspaceId("<id>")
                 .build();
 
-            ListUnifiedIntegrationWorkspacesRequest req = ListUnifiedIntegrationWorkspacesRequest.builder()
-                .workspaceId("<value>")
-                .build();
-
-            ListUnifiedIntegrationWorkspacesResponse res = sdk.unified().listUnifiedIntegrationWorkspaces()
+        ListUnifiedIntegrationWorkspacesResponse res = sdk.unified().listUnifiedIntegrationWorkspaces()
                 .request(req)
                 .call();
 
-            if (res.integrations().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.integrations().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -620,10 +531,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listUnifiedIntegrations
 
@@ -635,7 +545,6 @@ Returns all integrations
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedIntegrationsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -644,31 +553,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListUnifiedIntegrationsRequest req = ListUnifiedIntegrationsRequest.builder()
                 .build();
 
-            ListUnifiedIntegrationsRequest req = ListUnifiedIntegrationsRequest.builder()
-                .build();
-
-            ListUnifiedIntegrationsResponse res = sdk.unified().listUnifiedIntegrations()
+        ListUnifiedIntegrationsResponse res = sdk.unified().listUnifiedIntegrations()
                 .request(req)
                 .call();
 
-            if (res.integrations().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.integrations().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -685,10 +586,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listUnifiedIssues
 
@@ -700,7 +600,6 @@ List support issues
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedIssuesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedIssuesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -709,31 +608,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListUnifiedIssuesRequest req = ListUnifiedIssuesRequest.builder()
                 .build();
 
-            ListUnifiedIssuesRequest req = ListUnifiedIssuesRequest.builder()
-                .build();
-
-            ListUnifiedIssuesResponse res = sdk.unified().listUnifiedIssues()
+        ListUnifiedIssuesResponse res = sdk.unified().listUnifiedIssues()
                 .request(req)
                 .call();
 
-            if (res.issues().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.issues().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -750,10 +641,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listUnifiedWebhooks
 
@@ -765,7 +655,6 @@ Returns all registered webhooks
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedWebhooksRequest;
 import com.unifiedapi.unifiedto.models.operations.ListUnifiedWebhooksResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -774,31 +663,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListUnifiedWebhooksRequest req = ListUnifiedWebhooksRequest.builder()
                 .build();
 
-            ListUnifiedWebhooksRequest req = ListUnifiedWebhooksRequest.builder()
-                .build();
-
-            ListUnifiedWebhooksResponse res = sdk.unified().listUnifiedWebhooks()
+        ListUnifiedWebhooksResponse res = sdk.unified().listUnifiedWebhooks()
                 .request(req)
                 .call();
 
-            if (res.webhooks().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.webhooks().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -815,10 +696,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchUnifiedConnection
 
@@ -830,7 +710,6 @@ Update connection
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchUnifiedConnectionRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchUnifiedConnectionResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -839,32 +718,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchUnifiedConnectionRequest req = PatchUnifiedConnectionRequest.builder()
+        PatchUnifiedConnectionRequest req = PatchUnifiedConnectionRequest.builder()
                 .id("<id>")
                 .build();
 
-            PatchUnifiedConnectionResponse res = sdk.unified().patchUnifiedConnection()
+        PatchUnifiedConnectionResponse res = sdk.unified().patchUnifiedConnection()
                 .request(req)
                 .call();
 
-            if (res.connection().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.connection().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -881,10 +752,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchUnifiedWebhook
 
@@ -896,7 +766,6 @@ Update webhook subscription
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -905,32 +774,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchUnifiedWebhookRequest req = PatchUnifiedWebhookRequest.builder()
+        PatchUnifiedWebhookRequest req = PatchUnifiedWebhookRequest.builder()
                 .id("<id>")
                 .build();
 
-            PatchUnifiedWebhookResponse res = sdk.unified().patchUnifiedWebhook()
+        PatchUnifiedWebhookResponse res = sdk.unified().patchUnifiedWebhook()
                 .request(req)
                 .call();
 
-            if (res.webhook().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.webhook().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -947,10 +808,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchUnifiedWebhookTrigger
 
@@ -962,7 +822,6 @@ Trigger webhook
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchUnifiedWebhookTriggerResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -971,30 +830,22 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchUnifiedWebhookTriggerRequest req = PatchUnifiedWebhookTriggerRequest.builder()
+        PatchUnifiedWebhookTriggerRequest req = PatchUnifiedWebhookTriggerRequest.builder()
                 .id("<id>")
                 .build();
 
-            PatchUnifiedWebhookTriggerResponse res = sdk.unified().patchUnifiedWebhookTrigger()
+        PatchUnifiedWebhookTriggerResponse res = sdk.unified().patchUnifiedWebhookTrigger()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -1011,10 +862,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeUnifiedConnection
 
@@ -1026,7 +876,6 @@ Remove connection
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveUnifiedConnectionRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveUnifiedConnectionResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1035,30 +884,22 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveUnifiedConnectionRequest req = RemoveUnifiedConnectionRequest.builder()
+        RemoveUnifiedConnectionRequest req = RemoveUnifiedConnectionRequest.builder()
                 .id("<id>")
                 .build();
 
-            RemoveUnifiedConnectionResponse res = sdk.unified().removeUnifiedConnection()
+        RemoveUnifiedConnectionResponse res = sdk.unified().removeUnifiedConnection()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -1075,10 +916,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeUnifiedWebhook
 
@@ -1090,7 +930,6 @@ Remove webhook subscription
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveUnifiedWebhookRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveUnifiedWebhookResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1099,30 +938,22 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveUnifiedWebhookRequest req = RemoveUnifiedWebhookRequest.builder()
+        RemoveUnifiedWebhookRequest req = RemoveUnifiedWebhookRequest.builder()
                 .id("<id>")
                 .build();
 
-            RemoveUnifiedWebhookResponse res = sdk.unified().removeUnifiedWebhook()
+        RemoveUnifiedWebhookResponse res = sdk.unified().removeUnifiedWebhook()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -1139,10 +970,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateUnifiedConnection
 
@@ -1154,7 +984,6 @@ Update connection
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedConnectionRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedConnectionResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1163,32 +992,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateUnifiedConnectionRequest req = UpdateUnifiedConnectionRequest.builder()
+        UpdateUnifiedConnectionRequest req = UpdateUnifiedConnectionRequest.builder()
                 .id("<id>")
                 .build();
 
-            UpdateUnifiedConnectionResponse res = sdk.unified().updateUnifiedConnection()
+        UpdateUnifiedConnectionResponse res = sdk.unified().updateUnifiedConnection()
                 .request(req)
                 .call();
 
-            if (res.connection().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.connection().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1205,10 +1026,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateUnifiedWebhook
 
@@ -1220,7 +1040,6 @@ Update webhook subscription
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1229,32 +1048,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateUnifiedWebhookRequest req = UpdateUnifiedWebhookRequest.builder()
+        UpdateUnifiedWebhookRequest req = UpdateUnifiedWebhookRequest.builder()
                 .id("<id>")
                 .build();
 
-            UpdateUnifiedWebhookResponse res = sdk.unified().updateUnifiedWebhook()
+        UpdateUnifiedWebhookResponse res = sdk.unified().updateUnifiedWebhook()
                 .request(req)
                 .call();
 
-            if (res.webhook().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.webhook().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1271,10 +1082,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateUnifiedWebhookTrigger
 
@@ -1286,7 +1096,6 @@ Trigger webhook
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateUnifiedWebhookTriggerResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1295,30 +1104,22 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateUnifiedWebhookTriggerRequest req = UpdateUnifiedWebhookTriggerRequest.builder()
+        UpdateUnifiedWebhookTriggerRequest req = UpdateUnifiedWebhookTriggerRequest.builder()
                 .id("<id>")
                 .build();
 
-            UpdateUnifiedWebhookTriggerResponse res = sdk.unified().updateUnifiedWebhookTrigger()
+        UpdateUnifiedWebhookTriggerResponse res = sdk.unified().updateUnifiedWebhookTrigger()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -1335,6 +1136,6 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |

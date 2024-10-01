@@ -15,7 +15,7 @@ public class GetAccountingTaxrateRequestBuilder {
         this.sdk = sdk;
     }
 
-    public GetAccountingTaxrateRequestBuilder request(com.unifiedapi.unifiedto.models.operations.GetAccountingTaxrateRequest request) {
+    public GetAccountingTaxrateRequestBuilder request(GetAccountingTaxrateRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

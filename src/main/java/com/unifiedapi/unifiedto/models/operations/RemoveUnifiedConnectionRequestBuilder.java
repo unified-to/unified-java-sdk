@@ -15,7 +15,7 @@ public class RemoveUnifiedConnectionRequestBuilder {
         this.sdk = sdk;
     }
 
-    public RemoveUnifiedConnectionRequestBuilder request(com.unifiedapi.unifiedto.models.operations.RemoveUnifiedConnectionRequest request) {
+    public RemoveUnifiedConnectionRequestBuilder request(RemoveUnifiedConnectionRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

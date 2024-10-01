@@ -15,7 +15,7 @@ public class ListPassthroughsRequestBuilder {
         this.sdk = sdk;
     }
 
-    public ListPassthroughsRequestBuilder request(com.unifiedapi.unifiedto.models.operations.ListPassthroughsRequest request) {
+    public ListPassthroughsRequestBuilder request(ListPassthroughsRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

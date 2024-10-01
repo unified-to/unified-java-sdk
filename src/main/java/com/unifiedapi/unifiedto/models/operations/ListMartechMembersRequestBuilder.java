@@ -15,7 +15,7 @@ public class ListMartechMembersRequestBuilder {
         this.sdk = sdk;
     }
 
-    public ListMartechMembersRequestBuilder request(com.unifiedapi.unifiedto.models.operations.ListMartechMembersRequest request) {
+    public ListMartechMembersRequestBuilder request(ListMartechMembersRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

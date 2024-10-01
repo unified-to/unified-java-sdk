@@ -15,7 +15,7 @@ public class UpdateKmsSpaceRequestBuilder {
         this.sdk = sdk;
     }
 
-    public UpdateKmsSpaceRequestBuilder request(com.unifiedapi.unifiedto.models.operations.UpdateKmsSpaceRequest request) {
+    public UpdateKmsSpaceRequestBuilder request(UpdateKmsSpaceRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

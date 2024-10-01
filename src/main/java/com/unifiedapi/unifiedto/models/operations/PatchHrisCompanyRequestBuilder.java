@@ -15,7 +15,7 @@ public class PatchHrisCompanyRequestBuilder {
         this.sdk = sdk;
     }
 
-    public PatchHrisCompanyRequestBuilder request(com.unifiedapi.unifiedto.models.operations.PatchHrisCompanyRequest request) {
+    public PatchHrisCompanyRequestBuilder request(PatchHrisCompanyRequest request) {
         Utils.checkNotNull(request, "request");
         this.request = request;
         return this;

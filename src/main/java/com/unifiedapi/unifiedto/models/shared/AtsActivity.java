@@ -77,8 +77,9 @@ public class AtsActivity {
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
-    private String title;
+    private Optional<String> title;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
@@ -114,7 +115,7 @@ public class AtsActivity {
             @JsonProperty("is_private") Optional<Boolean> isPrivate,
             @JsonProperty("job_id") Optional<String> jobId,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("title") String title,
+            @JsonProperty("title") Optional<String> title,
             @JsonProperty("to") Optional<? extends List<AtsEmail>> to,
             @JsonProperty("type") Optional<? extends AtsActivityType> type,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
@@ -157,9 +158,8 @@ public class AtsActivity {
         this.userIds = userIds;
     }
     
-    public AtsActivity(
-            String title) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), title, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+    public AtsActivity() {
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -232,7 +232,7 @@ public class AtsActivity {
     }
 
     @JsonIgnore
-    public String title() {
+    public Optional<String> title() {
         return title;
     }
 
@@ -424,6 +424,12 @@ public class AtsActivity {
 
     public AtsActivity withTitle(String title) {
         Utils.checkNotNull(title, "title");
+        this.title = Optional.ofNullable(title);
+        return this;
+    }
+
+    public AtsActivity withTitle(Optional<String> title) {
+        Utils.checkNotNull(title, "title");
         this.title = title;
         return this;
     }
@@ -586,7 +592,7 @@ public class AtsActivity {
  
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
  
-        private String title;
+        private Optional<String> title = Optional.empty();
  
         private Optional<? extends List<AtsEmail>> to = Optional.empty();
  
@@ -757,6 +763,12 @@ public class AtsActivity {
         }
 
         public Builder title(String title) {
+            Utils.checkNotNull(title, "title");
+            this.title = Optional.ofNullable(title);
+            return this;
+        }
+
+        public Builder title(Optional<String> title) {
             Utils.checkNotNull(title, "title");
             this.title = title;
             return this;

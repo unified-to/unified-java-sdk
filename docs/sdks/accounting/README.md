@@ -54,7 +54,6 @@ Create an account
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingAccountResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -63,32 +62,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateAccountingAccountRequest req = CreateAccountingAccountRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateAccountingAccountRequest req = CreateAccountingAccountRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateAccountingAccountResponse res = sdk.accounting().createAccountingAccount()
+        CreateAccountingAccountResponse res = sdk.accounting().createAccountingAccount()
                 .request(req)
                 .call();
 
-            if (res.accountingAccount().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingAccount().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -105,10 +96,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createAccountingContact
 
@@ -120,7 +110,6 @@ Create a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingContactRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingContactResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -129,32 +118,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateAccountingContactRequest req = CreateAccountingContactRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateAccountingContactRequest req = CreateAccountingContactRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateAccountingContactResponse res = sdk.accounting().createAccountingContact()
+        CreateAccountingContactResponse res = sdk.accounting().createAccountingContact()
                 .request(req)
                 .call();
 
-            if (res.accountingContact().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingContact().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -171,10 +152,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createAccountingInvoice
 
@@ -186,7 +166,6 @@ Create an invoice
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingInvoiceRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingInvoiceResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -195,32 +174,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateAccountingInvoiceRequest req = CreateAccountingInvoiceRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateAccountingInvoiceRequest req = CreateAccountingInvoiceRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateAccountingInvoiceResponse res = sdk.accounting().createAccountingInvoice()
+        CreateAccountingInvoiceResponse res = sdk.accounting().createAccountingInvoice()
                 .request(req)
                 .call();
 
-            if (res.accountingInvoice().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingInvoice().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -237,10 +208,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createAccountingJournal
 
@@ -252,7 +222,6 @@ Create a journal
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingJournalRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingJournalResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -261,32 +230,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateAccountingJournalRequest req = CreateAccountingJournalRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateAccountingJournalRequest req = CreateAccountingJournalRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateAccountingJournalResponse res = sdk.accounting().createAccountingJournal()
+        CreateAccountingJournalResponse res = sdk.accounting().createAccountingJournal()
                 .request(req)
                 .call();
 
-            if (res.accountingJournal().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingJournal().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -303,10 +264,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createAccountingTaxrate
 
@@ -318,7 +278,6 @@ Create a taxrate
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingTaxrateRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingTaxrateResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -327,32 +286,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateAccountingTaxrateRequest req = CreateAccountingTaxrateRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateAccountingTaxrateRequest req = CreateAccountingTaxrateRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateAccountingTaxrateResponse res = sdk.accounting().createAccountingTaxrate()
+        CreateAccountingTaxrateResponse res = sdk.accounting().createAccountingTaxrate()
                 .request(req)
                 .call();
 
-            if (res.accountingTaxrate().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingTaxrate().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -369,10 +320,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createAccountingTransaction
 
@@ -384,7 +334,6 @@ Create a transaction
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingTransactionResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -393,32 +342,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        CreateAccountingTransactionRequest req = CreateAccountingTransactionRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            CreateAccountingTransactionRequest req = CreateAccountingTransactionRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            CreateAccountingTransactionResponse res = sdk.accounting().createAccountingTransaction()
+        CreateAccountingTransactionResponse res = sdk.accounting().createAccountingTransaction()
                 .request(req)
                 .call();
 
-            if (res.accountingTransaction().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingTransaction().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -435,10 +376,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getAccountingAccount
 
@@ -450,7 +390,6 @@ Retrieve an account
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingAccountRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingAccountResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -459,33 +398,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetAccountingAccountRequest req = GetAccountingAccountRequest.builder()
-                .connectionId("<value>")
+        GetAccountingAccountRequest req = GetAccountingAccountRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetAccountingAccountResponse res = sdk.accounting().getAccountingAccount()
+        GetAccountingAccountResponse res = sdk.accounting().getAccountingAccount()
                 .request(req)
                 .call();
 
-            if (res.accountingAccount().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingAccount().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -502,10 +433,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getAccountingContact
 
@@ -517,7 +447,6 @@ Retrieve a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingContactRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingContactResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -526,33 +455,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetAccountingContactRequest req = GetAccountingContactRequest.builder()
-                .connectionId("<value>")
+        GetAccountingContactRequest req = GetAccountingContactRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetAccountingContactResponse res = sdk.accounting().getAccountingContact()
+        GetAccountingContactResponse res = sdk.accounting().getAccountingContact()
                 .request(req)
                 .call();
 
-            if (res.accountingContact().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingContact().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -569,10 +490,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getAccountingInvoice
 
@@ -584,7 +504,6 @@ Retrieve an invoice
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingInvoiceRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingInvoiceResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -593,33 +512,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetAccountingInvoiceRequest req = GetAccountingInvoiceRequest.builder()
-                .connectionId("<value>")
+        GetAccountingInvoiceRequest req = GetAccountingInvoiceRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetAccountingInvoiceResponse res = sdk.accounting().getAccountingInvoice()
+        GetAccountingInvoiceResponse res = sdk.accounting().getAccountingInvoice()
                 .request(req)
                 .call();
 
-            if (res.accountingInvoice().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingInvoice().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -636,10 +547,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getAccountingJournal
 
@@ -651,7 +561,6 @@ Retrieve a journal
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingJournalRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingJournalResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -660,33 +569,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetAccountingJournalRequest req = GetAccountingJournalRequest.builder()
-                .connectionId("<value>")
+        GetAccountingJournalRequest req = GetAccountingJournalRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetAccountingJournalResponse res = sdk.accounting().getAccountingJournal()
+        GetAccountingJournalResponse res = sdk.accounting().getAccountingJournal()
                 .request(req)
                 .call();
 
-            if (res.accountingJournal().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingJournal().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -703,10 +604,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getAccountingOrganization
 
@@ -718,7 +618,6 @@ Retrieve an organization
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingOrganizationRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingOrganizationResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -727,33 +626,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetAccountingOrganizationRequest req = GetAccountingOrganizationRequest.builder()
-                .connectionId("<value>")
+        GetAccountingOrganizationRequest req = GetAccountingOrganizationRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetAccountingOrganizationResponse res = sdk.accounting().getAccountingOrganization()
+        GetAccountingOrganizationResponse res = sdk.accounting().getAccountingOrganization()
                 .request(req)
                 .call();
 
-            if (res.accountingOrganization().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingOrganization().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -770,10 +661,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getAccountingTaxrate
 
@@ -785,7 +675,6 @@ Retrieve a taxrate
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingTaxrateRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingTaxrateResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -794,33 +683,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetAccountingTaxrateRequest req = GetAccountingTaxrateRequest.builder()
-                .connectionId("<value>")
+        GetAccountingTaxrateRequest req = GetAccountingTaxrateRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetAccountingTaxrateResponse res = sdk.accounting().getAccountingTaxrate()
+        GetAccountingTaxrateResponse res = sdk.accounting().getAccountingTaxrate()
                 .request(req)
                 .call();
 
-            if (res.accountingTaxrate().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingTaxrate().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -837,10 +718,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## getAccountingTransaction
 
@@ -852,7 +732,6 @@ Retrieve a transaction
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingTransactionRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingTransactionResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -861,33 +740,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            GetAccountingTransactionRequest req = GetAccountingTransactionRequest.builder()
-                .connectionId("<value>")
+        GetAccountingTransactionRequest req = GetAccountingTransactionRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            GetAccountingTransactionResponse res = sdk.accounting().getAccountingTransaction()
+        GetAccountingTransactionResponse res = sdk.accounting().getAccountingTransaction()
                 .request(req)
                 .call();
 
-            if (res.accountingTransaction().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingTransaction().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -904,10 +775,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listAccountingAccounts
 
@@ -919,7 +789,6 @@ List all accounts
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingAccountsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingAccountsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -928,32 +797,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListAccountingAccountsRequest req = ListAccountingAccountsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListAccountingAccountsRequest req = ListAccountingAccountsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListAccountingAccountsResponse res = sdk.accounting().listAccountingAccounts()
+        ListAccountingAccountsResponse res = sdk.accounting().listAccountingAccounts()
                 .request(req)
                 .call();
 
-            if (res.accountingAccounts().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingAccounts().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -970,10 +831,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listAccountingContacts
 
@@ -985,7 +845,6 @@ List all contacts
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingContactsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingContactsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -994,32 +853,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListAccountingContactsRequest req = ListAccountingContactsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListAccountingContactsRequest req = ListAccountingContactsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListAccountingContactsResponse res = sdk.accounting().listAccountingContacts()
+        ListAccountingContactsResponse res = sdk.accounting().listAccountingContacts()
                 .request(req)
                 .call();
 
-            if (res.accountingContacts().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingContacts().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1036,10 +887,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listAccountingInvoices
 
@@ -1051,7 +901,6 @@ List all invoices
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingInvoicesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingInvoicesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1060,32 +909,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListAccountingInvoicesRequest req = ListAccountingInvoicesRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListAccountingInvoicesRequest req = ListAccountingInvoicesRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListAccountingInvoicesResponse res = sdk.accounting().listAccountingInvoices()
+        ListAccountingInvoicesResponse res = sdk.accounting().listAccountingInvoices()
                 .request(req)
                 .call();
 
-            if (res.accountingInvoices().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingInvoices().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1102,10 +943,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listAccountingJournals
 
@@ -1117,7 +957,6 @@ List all journals
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingJournalsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingJournalsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1126,32 +965,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListAccountingJournalsRequest req = ListAccountingJournalsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListAccountingJournalsRequest req = ListAccountingJournalsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListAccountingJournalsResponse res = sdk.accounting().listAccountingJournals()
+        ListAccountingJournalsResponse res = sdk.accounting().listAccountingJournals()
                 .request(req)
                 .call();
 
-            if (res.accountingJournals().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingJournals().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1168,10 +999,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listAccountingOrganizations
 
@@ -1183,7 +1013,6 @@ List all organizations
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingOrganizationsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingOrganizationsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1192,32 +1021,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListAccountingOrganizationsRequest req = ListAccountingOrganizationsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListAccountingOrganizationsRequest req = ListAccountingOrganizationsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListAccountingOrganizationsResponse res = sdk.accounting().listAccountingOrganizations()
+        ListAccountingOrganizationsResponse res = sdk.accounting().listAccountingOrganizations()
                 .request(req)
                 .call();
 
-            if (res.accountingOrganizations().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingOrganizations().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1234,10 +1055,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listAccountingTaxrates
 
@@ -1249,7 +1069,6 @@ List all taxrates
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingTaxratesRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingTaxratesResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1258,32 +1077,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListAccountingTaxratesRequest req = ListAccountingTaxratesRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListAccountingTaxratesRequest req = ListAccountingTaxratesRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListAccountingTaxratesResponse res = sdk.accounting().listAccountingTaxrates()
+        ListAccountingTaxratesResponse res = sdk.accounting().listAccountingTaxrates()
                 .request(req)
                 .call();
 
-            if (res.accountingTaxrates().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingTaxrates().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1300,10 +1111,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## listAccountingTransactions
 
@@ -1315,7 +1125,6 @@ List all transactions
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingTransactionsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingTransactionsResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1324,32 +1133,24 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
+            .build();
+
+        ListAccountingTransactionsRequest req = ListAccountingTransactionsRequest.builder()
+                .connectionId("<id>")
                 .build();
 
-            ListAccountingTransactionsRequest req = ListAccountingTransactionsRequest.builder()
-                .connectionId("<value>")
-                .build();
-
-            ListAccountingTransactionsResponse res = sdk.accounting().listAccountingTransactions()
+        ListAccountingTransactionsResponse res = sdk.accounting().listAccountingTransactions()
                 .request(req)
                 .call();
 
-            if (res.accountingTransactions().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingTransactions().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1366,10 +1167,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchAccountingAccount
 
@@ -1381,7 +1181,6 @@ Update an account
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingAccountRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingAccountResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1390,33 +1189,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchAccountingAccountRequest req = PatchAccountingAccountRequest.builder()
-                .connectionId("<value>")
+        PatchAccountingAccountRequest req = PatchAccountingAccountRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchAccountingAccountResponse res = sdk.accounting().patchAccountingAccount()
+        PatchAccountingAccountResponse res = sdk.accounting().patchAccountingAccount()
                 .request(req)
                 .call();
 
-            if (res.accountingAccount().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingAccount().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1433,10 +1224,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchAccountingContact
 
@@ -1448,7 +1238,6 @@ Update a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingContactRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingContactResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1457,33 +1246,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchAccountingContactRequest req = PatchAccountingContactRequest.builder()
-                .connectionId("<value>")
+        PatchAccountingContactRequest req = PatchAccountingContactRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchAccountingContactResponse res = sdk.accounting().patchAccountingContact()
+        PatchAccountingContactResponse res = sdk.accounting().patchAccountingContact()
                 .request(req)
                 .call();
 
-            if (res.accountingContact().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingContact().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1500,10 +1281,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchAccountingInvoice
 
@@ -1515,7 +1295,6 @@ Update an invoice
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingInvoiceRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingInvoiceResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1524,33 +1303,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchAccountingInvoiceRequest req = PatchAccountingInvoiceRequest.builder()
-                .connectionId("<value>")
+        PatchAccountingInvoiceRequest req = PatchAccountingInvoiceRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchAccountingInvoiceResponse res = sdk.accounting().patchAccountingInvoice()
+        PatchAccountingInvoiceResponse res = sdk.accounting().patchAccountingInvoice()
                 .request(req)
                 .call();
 
-            if (res.accountingInvoice().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingInvoice().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1567,10 +1338,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchAccountingJournal
 
@@ -1582,7 +1352,6 @@ Update a journal
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingJournalRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingJournalResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1591,33 +1360,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchAccountingJournalRequest req = PatchAccountingJournalRequest.builder()
-                .connectionId("<value>")
+        PatchAccountingJournalRequest req = PatchAccountingJournalRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchAccountingJournalResponse res = sdk.accounting().patchAccountingJournal()
+        PatchAccountingJournalResponse res = sdk.accounting().patchAccountingJournal()
                 .request(req)
                 .call();
 
-            if (res.accountingJournal().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingJournal().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1634,10 +1395,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchAccountingTaxrate
 
@@ -1649,7 +1409,6 @@ Update a taxrate
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingTaxrateRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingTaxrateResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1658,33 +1417,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchAccountingTaxrateRequest req = PatchAccountingTaxrateRequest.builder()
-                .connectionId("<value>")
+        PatchAccountingTaxrateRequest req = PatchAccountingTaxrateRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchAccountingTaxrateResponse res = sdk.accounting().patchAccountingTaxrate()
+        PatchAccountingTaxrateResponse res = sdk.accounting().patchAccountingTaxrate()
                 .request(req)
                 .call();
 
-            if (res.accountingTaxrate().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingTaxrate().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1701,10 +1452,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## patchAccountingTransaction
 
@@ -1716,7 +1466,6 @@ Update a transaction
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingTransactionResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1725,33 +1474,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            PatchAccountingTransactionRequest req = PatchAccountingTransactionRequest.builder()
-                .connectionId("<value>")
+        PatchAccountingTransactionRequest req = PatchAccountingTransactionRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            PatchAccountingTransactionResponse res = sdk.accounting().patchAccountingTransaction()
+        PatchAccountingTransactionResponse res = sdk.accounting().patchAccountingTransaction()
                 .request(req)
                 .call();
 
-            if (res.accountingTransaction().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingTransaction().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -1768,10 +1509,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeAccountingAccount
 
@@ -1783,7 +1523,6 @@ Remove an account
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveAccountingAccountRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveAccountingAccountResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1792,31 +1531,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveAccountingAccountRequest req = RemoveAccountingAccountRequest.builder()
-                .connectionId("<value>")
+        RemoveAccountingAccountRequest req = RemoveAccountingAccountRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveAccountingAccountResponse res = sdk.accounting().removeAccountingAccount()
+        RemoveAccountingAccountResponse res = sdk.accounting().removeAccountingAccount()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -1833,10 +1564,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeAccountingContact
 
@@ -1848,7 +1578,6 @@ Remove a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveAccountingContactRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveAccountingContactResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1857,31 +1586,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveAccountingContactRequest req = RemoveAccountingContactRequest.builder()
-                .connectionId("<value>")
+        RemoveAccountingContactRequest req = RemoveAccountingContactRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveAccountingContactResponse res = sdk.accounting().removeAccountingContact()
+        RemoveAccountingContactResponse res = sdk.accounting().removeAccountingContact()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -1898,10 +1619,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeAccountingInvoice
 
@@ -1913,7 +1633,6 @@ Remove an invoice
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveAccountingInvoiceRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveAccountingInvoiceResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1922,31 +1641,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveAccountingInvoiceRequest req = RemoveAccountingInvoiceRequest.builder()
-                .connectionId("<value>")
+        RemoveAccountingInvoiceRequest req = RemoveAccountingInvoiceRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveAccountingInvoiceResponse res = sdk.accounting().removeAccountingInvoice()
+        RemoveAccountingInvoiceResponse res = sdk.accounting().removeAccountingInvoice()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -1963,10 +1674,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeAccountingJournal
 
@@ -1978,7 +1688,6 @@ Remove a journal
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveAccountingJournalRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveAccountingJournalResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -1987,31 +1696,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveAccountingJournalRequest req = RemoveAccountingJournalRequest.builder()
-                .connectionId("<value>")
+        RemoveAccountingJournalRequest req = RemoveAccountingJournalRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveAccountingJournalResponse res = sdk.accounting().removeAccountingJournal()
+        RemoveAccountingJournalResponse res = sdk.accounting().removeAccountingJournal()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -2028,10 +1729,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeAccountingTaxrate
 
@@ -2043,7 +1743,6 @@ Remove a taxrate
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveAccountingTaxrateRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveAccountingTaxrateResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -2052,31 +1751,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveAccountingTaxrateRequest req = RemoveAccountingTaxrateRequest.builder()
-                .connectionId("<value>")
+        RemoveAccountingTaxrateRequest req = RemoveAccountingTaxrateRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveAccountingTaxrateResponse res = sdk.accounting().removeAccountingTaxrate()
+        RemoveAccountingTaxrateResponse res = sdk.accounting().removeAccountingTaxrate()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -2093,10 +1784,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## removeAccountingTransaction
 
@@ -2108,7 +1798,6 @@ Remove a transaction
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.RemoveAccountingTransactionRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveAccountingTransactionResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -2117,31 +1806,23 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            RemoveAccountingTransactionRequest req = RemoveAccountingTransactionRequest.builder()
-                .connectionId("<value>")
+        RemoveAccountingTransactionRequest req = RemoveAccountingTransactionRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            RemoveAccountingTransactionResponse res = sdk.accounting().removeAccountingTransaction()
+        RemoveAccountingTransactionResponse res = sdk.accounting().removeAccountingTransaction()
                 .request(req)
                 .call();
 
-            // handle response
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
-        }
-
+        // handle response
     }
 }
 ```
@@ -2158,10 +1839,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateAccountingAccount
 
@@ -2173,7 +1853,6 @@ Update an account
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingAccountRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingAccountResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -2182,33 +1861,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateAccountingAccountRequest req = UpdateAccountingAccountRequest.builder()
-                .connectionId("<value>")
+        UpdateAccountingAccountRequest req = UpdateAccountingAccountRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateAccountingAccountResponse res = sdk.accounting().updateAccountingAccount()
+        UpdateAccountingAccountResponse res = sdk.accounting().updateAccountingAccount()
                 .request(req)
                 .call();
 
-            if (res.accountingAccount().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingAccount().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -2225,10 +1896,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateAccountingContact
 
@@ -2240,7 +1910,6 @@ Update a contact
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingContactRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingContactResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -2249,33 +1918,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateAccountingContactRequest req = UpdateAccountingContactRequest.builder()
-                .connectionId("<value>")
+        UpdateAccountingContactRequest req = UpdateAccountingContactRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateAccountingContactResponse res = sdk.accounting().updateAccountingContact()
+        UpdateAccountingContactResponse res = sdk.accounting().updateAccountingContact()
                 .request(req)
                 .call();
 
-            if (res.accountingContact().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingContact().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -2292,10 +1953,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateAccountingInvoice
 
@@ -2307,7 +1967,6 @@ Update an invoice
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -2316,33 +1975,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateAccountingInvoiceRequest req = UpdateAccountingInvoiceRequest.builder()
-                .connectionId("<value>")
+        UpdateAccountingInvoiceRequest req = UpdateAccountingInvoiceRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateAccountingInvoiceResponse res = sdk.accounting().updateAccountingInvoice()
+        UpdateAccountingInvoiceResponse res = sdk.accounting().updateAccountingInvoice()
                 .request(req)
                 .call();
 
-            if (res.accountingInvoice().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingInvoice().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -2359,10 +2010,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateAccountingJournal
 
@@ -2374,7 +2024,6 @@ Update a journal
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingJournalRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingJournalResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -2383,33 +2032,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateAccountingJournalRequest req = UpdateAccountingJournalRequest.builder()
-                .connectionId("<value>")
+        UpdateAccountingJournalRequest req = UpdateAccountingJournalRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateAccountingJournalResponse res = sdk.accounting().updateAccountingJournal()
+        UpdateAccountingJournalResponse res = sdk.accounting().updateAccountingJournal()
                 .request(req)
                 .call();
 
-            if (res.accountingJournal().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingJournal().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -2426,10 +2067,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateAccountingTaxrate
 
@@ -2441,7 +2081,6 @@ Update a taxrate
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingTaxrateRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingTaxrateResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -2450,33 +2089,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateAccountingTaxrateRequest req = UpdateAccountingTaxrateRequest.builder()
-                .connectionId("<value>")
+        UpdateAccountingTaxrateRequest req = UpdateAccountingTaxrateRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateAccountingTaxrateResponse res = sdk.accounting().updateAccountingTaxrate()
+        UpdateAccountingTaxrateResponse res = sdk.accounting().updateAccountingTaxrate()
                 .request(req)
                 .call();
 
-            if (res.accountingTaxrate().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingTaxrate().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -2493,10 +2124,9 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
-
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## updateAccountingTransaction
 
@@ -2508,7 +2138,6 @@ Update a transaction
 package hello.world;
 
 import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.errors.SDKError;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingTransactionResponse;
 import com.unifiedapi.unifiedto.models.shared.Security;
@@ -2517,33 +2146,25 @@ import java.lang.Exception;
 public class Application {
 
     public static void main(String[] args) throws Exception {
-        try {
-            UnifiedTo sdk = UnifiedTo.builder()
+
+        UnifiedTo sdk = UnifiedTo.builder()
                 .security(Security.builder()
                     .jwt("<YOUR_API_KEY_HERE>")
                     .build())
-                .build();
+            .build();
 
-            UpdateAccountingTransactionRequest req = UpdateAccountingTransactionRequest.builder()
-                .connectionId("<value>")
+        UpdateAccountingTransactionRequest req = UpdateAccountingTransactionRequest.builder()
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-            UpdateAccountingTransactionResponse res = sdk.accounting().updateAccountingTransaction()
+        UpdateAccountingTransactionResponse res = sdk.accounting().updateAccountingTransaction()
                 .request(req)
                 .call();
 
-            if (res.accountingTransaction().isPresent()) {
-                // handle response
-            }
-        } catch (SDKError e) {
-            // handle exception
-            throw e;
-        } catch (Exception e) {
-            // handle exception
-            throw e;
+        if (res.accountingTransaction().isPresent()) {
+            // handle response
         }
-
     }
 }
 ```
@@ -2560,6 +2181,6 @@ public class Application {
 
 ### Errors
 
-| Error Object           | Status Code            | Content Type           |
+| Error Type             | Status Code            | Content Type           |
 | ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4xx-5xx                | \*\/*                  |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
