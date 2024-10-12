@@ -137,6 +137,10 @@ public class UnifiedTo {
 
     private final Refund refund;
 
+    private final Scim scim;
+
+    private final User user;
+
     private final Storage storage;
 
     private final File file;
@@ -379,6 +383,14 @@ public class UnifiedTo {
 
     public Refund refund() {
         return refund;
+    }
+
+    public Scim scim() {
+        return scim;
+    }
+
+    public User user() {
+        return user;
     }
 
     public Storage storage() {
@@ -626,6 +638,8 @@ public class UnifiedTo {
         this.link = new Link(sdkConfiguration);
         this.payout = new Payout(sdkConfiguration);
         this.refund = new Refund(sdkConfiguration);
+        this.scim = new Scim(sdkConfiguration);
+        this.user = new User(sdkConfiguration);
         this.storage = new Storage(sdkConfiguration);
         this.file = new File(sdkConfiguration);
         this.task = new Task(sdkConfiguration);

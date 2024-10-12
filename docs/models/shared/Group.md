@@ -1,0 +1,14 @@
+# Group
+
+
+## Fields
+
+| Field                                                                     | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `displayName`                                                             | *Optional<String>*                                                        | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `externalId`                                                              | *Optional<String>*                                                        | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `groupType`                                                               | *Optional<String>*                                                        | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `id`                                                                      | *Optional<String>*                                                        | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `members`                                                                 | List<[Undefined](../../models/shared/Undefined.md)>                       | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `meta`                                                                    | [Optional<PropertyGroupMeta>](../../models/shared/PropertyGroupMeta.md)   | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `schemas`                                                                 | List<[PropertyGroupSchemas](../../models/shared/PropertyGroupSchemas.md)> | :heavy_minus_sign:                                                        | N/A                                                                       |

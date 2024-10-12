@@ -34,8 +34,9 @@ public class KmsSpace {
     @JsonProperty("description")
     private Optional<String> description;
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private String id;
+    private Optional<String> id;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
@@ -64,7 +65,7 @@ public class KmsSpace {
     public KmsSpace(
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("description") Optional<String> description,
-            @JsonProperty("id") String id,
+            @JsonProperty("id") Optional<String> id,
             @JsonProperty("is_active") Optional<Boolean> isActive,
             @JsonProperty("name") String name,
             @JsonProperty("parent_space_id") Optional<String> parentSpaceId,
@@ -92,9 +93,8 @@ public class KmsSpace {
     }
     
     public KmsSpace(
-            String id,
             String name) {
-        this(Optional.empty(), Optional.empty(), id, Optional.empty(), name, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), name, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -108,7 +108,7 @@ public class KmsSpace {
     }
 
     @JsonIgnore
-    public String id() {
+    public Optional<String> id() {
         return id;
     }
 
@@ -172,6 +172,12 @@ public class KmsSpace {
     }
 
     public KmsSpace withId(String id) {
+        Utils.checkNotNull(id, "id");
+        this.id = Optional.ofNullable(id);
+        return this;
+    }
+
+    public KmsSpace withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
         return this;
@@ -298,7 +304,7 @@ public class KmsSpace {
  
         private Optional<String> description = Optional.empty();
  
-        private String id;
+        private Optional<String> id = Optional.empty();
  
         private Optional<Boolean> isActive = Optional.empty();
  
@@ -341,6 +347,12 @@ public class KmsSpace {
         }
 
         public Builder id(String id) {
+            Utils.checkNotNull(id, "id");
+            this.id = Optional.ofNullable(id);
+            return this;
+        }
+
+        public Builder id(Optional<String> id) {
             Utils.checkNotNull(id, "id");
             this.id = id;
             return this;

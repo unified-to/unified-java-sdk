@@ -14,13 +14,11 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.unifiedapi.unifiedto.utils.LazySingletonValue;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Boolean;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -53,7 +51,7 @@ public class Connection {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursors_cache")
-    private Optional<? extends List<Map<String, Object>>> cursorsCache;
+    private Optional<? extends List<Undefined>> cursorsCache;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
@@ -99,7 +97,7 @@ public class Connection {
             @JsonProperty("auth_aws_arn") Optional<String> authAwsArn,
             @JsonProperty("categories") List<PropertyConnectionCategories> categories,
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("cursors_cache") Optional<? extends List<Map<String, Object>>> cursorsCache,
+            @JsonProperty("cursors_cache") Optional<? extends List<Undefined>> cursorsCache,
             @JsonProperty("environment") Optional<String> environment,
             @JsonProperty("external_xref") Optional<String> externalXref,
             @JsonProperty("id") Optional<String> id,
@@ -178,8 +176,8 @@ public class Connection {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<Map<String, Object>>> cursorsCache() {
-        return (Optional<List<Map<String, Object>>>) cursorsCache;
+    public Optional<List<Undefined>> cursorsCache() {
+        return (Optional<List<Undefined>>) cursorsCache;
     }
 
     @JsonIgnore
@@ -287,13 +285,13 @@ public class Connection {
         return this;
     }
 
-    public Connection withCursorsCache(List<Map<String, Object>> cursorsCache) {
+    public Connection withCursorsCache(List<Undefined> cursorsCache) {
         Utils.checkNotNull(cursorsCache, "cursorsCache");
         this.cursorsCache = Optional.ofNullable(cursorsCache);
         return this;
     }
 
-    public Connection withCursorsCache(Optional<? extends List<Map<String, Object>>> cursorsCache) {
+    public Connection withCursorsCache(Optional<? extends List<Undefined>> cursorsCache) {
         Utils.checkNotNull(cursorsCache, "cursorsCache");
         this.cursorsCache = cursorsCache;
         return this;
@@ -484,7 +482,7 @@ public class Connection {
  
         private Optional<OffsetDateTime> createdAt = Optional.empty();
  
-        private Optional<? extends List<Map<String, Object>>> cursorsCache = Optional.empty();
+        private Optional<? extends List<Undefined>> cursorsCache = Optional.empty();
  
         private Optional<String> environment;
  
@@ -561,13 +559,13 @@ public class Connection {
             return this;
         }
 
-        public Builder cursorsCache(List<Map<String, Object>> cursorsCache) {
+        public Builder cursorsCache(List<Undefined> cursorsCache) {
             Utils.checkNotNull(cursorsCache, "cursorsCache");
             this.cursorsCache = Optional.ofNullable(cursorsCache);
             return this;
         }
 
-        public Builder cursorsCache(Optional<? extends List<Map<String, Object>>> cursorsCache) {
+        public Builder cursorsCache(Optional<? extends List<Undefined>> cursorsCache) {
             Utils.checkNotNull(cursorsCache, "cursorsCache");
             this.cursorsCache = cursorsCache;
             return this;

@@ -21,8 +21,9 @@ import java.util.Optional;
 
 public class CommerceItemOption {
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private String id;
+    private Optional<String> id;
 
     @JsonProperty("name")
     private String name;
@@ -36,7 +37,7 @@ public class CommerceItemOption {
 
     @JsonCreator
     public CommerceItemOption(
-            @JsonProperty("id") String id,
+            @JsonProperty("id") Optional<String> id,
             @JsonProperty("name") String name,
             @JsonProperty("position") Optional<Double> position,
             @JsonProperty("values") List<String> values) {
@@ -51,14 +52,13 @@ public class CommerceItemOption {
     }
     
     public CommerceItemOption(
-            String id,
             String name,
             List<String> values) {
-        this(id, name, Optional.empty(), values);
+        this(Optional.empty(), name, Optional.empty(), values);
     }
 
     @JsonIgnore
-    public String id() {
+    public Optional<String> id() {
         return id;
     }
 
@@ -82,6 +82,12 @@ public class CommerceItemOption {
     }
 
     public CommerceItemOption withId(String id) {
+        Utils.checkNotNull(id, "id");
+        this.id = Optional.ofNullable(id);
+        return this;
+    }
+
+    public CommerceItemOption withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
         return this;
@@ -147,7 +153,7 @@ public class CommerceItemOption {
     
     public final static class Builder {
  
-        private String id;
+        private Optional<String> id = Optional.empty();
  
         private String name;
  
@@ -160,6 +166,12 @@ public class CommerceItemOption {
         }
 
         public Builder id(String id) {
+            Utils.checkNotNull(id, "id");
+            this.id = Optional.ofNullable(id);
+            return this;
+        }
+
+        public Builder id(Optional<String> id) {
             Utils.checkNotNull(id, "id");
             this.id = id;
             return this;

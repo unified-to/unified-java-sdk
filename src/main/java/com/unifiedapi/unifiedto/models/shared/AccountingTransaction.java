@@ -34,6 +34,10 @@ public class AccountingTransaction {
     private Optional<String> contactId;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("contacts")
+    private Optional<? extends List<AccountingTransactionContact>> contacts;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
@@ -101,6 +105,7 @@ public class AccountingTransaction {
     public AccountingTransaction(
             @JsonProperty("account_id") Optional<String> accountId,
             @JsonProperty("contact_id") Optional<String> contactId,
+            @JsonProperty("contacts") Optional<? extends List<AccountingTransactionContact>> contacts,
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("currency") Optional<String> currency,
             @JsonProperty("customer_message") Optional<String> customerMessage,
@@ -119,6 +124,7 @@ public class AccountingTransaction {
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(accountId, "accountId");
         Utils.checkNotNull(contactId, "contactId");
+        Utils.checkNotNull(contacts, "contacts");
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(currency, "currency");
         Utils.checkNotNull(customerMessage, "customerMessage");
@@ -137,6 +143,7 @@ public class AccountingTransaction {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.accountId = accountId;
         this.contactId = contactId;
+        this.contacts = contacts;
         this.createdAt = createdAt;
         this.currency = currency;
         this.customerMessage = customerMessage;
@@ -156,7 +163,7 @@ public class AccountingTransaction {
     }
     
     public AccountingTransaction() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -167,6 +174,12 @@ public class AccountingTransaction {
     @JsonIgnore
     public Optional<String> contactId() {
         return contactId;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<AccountingTransactionContact>> contacts() {
+        return (Optional<List<AccountingTransactionContact>>) contacts;
     }
 
     @JsonIgnore
@@ -276,6 +289,18 @@ public class AccountingTransaction {
     public AccountingTransaction withContactId(Optional<String> contactId) {
         Utils.checkNotNull(contactId, "contactId");
         this.contactId = contactId;
+        return this;
+    }
+
+    public AccountingTransaction withContacts(List<AccountingTransactionContact> contacts) {
+        Utils.checkNotNull(contacts, "contacts");
+        this.contacts = Optional.ofNullable(contacts);
+        return this;
+    }
+
+    public AccountingTransaction withContacts(Optional<? extends List<AccountingTransactionContact>> contacts) {
+        Utils.checkNotNull(contacts, "contacts");
+        this.contacts = contacts;
         return this;
     }
 
@@ -483,6 +508,7 @@ public class AccountingTransaction {
         return 
             Objects.deepEquals(this.accountId, other.accountId) &&
             Objects.deepEquals(this.contactId, other.contactId) &&
+            Objects.deepEquals(this.contacts, other.contacts) &&
             Objects.deepEquals(this.createdAt, other.createdAt) &&
             Objects.deepEquals(this.currency, other.currency) &&
             Objects.deepEquals(this.customerMessage, other.customerMessage) &&
@@ -506,6 +532,7 @@ public class AccountingTransaction {
         return Objects.hash(
             accountId,
             contactId,
+            contacts,
             createdAt,
             currency,
             customerMessage,
@@ -529,6 +556,7 @@ public class AccountingTransaction {
         return Utils.toString(AccountingTransaction.class,
                 "accountId", accountId,
                 "contactId", contactId,
+                "contacts", contacts,
                 "createdAt", createdAt,
                 "currency", currency,
                 "customerMessage", customerMessage,
@@ -552,6 +580,8 @@ public class AccountingTransaction {
         private Optional<String> accountId = Optional.empty();
  
         private Optional<String> contactId = Optional.empty();
+ 
+        private Optional<? extends List<AccountingTransactionContact>> contacts = Optional.empty();
  
         private Optional<OffsetDateTime> createdAt = Optional.empty();
  
@@ -610,6 +640,18 @@ public class AccountingTransaction {
         public Builder contactId(Optional<String> contactId) {
             Utils.checkNotNull(contactId, "contactId");
             this.contactId = contactId;
+            return this;
+        }
+
+        public Builder contacts(List<AccountingTransactionContact> contacts) {
+            Utils.checkNotNull(contacts, "contacts");
+            this.contacts = Optional.ofNullable(contacts);
+            return this;
+        }
+
+        public Builder contacts(Optional<? extends List<AccountingTransactionContact>> contacts) {
+            Utils.checkNotNull(contacts, "contacts");
+            this.contacts = contacts;
             return this;
         }
 
@@ -809,6 +851,7 @@ public class AccountingTransaction {
             return new AccountingTransaction(
                 accountId,
                 contactId,
+                contacts,
                 createdAt,
                 currency,
                 customerMessage,

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 3c4e8a5e234e6444307aef536fd547bd
+  docChecksum: 2f8b1ad907e9f06fa5885ee0f6d0b4ad
   docVersion: "1.0"
-  speakeasyVersion: 1.405.6
-  generationVersion: 2.428.1
-  releaseVersion: 0.22.0
-  configChecksum: 90a3da3553b6441c6ee5b9480e74a767
+  speakeasyVersion: 1.418.1
+  generationVersion: 2.438.3
+  releaseVersion: 0.22.1
+  configChecksum: dc3e8408a74b064332743484568b1dc6
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -101,6 +101,10 @@ generatedFiles:
   - docs/models/operations/CreatePaymentLinkResponse.md
   - docs/models/operations/CreatePaymentPaymentRequest.md
   - docs/models/operations/CreatePaymentPaymentResponse.md
+  - docs/models/operations/CreateScimGroupsRequest.md
+  - docs/models/operations/CreateScimGroupsResponse.md
+  - docs/models/operations/CreateScimUsersRequest.md
+  - docs/models/operations/CreateScimUsersResponse.md
   - docs/models/operations/CreateStorageFileRequest.md
   - docs/models/operations/CreateStorageFileResponse.md
   - docs/models/operations/CreateTaskProjectRequest.md
@@ -200,6 +204,8 @@ generatedFiles:
   - docs/models/operations/GetPaymentPayoutResponse.md
   - docs/models/operations/GetPaymentRefundRequest.md
   - docs/models/operations/GetPaymentRefundResponse.md
+  - docs/models/operations/GetScimUsersRequest.md
+  - docs/models/operations/GetScimUsersResponse.md
   - docs/models/operations/GetStorageFileRequest.md
   - docs/models/operations/GetStorageFileResponse.md
   - docs/models/operations/GetTaskProjectRequest.md
@@ -317,6 +323,10 @@ generatedFiles:
   - docs/models/operations/ListPaymentPayoutsResponse.md
   - docs/models/operations/ListPaymentRefundsRequest.md
   - docs/models/operations/ListPaymentRefundsResponse.md
+  - docs/models/operations/ListScimGroupsRequest.md
+  - docs/models/operations/ListScimGroupsResponse.md
+  - docs/models/operations/ListScimUsersRequest.md
+  - docs/models/operations/ListScimUsersResponse.md
   - docs/models/operations/ListStorageFilesRequest.md
   - docs/models/operations/ListStorageFilesResponse.md
   - docs/models/operations/ListTaskProjectsRequest.md
@@ -418,6 +428,10 @@ generatedFiles:
   - docs/models/operations/PatchPaymentLinkResponse.md
   - docs/models/operations/PatchPaymentPaymentRequest.md
   - docs/models/operations/PatchPaymentPaymentResponse.md
+  - docs/models/operations/PatchScimGroupsRequest.md
+  - docs/models/operations/PatchScimGroupsResponse.md
+  - docs/models/operations/PatchScimUsersRequest.md
+  - docs/models/operations/PatchScimUsersResponse.md
   - docs/models/operations/PatchStorageFileRequest.md
   - docs/models/operations/PatchStorageFileResponse.md
   - docs/models/operations/PatchTaskProjectRequest.md
@@ -509,6 +523,10 @@ generatedFiles:
   - docs/models/operations/RemovePaymentLinkResponse.md
   - docs/models/operations/RemovePaymentPaymentRequest.md
   - docs/models/operations/RemovePaymentPaymentResponse.md
+  - docs/models/operations/RemoveScimGroupsRequest.md
+  - docs/models/operations/RemoveScimGroupsResponse.md
+  - docs/models/operations/RemoveScimUsersRequest.md
+  - docs/models/operations/RemoveScimUsersResponse.md
   - docs/models/operations/RemoveStorageFileRequest.md
   - docs/models/operations/RemoveStorageFileResponse.md
   - docs/models/operations/RemoveTaskProjectRequest.md
@@ -600,6 +618,10 @@ generatedFiles:
   - docs/models/operations/UpdatePaymentLinkResponse.md
   - docs/models/operations/UpdatePaymentPaymentRequest.md
   - docs/models/operations/UpdatePaymentPaymentResponse.md
+  - docs/models/operations/UpdateScimGroupsRequest.md
+  - docs/models/operations/UpdateScimGroupsResponse.md
+  - docs/models/operations/UpdateScimUsersRequest.md
+  - docs/models/operations/UpdateScimUsersResponse.md
   - docs/models/operations/UpdateStorageFileRequest.md
   - docs/models/operations/UpdateStorageFileResponse.md
   - docs/models/operations/UpdateTaskProjectRequest.md
@@ -636,6 +658,7 @@ generatedFiles:
   - docs/models/shared/AccountingTelephone.md
   - docs/models/shared/AccountingTelephoneType.md
   - docs/models/shared/AccountingTransaction.md
+  - docs/models/shared/AccountingTransactionContact.md
   - docs/models/shared/AccountingTransactionLineItem.md
   - docs/models/shared/ApiCall.md
   - docs/models/shared/ApiCallType.md
@@ -699,6 +722,7 @@ generatedFiles:
   - docs/models/shared/EnrichPersonWorkHistory.md
   - docs/models/shared/EnrichTelephone.md
   - docs/models/shared/EnrichTelephoneType.md
+  - docs/models/shared/Ethnicity.md
   - docs/models/shared/Event.md
   - docs/models/shared/Frequency.md
   - docs/models/shared/FromWebhook.md
@@ -706,6 +730,7 @@ generatedFiles:
   - docs/models/shared/GenaiModel.md
   - docs/models/shared/GenaiPrompt.md
   - docs/models/shared/Gender.md
+  - docs/models/shared/Group.md
   - docs/models/shared/HrisCompany.md
   - docs/models/shared/HrisCompensation.md
   - docs/models/shared/HrisCompensationFrequency.md
@@ -733,6 +758,7 @@ generatedFiles:
   - docs/models/shared/KmsPage.md
   - docs/models/shared/KmsPageType.md
   - docs/models/shared/KmsSpace.md
+  - docs/models/shared/Level.md
   - docs/models/shared/ListAccountId.md
   - docs/models/shared/ListApplicationId.md
   - docs/models/shared/ListCandidateId.md
@@ -775,6 +801,7 @@ generatedFiles:
   - docs/models/shared/MessagingMember.md
   - docs/models/shared/MessagingMessage.md
   - docs/models/shared/ObjectType.md
+  - docs/models/shared/Operation.md
   - docs/models/shared/Origin.md
   - docs/models/shared/PaymentCollectionMethod.md
   - docs/models/shared/PaymentLink.md
@@ -808,6 +835,8 @@ generatedFiles:
   - docs/models/shared/PropertyCrmLeadAddress.md
   - docs/models/shared/PropertyEnrichCompanyAddress.md
   - docs/models/shared/PropertyEnrichPersonAddress.md
+  - docs/models/shared/PropertyGroupMeta.md
+  - docs/models/shared/PropertyGroupSchemas.md
   - docs/models/shared/PropertyHrisCompanyAddress.md
   - docs/models/shared/PropertyHrisEmployeeAddress.md
   - docs/models/shared/PropertyHrisEmployeeEmployeeRoles.md
@@ -818,10 +847,23 @@ generatedFiles:
   - docs/models/shared/PropertyPropertyIntegrationSupportWebhookEventsCreated.md
   - docs/models/shared/PropertyPropertyIntegrationSupportWebhookEventsDeleted.md
   - docs/models/shared/PropertyPropertyIntegrationSupportWebhookEventsUpdated.md
+  - docs/models/shared/PropertyPropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager.md
+  - docs/models/shared/PropertyPropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType.md
   - docs/models/shared/PropertyStoragePermissionRoles.md
   - docs/models/shared/PropertyUcCallTelephone.md
   - docs/models/shared/PropertyUcCallTelephoneType.md
+  - docs/models/shared/PropertyUserMeta.md
+  - docs/models/shared/PropertyUserMetaResourceType.md
+  - docs/models/shared/PropertyUserName.md
+  - docs/models/shared/PropertyUserSchemas.md
+  - docs/models/shared/PropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20User.md
+  - docs/models/shared/PropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender.md
+  - docs/models/shared/PropertyUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User.md
+  - docs/models/shared/PropertyUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender.md
+  - docs/models/shared/PropertyUserUrnIetfParamsScimSchemasExtensionPeakon20User.md
+  - docs/models/shared/PropertyUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender.md
   - docs/models/shared/Recommendation.md
+  - docs/models/shared/ResourceType.md
   - docs/models/shared/Role.md
   - docs/models/shared/SearchDomain.md
   - docs/models/shared/SearchEmail.md
@@ -829,6 +871,7 @@ generatedFiles:
   - docs/models/shared/SearchName.md
   - docs/models/shared/SearchTwitter.md
   - docs/models/shared/Security.md
+  - docs/models/shared/SexualOrientation.md
   - docs/models/shared/SizeUnit.md
   - docs/models/shared/Status.md
   - docs/models/shared/StorageFile.md
@@ -853,6 +896,9 @@ generatedFiles:
   - docs/models/shared/UcEmailType.md
   - docs/models/shared/UcTelephone.md
   - docs/models/shared/UcTelephoneType.md
+  - docs/models/shared/Undefined.md
+  - docs/models/shared/UndefinedType.md
+  - docs/models/shared/User.md
   - docs/models/shared/Webhook.md
   - docs/models/shared/WebhookType.md
   - docs/models/shared/WeightUnit.md
@@ -914,6 +960,7 @@ generatedFiles:
   - docs/sdks/project/README.md
   - docs/sdks/prompt/README.md
   - docs/sdks/refund/README.md
+  - docs/sdks/scim/README.md
   - docs/sdks/scorecard/README.md
   - docs/sdks/space/README.md
   - docs/sdks/storage/README.md
@@ -926,6 +973,7 @@ generatedFiles:
   - docs/sdks/uc/README.md
   - docs/sdks/unified/README.md
   - docs/sdks/unifiedto/README.md
+  - docs/sdks/user/README.md
   - docs/sdks/webhook/README.md
   - gradle/wrapper/gradle-wrapper.jar
   - gradle/wrapper/gradle-wrapper.properties
@@ -991,6 +1039,7 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/Prompt.java
   - src/main/java/com/unifiedapi/unifiedto/Refund.java
   - src/main/java/com/unifiedapi/unifiedto/SDKConfiguration.java
+  - src/main/java/com/unifiedapi/unifiedto/Scim.java
   - src/main/java/com/unifiedapi/unifiedto/Scorecard.java
   - src/main/java/com/unifiedapi/unifiedto/SecuritySource.java
   - src/main/java/com/unifiedapi/unifiedto/Space.java
@@ -1004,6 +1053,7 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/Uc.java
   - src/main/java/com/unifiedapi/unifiedto/Unified.java
   - src/main/java/com/unifiedapi/unifiedto/UnifiedTo.java
+  - src/main/java/com/unifiedapi/unifiedto/User.java
   - src/main/java/com/unifiedapi/unifiedto/Webhook.java
   - src/main/java/com/unifiedapi/unifiedto/models/errors/AuthException.java
   - src/main/java/com/unifiedapi/unifiedto/models/errors/SDKError.java
@@ -1120,6 +1170,12 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreatePaymentPaymentRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreatePaymentPaymentRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreatePaymentPaymentResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateScimGroupsRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateScimGroupsRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateScimGroupsResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateScimUsersRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateScimUsersRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateScimUsersResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateStorageFileRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateStorageFileRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateStorageFileResponse.java
@@ -1269,6 +1325,9 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetPaymentRefundRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetPaymentRefundRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetPaymentRefundResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetScimUsersRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetScimUsersRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetScimUsersResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetStorageFileRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetStorageFileRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetStorageFileResponse.java
@@ -1444,6 +1503,12 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListPaymentRefundsRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListPaymentRefundsRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListPaymentRefundsResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListScimGroupsRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListScimGroupsRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListScimGroupsResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListScimUsersRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListScimUsersRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListScimUsersResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListStorageFilesRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListStorageFilesRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListStorageFilesResponse.java
@@ -1595,6 +1660,12 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchPaymentPaymentRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchPaymentPaymentRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchPaymentPaymentResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchScimGroupsRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchScimGroupsRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchScimGroupsResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchScimUsersRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchScimUsersRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchScimUsersResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchStorageFileRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchStorageFileRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchStorageFileResponse.java
@@ -1731,6 +1802,12 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemovePaymentPaymentRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemovePaymentPaymentRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemovePaymentPaymentResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveScimGroupsRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveScimGroupsRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveScimGroupsResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveScimUsersRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveScimUsersRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveScimUsersResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveStorageFileRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveStorageFileRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveStorageFileResponse.java
@@ -1868,6 +1945,12 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePaymentPaymentRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePaymentPaymentRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePaymentPaymentResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateScimGroupsRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateScimGroupsRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateScimGroupsResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateScimUsersRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateScimUsersRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateScimUsersResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateStorageFileRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateStorageFileRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateStorageFileResponse.java
@@ -1914,6 +1997,7 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTelephone.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTelephoneType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTransaction.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTransactionContact.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTransactionLineItem.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ApiCall.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ApiCallType.java
@@ -1977,6 +2061,7 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/EnrichPersonWorkHistory.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/EnrichTelephone.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/EnrichTelephoneType.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/Ethnicity.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Event.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Frequency.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/FromWebhook.java
@@ -1984,6 +2069,7 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/GenaiModel.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/GenaiPrompt.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Gender.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/Group.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisCompany.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisCompensation.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisCompensationFrequency.java
@@ -2011,6 +2097,7 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/KmsPage.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/KmsPageType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/KmsSpace.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/Level.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListAccountId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListApplicationId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListCandidateId.java
@@ -2053,6 +2140,7 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/MessagingMember.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/MessagingMessage.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ObjectType.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/Operation.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Origin.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PaymentCollectionMethod.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PaymentLink.java
@@ -2086,6 +2174,8 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmLeadAddress.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyEnrichCompanyAddress.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyEnrichPersonAddress.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyGroupMeta.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyGroupSchemas.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyHrisCompanyAddress.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyHrisEmployeeAddress.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyHrisEmployeeEmployeeRoles.java
@@ -2096,10 +2186,23 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyPropertyIntegrationSupportWebhookEventsCreated.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyPropertyIntegrationSupportWebhookEventsDeleted.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyPropertyIntegrationSupportWebhookEventsUpdated.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyPropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyPropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyStoragePermissionRoles.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUcCallTelephone.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUcCallTelephoneType.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUserMeta.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUserMetaResourceType.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUserName.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUserSchemas.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20User.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUserUrnIetfParamsScimSchemasExtensionPeakon20User.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Recommendation.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ResourceType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Role.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/SearchDomain.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/SearchEmail.java
@@ -2107,6 +2210,7 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/SearchName.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/SearchTwitter.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Security.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/SexualOrientation.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/SizeUnit.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Status.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/StorageFile.java
@@ -2131,6 +2235,9 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/UcEmailType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/UcTelephone.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/UcTelephoneType.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/Undefined.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/UndefinedType.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/User.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Webhook.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/WebhookType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/WeightUnit.java
@@ -4393,3 +4500,68 @@ examples:
       responses:
         "200":
           text/plain: "<value>"
+  createScimGroups:
+    speakeasy-default-create-scim-groups:
+      parameters:
+        path:
+          connection_id: "<id>"
+  listScimGroups:
+    speakeasy-default-list-scim-groups:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+  patchScimGroups:
+    speakeasy-default-patch-scim-groups:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeScimGroups:
+    speakeasy-default-remove-scim-groups:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateScimGroups:
+    speakeasy-default-update-scim-groups:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  createScimUsers:
+    speakeasy-default-create-scim-users:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+  getScimUsers:
+    speakeasy-default-get-scim-users:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  listScimUsers:
+    speakeasy-default-list-scim-users:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+  patchScimUsers:
+    speakeasy-default-patch-scim-users:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeScimUsers:
+    speakeasy-default-remove-scim-users:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateScimUsers:
+    speakeasy-default-update-scim-users:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"

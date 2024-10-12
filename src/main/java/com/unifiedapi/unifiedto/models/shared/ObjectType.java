@@ -62,7 +62,9 @@ public enum ObjectType {
     KMS_SPACE("kms_space"),
     KMS_PAGE("kms_page"),
     TASK_PROJECT("task_project"),
-    TASK_TASK("task_task");
+    TASK_TASK("task_task"),
+    SCIM_USERS("scim_users"),
+    SCIM_GROUPS("scim_groups");
 
     @JsonValue
     private final String value;

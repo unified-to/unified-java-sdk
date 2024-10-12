@@ -24,7 +24,8 @@ public enum QueryParamCategories {
     GENAI("genai"),
     MESSAGING("messaging"),
     KMS("kms"),
-    TASK("task");
+    TASK("task"),
+    SCIM("scim");
 
     @JsonValue
     private final String value;

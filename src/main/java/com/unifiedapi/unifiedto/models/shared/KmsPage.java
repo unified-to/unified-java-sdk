@@ -31,8 +31,9 @@ public class KmsPage {
     @JsonProperty("download_url")
     private String downloadUrl;
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private String id;
+    private Optional<String> id;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
@@ -67,7 +68,7 @@ public class KmsPage {
     public KmsPage(
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("download_url") String downloadUrl,
-            @JsonProperty("id") String id,
+            @JsonProperty("id") Optional<String> id,
             @JsonProperty("is_active") Optional<Boolean> isActive,
             @JsonProperty("parent_page_id") Optional<String> parentPageId,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
@@ -102,11 +103,10 @@ public class KmsPage {
     
     public KmsPage(
             String downloadUrl,
-            String id,
             String spaceId,
             String title,
             KmsPageType type) {
-        this(Optional.empty(), downloadUrl, id, Optional.empty(), Optional.empty(), Optional.empty(), spaceId, title, type, Optional.empty(), Optional.empty());
+        this(Optional.empty(), downloadUrl, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), spaceId, title, type, Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -120,7 +120,7 @@ public class KmsPage {
     }
 
     @JsonIgnore
-    public String id() {
+    public Optional<String> id() {
         return id;
     }
 
@@ -188,6 +188,12 @@ public class KmsPage {
     }
 
     public KmsPage withId(String id) {
+        Utils.checkNotNull(id, "id");
+        this.id = Optional.ofNullable(id);
+        return this;
+    }
+
+    public KmsPage withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
         return this;
@@ -332,7 +338,7 @@ public class KmsPage {
  
         private String downloadUrl;
  
-        private String id;
+        private Optional<String> id = Optional.empty();
  
         private Optional<Boolean> isActive = Optional.empty();
  
@@ -373,6 +379,12 @@ public class KmsPage {
         }
 
         public Builder id(String id) {
+            Utils.checkNotNull(id, "id");
+            this.id = Optional.ofNullable(id);
+            return this;
+        }
+
+        public Builder id(Optional<String> id) {
             Utils.checkNotNull(id, "id");
             this.id = id;
             return this;

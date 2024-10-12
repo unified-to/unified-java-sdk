@@ -1097,6 +1097,36 @@ public class SDKMethodInterfaces {
     }
 
 
+    public interface MethodCallCreateScimGroups {
+        CreateScimGroupsResponse createScimGroups(
+            CreateScimGroupsRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallListScimGroups {
+        ListScimGroupsResponse listScimGroups(
+            ListScimGroupsRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallPatchScimGroups {
+        PatchScimGroupsResponse patchScimGroups(
+            PatchScimGroupsRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallRemoveScimGroups {
+        RemoveScimGroupsResponse removeScimGroups(
+            RemoveScimGroupsRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallUpdateScimGroups {
+        UpdateScimGroupsResponse updateScimGroups(
+            UpdateScimGroupsRequest request) throws Exception;
+    }
+
+
     public interface MethodCallCreateKmsPage {
         CreateKmsPageResponse createKmsPage(
             CreateKmsPageRequest request) throws Exception;
@@ -1430,6 +1460,42 @@ public class SDKMethodInterfaces {
     public interface MethodCallUpdatePaymentPayment {
         UpdatePaymentPaymentResponse updatePaymentPayment(
             UpdatePaymentPaymentRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallCreateScimUsers {
+        CreateScimUsersResponse createScimUsers(
+            CreateScimUsersRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallGetScimUsers {
+        GetScimUsersResponse getScimUsers(
+            GetScimUsersRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallListScimUsers {
+        ListScimUsersResponse listScimUsers(
+            ListScimUsersRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallPatchScimUsers {
+        PatchScimUsersResponse patchScimUsers(
+            PatchScimUsersRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallRemoveScimUsers {
+        RemoveScimUsersResponse removeScimUsers(
+            RemoveScimUsersRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallUpdateScimUsers {
+        UpdateScimUsersResponse updateScimUsers(
+            UpdateScimUsersRequest request) throws Exception;
     }
 
 
