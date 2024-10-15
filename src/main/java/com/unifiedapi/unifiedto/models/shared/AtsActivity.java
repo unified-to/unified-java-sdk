@@ -78,6 +78,10 @@ public class AtsActivity {
     private Optional<? extends Map<String, Object>> raw;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sub_type")
+    private Optional<String> subType;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     private Optional<String> title;
 
@@ -115,6 +119,7 @@ public class AtsActivity {
             @JsonProperty("is_private") Optional<Boolean> isPrivate,
             @JsonProperty("job_id") Optional<String> jobId,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("sub_type") Optional<String> subType,
             @JsonProperty("title") Optional<String> title,
             @JsonProperty("to") Optional<? extends List<AtsEmail>> to,
             @JsonProperty("type") Optional<? extends AtsActivityType> type,
@@ -133,6 +138,7 @@ public class AtsActivity {
         Utils.checkNotNull(isPrivate, "isPrivate");
         Utils.checkNotNull(jobId, "jobId");
         Utils.checkNotNull(raw, "raw");
+        Utils.checkNotNull(subType, "subType");
         Utils.checkNotNull(title, "title");
         Utils.checkNotNull(to, "to");
         Utils.checkNotNull(type, "type");
@@ -151,6 +157,7 @@ public class AtsActivity {
         this.isPrivate = isPrivate;
         this.jobId = jobId;
         this.raw = raw;
+        this.subType = subType;
         this.title = title;
         this.to = to;
         this.type = type;
@@ -159,7 +166,7 @@ public class AtsActivity {
     }
     
     public AtsActivity() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -229,6 +236,11 @@ public class AtsActivity {
     @JsonIgnore
     public Optional<Map<String, Object>> raw() {
         return (Optional<Map<String, Object>>) raw;
+    }
+
+    @JsonIgnore
+    public Optional<String> subType() {
+        return subType;
     }
 
     @JsonIgnore
@@ -422,6 +434,18 @@ public class AtsActivity {
         return this;
     }
 
+    public AtsActivity withSubType(String subType) {
+        Utils.checkNotNull(subType, "subType");
+        this.subType = Optional.ofNullable(subType);
+        return this;
+    }
+
+    public AtsActivity withSubType(Optional<String> subType) {
+        Utils.checkNotNull(subType, "subType");
+        this.subType = subType;
+        return this;
+    }
+
     public AtsActivity withTitle(String title) {
         Utils.checkNotNull(title, "title");
         this.title = Optional.ofNullable(title);
@@ -511,6 +535,7 @@ public class AtsActivity {
             Objects.deepEquals(this.isPrivate, other.isPrivate) &&
             Objects.deepEquals(this.jobId, other.jobId) &&
             Objects.deepEquals(this.raw, other.raw) &&
+            Objects.deepEquals(this.subType, other.subType) &&
             Objects.deepEquals(this.title, other.title) &&
             Objects.deepEquals(this.to, other.to) &&
             Objects.deepEquals(this.type, other.type) &&
@@ -534,6 +559,7 @@ public class AtsActivity {
             isPrivate,
             jobId,
             raw,
+            subType,
             title,
             to,
             type,
@@ -557,6 +583,7 @@ public class AtsActivity {
                 "isPrivate", isPrivate,
                 "jobId", jobId,
                 "raw", raw,
+                "subType", subType,
                 "title", title,
                 "to", to,
                 "type", type,
@@ -591,6 +618,8 @@ public class AtsActivity {
         private Optional<String> jobId = Optional.empty();
  
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
+ 
+        private Optional<String> subType = Optional.empty();
  
         private Optional<String> title = Optional.empty();
  
@@ -762,6 +791,18 @@ public class AtsActivity {
             return this;
         }
 
+        public Builder subType(String subType) {
+            Utils.checkNotNull(subType, "subType");
+            this.subType = Optional.ofNullable(subType);
+            return this;
+        }
+
+        public Builder subType(Optional<String> subType) {
+            Utils.checkNotNull(subType, "subType");
+            this.subType = subType;
+            return this;
+        }
+
         public Builder title(String title) {
             Utils.checkNotNull(title, "title");
             this.title = Optional.ofNullable(title);
@@ -843,6 +884,7 @@ public class AtsActivity {
                 isPrivate,
                 jobId,
                 raw,
+                subType,
                 title,
                 to,
                 type,
