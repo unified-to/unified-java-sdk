@@ -26,6 +26,10 @@ import java.util.Optional;
 public class CommerceItem {
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("account_id")
+    private Optional<String> accountId;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collection_ids")
     private Optional<? extends List<String>> collectionIds;
 
@@ -102,6 +106,7 @@ public class CommerceItem {
 
     @JsonCreator
     public CommerceItem(
+            @JsonProperty("account_id") Optional<String> accountId,
             @JsonProperty("collection_ids") Optional<? extends List<String>> collectionIds,
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("description") Optional<String> description,
@@ -120,6 +125,7 @@ public class CommerceItem {
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
             @JsonProperty("variants") Optional<? extends List<CommerceItemVariant>> variants,
             @JsonProperty("vendor_name") Optional<String> vendorName) {
+        Utils.checkNotNull(accountId, "accountId");
         Utils.checkNotNull(collectionIds, "collectionIds");
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(description, "description");
@@ -138,6 +144,7 @@ public class CommerceItem {
         Utils.checkNotNull(updatedAt, "updatedAt");
         Utils.checkNotNull(variants, "variants");
         Utils.checkNotNull(vendorName, "vendorName");
+        this.accountId = accountId;
         this.collectionIds = collectionIds;
         this.createdAt = createdAt;
         this.description = description;
@@ -159,7 +166,12 @@ public class CommerceItem {
     }
     
     public CommerceItem() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+    }
+
+    @JsonIgnore
+    public Optional<String> accountId() {
+        return accountId;
     }
 
     @SuppressWarnings("unchecked")
@@ -263,6 +275,18 @@ public class CommerceItem {
 
     public final static Builder builder() {
         return new Builder();
+    }
+
+    public CommerceItem withAccountId(String accountId) {
+        Utils.checkNotNull(accountId, "accountId");
+        this.accountId = Optional.ofNullable(accountId);
+        return this;
+    }
+
+    public CommerceItem withAccountId(Optional<String> accountId) {
+        Utils.checkNotNull(accountId, "accountId");
+        this.accountId = accountId;
+        return this;
     }
 
     public CommerceItem withCollectionIds(List<String> collectionIds) {
@@ -497,6 +521,7 @@ public class CommerceItem {
         }
         CommerceItem other = (CommerceItem) o;
         return 
+            Objects.deepEquals(this.accountId, other.accountId) &&
             Objects.deepEquals(this.collectionIds, other.collectionIds) &&
             Objects.deepEquals(this.createdAt, other.createdAt) &&
             Objects.deepEquals(this.description, other.description) &&
@@ -520,6 +545,7 @@ public class CommerceItem {
     @Override
     public int hashCode() {
         return Objects.hash(
+            accountId,
             collectionIds,
             createdAt,
             description,
@@ -543,6 +569,7 @@ public class CommerceItem {
     @Override
     public String toString() {
         return Utils.toString(CommerceItem.class,
+                "accountId", accountId,
                 "collectionIds", collectionIds,
                 "createdAt", createdAt,
                 "description", description,
@@ -564,6 +591,8 @@ public class CommerceItem {
     }
     
     public final static class Builder {
+ 
+        private Optional<String> accountId = Optional.empty();
  
         private Optional<? extends List<String>> collectionIds = Optional.empty();
  
@@ -603,6 +632,18 @@ public class CommerceItem {
         
         private Builder() {
           // force use of static builder() method
+        }
+
+        public Builder accountId(String accountId) {
+            Utils.checkNotNull(accountId, "accountId");
+            this.accountId = Optional.ofNullable(accountId);
+            return this;
+        }
+
+        public Builder accountId(Optional<String> accountId) {
+            Utils.checkNotNull(accountId, "accountId");
+            this.accountId = accountId;
+            return this;
         }
 
         public Builder collectionIds(List<String> collectionIds) {
@@ -829,6 +870,7 @@ public class CommerceItem {
         
         public CommerceItem build() {
             return new CommerceItem(
+                accountId,
                 collectionIds,
                 createdAt,
                 description,

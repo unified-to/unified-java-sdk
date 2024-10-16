@@ -30,6 +30,10 @@ public class StorageFile {
     private Optional<OffsetDateTime> createdAt;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("data")
+    private Optional<String> data;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private Optional<String> description;
 
@@ -84,6 +88,7 @@ public class StorageFile {
     @JsonCreator
     public StorageFile(
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
+            @JsonProperty("data") Optional<String> data,
             @JsonProperty("description") Optional<String> description,
             @JsonProperty("download_url") Optional<String> downloadUrl,
             @JsonProperty("hash") Optional<String> hash,
@@ -98,6 +103,7 @@ public class StorageFile {
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
             @JsonProperty("user_id") Optional<String> userId) {
         Utils.checkNotNull(createdAt, "createdAt");
+        Utils.checkNotNull(data, "data");
         Utils.checkNotNull(description, "description");
         Utils.checkNotNull(downloadUrl, "downloadUrl");
         Utils.checkNotNull(hash, "hash");
@@ -112,6 +118,7 @@ public class StorageFile {
         Utils.checkNotNull(updatedAt, "updatedAt");
         Utils.checkNotNull(userId, "userId");
         this.createdAt = createdAt;
+        this.data = data;
         this.description = description;
         this.downloadUrl = downloadUrl;
         this.hash = hash;
@@ -128,12 +135,17 @@ public class StorageFile {
     }
     
     public StorageFile() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
         return createdAt;
+    }
+
+    @JsonIgnore
+    public Optional<String> data() {
+        return data;
     }
 
     @JsonIgnore
@@ -217,6 +229,18 @@ public class StorageFile {
     public StorageFile withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
+        return this;
+    }
+
+    public StorageFile withData(String data) {
+        Utils.checkNotNull(data, "data");
+        this.data = Optional.ofNullable(data);
+        return this;
+    }
+
+    public StorageFile withData(Optional<String> data) {
+        Utils.checkNotNull(data, "data");
+        this.data = data;
         return this;
     }
 
@@ -387,6 +411,7 @@ public class StorageFile {
         StorageFile other = (StorageFile) o;
         return 
             Objects.deepEquals(this.createdAt, other.createdAt) &&
+            Objects.deepEquals(this.data, other.data) &&
             Objects.deepEquals(this.description, other.description) &&
             Objects.deepEquals(this.downloadUrl, other.downloadUrl) &&
             Objects.deepEquals(this.hash, other.hash) &&
@@ -406,6 +431,7 @@ public class StorageFile {
     public int hashCode() {
         return Objects.hash(
             createdAt,
+            data,
             description,
             downloadUrl,
             hash,
@@ -425,6 +451,7 @@ public class StorageFile {
     public String toString() {
         return Utils.toString(StorageFile.class,
                 "createdAt", createdAt,
+                "data", data,
                 "description", description,
                 "downloadUrl", downloadUrl,
                 "hash", hash,
@@ -443,6 +470,8 @@ public class StorageFile {
     public final static class Builder {
  
         private Optional<OffsetDateTime> createdAt = Optional.empty();
+ 
+        private Optional<String> data = Optional.empty();
  
         private Optional<String> description = Optional.empty();
  
@@ -483,6 +512,18 @@ public class StorageFile {
         public Builder createdAt(Optional<OffsetDateTime> createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = createdAt;
+            return this;
+        }
+
+        public Builder data(String data) {
+            Utils.checkNotNull(data, "data");
+            this.data = Optional.ofNullable(data);
+            return this;
+        }
+
+        public Builder data(Optional<String> data) {
+            Utils.checkNotNull(data, "data");
+            this.data = data;
             return this;
         }
 
@@ -645,6 +686,7 @@ public class StorageFile {
         public StorageFile build() {
             return new StorageFile(
                 createdAt,
+                data,
                 description,
                 downloadUrl,
                 hash,
