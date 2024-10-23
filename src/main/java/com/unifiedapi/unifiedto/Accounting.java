@@ -18,6 +18,9 @@ import com.unifiedapi.unifiedto.models.operations.CreateAccountingInvoiceRespons
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingJournalRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingJournalRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingJournalResponse;
+import com.unifiedapi.unifiedto.models.operations.CreateAccountingOrderRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateAccountingOrderRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.CreateAccountingOrderResponse;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingTaxrateRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingTaxrateRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.CreateAccountingTaxrateResponse;
@@ -36,6 +39,9 @@ import com.unifiedapi.unifiedto.models.operations.GetAccountingInvoiceResponse;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingJournalRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingJournalRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingJournalResponse;
+import com.unifiedapi.unifiedto.models.operations.GetAccountingOrderRequest;
+import com.unifiedapi.unifiedto.models.operations.GetAccountingOrderRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.GetAccountingOrderResponse;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingOrganizationRequest;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingOrganizationRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.GetAccountingOrganizationResponse;
@@ -57,6 +63,9 @@ import com.unifiedapi.unifiedto.models.operations.ListAccountingInvoicesResponse
 import com.unifiedapi.unifiedto.models.operations.ListAccountingJournalsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingJournalsRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingJournalsResponse;
+import com.unifiedapi.unifiedto.models.operations.ListAccountingOrdersRequest;
+import com.unifiedapi.unifiedto.models.operations.ListAccountingOrdersRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.ListAccountingOrdersResponse;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingOrganizationsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingOrganizationsRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.ListAccountingOrganizationsResponse;
@@ -78,6 +87,9 @@ import com.unifiedapi.unifiedto.models.operations.PatchAccountingInvoiceResponse
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingJournalRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingJournalRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingJournalResponse;
+import com.unifiedapi.unifiedto.models.operations.PatchAccountingOrderRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchAccountingOrderRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.PatchAccountingOrderResponse;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingTaxrateRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingTaxrateRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.PatchAccountingTaxrateResponse;
@@ -96,6 +108,9 @@ import com.unifiedapi.unifiedto.models.operations.RemoveAccountingInvoiceRespons
 import com.unifiedapi.unifiedto.models.operations.RemoveAccountingJournalRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveAccountingJournalRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.RemoveAccountingJournalResponse;
+import com.unifiedapi.unifiedto.models.operations.RemoveAccountingOrderRequest;
+import com.unifiedapi.unifiedto.models.operations.RemoveAccountingOrderRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.RemoveAccountingOrderResponse;
 import com.unifiedapi.unifiedto.models.operations.RemoveAccountingTaxrateRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveAccountingTaxrateRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.RemoveAccountingTaxrateResponse;
@@ -115,6 +130,9 @@ import com.unifiedapi.unifiedto.models.operations.UpdateAccountingInvoiceRespons
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingJournalRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingJournalRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingJournalResponse;
+import com.unifiedapi.unifiedto.models.operations.UpdateAccountingOrderRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdateAccountingOrderRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.UpdateAccountingOrderResponse;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingTaxrateRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingTaxrateRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.UpdateAccountingTaxrateResponse;
@@ -125,6 +143,7 @@ import com.unifiedapi.unifiedto.models.shared.AccountingAccount;
 import com.unifiedapi.unifiedto.models.shared.AccountingContact;
 import com.unifiedapi.unifiedto.models.shared.AccountingInvoice;
 import com.unifiedapi.unifiedto.models.shared.AccountingJournal;
+import com.unifiedapi.unifiedto.models.shared.AccountingOrder;
 import com.unifiedapi.unifiedto.models.shared.AccountingOrganization;
 import com.unifiedapi.unifiedto.models.shared.AccountingTaxrate;
 import com.unifiedapi.unifiedto.models.shared.AccountingTransaction;
@@ -150,12 +169,14 @@ public class Accounting implements
             MethodCallCreateAccountingContact,
             MethodCallCreateAccountingInvoice,
             MethodCallCreateAccountingJournal,
+            MethodCallCreateAccountingOrder,
             MethodCallCreateAccountingTaxrate,
             MethodCallCreateAccountingTransaction,
             MethodCallGetAccountingAccount,
             MethodCallGetAccountingContact,
             MethodCallGetAccountingInvoice,
             MethodCallGetAccountingJournal,
+            MethodCallGetAccountingOrder,
             MethodCallGetAccountingOrganization,
             MethodCallGetAccountingTaxrate,
             MethodCallGetAccountingTransaction,
@@ -163,6 +184,7 @@ public class Accounting implements
             MethodCallListAccountingContacts,
             MethodCallListAccountingInvoices,
             MethodCallListAccountingJournals,
+            MethodCallListAccountingOrders,
             MethodCallListAccountingOrganizations,
             MethodCallListAccountingTaxrates,
             MethodCallListAccountingTransactions,
@@ -170,18 +192,21 @@ public class Accounting implements
             MethodCallPatchAccountingContact,
             MethodCallPatchAccountingInvoice,
             MethodCallPatchAccountingJournal,
+            MethodCallPatchAccountingOrder,
             MethodCallPatchAccountingTaxrate,
             MethodCallPatchAccountingTransaction,
             MethodCallRemoveAccountingAccount,
             MethodCallRemoveAccountingContact,
             MethodCallRemoveAccountingInvoice,
             MethodCallRemoveAccountingJournal,
+            MethodCallRemoveAccountingOrder,
             MethodCallRemoveAccountingTaxrate,
             MethodCallRemoveAccountingTransaction,
             MethodCallUpdateAccountingAccount,
             MethodCallUpdateAccountingContact,
             MethodCallUpdateAccountingInvoice,
             MethodCallUpdateAccountingJournal,
+            MethodCallUpdateAccountingOrder,
             MethodCallUpdateAccountingTaxrate,
             MethodCallUpdateAccountingTransaction {
 
@@ -690,6 +715,137 @@ public class Accounting implements
                     Utils.toUtf8AndClose(_httpRes.body()),
                     new TypeReference<AccountingJournal>() {});
                 _res.withAccountingJournal(Optional.ofNullable(_out));
+                return _res;
+            } else {
+                throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "Unexpected content-type received: " + _contentType, 
+                    Utils.extractByteArrayFromBody(_httpRes));
+            }
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        throw new SDKError(
+            _httpRes, 
+            _httpRes.statusCode(), 
+            "Unexpected status code received: " + _httpRes.statusCode(), 
+            Utils.extractByteArrayFromBody(_httpRes));
+    }
+
+
+
+    /**
+     * Create an order
+     * @return The call builder
+     */
+    public CreateAccountingOrderRequestBuilder createAccountingOrder() {
+        return new CreateAccountingOrderRequestBuilder(this);
+    }
+
+    /**
+     * Create an order
+     * @param request The request object containing all of the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public CreateAccountingOrderResponse createAccountingOrder(
+            CreateAccountingOrderRequest request) throws Exception {
+        String _baseUrl = this.sdkConfiguration.serverUrl;
+        String _url = Utils.generateURL(
+                CreateAccountingOrderRequest.class,
+                _baseUrl,
+                "/accounting/{connection_id}/order",
+                request, null);
+        
+        HTTPRequest _req = new HTTPRequest(_url, "POST");
+        Object _convertedRequest = Utils.convertToShape(
+                request, 
+                JsonShape.DEFAULT,
+                new TypeReference<CreateAccountingOrderRequest>() {});
+        SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
+                _convertedRequest, 
+                "accountingOrder",
+                "json",
+                false);
+        _req.setBody(Optional.ofNullable(_serializedRequestBody));
+        _req.addHeader("Accept", "application/json")
+            .addHeader("user-agent", 
+                SDKConfiguration.USER_AGENT);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                CreateAccountingOrderRequest.class,
+                request, 
+                null));
+
+        Utils.configureSecurity(_req,  
+                this.sdkConfiguration.securitySource.getSecurity());
+
+        HTTPClient _client = this.sdkConfiguration.defaultClient;
+        HttpRequest _r = 
+            sdkConfiguration.hooks()
+               .beforeRequest(
+                  new BeforeRequestContextImpl(
+                      "createAccountingOrder", 
+                      Optional.of(List.of()), 
+                      sdkConfiguration.securitySource()),
+                  _req.build());
+        HttpResponse<InputStream> _httpRes;
+        try {
+            _httpRes = _client.send(_r);
+            if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "createAccountingOrder",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()),
+                        Optional.of(_httpRes),
+                        Optional.empty());
+            } else {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterSuccess(
+                        new AfterSuccessContextImpl(
+                            "createAccountingOrder",
+                            Optional.of(List.of()), 
+                            sdkConfiguration.securitySource()),
+                         _httpRes);
+            }
+        } catch (Exception _e) {
+            _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "createAccountingOrder",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()), 
+                        Optional.empty(),
+                        Optional.of(_e));
+        }
+        String _contentType = _httpRes
+            .headers()
+            .firstValue("Content-Type")
+            .orElse("application/octet-stream");
+        CreateAccountingOrderResponse.Builder _resBuilder = 
+            CreateAccountingOrderResponse
+                .builder()
+                .contentType(_contentType)
+                .statusCode(_httpRes.statusCode())
+                .rawResponse(_httpRes);
+
+        CreateAccountingOrderResponse _res = _resBuilder.build();
+        
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            if (Utils.contentTypeMatches(_contentType, "application/json")) {
+                AccountingOrder _out = Utils.mapper().readValue(
+                    Utils.toUtf8AndClose(_httpRes.body()),
+                    new TypeReference<AccountingOrder>() {});
+                _res.withAccountingOrder(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -1436,6 +1592,127 @@ public class Accounting implements
                     Utils.toUtf8AndClose(_httpRes.body()),
                     new TypeReference<AccountingJournal>() {});
                 _res.withAccountingJournal(Optional.ofNullable(_out));
+                return _res;
+            } else {
+                throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "Unexpected content-type received: " + _contentType, 
+                    Utils.extractByteArrayFromBody(_httpRes));
+            }
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        throw new SDKError(
+            _httpRes, 
+            _httpRes.statusCode(), 
+            "Unexpected status code received: " + _httpRes.statusCode(), 
+            Utils.extractByteArrayFromBody(_httpRes));
+    }
+
+
+
+    /**
+     * Retrieve an order
+     * @return The call builder
+     */
+    public GetAccountingOrderRequestBuilder getAccountingOrder() {
+        return new GetAccountingOrderRequestBuilder(this);
+    }
+
+    /**
+     * Retrieve an order
+     * @param request The request object containing all of the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public GetAccountingOrderResponse getAccountingOrder(
+            GetAccountingOrderRequest request) throws Exception {
+        String _baseUrl = this.sdkConfiguration.serverUrl;
+        String _url = Utils.generateURL(
+                GetAccountingOrderRequest.class,
+                _baseUrl,
+                "/accounting/{connection_id}/order/{id}",
+                request, null);
+        
+        HTTPRequest _req = new HTTPRequest(_url, "GET");
+        _req.addHeader("Accept", "application/json")
+            .addHeader("user-agent", 
+                SDKConfiguration.USER_AGENT);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                GetAccountingOrderRequest.class,
+                request, 
+                null));
+
+        Utils.configureSecurity(_req,  
+                this.sdkConfiguration.securitySource.getSecurity());
+
+        HTTPClient _client = this.sdkConfiguration.defaultClient;
+        HttpRequest _r = 
+            sdkConfiguration.hooks()
+               .beforeRequest(
+                  new BeforeRequestContextImpl(
+                      "getAccountingOrder", 
+                      Optional.of(List.of()), 
+                      sdkConfiguration.securitySource()),
+                  _req.build());
+        HttpResponse<InputStream> _httpRes;
+        try {
+            _httpRes = _client.send(_r);
+            if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "getAccountingOrder",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()),
+                        Optional.of(_httpRes),
+                        Optional.empty());
+            } else {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterSuccess(
+                        new AfterSuccessContextImpl(
+                            "getAccountingOrder",
+                            Optional.of(List.of()), 
+                            sdkConfiguration.securitySource()),
+                         _httpRes);
+            }
+        } catch (Exception _e) {
+            _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "getAccountingOrder",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()), 
+                        Optional.empty(),
+                        Optional.of(_e));
+        }
+        String _contentType = _httpRes
+            .headers()
+            .firstValue("Content-Type")
+            .orElse("application/octet-stream");
+        GetAccountingOrderResponse.Builder _resBuilder = 
+            GetAccountingOrderResponse
+                .builder()
+                .contentType(_contentType)
+                .statusCode(_httpRes.statusCode())
+                .rawResponse(_httpRes);
+
+        GetAccountingOrderResponse _res = _resBuilder.build();
+        
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            if (Utils.contentTypeMatches(_contentType, "application/json")) {
+                AccountingOrder _out = Utils.mapper().readValue(
+                    Utils.toUtf8AndClose(_httpRes.body()),
+                    new TypeReference<AccountingOrder>() {});
+                _res.withAccountingOrder(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -2283,6 +2560,127 @@ public class Accounting implements
                     Utils.toUtf8AndClose(_httpRes.body()),
                     new TypeReference<List<AccountingJournal>>() {});
                 _res.withAccountingJournals(Optional.ofNullable(_out));
+                return _res;
+            } else {
+                throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "Unexpected content-type received: " + _contentType, 
+                    Utils.extractByteArrayFromBody(_httpRes));
+            }
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        throw new SDKError(
+            _httpRes, 
+            _httpRes.statusCode(), 
+            "Unexpected status code received: " + _httpRes.statusCode(), 
+            Utils.extractByteArrayFromBody(_httpRes));
+    }
+
+
+
+    /**
+     * List all orders
+     * @return The call builder
+     */
+    public ListAccountingOrdersRequestBuilder listAccountingOrders() {
+        return new ListAccountingOrdersRequestBuilder(this);
+    }
+
+    /**
+     * List all orders
+     * @param request The request object containing all of the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public ListAccountingOrdersResponse listAccountingOrders(
+            ListAccountingOrdersRequest request) throws Exception {
+        String _baseUrl = this.sdkConfiguration.serverUrl;
+        String _url = Utils.generateURL(
+                ListAccountingOrdersRequest.class,
+                _baseUrl,
+                "/accounting/{connection_id}/order",
+                request, null);
+        
+        HTTPRequest _req = new HTTPRequest(_url, "GET");
+        _req.addHeader("Accept", "application/json")
+            .addHeader("user-agent", 
+                SDKConfiguration.USER_AGENT);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                ListAccountingOrdersRequest.class,
+                request, 
+                null));
+
+        Utils.configureSecurity(_req,  
+                this.sdkConfiguration.securitySource.getSecurity());
+
+        HTTPClient _client = this.sdkConfiguration.defaultClient;
+        HttpRequest _r = 
+            sdkConfiguration.hooks()
+               .beforeRequest(
+                  new BeforeRequestContextImpl(
+                      "listAccountingOrders", 
+                      Optional.of(List.of()), 
+                      sdkConfiguration.securitySource()),
+                  _req.build());
+        HttpResponse<InputStream> _httpRes;
+        try {
+            _httpRes = _client.send(_r);
+            if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "listAccountingOrders",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()),
+                        Optional.of(_httpRes),
+                        Optional.empty());
+            } else {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterSuccess(
+                        new AfterSuccessContextImpl(
+                            "listAccountingOrders",
+                            Optional.of(List.of()), 
+                            sdkConfiguration.securitySource()),
+                         _httpRes);
+            }
+        } catch (Exception _e) {
+            _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "listAccountingOrders",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()), 
+                        Optional.empty(),
+                        Optional.of(_e));
+        }
+        String _contentType = _httpRes
+            .headers()
+            .firstValue("Content-Type")
+            .orElse("application/octet-stream");
+        ListAccountingOrdersResponse.Builder _resBuilder = 
+            ListAccountingOrdersResponse
+                .builder()
+                .contentType(_contentType)
+                .statusCode(_httpRes.statusCode())
+                .rawResponse(_httpRes);
+
+        ListAccountingOrdersResponse _res = _resBuilder.build();
+        
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            if (Utils.contentTypeMatches(_contentType, "application/json")) {
+                List<AccountingOrder> _out = Utils.mapper().readValue(
+                    Utils.toUtf8AndClose(_httpRes.body()),
+                    new TypeReference<List<AccountingOrder>>() {});
+                _res.withAccountingOrders(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -3197,6 +3595,137 @@ public class Accounting implements
 
 
     /**
+     * Update an order
+     * @return The call builder
+     */
+    public PatchAccountingOrderRequestBuilder patchAccountingOrder() {
+        return new PatchAccountingOrderRequestBuilder(this);
+    }
+
+    /**
+     * Update an order
+     * @param request The request object containing all of the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public PatchAccountingOrderResponse patchAccountingOrder(
+            PatchAccountingOrderRequest request) throws Exception {
+        String _baseUrl = this.sdkConfiguration.serverUrl;
+        String _url = Utils.generateURL(
+                PatchAccountingOrderRequest.class,
+                _baseUrl,
+                "/accounting/{connection_id}/order/{id}",
+                request, null);
+        
+        HTTPRequest _req = new HTTPRequest(_url, "PATCH");
+        Object _convertedRequest = Utils.convertToShape(
+                request, 
+                JsonShape.DEFAULT,
+                new TypeReference<PatchAccountingOrderRequest>() {});
+        SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
+                _convertedRequest, 
+                "accountingOrder",
+                "json",
+                false);
+        _req.setBody(Optional.ofNullable(_serializedRequestBody));
+        _req.addHeader("Accept", "application/json")
+            .addHeader("user-agent", 
+                SDKConfiguration.USER_AGENT);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                PatchAccountingOrderRequest.class,
+                request, 
+                null));
+
+        Utils.configureSecurity(_req,  
+                this.sdkConfiguration.securitySource.getSecurity());
+
+        HTTPClient _client = this.sdkConfiguration.defaultClient;
+        HttpRequest _r = 
+            sdkConfiguration.hooks()
+               .beforeRequest(
+                  new BeforeRequestContextImpl(
+                      "patchAccountingOrder", 
+                      Optional.of(List.of()), 
+                      sdkConfiguration.securitySource()),
+                  _req.build());
+        HttpResponse<InputStream> _httpRes;
+        try {
+            _httpRes = _client.send(_r);
+            if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "patchAccountingOrder",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()),
+                        Optional.of(_httpRes),
+                        Optional.empty());
+            } else {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterSuccess(
+                        new AfterSuccessContextImpl(
+                            "patchAccountingOrder",
+                            Optional.of(List.of()), 
+                            sdkConfiguration.securitySource()),
+                         _httpRes);
+            }
+        } catch (Exception _e) {
+            _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "patchAccountingOrder",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()), 
+                        Optional.empty(),
+                        Optional.of(_e));
+        }
+        String _contentType = _httpRes
+            .headers()
+            .firstValue("Content-Type")
+            .orElse("application/octet-stream");
+        PatchAccountingOrderResponse.Builder _resBuilder = 
+            PatchAccountingOrderResponse
+                .builder()
+                .contentType(_contentType)
+                .statusCode(_httpRes.statusCode())
+                .rawResponse(_httpRes);
+
+        PatchAccountingOrderResponse _res = _resBuilder.build();
+        
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            if (Utils.contentTypeMatches(_contentType, "application/json")) {
+                AccountingOrder _out = Utils.mapper().readValue(
+                    Utils.toUtf8AndClose(_httpRes.body()),
+                    new TypeReference<AccountingOrder>() {});
+                _res.withAccountingOrder(Optional.ofNullable(_out));
+                return _res;
+            } else {
+                throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "Unexpected content-type received: " + _contentType, 
+                    Utils.extractByteArrayFromBody(_httpRes));
+            }
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        throw new SDKError(
+            _httpRes, 
+            _httpRes.statusCode(), 
+            "Unexpected status code received: " + _httpRes.statusCode(), 
+            Utils.extractByteArrayFromBody(_httpRes));
+    }
+
+
+
+    /**
      * Update a taxrate
      * @return The call builder
      */
@@ -3856,6 +4385,111 @@ public class Accounting implements
                 .rawResponse(_httpRes);
 
         RemoveAccountingJournalResponse _res = _resBuilder.build();
+        
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200", "default")) {
+            // no content 
+            return _res;
+        }
+        throw new SDKError(
+            _httpRes, 
+            _httpRes.statusCode(), 
+            "Unexpected status code received: " + _httpRes.statusCode(), 
+            Utils.extractByteArrayFromBody(_httpRes));
+    }
+
+
+
+    /**
+     * Remove an order
+     * @return The call builder
+     */
+    public RemoveAccountingOrderRequestBuilder removeAccountingOrder() {
+        return new RemoveAccountingOrderRequestBuilder(this);
+    }
+
+    /**
+     * Remove an order
+     * @param request The request object containing all of the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public RemoveAccountingOrderResponse removeAccountingOrder(
+            RemoveAccountingOrderRequest request) throws Exception {
+        String _baseUrl = this.sdkConfiguration.serverUrl;
+        String _url = Utils.generateURL(
+                RemoveAccountingOrderRequest.class,
+                _baseUrl,
+                "/accounting/{connection_id}/order/{id}",
+                request, null);
+        
+        HTTPRequest _req = new HTTPRequest(_url, "DELETE");
+        _req.addHeader("Accept", "*/*")
+            .addHeader("user-agent", 
+                SDKConfiguration.USER_AGENT);
+
+        Utils.configureSecurity(_req,  
+                this.sdkConfiguration.securitySource.getSecurity());
+
+        HTTPClient _client = this.sdkConfiguration.defaultClient;
+        HttpRequest _r = 
+            sdkConfiguration.hooks()
+               .beforeRequest(
+                  new BeforeRequestContextImpl(
+                      "removeAccountingOrder", 
+                      Optional.of(List.of()), 
+                      sdkConfiguration.securitySource()),
+                  _req.build());
+        HttpResponse<InputStream> _httpRes;
+        try {
+            _httpRes = _client.send(_r);
+            if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "removeAccountingOrder",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()),
+                        Optional.of(_httpRes),
+                        Optional.empty());
+            } else {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterSuccess(
+                        new AfterSuccessContextImpl(
+                            "removeAccountingOrder",
+                            Optional.of(List.of()), 
+                            sdkConfiguration.securitySource()),
+                         _httpRes);
+            }
+        } catch (Exception _e) {
+            _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "removeAccountingOrder",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()), 
+                        Optional.empty(),
+                        Optional.of(_e));
+        }
+        String _contentType = _httpRes
+            .headers()
+            .firstValue("Content-Type")
+            .orElse("application/octet-stream");
+        RemoveAccountingOrderResponse.Builder _resBuilder = 
+            RemoveAccountingOrderResponse
+                .builder()
+                .contentType(_contentType)
+                .statusCode(_httpRes.statusCode())
+                .rawResponse(_httpRes);
+
+        RemoveAccountingOrderResponse _res = _resBuilder.build();
         
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
             // no content 
@@ -4586,6 +5220,137 @@ public class Accounting implements
                     Utils.toUtf8AndClose(_httpRes.body()),
                     new TypeReference<AccountingJournal>() {});
                 _res.withAccountingJournal(Optional.ofNullable(_out));
+                return _res;
+            } else {
+                throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "Unexpected content-type received: " + _contentType, 
+                    Utils.extractByteArrayFromBody(_httpRes));
+            }
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        throw new SDKError(
+            _httpRes, 
+            _httpRes.statusCode(), 
+            "Unexpected status code received: " + _httpRes.statusCode(), 
+            Utils.extractByteArrayFromBody(_httpRes));
+    }
+
+
+
+    /**
+     * Update an order
+     * @return The call builder
+     */
+    public UpdateAccountingOrderRequestBuilder updateAccountingOrder() {
+        return new UpdateAccountingOrderRequestBuilder(this);
+    }
+
+    /**
+     * Update an order
+     * @param request The request object containing all of the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public UpdateAccountingOrderResponse updateAccountingOrder(
+            UpdateAccountingOrderRequest request) throws Exception {
+        String _baseUrl = this.sdkConfiguration.serverUrl;
+        String _url = Utils.generateURL(
+                UpdateAccountingOrderRequest.class,
+                _baseUrl,
+                "/accounting/{connection_id}/order/{id}",
+                request, null);
+        
+        HTTPRequest _req = new HTTPRequest(_url, "PUT");
+        Object _convertedRequest = Utils.convertToShape(
+                request, 
+                JsonShape.DEFAULT,
+                new TypeReference<UpdateAccountingOrderRequest>() {});
+        SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
+                _convertedRequest, 
+                "accountingOrder",
+                "json",
+                false);
+        _req.setBody(Optional.ofNullable(_serializedRequestBody));
+        _req.addHeader("Accept", "application/json")
+            .addHeader("user-agent", 
+                SDKConfiguration.USER_AGENT);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                UpdateAccountingOrderRequest.class,
+                request, 
+                null));
+
+        Utils.configureSecurity(_req,  
+                this.sdkConfiguration.securitySource.getSecurity());
+
+        HTTPClient _client = this.sdkConfiguration.defaultClient;
+        HttpRequest _r = 
+            sdkConfiguration.hooks()
+               .beforeRequest(
+                  new BeforeRequestContextImpl(
+                      "updateAccountingOrder", 
+                      Optional.of(List.of()), 
+                      sdkConfiguration.securitySource()),
+                  _req.build());
+        HttpResponse<InputStream> _httpRes;
+        try {
+            _httpRes = _client.send(_r);
+            if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "updateAccountingOrder",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()),
+                        Optional.of(_httpRes),
+                        Optional.empty());
+            } else {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterSuccess(
+                        new AfterSuccessContextImpl(
+                            "updateAccountingOrder",
+                            Optional.of(List.of()), 
+                            sdkConfiguration.securitySource()),
+                         _httpRes);
+            }
+        } catch (Exception _e) {
+            _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "updateAccountingOrder",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()), 
+                        Optional.empty(),
+                        Optional.of(_e));
+        }
+        String _contentType = _httpRes
+            .headers()
+            .firstValue("Content-Type")
+            .orElse("application/octet-stream");
+        UpdateAccountingOrderResponse.Builder _resBuilder = 
+            UpdateAccountingOrderResponse
+                .builder()
+                .contentType(_contentType)
+                .statusCode(_httpRes.statusCode())
+                .rawResponse(_httpRes);
+
+        UpdateAccountingOrderResponse _res = _resBuilder.build();
+        
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            if (Utils.contentTypeMatches(_contentType, "application/json")) {
+                AccountingOrder _out = Utils.mapper().readValue(
+                    Utils.toUtf8AndClose(_httpRes.body()),
+                    new TypeReference<AccountingOrder>() {});
+                _res.withAccountingOrder(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(

@@ -35,6 +35,12 @@ public class SDKMethodInterfaces {
     }
 
 
+    public interface MethodCallCreateAccountingOrder {
+        CreateAccountingOrderResponse createAccountingOrder(
+            CreateAccountingOrderRequest request) throws Exception;
+    }
+
+
     public interface MethodCallCreateAccountingTaxrate {
         CreateAccountingTaxrateResponse createAccountingTaxrate(
             CreateAccountingTaxrateRequest request) throws Exception;
@@ -68,6 +74,12 @@ public class SDKMethodInterfaces {
     public interface MethodCallGetAccountingJournal {
         GetAccountingJournalResponse getAccountingJournal(
             GetAccountingJournalRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallGetAccountingOrder {
+        GetAccountingOrderResponse getAccountingOrder(
+            GetAccountingOrderRequest request) throws Exception;
     }
 
 
@@ -113,6 +125,12 @@ public class SDKMethodInterfaces {
     }
 
 
+    public interface MethodCallListAccountingOrders {
+        ListAccountingOrdersResponse listAccountingOrders(
+            ListAccountingOrdersRequest request) throws Exception;
+    }
+
+
     public interface MethodCallListAccountingOrganizations {
         ListAccountingOrganizationsResponse listAccountingOrganizations(
             ListAccountingOrganizationsRequest request) throws Exception;
@@ -155,6 +173,12 @@ public class SDKMethodInterfaces {
     }
 
 
+    public interface MethodCallPatchAccountingOrder {
+        PatchAccountingOrderResponse patchAccountingOrder(
+            PatchAccountingOrderRequest request) throws Exception;
+    }
+
+
     public interface MethodCallPatchAccountingTaxrate {
         PatchAccountingTaxrateResponse patchAccountingTaxrate(
             PatchAccountingTaxrateRequest request) throws Exception;
@@ -191,6 +215,12 @@ public class SDKMethodInterfaces {
     }
 
 
+    public interface MethodCallRemoveAccountingOrder {
+        RemoveAccountingOrderResponse removeAccountingOrder(
+            RemoveAccountingOrderRequest request) throws Exception;
+    }
+
+
     public interface MethodCallRemoveAccountingTaxrate {
         RemoveAccountingTaxrateResponse removeAccountingTaxrate(
             RemoveAccountingTaxrateRequest request) throws Exception;
@@ -224,6 +254,12 @@ public class SDKMethodInterfaces {
     public interface MethodCallUpdateAccountingJournal {
         UpdateAccountingJournalResponse updateAccountingJournal(
             UpdateAccountingJournalRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallUpdateAccountingOrder {
+        UpdateAccountingOrderResponse updateAccountingOrder(
+            UpdateAccountingOrderRequest request) throws Exception;
     }
 
 

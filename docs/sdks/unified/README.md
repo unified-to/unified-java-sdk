@@ -59,7 +59,7 @@ public class Application {
                     PropertyConnectionCategories.TASK))
                 .integrationType("<value>")
                 .permissions(List.of(
-                    PropertyConnectionPermissions.ATS_SCORECARD_WRITE))
+                    PropertyConnectionPermissions.ATS_SCORECARD_READ))
                 .build();
 
         CreateUnifiedConnectionResponse res = sdk.unified().createUnifiedConnection()

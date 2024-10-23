@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 93cdcc39dcda25b2b2e4aa38187b5d21
+  docChecksum: ec37ac8840007140d82aa965e5a1b881
   docVersion: "1.0"
-  speakeasyVersion: 1.419.2
+  speakeasyVersion: 1.420.0
   generationVersion: 2.438.15
-  releaseVersion: 0.22.4
-  configChecksum: 799de3759e8d441befc445adc4508766
+  releaseVersion: 0.22.5
+  configChecksum: ddad4f3b50943d312144bd277c81703c
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -35,6 +35,8 @@ generatedFiles:
   - docs/models/operations/CreateAccountingInvoiceResponse.md
   - docs/models/operations/CreateAccountingJournalRequest.md
   - docs/models/operations/CreateAccountingJournalResponse.md
+  - docs/models/operations/CreateAccountingOrderRequest.md
+  - docs/models/operations/CreateAccountingOrderResponse.md
   - docs/models/operations/CreateAccountingTaxrateRequest.md
   - docs/models/operations/CreateAccountingTaxrateResponse.md
   - docs/models/operations/CreateAccountingTransactionRequest.md
@@ -130,6 +132,8 @@ generatedFiles:
   - docs/models/operations/GetAccountingInvoiceResponse.md
   - docs/models/operations/GetAccountingJournalRequest.md
   - docs/models/operations/GetAccountingJournalResponse.md
+  - docs/models/operations/GetAccountingOrderRequest.md
+  - docs/models/operations/GetAccountingOrderResponse.md
   - docs/models/operations/GetAccountingOrganizationRequest.md
   - docs/models/operations/GetAccountingOrganizationResponse.md
   - docs/models/operations/GetAccountingTaxrateRequest.md
@@ -239,6 +243,8 @@ generatedFiles:
   - docs/models/operations/ListAccountingInvoicesResponse.md
   - docs/models/operations/ListAccountingJournalsRequest.md
   - docs/models/operations/ListAccountingJournalsResponse.md
+  - docs/models/operations/ListAccountingOrdersRequest.md
+  - docs/models/operations/ListAccountingOrdersResponse.md
   - docs/models/operations/ListAccountingOrganizationsRequest.md
   - docs/models/operations/ListAccountingOrganizationsResponse.md
   - docs/models/operations/ListAccountingTaxratesRequest.md
@@ -364,6 +370,8 @@ generatedFiles:
   - docs/models/operations/PatchAccountingInvoiceResponse.md
   - docs/models/operations/PatchAccountingJournalRequest.md
   - docs/models/operations/PatchAccountingJournalResponse.md
+  - docs/models/operations/PatchAccountingOrderRequest.md
+  - docs/models/operations/PatchAccountingOrderResponse.md
   - docs/models/operations/PatchAccountingTaxrateRequest.md
   - docs/models/operations/PatchAccountingTaxrateResponse.md
   - docs/models/operations/PatchAccountingTransactionRequest.md
@@ -461,6 +469,8 @@ generatedFiles:
   - docs/models/operations/RemoveAccountingInvoiceResponse.md
   - docs/models/operations/RemoveAccountingJournalRequest.md
   - docs/models/operations/RemoveAccountingJournalResponse.md
+  - docs/models/operations/RemoveAccountingOrderRequest.md
+  - docs/models/operations/RemoveAccountingOrderResponse.md
   - docs/models/operations/RemoveAccountingTaxrateRequest.md
   - docs/models/operations/RemoveAccountingTaxrateResponse.md
   - docs/models/operations/RemoveAccountingTransactionRequest.md
@@ -554,6 +564,8 @@ generatedFiles:
   - docs/models/operations/UpdateAccountingInvoiceResponse.md
   - docs/models/operations/UpdateAccountingJournalRequest.md
   - docs/models/operations/UpdateAccountingJournalResponse.md
+  - docs/models/operations/UpdateAccountingOrderRequest.md
+  - docs/models/operations/UpdateAccountingOrderResponse.md
   - docs/models/operations/UpdateAccountingTaxrateRequest.md
   - docs/models/operations/UpdateAccountingTaxrateResponse.md
   - docs/models/operations/UpdateAccountingTransactionRequest.md
@@ -650,9 +662,13 @@ generatedFiles:
   - docs/models/shared/AccountingEmailType.md
   - docs/models/shared/AccountingInvoice.md
   - docs/models/shared/AccountingInvoiceStatus.md
+  - docs/models/shared/AccountingInvoiceType.md
   - docs/models/shared/AccountingJournal.md
   - docs/models/shared/AccountingJournalLineitem.md
   - docs/models/shared/AccountingLineitem.md
+  - docs/models/shared/AccountingOrder.md
+  - docs/models/shared/AccountingOrderStatus.md
+  - docs/models/shared/AccountingOrderType.md
   - docs/models/shared/AccountingOrganization.md
   - docs/models/shared/AccountingTaxrate.md
   - docs/models/shared/AccountingTelephone.md
@@ -815,6 +831,8 @@ generatedFiles:
   - docs/models/shared/Priority.md
   - docs/models/shared/PropertyAccountingContactBillingAddress.md
   - docs/models/shared/PropertyAccountingContactShippingAddress.md
+  - docs/models/shared/PropertyAccountingOrderBillingAddress.md
+  - docs/models/shared/PropertyAccountingOrderShippingAddress.md
   - docs/models/shared/PropertyAccountingOrganizationAddress.md
   - docs/models/shared/PropertyAtsActivityFrom.md
   - docs/models/shared/PropertyAtsActivityFromType.md
@@ -949,6 +967,7 @@ generatedFiles:
   - docs/sdks/messaging/README.md
   - docs/sdks/model/README.md
   - docs/sdks/note/README.md
+  - docs/sdks/order/README.md
   - docs/sdks/organization/README.md
   - docs/sdks/page/README.md
   - docs/sdks/passthrough/README.md
@@ -1027,6 +1046,7 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/Messaging.java
   - src/main/java/com/unifiedapi/unifiedto/Model.java
   - src/main/java/com/unifiedapi/unifiedto/Note.java
+  - src/main/java/com/unifiedapi/unifiedto/Order.java
   - src/main/java/com/unifiedapi/unifiedto/Organization.java
   - src/main/java/com/unifiedapi/unifiedto/Page.java
   - src/main/java/com/unifiedapi/unifiedto/Passthrough.java
@@ -1071,6 +1091,9 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingJournalRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingJournalRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingJournalResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingOrderRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingOrderRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingOrderResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingTaxrateRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingTaxrateRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateAccountingTaxrateResponse.java
@@ -1214,6 +1237,9 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingJournalRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingJournalRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingJournalResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingOrderRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingOrderRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingOrderResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingOrganizationRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingOrganizationRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetAccountingOrganizationResponse.java
@@ -1377,6 +1403,9 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingJournalsRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingJournalsRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingJournalsResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingOrdersRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingOrdersRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingOrdersResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingOrganizationsRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingOrganizationsRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListAccountingOrganizationsResponse.java
@@ -1564,6 +1593,9 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingJournalRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingJournalRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingJournalResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingOrderRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingOrderRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingOrderResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingTaxrateRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingTaxrateRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchAccountingTaxrateResponse.java
@@ -1709,6 +1741,9 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingJournalRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingJournalRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingJournalResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingOrderRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingOrderRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingOrderResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingTaxrateRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingTaxrateRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveAccountingTaxrateResponse.java
@@ -1849,6 +1884,9 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingJournalRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingJournalRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingJournalResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingOrderRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingOrderRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingOrderResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingTaxrateRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingTaxrateRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateAccountingTaxrateResponse.java
@@ -1989,9 +2027,13 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingEmailType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingInvoice.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingInvoiceStatus.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingInvoiceType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingJournal.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingJournalLineitem.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingLineitem.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingOrder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingOrderStatus.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingOrderType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingOrganization.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTaxrate.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTelephone.java
@@ -2154,6 +2196,8 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Priority.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingContactBillingAddress.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingContactShippingAddress.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingOrderBillingAddress.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingOrderShippingAddress.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingOrganizationAddress.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAtsActivityFrom.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAtsActivityFromType.java
@@ -4565,3 +4609,42 @@ examples:
         path:
           connection_id: "<id>"
           id: "<id>"
+  createAccountingOrder:
+    speakeasy-default-create-accounting-order:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+  getAccountingOrder:
+    speakeasy-default-get-accounting-order:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+  listAccountingOrders:
+    speakeasy-default-list-accounting-orders:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+  patchAccountingOrder:
+    speakeasy-default-patch-accounting-order:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+  removeAccountingOrder:
+    speakeasy-default-remove-accounting-order:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateAccountingOrder:
+    speakeasy-default-update-accounting-order:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}

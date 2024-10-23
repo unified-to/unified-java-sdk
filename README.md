@@ -32,7 +32,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'com.unifiedapi:unifiedto:0.22.4'
+implementation 'com.unifiedapi:unifiedto:0.22.5'
 ```
 
 Maven:
@@ -40,7 +40,7 @@ Maven:
 <dependency>
     <groupId>com.unifiedapi</groupId>
     <artifactId>unifiedto</artifactId>
-    <version>0.22.4</version>
+    <version>0.22.5</version>
 </dependency>
 ```
 
@@ -120,12 +120,14 @@ public class Application {
 * [createAccountingContact](docs/sdks/accounting/README.md#createaccountingcontact) - Create a contact
 * [createAccountingInvoice](docs/sdks/accounting/README.md#createaccountinginvoice) - Create an invoice
 * [createAccountingJournal](docs/sdks/accounting/README.md#createaccountingjournal) - Create a journal
+* [createAccountingOrder](docs/sdks/accounting/README.md#createaccountingorder) - Create an order
 * [createAccountingTaxrate](docs/sdks/accounting/README.md#createaccountingtaxrate) - Create a taxrate
 * [createAccountingTransaction](docs/sdks/accounting/README.md#createaccountingtransaction) - Create a transaction
 * [getAccountingAccount](docs/sdks/accounting/README.md#getaccountingaccount) - Retrieve an account
 * [getAccountingContact](docs/sdks/accounting/README.md#getaccountingcontact) - Retrieve a contact
 * [getAccountingInvoice](docs/sdks/accounting/README.md#getaccountinginvoice) - Retrieve an invoice
 * [getAccountingJournal](docs/sdks/accounting/README.md#getaccountingjournal) - Retrieve a journal
+* [getAccountingOrder](docs/sdks/accounting/README.md#getaccountingorder) - Retrieve an order
 * [getAccountingOrganization](docs/sdks/accounting/README.md#getaccountingorganization) - Retrieve an organization
 * [getAccountingTaxrate](docs/sdks/accounting/README.md#getaccountingtaxrate) - Retrieve a taxrate
 * [getAccountingTransaction](docs/sdks/accounting/README.md#getaccountingtransaction) - Retrieve a transaction
@@ -133,6 +135,7 @@ public class Application {
 * [listAccountingContacts](docs/sdks/accounting/README.md#listaccountingcontacts) - List all contacts
 * [listAccountingInvoices](docs/sdks/accounting/README.md#listaccountinginvoices) - List all invoices
 * [listAccountingJournals](docs/sdks/accounting/README.md#listaccountingjournals) - List all journals
+* [listAccountingOrders](docs/sdks/accounting/README.md#listaccountingorders) - List all orders
 * [listAccountingOrganizations](docs/sdks/accounting/README.md#listaccountingorganizations) - List all organizations
 * [listAccountingTaxrates](docs/sdks/accounting/README.md#listaccountingtaxrates) - List all taxrates
 * [listAccountingTransactions](docs/sdks/accounting/README.md#listaccountingtransactions) - List all transactions
@@ -140,18 +143,21 @@ public class Application {
 * [patchAccountingContact](docs/sdks/accounting/README.md#patchaccountingcontact) - Update a contact
 * [patchAccountingInvoice](docs/sdks/accounting/README.md#patchaccountinginvoice) - Update an invoice
 * [patchAccountingJournal](docs/sdks/accounting/README.md#patchaccountingjournal) - Update a journal
+* [patchAccountingOrder](docs/sdks/accounting/README.md#patchaccountingorder) - Update an order
 * [patchAccountingTaxrate](docs/sdks/accounting/README.md#patchaccountingtaxrate) - Update a taxrate
 * [patchAccountingTransaction](docs/sdks/accounting/README.md#patchaccountingtransaction) - Update a transaction
 * [removeAccountingAccount](docs/sdks/accounting/README.md#removeaccountingaccount) - Remove an account
 * [removeAccountingContact](docs/sdks/accounting/README.md#removeaccountingcontact) - Remove a contact
 * [removeAccountingInvoice](docs/sdks/accounting/README.md#removeaccountinginvoice) - Remove an invoice
 * [removeAccountingJournal](docs/sdks/accounting/README.md#removeaccountingjournal) - Remove a journal
+* [removeAccountingOrder](docs/sdks/accounting/README.md#removeaccountingorder) - Remove an order
 * [removeAccountingTaxrate](docs/sdks/accounting/README.md#removeaccountingtaxrate) - Remove a taxrate
 * [removeAccountingTransaction](docs/sdks/accounting/README.md#removeaccountingtransaction) - Remove a transaction
 * [updateAccountingAccount](docs/sdks/accounting/README.md#updateaccountingaccount) - Update an account
 * [updateAccountingContact](docs/sdks/accounting/README.md#updateaccountingcontact) - Update a contact
 * [updateAccountingInvoice](docs/sdks/accounting/README.md#updateaccountinginvoice) - Update an invoice
 * [updateAccountingJournal](docs/sdks/accounting/README.md#updateaccountingjournal) - Update a journal
+* [updateAccountingOrder](docs/sdks/accounting/README.md#updateaccountingorder) - Update an order
 * [updateAccountingTaxrate](docs/sdks/accounting/README.md#updateaccountingtaxrate) - Update a taxrate
 * [updateAccountingTransaction](docs/sdks/accounting/README.md#updateaccountingtransaction) - Update a transaction
 
@@ -666,6 +672,15 @@ public class Application {
 * [patchTicketingNote](docs/sdks/note/README.md#patchticketingnote) - Update a note
 * [removeTicketingNote](docs/sdks/note/README.md#removeticketingnote) - Remove a note
 * [updateTicketingNote](docs/sdks/note/README.md#updateticketingnote) - Update a note
+
+### [order()](docs/sdks/order/README.md)
+
+* [createAccountingOrder](docs/sdks/order/README.md#createaccountingorder) - Create an order
+* [getAccountingOrder](docs/sdks/order/README.md#getaccountingorder) - Retrieve an order
+* [listAccountingOrders](docs/sdks/order/README.md#listaccountingorders) - List all orders
+* [patchAccountingOrder](docs/sdks/order/README.md#patchaccountingorder) - Update an order
+* [removeAccountingOrder](docs/sdks/order/README.md#removeaccountingorder) - Remove an order
+* [updateAccountingOrder](docs/sdks/order/README.md#updateaccountingorder) - Update an order
 
 ### [organization()](docs/sdks/organization/README.md)
 

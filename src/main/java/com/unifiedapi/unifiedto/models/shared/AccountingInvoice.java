@@ -58,6 +58,10 @@ public class AccountingInvoice {
     private Optional<String> id;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("invoice_at")
+    private Optional<OffsetDateTime> invoiceAt;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoice_number")
     private Optional<String> invoiceNumber;
 
@@ -110,6 +114,10 @@ public class AccountingInvoice {
     private Optional<Double> totalAmount;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    private Optional<? extends AccountingInvoiceType> type;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
 
@@ -127,6 +135,7 @@ public class AccountingInvoice {
             @JsonProperty("discount_amount") Optional<Double> discountAmount,
             @JsonProperty("due_at") Optional<OffsetDateTime> dueAt,
             @JsonProperty("id") Optional<String> id,
+            @JsonProperty("invoice_at") Optional<OffsetDateTime> invoiceAt,
             @JsonProperty("invoice_number") Optional<String> invoiceNumber,
             @JsonProperty("lineitems") Optional<? extends List<AccountingLineitem>> lineitems,
             @JsonProperty("notes") Optional<String> notes,
@@ -140,6 +149,7 @@ public class AccountingInvoice {
             @JsonProperty("status") Optional<? extends AccountingInvoiceStatus> status,
             @JsonProperty("tax_amount") Optional<Double> taxAmount,
             @JsonProperty("total_amount") Optional<Double> totalAmount,
+            @JsonProperty("type") Optional<? extends AccountingInvoiceType> type,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
             @JsonProperty("url") Optional<String> url) {
         Utils.checkNotNull(balanceAmount, "balanceAmount");
@@ -150,6 +160,7 @@ public class AccountingInvoice {
         Utils.checkNotNull(discountAmount, "discountAmount");
         Utils.checkNotNull(dueAt, "dueAt");
         Utils.checkNotNull(id, "id");
+        Utils.checkNotNull(invoiceAt, "invoiceAt");
         Utils.checkNotNull(invoiceNumber, "invoiceNumber");
         Utils.checkNotNull(lineitems, "lineitems");
         Utils.checkNotNull(notes, "notes");
@@ -163,6 +174,7 @@ public class AccountingInvoice {
         Utils.checkNotNull(status, "status");
         Utils.checkNotNull(taxAmount, "taxAmount");
         Utils.checkNotNull(totalAmount, "totalAmount");
+        Utils.checkNotNull(type, "type");
         Utils.checkNotNull(updatedAt, "updatedAt");
         Utils.checkNotNull(url, "url");
         this.balanceAmount = balanceAmount;
@@ -173,6 +185,7 @@ public class AccountingInvoice {
         this.discountAmount = discountAmount;
         this.dueAt = dueAt;
         this.id = id;
+        this.invoiceAt = invoiceAt;
         this.invoiceNumber = invoiceNumber;
         this.lineitems = lineitems;
         this.notes = notes;
@@ -186,12 +199,13 @@ public class AccountingInvoice {
         this.status = status;
         this.taxAmount = taxAmount;
         this.totalAmount = totalAmount;
+        this.type = type;
         this.updatedAt = updatedAt;
         this.url = url;
     }
     
     public AccountingInvoice() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -232,6 +246,11 @@ public class AccountingInvoice {
     @JsonIgnore
     public Optional<String> id() {
         return id;
+    }
+
+    @JsonIgnore
+    public Optional<OffsetDateTime> invoiceAt() {
+        return invoiceAt;
     }
 
     @JsonIgnore
@@ -301,6 +320,12 @@ public class AccountingInvoice {
     @JsonIgnore
     public Optional<Double> totalAmount() {
         return totalAmount;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<AccountingInvoiceType> type() {
+        return (Optional<AccountingInvoiceType>) type;
     }
 
     @JsonIgnore
@@ -410,6 +435,18 @@ public class AccountingInvoice {
     public AccountingInvoice withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
+        return this;
+    }
+
+    public AccountingInvoice withInvoiceAt(OffsetDateTime invoiceAt) {
+        Utils.checkNotNull(invoiceAt, "invoiceAt");
+        this.invoiceAt = Optional.ofNullable(invoiceAt);
+        return this;
+    }
+
+    public AccountingInvoice withInvoiceAt(Optional<OffsetDateTime> invoiceAt) {
+        Utils.checkNotNull(invoiceAt, "invoiceAt");
+        this.invoiceAt = invoiceAt;
         return this;
     }
 
@@ -569,6 +606,18 @@ public class AccountingInvoice {
         return this;
     }
 
+    public AccountingInvoice withType(AccountingInvoiceType type) {
+        Utils.checkNotNull(type, "type");
+        this.type = Optional.ofNullable(type);
+        return this;
+    }
+
+    public AccountingInvoice withType(Optional<? extends AccountingInvoiceType> type) {
+        Utils.checkNotNull(type, "type");
+        this.type = type;
+        return this;
+    }
+
     public AccountingInvoice withUpdatedAt(OffsetDateTime updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = Optional.ofNullable(updatedAt);
@@ -611,6 +660,7 @@ public class AccountingInvoice {
             Objects.deepEquals(this.discountAmount, other.discountAmount) &&
             Objects.deepEquals(this.dueAt, other.dueAt) &&
             Objects.deepEquals(this.id, other.id) &&
+            Objects.deepEquals(this.invoiceAt, other.invoiceAt) &&
             Objects.deepEquals(this.invoiceNumber, other.invoiceNumber) &&
             Objects.deepEquals(this.lineitems, other.lineitems) &&
             Objects.deepEquals(this.notes, other.notes) &&
@@ -624,6 +674,7 @@ public class AccountingInvoice {
             Objects.deepEquals(this.status, other.status) &&
             Objects.deepEquals(this.taxAmount, other.taxAmount) &&
             Objects.deepEquals(this.totalAmount, other.totalAmount) &&
+            Objects.deepEquals(this.type, other.type) &&
             Objects.deepEquals(this.updatedAt, other.updatedAt) &&
             Objects.deepEquals(this.url, other.url);
     }
@@ -639,6 +690,7 @@ public class AccountingInvoice {
             discountAmount,
             dueAt,
             id,
+            invoiceAt,
             invoiceNumber,
             lineitems,
             notes,
@@ -652,6 +704,7 @@ public class AccountingInvoice {
             status,
             taxAmount,
             totalAmount,
+            type,
             updatedAt,
             url);
     }
@@ -667,6 +720,7 @@ public class AccountingInvoice {
                 "discountAmount", discountAmount,
                 "dueAt", dueAt,
                 "id", id,
+                "invoiceAt", invoiceAt,
                 "invoiceNumber", invoiceNumber,
                 "lineitems", lineitems,
                 "notes", notes,
@@ -680,6 +734,7 @@ public class AccountingInvoice {
                 "status", status,
                 "taxAmount", taxAmount,
                 "totalAmount", totalAmount,
+                "type", type,
                 "updatedAt", updatedAt,
                 "url", url);
     }
@@ -701,6 +756,8 @@ public class AccountingInvoice {
         private Optional<OffsetDateTime> dueAt = Optional.empty();
  
         private Optional<String> id = Optional.empty();
+ 
+        private Optional<OffsetDateTime> invoiceAt = Optional.empty();
  
         private Optional<String> invoiceNumber = Optional.empty();
  
@@ -727,6 +784,8 @@ public class AccountingInvoice {
         private Optional<Double> taxAmount = Optional.empty();
  
         private Optional<Double> totalAmount = Optional.empty();
+ 
+        private Optional<? extends AccountingInvoiceType> type = Optional.empty();
  
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
  
@@ -829,6 +888,18 @@ public class AccountingInvoice {
         public Builder id(Optional<String> id) {
             Utils.checkNotNull(id, "id");
             this.id = id;
+            return this;
+        }
+
+        public Builder invoiceAt(OffsetDateTime invoiceAt) {
+            Utils.checkNotNull(invoiceAt, "invoiceAt");
+            this.invoiceAt = Optional.ofNullable(invoiceAt);
+            return this;
+        }
+
+        public Builder invoiceAt(Optional<OffsetDateTime> invoiceAt) {
+            Utils.checkNotNull(invoiceAt, "invoiceAt");
+            this.invoiceAt = invoiceAt;
             return this;
         }
 
@@ -988,6 +1059,18 @@ public class AccountingInvoice {
             return this;
         }
 
+        public Builder type(AccountingInvoiceType type) {
+            Utils.checkNotNull(type, "type");
+            this.type = Optional.ofNullable(type);
+            return this;
+        }
+
+        public Builder type(Optional<? extends AccountingInvoiceType> type) {
+            Utils.checkNotNull(type, "type");
+            this.type = type;
+            return this;
+        }
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -1022,6 +1105,7 @@ public class AccountingInvoice {
                 discountAmount,
                 dueAt,
                 id,
+                invoiceAt,
                 invoiceNumber,
                 lineitems,
                 notes,
@@ -1035,6 +1119,7 @@ public class AccountingInvoice {
                 status,
                 taxAmount,
                 totalAmount,
+                type,
                 updatedAt,
                 url);
         }

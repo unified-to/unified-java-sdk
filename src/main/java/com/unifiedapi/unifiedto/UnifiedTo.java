@@ -43,6 +43,8 @@ public class UnifiedTo {
 
     private final Journal journal;
 
+    private final Order order;
+
     private final Organization organization;
 
     private final Taxrate taxrate;
@@ -195,6 +197,10 @@ public class UnifiedTo {
 
     public Journal journal() {
         return journal;
+    }
+
+    public Order order() {
+        return order;
     }
 
     public Organization organization() {
@@ -591,6 +597,7 @@ public class UnifiedTo {
         this.contact = new Contact(sdkConfiguration);
         this.invoice = new Invoice(sdkConfiguration);
         this.journal = new Journal(sdkConfiguration);
+        this.order = new Order(sdkConfiguration);
         this.organization = new Organization(sdkConfiguration);
         this.taxrate = new Taxrate(sdkConfiguration);
         this.transaction = new Transaction(sdkConfiguration);
