@@ -67,6 +67,10 @@ public class PaymentLink {
     private Optional<? extends Map<String, Object>> raw;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("success_url")
+    private Optional<String> successUrl;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
 
@@ -86,6 +90,7 @@ public class PaymentLink {
             @JsonProperty("lineitems") Optional<? extends List<PaymentLinkLineitem>> lineitems,
             @JsonProperty("payment_id") Optional<String> paymentId,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("success_url") Optional<String> successUrl,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
             @JsonProperty("url") Optional<String> url) {
         Utils.checkNotNull(amount, "amount");
@@ -98,6 +103,7 @@ public class PaymentLink {
         Utils.checkNotNull(lineitems, "lineitems");
         Utils.checkNotNull(paymentId, "paymentId");
         Utils.checkNotNull(raw, "raw");
+        Utils.checkNotNull(successUrl, "successUrl");
         Utils.checkNotNull(updatedAt, "updatedAt");
         Utils.checkNotNull(url, "url");
         this.amount = amount;
@@ -110,12 +116,13 @@ public class PaymentLink {
         this.lineitems = lineitems;
         this.paymentId = paymentId;
         this.raw = raw;
+        this.successUrl = successUrl;
         this.updatedAt = updatedAt;
         this.url = url;
     }
     
     public PaymentLink() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -168,6 +175,11 @@ public class PaymentLink {
     @JsonIgnore
     public Optional<Map<String, Object>> raw() {
         return (Optional<Map<String, Object>>) raw;
+    }
+
+    @JsonIgnore
+    public Optional<String> successUrl() {
+        return successUrl;
     }
 
     @JsonIgnore
@@ -304,6 +316,18 @@ public class PaymentLink {
         return this;
     }
 
+    public PaymentLink withSuccessUrl(String successUrl) {
+        Utils.checkNotNull(successUrl, "successUrl");
+        this.successUrl = Optional.ofNullable(successUrl);
+        return this;
+    }
+
+    public PaymentLink withSuccessUrl(Optional<String> successUrl) {
+        Utils.checkNotNull(successUrl, "successUrl");
+        this.successUrl = successUrl;
+        return this;
+    }
+
     public PaymentLink withUpdatedAt(OffsetDateTime updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = Optional.ofNullable(updatedAt);
@@ -348,6 +372,7 @@ public class PaymentLink {
             Objects.deepEquals(this.lineitems, other.lineitems) &&
             Objects.deepEquals(this.paymentId, other.paymentId) &&
             Objects.deepEquals(this.raw, other.raw) &&
+            Objects.deepEquals(this.successUrl, other.successUrl) &&
             Objects.deepEquals(this.updatedAt, other.updatedAt) &&
             Objects.deepEquals(this.url, other.url);
     }
@@ -365,6 +390,7 @@ public class PaymentLink {
             lineitems,
             paymentId,
             raw,
+            successUrl,
             updatedAt,
             url);
     }
@@ -382,6 +408,7 @@ public class PaymentLink {
                 "lineitems", lineitems,
                 "paymentId", paymentId,
                 "raw", raw,
+                "successUrl", successUrl,
                 "updatedAt", updatedAt,
                 "url", url);
     }
@@ -407,6 +434,8 @@ public class PaymentLink {
         private Optional<String> paymentId = Optional.empty();
  
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
+ 
+        private Optional<String> successUrl = Optional.empty();
  
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
  
@@ -536,6 +565,18 @@ public class PaymentLink {
             return this;
         }
 
+        public Builder successUrl(String successUrl) {
+            Utils.checkNotNull(successUrl, "successUrl");
+            this.successUrl = Optional.ofNullable(successUrl);
+            return this;
+        }
+
+        public Builder successUrl(Optional<String> successUrl) {
+            Utils.checkNotNull(successUrl, "successUrl");
+            this.successUrl = successUrl;
+            return this;
+        }
+
         public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
@@ -572,6 +613,7 @@ public class PaymentLink {
                 lineitems,
                 paymentId,
                 raw,
+                successUrl,
                 updatedAt,
                 url);
         }
