@@ -10,10 +10,11 @@ generation:
     requestResponseComponentNamesFeb2024: false
   auth:
     oAuth2ClientCredentialsEnabled: false
+    oAuth2PasswordEnabled: false
   baseServerURL: ""
   flattenGlobalSecurity: true
 java:
-  version: 0.22.7
+  version: 0.22.8
   additionalDependencies: []
   additionalPlugins: []
   artifactID: unifiedto
