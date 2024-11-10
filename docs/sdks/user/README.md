@@ -45,7 +45,7 @@ public class Application {
                 .request(req)
                 .call();
 
-        if (res.user().isPresent()) {
+        if (res.scimUser().isPresent()) {
             // handle response
         }
     }
@@ -102,7 +102,7 @@ public class Application {
                 .request(req)
                 .call();
 
-        if (res.user().isPresent()) {
+        if (res.scimUser().isPresent()) {
             // handle response
         }
     }
@@ -158,7 +158,7 @@ public class Application {
                 .request(req)
                 .call();
 
-        if (res.users().isPresent()) {
+        if (res.scimUsers().isPresent()) {
             // handle response
         }
     }
@@ -215,7 +215,7 @@ public class Application {
                 .request(req)
                 .call();
 
-        if (res.user().isPresent()) {
+        if (res.scimUser().isPresent()) {
             // handle response
         }
     }
@@ -327,7 +327,7 @@ public class Application {
                 .request(req)
                 .call();
 
-        if (res.user().isPresent()) {
+        if (res.scimUser().isPresent()) {
             // handle response
         }
     }

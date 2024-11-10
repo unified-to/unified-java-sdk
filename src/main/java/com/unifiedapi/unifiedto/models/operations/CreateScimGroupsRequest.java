@@ -7,7 +7,7 @@ package com.unifiedapi.unifiedto.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.unifiedapi.unifiedto.models.shared.Group;
+import com.unifiedapi.unifiedto.models.shared.ScimGroup;
 import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Override;
@@ -20,7 +20,7 @@ import java.util.Optional;
 public class CreateScimGroupsRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends Group> group;
+    private Optional<? extends ScimGroup> scimGroup;
 
     /**
      * ID of the connection
@@ -30,11 +30,11 @@ public class CreateScimGroupsRequest {
 
     @JsonCreator
     public CreateScimGroupsRequest(
-            Optional<? extends Group> group,
+            Optional<? extends ScimGroup> scimGroup,
             String connectionId) {
-        Utils.checkNotNull(group, "group");
+        Utils.checkNotNull(scimGroup, "scimGroup");
         Utils.checkNotNull(connectionId, "connectionId");
-        this.group = group;
+        this.scimGroup = scimGroup;
         this.connectionId = connectionId;
     }
     
@@ -45,8 +45,8 @@ public class CreateScimGroupsRequest {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Group> group() {
-        return (Optional<Group>) group;
+    public Optional<ScimGroup> scimGroup() {
+        return (Optional<ScimGroup>) scimGroup;
     }
 
     /**
@@ -61,15 +61,15 @@ public class CreateScimGroupsRequest {
         return new Builder();
     }
 
-    public CreateScimGroupsRequest withGroup(Group group) {
-        Utils.checkNotNull(group, "group");
-        this.group = Optional.ofNullable(group);
+    public CreateScimGroupsRequest withScimGroup(ScimGroup scimGroup) {
+        Utils.checkNotNull(scimGroup, "scimGroup");
+        this.scimGroup = Optional.ofNullable(scimGroup);
         return this;
     }
 
-    public CreateScimGroupsRequest withGroup(Optional<? extends Group> group) {
-        Utils.checkNotNull(group, "group");
-        this.group = group;
+    public CreateScimGroupsRequest withScimGroup(Optional<? extends ScimGroup> scimGroup) {
+        Utils.checkNotNull(scimGroup, "scimGroup");
+        this.scimGroup = scimGroup;
         return this;
     }
 
@@ -92,27 +92,27 @@ public class CreateScimGroupsRequest {
         }
         CreateScimGroupsRequest other = (CreateScimGroupsRequest) o;
         return 
-            Objects.deepEquals(this.group, other.group) &&
+            Objects.deepEquals(this.scimGroup, other.scimGroup) &&
             Objects.deepEquals(this.connectionId, other.connectionId);
     }
     
     @Override
     public int hashCode() {
         return Objects.hash(
-            group,
+            scimGroup,
             connectionId);
     }
     
     @Override
     public String toString() {
         return Utils.toString(CreateScimGroupsRequest.class,
-                "group", group,
+                "scimGroup", scimGroup,
                 "connectionId", connectionId);
     }
     
     public final static class Builder {
  
-        private Optional<? extends Group> group = Optional.empty();
+        private Optional<? extends ScimGroup> scimGroup = Optional.empty();
  
         private String connectionId;  
         
@@ -120,15 +120,15 @@ public class CreateScimGroupsRequest {
           // force use of static builder() method
         }
 
-        public Builder group(Group group) {
-            Utils.checkNotNull(group, "group");
-            this.group = Optional.ofNullable(group);
+        public Builder scimGroup(ScimGroup scimGroup) {
+            Utils.checkNotNull(scimGroup, "scimGroup");
+            this.scimGroup = Optional.ofNullable(scimGroup);
             return this;
         }
 
-        public Builder group(Optional<? extends Group> group) {
-            Utils.checkNotNull(group, "group");
-            this.group = group;
+        public Builder scimGroup(Optional<? extends ScimGroup> scimGroup) {
+            Utils.checkNotNull(scimGroup, "scimGroup");
+            this.scimGroup = scimGroup;
             return this;
         }
 
@@ -143,7 +143,7 @@ public class CreateScimGroupsRequest {
         
         public CreateScimGroupsRequest build() {
             return new CreateScimGroupsRequest(
-                group,
+                scimGroup,
                 connectionId);
         }
     }

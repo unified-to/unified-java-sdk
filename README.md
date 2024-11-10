@@ -32,7 +32,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'com.unifiedapi:unifiedto:0.22.8'
+implementation 'com.unifiedapi:unifiedto:0.23.0'
 ```
 
 Maven:
@@ -40,7 +40,7 @@ Maven:
 <dependency>
     <groupId>com.unifiedapi</groupId>
     <artifactId>unifiedto</artifactId>
-    <version>0.22.8</version>
+    <version>0.23.0</version>
 </dependency>
 ```
 
@@ -241,6 +241,15 @@ public class Application {
 * [getUnifiedIntegrationAuth](docs/sdks/auth/README.md#getunifiedintegrationauth) - Create connection indirectly
 * [getUnifiedIntegrationLogin](docs/sdks/auth/README.md#getunifiedintegrationlogin) - Sign in a user
 
+### [branch()](docs/sdks/branch/README.md)
+
+* [createRepoBranch](docs/sdks/branch/README.md#createrepobranch) - Create a branch
+* [getRepoBranch](docs/sdks/branch/README.md#getrepobranch) - Retrieve a branch
+* [listRepoBranches](docs/sdks/branch/README.md#listrepobranches) - List all branches
+* [patchRepoBranch](docs/sdks/branch/README.md#patchrepobranch) - Update a branch
+* [removeRepoBranch](docs/sdks/branch/README.md#removerepobranch) - Remove a branch
+* [updateRepoBranch](docs/sdks/branch/README.md#updaterepobranch) - Update a branch
+
 ### [call()](docs/sdks/call/README.md)
 
 * [listUcCalls](docs/sdks/call/README.md#listuccalls) - List all calls
@@ -258,6 +267,15 @@ public class Application {
 
 * [getMessagingChannel](docs/sdks/channel/README.md#getmessagingchannel) - Retrieve a channel
 * [listMessagingChannels](docs/sdks/channel/README.md#listmessagingchannels) - List all channels
+
+### [class_()](docs/sdks/class/README.md)
+
+* [createLmsClass](docs/sdks/class/README.md#createlmsclass) - Create a class
+* [getLmsClass](docs/sdks/class/README.md#getlmsclass) - Retrieve a class
+* [listLmsClasses](docs/sdks/class/README.md#listlmsclasses) - List all classes
+* [patchLmsClass](docs/sdks/class/README.md#patchlmsclass) - Update a class
+* [removeLmsClass](docs/sdks/class/README.md#removelmsclass) - Remove a class
+* [updateLmsClass](docs/sdks/class/README.md#updatelmsclass) - Update a class
 
 ### [collection()](docs/sdks/collection/README.md)
 
@@ -294,6 +312,15 @@ public class Application {
 * [updateCommerceInventory](docs/sdks/commerce/README.md#updatecommerceinventory) - Update an inventory
 * [updateCommerceItem](docs/sdks/commerce/README.md#updatecommerceitem) - Update an item
 * [updateCommerceLocation](docs/sdks/commerce/README.md#updatecommercelocation) - Update a location
+
+### [commit()](docs/sdks/commit/README.md)
+
+* [createRepoCommit](docs/sdks/commit/README.md#createrepocommit) - Create a commit
+* [getRepoCommit](docs/sdks/commit/README.md#getrepocommit) - Retrieve a commit
+* [listRepoCommits](docs/sdks/commit/README.md#listrepocommits) - List all commits
+* [patchRepoCommit](docs/sdks/commit/README.md#patchrepocommit) - Update a commit
+* [removeRepoCommit](docs/sdks/commit/README.md#removerepocommit) - Remove a commit
+* [updateRepoCommit](docs/sdks/commit/README.md#updaterepocommit) - Update a commit
 
 ### [company()](docs/sdks/company/README.md)
 
@@ -342,6 +369,15 @@ public class Application {
 * [updateAccountingContact](docs/sdks/contact/README.md#updateaccountingcontact) - Update a contact
 * [updateCrmContact](docs/sdks/contact/README.md#updatecrmcontact) - Update a contact
 * [updateUcContact](docs/sdks/contact/README.md#updateuccontact) - Update a contact
+
+### [course()](docs/sdks/course/README.md)
+
+* [createLmsCourse](docs/sdks/course/README.md#createlmscourse) - Create a course
+* [getLmsCourse](docs/sdks/course/README.md#getlmscourse) - Retrieve a course
+* [listLmsCourses](docs/sdks/course/README.md#listlmscourses) - List all courses
+* [patchLmsCourse](docs/sdks/course/README.md#patchlmscourse) - Update a course
+* [removeLmsCourse](docs/sdks/course/README.md#removelmscourse) - Remove a course
+* [updateLmsCourse](docs/sdks/course/README.md#updatelmscourse) - Update a course
 
 ### [crm()](docs/sdks/crm/README.md)
 
@@ -451,6 +487,7 @@ public class Application {
 * [createHrisGroup](docs/sdks/group/README.md#createhrisgroup) - Create a group
 * [createScimGroups](docs/sdks/group/README.md#createscimgroups) - Create group
 * [getHrisGroup](docs/sdks/group/README.md#gethrisgroup) - Retrieve a group
+* [getScimGroups](docs/sdks/group/README.md#getscimgroups) - Get group
 * [listHrisGroups](docs/sdks/group/README.md#listhrisgroups) - List all groups
 * [listScimGroups](docs/sdks/group/README.md#listscimgroups) - List groups
 * [patchHrisGroup](docs/sdks/group/README.md#patchhrisgroup) - Update a group
@@ -490,6 +527,15 @@ public class Application {
 * [updateHrisEmployee](docs/sdks/hris/README.md#updatehrisemployee) - Update an employee
 * [updateHrisGroup](docs/sdks/hris/README.md#updatehrisgroup) - Update a group
 * [updateHrisLocation](docs/sdks/hris/README.md#updatehrislocation) - Update a location
+
+### [instructor()](docs/sdks/instructor/README.md)
+
+* [createLmsInstructor](docs/sdks/instructor/README.md#createlmsinstructor) - Create an instructor
+* [getLmsInstructor](docs/sdks/instructor/README.md#getlmsinstructor) - Retrieve an instructor
+* [listLmsInstructors](docs/sdks/instructor/README.md#listlmsinstructors) - List all instructors
+* [patchLmsInstructor](docs/sdks/instructor/README.md#patchlmsinstructor) - Update an instructor
+* [removeLmsInstructor](docs/sdks/instructor/README.md#removelmsinstructor) - Remove an instructor
+* [updateLmsInstructor](docs/sdks/instructor/README.md#updatelmsinstructor) - Update an instructor
 
 ### [integration()](docs/sdks/integration/README.md)
 
@@ -597,6 +643,33 @@ public class Application {
 * [removeMartechList](docs/sdks/list/README.md#removemartechlist) - Remove a list
 * [updateMartechList](docs/sdks/list/README.md#updatemartechlist) - Update a list
 
+### [lms()](docs/sdks/lms/README.md)
+
+* [createLmsClass](docs/sdks/lms/README.md#createlmsclass) - Create a class
+* [createLmsCourse](docs/sdks/lms/README.md#createlmscourse) - Create a course
+* [createLmsInstructor](docs/sdks/lms/README.md#createlmsinstructor) - Create an instructor
+* [createLmsStudent](docs/sdks/lms/README.md#createlmsstudent) - Create a student
+* [getLmsClass](docs/sdks/lms/README.md#getlmsclass) - Retrieve a class
+* [getLmsCourse](docs/sdks/lms/README.md#getlmscourse) - Retrieve a course
+* [getLmsInstructor](docs/sdks/lms/README.md#getlmsinstructor) - Retrieve an instructor
+* [getLmsStudent](docs/sdks/lms/README.md#getlmsstudent) - Retrieve a student
+* [listLmsClasses](docs/sdks/lms/README.md#listlmsclasses) - List all classes
+* [listLmsCourses](docs/sdks/lms/README.md#listlmscourses) - List all courses
+* [listLmsInstructors](docs/sdks/lms/README.md#listlmsinstructors) - List all instructors
+* [listLmsStudents](docs/sdks/lms/README.md#listlmsstudents) - List all students
+* [patchLmsClass](docs/sdks/lms/README.md#patchlmsclass) - Update a class
+* [patchLmsCourse](docs/sdks/lms/README.md#patchlmscourse) - Update a course
+* [patchLmsInstructor](docs/sdks/lms/README.md#patchlmsinstructor) - Update an instructor
+* [patchLmsStudent](docs/sdks/lms/README.md#patchlmsstudent) - Update a student
+* [removeLmsClass](docs/sdks/lms/README.md#removelmsclass) - Remove a class
+* [removeLmsCourse](docs/sdks/lms/README.md#removelmscourse) - Remove a course
+* [removeLmsInstructor](docs/sdks/lms/README.md#removelmsinstructor) - Remove an instructor
+* [removeLmsStudent](docs/sdks/lms/README.md#removelmsstudent) - Remove a student
+* [updateLmsClass](docs/sdks/lms/README.md#updatelmsclass) - Update a class
+* [updateLmsCourse](docs/sdks/lms/README.md#updatelmscourse) - Update a course
+* [updateLmsInstructor](docs/sdks/lms/README.md#updatelmsinstructor) - Update an instructor
+* [updateLmsStudent](docs/sdks/lms/README.md#updatelmsstudent) - Update a student
+
 ### [location()](docs/sdks/location/README.md)
 
 * [createCommerceLocation](docs/sdks/location/README.md#createcommercelocation) - Create a location
@@ -684,8 +757,14 @@ public class Application {
 
 ### [organization()](docs/sdks/organization/README.md)
 
+* [createRepoOrganization](docs/sdks/organization/README.md#createrepoorganization) - Create an organization
 * [getAccountingOrganization](docs/sdks/organization/README.md#getaccountingorganization) - Retrieve an organization
+* [getRepoOrganization](docs/sdks/organization/README.md#getrepoorganization) - Retrieve an organization
 * [listAccountingOrganizations](docs/sdks/organization/README.md#listaccountingorganizations) - List all organizations
+* [listRepoOrganizations](docs/sdks/organization/README.md#listrepoorganizations) - List all organizations
+* [patchRepoOrganization](docs/sdks/organization/README.md#patchrepoorganization) - Update an organization
+* [removeRepoOrganization](docs/sdks/organization/README.md#removerepoorganization) - Remove an organization
+* [updateRepoOrganization](docs/sdks/organization/README.md#updaterepoorganization) - Update an organization
 
 ### [page()](docs/sdks/page/README.md)
 
@@ -762,15 +841,67 @@ public class Application {
 
 * [createGenaiPrompt](docs/sdks/prompt/README.md#creategenaiprompt) - Create a prompt
 
+### [pullrequest()](docs/sdks/pullrequest/README.md)
+
+* [createRepoPullrequest](docs/sdks/pullrequest/README.md#createrepopullrequest) - Create a pullrequest
+* [getRepoPullrequest](docs/sdks/pullrequest/README.md#getrepopullrequest) - Retrieve a pullrequest
+* [listRepoPullrequests](docs/sdks/pullrequest/README.md#listrepopullrequests) - List all pullrequests
+* [patchRepoPullrequest](docs/sdks/pullrequest/README.md#patchrepopullrequest) - Update a pullrequest
+* [removeRepoPullrequest](docs/sdks/pullrequest/README.md#removerepopullrequest) - Remove a pullrequest
+* [updateRepoPullrequest](docs/sdks/pullrequest/README.md#updaterepopullrequest) - Update a pullrequest
+
 ### [refund()](docs/sdks/refund/README.md)
 
 * [getPaymentRefund](docs/sdks/refund/README.md#getpaymentrefund) - Retrieve a refund
 * [listPaymentRefunds](docs/sdks/refund/README.md#listpaymentrefunds) - List all refunds
 
+### [repo()](docs/sdks/repo/README.md)
+
+* [createRepoBranch](docs/sdks/repo/README.md#createrepobranch) - Create a branch
+* [createRepoCommit](docs/sdks/repo/README.md#createrepocommit) - Create a commit
+* [createRepoOrganization](docs/sdks/repo/README.md#createrepoorganization) - Create an organization
+* [createRepoPullrequest](docs/sdks/repo/README.md#createrepopullrequest) - Create a pullrequest
+* [createRepoRepository](docs/sdks/repo/README.md#createreporepository) - Create a repository
+* [getRepoBranch](docs/sdks/repo/README.md#getrepobranch) - Retrieve a branch
+* [getRepoCommit](docs/sdks/repo/README.md#getrepocommit) - Retrieve a commit
+* [getRepoOrganization](docs/sdks/repo/README.md#getrepoorganization) - Retrieve an organization
+* [getRepoPullrequest](docs/sdks/repo/README.md#getrepopullrequest) - Retrieve a pullrequest
+* [getRepoRepository](docs/sdks/repo/README.md#getreporepository) - Retrieve a repository
+* [listRepoBranches](docs/sdks/repo/README.md#listrepobranches) - List all branches
+* [listRepoCommits](docs/sdks/repo/README.md#listrepocommits) - List all commits
+* [listRepoOrganizations](docs/sdks/repo/README.md#listrepoorganizations) - List all organizations
+* [listRepoPullrequests](docs/sdks/repo/README.md#listrepopullrequests) - List all pullrequests
+* [listRepoRepositories](docs/sdks/repo/README.md#listreporepositories) - List all repositories
+* [patchRepoBranch](docs/sdks/repo/README.md#patchrepobranch) - Update a branch
+* [patchRepoCommit](docs/sdks/repo/README.md#patchrepocommit) - Update a commit
+* [patchRepoOrganization](docs/sdks/repo/README.md#patchrepoorganization) - Update an organization
+* [patchRepoPullrequest](docs/sdks/repo/README.md#patchrepopullrequest) - Update a pullrequest
+* [patchRepoRepository](docs/sdks/repo/README.md#patchreporepository) - Update a repository
+* [removeRepoBranch](docs/sdks/repo/README.md#removerepobranch) - Remove a branch
+* [removeRepoCommit](docs/sdks/repo/README.md#removerepocommit) - Remove a commit
+* [removeRepoOrganization](docs/sdks/repo/README.md#removerepoorganization) - Remove an organization
+* [removeRepoPullrequest](docs/sdks/repo/README.md#removerepopullrequest) - Remove a pullrequest
+* [removeRepoRepository](docs/sdks/repo/README.md#removereporepository) - Remove a repository
+* [updateRepoBranch](docs/sdks/repo/README.md#updaterepobranch) - Update a branch
+* [updateRepoCommit](docs/sdks/repo/README.md#updaterepocommit) - Update a commit
+* [updateRepoOrganization](docs/sdks/repo/README.md#updaterepoorganization) - Update an organization
+* [updateRepoPullrequest](docs/sdks/repo/README.md#updaterepopullrequest) - Update a pullrequest
+* [updateRepoRepository](docs/sdks/repo/README.md#updatereporepository) - Update a repository
+
+### [repository()](docs/sdks/repository/README.md)
+
+* [createRepoRepository](docs/sdks/repository/README.md#createreporepository) - Create a repository
+* [getRepoRepository](docs/sdks/repository/README.md#getreporepository) - Retrieve a repository
+* [listRepoRepositories](docs/sdks/repository/README.md#listreporepositories) - List all repositories
+* [patchRepoRepository](docs/sdks/repository/README.md#patchreporepository) - Update a repository
+* [removeRepoRepository](docs/sdks/repository/README.md#removereporepository) - Remove a repository
+* [updateRepoRepository](docs/sdks/repository/README.md#updatereporepository) - Update a repository
+
 ### [scim()](docs/sdks/scim/README.md)
 
 * [createScimGroups](docs/sdks/scim/README.md#createscimgroups) - Create group
 * [createScimUsers](docs/sdks/scim/README.md#createscimusers) - Create user
+* [getScimGroups](docs/sdks/scim/README.md#getscimgroups) - Get group
 * [getScimUsers](docs/sdks/scim/README.md#getscimusers) - Get user
 * [listScimGroups](docs/sdks/scim/README.md#listscimgroups) - List groups
 * [listScimUsers](docs/sdks/scim/README.md#listscimusers) - List users
@@ -807,6 +938,15 @@ public class Application {
 * [patchStorageFile](docs/sdks/storage/README.md#patchstoragefile) - Update a file
 * [removeStorageFile](docs/sdks/storage/README.md#removestoragefile) - Remove a file
 * [updateStorageFile](docs/sdks/storage/README.md#updatestoragefile) - Update a file
+
+### [student()](docs/sdks/student/README.md)
+
+* [createLmsStudent](docs/sdks/student/README.md#createlmsstudent) - Create a student
+* [getLmsStudent](docs/sdks/student/README.md#getlmsstudent) - Retrieve a student
+* [listLmsStudents](docs/sdks/student/README.md#listlmsstudents) - List all students
+* [patchLmsStudent](docs/sdks/student/README.md#patchlmsstudent) - Update a student
+* [removeLmsStudent](docs/sdks/student/README.md#removelmsstudent) - Remove a student
+* [updateLmsStudent](docs/sdks/student/README.md#updatelmsstudent) - Update a student
 
 ### [task()](docs/sdks/task/README.md)
 
@@ -940,12 +1080,12 @@ public class Application {
 
 ### Select Server by Index
 
-You can override the default server globally by passing a server index to the `serverIndex` builder method when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
+You can override the default server globally using the `.serverIndex(int serverIdx)` builder method when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
 
-| # | Server | Variables |
-| - | ------ | --------- |
-| 0 | `https://api.unified.to` | None |
-| 1 | `https://api-eu.unified.to` | None |
+| #   | Server                      |
+| --- | --------------------------- |
+| 0   | `https://api.unified.to`    |
+| 1   | `https://api-eu.unified.to` |
 
 #### Example
 
@@ -984,10 +1124,9 @@ public class Application {
 }
 ```
 
-
 ### Override Server URL Per-Client
 
-The default server can also be overridden globally by passing a URL to the `serverURL` builder method when initializing the SDK client instance. For example:
+The default server can also be overridden globally using the `.serverURL(String serverUrl)` builder method when initializing the SDK client instance. For example:
 ```java
 package hello.world;
 
@@ -1031,9 +1170,9 @@ Handling errors in this SDK should largely match your expectations. All operatio
 
 By default, an API error will throw a `models/errors/SDKError` exception. When custom error responses are specified for an operation, the SDK may also throw their associated exception. You can refer to respective *Errors* tables in SDK docs for more details on possible exception types for each operation. For example, the `createAccountingAccount` method throws the following exceptions:
 
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+| Error Type             | Status Code | Content Type |
+| ---------------------- | ----------- | ------------ |
+| models/errors/SDKError | 4XX, 5XX    | \*/\*        |
 
 ### Example
 
@@ -1079,9 +1218,9 @@ public class Application {
 
 This SDK supports the following security scheme globally:
 
-| Name    | Type    | Scheme  |
-| ------- | ------- | ------- |
-| `jwt`   | apiKey  | API key |
+| Name  | Type   | Scheme  |
+| ----- | ------ | ------- |
+| `jwt` | apiKey | API key |
 
 You can set the security parameters through the `security` builder method when initializing the SDK client instance. For example:
 ```java

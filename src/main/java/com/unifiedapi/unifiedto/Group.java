@@ -15,6 +15,9 @@ import com.unifiedapi.unifiedto.models.operations.CreateScimGroupsResponse;
 import com.unifiedapi.unifiedto.models.operations.GetHrisGroupRequest;
 import com.unifiedapi.unifiedto.models.operations.GetHrisGroupRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.GetHrisGroupResponse;
+import com.unifiedapi.unifiedto.models.operations.GetScimGroupsRequest;
+import com.unifiedapi.unifiedto.models.operations.GetScimGroupsRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.GetScimGroupsResponse;
 import com.unifiedapi.unifiedto.models.operations.ListHrisGroupsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListHrisGroupsRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.ListHrisGroupsResponse;
@@ -41,6 +44,7 @@ import com.unifiedapi.unifiedto.models.operations.UpdateScimGroupsRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateScimGroupsRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.UpdateScimGroupsResponse;
 import com.unifiedapi.unifiedto.models.shared.HrisGroup;
+import com.unifiedapi.unifiedto.models.shared.ScimGroup;
 import com.unifiedapi.unifiedto.utils.HTTPClient;
 import com.unifiedapi.unifiedto.utils.HTTPRequest;
 import com.unifiedapi.unifiedto.utils.Hook.AfterErrorContextImpl;
@@ -62,6 +66,7 @@ public class Group implements
             MethodCallCreateHrisGroup,
             MethodCallCreateScimGroups,
             MethodCallGetHrisGroup,
+            MethodCallGetScimGroups,
             MethodCallListHrisGroups,
             MethodCallListScimGroups,
             MethodCallPatchHrisGroup,
@@ -239,7 +244,7 @@ public class Group implements
                 new TypeReference<CreateScimGroupsRequest>() {});
         SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
                 _convertedRequest, 
-                "group",
+                "scimGroup",
                 "json",
                 false);
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
@@ -305,10 +310,10 @@ public class Group implements
         
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                com.unifiedapi.unifiedto.models.shared.Group _out = Utils.mapper().readValue(
+                ScimGroup _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<com.unifiedapi.unifiedto.models.shared.Group>() {});
-                _res.withGroup(Optional.ofNullable(_out));
+                    new TypeReference<ScimGroup>() {});
+                _res.withScimGroup(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -430,6 +435,122 @@ public class Group implements
                     Utils.toUtf8AndClose(_httpRes.body()),
                     new TypeReference<HrisGroup>() {});
                 _res.withHrisGroup(Optional.ofNullable(_out));
+                return _res;
+            } else {
+                throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "Unexpected content-type received: " + _contentType, 
+                    Utils.extractByteArrayFromBody(_httpRes));
+            }
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        throw new SDKError(
+            _httpRes, 
+            _httpRes.statusCode(), 
+            "Unexpected status code received: " + _httpRes.statusCode(), 
+            Utils.extractByteArrayFromBody(_httpRes));
+    }
+
+
+
+    /**
+     * Get group
+     * @return The call builder
+     */
+    public GetScimGroupsRequestBuilder getScimGroups() {
+        return new GetScimGroupsRequestBuilder(this);
+    }
+
+    /**
+     * Get group
+     * @param request The request object containing all of the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public GetScimGroupsResponse getScimGroups(
+            GetScimGroupsRequest request) throws Exception {
+        String _baseUrl = this.sdkConfiguration.serverUrl;
+        String _url = Utils.generateURL(
+                GetScimGroupsRequest.class,
+                _baseUrl,
+                "/scim/{connection_id}/groups/{id}",
+                request, null);
+        
+        HTTPRequest _req = new HTTPRequest(_url, "GET");
+        _req.addHeader("Accept", "application/json")
+            .addHeader("user-agent", 
+                SDKConfiguration.USER_AGENT);
+
+        Utils.configureSecurity(_req,  
+                this.sdkConfiguration.securitySource.getSecurity());
+
+        HTTPClient _client = this.sdkConfiguration.defaultClient;
+        HttpRequest _r = 
+            sdkConfiguration.hooks()
+               .beforeRequest(
+                  new BeforeRequestContextImpl(
+                      "getScimGroups", 
+                      Optional.of(List.of()), 
+                      sdkConfiguration.securitySource()),
+                  _req.build());
+        HttpResponse<InputStream> _httpRes;
+        try {
+            _httpRes = _client.send(_r);
+            if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "getScimGroups",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()),
+                        Optional.of(_httpRes),
+                        Optional.empty());
+            } else {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterSuccess(
+                        new AfterSuccessContextImpl(
+                            "getScimGroups",
+                            Optional.of(List.of()), 
+                            sdkConfiguration.securitySource()),
+                         _httpRes);
+            }
+        } catch (Exception _e) {
+            _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "getScimGroups",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()), 
+                        Optional.empty(),
+                        Optional.of(_e));
+        }
+        String _contentType = _httpRes
+            .headers()
+            .firstValue("Content-Type")
+            .orElse("application/octet-stream");
+        GetScimGroupsResponse.Builder _resBuilder = 
+            GetScimGroupsResponse
+                .builder()
+                .contentType(_contentType)
+                .statusCode(_httpRes.statusCode())
+                .rawResponse(_httpRes);
+
+        GetScimGroupsResponse _res = _resBuilder.build();
+        
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            if (Utils.contentTypeMatches(_contentType, "application/json")) {
+                ScimGroup _out = Utils.mapper().readValue(
+                    Utils.toUtf8AndClose(_httpRes.body()),
+                    new TypeReference<ScimGroup>() {});
+                _res.withScimGroup(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -668,10 +789,10 @@ public class Group implements
         
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                List<com.unifiedapi.unifiedto.models.shared.Group> _out = Utils.mapper().readValue(
+                List<ScimGroup> _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<List<com.unifiedapi.unifiedto.models.shared.Group>>() {});
-                _res.withGroups(Optional.ofNullable(_out));
+                    new TypeReference<List<ScimGroup>>() {});
+                _res.withScimGroups(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -859,7 +980,7 @@ public class Group implements
                 new TypeReference<PatchScimGroupsRequest>() {});
         SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
                 _convertedRequest, 
-                "group",
+                "scimGroup",
                 "json",
                 false);
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
@@ -925,10 +1046,10 @@ public class Group implements
         
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                com.unifiedapi.unifiedto.models.shared.Group _out = Utils.mapper().readValue(
+                ScimGroup _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<com.unifiedapi.unifiedto.models.shared.Group>() {});
-                _res.withGroup(Optional.ofNullable(_out));
+                    new TypeReference<ScimGroup>() {});
+                _res.withScimGroup(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -1326,7 +1447,7 @@ public class Group implements
                 new TypeReference<UpdateScimGroupsRequest>() {});
         SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
                 _convertedRequest, 
-                "group",
+                "scimGroup",
                 "json",
                 false);
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
@@ -1392,10 +1513,10 @@ public class Group implements
         
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                com.unifiedapi.unifiedto.models.shared.Group _out = Utils.mapper().readValue(
+                ScimGroup _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<com.unifiedapi.unifiedto.models.shared.Group>() {});
-                _res.withGroup(Optional.ofNullable(_out));
+                    new TypeReference<ScimGroup>() {});
+                _res.withScimGroup(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(

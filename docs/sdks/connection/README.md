@@ -42,10 +42,10 @@ public class Application {
 
         Connection req = Connection.builder()
                 .categories(List.of(
-                    PropertyConnectionCategories.TASK))
+                    PropertyConnectionCategories.LMS))
                 .integrationType("<value>")
                 .permissions(List.of(
-                    PropertyConnectionPermissions.ATS_SCORECARD_READ))
+                    PropertyConnectionPermissions.CRM_EVENT_READ))
                 .build();
 
         CreateUnifiedConnectionResponse res = sdk.connection().createUnifiedConnection()

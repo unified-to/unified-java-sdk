@@ -14,7 +14,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 java:
-  version: 0.22.8
+  version: 0.23.0
   additionalDependencies: []
   additionalPlugins: []
   artifactID: unifiedto
@@ -22,6 +22,7 @@ java:
   companyEmail: hello@unified.to
   companyName: Unified API Inc.
   companyURL: www.unified.to
+  defaultErrorName: SDKError
   flattenGlobalSecurity: false
   githubURL: github.com/unified-to/unified-java-sdk
   groupID: com.unifiedapi

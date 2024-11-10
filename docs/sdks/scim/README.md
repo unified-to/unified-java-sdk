@@ -7,6 +7,7 @@
 
 * [createScimGroups](#createscimgroups) - Create group
 * [createScimUsers](#createscimusers) - Create user
+* [getScimGroups](#getscimgroups) - Get group
 * [getScimUsers](#getscimusers) - Get user
 * [listScimGroups](#listscimgroups) - List groups
 * [listScimUsers](#listscimusers) - List users
@@ -50,7 +51,7 @@ public class Application {
                 .request(req)
                 .call();
 
-        if (res.group().isPresent()) {
+        if (res.scimGroup().isPresent()) {
             // handle response
         }
     }
@@ -106,7 +107,7 @@ public class Application {
                 .request(req)
                 .call();
 
-        if (res.user().isPresent()) {
+        if (res.scimUser().isPresent()) {
             // handle response
         }
     }
@@ -122,6 +123,63 @@ public class Application {
 ### Response
 
 **[CreateScimUsersResponse](../../models/operations/CreateScimUsersResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getScimGroups
+
+Get group
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.GetScimGroupsRequest;
+import com.unifiedapi.unifiedto.models.operations.GetScimGroupsResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        GetScimGroupsRequest req = GetScimGroupsRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetScimGroupsResponse res = sdk.scim().getScimGroups()
+                .request(req)
+                .call();
+
+        if (res.scimGroup().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [GetScimGroupsRequest](../../models/operations/GetScimGroupsRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+
+### Response
+
+**[GetScimGroupsResponse](../../models/operations/GetScimGroupsResponse.md)**
 
 ### Errors
 
@@ -163,7 +221,7 @@ public class Application {
                 .request(req)
                 .call();
 
-        if (res.user().isPresent()) {
+        if (res.scimUser().isPresent()) {
             // handle response
         }
     }
@@ -219,7 +277,7 @@ public class Application {
                 .request(req)
                 .call();
 
-        if (res.groups().isPresent()) {
+        if (res.scimGroups().isPresent()) {
             // handle response
         }
     }
@@ -275,7 +333,7 @@ public class Application {
                 .request(req)
                 .call();
 
-        if (res.users().isPresent()) {
+        if (res.scimUsers().isPresent()) {
             // handle response
         }
     }
@@ -332,7 +390,7 @@ public class Application {
                 .request(req)
                 .call();
 
-        if (res.group().isPresent()) {
+        if (res.scimGroup().isPresent()) {
             // handle response
         }
     }
@@ -389,7 +447,7 @@ public class Application {
                 .request(req)
                 .call();
 
-        if (res.user().isPresent()) {
+        if (res.scimUser().isPresent()) {
             // handle response
         }
     }
@@ -556,7 +614,7 @@ public class Application {
                 .request(req)
                 .call();
 
-        if (res.group().isPresent()) {
+        if (res.scimGroup().isPresent()) {
             // handle response
         }
     }
@@ -613,7 +671,7 @@ public class Application {
                 .request(req)
                 .call();
 
-        if (res.user().isPresent()) {
+        if (res.scimUser().isPresent()) {
             // handle response
         }
     }

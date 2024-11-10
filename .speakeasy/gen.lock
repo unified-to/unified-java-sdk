@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 959e2ac257abb80b8937dce372ee1c82
+  docChecksum: b5c113c07df6378c9b107904984f614c
   docVersion: "1.0"
-  speakeasyVersion: 1.434.0
-  generationVersion: 2.452.0
-  releaseVersion: 0.22.8
-  configChecksum: 52c3656a609a3a5b9ad559e4b8266825
+  speakeasyVersion: 1.436.0
+  generationVersion: 2.455.2
+  releaseVersion: 0.23.0
+  configChecksum: 9b77065cae0a87224d0bd65d7b0c8002
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -15,7 +15,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.1
-    core: 3.30.7
+    core: 3.31.0
     globalSecurity: 2.82.7
     globalSecurityCallbacks: 0.1.0
     globalServerURLs: 2.82.1
@@ -89,6 +89,14 @@ generatedFiles:
   - docs/models/operations/CreateKmsPageResponse.md
   - docs/models/operations/CreateKmsSpaceRequest.md
   - docs/models/operations/CreateKmsSpaceResponse.md
+  - docs/models/operations/CreateLmsClassRequest.md
+  - docs/models/operations/CreateLmsClassResponse.md
+  - docs/models/operations/CreateLmsCourseRequest.md
+  - docs/models/operations/CreateLmsCourseResponse.md
+  - docs/models/operations/CreateLmsInstructorRequest.md
+  - docs/models/operations/CreateLmsInstructorResponse.md
+  - docs/models/operations/CreateLmsStudentRequest.md
+  - docs/models/operations/CreateLmsStudentResponse.md
   - docs/models/operations/CreateMartechListRequest.md
   - docs/models/operations/CreateMartechListResponse.md
   - docs/models/operations/CreateMartechMemberRequest.md
@@ -103,6 +111,16 @@ generatedFiles:
   - docs/models/operations/CreatePaymentLinkResponse.md
   - docs/models/operations/CreatePaymentPaymentRequest.md
   - docs/models/operations/CreatePaymentPaymentResponse.md
+  - docs/models/operations/CreateRepoBranchRequest.md
+  - docs/models/operations/CreateRepoBranchResponse.md
+  - docs/models/operations/CreateRepoCommitRequest.md
+  - docs/models/operations/CreateRepoCommitResponse.md
+  - docs/models/operations/CreateRepoOrganizationRequest.md
+  - docs/models/operations/CreateRepoOrganizationResponse.md
+  - docs/models/operations/CreateRepoPullrequestRequest.md
+  - docs/models/operations/CreateRepoPullrequestResponse.md
+  - docs/models/operations/CreateRepoRepositoryRequest.md
+  - docs/models/operations/CreateRepoRepositoryResponse.md
   - docs/models/operations/CreateScimGroupsRequest.md
   - docs/models/operations/CreateScimGroupsResponse.md
   - docs/models/operations/CreateScimUsersRequest.md
@@ -192,6 +210,14 @@ generatedFiles:
   - docs/models/operations/GetKmsPageResponse.md
   - docs/models/operations/GetKmsSpaceRequest.md
   - docs/models/operations/GetKmsSpaceResponse.md
+  - docs/models/operations/GetLmsClassRequest.md
+  - docs/models/operations/GetLmsClassResponse.md
+  - docs/models/operations/GetLmsCourseRequest.md
+  - docs/models/operations/GetLmsCourseResponse.md
+  - docs/models/operations/GetLmsInstructorRequest.md
+  - docs/models/operations/GetLmsInstructorResponse.md
+  - docs/models/operations/GetLmsStudentRequest.md
+  - docs/models/operations/GetLmsStudentResponse.md
   - docs/models/operations/GetMartechListRequest.md
   - docs/models/operations/GetMartechListResponse.md
   - docs/models/operations/GetMartechMemberRequest.md
@@ -208,6 +234,18 @@ generatedFiles:
   - docs/models/operations/GetPaymentPayoutResponse.md
   - docs/models/operations/GetPaymentRefundRequest.md
   - docs/models/operations/GetPaymentRefundResponse.md
+  - docs/models/operations/GetRepoBranchRequest.md
+  - docs/models/operations/GetRepoBranchResponse.md
+  - docs/models/operations/GetRepoCommitRequest.md
+  - docs/models/operations/GetRepoCommitResponse.md
+  - docs/models/operations/GetRepoOrganizationRequest.md
+  - docs/models/operations/GetRepoOrganizationResponse.md
+  - docs/models/operations/GetRepoPullrequestRequest.md
+  - docs/models/operations/GetRepoPullrequestResponse.md
+  - docs/models/operations/GetRepoRepositoryRequest.md
+  - docs/models/operations/GetRepoRepositoryResponse.md
+  - docs/models/operations/GetScimGroupsRequest.md
+  - docs/models/operations/GetScimGroupsResponse.md
   - docs/models/operations/GetScimUsersRequest.md
   - docs/models/operations/GetScimUsersResponse.md
   - docs/models/operations/GetStorageFileRequest.md
@@ -311,6 +349,14 @@ generatedFiles:
   - docs/models/operations/ListKmsPagesResponse.md
   - docs/models/operations/ListKmsSpacesRequest.md
   - docs/models/operations/ListKmsSpacesResponse.md
+  - docs/models/operations/ListLmsClassesRequest.md
+  - docs/models/operations/ListLmsClassesResponse.md
+  - docs/models/operations/ListLmsCoursesRequest.md
+  - docs/models/operations/ListLmsCoursesResponse.md
+  - docs/models/operations/ListLmsInstructorsRequest.md
+  - docs/models/operations/ListLmsInstructorsResponse.md
+  - docs/models/operations/ListLmsStudentsRequest.md
+  - docs/models/operations/ListLmsStudentsResponse.md
   - docs/models/operations/ListMartechListsRequest.md
   - docs/models/operations/ListMartechListsResponse.md
   - docs/models/operations/ListMartechMembersRequest.md
@@ -329,6 +375,16 @@ generatedFiles:
   - docs/models/operations/ListPaymentPayoutsResponse.md
   - docs/models/operations/ListPaymentRefundsRequest.md
   - docs/models/operations/ListPaymentRefundsResponse.md
+  - docs/models/operations/ListRepoBranchesRequest.md
+  - docs/models/operations/ListRepoBranchesResponse.md
+  - docs/models/operations/ListRepoCommitsRequest.md
+  - docs/models/operations/ListRepoCommitsResponse.md
+  - docs/models/operations/ListRepoOrganizationsRequest.md
+  - docs/models/operations/ListRepoOrganizationsResponse.md
+  - docs/models/operations/ListRepoPullrequestsRequest.md
+  - docs/models/operations/ListRepoPullrequestsResponse.md
+  - docs/models/operations/ListRepoRepositoriesRequest.md
+  - docs/models/operations/ListRepoRepositoriesResponse.md
   - docs/models/operations/ListScimGroupsRequest.md
   - docs/models/operations/ListScimGroupsResponse.md
   - docs/models/operations/ListScimUsersRequest.md
@@ -422,6 +478,14 @@ generatedFiles:
   - docs/models/operations/PatchKmsPageResponse.md
   - docs/models/operations/PatchKmsSpaceRequest.md
   - docs/models/operations/PatchKmsSpaceResponse.md
+  - docs/models/operations/PatchLmsClassRequest.md
+  - docs/models/operations/PatchLmsClassResponse.md
+  - docs/models/operations/PatchLmsCourseRequest.md
+  - docs/models/operations/PatchLmsCourseResponse.md
+  - docs/models/operations/PatchLmsInstructorRequest.md
+  - docs/models/operations/PatchLmsInstructorResponse.md
+  - docs/models/operations/PatchLmsStudentRequest.md
+  - docs/models/operations/PatchLmsStudentResponse.md
   - docs/models/operations/PatchMartechListRequest.md
   - docs/models/operations/PatchMartechListResponse.md
   - docs/models/operations/PatchMartechMemberRequest.md
@@ -436,6 +500,16 @@ generatedFiles:
   - docs/models/operations/PatchPaymentLinkResponse.md
   - docs/models/operations/PatchPaymentPaymentRequest.md
   - docs/models/operations/PatchPaymentPaymentResponse.md
+  - docs/models/operations/PatchRepoBranchRequest.md
+  - docs/models/operations/PatchRepoBranchResponse.md
+  - docs/models/operations/PatchRepoCommitRequest.md
+  - docs/models/operations/PatchRepoCommitResponse.md
+  - docs/models/operations/PatchRepoOrganizationRequest.md
+  - docs/models/operations/PatchRepoOrganizationResponse.md
+  - docs/models/operations/PatchRepoPullrequestRequest.md
+  - docs/models/operations/PatchRepoPullrequestResponse.md
+  - docs/models/operations/PatchRepoRepositoryRequest.md
+  - docs/models/operations/PatchRepoRepositoryResponse.md
   - docs/models/operations/PatchScimGroupsRequest.md
   - docs/models/operations/PatchScimGroupsResponse.md
   - docs/models/operations/PatchScimUsersRequest.md
@@ -521,6 +595,14 @@ generatedFiles:
   - docs/models/operations/RemoveKmsPageResponse.md
   - docs/models/operations/RemoveKmsSpaceRequest.md
   - docs/models/operations/RemoveKmsSpaceResponse.md
+  - docs/models/operations/RemoveLmsClassRequest.md
+  - docs/models/operations/RemoveLmsClassResponse.md
+  - docs/models/operations/RemoveLmsCourseRequest.md
+  - docs/models/operations/RemoveLmsCourseResponse.md
+  - docs/models/operations/RemoveLmsInstructorRequest.md
+  - docs/models/operations/RemoveLmsInstructorResponse.md
+  - docs/models/operations/RemoveLmsStudentRequest.md
+  - docs/models/operations/RemoveLmsStudentResponse.md
   - docs/models/operations/RemoveMartechListRequest.md
   - docs/models/operations/RemoveMartechListResponse.md
   - docs/models/operations/RemoveMartechMemberRequest.md
@@ -533,6 +615,16 @@ generatedFiles:
   - docs/models/operations/RemovePaymentLinkResponse.md
   - docs/models/operations/RemovePaymentPaymentRequest.md
   - docs/models/operations/RemovePaymentPaymentResponse.md
+  - docs/models/operations/RemoveRepoBranchRequest.md
+  - docs/models/operations/RemoveRepoBranchResponse.md
+  - docs/models/operations/RemoveRepoCommitRequest.md
+  - docs/models/operations/RemoveRepoCommitResponse.md
+  - docs/models/operations/RemoveRepoOrganizationRequest.md
+  - docs/models/operations/RemoveRepoOrganizationResponse.md
+  - docs/models/operations/RemoveRepoPullrequestRequest.md
+  - docs/models/operations/RemoveRepoPullrequestResponse.md
+  - docs/models/operations/RemoveRepoRepositoryRequest.md
+  - docs/models/operations/RemoveRepoRepositoryResponse.md
   - docs/models/operations/RemoveScimGroupsRequest.md
   - docs/models/operations/RemoveScimGroupsResponse.md
   - docs/models/operations/RemoveScimUsersRequest.md
@@ -616,6 +708,14 @@ generatedFiles:
   - docs/models/operations/UpdateKmsPageResponse.md
   - docs/models/operations/UpdateKmsSpaceRequest.md
   - docs/models/operations/UpdateKmsSpaceResponse.md
+  - docs/models/operations/UpdateLmsClassRequest.md
+  - docs/models/operations/UpdateLmsClassResponse.md
+  - docs/models/operations/UpdateLmsCourseRequest.md
+  - docs/models/operations/UpdateLmsCourseResponse.md
+  - docs/models/operations/UpdateLmsInstructorRequest.md
+  - docs/models/operations/UpdateLmsInstructorResponse.md
+  - docs/models/operations/UpdateLmsStudentRequest.md
+  - docs/models/operations/UpdateLmsStudentResponse.md
   - docs/models/operations/UpdateMartechListRequest.md
   - docs/models/operations/UpdateMartechListResponse.md
   - docs/models/operations/UpdateMartechMemberRequest.md
@@ -630,6 +730,16 @@ generatedFiles:
   - docs/models/operations/UpdatePaymentLinkResponse.md
   - docs/models/operations/UpdatePaymentPaymentRequest.md
   - docs/models/operations/UpdatePaymentPaymentResponse.md
+  - docs/models/operations/UpdateRepoBranchRequest.md
+  - docs/models/operations/UpdateRepoBranchResponse.md
+  - docs/models/operations/UpdateRepoCommitRequest.md
+  - docs/models/operations/UpdateRepoCommitResponse.md
+  - docs/models/operations/UpdateRepoOrganizationRequest.md
+  - docs/models/operations/UpdateRepoOrganizationResponse.md
+  - docs/models/operations/UpdateRepoPullrequestRequest.md
+  - docs/models/operations/UpdateRepoPullrequestResponse.md
+  - docs/models/operations/UpdateRepoRepositoryRequest.md
+  - docs/models/operations/UpdateRepoRepositoryResponse.md
   - docs/models/operations/UpdateScimGroupsRequest.md
   - docs/models/operations/UpdateScimGroupsResponse.md
   - docs/models/operations/UpdateScimUsersRequest.md
@@ -746,7 +856,6 @@ generatedFiles:
   - docs/models/shared/GenaiModel.md
   - docs/models/shared/GenaiPrompt.md
   - docs/models/shared/Gender.md
-  - docs/models/shared/Group.md
   - docs/models/shared/HrisCompany.md
   - docs/models/shared/HrisCompensation.md
   - docs/models/shared/HrisCompensationFrequency.md
@@ -774,16 +883,18 @@ generatedFiles:
   - docs/models/shared/KmsPage.md
   - docs/models/shared/KmsPageType.md
   - docs/models/shared/KmsSpace.md
-  - docs/models/shared/Level.md
   - docs/models/shared/ListAccountId.md
   - docs/models/shared/ListApplicationId.md
   - docs/models/shared/ListCandidateId.md
   - docs/models/shared/ListChannelId.md
+  - docs/models/shared/ListClassId.md
   - docs/models/shared/ListCollectionId.md
   - docs/models/shared/ListCompanyId.md
   - docs/models/shared/ListContactId.md
+  - docs/models/shared/ListCourseId.md
   - docs/models/shared/ListCustomerId.md
   - docs/models/shared/ListDealId.md
+  - docs/models/shared/ListInstructorId.md
   - docs/models/shared/ListInterviewId.md
   - docs/models/shared/ListInvoiceId.md
   - docs/models/shared/ListItemId.md
@@ -803,10 +914,20 @@ generatedFiles:
   - docs/models/shared/ListSortByName.md
   - docs/models/shared/ListSortByUpdatedAt.md
   - docs/models/shared/ListSpaceId.md
+  - docs/models/shared/ListStudentId.md
   - docs/models/shared/ListTicketId.md
   - docs/models/shared/ListType.md
   - docs/models/shared/ListUpdatedGte.md
   - docs/models/shared/ListUserId.md
+  - docs/models/shared/LmsClass.md
+  - docs/models/shared/LmsCourse.md
+  - docs/models/shared/LmsEmail.md
+  - docs/models/shared/LmsInstructor.md
+  - docs/models/shared/LmsMedia.md
+  - docs/models/shared/LmsMediaType.md
+  - docs/models/shared/LmsStudent.md
+  - docs/models/shared/LmsTelephone.md
+  - docs/models/shared/LmsTelephoneType.md
   - docs/models/shared/MaritalStatus.md
   - docs/models/shared/MarketingEmail.md
   - docs/models/shared/MarketingEmailType.md
@@ -853,36 +974,63 @@ generatedFiles:
   - docs/models/shared/PropertyCrmLeadAddress.md
   - docs/models/shared/PropertyEnrichCompanyAddress.md
   - docs/models/shared/PropertyEnrichPersonAddress.md
-  - docs/models/shared/PropertyGroupMeta.md
-  - docs/models/shared/PropertyGroupSchemas.md
   - docs/models/shared/PropertyHrisCompanyAddress.md
   - docs/models/shared/PropertyHrisEmployeeAddress.md
   - docs/models/shared/PropertyHrisEmployeeEmployeeRoles.md
   - docs/models/shared/PropertyHrisLocationAddress.md
   - docs/models/shared/PropertyIntegrationCategories.md
   - docs/models/shared/PropertyIntegrationSupportWebhookEvents.md
+  - docs/models/shared/PropertyIntegrationSupportWebhookEventsCreated.md
+  - docs/models/shared/PropertyIntegrationSupportWebhookEventsDeleted.md
+  - docs/models/shared/PropertyIntegrationSupportWebhookEventsUpdated.md
+  - docs/models/shared/PropertyLmsStudentAddress.md
   - docs/models/shared/PropertyMessagingMessageAuthorMember.md
-  - docs/models/shared/PropertyPropertyIntegrationSupportWebhookEventsCreated.md
-  - docs/models/shared/PropertyPropertyIntegrationSupportWebhookEventsDeleted.md
-  - docs/models/shared/PropertyPropertyIntegrationSupportWebhookEventsUpdated.md
-  - docs/models/shared/PropertyPropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager.md
-  - docs/models/shared/PropertyPropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType.md
+  - docs/models/shared/PropertyScimGroupMeta.md
+  - docs/models/shared/PropertyScimGroupSchemas.md
+  - docs/models/shared/PropertyScimUserMeta.md
+  - docs/models/shared/PropertyScimUserMetaResourceType.md
+  - docs/models/shared/PropertyScimUserName.md
+  - docs/models/shared/PropertyScimUserSchemas.md
+  - docs/models/shared/PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User.md
+  - docs/models/shared/PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender.md
+  - docs/models/shared/PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager.md
+  - docs/models/shared/PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType.md
+  - docs/models/shared/PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User.md
+  - docs/models/shared/PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender.md
+  - docs/models/shared/PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User.md
+  - docs/models/shared/PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender.md
   - docs/models/shared/PropertyStoragePermissionRoles.md
   - docs/models/shared/PropertyUcCallTelephone.md
   - docs/models/shared/PropertyUcCallTelephoneType.md
-  - docs/models/shared/PropertyUserMeta.md
-  - docs/models/shared/PropertyUserMetaResourceType.md
-  - docs/models/shared/PropertyUserName.md
-  - docs/models/shared/PropertyUserSchemas.md
-  - docs/models/shared/PropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20User.md
-  - docs/models/shared/PropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender.md
-  - docs/models/shared/PropertyUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User.md
-  - docs/models/shared/PropertyUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender.md
-  - docs/models/shared/PropertyUserUrnIetfParamsScimSchemasExtensionPeakon20User.md
-  - docs/models/shared/PropertyUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender.md
   - docs/models/shared/Recommendation.md
+  - docs/models/shared/RepoBranch.md
+  - docs/models/shared/RepoCommit.md
+  - docs/models/shared/RepoOrganization.md
+  - docs/models/shared/RepoPullrequest.md
+  - docs/models/shared/RepoPullrequestStatus.md
+  - docs/models/shared/RepoRepository.md
   - docs/models/shared/ResourceType.md
   - docs/models/shared/Role.md
+  - docs/models/shared/ScimAddress.md
+  - docs/models/shared/ScimAddressType.md
+  - docs/models/shared/ScimEmail.md
+  - docs/models/shared/ScimEmailType.md
+  - docs/models/shared/ScimEntitlement.md
+  - docs/models/shared/ScimGroup.md
+  - docs/models/shared/ScimGroupMember.md
+  - docs/models/shared/ScimGroupMemberType.md
+  - docs/models/shared/ScimIms.md
+  - docs/models/shared/ScimImsType.md
+  - docs/models/shared/ScimManager.md
+  - docs/models/shared/ScimManagerType.md
+  - docs/models/shared/ScimPhoneNumber.md
+  - docs/models/shared/ScimPhoneNumberType.md
+  - docs/models/shared/ScimPhoto.md
+  - docs/models/shared/ScimPhotoType.md
+  - docs/models/shared/ScimRole.md
+  - docs/models/shared/ScimUser.md
+  - docs/models/shared/ScimUserGroups.md
+  - docs/models/shared/ScimUserGroupsType.md
   - docs/models/shared/SearchDomain.md
   - docs/models/shared/SearchEmail.md
   - docs/models/shared/SearchLinkedinurl.md
@@ -914,9 +1062,6 @@ generatedFiles:
   - docs/models/shared/UcEmailType.md
   - docs/models/shared/UcTelephone.md
   - docs/models/shared/UcTelephoneType.md
-  - docs/models/shared/Undefined.md
-  - docs/models/shared/UndefinedType.md
-  - docs/models/shared/User.md
   - docs/models/shared/Webhook.md
   - docs/models/shared/WebhookType.md
   - docs/models/shared/WeightUnit.md
@@ -928,14 +1073,18 @@ generatedFiles:
   - docs/sdks/applicationstatus/README.md
   - docs/sdks/ats/README.md
   - docs/sdks/auth/README.md
+  - docs/sdks/branch/README.md
   - docs/sdks/call/README.md
   - docs/sdks/candidate/README.md
   - docs/sdks/channel/README.md
+  - docs/sdks/class/README.md
   - docs/sdks/collection/README.md
   - docs/sdks/commerce/README.md
+  - docs/sdks/commit/README.md
   - docs/sdks/company/README.md
   - docs/sdks/connection/README.md
   - docs/sdks/contact/README.md
+  - docs/sdks/course/README.md
   - docs/sdks/crm/README.md
   - docs/sdks/customer/README.md
   - docs/sdks/deal/README.md
@@ -947,6 +1096,7 @@ generatedFiles:
   - docs/sdks/genai/README.md
   - docs/sdks/group/README.md
   - docs/sdks/hris/README.md
+  - docs/sdks/instructor/README.md
   - docs/sdks/integration/README.md
   - docs/sdks/interview/README.md
   - docs/sdks/inventory/README.md
@@ -959,6 +1109,7 @@ generatedFiles:
   - docs/sdks/lead/README.md
   - docs/sdks/link/README.md
   - docs/sdks/list/README.md
+  - docs/sdks/lms/README.md
   - docs/sdks/location/README.md
   - docs/sdks/login/README.md
   - docs/sdks/martech/README.md
@@ -978,11 +1129,15 @@ generatedFiles:
   - docs/sdks/pipeline/README.md
   - docs/sdks/project/README.md
   - docs/sdks/prompt/README.md
+  - docs/sdks/pullrequest/README.md
   - docs/sdks/refund/README.md
+  - docs/sdks/repo/README.md
+  - docs/sdks/repository/README.md
   - docs/sdks/scim/README.md
   - docs/sdks/scorecard/README.md
   - docs/sdks/space/README.md
   - docs/sdks/storage/README.md
+  - docs/sdks/student/README.md
   - docs/sdks/task/README.md
   - docs/sdks/taxrate/README.md
   - docs/sdks/ticket/README.md
@@ -1007,14 +1162,18 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/Applicationstatus.java
   - src/main/java/com/unifiedapi/unifiedto/Ats.java
   - src/main/java/com/unifiedapi/unifiedto/Auth.java
+  - src/main/java/com/unifiedapi/unifiedto/Branch.java
   - src/main/java/com/unifiedapi/unifiedto/Call.java
   - src/main/java/com/unifiedapi/unifiedto/Candidate.java
   - src/main/java/com/unifiedapi/unifiedto/Channel.java
+  - src/main/java/com/unifiedapi/unifiedto/Class.java
   - src/main/java/com/unifiedapi/unifiedto/Collection.java
   - src/main/java/com/unifiedapi/unifiedto/Commerce.java
+  - src/main/java/com/unifiedapi/unifiedto/Commit.java
   - src/main/java/com/unifiedapi/unifiedto/Company.java
   - src/main/java/com/unifiedapi/unifiedto/Connection.java
   - src/main/java/com/unifiedapi/unifiedto/Contact.java
+  - src/main/java/com/unifiedapi/unifiedto/Course.java
   - src/main/java/com/unifiedapi/unifiedto/Crm.java
   - src/main/java/com/unifiedapi/unifiedto/Customer.java
   - src/main/java/com/unifiedapi/unifiedto/Deal.java
@@ -1026,6 +1185,7 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/Genai.java
   - src/main/java/com/unifiedapi/unifiedto/Group.java
   - src/main/java/com/unifiedapi/unifiedto/Hris.java
+  - src/main/java/com/unifiedapi/unifiedto/Instructor.java
   - src/main/java/com/unifiedapi/unifiedto/Integration.java
   - src/main/java/com/unifiedapi/unifiedto/Interview.java
   - src/main/java/com/unifiedapi/unifiedto/Inventory.java
@@ -1038,6 +1198,7 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/Lead.java
   - src/main/java/com/unifiedapi/unifiedto/Link.java
   - src/main/java/com/unifiedapi/unifiedto/List.java
+  - src/main/java/com/unifiedapi/unifiedto/Lms.java
   - src/main/java/com/unifiedapi/unifiedto/Location.java
   - src/main/java/com/unifiedapi/unifiedto/Login.java
   - src/main/java/com/unifiedapi/unifiedto/Martech.java
@@ -1057,13 +1218,17 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/Pipeline.java
   - src/main/java/com/unifiedapi/unifiedto/Project.java
   - src/main/java/com/unifiedapi/unifiedto/Prompt.java
+  - src/main/java/com/unifiedapi/unifiedto/Pullrequest.java
   - src/main/java/com/unifiedapi/unifiedto/Refund.java
+  - src/main/java/com/unifiedapi/unifiedto/Repo.java
+  - src/main/java/com/unifiedapi/unifiedto/Repository.java
   - src/main/java/com/unifiedapi/unifiedto/SDKConfiguration.java
   - src/main/java/com/unifiedapi/unifiedto/Scim.java
   - src/main/java/com/unifiedapi/unifiedto/Scorecard.java
   - src/main/java/com/unifiedapi/unifiedto/SecuritySource.java
   - src/main/java/com/unifiedapi/unifiedto/Space.java
   - src/main/java/com/unifiedapi/unifiedto/Storage.java
+  - src/main/java/com/unifiedapi/unifiedto/Student.java
   - src/main/java/com/unifiedapi/unifiedto/Task.java
   - src/main/java/com/unifiedapi/unifiedto/Taxrate.java
   - src/main/java/com/unifiedapi/unifiedto/Ticket.java
@@ -1172,6 +1337,18 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateKmsSpaceRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateKmsSpaceRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateKmsSpaceResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateLmsClassRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateLmsClassRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateLmsClassResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateLmsCourseRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateLmsCourseRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateLmsCourseResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateLmsInstructorRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateLmsInstructorRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateLmsInstructorResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateLmsStudentRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateLmsStudentRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateLmsStudentResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateMartechListRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateMartechListRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateMartechListResponse.java
@@ -1193,6 +1370,21 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreatePaymentPaymentRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreatePaymentPaymentRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreatePaymentPaymentResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateRepoBranchRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateRepoBranchRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateRepoBranchResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateRepoCommitRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateRepoCommitRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateRepoCommitResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateRepoOrganizationRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateRepoOrganizationRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateRepoOrganizationResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateRepoPullrequestRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateRepoPullrequestRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateRepoPullrequestResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateRepoRepositoryRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateRepoRepositoryRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateRepoRepositoryResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateScimGroupsRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateScimGroupsRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateScimGroupsResponse.java
@@ -1327,6 +1519,18 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetKmsSpaceRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetKmsSpaceRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetKmsSpaceResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetLmsClassRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetLmsClassRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetLmsClassResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetLmsCourseRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetLmsCourseRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetLmsCourseResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetLmsInstructorRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetLmsInstructorRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetLmsInstructorResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetLmsStudentRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetLmsStudentRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetLmsStudentResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetMartechListRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetMartechListRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetMartechListResponse.java
@@ -1351,6 +1555,24 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetPaymentRefundRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetPaymentRefundRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetPaymentRefundResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetRepoBranchRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetRepoBranchRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetRepoBranchResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetRepoCommitRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetRepoCommitRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetRepoCommitResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetRepoOrganizationRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetRepoOrganizationRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetRepoOrganizationResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetRepoPullrequestRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetRepoPullrequestRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetRepoPullrequestResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetRepoRepositoryRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetRepoRepositoryRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetRepoRepositoryResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetScimGroupsRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetScimGroupsRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetScimGroupsResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetScimUsersRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetScimUsersRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetScimUsersResponse.java
@@ -1505,6 +1727,18 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListKmsSpacesRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListKmsSpacesRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListKmsSpacesResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListLmsClassesRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListLmsClassesRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListLmsClassesResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListLmsCoursesRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListLmsCoursesRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListLmsCoursesResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListLmsInstructorsRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListLmsInstructorsRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListLmsInstructorsResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListLmsStudentsRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListLmsStudentsRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListLmsStudentsResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListMartechListsRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListMartechListsRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListMartechListsResponse.java
@@ -1532,6 +1766,21 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListPaymentRefundsRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListPaymentRefundsRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListPaymentRefundsResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListRepoBranchesRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListRepoBranchesRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListRepoBranchesResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListRepoCommitsRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListRepoCommitsRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListRepoCommitsResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListRepoOrganizationsRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListRepoOrganizationsRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListRepoOrganizationsResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListRepoPullrequestsRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListRepoPullrequestsRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListRepoPullrequestsResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListRepoRepositoriesRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListRepoRepositoriesRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListRepoRepositoriesResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListScimGroupsRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListScimGroupsRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListScimGroupsResponse.java
@@ -1671,6 +1920,18 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchKmsSpaceRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchKmsSpaceRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchKmsSpaceResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchLmsClassRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchLmsClassRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchLmsClassResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchLmsCourseRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchLmsCourseRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchLmsCourseResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchLmsInstructorRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchLmsInstructorRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchLmsInstructorResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchLmsStudentRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchLmsStudentRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchLmsStudentResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchMartechListRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchMartechListRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchMartechListResponse.java
@@ -1692,6 +1953,21 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchPaymentPaymentRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchPaymentPaymentRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchPaymentPaymentResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchRepoBranchRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchRepoBranchRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchRepoBranchResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchRepoCommitRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchRepoCommitRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchRepoCommitResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchRepoOrganizationRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchRepoOrganizationRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchRepoOrganizationResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchRepoPullrequestRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchRepoPullrequestRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchRepoPullrequestResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchRepoRepositoryRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchRepoRepositoryRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchRepoRepositoryResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchScimGroupsRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchScimGroupsRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchScimGroupsResponse.java
@@ -1819,6 +2095,18 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveKmsSpaceRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveKmsSpaceRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveKmsSpaceResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveLmsClassRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveLmsClassRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveLmsClassResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveLmsCourseRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveLmsCourseRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveLmsCourseResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveLmsInstructorRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveLmsInstructorRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveLmsInstructorResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveLmsStudentRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveLmsStudentRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveLmsStudentResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveMartechListRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveMartechListRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveMartechListResponse.java
@@ -1837,6 +2125,21 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemovePaymentPaymentRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemovePaymentPaymentRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemovePaymentPaymentResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveRepoBranchRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveRepoBranchRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveRepoBranchResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveRepoCommitRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveRepoCommitRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveRepoCommitResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveRepoOrganizationRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveRepoOrganizationRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveRepoOrganizationResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveRepoPullrequestRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveRepoPullrequestRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveRepoPullrequestResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveRepoRepositoryRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveRepoRepositoryRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveRepoRepositoryResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveScimGroupsRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveScimGroupsRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveScimGroupsResponse.java
@@ -1962,6 +2265,18 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateKmsSpaceRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateKmsSpaceRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateKmsSpaceResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateLmsClassRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateLmsClassRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateLmsClassResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateLmsCourseRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateLmsCourseRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateLmsCourseResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateLmsInstructorRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateLmsInstructorRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateLmsInstructorResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateLmsStudentRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateLmsStudentRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateLmsStudentResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateMartechListRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateMartechListRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateMartechListResponse.java
@@ -1983,6 +2298,21 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePaymentPaymentRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePaymentPaymentRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePaymentPaymentResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateRepoBranchRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateRepoBranchRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateRepoBranchResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateRepoCommitRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateRepoCommitRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateRepoCommitResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateRepoOrganizationRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateRepoOrganizationRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateRepoOrganizationResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateRepoPullrequestRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateRepoPullrequestRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateRepoPullrequestResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateRepoRepositoryRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateRepoRepositoryRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateRepoRepositoryResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateScimGroupsRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateScimGroupsRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateScimGroupsResponse.java
@@ -2111,7 +2441,6 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/GenaiModel.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/GenaiPrompt.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Gender.java
-  - src/main/java/com/unifiedapi/unifiedto/models/shared/Group.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisCompany.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisCompensation.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisCompensationFrequency.java
@@ -2139,16 +2468,18 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/KmsPage.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/KmsPageType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/KmsSpace.java
-  - src/main/java/com/unifiedapi/unifiedto/models/shared/Level.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListAccountId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListApplicationId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListCandidateId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListChannelId.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ListClassId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListCollectionId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListCompanyId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListContactId.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ListCourseId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListCustomerId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListDealId.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ListInstructorId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListInterviewId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListInvoiceId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListItemId.java
@@ -2168,10 +2499,20 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListSortByName.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListSortByUpdatedAt.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListSpaceId.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ListStudentId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListTicketId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListUpdatedGte.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ListUserId.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/LmsClass.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/LmsCourse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/LmsEmail.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/LmsInstructor.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/LmsMedia.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/LmsMediaType.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/LmsStudent.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/LmsTelephone.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/LmsTelephoneType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/MaritalStatus.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/MarketingEmail.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/MarketingEmailType.java
@@ -2218,36 +2559,63 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmLeadAddress.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyEnrichCompanyAddress.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyEnrichPersonAddress.java
-  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyGroupMeta.java
-  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyGroupSchemas.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyHrisCompanyAddress.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyHrisEmployeeAddress.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyHrisEmployeeEmployeeRoles.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyHrisLocationAddress.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyIntegrationCategories.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyIntegrationSupportWebhookEvents.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyIntegrationSupportWebhookEventsCreated.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyIntegrationSupportWebhookEventsDeleted.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyIntegrationSupportWebhookEventsUpdated.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyLmsStudentAddress.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyMessagingMessageAuthorMember.java
-  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyPropertyIntegrationSupportWebhookEventsCreated.java
-  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyPropertyIntegrationSupportWebhookEventsDeleted.java
-  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyPropertyIntegrationSupportWebhookEventsUpdated.java
-  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyPropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager.java
-  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyPropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyScimGroupMeta.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyScimGroupSchemas.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyScimUserMeta.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyScimUserMetaResourceType.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyScimUserName.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyScimUserSchemas.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyStoragePermissionRoles.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUcCallTelephone.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUcCallTelephoneType.java
-  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUserMeta.java
-  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUserMetaResourceType.java
-  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUserName.java
-  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUserSchemas.java
-  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20User.java
-  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender.java
-  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User.java
-  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender.java
-  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUserUrnIetfParamsScimSchemasExtensionPeakon20User.java
-  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Recommendation.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/RepoBranch.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/RepoCommit.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/RepoOrganization.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/RepoPullrequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/RepoPullrequestStatus.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/RepoRepository.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ResourceType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Role.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ScimAddress.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ScimAddressType.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ScimEmail.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ScimEmailType.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ScimEntitlement.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ScimGroup.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ScimGroupMember.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ScimGroupMemberType.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ScimIms.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ScimImsType.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ScimManager.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ScimManagerType.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ScimPhoneNumber.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ScimPhoneNumberType.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ScimPhoto.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ScimPhotoType.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ScimRole.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ScimUser.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ScimUserGroups.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ScimUserGroupsType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/SearchDomain.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/SearchEmail.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/SearchLinkedinurl.java
@@ -2279,9 +2647,6 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/UcEmailType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/UcTelephone.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/UcTelephoneType.java
-  - src/main/java/com/unifiedapi/unifiedto/models/shared/Undefined.java
-  - src/main/java/com/unifiedapi/unifiedto/models/shared/UndefinedType.java
-  - src/main/java/com/unifiedapi/unifiedto/models/shared/User.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Webhook.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/WebhookType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/WeightUnit.java
@@ -4549,18 +4914,27 @@ examples:
       parameters:
         path:
           connection_id: "<id>"
+      responses:
+        "200":
+          application/json: {"displayName": "Bert89", "id": "<id>"}
   listScimGroups:
     speakeasy-default-list-scim-groups:
       parameters:
         path:
           connection_id: "<id>"
         query: {}
+      responses:
+        "200":
+          application/json: [{"displayName": "Anya_Mante96", "id": "<id>"}]
   patchScimGroups:
     speakeasy-default-patch-scim-groups:
       parameters:
         path:
           connection_id: "<id>"
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"displayName": "Damon_Rutherford93", "id": "<id>"}
   removeScimGroups:
     speakeasy-default-remove-scim-groups:
       parameters:
@@ -4573,6 +4947,9 @@ examples:
         path:
           connection_id: "<id>"
           id: "<id>"
+      responses:
+        "200":
+          application/json: {"displayName": "Frederic.Reichel", "id": "<id>"}
   createScimUsers:
     speakeasy-default-create-scim-users:
       parameters:
@@ -4648,3 +5025,453 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+  createRepoOrganization:
+    speakeasy-default-create-repo-organization:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  getRepoOrganization:
+    speakeasy-default-get-repo-organization:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  listRepoOrganizations:
+    speakeasy-default-list-repo-organizations:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"name": "<value>"}]
+  patchRepoOrganization:
+    speakeasy-default-patch-repo-organization:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  removeRepoOrganization:
+    speakeasy-default-remove-repo-organization:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateRepoOrganization:
+    speakeasy-default-update-repo-organization:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  getScimGroups:
+    speakeasy-default-get-scim-groups:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"displayName": "Tressa10", "id": "<id>"}
+  createLmsClass:
+    speakeasy-default-create-lms-class:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"course_id": "<id>", "name": "<value>"}
+  createLmsCourse:
+    speakeasy-default-create-lms-course:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  createLmsInstructor:
+    speakeasy-default-create-lms-instructor:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+  createLmsStudent:
+    speakeasy-default-create-lms-student:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+  getLmsClass:
+    speakeasy-default-get-lms-class:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"course_id": "<id>", "name": "<value>"}
+  getLmsCourse:
+    speakeasy-default-get-lms-course:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  getLmsInstructor:
+    speakeasy-default-get-lms-instructor:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+  getLmsStudent:
+    speakeasy-default-get-lms-student:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+  listLmsClasses:
+    speakeasy-default-list-lms-classes:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"course_id": "<id>", "name": "<value>"}, {"course_id": "<id>", "name": "<value>"}, {"course_id": "<id>", "name": "<value>"}]
+  listLmsCourses:
+    speakeasy-default-list-lms-courses:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"name": "<value>"}]
+  listLmsInstructors:
+    speakeasy-default-list-lms-instructors:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+  listLmsStudents:
+    speakeasy-default-list-lms-students:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+  patchLmsClass:
+    speakeasy-default-patch-lms-class:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"course_id": "<id>", "name": "<value>"}
+  patchLmsCourse:
+    speakeasy-default-patch-lms-course:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  patchLmsInstructor:
+    speakeasy-default-patch-lms-instructor:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+  patchLmsStudent:
+    speakeasy-default-patch-lms-student:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+  removeLmsClass:
+    speakeasy-default-remove-lms-class:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeLmsCourse:
+    speakeasy-default-remove-lms-course:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeLmsInstructor:
+    speakeasy-default-remove-lms-instructor:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeLmsStudent:
+    speakeasy-default-remove-lms-student:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateLmsClass:
+    speakeasy-default-update-lms-class:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"course_id": "<id>", "name": "<value>"}
+  updateLmsCourse:
+    speakeasy-default-update-lms-course:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  updateLmsInstructor:
+    speakeasy-default-update-lms-instructor:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+  updateLmsStudent:
+    speakeasy-default-update-lms-student:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+  createRepoBranch:
+    speakeasy-default-create-repo-branch:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>", "repo_id": "<id>"}
+  createRepoCommit:
+    speakeasy-default-create-repo-commit:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"repo_id": "<id>", "user_id": "<id>"}
+  createRepoPullrequest:
+    speakeasy-default-create-repo-pullrequest:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+  createRepoRepository:
+    speakeasy-default-create-repo-repository:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  getRepoBranch:
+    speakeasy-default-get-repo-branch:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>", "repo_id": "<id>"}
+  getRepoCommit:
+    speakeasy-default-get-repo-commit:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"repo_id": "<id>", "user_id": "<id>"}
+  getRepoPullrequest:
+    speakeasy-default-get-repo-pullrequest:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+  getRepoRepository:
+    speakeasy-default-get-repo-repository:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  listRepoBranches:
+    speakeasy-default-list-repo-branches:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"name": "<value>", "repo_id": "<id>"}, {"name": "<value>", "repo_id": "<id>"}]
+  listRepoCommits:
+    speakeasy-default-list-repo-commits:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"repo_id": "<id>", "user_id": "<id>"}, {"repo_id": "<id>", "user_id": "<id>"}]
+  listRepoPullrequests:
+    speakeasy-default-list-repo-pullrequests:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+  listRepoRepositories:
+    speakeasy-default-list-repo-repositories:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"name": "<value>"}]
+  patchRepoBranch:
+    speakeasy-default-patch-repo-branch:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>", "repo_id": "<id>"}
+  patchRepoCommit:
+    speakeasy-default-patch-repo-commit:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"repo_id": "<id>", "user_id": "<id>"}
+  patchRepoPullrequest:
+    speakeasy-default-patch-repo-pullrequest:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+  patchRepoRepository:
+    speakeasy-default-patch-repo-repository:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  removeRepoBranch:
+    speakeasy-default-remove-repo-branch:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeRepoCommit:
+    speakeasy-default-remove-repo-commit:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeRepoPullrequest:
+    speakeasy-default-remove-repo-pullrequest:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeRepoRepository:
+    speakeasy-default-remove-repo-repository:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateRepoBranch:
+    speakeasy-default-update-repo-branch:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>", "repo_id": "<id>"}
+  updateRepoCommit:
+    speakeasy-default-update-repo-commit:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"repo_id": "<id>", "user_id": "<id>"}
+  updateRepoPullrequest:
+    speakeasy-default-update-repo-pullrequest:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+  updateRepoRepository:
+    speakeasy-default-update-repo-repository:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}

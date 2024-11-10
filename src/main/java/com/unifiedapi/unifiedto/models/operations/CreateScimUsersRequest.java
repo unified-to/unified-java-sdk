@@ -7,7 +7,7 @@ package com.unifiedapi.unifiedto.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.unifiedapi.unifiedto.models.shared.User;
+import com.unifiedapi.unifiedto.models.shared.ScimUser;
 import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Double;
@@ -21,7 +21,7 @@ import java.util.Optional;
 public class CreateScimUsersRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends User> user;
+    private Optional<? extends ScimUser> scimUser;
 
     /**
      * ID of the connection
@@ -46,21 +46,21 @@ public class CreateScimUsersRequest {
 
     @JsonCreator
     public CreateScimUsersRequest(
-            Optional<? extends User> user,
+            Optional<? extends ScimUser> scimUser,
             String connectionId,
             Optional<Double> count,
             Optional<String> filter,
             Optional<String> sortBy,
             Optional<String> sortOrder,
             Optional<Double> startIndex) {
-        Utils.checkNotNull(user, "user");
+        Utils.checkNotNull(scimUser, "scimUser");
         Utils.checkNotNull(connectionId, "connectionId");
         Utils.checkNotNull(count, "count");
         Utils.checkNotNull(filter, "filter");
         Utils.checkNotNull(sortBy, "sortBy");
         Utils.checkNotNull(sortOrder, "sortOrder");
         Utils.checkNotNull(startIndex, "startIndex");
-        this.user = user;
+        this.scimUser = scimUser;
         this.connectionId = connectionId;
         this.count = count;
         this.filter = filter;
@@ -76,8 +76,8 @@ public class CreateScimUsersRequest {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<User> user() {
-        return (Optional<User>) user;
+    public Optional<ScimUser> scimUser() {
+        return (Optional<ScimUser>) scimUser;
     }
 
     /**
@@ -117,15 +117,15 @@ public class CreateScimUsersRequest {
         return new Builder();
     }
 
-    public CreateScimUsersRequest withUser(User user) {
-        Utils.checkNotNull(user, "user");
-        this.user = Optional.ofNullable(user);
+    public CreateScimUsersRequest withScimUser(ScimUser scimUser) {
+        Utils.checkNotNull(scimUser, "scimUser");
+        this.scimUser = Optional.ofNullable(scimUser);
         return this;
     }
 
-    public CreateScimUsersRequest withUser(Optional<? extends User> user) {
-        Utils.checkNotNull(user, "user");
-        this.user = user;
+    public CreateScimUsersRequest withScimUser(Optional<? extends ScimUser> scimUser) {
+        Utils.checkNotNull(scimUser, "scimUser");
+        this.scimUser = scimUser;
         return this;
     }
 
@@ -208,7 +208,7 @@ public class CreateScimUsersRequest {
         }
         CreateScimUsersRequest other = (CreateScimUsersRequest) o;
         return 
-            Objects.deepEquals(this.user, other.user) &&
+            Objects.deepEquals(this.scimUser, other.scimUser) &&
             Objects.deepEquals(this.connectionId, other.connectionId) &&
             Objects.deepEquals(this.count, other.count) &&
             Objects.deepEquals(this.filter, other.filter) &&
@@ -220,7 +220,7 @@ public class CreateScimUsersRequest {
     @Override
     public int hashCode() {
         return Objects.hash(
-            user,
+            scimUser,
             connectionId,
             count,
             filter,
@@ -232,7 +232,7 @@ public class CreateScimUsersRequest {
     @Override
     public String toString() {
         return Utils.toString(CreateScimUsersRequest.class,
-                "user", user,
+                "scimUser", scimUser,
                 "connectionId", connectionId,
                 "count", count,
                 "filter", filter,
@@ -243,7 +243,7 @@ public class CreateScimUsersRequest {
     
     public final static class Builder {
  
-        private Optional<? extends User> user = Optional.empty();
+        private Optional<? extends ScimUser> scimUser = Optional.empty();
  
         private String connectionId;
  
@@ -261,15 +261,15 @@ public class CreateScimUsersRequest {
           // force use of static builder() method
         }
 
-        public Builder user(User user) {
-            Utils.checkNotNull(user, "user");
-            this.user = Optional.ofNullable(user);
+        public Builder scimUser(ScimUser scimUser) {
+            Utils.checkNotNull(scimUser, "scimUser");
+            this.scimUser = Optional.ofNullable(scimUser);
             return this;
         }
 
-        public Builder user(Optional<? extends User> user) {
-            Utils.checkNotNull(user, "user");
-            this.user = user;
+        public Builder scimUser(Optional<? extends ScimUser> scimUser) {
+            Utils.checkNotNull(scimUser, "scimUser");
+            this.scimUser = scimUser;
             return this;
         }
 
@@ -344,7 +344,7 @@ public class CreateScimUsersRequest {
         
         public CreateScimUsersRequest build() {
             return new CreateScimUsersRequest(
-                user,
+                scimUser,
                 connectionId,
                 count,
                 filter,

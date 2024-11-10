@@ -23,21 +23,21 @@ public class PropertyIntegrationSupportWebhookEvents {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created")
-    private Optional<? extends List<PropertyPropertyIntegrationSupportWebhookEventsCreated>> created;
+    private Optional<? extends List<PropertyIntegrationSupportWebhookEventsCreated>> created;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted")
-    private Optional<? extends List<PropertyPropertyIntegrationSupportWebhookEventsDeleted>> deleted;
+    private Optional<? extends List<PropertyIntegrationSupportWebhookEventsDeleted>> deleted;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated")
-    private Optional<? extends List<PropertyPropertyIntegrationSupportWebhookEventsUpdated>> updated;
+    private Optional<? extends List<PropertyIntegrationSupportWebhookEventsUpdated>> updated;
 
     @JsonCreator
     public PropertyIntegrationSupportWebhookEvents(
-            @JsonProperty("created") Optional<? extends List<PropertyPropertyIntegrationSupportWebhookEventsCreated>> created,
-            @JsonProperty("deleted") Optional<? extends List<PropertyPropertyIntegrationSupportWebhookEventsDeleted>> deleted,
-            @JsonProperty("updated") Optional<? extends List<PropertyPropertyIntegrationSupportWebhookEventsUpdated>> updated) {
+            @JsonProperty("created") Optional<? extends List<PropertyIntegrationSupportWebhookEventsCreated>> created,
+            @JsonProperty("deleted") Optional<? extends List<PropertyIntegrationSupportWebhookEventsDeleted>> deleted,
+            @JsonProperty("updated") Optional<? extends List<PropertyIntegrationSupportWebhookEventsUpdated>> updated) {
         Utils.checkNotNull(created, "created");
         Utils.checkNotNull(deleted, "deleted");
         Utils.checkNotNull(updated, "updated");
@@ -52,57 +52,57 @@ public class PropertyIntegrationSupportWebhookEvents {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<PropertyPropertyIntegrationSupportWebhookEventsCreated>> created() {
-        return (Optional<List<PropertyPropertyIntegrationSupportWebhookEventsCreated>>) created;
+    public Optional<List<PropertyIntegrationSupportWebhookEventsCreated>> created() {
+        return (Optional<List<PropertyIntegrationSupportWebhookEventsCreated>>) created;
     }
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<PropertyPropertyIntegrationSupportWebhookEventsDeleted>> deleted() {
-        return (Optional<List<PropertyPropertyIntegrationSupportWebhookEventsDeleted>>) deleted;
+    public Optional<List<PropertyIntegrationSupportWebhookEventsDeleted>> deleted() {
+        return (Optional<List<PropertyIntegrationSupportWebhookEventsDeleted>>) deleted;
     }
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<PropertyPropertyIntegrationSupportWebhookEventsUpdated>> updated() {
-        return (Optional<List<PropertyPropertyIntegrationSupportWebhookEventsUpdated>>) updated;
+    public Optional<List<PropertyIntegrationSupportWebhookEventsUpdated>> updated() {
+        return (Optional<List<PropertyIntegrationSupportWebhookEventsUpdated>>) updated;
     }
 
     public final static Builder builder() {
         return new Builder();
     }
 
-    public PropertyIntegrationSupportWebhookEvents withCreated(List<PropertyPropertyIntegrationSupportWebhookEventsCreated> created) {
+    public PropertyIntegrationSupportWebhookEvents withCreated(List<PropertyIntegrationSupportWebhookEventsCreated> created) {
         Utils.checkNotNull(created, "created");
         this.created = Optional.ofNullable(created);
         return this;
     }
 
-    public PropertyIntegrationSupportWebhookEvents withCreated(Optional<? extends List<PropertyPropertyIntegrationSupportWebhookEventsCreated>> created) {
+    public PropertyIntegrationSupportWebhookEvents withCreated(Optional<? extends List<PropertyIntegrationSupportWebhookEventsCreated>> created) {
         Utils.checkNotNull(created, "created");
         this.created = created;
         return this;
     }
 
-    public PropertyIntegrationSupportWebhookEvents withDeleted(List<PropertyPropertyIntegrationSupportWebhookEventsDeleted> deleted) {
+    public PropertyIntegrationSupportWebhookEvents withDeleted(List<PropertyIntegrationSupportWebhookEventsDeleted> deleted) {
         Utils.checkNotNull(deleted, "deleted");
         this.deleted = Optional.ofNullable(deleted);
         return this;
     }
 
-    public PropertyIntegrationSupportWebhookEvents withDeleted(Optional<? extends List<PropertyPropertyIntegrationSupportWebhookEventsDeleted>> deleted) {
+    public PropertyIntegrationSupportWebhookEvents withDeleted(Optional<? extends List<PropertyIntegrationSupportWebhookEventsDeleted>> deleted) {
         Utils.checkNotNull(deleted, "deleted");
         this.deleted = deleted;
         return this;
     }
 
-    public PropertyIntegrationSupportWebhookEvents withUpdated(List<PropertyPropertyIntegrationSupportWebhookEventsUpdated> updated) {
+    public PropertyIntegrationSupportWebhookEvents withUpdated(List<PropertyIntegrationSupportWebhookEventsUpdated> updated) {
         Utils.checkNotNull(updated, "updated");
         this.updated = Optional.ofNullable(updated);
         return this;
     }
 
-    public PropertyIntegrationSupportWebhookEvents withUpdated(Optional<? extends List<PropertyPropertyIntegrationSupportWebhookEventsUpdated>> updated) {
+    public PropertyIntegrationSupportWebhookEvents withUpdated(Optional<? extends List<PropertyIntegrationSupportWebhookEventsUpdated>> updated) {
         Utils.checkNotNull(updated, "updated");
         this.updated = updated;
         return this;
@@ -141,47 +141,47 @@ public class PropertyIntegrationSupportWebhookEvents {
     
     public final static class Builder {
  
-        private Optional<? extends List<PropertyPropertyIntegrationSupportWebhookEventsCreated>> created = Optional.empty();
+        private Optional<? extends List<PropertyIntegrationSupportWebhookEventsCreated>> created = Optional.empty();
  
-        private Optional<? extends List<PropertyPropertyIntegrationSupportWebhookEventsDeleted>> deleted = Optional.empty();
+        private Optional<? extends List<PropertyIntegrationSupportWebhookEventsDeleted>> deleted = Optional.empty();
  
-        private Optional<? extends List<PropertyPropertyIntegrationSupportWebhookEventsUpdated>> updated = Optional.empty();  
+        private Optional<? extends List<PropertyIntegrationSupportWebhookEventsUpdated>> updated = Optional.empty();  
         
         private Builder() {
           // force use of static builder() method
         }
 
-        public Builder created(List<PropertyPropertyIntegrationSupportWebhookEventsCreated> created) {
+        public Builder created(List<PropertyIntegrationSupportWebhookEventsCreated> created) {
             Utils.checkNotNull(created, "created");
             this.created = Optional.ofNullable(created);
             return this;
         }
 
-        public Builder created(Optional<? extends List<PropertyPropertyIntegrationSupportWebhookEventsCreated>> created) {
+        public Builder created(Optional<? extends List<PropertyIntegrationSupportWebhookEventsCreated>> created) {
             Utils.checkNotNull(created, "created");
             this.created = created;
             return this;
         }
 
-        public Builder deleted(List<PropertyPropertyIntegrationSupportWebhookEventsDeleted> deleted) {
+        public Builder deleted(List<PropertyIntegrationSupportWebhookEventsDeleted> deleted) {
             Utils.checkNotNull(deleted, "deleted");
             this.deleted = Optional.ofNullable(deleted);
             return this;
         }
 
-        public Builder deleted(Optional<? extends List<PropertyPropertyIntegrationSupportWebhookEventsDeleted>> deleted) {
+        public Builder deleted(Optional<? extends List<PropertyIntegrationSupportWebhookEventsDeleted>> deleted) {
             Utils.checkNotNull(deleted, "deleted");
             this.deleted = deleted;
             return this;
         }
 
-        public Builder updated(List<PropertyPropertyIntegrationSupportWebhookEventsUpdated> updated) {
+        public Builder updated(List<PropertyIntegrationSupportWebhookEventsUpdated> updated) {
             Utils.checkNotNull(updated, "updated");
             this.updated = Optional.ofNullable(updated);
             return this;
         }
 
-        public Builder updated(Optional<? extends List<PropertyPropertyIntegrationSupportWebhookEventsUpdated>> updated) {
+        public Builder updated(Optional<? extends List<PropertyIntegrationSupportWebhookEventsUpdated>> updated) {
             Utils.checkNotNull(updated, "updated");
             this.updated = updated;
             return this;

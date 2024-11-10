@@ -347,6 +347,42 @@ public class SDKMethodInterfaces {
     }
 
 
+    public interface MethodCallCreateRepoOrganization {
+        CreateRepoOrganizationResponse createRepoOrganization(
+            CreateRepoOrganizationRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallGetRepoOrganization {
+        GetRepoOrganizationResponse getRepoOrganization(
+            GetRepoOrganizationRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallListRepoOrganizations {
+        ListRepoOrganizationsResponse listRepoOrganizations(
+            ListRepoOrganizationsRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallPatchRepoOrganization {
+        PatchRepoOrganizationResponse patchRepoOrganization(
+            PatchRepoOrganizationRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallRemoveRepoOrganization {
+        RemoveRepoOrganizationResponse removeRepoOrganization(
+            RemoveRepoOrganizationRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallUpdateRepoOrganization {
+        UpdateRepoOrganizationResponse updateRepoOrganization(
+            UpdateRepoOrganizationRequest request) throws Exception;
+    }
+
+
     public interface MethodCallCreateAtsActivity {
         CreateAtsActivityResponse createAtsActivity(
             CreateAtsActivityRequest request) throws Exception;
@@ -1139,6 +1175,12 @@ public class SDKMethodInterfaces {
     }
 
 
+    public interface MethodCallGetScimGroups {
+        GetScimGroupsResponse getScimGroups(
+            GetScimGroupsRequest request) throws Exception;
+    }
+
+
     public interface MethodCallListScimGroups {
         ListScimGroupsResponse listScimGroups(
             ListScimGroupsRequest request) throws Exception;
@@ -1232,6 +1274,150 @@ public class SDKMethodInterfaces {
     public interface MethodCallUpdateKmsSpace {
         UpdateKmsSpaceResponse updateKmsSpace(
             UpdateKmsSpaceRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallCreateLmsClass {
+        CreateLmsClassResponse createLmsClass(
+            CreateLmsClassRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallCreateLmsCourse {
+        CreateLmsCourseResponse createLmsCourse(
+            CreateLmsCourseRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallCreateLmsInstructor {
+        CreateLmsInstructorResponse createLmsInstructor(
+            CreateLmsInstructorRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallCreateLmsStudent {
+        CreateLmsStudentResponse createLmsStudent(
+            CreateLmsStudentRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallGetLmsClass {
+        GetLmsClassResponse getLmsClass(
+            GetLmsClassRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallGetLmsCourse {
+        GetLmsCourseResponse getLmsCourse(
+            GetLmsCourseRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallGetLmsInstructor {
+        GetLmsInstructorResponse getLmsInstructor(
+            GetLmsInstructorRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallGetLmsStudent {
+        GetLmsStudentResponse getLmsStudent(
+            GetLmsStudentRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallListLmsClasses {
+        ListLmsClassesResponse listLmsClasses(
+            ListLmsClassesRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallListLmsCourses {
+        ListLmsCoursesResponse listLmsCourses(
+            ListLmsCoursesRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallListLmsInstructors {
+        ListLmsInstructorsResponse listLmsInstructors(
+            ListLmsInstructorsRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallListLmsStudents {
+        ListLmsStudentsResponse listLmsStudents(
+            ListLmsStudentsRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallPatchLmsClass {
+        PatchLmsClassResponse patchLmsClass(
+            PatchLmsClassRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallPatchLmsCourse {
+        PatchLmsCourseResponse patchLmsCourse(
+            PatchLmsCourseRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallPatchLmsInstructor {
+        PatchLmsInstructorResponse patchLmsInstructor(
+            PatchLmsInstructorRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallPatchLmsStudent {
+        PatchLmsStudentResponse patchLmsStudent(
+            PatchLmsStudentRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallRemoveLmsClass {
+        RemoveLmsClassResponse removeLmsClass(
+            RemoveLmsClassRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallRemoveLmsCourse {
+        RemoveLmsCourseResponse removeLmsCourse(
+            RemoveLmsCourseRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallRemoveLmsInstructor {
+        RemoveLmsInstructorResponse removeLmsInstructor(
+            RemoveLmsInstructorRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallRemoveLmsStudent {
+        RemoveLmsStudentResponse removeLmsStudent(
+            RemoveLmsStudentRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallUpdateLmsClass {
+        UpdateLmsClassResponse updateLmsClass(
+            UpdateLmsClassRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallUpdateLmsCourse {
+        UpdateLmsCourseResponse updateLmsCourse(
+            UpdateLmsCourseRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallUpdateLmsInstructor {
+        UpdateLmsInstructorResponse updateLmsInstructor(
+            UpdateLmsInstructorRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallUpdateLmsStudent {
+        UpdateLmsStudentResponse updateLmsStudent(
+            UpdateLmsStudentRequest request) throws Exception;
     }
 
 
@@ -1496,6 +1682,150 @@ public class SDKMethodInterfaces {
     public interface MethodCallUpdatePaymentPayment {
         UpdatePaymentPaymentResponse updatePaymentPayment(
             UpdatePaymentPaymentRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallCreateRepoBranch {
+        CreateRepoBranchResponse createRepoBranch(
+            CreateRepoBranchRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallCreateRepoCommit {
+        CreateRepoCommitResponse createRepoCommit(
+            CreateRepoCommitRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallCreateRepoPullrequest {
+        CreateRepoPullrequestResponse createRepoPullrequest(
+            CreateRepoPullrequestRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallCreateRepoRepository {
+        CreateRepoRepositoryResponse createRepoRepository(
+            CreateRepoRepositoryRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallGetRepoBranch {
+        GetRepoBranchResponse getRepoBranch(
+            GetRepoBranchRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallGetRepoCommit {
+        GetRepoCommitResponse getRepoCommit(
+            GetRepoCommitRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallGetRepoPullrequest {
+        GetRepoPullrequestResponse getRepoPullrequest(
+            GetRepoPullrequestRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallGetRepoRepository {
+        GetRepoRepositoryResponse getRepoRepository(
+            GetRepoRepositoryRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallListRepoBranches {
+        ListRepoBranchesResponse listRepoBranches(
+            ListRepoBranchesRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallListRepoCommits {
+        ListRepoCommitsResponse listRepoCommits(
+            ListRepoCommitsRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallListRepoPullrequests {
+        ListRepoPullrequestsResponse listRepoPullrequests(
+            ListRepoPullrequestsRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallListRepoRepositories {
+        ListRepoRepositoriesResponse listRepoRepositories(
+            ListRepoRepositoriesRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallPatchRepoBranch {
+        PatchRepoBranchResponse patchRepoBranch(
+            PatchRepoBranchRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallPatchRepoCommit {
+        PatchRepoCommitResponse patchRepoCommit(
+            PatchRepoCommitRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallPatchRepoPullrequest {
+        PatchRepoPullrequestResponse patchRepoPullrequest(
+            PatchRepoPullrequestRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallPatchRepoRepository {
+        PatchRepoRepositoryResponse patchRepoRepository(
+            PatchRepoRepositoryRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallRemoveRepoBranch {
+        RemoveRepoBranchResponse removeRepoBranch(
+            RemoveRepoBranchRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallRemoveRepoCommit {
+        RemoveRepoCommitResponse removeRepoCommit(
+            RemoveRepoCommitRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallRemoveRepoPullrequest {
+        RemoveRepoPullrequestResponse removeRepoPullrequest(
+            RemoveRepoPullrequestRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallRemoveRepoRepository {
+        RemoveRepoRepositoryResponse removeRepoRepository(
+            RemoveRepoRepositoryRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallUpdateRepoBranch {
+        UpdateRepoBranchResponse updateRepoBranch(
+            UpdateRepoBranchRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallUpdateRepoCommit {
+        UpdateRepoCommitResponse updateRepoCommit(
+            UpdateRepoCommitRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallUpdateRepoPullrequest {
+        UpdateRepoPullrequestResponse updateRepoPullrequest(
+            UpdateRepoPullrequestRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallUpdateRepoRepository {
+        UpdateRepoRepositoryResponse updateRepoRepository(
+            UpdateRepoRepositoryRequest request) throws Exception;
     }
 
 

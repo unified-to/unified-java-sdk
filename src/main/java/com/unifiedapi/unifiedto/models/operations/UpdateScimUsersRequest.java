@@ -7,7 +7,7 @@ package com.unifiedapi.unifiedto.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.unifiedapi.unifiedto.models.shared.User;
+import com.unifiedapi.unifiedto.models.shared.ScimUser;
 import com.unifiedapi.unifiedto.utils.SpeakeasyMetadata;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Override;
@@ -20,7 +20,7 @@ import java.util.Optional;
 public class UpdateScimUsersRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends User> user;
+    private Optional<? extends ScimUser> scimUser;
 
     /**
      * ID of the connection
@@ -36,13 +36,13 @@ public class UpdateScimUsersRequest {
 
     @JsonCreator
     public UpdateScimUsersRequest(
-            Optional<? extends User> user,
+            Optional<? extends ScimUser> scimUser,
             String connectionId,
             String id) {
-        Utils.checkNotNull(user, "user");
+        Utils.checkNotNull(scimUser, "scimUser");
         Utils.checkNotNull(connectionId, "connectionId");
         Utils.checkNotNull(id, "id");
-        this.user = user;
+        this.scimUser = scimUser;
         this.connectionId = connectionId;
         this.id = id;
     }
@@ -55,8 +55,8 @@ public class UpdateScimUsersRequest {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<User> user() {
-        return (Optional<User>) user;
+    public Optional<ScimUser> scimUser() {
+        return (Optional<ScimUser>) scimUser;
     }
 
     /**
@@ -79,15 +79,15 @@ public class UpdateScimUsersRequest {
         return new Builder();
     }
 
-    public UpdateScimUsersRequest withUser(User user) {
-        Utils.checkNotNull(user, "user");
-        this.user = Optional.ofNullable(user);
+    public UpdateScimUsersRequest withScimUser(ScimUser scimUser) {
+        Utils.checkNotNull(scimUser, "scimUser");
+        this.scimUser = Optional.ofNullable(scimUser);
         return this;
     }
 
-    public UpdateScimUsersRequest withUser(Optional<? extends User> user) {
-        Utils.checkNotNull(user, "user");
-        this.user = user;
+    public UpdateScimUsersRequest withScimUser(Optional<? extends ScimUser> scimUser) {
+        Utils.checkNotNull(scimUser, "scimUser");
+        this.scimUser = scimUser;
         return this;
     }
 
@@ -119,7 +119,7 @@ public class UpdateScimUsersRequest {
         }
         UpdateScimUsersRequest other = (UpdateScimUsersRequest) o;
         return 
-            Objects.deepEquals(this.user, other.user) &&
+            Objects.deepEquals(this.scimUser, other.scimUser) &&
             Objects.deepEquals(this.connectionId, other.connectionId) &&
             Objects.deepEquals(this.id, other.id);
     }
@@ -127,7 +127,7 @@ public class UpdateScimUsersRequest {
     @Override
     public int hashCode() {
         return Objects.hash(
-            user,
+            scimUser,
             connectionId,
             id);
     }
@@ -135,14 +135,14 @@ public class UpdateScimUsersRequest {
     @Override
     public String toString() {
         return Utils.toString(UpdateScimUsersRequest.class,
-                "user", user,
+                "scimUser", scimUser,
                 "connectionId", connectionId,
                 "id", id);
     }
     
     public final static class Builder {
  
-        private Optional<? extends User> user = Optional.empty();
+        private Optional<? extends ScimUser> scimUser = Optional.empty();
  
         private String connectionId;
  
@@ -152,15 +152,15 @@ public class UpdateScimUsersRequest {
           // force use of static builder() method
         }
 
-        public Builder user(User user) {
-            Utils.checkNotNull(user, "user");
-            this.user = Optional.ofNullable(user);
+        public Builder scimUser(ScimUser scimUser) {
+            Utils.checkNotNull(scimUser, "scimUser");
+            this.scimUser = Optional.ofNullable(scimUser);
             return this;
         }
 
-        public Builder user(Optional<? extends User> user) {
-            Utils.checkNotNull(user, "user");
-            this.user = user;
+        public Builder scimUser(Optional<? extends ScimUser> scimUser) {
+            Utils.checkNotNull(scimUser, "scimUser");
+            this.scimUser = scimUser;
             return this;
         }
 
@@ -184,7 +184,7 @@ public class UpdateScimUsersRequest {
         
         public UpdateScimUsersRequest build() {
             return new UpdateScimUsersRequest(
-                user,
+                scimUser,
                 connectionId,
                 id);
         }

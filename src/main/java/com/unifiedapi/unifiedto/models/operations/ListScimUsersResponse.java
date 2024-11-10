@@ -7,7 +7,7 @@ package com.unifiedapi.unifiedto.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.unifiedapi.unifiedto.models.shared.User;
+import com.unifiedapi.unifiedto.models.shared.ScimUser;
 import com.unifiedapi.unifiedto.utils.Response;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.io.InputStream;
@@ -29,6 +29,11 @@ public class ListScimUsersResponse implements Response {
     private String contentType;
 
     /**
+     * Successful
+     */
+    private Optional<? extends List<ScimUser>> scimUsers;
+
+    /**
      * HTTP response status code for this operation
      */
     private int statusCode;
@@ -38,32 +43,27 @@ public class ListScimUsersResponse implements Response {
      */
     private HttpResponse<InputStream> rawResponse;
 
-    /**
-     * Successful
-     */
-    private Optional<? extends List<User>> users;
-
     @JsonCreator
     public ListScimUsersResponse(
             String contentType,
+            Optional<? extends List<ScimUser>> scimUsers,
             int statusCode,
-            HttpResponse<InputStream> rawResponse,
-            Optional<? extends List<User>> users) {
+            HttpResponse<InputStream> rawResponse) {
         Utils.checkNotNull(contentType, "contentType");
+        Utils.checkNotNull(scimUsers, "scimUsers");
         Utils.checkNotNull(statusCode, "statusCode");
         Utils.checkNotNull(rawResponse, "rawResponse");
-        Utils.checkNotNull(users, "users");
         this.contentType = contentType;
+        this.scimUsers = scimUsers;
         this.statusCode = statusCode;
         this.rawResponse = rawResponse;
-        this.users = users;
     }
     
     public ListScimUsersResponse(
             String contentType,
             int statusCode,
             HttpResponse<InputStream> rawResponse) {
-        this(contentType, statusCode, rawResponse, Optional.empty());
+        this(contentType, Optional.empty(), statusCode, rawResponse);
     }
 
     /**
@@ -72,6 +72,15 @@ public class ListScimUsersResponse implements Response {
     @JsonIgnore
     public String contentType() {
         return contentType;
+    }
+
+    /**
+     * Successful
+     */
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<ScimUser>> scimUsers() {
+        return (Optional<List<ScimUser>>) scimUsers;
     }
 
     /**
@@ -90,15 +99,6 @@ public class ListScimUsersResponse implements Response {
         return rawResponse;
     }
 
-    /**
-     * Successful
-     */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
-    public Optional<List<User>> users() {
-        return (Optional<List<User>>) users;
-    }
-
     public final static Builder builder() {
         return new Builder();
     }
@@ -109,6 +109,24 @@ public class ListScimUsersResponse implements Response {
     public ListScimUsersResponse withContentType(String contentType) {
         Utils.checkNotNull(contentType, "contentType");
         this.contentType = contentType;
+        return this;
+    }
+
+    /**
+     * Successful
+     */
+    public ListScimUsersResponse withScimUsers(List<ScimUser> scimUsers) {
+        Utils.checkNotNull(scimUsers, "scimUsers");
+        this.scimUsers = Optional.ofNullable(scimUsers);
+        return this;
+    }
+
+    /**
+     * Successful
+     */
+    public ListScimUsersResponse withScimUsers(Optional<? extends List<ScimUser>> scimUsers) {
+        Utils.checkNotNull(scimUsers, "scimUsers");
+        this.scimUsers = scimUsers;
         return this;
     }
 
@@ -129,24 +147,6 @@ public class ListScimUsersResponse implements Response {
         this.rawResponse = rawResponse;
         return this;
     }
-
-    /**
-     * Successful
-     */
-    public ListScimUsersResponse withUsers(List<User> users) {
-        Utils.checkNotNull(users, "users");
-        this.users = Optional.ofNullable(users);
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public ListScimUsersResponse withUsers(Optional<? extends List<User>> users) {
-        Utils.checkNotNull(users, "users");
-        this.users = users;
-        return this;
-    }
     
     @Override
     public boolean equals(java.lang.Object o) {
@@ -159,38 +159,38 @@ public class ListScimUsersResponse implements Response {
         ListScimUsersResponse other = (ListScimUsersResponse) o;
         return 
             Objects.deepEquals(this.contentType, other.contentType) &&
+            Objects.deepEquals(this.scimUsers, other.scimUsers) &&
             Objects.deepEquals(this.statusCode, other.statusCode) &&
-            Objects.deepEquals(this.rawResponse, other.rawResponse) &&
-            Objects.deepEquals(this.users, other.users);
+            Objects.deepEquals(this.rawResponse, other.rawResponse);
     }
     
     @Override
     public int hashCode() {
         return Objects.hash(
             contentType,
+            scimUsers,
             statusCode,
-            rawResponse,
-            users);
+            rawResponse);
     }
     
     @Override
     public String toString() {
         return Utils.toString(ListScimUsersResponse.class,
                 "contentType", contentType,
+                "scimUsers", scimUsers,
                 "statusCode", statusCode,
-                "rawResponse", rawResponse,
-                "users", users);
+                "rawResponse", rawResponse);
     }
     
     public final static class Builder {
  
         private String contentType;
  
+        private Optional<? extends List<ScimUser>> scimUsers = Optional.empty();
+ 
         private Integer statusCode;
  
-        private HttpResponse<InputStream> rawResponse;
- 
-        private Optional<? extends List<User>> users = Optional.empty();  
+        private HttpResponse<InputStream> rawResponse;  
         
         private Builder() {
           // force use of static builder() method
@@ -202,6 +202,24 @@ public class ListScimUsersResponse implements Response {
         public Builder contentType(String contentType) {
             Utils.checkNotNull(contentType, "contentType");
             this.contentType = contentType;
+            return this;
+        }
+
+        /**
+         * Successful
+         */
+        public Builder scimUsers(List<ScimUser> scimUsers) {
+            Utils.checkNotNull(scimUsers, "scimUsers");
+            this.scimUsers = Optional.ofNullable(scimUsers);
+            return this;
+        }
+
+        /**
+         * Successful
+         */
+        public Builder scimUsers(Optional<? extends List<ScimUser>> scimUsers) {
+            Utils.checkNotNull(scimUsers, "scimUsers");
+            this.scimUsers = scimUsers;
             return this;
         }
 
@@ -222,31 +240,13 @@ public class ListScimUsersResponse implements Response {
             this.rawResponse = rawResponse;
             return this;
         }
-
-        /**
-         * Successful
-         */
-        public Builder users(List<User> users) {
-            Utils.checkNotNull(users, "users");
-            this.users = Optional.ofNullable(users);
-            return this;
-        }
-
-        /**
-         * Successful
-         */
-        public Builder users(Optional<? extends List<User>> users) {
-            Utils.checkNotNull(users, "users");
-            this.users = users;
-            return this;
-        }
         
         public ListScimUsersResponse build() {
             return new ListScimUsersResponse(
                 contentType,
+                scimUsers,
                 statusCode,
-                rawResponse,
-                users);
+                rawResponse);
         }
     }
 }

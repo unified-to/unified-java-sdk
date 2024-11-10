@@ -7,7 +7,7 @@ package com.unifiedapi.unifiedto.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.unifiedapi.unifiedto.models.shared.Group;
+import com.unifiedapi.unifiedto.models.shared.ScimGroup;
 import com.unifiedapi.unifiedto.utils.Response;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.io.InputStream;
@@ -31,7 +31,7 @@ public class ListScimGroupsResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends List<Group>> groups;
+    private Optional<? extends List<ScimGroup>> scimGroups;
 
     /**
      * HTTP response status code for this operation
@@ -46,15 +46,15 @@ public class ListScimGroupsResponse implements Response {
     @JsonCreator
     public ListScimGroupsResponse(
             String contentType,
-            Optional<? extends List<Group>> groups,
+            Optional<? extends List<ScimGroup>> scimGroups,
             int statusCode,
             HttpResponse<InputStream> rawResponse) {
         Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(groups, "groups");
+        Utils.checkNotNull(scimGroups, "scimGroups");
         Utils.checkNotNull(statusCode, "statusCode");
         Utils.checkNotNull(rawResponse, "rawResponse");
         this.contentType = contentType;
-        this.groups = groups;
+        this.scimGroups = scimGroups;
         this.statusCode = statusCode;
         this.rawResponse = rawResponse;
     }
@@ -79,8 +79,8 @@ public class ListScimGroupsResponse implements Response {
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<Group>> groups() {
-        return (Optional<List<Group>>) groups;
+    public Optional<List<ScimGroup>> scimGroups() {
+        return (Optional<List<ScimGroup>>) scimGroups;
     }
 
     /**
@@ -115,18 +115,18 @@ public class ListScimGroupsResponse implements Response {
     /**
      * Successful
      */
-    public ListScimGroupsResponse withGroups(List<Group> groups) {
-        Utils.checkNotNull(groups, "groups");
-        this.groups = Optional.ofNullable(groups);
+    public ListScimGroupsResponse withScimGroups(List<ScimGroup> scimGroups) {
+        Utils.checkNotNull(scimGroups, "scimGroups");
+        this.scimGroups = Optional.ofNullable(scimGroups);
         return this;
     }
 
     /**
      * Successful
      */
-    public ListScimGroupsResponse withGroups(Optional<? extends List<Group>> groups) {
-        Utils.checkNotNull(groups, "groups");
-        this.groups = groups;
+    public ListScimGroupsResponse withScimGroups(Optional<? extends List<ScimGroup>> scimGroups) {
+        Utils.checkNotNull(scimGroups, "scimGroups");
+        this.scimGroups = scimGroups;
         return this;
     }
 
@@ -159,7 +159,7 @@ public class ListScimGroupsResponse implements Response {
         ListScimGroupsResponse other = (ListScimGroupsResponse) o;
         return 
             Objects.deepEquals(this.contentType, other.contentType) &&
-            Objects.deepEquals(this.groups, other.groups) &&
+            Objects.deepEquals(this.scimGroups, other.scimGroups) &&
             Objects.deepEquals(this.statusCode, other.statusCode) &&
             Objects.deepEquals(this.rawResponse, other.rawResponse);
     }
@@ -168,7 +168,7 @@ public class ListScimGroupsResponse implements Response {
     public int hashCode() {
         return Objects.hash(
             contentType,
-            groups,
+            scimGroups,
             statusCode,
             rawResponse);
     }
@@ -177,7 +177,7 @@ public class ListScimGroupsResponse implements Response {
     public String toString() {
         return Utils.toString(ListScimGroupsResponse.class,
                 "contentType", contentType,
-                "groups", groups,
+                "scimGroups", scimGroups,
                 "statusCode", statusCode,
                 "rawResponse", rawResponse);
     }
@@ -186,7 +186,7 @@ public class ListScimGroupsResponse implements Response {
  
         private String contentType;
  
-        private Optional<? extends List<Group>> groups = Optional.empty();
+        private Optional<? extends List<ScimGroup>> scimGroups = Optional.empty();
  
         private Integer statusCode;
  
@@ -208,18 +208,18 @@ public class ListScimGroupsResponse implements Response {
         /**
          * Successful
          */
-        public Builder groups(List<Group> groups) {
-            Utils.checkNotNull(groups, "groups");
-            this.groups = Optional.ofNullable(groups);
+        public Builder scimGroups(List<ScimGroup> scimGroups) {
+            Utils.checkNotNull(scimGroups, "scimGroups");
+            this.scimGroups = Optional.ofNullable(scimGroups);
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder groups(Optional<? extends List<Group>> groups) {
-            Utils.checkNotNull(groups, "groups");
-            this.groups = groups;
+        public Builder scimGroups(Optional<? extends List<ScimGroup>> scimGroups) {
+            Utils.checkNotNull(scimGroups, "scimGroups");
+            this.scimGroups = scimGroups;
             return this;
         }
 
@@ -244,7 +244,7 @@ public class ListScimGroupsResponse implements Response {
         public ListScimGroupsResponse build() {
             return new ListScimGroupsResponse(
                 contentType,
-                groups,
+                scimGroups,
                 statusCode,
                 rawResponse);
         }

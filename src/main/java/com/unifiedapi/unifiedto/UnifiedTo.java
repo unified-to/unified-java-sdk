@@ -117,6 +117,16 @@ public class UnifiedTo {
 
     private final Space space;
 
+    private final Lms lms;
+
+    private final Class class_;
+
+    private final Course course;
+
+    private final Instructor instructor;
+
+    private final Student student;
+
     private final Martech martech;
 
     private final List list;
@@ -138,6 +148,16 @@ public class UnifiedTo {
     private final Payout payout;
 
     private final Refund refund;
+
+    private final Repo repo;
+
+    private final Branch branch;
+
+    private final Commit commit;
+
+    private final Pullrequest pullrequest;
+
+    private final Repository repository;
 
     private final Scim scim;
 
@@ -347,6 +367,26 @@ public class UnifiedTo {
         return space;
     }
 
+    public Lms lms() {
+        return lms;
+    }
+
+    public Class class_() {
+        return class_;
+    }
+
+    public Course course() {
+        return course;
+    }
+
+    public Instructor instructor() {
+        return instructor;
+    }
+
+    public Student student() {
+        return student;
+    }
+
     public Martech martech() {
         return martech;
     }
@@ -389,6 +429,26 @@ public class UnifiedTo {
 
     public Refund refund() {
         return refund;
+    }
+
+    public Repo repo() {
+        return repo;
+    }
+
+    public Branch branch() {
+        return branch;
+    }
+
+    public Commit commit() {
+        return commit;
+    }
+
+    public Pullrequest pullrequest() {
+        return pullrequest;
+    }
+
+    public Repository repository() {
+        return repository;
     }
 
     public Scim scim() {
@@ -634,6 +694,11 @@ public class UnifiedTo {
         this.kms = new Kms(sdkConfiguration);
         this.page = new Page(sdkConfiguration);
         this.space = new Space(sdkConfiguration);
+        this.lms = new Lms(sdkConfiguration);
+        this.class_ = new Class(sdkConfiguration);
+        this.course = new Course(sdkConfiguration);
+        this.instructor = new Instructor(sdkConfiguration);
+        this.student = new Student(sdkConfiguration);
         this.martech = new Martech(sdkConfiguration);
         this.list = new List(sdkConfiguration);
         this.member = new Member(sdkConfiguration);
@@ -645,6 +710,11 @@ public class UnifiedTo {
         this.link = new Link(sdkConfiguration);
         this.payout = new Payout(sdkConfiguration);
         this.refund = new Refund(sdkConfiguration);
+        this.repo = new Repo(sdkConfiguration);
+        this.branch = new Branch(sdkConfiguration);
+        this.commit = new Commit(sdkConfiguration);
+        this.pullrequest = new Pullrequest(sdkConfiguration);
+        this.repository = new Repository(sdkConfiguration);
         this.scim = new Scim(sdkConfiguration);
         this.user = new User(sdkConfiguration);
         this.storage = new Storage(sdkConfiguration);

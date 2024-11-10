@@ -25,6 +25,7 @@ import com.unifiedapi.unifiedto.models.operations.SDKMethodInterfaces.*;
 import com.unifiedapi.unifiedto.models.operations.UpdateScimUsersRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateScimUsersRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.UpdateScimUsersResponse;
+import com.unifiedapi.unifiedto.models.shared.ScimUser;
 import com.unifiedapi.unifiedto.utils.HTTPClient;
 import com.unifiedapi.unifiedto.utils.HTTPRequest;
 import com.unifiedapi.unifiedto.utils.Hook.AfterErrorContextImpl;
@@ -87,7 +88,7 @@ public class User implements
                 new TypeReference<CreateScimUsersRequest>() {});
         SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
                 _convertedRequest, 
-                "user",
+                "scimUser",
                 "json",
                 false);
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
@@ -158,10 +159,10 @@ public class User implements
         
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                com.unifiedapi.unifiedto.models.shared.User _out = Utils.mapper().readValue(
+                ScimUser _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<com.unifiedapi.unifiedto.models.shared.User>() {});
-                _res.withUser(Optional.ofNullable(_out));
+                    new TypeReference<ScimUser>() {});
+                _res.withScimUser(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -274,10 +275,10 @@ public class User implements
         
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                com.unifiedapi.unifiedto.models.shared.User _out = Utils.mapper().readValue(
+                ScimUser _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<com.unifiedapi.unifiedto.models.shared.User>() {});
-                _res.withUser(Optional.ofNullable(_out));
+                    new TypeReference<ScimUser>() {});
+                _res.withScimUser(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -395,10 +396,10 @@ public class User implements
         
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                List<com.unifiedapi.unifiedto.models.shared.User> _out = Utils.mapper().readValue(
+                List<ScimUser> _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<List<com.unifiedapi.unifiedto.models.shared.User>>() {});
-                _res.withUsers(Optional.ofNullable(_out));
+                    new TypeReference<List<ScimUser>>() {});
+                _res.withScimUsers(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -455,7 +456,7 @@ public class User implements
                 new TypeReference<PatchScimUsersRequest>() {});
         SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
                 _convertedRequest, 
-                "user",
+                "scimUser",
                 "json",
                 false);
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
@@ -521,10 +522,10 @@ public class User implements
         
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                com.unifiedapi.unifiedto.models.shared.User _out = Utils.mapper().readValue(
+                ScimUser _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<com.unifiedapi.unifiedto.models.shared.User>() {});
-                _res.withUser(Optional.ofNullable(_out));
+                    new TypeReference<ScimUser>() {});
+                _res.withScimUser(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -686,7 +687,7 @@ public class User implements
                 new TypeReference<UpdateScimUsersRequest>() {});
         SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
                 _convertedRequest, 
-                "user",
+                "scimUser",
                 "json",
                 false);
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
@@ -752,10 +753,10 @@ public class User implements
         
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                com.unifiedapi.unifiedto.models.shared.User _out = Utils.mapper().readValue(
+                ScimUser _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<com.unifiedapi.unifiedto.models.shared.User>() {});
-                _res.withUser(Optional.ofNullable(_out));
+                    new TypeReference<ScimUser>() {});
+                _res.withScimUser(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(

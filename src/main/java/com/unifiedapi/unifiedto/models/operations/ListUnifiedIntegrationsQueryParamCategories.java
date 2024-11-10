@@ -25,7 +25,9 @@ public enum ListUnifiedIntegrationsQueryParamCategories {
     MESSAGING("messaging"),
     KMS("kms"),
     TASK("task"),
-    SCIM("scim");
+    SCIM("scim"),
+    LMS("lms"),
+    REPO("repo");
 
     @JsonValue
     private final String value;

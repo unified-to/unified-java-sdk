@@ -12,6 +12,9 @@ import com.unifiedapi.unifiedto.models.operations.CreateScimGroupsResponse;
 import com.unifiedapi.unifiedto.models.operations.CreateScimUsersRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateScimUsersRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.CreateScimUsersResponse;
+import com.unifiedapi.unifiedto.models.operations.GetScimGroupsRequest;
+import com.unifiedapi.unifiedto.models.operations.GetScimGroupsRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.GetScimGroupsResponse;
 import com.unifiedapi.unifiedto.models.operations.GetScimUsersRequest;
 import com.unifiedapi.unifiedto.models.operations.GetScimUsersRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.GetScimUsersResponse;
@@ -40,8 +43,8 @@ import com.unifiedapi.unifiedto.models.operations.UpdateScimGroupsResponse;
 import com.unifiedapi.unifiedto.models.operations.UpdateScimUsersRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateScimUsersRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.UpdateScimUsersResponse;
-import com.unifiedapi.unifiedto.models.shared.Group;
-import com.unifiedapi.unifiedto.models.shared.User;
+import com.unifiedapi.unifiedto.models.shared.ScimGroup;
+import com.unifiedapi.unifiedto.models.shared.ScimUser;
 import com.unifiedapi.unifiedto.utils.HTTPClient;
 import com.unifiedapi.unifiedto.utils.HTTPRequest;
 import com.unifiedapi.unifiedto.utils.Hook.AfterErrorContextImpl;
@@ -62,6 +65,7 @@ import java.util.Optional;
 public class Scim implements
             MethodCallCreateScimGroups,
             MethodCallCreateScimUsers,
+            MethodCallGetScimGroups,
             MethodCallGetScimUsers,
             MethodCallListScimGroups,
             MethodCallListScimUsers,
@@ -109,7 +113,7 @@ public class Scim implements
                 new TypeReference<CreateScimGroupsRequest>() {});
         SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
                 _convertedRequest, 
-                "group",
+                "scimGroup",
                 "json",
                 false);
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
@@ -175,10 +179,10 @@ public class Scim implements
         
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                Group _out = Utils.mapper().readValue(
+                ScimGroup _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<Group>() {});
-                _res.withGroup(Optional.ofNullable(_out));
+                    new TypeReference<ScimGroup>() {});
+                _res.withScimGroup(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -235,7 +239,7 @@ public class Scim implements
                 new TypeReference<CreateScimUsersRequest>() {});
         SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
                 _convertedRequest, 
-                "user",
+                "scimUser",
                 "json",
                 false);
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
@@ -306,10 +310,126 @@ public class Scim implements
         
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                User _out = Utils.mapper().readValue(
+                ScimUser _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<User>() {});
-                _res.withUser(Optional.ofNullable(_out));
+                    new TypeReference<ScimUser>() {});
+                _res.withScimUser(Optional.ofNullable(_out));
+                return _res;
+            } else {
+                throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "Unexpected content-type received: " + _contentType, 
+                    Utils.extractByteArrayFromBody(_httpRes));
+            }
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        throw new SDKError(
+            _httpRes, 
+            _httpRes.statusCode(), 
+            "Unexpected status code received: " + _httpRes.statusCode(), 
+            Utils.extractByteArrayFromBody(_httpRes));
+    }
+
+
+
+    /**
+     * Get group
+     * @return The call builder
+     */
+    public GetScimGroupsRequestBuilder getScimGroups() {
+        return new GetScimGroupsRequestBuilder(this);
+    }
+
+    /**
+     * Get group
+     * @param request The request object containing all of the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public GetScimGroupsResponse getScimGroups(
+            GetScimGroupsRequest request) throws Exception {
+        String _baseUrl = this.sdkConfiguration.serverUrl;
+        String _url = Utils.generateURL(
+                GetScimGroupsRequest.class,
+                _baseUrl,
+                "/scim/{connection_id}/groups/{id}",
+                request, null);
+        
+        HTTPRequest _req = new HTTPRequest(_url, "GET");
+        _req.addHeader("Accept", "application/json")
+            .addHeader("user-agent", 
+                SDKConfiguration.USER_AGENT);
+
+        Utils.configureSecurity(_req,  
+                this.sdkConfiguration.securitySource.getSecurity());
+
+        HTTPClient _client = this.sdkConfiguration.defaultClient;
+        HttpRequest _r = 
+            sdkConfiguration.hooks()
+               .beforeRequest(
+                  new BeforeRequestContextImpl(
+                      "getScimGroups", 
+                      Optional.of(List.of()), 
+                      sdkConfiguration.securitySource()),
+                  _req.build());
+        HttpResponse<InputStream> _httpRes;
+        try {
+            _httpRes = _client.send(_r);
+            if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "getScimGroups",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()),
+                        Optional.of(_httpRes),
+                        Optional.empty());
+            } else {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterSuccess(
+                        new AfterSuccessContextImpl(
+                            "getScimGroups",
+                            Optional.of(List.of()), 
+                            sdkConfiguration.securitySource()),
+                         _httpRes);
+            }
+        } catch (Exception _e) {
+            _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "getScimGroups",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()), 
+                        Optional.empty(),
+                        Optional.of(_e));
+        }
+        String _contentType = _httpRes
+            .headers()
+            .firstValue("Content-Type")
+            .orElse("application/octet-stream");
+        GetScimGroupsResponse.Builder _resBuilder = 
+            GetScimGroupsResponse
+                .builder()
+                .contentType(_contentType)
+                .statusCode(_httpRes.statusCode())
+                .rawResponse(_httpRes);
+
+        GetScimGroupsResponse _res = _resBuilder.build();
+        
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            if (Utils.contentTypeMatches(_contentType, "application/json")) {
+                ScimGroup _out = Utils.mapper().readValue(
+                    Utils.toUtf8AndClose(_httpRes.body()),
+                    new TypeReference<ScimGroup>() {});
+                _res.withScimGroup(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -422,10 +542,10 @@ public class Scim implements
         
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                User _out = Utils.mapper().readValue(
+                ScimUser _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<User>() {});
-                _res.withUser(Optional.ofNullable(_out));
+                    new TypeReference<ScimUser>() {});
+                _res.withScimUser(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -543,10 +663,10 @@ public class Scim implements
         
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                List<Group> _out = Utils.mapper().readValue(
+                List<ScimGroup> _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<List<Group>>() {});
-                _res.withGroups(Optional.ofNullable(_out));
+                    new TypeReference<List<ScimGroup>>() {});
+                _res.withScimGroups(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -664,10 +784,10 @@ public class Scim implements
         
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                List<User> _out = Utils.mapper().readValue(
+                List<ScimUser> _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<List<User>>() {});
-                _res.withUsers(Optional.ofNullable(_out));
+                    new TypeReference<List<ScimUser>>() {});
+                _res.withScimUsers(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -724,7 +844,7 @@ public class Scim implements
                 new TypeReference<PatchScimGroupsRequest>() {});
         SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
                 _convertedRequest, 
-                "group",
+                "scimGroup",
                 "json",
                 false);
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
@@ -790,10 +910,10 @@ public class Scim implements
         
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                Group _out = Utils.mapper().readValue(
+                ScimGroup _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<Group>() {});
-                _res.withGroup(Optional.ofNullable(_out));
+                    new TypeReference<ScimGroup>() {});
+                _res.withScimGroup(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -850,7 +970,7 @@ public class Scim implements
                 new TypeReference<PatchScimUsersRequest>() {});
         SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
                 _convertedRequest, 
-                "user",
+                "scimUser",
                 "json",
                 false);
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
@@ -916,10 +1036,10 @@ public class Scim implements
         
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                User _out = Utils.mapper().readValue(
+                ScimUser _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<User>() {});
-                _res.withUser(Optional.ofNullable(_out));
+                    new TypeReference<ScimUser>() {});
+                _res.withScimUser(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -1186,7 +1306,7 @@ public class Scim implements
                 new TypeReference<UpdateScimGroupsRequest>() {});
         SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
                 _convertedRequest, 
-                "group",
+                "scimGroup",
                 "json",
                 false);
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
@@ -1252,10 +1372,10 @@ public class Scim implements
         
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                Group _out = Utils.mapper().readValue(
+                ScimGroup _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<Group>() {});
-                _res.withGroup(Optional.ofNullable(_out));
+                    new TypeReference<ScimGroup>() {});
+                _res.withScimGroup(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -1312,7 +1432,7 @@ public class Scim implements
                 new TypeReference<UpdateScimUsersRequest>() {});
         SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
                 _convertedRequest, 
-                "user",
+                "scimUser",
                 "json",
                 false);
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
@@ -1378,10 +1498,10 @@ public class Scim implements
         
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                User _out = Utils.mapper().readValue(
+                ScimUser _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<User>() {});
-                _res.withUser(Optional.ofNullable(_out));
+                    new TypeReference<ScimUser>() {});
+                _res.withScimUser(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(

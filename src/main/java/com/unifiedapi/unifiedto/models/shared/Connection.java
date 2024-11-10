@@ -50,10 +50,6 @@ public class Connection {
     private Optional<OffsetDateTime> createdAt;
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("cursors_cache")
-    private Optional<? extends List<Undefined>> cursorsCache;
-
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     private Optional<String> environment;
 
@@ -97,7 +93,6 @@ public class Connection {
             @JsonProperty("auth_aws_arn") Optional<String> authAwsArn,
             @JsonProperty("categories") List<PropertyConnectionCategories> categories,
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("cursors_cache") Optional<? extends List<Undefined>> cursorsCache,
             @JsonProperty("environment") Optional<String> environment,
             @JsonProperty("external_xref") Optional<String> externalXref,
             @JsonProperty("id") Optional<String> id,
@@ -112,7 +107,6 @@ public class Connection {
         Utils.checkNotNull(authAwsArn, "authAwsArn");
         Utils.checkNotNull(categories, "categories");
         Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(cursorsCache, "cursorsCache");
         Utils.checkNotNull(environment, "environment");
         Utils.checkNotNull(externalXref, "externalXref");
         Utils.checkNotNull(id, "id");
@@ -127,7 +121,6 @@ public class Connection {
         this.authAwsArn = authAwsArn;
         this.categories = categories;
         this.createdAt = createdAt;
-        this.cursorsCache = cursorsCache;
         this.environment = environment;
         this.externalXref = externalXref;
         this.id = id;
@@ -144,7 +137,7 @@ public class Connection {
             List<PropertyConnectionCategories> categories,
             String integrationType,
             List<PropertyConnectionPermissions> permissions) {
-        this(Optional.empty(), Optional.empty(), categories, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), integrationType, Optional.empty(), Optional.empty(), Optional.empty(), permissions, Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), categories, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), integrationType, Optional.empty(), Optional.empty(), Optional.empty(), permissions, Optional.empty(), Optional.empty());
     }
 
     /**
@@ -172,12 +165,6 @@ public class Connection {
     @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
         return createdAt;
-    }
-
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
-    public Optional<List<Undefined>> cursorsCache() {
-        return (Optional<List<Undefined>>) cursorsCache;
     }
 
     @JsonIgnore
@@ -282,18 +269,6 @@ public class Connection {
     public Connection withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
-        return this;
-    }
-
-    public Connection withCursorsCache(List<Undefined> cursorsCache) {
-        Utils.checkNotNull(cursorsCache, "cursorsCache");
-        this.cursorsCache = Optional.ofNullable(cursorsCache);
-        return this;
-    }
-
-    public Connection withCursorsCache(Optional<? extends List<Undefined>> cursorsCache) {
-        Utils.checkNotNull(cursorsCache, "cursorsCache");
-        this.cursorsCache = cursorsCache;
         return this;
     }
 
@@ -419,7 +394,6 @@ public class Connection {
             Objects.deepEquals(this.authAwsArn, other.authAwsArn) &&
             Objects.deepEquals(this.categories, other.categories) &&
             Objects.deepEquals(this.createdAt, other.createdAt) &&
-            Objects.deepEquals(this.cursorsCache, other.cursorsCache) &&
             Objects.deepEquals(this.environment, other.environment) &&
             Objects.deepEquals(this.externalXref, other.externalXref) &&
             Objects.deepEquals(this.id, other.id) &&
@@ -439,7 +413,6 @@ public class Connection {
             authAwsArn,
             categories,
             createdAt,
-            cursorsCache,
             environment,
             externalXref,
             id,
@@ -459,7 +432,6 @@ public class Connection {
                 "authAwsArn", authAwsArn,
                 "categories", categories,
                 "createdAt", createdAt,
-                "cursorsCache", cursorsCache,
                 "environment", environment,
                 "externalXref", externalXref,
                 "id", id,
@@ -481,8 +453,6 @@ public class Connection {
         private List<PropertyConnectionCategories> categories;
  
         private Optional<OffsetDateTime> createdAt = Optional.empty();
- 
-        private Optional<? extends List<Undefined>> cursorsCache = Optional.empty();
  
         private Optional<String> environment;
  
@@ -556,18 +526,6 @@ public class Connection {
         public Builder createdAt(Optional<OffsetDateTime> createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = createdAt;
-            return this;
-        }
-
-        public Builder cursorsCache(List<Undefined> cursorsCache) {
-            Utils.checkNotNull(cursorsCache, "cursorsCache");
-            this.cursorsCache = Optional.ofNullable(cursorsCache);
-            return this;
-        }
-
-        public Builder cursorsCache(Optional<? extends List<Undefined>> cursorsCache) {
-            Utils.checkNotNull(cursorsCache, "cursorsCache");
-            this.cursorsCache = cursorsCache;
             return this;
         }
 
@@ -687,7 +645,6 @@ public class Connection {
                 authAwsArn,
                 categories,
                 createdAt,
-                cursorsCache,
                 environment,
                 externalXref,
                 id,

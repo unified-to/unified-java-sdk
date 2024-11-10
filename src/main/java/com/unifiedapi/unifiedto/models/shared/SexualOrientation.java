@@ -10,8 +10,7 @@ import java.lang.String;
 public enum SexualOrientation {
     QUEER("Queer"),
     HETEROSEXUAL("Heterosexual"),
-    STRAIGHT_MIXED("Straight"),
-    STRAIGHT_LOWER("straight");
+    STRAIGHT("Straight");
 
     @JsonValue
     private final String value;
