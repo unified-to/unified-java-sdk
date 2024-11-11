@@ -32,8 +32,9 @@ public class ScimGroup {
     @JsonProperty("groupType")
     private Optional<String> groupType;
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private String id;
+    private Optional<String> id;
 
     /**
      * An array of members
@@ -58,7 +59,7 @@ public class ScimGroup {
             @JsonProperty("displayName") String displayName,
             @JsonProperty("externalId") Optional<String> externalId,
             @JsonProperty("groupType") Optional<String> groupType,
-            @JsonProperty("id") String id,
+            @JsonProperty("id") Optional<String> id,
             @JsonProperty("members") Optional<? extends List<ScimGroupMember>> members,
             @JsonProperty("meta") Optional<? extends PropertyScimGroupMeta> meta,
             @JsonProperty("schemas") Optional<? extends List<PropertyScimGroupSchemas>> schemas) {
@@ -79,9 +80,8 @@ public class ScimGroup {
     }
     
     public ScimGroup(
-            String displayName,
-            String id) {
-        this(displayName, Optional.empty(), Optional.empty(), id, Optional.empty(), Optional.empty(), Optional.empty());
+            String displayName) {
+        this(displayName, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -100,7 +100,7 @@ public class ScimGroup {
     }
 
     @JsonIgnore
-    public String id() {
+    public Optional<String> id() {
         return id;
     }
 
@@ -163,6 +163,12 @@ public class ScimGroup {
     }
 
     public ScimGroup withId(String id) {
+        Utils.checkNotNull(id, "id");
+        this.id = Optional.ofNullable(id);
+        return this;
+    }
+
+    public ScimGroup withId(Optional<String> id) {
         Utils.checkNotNull(id, "id");
         this.id = id;
         return this;
@@ -267,7 +273,7 @@ public class ScimGroup {
  
         private Optional<String> groupType = Optional.empty();
  
-        private String id;
+        private Optional<String> id = Optional.empty();
  
         private Optional<? extends List<ScimGroupMember>> members = Optional.empty();
  
@@ -310,6 +316,12 @@ public class ScimGroup {
         }
 
         public Builder id(String id) {
+            Utils.checkNotNull(id, "id");
+            this.id = Optional.ofNullable(id);
+            return this;
+        }
+
+        public Builder id(Optional<String> id) {
             Utils.checkNotNull(id, "id");
             this.id = id;
             return this;
