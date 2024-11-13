@@ -14,6 +14,8 @@ import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
 import java.net.http.HttpResponse;
+import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 
@@ -23,6 +25,8 @@ public class RemoveAtsScorecardResponse implements Response {
      * HTTP response content type for this operation
      */
     private String contentType;
+
+    private Map<String, List<String>> headers;
 
     /**
      * HTTP response status code for this operation
@@ -37,12 +41,15 @@ public class RemoveAtsScorecardResponse implements Response {
     @JsonCreator
     public RemoveAtsScorecardResponse(
             String contentType,
+            Map<String, List<String>> headers,
             int statusCode,
             HttpResponse<InputStream> rawResponse) {
         Utils.checkNotNull(contentType, "contentType");
+        headers = Utils.emptyMapIfNull(headers);
         Utils.checkNotNull(statusCode, "statusCode");
         Utils.checkNotNull(rawResponse, "rawResponse");
         this.contentType = contentType;
+        this.headers = headers;
         this.statusCode = statusCode;
         this.rawResponse = rawResponse;
     }
@@ -53,6 +60,11 @@ public class RemoveAtsScorecardResponse implements Response {
     @JsonIgnore
     public String contentType() {
         return contentType;
+    }
+
+    @JsonIgnore
+    public Map<String, List<String>> headers() {
+        return headers;
     }
 
     /**
@@ -81,6 +93,12 @@ public class RemoveAtsScorecardResponse implements Response {
     public RemoveAtsScorecardResponse withContentType(String contentType) {
         Utils.checkNotNull(contentType, "contentType");
         this.contentType = contentType;
+        return this;
+    }
+
+    public RemoveAtsScorecardResponse withHeaders(Map<String, List<String>> headers) {
+        Utils.checkNotNull(headers, "headers");
+        this.headers = headers;
         return this;
     }
 
@@ -113,6 +131,7 @@ public class RemoveAtsScorecardResponse implements Response {
         RemoveAtsScorecardResponse other = (RemoveAtsScorecardResponse) o;
         return 
             Objects.deepEquals(this.contentType, other.contentType) &&
+            Objects.deepEquals(this.headers, other.headers) &&
             Objects.deepEquals(this.statusCode, other.statusCode) &&
             Objects.deepEquals(this.rawResponse, other.rawResponse);
     }
@@ -121,6 +140,7 @@ public class RemoveAtsScorecardResponse implements Response {
     public int hashCode() {
         return Objects.hash(
             contentType,
+            headers,
             statusCode,
             rawResponse);
     }
@@ -129,6 +149,7 @@ public class RemoveAtsScorecardResponse implements Response {
     public String toString() {
         return Utils.toString(RemoveAtsScorecardResponse.class,
                 "contentType", contentType,
+                "headers", headers,
                 "statusCode", statusCode,
                 "rawResponse", rawResponse);
     }
@@ -136,6 +157,8 @@ public class RemoveAtsScorecardResponse implements Response {
     public final static class Builder {
  
         private String contentType;
+ 
+        private Map<String, List<String>> headers;
  
         private Integer statusCode;
  
@@ -151,6 +174,12 @@ public class RemoveAtsScorecardResponse implements Response {
         public Builder contentType(String contentType) {
             Utils.checkNotNull(contentType, "contentType");
             this.contentType = contentType;
+            return this;
+        }
+
+        public Builder headers(Map<String, List<String>> headers) {
+            Utils.checkNotNull(headers, "headers");
+            this.headers = headers;
             return this;
         }
 
@@ -175,6 +204,7 @@ public class RemoveAtsScorecardResponse implements Response {
         public RemoveAtsScorecardResponse build() {
             return new RemoveAtsScorecardResponse(
                 contentType,
+                headers,
                 statusCode,
                 rawResponse);
         }

@@ -4071,6 +4071,10 @@ public class Accounting implements
 
         RemoveAccountingAccountResponse _res = _resBuilder.build();
         
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            // no content 
+            return _res;
+        }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
             // no content 
             throw new SDKError(
@@ -4079,7 +4083,8 @@ public class Accounting implements
                     "API error occurred", 
                     Utils.extractByteArrayFromBody(_httpRes));
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200", "default")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             // no content 
             return _res;
         }
@@ -4176,6 +4181,10 @@ public class Accounting implements
 
         RemoveAccountingContactResponse _res = _resBuilder.build();
         
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            // no content 
+            return _res;
+        }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
             // no content 
             throw new SDKError(
@@ -4184,7 +4193,8 @@ public class Accounting implements
                     "API error occurred", 
                     Utils.extractByteArrayFromBody(_httpRes));
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200", "default")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             // no content 
             return _res;
         }
@@ -4281,6 +4291,10 @@ public class Accounting implements
 
         RemoveAccountingInvoiceResponse _res = _resBuilder.build();
         
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            // no content 
+            return _res;
+        }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
             // no content 
             throw new SDKError(
@@ -4289,7 +4303,8 @@ public class Accounting implements
                     "API error occurred", 
                     Utils.extractByteArrayFromBody(_httpRes));
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200", "default")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             // no content 
             return _res;
         }
@@ -4386,6 +4401,10 @@ public class Accounting implements
 
         RemoveAccountingJournalResponse _res = _resBuilder.build();
         
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            // no content 
+            return _res;
+        }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
             // no content 
             throw new SDKError(
@@ -4394,7 +4413,8 @@ public class Accounting implements
                     "API error occurred", 
                     Utils.extractByteArrayFromBody(_httpRes));
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200", "default")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             // no content 
             return _res;
         }
@@ -4491,6 +4511,10 @@ public class Accounting implements
 
         RemoveAccountingOrderResponse _res = _resBuilder.build();
         
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            // no content 
+            return _res;
+        }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
             // no content 
             throw new SDKError(
@@ -4499,7 +4523,8 @@ public class Accounting implements
                     "API error occurred", 
                     Utils.extractByteArrayFromBody(_httpRes));
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200", "default")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             // no content 
             return _res;
         }
@@ -4596,6 +4621,10 @@ public class Accounting implements
 
         RemoveAccountingTaxrateResponse _res = _resBuilder.build();
         
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            // no content 
+            return _res;
+        }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
             // no content 
             throw new SDKError(
@@ -4604,7 +4633,8 @@ public class Accounting implements
                     "API error occurred", 
                     Utils.extractByteArrayFromBody(_httpRes));
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200", "default")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             // no content 
             return _res;
         }
@@ -4701,6 +4731,10 @@ public class Accounting implements
 
         RemoveAccountingTransactionResponse _res = _resBuilder.build();
         
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            // no content 
+            return _res;
+        }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
             // no content 
             throw new SDKError(
@@ -4709,7 +4743,8 @@ public class Accounting implements
                     "API error occurred", 
                     Utils.extractByteArrayFromBody(_httpRes));
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200", "default")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             // no content 
             return _res;
         }

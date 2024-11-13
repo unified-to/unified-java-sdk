@@ -25,18 +25,6 @@ import java.util.Optional;
 public class PatchPassthroughRawResponse implements Response {
 
     /**
-     * Successful
-     */
-    private Optional<? extends Object> twoXXApplicationJsonAny;
-
-    /**
-     * Successful
-     */
-    private Optional<String> twoXXTextPlainRes;
-
-    private Optional<? extends byte[]> body;
-
-    /**
      * HTTP response content type for this operation
      */
     private String contentType;
@@ -53,29 +41,60 @@ public class PatchPassthroughRawResponse implements Response {
      */
     private HttpResponse<InputStream> rawResponse;
 
+    /**
+     * Successful
+     */
+    private Optional<? extends InputStream> defaultWildcardWildcardResponseStream;
+
+    /**
+     * Successful
+     */
+    private Optional<? extends Object> defaultApplicationJsonAny;
+
+    /**
+     * Successful
+     */
+    private Optional<String> defaultApplicationXmlRes;
+
+    /**
+     * Successful
+     */
+    private Optional<String> defaultTextCsvRes;
+
+    /**
+     * Successful
+     */
+    private Optional<String> defaultTextPlainRes;
+
     @JsonCreator
     public PatchPassthroughRawResponse(
-            Optional<? extends Object> twoXXApplicationJsonAny,
-            Optional<String> twoXXTextPlainRes,
-            Optional<? extends byte[]> body,
             String contentType,
             Map<String, List<String>> headers,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(twoXXApplicationJsonAny, "twoXXApplicationJsonAny");
-        Utils.checkNotNull(twoXXTextPlainRes, "twoXXTextPlainRes");
-        Utils.checkNotNull(body, "body");
+            HttpResponse<InputStream> rawResponse,
+            Optional<? extends InputStream> defaultWildcardWildcardResponseStream,
+            Optional<? extends Object> defaultApplicationJsonAny,
+            Optional<String> defaultApplicationXmlRes,
+            Optional<String> defaultTextCsvRes,
+            Optional<String> defaultTextPlainRes) {
         Utils.checkNotNull(contentType, "contentType");
         headers = Utils.emptyMapIfNull(headers);
         Utils.checkNotNull(statusCode, "statusCode");
         Utils.checkNotNull(rawResponse, "rawResponse");
-        this.twoXXApplicationJsonAny = twoXXApplicationJsonAny;
-        this.twoXXTextPlainRes = twoXXTextPlainRes;
-        this.body = body;
+        Utils.checkNotNull(defaultWildcardWildcardResponseStream, "defaultWildcardWildcardResponseStream");
+        Utils.checkNotNull(defaultApplicationJsonAny, "defaultApplicationJsonAny");
+        Utils.checkNotNull(defaultApplicationXmlRes, "defaultApplicationXmlRes");
+        Utils.checkNotNull(defaultTextCsvRes, "defaultTextCsvRes");
+        Utils.checkNotNull(defaultTextPlainRes, "defaultTextPlainRes");
         this.contentType = contentType;
         this.headers = headers;
         this.statusCode = statusCode;
         this.rawResponse = rawResponse;
+        this.defaultWildcardWildcardResponseStream = defaultWildcardWildcardResponseStream;
+        this.defaultApplicationJsonAny = defaultApplicationJsonAny;
+        this.defaultApplicationXmlRes = defaultApplicationXmlRes;
+        this.defaultTextCsvRes = defaultTextCsvRes;
+        this.defaultTextPlainRes = defaultTextPlainRes;
     }
     
     public PatchPassthroughRawResponse(
@@ -83,30 +102,7 @@ public class PatchPassthroughRawResponse implements Response {
             Map<String, List<String>> headers,
             int statusCode,
             HttpResponse<InputStream> rawResponse) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), contentType, headers, statusCode, rawResponse);
-    }
-
-    /**
-     * Successful
-     */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
-    public Optional<Object> twoXXApplicationJsonAny() {
-        return (Optional<Object>) twoXXApplicationJsonAny;
-    }
-
-    /**
-     * Successful
-     */
-    @JsonIgnore
-    public Optional<String> twoXXTextPlainRes() {
-        return twoXXTextPlainRes;
-    }
-
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
-    public Optional<byte[]> body() {
-        return (Optional<byte[]>) body;
+        this(contentType, headers, statusCode, rawResponse, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     /**
@@ -138,56 +134,50 @@ public class PatchPassthroughRawResponse implements Response {
         return rawResponse;
     }
 
+    /**
+     * Successful
+     */
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<InputStream> defaultWildcardWildcardResponseStream() {
+        return (Optional<InputStream>) defaultWildcardWildcardResponseStream;
+    }
+
+    /**
+     * Successful
+     */
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<Object> defaultApplicationJsonAny() {
+        return (Optional<Object>) defaultApplicationJsonAny;
+    }
+
+    /**
+     * Successful
+     */
+    @JsonIgnore
+    public Optional<String> defaultApplicationXmlRes() {
+        return defaultApplicationXmlRes;
+    }
+
+    /**
+     * Successful
+     */
+    @JsonIgnore
+    public Optional<String> defaultTextCsvRes() {
+        return defaultTextCsvRes;
+    }
+
+    /**
+     * Successful
+     */
+    @JsonIgnore
+    public Optional<String> defaultTextPlainRes() {
+        return defaultTextPlainRes;
+    }
+
     public final static Builder builder() {
         return new Builder();
-    }
-
-    /**
-     * Successful
-     */
-    public PatchPassthroughRawResponse withTwoXXApplicationJsonAny(Object twoXXApplicationJsonAny) {
-        Utils.checkNotNull(twoXXApplicationJsonAny, "twoXXApplicationJsonAny");
-        this.twoXXApplicationJsonAny = Optional.ofNullable(twoXXApplicationJsonAny);
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public PatchPassthroughRawResponse withTwoXXApplicationJsonAny(Optional<? extends Object> twoXXApplicationJsonAny) {
-        Utils.checkNotNull(twoXXApplicationJsonAny, "twoXXApplicationJsonAny");
-        this.twoXXApplicationJsonAny = twoXXApplicationJsonAny;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public PatchPassthroughRawResponse withTwoXXTextPlainRes(String twoXXTextPlainRes) {
-        Utils.checkNotNull(twoXXTextPlainRes, "twoXXTextPlainRes");
-        this.twoXXTextPlainRes = Optional.ofNullable(twoXXTextPlainRes);
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public PatchPassthroughRawResponse withTwoXXTextPlainRes(Optional<String> twoXXTextPlainRes) {
-        Utils.checkNotNull(twoXXTextPlainRes, "twoXXTextPlainRes");
-        this.twoXXTextPlainRes = twoXXTextPlainRes;
-        return this;
-    }
-
-    public PatchPassthroughRawResponse withBody(byte[] body) {
-        Utils.checkNotNull(body, "body");
-        this.body = Optional.ofNullable(body);
-        return this;
-    }
-
-    public PatchPassthroughRawResponse withBody(Optional<? extends byte[]> body) {
-        Utils.checkNotNull(body, "body");
-        this.body = body;
-        return this;
     }
 
     /**
@@ -222,6 +212,96 @@ public class PatchPassthroughRawResponse implements Response {
         this.rawResponse = rawResponse;
         return this;
     }
+
+    /**
+     * Successful
+     */
+    public PatchPassthroughRawResponse withDefaultWildcardWildcardResponseStream(InputStream defaultWildcardWildcardResponseStream) {
+        Utils.checkNotNull(defaultWildcardWildcardResponseStream, "defaultWildcardWildcardResponseStream");
+        this.defaultWildcardWildcardResponseStream = Optional.ofNullable(defaultWildcardWildcardResponseStream);
+        return this;
+    }
+
+    /**
+     * Successful
+     */
+    public PatchPassthroughRawResponse withDefaultWildcardWildcardResponseStream(Optional<? extends InputStream> defaultWildcardWildcardResponseStream) {
+        Utils.checkNotNull(defaultWildcardWildcardResponseStream, "defaultWildcardWildcardResponseStream");
+        this.defaultWildcardWildcardResponseStream = defaultWildcardWildcardResponseStream;
+        return this;
+    }
+
+    /**
+     * Successful
+     */
+    public PatchPassthroughRawResponse withDefaultApplicationJsonAny(Object defaultApplicationJsonAny) {
+        Utils.checkNotNull(defaultApplicationJsonAny, "defaultApplicationJsonAny");
+        this.defaultApplicationJsonAny = Optional.ofNullable(defaultApplicationJsonAny);
+        return this;
+    }
+
+    /**
+     * Successful
+     */
+    public PatchPassthroughRawResponse withDefaultApplicationJsonAny(Optional<? extends Object> defaultApplicationJsonAny) {
+        Utils.checkNotNull(defaultApplicationJsonAny, "defaultApplicationJsonAny");
+        this.defaultApplicationJsonAny = defaultApplicationJsonAny;
+        return this;
+    }
+
+    /**
+     * Successful
+     */
+    public PatchPassthroughRawResponse withDefaultApplicationXmlRes(String defaultApplicationXmlRes) {
+        Utils.checkNotNull(defaultApplicationXmlRes, "defaultApplicationXmlRes");
+        this.defaultApplicationXmlRes = Optional.ofNullable(defaultApplicationXmlRes);
+        return this;
+    }
+
+    /**
+     * Successful
+     */
+    public PatchPassthroughRawResponse withDefaultApplicationXmlRes(Optional<String> defaultApplicationXmlRes) {
+        Utils.checkNotNull(defaultApplicationXmlRes, "defaultApplicationXmlRes");
+        this.defaultApplicationXmlRes = defaultApplicationXmlRes;
+        return this;
+    }
+
+    /**
+     * Successful
+     */
+    public PatchPassthroughRawResponse withDefaultTextCsvRes(String defaultTextCsvRes) {
+        Utils.checkNotNull(defaultTextCsvRes, "defaultTextCsvRes");
+        this.defaultTextCsvRes = Optional.ofNullable(defaultTextCsvRes);
+        return this;
+    }
+
+    /**
+     * Successful
+     */
+    public PatchPassthroughRawResponse withDefaultTextCsvRes(Optional<String> defaultTextCsvRes) {
+        Utils.checkNotNull(defaultTextCsvRes, "defaultTextCsvRes");
+        this.defaultTextCsvRes = defaultTextCsvRes;
+        return this;
+    }
+
+    /**
+     * Successful
+     */
+    public PatchPassthroughRawResponse withDefaultTextPlainRes(String defaultTextPlainRes) {
+        Utils.checkNotNull(defaultTextPlainRes, "defaultTextPlainRes");
+        this.defaultTextPlainRes = Optional.ofNullable(defaultTextPlainRes);
+        return this;
+    }
+
+    /**
+     * Successful
+     */
+    public PatchPassthroughRawResponse withDefaultTextPlainRes(Optional<String> defaultTextPlainRes) {
+        Utils.checkNotNull(defaultTextPlainRes, "defaultTextPlainRes");
+        this.defaultTextPlainRes = defaultTextPlainRes;
+        return this;
+    }
     
     @Override
     public boolean equals(java.lang.Object o) {
@@ -233,46 +313,46 @@ public class PatchPassthroughRawResponse implements Response {
         }
         PatchPassthroughRawResponse other = (PatchPassthroughRawResponse) o;
         return 
-            Objects.deepEquals(this.twoXXApplicationJsonAny, other.twoXXApplicationJsonAny) &&
-            Objects.deepEquals(this.twoXXTextPlainRes, other.twoXXTextPlainRes) &&
-            Objects.deepEquals(this.body, other.body) &&
             Objects.deepEquals(this.contentType, other.contentType) &&
             Objects.deepEquals(this.headers, other.headers) &&
             Objects.deepEquals(this.statusCode, other.statusCode) &&
-            Objects.deepEquals(this.rawResponse, other.rawResponse);
+            Objects.deepEquals(this.rawResponse, other.rawResponse) &&
+            Objects.deepEquals(this.defaultWildcardWildcardResponseStream, other.defaultWildcardWildcardResponseStream) &&
+            Objects.deepEquals(this.defaultApplicationJsonAny, other.defaultApplicationJsonAny) &&
+            Objects.deepEquals(this.defaultApplicationXmlRes, other.defaultApplicationXmlRes) &&
+            Objects.deepEquals(this.defaultTextCsvRes, other.defaultTextCsvRes) &&
+            Objects.deepEquals(this.defaultTextPlainRes, other.defaultTextPlainRes);
     }
     
     @Override
     public int hashCode() {
         return Objects.hash(
-            twoXXApplicationJsonAny,
-            twoXXTextPlainRes,
-            body,
             contentType,
             headers,
             statusCode,
-            rawResponse);
+            rawResponse,
+            defaultWildcardWildcardResponseStream,
+            defaultApplicationJsonAny,
+            defaultApplicationXmlRes,
+            defaultTextCsvRes,
+            defaultTextPlainRes);
     }
     
     @Override
     public String toString() {
         return Utils.toString(PatchPassthroughRawResponse.class,
-                "twoXXApplicationJsonAny", twoXXApplicationJsonAny,
-                "twoXXTextPlainRes", twoXXTextPlainRes,
-                "body", body,
                 "contentType", contentType,
                 "headers", headers,
                 "statusCode", statusCode,
-                "rawResponse", rawResponse);
+                "rawResponse", rawResponse,
+                "defaultWildcardWildcardResponseStream", defaultWildcardWildcardResponseStream,
+                "defaultApplicationJsonAny", defaultApplicationJsonAny,
+                "defaultApplicationXmlRes", defaultApplicationXmlRes,
+                "defaultTextCsvRes", defaultTextCsvRes,
+                "defaultTextPlainRes", defaultTextPlainRes);
     }
     
     public final static class Builder {
- 
-        private Optional<? extends Object> twoXXApplicationJsonAny = Optional.empty();
- 
-        private Optional<String> twoXXTextPlainRes = Optional.empty();
- 
-        private Optional<? extends byte[]> body = Optional.empty();
  
         private String contentType;
  
@@ -280,58 +360,20 @@ public class PatchPassthroughRawResponse implements Response {
  
         private Integer statusCode;
  
-        private HttpResponse<InputStream> rawResponse;  
+        private HttpResponse<InputStream> rawResponse;
+ 
+        private Optional<? extends InputStream> defaultWildcardWildcardResponseStream = Optional.empty();
+ 
+        private Optional<? extends Object> defaultApplicationJsonAny = Optional.empty();
+ 
+        private Optional<String> defaultApplicationXmlRes = Optional.empty();
+ 
+        private Optional<String> defaultTextCsvRes = Optional.empty();
+ 
+        private Optional<String> defaultTextPlainRes = Optional.empty();  
         
         private Builder() {
           // force use of static builder() method
-        }
-
-        /**
-         * Successful
-         */
-        public Builder twoXXApplicationJsonAny(Object twoXXApplicationJsonAny) {
-            Utils.checkNotNull(twoXXApplicationJsonAny, "twoXXApplicationJsonAny");
-            this.twoXXApplicationJsonAny = Optional.ofNullable(twoXXApplicationJsonAny);
-            return this;
-        }
-
-        /**
-         * Successful
-         */
-        public Builder twoXXApplicationJsonAny(Optional<? extends Object> twoXXApplicationJsonAny) {
-            Utils.checkNotNull(twoXXApplicationJsonAny, "twoXXApplicationJsonAny");
-            this.twoXXApplicationJsonAny = twoXXApplicationJsonAny;
-            return this;
-        }
-
-        /**
-         * Successful
-         */
-        public Builder twoXXTextPlainRes(String twoXXTextPlainRes) {
-            Utils.checkNotNull(twoXXTextPlainRes, "twoXXTextPlainRes");
-            this.twoXXTextPlainRes = Optional.ofNullable(twoXXTextPlainRes);
-            return this;
-        }
-
-        /**
-         * Successful
-         */
-        public Builder twoXXTextPlainRes(Optional<String> twoXXTextPlainRes) {
-            Utils.checkNotNull(twoXXTextPlainRes, "twoXXTextPlainRes");
-            this.twoXXTextPlainRes = twoXXTextPlainRes;
-            return this;
-        }
-
-        public Builder body(byte[] body) {
-            Utils.checkNotNull(body, "body");
-            this.body = Optional.ofNullable(body);
-            return this;
-        }
-
-        public Builder body(Optional<? extends byte[]> body) {
-            Utils.checkNotNull(body, "body");
-            this.body = body;
-            return this;
         }
 
         /**
@@ -366,16 +408,108 @@ public class PatchPassthroughRawResponse implements Response {
             this.rawResponse = rawResponse;
             return this;
         }
+
+        /**
+         * Successful
+         */
+        public Builder defaultWildcardWildcardResponseStream(InputStream defaultWildcardWildcardResponseStream) {
+            Utils.checkNotNull(defaultWildcardWildcardResponseStream, "defaultWildcardWildcardResponseStream");
+            this.defaultWildcardWildcardResponseStream = Optional.ofNullable(defaultWildcardWildcardResponseStream);
+            return this;
+        }
+
+        /**
+         * Successful
+         */
+        public Builder defaultWildcardWildcardResponseStream(Optional<? extends InputStream> defaultWildcardWildcardResponseStream) {
+            Utils.checkNotNull(defaultWildcardWildcardResponseStream, "defaultWildcardWildcardResponseStream");
+            this.defaultWildcardWildcardResponseStream = defaultWildcardWildcardResponseStream;
+            return this;
+        }
+
+        /**
+         * Successful
+         */
+        public Builder defaultApplicationJsonAny(Object defaultApplicationJsonAny) {
+            Utils.checkNotNull(defaultApplicationJsonAny, "defaultApplicationJsonAny");
+            this.defaultApplicationJsonAny = Optional.ofNullable(defaultApplicationJsonAny);
+            return this;
+        }
+
+        /**
+         * Successful
+         */
+        public Builder defaultApplicationJsonAny(Optional<? extends Object> defaultApplicationJsonAny) {
+            Utils.checkNotNull(defaultApplicationJsonAny, "defaultApplicationJsonAny");
+            this.defaultApplicationJsonAny = defaultApplicationJsonAny;
+            return this;
+        }
+
+        /**
+         * Successful
+         */
+        public Builder defaultApplicationXmlRes(String defaultApplicationXmlRes) {
+            Utils.checkNotNull(defaultApplicationXmlRes, "defaultApplicationXmlRes");
+            this.defaultApplicationXmlRes = Optional.ofNullable(defaultApplicationXmlRes);
+            return this;
+        }
+
+        /**
+         * Successful
+         */
+        public Builder defaultApplicationXmlRes(Optional<String> defaultApplicationXmlRes) {
+            Utils.checkNotNull(defaultApplicationXmlRes, "defaultApplicationXmlRes");
+            this.defaultApplicationXmlRes = defaultApplicationXmlRes;
+            return this;
+        }
+
+        /**
+         * Successful
+         */
+        public Builder defaultTextCsvRes(String defaultTextCsvRes) {
+            Utils.checkNotNull(defaultTextCsvRes, "defaultTextCsvRes");
+            this.defaultTextCsvRes = Optional.ofNullable(defaultTextCsvRes);
+            return this;
+        }
+
+        /**
+         * Successful
+         */
+        public Builder defaultTextCsvRes(Optional<String> defaultTextCsvRes) {
+            Utils.checkNotNull(defaultTextCsvRes, "defaultTextCsvRes");
+            this.defaultTextCsvRes = defaultTextCsvRes;
+            return this;
+        }
+
+        /**
+         * Successful
+         */
+        public Builder defaultTextPlainRes(String defaultTextPlainRes) {
+            Utils.checkNotNull(defaultTextPlainRes, "defaultTextPlainRes");
+            this.defaultTextPlainRes = Optional.ofNullable(defaultTextPlainRes);
+            return this;
+        }
+
+        /**
+         * Successful
+         */
+        public Builder defaultTextPlainRes(Optional<String> defaultTextPlainRes) {
+            Utils.checkNotNull(defaultTextPlainRes, "defaultTextPlainRes");
+            this.defaultTextPlainRes = defaultTextPlainRes;
+            return this;
+        }
         
         public PatchPassthroughRawResponse build() {
             return new PatchPassthroughRawResponse(
-                twoXXApplicationJsonAny,
-                twoXXTextPlainRes,
-                body,
                 contentType,
                 headers,
                 statusCode,
-                rawResponse);
+                rawResponse,
+                defaultWildcardWildcardResponseStream,
+                defaultApplicationJsonAny,
+                defaultApplicationXmlRes,
+                defaultTextCsvRes,
+                defaultTextPlainRes);
         }
     }
 }

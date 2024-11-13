@@ -3291,6 +3291,10 @@ public class Crm implements
 
         RemoveCrmCompanyResponse _res = _resBuilder.build();
         
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            // no content 
+            return _res;
+        }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
             // no content 
             throw new SDKError(
@@ -3299,7 +3303,8 @@ public class Crm implements
                     "API error occurred", 
                     Utils.extractByteArrayFromBody(_httpRes));
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200", "default")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             // no content 
             return _res;
         }
@@ -3396,6 +3401,10 @@ public class Crm implements
 
         RemoveCrmContactResponse _res = _resBuilder.build();
         
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            // no content 
+            return _res;
+        }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
             // no content 
             throw new SDKError(
@@ -3404,7 +3413,8 @@ public class Crm implements
                     "API error occurred", 
                     Utils.extractByteArrayFromBody(_httpRes));
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200", "default")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             // no content 
             return _res;
         }
@@ -3501,6 +3511,10 @@ public class Crm implements
 
         RemoveCrmDealResponse _res = _resBuilder.build();
         
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            // no content 
+            return _res;
+        }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
             // no content 
             throw new SDKError(
@@ -3509,7 +3523,8 @@ public class Crm implements
                     "API error occurred", 
                     Utils.extractByteArrayFromBody(_httpRes));
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200", "default")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             // no content 
             return _res;
         }
@@ -3606,6 +3621,10 @@ public class Crm implements
 
         RemoveCrmEventResponse _res = _resBuilder.build();
         
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            // no content 
+            return _res;
+        }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
             // no content 
             throw new SDKError(
@@ -3614,7 +3633,8 @@ public class Crm implements
                     "API error occurred", 
                     Utils.extractByteArrayFromBody(_httpRes));
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200", "default")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             // no content 
             return _res;
         }
@@ -3711,6 +3731,10 @@ public class Crm implements
 
         RemoveCrmLeadResponse _res = _resBuilder.build();
         
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            // no content 
+            return _res;
+        }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
             // no content 
             throw new SDKError(
@@ -3719,7 +3743,8 @@ public class Crm implements
                     "API error occurred", 
                     Utils.extractByteArrayFromBody(_httpRes));
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200", "default")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             // no content 
             return _res;
         }
@@ -3816,6 +3841,10 @@ public class Crm implements
 
         RemoveCrmPipelineResponse _res = _resBuilder.build();
         
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            // no content 
+            return _res;
+        }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
             // no content 
             throw new SDKError(
@@ -3824,7 +3853,8 @@ public class Crm implements
                     "API error occurred", 
                     Utils.extractByteArrayFromBody(_httpRes));
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200", "default")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             // no content 
             return _res;
         }

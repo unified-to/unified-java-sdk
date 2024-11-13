@@ -4197,6 +4197,10 @@ public class Ats implements
 
         RemoveAtsActivityResponse _res = _resBuilder.build();
         
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            // no content 
+            return _res;
+        }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
             // no content 
             throw new SDKError(
@@ -4205,7 +4209,8 @@ public class Ats implements
                     "API error occurred", 
                     Utils.extractByteArrayFromBody(_httpRes));
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200", "default")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             // no content 
             return _res;
         }
@@ -4302,6 +4307,10 @@ public class Ats implements
 
         RemoveAtsApplicationResponse _res = _resBuilder.build();
         
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            // no content 
+            return _res;
+        }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
             // no content 
             throw new SDKError(
@@ -4310,7 +4319,8 @@ public class Ats implements
                     "API error occurred", 
                     Utils.extractByteArrayFromBody(_httpRes));
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200", "default")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             // no content 
             return _res;
         }
@@ -4407,6 +4417,10 @@ public class Ats implements
 
         RemoveAtsCandidateResponse _res = _resBuilder.build();
         
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            // no content 
+            return _res;
+        }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
             // no content 
             throw new SDKError(
@@ -4415,7 +4429,8 @@ public class Ats implements
                     "API error occurred", 
                     Utils.extractByteArrayFromBody(_httpRes));
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200", "default")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             // no content 
             return _res;
         }
@@ -4512,6 +4527,10 @@ public class Ats implements
 
         RemoveAtsDocumentResponse _res = _resBuilder.build();
         
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            // no content 
+            return _res;
+        }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
             // no content 
             throw new SDKError(
@@ -4520,7 +4539,8 @@ public class Ats implements
                     "API error occurred", 
                     Utils.extractByteArrayFromBody(_httpRes));
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200", "default")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             // no content 
             return _res;
         }
@@ -4617,6 +4637,10 @@ public class Ats implements
 
         RemoveAtsInterviewResponse _res = _resBuilder.build();
         
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            // no content 
+            return _res;
+        }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
             // no content 
             throw new SDKError(
@@ -4625,7 +4649,8 @@ public class Ats implements
                     "API error occurred", 
                     Utils.extractByteArrayFromBody(_httpRes));
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200", "default")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             // no content 
             return _res;
         }
@@ -4722,6 +4747,10 @@ public class Ats implements
 
         RemoveAtsJobResponse _res = _resBuilder.build();
         
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            // no content 
+            return _res;
+        }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
             // no content 
             throw new SDKError(
@@ -4730,7 +4759,8 @@ public class Ats implements
                     "API error occurred", 
                     Utils.extractByteArrayFromBody(_httpRes));
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200", "default")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             // no content 
             return _res;
         }
@@ -4827,6 +4857,10 @@ public class Ats implements
 
         RemoveAtsScorecardResponse _res = _resBuilder.build();
         
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            // no content 
+            return _res;
+        }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
             // no content 
             throw new SDKError(
@@ -4835,7 +4869,8 @@ public class Ats implements
                     "API error occurred", 
                     Utils.extractByteArrayFromBody(_httpRes));
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200", "default")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             // no content 
             return _res;
         }

@@ -99,7 +99,7 @@ public class Passthrough implements
                 "json",
                 false);
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
-        _req.addHeader("Accept", "application/json;q=1, text/plain;q=0.7, */*;q=0")
+        _req.addHeader("Accept", "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
 
@@ -156,6 +156,9 @@ public class Passthrough implements
                 .contentType(_contentType)
                 .statusCode(_httpRes.statusCode())
                 .rawResponse(_httpRes);
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default") && Utils.contentTypeMatches(_contentType, "*/*")) {
+            _resBuilder.defaultWildcardWildcardResponseStream(_httpRes.body());
+        }
 
         CreatePassthroughJsonResponse _res = _resBuilder.build();
         
@@ -164,18 +167,35 @@ public class Passthrough implements
             // no content 
             return _res;
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "2XX")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             if (Utils.contentTypeMatches(_contentType, "*/*")) {
                 return _res;
             } else if (Utils.contentTypeMatches(_contentType, "application/json")) {
                 Object _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
                     new TypeReference<Object>() {});
-                _res.withTwoXXApplicationJsonAny(Optional.ofNullable(_out));
+                _res.withDefaultApplicationJsonAny(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "application/xml")) {
+                String _out = Utils.toUtf8AndClose(_httpRes.body());
+                _res.withDefaultApplicationXmlRes(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "text/csv")) {
+                String _out = Utils.toUtf8AndClose(_httpRes.body());
+                _res.withDefaultTextCsvRes(Optional.ofNullable(_out));
                 return _res;
             } else if (Utils.contentTypeMatches(_contentType, "text/plain")) {
                 String _out = Utils.toUtf8AndClose(_httpRes.body());
-                _res.withTwoXXTextPlainRes(Optional.ofNullable(_out));
+                _res.withDefaultTextPlainRes(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -184,14 +204,6 @@ public class Passthrough implements
                     "Unexpected content-type received: " + _contentType, 
                     Utils.extractByteArrayFromBody(_httpRes));
             }
-        }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
-            // no content 
-            throw new SDKError(
-                    _httpRes, 
-                    _httpRes.statusCode(), 
-                    "API error occurred", 
-                    Utils.extractByteArrayFromBody(_httpRes));
         }
         throw new SDKError(
             _httpRes, 
@@ -236,7 +248,7 @@ public class Passthrough implements
                 "raw",
                 false);
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
-        _req.addHeader("Accept", "application/json;q=1, text/plain;q=0.7, */*;q=0")
+        _req.addHeader("Accept", "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
 
@@ -293,6 +305,9 @@ public class Passthrough implements
                 .contentType(_contentType)
                 .statusCode(_httpRes.statusCode())
                 .rawResponse(_httpRes);
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default") && Utils.contentTypeMatches(_contentType, "*/*")) {
+            _resBuilder.defaultWildcardWildcardResponseStream(_httpRes.body());
+        }
 
         CreatePassthroughRawResponse _res = _resBuilder.build();
         
@@ -301,18 +316,35 @@ public class Passthrough implements
             // no content 
             return _res;
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "2XX")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             if (Utils.contentTypeMatches(_contentType, "*/*")) {
                 return _res;
             } else if (Utils.contentTypeMatches(_contentType, "application/json")) {
                 Object _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
                     new TypeReference<Object>() {});
-                _res.withTwoXXApplicationJsonAny(Optional.ofNullable(_out));
+                _res.withDefaultApplicationJsonAny(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "application/xml")) {
+                String _out = Utils.toUtf8AndClose(_httpRes.body());
+                _res.withDefaultApplicationXmlRes(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "text/csv")) {
+                String _out = Utils.toUtf8AndClose(_httpRes.body());
+                _res.withDefaultTextCsvRes(Optional.ofNullable(_out));
                 return _res;
             } else if (Utils.contentTypeMatches(_contentType, "text/plain")) {
                 String _out = Utils.toUtf8AndClose(_httpRes.body());
-                _res.withTwoXXTextPlainRes(Optional.ofNullable(_out));
+                _res.withDefaultTextPlainRes(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -321,14 +353,6 @@ public class Passthrough implements
                     "Unexpected content-type received: " + _contentType, 
                     Utils.extractByteArrayFromBody(_httpRes));
             }
-        }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
-            // no content 
-            throw new SDKError(
-                    _httpRes, 
-                    _httpRes.statusCode(), 
-                    "API error occurred", 
-                    Utils.extractByteArrayFromBody(_httpRes));
         }
         throw new SDKError(
             _httpRes, 
@@ -363,7 +387,7 @@ public class Passthrough implements
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "GET");
-        _req.addHeader("Accept", "application/json;q=1, text/plain;q=0.7, */*;q=0")
+        _req.addHeader("Accept", "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
 
@@ -420,6 +444,9 @@ public class Passthrough implements
                 .contentType(_contentType)
                 .statusCode(_httpRes.statusCode())
                 .rawResponse(_httpRes);
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default") && Utils.contentTypeMatches(_contentType, "*/*")) {
+            _resBuilder.defaultWildcardWildcardResponseStream(_httpRes.body());
+        }
 
         ListPassthroughsResponse _res = _resBuilder.build();
         
@@ -428,18 +455,35 @@ public class Passthrough implements
             // no content 
             return _res;
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "2XX")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             if (Utils.contentTypeMatches(_contentType, "*/*")) {
                 return _res;
             } else if (Utils.contentTypeMatches(_contentType, "application/json")) {
                 Object _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
                     new TypeReference<Object>() {});
-                _res.withTwoXXApplicationJsonAny(Optional.ofNullable(_out));
+                _res.withDefaultApplicationJsonAny(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "application/xml")) {
+                String _out = Utils.toUtf8AndClose(_httpRes.body());
+                _res.withDefaultApplicationXmlRes(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "text/csv")) {
+                String _out = Utils.toUtf8AndClose(_httpRes.body());
+                _res.withDefaultTextCsvRes(Optional.ofNullable(_out));
                 return _res;
             } else if (Utils.contentTypeMatches(_contentType, "text/plain")) {
                 String _out = Utils.toUtf8AndClose(_httpRes.body());
-                _res.withTwoXXTextPlainRes(Optional.ofNullable(_out));
+                _res.withDefaultTextPlainRes(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -448,14 +492,6 @@ public class Passthrough implements
                     "Unexpected content-type received: " + _contentType, 
                     Utils.extractByteArrayFromBody(_httpRes));
             }
-        }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
-            // no content 
-            throw new SDKError(
-                    _httpRes, 
-                    _httpRes.statusCode(), 
-                    "API error occurred", 
-                    Utils.extractByteArrayFromBody(_httpRes));
         }
         throw new SDKError(
             _httpRes, 
@@ -500,7 +536,7 @@ public class Passthrough implements
                 "json",
                 false);
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
-        _req.addHeader("Accept", "application/json;q=1, text/plain;q=0.7, */*;q=0")
+        _req.addHeader("Accept", "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
 
@@ -557,6 +593,9 @@ public class Passthrough implements
                 .contentType(_contentType)
                 .statusCode(_httpRes.statusCode())
                 .rawResponse(_httpRes);
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default") && Utils.contentTypeMatches(_contentType, "*/*")) {
+            _resBuilder.defaultWildcardWildcardResponseStream(_httpRes.body());
+        }
 
         PatchPassthroughJsonResponse _res = _resBuilder.build();
         
@@ -565,18 +604,35 @@ public class Passthrough implements
             // no content 
             return _res;
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "2XX")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             if (Utils.contentTypeMatches(_contentType, "*/*")) {
                 return _res;
             } else if (Utils.contentTypeMatches(_contentType, "application/json")) {
                 Object _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
                     new TypeReference<Object>() {});
-                _res.withTwoXXApplicationJsonAny(Optional.ofNullable(_out));
+                _res.withDefaultApplicationJsonAny(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "application/xml")) {
+                String _out = Utils.toUtf8AndClose(_httpRes.body());
+                _res.withDefaultApplicationXmlRes(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "text/csv")) {
+                String _out = Utils.toUtf8AndClose(_httpRes.body());
+                _res.withDefaultTextCsvRes(Optional.ofNullable(_out));
                 return _res;
             } else if (Utils.contentTypeMatches(_contentType, "text/plain")) {
                 String _out = Utils.toUtf8AndClose(_httpRes.body());
-                _res.withTwoXXTextPlainRes(Optional.ofNullable(_out));
+                _res.withDefaultTextPlainRes(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -585,14 +641,6 @@ public class Passthrough implements
                     "Unexpected content-type received: " + _contentType, 
                     Utils.extractByteArrayFromBody(_httpRes));
             }
-        }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
-            // no content 
-            throw new SDKError(
-                    _httpRes, 
-                    _httpRes.statusCode(), 
-                    "API error occurred", 
-                    Utils.extractByteArrayFromBody(_httpRes));
         }
         throw new SDKError(
             _httpRes, 
@@ -637,7 +685,7 @@ public class Passthrough implements
                 "raw",
                 false);
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
-        _req.addHeader("Accept", "application/json;q=1, text/plain;q=0.7, */*;q=0")
+        _req.addHeader("Accept", "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
 
@@ -694,6 +742,9 @@ public class Passthrough implements
                 .contentType(_contentType)
                 .statusCode(_httpRes.statusCode())
                 .rawResponse(_httpRes);
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default") && Utils.contentTypeMatches(_contentType, "*/*")) {
+            _resBuilder.defaultWildcardWildcardResponseStream(_httpRes.body());
+        }
 
         PatchPassthroughRawResponse _res = _resBuilder.build();
         
@@ -702,18 +753,35 @@ public class Passthrough implements
             // no content 
             return _res;
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "2XX")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             if (Utils.contentTypeMatches(_contentType, "*/*")) {
                 return _res;
             } else if (Utils.contentTypeMatches(_contentType, "application/json")) {
                 Object _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
                     new TypeReference<Object>() {});
-                _res.withTwoXXApplicationJsonAny(Optional.ofNullable(_out));
+                _res.withDefaultApplicationJsonAny(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "application/xml")) {
+                String _out = Utils.toUtf8AndClose(_httpRes.body());
+                _res.withDefaultApplicationXmlRes(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "text/csv")) {
+                String _out = Utils.toUtf8AndClose(_httpRes.body());
+                _res.withDefaultTextCsvRes(Optional.ofNullable(_out));
                 return _res;
             } else if (Utils.contentTypeMatches(_contentType, "text/plain")) {
                 String _out = Utils.toUtf8AndClose(_httpRes.body());
-                _res.withTwoXXTextPlainRes(Optional.ofNullable(_out));
+                _res.withDefaultTextPlainRes(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -722,14 +790,6 @@ public class Passthrough implements
                     "Unexpected content-type received: " + _contentType, 
                     Utils.extractByteArrayFromBody(_httpRes));
             }
-        }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
-            // no content 
-            throw new SDKError(
-                    _httpRes, 
-                    _httpRes.statusCode(), 
-                    "API error occurred", 
-                    Utils.extractByteArrayFromBody(_httpRes));
         }
         throw new SDKError(
             _httpRes, 
@@ -764,7 +824,7 @@ public class Passthrough implements
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "DELETE");
-        _req.addHeader("Accept", "application/json;q=1, text/plain;q=0.7, */*;q=0")
+        _req.addHeader("Accept", "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
 
@@ -821,6 +881,9 @@ public class Passthrough implements
                 .contentType(_contentType)
                 .statusCode(_httpRes.statusCode())
                 .rawResponse(_httpRes);
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default") && Utils.contentTypeMatches(_contentType, "*/*")) {
+            _resBuilder.defaultWildcardWildcardResponseStream(_httpRes.body());
+        }
 
         RemovePassthroughResponse _res = _resBuilder.build();
         
@@ -829,18 +892,35 @@ public class Passthrough implements
             // no content 
             return _res;
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "2XX")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             if (Utils.contentTypeMatches(_contentType, "*/*")) {
                 return _res;
             } else if (Utils.contentTypeMatches(_contentType, "application/json")) {
                 Object _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
                     new TypeReference<Object>() {});
-                _res.withTwoXXApplicationJsonAny(Optional.ofNullable(_out));
+                _res.withDefaultApplicationJsonAny(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "application/xml")) {
+                String _out = Utils.toUtf8AndClose(_httpRes.body());
+                _res.withDefaultApplicationXmlRes(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "text/csv")) {
+                String _out = Utils.toUtf8AndClose(_httpRes.body());
+                _res.withDefaultTextCsvRes(Optional.ofNullable(_out));
                 return _res;
             } else if (Utils.contentTypeMatches(_contentType, "text/plain")) {
                 String _out = Utils.toUtf8AndClose(_httpRes.body());
-                _res.withTwoXXTextPlainRes(Optional.ofNullable(_out));
+                _res.withDefaultTextPlainRes(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -849,14 +929,6 @@ public class Passthrough implements
                     "Unexpected content-type received: " + _contentType, 
                     Utils.extractByteArrayFromBody(_httpRes));
             }
-        }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
-            // no content 
-            throw new SDKError(
-                    _httpRes, 
-                    _httpRes.statusCode(), 
-                    "API error occurred", 
-                    Utils.extractByteArrayFromBody(_httpRes));
         }
         throw new SDKError(
             _httpRes, 
@@ -901,7 +973,7 @@ public class Passthrough implements
                 "json",
                 false);
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
-        _req.addHeader("Accept", "application/json;q=1, text/plain;q=0.7, */*;q=0")
+        _req.addHeader("Accept", "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
 
@@ -958,6 +1030,9 @@ public class Passthrough implements
                 .contentType(_contentType)
                 .statusCode(_httpRes.statusCode())
                 .rawResponse(_httpRes);
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default") && Utils.contentTypeMatches(_contentType, "*/*")) {
+            _resBuilder.defaultWildcardWildcardResponseStream(_httpRes.body());
+        }
 
         UpdatePassthroughJsonResponse _res = _resBuilder.build();
         
@@ -966,18 +1041,35 @@ public class Passthrough implements
             // no content 
             return _res;
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "2XX")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             if (Utils.contentTypeMatches(_contentType, "*/*")) {
                 return _res;
             } else if (Utils.contentTypeMatches(_contentType, "application/json")) {
                 Object _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
                     new TypeReference<Object>() {});
-                _res.withTwoXXApplicationJsonAny(Optional.ofNullable(_out));
+                _res.withDefaultApplicationJsonAny(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "application/xml")) {
+                String _out = Utils.toUtf8AndClose(_httpRes.body());
+                _res.withDefaultApplicationXmlRes(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "text/csv")) {
+                String _out = Utils.toUtf8AndClose(_httpRes.body());
+                _res.withDefaultTextCsvRes(Optional.ofNullable(_out));
                 return _res;
             } else if (Utils.contentTypeMatches(_contentType, "text/plain")) {
                 String _out = Utils.toUtf8AndClose(_httpRes.body());
-                _res.withTwoXXTextPlainRes(Optional.ofNullable(_out));
+                _res.withDefaultTextPlainRes(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -986,14 +1078,6 @@ public class Passthrough implements
                     "Unexpected content-type received: " + _contentType, 
                     Utils.extractByteArrayFromBody(_httpRes));
             }
-        }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
-            // no content 
-            throw new SDKError(
-                    _httpRes, 
-                    _httpRes.statusCode(), 
-                    "API error occurred", 
-                    Utils.extractByteArrayFromBody(_httpRes));
         }
         throw new SDKError(
             _httpRes, 
@@ -1038,7 +1122,7 @@ public class Passthrough implements
                 "raw",
                 false);
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
-        _req.addHeader("Accept", "application/json;q=1, text/plain;q=0.7, */*;q=0")
+        _req.addHeader("Accept", "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
 
@@ -1095,6 +1179,9 @@ public class Passthrough implements
                 .contentType(_contentType)
                 .statusCode(_httpRes.statusCode())
                 .rawResponse(_httpRes);
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default") && Utils.contentTypeMatches(_contentType, "*/*")) {
+            _resBuilder.defaultWildcardWildcardResponseStream(_httpRes.body());
+        }
 
         UpdatePassthroughRawResponse _res = _resBuilder.build();
         
@@ -1103,18 +1190,35 @@ public class Passthrough implements
             // no content 
             return _res;
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "2XX")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             if (Utils.contentTypeMatches(_contentType, "*/*")) {
                 return _res;
             } else if (Utils.contentTypeMatches(_contentType, "application/json")) {
                 Object _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
                     new TypeReference<Object>() {});
-                _res.withTwoXXApplicationJsonAny(Optional.ofNullable(_out));
+                _res.withDefaultApplicationJsonAny(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "application/xml")) {
+                String _out = Utils.toUtf8AndClose(_httpRes.body());
+                _res.withDefaultApplicationXmlRes(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "text/csv")) {
+                String _out = Utils.toUtf8AndClose(_httpRes.body());
+                _res.withDefaultTextCsvRes(Optional.ofNullable(_out));
                 return _res;
             } else if (Utils.contentTypeMatches(_contentType, "text/plain")) {
                 String _out = Utils.toUtf8AndClose(_httpRes.body());
-                _res.withTwoXXTextPlainRes(Optional.ofNullable(_out));
+                _res.withDefaultTextPlainRes(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -1123,14 +1227,6 @@ public class Passthrough implements
                     "Unexpected content-type received: " + _contentType, 
                     Utils.extractByteArrayFromBody(_httpRes));
             }
-        }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
-            // no content 
-            throw new SDKError(
-                    _httpRes, 
-                    _httpRes.statusCode(), 
-                    "API error occurred", 
-                    Utils.extractByteArrayFromBody(_httpRes));
         }
         throw new SDKError(
             _httpRes, 

@@ -897,6 +897,10 @@ public class Messaging implements
 
         RemoveMessagingMessageResponse _res = _resBuilder.build();
         
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            // no content 
+            return _res;
+        }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
             // no content 
             throw new SDKError(
@@ -905,7 +909,8 @@ public class Messaging implements
                     "API error occurred", 
                     Utils.extractByteArrayFromBody(_httpRes));
         }
-        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200", "default")) {
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
             // no content 
             return _res;
         }

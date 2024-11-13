@@ -48,9 +48,7 @@ public class Application {
                 .request(req)
                 .call();
 
-        if (res.body().isPresent()) {
-            // handle response
-        }
+        // handle response
     }
 }
 ```
@@ -105,9 +103,7 @@ public class Application {
                 .request(req)
                 .call();
 
-        if (res.body().isPresent()) {
-            // handle response
-        }
+        // handle response
     }
 }
 ```
@@ -162,9 +158,7 @@ public class Application {
                 .request(req)
                 .call();
 
-        if (res.body().isPresent()) {
-            // handle response
-        }
+        // handle response
     }
 }
 ```
@@ -219,9 +213,7 @@ public class Application {
                 .request(req)
                 .call();
 
-        if (res.body().isPresent()) {
-            // handle response
-        }
+        // handle response
     }
 }
 ```
@@ -276,9 +268,7 @@ public class Application {
                 .request(req)
                 .call();
 
-        if (res.body().isPresent()) {
-            // handle response
-        }
+        // handle response
     }
 }
 ```
@@ -333,9 +323,7 @@ public class Application {
                 .request(req)
                 .call();
 
-        if (res.body().isPresent()) {
-            // handle response
-        }
+        // handle response
     }
 }
 ```
@@ -390,9 +378,7 @@ public class Application {
                 .request(req)
                 .call();
 
-        if (res.body().isPresent()) {
-            // handle response
-        }
+        // handle response
     }
 }
 ```
@@ -447,9 +433,7 @@ public class Application {
                 .request(req)
                 .call();
 
-        if (res.body().isPresent()) {
-            // handle response
-        }
+        // handle response
     }
 }
 ```

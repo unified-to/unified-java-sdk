@@ -46,6 +46,9 @@ public class AtsJob {
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+    /**
+     * The names of the departments/divisions that this job belongs to
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("departments")
     private Optional<? extends List<String>> departments;
@@ -204,6 +207,9 @@ public class AtsJob {
         return createdAt;
     }
 
+    /**
+     * The names of the departments/divisions that this job belongs to
+     */
     @SuppressWarnings("unchecked")
     @JsonIgnore
     public Optional<List<String>> departments() {
@@ -354,12 +360,18 @@ public class AtsJob {
         return this;
     }
 
+    /**
+     * The names of the departments/divisions that this job belongs to
+     */
     public AtsJob withDepartments(List<String> departments) {
         Utils.checkNotNull(departments, "departments");
         this.departments = Optional.ofNullable(departments);
         return this;
     }
 
+    /**
+     * The names of the departments/divisions that this job belongs to
+     */
     public AtsJob withDepartments(Optional<? extends List<String>> departments) {
         Utils.checkNotNull(departments, "departments");
         this.departments = departments;
@@ -728,12 +740,18 @@ public class AtsJob {
             return this;
         }
 
+        /**
+         * The names of the departments/divisions that this job belongs to
+         */
         public Builder departments(List<String> departments) {
             Utils.checkNotNull(departments, "departments");
             this.departments = Optional.ofNullable(departments);
             return this;
         }
 
+        /**
+         * The names of the departments/divisions that this job belongs to
+         */
         public Builder departments(Optional<? extends List<String>> departments) {
             Utils.checkNotNull(departments, "departments");
             this.departments = departments;
