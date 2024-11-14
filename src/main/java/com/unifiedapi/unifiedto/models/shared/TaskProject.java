@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
+import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
@@ -35,6 +36,10 @@ public class TaskProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_ids")
     private Optional<? extends List<String>> groupIds;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("has_tasks")
+    private Optional<Boolean> hasTasks;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
@@ -65,6 +70,7 @@ public class TaskProject {
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("description") Optional<String> description,
             @JsonProperty("group_ids") Optional<? extends List<String>> groupIds,
+            @JsonProperty("has_tasks") Optional<Boolean> hasTasks,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("name") Optional<String> name,
             @JsonProperty("parent_id") Optional<String> parentId,
@@ -74,6 +80,7 @@ public class TaskProject {
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(description, "description");
         Utils.checkNotNull(groupIds, "groupIds");
+        Utils.checkNotNull(hasTasks, "hasTasks");
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(name, "name");
         Utils.checkNotNull(parentId, "parentId");
@@ -83,6 +90,7 @@ public class TaskProject {
         this.createdAt = createdAt;
         this.description = description;
         this.groupIds = groupIds;
+        this.hasTasks = hasTasks;
         this.id = id;
         this.name = name;
         this.parentId = parentId;
@@ -92,7 +100,7 @@ public class TaskProject {
     }
     
     public TaskProject() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -109,6 +117,11 @@ public class TaskProject {
     @JsonIgnore
     public Optional<List<String>> groupIds() {
         return (Optional<List<String>>) groupIds;
+    }
+
+    @JsonIgnore
+    public Optional<Boolean> hasTasks() {
+        return hasTasks;
     }
 
     @JsonIgnore
@@ -180,6 +193,18 @@ public class TaskProject {
     public TaskProject withGroupIds(Optional<? extends List<String>> groupIds) {
         Utils.checkNotNull(groupIds, "groupIds");
         this.groupIds = groupIds;
+        return this;
+    }
+
+    public TaskProject withHasTasks(boolean hasTasks) {
+        Utils.checkNotNull(hasTasks, "hasTasks");
+        this.hasTasks = Optional.ofNullable(hasTasks);
+        return this;
+    }
+
+    public TaskProject withHasTasks(Optional<Boolean> hasTasks) {
+        Utils.checkNotNull(hasTasks, "hasTasks");
+        this.hasTasks = hasTasks;
         return this;
     }
 
@@ -268,6 +293,7 @@ public class TaskProject {
             Objects.deepEquals(this.createdAt, other.createdAt) &&
             Objects.deepEquals(this.description, other.description) &&
             Objects.deepEquals(this.groupIds, other.groupIds) &&
+            Objects.deepEquals(this.hasTasks, other.hasTasks) &&
             Objects.deepEquals(this.id, other.id) &&
             Objects.deepEquals(this.name, other.name) &&
             Objects.deepEquals(this.parentId, other.parentId) &&
@@ -282,6 +308,7 @@ public class TaskProject {
             createdAt,
             description,
             groupIds,
+            hasTasks,
             id,
             name,
             parentId,
@@ -296,6 +323,7 @@ public class TaskProject {
                 "createdAt", createdAt,
                 "description", description,
                 "groupIds", groupIds,
+                "hasTasks", hasTasks,
                 "id", id,
                 "name", name,
                 "parentId", parentId,
@@ -311,6 +339,8 @@ public class TaskProject {
         private Optional<String> description = Optional.empty();
  
         private Optional<? extends List<String>> groupIds = Optional.empty();
+ 
+        private Optional<Boolean> hasTasks = Optional.empty();
  
         private Optional<String> id = Optional.empty();
  
@@ -361,6 +391,18 @@ public class TaskProject {
         public Builder groupIds(Optional<? extends List<String>> groupIds) {
             Utils.checkNotNull(groupIds, "groupIds");
             this.groupIds = groupIds;
+            return this;
+        }
+
+        public Builder hasTasks(boolean hasTasks) {
+            Utils.checkNotNull(hasTasks, "hasTasks");
+            this.hasTasks = Optional.ofNullable(hasTasks);
+            return this;
+        }
+
+        public Builder hasTasks(Optional<Boolean> hasTasks) {
+            Utils.checkNotNull(hasTasks, "hasTasks");
+            this.hasTasks = hasTasks;
             return this;
         }
 
@@ -441,6 +483,7 @@ public class TaskProject {
                 createdAt,
                 description,
                 groupIds,
+                hasTasks,
                 id,
                 name,
                 parentId,

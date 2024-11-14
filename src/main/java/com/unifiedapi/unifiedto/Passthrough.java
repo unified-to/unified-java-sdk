@@ -177,9 +177,7 @@ public class Passthrough implements
         }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
             _res.withHeaders(_httpRes.headers().map());
-            if (Utils.contentTypeMatches(_contentType, "*/*")) {
-                return _res;
-            } else if (Utils.contentTypeMatches(_contentType, "application/json")) {
+            if (Utils.contentTypeMatches(_contentType, "application/json")) {
                 Object _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
                     new TypeReference<Object>() {});
@@ -196,6 +194,8 @@ public class Passthrough implements
             } else if (Utils.contentTypeMatches(_contentType, "text/plain")) {
                 String _out = Utils.toUtf8AndClose(_httpRes.body());
                 _res.withDefaultTextPlainRes(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "*/*")) {
                 return _res;
             } else {
                 throw new SDKError(
@@ -326,9 +326,7 @@ public class Passthrough implements
         }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
             _res.withHeaders(_httpRes.headers().map());
-            if (Utils.contentTypeMatches(_contentType, "*/*")) {
-                return _res;
-            } else if (Utils.contentTypeMatches(_contentType, "application/json")) {
+            if (Utils.contentTypeMatches(_contentType, "application/json")) {
                 Object _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
                     new TypeReference<Object>() {});
@@ -345,6 +343,8 @@ public class Passthrough implements
             } else if (Utils.contentTypeMatches(_contentType, "text/plain")) {
                 String _out = Utils.toUtf8AndClose(_httpRes.body());
                 _res.withDefaultTextPlainRes(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "*/*")) {
                 return _res;
             } else {
                 throw new SDKError(
@@ -465,9 +465,7 @@ public class Passthrough implements
         }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
             _res.withHeaders(_httpRes.headers().map());
-            if (Utils.contentTypeMatches(_contentType, "*/*")) {
-                return _res;
-            } else if (Utils.contentTypeMatches(_contentType, "application/json")) {
+            if (Utils.contentTypeMatches(_contentType, "application/json")) {
                 Object _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
                     new TypeReference<Object>() {});
@@ -484,6 +482,8 @@ public class Passthrough implements
             } else if (Utils.contentTypeMatches(_contentType, "text/plain")) {
                 String _out = Utils.toUtf8AndClose(_httpRes.body());
                 _res.withDefaultTextPlainRes(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "*/*")) {
                 return _res;
             } else {
                 throw new SDKError(
@@ -614,9 +614,7 @@ public class Passthrough implements
         }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
             _res.withHeaders(_httpRes.headers().map());
-            if (Utils.contentTypeMatches(_contentType, "*/*")) {
-                return _res;
-            } else if (Utils.contentTypeMatches(_contentType, "application/json")) {
+            if (Utils.contentTypeMatches(_contentType, "application/json")) {
                 Object _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
                     new TypeReference<Object>() {});
@@ -633,6 +631,8 @@ public class Passthrough implements
             } else if (Utils.contentTypeMatches(_contentType, "text/plain")) {
                 String _out = Utils.toUtf8AndClose(_httpRes.body());
                 _res.withDefaultTextPlainRes(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "*/*")) {
                 return _res;
             } else {
                 throw new SDKError(
@@ -763,9 +763,7 @@ public class Passthrough implements
         }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
             _res.withHeaders(_httpRes.headers().map());
-            if (Utils.contentTypeMatches(_contentType, "*/*")) {
-                return _res;
-            } else if (Utils.contentTypeMatches(_contentType, "application/json")) {
+            if (Utils.contentTypeMatches(_contentType, "application/json")) {
                 Object _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
                     new TypeReference<Object>() {});
@@ -782,6 +780,8 @@ public class Passthrough implements
             } else if (Utils.contentTypeMatches(_contentType, "text/plain")) {
                 String _out = Utils.toUtf8AndClose(_httpRes.body());
                 _res.withDefaultTextPlainRes(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "*/*")) {
                 return _res;
             } else {
                 throw new SDKError(
@@ -902,9 +902,7 @@ public class Passthrough implements
         }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
             _res.withHeaders(_httpRes.headers().map());
-            if (Utils.contentTypeMatches(_contentType, "*/*")) {
-                return _res;
-            } else if (Utils.contentTypeMatches(_contentType, "application/json")) {
+            if (Utils.contentTypeMatches(_contentType, "application/json")) {
                 Object _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
                     new TypeReference<Object>() {});
@@ -921,6 +919,8 @@ public class Passthrough implements
             } else if (Utils.contentTypeMatches(_contentType, "text/plain")) {
                 String _out = Utils.toUtf8AndClose(_httpRes.body());
                 _res.withDefaultTextPlainRes(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "*/*")) {
                 return _res;
             } else {
                 throw new SDKError(
@@ -1051,9 +1051,7 @@ public class Passthrough implements
         }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
             _res.withHeaders(_httpRes.headers().map());
-            if (Utils.contentTypeMatches(_contentType, "*/*")) {
-                return _res;
-            } else if (Utils.contentTypeMatches(_contentType, "application/json")) {
+            if (Utils.contentTypeMatches(_contentType, "application/json")) {
                 Object _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
                     new TypeReference<Object>() {});
@@ -1070,6 +1068,8 @@ public class Passthrough implements
             } else if (Utils.contentTypeMatches(_contentType, "text/plain")) {
                 String _out = Utils.toUtf8AndClose(_httpRes.body());
                 _res.withDefaultTextPlainRes(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "*/*")) {
                 return _res;
             } else {
                 throw new SDKError(
@@ -1200,9 +1200,7 @@ public class Passthrough implements
         }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
             _res.withHeaders(_httpRes.headers().map());
-            if (Utils.contentTypeMatches(_contentType, "*/*")) {
-                return _res;
-            } else if (Utils.contentTypeMatches(_contentType, "application/json")) {
+            if (Utils.contentTypeMatches(_contentType, "application/json")) {
                 Object _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
                     new TypeReference<Object>() {});
@@ -1219,6 +1217,8 @@ public class Passthrough implements
             } else if (Utils.contentTypeMatches(_contentType, "text/plain")) {
                 String _out = Utils.toUtf8AndClose(_httpRes.body());
                 _res.withDefaultTextPlainRes(Optional.ofNullable(_out));
+                return _res;
+            } else if (Utils.contentTypeMatches(_contentType, "*/*")) {
                 return _res;
             } else {
                 throw new SDKError(
