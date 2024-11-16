@@ -66,7 +66,7 @@ public class MessagingChannel {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<String> updatedAt;
+    private Optional<OffsetDateTime> updatedAt;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
@@ -84,7 +84,7 @@ public class MessagingChannel {
             @JsonProperty("name") String name,
             @JsonProperty("parent_channel_id") Optional<String> parentChannelId,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("updated_at") Optional<String> updatedAt,
+            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
             @JsonProperty("web_url") Optional<String> webUrl) {
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(description, "description");
@@ -170,7 +170,7 @@ public class MessagingChannel {
     }
 
     @JsonIgnore
-    public Optional<String> updatedAt() {
+    public Optional<OffsetDateTime> updatedAt() {
         return updatedAt;
     }
 
@@ -297,13 +297,13 @@ public class MessagingChannel {
         return this;
     }
 
-    public MessagingChannel withUpdatedAt(String updatedAt) {
+    public MessagingChannel withUpdatedAt(OffsetDateTime updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = Optional.ofNullable(updatedAt);
         return this;
     }
 
-    public MessagingChannel withUpdatedAt(Optional<String> updatedAt) {
+    public MessagingChannel withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
@@ -401,7 +401,7 @@ public class MessagingChannel {
  
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
  
-        private Optional<String> updatedAt = Optional.empty();
+        private Optional<OffsetDateTime> updatedAt = Optional.empty();
  
         private Optional<String> webUrl = Optional.empty();  
         
@@ -523,13 +523,13 @@ public class MessagingChannel {
             return this;
         }
 
-        public Builder updatedAt(String updatedAt) {
+        public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
             return this;
         }
 
-        public Builder updatedAt(Optional<String> updatedAt) {
+        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = updatedAt;
             return this;

@@ -15,6 +15,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -37,7 +38,7 @@ public class MessagingMessage {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<String> createdAt;
+    private Optional<OffsetDateTime> createdAt;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination_members")
@@ -81,7 +82,7 @@ public class MessagingMessage {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<String> updatedAt;
+    private Optional<OffsetDateTime> updatedAt;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
@@ -92,7 +93,7 @@ public class MessagingMessage {
             @JsonProperty("attachments") Optional<? extends List<MessagingAttachment>> attachments,
             @JsonProperty("author_member") Optional<? extends PropertyMessagingMessageAuthorMember> authorMember,
             @JsonProperty("channel_id") Optional<String> channelId,
-            @JsonProperty("created_at") Optional<String> createdAt,
+            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("destination_members") Optional<? extends List<MessagingMember>> destinationMembers,
             @JsonProperty("hidden_members") Optional<? extends List<MessagingMember>> hiddenMembers,
             @JsonProperty("id") Optional<String> id,
@@ -103,7 +104,7 @@ public class MessagingMessage {
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
             @JsonProperty("reference") Optional<String> reference,
             @JsonProperty("subject") Optional<String> subject,
-            @JsonProperty("updated_at") Optional<String> updatedAt,
+            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
             @JsonProperty("web_url") Optional<String> webUrl) {
         Utils.checkNotNull(attachments, "attachments");
         Utils.checkNotNull(authorMember, "authorMember");
@@ -161,7 +162,7 @@ public class MessagingMessage {
     }
 
     @JsonIgnore
-    public Optional<String> createdAt() {
+    public Optional<OffsetDateTime> createdAt() {
         return createdAt;
     }
 
@@ -220,7 +221,7 @@ public class MessagingMessage {
     }
 
     @JsonIgnore
-    public Optional<String> updatedAt() {
+    public Optional<OffsetDateTime> updatedAt() {
         return updatedAt;
     }
 
@@ -269,13 +270,13 @@ public class MessagingMessage {
         return this;
     }
 
-    public MessagingMessage withCreatedAt(String createdAt) {
+    public MessagingMessage withCreatedAt(OffsetDateTime createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
 
-    public MessagingMessage withCreatedAt(Optional<String> createdAt) {
+    public MessagingMessage withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
         return this;
@@ -401,13 +402,13 @@ public class MessagingMessage {
         return this;
     }
 
-    public MessagingMessage withUpdatedAt(String updatedAt) {
+    public MessagingMessage withUpdatedAt(OffsetDateTime updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = Optional.ofNullable(updatedAt);
         return this;
     }
 
-    public MessagingMessage withUpdatedAt(Optional<String> updatedAt) {
+    public MessagingMessage withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
@@ -503,7 +504,7 @@ public class MessagingMessage {
  
         private Optional<String> channelId = Optional.empty();
  
-        private Optional<String> createdAt = Optional.empty();
+        private Optional<OffsetDateTime> createdAt = Optional.empty();
  
         private Optional<? extends List<MessagingMember>> destinationMembers = Optional.empty();
  
@@ -525,7 +526,7 @@ public class MessagingMessage {
  
         private Optional<String> subject = Optional.empty();
  
-        private Optional<String> updatedAt = Optional.empty();
+        private Optional<OffsetDateTime> updatedAt = Optional.empty();
  
         private Optional<String> webUrl = Optional.empty();  
         
@@ -569,13 +570,13 @@ public class MessagingMessage {
             return this;
         }
 
-        public Builder createdAt(String createdAt) {
+        public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
             return this;
         }
 
-        public Builder createdAt(Optional<String> createdAt) {
+        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = createdAt;
             return this;
@@ -701,13 +702,13 @@ public class MessagingMessage {
             return this;
         }
 
-        public Builder updatedAt(String updatedAt) {
+        public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
             return this;
         }
 
-        public Builder updatedAt(Optional<String> updatedAt) {
+        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = updatedAt;
             return this;
