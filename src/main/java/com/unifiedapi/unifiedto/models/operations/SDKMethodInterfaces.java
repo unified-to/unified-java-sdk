@@ -755,6 +755,12 @@ public class SDKMethodInterfaces {
     }
 
 
+    public interface MethodCallCreateCommerceMetadata {
+        CreateCommerceMetadataResponse createCommerceMetadata(
+            CreateCommerceMetadataRequest request) throws Exception;
+    }
+
+
     public interface MethodCallGetCommerceCollection {
         GetCommerceCollectionResponse getCommerceCollection(
             GetCommerceCollectionRequest request) throws Exception;
@@ -776,6 +782,12 @@ public class SDKMethodInterfaces {
     public interface MethodCallGetCommerceLocation {
         GetCommerceLocationResponse getCommerceLocation(
             GetCommerceLocationRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallGetCommerceMetadata {
+        GetCommerceMetadataResponse getCommerceMetadata(
+            GetCommerceMetadataRequest request) throws Exception;
     }
 
 
@@ -803,6 +815,12 @@ public class SDKMethodInterfaces {
     }
 
 
+    public interface MethodCallListCommerceMetadatas {
+        ListCommerceMetadatasResponse listCommerceMetadatas(
+            ListCommerceMetadatasRequest request) throws Exception;
+    }
+
+
     public interface MethodCallPatchCommerceCollection {
         PatchCommerceCollectionResponse patchCommerceCollection(
             PatchCommerceCollectionRequest request) throws Exception;
@@ -824,6 +842,12 @@ public class SDKMethodInterfaces {
     public interface MethodCallPatchCommerceLocation {
         PatchCommerceLocationResponse patchCommerceLocation(
             PatchCommerceLocationRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallPatchCommerceMetadata {
+        PatchCommerceMetadataResponse patchCommerceMetadata(
+            PatchCommerceMetadataRequest request) throws Exception;
     }
 
 
@@ -851,6 +875,12 @@ public class SDKMethodInterfaces {
     }
 
 
+    public interface MethodCallRemoveCommerceMetadata {
+        RemoveCommerceMetadataResponse removeCommerceMetadata(
+            RemoveCommerceMetadataRequest request) throws Exception;
+    }
+
+
     public interface MethodCallUpdateCommerceCollection {
         UpdateCommerceCollectionResponse updateCommerceCollection(
             UpdateCommerceCollectionRequest request) throws Exception;
@@ -872,6 +902,12 @@ public class SDKMethodInterfaces {
     public interface MethodCallUpdateCommerceLocation {
         UpdateCommerceLocationResponse updateCommerceLocation(
             UpdateCommerceLocationRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallUpdateCommerceMetadata {
+        UpdateCommerceMetadataResponse updateCommerceMetadata(
+            UpdateCommerceMetadataRequest request) throws Exception;
     }
 
 

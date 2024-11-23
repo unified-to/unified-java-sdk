@@ -18,6 +18,9 @@ import com.unifiedapi.unifiedto.models.operations.CreateCommerceItemResponse;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.CreateCommerceLocationResponse;
+import com.unifiedapi.unifiedto.models.operations.CreateCommerceMetadataRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateCommerceMetadataRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.CreateCommerceMetadataResponse;
 import com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.GetCommerceCollectionResponse;
@@ -30,6 +33,9 @@ import com.unifiedapi.unifiedto.models.operations.GetCommerceItemResponse;
 import com.unifiedapi.unifiedto.models.operations.GetCommerceLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.GetCommerceLocationRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.GetCommerceLocationResponse;
+import com.unifiedapi.unifiedto.models.operations.GetCommerceMetadataRequest;
+import com.unifiedapi.unifiedto.models.operations.GetCommerceMetadataRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.GetCommerceMetadataResponse;
 import com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.ListCommerceCollectionsResponse;
@@ -42,6 +48,9 @@ import com.unifiedapi.unifiedto.models.operations.ListCommerceItemsResponse;
 import com.unifiedapi.unifiedto.models.operations.ListCommerceLocationsRequest;
 import com.unifiedapi.unifiedto.models.operations.ListCommerceLocationsRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.ListCommerceLocationsResponse;
+import com.unifiedapi.unifiedto.models.operations.ListCommerceMetadatasRequest;
+import com.unifiedapi.unifiedto.models.operations.ListCommerceMetadatasRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.ListCommerceMetadatasResponse;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceCollectionResponse;
@@ -54,6 +63,9 @@ import com.unifiedapi.unifiedto.models.operations.PatchCommerceItemResponse;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.PatchCommerceLocationResponse;
+import com.unifiedapi.unifiedto.models.operations.PatchCommerceMetadataRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchCommerceMetadataRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.PatchCommerceMetadataResponse;
 import com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.RemoveCommerceCollectionResponse;
@@ -66,6 +78,9 @@ import com.unifiedapi.unifiedto.models.operations.RemoveCommerceItemResponse;
 import com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.RemoveCommerceLocationResponse;
+import com.unifiedapi.unifiedto.models.operations.RemoveCommerceMetadataRequest;
+import com.unifiedapi.unifiedto.models.operations.RemoveCommerceMetadataRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.RemoveCommerceMetadataResponse;
 import com.unifiedapi.unifiedto.models.operations.SDKMethodInterfaces.*;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceCollectionRequestBuilder;
@@ -79,10 +94,14 @@ import com.unifiedapi.unifiedto.models.operations.UpdateCommerceItemResponse;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationRequest;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationRequestBuilder;
 import com.unifiedapi.unifiedto.models.operations.UpdateCommerceLocationResponse;
+import com.unifiedapi.unifiedto.models.operations.UpdateCommerceMetadataRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdateCommerceMetadataRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.UpdateCommerceMetadataResponse;
 import com.unifiedapi.unifiedto.models.shared.CommerceCollection;
 import com.unifiedapi.unifiedto.models.shared.CommerceInventory;
 import com.unifiedapi.unifiedto.models.shared.CommerceItem;
 import com.unifiedapi.unifiedto.models.shared.CommerceLocation;
+import com.unifiedapi.unifiedto.models.shared.CommerceMetadata;
 import com.unifiedapi.unifiedto.utils.HTTPClient;
 import com.unifiedapi.unifiedto.utils.HTTPRequest;
 import com.unifiedapi.unifiedto.utils.Hook.AfterErrorContextImpl;
@@ -105,26 +124,32 @@ public class Commerce implements
             MethodCallCreateCommerceInventory,
             MethodCallCreateCommerceItem,
             MethodCallCreateCommerceLocation,
+            MethodCallCreateCommerceMetadata,
             MethodCallGetCommerceCollection,
             MethodCallGetCommerceInventory,
             MethodCallGetCommerceItem,
             MethodCallGetCommerceLocation,
+            MethodCallGetCommerceMetadata,
             MethodCallListCommerceCollections,
             MethodCallListCommerceInventories,
             MethodCallListCommerceItems,
             MethodCallListCommerceLocations,
+            MethodCallListCommerceMetadatas,
             MethodCallPatchCommerceCollection,
             MethodCallPatchCommerceInventory,
             MethodCallPatchCommerceItem,
             MethodCallPatchCommerceLocation,
+            MethodCallPatchCommerceMetadata,
             MethodCallRemoveCommerceCollection,
             MethodCallRemoveCommerceInventory,
             MethodCallRemoveCommerceItem,
             MethodCallRemoveCommerceLocation,
+            MethodCallRemoveCommerceMetadata,
             MethodCallUpdateCommerceCollection,
             MethodCallUpdateCommerceInventory,
             MethodCallUpdateCommerceItem,
-            MethodCallUpdateCommerceLocation {
+            MethodCallUpdateCommerceLocation,
+            MethodCallUpdateCommerceMetadata {
 
     private final SDKConfiguration sdkConfiguration;
 
@@ -658,6 +683,137 @@ public class Commerce implements
 
 
     /**
+     * Create a metadata
+     * @return The call builder
+     */
+    public CreateCommerceMetadataRequestBuilder createCommerceMetadata() {
+        return new CreateCommerceMetadataRequestBuilder(this);
+    }
+
+    /**
+     * Create a metadata
+     * @param request The request object containing all of the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public CreateCommerceMetadataResponse createCommerceMetadata(
+            CreateCommerceMetadataRequest request) throws Exception {
+        String _baseUrl = this.sdkConfiguration.serverUrl;
+        String _url = Utils.generateURL(
+                CreateCommerceMetadataRequest.class,
+                _baseUrl,
+                "/commerce/{connection_id}/metadata",
+                request, null);
+        
+        HTTPRequest _req = new HTTPRequest(_url, "POST");
+        Object _convertedRequest = Utils.convertToShape(
+                request, 
+                JsonShape.DEFAULT,
+                new TypeReference<CreateCommerceMetadataRequest>() {});
+        SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
+                _convertedRequest, 
+                "commerceMetadata",
+                "json",
+                false);
+        _req.setBody(Optional.ofNullable(_serializedRequestBody));
+        _req.addHeader("Accept", "application/json")
+            .addHeader("user-agent", 
+                SDKConfiguration.USER_AGENT);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                CreateCommerceMetadataRequest.class,
+                request, 
+                null));
+
+        Utils.configureSecurity(_req,  
+                this.sdkConfiguration.securitySource.getSecurity());
+
+        HTTPClient _client = this.sdkConfiguration.defaultClient;
+        HttpRequest _r = 
+            sdkConfiguration.hooks()
+               .beforeRequest(
+                  new BeforeRequestContextImpl(
+                      "createCommerceMetadata", 
+                      Optional.of(List.of()), 
+                      sdkConfiguration.securitySource()),
+                  _req.build());
+        HttpResponse<InputStream> _httpRes;
+        try {
+            _httpRes = _client.send(_r);
+            if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "createCommerceMetadata",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()),
+                        Optional.of(_httpRes),
+                        Optional.empty());
+            } else {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterSuccess(
+                        new AfterSuccessContextImpl(
+                            "createCommerceMetadata",
+                            Optional.of(List.of()), 
+                            sdkConfiguration.securitySource()),
+                         _httpRes);
+            }
+        } catch (Exception _e) {
+            _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "createCommerceMetadata",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()), 
+                        Optional.empty(),
+                        Optional.of(_e));
+        }
+        String _contentType = _httpRes
+            .headers()
+            .firstValue("Content-Type")
+            .orElse("application/octet-stream");
+        CreateCommerceMetadataResponse.Builder _resBuilder = 
+            CreateCommerceMetadataResponse
+                .builder()
+                .contentType(_contentType)
+                .statusCode(_httpRes.statusCode())
+                .rawResponse(_httpRes);
+
+        CreateCommerceMetadataResponse _res = _resBuilder.build();
+        
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            if (Utils.contentTypeMatches(_contentType, "application/json")) {
+                CommerceMetadata _out = Utils.mapper().readValue(
+                    Utils.toUtf8AndClose(_httpRes.body()),
+                    new TypeReference<CommerceMetadata>() {});
+                _res.withCommerceMetadata(Optional.ofNullable(_out));
+                return _res;
+            } else {
+                throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "Unexpected content-type received: " + _contentType, 
+                    Utils.extractByteArrayFromBody(_httpRes));
+            }
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        throw new SDKError(
+            _httpRes, 
+            _httpRes.statusCode(), 
+            "Unexpected status code received: " + _httpRes.statusCode(), 
+            Utils.extractByteArrayFromBody(_httpRes));
+    }
+
+
+
+    /**
      * Retrieve a collection
      * @return The call builder
      */
@@ -1142,6 +1298,127 @@ public class Commerce implements
 
 
     /**
+     * Retrieve a metadata
+     * @return The call builder
+     */
+    public GetCommerceMetadataRequestBuilder getCommerceMetadata() {
+        return new GetCommerceMetadataRequestBuilder(this);
+    }
+
+    /**
+     * Retrieve a metadata
+     * @param request The request object containing all of the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public GetCommerceMetadataResponse getCommerceMetadata(
+            GetCommerceMetadataRequest request) throws Exception {
+        String _baseUrl = this.sdkConfiguration.serverUrl;
+        String _url = Utils.generateURL(
+                GetCommerceMetadataRequest.class,
+                _baseUrl,
+                "/commerce/{connection_id}/metadata/{id}",
+                request, null);
+        
+        HTTPRequest _req = new HTTPRequest(_url, "GET");
+        _req.addHeader("Accept", "application/json")
+            .addHeader("user-agent", 
+                SDKConfiguration.USER_AGENT);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                GetCommerceMetadataRequest.class,
+                request, 
+                null));
+
+        Utils.configureSecurity(_req,  
+                this.sdkConfiguration.securitySource.getSecurity());
+
+        HTTPClient _client = this.sdkConfiguration.defaultClient;
+        HttpRequest _r = 
+            sdkConfiguration.hooks()
+               .beforeRequest(
+                  new BeforeRequestContextImpl(
+                      "getCommerceMetadata", 
+                      Optional.of(List.of()), 
+                      sdkConfiguration.securitySource()),
+                  _req.build());
+        HttpResponse<InputStream> _httpRes;
+        try {
+            _httpRes = _client.send(_r);
+            if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "getCommerceMetadata",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()),
+                        Optional.of(_httpRes),
+                        Optional.empty());
+            } else {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterSuccess(
+                        new AfterSuccessContextImpl(
+                            "getCommerceMetadata",
+                            Optional.of(List.of()), 
+                            sdkConfiguration.securitySource()),
+                         _httpRes);
+            }
+        } catch (Exception _e) {
+            _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "getCommerceMetadata",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()), 
+                        Optional.empty(),
+                        Optional.of(_e));
+        }
+        String _contentType = _httpRes
+            .headers()
+            .firstValue("Content-Type")
+            .orElse("application/octet-stream");
+        GetCommerceMetadataResponse.Builder _resBuilder = 
+            GetCommerceMetadataResponse
+                .builder()
+                .contentType(_contentType)
+                .statusCode(_httpRes.statusCode())
+                .rawResponse(_httpRes);
+
+        GetCommerceMetadataResponse _res = _resBuilder.build();
+        
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            if (Utils.contentTypeMatches(_contentType, "application/json")) {
+                CommerceMetadata _out = Utils.mapper().readValue(
+                    Utils.toUtf8AndClose(_httpRes.body()),
+                    new TypeReference<CommerceMetadata>() {});
+                _res.withCommerceMetadata(Optional.ofNullable(_out));
+                return _res;
+            } else {
+                throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "Unexpected content-type received: " + _contentType, 
+                    Utils.extractByteArrayFromBody(_httpRes));
+            }
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        throw new SDKError(
+            _httpRes, 
+            _httpRes.statusCode(), 
+            "Unexpected status code received: " + _httpRes.statusCode(), 
+            Utils.extractByteArrayFromBody(_httpRes));
+    }
+
+
+
+    /**
      * List all collections
      * @return The call builder
      */
@@ -1599,6 +1876,127 @@ public class Commerce implements
                     Utils.toUtf8AndClose(_httpRes.body()),
                     new TypeReference<List<CommerceLocation>>() {});
                 _res.withCommerceLocations(Optional.ofNullable(_out));
+                return _res;
+            } else {
+                throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "Unexpected content-type received: " + _contentType, 
+                    Utils.extractByteArrayFromBody(_httpRes));
+            }
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        throw new SDKError(
+            _httpRes, 
+            _httpRes.statusCode(), 
+            "Unexpected status code received: " + _httpRes.statusCode(), 
+            Utils.extractByteArrayFromBody(_httpRes));
+    }
+
+
+
+    /**
+     * List all metadatas
+     * @return The call builder
+     */
+    public ListCommerceMetadatasRequestBuilder listCommerceMetadatas() {
+        return new ListCommerceMetadatasRequestBuilder(this);
+    }
+
+    /**
+     * List all metadatas
+     * @param request The request object containing all of the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public ListCommerceMetadatasResponse listCommerceMetadatas(
+            ListCommerceMetadatasRequest request) throws Exception {
+        String _baseUrl = this.sdkConfiguration.serverUrl;
+        String _url = Utils.generateURL(
+                ListCommerceMetadatasRequest.class,
+                _baseUrl,
+                "/commerce/{connection_id}/metadata",
+                request, null);
+        
+        HTTPRequest _req = new HTTPRequest(_url, "GET");
+        _req.addHeader("Accept", "application/json")
+            .addHeader("user-agent", 
+                SDKConfiguration.USER_AGENT);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                ListCommerceMetadatasRequest.class,
+                request, 
+                null));
+
+        Utils.configureSecurity(_req,  
+                this.sdkConfiguration.securitySource.getSecurity());
+
+        HTTPClient _client = this.sdkConfiguration.defaultClient;
+        HttpRequest _r = 
+            sdkConfiguration.hooks()
+               .beforeRequest(
+                  new BeforeRequestContextImpl(
+                      "listCommerceMetadatas", 
+                      Optional.of(List.of()), 
+                      sdkConfiguration.securitySource()),
+                  _req.build());
+        HttpResponse<InputStream> _httpRes;
+        try {
+            _httpRes = _client.send(_r);
+            if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "listCommerceMetadatas",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()),
+                        Optional.of(_httpRes),
+                        Optional.empty());
+            } else {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterSuccess(
+                        new AfterSuccessContextImpl(
+                            "listCommerceMetadatas",
+                            Optional.of(List.of()), 
+                            sdkConfiguration.securitySource()),
+                         _httpRes);
+            }
+        } catch (Exception _e) {
+            _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "listCommerceMetadatas",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()), 
+                        Optional.empty(),
+                        Optional.of(_e));
+        }
+        String _contentType = _httpRes
+            .headers()
+            .firstValue("Content-Type")
+            .orElse("application/octet-stream");
+        ListCommerceMetadatasResponse.Builder _resBuilder = 
+            ListCommerceMetadatasResponse
+                .builder()
+                .contentType(_contentType)
+                .statusCode(_httpRes.statusCode())
+                .rawResponse(_httpRes);
+
+        ListCommerceMetadatasResponse _res = _resBuilder.build();
+        
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            if (Utils.contentTypeMatches(_contentType, "application/json")) {
+                List<CommerceMetadata> _out = Utils.mapper().readValue(
+                    Utils.toUtf8AndClose(_httpRes.body()),
+                    new TypeReference<List<CommerceMetadata>>() {});
+                _res.withCommerceMetadatas(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -2150,6 +2548,137 @@ public class Commerce implements
 
 
     /**
+     * Update a metadata
+     * @return The call builder
+     */
+    public PatchCommerceMetadataRequestBuilder patchCommerceMetadata() {
+        return new PatchCommerceMetadataRequestBuilder(this);
+    }
+
+    /**
+     * Update a metadata
+     * @param request The request object containing all of the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public PatchCommerceMetadataResponse patchCommerceMetadata(
+            PatchCommerceMetadataRequest request) throws Exception {
+        String _baseUrl = this.sdkConfiguration.serverUrl;
+        String _url = Utils.generateURL(
+                PatchCommerceMetadataRequest.class,
+                _baseUrl,
+                "/commerce/{connection_id}/metadata/{id}",
+                request, null);
+        
+        HTTPRequest _req = new HTTPRequest(_url, "PATCH");
+        Object _convertedRequest = Utils.convertToShape(
+                request, 
+                JsonShape.DEFAULT,
+                new TypeReference<PatchCommerceMetadataRequest>() {});
+        SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
+                _convertedRequest, 
+                "commerceMetadata",
+                "json",
+                false);
+        _req.setBody(Optional.ofNullable(_serializedRequestBody));
+        _req.addHeader("Accept", "application/json")
+            .addHeader("user-agent", 
+                SDKConfiguration.USER_AGENT);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                PatchCommerceMetadataRequest.class,
+                request, 
+                null));
+
+        Utils.configureSecurity(_req,  
+                this.sdkConfiguration.securitySource.getSecurity());
+
+        HTTPClient _client = this.sdkConfiguration.defaultClient;
+        HttpRequest _r = 
+            sdkConfiguration.hooks()
+               .beforeRequest(
+                  new BeforeRequestContextImpl(
+                      "patchCommerceMetadata", 
+                      Optional.of(List.of()), 
+                      sdkConfiguration.securitySource()),
+                  _req.build());
+        HttpResponse<InputStream> _httpRes;
+        try {
+            _httpRes = _client.send(_r);
+            if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "patchCommerceMetadata",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()),
+                        Optional.of(_httpRes),
+                        Optional.empty());
+            } else {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterSuccess(
+                        new AfterSuccessContextImpl(
+                            "patchCommerceMetadata",
+                            Optional.of(List.of()), 
+                            sdkConfiguration.securitySource()),
+                         _httpRes);
+            }
+        } catch (Exception _e) {
+            _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "patchCommerceMetadata",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()), 
+                        Optional.empty(),
+                        Optional.of(_e));
+        }
+        String _contentType = _httpRes
+            .headers()
+            .firstValue("Content-Type")
+            .orElse("application/octet-stream");
+        PatchCommerceMetadataResponse.Builder _resBuilder = 
+            PatchCommerceMetadataResponse
+                .builder()
+                .contentType(_contentType)
+                .statusCode(_httpRes.statusCode())
+                .rawResponse(_httpRes);
+
+        PatchCommerceMetadataResponse _res = _resBuilder.build();
+        
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            if (Utils.contentTypeMatches(_contentType, "application/json")) {
+                CommerceMetadata _out = Utils.mapper().readValue(
+                    Utils.toUtf8AndClose(_httpRes.body()),
+                    new TypeReference<CommerceMetadata>() {});
+                _res.withCommerceMetadata(Optional.ofNullable(_out));
+                return _res;
+            } else {
+                throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "Unexpected content-type received: " + _contentType, 
+                    Utils.extractByteArrayFromBody(_httpRes));
+            }
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        throw new SDKError(
+            _httpRes, 
+            _httpRes.statusCode(), 
+            "Unexpected status code received: " + _httpRes.statusCode(), 
+            Utils.extractByteArrayFromBody(_httpRes));
+    }
+
+
+
+    /**
      * Remove a collection
      * @return The call builder
      */
@@ -2562,6 +3091,116 @@ public class Commerce implements
                 .rawResponse(_httpRes);
 
         RemoveCommerceLocationResponse _res = _resBuilder.build();
+        
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            // no content 
+            return _res;
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "default")) {
+            _res.withHeaders(_httpRes.headers().map());
+            // no content 
+            return _res;
+        }
+        throw new SDKError(
+            _httpRes, 
+            _httpRes.statusCode(), 
+            "Unexpected status code received: " + _httpRes.statusCode(), 
+            Utils.extractByteArrayFromBody(_httpRes));
+    }
+
+
+
+    /**
+     * Remove a metadata
+     * @return The call builder
+     */
+    public RemoveCommerceMetadataRequestBuilder removeCommerceMetadata() {
+        return new RemoveCommerceMetadataRequestBuilder(this);
+    }
+
+    /**
+     * Remove a metadata
+     * @param request The request object containing all of the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public RemoveCommerceMetadataResponse removeCommerceMetadata(
+            RemoveCommerceMetadataRequest request) throws Exception {
+        String _baseUrl = this.sdkConfiguration.serverUrl;
+        String _url = Utils.generateURL(
+                RemoveCommerceMetadataRequest.class,
+                _baseUrl,
+                "/commerce/{connection_id}/metadata/{id}",
+                request, null);
+        
+        HTTPRequest _req = new HTTPRequest(_url, "DELETE");
+        _req.addHeader("Accept", "*/*")
+            .addHeader("user-agent", 
+                SDKConfiguration.USER_AGENT);
+
+        Utils.configureSecurity(_req,  
+                this.sdkConfiguration.securitySource.getSecurity());
+
+        HTTPClient _client = this.sdkConfiguration.defaultClient;
+        HttpRequest _r = 
+            sdkConfiguration.hooks()
+               .beforeRequest(
+                  new BeforeRequestContextImpl(
+                      "removeCommerceMetadata", 
+                      Optional.of(List.of()), 
+                      sdkConfiguration.securitySource()),
+                  _req.build());
+        HttpResponse<InputStream> _httpRes;
+        try {
+            _httpRes = _client.send(_r);
+            if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "removeCommerceMetadata",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()),
+                        Optional.of(_httpRes),
+                        Optional.empty());
+            } else {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterSuccess(
+                        new AfterSuccessContextImpl(
+                            "removeCommerceMetadata",
+                            Optional.of(List.of()), 
+                            sdkConfiguration.securitySource()),
+                         _httpRes);
+            }
+        } catch (Exception _e) {
+            _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "removeCommerceMetadata",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()), 
+                        Optional.empty(),
+                        Optional.of(_e));
+        }
+        String _contentType = _httpRes
+            .headers()
+            .firstValue("Content-Type")
+            .orElse("application/octet-stream");
+        RemoveCommerceMetadataResponse.Builder _resBuilder = 
+            RemoveCommerceMetadataResponse
+                .builder()
+                .contentType(_contentType)
+                .statusCode(_httpRes.statusCode())
+                .rawResponse(_httpRes);
+
+        RemoveCommerceMetadataResponse _res = _resBuilder.build();
         
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
             // no content 
@@ -3087,6 +3726,137 @@ public class Commerce implements
                     Utils.toUtf8AndClose(_httpRes.body()),
                     new TypeReference<CommerceLocation>() {});
                 _res.withCommerceLocation(Optional.ofNullable(_out));
+                return _res;
+            } else {
+                throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "Unexpected content-type received: " + _contentType, 
+                    Utils.extractByteArrayFromBody(_httpRes));
+            }
+        }
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+            // no content 
+            throw new SDKError(
+                    _httpRes, 
+                    _httpRes.statusCode(), 
+                    "API error occurred", 
+                    Utils.extractByteArrayFromBody(_httpRes));
+        }
+        throw new SDKError(
+            _httpRes, 
+            _httpRes.statusCode(), 
+            "Unexpected status code received: " + _httpRes.statusCode(), 
+            Utils.extractByteArrayFromBody(_httpRes));
+    }
+
+
+
+    /**
+     * Update a metadata
+     * @return The call builder
+     */
+    public UpdateCommerceMetadataRequestBuilder updateCommerceMetadata() {
+        return new UpdateCommerceMetadataRequestBuilder(this);
+    }
+
+    /**
+     * Update a metadata
+     * @param request The request object containing all of the parameters for the API call.
+     * @return The response from the API call
+     * @throws Exception if the API call fails
+     */
+    public UpdateCommerceMetadataResponse updateCommerceMetadata(
+            UpdateCommerceMetadataRequest request) throws Exception {
+        String _baseUrl = this.sdkConfiguration.serverUrl;
+        String _url = Utils.generateURL(
+                UpdateCommerceMetadataRequest.class,
+                _baseUrl,
+                "/commerce/{connection_id}/metadata/{id}",
+                request, null);
+        
+        HTTPRequest _req = new HTTPRequest(_url, "PUT");
+        Object _convertedRequest = Utils.convertToShape(
+                request, 
+                JsonShape.DEFAULT,
+                new TypeReference<UpdateCommerceMetadataRequest>() {});
+        SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
+                _convertedRequest, 
+                "commerceMetadata",
+                "json",
+                false);
+        _req.setBody(Optional.ofNullable(_serializedRequestBody));
+        _req.addHeader("Accept", "application/json")
+            .addHeader("user-agent", 
+                SDKConfiguration.USER_AGENT);
+
+        _req.addQueryParams(Utils.getQueryParams(
+                UpdateCommerceMetadataRequest.class,
+                request, 
+                null));
+
+        Utils.configureSecurity(_req,  
+                this.sdkConfiguration.securitySource.getSecurity());
+
+        HTTPClient _client = this.sdkConfiguration.defaultClient;
+        HttpRequest _r = 
+            sdkConfiguration.hooks()
+               .beforeRequest(
+                  new BeforeRequestContextImpl(
+                      "updateCommerceMetadata", 
+                      Optional.of(List.of()), 
+                      sdkConfiguration.securitySource()),
+                  _req.build());
+        HttpResponse<InputStream> _httpRes;
+        try {
+            _httpRes = _client.send(_r);
+            if (Utils.statusCodeMatches(_httpRes.statusCode(), "4XX", "5XX")) {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "updateCommerceMetadata",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()),
+                        Optional.of(_httpRes),
+                        Optional.empty());
+            } else {
+                _httpRes = sdkConfiguration.hooks()
+                    .afterSuccess(
+                        new AfterSuccessContextImpl(
+                            "updateCommerceMetadata",
+                            Optional.of(List.of()), 
+                            sdkConfiguration.securitySource()),
+                         _httpRes);
+            }
+        } catch (Exception _e) {
+            _httpRes = sdkConfiguration.hooks()
+                    .afterError(
+                        new AfterErrorContextImpl(
+                            "updateCommerceMetadata",
+                            Optional.of(List.of()),
+                            sdkConfiguration.securitySource()), 
+                        Optional.empty(),
+                        Optional.of(_e));
+        }
+        String _contentType = _httpRes
+            .headers()
+            .firstValue("Content-Type")
+            .orElse("application/octet-stream");
+        UpdateCommerceMetadataResponse.Builder _resBuilder = 
+            UpdateCommerceMetadataResponse
+                .builder()
+                .contentType(_contentType)
+                .statusCode(_httpRes.statusCode())
+                .rawResponse(_httpRes);
+
+        UpdateCommerceMetadataResponse _res = _resBuilder.build();
+        
+        if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
+            if (Utils.contentTypeMatches(_contentType, "application/json")) {
+                CommerceMetadata _out = Utils.mapper().readValue(
+                    Utils.toUtf8AndClose(_httpRes.body()),
+                    new TypeReference<CommerceMetadata>() {});
+                _res.withCommerceMetadata(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(

@@ -181,6 +181,14 @@ public class IntegrationSupport {
     private Optional<? extends Map<String, Boolean>> methods;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("native_webhook_parent_id")
+    private Optional<? extends NativeWebhookParentId> nativeWebhookParentId;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("native_webhook_project_id")
+    private Optional<? extends NativeWebhookProjectId> nativeWebhookProjectId;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outbound_fields")
     private Optional<? extends Map<String, Object>> outboundFields;
 
@@ -210,6 +218,46 @@ public class IntegrationSupport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("search_twitter")
     private Optional<? extends SearchTwitter> searchTwitter;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("virtual_webhook_channel_id")
+    private Optional<? extends VirtualWebhookChannelId> virtualWebhookChannelId;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("virtual_webhook_company_id")
+    private Optional<? extends VirtualWebhookCompanyId> virtualWebhookCompanyId;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("virtual_webhook_contact_id")
+    private Optional<? extends VirtualWebhookContactId> virtualWebhookContactId;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("virtual_webhook_deal_id")
+    private Optional<? extends VirtualWebhookDealId> virtualWebhookDealId;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("virtual_webhook_limit")
+    private Optional<? extends VirtualWebhookLimit> virtualWebhookLimit;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("virtual_webhook_parent_id")
+    private Optional<? extends VirtualWebhookParentId> virtualWebhookParentId;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("virtual_webhook_ticket_id")
+    private Optional<? extends VirtualWebhookTicketId> virtualWebhookTicketId;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("virtual_webhook_type")
+    private Optional<? extends VirtualWebhookType> virtualWebhookType;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("virtual_webhook_updated_gte")
+    private Optional<? extends VirtualWebhookUpdatedGte> virtualWebhookUpdatedGte;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("virtual_webhook_user_id")
+    private Optional<? extends VirtualWebhookUserId> virtualWebhookUserId;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhook_events")
@@ -256,6 +304,8 @@ public class IntegrationSupport {
             @JsonProperty("list_updated_gte") Optional<? extends ListUpdatedGte> listUpdatedGte,
             @JsonProperty("list_user_id") Optional<? extends ListUserId> listUserId,
             @JsonProperty("methods") Optional<? extends Map<String, Boolean>> methods,
+            @JsonProperty("native_webhook_parent_id") Optional<? extends NativeWebhookParentId> nativeWebhookParentId,
+            @JsonProperty("native_webhook_project_id") Optional<? extends NativeWebhookProjectId> nativeWebhookProjectId,
             @JsonProperty("outbound_fields") Optional<? extends Map<String, Object>> outboundFields,
             @JsonProperty("raw_objects") Optional<? extends List<String>> rawObjects,
             @JsonProperty("search_domain") Optional<? extends SearchDomain> searchDomain,
@@ -263,6 +313,16 @@ public class IntegrationSupport {
             @JsonProperty("search_linkedinurl") Optional<? extends SearchLinkedinurl> searchLinkedinurl,
             @JsonProperty("search_name") Optional<? extends SearchName> searchName,
             @JsonProperty("search_twitter") Optional<? extends SearchTwitter> searchTwitter,
+            @JsonProperty("virtual_webhook_channel_id") Optional<? extends VirtualWebhookChannelId> virtualWebhookChannelId,
+            @JsonProperty("virtual_webhook_company_id") Optional<? extends VirtualWebhookCompanyId> virtualWebhookCompanyId,
+            @JsonProperty("virtual_webhook_contact_id") Optional<? extends VirtualWebhookContactId> virtualWebhookContactId,
+            @JsonProperty("virtual_webhook_deal_id") Optional<? extends VirtualWebhookDealId> virtualWebhookDealId,
+            @JsonProperty("virtual_webhook_limit") Optional<? extends VirtualWebhookLimit> virtualWebhookLimit,
+            @JsonProperty("virtual_webhook_parent_id") Optional<? extends VirtualWebhookParentId> virtualWebhookParentId,
+            @JsonProperty("virtual_webhook_ticket_id") Optional<? extends VirtualWebhookTicketId> virtualWebhookTicketId,
+            @JsonProperty("virtual_webhook_type") Optional<? extends VirtualWebhookType> virtualWebhookType,
+            @JsonProperty("virtual_webhook_updated_gte") Optional<? extends VirtualWebhookUpdatedGte> virtualWebhookUpdatedGte,
+            @JsonProperty("virtual_webhook_user_id") Optional<? extends VirtualWebhookUserId> virtualWebhookUserId,
             @JsonProperty("webhook_events") Optional<? extends PropertyIntegrationSupportWebhookEvents> webhookEvents) {
         Utils.checkNotNull(fromWebhook, "fromWebhook");
         Utils.checkNotNull(inboundFields, "inboundFields");
@@ -303,6 +363,8 @@ public class IntegrationSupport {
         Utils.checkNotNull(listUpdatedGte, "listUpdatedGte");
         Utils.checkNotNull(listUserId, "listUserId");
         Utils.checkNotNull(methods, "methods");
+        Utils.checkNotNull(nativeWebhookParentId, "nativeWebhookParentId");
+        Utils.checkNotNull(nativeWebhookProjectId, "nativeWebhookProjectId");
         Utils.checkNotNull(outboundFields, "outboundFields");
         Utils.checkNotNull(rawObjects, "rawObjects");
         Utils.checkNotNull(searchDomain, "searchDomain");
@@ -310,6 +372,16 @@ public class IntegrationSupport {
         Utils.checkNotNull(searchLinkedinurl, "searchLinkedinurl");
         Utils.checkNotNull(searchName, "searchName");
         Utils.checkNotNull(searchTwitter, "searchTwitter");
+        Utils.checkNotNull(virtualWebhookChannelId, "virtualWebhookChannelId");
+        Utils.checkNotNull(virtualWebhookCompanyId, "virtualWebhookCompanyId");
+        Utils.checkNotNull(virtualWebhookContactId, "virtualWebhookContactId");
+        Utils.checkNotNull(virtualWebhookDealId, "virtualWebhookDealId");
+        Utils.checkNotNull(virtualWebhookLimit, "virtualWebhookLimit");
+        Utils.checkNotNull(virtualWebhookParentId, "virtualWebhookParentId");
+        Utils.checkNotNull(virtualWebhookTicketId, "virtualWebhookTicketId");
+        Utils.checkNotNull(virtualWebhookType, "virtualWebhookType");
+        Utils.checkNotNull(virtualWebhookUpdatedGte, "virtualWebhookUpdatedGte");
+        Utils.checkNotNull(virtualWebhookUserId, "virtualWebhookUserId");
         Utils.checkNotNull(webhookEvents, "webhookEvents");
         this.fromWebhook = fromWebhook;
         this.inboundFields = inboundFields;
@@ -350,6 +422,8 @@ public class IntegrationSupport {
         this.listUpdatedGte = listUpdatedGte;
         this.listUserId = listUserId;
         this.methods = methods;
+        this.nativeWebhookParentId = nativeWebhookParentId;
+        this.nativeWebhookProjectId = nativeWebhookProjectId;
         this.outboundFields = outboundFields;
         this.rawObjects = rawObjects;
         this.searchDomain = searchDomain;
@@ -357,11 +431,21 @@ public class IntegrationSupport {
         this.searchLinkedinurl = searchLinkedinurl;
         this.searchName = searchName;
         this.searchTwitter = searchTwitter;
+        this.virtualWebhookChannelId = virtualWebhookChannelId;
+        this.virtualWebhookCompanyId = virtualWebhookCompanyId;
+        this.virtualWebhookContactId = virtualWebhookContactId;
+        this.virtualWebhookDealId = virtualWebhookDealId;
+        this.virtualWebhookLimit = virtualWebhookLimit;
+        this.virtualWebhookParentId = virtualWebhookParentId;
+        this.virtualWebhookTicketId = virtualWebhookTicketId;
+        this.virtualWebhookType = virtualWebhookType;
+        this.virtualWebhookUpdatedGte = virtualWebhookUpdatedGte;
+        this.virtualWebhookUserId = virtualWebhookUserId;
         this.webhookEvents = webhookEvents;
     }
     
     public IntegrationSupport() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -600,6 +684,18 @@ public class IntegrationSupport {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
+    public Optional<NativeWebhookParentId> nativeWebhookParentId() {
+        return (Optional<NativeWebhookParentId>) nativeWebhookParentId;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<NativeWebhookProjectId> nativeWebhookProjectId() {
+        return (Optional<NativeWebhookProjectId>) nativeWebhookProjectId;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
     public Optional<Map<String, Object>> outboundFields() {
         return (Optional<Map<String, Object>>) outboundFields;
     }
@@ -641,6 +737,66 @@ public class IntegrationSupport {
     @JsonIgnore
     public Optional<SearchTwitter> searchTwitter() {
         return (Optional<SearchTwitter>) searchTwitter;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<VirtualWebhookChannelId> virtualWebhookChannelId() {
+        return (Optional<VirtualWebhookChannelId>) virtualWebhookChannelId;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<VirtualWebhookCompanyId> virtualWebhookCompanyId() {
+        return (Optional<VirtualWebhookCompanyId>) virtualWebhookCompanyId;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<VirtualWebhookContactId> virtualWebhookContactId() {
+        return (Optional<VirtualWebhookContactId>) virtualWebhookContactId;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<VirtualWebhookDealId> virtualWebhookDealId() {
+        return (Optional<VirtualWebhookDealId>) virtualWebhookDealId;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<VirtualWebhookLimit> virtualWebhookLimit() {
+        return (Optional<VirtualWebhookLimit>) virtualWebhookLimit;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<VirtualWebhookParentId> virtualWebhookParentId() {
+        return (Optional<VirtualWebhookParentId>) virtualWebhookParentId;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<VirtualWebhookTicketId> virtualWebhookTicketId() {
+        return (Optional<VirtualWebhookTicketId>) virtualWebhookTicketId;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<VirtualWebhookType> virtualWebhookType() {
+        return (Optional<VirtualWebhookType>) virtualWebhookType;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<VirtualWebhookUpdatedGte> virtualWebhookUpdatedGte() {
+        return (Optional<VirtualWebhookUpdatedGte>) virtualWebhookUpdatedGte;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<VirtualWebhookUserId> virtualWebhookUserId() {
+        return (Optional<VirtualWebhookUserId>) virtualWebhookUserId;
     }
 
     @SuppressWarnings("unchecked")
@@ -1121,6 +1277,30 @@ public class IntegrationSupport {
         return this;
     }
 
+    public IntegrationSupport withNativeWebhookParentId(NativeWebhookParentId nativeWebhookParentId) {
+        Utils.checkNotNull(nativeWebhookParentId, "nativeWebhookParentId");
+        this.nativeWebhookParentId = Optional.ofNullable(nativeWebhookParentId);
+        return this;
+    }
+
+    public IntegrationSupport withNativeWebhookParentId(Optional<? extends NativeWebhookParentId> nativeWebhookParentId) {
+        Utils.checkNotNull(nativeWebhookParentId, "nativeWebhookParentId");
+        this.nativeWebhookParentId = nativeWebhookParentId;
+        return this;
+    }
+
+    public IntegrationSupport withNativeWebhookProjectId(NativeWebhookProjectId nativeWebhookProjectId) {
+        Utils.checkNotNull(nativeWebhookProjectId, "nativeWebhookProjectId");
+        this.nativeWebhookProjectId = Optional.ofNullable(nativeWebhookProjectId);
+        return this;
+    }
+
+    public IntegrationSupport withNativeWebhookProjectId(Optional<? extends NativeWebhookProjectId> nativeWebhookProjectId) {
+        Utils.checkNotNull(nativeWebhookProjectId, "nativeWebhookProjectId");
+        this.nativeWebhookProjectId = nativeWebhookProjectId;
+        return this;
+    }
+
     public IntegrationSupport withOutboundFields(Map<String, Object> outboundFields) {
         Utils.checkNotNull(outboundFields, "outboundFields");
         this.outboundFields = Optional.ofNullable(outboundFields);
@@ -1211,6 +1391,126 @@ public class IntegrationSupport {
         return this;
     }
 
+    public IntegrationSupport withVirtualWebhookChannelId(VirtualWebhookChannelId virtualWebhookChannelId) {
+        Utils.checkNotNull(virtualWebhookChannelId, "virtualWebhookChannelId");
+        this.virtualWebhookChannelId = Optional.ofNullable(virtualWebhookChannelId);
+        return this;
+    }
+
+    public IntegrationSupport withVirtualWebhookChannelId(Optional<? extends VirtualWebhookChannelId> virtualWebhookChannelId) {
+        Utils.checkNotNull(virtualWebhookChannelId, "virtualWebhookChannelId");
+        this.virtualWebhookChannelId = virtualWebhookChannelId;
+        return this;
+    }
+
+    public IntegrationSupport withVirtualWebhookCompanyId(VirtualWebhookCompanyId virtualWebhookCompanyId) {
+        Utils.checkNotNull(virtualWebhookCompanyId, "virtualWebhookCompanyId");
+        this.virtualWebhookCompanyId = Optional.ofNullable(virtualWebhookCompanyId);
+        return this;
+    }
+
+    public IntegrationSupport withVirtualWebhookCompanyId(Optional<? extends VirtualWebhookCompanyId> virtualWebhookCompanyId) {
+        Utils.checkNotNull(virtualWebhookCompanyId, "virtualWebhookCompanyId");
+        this.virtualWebhookCompanyId = virtualWebhookCompanyId;
+        return this;
+    }
+
+    public IntegrationSupport withVirtualWebhookContactId(VirtualWebhookContactId virtualWebhookContactId) {
+        Utils.checkNotNull(virtualWebhookContactId, "virtualWebhookContactId");
+        this.virtualWebhookContactId = Optional.ofNullable(virtualWebhookContactId);
+        return this;
+    }
+
+    public IntegrationSupport withVirtualWebhookContactId(Optional<? extends VirtualWebhookContactId> virtualWebhookContactId) {
+        Utils.checkNotNull(virtualWebhookContactId, "virtualWebhookContactId");
+        this.virtualWebhookContactId = virtualWebhookContactId;
+        return this;
+    }
+
+    public IntegrationSupport withVirtualWebhookDealId(VirtualWebhookDealId virtualWebhookDealId) {
+        Utils.checkNotNull(virtualWebhookDealId, "virtualWebhookDealId");
+        this.virtualWebhookDealId = Optional.ofNullable(virtualWebhookDealId);
+        return this;
+    }
+
+    public IntegrationSupport withVirtualWebhookDealId(Optional<? extends VirtualWebhookDealId> virtualWebhookDealId) {
+        Utils.checkNotNull(virtualWebhookDealId, "virtualWebhookDealId");
+        this.virtualWebhookDealId = virtualWebhookDealId;
+        return this;
+    }
+
+    public IntegrationSupport withVirtualWebhookLimit(VirtualWebhookLimit virtualWebhookLimit) {
+        Utils.checkNotNull(virtualWebhookLimit, "virtualWebhookLimit");
+        this.virtualWebhookLimit = Optional.ofNullable(virtualWebhookLimit);
+        return this;
+    }
+
+    public IntegrationSupport withVirtualWebhookLimit(Optional<? extends VirtualWebhookLimit> virtualWebhookLimit) {
+        Utils.checkNotNull(virtualWebhookLimit, "virtualWebhookLimit");
+        this.virtualWebhookLimit = virtualWebhookLimit;
+        return this;
+    }
+
+    public IntegrationSupport withVirtualWebhookParentId(VirtualWebhookParentId virtualWebhookParentId) {
+        Utils.checkNotNull(virtualWebhookParentId, "virtualWebhookParentId");
+        this.virtualWebhookParentId = Optional.ofNullable(virtualWebhookParentId);
+        return this;
+    }
+
+    public IntegrationSupport withVirtualWebhookParentId(Optional<? extends VirtualWebhookParentId> virtualWebhookParentId) {
+        Utils.checkNotNull(virtualWebhookParentId, "virtualWebhookParentId");
+        this.virtualWebhookParentId = virtualWebhookParentId;
+        return this;
+    }
+
+    public IntegrationSupport withVirtualWebhookTicketId(VirtualWebhookTicketId virtualWebhookTicketId) {
+        Utils.checkNotNull(virtualWebhookTicketId, "virtualWebhookTicketId");
+        this.virtualWebhookTicketId = Optional.ofNullable(virtualWebhookTicketId);
+        return this;
+    }
+
+    public IntegrationSupport withVirtualWebhookTicketId(Optional<? extends VirtualWebhookTicketId> virtualWebhookTicketId) {
+        Utils.checkNotNull(virtualWebhookTicketId, "virtualWebhookTicketId");
+        this.virtualWebhookTicketId = virtualWebhookTicketId;
+        return this;
+    }
+
+    public IntegrationSupport withVirtualWebhookType(VirtualWebhookType virtualWebhookType) {
+        Utils.checkNotNull(virtualWebhookType, "virtualWebhookType");
+        this.virtualWebhookType = Optional.ofNullable(virtualWebhookType);
+        return this;
+    }
+
+    public IntegrationSupport withVirtualWebhookType(Optional<? extends VirtualWebhookType> virtualWebhookType) {
+        Utils.checkNotNull(virtualWebhookType, "virtualWebhookType");
+        this.virtualWebhookType = virtualWebhookType;
+        return this;
+    }
+
+    public IntegrationSupport withVirtualWebhookUpdatedGte(VirtualWebhookUpdatedGte virtualWebhookUpdatedGte) {
+        Utils.checkNotNull(virtualWebhookUpdatedGte, "virtualWebhookUpdatedGte");
+        this.virtualWebhookUpdatedGte = Optional.ofNullable(virtualWebhookUpdatedGte);
+        return this;
+    }
+
+    public IntegrationSupport withVirtualWebhookUpdatedGte(Optional<? extends VirtualWebhookUpdatedGte> virtualWebhookUpdatedGte) {
+        Utils.checkNotNull(virtualWebhookUpdatedGte, "virtualWebhookUpdatedGte");
+        this.virtualWebhookUpdatedGte = virtualWebhookUpdatedGte;
+        return this;
+    }
+
+    public IntegrationSupport withVirtualWebhookUserId(VirtualWebhookUserId virtualWebhookUserId) {
+        Utils.checkNotNull(virtualWebhookUserId, "virtualWebhookUserId");
+        this.virtualWebhookUserId = Optional.ofNullable(virtualWebhookUserId);
+        return this;
+    }
+
+    public IntegrationSupport withVirtualWebhookUserId(Optional<? extends VirtualWebhookUserId> virtualWebhookUserId) {
+        Utils.checkNotNull(virtualWebhookUserId, "virtualWebhookUserId");
+        this.virtualWebhookUserId = virtualWebhookUserId;
+        return this;
+    }
+
     public IntegrationSupport withWebhookEvents(PropertyIntegrationSupportWebhookEvents webhookEvents) {
         Utils.checkNotNull(webhookEvents, "webhookEvents");
         this.webhookEvents = Optional.ofNullable(webhookEvents);
@@ -1272,6 +1572,8 @@ public class IntegrationSupport {
             Objects.deepEquals(this.listUpdatedGte, other.listUpdatedGte) &&
             Objects.deepEquals(this.listUserId, other.listUserId) &&
             Objects.deepEquals(this.methods, other.methods) &&
+            Objects.deepEquals(this.nativeWebhookParentId, other.nativeWebhookParentId) &&
+            Objects.deepEquals(this.nativeWebhookProjectId, other.nativeWebhookProjectId) &&
             Objects.deepEquals(this.outboundFields, other.outboundFields) &&
             Objects.deepEquals(this.rawObjects, other.rawObjects) &&
             Objects.deepEquals(this.searchDomain, other.searchDomain) &&
@@ -1279,6 +1581,16 @@ public class IntegrationSupport {
             Objects.deepEquals(this.searchLinkedinurl, other.searchLinkedinurl) &&
             Objects.deepEquals(this.searchName, other.searchName) &&
             Objects.deepEquals(this.searchTwitter, other.searchTwitter) &&
+            Objects.deepEquals(this.virtualWebhookChannelId, other.virtualWebhookChannelId) &&
+            Objects.deepEquals(this.virtualWebhookCompanyId, other.virtualWebhookCompanyId) &&
+            Objects.deepEquals(this.virtualWebhookContactId, other.virtualWebhookContactId) &&
+            Objects.deepEquals(this.virtualWebhookDealId, other.virtualWebhookDealId) &&
+            Objects.deepEquals(this.virtualWebhookLimit, other.virtualWebhookLimit) &&
+            Objects.deepEquals(this.virtualWebhookParentId, other.virtualWebhookParentId) &&
+            Objects.deepEquals(this.virtualWebhookTicketId, other.virtualWebhookTicketId) &&
+            Objects.deepEquals(this.virtualWebhookType, other.virtualWebhookType) &&
+            Objects.deepEquals(this.virtualWebhookUpdatedGte, other.virtualWebhookUpdatedGte) &&
+            Objects.deepEquals(this.virtualWebhookUserId, other.virtualWebhookUserId) &&
             Objects.deepEquals(this.webhookEvents, other.webhookEvents);
     }
     
@@ -1324,6 +1636,8 @@ public class IntegrationSupport {
             listUpdatedGte,
             listUserId,
             methods,
+            nativeWebhookParentId,
+            nativeWebhookProjectId,
             outboundFields,
             rawObjects,
             searchDomain,
@@ -1331,6 +1645,16 @@ public class IntegrationSupport {
             searchLinkedinurl,
             searchName,
             searchTwitter,
+            virtualWebhookChannelId,
+            virtualWebhookCompanyId,
+            virtualWebhookContactId,
+            virtualWebhookDealId,
+            virtualWebhookLimit,
+            virtualWebhookParentId,
+            virtualWebhookTicketId,
+            virtualWebhookType,
+            virtualWebhookUpdatedGte,
+            virtualWebhookUserId,
             webhookEvents);
     }
     
@@ -1376,6 +1700,8 @@ public class IntegrationSupport {
                 "listUpdatedGte", listUpdatedGte,
                 "listUserId", listUserId,
                 "methods", methods,
+                "nativeWebhookParentId", nativeWebhookParentId,
+                "nativeWebhookProjectId", nativeWebhookProjectId,
                 "outboundFields", outboundFields,
                 "rawObjects", rawObjects,
                 "searchDomain", searchDomain,
@@ -1383,6 +1709,16 @@ public class IntegrationSupport {
                 "searchLinkedinurl", searchLinkedinurl,
                 "searchName", searchName,
                 "searchTwitter", searchTwitter,
+                "virtualWebhookChannelId", virtualWebhookChannelId,
+                "virtualWebhookCompanyId", virtualWebhookCompanyId,
+                "virtualWebhookContactId", virtualWebhookContactId,
+                "virtualWebhookDealId", virtualWebhookDealId,
+                "virtualWebhookLimit", virtualWebhookLimit,
+                "virtualWebhookParentId", virtualWebhookParentId,
+                "virtualWebhookTicketId", virtualWebhookTicketId,
+                "virtualWebhookType", virtualWebhookType,
+                "virtualWebhookUpdatedGte", virtualWebhookUpdatedGte,
+                "virtualWebhookUserId", virtualWebhookUserId,
                 "webhookEvents", webhookEvents);
     }
     
@@ -1466,6 +1802,10 @@ public class IntegrationSupport {
  
         private Optional<? extends Map<String, Boolean>> methods = Optional.empty();
  
+        private Optional<? extends NativeWebhookParentId> nativeWebhookParentId = Optional.empty();
+ 
+        private Optional<? extends NativeWebhookProjectId> nativeWebhookProjectId = Optional.empty();
+ 
         private Optional<? extends Map<String, Object>> outboundFields = Optional.empty();
  
         private Optional<? extends List<String>> rawObjects = Optional.empty();
@@ -1479,6 +1819,26 @@ public class IntegrationSupport {
         private Optional<? extends SearchName> searchName = Optional.empty();
  
         private Optional<? extends SearchTwitter> searchTwitter = Optional.empty();
+ 
+        private Optional<? extends VirtualWebhookChannelId> virtualWebhookChannelId = Optional.empty();
+ 
+        private Optional<? extends VirtualWebhookCompanyId> virtualWebhookCompanyId = Optional.empty();
+ 
+        private Optional<? extends VirtualWebhookContactId> virtualWebhookContactId = Optional.empty();
+ 
+        private Optional<? extends VirtualWebhookDealId> virtualWebhookDealId = Optional.empty();
+ 
+        private Optional<? extends VirtualWebhookLimit> virtualWebhookLimit = Optional.empty();
+ 
+        private Optional<? extends VirtualWebhookParentId> virtualWebhookParentId = Optional.empty();
+ 
+        private Optional<? extends VirtualWebhookTicketId> virtualWebhookTicketId = Optional.empty();
+ 
+        private Optional<? extends VirtualWebhookType> virtualWebhookType = Optional.empty();
+ 
+        private Optional<? extends VirtualWebhookUpdatedGte> virtualWebhookUpdatedGte = Optional.empty();
+ 
+        private Optional<? extends VirtualWebhookUserId> virtualWebhookUserId = Optional.empty();
  
         private Optional<? extends PropertyIntegrationSupportWebhookEvents> webhookEvents = Optional.empty();  
         
@@ -1954,6 +2314,30 @@ public class IntegrationSupport {
             return this;
         }
 
+        public Builder nativeWebhookParentId(NativeWebhookParentId nativeWebhookParentId) {
+            Utils.checkNotNull(nativeWebhookParentId, "nativeWebhookParentId");
+            this.nativeWebhookParentId = Optional.ofNullable(nativeWebhookParentId);
+            return this;
+        }
+
+        public Builder nativeWebhookParentId(Optional<? extends NativeWebhookParentId> nativeWebhookParentId) {
+            Utils.checkNotNull(nativeWebhookParentId, "nativeWebhookParentId");
+            this.nativeWebhookParentId = nativeWebhookParentId;
+            return this;
+        }
+
+        public Builder nativeWebhookProjectId(NativeWebhookProjectId nativeWebhookProjectId) {
+            Utils.checkNotNull(nativeWebhookProjectId, "nativeWebhookProjectId");
+            this.nativeWebhookProjectId = Optional.ofNullable(nativeWebhookProjectId);
+            return this;
+        }
+
+        public Builder nativeWebhookProjectId(Optional<? extends NativeWebhookProjectId> nativeWebhookProjectId) {
+            Utils.checkNotNull(nativeWebhookProjectId, "nativeWebhookProjectId");
+            this.nativeWebhookProjectId = nativeWebhookProjectId;
+            return this;
+        }
+
         public Builder outboundFields(Map<String, Object> outboundFields) {
             Utils.checkNotNull(outboundFields, "outboundFields");
             this.outboundFields = Optional.ofNullable(outboundFields);
@@ -2044,6 +2428,126 @@ public class IntegrationSupport {
             return this;
         }
 
+        public Builder virtualWebhookChannelId(VirtualWebhookChannelId virtualWebhookChannelId) {
+            Utils.checkNotNull(virtualWebhookChannelId, "virtualWebhookChannelId");
+            this.virtualWebhookChannelId = Optional.ofNullable(virtualWebhookChannelId);
+            return this;
+        }
+
+        public Builder virtualWebhookChannelId(Optional<? extends VirtualWebhookChannelId> virtualWebhookChannelId) {
+            Utils.checkNotNull(virtualWebhookChannelId, "virtualWebhookChannelId");
+            this.virtualWebhookChannelId = virtualWebhookChannelId;
+            return this;
+        }
+
+        public Builder virtualWebhookCompanyId(VirtualWebhookCompanyId virtualWebhookCompanyId) {
+            Utils.checkNotNull(virtualWebhookCompanyId, "virtualWebhookCompanyId");
+            this.virtualWebhookCompanyId = Optional.ofNullable(virtualWebhookCompanyId);
+            return this;
+        }
+
+        public Builder virtualWebhookCompanyId(Optional<? extends VirtualWebhookCompanyId> virtualWebhookCompanyId) {
+            Utils.checkNotNull(virtualWebhookCompanyId, "virtualWebhookCompanyId");
+            this.virtualWebhookCompanyId = virtualWebhookCompanyId;
+            return this;
+        }
+
+        public Builder virtualWebhookContactId(VirtualWebhookContactId virtualWebhookContactId) {
+            Utils.checkNotNull(virtualWebhookContactId, "virtualWebhookContactId");
+            this.virtualWebhookContactId = Optional.ofNullable(virtualWebhookContactId);
+            return this;
+        }
+
+        public Builder virtualWebhookContactId(Optional<? extends VirtualWebhookContactId> virtualWebhookContactId) {
+            Utils.checkNotNull(virtualWebhookContactId, "virtualWebhookContactId");
+            this.virtualWebhookContactId = virtualWebhookContactId;
+            return this;
+        }
+
+        public Builder virtualWebhookDealId(VirtualWebhookDealId virtualWebhookDealId) {
+            Utils.checkNotNull(virtualWebhookDealId, "virtualWebhookDealId");
+            this.virtualWebhookDealId = Optional.ofNullable(virtualWebhookDealId);
+            return this;
+        }
+
+        public Builder virtualWebhookDealId(Optional<? extends VirtualWebhookDealId> virtualWebhookDealId) {
+            Utils.checkNotNull(virtualWebhookDealId, "virtualWebhookDealId");
+            this.virtualWebhookDealId = virtualWebhookDealId;
+            return this;
+        }
+
+        public Builder virtualWebhookLimit(VirtualWebhookLimit virtualWebhookLimit) {
+            Utils.checkNotNull(virtualWebhookLimit, "virtualWebhookLimit");
+            this.virtualWebhookLimit = Optional.ofNullable(virtualWebhookLimit);
+            return this;
+        }
+
+        public Builder virtualWebhookLimit(Optional<? extends VirtualWebhookLimit> virtualWebhookLimit) {
+            Utils.checkNotNull(virtualWebhookLimit, "virtualWebhookLimit");
+            this.virtualWebhookLimit = virtualWebhookLimit;
+            return this;
+        }
+
+        public Builder virtualWebhookParentId(VirtualWebhookParentId virtualWebhookParentId) {
+            Utils.checkNotNull(virtualWebhookParentId, "virtualWebhookParentId");
+            this.virtualWebhookParentId = Optional.ofNullable(virtualWebhookParentId);
+            return this;
+        }
+
+        public Builder virtualWebhookParentId(Optional<? extends VirtualWebhookParentId> virtualWebhookParentId) {
+            Utils.checkNotNull(virtualWebhookParentId, "virtualWebhookParentId");
+            this.virtualWebhookParentId = virtualWebhookParentId;
+            return this;
+        }
+
+        public Builder virtualWebhookTicketId(VirtualWebhookTicketId virtualWebhookTicketId) {
+            Utils.checkNotNull(virtualWebhookTicketId, "virtualWebhookTicketId");
+            this.virtualWebhookTicketId = Optional.ofNullable(virtualWebhookTicketId);
+            return this;
+        }
+
+        public Builder virtualWebhookTicketId(Optional<? extends VirtualWebhookTicketId> virtualWebhookTicketId) {
+            Utils.checkNotNull(virtualWebhookTicketId, "virtualWebhookTicketId");
+            this.virtualWebhookTicketId = virtualWebhookTicketId;
+            return this;
+        }
+
+        public Builder virtualWebhookType(VirtualWebhookType virtualWebhookType) {
+            Utils.checkNotNull(virtualWebhookType, "virtualWebhookType");
+            this.virtualWebhookType = Optional.ofNullable(virtualWebhookType);
+            return this;
+        }
+
+        public Builder virtualWebhookType(Optional<? extends VirtualWebhookType> virtualWebhookType) {
+            Utils.checkNotNull(virtualWebhookType, "virtualWebhookType");
+            this.virtualWebhookType = virtualWebhookType;
+            return this;
+        }
+
+        public Builder virtualWebhookUpdatedGte(VirtualWebhookUpdatedGte virtualWebhookUpdatedGte) {
+            Utils.checkNotNull(virtualWebhookUpdatedGte, "virtualWebhookUpdatedGte");
+            this.virtualWebhookUpdatedGte = Optional.ofNullable(virtualWebhookUpdatedGte);
+            return this;
+        }
+
+        public Builder virtualWebhookUpdatedGte(Optional<? extends VirtualWebhookUpdatedGte> virtualWebhookUpdatedGte) {
+            Utils.checkNotNull(virtualWebhookUpdatedGte, "virtualWebhookUpdatedGte");
+            this.virtualWebhookUpdatedGte = virtualWebhookUpdatedGte;
+            return this;
+        }
+
+        public Builder virtualWebhookUserId(VirtualWebhookUserId virtualWebhookUserId) {
+            Utils.checkNotNull(virtualWebhookUserId, "virtualWebhookUserId");
+            this.virtualWebhookUserId = Optional.ofNullable(virtualWebhookUserId);
+            return this;
+        }
+
+        public Builder virtualWebhookUserId(Optional<? extends VirtualWebhookUserId> virtualWebhookUserId) {
+            Utils.checkNotNull(virtualWebhookUserId, "virtualWebhookUserId");
+            this.virtualWebhookUserId = virtualWebhookUserId;
+            return this;
+        }
+
         public Builder webhookEvents(PropertyIntegrationSupportWebhookEvents webhookEvents) {
             Utils.checkNotNull(webhookEvents, "webhookEvents");
             this.webhookEvents = Optional.ofNullable(webhookEvents);
@@ -2097,6 +2601,8 @@ public class IntegrationSupport {
                 listUpdatedGte,
                 listUserId,
                 methods,
+                nativeWebhookParentId,
+                nativeWebhookProjectId,
                 outboundFields,
                 rawObjects,
                 searchDomain,
@@ -2104,6 +2610,16 @@ public class IntegrationSupport {
                 searchLinkedinurl,
                 searchName,
                 searchTwitter,
+                virtualWebhookChannelId,
+                virtualWebhookCompanyId,
+                virtualWebhookContactId,
+                virtualWebhookDealId,
+                virtualWebhookLimit,
+                virtualWebhookParentId,
+                virtualWebhookTicketId,
+                virtualWebhookType,
+                virtualWebhookUpdatedGte,
+                virtualWebhookUserId,
                 webhookEvents);
         }
     }

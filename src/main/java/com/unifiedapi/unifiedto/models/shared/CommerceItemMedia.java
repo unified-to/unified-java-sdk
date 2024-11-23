@@ -36,7 +36,7 @@ public class CommerceItemMedia {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
-    private Optional<? extends List<CommerceMetadata>> metadata;
+    private Optional<? extends List<CommerceItemMetadata>> metadata;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
@@ -58,7 +58,7 @@ public class CommerceItemMedia {
             @JsonProperty("alt") Optional<String> alt,
             @JsonProperty("height") Optional<Double> height,
             @JsonProperty("id") Optional<String> id,
-            @JsonProperty("metadata") Optional<? extends List<CommerceMetadata>> metadata,
+            @JsonProperty("metadata") Optional<? extends List<CommerceItemMetadata>> metadata,
             @JsonProperty("position") Optional<Double> position,
             @JsonProperty("type") Optional<? extends CommerceItemMediaType> type,
             @JsonProperty("url") String url,
@@ -103,8 +103,8 @@ public class CommerceItemMedia {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<CommerceMetadata>> metadata() {
-        return (Optional<List<CommerceMetadata>>) metadata;
+    public Optional<List<CommerceItemMetadata>> metadata() {
+        return (Optional<List<CommerceItemMetadata>>) metadata;
     }
 
     @JsonIgnore
@@ -168,13 +168,13 @@ public class CommerceItemMedia {
         return this;
     }
 
-    public CommerceItemMedia withMetadata(List<CommerceMetadata> metadata) {
+    public CommerceItemMedia withMetadata(List<CommerceItemMetadata> metadata) {
         Utils.checkNotNull(metadata, "metadata");
         this.metadata = Optional.ofNullable(metadata);
         return this;
     }
 
-    public CommerceItemMedia withMetadata(Optional<? extends List<CommerceMetadata>> metadata) {
+    public CommerceItemMedia withMetadata(Optional<? extends List<CommerceItemMetadata>> metadata) {
         Utils.checkNotNull(metadata, "metadata");
         this.metadata = metadata;
         return this;
@@ -276,7 +276,7 @@ public class CommerceItemMedia {
  
         private Optional<String> id = Optional.empty();
  
-        private Optional<? extends List<CommerceMetadata>> metadata = Optional.empty();
+        private Optional<? extends List<CommerceItemMetadata>> metadata = Optional.empty();
  
         private Optional<Double> position = Optional.empty();
  
@@ -326,13 +326,13 @@ public class CommerceItemMedia {
             return this;
         }
 
-        public Builder metadata(List<CommerceMetadata> metadata) {
+        public Builder metadata(List<CommerceItemMetadata> metadata) {
             Utils.checkNotNull(metadata, "metadata");
             this.metadata = Optional.ofNullable(metadata);
             return this;
         }
 
-        public Builder metadata(Optional<? extends List<CommerceMetadata>> metadata) {
+        public Builder metadata(Optional<? extends List<CommerceItemMetadata>> metadata) {
             Utils.checkNotNull(metadata, "metadata");
             this.metadata = metadata;
             return this;

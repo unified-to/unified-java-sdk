@@ -24,6 +24,7 @@ public enum ObjectType {
     COMMERCE_COLLECTION("commerce_collection"),
     COMMERCE_INVENTORY("commerce_inventory"),
     COMMERCE_LOCATION("commerce_location"),
+    COMMERCE_METADATA("commerce_metadata"),
     ATS_ACTIVITY("ats_activity"),
     ATS_APPLICATION("ats_application"),
     ATS_APPLICATIONSTATUS("ats_applicationstatus"),

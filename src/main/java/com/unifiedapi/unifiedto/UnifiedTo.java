@@ -81,6 +81,8 @@ public class UnifiedTo {
 
     private final Location location;
 
+    private final Metadata metadata;
+
     private final Crm crm;
 
     private final Deal deal;
@@ -293,6 +295,10 @@ public class UnifiedTo {
 
     public Location location() {
         return location;
+    }
+
+    public Metadata metadata() {
+        return metadata;
     }
 
     public Crm crm() {
@@ -676,6 +682,7 @@ public class UnifiedTo {
         this.inventory = new Inventory(sdkConfiguration);
         this.item = new Item(sdkConfiguration);
         this.location = new Location(sdkConfiguration);
+        this.metadata = new Metadata(sdkConfiguration);
         this.crm = new Crm(sdkConfiguration);
         this.deal = new Deal(sdkConfiguration);
         this.event = new Event(sdkConfiguration);
