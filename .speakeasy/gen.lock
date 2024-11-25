@@ -3,10 +3,10 @@ id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
   docChecksum: a69d016e113a8d9eb83404e95207c9eb
   docVersion: "1.0"
-  speakeasyVersion: 1.444.1
+  speakeasyVersion: 1.445.2
   generationVersion: 2.461.4
-  releaseVersion: 0.25.2
-  configChecksum: 3b66dcaa658983cfbb73c6ff59b432db
+  releaseVersion: 0.25.3
+  configChecksum: 701dd819b11ac37176be360cc7e317d7
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
