@@ -38,7 +38,7 @@ public class Application {
             .build();
 
         CreateAtsJobRequest req = CreateAtsJobRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateAtsJobResponse res = sdk.job().createAtsJob()
@@ -94,7 +94,7 @@ public class Application {
             .build();
 
         GetAtsJobRequest req = GetAtsJobRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -151,7 +151,7 @@ public class Application {
             .build();
 
         ListAtsJobsRequest req = ListAtsJobsRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListAtsJobsResponse res = sdk.job().listAtsJobs()
@@ -207,7 +207,7 @@ public class Application {
             .build();
 
         PatchAtsJobRequest req = PatchAtsJobRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -264,7 +264,7 @@ public class Application {
             .build();
 
         RemoveAtsJobRequest req = RemoveAtsJobRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -319,7 +319,7 @@ public class Application {
             .build();
 
         UpdateAtsJobRequest req = UpdateAtsJobRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 

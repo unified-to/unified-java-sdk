@@ -47,7 +47,7 @@ public class Application {
             .build();
 
         CreateCrmCompanyRequest req = CreateCrmCompanyRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateCrmCompanyResponse res = sdk.company().createCrmCompany()
@@ -103,7 +103,7 @@ public class Application {
             .build();
 
         CreateHrisCompanyRequest req = CreateHrisCompanyRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateHrisCompanyResponse res = sdk.company().createHrisCompany()
@@ -159,7 +159,7 @@ public class Application {
             .build();
 
         GetAtsCompanyRequest req = GetAtsCompanyRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -216,7 +216,7 @@ public class Application {
             .build();
 
         GetCrmCompanyRequest req = GetCrmCompanyRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -273,7 +273,7 @@ public class Application {
             .build();
 
         GetHrisCompanyRequest req = GetHrisCompanyRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -330,7 +330,7 @@ public class Application {
             .build();
 
         ListAtsCompaniesRequest req = ListAtsCompaniesRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListAtsCompaniesResponse res = sdk.company().listAtsCompanies()
@@ -386,7 +386,7 @@ public class Application {
             .build();
 
         ListCrmCompaniesRequest req = ListCrmCompaniesRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListCrmCompaniesResponse res = sdk.company().listCrmCompanies()
@@ -442,7 +442,7 @@ public class Application {
             .build();
 
         ListEnrichCompaniesRequest req = ListEnrichCompaniesRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListEnrichCompaniesResponse res = sdk.company().listEnrichCompanies()
@@ -498,7 +498,7 @@ public class Application {
             .build();
 
         ListHrisCompaniesRequest req = ListHrisCompaniesRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListHrisCompaniesResponse res = sdk.company().listHrisCompanies()
@@ -554,7 +554,7 @@ public class Application {
             .build();
 
         PatchCrmCompanyRequest req = PatchCrmCompanyRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -611,7 +611,7 @@ public class Application {
             .build();
 
         PatchHrisCompanyRequest req = PatchHrisCompanyRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -668,7 +668,7 @@ public class Application {
             .build();
 
         RemoveCrmCompanyRequest req = RemoveCrmCompanyRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -723,7 +723,7 @@ public class Application {
             .build();
 
         RemoveHrisCompanyRequest req = RemoveHrisCompanyRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -778,7 +778,7 @@ public class Application {
             .build();
 
         UpdateCrmCompanyRequest req = UpdateCrmCompanyRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -835,7 +835,7 @@ public class Application {
             .build();
 
         UpdateHrisCompanyRequest req = UpdateHrisCompanyRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 

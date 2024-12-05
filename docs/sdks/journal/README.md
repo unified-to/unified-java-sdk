@@ -38,7 +38,7 @@ public class Application {
             .build();
 
         CreateAccountingJournalRequest req = CreateAccountingJournalRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateAccountingJournalResponse res = sdk.journal().createAccountingJournal()
@@ -94,7 +94,7 @@ public class Application {
             .build();
 
         GetAccountingJournalRequest req = GetAccountingJournalRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -151,7 +151,7 @@ public class Application {
             .build();
 
         ListAccountingJournalsRequest req = ListAccountingJournalsRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListAccountingJournalsResponse res = sdk.journal().listAccountingJournals()
@@ -207,7 +207,7 @@ public class Application {
             .build();
 
         PatchAccountingJournalRequest req = PatchAccountingJournalRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -264,7 +264,7 @@ public class Application {
             .build();
 
         RemoveAccountingJournalRequest req = RemoveAccountingJournalRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -319,7 +319,7 @@ public class Application {
             .build();
 
         UpdateAccountingJournalRequest req = UpdateAccountingJournalRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 

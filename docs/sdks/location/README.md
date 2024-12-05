@@ -44,7 +44,7 @@ public class Application {
             .build();
 
         CreateCommerceLocationRequest req = CreateCommerceLocationRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateCommerceLocationResponse res = sdk.location().createCommerceLocation()
@@ -100,7 +100,7 @@ public class Application {
             .build();
 
         CreateHrisLocationRequest req = CreateHrisLocationRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateHrisLocationResponse res = sdk.location().createHrisLocation()
@@ -156,7 +156,7 @@ public class Application {
             .build();
 
         GetCommerceLocationRequest req = GetCommerceLocationRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -213,7 +213,7 @@ public class Application {
             .build();
 
         GetHrisLocationRequest req = GetHrisLocationRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -270,7 +270,7 @@ public class Application {
             .build();
 
         ListCommerceLocationsRequest req = ListCommerceLocationsRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListCommerceLocationsResponse res = sdk.location().listCommerceLocations()
@@ -326,7 +326,7 @@ public class Application {
             .build();
 
         ListHrisLocationsRequest req = ListHrisLocationsRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListHrisLocationsResponse res = sdk.location().listHrisLocations()
@@ -382,7 +382,7 @@ public class Application {
             .build();
 
         PatchCommerceLocationRequest req = PatchCommerceLocationRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -439,7 +439,7 @@ public class Application {
             .build();
 
         PatchHrisLocationRequest req = PatchHrisLocationRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -496,7 +496,7 @@ public class Application {
             .build();
 
         RemoveCommerceLocationRequest req = RemoveCommerceLocationRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -551,7 +551,7 @@ public class Application {
             .build();
 
         RemoveHrisLocationRequest req = RemoveHrisLocationRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -606,7 +606,7 @@ public class Application {
             .build();
 
         UpdateCommerceLocationRequest req = UpdateCommerceLocationRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -663,7 +663,7 @@ public class Application {
             .build();
 
         UpdateHrisLocationRequest req = UpdateHrisLocationRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 

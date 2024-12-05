@@ -96,7 +96,7 @@ public class Application {
             .build();
 
         GetAccountingOrganizationRequest req = GetAccountingOrganizationRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -210,7 +210,7 @@ public class Application {
             .build();
 
         ListAccountingOrganizationsRequest req = ListAccountingOrganizationsRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListAccountingOrganizationsResponse res = sdk.organization().listAccountingOrganizations()

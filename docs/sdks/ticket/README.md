@@ -38,7 +38,7 @@ public class Application {
             .build();
 
         CreateTicketingTicketRequest req = CreateTicketingTicketRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateTicketingTicketResponse res = sdk.ticket().createTicketingTicket()
@@ -94,7 +94,7 @@ public class Application {
             .build();
 
         GetTicketingTicketRequest req = GetTicketingTicketRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -151,7 +151,7 @@ public class Application {
             .build();
 
         ListTicketingTicketsRequest req = ListTicketingTicketsRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListTicketingTicketsResponse res = sdk.ticket().listTicketingTickets()
@@ -207,7 +207,7 @@ public class Application {
             .build();
 
         PatchTicketingTicketRequest req = PatchTicketingTicketRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -264,7 +264,7 @@ public class Application {
             .build();
 
         RemoveTicketingTicketRequest req = RemoveTicketingTicketRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -319,7 +319,7 @@ public class Application {
             .build();
 
         UpdateTicketingTicketRequest req = UpdateTicketingTicketRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 

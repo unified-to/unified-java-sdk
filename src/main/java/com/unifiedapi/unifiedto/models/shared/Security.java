@@ -12,27 +12,22 @@ import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Override;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
 
 
 public class Security {
 
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=authorization")
-    private Optional<String> jwt;
+    private String jwt;
 
     @JsonCreator
     public Security(
-            Optional<String> jwt) {
+            String jwt) {
         Utils.checkNotNull(jwt, "jwt");
         this.jwt = jwt;
     }
-    
-    public Security() {
-        this(Optional.empty());
-    }
 
     @JsonIgnore
-    public Optional<String> jwt() {
+    public String jwt() {
         return jwt;
     }
 
@@ -41,12 +36,6 @@ public class Security {
     }
 
     public Security withJwt(String jwt) {
-        Utils.checkNotNull(jwt, "jwt");
-        this.jwt = Optional.ofNullable(jwt);
-        return this;
-    }
-
-    public Security withJwt(Optional<String> jwt) {
         Utils.checkNotNull(jwt, "jwt");
         this.jwt = jwt;
         return this;
@@ -79,19 +68,13 @@ public class Security {
     
     public final static class Builder {
  
-        private Optional<String> jwt = Optional.empty();  
+        private String jwt;  
         
         private Builder() {
           // force use of static builder() method
         }
 
         public Builder jwt(String jwt) {
-            Utils.checkNotNull(jwt, "jwt");
-            this.jwt = Optional.ofNullable(jwt);
-            return this;
-        }
-
-        public Builder jwt(Optional<String> jwt) {
             Utils.checkNotNull(jwt, "jwt");
             this.jwt = jwt;
             return this;

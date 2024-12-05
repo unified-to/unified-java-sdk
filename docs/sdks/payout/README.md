@@ -34,7 +34,7 @@ public class Application {
             .build();
 
         GetPaymentPayoutRequest req = GetPaymentPayoutRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -91,7 +91,7 @@ public class Application {
             .build();
 
         ListPaymentPayoutsRequest req = ListPaymentPayoutsRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListPaymentPayoutsResponse res = sdk.payout().listPaymentPayouts()

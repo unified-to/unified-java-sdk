@@ -44,7 +44,7 @@ public class Application {
             .build();
 
         CreateKmsPageRequest req = CreateKmsPageRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateKmsPageResponse res = sdk.kms().createKmsPage()
@@ -100,7 +100,7 @@ public class Application {
             .build();
 
         CreateKmsSpaceRequest req = CreateKmsSpaceRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateKmsSpaceResponse res = sdk.kms().createKmsSpace()
@@ -156,7 +156,7 @@ public class Application {
             .build();
 
         GetKmsPageRequest req = GetKmsPageRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -213,7 +213,7 @@ public class Application {
             .build();
 
         GetKmsSpaceRequest req = GetKmsSpaceRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -270,7 +270,7 @@ public class Application {
             .build();
 
         ListKmsPagesRequest req = ListKmsPagesRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListKmsPagesResponse res = sdk.kms().listKmsPages()
@@ -326,7 +326,7 @@ public class Application {
             .build();
 
         ListKmsSpacesRequest req = ListKmsSpacesRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListKmsSpacesResponse res = sdk.kms().listKmsSpaces()
@@ -382,7 +382,7 @@ public class Application {
             .build();
 
         PatchKmsPageRequest req = PatchKmsPageRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -439,7 +439,7 @@ public class Application {
             .build();
 
         PatchKmsSpaceRequest req = PatchKmsSpaceRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -496,7 +496,7 @@ public class Application {
             .build();
 
         RemoveKmsPageRequest req = RemoveKmsPageRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -551,7 +551,7 @@ public class Application {
             .build();
 
         RemoveKmsSpaceRequest req = RemoveKmsSpaceRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -606,7 +606,7 @@ public class Application {
             .build();
 
         UpdateKmsPageRequest req = UpdateKmsPageRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -663,7 +663,7 @@ public class Application {
             .build();
 
         UpdateKmsSpaceRequest req = UpdateKmsSpaceRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 

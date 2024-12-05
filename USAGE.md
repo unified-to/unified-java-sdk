@@ -19,7 +19,7 @@ public class Application {
             .build();
 
         CreateAccountingAccountRequest req = CreateAccountingAccountRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateAccountingAccountResponse res = sdk.accounting().createAccountingAccount()

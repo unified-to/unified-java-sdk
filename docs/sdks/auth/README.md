@@ -35,7 +35,7 @@ public class Application {
 
         GetUnifiedIntegrationAuthRequest req = GetUnifiedIntegrationAuthRequest.builder()
                 .integrationType("<value>")
-                .workspaceId("<id>")
+                .workspaceId("<value>")
                 .build();
 
         GetUnifiedIntegrationAuthResponse res = sdk.auth().getUnifiedIntegrationAuth()
@@ -92,7 +92,7 @@ public class Application {
 
         GetUnifiedIntegrationLoginRequest req = GetUnifiedIntegrationLoginRequest.builder()
                 .integrationType("<value>")
-                .workspaceId("<id>")
+                .workspaceId("<value>")
                 .build();
 
         GetUnifiedIntegrationLoginResponse res = sdk.auth().getUnifiedIntegrationLogin()

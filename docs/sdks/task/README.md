@@ -44,7 +44,7 @@ public class Application {
             .build();
 
         CreateTaskProjectRequest req = CreateTaskProjectRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateTaskProjectResponse res = sdk.task().createTaskProject()
@@ -100,7 +100,7 @@ public class Application {
             .build();
 
         CreateTaskTaskRequest req = CreateTaskTaskRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateTaskTaskResponse res = sdk.task().createTaskTask()
@@ -156,7 +156,7 @@ public class Application {
             .build();
 
         GetTaskProjectRequest req = GetTaskProjectRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -213,7 +213,7 @@ public class Application {
             .build();
 
         GetTaskTaskRequest req = GetTaskTaskRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -270,7 +270,7 @@ public class Application {
             .build();
 
         ListTaskProjectsRequest req = ListTaskProjectsRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListTaskProjectsResponse res = sdk.task().listTaskProjects()
@@ -326,7 +326,7 @@ public class Application {
             .build();
 
         ListTaskTasksRequest req = ListTaskTasksRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListTaskTasksResponse res = sdk.task().listTaskTasks()
@@ -382,7 +382,7 @@ public class Application {
             .build();
 
         PatchTaskProjectRequest req = PatchTaskProjectRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -439,7 +439,7 @@ public class Application {
             .build();
 
         PatchTaskTaskRequest req = PatchTaskTaskRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -496,7 +496,7 @@ public class Application {
             .build();
 
         RemoveTaskProjectRequest req = RemoveTaskProjectRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -551,7 +551,7 @@ public class Application {
             .build();
 
         RemoveTaskTaskRequest req = RemoveTaskTaskRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -606,7 +606,7 @@ public class Application {
             .build();
 
         UpdateTaskProjectRequest req = UpdateTaskProjectRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -663,7 +663,7 @@ public class Application {
             .build();
 
         UpdateTaskTaskRequest req = UpdateTaskTaskRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 

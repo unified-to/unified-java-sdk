@@ -11,3 +11,7 @@ targets:
     java-target:
         target: java
         source: my-source
+        codeSamples:
+            registry:
+                location: registry.speakeasyapi.dev/unified/unified/my-source-java-code-samples
+            blocking: false

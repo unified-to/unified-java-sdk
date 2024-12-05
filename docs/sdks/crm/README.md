@@ -68,7 +68,7 @@ public class Application {
             .build();
 
         CreateCrmCompanyRequest req = CreateCrmCompanyRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateCrmCompanyResponse res = sdk.crm().createCrmCompany()
@@ -124,7 +124,7 @@ public class Application {
             .build();
 
         CreateCrmContactRequest req = CreateCrmContactRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateCrmContactResponse res = sdk.crm().createCrmContact()
@@ -180,7 +180,7 @@ public class Application {
             .build();
 
         CreateCrmDealRequest req = CreateCrmDealRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateCrmDealResponse res = sdk.crm().createCrmDeal()
@@ -236,7 +236,7 @@ public class Application {
             .build();
 
         CreateCrmEventRequest req = CreateCrmEventRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateCrmEventResponse res = sdk.crm().createCrmEvent()
@@ -292,7 +292,7 @@ public class Application {
             .build();
 
         CreateCrmLeadRequest req = CreateCrmLeadRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateCrmLeadResponse res = sdk.crm().createCrmLead()
@@ -348,7 +348,7 @@ public class Application {
             .build();
 
         CreateCrmPipelineRequest req = CreateCrmPipelineRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateCrmPipelineResponse res = sdk.crm().createCrmPipeline()
@@ -404,7 +404,7 @@ public class Application {
             .build();
 
         GetCrmCompanyRequest req = GetCrmCompanyRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -461,7 +461,7 @@ public class Application {
             .build();
 
         GetCrmContactRequest req = GetCrmContactRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -518,7 +518,7 @@ public class Application {
             .build();
 
         GetCrmDealRequest req = GetCrmDealRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -575,7 +575,7 @@ public class Application {
             .build();
 
         GetCrmEventRequest req = GetCrmEventRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -632,7 +632,7 @@ public class Application {
             .build();
 
         GetCrmLeadRequest req = GetCrmLeadRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -689,7 +689,7 @@ public class Application {
             .build();
 
         GetCrmPipelineRequest req = GetCrmPipelineRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -746,7 +746,7 @@ public class Application {
             .build();
 
         ListCrmCompaniesRequest req = ListCrmCompaniesRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListCrmCompaniesResponse res = sdk.crm().listCrmCompanies()
@@ -802,7 +802,7 @@ public class Application {
             .build();
 
         ListCrmContactsRequest req = ListCrmContactsRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListCrmContactsResponse res = sdk.crm().listCrmContacts()
@@ -858,7 +858,7 @@ public class Application {
             .build();
 
         ListCrmDealsRequest req = ListCrmDealsRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListCrmDealsResponse res = sdk.crm().listCrmDeals()
@@ -914,7 +914,7 @@ public class Application {
             .build();
 
         ListCrmEventsRequest req = ListCrmEventsRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListCrmEventsResponse res = sdk.crm().listCrmEvents()
@@ -970,7 +970,7 @@ public class Application {
             .build();
 
         ListCrmLeadsRequest req = ListCrmLeadsRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListCrmLeadsResponse res = sdk.crm().listCrmLeads()
@@ -1026,7 +1026,7 @@ public class Application {
             .build();
 
         ListCrmPipelinesRequest req = ListCrmPipelinesRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListCrmPipelinesResponse res = sdk.crm().listCrmPipelines()
@@ -1082,7 +1082,7 @@ public class Application {
             .build();
 
         PatchCrmCompanyRequest req = PatchCrmCompanyRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1139,7 +1139,7 @@ public class Application {
             .build();
 
         PatchCrmContactRequest req = PatchCrmContactRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1196,7 +1196,7 @@ public class Application {
             .build();
 
         PatchCrmDealRequest req = PatchCrmDealRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1253,7 +1253,7 @@ public class Application {
             .build();
 
         PatchCrmEventRequest req = PatchCrmEventRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1310,7 +1310,7 @@ public class Application {
             .build();
 
         PatchCrmLeadRequest req = PatchCrmLeadRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1367,7 +1367,7 @@ public class Application {
             .build();
 
         PatchCrmPipelineRequest req = PatchCrmPipelineRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1424,7 +1424,7 @@ public class Application {
             .build();
 
         RemoveCrmCompanyRequest req = RemoveCrmCompanyRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1479,7 +1479,7 @@ public class Application {
             .build();
 
         RemoveCrmContactRequest req = RemoveCrmContactRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1534,7 +1534,7 @@ public class Application {
             .build();
 
         RemoveCrmDealRequest req = RemoveCrmDealRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1589,7 +1589,7 @@ public class Application {
             .build();
 
         RemoveCrmEventRequest req = RemoveCrmEventRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1644,7 +1644,7 @@ public class Application {
             .build();
 
         RemoveCrmLeadRequest req = RemoveCrmLeadRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1699,7 +1699,7 @@ public class Application {
             .build();
 
         RemoveCrmPipelineRequest req = RemoveCrmPipelineRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1754,7 +1754,7 @@ public class Application {
             .build();
 
         UpdateCrmCompanyRequest req = UpdateCrmCompanyRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1811,7 +1811,7 @@ public class Application {
             .build();
 
         UpdateCrmContactRequest req = UpdateCrmContactRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1868,7 +1868,7 @@ public class Application {
             .build();
 
         UpdateCrmDealRequest req = UpdateCrmDealRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1925,7 +1925,7 @@ public class Application {
             .build();
 
         UpdateCrmEventRequest req = UpdateCrmEventRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1982,7 +1982,7 @@ public class Application {
             .build();
 
         UpdateCrmLeadRequest req = UpdateCrmLeadRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -2039,7 +2039,7 @@ public class Application {
             .build();
 
         UpdateCrmPipelineRequest req = UpdateCrmPipelineRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 

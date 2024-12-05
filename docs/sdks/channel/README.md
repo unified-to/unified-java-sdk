@@ -34,7 +34,7 @@ public class Application {
             .build();
 
         GetMessagingChannelRequest req = GetMessagingChannelRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -91,7 +91,7 @@ public class Application {
             .build();
 
         ListMessagingChannelsRequest req = ListMessagingChannelsRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListMessagingChannelsResponse res = sdk.channel().listMessagingChannels()

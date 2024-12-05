@@ -33,7 +33,7 @@ public class Application {
             .build();
 
         ListGenaiModelsRequest req = ListGenaiModelsRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListGenaiModelsResponse res = sdk.model().listGenaiModels()

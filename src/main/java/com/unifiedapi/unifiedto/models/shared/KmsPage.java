@@ -17,6 +17,7 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
@@ -32,12 +33,20 @@ public class KmsPage {
     private String downloadUrl;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("has_children")
+    private Optional<Boolean> hasChildren;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Optional<Boolean> isActive;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private Optional<? extends List<KmsPageMetadata>> metadata;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_page_id")
@@ -68,8 +77,10 @@ public class KmsPage {
     public KmsPage(
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("download_url") String downloadUrl,
+            @JsonProperty("has_children") Optional<Boolean> hasChildren,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("is_active") Optional<Boolean> isActive,
+            @JsonProperty("metadata") Optional<? extends List<KmsPageMetadata>> metadata,
             @JsonProperty("parent_page_id") Optional<String> parentPageId,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
             @JsonProperty("space_id") String spaceId,
@@ -79,8 +90,10 @@ public class KmsPage {
             @JsonProperty("user_id") Optional<String> userId) {
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(downloadUrl, "downloadUrl");
+        Utils.checkNotNull(hasChildren, "hasChildren");
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(isActive, "isActive");
+        Utils.checkNotNull(metadata, "metadata");
         Utils.checkNotNull(parentPageId, "parentPageId");
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(spaceId, "spaceId");
@@ -90,8 +103,10 @@ public class KmsPage {
         Utils.checkNotNull(userId, "userId");
         this.createdAt = createdAt;
         this.downloadUrl = downloadUrl;
+        this.hasChildren = hasChildren;
         this.id = id;
         this.isActive = isActive;
+        this.metadata = metadata;
         this.parentPageId = parentPageId;
         this.raw = raw;
         this.spaceId = spaceId;
@@ -106,7 +121,7 @@ public class KmsPage {
             String spaceId,
             String title,
             KmsPageType type) {
-        this(Optional.empty(), downloadUrl, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), spaceId, title, type, Optional.empty(), Optional.empty());
+        this(Optional.empty(), downloadUrl, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), spaceId, title, type, Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -120,6 +135,11 @@ public class KmsPage {
     }
 
     @JsonIgnore
+    public Optional<Boolean> hasChildren() {
+        return hasChildren;
+    }
+
+    @JsonIgnore
     public Optional<String> id() {
         return id;
     }
@@ -127,6 +147,12 @@ public class KmsPage {
     @JsonIgnore
     public Optional<Boolean> isActive() {
         return isActive;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<KmsPageMetadata>> metadata() {
+        return (Optional<List<KmsPageMetadata>>) metadata;
     }
 
     @JsonIgnore
@@ -187,6 +213,18 @@ public class KmsPage {
         return this;
     }
 
+    public KmsPage withHasChildren(boolean hasChildren) {
+        Utils.checkNotNull(hasChildren, "hasChildren");
+        this.hasChildren = Optional.ofNullable(hasChildren);
+        return this;
+    }
+
+    public KmsPage withHasChildren(Optional<Boolean> hasChildren) {
+        Utils.checkNotNull(hasChildren, "hasChildren");
+        this.hasChildren = hasChildren;
+        return this;
+    }
+
     public KmsPage withId(String id) {
         Utils.checkNotNull(id, "id");
         this.id = Optional.ofNullable(id);
@@ -208,6 +246,18 @@ public class KmsPage {
     public KmsPage withIsActive(Optional<Boolean> isActive) {
         Utils.checkNotNull(isActive, "isActive");
         this.isActive = isActive;
+        return this;
+    }
+
+    public KmsPage withMetadata(List<KmsPageMetadata> metadata) {
+        Utils.checkNotNull(metadata, "metadata");
+        this.metadata = Optional.ofNullable(metadata);
+        return this;
+    }
+
+    public KmsPage withMetadata(Optional<? extends List<KmsPageMetadata>> metadata) {
+        Utils.checkNotNull(metadata, "metadata");
+        this.metadata = metadata;
         return this;
     }
 
@@ -289,8 +339,10 @@ public class KmsPage {
         return 
             Objects.deepEquals(this.createdAt, other.createdAt) &&
             Objects.deepEquals(this.downloadUrl, other.downloadUrl) &&
+            Objects.deepEquals(this.hasChildren, other.hasChildren) &&
             Objects.deepEquals(this.id, other.id) &&
             Objects.deepEquals(this.isActive, other.isActive) &&
+            Objects.deepEquals(this.metadata, other.metadata) &&
             Objects.deepEquals(this.parentPageId, other.parentPageId) &&
             Objects.deepEquals(this.raw, other.raw) &&
             Objects.deepEquals(this.spaceId, other.spaceId) &&
@@ -305,8 +357,10 @@ public class KmsPage {
         return Objects.hash(
             createdAt,
             downloadUrl,
+            hasChildren,
             id,
             isActive,
+            metadata,
             parentPageId,
             raw,
             spaceId,
@@ -321,8 +375,10 @@ public class KmsPage {
         return Utils.toString(KmsPage.class,
                 "createdAt", createdAt,
                 "downloadUrl", downloadUrl,
+                "hasChildren", hasChildren,
                 "id", id,
                 "isActive", isActive,
+                "metadata", metadata,
                 "parentPageId", parentPageId,
                 "raw", raw,
                 "spaceId", spaceId,
@@ -338,9 +394,13 @@ public class KmsPage {
  
         private String downloadUrl;
  
+        private Optional<Boolean> hasChildren = Optional.empty();
+ 
         private Optional<String> id = Optional.empty();
  
         private Optional<Boolean> isActive = Optional.empty();
+ 
+        private Optional<? extends List<KmsPageMetadata>> metadata = Optional.empty();
  
         private Optional<String> parentPageId = Optional.empty();
  
@@ -378,6 +438,18 @@ public class KmsPage {
             return this;
         }
 
+        public Builder hasChildren(boolean hasChildren) {
+            Utils.checkNotNull(hasChildren, "hasChildren");
+            this.hasChildren = Optional.ofNullable(hasChildren);
+            return this;
+        }
+
+        public Builder hasChildren(Optional<Boolean> hasChildren) {
+            Utils.checkNotNull(hasChildren, "hasChildren");
+            this.hasChildren = hasChildren;
+            return this;
+        }
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -399,6 +471,18 @@ public class KmsPage {
         public Builder isActive(Optional<Boolean> isActive) {
             Utils.checkNotNull(isActive, "isActive");
             this.isActive = isActive;
+            return this;
+        }
+
+        public Builder metadata(List<KmsPageMetadata> metadata) {
+            Utils.checkNotNull(metadata, "metadata");
+            this.metadata = Optional.ofNullable(metadata);
+            return this;
+        }
+
+        public Builder metadata(Optional<? extends List<KmsPageMetadata>> metadata) {
+            Utils.checkNotNull(metadata, "metadata");
+            this.metadata = metadata;
             return this;
         }
 
@@ -472,8 +556,10 @@ public class KmsPage {
             return new KmsPage(
                 createdAt,
                 downloadUrl,
+                hasChildren,
                 id,
                 isActive,
+                metadata,
                 parentPageId,
                 raw,
                 spaceId,

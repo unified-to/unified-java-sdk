@@ -46,6 +46,10 @@ public class KmsSpace {
     private String name;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("parent_page_id")
+    private Optional<String> parentPageId;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_space_id")
     private Optional<String> parentSpaceId;
 
@@ -68,6 +72,7 @@ public class KmsSpace {
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("is_active") Optional<Boolean> isActive,
             @JsonProperty("name") String name,
+            @JsonProperty("parent_page_id") Optional<String> parentPageId,
             @JsonProperty("parent_space_id") Optional<String> parentSpaceId,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
@@ -77,6 +82,7 @@ public class KmsSpace {
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(isActive, "isActive");
         Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(parentPageId, "parentPageId");
         Utils.checkNotNull(parentSpaceId, "parentSpaceId");
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(updatedAt, "updatedAt");
@@ -86,6 +92,7 @@ public class KmsSpace {
         this.id = id;
         this.isActive = isActive;
         this.name = name;
+        this.parentPageId = parentPageId;
         this.parentSpaceId = parentSpaceId;
         this.raw = raw;
         this.updatedAt = updatedAt;
@@ -94,7 +101,7 @@ public class KmsSpace {
     
     public KmsSpace(
             String name) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), name, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), name, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -120,6 +127,11 @@ public class KmsSpace {
     @JsonIgnore
     public String name() {
         return name;
+    }
+
+    @JsonIgnore
+    public Optional<String> parentPageId() {
+        return parentPageId;
     }
 
     @JsonIgnore
@@ -201,6 +213,18 @@ public class KmsSpace {
         return this;
     }
 
+    public KmsSpace withParentPageId(String parentPageId) {
+        Utils.checkNotNull(parentPageId, "parentPageId");
+        this.parentPageId = Optional.ofNullable(parentPageId);
+        return this;
+    }
+
+    public KmsSpace withParentPageId(Optional<String> parentPageId) {
+        Utils.checkNotNull(parentPageId, "parentPageId");
+        this.parentPageId = parentPageId;
+        return this;
+    }
+
     public KmsSpace withParentSpaceId(String parentSpaceId) {
         Utils.checkNotNull(parentSpaceId, "parentSpaceId");
         this.parentSpaceId = Optional.ofNullable(parentSpaceId);
@@ -264,6 +288,7 @@ public class KmsSpace {
             Objects.deepEquals(this.id, other.id) &&
             Objects.deepEquals(this.isActive, other.isActive) &&
             Objects.deepEquals(this.name, other.name) &&
+            Objects.deepEquals(this.parentPageId, other.parentPageId) &&
             Objects.deepEquals(this.parentSpaceId, other.parentSpaceId) &&
             Objects.deepEquals(this.raw, other.raw) &&
             Objects.deepEquals(this.updatedAt, other.updatedAt) &&
@@ -278,6 +303,7 @@ public class KmsSpace {
             id,
             isActive,
             name,
+            parentPageId,
             parentSpaceId,
             raw,
             updatedAt,
@@ -292,6 +318,7 @@ public class KmsSpace {
                 "id", id,
                 "isActive", isActive,
                 "name", name,
+                "parentPageId", parentPageId,
                 "parentSpaceId", parentSpaceId,
                 "raw", raw,
                 "updatedAt", updatedAt,
@@ -309,6 +336,8 @@ public class KmsSpace {
         private Optional<Boolean> isActive = Optional.empty();
  
         private String name;
+ 
+        private Optional<String> parentPageId = Optional.empty();
  
         private Optional<String> parentSpaceId;
  
@@ -376,6 +405,18 @@ public class KmsSpace {
             return this;
         }
 
+        public Builder parentPageId(String parentPageId) {
+            Utils.checkNotNull(parentPageId, "parentPageId");
+            this.parentPageId = Optional.ofNullable(parentPageId);
+            return this;
+        }
+
+        public Builder parentPageId(Optional<String> parentPageId) {
+            Utils.checkNotNull(parentPageId, "parentPageId");
+            this.parentPageId = parentPageId;
+            return this;
+        }
+
         public Builder parentSpaceId(String parentSpaceId) {
             Utils.checkNotNull(parentSpaceId, "parentSpaceId");
             this.parentSpaceId = Optional.ofNullable(parentSpaceId);
@@ -433,6 +474,7 @@ public class KmsSpace {
                 id,
                 isActive,
                 name,
+                parentPageId,
                 parentSpaceId,
                 raw,
                 updatedAt,

@@ -60,7 +60,7 @@ public class Application {
             .build();
 
         CreateHrisCompanyRequest req = CreateHrisCompanyRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateHrisCompanyResponse res = sdk.hris().createHrisCompany()
@@ -116,7 +116,7 @@ public class Application {
             .build();
 
         CreateHrisEmployeeRequest req = CreateHrisEmployeeRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateHrisEmployeeResponse res = sdk.hris().createHrisEmployee()
@@ -172,7 +172,7 @@ public class Application {
             .build();
 
         CreateHrisGroupRequest req = CreateHrisGroupRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateHrisGroupResponse res = sdk.hris().createHrisGroup()
@@ -228,7 +228,7 @@ public class Application {
             .build();
 
         CreateHrisLocationRequest req = CreateHrisLocationRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateHrisLocationResponse res = sdk.hris().createHrisLocation()
@@ -284,7 +284,7 @@ public class Application {
             .build();
 
         GetHrisCompanyRequest req = GetHrisCompanyRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -341,7 +341,7 @@ public class Application {
             .build();
 
         GetHrisEmployeeRequest req = GetHrisEmployeeRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -398,7 +398,7 @@ public class Application {
             .build();
 
         GetHrisGroupRequest req = GetHrisGroupRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -455,7 +455,7 @@ public class Application {
             .build();
 
         GetHrisLocationRequest req = GetHrisLocationRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -512,7 +512,7 @@ public class Application {
             .build();
 
         GetHrisPayslipRequest req = GetHrisPayslipRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -569,7 +569,7 @@ public class Application {
             .build();
 
         GetHrisTimeoffRequest req = GetHrisTimeoffRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -626,7 +626,7 @@ public class Application {
             .build();
 
         ListHrisCompaniesRequest req = ListHrisCompaniesRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListHrisCompaniesResponse res = sdk.hris().listHrisCompanies()
@@ -682,7 +682,7 @@ public class Application {
             .build();
 
         ListHrisEmployeesRequest req = ListHrisEmployeesRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListHrisEmployeesResponse res = sdk.hris().listHrisEmployees()
@@ -738,7 +738,7 @@ public class Application {
             .build();
 
         ListHrisGroupsRequest req = ListHrisGroupsRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListHrisGroupsResponse res = sdk.hris().listHrisGroups()
@@ -794,7 +794,7 @@ public class Application {
             .build();
 
         ListHrisLocationsRequest req = ListHrisLocationsRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListHrisLocationsResponse res = sdk.hris().listHrisLocations()
@@ -850,7 +850,7 @@ public class Application {
             .build();
 
         ListHrisPayslipsRequest req = ListHrisPayslipsRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListHrisPayslipsResponse res = sdk.hris().listHrisPayslips()
@@ -906,7 +906,7 @@ public class Application {
             .build();
 
         ListHrisTimeoffsRequest req = ListHrisTimeoffsRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListHrisTimeoffsResponse res = sdk.hris().listHrisTimeoffs()
@@ -962,7 +962,7 @@ public class Application {
             .build();
 
         PatchHrisCompanyRequest req = PatchHrisCompanyRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1019,7 +1019,7 @@ public class Application {
             .build();
 
         PatchHrisEmployeeRequest req = PatchHrisEmployeeRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1076,7 +1076,7 @@ public class Application {
             .build();
 
         PatchHrisGroupRequest req = PatchHrisGroupRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1133,7 +1133,7 @@ public class Application {
             .build();
 
         PatchHrisLocationRequest req = PatchHrisLocationRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1190,7 +1190,7 @@ public class Application {
             .build();
 
         RemoveHrisCompanyRequest req = RemoveHrisCompanyRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1245,7 +1245,7 @@ public class Application {
             .build();
 
         RemoveHrisEmployeeRequest req = RemoveHrisEmployeeRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1300,7 +1300,7 @@ public class Application {
             .build();
 
         RemoveHrisGroupRequest req = RemoveHrisGroupRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1355,7 +1355,7 @@ public class Application {
             .build();
 
         RemoveHrisLocationRequest req = RemoveHrisLocationRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1410,7 +1410,7 @@ public class Application {
             .build();
 
         UpdateHrisCompanyRequest req = UpdateHrisCompanyRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1467,7 +1467,7 @@ public class Application {
             .build();
 
         UpdateHrisEmployeeRequest req = UpdateHrisEmployeeRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1524,7 +1524,7 @@ public class Application {
             .build();
 
         UpdateHrisGroupRequest req = UpdateHrisGroupRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1581,7 +1581,7 @@ public class Application {
             .build();
 
         UpdateHrisLocationRequest req = UpdateHrisLocationRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 

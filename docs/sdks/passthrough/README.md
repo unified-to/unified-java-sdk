@@ -40,8 +40,8 @@ public class Application {
             .build();
 
         CreatePassthroughJsonRequest req = CreatePassthroughJsonRequest.builder()
-                .connectionId("<id>")
-                .path("/opt/lib")
+                .connectionId("<value>")
+                .path("/etc/periodic")
                 .build();
 
         CreatePassthroughJsonResponse res = sdk.passthrough().createPassthroughJson()
@@ -95,8 +95,8 @@ public class Application {
             .build();
 
         CreatePassthroughRawRequest req = CreatePassthroughRawRequest.builder()
-                .connectionId("<id>")
-                .path("/etc/namedb")
+                .connectionId("<value>")
+                .path("/etc/periodic")
                 .build();
 
         CreatePassthroughRawResponse res = sdk.passthrough().createPassthroughRaw()
@@ -150,7 +150,7 @@ public class Application {
             .build();
 
         ListPassthroughsRequest req = ListPassthroughsRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .path("/selinux")
                 .build();
 
@@ -205,8 +205,8 @@ public class Application {
             .build();
 
         PatchPassthroughJsonRequest req = PatchPassthroughJsonRequest.builder()
-                .connectionId("<id>")
-                .path("/home/user")
+                .connectionId("<value>")
+                .path("/mnt")
                 .build();
 
         PatchPassthroughJsonResponse res = sdk.passthrough().patchPassthroughJson()
@@ -260,8 +260,8 @@ public class Application {
             .build();
 
         PatchPassthroughRawRequest req = PatchPassthroughRawRequest.builder()
-                .connectionId("<id>")
-                .path("/etc/mail")
+                .connectionId("<value>")
+                .path("/mnt")
                 .build();
 
         PatchPassthroughRawResponse res = sdk.passthrough().patchPassthroughRaw()
@@ -315,7 +315,7 @@ public class Application {
             .build();
 
         RemovePassthroughRequest req = RemovePassthroughRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .path("/Applications")
                 .build();
 
@@ -370,8 +370,8 @@ public class Application {
             .build();
 
         UpdatePassthroughJsonRequest req = UpdatePassthroughJsonRequest.builder()
-                .connectionId("<id>")
-                .path("/etc/namedb")
+                .connectionId("<value>")
+                .path("/dev")
                 .build();
 
         UpdatePassthroughJsonResponse res = sdk.passthrough().updatePassthroughJson()
@@ -425,8 +425,8 @@ public class Application {
             .build();
 
         UpdatePassthroughRawRequest req = UpdatePassthroughRawRequest.builder()
-                .connectionId("<id>")
-                .path("/System")
+                .connectionId("<value>")
+                .path("/dev")
                 .build();
 
         UpdatePassthroughRawResponse res = sdk.passthrough().updatePassthroughRaw()

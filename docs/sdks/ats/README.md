@@ -77,7 +77,7 @@ public class Application {
             .build();
 
         CreateAtsActivityRequest req = CreateAtsActivityRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateAtsActivityResponse res = sdk.ats().createAtsActivity()
@@ -133,7 +133,7 @@ public class Application {
             .build();
 
         CreateAtsApplicationRequest req = CreateAtsApplicationRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateAtsApplicationResponse res = sdk.ats().createAtsApplication()
@@ -189,7 +189,7 @@ public class Application {
             .build();
 
         CreateAtsCandidateRequest req = CreateAtsCandidateRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateAtsCandidateResponse res = sdk.ats().createAtsCandidate()
@@ -245,7 +245,7 @@ public class Application {
             .build();
 
         CreateAtsDocumentRequest req = CreateAtsDocumentRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateAtsDocumentResponse res = sdk.ats().createAtsDocument()
@@ -301,7 +301,7 @@ public class Application {
             .build();
 
         CreateAtsInterviewRequest req = CreateAtsInterviewRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateAtsInterviewResponse res = sdk.ats().createAtsInterview()
@@ -357,7 +357,7 @@ public class Application {
             .build();
 
         CreateAtsJobRequest req = CreateAtsJobRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateAtsJobResponse res = sdk.ats().createAtsJob()
@@ -413,7 +413,7 @@ public class Application {
             .build();
 
         CreateAtsScorecardRequest req = CreateAtsScorecardRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         CreateAtsScorecardResponse res = sdk.ats().createAtsScorecard()
@@ -469,7 +469,7 @@ public class Application {
             .build();
 
         GetAtsActivityRequest req = GetAtsActivityRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -526,7 +526,7 @@ public class Application {
             .build();
 
         GetAtsApplicationRequest req = GetAtsApplicationRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -583,7 +583,7 @@ public class Application {
             .build();
 
         GetAtsCandidateRequest req = GetAtsCandidateRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -640,7 +640,7 @@ public class Application {
             .build();
 
         GetAtsCompanyRequest req = GetAtsCompanyRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -697,7 +697,7 @@ public class Application {
             .build();
 
         GetAtsDocumentRequest req = GetAtsDocumentRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -754,7 +754,7 @@ public class Application {
             .build();
 
         GetAtsInterviewRequest req = GetAtsInterviewRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -811,7 +811,7 @@ public class Application {
             .build();
 
         GetAtsJobRequest req = GetAtsJobRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -868,7 +868,7 @@ public class Application {
             .build();
 
         GetAtsScorecardRequest req = GetAtsScorecardRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -925,7 +925,7 @@ public class Application {
             .build();
 
         ListAtsActivitiesRequest req = ListAtsActivitiesRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListAtsActivitiesResponse res = sdk.ats().listAtsActivities()
@@ -981,7 +981,7 @@ public class Application {
             .build();
 
         ListAtsApplicationsRequest req = ListAtsApplicationsRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListAtsApplicationsResponse res = sdk.ats().listAtsApplications()
@@ -1037,7 +1037,7 @@ public class Application {
             .build();
 
         ListAtsApplicationstatusesRequest req = ListAtsApplicationstatusesRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListAtsApplicationstatusesResponse res = sdk.ats().listAtsApplicationstatuses()
@@ -1093,7 +1093,7 @@ public class Application {
             .build();
 
         ListAtsCandidatesRequest req = ListAtsCandidatesRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListAtsCandidatesResponse res = sdk.ats().listAtsCandidates()
@@ -1149,7 +1149,7 @@ public class Application {
             .build();
 
         ListAtsCompaniesRequest req = ListAtsCompaniesRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListAtsCompaniesResponse res = sdk.ats().listAtsCompanies()
@@ -1205,7 +1205,7 @@ public class Application {
             .build();
 
         ListAtsDocumentsRequest req = ListAtsDocumentsRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListAtsDocumentsResponse res = sdk.ats().listAtsDocuments()
@@ -1261,7 +1261,7 @@ public class Application {
             .build();
 
         ListAtsInterviewsRequest req = ListAtsInterviewsRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListAtsInterviewsResponse res = sdk.ats().listAtsInterviews()
@@ -1317,7 +1317,7 @@ public class Application {
             .build();
 
         ListAtsJobsRequest req = ListAtsJobsRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListAtsJobsResponse res = sdk.ats().listAtsJobs()
@@ -1373,7 +1373,7 @@ public class Application {
             .build();
 
         ListAtsScorecardsRequest req = ListAtsScorecardsRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListAtsScorecardsResponse res = sdk.ats().listAtsScorecards()
@@ -1429,7 +1429,7 @@ public class Application {
             .build();
 
         PatchAtsActivityRequest req = PatchAtsActivityRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1486,7 +1486,7 @@ public class Application {
             .build();
 
         PatchAtsApplicationRequest req = PatchAtsApplicationRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1543,7 +1543,7 @@ public class Application {
             .build();
 
         PatchAtsCandidateRequest req = PatchAtsCandidateRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1600,7 +1600,7 @@ public class Application {
             .build();
 
         PatchAtsDocumentRequest req = PatchAtsDocumentRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1657,7 +1657,7 @@ public class Application {
             .build();
 
         PatchAtsInterviewRequest req = PatchAtsInterviewRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1714,7 +1714,7 @@ public class Application {
             .build();
 
         PatchAtsJobRequest req = PatchAtsJobRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1771,7 +1771,7 @@ public class Application {
             .build();
 
         PatchAtsScorecardRequest req = PatchAtsScorecardRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1828,7 +1828,7 @@ public class Application {
             .build();
 
         RemoveAtsActivityRequest req = RemoveAtsActivityRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1883,7 +1883,7 @@ public class Application {
             .build();
 
         RemoveAtsApplicationRequest req = RemoveAtsApplicationRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1938,7 +1938,7 @@ public class Application {
             .build();
 
         RemoveAtsCandidateRequest req = RemoveAtsCandidateRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -1993,7 +1993,7 @@ public class Application {
             .build();
 
         RemoveAtsDocumentRequest req = RemoveAtsDocumentRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -2048,7 +2048,7 @@ public class Application {
             .build();
 
         RemoveAtsInterviewRequest req = RemoveAtsInterviewRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -2103,7 +2103,7 @@ public class Application {
             .build();
 
         RemoveAtsJobRequest req = RemoveAtsJobRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -2158,7 +2158,7 @@ public class Application {
             .build();
 
         RemoveAtsScorecardRequest req = RemoveAtsScorecardRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -2213,7 +2213,7 @@ public class Application {
             .build();
 
         UpdateAtsActivityRequest req = UpdateAtsActivityRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -2270,7 +2270,7 @@ public class Application {
             .build();
 
         UpdateAtsApplicationRequest req = UpdateAtsApplicationRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -2327,7 +2327,7 @@ public class Application {
             .build();
 
         UpdateAtsCandidateRequest req = UpdateAtsCandidateRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -2384,7 +2384,7 @@ public class Application {
             .build();
 
         UpdateAtsDocumentRequest req = UpdateAtsDocumentRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -2441,7 +2441,7 @@ public class Application {
             .build();
 
         UpdateAtsInterviewRequest req = UpdateAtsInterviewRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -2498,7 +2498,7 @@ public class Application {
             .build();
 
         UpdateAtsJobRequest req = UpdateAtsJobRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -2555,7 +2555,7 @@ public class Application {
             .build();
 
         UpdateAtsScorecardRequest req = UpdateAtsScorecardRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 

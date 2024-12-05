@@ -33,7 +33,7 @@ public class Application {
             .build();
 
         ListEnrichPeopleRequest req = ListEnrichPeopleRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListEnrichPeopleResponse res = sdk.person().listEnrichPeople()

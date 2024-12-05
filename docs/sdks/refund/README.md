@@ -34,7 +34,7 @@ public class Application {
             .build();
 
         GetPaymentRefundRequest req = GetPaymentRefundRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .id("<id>")
                 .build();
 
@@ -91,7 +91,7 @@ public class Application {
             .build();
 
         ListPaymentRefundsRequest req = ListPaymentRefundsRequest.builder()
-                .connectionId("<id>")
+                .connectionId("<value>")
                 .build();
 
         ListPaymentRefundsResponse res = sdk.refund().listPaymentRefunds()
