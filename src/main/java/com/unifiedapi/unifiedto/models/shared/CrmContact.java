@@ -65,6 +65,10 @@ public class CrmContact {
     private Optional<String> id;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("link_urls")
+    private Optional<? extends List<String>> linkUrls;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
 
@@ -103,6 +107,7 @@ public class CrmContact {
             @JsonProperty("deal_ids") Optional<? extends List<String>> dealIds,
             @JsonProperty("emails") Optional<? extends List<CrmEmail>> emails,
             @JsonProperty("id") Optional<String> id,
+            @JsonProperty("link_urls") Optional<? extends List<String>> linkUrls,
             @JsonProperty("name") Optional<String> name,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
             @JsonProperty("telephones") Optional<? extends List<CrmTelephone>> telephones,
@@ -116,6 +121,7 @@ public class CrmContact {
         Utils.checkNotNull(dealIds, "dealIds");
         Utils.checkNotNull(emails, "emails");
         Utils.checkNotNull(id, "id");
+        Utils.checkNotNull(linkUrls, "linkUrls");
         Utils.checkNotNull(name, "name");
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(telephones, "telephones");
@@ -129,6 +135,7 @@ public class CrmContact {
         this.dealIds = dealIds;
         this.emails = emails;
         this.id = id;
+        this.linkUrls = linkUrls;
         this.name = name;
         this.raw = raw;
         this.telephones = telephones;
@@ -138,7 +145,7 @@ public class CrmContact {
     }
     
     public CrmContact() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -187,6 +194,12 @@ public class CrmContact {
     @JsonIgnore
     public Optional<String> id() {
         return id;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<String>> linkUrls() {
+        return (Optional<List<String>>) linkUrls;
     }
 
     @JsonIgnore
@@ -333,6 +346,18 @@ public class CrmContact {
         return this;
     }
 
+    public CrmContact withLinkUrls(List<String> linkUrls) {
+        Utils.checkNotNull(linkUrls, "linkUrls");
+        this.linkUrls = Optional.ofNullable(linkUrls);
+        return this;
+    }
+
+    public CrmContact withLinkUrls(Optional<? extends List<String>> linkUrls) {
+        Utils.checkNotNull(linkUrls, "linkUrls");
+        this.linkUrls = linkUrls;
+        return this;
+    }
+
     public CrmContact withName(String name) {
         Utils.checkNotNull(name, "name");
         this.name = Optional.ofNullable(name);
@@ -434,6 +459,7 @@ public class CrmContact {
             Objects.deepEquals(this.dealIds, other.dealIds) &&
             Objects.deepEquals(this.emails, other.emails) &&
             Objects.deepEquals(this.id, other.id) &&
+            Objects.deepEquals(this.linkUrls, other.linkUrls) &&
             Objects.deepEquals(this.name, other.name) &&
             Objects.deepEquals(this.raw, other.raw) &&
             Objects.deepEquals(this.telephones, other.telephones) &&
@@ -452,6 +478,7 @@ public class CrmContact {
             dealIds,
             emails,
             id,
+            linkUrls,
             name,
             raw,
             telephones,
@@ -470,6 +497,7 @@ public class CrmContact {
                 "dealIds", dealIds,
                 "emails", emails,
                 "id", id,
+                "linkUrls", linkUrls,
                 "name", name,
                 "raw", raw,
                 "telephones", telephones,
@@ -493,6 +521,8 @@ public class CrmContact {
         private Optional<? extends List<CrmEmail>> emails = Optional.empty();
  
         private Optional<String> id = Optional.empty();
+ 
+        private Optional<? extends List<String>> linkUrls = Optional.empty();
  
         private Optional<String> name = Optional.empty();
  
@@ -612,6 +642,18 @@ public class CrmContact {
             return this;
         }
 
+        public Builder linkUrls(List<String> linkUrls) {
+            Utils.checkNotNull(linkUrls, "linkUrls");
+            this.linkUrls = Optional.ofNullable(linkUrls);
+            return this;
+        }
+
+        public Builder linkUrls(Optional<? extends List<String>> linkUrls) {
+            Utils.checkNotNull(linkUrls, "linkUrls");
+            this.linkUrls = linkUrls;
+            return this;
+        }
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -705,6 +747,7 @@ public class CrmContact {
                 dealIds,
                 emails,
                 id,
+                linkUrls,
                 name,
                 raw,
                 telephones,

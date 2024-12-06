@@ -62,6 +62,10 @@ public class CrmLead {
     private Optional<Boolean> isActive;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("link_urls")
+    private Optional<? extends List<String>> linkUrls;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private Optional<String> name;
 
@@ -100,6 +104,7 @@ public class CrmLead {
             @JsonProperty("emails") Optional<? extends List<CrmEmail>> emails,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("is_active") Optional<Boolean> isActive,
+            @JsonProperty("link_urls") Optional<? extends List<String>> linkUrls,
             @JsonProperty("name") Optional<String> name,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
             @JsonProperty("source") Optional<String> source,
@@ -116,6 +121,7 @@ public class CrmLead {
         Utils.checkNotNull(emails, "emails");
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(isActive, "isActive");
+        Utils.checkNotNull(linkUrls, "linkUrls");
         Utils.checkNotNull(name, "name");
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(source, "source");
@@ -132,6 +138,7 @@ public class CrmLead {
         this.emails = emails;
         this.id = id;
         this.isActive = isActive;
+        this.linkUrls = linkUrls;
         this.name = name;
         this.raw = raw;
         this.source = source;
@@ -142,7 +149,7 @@ public class CrmLead {
     }
     
     public CrmLead() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -190,6 +197,12 @@ public class CrmLead {
     @JsonIgnore
     public Optional<Boolean> isActive() {
         return isActive;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<String>> linkUrls() {
+        return (Optional<List<String>>) linkUrls;
     }
 
     @JsonIgnore
@@ -341,6 +354,18 @@ public class CrmLead {
         return this;
     }
 
+    public CrmLead withLinkUrls(List<String> linkUrls) {
+        Utils.checkNotNull(linkUrls, "linkUrls");
+        this.linkUrls = Optional.ofNullable(linkUrls);
+        return this;
+    }
+
+    public CrmLead withLinkUrls(Optional<? extends List<String>> linkUrls) {
+        Utils.checkNotNull(linkUrls, "linkUrls");
+        this.linkUrls = linkUrls;
+        return this;
+    }
+
     public CrmLead withName(String name) {
         Utils.checkNotNull(name, "name");
         this.name = Optional.ofNullable(name);
@@ -444,6 +469,7 @@ public class CrmLead {
             Objects.deepEquals(this.emails, other.emails) &&
             Objects.deepEquals(this.id, other.id) &&
             Objects.deepEquals(this.isActive, other.isActive) &&
+            Objects.deepEquals(this.linkUrls, other.linkUrls) &&
             Objects.deepEquals(this.name, other.name) &&
             Objects.deepEquals(this.raw, other.raw) &&
             Objects.deepEquals(this.source, other.source) &&
@@ -465,6 +491,7 @@ public class CrmLead {
             emails,
             id,
             isActive,
+            linkUrls,
             name,
             raw,
             source,
@@ -486,6 +513,7 @@ public class CrmLead {
                 "emails", emails,
                 "id", id,
                 "isActive", isActive,
+                "linkUrls", linkUrls,
                 "name", name,
                 "raw", raw,
                 "source", source,
@@ -514,6 +542,8 @@ public class CrmLead {
         private Optional<String> id = Optional.empty();
  
         private Optional<Boolean> isActive = Optional.empty();
+ 
+        private Optional<? extends List<String>> linkUrls = Optional.empty();
  
         private Optional<String> name = Optional.empty();
  
@@ -641,6 +671,18 @@ public class CrmLead {
             return this;
         }
 
+        public Builder linkUrls(List<String> linkUrls) {
+            Utils.checkNotNull(linkUrls, "linkUrls");
+            this.linkUrls = Optional.ofNullable(linkUrls);
+            return this;
+        }
+
+        public Builder linkUrls(Optional<? extends List<String>> linkUrls) {
+            Utils.checkNotNull(linkUrls, "linkUrls");
+            this.linkUrls = linkUrls;
+            return this;
+        }
+
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
             this.name = Optional.ofNullable(name);
@@ -736,6 +778,7 @@ public class CrmLead {
                 emails,
                 id,
                 isActive,
+                linkUrls,
                 name,
                 raw,
                 source,
