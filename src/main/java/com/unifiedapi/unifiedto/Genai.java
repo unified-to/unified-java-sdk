@@ -85,10 +85,10 @@ public class Genai implements
                 CreateGenaiPromptRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -96,7 +96,7 @@ public class Genai implements
                   new BeforeRequestContextImpl(
                       "createGenaiPrompt", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -107,7 +107,7 @@ public class Genai implements
                         new AfterErrorContextImpl(
                             "createGenaiPrompt",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -116,7 +116,7 @@ public class Genai implements
                         new AfterSuccessContextImpl(
                             "createGenaiPrompt",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -125,7 +125,7 @@ public class Genai implements
                         new AfterErrorContextImpl(
                             "createGenaiPrompt",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -206,10 +206,10 @@ public class Genai implements
                 ListGenaiModelsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -217,7 +217,7 @@ public class Genai implements
                   new BeforeRequestContextImpl(
                       "listGenaiModels", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -228,7 +228,7 @@ public class Genai implements
                         new AfterErrorContextImpl(
                             "listGenaiModels",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -237,7 +237,7 @@ public class Genai implements
                         new AfterSuccessContextImpl(
                             "listGenaiModels",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -246,7 +246,7 @@ public class Genai implements
                         new AfterErrorContextImpl(
                             "listGenaiModels",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }

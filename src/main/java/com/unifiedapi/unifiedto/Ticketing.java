@@ -150,10 +150,10 @@ public class Ticketing implements
                 CreateTicketingCustomerRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -161,7 +161,7 @@ public class Ticketing implements
                   new BeforeRequestContextImpl(
                       "createTicketingCustomer", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -172,7 +172,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "createTicketingCustomer",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -181,7 +181,7 @@ public class Ticketing implements
                         new AfterSuccessContextImpl(
                             "createTicketingCustomer",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -190,7 +190,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "createTicketingCustomer",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -281,10 +281,10 @@ public class Ticketing implements
                 CreateTicketingNoteRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -292,7 +292,7 @@ public class Ticketing implements
                   new BeforeRequestContextImpl(
                       "createTicketingNote", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -303,7 +303,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "createTicketingNote",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -312,7 +312,7 @@ public class Ticketing implements
                         new AfterSuccessContextImpl(
                             "createTicketingNote",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -321,7 +321,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "createTicketingNote",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -412,10 +412,10 @@ public class Ticketing implements
                 CreateTicketingTicketRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -423,7 +423,7 @@ public class Ticketing implements
                   new BeforeRequestContextImpl(
                       "createTicketingTicket", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -434,7 +434,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "createTicketingTicket",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -443,7 +443,7 @@ public class Ticketing implements
                         new AfterSuccessContextImpl(
                             "createTicketingTicket",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -452,7 +452,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "createTicketingTicket",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -533,10 +533,10 @@ public class Ticketing implements
                 GetTicketingCustomerRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -544,7 +544,7 @@ public class Ticketing implements
                   new BeforeRequestContextImpl(
                       "getTicketingCustomer", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -555,7 +555,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "getTicketingCustomer",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -564,7 +564,7 @@ public class Ticketing implements
                         new AfterSuccessContextImpl(
                             "getTicketingCustomer",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -573,7 +573,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "getTicketingCustomer",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -654,10 +654,10 @@ public class Ticketing implements
                 GetTicketingNoteRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -665,7 +665,7 @@ public class Ticketing implements
                   new BeforeRequestContextImpl(
                       "getTicketingNote", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -676,7 +676,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "getTicketingNote",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -685,7 +685,7 @@ public class Ticketing implements
                         new AfterSuccessContextImpl(
                             "getTicketingNote",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -694,7 +694,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "getTicketingNote",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -775,10 +775,10 @@ public class Ticketing implements
                 GetTicketingTicketRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -786,7 +786,7 @@ public class Ticketing implements
                   new BeforeRequestContextImpl(
                       "getTicketingTicket", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -797,7 +797,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "getTicketingTicket",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -806,7 +806,7 @@ public class Ticketing implements
                         new AfterSuccessContextImpl(
                             "getTicketingTicket",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -815,7 +815,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "getTicketingTicket",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -896,10 +896,10 @@ public class Ticketing implements
                 ListTicketingCustomersRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -907,7 +907,7 @@ public class Ticketing implements
                   new BeforeRequestContextImpl(
                       "listTicketingCustomers", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -918,7 +918,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "listTicketingCustomers",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -927,7 +927,7 @@ public class Ticketing implements
                         new AfterSuccessContextImpl(
                             "listTicketingCustomers",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -936,7 +936,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "listTicketingCustomers",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1017,10 +1017,10 @@ public class Ticketing implements
                 ListTicketingNotesRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1028,7 +1028,7 @@ public class Ticketing implements
                   new BeforeRequestContextImpl(
                       "listTicketingNotes", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1039,7 +1039,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "listTicketingNotes",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1048,7 +1048,7 @@ public class Ticketing implements
                         new AfterSuccessContextImpl(
                             "listTicketingNotes",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1057,7 +1057,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "listTicketingNotes",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1138,10 +1138,10 @@ public class Ticketing implements
                 ListTicketingTicketsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1149,7 +1149,7 @@ public class Ticketing implements
                   new BeforeRequestContextImpl(
                       "listTicketingTickets", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1160,7 +1160,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "listTicketingTickets",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1169,7 +1169,7 @@ public class Ticketing implements
                         new AfterSuccessContextImpl(
                             "listTicketingTickets",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1178,7 +1178,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "listTicketingTickets",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1269,10 +1269,10 @@ public class Ticketing implements
                 PatchTicketingCustomerRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1280,7 +1280,7 @@ public class Ticketing implements
                   new BeforeRequestContextImpl(
                       "patchTicketingCustomer", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1291,7 +1291,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "patchTicketingCustomer",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1300,7 +1300,7 @@ public class Ticketing implements
                         new AfterSuccessContextImpl(
                             "patchTicketingCustomer",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1309,7 +1309,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "patchTicketingCustomer",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1400,10 +1400,10 @@ public class Ticketing implements
                 PatchTicketingNoteRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1411,7 +1411,7 @@ public class Ticketing implements
                   new BeforeRequestContextImpl(
                       "patchTicketingNote", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1422,7 +1422,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "patchTicketingNote",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1431,7 +1431,7 @@ public class Ticketing implements
                         new AfterSuccessContextImpl(
                             "patchTicketingNote",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1440,7 +1440,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "patchTicketingNote",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1531,10 +1531,10 @@ public class Ticketing implements
                 PatchTicketingTicketRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1542,7 +1542,7 @@ public class Ticketing implements
                   new BeforeRequestContextImpl(
                       "patchTicketingTicket", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1553,7 +1553,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "patchTicketingTicket",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1562,7 +1562,7 @@ public class Ticketing implements
                         new AfterSuccessContextImpl(
                             "patchTicketingTicket",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1571,7 +1571,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "patchTicketingTicket",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1647,10 +1647,10 @@ public class Ticketing implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1658,7 +1658,7 @@ public class Ticketing implements
                   new BeforeRequestContextImpl(
                       "removeTicketingCustomer", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1669,7 +1669,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "removeTicketingCustomer",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1678,7 +1678,7 @@ public class Ticketing implements
                         new AfterSuccessContextImpl(
                             "removeTicketingCustomer",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1687,7 +1687,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "removeTicketingCustomer",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1757,10 +1757,10 @@ public class Ticketing implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1768,7 +1768,7 @@ public class Ticketing implements
                   new BeforeRequestContextImpl(
                       "removeTicketingNote", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1779,7 +1779,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "removeTicketingNote",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1788,7 +1788,7 @@ public class Ticketing implements
                         new AfterSuccessContextImpl(
                             "removeTicketingNote",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1797,7 +1797,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "removeTicketingNote",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1867,10 +1867,10 @@ public class Ticketing implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1878,7 +1878,7 @@ public class Ticketing implements
                   new BeforeRequestContextImpl(
                       "removeTicketingTicket", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1889,7 +1889,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "removeTicketingTicket",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1898,7 +1898,7 @@ public class Ticketing implements
                         new AfterSuccessContextImpl(
                             "removeTicketingTicket",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1907,7 +1907,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "removeTicketingTicket",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1992,10 +1992,10 @@ public class Ticketing implements
                 UpdateTicketingCustomerRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2003,7 +2003,7 @@ public class Ticketing implements
                   new BeforeRequestContextImpl(
                       "updateTicketingCustomer", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2014,7 +2014,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "updateTicketingCustomer",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2023,7 +2023,7 @@ public class Ticketing implements
                         new AfterSuccessContextImpl(
                             "updateTicketingCustomer",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2032,7 +2032,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "updateTicketingCustomer",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2123,10 +2123,10 @@ public class Ticketing implements
                 UpdateTicketingNoteRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2134,7 +2134,7 @@ public class Ticketing implements
                   new BeforeRequestContextImpl(
                       "updateTicketingNote", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2145,7 +2145,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "updateTicketingNote",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2154,7 +2154,7 @@ public class Ticketing implements
                         new AfterSuccessContextImpl(
                             "updateTicketingNote",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2163,7 +2163,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "updateTicketingNote",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2254,10 +2254,10 @@ public class Ticketing implements
                 UpdateTicketingTicketRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2265,7 +2265,7 @@ public class Ticketing implements
                   new BeforeRequestContextImpl(
                       "updateTicketingTicket", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2276,7 +2276,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "updateTicketingTicket",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2285,7 +2285,7 @@ public class Ticketing implements
                         new AfterSuccessContextImpl(
                             "updateTicketingTicket",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2294,7 +2294,7 @@ public class Ticketing implements
                         new AfterErrorContextImpl(
                             "updateTicketingTicket",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }

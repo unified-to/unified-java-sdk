@@ -72,10 +72,10 @@ public class Enrich implements
                 ListEnrichCompaniesRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -83,7 +83,7 @@ public class Enrich implements
                   new BeforeRequestContextImpl(
                       "listEnrichCompanies", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -94,7 +94,7 @@ public class Enrich implements
                         new AfterErrorContextImpl(
                             "listEnrichCompanies",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -103,7 +103,7 @@ public class Enrich implements
                         new AfterSuccessContextImpl(
                             "listEnrichCompanies",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -112,7 +112,7 @@ public class Enrich implements
                         new AfterErrorContextImpl(
                             "listEnrichCompanies",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -193,10 +193,10 @@ public class Enrich implements
                 ListEnrichPeopleRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -204,7 +204,7 @@ public class Enrich implements
                   new BeforeRequestContextImpl(
                       "listEnrichPeople", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -215,7 +215,7 @@ public class Enrich implements
                         new AfterErrorContextImpl(
                             "listEnrichPeople",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -224,7 +224,7 @@ public class Enrich implements
                         new AfterSuccessContextImpl(
                             "listEnrichPeople",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -233,7 +233,7 @@ public class Enrich implements
                         new AfterErrorContextImpl(
                             "listEnrichPeople",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }

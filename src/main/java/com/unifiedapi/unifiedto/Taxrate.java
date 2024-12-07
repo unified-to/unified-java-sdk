@@ -100,10 +100,10 @@ public class Taxrate implements
                 CreateAccountingTaxrateRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -111,7 +111,7 @@ public class Taxrate implements
                   new BeforeRequestContextImpl(
                       "createAccountingTaxrate", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -122,7 +122,7 @@ public class Taxrate implements
                         new AfterErrorContextImpl(
                             "createAccountingTaxrate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -131,7 +131,7 @@ public class Taxrate implements
                         new AfterSuccessContextImpl(
                             "createAccountingTaxrate",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -140,7 +140,7 @@ public class Taxrate implements
                         new AfterErrorContextImpl(
                             "createAccountingTaxrate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -221,10 +221,10 @@ public class Taxrate implements
                 GetAccountingTaxrateRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -232,7 +232,7 @@ public class Taxrate implements
                   new BeforeRequestContextImpl(
                       "getAccountingTaxrate", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -243,7 +243,7 @@ public class Taxrate implements
                         new AfterErrorContextImpl(
                             "getAccountingTaxrate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -252,7 +252,7 @@ public class Taxrate implements
                         new AfterSuccessContextImpl(
                             "getAccountingTaxrate",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -261,7 +261,7 @@ public class Taxrate implements
                         new AfterErrorContextImpl(
                             "getAccountingTaxrate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -342,10 +342,10 @@ public class Taxrate implements
                 ListAccountingTaxratesRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -353,7 +353,7 @@ public class Taxrate implements
                   new BeforeRequestContextImpl(
                       "listAccountingTaxrates", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -364,7 +364,7 @@ public class Taxrate implements
                         new AfterErrorContextImpl(
                             "listAccountingTaxrates",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -373,7 +373,7 @@ public class Taxrate implements
                         new AfterSuccessContextImpl(
                             "listAccountingTaxrates",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -382,7 +382,7 @@ public class Taxrate implements
                         new AfterErrorContextImpl(
                             "listAccountingTaxrates",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -473,10 +473,10 @@ public class Taxrate implements
                 PatchAccountingTaxrateRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -484,7 +484,7 @@ public class Taxrate implements
                   new BeforeRequestContextImpl(
                       "patchAccountingTaxrate", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -495,7 +495,7 @@ public class Taxrate implements
                         new AfterErrorContextImpl(
                             "patchAccountingTaxrate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -504,7 +504,7 @@ public class Taxrate implements
                         new AfterSuccessContextImpl(
                             "patchAccountingTaxrate",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -513,7 +513,7 @@ public class Taxrate implements
                         new AfterErrorContextImpl(
                             "patchAccountingTaxrate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -589,10 +589,10 @@ public class Taxrate implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -600,7 +600,7 @@ public class Taxrate implements
                   new BeforeRequestContextImpl(
                       "removeAccountingTaxrate", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -611,7 +611,7 @@ public class Taxrate implements
                         new AfterErrorContextImpl(
                             "removeAccountingTaxrate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -620,7 +620,7 @@ public class Taxrate implements
                         new AfterSuccessContextImpl(
                             "removeAccountingTaxrate",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -629,7 +629,7 @@ public class Taxrate implements
                         new AfterErrorContextImpl(
                             "removeAccountingTaxrate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -714,10 +714,10 @@ public class Taxrate implements
                 UpdateAccountingTaxrateRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -725,7 +725,7 @@ public class Taxrate implements
                   new BeforeRequestContextImpl(
                       "updateAccountingTaxrate", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -736,7 +736,7 @@ public class Taxrate implements
                         new AfterErrorContextImpl(
                             "updateAccountingTaxrate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -745,7 +745,7 @@ public class Taxrate implements
                         new AfterSuccessContextImpl(
                             "updateAccountingTaxrate",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -754,7 +754,7 @@ public class Taxrate implements
                         new AfterErrorContextImpl(
                             "updateAccountingTaxrate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }

@@ -139,10 +139,10 @@ public class Company implements
                 CreateCrmCompanyRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -150,7 +150,7 @@ public class Company implements
                   new BeforeRequestContextImpl(
                       "createCrmCompany", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -161,7 +161,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "createCrmCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -170,7 +170,7 @@ public class Company implements
                         new AfterSuccessContextImpl(
                             "createCrmCompany",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -179,7 +179,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "createCrmCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -270,10 +270,10 @@ public class Company implements
                 CreateHrisCompanyRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -281,7 +281,7 @@ public class Company implements
                   new BeforeRequestContextImpl(
                       "createHrisCompany", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -292,7 +292,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "createHrisCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -301,7 +301,7 @@ public class Company implements
                         new AfterSuccessContextImpl(
                             "createHrisCompany",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -310,7 +310,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "createHrisCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -391,10 +391,10 @@ public class Company implements
                 GetAtsCompanyRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -402,7 +402,7 @@ public class Company implements
                   new BeforeRequestContextImpl(
                       "getAtsCompany", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -413,7 +413,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "getAtsCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -422,7 +422,7 @@ public class Company implements
                         new AfterSuccessContextImpl(
                             "getAtsCompany",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -431,7 +431,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "getAtsCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -512,10 +512,10 @@ public class Company implements
                 GetCrmCompanyRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -523,7 +523,7 @@ public class Company implements
                   new BeforeRequestContextImpl(
                       "getCrmCompany", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -534,7 +534,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "getCrmCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -543,7 +543,7 @@ public class Company implements
                         new AfterSuccessContextImpl(
                             "getCrmCompany",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -552,7 +552,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "getCrmCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -633,10 +633,10 @@ public class Company implements
                 GetHrisCompanyRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -644,7 +644,7 @@ public class Company implements
                   new BeforeRequestContextImpl(
                       "getHrisCompany", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -655,7 +655,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "getHrisCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -664,7 +664,7 @@ public class Company implements
                         new AfterSuccessContextImpl(
                             "getHrisCompany",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -673,7 +673,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "getHrisCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -754,10 +754,10 @@ public class Company implements
                 ListAtsCompaniesRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -765,7 +765,7 @@ public class Company implements
                   new BeforeRequestContextImpl(
                       "listAtsCompanies", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -776,7 +776,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "listAtsCompanies",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -785,7 +785,7 @@ public class Company implements
                         new AfterSuccessContextImpl(
                             "listAtsCompanies",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -794,7 +794,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "listAtsCompanies",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -875,10 +875,10 @@ public class Company implements
                 ListCrmCompaniesRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -886,7 +886,7 @@ public class Company implements
                   new BeforeRequestContextImpl(
                       "listCrmCompanies", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -897,7 +897,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "listCrmCompanies",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -906,7 +906,7 @@ public class Company implements
                         new AfterSuccessContextImpl(
                             "listCrmCompanies",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -915,7 +915,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "listCrmCompanies",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -996,10 +996,10 @@ public class Company implements
                 ListEnrichCompaniesRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1007,7 +1007,7 @@ public class Company implements
                   new BeforeRequestContextImpl(
                       "listEnrichCompanies", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1018,7 +1018,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "listEnrichCompanies",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1027,7 +1027,7 @@ public class Company implements
                         new AfterSuccessContextImpl(
                             "listEnrichCompanies",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1036,7 +1036,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "listEnrichCompanies",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1117,10 +1117,10 @@ public class Company implements
                 ListHrisCompaniesRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1128,7 +1128,7 @@ public class Company implements
                   new BeforeRequestContextImpl(
                       "listHrisCompanies", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1139,7 +1139,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "listHrisCompanies",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1148,7 +1148,7 @@ public class Company implements
                         new AfterSuccessContextImpl(
                             "listHrisCompanies",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1157,7 +1157,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "listHrisCompanies",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1248,10 +1248,10 @@ public class Company implements
                 PatchCrmCompanyRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1259,7 +1259,7 @@ public class Company implements
                   new BeforeRequestContextImpl(
                       "patchCrmCompany", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1270,7 +1270,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "patchCrmCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1279,7 +1279,7 @@ public class Company implements
                         new AfterSuccessContextImpl(
                             "patchCrmCompany",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1288,7 +1288,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "patchCrmCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1379,10 +1379,10 @@ public class Company implements
                 PatchHrisCompanyRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1390,7 +1390,7 @@ public class Company implements
                   new BeforeRequestContextImpl(
                       "patchHrisCompany", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1401,7 +1401,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "patchHrisCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1410,7 +1410,7 @@ public class Company implements
                         new AfterSuccessContextImpl(
                             "patchHrisCompany",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1419,7 +1419,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "patchHrisCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1495,10 +1495,10 @@ public class Company implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1506,7 +1506,7 @@ public class Company implements
                   new BeforeRequestContextImpl(
                       "removeCrmCompany", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1517,7 +1517,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "removeCrmCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1526,7 +1526,7 @@ public class Company implements
                         new AfterSuccessContextImpl(
                             "removeCrmCompany",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1535,7 +1535,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "removeCrmCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1605,10 +1605,10 @@ public class Company implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1616,7 +1616,7 @@ public class Company implements
                   new BeforeRequestContextImpl(
                       "removeHrisCompany", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1627,7 +1627,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "removeHrisCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1636,7 +1636,7 @@ public class Company implements
                         new AfterSuccessContextImpl(
                             "removeHrisCompany",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1645,7 +1645,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "removeHrisCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1730,10 +1730,10 @@ public class Company implements
                 UpdateCrmCompanyRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1741,7 +1741,7 @@ public class Company implements
                   new BeforeRequestContextImpl(
                       "updateCrmCompany", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1752,7 +1752,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "updateCrmCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1761,7 +1761,7 @@ public class Company implements
                         new AfterSuccessContextImpl(
                             "updateCrmCompany",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1770,7 +1770,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "updateCrmCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1861,10 +1861,10 @@ public class Company implements
                 UpdateHrisCompanyRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1872,7 +1872,7 @@ public class Company implements
                   new BeforeRequestContextImpl(
                       "updateHrisCompany", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1883,7 +1883,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "updateHrisCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1892,7 +1892,7 @@ public class Company implements
                         new AfterSuccessContextImpl(
                             "updateHrisCompany",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1901,7 +1901,7 @@ public class Company implements
                         new AfterErrorContextImpl(
                             "updateHrisCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }

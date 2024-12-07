@@ -143,10 +143,10 @@ public class Payment implements
                 CreatePaymentLinkRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -154,7 +154,7 @@ public class Payment implements
                   new BeforeRequestContextImpl(
                       "createPaymentLink", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -165,7 +165,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "createPaymentLink",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -174,7 +174,7 @@ public class Payment implements
                         new AfterSuccessContextImpl(
                             "createPaymentLink",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -183,7 +183,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "createPaymentLink",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -274,10 +274,10 @@ public class Payment implements
                 CreatePaymentPaymentRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -285,7 +285,7 @@ public class Payment implements
                   new BeforeRequestContextImpl(
                       "createPaymentPayment", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -296,7 +296,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "createPaymentPayment",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -305,7 +305,7 @@ public class Payment implements
                         new AfterSuccessContextImpl(
                             "createPaymentPayment",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -314,7 +314,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "createPaymentPayment",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -395,10 +395,10 @@ public class Payment implements
                 GetPaymentLinkRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -406,7 +406,7 @@ public class Payment implements
                   new BeforeRequestContextImpl(
                       "getPaymentLink", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -417,7 +417,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "getPaymentLink",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -426,7 +426,7 @@ public class Payment implements
                         new AfterSuccessContextImpl(
                             "getPaymentLink",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -435,7 +435,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "getPaymentLink",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -516,10 +516,10 @@ public class Payment implements
                 GetPaymentPaymentRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -527,7 +527,7 @@ public class Payment implements
                   new BeforeRequestContextImpl(
                       "getPaymentPayment", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -538,7 +538,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "getPaymentPayment",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -547,7 +547,7 @@ public class Payment implements
                         new AfterSuccessContextImpl(
                             "getPaymentPayment",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -556,7 +556,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "getPaymentPayment",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -637,10 +637,10 @@ public class Payment implements
                 GetPaymentPayoutRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -648,7 +648,7 @@ public class Payment implements
                   new BeforeRequestContextImpl(
                       "getPaymentPayout", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -659,7 +659,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "getPaymentPayout",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -668,7 +668,7 @@ public class Payment implements
                         new AfterSuccessContextImpl(
                             "getPaymentPayout",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -677,7 +677,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "getPaymentPayout",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -758,10 +758,10 @@ public class Payment implements
                 GetPaymentRefundRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -769,7 +769,7 @@ public class Payment implements
                   new BeforeRequestContextImpl(
                       "getPaymentRefund", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -780,7 +780,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "getPaymentRefund",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -789,7 +789,7 @@ public class Payment implements
                         new AfterSuccessContextImpl(
                             "getPaymentRefund",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -798,7 +798,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "getPaymentRefund",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -879,10 +879,10 @@ public class Payment implements
                 ListPaymentLinksRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -890,7 +890,7 @@ public class Payment implements
                   new BeforeRequestContextImpl(
                       "listPaymentLinks", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -901,7 +901,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "listPaymentLinks",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -910,7 +910,7 @@ public class Payment implements
                         new AfterSuccessContextImpl(
                             "listPaymentLinks",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -919,7 +919,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "listPaymentLinks",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1000,10 +1000,10 @@ public class Payment implements
                 ListPaymentPaymentsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1011,7 +1011,7 @@ public class Payment implements
                   new BeforeRequestContextImpl(
                       "listPaymentPayments", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1022,7 +1022,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "listPaymentPayments",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1031,7 +1031,7 @@ public class Payment implements
                         new AfterSuccessContextImpl(
                             "listPaymentPayments",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1040,7 +1040,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "listPaymentPayments",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1121,10 +1121,10 @@ public class Payment implements
                 ListPaymentPayoutsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1132,7 +1132,7 @@ public class Payment implements
                   new BeforeRequestContextImpl(
                       "listPaymentPayouts", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1143,7 +1143,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "listPaymentPayouts",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1152,7 +1152,7 @@ public class Payment implements
                         new AfterSuccessContextImpl(
                             "listPaymentPayouts",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1161,7 +1161,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "listPaymentPayouts",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1242,10 +1242,10 @@ public class Payment implements
                 ListPaymentRefundsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1253,7 +1253,7 @@ public class Payment implements
                   new BeforeRequestContextImpl(
                       "listPaymentRefunds", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1264,7 +1264,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "listPaymentRefunds",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1273,7 +1273,7 @@ public class Payment implements
                         new AfterSuccessContextImpl(
                             "listPaymentRefunds",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1282,7 +1282,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "listPaymentRefunds",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1373,10 +1373,10 @@ public class Payment implements
                 PatchPaymentLinkRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1384,7 +1384,7 @@ public class Payment implements
                   new BeforeRequestContextImpl(
                       "patchPaymentLink", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1395,7 +1395,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "patchPaymentLink",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1404,7 +1404,7 @@ public class Payment implements
                         new AfterSuccessContextImpl(
                             "patchPaymentLink",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1413,7 +1413,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "patchPaymentLink",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1504,10 +1504,10 @@ public class Payment implements
                 PatchPaymentPaymentRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1515,7 +1515,7 @@ public class Payment implements
                   new BeforeRequestContextImpl(
                       "patchPaymentPayment", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1526,7 +1526,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "patchPaymentPayment",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1535,7 +1535,7 @@ public class Payment implements
                         new AfterSuccessContextImpl(
                             "patchPaymentPayment",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1544,7 +1544,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "patchPaymentPayment",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1620,10 +1620,10 @@ public class Payment implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1631,7 +1631,7 @@ public class Payment implements
                   new BeforeRequestContextImpl(
                       "removePaymentLink", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1642,7 +1642,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "removePaymentLink",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1651,7 +1651,7 @@ public class Payment implements
                         new AfterSuccessContextImpl(
                             "removePaymentLink",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1660,7 +1660,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "removePaymentLink",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1730,10 +1730,10 @@ public class Payment implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1741,7 +1741,7 @@ public class Payment implements
                   new BeforeRequestContextImpl(
                       "removePaymentPayment", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1752,7 +1752,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "removePaymentPayment",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1761,7 +1761,7 @@ public class Payment implements
                         new AfterSuccessContextImpl(
                             "removePaymentPayment",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1770,7 +1770,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "removePaymentPayment",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1855,10 +1855,10 @@ public class Payment implements
                 UpdatePaymentLinkRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1866,7 +1866,7 @@ public class Payment implements
                   new BeforeRequestContextImpl(
                       "updatePaymentLink", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1877,7 +1877,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "updatePaymentLink",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1886,7 +1886,7 @@ public class Payment implements
                         new AfterSuccessContextImpl(
                             "updatePaymentLink",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1895,7 +1895,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "updatePaymentLink",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1986,10 +1986,10 @@ public class Payment implements
                 UpdatePaymentPaymentRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1997,7 +1997,7 @@ public class Payment implements
                   new BeforeRequestContextImpl(
                       "updatePaymentPayment", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2008,7 +2008,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "updatePaymentPayment",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2017,7 +2017,7 @@ public class Payment implements
                         new AfterSuccessContextImpl(
                             "updatePaymentPayment",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2026,7 +2026,7 @@ public class Payment implements
                         new AfterErrorContextImpl(
                             "updatePaymentPayment",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }

@@ -107,10 +107,10 @@ public class Webhook implements
                 CreateUnifiedWebhookRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -118,7 +118,7 @@ public class Webhook implements
                   new BeforeRequestContextImpl(
                       "createUnifiedWebhook", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -129,7 +129,7 @@ public class Webhook implements
                         new AfterErrorContextImpl(
                             "createUnifiedWebhook",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -138,7 +138,7 @@ public class Webhook implements
                         new AfterSuccessContextImpl(
                             "createUnifiedWebhook",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -147,7 +147,7 @@ public class Webhook implements
                         new AfterErrorContextImpl(
                             "createUnifiedWebhook",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -223,10 +223,10 @@ public class Webhook implements
         _req.addHeader("Accept", "application/json")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -234,7 +234,7 @@ public class Webhook implements
                   new BeforeRequestContextImpl(
                       "getUnifiedWebhook", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -245,7 +245,7 @@ public class Webhook implements
                         new AfterErrorContextImpl(
                             "getUnifiedWebhook",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -254,7 +254,7 @@ public class Webhook implements
                         new AfterSuccessContextImpl(
                             "getUnifiedWebhook",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -263,7 +263,7 @@ public class Webhook implements
                         new AfterErrorContextImpl(
                             "getUnifiedWebhook",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -342,10 +342,10 @@ public class Webhook implements
                 ListUnifiedWebhooksRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -353,7 +353,7 @@ public class Webhook implements
                   new BeforeRequestContextImpl(
                       "listUnifiedWebhooks", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -364,7 +364,7 @@ public class Webhook implements
                         new AfterErrorContextImpl(
                             "listUnifiedWebhooks",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -373,7 +373,7 @@ public class Webhook implements
                         new AfterSuccessContextImpl(
                             "listUnifiedWebhooks",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -382,7 +382,7 @@ public class Webhook implements
                         new AfterErrorContextImpl(
                             "listUnifiedWebhooks",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -468,10 +468,10 @@ public class Webhook implements
         _req.addHeader("Accept", "application/json")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -479,7 +479,7 @@ public class Webhook implements
                   new BeforeRequestContextImpl(
                       "patchUnifiedWebhook", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -490,7 +490,7 @@ public class Webhook implements
                         new AfterErrorContextImpl(
                             "patchUnifiedWebhook",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -499,7 +499,7 @@ public class Webhook implements
                         new AfterSuccessContextImpl(
                             "patchUnifiedWebhook",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -508,7 +508,7 @@ public class Webhook implements
                         new AfterErrorContextImpl(
                             "patchUnifiedWebhook",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -584,10 +584,10 @@ public class Webhook implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -595,7 +595,7 @@ public class Webhook implements
                   new BeforeRequestContextImpl(
                       "patchUnifiedWebhookTrigger", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -606,7 +606,7 @@ public class Webhook implements
                         new AfterErrorContextImpl(
                             "patchUnifiedWebhookTrigger",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -615,7 +615,7 @@ public class Webhook implements
                         new AfterSuccessContextImpl(
                             "patchUnifiedWebhookTrigger",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -624,7 +624,7 @@ public class Webhook implements
                         new AfterErrorContextImpl(
                             "patchUnifiedWebhookTrigger",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -694,10 +694,10 @@ public class Webhook implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -705,7 +705,7 @@ public class Webhook implements
                   new BeforeRequestContextImpl(
                       "removeUnifiedWebhook", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -716,7 +716,7 @@ public class Webhook implements
                         new AfterErrorContextImpl(
                             "removeUnifiedWebhook",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -725,7 +725,7 @@ public class Webhook implements
                         new AfterSuccessContextImpl(
                             "removeUnifiedWebhook",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -734,7 +734,7 @@ public class Webhook implements
                         new AfterErrorContextImpl(
                             "removeUnifiedWebhook",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -814,10 +814,10 @@ public class Webhook implements
         _req.addHeader("Accept", "application/json")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -825,7 +825,7 @@ public class Webhook implements
                   new BeforeRequestContextImpl(
                       "updateUnifiedWebhook", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -836,7 +836,7 @@ public class Webhook implements
                         new AfterErrorContextImpl(
                             "updateUnifiedWebhook",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -845,7 +845,7 @@ public class Webhook implements
                         new AfterSuccessContextImpl(
                             "updateUnifiedWebhook",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -854,7 +854,7 @@ public class Webhook implements
                         new AfterErrorContextImpl(
                             "updateUnifiedWebhook",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -930,10 +930,10 @@ public class Webhook implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -941,7 +941,7 @@ public class Webhook implements
                   new BeforeRequestContextImpl(
                       "updateUnifiedWebhookTrigger", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -952,7 +952,7 @@ public class Webhook implements
                         new AfterErrorContextImpl(
                             "updateUnifiedWebhookTrigger",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -961,7 +961,7 @@ public class Webhook implements
                         new AfterSuccessContextImpl(
                             "updateUnifiedWebhookTrigger",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -970,7 +970,7 @@ public class Webhook implements
                         new AfterErrorContextImpl(
                             "updateUnifiedWebhookTrigger",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }

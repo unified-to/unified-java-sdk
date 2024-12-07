@@ -125,10 +125,10 @@ public class Kms implements
                 CreateKmsPageRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -136,7 +136,7 @@ public class Kms implements
                   new BeforeRequestContextImpl(
                       "createKmsPage", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -147,7 +147,7 @@ public class Kms implements
                         new AfterErrorContextImpl(
                             "createKmsPage",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -156,7 +156,7 @@ public class Kms implements
                         new AfterSuccessContextImpl(
                             "createKmsPage",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -165,7 +165,7 @@ public class Kms implements
                         new AfterErrorContextImpl(
                             "createKmsPage",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -256,10 +256,10 @@ public class Kms implements
                 CreateKmsSpaceRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -267,7 +267,7 @@ public class Kms implements
                   new BeforeRequestContextImpl(
                       "createKmsSpace", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -278,7 +278,7 @@ public class Kms implements
                         new AfterErrorContextImpl(
                             "createKmsSpace",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -287,7 +287,7 @@ public class Kms implements
                         new AfterSuccessContextImpl(
                             "createKmsSpace",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -296,7 +296,7 @@ public class Kms implements
                         new AfterErrorContextImpl(
                             "createKmsSpace",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -377,10 +377,10 @@ public class Kms implements
                 GetKmsPageRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -388,7 +388,7 @@ public class Kms implements
                   new BeforeRequestContextImpl(
                       "getKmsPage", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -399,7 +399,7 @@ public class Kms implements
                         new AfterErrorContextImpl(
                             "getKmsPage",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -408,7 +408,7 @@ public class Kms implements
                         new AfterSuccessContextImpl(
                             "getKmsPage",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -417,7 +417,7 @@ public class Kms implements
                         new AfterErrorContextImpl(
                             "getKmsPage",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -498,10 +498,10 @@ public class Kms implements
                 GetKmsSpaceRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -509,7 +509,7 @@ public class Kms implements
                   new BeforeRequestContextImpl(
                       "getKmsSpace", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -520,7 +520,7 @@ public class Kms implements
                         new AfterErrorContextImpl(
                             "getKmsSpace",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -529,7 +529,7 @@ public class Kms implements
                         new AfterSuccessContextImpl(
                             "getKmsSpace",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -538,7 +538,7 @@ public class Kms implements
                         new AfterErrorContextImpl(
                             "getKmsSpace",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -619,10 +619,10 @@ public class Kms implements
                 ListKmsPagesRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -630,7 +630,7 @@ public class Kms implements
                   new BeforeRequestContextImpl(
                       "listKmsPages", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -641,7 +641,7 @@ public class Kms implements
                         new AfterErrorContextImpl(
                             "listKmsPages",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -650,7 +650,7 @@ public class Kms implements
                         new AfterSuccessContextImpl(
                             "listKmsPages",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -659,7 +659,7 @@ public class Kms implements
                         new AfterErrorContextImpl(
                             "listKmsPages",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -740,10 +740,10 @@ public class Kms implements
                 ListKmsSpacesRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -751,7 +751,7 @@ public class Kms implements
                   new BeforeRequestContextImpl(
                       "listKmsSpaces", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -762,7 +762,7 @@ public class Kms implements
                         new AfterErrorContextImpl(
                             "listKmsSpaces",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -771,7 +771,7 @@ public class Kms implements
                         new AfterSuccessContextImpl(
                             "listKmsSpaces",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -780,7 +780,7 @@ public class Kms implements
                         new AfterErrorContextImpl(
                             "listKmsSpaces",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -871,10 +871,10 @@ public class Kms implements
                 PatchKmsPageRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -882,7 +882,7 @@ public class Kms implements
                   new BeforeRequestContextImpl(
                       "patchKmsPage", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -893,7 +893,7 @@ public class Kms implements
                         new AfterErrorContextImpl(
                             "patchKmsPage",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -902,7 +902,7 @@ public class Kms implements
                         new AfterSuccessContextImpl(
                             "patchKmsPage",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -911,7 +911,7 @@ public class Kms implements
                         new AfterErrorContextImpl(
                             "patchKmsPage",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1002,10 +1002,10 @@ public class Kms implements
                 PatchKmsSpaceRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1013,7 +1013,7 @@ public class Kms implements
                   new BeforeRequestContextImpl(
                       "patchKmsSpace", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1024,7 +1024,7 @@ public class Kms implements
                         new AfterErrorContextImpl(
                             "patchKmsSpace",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1033,7 +1033,7 @@ public class Kms implements
                         new AfterSuccessContextImpl(
                             "patchKmsSpace",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1042,7 +1042,7 @@ public class Kms implements
                         new AfterErrorContextImpl(
                             "patchKmsSpace",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1118,10 +1118,10 @@ public class Kms implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1129,7 +1129,7 @@ public class Kms implements
                   new BeforeRequestContextImpl(
                       "removeKmsPage", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1140,7 +1140,7 @@ public class Kms implements
                         new AfterErrorContextImpl(
                             "removeKmsPage",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1149,7 +1149,7 @@ public class Kms implements
                         new AfterSuccessContextImpl(
                             "removeKmsPage",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1158,7 +1158,7 @@ public class Kms implements
                         new AfterErrorContextImpl(
                             "removeKmsPage",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1228,10 +1228,10 @@ public class Kms implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1239,7 +1239,7 @@ public class Kms implements
                   new BeforeRequestContextImpl(
                       "removeKmsSpace", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1250,7 +1250,7 @@ public class Kms implements
                         new AfterErrorContextImpl(
                             "removeKmsSpace",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1259,7 +1259,7 @@ public class Kms implements
                         new AfterSuccessContextImpl(
                             "removeKmsSpace",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1268,7 +1268,7 @@ public class Kms implements
                         new AfterErrorContextImpl(
                             "removeKmsSpace",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1353,10 +1353,10 @@ public class Kms implements
                 UpdateKmsPageRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1364,7 +1364,7 @@ public class Kms implements
                   new BeforeRequestContextImpl(
                       "updateKmsPage", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1375,7 +1375,7 @@ public class Kms implements
                         new AfterErrorContextImpl(
                             "updateKmsPage",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1384,7 +1384,7 @@ public class Kms implements
                         new AfterSuccessContextImpl(
                             "updateKmsPage",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1393,7 +1393,7 @@ public class Kms implements
                         new AfterErrorContextImpl(
                             "updateKmsPage",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1484,10 +1484,10 @@ public class Kms implements
                 UpdateKmsSpaceRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1495,7 +1495,7 @@ public class Kms implements
                   new BeforeRequestContextImpl(
                       "updateKmsSpace", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1506,7 +1506,7 @@ public class Kms implements
                         new AfterErrorContextImpl(
                             "updateKmsSpace",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1515,7 +1515,7 @@ public class Kms implements
                         new AfterSuccessContextImpl(
                             "updateKmsSpace",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1524,7 +1524,7 @@ public class Kms implements
                         new AfterErrorContextImpl(
                             "updateKmsSpace",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }

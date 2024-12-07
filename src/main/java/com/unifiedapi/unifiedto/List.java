@@ -99,10 +99,10 @@ public class List implements
                 CreateMartechListRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -110,7 +110,7 @@ public class List implements
                   new BeforeRequestContextImpl(
                       "createMartechList", 
                       Optional.of(java.util.List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -121,7 +121,7 @@ public class List implements
                         new AfterErrorContextImpl(
                             "createMartechList",
                             Optional.of(java.util.List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -130,7 +130,7 @@ public class List implements
                         new AfterSuccessContextImpl(
                             "createMartechList",
                             Optional.of(java.util.List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -139,7 +139,7 @@ public class List implements
                         new AfterErrorContextImpl(
                             "createMartechList",
                             Optional.of(java.util.List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -220,10 +220,10 @@ public class List implements
                 GetMartechListRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -231,7 +231,7 @@ public class List implements
                   new BeforeRequestContextImpl(
                       "getMartechList", 
                       Optional.of(java.util.List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -242,7 +242,7 @@ public class List implements
                         new AfterErrorContextImpl(
                             "getMartechList",
                             Optional.of(java.util.List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -251,7 +251,7 @@ public class List implements
                         new AfterSuccessContextImpl(
                             "getMartechList",
                             Optional.of(java.util.List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -260,7 +260,7 @@ public class List implements
                         new AfterErrorContextImpl(
                             "getMartechList",
                             Optional.of(java.util.List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -341,10 +341,10 @@ public class List implements
                 ListMartechListsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -352,7 +352,7 @@ public class List implements
                   new BeforeRequestContextImpl(
                       "listMartechLists", 
                       Optional.of(java.util.List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -363,7 +363,7 @@ public class List implements
                         new AfterErrorContextImpl(
                             "listMartechLists",
                             Optional.of(java.util.List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -372,7 +372,7 @@ public class List implements
                         new AfterSuccessContextImpl(
                             "listMartechLists",
                             Optional.of(java.util.List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -381,7 +381,7 @@ public class List implements
                         new AfterErrorContextImpl(
                             "listMartechLists",
                             Optional.of(java.util.List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -472,10 +472,10 @@ public class List implements
                 PatchMartechListRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -483,7 +483,7 @@ public class List implements
                   new BeforeRequestContextImpl(
                       "patchMartechList", 
                       Optional.of(java.util.List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -494,7 +494,7 @@ public class List implements
                         new AfterErrorContextImpl(
                             "patchMartechList",
                             Optional.of(java.util.List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -503,7 +503,7 @@ public class List implements
                         new AfterSuccessContextImpl(
                             "patchMartechList",
                             Optional.of(java.util.List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -512,7 +512,7 @@ public class List implements
                         new AfterErrorContextImpl(
                             "patchMartechList",
                             Optional.of(java.util.List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -588,10 +588,10 @@ public class List implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -599,7 +599,7 @@ public class List implements
                   new BeforeRequestContextImpl(
                       "removeMartechList", 
                       Optional.of(java.util.List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -610,7 +610,7 @@ public class List implements
                         new AfterErrorContextImpl(
                             "removeMartechList",
                             Optional.of(java.util.List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -619,7 +619,7 @@ public class List implements
                         new AfterSuccessContextImpl(
                             "removeMartechList",
                             Optional.of(java.util.List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -628,7 +628,7 @@ public class List implements
                         new AfterErrorContextImpl(
                             "removeMartechList",
                             Optional.of(java.util.List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -713,10 +713,10 @@ public class List implements
                 UpdateMartechListRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -724,7 +724,7 @@ public class List implements
                   new BeforeRequestContextImpl(
                       "updateMartechList", 
                       Optional.of(java.util.List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -735,7 +735,7 @@ public class List implements
                         new AfterErrorContextImpl(
                             "updateMartechList",
                             Optional.of(java.util.List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -744,7 +744,7 @@ public class List implements
                         new AfterSuccessContextImpl(
                             "updateMartechList",
                             Optional.of(java.util.List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -753,7 +753,7 @@ public class List implements
                         new AfterErrorContextImpl(
                             "updateMartechList",
                             Optional.of(java.util.List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }

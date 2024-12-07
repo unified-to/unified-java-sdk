@@ -225,10 +225,10 @@ public class Crm implements
                 CreateCrmCompanyRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -236,7 +236,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "createCrmCompany", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -247,7 +247,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "createCrmCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -256,7 +256,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "createCrmCompany",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -265,7 +265,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "createCrmCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -356,10 +356,10 @@ public class Crm implements
                 CreateCrmContactRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -367,7 +367,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "createCrmContact", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -378,7 +378,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "createCrmContact",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -387,7 +387,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "createCrmContact",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -396,7 +396,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "createCrmContact",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -487,10 +487,10 @@ public class Crm implements
                 CreateCrmDealRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -498,7 +498,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "createCrmDeal", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -509,7 +509,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "createCrmDeal",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -518,7 +518,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "createCrmDeal",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -527,7 +527,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "createCrmDeal",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -618,10 +618,10 @@ public class Crm implements
                 CreateCrmEventRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -629,7 +629,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "createCrmEvent", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -640,7 +640,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "createCrmEvent",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -649,7 +649,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "createCrmEvent",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -658,7 +658,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "createCrmEvent",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -749,10 +749,10 @@ public class Crm implements
                 CreateCrmLeadRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -760,7 +760,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "createCrmLead", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -771,7 +771,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "createCrmLead",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -780,7 +780,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "createCrmLead",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -789,7 +789,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "createCrmLead",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -880,10 +880,10 @@ public class Crm implements
                 CreateCrmPipelineRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -891,7 +891,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "createCrmPipeline", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -902,7 +902,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "createCrmPipeline",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -911,7 +911,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "createCrmPipeline",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -920,7 +920,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "createCrmPipeline",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1001,10 +1001,10 @@ public class Crm implements
                 GetCrmCompanyRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1012,7 +1012,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "getCrmCompany", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1023,7 +1023,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "getCrmCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1032,7 +1032,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "getCrmCompany",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1041,7 +1041,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "getCrmCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1122,10 +1122,10 @@ public class Crm implements
                 GetCrmContactRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1133,7 +1133,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "getCrmContact", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1144,7 +1144,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "getCrmContact",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1153,7 +1153,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "getCrmContact",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1162,7 +1162,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "getCrmContact",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1243,10 +1243,10 @@ public class Crm implements
                 GetCrmDealRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1254,7 +1254,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "getCrmDeal", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1265,7 +1265,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "getCrmDeal",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1274,7 +1274,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "getCrmDeal",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1283,7 +1283,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "getCrmDeal",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1364,10 +1364,10 @@ public class Crm implements
                 GetCrmEventRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1375,7 +1375,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "getCrmEvent", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1386,7 +1386,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "getCrmEvent",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1395,7 +1395,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "getCrmEvent",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1404,7 +1404,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "getCrmEvent",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1485,10 +1485,10 @@ public class Crm implements
                 GetCrmLeadRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1496,7 +1496,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "getCrmLead", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1507,7 +1507,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "getCrmLead",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1516,7 +1516,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "getCrmLead",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1525,7 +1525,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "getCrmLead",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1606,10 +1606,10 @@ public class Crm implements
                 GetCrmPipelineRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1617,7 +1617,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "getCrmPipeline", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1628,7 +1628,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "getCrmPipeline",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1637,7 +1637,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "getCrmPipeline",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1646,7 +1646,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "getCrmPipeline",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1727,10 +1727,10 @@ public class Crm implements
                 ListCrmCompaniesRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1738,7 +1738,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "listCrmCompanies", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1749,7 +1749,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "listCrmCompanies",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1758,7 +1758,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "listCrmCompanies",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1767,7 +1767,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "listCrmCompanies",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1848,10 +1848,10 @@ public class Crm implements
                 ListCrmContactsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1859,7 +1859,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "listCrmContacts", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1870,7 +1870,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "listCrmContacts",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1879,7 +1879,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "listCrmContacts",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1888,7 +1888,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "listCrmContacts",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1969,10 +1969,10 @@ public class Crm implements
                 ListCrmDealsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1980,7 +1980,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "listCrmDeals", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1991,7 +1991,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "listCrmDeals",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2000,7 +2000,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "listCrmDeals",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2009,7 +2009,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "listCrmDeals",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2090,10 +2090,10 @@ public class Crm implements
                 ListCrmEventsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2101,7 +2101,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "listCrmEvents", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2112,7 +2112,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "listCrmEvents",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2121,7 +2121,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "listCrmEvents",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2130,7 +2130,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "listCrmEvents",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2211,10 +2211,10 @@ public class Crm implements
                 ListCrmLeadsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2222,7 +2222,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "listCrmLeads", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2233,7 +2233,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "listCrmLeads",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2242,7 +2242,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "listCrmLeads",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2251,7 +2251,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "listCrmLeads",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2332,10 +2332,10 @@ public class Crm implements
                 ListCrmPipelinesRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2343,7 +2343,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "listCrmPipelines", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2354,7 +2354,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "listCrmPipelines",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2363,7 +2363,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "listCrmPipelines",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2372,7 +2372,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "listCrmPipelines",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2463,10 +2463,10 @@ public class Crm implements
                 PatchCrmCompanyRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2474,7 +2474,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "patchCrmCompany", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2485,7 +2485,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "patchCrmCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2494,7 +2494,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "patchCrmCompany",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2503,7 +2503,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "patchCrmCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2594,10 +2594,10 @@ public class Crm implements
                 PatchCrmContactRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2605,7 +2605,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "patchCrmContact", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2616,7 +2616,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "patchCrmContact",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2625,7 +2625,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "patchCrmContact",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2634,7 +2634,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "patchCrmContact",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2725,10 +2725,10 @@ public class Crm implements
                 PatchCrmDealRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2736,7 +2736,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "patchCrmDeal", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2747,7 +2747,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "patchCrmDeal",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2756,7 +2756,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "patchCrmDeal",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2765,7 +2765,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "patchCrmDeal",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2856,10 +2856,10 @@ public class Crm implements
                 PatchCrmEventRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2867,7 +2867,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "patchCrmEvent", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2878,7 +2878,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "patchCrmEvent",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2887,7 +2887,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "patchCrmEvent",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2896,7 +2896,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "patchCrmEvent",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2987,10 +2987,10 @@ public class Crm implements
                 PatchCrmLeadRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2998,7 +2998,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "patchCrmLead", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3009,7 +3009,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "patchCrmLead",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3018,7 +3018,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "patchCrmLead",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3027,7 +3027,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "patchCrmLead",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3118,10 +3118,10 @@ public class Crm implements
                 PatchCrmPipelineRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3129,7 +3129,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "patchCrmPipeline", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3140,7 +3140,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "patchCrmPipeline",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3149,7 +3149,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "patchCrmPipeline",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3158,7 +3158,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "patchCrmPipeline",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3234,10 +3234,10 @@ public class Crm implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3245,7 +3245,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "removeCrmCompany", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3256,7 +3256,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "removeCrmCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3265,7 +3265,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "removeCrmCompany",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3274,7 +3274,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "removeCrmCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3344,10 +3344,10 @@ public class Crm implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3355,7 +3355,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "removeCrmContact", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3366,7 +3366,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "removeCrmContact",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3375,7 +3375,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "removeCrmContact",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3384,7 +3384,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "removeCrmContact",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3454,10 +3454,10 @@ public class Crm implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3465,7 +3465,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "removeCrmDeal", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3476,7 +3476,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "removeCrmDeal",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3485,7 +3485,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "removeCrmDeal",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3494,7 +3494,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "removeCrmDeal",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3564,10 +3564,10 @@ public class Crm implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3575,7 +3575,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "removeCrmEvent", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3586,7 +3586,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "removeCrmEvent",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3595,7 +3595,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "removeCrmEvent",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3604,7 +3604,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "removeCrmEvent",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3674,10 +3674,10 @@ public class Crm implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3685,7 +3685,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "removeCrmLead", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3696,7 +3696,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "removeCrmLead",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3705,7 +3705,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "removeCrmLead",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3714,7 +3714,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "removeCrmLead",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3784,10 +3784,10 @@ public class Crm implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3795,7 +3795,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "removeCrmPipeline", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3806,7 +3806,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "removeCrmPipeline",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3815,7 +3815,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "removeCrmPipeline",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3824,7 +3824,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "removeCrmPipeline",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3909,10 +3909,10 @@ public class Crm implements
                 UpdateCrmCompanyRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3920,7 +3920,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "updateCrmCompany", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3931,7 +3931,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "updateCrmCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3940,7 +3940,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "updateCrmCompany",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3949,7 +3949,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "updateCrmCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -4040,10 +4040,10 @@ public class Crm implements
                 UpdateCrmContactRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -4051,7 +4051,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "updateCrmContact", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -4062,7 +4062,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "updateCrmContact",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -4071,7 +4071,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "updateCrmContact",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -4080,7 +4080,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "updateCrmContact",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -4171,10 +4171,10 @@ public class Crm implements
                 UpdateCrmDealRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -4182,7 +4182,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "updateCrmDeal", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -4193,7 +4193,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "updateCrmDeal",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -4202,7 +4202,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "updateCrmDeal",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -4211,7 +4211,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "updateCrmDeal",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -4302,10 +4302,10 @@ public class Crm implements
                 UpdateCrmEventRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -4313,7 +4313,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "updateCrmEvent", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -4324,7 +4324,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "updateCrmEvent",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -4333,7 +4333,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "updateCrmEvent",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -4342,7 +4342,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "updateCrmEvent",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -4433,10 +4433,10 @@ public class Crm implements
                 UpdateCrmLeadRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -4444,7 +4444,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "updateCrmLead", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -4455,7 +4455,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "updateCrmLead",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -4464,7 +4464,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "updateCrmLead",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -4473,7 +4473,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "updateCrmLead",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -4564,10 +4564,10 @@ public class Crm implements
                 UpdateCrmPipelineRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -4575,7 +4575,7 @@ public class Crm implements
                   new BeforeRequestContextImpl(
                       "updateCrmPipeline", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -4586,7 +4586,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "updateCrmPipeline",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -4595,7 +4595,7 @@ public class Crm implements
                         new AfterSuccessContextImpl(
                             "updateCrmPipeline",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -4604,7 +4604,7 @@ public class Crm implements
                         new AfterErrorContextImpl(
                             "updateCrmPipeline",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }

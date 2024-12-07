@@ -66,10 +66,10 @@ public class Apicall implements
         _req.addHeader("Accept", "application/json")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -77,7 +77,7 @@ public class Apicall implements
                   new BeforeRequestContextImpl(
                       "getUnifiedApicall", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -88,7 +88,7 @@ public class Apicall implements
                         new AfterErrorContextImpl(
                             "getUnifiedApicall",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -97,7 +97,7 @@ public class Apicall implements
                         new AfterSuccessContextImpl(
                             "getUnifiedApicall",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -106,7 +106,7 @@ public class Apicall implements
                         new AfterErrorContextImpl(
                             "getUnifiedApicall",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -185,10 +185,10 @@ public class Apicall implements
                 ListUnifiedApicallsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -196,7 +196,7 @@ public class Apicall implements
                   new BeforeRequestContextImpl(
                       "listUnifiedApicalls", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -207,7 +207,7 @@ public class Apicall implements
                         new AfterErrorContextImpl(
                             "listUnifiedApicalls",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -216,7 +216,7 @@ public class Apicall implements
                         new AfterSuccessContextImpl(
                             "listUnifiedApicalls",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -225,7 +225,7 @@ public class Apicall implements
                         new AfterErrorContextImpl(
                             "listUnifiedApicalls",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }

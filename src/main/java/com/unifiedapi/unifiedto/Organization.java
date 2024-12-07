@@ -109,10 +109,10 @@ public class Organization implements
                 CreateRepoOrganizationRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -120,7 +120,7 @@ public class Organization implements
                   new BeforeRequestContextImpl(
                       "createRepoOrganization", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -131,7 +131,7 @@ public class Organization implements
                         new AfterErrorContextImpl(
                             "createRepoOrganization",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -140,7 +140,7 @@ public class Organization implements
                         new AfterSuccessContextImpl(
                             "createRepoOrganization",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -149,7 +149,7 @@ public class Organization implements
                         new AfterErrorContextImpl(
                             "createRepoOrganization",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -230,10 +230,10 @@ public class Organization implements
                 GetAccountingOrganizationRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -241,7 +241,7 @@ public class Organization implements
                   new BeforeRequestContextImpl(
                       "getAccountingOrganization", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -252,7 +252,7 @@ public class Organization implements
                         new AfterErrorContextImpl(
                             "getAccountingOrganization",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -261,7 +261,7 @@ public class Organization implements
                         new AfterSuccessContextImpl(
                             "getAccountingOrganization",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -270,7 +270,7 @@ public class Organization implements
                         new AfterErrorContextImpl(
                             "getAccountingOrganization",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -351,10 +351,10 @@ public class Organization implements
                 GetRepoOrganizationRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -362,7 +362,7 @@ public class Organization implements
                   new BeforeRequestContextImpl(
                       "getRepoOrganization", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -373,7 +373,7 @@ public class Organization implements
                         new AfterErrorContextImpl(
                             "getRepoOrganization",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -382,7 +382,7 @@ public class Organization implements
                         new AfterSuccessContextImpl(
                             "getRepoOrganization",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -391,7 +391,7 @@ public class Organization implements
                         new AfterErrorContextImpl(
                             "getRepoOrganization",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -472,10 +472,10 @@ public class Organization implements
                 ListAccountingOrganizationsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -483,7 +483,7 @@ public class Organization implements
                   new BeforeRequestContextImpl(
                       "listAccountingOrganizations", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -494,7 +494,7 @@ public class Organization implements
                         new AfterErrorContextImpl(
                             "listAccountingOrganizations",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -503,7 +503,7 @@ public class Organization implements
                         new AfterSuccessContextImpl(
                             "listAccountingOrganizations",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -512,7 +512,7 @@ public class Organization implements
                         new AfterErrorContextImpl(
                             "listAccountingOrganizations",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -593,10 +593,10 @@ public class Organization implements
                 ListRepoOrganizationsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -604,7 +604,7 @@ public class Organization implements
                   new BeforeRequestContextImpl(
                       "listRepoOrganizations", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -615,7 +615,7 @@ public class Organization implements
                         new AfterErrorContextImpl(
                             "listRepoOrganizations",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -624,7 +624,7 @@ public class Organization implements
                         new AfterSuccessContextImpl(
                             "listRepoOrganizations",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -633,7 +633,7 @@ public class Organization implements
                         new AfterErrorContextImpl(
                             "listRepoOrganizations",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -724,10 +724,10 @@ public class Organization implements
                 PatchRepoOrganizationRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -735,7 +735,7 @@ public class Organization implements
                   new BeforeRequestContextImpl(
                       "patchRepoOrganization", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -746,7 +746,7 @@ public class Organization implements
                         new AfterErrorContextImpl(
                             "patchRepoOrganization",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -755,7 +755,7 @@ public class Organization implements
                         new AfterSuccessContextImpl(
                             "patchRepoOrganization",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -764,7 +764,7 @@ public class Organization implements
                         new AfterErrorContextImpl(
                             "patchRepoOrganization",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -840,10 +840,10 @@ public class Organization implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -851,7 +851,7 @@ public class Organization implements
                   new BeforeRequestContextImpl(
                       "removeRepoOrganization", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -862,7 +862,7 @@ public class Organization implements
                         new AfterErrorContextImpl(
                             "removeRepoOrganization",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -871,7 +871,7 @@ public class Organization implements
                         new AfterSuccessContextImpl(
                             "removeRepoOrganization",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -880,7 +880,7 @@ public class Organization implements
                         new AfterErrorContextImpl(
                             "removeRepoOrganization",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -965,10 +965,10 @@ public class Organization implements
                 UpdateRepoOrganizationRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -976,7 +976,7 @@ public class Organization implements
                   new BeforeRequestContextImpl(
                       "updateRepoOrganization", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -987,7 +987,7 @@ public class Organization implements
                         new AfterErrorContextImpl(
                             "updateRepoOrganization",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -996,7 +996,7 @@ public class Organization implements
                         new AfterSuccessContextImpl(
                             "updateRepoOrganization",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1005,7 +1005,7 @@ public class Organization implements
                         new AfterErrorContextImpl(
                             "updateRepoOrganization",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }

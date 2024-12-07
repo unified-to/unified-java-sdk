@@ -71,10 +71,10 @@ public class Refund implements
                 GetPaymentRefundRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -82,7 +82,7 @@ public class Refund implements
                   new BeforeRequestContextImpl(
                       "getPaymentRefund", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -93,7 +93,7 @@ public class Refund implements
                         new AfterErrorContextImpl(
                             "getPaymentRefund",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -102,7 +102,7 @@ public class Refund implements
                         new AfterSuccessContextImpl(
                             "getPaymentRefund",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -111,7 +111,7 @@ public class Refund implements
                         new AfterErrorContextImpl(
                             "getPaymentRefund",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -192,10 +192,10 @@ public class Refund implements
                 ListPaymentRefundsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -203,7 +203,7 @@ public class Refund implements
                   new BeforeRequestContextImpl(
                       "listPaymentRefunds", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -214,7 +214,7 @@ public class Refund implements
                         new AfterErrorContextImpl(
                             "listPaymentRefunds",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -223,7 +223,7 @@ public class Refund implements
                         new AfterSuccessContextImpl(
                             "listPaymentRefunds",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -232,7 +232,7 @@ public class Refund implements
                         new AfterErrorContextImpl(
                             "listPaymentRefunds",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }

@@ -12,7 +12,6 @@ import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.Objects;
 import java.util.Optional;
@@ -21,10 +20,10 @@ import java.util.Optional;
 public class ListUnifiedWebhooksRequest {
 
     /**
-     * A connection represents a specific authentication of an integration.
+     * Filter the results to just this integration
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=connection_id")
-    private Optional<? extends ConnectionId> connectionId;
+    private Optional<String> connectionId;
 
     /**
      * Return only results whose created date is equal or less to this value
@@ -36,10 +35,10 @@ public class ListUnifiedWebhooksRequest {
     private Optional<String> env;
 
     /**
-     * Informational object for supported integrations.
+     * Filter the results to just this integration
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=integration_type")
-    private Optional<? extends IntegrationType> integrationType;
+    private Optional<String> integrationType;
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Optional<Double> limit;
@@ -67,10 +66,10 @@ public class ListUnifiedWebhooksRequest {
 
     @JsonCreator
     public ListUnifiedWebhooksRequest(
-            Optional<? extends ConnectionId> connectionId,
+            Optional<String> connectionId,
             Optional<OffsetDateTime> createdLte,
             Optional<String> env,
-            Optional<? extends IntegrationType> integrationType,
+            Optional<String> integrationType,
             Optional<Double> limit,
             Optional<String> object,
             Optional<Double> offset,
@@ -104,12 +103,11 @@ public class ListUnifiedWebhooksRequest {
     }
 
     /**
-     * A connection represents a specific authentication of an integration.
+     * Filter the results to just this integration
      */
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<ConnectionId> connectionId() {
-        return (Optional<ConnectionId>) connectionId;
+    public Optional<String> connectionId() {
+        return connectionId;
     }
 
     /**
@@ -126,12 +124,11 @@ public class ListUnifiedWebhooksRequest {
     }
 
     /**
-     * Informational object for supported integrations.
+     * Filter the results to just this integration
      */
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<IntegrationType> integrationType() {
-        return (Optional<IntegrationType>) integrationType;
+    public Optional<String> integrationType() {
+        return integrationType;
     }
 
     @JsonIgnore
@@ -175,18 +172,18 @@ public class ListUnifiedWebhooksRequest {
     }
 
     /**
-     * A connection represents a specific authentication of an integration.
+     * Filter the results to just this integration
      */
-    public ListUnifiedWebhooksRequest withConnectionId(ConnectionId connectionId) {
+    public ListUnifiedWebhooksRequest withConnectionId(String connectionId) {
         Utils.checkNotNull(connectionId, "connectionId");
         this.connectionId = Optional.ofNullable(connectionId);
         return this;
     }
 
     /**
-     * A connection represents a specific authentication of an integration.
+     * Filter the results to just this integration
      */
-    public ListUnifiedWebhooksRequest withConnectionId(Optional<? extends ConnectionId> connectionId) {
+    public ListUnifiedWebhooksRequest withConnectionId(Optional<String> connectionId) {
         Utils.checkNotNull(connectionId, "connectionId");
         this.connectionId = connectionId;
         return this;
@@ -223,18 +220,18 @@ public class ListUnifiedWebhooksRequest {
     }
 
     /**
-     * Informational object for supported integrations.
+     * Filter the results to just this integration
      */
-    public ListUnifiedWebhooksRequest withIntegrationType(IntegrationType integrationType) {
+    public ListUnifiedWebhooksRequest withIntegrationType(String integrationType) {
         Utils.checkNotNull(integrationType, "integrationType");
         this.integrationType = Optional.ofNullable(integrationType);
         return this;
     }
 
     /**
-     * Informational object for supported integrations.
+     * Filter the results to just this integration
      */
-    public ListUnifiedWebhooksRequest withIntegrationType(Optional<? extends IntegrationType> integrationType) {
+    public ListUnifiedWebhooksRequest withIntegrationType(Optional<String> integrationType) {
         Utils.checkNotNull(integrationType, "integrationType");
         this.integrationType = integrationType;
         return this;
@@ -378,13 +375,13 @@ public class ListUnifiedWebhooksRequest {
     
     public final static class Builder {
  
-        private Optional<? extends ConnectionId> connectionId = Optional.empty();
+        private Optional<String> connectionId = Optional.empty();
  
         private Optional<OffsetDateTime> createdLte = Optional.empty();
  
         private Optional<String> env = Optional.empty();
  
-        private Optional<? extends IntegrationType> integrationType = Optional.empty();
+        private Optional<String> integrationType = Optional.empty();
  
         private Optional<Double> limit = Optional.empty();
  
@@ -403,18 +400,18 @@ public class ListUnifiedWebhooksRequest {
         }
 
         /**
-         * A connection represents a specific authentication of an integration.
+         * Filter the results to just this integration
          */
-        public Builder connectionId(ConnectionId connectionId) {
+        public Builder connectionId(String connectionId) {
             Utils.checkNotNull(connectionId, "connectionId");
             this.connectionId = Optional.ofNullable(connectionId);
             return this;
         }
 
         /**
-         * A connection represents a specific authentication of an integration.
+         * Filter the results to just this integration
          */
-        public Builder connectionId(Optional<? extends ConnectionId> connectionId) {
+        public Builder connectionId(Optional<String> connectionId) {
             Utils.checkNotNull(connectionId, "connectionId");
             this.connectionId = connectionId;
             return this;
@@ -451,18 +448,18 @@ public class ListUnifiedWebhooksRequest {
         }
 
         /**
-         * Informational object for supported integrations.
+         * Filter the results to just this integration
          */
-        public Builder integrationType(IntegrationType integrationType) {
+        public Builder integrationType(String integrationType) {
             Utils.checkNotNull(integrationType, "integrationType");
             this.integrationType = Optional.ofNullable(integrationType);
             return this;
         }
 
         /**
-         * Informational object for supported integrations.
+         * Filter the results to just this integration
          */
-        public Builder integrationType(Optional<? extends IntegrationType> integrationType) {
+        public Builder integrationType(Optional<String> integrationType) {
             Utils.checkNotNull(integrationType, "integrationType");
             this.integrationType = integrationType;
             return this;

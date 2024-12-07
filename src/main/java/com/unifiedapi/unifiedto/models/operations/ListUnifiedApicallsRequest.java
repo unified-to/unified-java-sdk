@@ -21,7 +21,7 @@ import java.util.Optional;
 public class ListUnifiedApicallsRequest {
 
     /**
-     * Filter the results to just this integration's API calls
+     * Filter the results to just this integration
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=connection_id")
     private Optional<String> connectionId;
@@ -42,7 +42,7 @@ public class ListUnifiedApicallsRequest {
     private Optional<String> externalXref;
 
     /**
-     * Filter the results for connections with this integration
+     * Filter the results to just this integration
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=integration_type")
     private Optional<String> integrationType;
@@ -104,7 +104,7 @@ public class ListUnifiedApicallsRequest {
     }
 
     /**
-     * Filter the results to just this integration's API calls
+     * Filter the results to just this integration
      */
     @JsonIgnore
     public Optional<String> connectionId() {
@@ -133,7 +133,7 @@ public class ListUnifiedApicallsRequest {
     }
 
     /**
-     * Filter the results for connections with this integration
+     * Filter the results to just this integration
      */
     @JsonIgnore
     public Optional<String> integrationType() {
@@ -173,7 +173,7 @@ public class ListUnifiedApicallsRequest {
     }
 
     /**
-     * Filter the results to just this integration's API calls
+     * Filter the results to just this integration
      */
     public ListUnifiedApicallsRequest withConnectionId(String connectionId) {
         Utils.checkNotNull(connectionId, "connectionId");
@@ -182,7 +182,7 @@ public class ListUnifiedApicallsRequest {
     }
 
     /**
-     * Filter the results to just this integration's API calls
+     * Filter the results to just this integration
      */
     public ListUnifiedApicallsRequest withConnectionId(Optional<String> connectionId) {
         Utils.checkNotNull(connectionId, "connectionId");
@@ -239,7 +239,7 @@ public class ListUnifiedApicallsRequest {
     }
 
     /**
-     * Filter the results for connections with this integration
+     * Filter the results to just this integration
      */
     public ListUnifiedApicallsRequest withIntegrationType(String integrationType) {
         Utils.checkNotNull(integrationType, "integrationType");
@@ -248,7 +248,7 @@ public class ListUnifiedApicallsRequest {
     }
 
     /**
-     * Filter the results for connections with this integration
+     * Filter the results to just this integration
      */
     public ListUnifiedApicallsRequest withIntegrationType(Optional<String> integrationType) {
         Utils.checkNotNull(integrationType, "integrationType");
@@ -401,7 +401,7 @@ public class ListUnifiedApicallsRequest {
         }
 
         /**
-         * Filter the results to just this integration's API calls
+         * Filter the results to just this integration
          */
         public Builder connectionId(String connectionId) {
             Utils.checkNotNull(connectionId, "connectionId");
@@ -410,7 +410,7 @@ public class ListUnifiedApicallsRequest {
         }
 
         /**
-         * Filter the results to just this integration's API calls
+         * Filter the results to just this integration
          */
         public Builder connectionId(Optional<String> connectionId) {
             Utils.checkNotNull(connectionId, "connectionId");
@@ -467,7 +467,7 @@ public class ListUnifiedApicallsRequest {
         }
 
         /**
-         * Filter the results for connections with this integration
+         * Filter the results to just this integration
          */
         public Builder integrationType(String integrationType) {
             Utils.checkNotNull(integrationType, "integrationType");
@@ -476,7 +476,7 @@ public class ListUnifiedApicallsRequest {
         }
 
         /**
-         * Filter the results for connections with this integration
+         * Filter the results to just this integration
          */
         public Builder integrationType(Optional<String> integrationType) {
             Utils.checkNotNull(integrationType, "integrationType");

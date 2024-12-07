@@ -193,10 +193,10 @@ public class Hris implements
                 CreateHrisCompanyRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -204,7 +204,7 @@ public class Hris implements
                   new BeforeRequestContextImpl(
                       "createHrisCompany", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -215,7 +215,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "createHrisCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -224,7 +224,7 @@ public class Hris implements
                         new AfterSuccessContextImpl(
                             "createHrisCompany",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -233,7 +233,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "createHrisCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -324,10 +324,10 @@ public class Hris implements
                 CreateHrisEmployeeRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -335,7 +335,7 @@ public class Hris implements
                   new BeforeRequestContextImpl(
                       "createHrisEmployee", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -346,7 +346,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "createHrisEmployee",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -355,7 +355,7 @@ public class Hris implements
                         new AfterSuccessContextImpl(
                             "createHrisEmployee",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -364,7 +364,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "createHrisEmployee",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -455,10 +455,10 @@ public class Hris implements
                 CreateHrisGroupRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -466,7 +466,7 @@ public class Hris implements
                   new BeforeRequestContextImpl(
                       "createHrisGroup", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -477,7 +477,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "createHrisGroup",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -486,7 +486,7 @@ public class Hris implements
                         new AfterSuccessContextImpl(
                             "createHrisGroup",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -495,7 +495,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "createHrisGroup",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -586,10 +586,10 @@ public class Hris implements
                 CreateHrisLocationRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -597,7 +597,7 @@ public class Hris implements
                   new BeforeRequestContextImpl(
                       "createHrisLocation", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -608,7 +608,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "createHrisLocation",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -617,7 +617,7 @@ public class Hris implements
                         new AfterSuccessContextImpl(
                             "createHrisLocation",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -626,7 +626,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "createHrisLocation",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -707,10 +707,10 @@ public class Hris implements
                 GetHrisCompanyRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -718,7 +718,7 @@ public class Hris implements
                   new BeforeRequestContextImpl(
                       "getHrisCompany", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -729,7 +729,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "getHrisCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -738,7 +738,7 @@ public class Hris implements
                         new AfterSuccessContextImpl(
                             "getHrisCompany",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -747,7 +747,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "getHrisCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -828,10 +828,10 @@ public class Hris implements
                 GetHrisEmployeeRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -839,7 +839,7 @@ public class Hris implements
                   new BeforeRequestContextImpl(
                       "getHrisEmployee", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -850,7 +850,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "getHrisEmployee",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -859,7 +859,7 @@ public class Hris implements
                         new AfterSuccessContextImpl(
                             "getHrisEmployee",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -868,7 +868,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "getHrisEmployee",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -949,10 +949,10 @@ public class Hris implements
                 GetHrisGroupRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -960,7 +960,7 @@ public class Hris implements
                   new BeforeRequestContextImpl(
                       "getHrisGroup", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -971,7 +971,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "getHrisGroup",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -980,7 +980,7 @@ public class Hris implements
                         new AfterSuccessContextImpl(
                             "getHrisGroup",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -989,7 +989,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "getHrisGroup",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1070,10 +1070,10 @@ public class Hris implements
                 GetHrisLocationRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1081,7 +1081,7 @@ public class Hris implements
                   new BeforeRequestContextImpl(
                       "getHrisLocation", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1092,7 +1092,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "getHrisLocation",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1101,7 +1101,7 @@ public class Hris implements
                         new AfterSuccessContextImpl(
                             "getHrisLocation",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1110,7 +1110,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "getHrisLocation",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1191,10 +1191,10 @@ public class Hris implements
                 GetHrisPayslipRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1202,7 +1202,7 @@ public class Hris implements
                   new BeforeRequestContextImpl(
                       "getHrisPayslip", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1213,7 +1213,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "getHrisPayslip",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1222,7 +1222,7 @@ public class Hris implements
                         new AfterSuccessContextImpl(
                             "getHrisPayslip",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1231,7 +1231,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "getHrisPayslip",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1312,10 +1312,10 @@ public class Hris implements
                 GetHrisTimeoffRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1323,7 +1323,7 @@ public class Hris implements
                   new BeforeRequestContextImpl(
                       "getHrisTimeoff", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1334,7 +1334,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "getHrisTimeoff",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1343,7 +1343,7 @@ public class Hris implements
                         new AfterSuccessContextImpl(
                             "getHrisTimeoff",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1352,7 +1352,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "getHrisTimeoff",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1433,10 +1433,10 @@ public class Hris implements
                 ListHrisCompaniesRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1444,7 +1444,7 @@ public class Hris implements
                   new BeforeRequestContextImpl(
                       "listHrisCompanies", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1455,7 +1455,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "listHrisCompanies",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1464,7 +1464,7 @@ public class Hris implements
                         new AfterSuccessContextImpl(
                             "listHrisCompanies",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1473,7 +1473,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "listHrisCompanies",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1554,10 +1554,10 @@ public class Hris implements
                 ListHrisEmployeesRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1565,7 +1565,7 @@ public class Hris implements
                   new BeforeRequestContextImpl(
                       "listHrisEmployees", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1576,7 +1576,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "listHrisEmployees",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1585,7 +1585,7 @@ public class Hris implements
                         new AfterSuccessContextImpl(
                             "listHrisEmployees",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1594,7 +1594,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "listHrisEmployees",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1675,10 +1675,10 @@ public class Hris implements
                 ListHrisGroupsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1686,7 +1686,7 @@ public class Hris implements
                   new BeforeRequestContextImpl(
                       "listHrisGroups", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1697,7 +1697,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "listHrisGroups",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1706,7 +1706,7 @@ public class Hris implements
                         new AfterSuccessContextImpl(
                             "listHrisGroups",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1715,7 +1715,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "listHrisGroups",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1796,10 +1796,10 @@ public class Hris implements
                 ListHrisLocationsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1807,7 +1807,7 @@ public class Hris implements
                   new BeforeRequestContextImpl(
                       "listHrisLocations", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1818,7 +1818,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "listHrisLocations",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1827,7 +1827,7 @@ public class Hris implements
                         new AfterSuccessContextImpl(
                             "listHrisLocations",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1836,7 +1836,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "listHrisLocations",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1917,10 +1917,10 @@ public class Hris implements
                 ListHrisPayslipsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1928,7 +1928,7 @@ public class Hris implements
                   new BeforeRequestContextImpl(
                       "listHrisPayslips", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1939,7 +1939,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "listHrisPayslips",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1948,7 +1948,7 @@ public class Hris implements
                         new AfterSuccessContextImpl(
                             "listHrisPayslips",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1957,7 +1957,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "listHrisPayslips",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2038,10 +2038,10 @@ public class Hris implements
                 ListHrisTimeoffsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2049,7 +2049,7 @@ public class Hris implements
                   new BeforeRequestContextImpl(
                       "listHrisTimeoffs", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2060,7 +2060,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "listHrisTimeoffs",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2069,7 +2069,7 @@ public class Hris implements
                         new AfterSuccessContextImpl(
                             "listHrisTimeoffs",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2078,7 +2078,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "listHrisTimeoffs",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2169,10 +2169,10 @@ public class Hris implements
                 PatchHrisCompanyRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2180,7 +2180,7 @@ public class Hris implements
                   new BeforeRequestContextImpl(
                       "patchHrisCompany", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2191,7 +2191,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "patchHrisCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2200,7 +2200,7 @@ public class Hris implements
                         new AfterSuccessContextImpl(
                             "patchHrisCompany",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2209,7 +2209,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "patchHrisCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2300,10 +2300,10 @@ public class Hris implements
                 PatchHrisEmployeeRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2311,7 +2311,7 @@ public class Hris implements
                   new BeforeRequestContextImpl(
                       "patchHrisEmployee", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2322,7 +2322,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "patchHrisEmployee",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2331,7 +2331,7 @@ public class Hris implements
                         new AfterSuccessContextImpl(
                             "patchHrisEmployee",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2340,7 +2340,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "patchHrisEmployee",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2431,10 +2431,10 @@ public class Hris implements
                 PatchHrisGroupRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2442,7 +2442,7 @@ public class Hris implements
                   new BeforeRequestContextImpl(
                       "patchHrisGroup", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2453,7 +2453,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "patchHrisGroup",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2462,7 +2462,7 @@ public class Hris implements
                         new AfterSuccessContextImpl(
                             "patchHrisGroup",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2471,7 +2471,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "patchHrisGroup",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2562,10 +2562,10 @@ public class Hris implements
                 PatchHrisLocationRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2573,7 +2573,7 @@ public class Hris implements
                   new BeforeRequestContextImpl(
                       "patchHrisLocation", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2584,7 +2584,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "patchHrisLocation",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2593,7 +2593,7 @@ public class Hris implements
                         new AfterSuccessContextImpl(
                             "patchHrisLocation",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2602,7 +2602,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "patchHrisLocation",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2678,10 +2678,10 @@ public class Hris implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2689,7 +2689,7 @@ public class Hris implements
                   new BeforeRequestContextImpl(
                       "removeHrisCompany", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2700,7 +2700,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "removeHrisCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2709,7 +2709,7 @@ public class Hris implements
                         new AfterSuccessContextImpl(
                             "removeHrisCompany",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2718,7 +2718,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "removeHrisCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2788,10 +2788,10 @@ public class Hris implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2799,7 +2799,7 @@ public class Hris implements
                   new BeforeRequestContextImpl(
                       "removeHrisEmployee", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2810,7 +2810,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "removeHrisEmployee",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2819,7 +2819,7 @@ public class Hris implements
                         new AfterSuccessContextImpl(
                             "removeHrisEmployee",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2828,7 +2828,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "removeHrisEmployee",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2898,10 +2898,10 @@ public class Hris implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2909,7 +2909,7 @@ public class Hris implements
                   new BeforeRequestContextImpl(
                       "removeHrisGroup", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2920,7 +2920,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "removeHrisGroup",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2929,7 +2929,7 @@ public class Hris implements
                         new AfterSuccessContextImpl(
                             "removeHrisGroup",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2938,7 +2938,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "removeHrisGroup",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3008,10 +3008,10 @@ public class Hris implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3019,7 +3019,7 @@ public class Hris implements
                   new BeforeRequestContextImpl(
                       "removeHrisLocation", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3030,7 +3030,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "removeHrisLocation",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3039,7 +3039,7 @@ public class Hris implements
                         new AfterSuccessContextImpl(
                             "removeHrisLocation",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3048,7 +3048,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "removeHrisLocation",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3133,10 +3133,10 @@ public class Hris implements
                 UpdateHrisCompanyRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3144,7 +3144,7 @@ public class Hris implements
                   new BeforeRequestContextImpl(
                       "updateHrisCompany", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3155,7 +3155,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "updateHrisCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3164,7 +3164,7 @@ public class Hris implements
                         new AfterSuccessContextImpl(
                             "updateHrisCompany",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3173,7 +3173,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "updateHrisCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3264,10 +3264,10 @@ public class Hris implements
                 UpdateHrisEmployeeRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3275,7 +3275,7 @@ public class Hris implements
                   new BeforeRequestContextImpl(
                       "updateHrisEmployee", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3286,7 +3286,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "updateHrisEmployee",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3295,7 +3295,7 @@ public class Hris implements
                         new AfterSuccessContextImpl(
                             "updateHrisEmployee",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3304,7 +3304,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "updateHrisEmployee",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3395,10 +3395,10 @@ public class Hris implements
                 UpdateHrisGroupRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3406,7 +3406,7 @@ public class Hris implements
                   new BeforeRequestContextImpl(
                       "updateHrisGroup", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3417,7 +3417,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "updateHrisGroup",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3426,7 +3426,7 @@ public class Hris implements
                         new AfterSuccessContextImpl(
                             "updateHrisGroup",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3435,7 +3435,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "updateHrisGroup",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3526,10 +3526,10 @@ public class Hris implements
                 UpdateHrisLocationRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3537,7 +3537,7 @@ public class Hris implements
                   new BeforeRequestContextImpl(
                       "updateHrisLocation", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3548,7 +3548,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "updateHrisLocation",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3557,7 +3557,7 @@ public class Hris implements
                         new AfterSuccessContextImpl(
                             "updateHrisLocation",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3566,7 +3566,7 @@ public class Hris implements
                         new AfterErrorContextImpl(
                             "updateHrisLocation",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }

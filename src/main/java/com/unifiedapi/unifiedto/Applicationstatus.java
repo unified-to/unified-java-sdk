@@ -67,10 +67,10 @@ public class Applicationstatus implements
                 ListAtsApplicationstatusesRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -78,7 +78,7 @@ public class Applicationstatus implements
                   new BeforeRequestContextImpl(
                       "listAtsApplicationstatuses", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -89,7 +89,7 @@ public class Applicationstatus implements
                         new AfterErrorContextImpl(
                             "listAtsApplicationstatuses",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -98,7 +98,7 @@ public class Applicationstatus implements
                         new AfterSuccessContextImpl(
                             "listAtsApplicationstatuses",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -107,7 +107,7 @@ public class Applicationstatus implements
                         new AfterErrorContextImpl(
                             "listAtsApplicationstatuses",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }

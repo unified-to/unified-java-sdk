@@ -264,10 +264,10 @@ public class Ats implements
                 CreateAtsActivityRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -275,7 +275,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "createAtsActivity", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -286,7 +286,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "createAtsActivity",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -295,7 +295,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "createAtsActivity",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -304,7 +304,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "createAtsActivity",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -395,10 +395,10 @@ public class Ats implements
                 CreateAtsApplicationRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -406,7 +406,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "createAtsApplication", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -417,7 +417,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "createAtsApplication",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -426,7 +426,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "createAtsApplication",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -435,7 +435,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "createAtsApplication",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -526,10 +526,10 @@ public class Ats implements
                 CreateAtsCandidateRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -537,7 +537,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "createAtsCandidate", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -548,7 +548,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "createAtsCandidate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -557,7 +557,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "createAtsCandidate",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -566,7 +566,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "createAtsCandidate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -657,10 +657,10 @@ public class Ats implements
                 CreateAtsDocumentRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -668,7 +668,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "createAtsDocument", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -679,7 +679,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "createAtsDocument",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -688,7 +688,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "createAtsDocument",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -697,7 +697,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "createAtsDocument",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -788,10 +788,10 @@ public class Ats implements
                 CreateAtsInterviewRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -799,7 +799,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "createAtsInterview", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -810,7 +810,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "createAtsInterview",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -819,7 +819,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "createAtsInterview",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -828,7 +828,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "createAtsInterview",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -919,10 +919,10 @@ public class Ats implements
                 CreateAtsJobRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -930,7 +930,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "createAtsJob", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -941,7 +941,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "createAtsJob",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -950,7 +950,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "createAtsJob",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -959,7 +959,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "createAtsJob",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1050,10 +1050,10 @@ public class Ats implements
                 CreateAtsScorecardRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1061,7 +1061,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "createAtsScorecard", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1072,7 +1072,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "createAtsScorecard",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1081,7 +1081,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "createAtsScorecard",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1090,7 +1090,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "createAtsScorecard",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1171,10 +1171,10 @@ public class Ats implements
                 GetAtsActivityRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1182,7 +1182,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "getAtsActivity", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1193,7 +1193,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "getAtsActivity",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1202,7 +1202,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "getAtsActivity",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1211,7 +1211,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "getAtsActivity",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1292,10 +1292,10 @@ public class Ats implements
                 GetAtsApplicationRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1303,7 +1303,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "getAtsApplication", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1314,7 +1314,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "getAtsApplication",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1323,7 +1323,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "getAtsApplication",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1332,7 +1332,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "getAtsApplication",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1413,10 +1413,10 @@ public class Ats implements
                 GetAtsCandidateRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1424,7 +1424,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "getAtsCandidate", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1435,7 +1435,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "getAtsCandidate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1444,7 +1444,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "getAtsCandidate",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1453,7 +1453,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "getAtsCandidate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1534,10 +1534,10 @@ public class Ats implements
                 GetAtsCompanyRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1545,7 +1545,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "getAtsCompany", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1556,7 +1556,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "getAtsCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1565,7 +1565,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "getAtsCompany",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1574,7 +1574,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "getAtsCompany",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1655,10 +1655,10 @@ public class Ats implements
                 GetAtsDocumentRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1666,7 +1666,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "getAtsDocument", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1677,7 +1677,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "getAtsDocument",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1686,7 +1686,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "getAtsDocument",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1695,7 +1695,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "getAtsDocument",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1776,10 +1776,10 @@ public class Ats implements
                 GetAtsInterviewRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1787,7 +1787,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "getAtsInterview", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1798,7 +1798,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "getAtsInterview",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1807,7 +1807,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "getAtsInterview",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1816,7 +1816,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "getAtsInterview",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1897,10 +1897,10 @@ public class Ats implements
                 GetAtsJobRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1908,7 +1908,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "getAtsJob", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1919,7 +1919,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "getAtsJob",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1928,7 +1928,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "getAtsJob",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1937,7 +1937,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "getAtsJob",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2018,10 +2018,10 @@ public class Ats implements
                 GetAtsScorecardRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2029,7 +2029,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "getAtsScorecard", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2040,7 +2040,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "getAtsScorecard",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2049,7 +2049,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "getAtsScorecard",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2058,7 +2058,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "getAtsScorecard",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2139,10 +2139,10 @@ public class Ats implements
                 ListAtsActivitiesRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2150,7 +2150,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "listAtsActivities", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2161,7 +2161,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "listAtsActivities",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2170,7 +2170,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "listAtsActivities",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2179,7 +2179,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "listAtsActivities",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2260,10 +2260,10 @@ public class Ats implements
                 ListAtsApplicationsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2271,7 +2271,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "listAtsApplications", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2282,7 +2282,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "listAtsApplications",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2291,7 +2291,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "listAtsApplications",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2300,7 +2300,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "listAtsApplications",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2381,10 +2381,10 @@ public class Ats implements
                 ListAtsApplicationstatusesRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2392,7 +2392,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "listAtsApplicationstatuses", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2403,7 +2403,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "listAtsApplicationstatuses",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2412,7 +2412,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "listAtsApplicationstatuses",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2421,7 +2421,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "listAtsApplicationstatuses",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2502,10 +2502,10 @@ public class Ats implements
                 ListAtsCandidatesRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2513,7 +2513,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "listAtsCandidates", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2524,7 +2524,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "listAtsCandidates",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2533,7 +2533,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "listAtsCandidates",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2542,7 +2542,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "listAtsCandidates",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2623,10 +2623,10 @@ public class Ats implements
                 ListAtsCompaniesRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2634,7 +2634,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "listAtsCompanies", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2645,7 +2645,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "listAtsCompanies",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2654,7 +2654,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "listAtsCompanies",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2663,7 +2663,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "listAtsCompanies",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2744,10 +2744,10 @@ public class Ats implements
                 ListAtsDocumentsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2755,7 +2755,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "listAtsDocuments", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2766,7 +2766,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "listAtsDocuments",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2775,7 +2775,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "listAtsDocuments",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2784,7 +2784,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "listAtsDocuments",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2865,10 +2865,10 @@ public class Ats implements
                 ListAtsInterviewsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2876,7 +2876,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "listAtsInterviews", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2887,7 +2887,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "listAtsInterviews",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2896,7 +2896,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "listAtsInterviews",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2905,7 +2905,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "listAtsInterviews",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2986,10 +2986,10 @@ public class Ats implements
                 ListAtsJobsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2997,7 +2997,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "listAtsJobs", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3008,7 +3008,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "listAtsJobs",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3017,7 +3017,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "listAtsJobs",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3026,7 +3026,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "listAtsJobs",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3107,10 +3107,10 @@ public class Ats implements
                 ListAtsScorecardsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3118,7 +3118,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "listAtsScorecards", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3129,7 +3129,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "listAtsScorecards",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3138,7 +3138,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "listAtsScorecards",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3147,7 +3147,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "listAtsScorecards",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3238,10 +3238,10 @@ public class Ats implements
                 PatchAtsActivityRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3249,7 +3249,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "patchAtsActivity", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3260,7 +3260,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "patchAtsActivity",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3269,7 +3269,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "patchAtsActivity",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3278,7 +3278,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "patchAtsActivity",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3369,10 +3369,10 @@ public class Ats implements
                 PatchAtsApplicationRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3380,7 +3380,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "patchAtsApplication", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3391,7 +3391,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "patchAtsApplication",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3400,7 +3400,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "patchAtsApplication",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3409,7 +3409,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "patchAtsApplication",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3500,10 +3500,10 @@ public class Ats implements
                 PatchAtsCandidateRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3511,7 +3511,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "patchAtsCandidate", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3522,7 +3522,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "patchAtsCandidate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3531,7 +3531,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "patchAtsCandidate",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3540,7 +3540,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "patchAtsCandidate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3631,10 +3631,10 @@ public class Ats implements
                 PatchAtsDocumentRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3642,7 +3642,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "patchAtsDocument", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3653,7 +3653,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "patchAtsDocument",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3662,7 +3662,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "patchAtsDocument",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3671,7 +3671,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "patchAtsDocument",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3762,10 +3762,10 @@ public class Ats implements
                 PatchAtsInterviewRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3773,7 +3773,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "patchAtsInterview", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3784,7 +3784,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "patchAtsInterview",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3793,7 +3793,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "patchAtsInterview",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3802,7 +3802,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "patchAtsInterview",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3893,10 +3893,10 @@ public class Ats implements
                 PatchAtsJobRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3904,7 +3904,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "patchAtsJob", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3915,7 +3915,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "patchAtsJob",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3924,7 +3924,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "patchAtsJob",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3933,7 +3933,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "patchAtsJob",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -4024,10 +4024,10 @@ public class Ats implements
                 PatchAtsScorecardRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -4035,7 +4035,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "patchAtsScorecard", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -4046,7 +4046,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "patchAtsScorecard",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -4055,7 +4055,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "patchAtsScorecard",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -4064,7 +4064,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "patchAtsScorecard",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -4140,10 +4140,10 @@ public class Ats implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -4151,7 +4151,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "removeAtsActivity", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -4162,7 +4162,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "removeAtsActivity",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -4171,7 +4171,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "removeAtsActivity",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -4180,7 +4180,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "removeAtsActivity",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -4250,10 +4250,10 @@ public class Ats implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -4261,7 +4261,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "removeAtsApplication", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -4272,7 +4272,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "removeAtsApplication",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -4281,7 +4281,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "removeAtsApplication",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -4290,7 +4290,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "removeAtsApplication",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -4360,10 +4360,10 @@ public class Ats implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -4371,7 +4371,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "removeAtsCandidate", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -4382,7 +4382,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "removeAtsCandidate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -4391,7 +4391,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "removeAtsCandidate",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -4400,7 +4400,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "removeAtsCandidate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -4470,10 +4470,10 @@ public class Ats implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -4481,7 +4481,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "removeAtsDocument", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -4492,7 +4492,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "removeAtsDocument",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -4501,7 +4501,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "removeAtsDocument",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -4510,7 +4510,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "removeAtsDocument",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -4580,10 +4580,10 @@ public class Ats implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -4591,7 +4591,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "removeAtsInterview", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -4602,7 +4602,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "removeAtsInterview",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -4611,7 +4611,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "removeAtsInterview",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -4620,7 +4620,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "removeAtsInterview",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -4690,10 +4690,10 @@ public class Ats implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -4701,7 +4701,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "removeAtsJob", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -4712,7 +4712,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "removeAtsJob",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -4721,7 +4721,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "removeAtsJob",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -4730,7 +4730,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "removeAtsJob",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -4800,10 +4800,10 @@ public class Ats implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -4811,7 +4811,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "removeAtsScorecard", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -4822,7 +4822,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "removeAtsScorecard",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -4831,7 +4831,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "removeAtsScorecard",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -4840,7 +4840,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "removeAtsScorecard",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -4925,10 +4925,10 @@ public class Ats implements
                 UpdateAtsActivityRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -4936,7 +4936,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "updateAtsActivity", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -4947,7 +4947,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "updateAtsActivity",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -4956,7 +4956,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "updateAtsActivity",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -4965,7 +4965,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "updateAtsActivity",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -5056,10 +5056,10 @@ public class Ats implements
                 UpdateAtsApplicationRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -5067,7 +5067,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "updateAtsApplication", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -5078,7 +5078,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "updateAtsApplication",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -5087,7 +5087,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "updateAtsApplication",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -5096,7 +5096,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "updateAtsApplication",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -5187,10 +5187,10 @@ public class Ats implements
                 UpdateAtsCandidateRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -5198,7 +5198,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "updateAtsCandidate", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -5209,7 +5209,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "updateAtsCandidate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -5218,7 +5218,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "updateAtsCandidate",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -5227,7 +5227,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "updateAtsCandidate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -5318,10 +5318,10 @@ public class Ats implements
                 UpdateAtsDocumentRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -5329,7 +5329,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "updateAtsDocument", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -5340,7 +5340,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "updateAtsDocument",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -5349,7 +5349,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "updateAtsDocument",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -5358,7 +5358,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "updateAtsDocument",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -5449,10 +5449,10 @@ public class Ats implements
                 UpdateAtsInterviewRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -5460,7 +5460,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "updateAtsInterview", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -5471,7 +5471,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "updateAtsInterview",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -5480,7 +5480,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "updateAtsInterview",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -5489,7 +5489,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "updateAtsInterview",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -5580,10 +5580,10 @@ public class Ats implements
                 UpdateAtsJobRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -5591,7 +5591,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "updateAtsJob", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -5602,7 +5602,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "updateAtsJob",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -5611,7 +5611,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "updateAtsJob",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -5620,7 +5620,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "updateAtsJob",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -5711,10 +5711,10 @@ public class Ats implements
                 UpdateAtsScorecardRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -5722,7 +5722,7 @@ public class Ats implements
                   new BeforeRequestContextImpl(
                       "updateAtsScorecard", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -5733,7 +5733,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "updateAtsScorecard",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -5742,7 +5742,7 @@ public class Ats implements
                         new AfterSuccessContextImpl(
                             "updateAtsScorecard",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -5751,7 +5751,7 @@ public class Ats implements
                         new AfterErrorContextImpl(
                             "updateAtsScorecard",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }

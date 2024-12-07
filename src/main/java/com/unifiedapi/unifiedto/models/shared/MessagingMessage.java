@@ -77,6 +77,10 @@ public class MessagingMessage {
     private Optional<String> reference;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("root_message_id")
+    private Optional<String> rootMessageId;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
     private Optional<String> subject;
 
@@ -103,6 +107,7 @@ public class MessagingMessage {
             @JsonProperty("parent_message_id") Optional<String> parentMessageId,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
             @JsonProperty("reference") Optional<String> reference,
+            @JsonProperty("root_message_id") Optional<String> rootMessageId,
             @JsonProperty("subject") Optional<String> subject,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
             @JsonProperty("web_url") Optional<String> webUrl) {
@@ -119,6 +124,7 @@ public class MessagingMessage {
         Utils.checkNotNull(parentMessageId, "parentMessageId");
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(reference, "reference");
+        Utils.checkNotNull(rootMessageId, "rootMessageId");
         Utils.checkNotNull(subject, "subject");
         Utils.checkNotNull(updatedAt, "updatedAt");
         Utils.checkNotNull(webUrl, "webUrl");
@@ -135,13 +141,14 @@ public class MessagingMessage {
         this.parentMessageId = parentMessageId;
         this.raw = raw;
         this.reference = reference;
+        this.rootMessageId = rootMessageId;
         this.subject = subject;
         this.updatedAt = updatedAt;
         this.webUrl = webUrl;
     }
     
     public MessagingMessage() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -213,6 +220,11 @@ public class MessagingMessage {
     @JsonIgnore
     public Optional<String> reference() {
         return reference;
+    }
+
+    @JsonIgnore
+    public Optional<String> rootMessageId() {
+        return rootMessageId;
     }
 
     @JsonIgnore
@@ -390,6 +402,18 @@ public class MessagingMessage {
         return this;
     }
 
+    public MessagingMessage withRootMessageId(String rootMessageId) {
+        Utils.checkNotNull(rootMessageId, "rootMessageId");
+        this.rootMessageId = Optional.ofNullable(rootMessageId);
+        return this;
+    }
+
+    public MessagingMessage withRootMessageId(Optional<String> rootMessageId) {
+        Utils.checkNotNull(rootMessageId, "rootMessageId");
+        this.rootMessageId = rootMessageId;
+        return this;
+    }
+
     public MessagingMessage withSubject(String subject) {
         Utils.checkNotNull(subject, "subject");
         this.subject = Optional.ofNullable(subject);
@@ -449,6 +473,7 @@ public class MessagingMessage {
             Objects.deepEquals(this.parentMessageId, other.parentMessageId) &&
             Objects.deepEquals(this.raw, other.raw) &&
             Objects.deepEquals(this.reference, other.reference) &&
+            Objects.deepEquals(this.rootMessageId, other.rootMessageId) &&
             Objects.deepEquals(this.subject, other.subject) &&
             Objects.deepEquals(this.updatedAt, other.updatedAt) &&
             Objects.deepEquals(this.webUrl, other.webUrl);
@@ -470,6 +495,7 @@ public class MessagingMessage {
             parentMessageId,
             raw,
             reference,
+            rootMessageId,
             subject,
             updatedAt,
             webUrl);
@@ -491,6 +517,7 @@ public class MessagingMessage {
                 "parentMessageId", parentMessageId,
                 "raw", raw,
                 "reference", reference,
+                "rootMessageId", rootMessageId,
                 "subject", subject,
                 "updatedAt", updatedAt,
                 "webUrl", webUrl);
@@ -523,6 +550,8 @@ public class MessagingMessage {
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
  
         private Optional<String> reference = Optional.empty();
+ 
+        private Optional<String> rootMessageId = Optional.empty();
  
         private Optional<String> subject = Optional.empty();
  
@@ -690,6 +719,18 @@ public class MessagingMessage {
             return this;
         }
 
+        public Builder rootMessageId(String rootMessageId) {
+            Utils.checkNotNull(rootMessageId, "rootMessageId");
+            this.rootMessageId = Optional.ofNullable(rootMessageId);
+            return this;
+        }
+
+        public Builder rootMessageId(Optional<String> rootMessageId) {
+            Utils.checkNotNull(rootMessageId, "rootMessageId");
+            this.rootMessageId = rootMessageId;
+            return this;
+        }
+
         public Builder subject(String subject) {
             Utils.checkNotNull(subject, "subject");
             this.subject = Optional.ofNullable(subject);
@@ -741,6 +782,7 @@ public class MessagingMessage {
                 parentMessageId,
                 raw,
                 reference,
+                rootMessageId,
                 subject,
                 updatedAt,
                 webUrl);

@@ -259,10 +259,10 @@ public class Accounting implements
                 CreateAccountingAccountRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -270,7 +270,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "createAccountingAccount", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -281,7 +281,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "createAccountingAccount",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -290,7 +290,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "createAccountingAccount",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -299,7 +299,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "createAccountingAccount",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -390,10 +390,10 @@ public class Accounting implements
                 CreateAccountingContactRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -401,7 +401,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "createAccountingContact", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -412,7 +412,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "createAccountingContact",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -421,7 +421,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "createAccountingContact",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -430,7 +430,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "createAccountingContact",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -521,10 +521,10 @@ public class Accounting implements
                 CreateAccountingInvoiceRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -532,7 +532,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "createAccountingInvoice", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -543,7 +543,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "createAccountingInvoice",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -552,7 +552,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "createAccountingInvoice",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -561,7 +561,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "createAccountingInvoice",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -652,10 +652,10 @@ public class Accounting implements
                 CreateAccountingJournalRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -663,7 +663,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "createAccountingJournal", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -674,7 +674,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "createAccountingJournal",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -683,7 +683,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "createAccountingJournal",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -692,7 +692,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "createAccountingJournal",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -783,10 +783,10 @@ public class Accounting implements
                 CreateAccountingOrderRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -794,7 +794,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "createAccountingOrder", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -805,7 +805,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "createAccountingOrder",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -814,7 +814,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "createAccountingOrder",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -823,7 +823,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "createAccountingOrder",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -914,10 +914,10 @@ public class Accounting implements
                 CreateAccountingTaxrateRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -925,7 +925,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "createAccountingTaxrate", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -936,7 +936,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "createAccountingTaxrate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -945,7 +945,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "createAccountingTaxrate",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -954,7 +954,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "createAccountingTaxrate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1045,10 +1045,10 @@ public class Accounting implements
                 CreateAccountingTransactionRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1056,7 +1056,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "createAccountingTransaction", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1067,7 +1067,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "createAccountingTransaction",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1076,7 +1076,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "createAccountingTransaction",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1085,7 +1085,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "createAccountingTransaction",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1166,10 +1166,10 @@ public class Accounting implements
                 GetAccountingAccountRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1177,7 +1177,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "getAccountingAccount", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1188,7 +1188,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "getAccountingAccount",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1197,7 +1197,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "getAccountingAccount",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1206,7 +1206,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "getAccountingAccount",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1287,10 +1287,10 @@ public class Accounting implements
                 GetAccountingContactRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1298,7 +1298,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "getAccountingContact", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1309,7 +1309,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "getAccountingContact",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1318,7 +1318,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "getAccountingContact",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1327,7 +1327,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "getAccountingContact",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1408,10 +1408,10 @@ public class Accounting implements
                 GetAccountingInvoiceRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1419,7 +1419,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "getAccountingInvoice", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1430,7 +1430,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "getAccountingInvoice",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1439,7 +1439,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "getAccountingInvoice",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1448,7 +1448,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "getAccountingInvoice",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1529,10 +1529,10 @@ public class Accounting implements
                 GetAccountingJournalRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1540,7 +1540,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "getAccountingJournal", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1551,7 +1551,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "getAccountingJournal",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1560,7 +1560,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "getAccountingJournal",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1569,7 +1569,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "getAccountingJournal",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1650,10 +1650,10 @@ public class Accounting implements
                 GetAccountingOrderRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1661,7 +1661,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "getAccountingOrder", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1672,7 +1672,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "getAccountingOrder",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1681,7 +1681,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "getAccountingOrder",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1690,7 +1690,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "getAccountingOrder",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1771,10 +1771,10 @@ public class Accounting implements
                 GetAccountingOrganizationRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1782,7 +1782,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "getAccountingOrganization", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1793,7 +1793,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "getAccountingOrganization",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1802,7 +1802,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "getAccountingOrganization",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1811,7 +1811,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "getAccountingOrganization",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1892,10 +1892,10 @@ public class Accounting implements
                 GetAccountingTaxrateRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1903,7 +1903,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "getAccountingTaxrate", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1914,7 +1914,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "getAccountingTaxrate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1923,7 +1923,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "getAccountingTaxrate",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1932,7 +1932,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "getAccountingTaxrate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2013,10 +2013,10 @@ public class Accounting implements
                 GetAccountingTransactionRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2024,7 +2024,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "getAccountingTransaction", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2035,7 +2035,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "getAccountingTransaction",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2044,7 +2044,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "getAccountingTransaction",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2053,7 +2053,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "getAccountingTransaction",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2134,10 +2134,10 @@ public class Accounting implements
                 ListAccountingAccountsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2145,7 +2145,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "listAccountingAccounts", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2156,7 +2156,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "listAccountingAccounts",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2165,7 +2165,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "listAccountingAccounts",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2174,7 +2174,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "listAccountingAccounts",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2255,10 +2255,10 @@ public class Accounting implements
                 ListAccountingContactsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2266,7 +2266,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "listAccountingContacts", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2277,7 +2277,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "listAccountingContacts",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2286,7 +2286,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "listAccountingContacts",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2295,7 +2295,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "listAccountingContacts",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2376,10 +2376,10 @@ public class Accounting implements
                 ListAccountingInvoicesRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2387,7 +2387,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "listAccountingInvoices", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2398,7 +2398,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "listAccountingInvoices",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2407,7 +2407,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "listAccountingInvoices",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2416,7 +2416,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "listAccountingInvoices",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2497,10 +2497,10 @@ public class Accounting implements
                 ListAccountingJournalsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2508,7 +2508,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "listAccountingJournals", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2519,7 +2519,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "listAccountingJournals",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2528,7 +2528,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "listAccountingJournals",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2537,7 +2537,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "listAccountingJournals",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2618,10 +2618,10 @@ public class Accounting implements
                 ListAccountingOrdersRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2629,7 +2629,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "listAccountingOrders", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2640,7 +2640,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "listAccountingOrders",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2649,7 +2649,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "listAccountingOrders",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2658,7 +2658,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "listAccountingOrders",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2739,10 +2739,10 @@ public class Accounting implements
                 ListAccountingOrganizationsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2750,7 +2750,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "listAccountingOrganizations", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2761,7 +2761,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "listAccountingOrganizations",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2770,7 +2770,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "listAccountingOrganizations",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2779,7 +2779,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "listAccountingOrganizations",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2860,10 +2860,10 @@ public class Accounting implements
                 ListAccountingTaxratesRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2871,7 +2871,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "listAccountingTaxrates", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2882,7 +2882,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "listAccountingTaxrates",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2891,7 +2891,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "listAccountingTaxrates",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2900,7 +2900,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "listAccountingTaxrates",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2981,10 +2981,10 @@ public class Accounting implements
                 ListAccountingTransactionsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2992,7 +2992,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "listAccountingTransactions", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3003,7 +3003,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "listAccountingTransactions",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3012,7 +3012,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "listAccountingTransactions",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3021,7 +3021,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "listAccountingTransactions",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3112,10 +3112,10 @@ public class Accounting implements
                 PatchAccountingAccountRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3123,7 +3123,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "patchAccountingAccount", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3134,7 +3134,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "patchAccountingAccount",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3143,7 +3143,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "patchAccountingAccount",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3152,7 +3152,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "patchAccountingAccount",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3243,10 +3243,10 @@ public class Accounting implements
                 PatchAccountingContactRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3254,7 +3254,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "patchAccountingContact", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3265,7 +3265,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "patchAccountingContact",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3274,7 +3274,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "patchAccountingContact",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3283,7 +3283,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "patchAccountingContact",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3374,10 +3374,10 @@ public class Accounting implements
                 PatchAccountingInvoiceRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3385,7 +3385,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "patchAccountingInvoice", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3396,7 +3396,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "patchAccountingInvoice",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3405,7 +3405,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "patchAccountingInvoice",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3414,7 +3414,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "patchAccountingInvoice",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3505,10 +3505,10 @@ public class Accounting implements
                 PatchAccountingJournalRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3516,7 +3516,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "patchAccountingJournal", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3527,7 +3527,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "patchAccountingJournal",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3536,7 +3536,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "patchAccountingJournal",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3545,7 +3545,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "patchAccountingJournal",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3636,10 +3636,10 @@ public class Accounting implements
                 PatchAccountingOrderRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3647,7 +3647,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "patchAccountingOrder", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3658,7 +3658,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "patchAccountingOrder",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3667,7 +3667,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "patchAccountingOrder",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3676,7 +3676,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "patchAccountingOrder",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3767,10 +3767,10 @@ public class Accounting implements
                 PatchAccountingTaxrateRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3778,7 +3778,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "patchAccountingTaxrate", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3789,7 +3789,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "patchAccountingTaxrate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3798,7 +3798,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "patchAccountingTaxrate",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3807,7 +3807,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "patchAccountingTaxrate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3898,10 +3898,10 @@ public class Accounting implements
                 PatchAccountingTransactionRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3909,7 +3909,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "patchAccountingTransaction", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3920,7 +3920,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "patchAccountingTransaction",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3929,7 +3929,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "patchAccountingTransaction",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3938,7 +3938,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "patchAccountingTransaction",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -4014,10 +4014,10 @@ public class Accounting implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -4025,7 +4025,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "removeAccountingAccount", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -4036,7 +4036,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "removeAccountingAccount",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -4045,7 +4045,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "removeAccountingAccount",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -4054,7 +4054,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "removeAccountingAccount",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -4124,10 +4124,10 @@ public class Accounting implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -4135,7 +4135,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "removeAccountingContact", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -4146,7 +4146,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "removeAccountingContact",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -4155,7 +4155,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "removeAccountingContact",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -4164,7 +4164,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "removeAccountingContact",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -4234,10 +4234,10 @@ public class Accounting implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -4245,7 +4245,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "removeAccountingInvoice", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -4256,7 +4256,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "removeAccountingInvoice",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -4265,7 +4265,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "removeAccountingInvoice",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -4274,7 +4274,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "removeAccountingInvoice",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -4344,10 +4344,10 @@ public class Accounting implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -4355,7 +4355,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "removeAccountingJournal", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -4366,7 +4366,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "removeAccountingJournal",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -4375,7 +4375,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "removeAccountingJournal",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -4384,7 +4384,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "removeAccountingJournal",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -4454,10 +4454,10 @@ public class Accounting implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -4465,7 +4465,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "removeAccountingOrder", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -4476,7 +4476,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "removeAccountingOrder",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -4485,7 +4485,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "removeAccountingOrder",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -4494,7 +4494,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "removeAccountingOrder",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -4564,10 +4564,10 @@ public class Accounting implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -4575,7 +4575,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "removeAccountingTaxrate", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -4586,7 +4586,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "removeAccountingTaxrate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -4595,7 +4595,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "removeAccountingTaxrate",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -4604,7 +4604,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "removeAccountingTaxrate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -4674,10 +4674,10 @@ public class Accounting implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -4685,7 +4685,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "removeAccountingTransaction", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -4696,7 +4696,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "removeAccountingTransaction",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -4705,7 +4705,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "removeAccountingTransaction",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -4714,7 +4714,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "removeAccountingTransaction",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -4799,10 +4799,10 @@ public class Accounting implements
                 UpdateAccountingAccountRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -4810,7 +4810,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "updateAccountingAccount", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -4821,7 +4821,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "updateAccountingAccount",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -4830,7 +4830,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "updateAccountingAccount",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -4839,7 +4839,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "updateAccountingAccount",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -4930,10 +4930,10 @@ public class Accounting implements
                 UpdateAccountingContactRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -4941,7 +4941,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "updateAccountingContact", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -4952,7 +4952,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "updateAccountingContact",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -4961,7 +4961,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "updateAccountingContact",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -4970,7 +4970,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "updateAccountingContact",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -5061,10 +5061,10 @@ public class Accounting implements
                 UpdateAccountingInvoiceRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -5072,7 +5072,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "updateAccountingInvoice", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -5083,7 +5083,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "updateAccountingInvoice",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -5092,7 +5092,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "updateAccountingInvoice",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -5101,7 +5101,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "updateAccountingInvoice",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -5192,10 +5192,10 @@ public class Accounting implements
                 UpdateAccountingJournalRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -5203,7 +5203,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "updateAccountingJournal", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -5214,7 +5214,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "updateAccountingJournal",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -5223,7 +5223,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "updateAccountingJournal",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -5232,7 +5232,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "updateAccountingJournal",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -5323,10 +5323,10 @@ public class Accounting implements
                 UpdateAccountingOrderRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -5334,7 +5334,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "updateAccountingOrder", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -5345,7 +5345,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "updateAccountingOrder",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -5354,7 +5354,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "updateAccountingOrder",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -5363,7 +5363,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "updateAccountingOrder",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -5454,10 +5454,10 @@ public class Accounting implements
                 UpdateAccountingTaxrateRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -5465,7 +5465,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "updateAccountingTaxrate", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -5476,7 +5476,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "updateAccountingTaxrate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -5485,7 +5485,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "updateAccountingTaxrate",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -5494,7 +5494,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "updateAccountingTaxrate",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -5585,10 +5585,10 @@ public class Accounting implements
                 UpdateAccountingTransactionRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -5596,7 +5596,7 @@ public class Accounting implements
                   new BeforeRequestContextImpl(
                       "updateAccountingTransaction", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -5607,7 +5607,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "updateAccountingTransaction",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -5616,7 +5616,7 @@ public class Accounting implements
                         new AfterSuccessContextImpl(
                             "updateAccountingTransaction",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -5625,7 +5625,7 @@ public class Accounting implements
                         new AfterErrorContextImpl(
                             "updateAccountingTransaction",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }

@@ -71,10 +71,10 @@ public class Payslip implements
                 GetHrisPayslipRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -82,7 +82,7 @@ public class Payslip implements
                   new BeforeRequestContextImpl(
                       "getHrisPayslip", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -93,7 +93,7 @@ public class Payslip implements
                         new AfterErrorContextImpl(
                             "getHrisPayslip",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -102,7 +102,7 @@ public class Payslip implements
                         new AfterSuccessContextImpl(
                             "getHrisPayslip",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -111,7 +111,7 @@ public class Payslip implements
                         new AfterErrorContextImpl(
                             "getHrisPayslip",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -192,10 +192,10 @@ public class Payslip implements
                 ListHrisPayslipsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -203,7 +203,7 @@ public class Payslip implements
                   new BeforeRequestContextImpl(
                       "listHrisPayslips", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -214,7 +214,7 @@ public class Payslip implements
                         new AfterErrorContextImpl(
                             "listHrisPayslips",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -223,7 +223,7 @@ public class Payslip implements
                         new AfterSuccessContextImpl(
                             "listHrisPayslips",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -232,7 +232,7 @@ public class Payslip implements
                         new AfterErrorContextImpl(
                             "listHrisPayslips",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }

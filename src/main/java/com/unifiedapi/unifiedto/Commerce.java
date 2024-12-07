@@ -200,10 +200,10 @@ public class Commerce implements
                 CreateCommerceCollectionRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -211,7 +211,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "createCommerceCollection", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -222,7 +222,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "createCommerceCollection",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -231,7 +231,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "createCommerceCollection",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -240,7 +240,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "createCommerceCollection",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -331,10 +331,10 @@ public class Commerce implements
                 CreateCommerceInventoryRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -342,7 +342,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "createCommerceInventory", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -353,7 +353,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "createCommerceInventory",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -362,7 +362,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "createCommerceInventory",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -371,7 +371,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "createCommerceInventory",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -462,10 +462,10 @@ public class Commerce implements
                 CreateCommerceItemRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -473,7 +473,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "createCommerceItem", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -484,7 +484,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "createCommerceItem",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -493,7 +493,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "createCommerceItem",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -502,7 +502,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "createCommerceItem",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -593,10 +593,10 @@ public class Commerce implements
                 CreateCommerceLocationRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -604,7 +604,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "createCommerceLocation", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -615,7 +615,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "createCommerceLocation",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -624,7 +624,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "createCommerceLocation",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -633,7 +633,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "createCommerceLocation",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -724,10 +724,10 @@ public class Commerce implements
                 CreateCommerceMetadataRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -735,7 +735,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "createCommerceMetadata", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -746,7 +746,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "createCommerceMetadata",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -755,7 +755,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "createCommerceMetadata",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -764,7 +764,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "createCommerceMetadata",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -845,10 +845,10 @@ public class Commerce implements
                 GetCommerceCollectionRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -856,7 +856,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "getCommerceCollection", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -867,7 +867,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "getCommerceCollection",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -876,7 +876,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "getCommerceCollection",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -885,7 +885,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "getCommerceCollection",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -966,10 +966,10 @@ public class Commerce implements
                 GetCommerceInventoryRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -977,7 +977,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "getCommerceInventory", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -988,7 +988,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "getCommerceInventory",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -997,7 +997,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "getCommerceInventory",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1006,7 +1006,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "getCommerceInventory",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1087,10 +1087,10 @@ public class Commerce implements
                 GetCommerceItemRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1098,7 +1098,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "getCommerceItem", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1109,7 +1109,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "getCommerceItem",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1118,7 +1118,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "getCommerceItem",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1127,7 +1127,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "getCommerceItem",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1208,10 +1208,10 @@ public class Commerce implements
                 GetCommerceLocationRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1219,7 +1219,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "getCommerceLocation", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1230,7 +1230,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "getCommerceLocation",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1239,7 +1239,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "getCommerceLocation",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1248,7 +1248,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "getCommerceLocation",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1329,10 +1329,10 @@ public class Commerce implements
                 GetCommerceMetadataRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1340,7 +1340,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "getCommerceMetadata", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1351,7 +1351,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "getCommerceMetadata",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1360,7 +1360,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "getCommerceMetadata",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1369,7 +1369,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "getCommerceMetadata",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1450,10 +1450,10 @@ public class Commerce implements
                 ListCommerceCollectionsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1461,7 +1461,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "listCommerceCollections", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1472,7 +1472,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "listCommerceCollections",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1481,7 +1481,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "listCommerceCollections",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1490,7 +1490,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "listCommerceCollections",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1571,10 +1571,10 @@ public class Commerce implements
                 ListCommerceInventoriesRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1582,7 +1582,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "listCommerceInventories", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1593,7 +1593,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "listCommerceInventories",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1602,7 +1602,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "listCommerceInventories",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1611,7 +1611,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "listCommerceInventories",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1692,10 +1692,10 @@ public class Commerce implements
                 ListCommerceItemsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1703,7 +1703,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "listCommerceItems", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1714,7 +1714,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "listCommerceItems",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1723,7 +1723,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "listCommerceItems",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1732,7 +1732,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "listCommerceItems",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1813,10 +1813,10 @@ public class Commerce implements
                 ListCommerceLocationsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1824,7 +1824,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "listCommerceLocations", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1835,7 +1835,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "listCommerceLocations",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1844,7 +1844,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "listCommerceLocations",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1853,7 +1853,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "listCommerceLocations",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1934,10 +1934,10 @@ public class Commerce implements
                 ListCommerceMetadatasRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1945,7 +1945,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "listCommerceMetadatas", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1956,7 +1956,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "listCommerceMetadatas",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1965,7 +1965,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "listCommerceMetadatas",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1974,7 +1974,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "listCommerceMetadatas",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2065,10 +2065,10 @@ public class Commerce implements
                 PatchCommerceCollectionRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2076,7 +2076,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "patchCommerceCollection", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2087,7 +2087,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "patchCommerceCollection",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2096,7 +2096,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "patchCommerceCollection",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2105,7 +2105,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "patchCommerceCollection",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2196,10 +2196,10 @@ public class Commerce implements
                 PatchCommerceInventoryRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2207,7 +2207,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "patchCommerceInventory", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2218,7 +2218,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "patchCommerceInventory",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2227,7 +2227,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "patchCommerceInventory",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2236,7 +2236,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "patchCommerceInventory",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2327,10 +2327,10 @@ public class Commerce implements
                 PatchCommerceItemRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2338,7 +2338,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "patchCommerceItem", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2349,7 +2349,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "patchCommerceItem",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2358,7 +2358,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "patchCommerceItem",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2367,7 +2367,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "patchCommerceItem",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2458,10 +2458,10 @@ public class Commerce implements
                 PatchCommerceLocationRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2469,7 +2469,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "patchCommerceLocation", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2480,7 +2480,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "patchCommerceLocation",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2489,7 +2489,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "patchCommerceLocation",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2498,7 +2498,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "patchCommerceLocation",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2589,10 +2589,10 @@ public class Commerce implements
                 PatchCommerceMetadataRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2600,7 +2600,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "patchCommerceMetadata", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2611,7 +2611,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "patchCommerceMetadata",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2620,7 +2620,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "patchCommerceMetadata",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2629,7 +2629,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "patchCommerceMetadata",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2705,10 +2705,10 @@ public class Commerce implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2716,7 +2716,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "removeCommerceCollection", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2727,7 +2727,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "removeCommerceCollection",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2736,7 +2736,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "removeCommerceCollection",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2745,7 +2745,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "removeCommerceCollection",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2815,10 +2815,10 @@ public class Commerce implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2826,7 +2826,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "removeCommerceInventory", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2837,7 +2837,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "removeCommerceInventory",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2846,7 +2846,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "removeCommerceInventory",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2855,7 +2855,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "removeCommerceInventory",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2925,10 +2925,10 @@ public class Commerce implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2936,7 +2936,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "removeCommerceItem", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2947,7 +2947,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "removeCommerceItem",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2956,7 +2956,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "removeCommerceItem",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2965,7 +2965,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "removeCommerceItem",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3035,10 +3035,10 @@ public class Commerce implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3046,7 +3046,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "removeCommerceLocation", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3057,7 +3057,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "removeCommerceLocation",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3066,7 +3066,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "removeCommerceLocation",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3075,7 +3075,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "removeCommerceLocation",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3145,10 +3145,10 @@ public class Commerce implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3156,7 +3156,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "removeCommerceMetadata", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3167,7 +3167,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "removeCommerceMetadata",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3176,7 +3176,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "removeCommerceMetadata",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3185,7 +3185,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "removeCommerceMetadata",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3270,10 +3270,10 @@ public class Commerce implements
                 UpdateCommerceCollectionRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3281,7 +3281,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "updateCommerceCollection", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3292,7 +3292,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "updateCommerceCollection",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3301,7 +3301,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "updateCommerceCollection",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3310,7 +3310,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "updateCommerceCollection",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3401,10 +3401,10 @@ public class Commerce implements
                 UpdateCommerceInventoryRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3412,7 +3412,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "updateCommerceInventory", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3423,7 +3423,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "updateCommerceInventory",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3432,7 +3432,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "updateCommerceInventory",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3441,7 +3441,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "updateCommerceInventory",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3532,10 +3532,10 @@ public class Commerce implements
                 UpdateCommerceItemRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3543,7 +3543,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "updateCommerceItem", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3554,7 +3554,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "updateCommerceItem",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3563,7 +3563,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "updateCommerceItem",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3572,7 +3572,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "updateCommerceItem",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3663,10 +3663,10 @@ public class Commerce implements
                 UpdateCommerceLocationRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3674,7 +3674,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "updateCommerceLocation", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3685,7 +3685,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "updateCommerceLocation",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3694,7 +3694,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "updateCommerceLocation",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3703,7 +3703,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "updateCommerceLocation",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3794,10 +3794,10 @@ public class Commerce implements
                 UpdateCommerceMetadataRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3805,7 +3805,7 @@ public class Commerce implements
                   new BeforeRequestContextImpl(
                       "updateCommerceMetadata", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3816,7 +3816,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "updateCommerceMetadata",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3825,7 +3825,7 @@ public class Commerce implements
                         new AfterSuccessContextImpl(
                             "updateCommerceMetadata",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3834,7 +3834,7 @@ public class Commerce implements
                         new AfterErrorContextImpl(
                             "updateCommerceMetadata",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }

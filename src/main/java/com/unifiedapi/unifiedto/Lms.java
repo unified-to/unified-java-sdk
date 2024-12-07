@@ -175,10 +175,10 @@ public class Lms implements
                 CreateLmsClassRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -186,7 +186,7 @@ public class Lms implements
                   new BeforeRequestContextImpl(
                       "createLmsClass", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -197,7 +197,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "createLmsClass",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -206,7 +206,7 @@ public class Lms implements
                         new AfterSuccessContextImpl(
                             "createLmsClass",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -215,7 +215,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "createLmsClass",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -306,10 +306,10 @@ public class Lms implements
                 CreateLmsCourseRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -317,7 +317,7 @@ public class Lms implements
                   new BeforeRequestContextImpl(
                       "createLmsCourse", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -328,7 +328,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "createLmsCourse",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -337,7 +337,7 @@ public class Lms implements
                         new AfterSuccessContextImpl(
                             "createLmsCourse",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -346,7 +346,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "createLmsCourse",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -437,10 +437,10 @@ public class Lms implements
                 CreateLmsInstructorRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -448,7 +448,7 @@ public class Lms implements
                   new BeforeRequestContextImpl(
                       "createLmsInstructor", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -459,7 +459,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "createLmsInstructor",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -468,7 +468,7 @@ public class Lms implements
                         new AfterSuccessContextImpl(
                             "createLmsInstructor",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -477,7 +477,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "createLmsInstructor",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -568,10 +568,10 @@ public class Lms implements
                 CreateLmsStudentRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -579,7 +579,7 @@ public class Lms implements
                   new BeforeRequestContextImpl(
                       "createLmsStudent", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -590,7 +590,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "createLmsStudent",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -599,7 +599,7 @@ public class Lms implements
                         new AfterSuccessContextImpl(
                             "createLmsStudent",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -608,7 +608,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "createLmsStudent",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -689,10 +689,10 @@ public class Lms implements
                 GetLmsClassRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -700,7 +700,7 @@ public class Lms implements
                   new BeforeRequestContextImpl(
                       "getLmsClass", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -711,7 +711,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "getLmsClass",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -720,7 +720,7 @@ public class Lms implements
                         new AfterSuccessContextImpl(
                             "getLmsClass",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -729,7 +729,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "getLmsClass",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -810,10 +810,10 @@ public class Lms implements
                 GetLmsCourseRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -821,7 +821,7 @@ public class Lms implements
                   new BeforeRequestContextImpl(
                       "getLmsCourse", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -832,7 +832,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "getLmsCourse",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -841,7 +841,7 @@ public class Lms implements
                         new AfterSuccessContextImpl(
                             "getLmsCourse",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -850,7 +850,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "getLmsCourse",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -931,10 +931,10 @@ public class Lms implements
                 GetLmsInstructorRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -942,7 +942,7 @@ public class Lms implements
                   new BeforeRequestContextImpl(
                       "getLmsInstructor", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -953,7 +953,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "getLmsInstructor",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -962,7 +962,7 @@ public class Lms implements
                         new AfterSuccessContextImpl(
                             "getLmsInstructor",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -971,7 +971,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "getLmsInstructor",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1052,10 +1052,10 @@ public class Lms implements
                 GetLmsStudentRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1063,7 +1063,7 @@ public class Lms implements
                   new BeforeRequestContextImpl(
                       "getLmsStudent", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1074,7 +1074,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "getLmsStudent",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1083,7 +1083,7 @@ public class Lms implements
                         new AfterSuccessContextImpl(
                             "getLmsStudent",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1092,7 +1092,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "getLmsStudent",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1173,10 +1173,10 @@ public class Lms implements
                 ListLmsClassesRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1184,7 +1184,7 @@ public class Lms implements
                   new BeforeRequestContextImpl(
                       "listLmsClasses", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1195,7 +1195,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "listLmsClasses",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1204,7 +1204,7 @@ public class Lms implements
                         new AfterSuccessContextImpl(
                             "listLmsClasses",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1213,7 +1213,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "listLmsClasses",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1294,10 +1294,10 @@ public class Lms implements
                 ListLmsCoursesRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1305,7 +1305,7 @@ public class Lms implements
                   new BeforeRequestContextImpl(
                       "listLmsCourses", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1316,7 +1316,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "listLmsCourses",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1325,7 +1325,7 @@ public class Lms implements
                         new AfterSuccessContextImpl(
                             "listLmsCourses",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1334,7 +1334,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "listLmsCourses",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1415,10 +1415,10 @@ public class Lms implements
                 ListLmsInstructorsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1426,7 +1426,7 @@ public class Lms implements
                   new BeforeRequestContextImpl(
                       "listLmsInstructors", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1437,7 +1437,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "listLmsInstructors",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1446,7 +1446,7 @@ public class Lms implements
                         new AfterSuccessContextImpl(
                             "listLmsInstructors",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1455,7 +1455,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "listLmsInstructors",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1536,10 +1536,10 @@ public class Lms implements
                 ListLmsStudentsRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1547,7 +1547,7 @@ public class Lms implements
                   new BeforeRequestContextImpl(
                       "listLmsStudents", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1558,7 +1558,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "listLmsStudents",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1567,7 +1567,7 @@ public class Lms implements
                         new AfterSuccessContextImpl(
                             "listLmsStudents",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1576,7 +1576,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "listLmsStudents",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1667,10 +1667,10 @@ public class Lms implements
                 PatchLmsClassRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1678,7 +1678,7 @@ public class Lms implements
                   new BeforeRequestContextImpl(
                       "patchLmsClass", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1689,7 +1689,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "patchLmsClass",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1698,7 +1698,7 @@ public class Lms implements
                         new AfterSuccessContextImpl(
                             "patchLmsClass",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1707,7 +1707,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "patchLmsClass",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1798,10 +1798,10 @@ public class Lms implements
                 PatchLmsCourseRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1809,7 +1809,7 @@ public class Lms implements
                   new BeforeRequestContextImpl(
                       "patchLmsCourse", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1820,7 +1820,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "patchLmsCourse",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1829,7 +1829,7 @@ public class Lms implements
                         new AfterSuccessContextImpl(
                             "patchLmsCourse",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1838,7 +1838,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "patchLmsCourse",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -1929,10 +1929,10 @@ public class Lms implements
                 PatchLmsInstructorRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -1940,7 +1940,7 @@ public class Lms implements
                   new BeforeRequestContextImpl(
                       "patchLmsInstructor", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -1951,7 +1951,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "patchLmsInstructor",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -1960,7 +1960,7 @@ public class Lms implements
                         new AfterSuccessContextImpl(
                             "patchLmsInstructor",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -1969,7 +1969,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "patchLmsInstructor",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2060,10 +2060,10 @@ public class Lms implements
                 PatchLmsStudentRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2071,7 +2071,7 @@ public class Lms implements
                   new BeforeRequestContextImpl(
                       "patchLmsStudent", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2082,7 +2082,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "patchLmsStudent",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2091,7 +2091,7 @@ public class Lms implements
                         new AfterSuccessContextImpl(
                             "patchLmsStudent",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2100,7 +2100,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "patchLmsStudent",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2176,10 +2176,10 @@ public class Lms implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2187,7 +2187,7 @@ public class Lms implements
                   new BeforeRequestContextImpl(
                       "removeLmsClass", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2198,7 +2198,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "removeLmsClass",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2207,7 +2207,7 @@ public class Lms implements
                         new AfterSuccessContextImpl(
                             "removeLmsClass",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2216,7 +2216,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "removeLmsClass",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2286,10 +2286,10 @@ public class Lms implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2297,7 +2297,7 @@ public class Lms implements
                   new BeforeRequestContextImpl(
                       "removeLmsCourse", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2308,7 +2308,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "removeLmsCourse",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2317,7 +2317,7 @@ public class Lms implements
                         new AfterSuccessContextImpl(
                             "removeLmsCourse",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2326,7 +2326,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "removeLmsCourse",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2396,10 +2396,10 @@ public class Lms implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2407,7 +2407,7 @@ public class Lms implements
                   new BeforeRequestContextImpl(
                       "removeLmsInstructor", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2418,7 +2418,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "removeLmsInstructor",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2427,7 +2427,7 @@ public class Lms implements
                         new AfterSuccessContextImpl(
                             "removeLmsInstructor",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2436,7 +2436,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "removeLmsInstructor",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2506,10 +2506,10 @@ public class Lms implements
         _req.addHeader("Accept", "*/*")
             .addHeader("user-agent", 
                 SDKConfiguration.USER_AGENT);
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2517,7 +2517,7 @@ public class Lms implements
                   new BeforeRequestContextImpl(
                       "removeLmsStudent", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2528,7 +2528,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "removeLmsStudent",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2537,7 +2537,7 @@ public class Lms implements
                         new AfterSuccessContextImpl(
                             "removeLmsStudent",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2546,7 +2546,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "removeLmsStudent",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2631,10 +2631,10 @@ public class Lms implements
                 UpdateLmsClassRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2642,7 +2642,7 @@ public class Lms implements
                   new BeforeRequestContextImpl(
                       "updateLmsClass", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2653,7 +2653,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "updateLmsClass",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2662,7 +2662,7 @@ public class Lms implements
                         new AfterSuccessContextImpl(
                             "updateLmsClass",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2671,7 +2671,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "updateLmsClass",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2762,10 +2762,10 @@ public class Lms implements
                 UpdateLmsCourseRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2773,7 +2773,7 @@ public class Lms implements
                   new BeforeRequestContextImpl(
                       "updateLmsCourse", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2784,7 +2784,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "updateLmsCourse",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2793,7 +2793,7 @@ public class Lms implements
                         new AfterSuccessContextImpl(
                             "updateLmsCourse",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2802,7 +2802,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "updateLmsCourse",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -2893,10 +2893,10 @@ public class Lms implements
                 UpdateLmsInstructorRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -2904,7 +2904,7 @@ public class Lms implements
                   new BeforeRequestContextImpl(
                       "updateLmsInstructor", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -2915,7 +2915,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "updateLmsInstructor",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -2924,7 +2924,7 @@ public class Lms implements
                         new AfterSuccessContextImpl(
                             "updateLmsInstructor",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -2933,7 +2933,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "updateLmsInstructor",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
@@ -3024,10 +3024,10 @@ public class Lms implements
                 UpdateLmsStudentRequest.class,
                 request, 
                 null));
-
+        
+        Optional<SecuritySource> _hookSecuritySource = this.sdkConfiguration.securitySource();
         Utils.configureSecurity(_req,  
                 this.sdkConfiguration.securitySource.getSecurity());
-
         HTTPClient _client = this.sdkConfiguration.defaultClient;
         HttpRequest _r = 
             sdkConfiguration.hooks()
@@ -3035,7 +3035,7 @@ public class Lms implements
                   new BeforeRequestContextImpl(
                       "updateLmsStudent", 
                       Optional.of(List.of()), 
-                      sdkConfiguration.securitySource()),
+                      _hookSecuritySource),
                   _req.build());
         HttpResponse<InputStream> _httpRes;
         try {
@@ -3046,7 +3046,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "updateLmsStudent",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                         Optional.of(_httpRes),
                         Optional.empty());
             } else {
@@ -3055,7 +3055,7 @@ public class Lms implements
                         new AfterSuccessContextImpl(
                             "updateLmsStudent",
                             Optional.of(List.of()), 
-                            sdkConfiguration.securitySource()),
+                            _hookSecuritySource),
                          _httpRes);
             }
         } catch (Exception _e) {
@@ -3064,7 +3064,7 @@ public class Lms implements
                         new AfterErrorContextImpl(
                             "updateLmsStudent",
                             Optional.of(List.of()),
-                            sdkConfiguration.securitySource()), 
+                            _hookSecuritySource), 
                         Optional.empty(),
                         Optional.of(_e));
         }
