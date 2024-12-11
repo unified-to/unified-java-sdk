@@ -6,26 +6,26 @@ package com.unifiedapi.unifiedto;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.unifiedapi.unifiedto.models.errors.SDKError;
-import com.unifiedapi.unifiedto.models.operations.CreateCommerceMetadataRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateCommerceMetadataRequestBuilder;
-import com.unifiedapi.unifiedto.models.operations.CreateCommerceMetadataResponse;
-import com.unifiedapi.unifiedto.models.operations.GetCommerceMetadataRequest;
-import com.unifiedapi.unifiedto.models.operations.GetCommerceMetadataRequestBuilder;
-import com.unifiedapi.unifiedto.models.operations.GetCommerceMetadataResponse;
-import com.unifiedapi.unifiedto.models.operations.ListCommerceMetadatasRequest;
-import com.unifiedapi.unifiedto.models.operations.ListCommerceMetadatasRequestBuilder;
-import com.unifiedapi.unifiedto.models.operations.ListCommerceMetadatasResponse;
-import com.unifiedapi.unifiedto.models.operations.PatchCommerceMetadataRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchCommerceMetadataRequestBuilder;
-import com.unifiedapi.unifiedto.models.operations.PatchCommerceMetadataResponse;
-import com.unifiedapi.unifiedto.models.operations.RemoveCommerceMetadataRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveCommerceMetadataRequestBuilder;
-import com.unifiedapi.unifiedto.models.operations.RemoveCommerceMetadataResponse;
+import com.unifiedapi.unifiedto.models.operations.CreateMetadataMetadataRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateMetadataMetadataRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.CreateMetadataMetadataResponse;
+import com.unifiedapi.unifiedto.models.operations.GetMetadataMetadataRequest;
+import com.unifiedapi.unifiedto.models.operations.GetMetadataMetadataRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.GetMetadataMetadataResponse;
+import com.unifiedapi.unifiedto.models.operations.ListMetadataMetadatasRequest;
+import com.unifiedapi.unifiedto.models.operations.ListMetadataMetadatasRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.ListMetadataMetadatasResponse;
+import com.unifiedapi.unifiedto.models.operations.PatchMetadataMetadataRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchMetadataMetadataRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.PatchMetadataMetadataResponse;
+import com.unifiedapi.unifiedto.models.operations.RemoveMetadataMetadataRequest;
+import com.unifiedapi.unifiedto.models.operations.RemoveMetadataMetadataRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.RemoveMetadataMetadataResponse;
 import com.unifiedapi.unifiedto.models.operations.SDKMethodInterfaces.*;
-import com.unifiedapi.unifiedto.models.operations.UpdateCommerceMetadataRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateCommerceMetadataRequestBuilder;
-import com.unifiedapi.unifiedto.models.operations.UpdateCommerceMetadataResponse;
-import com.unifiedapi.unifiedto.models.shared.CommerceMetadata;
+import com.unifiedapi.unifiedto.models.operations.UpdateMetadataMetadataRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdateMetadataMetadataRequestBuilder;
+import com.unifiedapi.unifiedto.models.operations.UpdateMetadataMetadataResponse;
+import com.unifiedapi.unifiedto.models.shared.MetadataMetadata;
 import com.unifiedapi.unifiedto.utils.HTTPClient;
 import com.unifiedapi.unifiedto.utils.HTTPRequest;
 import com.unifiedapi.unifiedto.utils.Hook.AfterErrorContextImpl;
@@ -44,12 +44,12 @@ import java.util.List;
 import java.util.Optional; 
 
 public class Metadata implements
-            MethodCallCreateCommerceMetadata,
-            MethodCallGetCommerceMetadata,
-            MethodCallListCommerceMetadatas,
-            MethodCallPatchCommerceMetadata,
-            MethodCallRemoveCommerceMetadata,
-            MethodCallUpdateCommerceMetadata {
+            MethodCallCreateMetadataMetadata,
+            MethodCallGetMetadataMetadata,
+            MethodCallListMetadataMetadatas,
+            MethodCallPatchMetadataMetadata,
+            MethodCallRemoveMetadataMetadata,
+            MethodCallUpdateMetadataMetadata {
 
     private final SDKConfiguration sdkConfiguration;
 
@@ -62,8 +62,8 @@ public class Metadata implements
      * Create a metadata
      * @return The call builder
      */
-    public CreateCommerceMetadataRequestBuilder createCommerceMetadata() {
-        return new CreateCommerceMetadataRequestBuilder(this);
+    public CreateMetadataMetadataRequestBuilder createMetadataMetadata() {
+        return new CreateMetadataMetadataRequestBuilder(this);
     }
 
     /**
@@ -72,23 +72,23 @@ public class Metadata implements
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public CreateCommerceMetadataResponse createCommerceMetadata(
-            CreateCommerceMetadataRequest request) throws Exception {
+    public CreateMetadataMetadataResponse createMetadataMetadata(
+            CreateMetadataMetadataRequest request) throws Exception {
         String _baseUrl = this.sdkConfiguration.serverUrl;
         String _url = Utils.generateURL(
-                CreateCommerceMetadataRequest.class,
+                CreateMetadataMetadataRequest.class,
                 _baseUrl,
-                "/commerce/{connection_id}/metadata",
+                "/metadata/{connection_id}/metadata",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "POST");
         Object _convertedRequest = Utils.convertToShape(
                 request, 
                 JsonShape.DEFAULT,
-                new TypeReference<CreateCommerceMetadataRequest>() {});
+                new TypeReference<CreateMetadataMetadataRequest>() {});
         SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
                 _convertedRequest, 
-                "commerceMetadata",
+                "metadataMetadata",
                 "json",
                 false);
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
@@ -97,7 +97,7 @@ public class Metadata implements
                 SDKConfiguration.USER_AGENT);
 
         _req.addQueryParams(Utils.getQueryParams(
-                CreateCommerceMetadataRequest.class,
+                CreateMetadataMetadataRequest.class,
                 request, 
                 null));
         
@@ -109,7 +109,7 @@ public class Metadata implements
             sdkConfiguration.hooks()
                .beforeRequest(
                   new BeforeRequestContextImpl(
-                      "createCommerceMetadata", 
+                      "createMetadataMetadata", 
                       Optional.of(List.of()), 
                       _hookSecuritySource),
                   _req.build());
@@ -120,7 +120,7 @@ public class Metadata implements
                 _httpRes = sdkConfiguration.hooks()
                     .afterError(
                         new AfterErrorContextImpl(
-                            "createCommerceMetadata",
+                            "createMetadataMetadata",
                             Optional.of(List.of()),
                             _hookSecuritySource),
                         Optional.of(_httpRes),
@@ -129,7 +129,7 @@ public class Metadata implements
                 _httpRes = sdkConfiguration.hooks()
                     .afterSuccess(
                         new AfterSuccessContextImpl(
-                            "createCommerceMetadata",
+                            "createMetadataMetadata",
                             Optional.of(List.of()), 
                             _hookSecuritySource),
                          _httpRes);
@@ -138,7 +138,7 @@ public class Metadata implements
             _httpRes = sdkConfiguration.hooks()
                     .afterError(
                         new AfterErrorContextImpl(
-                            "createCommerceMetadata",
+                            "createMetadataMetadata",
                             Optional.of(List.of()),
                             _hookSecuritySource), 
                         Optional.empty(),
@@ -148,21 +148,21 @@ public class Metadata implements
             .headers()
             .firstValue("Content-Type")
             .orElse("application/octet-stream");
-        CreateCommerceMetadataResponse.Builder _resBuilder = 
-            CreateCommerceMetadataResponse
+        CreateMetadataMetadataResponse.Builder _resBuilder = 
+            CreateMetadataMetadataResponse
                 .builder()
                 .contentType(_contentType)
                 .statusCode(_httpRes.statusCode())
                 .rawResponse(_httpRes);
 
-        CreateCommerceMetadataResponse _res = _resBuilder.build();
+        CreateMetadataMetadataResponse _res = _resBuilder.build();
         
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                CommerceMetadata _out = Utils.mapper().readValue(
+                MetadataMetadata _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<CommerceMetadata>() {});
-                _res.withCommerceMetadata(Optional.ofNullable(_out));
+                    new TypeReference<MetadataMetadata>() {});
+                _res.withMetadataMetadata(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -193,8 +193,8 @@ public class Metadata implements
      * Retrieve a metadata
      * @return The call builder
      */
-    public GetCommerceMetadataRequestBuilder getCommerceMetadata() {
-        return new GetCommerceMetadataRequestBuilder(this);
+    public GetMetadataMetadataRequestBuilder getMetadataMetadata() {
+        return new GetMetadataMetadataRequestBuilder(this);
     }
 
     /**
@@ -203,13 +203,13 @@ public class Metadata implements
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public GetCommerceMetadataResponse getCommerceMetadata(
-            GetCommerceMetadataRequest request) throws Exception {
+    public GetMetadataMetadataResponse getMetadataMetadata(
+            GetMetadataMetadataRequest request) throws Exception {
         String _baseUrl = this.sdkConfiguration.serverUrl;
         String _url = Utils.generateURL(
-                GetCommerceMetadataRequest.class,
+                GetMetadataMetadataRequest.class,
                 _baseUrl,
-                "/commerce/{connection_id}/metadata/{id}",
+                "/metadata/{connection_id}/metadata/{id}",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "GET");
@@ -218,7 +218,7 @@ public class Metadata implements
                 SDKConfiguration.USER_AGENT);
 
         _req.addQueryParams(Utils.getQueryParams(
-                GetCommerceMetadataRequest.class,
+                GetMetadataMetadataRequest.class,
                 request, 
                 null));
         
@@ -230,7 +230,7 @@ public class Metadata implements
             sdkConfiguration.hooks()
                .beforeRequest(
                   new BeforeRequestContextImpl(
-                      "getCommerceMetadata", 
+                      "getMetadataMetadata", 
                       Optional.of(List.of()), 
                       _hookSecuritySource),
                   _req.build());
@@ -241,7 +241,7 @@ public class Metadata implements
                 _httpRes = sdkConfiguration.hooks()
                     .afterError(
                         new AfterErrorContextImpl(
-                            "getCommerceMetadata",
+                            "getMetadataMetadata",
                             Optional.of(List.of()),
                             _hookSecuritySource),
                         Optional.of(_httpRes),
@@ -250,7 +250,7 @@ public class Metadata implements
                 _httpRes = sdkConfiguration.hooks()
                     .afterSuccess(
                         new AfterSuccessContextImpl(
-                            "getCommerceMetadata",
+                            "getMetadataMetadata",
                             Optional.of(List.of()), 
                             _hookSecuritySource),
                          _httpRes);
@@ -259,7 +259,7 @@ public class Metadata implements
             _httpRes = sdkConfiguration.hooks()
                     .afterError(
                         new AfterErrorContextImpl(
-                            "getCommerceMetadata",
+                            "getMetadataMetadata",
                             Optional.of(List.of()),
                             _hookSecuritySource), 
                         Optional.empty(),
@@ -269,21 +269,21 @@ public class Metadata implements
             .headers()
             .firstValue("Content-Type")
             .orElse("application/octet-stream");
-        GetCommerceMetadataResponse.Builder _resBuilder = 
-            GetCommerceMetadataResponse
+        GetMetadataMetadataResponse.Builder _resBuilder = 
+            GetMetadataMetadataResponse
                 .builder()
                 .contentType(_contentType)
                 .statusCode(_httpRes.statusCode())
                 .rawResponse(_httpRes);
 
-        GetCommerceMetadataResponse _res = _resBuilder.build();
+        GetMetadataMetadataResponse _res = _resBuilder.build();
         
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                CommerceMetadata _out = Utils.mapper().readValue(
+                MetadataMetadata _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<CommerceMetadata>() {});
-                _res.withCommerceMetadata(Optional.ofNullable(_out));
+                    new TypeReference<MetadataMetadata>() {});
+                _res.withMetadataMetadata(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -314,8 +314,8 @@ public class Metadata implements
      * List all metadatas
      * @return The call builder
      */
-    public ListCommerceMetadatasRequestBuilder listCommerceMetadatas() {
-        return new ListCommerceMetadatasRequestBuilder(this);
+    public ListMetadataMetadatasRequestBuilder listMetadataMetadatas() {
+        return new ListMetadataMetadatasRequestBuilder(this);
     }
 
     /**
@@ -324,13 +324,13 @@ public class Metadata implements
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public ListCommerceMetadatasResponse listCommerceMetadatas(
-            ListCommerceMetadatasRequest request) throws Exception {
+    public ListMetadataMetadatasResponse listMetadataMetadatas(
+            ListMetadataMetadatasRequest request) throws Exception {
         String _baseUrl = this.sdkConfiguration.serverUrl;
         String _url = Utils.generateURL(
-                ListCommerceMetadatasRequest.class,
+                ListMetadataMetadatasRequest.class,
                 _baseUrl,
-                "/commerce/{connection_id}/metadata",
+                "/metadata/{connection_id}/metadata",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "GET");
@@ -339,7 +339,7 @@ public class Metadata implements
                 SDKConfiguration.USER_AGENT);
 
         _req.addQueryParams(Utils.getQueryParams(
-                ListCommerceMetadatasRequest.class,
+                ListMetadataMetadatasRequest.class,
                 request, 
                 null));
         
@@ -351,7 +351,7 @@ public class Metadata implements
             sdkConfiguration.hooks()
                .beforeRequest(
                   new BeforeRequestContextImpl(
-                      "listCommerceMetadatas", 
+                      "listMetadataMetadatas", 
                       Optional.of(List.of()), 
                       _hookSecuritySource),
                   _req.build());
@@ -362,7 +362,7 @@ public class Metadata implements
                 _httpRes = sdkConfiguration.hooks()
                     .afterError(
                         new AfterErrorContextImpl(
-                            "listCommerceMetadatas",
+                            "listMetadataMetadatas",
                             Optional.of(List.of()),
                             _hookSecuritySource),
                         Optional.of(_httpRes),
@@ -371,7 +371,7 @@ public class Metadata implements
                 _httpRes = sdkConfiguration.hooks()
                     .afterSuccess(
                         new AfterSuccessContextImpl(
-                            "listCommerceMetadatas",
+                            "listMetadataMetadatas",
                             Optional.of(List.of()), 
                             _hookSecuritySource),
                          _httpRes);
@@ -380,7 +380,7 @@ public class Metadata implements
             _httpRes = sdkConfiguration.hooks()
                     .afterError(
                         new AfterErrorContextImpl(
-                            "listCommerceMetadatas",
+                            "listMetadataMetadatas",
                             Optional.of(List.of()),
                             _hookSecuritySource), 
                         Optional.empty(),
@@ -390,21 +390,21 @@ public class Metadata implements
             .headers()
             .firstValue("Content-Type")
             .orElse("application/octet-stream");
-        ListCommerceMetadatasResponse.Builder _resBuilder = 
-            ListCommerceMetadatasResponse
+        ListMetadataMetadatasResponse.Builder _resBuilder = 
+            ListMetadataMetadatasResponse
                 .builder()
                 .contentType(_contentType)
                 .statusCode(_httpRes.statusCode())
                 .rawResponse(_httpRes);
 
-        ListCommerceMetadatasResponse _res = _resBuilder.build();
+        ListMetadataMetadatasResponse _res = _resBuilder.build();
         
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                List<CommerceMetadata> _out = Utils.mapper().readValue(
+                List<MetadataMetadata> _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<List<CommerceMetadata>>() {});
-                _res.withCommerceMetadatas(Optional.ofNullable(_out));
+                    new TypeReference<List<MetadataMetadata>>() {});
+                _res.withMetadataMetadatas(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -435,8 +435,8 @@ public class Metadata implements
      * Update a metadata
      * @return The call builder
      */
-    public PatchCommerceMetadataRequestBuilder patchCommerceMetadata() {
-        return new PatchCommerceMetadataRequestBuilder(this);
+    public PatchMetadataMetadataRequestBuilder patchMetadataMetadata() {
+        return new PatchMetadataMetadataRequestBuilder(this);
     }
 
     /**
@@ -445,23 +445,23 @@ public class Metadata implements
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public PatchCommerceMetadataResponse patchCommerceMetadata(
-            PatchCommerceMetadataRequest request) throws Exception {
+    public PatchMetadataMetadataResponse patchMetadataMetadata(
+            PatchMetadataMetadataRequest request) throws Exception {
         String _baseUrl = this.sdkConfiguration.serverUrl;
         String _url = Utils.generateURL(
-                PatchCommerceMetadataRequest.class,
+                PatchMetadataMetadataRequest.class,
                 _baseUrl,
-                "/commerce/{connection_id}/metadata/{id}",
+                "/metadata/{connection_id}/metadata/{id}",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "PATCH");
         Object _convertedRequest = Utils.convertToShape(
                 request, 
                 JsonShape.DEFAULT,
-                new TypeReference<PatchCommerceMetadataRequest>() {});
+                new TypeReference<PatchMetadataMetadataRequest>() {});
         SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
                 _convertedRequest, 
-                "commerceMetadata",
+                "metadataMetadata",
                 "json",
                 false);
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
@@ -470,7 +470,7 @@ public class Metadata implements
                 SDKConfiguration.USER_AGENT);
 
         _req.addQueryParams(Utils.getQueryParams(
-                PatchCommerceMetadataRequest.class,
+                PatchMetadataMetadataRequest.class,
                 request, 
                 null));
         
@@ -482,7 +482,7 @@ public class Metadata implements
             sdkConfiguration.hooks()
                .beforeRequest(
                   new BeforeRequestContextImpl(
-                      "patchCommerceMetadata", 
+                      "patchMetadataMetadata", 
                       Optional.of(List.of()), 
                       _hookSecuritySource),
                   _req.build());
@@ -493,7 +493,7 @@ public class Metadata implements
                 _httpRes = sdkConfiguration.hooks()
                     .afterError(
                         new AfterErrorContextImpl(
-                            "patchCommerceMetadata",
+                            "patchMetadataMetadata",
                             Optional.of(List.of()),
                             _hookSecuritySource),
                         Optional.of(_httpRes),
@@ -502,7 +502,7 @@ public class Metadata implements
                 _httpRes = sdkConfiguration.hooks()
                     .afterSuccess(
                         new AfterSuccessContextImpl(
-                            "patchCommerceMetadata",
+                            "patchMetadataMetadata",
                             Optional.of(List.of()), 
                             _hookSecuritySource),
                          _httpRes);
@@ -511,7 +511,7 @@ public class Metadata implements
             _httpRes = sdkConfiguration.hooks()
                     .afterError(
                         new AfterErrorContextImpl(
-                            "patchCommerceMetadata",
+                            "patchMetadataMetadata",
                             Optional.of(List.of()),
                             _hookSecuritySource), 
                         Optional.empty(),
@@ -521,21 +521,21 @@ public class Metadata implements
             .headers()
             .firstValue("Content-Type")
             .orElse("application/octet-stream");
-        PatchCommerceMetadataResponse.Builder _resBuilder = 
-            PatchCommerceMetadataResponse
+        PatchMetadataMetadataResponse.Builder _resBuilder = 
+            PatchMetadataMetadataResponse
                 .builder()
                 .contentType(_contentType)
                 .statusCode(_httpRes.statusCode())
                 .rawResponse(_httpRes);
 
-        PatchCommerceMetadataResponse _res = _resBuilder.build();
+        PatchMetadataMetadataResponse _res = _resBuilder.build();
         
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                CommerceMetadata _out = Utils.mapper().readValue(
+                MetadataMetadata _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<CommerceMetadata>() {});
-                _res.withCommerceMetadata(Optional.ofNullable(_out));
+                    new TypeReference<MetadataMetadata>() {});
+                _res.withMetadataMetadata(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(
@@ -566,8 +566,8 @@ public class Metadata implements
      * Remove a metadata
      * @return The call builder
      */
-    public RemoveCommerceMetadataRequestBuilder removeCommerceMetadata() {
-        return new RemoveCommerceMetadataRequestBuilder(this);
+    public RemoveMetadataMetadataRequestBuilder removeMetadataMetadata() {
+        return new RemoveMetadataMetadataRequestBuilder(this);
     }
 
     /**
@@ -576,13 +576,13 @@ public class Metadata implements
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public RemoveCommerceMetadataResponse removeCommerceMetadata(
-            RemoveCommerceMetadataRequest request) throws Exception {
+    public RemoveMetadataMetadataResponse removeMetadataMetadata(
+            RemoveMetadataMetadataRequest request) throws Exception {
         String _baseUrl = this.sdkConfiguration.serverUrl;
         String _url = Utils.generateURL(
-                RemoveCommerceMetadataRequest.class,
+                RemoveMetadataMetadataRequest.class,
                 _baseUrl,
-                "/commerce/{connection_id}/metadata/{id}",
+                "/metadata/{connection_id}/metadata/{id}",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "DELETE");
@@ -598,7 +598,7 @@ public class Metadata implements
             sdkConfiguration.hooks()
                .beforeRequest(
                   new BeforeRequestContextImpl(
-                      "removeCommerceMetadata", 
+                      "removeMetadataMetadata", 
                       Optional.of(List.of()), 
                       _hookSecuritySource),
                   _req.build());
@@ -609,7 +609,7 @@ public class Metadata implements
                 _httpRes = sdkConfiguration.hooks()
                     .afterError(
                         new AfterErrorContextImpl(
-                            "removeCommerceMetadata",
+                            "removeMetadataMetadata",
                             Optional.of(List.of()),
                             _hookSecuritySource),
                         Optional.of(_httpRes),
@@ -618,7 +618,7 @@ public class Metadata implements
                 _httpRes = sdkConfiguration.hooks()
                     .afterSuccess(
                         new AfterSuccessContextImpl(
-                            "removeCommerceMetadata",
+                            "removeMetadataMetadata",
                             Optional.of(List.of()), 
                             _hookSecuritySource),
                          _httpRes);
@@ -627,7 +627,7 @@ public class Metadata implements
             _httpRes = sdkConfiguration.hooks()
                     .afterError(
                         new AfterErrorContextImpl(
-                            "removeCommerceMetadata",
+                            "removeMetadataMetadata",
                             Optional.of(List.of()),
                             _hookSecuritySource), 
                         Optional.empty(),
@@ -637,14 +637,14 @@ public class Metadata implements
             .headers()
             .firstValue("Content-Type")
             .orElse("application/octet-stream");
-        RemoveCommerceMetadataResponse.Builder _resBuilder = 
-            RemoveCommerceMetadataResponse
+        RemoveMetadataMetadataResponse.Builder _resBuilder = 
+            RemoveMetadataMetadataResponse
                 .builder()
                 .contentType(_contentType)
                 .statusCode(_httpRes.statusCode())
                 .rawResponse(_httpRes);
 
-        RemoveCommerceMetadataResponse _res = _resBuilder.build();
+        RemoveMetadataMetadataResponse _res = _resBuilder.build();
         
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
             // no content 
@@ -676,8 +676,8 @@ public class Metadata implements
      * Update a metadata
      * @return The call builder
      */
-    public UpdateCommerceMetadataRequestBuilder updateCommerceMetadata() {
-        return new UpdateCommerceMetadataRequestBuilder(this);
+    public UpdateMetadataMetadataRequestBuilder updateMetadataMetadata() {
+        return new UpdateMetadataMetadataRequestBuilder(this);
     }
 
     /**
@@ -686,23 +686,23 @@ public class Metadata implements
      * @return The response from the API call
      * @throws Exception if the API call fails
      */
-    public UpdateCommerceMetadataResponse updateCommerceMetadata(
-            UpdateCommerceMetadataRequest request) throws Exception {
+    public UpdateMetadataMetadataResponse updateMetadataMetadata(
+            UpdateMetadataMetadataRequest request) throws Exception {
         String _baseUrl = this.sdkConfiguration.serverUrl;
         String _url = Utils.generateURL(
-                UpdateCommerceMetadataRequest.class,
+                UpdateMetadataMetadataRequest.class,
                 _baseUrl,
-                "/commerce/{connection_id}/metadata/{id}",
+                "/metadata/{connection_id}/metadata/{id}",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "PUT");
         Object _convertedRequest = Utils.convertToShape(
                 request, 
                 JsonShape.DEFAULT,
-                new TypeReference<UpdateCommerceMetadataRequest>() {});
+                new TypeReference<UpdateMetadataMetadataRequest>() {});
         SerializedBody _serializedRequestBody = Utils.serializeRequestBody(
                 _convertedRequest, 
-                "commerceMetadata",
+                "metadataMetadata",
                 "json",
                 false);
         _req.setBody(Optional.ofNullable(_serializedRequestBody));
@@ -711,7 +711,7 @@ public class Metadata implements
                 SDKConfiguration.USER_AGENT);
 
         _req.addQueryParams(Utils.getQueryParams(
-                UpdateCommerceMetadataRequest.class,
+                UpdateMetadataMetadataRequest.class,
                 request, 
                 null));
         
@@ -723,7 +723,7 @@ public class Metadata implements
             sdkConfiguration.hooks()
                .beforeRequest(
                   new BeforeRequestContextImpl(
-                      "updateCommerceMetadata", 
+                      "updateMetadataMetadata", 
                       Optional.of(List.of()), 
                       _hookSecuritySource),
                   _req.build());
@@ -734,7 +734,7 @@ public class Metadata implements
                 _httpRes = sdkConfiguration.hooks()
                     .afterError(
                         new AfterErrorContextImpl(
-                            "updateCommerceMetadata",
+                            "updateMetadataMetadata",
                             Optional.of(List.of()),
                             _hookSecuritySource),
                         Optional.of(_httpRes),
@@ -743,7 +743,7 @@ public class Metadata implements
                 _httpRes = sdkConfiguration.hooks()
                     .afterSuccess(
                         new AfterSuccessContextImpl(
-                            "updateCommerceMetadata",
+                            "updateMetadataMetadata",
                             Optional.of(List.of()), 
                             _hookSecuritySource),
                          _httpRes);
@@ -752,7 +752,7 @@ public class Metadata implements
             _httpRes = sdkConfiguration.hooks()
                     .afterError(
                         new AfterErrorContextImpl(
-                            "updateCommerceMetadata",
+                            "updateMetadataMetadata",
                             Optional.of(List.of()),
                             _hookSecuritySource), 
                         Optional.empty(),
@@ -762,21 +762,21 @@ public class Metadata implements
             .headers()
             .firstValue("Content-Type")
             .orElse("application/octet-stream");
-        UpdateCommerceMetadataResponse.Builder _resBuilder = 
-            UpdateCommerceMetadataResponse
+        UpdateMetadataMetadataResponse.Builder _resBuilder = 
+            UpdateMetadataMetadataResponse
                 .builder()
                 .contentType(_contentType)
                 .statusCode(_httpRes.statusCode())
                 .rawResponse(_httpRes);
 
-        UpdateCommerceMetadataResponse _res = _resBuilder.build();
+        UpdateMetadataMetadataResponse _res = _resBuilder.build();
         
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "200")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                CommerceMetadata _out = Utils.mapper().readValue(
+                MetadataMetadata _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<CommerceMetadata>() {});
-                _res.withCommerceMetadata(Optional.ofNullable(_out));
+                    new TypeReference<MetadataMetadata>() {});
+                _res.withMetadataMetadata(Optional.ofNullable(_out));
                 return _res;
             } else {
                 throw new SDKError(

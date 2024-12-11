@@ -81,8 +81,6 @@ public class UnifiedTo {
 
     private final Location location;
 
-    private final Metadata metadata;
-
     private final Crm crm;
 
     private final Deal deal;
@@ -140,6 +138,8 @@ public class UnifiedTo {
     private final Channel channel;
 
     private final Message message;
+
+    private final Metadata metadata;
 
     private final Passthrough passthrough;
 
@@ -297,10 +297,6 @@ public class UnifiedTo {
         return location;
     }
 
-    public Metadata metadata() {
-        return metadata;
-    }
-
     public Crm crm() {
         return crm;
     }
@@ -415,6 +411,10 @@ public class UnifiedTo {
 
     public Message message() {
         return message;
+    }
+
+    public Metadata metadata() {
+        return metadata;
     }
 
     public Passthrough passthrough() {
@@ -682,7 +682,6 @@ public class UnifiedTo {
         this.inventory = new Inventory(sdkConfiguration);
         this.item = new Item(sdkConfiguration);
         this.location = new Location(sdkConfiguration);
-        this.metadata = new Metadata(sdkConfiguration);
         this.crm = new Crm(sdkConfiguration);
         this.deal = new Deal(sdkConfiguration);
         this.event = new Event(sdkConfiguration);
@@ -712,6 +711,7 @@ public class UnifiedTo {
         this.messaging = new Messaging(sdkConfiguration);
         this.channel = new Channel(sdkConfiguration);
         this.message = new Message(sdkConfiguration);
+        this.metadata = new Metadata(sdkConfiguration);
         this.passthrough = new Passthrough(sdkConfiguration);
         this.payment = new Payment(sdkConfiguration);
         this.link = new Link(sdkConfiguration);

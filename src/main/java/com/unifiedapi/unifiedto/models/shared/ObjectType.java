@@ -24,7 +24,6 @@ public enum ObjectType {
     COMMERCE_COLLECTION("commerce_collection"),
     COMMERCE_INVENTORY("commerce_inventory"),
     COMMERCE_LOCATION("commerce_location"),
-    COMMERCE_METADATA("commerce_metadata"),
     ATS_ACTIVITY("ats_activity"),
     ATS_APPLICATION("ats_application"),
     ATS_APPLICATIONSTATUS("ats_applicationstatus"),
@@ -75,7 +74,8 @@ public enum ObjectType {
     REPO_REPOSITORY("repo_repository"),
     REPO_BRANCH("repo_branch"),
     REPO_COMMIT("repo_commit"),
-    REPO_PULLREQUEST("repo_pullrequest");
+    REPO_PULLREQUEST("repo_pullrequest"),
+    METADATA_METADATA("metadata_metadata");
 
     @JsonValue
     private final String value;

@@ -9,32 +9,26 @@
 * [createCommerceInventory](#createcommerceinventory) - Create an inventory
 * [createCommerceItem](#createcommerceitem) - Create an item
 * [createCommerceLocation](#createcommercelocation) - Create a location
-* [createCommerceMetadata](#createcommercemetadata) - Create a metadata
 * [getCommerceCollection](#getcommercecollection) - Retrieve a collection
 * [getCommerceInventory](#getcommerceinventory) - Retrieve an inventory
 * [getCommerceItem](#getcommerceitem) - Retrieve an item
 * [getCommerceLocation](#getcommercelocation) - Retrieve a location
-* [getCommerceMetadata](#getcommercemetadata) - Retrieve a metadata
 * [listCommerceCollections](#listcommercecollections) - List all collections
 * [listCommerceInventories](#listcommerceinventories) - List all inventories
 * [listCommerceItems](#listcommerceitems) - List all items
 * [listCommerceLocations](#listcommercelocations) - List all locations
-* [listCommerceMetadatas](#listcommercemetadatas) - List all metadatas
 * [patchCommerceCollection](#patchcommercecollection) - Update a collection
 * [patchCommerceInventory](#patchcommerceinventory) - Update an inventory
 * [patchCommerceItem](#patchcommerceitem) - Update an item
 * [patchCommerceLocation](#patchcommercelocation) - Update a location
-* [patchCommerceMetadata](#patchcommercemetadata) - Update a metadata
 * [removeCommerceCollection](#removecommercecollection) - Remove a collection
 * [removeCommerceInventory](#removecommerceinventory) - Remove an inventory
 * [removeCommerceItem](#removecommerceitem) - Remove an item
 * [removeCommerceLocation](#removecommercelocation) - Remove a location
-* [removeCommerceMetadata](#removecommercemetadata) - Remove a metadata
 * [updateCommerceCollection](#updatecommercecollection) - Update a collection
 * [updateCommerceInventory](#updatecommerceinventory) - Update an inventory
 * [updateCommerceItem](#updatecommerceitem) - Update an item
 * [updateCommerceLocation](#updatecommercelocation) - Update a location
-* [updateCommerceMetadata](#updatecommercemetadata) - Update a metadata
 
 ## createCommerceCollection
 
@@ -253,62 +247,6 @@ public class Application {
 ### Response
 
 **[CreateCommerceLocationResponse](../../models/operations/CreateCommerceLocationResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## createCommerceMetadata
-
-Create a metadata
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.CreateCommerceMetadataRequest;
-import com.unifiedapi.unifiedto.models.operations.CreateCommerceMetadataResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
-import java.lang.Exception;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
-                    .build())
-            .build();
-
-        CreateCommerceMetadataRequest req = CreateCommerceMetadataRequest.builder()
-                .connectionId("<id>")
-                .build();
-
-        CreateCommerceMetadataResponse res = sdk.commerce().createCommerceMetadata()
-                .request(req)
-                .call();
-
-        if (res.commerceMetadata().isPresent()) {
-            // handle response
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [CreateCommerceMetadataRequest](../../models/operations/CreateCommerceMetadataRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
-
-### Response
-
-**[CreateCommerceMetadataResponse](../../models/operations/CreateCommerceMetadataResponse.md)**
 
 ### Errors
 
@@ -544,63 +482,6 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getCommerceMetadata
-
-Retrieve a metadata
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.GetCommerceMetadataRequest;
-import com.unifiedapi.unifiedto.models.operations.GetCommerceMetadataResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
-import java.lang.Exception;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
-                    .build())
-            .build();
-
-        GetCommerceMetadataRequest req = GetCommerceMetadataRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        GetCommerceMetadataResponse res = sdk.commerce().getCommerceMetadata()
-                .request(req)
-                .call();
-
-        if (res.commerceMetadata().isPresent()) {
-            // handle response
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [GetCommerceMetadataRequest](../../models/operations/GetCommerceMetadataRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
-
-### Response
-
-**[GetCommerceMetadataResponse](../../models/operations/GetCommerceMetadataResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
 ## listCommerceCollections
 
 List all collections
@@ -818,62 +699,6 @@ public class Application {
 ### Response
 
 **[ListCommerceLocationsResponse](../../models/operations/ListCommerceLocationsResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## listCommerceMetadatas
-
-List all metadatas
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.ListCommerceMetadatasRequest;
-import com.unifiedapi.unifiedto.models.operations.ListCommerceMetadatasResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
-import java.lang.Exception;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
-                    .build())
-            .build();
-
-        ListCommerceMetadatasRequest req = ListCommerceMetadatasRequest.builder()
-                .connectionId("<id>")
-                .build();
-
-        ListCommerceMetadatasResponse res = sdk.commerce().listCommerceMetadatas()
-                .request(req)
-                .call();
-
-        if (res.commerceMetadatas().isPresent()) {
-            // handle response
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [ListCommerceMetadatasRequest](../../models/operations/ListCommerceMetadatasRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
-
-### Response
-
-**[ListCommerceMetadatasResponse](../../models/operations/ListCommerceMetadatasResponse.md)**
 
 ### Errors
 
@@ -1109,63 +934,6 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchCommerceMetadata
-
-Update a metadata
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.PatchCommerceMetadataRequest;
-import com.unifiedapi.unifiedto.models.operations.PatchCommerceMetadataResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
-import java.lang.Exception;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
-                    .build())
-            .build();
-
-        PatchCommerceMetadataRequest req = PatchCommerceMetadataRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        PatchCommerceMetadataResponse res = sdk.commerce().patchCommerceMetadata()
-                .request(req)
-                .call();
-
-        if (res.commerceMetadata().isPresent()) {
-            // handle response
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [PatchCommerceMetadataRequest](../../models/operations/PatchCommerceMetadataRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
-
-### Response
-
-**[PatchCommerceMetadataResponse](../../models/operations/PatchCommerceMetadataResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
 ## removeCommerceCollection
 
 Remove a collection
@@ -1379,61 +1147,6 @@ public class Application {
 ### Response
 
 **[RemoveCommerceLocationResponse](../../models/operations/RemoveCommerceLocationResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeCommerceMetadata
-
-Remove a metadata
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.RemoveCommerceMetadataRequest;
-import com.unifiedapi.unifiedto.models.operations.RemoveCommerceMetadataResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
-import java.lang.Exception;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
-                    .build())
-            .build();
-
-        RemoveCommerceMetadataRequest req = RemoveCommerceMetadataRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveCommerceMetadataResponse res = sdk.commerce().removeCommerceMetadata()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [RemoveCommerceMetadataRequest](../../models/operations/RemoveCommerceMetadataRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
-
-### Response
-
-**[RemoveCommerceMetadataResponse](../../models/operations/RemoveCommerceMetadataResponse.md)**
 
 ### Errors
 
@@ -1662,63 +1375,6 @@ public class Application {
 ### Response
 
 **[UpdateCommerceLocationResponse](../../models/operations/UpdateCommerceLocationResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateCommerceMetadata
-
-Update a metadata
-
-### Example Usage
-
-```java
-package hello.world;
-
-import com.unifiedapi.unifiedto.UnifiedTo;
-import com.unifiedapi.unifiedto.models.operations.UpdateCommerceMetadataRequest;
-import com.unifiedapi.unifiedto.models.operations.UpdateCommerceMetadataResponse;
-import com.unifiedapi.unifiedto.models.shared.Security;
-import java.lang.Exception;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt("<YOUR_API_KEY_HERE>")
-                    .build())
-            .build();
-
-        UpdateCommerceMetadataRequest req = UpdateCommerceMetadataRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateCommerceMetadataResponse res = sdk.commerce().updateCommerceMetadata()
-                .request(req)
-                .call();
-
-        if (res.commerceMetadata().isPresent()) {
-            // handle response
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [UpdateCommerceMetadataRequest](../../models/operations/UpdateCommerceMetadataRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
-
-### Response
-
-**[UpdateCommerceMetadataResponse](../../models/operations/UpdateCommerceMetadataResponse.md)**
 
 ### Errors
 

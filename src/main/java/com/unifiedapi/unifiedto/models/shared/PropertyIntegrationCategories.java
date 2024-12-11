@@ -27,7 +27,8 @@ public enum PropertyIntegrationCategories {
     TASK("task"),
     SCIM("scim"),
     LMS("lms"),
-    REPO("repo");
+    REPO("repo"),
+    METADATA("metadata");
 
     @JsonValue
     private final String value;

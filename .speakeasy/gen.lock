@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 42f573170bad12dc387a71808ef7cd22
+  docChecksum: 41f6fed774011bab102d612247a8bfd9
   docVersion: "1.0"
-  speakeasyVersion: 1.453.1
-  generationVersion: 2.474.4
-  releaseVersion: 0.26.0
-  configChecksum: 256ebf52686151d722f576d4c134a955
+  speakeasyVersion: 1.453.10
+  generationVersion: 2.474.15
+  releaseVersion: 0.26.1
+  configChecksum: 488d0875653a800238eecbb6fa0df350
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -15,7 +15,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.1
-    core: 3.33.0
+    core: 3.33.1
     downloadStreams: 0.1.1
     globalSecurity: 2.82.7
     globalSecurityCallbacks: 0.1.0
@@ -63,8 +63,6 @@ generatedFiles:
   - docs/models/operations/CreateCommerceItemResponse.md
   - docs/models/operations/CreateCommerceLocationRequest.md
   - docs/models/operations/CreateCommerceLocationResponse.md
-  - docs/models/operations/CreateCommerceMetadataRequest.md
-  - docs/models/operations/CreateCommerceMetadataResponse.md
   - docs/models/operations/CreateCrmCompanyRequest.md
   - docs/models/operations/CreateCrmCompanyResponse.md
   - docs/models/operations/CreateCrmContactRequest.md
@@ -105,6 +103,8 @@ generatedFiles:
   - docs/models/operations/CreateMartechMemberResponse.md
   - docs/models/operations/CreateMessagingMessageRequest.md
   - docs/models/operations/CreateMessagingMessageResponse.md
+  - docs/models/operations/CreateMetadataMetadataRequest.md
+  - docs/models/operations/CreateMetadataMetadataResponse.md
   - docs/models/operations/CreatePassthroughJsonRequest.md
   - docs/models/operations/CreatePassthroughJsonResponse.md
   - docs/models/operations/CreatePassthroughRawRequest.md
@@ -184,8 +184,6 @@ generatedFiles:
   - docs/models/operations/GetCommerceItemResponse.md
   - docs/models/operations/GetCommerceLocationRequest.md
   - docs/models/operations/GetCommerceLocationResponse.md
-  - docs/models/operations/GetCommerceMetadataRequest.md
-  - docs/models/operations/GetCommerceMetadataResponse.md
   - docs/models/operations/GetCrmCompanyRequest.md
   - docs/models/operations/GetCrmCompanyResponse.md
   - docs/models/operations/GetCrmContactRequest.md
@@ -230,6 +228,8 @@ generatedFiles:
   - docs/models/operations/GetMessagingChannelResponse.md
   - docs/models/operations/GetMessagingMessageRequest.md
   - docs/models/operations/GetMessagingMessageResponse.md
+  - docs/models/operations/GetMetadataMetadataRequest.md
+  - docs/models/operations/GetMetadataMetadataResponse.md
   - docs/models/operations/GetPaymentLinkRequest.md
   - docs/models/operations/GetPaymentLinkResponse.md
   - docs/models/operations/GetPaymentPaymentRequest.md
@@ -318,8 +318,6 @@ generatedFiles:
   - docs/models/operations/ListCommerceItemsResponse.md
   - docs/models/operations/ListCommerceLocationsRequest.md
   - docs/models/operations/ListCommerceLocationsResponse.md
-  - docs/models/operations/ListCommerceMetadatasRequest.md
-  - docs/models/operations/ListCommerceMetadatasResponse.md
   - docs/models/operations/ListCrmCompaniesRequest.md
   - docs/models/operations/ListCrmCompaniesResponse.md
   - docs/models/operations/ListCrmContactsRequest.md
@@ -370,6 +368,8 @@ generatedFiles:
   - docs/models/operations/ListMessagingChannelsResponse.md
   - docs/models/operations/ListMessagingMessagesRequest.md
   - docs/models/operations/ListMessagingMessagesResponse.md
+  - docs/models/operations/ListMetadataMetadatasRequest.md
+  - docs/models/operations/ListMetadataMetadatasResponse.md
   - docs/models/operations/ListPassthroughsRequest.md
   - docs/models/operations/ListPassthroughsResponse.md
   - docs/models/operations/ListPaymentLinksRequest.md
@@ -459,8 +459,6 @@ generatedFiles:
   - docs/models/operations/PatchCommerceItemResponse.md
   - docs/models/operations/PatchCommerceLocationRequest.md
   - docs/models/operations/PatchCommerceLocationResponse.md
-  - docs/models/operations/PatchCommerceMetadataRequest.md
-  - docs/models/operations/PatchCommerceMetadataResponse.md
   - docs/models/operations/PatchCrmCompanyRequest.md
   - docs/models/operations/PatchCrmCompanyResponse.md
   - docs/models/operations/PatchCrmContactRequest.md
@@ -499,6 +497,8 @@ generatedFiles:
   - docs/models/operations/PatchMartechMemberResponse.md
   - docs/models/operations/PatchMessagingMessageRequest.md
   - docs/models/operations/PatchMessagingMessageResponse.md
+  - docs/models/operations/PatchMetadataMetadataRequest.md
+  - docs/models/operations/PatchMetadataMetadataResponse.md
   - docs/models/operations/PatchPassthroughJsonRequest.md
   - docs/models/operations/PatchPassthroughJsonResponse.md
   - docs/models/operations/PatchPassthroughRawRequest.md
@@ -578,8 +578,6 @@ generatedFiles:
   - docs/models/operations/RemoveCommerceItemResponse.md
   - docs/models/operations/RemoveCommerceLocationRequest.md
   - docs/models/operations/RemoveCommerceLocationResponse.md
-  - docs/models/operations/RemoveCommerceMetadataRequest.md
-  - docs/models/operations/RemoveCommerceMetadataResponse.md
   - docs/models/operations/RemoveCrmCompanyRequest.md
   - docs/models/operations/RemoveCrmCompanyResponse.md
   - docs/models/operations/RemoveCrmContactRequest.md
@@ -618,6 +616,8 @@ generatedFiles:
   - docs/models/operations/RemoveMartechMemberResponse.md
   - docs/models/operations/RemoveMessagingMessageRequest.md
   - docs/models/operations/RemoveMessagingMessageResponse.md
+  - docs/models/operations/RemoveMetadataMetadataRequest.md
+  - docs/models/operations/RemoveMetadataMetadataResponse.md
   - docs/models/operations/RemovePassthroughRequest.md
   - docs/models/operations/RemovePassthroughResponse.md
   - docs/models/operations/RemovePaymentLinkRequest.md
@@ -693,8 +693,6 @@ generatedFiles:
   - docs/models/operations/UpdateCommerceItemResponse.md
   - docs/models/operations/UpdateCommerceLocationRequest.md
   - docs/models/operations/UpdateCommerceLocationResponse.md
-  - docs/models/operations/UpdateCommerceMetadataRequest.md
-  - docs/models/operations/UpdateCommerceMetadataResponse.md
   - docs/models/operations/UpdateCrmCompanyRequest.md
   - docs/models/operations/UpdateCrmCompanyResponse.md
   - docs/models/operations/UpdateCrmContactRequest.md
@@ -733,6 +731,8 @@ generatedFiles:
   - docs/models/operations/UpdateMartechMemberResponse.md
   - docs/models/operations/UpdateMessagingMessageRequest.md
   - docs/models/operations/UpdateMessagingMessageResponse.md
+  - docs/models/operations/UpdateMetadataMetadataRequest.md
+  - docs/models/operations/UpdateMetadataMetadataResponse.md
   - docs/models/operations/UpdatePassthroughJsonRequest.md
   - docs/models/operations/UpdatePassthroughJsonResponse.md
   - docs/models/operations/UpdatePassthroughRawRequest.md
@@ -837,7 +837,6 @@ generatedFiles:
   - docs/models/shared/CommerceItemPrice.md
   - docs/models/shared/CommerceItemVariant.md
   - docs/models/shared/CommerceLocation.md
-  - docs/models/shared/CommerceMetadata.md
   - docs/models/shared/Connection.md
   - docs/models/shared/CrmCompany.md
   - docs/models/shared/CrmContact.md
@@ -951,6 +950,7 @@ generatedFiles:
   - docs/models/shared/MessagingChannel.md
   - docs/models/shared/MessagingMember.md
   - docs/models/shared/MessagingMessage.md
+  - docs/models/shared/MetadataMetadata.md
   - docs/models/shared/NativeWebhookParentId.md
   - docs/models/shared/NativeWebhookProjectId.md
   - docs/models/shared/ObjectType.md
@@ -1325,9 +1325,6 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCommerceLocationRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCommerceLocationRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCommerceLocationResponse.java
-  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCommerceMetadataRequest.java
-  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCommerceMetadataRequestBuilder.java
-  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCommerceMetadataResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmCompanyRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmCompanyRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateCrmCompanyResponse.java
@@ -1388,6 +1385,9 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateMessagingMessageRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateMessagingMessageRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateMessagingMessageResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateMetadataMetadataRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateMetadataMetadataRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateMetadataMetadataResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreatePassthroughJsonRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreatePassthroughJsonRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreatePassthroughJsonResponse.java
@@ -1507,9 +1507,6 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetCommerceLocationRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetCommerceLocationRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetCommerceLocationResponse.java
-  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetCommerceMetadataRequest.java
-  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetCommerceMetadataRequestBuilder.java
-  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetCommerceMetadataResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmCompanyRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmCompanyRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetCrmCompanyResponse.java
@@ -1576,6 +1573,9 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetMessagingMessageRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetMessagingMessageRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetMessagingMessageResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetMetadataMetadataRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetMetadataMetadataRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetMetadataMetadataResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetPaymentLinkRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetPaymentLinkRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetPaymentLinkResponse.java
@@ -1708,9 +1708,6 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListCommerceLocationsRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListCommerceLocationsRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListCommerceLocationsResponse.java
-  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListCommerceMetadatasRequest.java
-  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListCommerceMetadatasRequestBuilder.java
-  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListCommerceMetadatasResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmCompaniesRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmCompaniesRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListCrmCompaniesResponse.java
@@ -1786,6 +1783,9 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListMessagingMessagesRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListMessagingMessagesRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListMessagingMessagesResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListMetadataMetadatasRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListMetadataMetadatasRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListMetadataMetadatasResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListPassthroughsRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListPassthroughsRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListPassthroughsResponse.java
@@ -1919,9 +1919,6 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCommerceLocationRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCommerceLocationRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCommerceLocationResponse.java
-  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCommerceMetadataRequest.java
-  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCommerceMetadataRequestBuilder.java
-  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCommerceMetadataResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmCompanyRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmCompanyRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchCrmCompanyResponse.java
@@ -1979,6 +1976,9 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchMessagingMessageRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchMessagingMessageRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchMessagingMessageResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchMetadataMetadataRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchMetadataMetadataRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchMetadataMetadataResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchPassthroughJsonRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchPassthroughJsonRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchPassthroughJsonResponse.java
@@ -2097,9 +2097,6 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCommerceLocationRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCommerceLocationRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCommerceLocationResponse.java
-  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCommerceMetadataRequest.java
-  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCommerceMetadataRequestBuilder.java
-  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCommerceMetadataResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmCompanyRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmCompanyRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveCrmCompanyResponse.java
@@ -2157,6 +2154,9 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveMessagingMessageRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveMessagingMessageRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveMessagingMessageResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveMetadataMetadataRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveMetadataMetadataRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveMetadataMetadataResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemovePassthroughRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemovePassthroughRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemovePassthroughResponse.java
@@ -2270,9 +2270,6 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCommerceLocationRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCommerceLocationRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCommerceLocationResponse.java
-  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCommerceMetadataRequest.java
-  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCommerceMetadataRequestBuilder.java
-  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCommerceMetadataResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmCompanyRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmCompanyRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateCrmCompanyResponse.java
@@ -2330,6 +2327,9 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateMessagingMessageRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateMessagingMessageRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateMessagingMessageResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateMetadataMetadataRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateMetadataMetadataRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateMetadataMetadataResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePassthroughJsonRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePassthroughJsonRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePassthroughJsonResponse.java
@@ -2455,7 +2455,6 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceItemPrice.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceItemVariant.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceLocation.java
-  - src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceMetadata.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Connection.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmCompany.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmContact.java
@@ -2569,6 +2568,7 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/MessagingChannel.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/MessagingMember.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/MessagingMessage.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/MetadataMetadata.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/NativeWebhookParentId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/NativeWebhookProjectId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ObjectType.java
@@ -5619,4 +5619,58 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+  createMetadataMetadata:
+    speakeasy-default-create-metadata-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>", "object_type": "<value>"}
+  getMetadataMetadata:
+    speakeasy-default-get-metadata-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>", "object_type": "<value>"}
+  listMetadataMetadatas:
+    speakeasy-default-list-metadata-metadatas:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: []
+  patchMetadataMetadata:
+    speakeasy-default-patch-metadata-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>", "object_type": "<value>"}
+  removeMetadataMetadata:
+    speakeasy-default-remove-metadata-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateMetadataMetadata:
+    speakeasy-default-update-metadata-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>", "object_type": "<value>"}
 generatedTests: {}

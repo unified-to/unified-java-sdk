@@ -33,7 +33,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'com.unifiedapi:unifiedto:0.26.0'
+implementation 'com.unifiedapi:unifiedto:0.26.1'
 ```
 
 Maven:
@@ -41,7 +41,7 @@ Maven:
 <dependency>
     <groupId>com.unifiedapi</groupId>
     <artifactId>unifiedto</artifactId>
-    <version>0.26.0</version>
+    <version>0.26.1</version>
 </dependency>
 ```
 
@@ -293,32 +293,26 @@ public class Application {
 * [createCommerceInventory](docs/sdks/commerce/README.md#createcommerceinventory) - Create an inventory
 * [createCommerceItem](docs/sdks/commerce/README.md#createcommerceitem) - Create an item
 * [createCommerceLocation](docs/sdks/commerce/README.md#createcommercelocation) - Create a location
-* [createCommerceMetadata](docs/sdks/commerce/README.md#createcommercemetadata) - Create a metadata
 * [getCommerceCollection](docs/sdks/commerce/README.md#getcommercecollection) - Retrieve a collection
 * [getCommerceInventory](docs/sdks/commerce/README.md#getcommerceinventory) - Retrieve an inventory
 * [getCommerceItem](docs/sdks/commerce/README.md#getcommerceitem) - Retrieve an item
 * [getCommerceLocation](docs/sdks/commerce/README.md#getcommercelocation) - Retrieve a location
-* [getCommerceMetadata](docs/sdks/commerce/README.md#getcommercemetadata) - Retrieve a metadata
 * [listCommerceCollections](docs/sdks/commerce/README.md#listcommercecollections) - List all collections
 * [listCommerceInventories](docs/sdks/commerce/README.md#listcommerceinventories) - List all inventories
 * [listCommerceItems](docs/sdks/commerce/README.md#listcommerceitems) - List all items
 * [listCommerceLocations](docs/sdks/commerce/README.md#listcommercelocations) - List all locations
-* [listCommerceMetadatas](docs/sdks/commerce/README.md#listcommercemetadatas) - List all metadatas
 * [patchCommerceCollection](docs/sdks/commerce/README.md#patchcommercecollection) - Update a collection
 * [patchCommerceInventory](docs/sdks/commerce/README.md#patchcommerceinventory) - Update an inventory
 * [patchCommerceItem](docs/sdks/commerce/README.md#patchcommerceitem) - Update an item
 * [patchCommerceLocation](docs/sdks/commerce/README.md#patchcommercelocation) - Update a location
-* [patchCommerceMetadata](docs/sdks/commerce/README.md#patchcommercemetadata) - Update a metadata
 * [removeCommerceCollection](docs/sdks/commerce/README.md#removecommercecollection) - Remove a collection
 * [removeCommerceInventory](docs/sdks/commerce/README.md#removecommerceinventory) - Remove an inventory
 * [removeCommerceItem](docs/sdks/commerce/README.md#removecommerceitem) - Remove an item
 * [removeCommerceLocation](docs/sdks/commerce/README.md#removecommercelocation) - Remove a location
-* [removeCommerceMetadata](docs/sdks/commerce/README.md#removecommercemetadata) - Remove a metadata
 * [updateCommerceCollection](docs/sdks/commerce/README.md#updatecommercecollection) - Update a collection
 * [updateCommerceInventory](docs/sdks/commerce/README.md#updatecommerceinventory) - Update an inventory
 * [updateCommerceItem](docs/sdks/commerce/README.md#updatecommerceitem) - Update an item
 * [updateCommerceLocation](docs/sdks/commerce/README.md#updatecommercelocation) - Update a location
-* [updateCommerceMetadata](docs/sdks/commerce/README.md#updatecommercemetadata) - Update a metadata
 
 ### [commit()](docs/sdks/commit/README.md)
 
@@ -742,12 +736,12 @@ public class Application {
 
 ### [metadata()](docs/sdks/metadata/README.md)
 
-* [createCommerceMetadata](docs/sdks/metadata/README.md#createcommercemetadata) - Create a metadata
-* [getCommerceMetadata](docs/sdks/metadata/README.md#getcommercemetadata) - Retrieve a metadata
-* [listCommerceMetadatas](docs/sdks/metadata/README.md#listcommercemetadatas) - List all metadatas
-* [patchCommerceMetadata](docs/sdks/metadata/README.md#patchcommercemetadata) - Update a metadata
-* [removeCommerceMetadata](docs/sdks/metadata/README.md#removecommercemetadata) - Remove a metadata
-* [updateCommerceMetadata](docs/sdks/metadata/README.md#updatecommercemetadata) - Update a metadata
+* [createMetadataMetadata](docs/sdks/metadata/README.md#createmetadatametadata) - Create a metadata
+* [getMetadataMetadata](docs/sdks/metadata/README.md#getmetadatametadata) - Retrieve a metadata
+* [listMetadataMetadatas](docs/sdks/metadata/README.md#listmetadatametadatas) - List all metadatas
+* [patchMetadataMetadata](docs/sdks/metadata/README.md#patchmetadatametadata) - Update a metadata
+* [removeMetadataMetadata](docs/sdks/metadata/README.md#removemetadatametadata) - Remove a metadata
+* [updateMetadataMetadata](docs/sdks/metadata/README.md#updatemetadatametadata) - Update a metadata
 
 ### [model()](docs/sdks/model/README.md)
 
