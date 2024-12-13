@@ -21,6 +21,10 @@ import java.util.Optional;
 public class MessagingAttachment {
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("content_identifier")
+    private Optional<String> contentIdentifier;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content_type")
     private Optional<String> contentType;
 
@@ -42,16 +46,19 @@ public class MessagingAttachment {
 
     @JsonCreator
     public MessagingAttachment(
+            @JsonProperty("content_identifier") Optional<String> contentIdentifier,
             @JsonProperty("content_type") Optional<String> contentType,
             @JsonProperty("download_url") Optional<String> downloadUrl,
             @JsonProperty("filename") Optional<String> filename,
             @JsonProperty("message_id") Optional<String> messageId,
             @JsonProperty("size") Optional<Double> size) {
+        Utils.checkNotNull(contentIdentifier, "contentIdentifier");
         Utils.checkNotNull(contentType, "contentType");
         Utils.checkNotNull(downloadUrl, "downloadUrl");
         Utils.checkNotNull(filename, "filename");
         Utils.checkNotNull(messageId, "messageId");
         Utils.checkNotNull(size, "size");
+        this.contentIdentifier = contentIdentifier;
         this.contentType = contentType;
         this.downloadUrl = downloadUrl;
         this.filename = filename;
@@ -60,7 +67,12 @@ public class MessagingAttachment {
     }
     
     public MessagingAttachment() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+    }
+
+    @JsonIgnore
+    public Optional<String> contentIdentifier() {
+        return contentIdentifier;
     }
 
     @JsonIgnore
@@ -90,6 +102,18 @@ public class MessagingAttachment {
 
     public final static Builder builder() {
         return new Builder();
+    }
+
+    public MessagingAttachment withContentIdentifier(String contentIdentifier) {
+        Utils.checkNotNull(contentIdentifier, "contentIdentifier");
+        this.contentIdentifier = Optional.ofNullable(contentIdentifier);
+        return this;
+    }
+
+    public MessagingAttachment withContentIdentifier(Optional<String> contentIdentifier) {
+        Utils.checkNotNull(contentIdentifier, "contentIdentifier");
+        this.contentIdentifier = contentIdentifier;
+        return this;
     }
 
     public MessagingAttachment withContentType(String contentType) {
@@ -162,6 +186,7 @@ public class MessagingAttachment {
         }
         MessagingAttachment other = (MessagingAttachment) o;
         return 
+            Objects.deepEquals(this.contentIdentifier, other.contentIdentifier) &&
             Objects.deepEquals(this.contentType, other.contentType) &&
             Objects.deepEquals(this.downloadUrl, other.downloadUrl) &&
             Objects.deepEquals(this.filename, other.filename) &&
@@ -172,6 +197,7 @@ public class MessagingAttachment {
     @Override
     public int hashCode() {
         return Objects.hash(
+            contentIdentifier,
             contentType,
             downloadUrl,
             filename,
@@ -182,6 +208,7 @@ public class MessagingAttachment {
     @Override
     public String toString() {
         return Utils.toString(MessagingAttachment.class,
+                "contentIdentifier", contentIdentifier,
                 "contentType", contentType,
                 "downloadUrl", downloadUrl,
                 "filename", filename,
@@ -190,6 +217,8 @@ public class MessagingAttachment {
     }
     
     public final static class Builder {
+ 
+        private Optional<String> contentIdentifier = Optional.empty();
  
         private Optional<String> contentType = Optional.empty();
  
@@ -203,6 +232,18 @@ public class MessagingAttachment {
         
         private Builder() {
           // force use of static builder() method
+        }
+
+        public Builder contentIdentifier(String contentIdentifier) {
+            Utils.checkNotNull(contentIdentifier, "contentIdentifier");
+            this.contentIdentifier = Optional.ofNullable(contentIdentifier);
+            return this;
+        }
+
+        public Builder contentIdentifier(Optional<String> contentIdentifier) {
+            Utils.checkNotNull(contentIdentifier, "contentIdentifier");
+            this.contentIdentifier = contentIdentifier;
+            return this;
         }
 
         public Builder contentType(String contentType) {
@@ -267,6 +308,7 @@ public class MessagingAttachment {
         
         public MessagingAttachment build() {
             return new MessagingAttachment(
+                contentIdentifier,
                 contentType,
                 downloadUrl,
                 filename,

@@ -1423,3 +1423,11 @@ Based on:
 - Speakeasy CLI 1.453.10 (2.474.15) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [java v0.26.1] .
+
+## 2024-12-13 00:05:12
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.454.2 (2.477.4) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [java v0.26.2] .
