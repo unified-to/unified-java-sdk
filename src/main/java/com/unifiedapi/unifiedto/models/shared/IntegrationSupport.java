@@ -125,6 +125,10 @@ public class IntegrationSupport {
     private Optional<? extends ListOrder> listOrder;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("list_org_id")
+    private Optional<? extends ListOrgId> listOrgId;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_parent_id")
     private Optional<? extends ListParentId> listParentId;
 
@@ -139,6 +143,10 @@ public class IntegrationSupport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_raw_fields")
     private Optional<? extends ListRawFields> listRawFields;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("list_repo_id")
+    private Optional<? extends ListRepoId> listRepoId;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_root_id")
@@ -240,6 +248,10 @@ public class IntegrationSupport {
     private Optional<? extends VirtualWebhookDealId> virtualWebhookDealId;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("virtual_webhook_job_id")
+    private Optional<? extends VirtualWebhookJobId> virtualWebhookJobId;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_limit")
     private Optional<? extends VirtualWebhookLimit> virtualWebhookLimit;
 
@@ -294,10 +306,12 @@ public class IntegrationSupport {
             @JsonProperty("list_location_id") Optional<? extends ListLocationId> listLocationId,
             @JsonProperty("list_offset") Optional<? extends ListOffset> listOffset,
             @JsonProperty("list_order") Optional<? extends ListOrder> listOrder,
+            @JsonProperty("list_org_id") Optional<? extends ListOrgId> listOrgId,
             @JsonProperty("list_parent_id") Optional<? extends ListParentId> listParentId,
             @JsonProperty("list_project_id") Optional<? extends ListProjectId> listProjectId,
             @JsonProperty("list_query") Optional<? extends ListQuery> listQuery,
             @JsonProperty("list_raw_fields") Optional<? extends ListRawFields> listRawFields,
+            @JsonProperty("list_repo_id") Optional<? extends ListRepoId> listRepoId,
             @JsonProperty("list_root_id") Optional<? extends ListRootId> listRootId,
             @JsonProperty("list_sort_by_created_at") Optional<? extends ListSortByCreatedAt> listSortByCreatedAt,
             @JsonProperty("list_sort_by_name") Optional<? extends ListSortByName> listSortByName,
@@ -322,6 +336,7 @@ public class IntegrationSupport {
             @JsonProperty("virtual_webhook_company_id") Optional<? extends VirtualWebhookCompanyId> virtualWebhookCompanyId,
             @JsonProperty("virtual_webhook_contact_id") Optional<? extends VirtualWebhookContactId> virtualWebhookContactId,
             @JsonProperty("virtual_webhook_deal_id") Optional<? extends VirtualWebhookDealId> virtualWebhookDealId,
+            @JsonProperty("virtual_webhook_job_id") Optional<? extends VirtualWebhookJobId> virtualWebhookJobId,
             @JsonProperty("virtual_webhook_limit") Optional<? extends VirtualWebhookLimit> virtualWebhookLimit,
             @JsonProperty("virtual_webhook_parent_id") Optional<? extends VirtualWebhookParentId> virtualWebhookParentId,
             @JsonProperty("virtual_webhook_ticket_id") Optional<? extends VirtualWebhookTicketId> virtualWebhookTicketId,
@@ -354,10 +369,12 @@ public class IntegrationSupport {
         Utils.checkNotNull(listLocationId, "listLocationId");
         Utils.checkNotNull(listOffset, "listOffset");
         Utils.checkNotNull(listOrder, "listOrder");
+        Utils.checkNotNull(listOrgId, "listOrgId");
         Utils.checkNotNull(listParentId, "listParentId");
         Utils.checkNotNull(listProjectId, "listProjectId");
         Utils.checkNotNull(listQuery, "listQuery");
         Utils.checkNotNull(listRawFields, "listRawFields");
+        Utils.checkNotNull(listRepoId, "listRepoId");
         Utils.checkNotNull(listRootId, "listRootId");
         Utils.checkNotNull(listSortByCreatedAt, "listSortByCreatedAt");
         Utils.checkNotNull(listSortByName, "listSortByName");
@@ -382,6 +399,7 @@ public class IntegrationSupport {
         Utils.checkNotNull(virtualWebhookCompanyId, "virtualWebhookCompanyId");
         Utils.checkNotNull(virtualWebhookContactId, "virtualWebhookContactId");
         Utils.checkNotNull(virtualWebhookDealId, "virtualWebhookDealId");
+        Utils.checkNotNull(virtualWebhookJobId, "virtualWebhookJobId");
         Utils.checkNotNull(virtualWebhookLimit, "virtualWebhookLimit");
         Utils.checkNotNull(virtualWebhookParentId, "virtualWebhookParentId");
         Utils.checkNotNull(virtualWebhookTicketId, "virtualWebhookTicketId");
@@ -414,10 +432,12 @@ public class IntegrationSupport {
         this.listLocationId = listLocationId;
         this.listOffset = listOffset;
         this.listOrder = listOrder;
+        this.listOrgId = listOrgId;
         this.listParentId = listParentId;
         this.listProjectId = listProjectId;
         this.listQuery = listQuery;
         this.listRawFields = listRawFields;
+        this.listRepoId = listRepoId;
         this.listRootId = listRootId;
         this.listSortByCreatedAt = listSortByCreatedAt;
         this.listSortByName = listSortByName;
@@ -442,6 +462,7 @@ public class IntegrationSupport {
         this.virtualWebhookCompanyId = virtualWebhookCompanyId;
         this.virtualWebhookContactId = virtualWebhookContactId;
         this.virtualWebhookDealId = virtualWebhookDealId;
+        this.virtualWebhookJobId = virtualWebhookJobId;
         this.virtualWebhookLimit = virtualWebhookLimit;
         this.virtualWebhookParentId = virtualWebhookParentId;
         this.virtualWebhookTicketId = virtualWebhookTicketId;
@@ -452,7 +473,7 @@ public class IntegrationSupport {
     }
     
     public IntegrationSupport() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -607,6 +628,12 @@ public class IntegrationSupport {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
+    public Optional<ListOrgId> listOrgId() {
+        return (Optional<ListOrgId>) listOrgId;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
     public Optional<ListParentId> listParentId() {
         return (Optional<ListParentId>) listParentId;
     }
@@ -627,6 +654,12 @@ public class IntegrationSupport {
     @JsonIgnore
     public Optional<ListRawFields> listRawFields() {
         return (Optional<ListRawFields>) listRawFields;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<ListRepoId> listRepoId() {
+        return (Optional<ListRepoId>) listRepoId;
     }
 
     @SuppressWarnings("unchecked")
@@ -774,6 +807,12 @@ public class IntegrationSupport {
     @JsonIgnore
     public Optional<VirtualWebhookDealId> virtualWebhookDealId() {
         return (Optional<VirtualWebhookDealId>) virtualWebhookDealId;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<VirtualWebhookJobId> virtualWebhookJobId() {
+        return (Optional<VirtualWebhookJobId>) virtualWebhookJobId;
     }
 
     @SuppressWarnings("unchecked")
@@ -1122,6 +1161,18 @@ public class IntegrationSupport {
         return this;
     }
 
+    public IntegrationSupport withListOrgId(ListOrgId listOrgId) {
+        Utils.checkNotNull(listOrgId, "listOrgId");
+        this.listOrgId = Optional.ofNullable(listOrgId);
+        return this;
+    }
+
+    public IntegrationSupport withListOrgId(Optional<? extends ListOrgId> listOrgId) {
+        Utils.checkNotNull(listOrgId, "listOrgId");
+        this.listOrgId = listOrgId;
+        return this;
+    }
+
     public IntegrationSupport withListParentId(ListParentId listParentId) {
         Utils.checkNotNull(listParentId, "listParentId");
         this.listParentId = Optional.ofNullable(listParentId);
@@ -1167,6 +1218,18 @@ public class IntegrationSupport {
     public IntegrationSupport withListRawFields(Optional<? extends ListRawFields> listRawFields) {
         Utils.checkNotNull(listRawFields, "listRawFields");
         this.listRawFields = listRawFields;
+        return this;
+    }
+
+    public IntegrationSupport withListRepoId(ListRepoId listRepoId) {
+        Utils.checkNotNull(listRepoId, "listRepoId");
+        this.listRepoId = Optional.ofNullable(listRepoId);
+        return this;
+    }
+
+    public IntegrationSupport withListRepoId(Optional<? extends ListRepoId> listRepoId) {
+        Utils.checkNotNull(listRepoId, "listRepoId");
+        this.listRepoId = listRepoId;
         return this;
     }
 
@@ -1464,6 +1527,18 @@ public class IntegrationSupport {
         return this;
     }
 
+    public IntegrationSupport withVirtualWebhookJobId(VirtualWebhookJobId virtualWebhookJobId) {
+        Utils.checkNotNull(virtualWebhookJobId, "virtualWebhookJobId");
+        this.virtualWebhookJobId = Optional.ofNullable(virtualWebhookJobId);
+        return this;
+    }
+
+    public IntegrationSupport withVirtualWebhookJobId(Optional<? extends VirtualWebhookJobId> virtualWebhookJobId) {
+        Utils.checkNotNull(virtualWebhookJobId, "virtualWebhookJobId");
+        this.virtualWebhookJobId = virtualWebhookJobId;
+        return this;
+    }
+
     public IntegrationSupport withVirtualWebhookLimit(VirtualWebhookLimit virtualWebhookLimit) {
         Utils.checkNotNull(virtualWebhookLimit, "virtualWebhookLimit");
         this.virtualWebhookLimit = Optional.ofNullable(virtualWebhookLimit);
@@ -1583,10 +1658,12 @@ public class IntegrationSupport {
             Objects.deepEquals(this.listLocationId, other.listLocationId) &&
             Objects.deepEquals(this.listOffset, other.listOffset) &&
             Objects.deepEquals(this.listOrder, other.listOrder) &&
+            Objects.deepEquals(this.listOrgId, other.listOrgId) &&
             Objects.deepEquals(this.listParentId, other.listParentId) &&
             Objects.deepEquals(this.listProjectId, other.listProjectId) &&
             Objects.deepEquals(this.listQuery, other.listQuery) &&
             Objects.deepEquals(this.listRawFields, other.listRawFields) &&
+            Objects.deepEquals(this.listRepoId, other.listRepoId) &&
             Objects.deepEquals(this.listRootId, other.listRootId) &&
             Objects.deepEquals(this.listSortByCreatedAt, other.listSortByCreatedAt) &&
             Objects.deepEquals(this.listSortByName, other.listSortByName) &&
@@ -1611,6 +1688,7 @@ public class IntegrationSupport {
             Objects.deepEquals(this.virtualWebhookCompanyId, other.virtualWebhookCompanyId) &&
             Objects.deepEquals(this.virtualWebhookContactId, other.virtualWebhookContactId) &&
             Objects.deepEquals(this.virtualWebhookDealId, other.virtualWebhookDealId) &&
+            Objects.deepEquals(this.virtualWebhookJobId, other.virtualWebhookJobId) &&
             Objects.deepEquals(this.virtualWebhookLimit, other.virtualWebhookLimit) &&
             Objects.deepEquals(this.virtualWebhookParentId, other.virtualWebhookParentId) &&
             Objects.deepEquals(this.virtualWebhookTicketId, other.virtualWebhookTicketId) &&
@@ -1648,10 +1726,12 @@ public class IntegrationSupport {
             listLocationId,
             listOffset,
             listOrder,
+            listOrgId,
             listParentId,
             listProjectId,
             listQuery,
             listRawFields,
+            listRepoId,
             listRootId,
             listSortByCreatedAt,
             listSortByName,
@@ -1676,6 +1756,7 @@ public class IntegrationSupport {
             virtualWebhookCompanyId,
             virtualWebhookContactId,
             virtualWebhookDealId,
+            virtualWebhookJobId,
             virtualWebhookLimit,
             virtualWebhookParentId,
             virtualWebhookTicketId,
@@ -1713,10 +1794,12 @@ public class IntegrationSupport {
                 "listLocationId", listLocationId,
                 "listOffset", listOffset,
                 "listOrder", listOrder,
+                "listOrgId", listOrgId,
                 "listParentId", listParentId,
                 "listProjectId", listProjectId,
                 "listQuery", listQuery,
                 "listRawFields", listRawFields,
+                "listRepoId", listRepoId,
                 "listRootId", listRootId,
                 "listSortByCreatedAt", listSortByCreatedAt,
                 "listSortByName", listSortByName,
@@ -1741,6 +1824,7 @@ public class IntegrationSupport {
                 "virtualWebhookCompanyId", virtualWebhookCompanyId,
                 "virtualWebhookContactId", virtualWebhookContactId,
                 "virtualWebhookDealId", virtualWebhookDealId,
+                "virtualWebhookJobId", virtualWebhookJobId,
                 "virtualWebhookLimit", virtualWebhookLimit,
                 "virtualWebhookParentId", virtualWebhookParentId,
                 "virtualWebhookTicketId", virtualWebhookTicketId,
@@ -1802,6 +1886,8 @@ public class IntegrationSupport {
  
         private Optional<? extends ListOrder> listOrder = Optional.empty();
  
+        private Optional<? extends ListOrgId> listOrgId = Optional.empty();
+ 
         private Optional<? extends ListParentId> listParentId = Optional.empty();
  
         private Optional<? extends ListProjectId> listProjectId = Optional.empty();
@@ -1809,6 +1895,8 @@ public class IntegrationSupport {
         private Optional<? extends ListQuery> listQuery = Optional.empty();
  
         private Optional<? extends ListRawFields> listRawFields = Optional.empty();
+ 
+        private Optional<? extends ListRepoId> listRepoId = Optional.empty();
  
         private Optional<? extends ListRootId> listRootId = Optional.empty();
  
@@ -1857,6 +1945,8 @@ public class IntegrationSupport {
         private Optional<? extends VirtualWebhookContactId> virtualWebhookContactId = Optional.empty();
  
         private Optional<? extends VirtualWebhookDealId> virtualWebhookDealId = Optional.empty();
+ 
+        private Optional<? extends VirtualWebhookJobId> virtualWebhookJobId = Optional.empty();
  
         private Optional<? extends VirtualWebhookLimit> virtualWebhookLimit = Optional.empty();
  
@@ -2176,6 +2266,18 @@ public class IntegrationSupport {
             return this;
         }
 
+        public Builder listOrgId(ListOrgId listOrgId) {
+            Utils.checkNotNull(listOrgId, "listOrgId");
+            this.listOrgId = Optional.ofNullable(listOrgId);
+            return this;
+        }
+
+        public Builder listOrgId(Optional<? extends ListOrgId> listOrgId) {
+            Utils.checkNotNull(listOrgId, "listOrgId");
+            this.listOrgId = listOrgId;
+            return this;
+        }
+
         public Builder listParentId(ListParentId listParentId) {
             Utils.checkNotNull(listParentId, "listParentId");
             this.listParentId = Optional.ofNullable(listParentId);
@@ -2221,6 +2323,18 @@ public class IntegrationSupport {
         public Builder listRawFields(Optional<? extends ListRawFields> listRawFields) {
             Utils.checkNotNull(listRawFields, "listRawFields");
             this.listRawFields = listRawFields;
+            return this;
+        }
+
+        public Builder listRepoId(ListRepoId listRepoId) {
+            Utils.checkNotNull(listRepoId, "listRepoId");
+            this.listRepoId = Optional.ofNullable(listRepoId);
+            return this;
+        }
+
+        public Builder listRepoId(Optional<? extends ListRepoId> listRepoId) {
+            Utils.checkNotNull(listRepoId, "listRepoId");
+            this.listRepoId = listRepoId;
             return this;
         }
 
@@ -2518,6 +2632,18 @@ public class IntegrationSupport {
             return this;
         }
 
+        public Builder virtualWebhookJobId(VirtualWebhookJobId virtualWebhookJobId) {
+            Utils.checkNotNull(virtualWebhookJobId, "virtualWebhookJobId");
+            this.virtualWebhookJobId = Optional.ofNullable(virtualWebhookJobId);
+            return this;
+        }
+
+        public Builder virtualWebhookJobId(Optional<? extends VirtualWebhookJobId> virtualWebhookJobId) {
+            Utils.checkNotNull(virtualWebhookJobId, "virtualWebhookJobId");
+            this.virtualWebhookJobId = virtualWebhookJobId;
+            return this;
+        }
+
         public Builder virtualWebhookLimit(VirtualWebhookLimit virtualWebhookLimit) {
             Utils.checkNotNull(virtualWebhookLimit, "virtualWebhookLimit");
             this.virtualWebhookLimit = Optional.ofNullable(virtualWebhookLimit);
@@ -2629,10 +2755,12 @@ public class IntegrationSupport {
                 listLocationId,
                 listOffset,
                 listOrder,
+                listOrgId,
                 listParentId,
                 listProjectId,
                 listQuery,
                 listRawFields,
+                listRepoId,
                 listRootId,
                 listSortByCreatedAt,
                 listSortByName,
@@ -2657,6 +2785,7 @@ public class IntegrationSupport {
                 virtualWebhookCompanyId,
                 virtualWebhookContactId,
                 virtualWebhookDealId,
+                virtualWebhookJobId,
                 virtualWebhookLimit,
                 virtualWebhookParentId,
                 virtualWebhookTicketId,
