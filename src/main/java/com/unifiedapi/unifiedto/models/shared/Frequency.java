@@ -6,6 +6,8 @@ package com.unifiedapi.unifiedto.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
+import java.util.Objects;
+import java.util.Optional;
 
 public enum Frequency {
     ONE_TIME("ONE_TIME"),
@@ -25,5 +27,14 @@ public enum Frequency {
     
     public String value() {
         return value;
+    }
+    
+    public static Optional<Frequency> fromValue(String value) {
+        for (Frequency o: Frequency.values()) {
+            if (Objects.deepEquals(o.value, value)) {
+                return Optional.of(o);
+            }
+        }
+        return Optional.empty();
     }
 }

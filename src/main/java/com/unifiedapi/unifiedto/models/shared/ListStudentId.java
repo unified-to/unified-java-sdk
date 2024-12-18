@@ -6,6 +6,8 @@ package com.unifiedapi.unifiedto.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
+import java.util.Objects;
+import java.util.Optional;
 
 public enum ListStudentId {
     SUPPORTED_REQUIRED("supported-required"),
@@ -21,5 +23,14 @@ public enum ListStudentId {
     
     public String value() {
         return value;
+    }
+    
+    public static Optional<ListStudentId> fromValue(String value) {
+        for (ListStudentId o: ListStudentId.values()) {
+            if (Objects.deepEquals(o.value, value)) {
+                return Optional.of(o);
+            }
+        }
+        return Optional.empty();
     }
 }

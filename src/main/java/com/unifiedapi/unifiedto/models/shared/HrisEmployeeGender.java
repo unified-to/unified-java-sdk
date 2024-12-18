@@ -6,6 +6,8 @@ package com.unifiedapi.unifiedto.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
+import java.util.Objects;
+import java.util.Optional;
 
 public enum HrisEmployeeGender {
     MALE("MALE"),
@@ -23,5 +25,14 @@ public enum HrisEmployeeGender {
     
     public String value() {
         return value;
+    }
+    
+    public static Optional<HrisEmployeeGender> fromValue(String value) {
+        for (HrisEmployeeGender o: HrisEmployeeGender.values()) {
+            if (Objects.deepEquals(o.value, value)) {
+                return Optional.of(o);
+            }
+        }
+        return Optional.empty();
     }
 }

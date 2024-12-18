@@ -6,6 +6,8 @@ package com.unifiedapi.unifiedto.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
+import java.util.Objects;
+import java.util.Optional;
 
 public enum VirtualWebhookDealId {
     SUPPORTED_REQUIRED("supported-required"),
@@ -21,5 +23,14 @@ public enum VirtualWebhookDealId {
     
     public String value() {
         return value;
+    }
+    
+    public static Optional<VirtualWebhookDealId> fromValue(String value) {
+        for (VirtualWebhookDealId o: VirtualWebhookDealId.values()) {
+            if (Objects.deepEquals(o.value, value)) {
+                return Optional.of(o);
+            }
+        }
+        return Optional.empty();
     }
 }

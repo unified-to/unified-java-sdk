@@ -6,6 +6,8 @@ package com.unifiedapi.unifiedto.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
+import java.util.Objects;
+import java.util.Optional;
 
 public enum SizeUnit {
     CM("cm"),
@@ -20,5 +22,14 @@ public enum SizeUnit {
     
     public String value() {
         return value;
+    }
+    
+    public static Optional<SizeUnit> fromValue(String value) {
+        for (SizeUnit o: SizeUnit.values()) {
+            if (Objects.deepEquals(o.value, value)) {
+                return Optional.of(o);
+            }
+        }
+        return Optional.empty();
     }
 }

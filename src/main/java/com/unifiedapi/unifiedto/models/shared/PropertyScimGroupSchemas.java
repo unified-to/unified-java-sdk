@@ -6,6 +6,8 @@ package com.unifiedapi.unifiedto.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
+import java.util.Objects;
+import java.util.Optional;
 
 public enum PropertyScimGroupSchemas {
     URN_IETF_PARAMS_SCIM_SCHEMAS_CORE20_GROUP("urn:ietf:params:scim:schemas:core:2.0:Group");
@@ -19,5 +21,14 @@ public enum PropertyScimGroupSchemas {
     
     public String value() {
         return value;
+    }
+    
+    public static Optional<PropertyScimGroupSchemas> fromValue(String value) {
+        for (PropertyScimGroupSchemas o: PropertyScimGroupSchemas.values()) {
+            if (Objects.deepEquals(o.value, value)) {
+                return Optional.of(o);
+            }
+        }
+        return Optional.empty();
     }
 }

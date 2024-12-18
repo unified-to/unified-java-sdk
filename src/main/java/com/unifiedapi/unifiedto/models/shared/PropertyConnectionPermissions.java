@@ -6,6 +6,8 @@ package com.unifiedapi.unifiedto.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
+import java.util.Objects;
+import java.util.Optional;
 
 public enum PropertyConnectionPermissions {
     AUTH_LOGIN("auth_login"),
@@ -142,5 +144,14 @@ public enum PropertyConnectionPermissions {
     
     public String value() {
         return value;
+    }
+    
+    public static Optional<PropertyConnectionPermissions> fromValue(String value) {
+        for (PropertyConnectionPermissions o: PropertyConnectionPermissions.values()) {
+            if (Objects.deepEquals(o.value, value)) {
+                return Optional.of(o);
+            }
+        }
+        return Optional.empty();
     }
 }

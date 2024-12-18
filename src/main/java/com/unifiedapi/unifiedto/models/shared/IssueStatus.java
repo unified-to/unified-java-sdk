@@ -6,6 +6,8 @@ package com.unifiedapi.unifiedto.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
+import java.util.Objects;
+import java.util.Optional;
 
 public enum IssueStatus {
     COMPLETED("COMPLETED"),
@@ -26,5 +28,14 @@ public enum IssueStatus {
     
     public String value() {
         return value;
+    }
+    
+    public static Optional<IssueStatus> fromValue(String value) {
+        for (IssueStatus o: IssueStatus.values()) {
+            if (Objects.deepEquals(o.value, value)) {
+                return Optional.of(o);
+            }
+        }
+        return Optional.empty();
     }
 }

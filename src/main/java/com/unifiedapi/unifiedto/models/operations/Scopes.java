@@ -6,6 +6,8 @@ package com.unifiedapi.unifiedto.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
+import java.util.Objects;
+import java.util.Optional;
 
 public enum Scopes {
     AUTH_LOGIN("auth_login"),
@@ -142,5 +144,14 @@ public enum Scopes {
     
     public String value() {
         return value;
+    }
+    
+    public static Optional<Scopes> fromValue(String value) {
+        for (Scopes o: Scopes.values()) {
+            if (Objects.deepEquals(o.value, value)) {
+                return Optional.of(o);
+            }
+        }
+        return Optional.empty();
     }
 }

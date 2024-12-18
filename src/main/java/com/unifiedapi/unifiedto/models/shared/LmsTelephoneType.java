@@ -6,6 +6,8 @@ package com.unifiedapi.unifiedto.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
+import java.util.Objects;
+import java.util.Optional;
 
 public enum LmsTelephoneType {
     WORK("WORK"),
@@ -23,5 +25,14 @@ public enum LmsTelephoneType {
     
     public String value() {
         return value;
+    }
+    
+    public static Optional<LmsTelephoneType> fromValue(String value) {
+        for (LmsTelephoneType o: LmsTelephoneType.values()) {
+            if (Objects.deepEquals(o.value, value)) {
+                return Optional.of(o);
+            }
+        }
+        return Optional.empty();
     }
 }

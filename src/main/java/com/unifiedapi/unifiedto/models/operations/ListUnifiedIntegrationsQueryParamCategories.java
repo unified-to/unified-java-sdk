@@ -6,6 +6,8 @@ package com.unifiedapi.unifiedto.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
+import java.util.Objects;
+import java.util.Optional;
 
 public enum ListUnifiedIntegrationsQueryParamCategories {
     PASSTHROUGH("passthrough"),
@@ -39,5 +41,14 @@ public enum ListUnifiedIntegrationsQueryParamCategories {
     
     public String value() {
         return value;
+    }
+    
+    public static Optional<ListUnifiedIntegrationsQueryParamCategories> fromValue(String value) {
+        for (ListUnifiedIntegrationsQueryParamCategories o: ListUnifiedIntegrationsQueryParamCategories.values()) {
+            if (Objects.deepEquals(o.value, value)) {
+                return Optional.of(o);
+            }
+        }
+        return Optional.empty();
     }
 }

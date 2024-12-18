@@ -6,6 +6,8 @@ package com.unifiedapi.unifiedto.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
+import java.util.Objects;
+import java.util.Optional;
 
 public enum CrmTelephoneType {
     WORK("WORK"),
@@ -23,5 +25,14 @@ public enum CrmTelephoneType {
     
     public String value() {
         return value;
+    }
+    
+    public static Optional<CrmTelephoneType> fromValue(String value) {
+        for (CrmTelephoneType o: CrmTelephoneType.values()) {
+            if (Objects.deepEquals(o.value, value)) {
+                return Optional.of(o);
+            }
+        }
+        return Optional.empty();
     }
 }

@@ -6,6 +6,8 @@ package com.unifiedapi.unifiedto.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
+import java.util.Objects;
+import java.util.Optional;
 
 public enum PropertyScimUserSchemas {
     URN_IETF_PARAMS_SCIM_SCHEMAS_CORE20_USER("urn:ietf:params:scim:schemas:core:2.0:User"),
@@ -22,5 +24,14 @@ public enum PropertyScimUserSchemas {
     
     public String value() {
         return value;
+    }
+    
+    public static Optional<PropertyScimUserSchemas> fromValue(String value) {
+        for (PropertyScimUserSchemas o: PropertyScimUserSchemas.values()) {
+            if (Objects.deepEquals(o.value, value)) {
+                return Optional.of(o);
+            }
+        }
+        return Optional.empty();
     }
 }

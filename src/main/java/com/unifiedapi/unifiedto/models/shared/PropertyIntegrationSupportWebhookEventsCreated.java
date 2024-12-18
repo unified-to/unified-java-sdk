@@ -6,6 +6,8 @@ package com.unifiedapi.unifiedto.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
+import java.util.Objects;
+import java.util.Optional;
 
 public enum PropertyIntegrationSupportWebhookEventsCreated {
     VIRTUAL("virtual"),
@@ -20,5 +22,14 @@ public enum PropertyIntegrationSupportWebhookEventsCreated {
     
     public String value() {
         return value;
+    }
+    
+    public static Optional<PropertyIntegrationSupportWebhookEventsCreated> fromValue(String value) {
+        for (PropertyIntegrationSupportWebhookEventsCreated o: PropertyIntegrationSupportWebhookEventsCreated.values()) {
+            if (Objects.deepEquals(o.value, value)) {
+                return Optional.of(o);
+            }
+        }
+        return Optional.empty();
     }
 }

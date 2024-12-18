@@ -6,6 +6,8 @@ package com.unifiedapi.unifiedto.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
+import java.util.Objects;
+import java.util.Optional;
 
 public enum AtsInterviewStatus {
     SCHEDULED("SCHEDULED"),
@@ -23,5 +25,14 @@ public enum AtsInterviewStatus {
     
     public String value() {
         return value;
+    }
+    
+    public static Optional<AtsInterviewStatus> fromValue(String value) {
+        for (AtsInterviewStatus o: AtsInterviewStatus.values()) {
+            if (Objects.deepEquals(o.value, value)) {
+                return Optional.of(o);
+            }
+        }
+        return Optional.empty();
     }
 }

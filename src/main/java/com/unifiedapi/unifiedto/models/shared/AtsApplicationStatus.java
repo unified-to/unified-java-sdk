@@ -6,6 +6,8 @@ package com.unifiedapi.unifiedto.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
+import java.util.Objects;
+import java.util.Optional;
 
 public enum AtsApplicationStatus {
     NEW("NEW"),
@@ -32,5 +34,14 @@ public enum AtsApplicationStatus {
     
     public String value() {
         return value;
+    }
+    
+    public static Optional<AtsApplicationStatus> fromValue(String value) {
+        for (AtsApplicationStatus o: AtsApplicationStatus.values()) {
+            if (Objects.deepEquals(o.value, value)) {
+                return Optional.of(o);
+            }
+        }
+        return Optional.empty();
     }
 }

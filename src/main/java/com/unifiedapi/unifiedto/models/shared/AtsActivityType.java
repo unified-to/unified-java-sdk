@@ -6,6 +6,8 @@ package com.unifiedapi.unifiedto.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
+import java.util.Objects;
+import java.util.Optional;
 
 public enum AtsActivityType {
     NOTE("NOTE"),
@@ -21,5 +23,14 @@ public enum AtsActivityType {
     
     public String value() {
         return value;
+    }
+    
+    public static Optional<AtsActivityType> fromValue(String value) {
+        for (AtsActivityType o: AtsActivityType.values()) {
+            if (Objects.deepEquals(o.value, value)) {
+                return Optional.of(o);
+            }
+        }
+        return Optional.empty();
     }
 }

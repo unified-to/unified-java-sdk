@@ -6,6 +6,8 @@ package com.unifiedapi.unifiedto.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
+import java.util.Objects;
+import java.util.Optional;
 
 public enum WeightUnit {
     G("g"),
@@ -22,5 +24,14 @@ public enum WeightUnit {
     
     public String value() {
         return value;
+    }
+    
+    public static Optional<WeightUnit> fromValue(String value) {
+        for (WeightUnit o: WeightUnit.values()) {
+            if (Objects.deepEquals(o.value, value)) {
+                return Optional.of(o);
+            }
+        }
+        return Optional.empty();
     }
 }

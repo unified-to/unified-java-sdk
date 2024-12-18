@@ -6,6 +6,8 @@ package com.unifiedapi.unifiedto.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
+import java.util.Objects;
+import java.util.Optional;
 
 public enum ScimPhotoType {
     PHOTO("photo"),
@@ -20,5 +22,14 @@ public enum ScimPhotoType {
     
     public String value() {
         return value;
+    }
+    
+    public static Optional<ScimPhotoType> fromValue(String value) {
+        for (ScimPhotoType o: ScimPhotoType.values()) {
+            if (Objects.deepEquals(o.value, value)) {
+                return Optional.of(o);
+            }
+        }
+        return Optional.empty();
     }
 }

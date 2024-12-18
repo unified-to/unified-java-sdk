@@ -6,6 +6,8 @@ package com.unifiedapi.unifiedto.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
+import java.util.Objects;
+import java.util.Optional;
 
 public enum LmsMediaType {
     IMAGE("IMAGE"),
@@ -24,5 +26,14 @@ public enum LmsMediaType {
     
     public String value() {
         return value;
+    }
+    
+    public static Optional<LmsMediaType> fromValue(String value) {
+        for (LmsMediaType o: LmsMediaType.values()) {
+            if (Objects.deepEquals(o.value, value)) {
+                return Optional.of(o);
+            }
+        }
+        return Optional.empty();
     }
 }

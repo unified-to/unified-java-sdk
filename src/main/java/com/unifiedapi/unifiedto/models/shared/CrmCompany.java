@@ -33,6 +33,13 @@ public class CrmCompany {
     @JsonProperty("address")
     private Optional<? extends PropertyCrmCompanyAddress> address;
 
+    /**
+     * An array of contact IDs associated with this company
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("contact_ids")
+    private Optional<? extends List<String>> contactIds;
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
@@ -110,6 +117,7 @@ public class CrmCompany {
     @JsonCreator
     public CrmCompany(
             @JsonProperty("address") Optional<? extends PropertyCrmCompanyAddress> address,
+            @JsonProperty("contact_ids") Optional<? extends List<String>> contactIds,
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("deal_ids") Optional<? extends List<String>> dealIds,
             @JsonProperty("description") Optional<String> description,
@@ -128,6 +136,7 @@ public class CrmCompany {
             @JsonProperty("user_id") Optional<String> userId,
             @JsonProperty("websites") Optional<? extends List<String>> websites) {
         Utils.checkNotNull(address, "address");
+        Utils.checkNotNull(contactIds, "contactIds");
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(dealIds, "dealIds");
         Utils.checkNotNull(description, "description");
@@ -146,6 +155,7 @@ public class CrmCompany {
         Utils.checkNotNull(userId, "userId");
         Utils.checkNotNull(websites, "websites");
         this.address = address;
+        this.contactIds = contactIds;
         this.createdAt = createdAt;
         this.dealIds = dealIds;
         this.description = description;
@@ -166,13 +176,22 @@ public class CrmCompany {
     }
     
     public CrmCompany() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
     public Optional<PropertyCrmCompanyAddress> address() {
         return (Optional<PropertyCrmCompanyAddress>) address;
+    }
+
+    /**
+     * An array of contact IDs associated with this company
+     */
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<String>> contactIds() {
+        return (Optional<List<String>>) contactIds;
     }
 
     @JsonIgnore
@@ -286,6 +305,24 @@ public class CrmCompany {
     public CrmCompany withAddress(Optional<? extends PropertyCrmCompanyAddress> address) {
         Utils.checkNotNull(address, "address");
         this.address = address;
+        return this;
+    }
+
+    /**
+     * An array of contact IDs associated with this company
+     */
+    public CrmCompany withContactIds(List<String> contactIds) {
+        Utils.checkNotNull(contactIds, "contactIds");
+        this.contactIds = Optional.ofNullable(contactIds);
+        return this;
+    }
+
+    /**
+     * An array of contact IDs associated with this company
+     */
+    public CrmCompany withContactIds(Optional<? extends List<String>> contactIds) {
+        Utils.checkNotNull(contactIds, "contactIds");
+        this.contactIds = contactIds;
         return this;
     }
 
@@ -516,6 +553,7 @@ public class CrmCompany {
         CrmCompany other = (CrmCompany) o;
         return 
             Objects.deepEquals(this.address, other.address) &&
+            Objects.deepEquals(this.contactIds, other.contactIds) &&
             Objects.deepEquals(this.createdAt, other.createdAt) &&
             Objects.deepEquals(this.dealIds, other.dealIds) &&
             Objects.deepEquals(this.description, other.description) &&
@@ -539,6 +577,7 @@ public class CrmCompany {
     public int hashCode() {
         return Objects.hash(
             address,
+            contactIds,
             createdAt,
             dealIds,
             description,
@@ -562,6 +601,7 @@ public class CrmCompany {
     public String toString() {
         return Utils.toString(CrmCompany.class,
                 "address", address,
+                "contactIds", contactIds,
                 "createdAt", createdAt,
                 "dealIds", dealIds,
                 "description", description,
@@ -584,6 +624,8 @@ public class CrmCompany {
     public final static class Builder {
  
         private Optional<? extends PropertyCrmCompanyAddress> address = Optional.empty();
+ 
+        private Optional<? extends List<String>> contactIds = Optional.empty();
  
         private Optional<OffsetDateTime> createdAt = Optional.empty();
  
@@ -632,6 +674,24 @@ public class CrmCompany {
         public Builder address(Optional<? extends PropertyCrmCompanyAddress> address) {
             Utils.checkNotNull(address, "address");
             this.address = address;
+            return this;
+        }
+
+        /**
+         * An array of contact IDs associated with this company
+         */
+        public Builder contactIds(List<String> contactIds) {
+            Utils.checkNotNull(contactIds, "contactIds");
+            this.contactIds = Optional.ofNullable(contactIds);
+            return this;
+        }
+
+        /**
+         * An array of contact IDs associated with this company
+         */
+        public Builder contactIds(Optional<? extends List<String>> contactIds) {
+            Utils.checkNotNull(contactIds, "contactIds");
+            this.contactIds = contactIds;
             return this;
         }
 
@@ -854,6 +914,7 @@ public class CrmCompany {
         public CrmCompany build() {
             return new CrmCompany(
                 address,
+                contactIds,
                 createdAt,
                 dealIds,
                 description,

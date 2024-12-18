@@ -6,6 +6,8 @@ package com.unifiedapi.unifiedto.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
+import java.util.Objects;
+import java.util.Optional;
 
 public enum AccountingEmailType {
     WORK("WORK"),
@@ -21,5 +23,14 @@ public enum AccountingEmailType {
     
     public String value() {
         return value;
+    }
+    
+    public static Optional<AccountingEmailType> fromValue(String value) {
+        for (AccountingEmailType o: AccountingEmailType.values()) {
+            if (Objects.deepEquals(o.value, value)) {
+                return Optional.of(o);
+            }
+        }
+        return Optional.empty();
     }
 }

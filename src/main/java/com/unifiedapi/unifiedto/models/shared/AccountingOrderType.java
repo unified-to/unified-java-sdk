@@ -6,6 +6,8 @@ package com.unifiedapi.unifiedto.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
+import java.util.Objects;
+import java.util.Optional;
 
 public enum AccountingOrderType {
     SALES("SALES"),
@@ -20,5 +22,14 @@ public enum AccountingOrderType {
     
     public String value() {
         return value;
+    }
+    
+    public static Optional<AccountingOrderType> fromValue(String value) {
+        for (AccountingOrderType o: AccountingOrderType.values()) {
+            if (Objects.deepEquals(o.value, value)) {
+                return Optional.of(o);
+            }
+        }
+        return Optional.empty();
     }
 }

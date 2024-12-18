@@ -6,6 +6,8 @@ package com.unifiedapi.unifiedto.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
+import java.util.Objects;
+import java.util.Optional;
 
 public enum ListSortByUpdatedAt {
     SUPPORTED_REQUIRED("supported-required"),
@@ -21,5 +23,14 @@ public enum ListSortByUpdatedAt {
     
     public String value() {
         return value;
+    }
+    
+    public static Optional<ListSortByUpdatedAt> fromValue(String value) {
+        for (ListSortByUpdatedAt o: ListSortByUpdatedAt.values()) {
+            if (Objects.deepEquals(o.value, value)) {
+                return Optional.of(o);
+            }
+        }
+        return Optional.empty();
     }
 }
