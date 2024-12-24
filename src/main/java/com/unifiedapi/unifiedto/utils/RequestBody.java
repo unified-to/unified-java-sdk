@@ -12,17 +12,16 @@ import java.net.http.HttpRequest.BodyPublishers;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.regex.Pattern;
 import java.util.Optional;
+import java.util.regex.Pattern;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.entity.ContentType;
-import org.apache.http.entity.mime.HttpMultipartMode;
-import org.apache.http.entity.mime.MultipartEntityBuilder;
-import org.apache.http.message.BasicNameValuePair;
-
+import org.apache.hc.client5.http.entity.UrlEncodedFormEntity;
+import org.apache.hc.client5.http.entity.mime.HttpMultipartMode;
+import org.apache.hc.client5.http.entity.mime.MultipartEntityBuilder;
+import org.apache.hc.core5.http.ContentType;
+import org.apache.hc.core5.http.HttpEntity;
+import org.apache.hc.core5.http.NameValuePair;
+import org.apache.hc.core5.http.message.BasicNameValuePair;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -120,7 +119,7 @@ public final class RequestBody {
     private static SerializedBody serializeMultipart(Object value)
             throws IllegalArgumentException, IllegalAccessException, UnsupportedOperationException, IOException {
         MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-        builder.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);
+        builder.setMode(HttpMultipartMode.EXTENDED);
         String boundary = "-------------" + System.currentTimeMillis();
         builder.setBoundary(boundary);
 
@@ -161,7 +160,7 @@ public final class RequestBody {
         }
 
         HttpEntity entity = builder.build();
-        String ct = builder.build().getContentType().getValue();
+        String ct = builder.build().getContentType();
         return new SerializedBody(ct, BodyPublishers.ofInputStream(() -> {
             try {
                 return entity.getContent();
@@ -334,8 +333,9 @@ public final class RequestBody {
                 throw new RuntimeException("Invalid type for form data");
         }
 
+        @SuppressWarnings("resource")
         UrlEncodedFormEntity entity = new UrlEncodedFormEntity(params);
-        String ct = entity.getContentType().getValue();
+        String ct = entity.getContentType();
         // ensure that a fresh open input stream is provided every time
         // by the BodyPublisher 
         return new SerializedBody(ct, BodyPublishers.ofInputStream(() -> {
