@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 11363cbfd40306b24119fb60c9ea2fc5
+  docChecksum: 05ab7803e5b317202af3aacb4835f336
   docVersion: "1.0"
-  speakeasyVersion: 1.460.2
+  speakeasyVersion: 1.460.3
   generationVersion: 2.484.0
-  releaseVersion: 0.26.5
-  configChecksum: 472cc64bd85d4e896da703552877b089
+  releaseVersion: 0.26.6
+  configChecksum: d41bc0659fefcda0b71708101fb0b15d
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -844,6 +844,9 @@ generatedFiles:
   - docs/models/shared/CrmEmail.md
   - docs/models/shared/CrmEmailType.md
   - docs/models/shared/CrmEvent.md
+  - docs/models/shared/CrmEventFormField.md
+  - docs/models/shared/CrmEventFormFieldType.md
+  - docs/models/shared/CrmEventFormOption.md
   - docs/models/shared/CrmEventType.md
   - docs/models/shared/CrmLead.md
   - docs/models/shared/CrmPipeline.md
@@ -985,8 +988,11 @@ generatedFiles:
   - docs/models/shared/PropertyCrmContactAddress.md
   - docs/models/shared/PropertyCrmEventCall.md
   - docs/models/shared/PropertyCrmEventEmail.md
+  - docs/models/shared/PropertyCrmEventForm.md
+  - docs/models/shared/PropertyCrmEventMarketingEmail.md
   - docs/models/shared/PropertyCrmEventMeeting.md
   - docs/models/shared/PropertyCrmEventNote.md
+  - docs/models/shared/PropertyCrmEventPageView.md
   - docs/models/shared/PropertyCrmEventTask.md
   - docs/models/shared/PropertyCrmEventTaskStatus.md
   - docs/models/shared/PropertyCrmLeadAddress.md
@@ -2465,6 +2471,9 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmEmail.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmEmailType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmEvent.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmEventFormField.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmEventFormFieldType.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmEventFormOption.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmEventType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmLead.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmPipeline.java
@@ -2606,8 +2615,11 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmContactAddress.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmEventCall.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmEventEmail.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmEventForm.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmEventMarketingEmail.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmEventMeeting.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmEventNote.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmEventPageView.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmEventTask.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmEventTaskStatus.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyCrmLeadAddress.java

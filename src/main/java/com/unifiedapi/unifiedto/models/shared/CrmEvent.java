@@ -67,12 +67,20 @@ public class CrmEvent {
     private Optional<? extends PropertyCrmEventEmail> email;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("form")
+    private Optional<? extends PropertyCrmEventForm> form;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private Optional<String> id;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lead_ids")
     private Optional<? extends List<String>> leadIds;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("marketing_email")
+    private Optional<? extends PropertyCrmEventMarketingEmail> marketingEmail;
 
     /**
      * The meeting object, when type = meeting
@@ -87,6 +95,10 @@ public class CrmEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     private Optional<? extends PropertyCrmEventNote> note;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("page_view")
+    private Optional<? extends PropertyCrmEventPageView> pageView;
 
     /**
      * The raw data returned by the integration for this event.
@@ -122,10 +134,13 @@ public class CrmEvent {
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("deal_ids") Optional<? extends List<String>> dealIds,
             @JsonProperty("email") Optional<? extends PropertyCrmEventEmail> email,
+            @JsonProperty("form") Optional<? extends PropertyCrmEventForm> form,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("lead_ids") Optional<? extends List<String>> leadIds,
+            @JsonProperty("marketing_email") Optional<? extends PropertyCrmEventMarketingEmail> marketingEmail,
             @JsonProperty("meeting") Optional<? extends PropertyCrmEventMeeting> meeting,
             @JsonProperty("note") Optional<? extends PropertyCrmEventNote> note,
+            @JsonProperty("page_view") Optional<? extends PropertyCrmEventPageView> pageView,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
             @JsonProperty("task") Optional<? extends PropertyCrmEventTask> task,
             @JsonProperty("type") Optional<? extends CrmEventType> type,
@@ -137,10 +152,13 @@ public class CrmEvent {
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(dealIds, "dealIds");
         Utils.checkNotNull(email, "email");
+        Utils.checkNotNull(form, "form");
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(leadIds, "leadIds");
+        Utils.checkNotNull(marketingEmail, "marketingEmail");
         Utils.checkNotNull(meeting, "meeting");
         Utils.checkNotNull(note, "note");
+        Utils.checkNotNull(pageView, "pageView");
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(task, "task");
         Utils.checkNotNull(type, "type");
@@ -152,10 +170,13 @@ public class CrmEvent {
         this.createdAt = createdAt;
         this.dealIds = dealIds;
         this.email = email;
+        this.form = form;
         this.id = id;
         this.leadIds = leadIds;
+        this.marketingEmail = marketingEmail;
         this.meeting = meeting;
         this.note = note;
+        this.pageView = pageView;
         this.raw = raw;
         this.task = task;
         this.type = type;
@@ -164,7 +185,7 @@ public class CrmEvent {
     }
     
     public CrmEvent() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     /**
@@ -217,6 +238,12 @@ public class CrmEvent {
         return (Optional<PropertyCrmEventEmail>) email;
     }
 
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<PropertyCrmEventForm> form() {
+        return (Optional<PropertyCrmEventForm>) form;
+    }
+
     @JsonIgnore
     public Optional<String> id() {
         return id;
@@ -226,6 +253,12 @@ public class CrmEvent {
     @JsonIgnore
     public Optional<List<String>> leadIds() {
         return (Optional<List<String>>) leadIds;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<PropertyCrmEventMarketingEmail> marketingEmail() {
+        return (Optional<PropertyCrmEventMarketingEmail>) marketingEmail;
     }
 
     /**
@@ -244,6 +277,12 @@ public class CrmEvent {
     @JsonIgnore
     public Optional<PropertyCrmEventNote> note() {
         return (Optional<PropertyCrmEventNote>) note;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<PropertyCrmEventPageView> pageView() {
+        return (Optional<PropertyCrmEventPageView>) pageView;
     }
 
     /**
@@ -386,6 +425,18 @@ public class CrmEvent {
         return this;
     }
 
+    public CrmEvent withForm(PropertyCrmEventForm form) {
+        Utils.checkNotNull(form, "form");
+        this.form = Optional.ofNullable(form);
+        return this;
+    }
+
+    public CrmEvent withForm(Optional<? extends PropertyCrmEventForm> form) {
+        Utils.checkNotNull(form, "form");
+        this.form = form;
+        return this;
+    }
+
     public CrmEvent withId(String id) {
         Utils.checkNotNull(id, "id");
         this.id = Optional.ofNullable(id);
@@ -407,6 +458,18 @@ public class CrmEvent {
     public CrmEvent withLeadIds(Optional<? extends List<String>> leadIds) {
         Utils.checkNotNull(leadIds, "leadIds");
         this.leadIds = leadIds;
+        return this;
+    }
+
+    public CrmEvent withMarketingEmail(PropertyCrmEventMarketingEmail marketingEmail) {
+        Utils.checkNotNull(marketingEmail, "marketingEmail");
+        this.marketingEmail = Optional.ofNullable(marketingEmail);
+        return this;
+    }
+
+    public CrmEvent withMarketingEmail(Optional<? extends PropertyCrmEventMarketingEmail> marketingEmail) {
+        Utils.checkNotNull(marketingEmail, "marketingEmail");
+        this.marketingEmail = marketingEmail;
         return this;
     }
 
@@ -443,6 +506,18 @@ public class CrmEvent {
     public CrmEvent withNote(Optional<? extends PropertyCrmEventNote> note) {
         Utils.checkNotNull(note, "note");
         this.note = note;
+        return this;
+    }
+
+    public CrmEvent withPageView(PropertyCrmEventPageView pageView) {
+        Utils.checkNotNull(pageView, "pageView");
+        this.pageView = Optional.ofNullable(pageView);
+        return this;
+    }
+
+    public CrmEvent withPageView(Optional<? extends PropertyCrmEventPageView> pageView) {
+        Utils.checkNotNull(pageView, "pageView");
+        this.pageView = pageView;
         return this;
     }
 
@@ -534,10 +609,13 @@ public class CrmEvent {
             Objects.deepEquals(this.createdAt, other.createdAt) &&
             Objects.deepEquals(this.dealIds, other.dealIds) &&
             Objects.deepEquals(this.email, other.email) &&
+            Objects.deepEquals(this.form, other.form) &&
             Objects.deepEquals(this.id, other.id) &&
             Objects.deepEquals(this.leadIds, other.leadIds) &&
+            Objects.deepEquals(this.marketingEmail, other.marketingEmail) &&
             Objects.deepEquals(this.meeting, other.meeting) &&
             Objects.deepEquals(this.note, other.note) &&
+            Objects.deepEquals(this.pageView, other.pageView) &&
             Objects.deepEquals(this.raw, other.raw) &&
             Objects.deepEquals(this.task, other.task) &&
             Objects.deepEquals(this.type, other.type) &&
@@ -554,10 +632,13 @@ public class CrmEvent {
             createdAt,
             dealIds,
             email,
+            form,
             id,
             leadIds,
+            marketingEmail,
             meeting,
             note,
+            pageView,
             raw,
             task,
             type,
@@ -574,10 +655,13 @@ public class CrmEvent {
                 "createdAt", createdAt,
                 "dealIds", dealIds,
                 "email", email,
+                "form", form,
                 "id", id,
                 "leadIds", leadIds,
+                "marketingEmail", marketingEmail,
                 "meeting", meeting,
                 "note", note,
+                "pageView", pageView,
                 "raw", raw,
                 "task", task,
                 "type", type,
@@ -599,13 +683,19 @@ public class CrmEvent {
  
         private Optional<? extends PropertyCrmEventEmail> email = Optional.empty();
  
+        private Optional<? extends PropertyCrmEventForm> form = Optional.empty();
+ 
         private Optional<String> id = Optional.empty();
  
         private Optional<? extends List<String>> leadIds = Optional.empty();
  
+        private Optional<? extends PropertyCrmEventMarketingEmail> marketingEmail = Optional.empty();
+ 
         private Optional<? extends PropertyCrmEventMeeting> meeting = Optional.empty();
  
         private Optional<? extends PropertyCrmEventNote> note = Optional.empty();
+ 
+        private Optional<? extends PropertyCrmEventPageView> pageView = Optional.empty();
  
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
  
@@ -723,6 +813,18 @@ public class CrmEvent {
             return this;
         }
 
+        public Builder form(PropertyCrmEventForm form) {
+            Utils.checkNotNull(form, "form");
+            this.form = Optional.ofNullable(form);
+            return this;
+        }
+
+        public Builder form(Optional<? extends PropertyCrmEventForm> form) {
+            Utils.checkNotNull(form, "form");
+            this.form = form;
+            return this;
+        }
+
         public Builder id(String id) {
             Utils.checkNotNull(id, "id");
             this.id = Optional.ofNullable(id);
@@ -744,6 +846,18 @@ public class CrmEvent {
         public Builder leadIds(Optional<? extends List<String>> leadIds) {
             Utils.checkNotNull(leadIds, "leadIds");
             this.leadIds = leadIds;
+            return this;
+        }
+
+        public Builder marketingEmail(PropertyCrmEventMarketingEmail marketingEmail) {
+            Utils.checkNotNull(marketingEmail, "marketingEmail");
+            this.marketingEmail = Optional.ofNullable(marketingEmail);
+            return this;
+        }
+
+        public Builder marketingEmail(Optional<? extends PropertyCrmEventMarketingEmail> marketingEmail) {
+            Utils.checkNotNull(marketingEmail, "marketingEmail");
+            this.marketingEmail = marketingEmail;
             return this;
         }
 
@@ -780,6 +894,18 @@ public class CrmEvent {
         public Builder note(Optional<? extends PropertyCrmEventNote> note) {
             Utils.checkNotNull(note, "note");
             this.note = note;
+            return this;
+        }
+
+        public Builder pageView(PropertyCrmEventPageView pageView) {
+            Utils.checkNotNull(pageView, "pageView");
+            this.pageView = Optional.ofNullable(pageView);
+            return this;
+        }
+
+        public Builder pageView(Optional<? extends PropertyCrmEventPageView> pageView) {
+            Utils.checkNotNull(pageView, "pageView");
+            this.pageView = pageView;
             return this;
         }
 
@@ -863,10 +989,13 @@ public class CrmEvent {
                 createdAt,
                 dealIds,
                 email,
+                form,
                 id,
                 leadIds,
+                marketingEmail,
                 meeting,
                 note,
+                pageView,
                 raw,
                 task,
                 type,

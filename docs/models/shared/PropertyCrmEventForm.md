@@ -1,0 +1,11 @@
+# PropertyCrmEventForm
+
+
+## Fields
+
+| Field                                                                                     | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `archivedAt`                                                                              | [OffsetDateTime](https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html) | :heavy_minus_sign:                                                                        | N/A                                                                                       |
+| `fields`                                                                                  | List\<[CrmEventFormField](../../models/shared/CrmEventFormField.md)>                      | :heavy_minus_sign:                                                                        | N/A                                                                                       |
+| `name`                                                                                    | *Optional\<String>*                                                                       | :heavy_minus_sign:                                                                        | N/A                                                                                       |
+| `redirectUrl`                                                                             | *Optional\<String>*                                                                       | :heavy_minus_sign:                                                                        | N/A                                                                                       |

@@ -18,11 +18,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
-/**
- * PropertyCrmEventEmail - The email object, when type = email
- */
 
-public class PropertyCrmEventEmail {
+public class PropertyCrmEventMarketingEmail {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachment_file_ids")
@@ -33,7 +30,7 @@ public class PropertyCrmEventEmail {
     private Optional<String> body;
 
     /**
-     * The event email's cc name &amp; email (name )
+     * The event email's cc name &amp; email (name &lt;test@test.com&gt;)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cc")
@@ -44,40 +41,47 @@ public class PropertyCrmEventEmail {
     private Optional<String> from;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("name")
+    private Optional<String> name;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
     private Optional<String> subject;
 
     /**
-     * The event email's "to" name &amp; email (name )
+     * The event email's "to" name &amp; email (name &lt;test@test.com&gt;)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
     private Optional<? extends List<String>> to;
 
     @JsonCreator
-    public PropertyCrmEventEmail(
+    public PropertyCrmEventMarketingEmail(
             @JsonProperty("attachment_file_ids") Optional<? extends List<String>> attachmentFileIds,
             @JsonProperty("body") Optional<String> body,
             @JsonProperty("cc") Optional<? extends List<String>> cc,
             @JsonProperty("from") Optional<String> from,
+            @JsonProperty("name") Optional<String> name,
             @JsonProperty("subject") Optional<String> subject,
             @JsonProperty("to") Optional<? extends List<String>> to) {
         Utils.checkNotNull(attachmentFileIds, "attachmentFileIds");
         Utils.checkNotNull(body, "body");
         Utils.checkNotNull(cc, "cc");
         Utils.checkNotNull(from, "from");
+        Utils.checkNotNull(name, "name");
         Utils.checkNotNull(subject, "subject");
         Utils.checkNotNull(to, "to");
         this.attachmentFileIds = attachmentFileIds;
         this.body = body;
         this.cc = cc;
         this.from = from;
+        this.name = name;
         this.subject = subject;
         this.to = to;
     }
     
-    public PropertyCrmEventEmail() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+    public PropertyCrmEventMarketingEmail() {
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -92,7 +96,7 @@ public class PropertyCrmEventEmail {
     }
 
     /**
-     * The event email's cc name &amp; email (name )
+     * The event email's cc name &amp; email (name &lt;test@test.com&gt;)
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
@@ -106,12 +110,17 @@ public class PropertyCrmEventEmail {
     }
 
     @JsonIgnore
+    public Optional<String> name() {
+        return name;
+    }
+
+    @JsonIgnore
     public Optional<String> subject() {
         return subject;
     }
 
     /**
-     * The event email's "to" name &amp; email (name )
+     * The event email's "to" name &amp; email (name &lt;test@test.com&gt;)
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
@@ -123,85 +132,97 @@ public class PropertyCrmEventEmail {
         return new Builder();
     }
 
-    public PropertyCrmEventEmail withAttachmentFileIds(List<String> attachmentFileIds) {
+    public PropertyCrmEventMarketingEmail withAttachmentFileIds(List<String> attachmentFileIds) {
         Utils.checkNotNull(attachmentFileIds, "attachmentFileIds");
         this.attachmentFileIds = Optional.ofNullable(attachmentFileIds);
         return this;
     }
 
-    public PropertyCrmEventEmail withAttachmentFileIds(Optional<? extends List<String>> attachmentFileIds) {
+    public PropertyCrmEventMarketingEmail withAttachmentFileIds(Optional<? extends List<String>> attachmentFileIds) {
         Utils.checkNotNull(attachmentFileIds, "attachmentFileIds");
         this.attachmentFileIds = attachmentFileIds;
         return this;
     }
 
-    public PropertyCrmEventEmail withBody(String body) {
+    public PropertyCrmEventMarketingEmail withBody(String body) {
         Utils.checkNotNull(body, "body");
         this.body = Optional.ofNullable(body);
         return this;
     }
 
-    public PropertyCrmEventEmail withBody(Optional<String> body) {
+    public PropertyCrmEventMarketingEmail withBody(Optional<String> body) {
         Utils.checkNotNull(body, "body");
         this.body = body;
         return this;
     }
 
     /**
-     * The event email's cc name &amp; email (name )
+     * The event email's cc name &amp; email (name &lt;test@test.com&gt;)
      */
-    public PropertyCrmEventEmail withCc(List<String> cc) {
+    public PropertyCrmEventMarketingEmail withCc(List<String> cc) {
         Utils.checkNotNull(cc, "cc");
         this.cc = Optional.ofNullable(cc);
         return this;
     }
 
     /**
-     * The event email's cc name &amp; email (name )
+     * The event email's cc name &amp; email (name &lt;test@test.com&gt;)
      */
-    public PropertyCrmEventEmail withCc(Optional<? extends List<String>> cc) {
+    public PropertyCrmEventMarketingEmail withCc(Optional<? extends List<String>> cc) {
         Utils.checkNotNull(cc, "cc");
         this.cc = cc;
         return this;
     }
 
-    public PropertyCrmEventEmail withFrom(String from) {
+    public PropertyCrmEventMarketingEmail withFrom(String from) {
         Utils.checkNotNull(from, "from");
         this.from = Optional.ofNullable(from);
         return this;
     }
 
-    public PropertyCrmEventEmail withFrom(Optional<String> from) {
+    public PropertyCrmEventMarketingEmail withFrom(Optional<String> from) {
         Utils.checkNotNull(from, "from");
         this.from = from;
         return this;
     }
 
-    public PropertyCrmEventEmail withSubject(String subject) {
+    public PropertyCrmEventMarketingEmail withName(String name) {
+        Utils.checkNotNull(name, "name");
+        this.name = Optional.ofNullable(name);
+        return this;
+    }
+
+    public PropertyCrmEventMarketingEmail withName(Optional<String> name) {
+        Utils.checkNotNull(name, "name");
+        this.name = name;
+        return this;
+    }
+
+    public PropertyCrmEventMarketingEmail withSubject(String subject) {
         Utils.checkNotNull(subject, "subject");
         this.subject = Optional.ofNullable(subject);
         return this;
     }
 
-    public PropertyCrmEventEmail withSubject(Optional<String> subject) {
+    public PropertyCrmEventMarketingEmail withSubject(Optional<String> subject) {
         Utils.checkNotNull(subject, "subject");
         this.subject = subject;
         return this;
     }
 
     /**
-     * The event email's "to" name &amp; email (name )
+     * The event email's "to" name &amp; email (name &lt;test@test.com&gt;)
      */
-    public PropertyCrmEventEmail withTo(List<String> to) {
+    public PropertyCrmEventMarketingEmail withTo(List<String> to) {
         Utils.checkNotNull(to, "to");
         this.to = Optional.ofNullable(to);
         return this;
     }
 
     /**
-     * The event email's "to" name &amp; email (name )
+     * The event email's "to" name &amp; email (name &lt;test@test.com&gt;)
      */
-    public PropertyCrmEventEmail withTo(Optional<? extends List<String>> to) {
+    public PropertyCrmEventMarketingEmail withTo(Optional<? extends List<String>> to) {
         Utils.checkNotNull(to, "to");
         this.to = to;
         return this;
@@ -215,12 +236,13 @@ public class PropertyCrmEventEmail {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        PropertyCrmEventEmail other = (PropertyCrmEventEmail) o;
+        PropertyCrmEventMarketingEmail other = (PropertyCrmEventMarketingEmail) o;
         return 
             Objects.deepEquals(this.attachmentFileIds, other.attachmentFileIds) &&
             Objects.deepEquals(this.body, other.body) &&
             Objects.deepEquals(this.cc, other.cc) &&
             Objects.deepEquals(this.from, other.from) &&
+            Objects.deepEquals(this.name, other.name) &&
             Objects.deepEquals(this.subject, other.subject) &&
             Objects.deepEquals(this.to, other.to);
     }
@@ -232,17 +254,19 @@ public class PropertyCrmEventEmail {
             body,
             cc,
             from,
+            name,
             subject,
             to);
     }
     
     @Override
     public String toString() {
-        return Utils.toString(PropertyCrmEventEmail.class,
+        return Utils.toString(PropertyCrmEventMarketingEmail.class,
                 "attachmentFileIds", attachmentFileIds,
                 "body", body,
                 "cc", cc,
                 "from", from,
+                "name", name,
                 "subject", subject,
                 "to", to);
     }
@@ -256,6 +280,8 @@ public class PropertyCrmEventEmail {
         private Optional<? extends List<String>> cc = Optional.empty();
  
         private Optional<String> from = Optional.empty();
+ 
+        private Optional<String> name = Optional.empty();
  
         private Optional<String> subject = Optional.empty();
  
@@ -290,7 +316,7 @@ public class PropertyCrmEventEmail {
         }
 
         /**
-         * The event email's cc name &amp; email (name )
+         * The event email's cc name &amp; email (name &lt;test@test.com&gt;)
          */
         public Builder cc(List<String> cc) {
             Utils.checkNotNull(cc, "cc");
@@ -299,7 +325,7 @@ public class PropertyCrmEventEmail {
         }
 
         /**
-         * The event email's cc name &amp; email (name )
+         * The event email's cc name &amp; email (name &lt;test@test.com&gt;)
          */
         public Builder cc(Optional<? extends List<String>> cc) {
             Utils.checkNotNull(cc, "cc");
@@ -319,6 +345,18 @@ public class PropertyCrmEventEmail {
             return this;
         }
 
+        public Builder name(String name) {
+            Utils.checkNotNull(name, "name");
+            this.name = Optional.ofNullable(name);
+            return this;
+        }
+
+        public Builder name(Optional<String> name) {
+            Utils.checkNotNull(name, "name");
+            this.name = name;
+            return this;
+        }
+
         public Builder subject(String subject) {
             Utils.checkNotNull(subject, "subject");
             this.subject = Optional.ofNullable(subject);
@@ -332,7 +370,7 @@ public class PropertyCrmEventEmail {
         }
 
         /**
-         * The event email's "to" name &amp; email (name )
+         * The event email's "to" name &amp; email (name &lt;test@test.com&gt;)
          */
         public Builder to(List<String> to) {
             Utils.checkNotNull(to, "to");
@@ -341,7 +379,7 @@ public class PropertyCrmEventEmail {
         }
 
         /**
-         * The event email's "to" name &amp; email (name )
+         * The event email's "to" name &amp; email (name &lt;test@test.com&gt;)
          */
         public Builder to(Optional<? extends List<String>> to) {
             Utils.checkNotNull(to, "to");
@@ -349,12 +387,13 @@ public class PropertyCrmEventEmail {
             return this;
         }
         
-        public PropertyCrmEventEmail build() {
-            return new PropertyCrmEventEmail(
+        public PropertyCrmEventMarketingEmail build() {
+            return new PropertyCrmEventMarketingEmail(
                 attachmentFileIds,
                 body,
                 cc,
                 from,
+                name,
                 subject,
                 to);
         }

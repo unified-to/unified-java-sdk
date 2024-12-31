@@ -1,0 +1,11 @@
+# CrmEventFormField
+
+
+## Fields
+
+| Field                                                                            | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `name`                                                                           | *Optional\<String>*                                                              | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `options`                                                                        | List\<[CrmEventFormOption](../../models/shared/CrmEventFormOption.md)>           | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `required`                                                                       | *Optional\<Boolean>*                                                             | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `type`                                                                           | [Optional\<CrmEventFormFieldType>](../../models/shared/CrmEventFormFieldType.md) | :heavy_minus_sign:                                                               | N/A                                                                              |
