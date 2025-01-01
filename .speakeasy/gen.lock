@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 05ab7803e5b317202af3aacb4835f336
+  docChecksum: d3ff121f2a7d483c6c660192f0d72464
   docVersion: "1.0"
   speakeasyVersion: 1.460.3
   generationVersion: 2.484.0
-  releaseVersion: 0.26.6
-  configChecksum: d41bc0659fefcda0b71708101fb0b15d
+  releaseVersion: 0.26.7
+  configChecksum: 3bf995f146fb8351818df3ff22143875
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -113,6 +113,8 @@ generatedFiles:
   - docs/models/operations/CreatePaymentLinkResponse.md
   - docs/models/operations/CreatePaymentPaymentRequest.md
   - docs/models/operations/CreatePaymentPaymentResponse.md
+  - docs/models/operations/CreatePaymentSubscriptionRequest.md
+  - docs/models/operations/CreatePaymentSubscriptionResponse.md
   - docs/models/operations/CreateRepoBranchRequest.md
   - docs/models/operations/CreateRepoBranchResponse.md
   - docs/models/operations/CreateRepoCommitRequest.md
@@ -238,6 +240,8 @@ generatedFiles:
   - docs/models/operations/GetPaymentPayoutResponse.md
   - docs/models/operations/GetPaymentRefundRequest.md
   - docs/models/operations/GetPaymentRefundResponse.md
+  - docs/models/operations/GetPaymentSubscriptionRequest.md
+  - docs/models/operations/GetPaymentSubscriptionResponse.md
   - docs/models/operations/GetRepoBranchRequest.md
   - docs/models/operations/GetRepoBranchResponse.md
   - docs/models/operations/GetRepoCommitRequest.md
@@ -380,6 +384,8 @@ generatedFiles:
   - docs/models/operations/ListPaymentPayoutsResponse.md
   - docs/models/operations/ListPaymentRefundsRequest.md
   - docs/models/operations/ListPaymentRefundsResponse.md
+  - docs/models/operations/ListPaymentSubscriptionsRequest.md
+  - docs/models/operations/ListPaymentSubscriptionsResponse.md
   - docs/models/operations/ListRepoBranchesRequest.md
   - docs/models/operations/ListRepoBranchesResponse.md
   - docs/models/operations/ListRepoCommitsRequest.md
@@ -507,6 +513,8 @@ generatedFiles:
   - docs/models/operations/PatchPaymentLinkResponse.md
   - docs/models/operations/PatchPaymentPaymentRequest.md
   - docs/models/operations/PatchPaymentPaymentResponse.md
+  - docs/models/operations/PatchPaymentSubscriptionRequest.md
+  - docs/models/operations/PatchPaymentSubscriptionResponse.md
   - docs/models/operations/PatchRepoBranchRequest.md
   - docs/models/operations/PatchRepoBranchResponse.md
   - docs/models/operations/PatchRepoCommitRequest.md
@@ -624,6 +632,8 @@ generatedFiles:
   - docs/models/operations/RemovePaymentLinkResponse.md
   - docs/models/operations/RemovePaymentPaymentRequest.md
   - docs/models/operations/RemovePaymentPaymentResponse.md
+  - docs/models/operations/RemovePaymentSubscriptionRequest.md
+  - docs/models/operations/RemovePaymentSubscriptionResponse.md
   - docs/models/operations/RemoveRepoBranchRequest.md
   - docs/models/operations/RemoveRepoBranchResponse.md
   - docs/models/operations/RemoveRepoCommitRequest.md
@@ -741,6 +751,8 @@ generatedFiles:
   - docs/models/operations/UpdatePaymentLinkResponse.md
   - docs/models/operations/UpdatePaymentPaymentRequest.md
   - docs/models/operations/UpdatePaymentPaymentResponse.md
+  - docs/models/operations/UpdatePaymentSubscriptionRequest.md
+  - docs/models/operations/UpdatePaymentSubscriptionResponse.md
   - docs/models/operations/UpdateRepoBranchRequest.md
   - docs/models/operations/UpdateRepoBranchResponse.md
   - docs/models/operations/UpdateRepoCommitRequest.md
@@ -892,6 +904,7 @@ generatedFiles:
   - docs/models/shared/HrisTimeoffType.md
   - docs/models/shared/Integration.md
   - docs/models/shared/IntegrationSupport.md
+  - docs/models/shared/IntervalUnit.md
   - docs/models/shared/Issue.md
   - docs/models/shared/IssueStatus.md
   - docs/models/shared/KmsPage.md
@@ -962,13 +975,15 @@ generatedFiles:
   - docs/models/shared/Operation.md
   - docs/models/shared/Origin.md
   - docs/models/shared/PaymentCollectionMethod.md
+  - docs/models/shared/PaymentLineitem.md
   - docs/models/shared/PaymentLink.md
-  - docs/models/shared/PaymentLinkLineitem.md
   - docs/models/shared/PaymentPayment.md
   - docs/models/shared/PaymentPayout.md
   - docs/models/shared/PaymentPayoutStatus.md
   - docs/models/shared/PaymentRefund.md
   - docs/models/shared/PaymentRefundStatus.md
+  - docs/models/shared/PaymentSubscription.md
+  - docs/models/shared/PaymentSubscriptionStatus.md
   - docs/models/shared/PaymentType.md
   - docs/models/shared/Priority.md
   - docs/models/shared/PropertyAccountingContactBillingAddress.md
@@ -1174,6 +1189,7 @@ generatedFiles:
   - docs/sdks/space/README.md
   - docs/sdks/storage/README.md
   - docs/sdks/student/README.md
+  - docs/sdks/subscription/README.md
   - docs/sdks/task/README.md
   - docs/sdks/taxrate/README.md
   - docs/sdks/ticket/README.md
@@ -1266,6 +1282,7 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/Space.java
   - src/main/java/com/unifiedapi/unifiedto/Storage.java
   - src/main/java/com/unifiedapi/unifiedto/Student.java
+  - src/main/java/com/unifiedapi/unifiedto/Subscription.java
   - src/main/java/com/unifiedapi/unifiedto/Task.java
   - src/main/java/com/unifiedapi/unifiedto/Taxrate.java
   - src/main/java/com/unifiedapi/unifiedto/Ticket.java
@@ -1409,6 +1426,9 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreatePaymentPaymentRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreatePaymentPaymentRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreatePaymentPaymentResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreatePaymentSubscriptionRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreatePaymentSubscriptionRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreatePaymentSubscriptionResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateRepoBranchRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateRepoBranchRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateRepoBranchResponse.java
@@ -1597,6 +1617,9 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetPaymentRefundRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetPaymentRefundRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetPaymentRefundResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetPaymentSubscriptionRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetPaymentSubscriptionRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetPaymentSubscriptionResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetRepoBranchRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetRepoBranchRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetRepoBranchResponse.java
@@ -1810,6 +1833,9 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListPaymentRefundsRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListPaymentRefundsRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListPaymentRefundsResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListPaymentSubscriptionsRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListPaymentSubscriptionsRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListPaymentSubscriptionsResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListRepoBranchesRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListRepoBranchesRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListRepoBranchesResponse.java
@@ -2000,6 +2026,9 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchPaymentPaymentRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchPaymentPaymentRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchPaymentPaymentResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchPaymentSubscriptionRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchPaymentSubscriptionRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchPaymentSubscriptionResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchRepoBranchRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchRepoBranchRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchRepoBranchResponse.java
@@ -2175,6 +2204,9 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemovePaymentPaymentRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemovePaymentPaymentRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemovePaymentPaymentResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemovePaymentSubscriptionRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemovePaymentSubscriptionRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemovePaymentSubscriptionResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveRepoBranchRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveRepoBranchRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveRepoBranchResponse.java
@@ -2351,6 +2383,9 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePaymentPaymentRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePaymentPaymentRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePaymentPaymentResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePaymentSubscriptionRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePaymentSubscriptionRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdatePaymentSubscriptionResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateRepoBranchRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateRepoBranchRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateRepoBranchResponse.java
@@ -2519,6 +2554,7 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisTimeoffType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Integration.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/IntegrationSupport.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/IntervalUnit.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Issue.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/IssueStatus.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/KmsPage.java
@@ -2589,13 +2625,15 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Operation.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Origin.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PaymentCollectionMethod.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PaymentLineitem.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PaymentLink.java
-  - src/main/java/com/unifiedapi/unifiedto/models/shared/PaymentLinkLineitem.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PaymentPayment.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PaymentPayout.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PaymentPayoutStatus.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PaymentRefund.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PaymentRefundStatus.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PaymentSubscription.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/PaymentSubscriptionStatus.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PaymentType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Priority.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyAccountingContactBillingAddress.java
@@ -6195,4 +6233,58 @@ examples:
       responses:
         "200":
           application/json: {"name": "<value>", "object_type": "<value>"}
+  createPaymentSubscription:
+    speakeasy-default-create-payment-subscription:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  getPaymentSubscription:
+    speakeasy-default-get-payment-subscription:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  listPaymentSubscriptions:
+    speakeasy-default-list-payment-subscriptions:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{}]
+  patchPaymentSubscription:
+    speakeasy-default-patch-payment-subscription:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  removePaymentSubscription:
+    speakeasy-default-remove-payment-subscription:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updatePaymentSubscription:
+    speakeasy-default-update-payment-subscription:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
 generatedTests: {}

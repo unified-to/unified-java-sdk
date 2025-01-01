@@ -16,6 +16,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public class AccountingJournal {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<String> createdAt;
+    private Optional<OffsetDateTime> createdAt;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
@@ -65,11 +66,11 @@ public class AccountingJournal {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<String> updatedAt;
+    private Optional<OffsetDateTime> updatedAt;
 
     @JsonCreator
     public AccountingJournal(
-            @JsonProperty("created_at") Optional<String> createdAt,
+            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("currency") Optional<String> currency,
             @JsonProperty("description") Optional<String> description,
             @JsonProperty("id") Optional<String> id,
@@ -78,7 +79,7 @@ public class AccountingJournal {
             @JsonProperty("reference") Optional<String> reference,
             @JsonProperty("tax_amount") Optional<Double> taxAmount,
             @JsonProperty("taxrate_id") Optional<String> taxrateId,
-            @JsonProperty("updated_at") Optional<String> updatedAt) {
+            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(currency, "currency");
         Utils.checkNotNull(description, "description");
@@ -106,7 +107,7 @@ public class AccountingJournal {
     }
 
     @JsonIgnore
-    public Optional<String> createdAt() {
+    public Optional<OffsetDateTime> createdAt() {
         return createdAt;
     }
 
@@ -156,7 +157,7 @@ public class AccountingJournal {
     }
 
     @JsonIgnore
-    public Optional<String> updatedAt() {
+    public Optional<OffsetDateTime> updatedAt() {
         return updatedAt;
     }
 
@@ -164,13 +165,13 @@ public class AccountingJournal {
         return new Builder();
     }
 
-    public AccountingJournal withCreatedAt(String createdAt) {
+    public AccountingJournal withCreatedAt(OffsetDateTime createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
 
-    public AccountingJournal withCreatedAt(Optional<String> createdAt) {
+    public AccountingJournal withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
         return this;
@@ -278,13 +279,13 @@ public class AccountingJournal {
         return this;
     }
 
-    public AccountingJournal withUpdatedAt(String updatedAt) {
+    public AccountingJournal withUpdatedAt(OffsetDateTime updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = Optional.ofNullable(updatedAt);
         return this;
     }
 
-    public AccountingJournal withUpdatedAt(Optional<String> updatedAt) {
+    public AccountingJournal withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
@@ -344,7 +345,7 @@ public class AccountingJournal {
     
     public final static class Builder {
  
-        private Optional<String> createdAt = Optional.empty();
+        private Optional<OffsetDateTime> createdAt = Optional.empty();
  
         private Optional<String> currency = Optional.empty();
  
@@ -362,19 +363,19 @@ public class AccountingJournal {
  
         private Optional<String> taxrateId = Optional.empty();
  
-        private Optional<String> updatedAt = Optional.empty();  
+        private Optional<OffsetDateTime> updatedAt = Optional.empty();  
         
         private Builder() {
           // force use of static builder() method
         }
 
-        public Builder createdAt(String createdAt) {
+        public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
             return this;
         }
 
-        public Builder createdAt(Optional<String> createdAt) {
+        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = createdAt;
             return this;
@@ -482,13 +483,13 @@ public class AccountingJournal {
             return this;
         }
 
-        public Builder updatedAt(String updatedAt) {
+        public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
             return this;
         }
 
-        public Builder updatedAt(Optional<String> updatedAt) {
+        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = updatedAt;
             return this;

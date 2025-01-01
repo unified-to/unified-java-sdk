@@ -33,7 +33,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'com.unifiedapi:unifiedto:0.26.6'
+implementation 'com.unifiedapi:unifiedto:0.26.7'
 ```
 
 Maven:
@@ -41,7 +41,7 @@ Maven:
 <dependency>
     <groupId>com.unifiedapi</groupId>
     <artifactId>unifiedto</artifactId>
-    <version>0.26.6</version>
+    <version>0.26.7</version>
 </dependency>
 ```
 
@@ -800,20 +800,26 @@ public class Application {
 
 * [createPaymentLink](docs/sdks/payment/README.md#createpaymentlink) - Create a link
 * [createPaymentPayment](docs/sdks/payment/README.md#createpaymentpayment) - Create a payment
+* [createPaymentSubscription](docs/sdks/payment/README.md#createpaymentsubscription) - Create a subscription
 * [getPaymentLink](docs/sdks/payment/README.md#getpaymentlink) - Retrieve a link
 * [getPaymentPayment](docs/sdks/payment/README.md#getpaymentpayment) - Retrieve a payment
 * [getPaymentPayout](docs/sdks/payment/README.md#getpaymentpayout) - Retrieve a payout
 * [getPaymentRefund](docs/sdks/payment/README.md#getpaymentrefund) - Retrieve a refund
+* [getPaymentSubscription](docs/sdks/payment/README.md#getpaymentsubscription) - Retrieve a subscription
 * [listPaymentLinks](docs/sdks/payment/README.md#listpaymentlinks) - List all links
 * [listPaymentPayments](docs/sdks/payment/README.md#listpaymentpayments) - List all payments
 * [listPaymentPayouts](docs/sdks/payment/README.md#listpaymentpayouts) - List all payouts
 * [listPaymentRefunds](docs/sdks/payment/README.md#listpaymentrefunds) - List all refunds
+* [listPaymentSubscriptions](docs/sdks/payment/README.md#listpaymentsubscriptions) - List all subscriptions
 * [patchPaymentLink](docs/sdks/payment/README.md#patchpaymentlink) - Update a link
 * [patchPaymentPayment](docs/sdks/payment/README.md#patchpaymentpayment) - Update a payment
+* [patchPaymentSubscription](docs/sdks/payment/README.md#patchpaymentsubscription) - Update a subscription
 * [removePaymentLink](docs/sdks/payment/README.md#removepaymentlink) - Remove a link
 * [removePaymentPayment](docs/sdks/payment/README.md#removepaymentpayment) - Remove a payment
+* [removePaymentSubscription](docs/sdks/payment/README.md#removepaymentsubscription) - Remove a subscription
 * [updatePaymentLink](docs/sdks/payment/README.md#updatepaymentlink) - Update a link
 * [updatePaymentPayment](docs/sdks/payment/README.md#updatepaymentpayment) - Update a payment
+* [updatePaymentSubscription](docs/sdks/payment/README.md#updatepaymentsubscription) - Update a subscription
 
 ### [payout()](docs/sdks/payout/README.md)
 
@@ -957,6 +963,15 @@ public class Application {
 * [patchLmsStudent](docs/sdks/student/README.md#patchlmsstudent) - Update a student
 * [removeLmsStudent](docs/sdks/student/README.md#removelmsstudent) - Remove a student
 * [updateLmsStudent](docs/sdks/student/README.md#updatelmsstudent) - Update a student
+
+### [subscription()](docs/sdks/subscription/README.md)
+
+* [createPaymentSubscription](docs/sdks/subscription/README.md#createpaymentsubscription) - Create a subscription
+* [getPaymentSubscription](docs/sdks/subscription/README.md#getpaymentsubscription) - Retrieve a subscription
+* [listPaymentSubscriptions](docs/sdks/subscription/README.md#listpaymentsubscriptions) - List all subscriptions
+* [patchPaymentSubscription](docs/sdks/subscription/README.md#patchpaymentsubscription) - Update a subscription
+* [removePaymentSubscription](docs/sdks/subscription/README.md#removepaymentsubscription) - Remove a subscription
+* [updatePaymentSubscription](docs/sdks/subscription/README.md#updatepaymentsubscription) - Update a subscription
 
 ### [task()](docs/sdks/task/README.md)
 

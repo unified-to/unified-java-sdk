@@ -59,7 +59,7 @@ public class Application {
                     PropertyConnectionCategories.REPO))
                 .integrationType("<value>")
                 .permissions(List.of(
-                    PropertyConnectionPermissions.CRM_LEAD_READ))
+                    PropertyConnectionPermissions.CRM_EVENT_WRITE))
                 .build();
 
         CreateUnifiedConnectionResponse res = sdk.unified().createUnifiedConnection()

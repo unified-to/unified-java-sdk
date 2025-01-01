@@ -56,7 +56,7 @@ public class PaymentLink {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineitems")
-    private Optional<? extends List<PaymentLinkLineitem>> lineitems;
+    private Optional<? extends List<PaymentLineitem>> lineitems;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_id")
@@ -87,7 +87,7 @@ public class PaymentLink {
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("is_active") Optional<Boolean> isActive,
             @JsonProperty("is_chargeable_now") Optional<Boolean> isChargeableNow,
-            @JsonProperty("lineitems") Optional<? extends List<PaymentLinkLineitem>> lineitems,
+            @JsonProperty("lineitems") Optional<? extends List<PaymentLineitem>> lineitems,
             @JsonProperty("payment_id") Optional<String> paymentId,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
             @JsonProperty("success_url") Optional<String> successUrl,
@@ -162,8 +162,8 @@ public class PaymentLink {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<List<PaymentLinkLineitem>> lineitems() {
-        return (Optional<List<PaymentLinkLineitem>>) lineitems;
+    public Optional<List<PaymentLineitem>> lineitems() {
+        return (Optional<List<PaymentLineitem>>) lineitems;
     }
 
     @JsonIgnore
@@ -280,13 +280,13 @@ public class PaymentLink {
         return this;
     }
 
-    public PaymentLink withLineitems(List<PaymentLinkLineitem> lineitems) {
+    public PaymentLink withLineitems(List<PaymentLineitem> lineitems) {
         Utils.checkNotNull(lineitems, "lineitems");
         this.lineitems = Optional.ofNullable(lineitems);
         return this;
     }
 
-    public PaymentLink withLineitems(Optional<? extends List<PaymentLinkLineitem>> lineitems) {
+    public PaymentLink withLineitems(Optional<? extends List<PaymentLineitem>> lineitems) {
         Utils.checkNotNull(lineitems, "lineitems");
         this.lineitems = lineitems;
         return this;
@@ -429,7 +429,7 @@ public class PaymentLink {
  
         private Optional<Boolean> isChargeableNow = Optional.empty();
  
-        private Optional<? extends List<PaymentLinkLineitem>> lineitems = Optional.empty();
+        private Optional<? extends List<PaymentLineitem>> lineitems = Optional.empty();
  
         private Optional<String> paymentId = Optional.empty();
  
@@ -529,13 +529,13 @@ public class PaymentLink {
             return this;
         }
 
-        public Builder lineitems(List<PaymentLinkLineitem> lineitems) {
+        public Builder lineitems(List<PaymentLineitem> lineitems) {
             Utils.checkNotNull(lineitems, "lineitems");
             this.lineitems = Optional.ofNullable(lineitems);
             return this;
         }
 
-        public Builder lineitems(Optional<? extends List<PaymentLinkLineitem>> lineitems) {
+        public Builder lineitems(Optional<? extends List<PaymentLineitem>> lineitems) {
             Utils.checkNotNull(lineitems, "lineitems");
             this.lineitems = lineitems;
             return this;

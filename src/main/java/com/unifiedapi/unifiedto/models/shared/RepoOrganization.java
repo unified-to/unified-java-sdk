@@ -15,6 +15,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.time.OffsetDateTime;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
@@ -28,7 +29,7 @@ public class RepoOrganization {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<String> createdAt;
+    private Optional<OffsetDateTime> createdAt;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
@@ -38,8 +39,9 @@ public class RepoOrganization {
     @JsonProperty("id")
     private Optional<String> id;
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private String name;
+    private Optional<String> name;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
@@ -47,7 +49,7 @@ public class RepoOrganization {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<String> updatedAt;
+    private Optional<OffsetDateTime> updatedAt;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
@@ -56,12 +58,12 @@ public class RepoOrganization {
     @JsonCreator
     public RepoOrganization(
             @JsonProperty("avatar_url") Optional<String> avatarUrl,
-            @JsonProperty("created_at") Optional<String> createdAt,
+            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("description") Optional<String> description,
             @JsonProperty("id") Optional<String> id,
-            @JsonProperty("name") String name,
+            @JsonProperty("name") Optional<String> name,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("updated_at") Optional<String> updatedAt,
+            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
             @JsonProperty("web_url") Optional<String> webUrl) {
         Utils.checkNotNull(avatarUrl, "avatarUrl");
         Utils.checkNotNull(createdAt, "createdAt");
@@ -81,9 +83,8 @@ public class RepoOrganization {
         this.webUrl = webUrl;
     }
     
-    public RepoOrganization(
-            String name) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), name, Optional.empty(), Optional.empty(), Optional.empty());
+    public RepoOrganization() {
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -92,7 +93,7 @@ public class RepoOrganization {
     }
 
     @JsonIgnore
-    public Optional<String> createdAt() {
+    public Optional<OffsetDateTime> createdAt() {
         return createdAt;
     }
 
@@ -107,7 +108,7 @@ public class RepoOrganization {
     }
 
     @JsonIgnore
-    public String name() {
+    public Optional<String> name() {
         return name;
     }
 
@@ -118,7 +119,7 @@ public class RepoOrganization {
     }
 
     @JsonIgnore
-    public Optional<String> updatedAt() {
+    public Optional<OffsetDateTime> updatedAt() {
         return updatedAt;
     }
 
@@ -143,13 +144,13 @@ public class RepoOrganization {
         return this;
     }
 
-    public RepoOrganization withCreatedAt(String createdAt) {
+    public RepoOrganization withCreatedAt(OffsetDateTime createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
 
-    public RepoOrganization withCreatedAt(Optional<String> createdAt) {
+    public RepoOrganization withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
         return this;
@@ -181,6 +182,12 @@ public class RepoOrganization {
 
     public RepoOrganization withName(String name) {
         Utils.checkNotNull(name, "name");
+        this.name = Optional.ofNullable(name);
+        return this;
+    }
+
+    public RepoOrganization withName(Optional<String> name) {
+        Utils.checkNotNull(name, "name");
         this.name = name;
         return this;
     }
@@ -197,13 +204,13 @@ public class RepoOrganization {
         return this;
     }
 
-    public RepoOrganization withUpdatedAt(String updatedAt) {
+    public RepoOrganization withUpdatedAt(OffsetDateTime updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = Optional.ofNullable(updatedAt);
         return this;
     }
 
-    public RepoOrganization withUpdatedAt(Optional<String> updatedAt) {
+    public RepoOrganization withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
@@ -271,17 +278,17 @@ public class RepoOrganization {
  
         private Optional<String> avatarUrl = Optional.empty();
  
-        private Optional<String> createdAt = Optional.empty();
+        private Optional<OffsetDateTime> createdAt = Optional.empty();
  
         private Optional<String> description = Optional.empty();
  
         private Optional<String> id = Optional.empty();
  
-        private String name;
+        private Optional<String> name = Optional.empty();
  
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
  
-        private Optional<String> updatedAt = Optional.empty();
+        private Optional<OffsetDateTime> updatedAt = Optional.empty();
  
         private Optional<String> webUrl = Optional.empty();  
         
@@ -301,13 +308,13 @@ public class RepoOrganization {
             return this;
         }
 
-        public Builder createdAt(String createdAt) {
+        public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
             return this;
         }
 
-        public Builder createdAt(Optional<String> createdAt) {
+        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = createdAt;
             return this;
@@ -339,6 +346,12 @@ public class RepoOrganization {
 
         public Builder name(String name) {
             Utils.checkNotNull(name, "name");
+            this.name = Optional.ofNullable(name);
+            return this;
+        }
+
+        public Builder name(Optional<String> name) {
+            Utils.checkNotNull(name, "name");
             this.name = name;
             return this;
         }
@@ -355,13 +368,13 @@ public class RepoOrganization {
             return this;
         }
 
-        public Builder updatedAt(String updatedAt) {
+        public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
             return this;
         }
 
-        public Builder updatedAt(Optional<String> updatedAt) {
+        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = updatedAt;
             return this;

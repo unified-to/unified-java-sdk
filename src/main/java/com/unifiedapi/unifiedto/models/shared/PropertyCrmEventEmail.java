@@ -33,7 +33,7 @@ public class PropertyCrmEventEmail {
     private Optional<String> body;
 
     /**
-     * The event email's cc name &amp; email (name )
+     * The event email's cc name &amp; email (name &lt;test@test.com&gt;)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cc")
@@ -48,7 +48,7 @@ public class PropertyCrmEventEmail {
     private Optional<String> subject;
 
     /**
-     * The event email's "to" name &amp; email (name )
+     * The event email's "to" name &amp; email (name &lt;test@test.com&gt;)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
@@ -92,7 +92,7 @@ public class PropertyCrmEventEmail {
     }
 
     /**
-     * The event email's cc name &amp; email (name )
+     * The event email's cc name &amp; email (name &lt;test@test.com&gt;)
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
@@ -111,7 +111,7 @@ public class PropertyCrmEventEmail {
     }
 
     /**
-     * The event email's "to" name &amp; email (name )
+     * The event email's "to" name &amp; email (name &lt;test@test.com&gt;)
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
@@ -148,7 +148,7 @@ public class PropertyCrmEventEmail {
     }
 
     /**
-     * The event email's cc name &amp; email (name )
+     * The event email's cc name &amp; email (name &lt;test@test.com&gt;)
      */
     public PropertyCrmEventEmail withCc(List<String> cc) {
         Utils.checkNotNull(cc, "cc");
@@ -157,7 +157,7 @@ public class PropertyCrmEventEmail {
     }
 
     /**
-     * The event email's cc name &amp; email (name )
+     * The event email's cc name &amp; email (name &lt;test@test.com&gt;)
      */
     public PropertyCrmEventEmail withCc(Optional<? extends List<String>> cc) {
         Utils.checkNotNull(cc, "cc");
@@ -190,7 +190,7 @@ public class PropertyCrmEventEmail {
     }
 
     /**
-     * The event email's "to" name &amp; email (name )
+     * The event email's "to" name &amp; email (name &lt;test@test.com&gt;)
      */
     public PropertyCrmEventEmail withTo(List<String> to) {
         Utils.checkNotNull(to, "to");
@@ -199,7 +199,7 @@ public class PropertyCrmEventEmail {
     }
 
     /**
-     * The event email's "to" name &amp; email (name )
+     * The event email's "to" name &amp; email (name &lt;test@test.com&gt;)
      */
     public PropertyCrmEventEmail withTo(Optional<? extends List<String>> to) {
         Utils.checkNotNull(to, "to");
@@ -290,7 +290,7 @@ public class PropertyCrmEventEmail {
         }
 
         /**
-         * The event email's cc name &amp; email (name )
+         * The event email's cc name &amp; email (name &lt;test@test.com&gt;)
          */
         public Builder cc(List<String> cc) {
             Utils.checkNotNull(cc, "cc");
@@ -299,7 +299,7 @@ public class PropertyCrmEventEmail {
         }
 
         /**
-         * The event email's cc name &amp; email (name )
+         * The event email's cc name &amp; email (name &lt;test@test.com&gt;)
          */
         public Builder cc(Optional<? extends List<String>> cc) {
             Utils.checkNotNull(cc, "cc");
@@ -332,7 +332,7 @@ public class PropertyCrmEventEmail {
         }
 
         /**
-         * The event email's "to" name &amp; email (name )
+         * The event email's "to" name &amp; email (name &lt;test@test.com&gt;)
          */
         public Builder to(List<String> to) {
             Utils.checkNotNull(to, "to");
@@ -341,7 +341,7 @@ public class PropertyCrmEventEmail {
         }
 
         /**
-         * The event email's "to" name &amp; email (name )
+         * The event email's "to" name &amp; email (name &lt;test@test.com&gt;)
          */
         public Builder to(Optional<? extends List<String>> to) {
             Utils.checkNotNull(to, "to");

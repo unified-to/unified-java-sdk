@@ -7,20 +7,26 @@
 
 * [createPaymentLink](#createpaymentlink) - Create a link
 * [createPaymentPayment](#createpaymentpayment) - Create a payment
+* [createPaymentSubscription](#createpaymentsubscription) - Create a subscription
 * [getPaymentLink](#getpaymentlink) - Retrieve a link
 * [getPaymentPayment](#getpaymentpayment) - Retrieve a payment
 * [getPaymentPayout](#getpaymentpayout) - Retrieve a payout
 * [getPaymentRefund](#getpaymentrefund) - Retrieve a refund
+* [getPaymentSubscription](#getpaymentsubscription) - Retrieve a subscription
 * [listPaymentLinks](#listpaymentlinks) - List all links
 * [listPaymentPayments](#listpaymentpayments) - List all payments
 * [listPaymentPayouts](#listpaymentpayouts) - List all payouts
 * [listPaymentRefunds](#listpaymentrefunds) - List all refunds
+* [listPaymentSubscriptions](#listpaymentsubscriptions) - List all subscriptions
 * [patchPaymentLink](#patchpaymentlink) - Update a link
 * [patchPaymentPayment](#patchpaymentpayment) - Update a payment
+* [patchPaymentSubscription](#patchpaymentsubscription) - Update a subscription
 * [removePaymentLink](#removepaymentlink) - Remove a link
 * [removePaymentPayment](#removepaymentpayment) - Remove a payment
+* [removePaymentSubscription](#removepaymentsubscription) - Remove a subscription
 * [updatePaymentLink](#updatepaymentlink) - Update a link
 * [updatePaymentPayment](#updatepaymentpayment) - Update a payment
+* [updatePaymentSubscription](#updatepaymentsubscription) - Update a subscription
 
 ## createPaymentLink
 
@@ -127,6 +133,62 @@ public class Application {
 ### Response
 
 **[CreatePaymentPaymentResponse](../../models/operations/CreatePaymentPaymentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createPaymentSubscription
+
+Create a subscription
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.CreatePaymentSubscriptionRequest;
+import com.unifiedapi.unifiedto.models.operations.CreatePaymentSubscriptionResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        CreatePaymentSubscriptionRequest req = CreatePaymentSubscriptionRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        CreatePaymentSubscriptionResponse res = sdk.payment().createPaymentSubscription()
+                .request(req)
+                .call();
+
+        if (res.paymentSubscription().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [CreatePaymentSubscriptionRequest](../../models/operations/CreatePaymentSubscriptionRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+
+### Response
+
+**[CreatePaymentSubscriptionResponse](../../models/operations/CreatePaymentSubscriptionResponse.md)**
 
 ### Errors
 
@@ -362,6 +424,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getPaymentSubscription
+
+Retrieve a subscription
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.GetPaymentSubscriptionRequest;
+import com.unifiedapi.unifiedto.models.operations.GetPaymentSubscriptionResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        GetPaymentSubscriptionRequest req = GetPaymentSubscriptionRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetPaymentSubscriptionResponse res = sdk.payment().getPaymentSubscription()
+                .request(req)
+                .call();
+
+        if (res.paymentSubscription().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [GetPaymentSubscriptionRequest](../../models/operations/GetPaymentSubscriptionRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+
+### Response
+
+**[GetPaymentSubscriptionResponse](../../models/operations/GetPaymentSubscriptionResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listPaymentLinks
 
 List all links
@@ -586,6 +705,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listPaymentSubscriptions
+
+List all subscriptions
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.ListPaymentSubscriptionsRequest;
+import com.unifiedapi.unifiedto.models.operations.ListPaymentSubscriptionsResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        ListPaymentSubscriptionsRequest req = ListPaymentSubscriptionsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListPaymentSubscriptionsResponse res = sdk.payment().listPaymentSubscriptions()
+                .request(req)
+                .call();
+
+        if (res.paymentSubscriptions().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [ListPaymentSubscriptionsRequest](../../models/operations/ListPaymentSubscriptionsRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+
+### Response
+
+**[ListPaymentSubscriptionsResponse](../../models/operations/ListPaymentSubscriptionsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchPaymentLink
 
 Update a link
@@ -693,6 +868,63 @@ public class Application {
 ### Response
 
 **[PatchPaymentPaymentResponse](../../models/operations/PatchPaymentPaymentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchPaymentSubscription
+
+Update a subscription
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.PatchPaymentSubscriptionRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchPaymentSubscriptionResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        PatchPaymentSubscriptionRequest req = PatchPaymentSubscriptionRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchPaymentSubscriptionResponse res = sdk.payment().patchPaymentSubscription()
+                .request(req)
+                .call();
+
+        if (res.paymentSubscription().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [PatchPaymentSubscriptionRequest](../../models/operations/PatchPaymentSubscriptionRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+
+### Response
+
+**[PatchPaymentSubscriptionResponse](../../models/operations/PatchPaymentSubscriptionResponse.md)**
 
 ### Errors
 
@@ -810,6 +1042,61 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removePaymentSubscription
+
+Remove a subscription
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.RemovePaymentSubscriptionRequest;
+import com.unifiedapi.unifiedto.models.operations.RemovePaymentSubscriptionResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        RemovePaymentSubscriptionRequest req = RemovePaymentSubscriptionRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemovePaymentSubscriptionResponse res = sdk.payment().removePaymentSubscription()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [RemovePaymentSubscriptionRequest](../../models/operations/RemovePaymentSubscriptionRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+
+### Response
+
+**[RemovePaymentSubscriptionResponse](../../models/operations/RemovePaymentSubscriptionResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## updatePaymentLink
 
 Update a link
@@ -917,6 +1204,63 @@ public class Application {
 ### Response
 
 **[UpdatePaymentPaymentResponse](../../models/operations/UpdatePaymentPaymentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updatePaymentSubscription
+
+Update a subscription
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.UpdatePaymentSubscriptionRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdatePaymentSubscriptionResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        UpdatePaymentSubscriptionRequest req = UpdatePaymentSubscriptionRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdatePaymentSubscriptionResponse res = sdk.payment().updatePaymentSubscription()
+                .request(req)
+                .call();
+
+        if (res.paymentSubscription().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [UpdatePaymentSubscriptionRequest](../../models/operations/UpdatePaymentSubscriptionRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+
+### Response
+
+**[UpdatePaymentSubscriptionResponse](../../models/operations/UpdatePaymentSubscriptionResponse.md)**
 
 ### Errors
 

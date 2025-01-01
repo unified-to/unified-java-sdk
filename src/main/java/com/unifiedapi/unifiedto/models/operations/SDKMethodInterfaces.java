@@ -1637,6 +1637,12 @@ public class SDKMethodInterfaces {
     }
 
 
+    public interface MethodCallCreatePaymentSubscription {
+        CreatePaymentSubscriptionResponse createPaymentSubscription(
+            CreatePaymentSubscriptionRequest request) throws Exception;
+    }
+
+
     public interface MethodCallGetPaymentLink {
         GetPaymentLinkResponse getPaymentLink(
             GetPaymentLinkRequest request) throws Exception;
@@ -1658,6 +1664,12 @@ public class SDKMethodInterfaces {
     public interface MethodCallGetPaymentRefund {
         GetPaymentRefundResponse getPaymentRefund(
             GetPaymentRefundRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallGetPaymentSubscription {
+        GetPaymentSubscriptionResponse getPaymentSubscription(
+            GetPaymentSubscriptionRequest request) throws Exception;
     }
 
 
@@ -1685,6 +1697,12 @@ public class SDKMethodInterfaces {
     }
 
 
+    public interface MethodCallListPaymentSubscriptions {
+        ListPaymentSubscriptionsResponse listPaymentSubscriptions(
+            ListPaymentSubscriptionsRequest request) throws Exception;
+    }
+
+
     public interface MethodCallPatchPaymentLink {
         PatchPaymentLinkResponse patchPaymentLink(
             PatchPaymentLinkRequest request) throws Exception;
@@ -1694,6 +1712,12 @@ public class SDKMethodInterfaces {
     public interface MethodCallPatchPaymentPayment {
         PatchPaymentPaymentResponse patchPaymentPayment(
             PatchPaymentPaymentRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallPatchPaymentSubscription {
+        PatchPaymentSubscriptionResponse patchPaymentSubscription(
+            PatchPaymentSubscriptionRequest request) throws Exception;
     }
 
 
@@ -1709,6 +1733,12 @@ public class SDKMethodInterfaces {
     }
 
 
+    public interface MethodCallRemovePaymentSubscription {
+        RemovePaymentSubscriptionResponse removePaymentSubscription(
+            RemovePaymentSubscriptionRequest request) throws Exception;
+    }
+
+
     public interface MethodCallUpdatePaymentLink {
         UpdatePaymentLinkResponse updatePaymentLink(
             UpdatePaymentLinkRequest request) throws Exception;
@@ -1718,6 +1748,12 @@ public class SDKMethodInterfaces {
     public interface MethodCallUpdatePaymentPayment {
         UpdatePaymentPaymentResponse updatePaymentPayment(
             UpdatePaymentPaymentRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallUpdatePaymentSubscription {
+        UpdatePaymentSubscriptionResponse updatePaymentSubscription(
+            UpdatePaymentSubscriptionRequest request) throws Exception;
     }
 
 

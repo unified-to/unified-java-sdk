@@ -150,6 +150,8 @@ public class UnifiedTo {
 
     private final Refund refund;
 
+    private final Subscription subscription;
+
     private final Repo repo;
 
     private final Branch branch;
@@ -436,6 +438,10 @@ public class UnifiedTo {
         return refund;
     }
 
+    public Subscription subscription() {
+        return subscription;
+    }
+
     public Repo repo() {
         return repo;
     }
@@ -716,6 +722,7 @@ public class UnifiedTo {
         this.link = new Link(sdkConfiguration);
         this.payout = new Payout(sdkConfiguration);
         this.refund = new Refund(sdkConfiguration);
+        this.subscription = new Subscription(sdkConfiguration);
         this.repo = new Repo(sdkConfiguration);
         this.branch = new Branch(sdkConfiguration);
         this.commit = new Commit(sdkConfiguration);

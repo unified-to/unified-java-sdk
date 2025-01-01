@@ -16,6 +16,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.time.OffsetDateTime;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +26,7 @@ public class PaymentRefund {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<String> createdAt;
+    private Optional<OffsetDateTime> createdAt;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
@@ -59,11 +60,11 @@ public class PaymentRefund {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<String> updatedAt;
+    private Optional<OffsetDateTime> updatedAt;
 
     @JsonCreator
     public PaymentRefund(
-            @JsonProperty("created_at") Optional<String> createdAt,
+            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("currency") Optional<String> currency,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("notes") Optional<String> notes,
@@ -72,7 +73,7 @@ public class PaymentRefund {
             @JsonProperty("reference") Optional<String> reference,
             @JsonProperty("status") Optional<? extends PaymentRefundStatus> status,
             @JsonProperty("total_amount") double totalAmount,
-            @JsonProperty("updated_at") Optional<String> updatedAt) {
+            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(currency, "currency");
         Utils.checkNotNull(id, "id");
@@ -102,7 +103,7 @@ public class PaymentRefund {
     }
 
     @JsonIgnore
-    public Optional<String> createdAt() {
+    public Optional<OffsetDateTime> createdAt() {
         return createdAt;
     }
 
@@ -149,7 +150,7 @@ public class PaymentRefund {
     }
 
     @JsonIgnore
-    public Optional<String> updatedAt() {
+    public Optional<OffsetDateTime> updatedAt() {
         return updatedAt;
     }
 
@@ -157,13 +158,13 @@ public class PaymentRefund {
         return new Builder();
     }
 
-    public PaymentRefund withCreatedAt(String createdAt) {
+    public PaymentRefund withCreatedAt(OffsetDateTime createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = Optional.ofNullable(createdAt);
         return this;
     }
 
-    public PaymentRefund withCreatedAt(Optional<String> createdAt) {
+    public PaymentRefund withCreatedAt(Optional<OffsetDateTime> createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = createdAt;
         return this;
@@ -253,13 +254,13 @@ public class PaymentRefund {
         return this;
     }
 
-    public PaymentRefund withUpdatedAt(String updatedAt) {
+    public PaymentRefund withUpdatedAt(OffsetDateTime updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = Optional.ofNullable(updatedAt);
         return this;
     }
 
-    public PaymentRefund withUpdatedAt(Optional<String> updatedAt) {
+    public PaymentRefund withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(updatedAt, "updatedAt");
         this.updatedAt = updatedAt;
         return this;
@@ -319,7 +320,7 @@ public class PaymentRefund {
     
     public final static class Builder {
  
-        private Optional<String> createdAt = Optional.empty();
+        private Optional<OffsetDateTime> createdAt = Optional.empty();
  
         private Optional<String> currency = Optional.empty();
  
@@ -337,19 +338,19 @@ public class PaymentRefund {
  
         private Double totalAmount;
  
-        private Optional<String> updatedAt = Optional.empty();  
+        private Optional<OffsetDateTime> updatedAt = Optional.empty();  
         
         private Builder() {
           // force use of static builder() method
         }
 
-        public Builder createdAt(String createdAt) {
+        public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
             return this;
         }
 
-        public Builder createdAt(Optional<String> createdAt) {
+        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = createdAt;
             return this;
@@ -439,13 +440,13 @@ public class PaymentRefund {
             return this;
         }
 
-        public Builder updatedAt(String updatedAt) {
+        public Builder updatedAt(OffsetDateTime updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = Optional.ofNullable(updatedAt);
             return this;
         }
 
-        public Builder updatedAt(Optional<String> updatedAt) {
+        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
             Utils.checkNotNull(updatedAt, "updatedAt");
             this.updatedAt = updatedAt;
             return this;
