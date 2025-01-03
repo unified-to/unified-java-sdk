@@ -67,6 +67,7 @@ public enum ObjectType {
     KMS_PAGE("kms_page"),
     TASK_PROJECT("task_project"),
     TASK_TASK("task_task"),
+    TASK_COMMENT("task_comment"),
     SCIM_USERS("scim_users"),
     SCIM_GROUPS("scim_groups"),
     LMS_COURSE("lms_course"),

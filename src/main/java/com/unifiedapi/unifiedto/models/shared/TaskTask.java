@@ -28,6 +28,13 @@ public class TaskTask {
     @JsonProperty("assigned_user_ids")
     private Optional<? extends List<String>> assignedUserIds;
 
+    /**
+     * Array of attachment IDs retrieved from StorageFile.Get endpoint
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("attachment_ids")
+    private Optional<? extends List<String>> attachmentIds;
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completed_at")
     private Optional<OffsetDateTime> completedAt;
@@ -99,6 +106,7 @@ public class TaskTask {
     @JsonCreator
     public TaskTask(
             @JsonProperty("assigned_user_ids") Optional<? extends List<String>> assignedUserIds,
+            @JsonProperty("attachment_ids") Optional<? extends List<String>> attachmentIds,
             @JsonProperty("completed_at") Optional<OffsetDateTime> completedAt,
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("creator_user_id") Optional<String> creatorUserId,
@@ -117,6 +125,7 @@ public class TaskTask {
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
             @JsonProperty("url") Optional<String> url) {
         Utils.checkNotNull(assignedUserIds, "assignedUserIds");
+        Utils.checkNotNull(attachmentIds, "attachmentIds");
         Utils.checkNotNull(completedAt, "completedAt");
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(creatorUserId, "creatorUserId");
@@ -135,6 +144,7 @@ public class TaskTask {
         Utils.checkNotNull(updatedAt, "updatedAt");
         Utils.checkNotNull(url, "url");
         this.assignedUserIds = assignedUserIds;
+        this.attachmentIds = attachmentIds;
         this.completedAt = completedAt;
         this.createdAt = createdAt;
         this.creatorUserId = creatorUserId;
@@ -155,13 +165,22 @@ public class TaskTask {
     }
     
     public TaskTask() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
     public Optional<List<String>> assignedUserIds() {
         return (Optional<List<String>>) assignedUserIds;
+    }
+
+    /**
+     * Array of attachment IDs retrieved from StorageFile.Get endpoint
+     */
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<String>> attachmentIds() {
+        return (Optional<List<String>>) attachmentIds;
     }
 
     @JsonIgnore
@@ -267,6 +286,24 @@ public class TaskTask {
     public TaskTask withAssignedUserIds(Optional<? extends List<String>> assignedUserIds) {
         Utils.checkNotNull(assignedUserIds, "assignedUserIds");
         this.assignedUserIds = assignedUserIds;
+        return this;
+    }
+
+    /**
+     * Array of attachment IDs retrieved from StorageFile.Get endpoint
+     */
+    public TaskTask withAttachmentIds(List<String> attachmentIds) {
+        Utils.checkNotNull(attachmentIds, "attachmentIds");
+        this.attachmentIds = Optional.ofNullable(attachmentIds);
+        return this;
+    }
+
+    /**
+     * Array of attachment IDs retrieved from StorageFile.Get endpoint
+     */
+    public TaskTask withAttachmentIds(Optional<? extends List<String>> attachmentIds) {
+        Utils.checkNotNull(attachmentIds, "attachmentIds");
+        this.attachmentIds = attachmentIds;
         return this;
     }
 
@@ -485,6 +522,7 @@ public class TaskTask {
         TaskTask other = (TaskTask) o;
         return 
             Objects.deepEquals(this.assignedUserIds, other.assignedUserIds) &&
+            Objects.deepEquals(this.attachmentIds, other.attachmentIds) &&
             Objects.deepEquals(this.completedAt, other.completedAt) &&
             Objects.deepEquals(this.createdAt, other.createdAt) &&
             Objects.deepEquals(this.creatorUserId, other.creatorUserId) &&
@@ -508,6 +546,7 @@ public class TaskTask {
     public int hashCode() {
         return Objects.hash(
             assignedUserIds,
+            attachmentIds,
             completedAt,
             createdAt,
             creatorUserId,
@@ -531,6 +570,7 @@ public class TaskTask {
     public String toString() {
         return Utils.toString(TaskTask.class,
                 "assignedUserIds", assignedUserIds,
+                "attachmentIds", attachmentIds,
                 "completedAt", completedAt,
                 "createdAt", createdAt,
                 "creatorUserId", creatorUserId,
@@ -553,6 +593,8 @@ public class TaskTask {
     public final static class Builder {
  
         private Optional<? extends List<String>> assignedUserIds = Optional.empty();
+ 
+        private Optional<? extends List<String>> attachmentIds = Optional.empty();
  
         private Optional<OffsetDateTime> completedAt = Optional.empty();
  
@@ -601,6 +643,24 @@ public class TaskTask {
         public Builder assignedUserIds(Optional<? extends List<String>> assignedUserIds) {
             Utils.checkNotNull(assignedUserIds, "assignedUserIds");
             this.assignedUserIds = assignedUserIds;
+            return this;
+        }
+
+        /**
+         * Array of attachment IDs retrieved from StorageFile.Get endpoint
+         */
+        public Builder attachmentIds(List<String> attachmentIds) {
+            Utils.checkNotNull(attachmentIds, "attachmentIds");
+            this.attachmentIds = Optional.ofNullable(attachmentIds);
+            return this;
+        }
+
+        /**
+         * Array of attachment IDs retrieved from StorageFile.Get endpoint
+         */
+        public Builder attachmentIds(Optional<? extends List<String>> attachmentIds) {
+            Utils.checkNotNull(attachmentIds, "attachmentIds");
+            this.attachmentIds = attachmentIds;
             return this;
         }
 
@@ -811,6 +871,7 @@ public class TaskTask {
         public TaskTask build() {
             return new TaskTask(
                 assignedUserIds,
+                attachmentIds,
                 completedAt,
                 createdAt,
                 creatorUserId,

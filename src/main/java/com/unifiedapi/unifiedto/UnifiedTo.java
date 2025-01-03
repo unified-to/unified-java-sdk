@@ -172,6 +172,8 @@ public class UnifiedTo {
 
     private final Task task;
 
+    private final Comment comment;
+
     private final Project project;
 
     private final Ticketing ticketing;
@@ -482,6 +484,10 @@ public class UnifiedTo {
         return task;
     }
 
+    public Comment comment() {
+        return comment;
+    }
+
     public Project project() {
         return project;
     }
@@ -733,6 +739,7 @@ public class UnifiedTo {
         this.storage = new Storage(sdkConfiguration);
         this.file = new File(sdkConfiguration);
         this.task = new Task(sdkConfiguration);
+        this.comment = new Comment(sdkConfiguration);
         this.project = new Project(sdkConfiguration);
         this.ticketing = new Ticketing(sdkConfiguration);
         this.customer = new Customer(sdkConfiguration);

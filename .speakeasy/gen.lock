@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: d3ff121f2a7d483c6c660192f0d72464
+  docChecksum: 20714033389bb63e345a793caa0911b9
   docVersion: "1.0"
-  speakeasyVersion: 1.460.3
+  speakeasyVersion: 1.460.4
   generationVersion: 2.484.0
-  releaseVersion: 0.26.7
-  configChecksum: 3bf995f146fb8351818df3ff22143875
+  releaseVersion: 0.26.8
+  configChecksum: 6bb42d7a146d168042ed22543252318b
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -131,6 +131,8 @@ generatedFiles:
   - docs/models/operations/CreateScimUsersResponse.md
   - docs/models/operations/CreateStorageFileRequest.md
   - docs/models/operations/CreateStorageFileResponse.md
+  - docs/models/operations/CreateTaskCommentRequest.md
+  - docs/models/operations/CreateTaskCommentResponse.md
   - docs/models/operations/CreateTaskProjectRequest.md
   - docs/models/operations/CreateTaskProjectResponse.md
   - docs/models/operations/CreateTaskTaskRequest.md
@@ -258,6 +260,8 @@ generatedFiles:
   - docs/models/operations/GetScimUsersResponse.md
   - docs/models/operations/GetStorageFileRequest.md
   - docs/models/operations/GetStorageFileResponse.md
+  - docs/models/operations/GetTaskCommentRequest.md
+  - docs/models/operations/GetTaskCommentResponse.md
   - docs/models/operations/GetTaskProjectRequest.md
   - docs/models/operations/GetTaskProjectResponse.md
   - docs/models/operations/GetTaskTaskRequest.md
@@ -402,6 +406,8 @@ generatedFiles:
   - docs/models/operations/ListScimUsersResponse.md
   - docs/models/operations/ListStorageFilesRequest.md
   - docs/models/operations/ListStorageFilesResponse.md
+  - docs/models/operations/ListTaskCommentsRequest.md
+  - docs/models/operations/ListTaskCommentsResponse.md
   - docs/models/operations/ListTaskProjectsRequest.md
   - docs/models/operations/ListTaskProjectsResponse.md
   - docs/models/operations/ListTaskTasksRequest.md
@@ -531,6 +537,8 @@ generatedFiles:
   - docs/models/operations/PatchScimUsersResponse.md
   - docs/models/operations/PatchStorageFileRequest.md
   - docs/models/operations/PatchStorageFileResponse.md
+  - docs/models/operations/PatchTaskCommentRequest.md
+  - docs/models/operations/PatchTaskCommentResponse.md
   - docs/models/operations/PatchTaskProjectRequest.md
   - docs/models/operations/PatchTaskProjectResponse.md
   - docs/models/operations/PatchTaskTaskRequest.md
@@ -650,6 +658,8 @@ generatedFiles:
   - docs/models/operations/RemoveScimUsersResponse.md
   - docs/models/operations/RemoveStorageFileRequest.md
   - docs/models/operations/RemoveStorageFileResponse.md
+  - docs/models/operations/RemoveTaskCommentRequest.md
+  - docs/models/operations/RemoveTaskCommentResponse.md
   - docs/models/operations/RemoveTaskProjectRequest.md
   - docs/models/operations/RemoveTaskProjectResponse.md
   - docs/models/operations/RemoveTaskTaskRequest.md
@@ -769,6 +779,8 @@ generatedFiles:
   - docs/models/operations/UpdateScimUsersResponse.md
   - docs/models/operations/UpdateStorageFileRequest.md
   - docs/models/operations/UpdateStorageFileResponse.md
+  - docs/models/operations/UpdateTaskCommentRequest.md
+  - docs/models/operations/UpdateTaskCommentResponse.md
   - docs/models/operations/UpdateTaskProjectRequest.md
   - docs/models/operations/UpdateTaskProjectResponse.md
   - docs/models/operations/UpdateTaskTaskRequest.md
@@ -1082,6 +1094,7 @@ generatedFiles:
   - docs/models/shared/StorageFile.md
   - docs/models/shared/StorageFileType.md
   - docs/models/shared/StoragePermission.md
+  - docs/models/shared/TaskComment.md
   - docs/models/shared/TaskProject.md
   - docs/models/shared/TaskTask.md
   - docs/models/shared/TaskTaskStatus.md
@@ -1129,6 +1142,7 @@ generatedFiles:
   - docs/sdks/channel/README.md
   - docs/sdks/class/README.md
   - docs/sdks/collection/README.md
+  - docs/sdks/comment/README.md
   - docs/sdks/commerce/README.md
   - docs/sdks/commit/README.md
   - docs/sdks/company/README.md
@@ -1220,6 +1234,7 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/Channel.java
   - src/main/java/com/unifiedapi/unifiedto/Class.java
   - src/main/java/com/unifiedapi/unifiedto/Collection.java
+  - src/main/java/com/unifiedapi/unifiedto/Comment.java
   - src/main/java/com/unifiedapi/unifiedto/Commerce.java
   - src/main/java/com/unifiedapi/unifiedto/Commit.java
   - src/main/java/com/unifiedapi/unifiedto/Company.java
@@ -1453,6 +1468,9 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateStorageFileRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateStorageFileRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateStorageFileResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateTaskCommentRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateTaskCommentRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateTaskCommentResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateTaskProjectRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateTaskProjectRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/CreateTaskProjectResponse.java
@@ -1644,6 +1662,9 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetStorageFileRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetStorageFileRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetStorageFileResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetTaskCommentRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetTaskCommentRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/GetTaskCommentResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetTaskProjectRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetTaskProjectRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/GetTaskProjectResponse.java
@@ -1860,6 +1881,9 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListStorageFilesRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListStorageFilesRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListStorageFilesResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListTaskCommentsRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListTaskCommentsRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/ListTaskCommentsResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListTaskProjectsRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListTaskProjectsRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/ListTaskProjectsResponse.java
@@ -2053,6 +2077,9 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchStorageFileRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchStorageFileRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchStorageFileResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchTaskCommentRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchTaskCommentRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchTaskCommentResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchTaskProjectRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchTaskProjectRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/PatchTaskProjectResponse.java
@@ -2231,6 +2258,9 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveStorageFileRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveStorageFileRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveStorageFileResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveTaskCommentRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveTaskCommentRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveTaskCommentResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveTaskProjectRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveTaskProjectRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/RemoveTaskProjectResponse.java
@@ -2410,6 +2440,9 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateStorageFileRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateStorageFileRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateStorageFileResponse.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateTaskCommentRequest.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateTaskCommentRequestBuilder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateTaskCommentResponse.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateTaskProjectRequest.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateTaskProjectRequestBuilder.java
   - src/main/java/com/unifiedapi/unifiedto/models/operations/UpdateTaskProjectResponse.java
@@ -2732,6 +2765,7 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/StorageFile.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/StorageFileType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/StoragePermission.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/TaskComment.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/TaskProject.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/TaskTask.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/TaskTaskStatus.java
@@ -6287,4 +6321,58 @@ examples:
       responses:
         "200":
           application/json: {}
+  createTaskComment:
+    speakeasy-default-create-task-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"task_id": "<id>", "text": "<value>"}
+  getTaskComment:
+    speakeasy-default-get-task-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"task_id": "<id>", "text": "<value>"}
+  listTaskComments:
+    speakeasy-default-list-task-comments:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: []
+  patchTaskComment:
+    speakeasy-default-patch-task-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"task_id": "<id>", "text": "<value>"}
+  removeTaskComment:
+    speakeasy-default-remove-task-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateTaskComment:
+    speakeasy-default-update-task-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"task_id": "<id>", "text": "<value>"}
 generatedTests: {}

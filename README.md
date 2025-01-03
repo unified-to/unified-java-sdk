@@ -33,7 +33,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'com.unifiedapi:unifiedto:0.26.7'
+implementation 'com.unifiedapi:unifiedto:0.26.8'
 ```
 
 Maven:
@@ -41,7 +41,7 @@ Maven:
 <dependency>
     <groupId>com.unifiedapi</groupId>
     <artifactId>unifiedto</artifactId>
-    <version>0.26.7</version>
+    <version>0.26.8</version>
 </dependency>
 ```
 
@@ -286,6 +286,15 @@ public class Application {
 * [patchCommerceCollection](docs/sdks/collection/README.md#patchcommercecollection) - Update a collection
 * [removeCommerceCollection](docs/sdks/collection/README.md#removecommercecollection) - Remove a collection
 * [updateCommerceCollection](docs/sdks/collection/README.md#updatecommercecollection) - Update a collection
+
+### [comment()](docs/sdks/comment/README.md)
+
+* [createTaskComment](docs/sdks/comment/README.md#createtaskcomment) - Create a comment
+* [getTaskComment](docs/sdks/comment/README.md#gettaskcomment) - Retrieve a comment
+* [listTaskComments](docs/sdks/comment/README.md#listtaskcomments) - List all comments
+* [patchTaskComment](docs/sdks/comment/README.md#patchtaskcomment) - Update a comment
+* [removeTaskComment](docs/sdks/comment/README.md#removetaskcomment) - Remove a comment
+* [updateTaskComment](docs/sdks/comment/README.md#updatetaskcomment) - Update a comment
 
 ### [commerce()](docs/sdks/commerce/README.md)
 
@@ -975,16 +984,22 @@ public class Application {
 
 ### [task()](docs/sdks/task/README.md)
 
+* [createTaskComment](docs/sdks/task/README.md#createtaskcomment) - Create a comment
 * [createTaskProject](docs/sdks/task/README.md#createtaskproject) - Create a project
 * [createTaskTask](docs/sdks/task/README.md#createtasktask) - Create a task
+* [getTaskComment](docs/sdks/task/README.md#gettaskcomment) - Retrieve a comment
 * [getTaskProject](docs/sdks/task/README.md#gettaskproject) - Retrieve a project
 * [getTaskTask](docs/sdks/task/README.md#gettasktask) - Retrieve a task
+* [listTaskComments](docs/sdks/task/README.md#listtaskcomments) - List all comments
 * [listTaskProjects](docs/sdks/task/README.md#listtaskprojects) - List all projects
 * [listTaskTasks](docs/sdks/task/README.md#listtasktasks) - List all tasks
+* [patchTaskComment](docs/sdks/task/README.md#patchtaskcomment) - Update a comment
 * [patchTaskProject](docs/sdks/task/README.md#patchtaskproject) - Update a project
 * [patchTaskTask](docs/sdks/task/README.md#patchtasktask) - Update a task
+* [removeTaskComment](docs/sdks/task/README.md#removetaskcomment) - Remove a comment
 * [removeTaskProject](docs/sdks/task/README.md#removetaskproject) - Remove a project
 * [removeTaskTask](docs/sdks/task/README.md#removetasktask) - Remove a task
+* [updateTaskComment](docs/sdks/task/README.md#updatetaskcomment) - Update a comment
 * [updateTaskProject](docs/sdks/task/README.md#updatetaskproject) - Update a project
 * [updateTaskTask](docs/sdks/task/README.md#updatetasktask) - Update a task
 
