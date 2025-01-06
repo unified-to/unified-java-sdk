@@ -61,7 +61,7 @@ tasks.withType(Javadoc) {
 }
 
 group = "com.unifiedapi"
-version = "0.26.8"
+version = "0.26.9"
 
 sourcesJar {
     archiveBaseName = "unifiedto"
@@ -88,7 +88,7 @@ publishing {
         maven(MavenPublication) {
             groupId = 'com.unifiedapi'
             artifactId = 'unifiedto'
-            version = '0.26.8'
+            version = '0.26.9'
 
             from components.java
 
@@ -131,6 +131,8 @@ if (!project.hasProperty('skip.signing')) {
     }
 }
 
+
+
 dependencies {
     api 'com.fasterxml.jackson.core:jackson-annotations:2.18.2'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.18.2'
@@ -140,7 +142,5 @@ dependencies {
     implementation 'org.apache.httpcomponents.client5:httpclient5:5.4.1'
     implementation 'commons-io:commons-io:2.18.0'
 }
-
-
 
 apply from: 'build-extras.gradle'

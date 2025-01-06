@@ -56,8 +56,9 @@ public class KmsPage {
     @JsonProperty("raw")
     private Optional<? extends Map<String, Object>> raw;
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("space_id")
-    private String spaceId;
+    private Optional<String> spaceId;
 
     @JsonProperty("title")
     private String title;
@@ -83,7 +84,7 @@ public class KmsPage {
             @JsonProperty("metadata") Optional<? extends List<KmsPageMetadata>> metadata,
             @JsonProperty("parent_page_id") Optional<String> parentPageId,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("space_id") String spaceId,
+            @JsonProperty("space_id") Optional<String> spaceId,
             @JsonProperty("title") String title,
             @JsonProperty("type") KmsPageType type,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
@@ -118,10 +119,9 @@ public class KmsPage {
     
     public KmsPage(
             String downloadUrl,
-            String spaceId,
             String title,
             KmsPageType type) {
-        this(Optional.empty(), downloadUrl, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), spaceId, title, type, Optional.empty(), Optional.empty());
+        this(Optional.empty(), downloadUrl, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), title, type, Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -167,7 +167,7 @@ public class KmsPage {
     }
 
     @JsonIgnore
-    public String spaceId() {
+    public Optional<String> spaceId() {
         return spaceId;
     }
 
@@ -286,6 +286,12 @@ public class KmsPage {
     }
 
     public KmsPage withSpaceId(String spaceId) {
+        Utils.checkNotNull(spaceId, "spaceId");
+        this.spaceId = Optional.ofNullable(spaceId);
+        return this;
+    }
+
+    public KmsPage withSpaceId(Optional<String> spaceId) {
         Utils.checkNotNull(spaceId, "spaceId");
         this.spaceId = spaceId;
         return this;
@@ -406,7 +412,7 @@ public class KmsPage {
  
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
  
-        private String spaceId;
+        private Optional<String> spaceId = Optional.empty();
  
         private String title;
  
@@ -511,6 +517,12 @@ public class KmsPage {
         }
 
         public Builder spaceId(String spaceId) {
+            Utils.checkNotNull(spaceId, "spaceId");
+            this.spaceId = Optional.ofNullable(spaceId);
+            return this;
+        }
+
+        public Builder spaceId(Optional<String> spaceId) {
             Utils.checkNotNull(spaceId, "spaceId");
             this.spaceId = spaceId;
             return this;
