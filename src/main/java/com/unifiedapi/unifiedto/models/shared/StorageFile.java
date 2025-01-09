@@ -89,6 +89,10 @@ public class StorageFile {
     @JsonProperty("version")
     private Optional<String> version;
 
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("web_url")
+    private Optional<String> webUrl;
+
     @JsonCreator
     public StorageFile(
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
@@ -106,7 +110,8 @@ public class StorageFile {
             @JsonProperty("type") Optional<? extends StorageFileType> type,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
             @JsonProperty("user_id") Optional<String> userId,
-            @JsonProperty("version") Optional<String> version) {
+            @JsonProperty("version") Optional<String> version,
+            @JsonProperty("web_url") Optional<String> webUrl) {
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(data, "data");
         Utils.checkNotNull(description, "description");
@@ -123,6 +128,7 @@ public class StorageFile {
         Utils.checkNotNull(updatedAt, "updatedAt");
         Utils.checkNotNull(userId, "userId");
         Utils.checkNotNull(version, "version");
+        Utils.checkNotNull(webUrl, "webUrl");
         this.createdAt = createdAt;
         this.data = data;
         this.description = description;
@@ -139,10 +145,11 @@ public class StorageFile {
         this.updatedAt = updatedAt;
         this.userId = userId;
         this.version = version;
+        this.webUrl = webUrl;
     }
     
     public StorageFile() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -226,6 +233,11 @@ public class StorageFile {
     @JsonIgnore
     public Optional<String> version() {
         return version;
+    }
+
+    @JsonIgnore
+    public Optional<String> webUrl() {
+        return webUrl;
     }
 
     public final static Builder builder() {
@@ -423,6 +435,18 @@ public class StorageFile {
         this.version = version;
         return this;
     }
+
+    public StorageFile withWebUrl(String webUrl) {
+        Utils.checkNotNull(webUrl, "webUrl");
+        this.webUrl = Optional.ofNullable(webUrl);
+        return this;
+    }
+
+    public StorageFile withWebUrl(Optional<String> webUrl) {
+        Utils.checkNotNull(webUrl, "webUrl");
+        this.webUrl = webUrl;
+        return this;
+    }
     
     @Override
     public boolean equals(java.lang.Object o) {
@@ -449,7 +473,8 @@ public class StorageFile {
             Objects.deepEquals(this.type, other.type) &&
             Objects.deepEquals(this.updatedAt, other.updatedAt) &&
             Objects.deepEquals(this.userId, other.userId) &&
-            Objects.deepEquals(this.version, other.version);
+            Objects.deepEquals(this.version, other.version) &&
+            Objects.deepEquals(this.webUrl, other.webUrl);
     }
     
     @Override
@@ -470,7 +495,8 @@ public class StorageFile {
             type,
             updatedAt,
             userId,
-            version);
+            version,
+            webUrl);
     }
     
     @Override
@@ -491,7 +517,8 @@ public class StorageFile {
                 "type", type,
                 "updatedAt", updatedAt,
                 "userId", userId,
-                "version", version);
+                "version", version,
+                "webUrl", webUrl);
     }
     
     public final static class Builder {
@@ -526,7 +553,9 @@ public class StorageFile {
  
         private Optional<String> userId = Optional.empty();
  
-        private Optional<String> version = Optional.empty();  
+        private Optional<String> version = Optional.empty();
+ 
+        private Optional<String> webUrl = Optional.empty();  
         
         private Builder() {
           // force use of static builder() method
@@ -723,6 +752,18 @@ public class StorageFile {
             this.version = version;
             return this;
         }
+
+        public Builder webUrl(String webUrl) {
+            Utils.checkNotNull(webUrl, "webUrl");
+            this.webUrl = Optional.ofNullable(webUrl);
+            return this;
+        }
+
+        public Builder webUrl(Optional<String> webUrl) {
+            Utils.checkNotNull(webUrl, "webUrl");
+            this.webUrl = webUrl;
+            return this;
+        }
         
         public StorageFile build() {
             return new StorageFile(
@@ -741,7 +782,8 @@ public class StorageFile {
                 type,
                 updatedAt,
                 userId,
-                version);
+                version,
+                webUrl);
         }
     }
 }

@@ -74,6 +74,10 @@ public class KmsPage {
     @JsonProperty("user_id")
     private Optional<String> userId;
 
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("web_url")
+    private Optional<String> webUrl;
+
     @JsonCreator
     public KmsPage(
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
@@ -88,7 +92,8 @@ public class KmsPage {
             @JsonProperty("title") String title,
             @JsonProperty("type") KmsPageType type,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("user_id") Optional<String> userId) {
+            @JsonProperty("user_id") Optional<String> userId,
+            @JsonProperty("web_url") Optional<String> webUrl) {
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(downloadUrl, "downloadUrl");
         Utils.checkNotNull(hasChildren, "hasChildren");
@@ -102,6 +107,7 @@ public class KmsPage {
         Utils.checkNotNull(type, "type");
         Utils.checkNotNull(updatedAt, "updatedAt");
         Utils.checkNotNull(userId, "userId");
+        Utils.checkNotNull(webUrl, "webUrl");
         this.createdAt = createdAt;
         this.downloadUrl = downloadUrl;
         this.hasChildren = hasChildren;
@@ -115,13 +121,14 @@ public class KmsPage {
         this.type = type;
         this.updatedAt = updatedAt;
         this.userId = userId;
+        this.webUrl = webUrl;
     }
     
     public KmsPage(
             String downloadUrl,
             String title,
             KmsPageType type) {
-        this(Optional.empty(), downloadUrl, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), title, type, Optional.empty(), Optional.empty());
+        this(Optional.empty(), downloadUrl, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), title, type, Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -189,6 +196,11 @@ public class KmsPage {
     @JsonIgnore
     public Optional<String> userId() {
         return userId;
+    }
+
+    @JsonIgnore
+    public Optional<String> webUrl() {
+        return webUrl;
     }
 
     public final static Builder builder() {
@@ -332,6 +344,18 @@ public class KmsPage {
         this.userId = userId;
         return this;
     }
+
+    public KmsPage withWebUrl(String webUrl) {
+        Utils.checkNotNull(webUrl, "webUrl");
+        this.webUrl = Optional.ofNullable(webUrl);
+        return this;
+    }
+
+    public KmsPage withWebUrl(Optional<String> webUrl) {
+        Utils.checkNotNull(webUrl, "webUrl");
+        this.webUrl = webUrl;
+        return this;
+    }
     
     @Override
     public boolean equals(java.lang.Object o) {
@@ -355,7 +379,8 @@ public class KmsPage {
             Objects.deepEquals(this.title, other.title) &&
             Objects.deepEquals(this.type, other.type) &&
             Objects.deepEquals(this.updatedAt, other.updatedAt) &&
-            Objects.deepEquals(this.userId, other.userId);
+            Objects.deepEquals(this.userId, other.userId) &&
+            Objects.deepEquals(this.webUrl, other.webUrl);
     }
     
     @Override
@@ -373,7 +398,8 @@ public class KmsPage {
             title,
             type,
             updatedAt,
-            userId);
+            userId,
+            webUrl);
     }
     
     @Override
@@ -391,7 +417,8 @@ public class KmsPage {
                 "title", title,
                 "type", type,
                 "updatedAt", updatedAt,
-                "userId", userId);
+                "userId", userId,
+                "webUrl", webUrl);
     }
     
     public final static class Builder {
@@ -420,7 +447,9 @@ public class KmsPage {
  
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
  
-        private Optional<String> userId = Optional.empty();  
+        private Optional<String> userId = Optional.empty();
+ 
+        private Optional<String> webUrl = Optional.empty();  
         
         private Builder() {
           // force use of static builder() method
@@ -563,6 +592,18 @@ public class KmsPage {
             this.userId = userId;
             return this;
         }
+
+        public Builder webUrl(String webUrl) {
+            Utils.checkNotNull(webUrl, "webUrl");
+            this.webUrl = Optional.ofNullable(webUrl);
+            return this;
+        }
+
+        public Builder webUrl(Optional<String> webUrl) {
+            Utils.checkNotNull(webUrl, "webUrl");
+            this.webUrl = webUrl;
+            return this;
+        }
         
         public KmsPage build() {
             return new KmsPage(
@@ -578,7 +619,8 @@ public class KmsPage {
                 title,
                 type,
                 updatedAt,
-                userId);
+                userId,
+                webUrl);
         }
     }
 }

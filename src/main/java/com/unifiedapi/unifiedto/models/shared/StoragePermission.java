@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
+import java.lang.Boolean;
 import java.lang.Override;
 import java.lang.String;
 import java.util.List;
@@ -24,6 +25,14 @@ public class StoragePermission {
     @JsonProperty("group_id")
     private Optional<String> groupId;
 
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_hidden")
+    private Optional<Boolean> isHidden;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_public")
+    private Optional<Boolean> isPublic;
+
     @JsonProperty("roles")
     private List<PropertyStoragePermissionRoles> roles;
 
@@ -34,24 +43,40 @@ public class StoragePermission {
     @JsonCreator
     public StoragePermission(
             @JsonProperty("group_id") Optional<String> groupId,
+            @JsonProperty("is_hidden") Optional<Boolean> isHidden,
+            @JsonProperty("is_public") Optional<Boolean> isPublic,
             @JsonProperty("roles") List<PropertyStoragePermissionRoles> roles,
             @JsonProperty("user_id") Optional<String> userId) {
         Utils.checkNotNull(groupId, "groupId");
+        Utils.checkNotNull(isHidden, "isHidden");
+        Utils.checkNotNull(isPublic, "isPublic");
         Utils.checkNotNull(roles, "roles");
         Utils.checkNotNull(userId, "userId");
         this.groupId = groupId;
+        this.isHidden = isHidden;
+        this.isPublic = isPublic;
         this.roles = roles;
         this.userId = userId;
     }
     
     public StoragePermission(
             List<PropertyStoragePermissionRoles> roles) {
-        this(Optional.empty(), roles, Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), roles, Optional.empty());
     }
 
     @JsonIgnore
     public Optional<String> groupId() {
         return groupId;
+    }
+
+    @JsonIgnore
+    public Optional<Boolean> isHidden() {
+        return isHidden;
+    }
+
+    @JsonIgnore
+    public Optional<Boolean> isPublic() {
+        return isPublic;
     }
 
     @JsonIgnore
@@ -77,6 +102,30 @@ public class StoragePermission {
     public StoragePermission withGroupId(Optional<String> groupId) {
         Utils.checkNotNull(groupId, "groupId");
         this.groupId = groupId;
+        return this;
+    }
+
+    public StoragePermission withIsHidden(boolean isHidden) {
+        Utils.checkNotNull(isHidden, "isHidden");
+        this.isHidden = Optional.ofNullable(isHidden);
+        return this;
+    }
+
+    public StoragePermission withIsHidden(Optional<Boolean> isHidden) {
+        Utils.checkNotNull(isHidden, "isHidden");
+        this.isHidden = isHidden;
+        return this;
+    }
+
+    public StoragePermission withIsPublic(boolean isPublic) {
+        Utils.checkNotNull(isPublic, "isPublic");
+        this.isPublic = Optional.ofNullable(isPublic);
+        return this;
+    }
+
+    public StoragePermission withIsPublic(Optional<Boolean> isPublic) {
+        Utils.checkNotNull(isPublic, "isPublic");
+        this.isPublic = isPublic;
         return this;
     }
 
@@ -109,6 +158,8 @@ public class StoragePermission {
         StoragePermission other = (StoragePermission) o;
         return 
             Objects.deepEquals(this.groupId, other.groupId) &&
+            Objects.deepEquals(this.isHidden, other.isHidden) &&
+            Objects.deepEquals(this.isPublic, other.isPublic) &&
             Objects.deepEquals(this.roles, other.roles) &&
             Objects.deepEquals(this.userId, other.userId);
     }
@@ -117,6 +168,8 @@ public class StoragePermission {
     public int hashCode() {
         return Objects.hash(
             groupId,
+            isHidden,
+            isPublic,
             roles,
             userId);
     }
@@ -125,6 +178,8 @@ public class StoragePermission {
     public String toString() {
         return Utils.toString(StoragePermission.class,
                 "groupId", groupId,
+                "isHidden", isHidden,
+                "isPublic", isPublic,
                 "roles", roles,
                 "userId", userId);
     }
@@ -132,6 +187,10 @@ public class StoragePermission {
     public final static class Builder {
  
         private Optional<String> groupId = Optional.empty();
+ 
+        private Optional<Boolean> isHidden = Optional.empty();
+ 
+        private Optional<Boolean> isPublic = Optional.empty();
  
         private List<PropertyStoragePermissionRoles> roles;
  
@@ -150,6 +209,30 @@ public class StoragePermission {
         public Builder groupId(Optional<String> groupId) {
             Utils.checkNotNull(groupId, "groupId");
             this.groupId = groupId;
+            return this;
+        }
+
+        public Builder isHidden(boolean isHidden) {
+            Utils.checkNotNull(isHidden, "isHidden");
+            this.isHidden = Optional.ofNullable(isHidden);
+            return this;
+        }
+
+        public Builder isHidden(Optional<Boolean> isHidden) {
+            Utils.checkNotNull(isHidden, "isHidden");
+            this.isHidden = isHidden;
+            return this;
+        }
+
+        public Builder isPublic(boolean isPublic) {
+            Utils.checkNotNull(isPublic, "isPublic");
+            this.isPublic = Optional.ofNullable(isPublic);
+            return this;
+        }
+
+        public Builder isPublic(Optional<Boolean> isPublic) {
+            Utils.checkNotNull(isPublic, "isPublic");
+            this.isPublic = isPublic;
             return this;
         }
 
@@ -174,6 +257,8 @@ public class StoragePermission {
         public StoragePermission build() {
             return new StoragePermission(
                 groupId,
+                isHidden,
+                isPublic,
                 roles,
                 userId);
         }
