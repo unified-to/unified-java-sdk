@@ -48,6 +48,10 @@ public class GenaiPrompt {
     @JsonProperty("temperature")
     private Optional<Double> temperature;
 
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tokens_used")
+    private Optional<Double> tokensUsed;
+
     @JsonCreator
     public GenaiPrompt(
             @JsonProperty("max_tokens") Optional<Double> maxTokens,
@@ -55,23 +59,26 @@ public class GenaiPrompt {
             @JsonProperty("model_id") Optional<String> modelId,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
             @JsonProperty("responses") Optional<? extends List<String>> responses,
-            @JsonProperty("temperature") Optional<Double> temperature) {
+            @JsonProperty("temperature") Optional<Double> temperature,
+            @JsonProperty("tokens_used") Optional<Double> tokensUsed) {
         Utils.checkNotNull(maxTokens, "maxTokens");
         Utils.checkNotNull(messages, "messages");
         Utils.checkNotNull(modelId, "modelId");
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(responses, "responses");
         Utils.checkNotNull(temperature, "temperature");
+        Utils.checkNotNull(tokensUsed, "tokensUsed");
         this.maxTokens = maxTokens;
         this.messages = messages;
         this.modelId = modelId;
         this.raw = raw;
         this.responses = responses;
         this.temperature = temperature;
+        this.tokensUsed = tokensUsed;
     }
     
     public GenaiPrompt() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -105,6 +112,11 @@ public class GenaiPrompt {
     @JsonIgnore
     public Optional<Double> temperature() {
         return temperature;
+    }
+
+    @JsonIgnore
+    public Optional<Double> tokensUsed() {
+        return tokensUsed;
     }
 
     public final static Builder builder() {
@@ -182,6 +194,18 @@ public class GenaiPrompt {
         this.temperature = temperature;
         return this;
     }
+
+    public GenaiPrompt withTokensUsed(double tokensUsed) {
+        Utils.checkNotNull(tokensUsed, "tokensUsed");
+        this.tokensUsed = Optional.ofNullable(tokensUsed);
+        return this;
+    }
+
+    public GenaiPrompt withTokensUsed(Optional<Double> tokensUsed) {
+        Utils.checkNotNull(tokensUsed, "tokensUsed");
+        this.tokensUsed = tokensUsed;
+        return this;
+    }
     
     @Override
     public boolean equals(java.lang.Object o) {
@@ -198,7 +222,8 @@ public class GenaiPrompt {
             Objects.deepEquals(this.modelId, other.modelId) &&
             Objects.deepEquals(this.raw, other.raw) &&
             Objects.deepEquals(this.responses, other.responses) &&
-            Objects.deepEquals(this.temperature, other.temperature);
+            Objects.deepEquals(this.temperature, other.temperature) &&
+            Objects.deepEquals(this.tokensUsed, other.tokensUsed);
     }
     
     @Override
@@ -209,7 +234,8 @@ public class GenaiPrompt {
             modelId,
             raw,
             responses,
-            temperature);
+            temperature,
+            tokensUsed);
     }
     
     @Override
@@ -220,7 +246,8 @@ public class GenaiPrompt {
                 "modelId", modelId,
                 "raw", raw,
                 "responses", responses,
-                "temperature", temperature);
+                "temperature", temperature,
+                "tokensUsed", tokensUsed);
     }
     
     public final static class Builder {
@@ -235,7 +262,9 @@ public class GenaiPrompt {
  
         private Optional<? extends List<String>> responses = Optional.empty();
  
-        private Optional<Double> temperature = Optional.empty();  
+        private Optional<Double> temperature = Optional.empty();
+ 
+        private Optional<Double> tokensUsed = Optional.empty();  
         
         private Builder() {
           // force use of static builder() method
@@ -312,6 +341,18 @@ public class GenaiPrompt {
             this.temperature = temperature;
             return this;
         }
+
+        public Builder tokensUsed(double tokensUsed) {
+            Utils.checkNotNull(tokensUsed, "tokensUsed");
+            this.tokensUsed = Optional.ofNullable(tokensUsed);
+            return this;
+        }
+
+        public Builder tokensUsed(Optional<Double> tokensUsed) {
+            Utils.checkNotNull(tokensUsed, "tokensUsed");
+            this.tokensUsed = tokensUsed;
+            return this;
+        }
         
         public GenaiPrompt build() {
             return new GenaiPrompt(
@@ -320,7 +361,8 @@ public class GenaiPrompt {
                 modelId,
                 raw,
                 responses,
-                temperature);
+                temperature,
+                tokensUsed);
         }
     }
 }

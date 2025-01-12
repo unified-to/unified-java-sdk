@@ -173,6 +173,10 @@ public class IntegrationSupport {
     private Optional<? extends ListStudentId> listStudentId;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("list_task_id")
+    private Optional<? extends ListTaskId> listTaskId;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_ticket_id")
     private Optional<? extends ListTicketId> listTicketId;
 
@@ -318,6 +322,7 @@ public class IntegrationSupport {
             @JsonProperty("list_sort_by_updated_at") Optional<? extends ListSortByUpdatedAt> listSortByUpdatedAt,
             @JsonProperty("list_space_id") Optional<? extends ListSpaceId> listSpaceId,
             @JsonProperty("list_student_id") Optional<? extends ListStudentId> listStudentId,
+            @JsonProperty("list_task_id") Optional<? extends ListTaskId> listTaskId,
             @JsonProperty("list_ticket_id") Optional<? extends ListTicketId> listTicketId,
             @JsonProperty("list_type") Optional<? extends ListType> listType,
             @JsonProperty("list_updated_gte") Optional<? extends ListUpdatedGte> listUpdatedGte,
@@ -381,6 +386,7 @@ public class IntegrationSupport {
         Utils.checkNotNull(listSortByUpdatedAt, "listSortByUpdatedAt");
         Utils.checkNotNull(listSpaceId, "listSpaceId");
         Utils.checkNotNull(listStudentId, "listStudentId");
+        Utils.checkNotNull(listTaskId, "listTaskId");
         Utils.checkNotNull(listTicketId, "listTicketId");
         Utils.checkNotNull(listType, "listType");
         Utils.checkNotNull(listUpdatedGte, "listUpdatedGte");
@@ -444,6 +450,7 @@ public class IntegrationSupport {
         this.listSortByUpdatedAt = listSortByUpdatedAt;
         this.listSpaceId = listSpaceId;
         this.listStudentId = listStudentId;
+        this.listTaskId = listTaskId;
         this.listTicketId = listTicketId;
         this.listType = listType;
         this.listUpdatedGte = listUpdatedGte;
@@ -473,7 +480,7 @@ public class IntegrationSupport {
     }
     
     public IntegrationSupport() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -696,6 +703,12 @@ public class IntegrationSupport {
     @JsonIgnore
     public Optional<ListStudentId> listStudentId() {
         return (Optional<ListStudentId>) listStudentId;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<ListTaskId> listTaskId() {
+        return (Optional<ListTaskId>) listTaskId;
     }
 
     @SuppressWarnings("unchecked")
@@ -1305,6 +1318,18 @@ public class IntegrationSupport {
         return this;
     }
 
+    public IntegrationSupport withListTaskId(ListTaskId listTaskId) {
+        Utils.checkNotNull(listTaskId, "listTaskId");
+        this.listTaskId = Optional.ofNullable(listTaskId);
+        return this;
+    }
+
+    public IntegrationSupport withListTaskId(Optional<? extends ListTaskId> listTaskId) {
+        Utils.checkNotNull(listTaskId, "listTaskId");
+        this.listTaskId = listTaskId;
+        return this;
+    }
+
     public IntegrationSupport withListTicketId(ListTicketId listTicketId) {
         Utils.checkNotNull(listTicketId, "listTicketId");
         this.listTicketId = Optional.ofNullable(listTicketId);
@@ -1670,6 +1695,7 @@ public class IntegrationSupport {
             Objects.deepEquals(this.listSortByUpdatedAt, other.listSortByUpdatedAt) &&
             Objects.deepEquals(this.listSpaceId, other.listSpaceId) &&
             Objects.deepEquals(this.listStudentId, other.listStudentId) &&
+            Objects.deepEquals(this.listTaskId, other.listTaskId) &&
             Objects.deepEquals(this.listTicketId, other.listTicketId) &&
             Objects.deepEquals(this.listType, other.listType) &&
             Objects.deepEquals(this.listUpdatedGte, other.listUpdatedGte) &&
@@ -1738,6 +1764,7 @@ public class IntegrationSupport {
             listSortByUpdatedAt,
             listSpaceId,
             listStudentId,
+            listTaskId,
             listTicketId,
             listType,
             listUpdatedGte,
@@ -1806,6 +1833,7 @@ public class IntegrationSupport {
                 "listSortByUpdatedAt", listSortByUpdatedAt,
                 "listSpaceId", listSpaceId,
                 "listStudentId", listStudentId,
+                "listTaskId", listTaskId,
                 "listTicketId", listTicketId,
                 "listType", listType,
                 "listUpdatedGte", listUpdatedGte,
@@ -1909,6 +1937,8 @@ public class IntegrationSupport {
         private Optional<? extends ListSpaceId> listSpaceId = Optional.empty();
  
         private Optional<? extends ListStudentId> listStudentId = Optional.empty();
+ 
+        private Optional<? extends ListTaskId> listTaskId = Optional.empty();
  
         private Optional<? extends ListTicketId> listTicketId = Optional.empty();
  
@@ -2410,6 +2440,18 @@ public class IntegrationSupport {
             return this;
         }
 
+        public Builder listTaskId(ListTaskId listTaskId) {
+            Utils.checkNotNull(listTaskId, "listTaskId");
+            this.listTaskId = Optional.ofNullable(listTaskId);
+            return this;
+        }
+
+        public Builder listTaskId(Optional<? extends ListTaskId> listTaskId) {
+            Utils.checkNotNull(listTaskId, "listTaskId");
+            this.listTaskId = listTaskId;
+            return this;
+        }
+
         public Builder listTicketId(ListTicketId listTicketId) {
             Utils.checkNotNull(listTicketId, "listTicketId");
             this.listTicketId = Optional.ofNullable(listTicketId);
@@ -2767,6 +2809,7 @@ public class IntegrationSupport {
                 listSortByUpdatedAt,
                 listSpaceId,
                 listStudentId,
+                listTaskId,
                 listTicketId,
                 listType,
                 listUpdatedGte,
