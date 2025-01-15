@@ -36,6 +36,13 @@ public class MessagingMessage {
     @JsonProperty("channel_id")
     private Optional<String> channelId;
 
+    /**
+     * Represents the IDs of all channels to which the message is sent. Identifies the channels where the message is posted.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("channel_ids")
+    private Optional<? extends List<String>> channelIds;
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
@@ -97,6 +104,7 @@ public class MessagingMessage {
             @JsonProperty("attachments") Optional<? extends List<MessagingAttachment>> attachments,
             @JsonProperty("author_member") Optional<? extends PropertyMessagingMessageAuthorMember> authorMember,
             @JsonProperty("channel_id") Optional<String> channelId,
+            @JsonProperty("channel_ids") Optional<? extends List<String>> channelIds,
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("destination_members") Optional<? extends List<MessagingMember>> destinationMembers,
             @JsonProperty("hidden_members") Optional<? extends List<MessagingMember>> hiddenMembers,
@@ -114,6 +122,7 @@ public class MessagingMessage {
         Utils.checkNotNull(attachments, "attachments");
         Utils.checkNotNull(authorMember, "authorMember");
         Utils.checkNotNull(channelId, "channelId");
+        Utils.checkNotNull(channelIds, "channelIds");
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(destinationMembers, "destinationMembers");
         Utils.checkNotNull(hiddenMembers, "hiddenMembers");
@@ -131,6 +140,7 @@ public class MessagingMessage {
         this.attachments = attachments;
         this.authorMember = authorMember;
         this.channelId = channelId;
+        this.channelIds = channelIds;
         this.createdAt = createdAt;
         this.destinationMembers = destinationMembers;
         this.hiddenMembers = hiddenMembers;
@@ -148,7 +158,7 @@ public class MessagingMessage {
     }
     
     public MessagingMessage() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -166,6 +176,15 @@ public class MessagingMessage {
     @JsonIgnore
     public Optional<String> channelId() {
         return channelId;
+    }
+
+    /**
+     * Represents the IDs of all channels to which the message is sent. Identifies the channels where the message is posted.
+     */
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<String>> channelIds() {
+        return (Optional<List<String>>) channelIds;
     }
 
     @JsonIgnore
@@ -279,6 +298,24 @@ public class MessagingMessage {
     public MessagingMessage withChannelId(Optional<String> channelId) {
         Utils.checkNotNull(channelId, "channelId");
         this.channelId = channelId;
+        return this;
+    }
+
+    /**
+     * Represents the IDs of all channels to which the message is sent. Identifies the channels where the message is posted.
+     */
+    public MessagingMessage withChannelIds(List<String> channelIds) {
+        Utils.checkNotNull(channelIds, "channelIds");
+        this.channelIds = Optional.ofNullable(channelIds);
+        return this;
+    }
+
+    /**
+     * Represents the IDs of all channels to which the message is sent. Identifies the channels where the message is posted.
+     */
+    public MessagingMessage withChannelIds(Optional<? extends List<String>> channelIds) {
+        Utils.checkNotNull(channelIds, "channelIds");
+        this.channelIds = channelIds;
         return this;
     }
 
@@ -463,6 +500,7 @@ public class MessagingMessage {
             Objects.deepEquals(this.attachments, other.attachments) &&
             Objects.deepEquals(this.authorMember, other.authorMember) &&
             Objects.deepEquals(this.channelId, other.channelId) &&
+            Objects.deepEquals(this.channelIds, other.channelIds) &&
             Objects.deepEquals(this.createdAt, other.createdAt) &&
             Objects.deepEquals(this.destinationMembers, other.destinationMembers) &&
             Objects.deepEquals(this.hiddenMembers, other.hiddenMembers) &&
@@ -485,6 +523,7 @@ public class MessagingMessage {
             attachments,
             authorMember,
             channelId,
+            channelIds,
             createdAt,
             destinationMembers,
             hiddenMembers,
@@ -507,6 +546,7 @@ public class MessagingMessage {
                 "attachments", attachments,
                 "authorMember", authorMember,
                 "channelId", channelId,
+                "channelIds", channelIds,
                 "createdAt", createdAt,
                 "destinationMembers", destinationMembers,
                 "hiddenMembers", hiddenMembers,
@@ -530,6 +570,8 @@ public class MessagingMessage {
         private Optional<? extends PropertyMessagingMessageAuthorMember> authorMember = Optional.empty();
  
         private Optional<String> channelId = Optional.empty();
+ 
+        private Optional<? extends List<String>> channelIds = Optional.empty();
  
         private Optional<OffsetDateTime> createdAt = Optional.empty();
  
@@ -596,6 +638,24 @@ public class MessagingMessage {
         public Builder channelId(Optional<String> channelId) {
             Utils.checkNotNull(channelId, "channelId");
             this.channelId = channelId;
+            return this;
+        }
+
+        /**
+         * Represents the IDs of all channels to which the message is sent. Identifies the channels where the message is posted.
+         */
+        public Builder channelIds(List<String> channelIds) {
+            Utils.checkNotNull(channelIds, "channelIds");
+            this.channelIds = Optional.ofNullable(channelIds);
+            return this;
+        }
+
+        /**
+         * Represents the IDs of all channels to which the message is sent. Identifies the channels where the message is posted.
+         */
+        public Builder channelIds(Optional<? extends List<String>> channelIds) {
+            Utils.checkNotNull(channelIds, "channelIds");
+            this.channelIds = channelIds;
             return this;
         }
 
@@ -772,6 +832,7 @@ public class MessagingMessage {
                 attachments,
                 authorMember,
                 channelId,
+                channelIds,
                 createdAt,
                 destinationMembers,
                 hiddenMembers,
