@@ -47,6 +47,12 @@ public class ListUnifiedApicallsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=integration_type")
     private Optional<String> integrationType;
 
+    /**
+     * Filter the results for only billable API Calls
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_billable")
+    private Optional<Boolean> isBillable;
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Optional<Double> limit;
 
@@ -60,10 +66,22 @@ public class ListUnifiedApicallsRequest {
     private Optional<String> sort;
 
     /**
+     * Filter the results to just this type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    private Optional<String> type;
+
+    /**
      * Return only results whose updated date is equal or greater to this value
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private Optional<OffsetDateTime> updatedGte;
+
+    /**
+     * Filter the results to just this webhook
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=webhook_id")
+    private Optional<String> webhookId;
 
     @JsonCreator
     public ListUnifiedApicallsRequest(
@@ -72,35 +90,44 @@ public class ListUnifiedApicallsRequest {
             Optional<Boolean> error,
             Optional<String> externalXref,
             Optional<String> integrationType,
+            Optional<Boolean> isBillable,
             Optional<Double> limit,
             Optional<Double> offset,
             Optional<String> order,
             Optional<String> sort,
-            Optional<OffsetDateTime> updatedGte) {
+            Optional<String> type,
+            Optional<OffsetDateTime> updatedGte,
+            Optional<String> webhookId) {
         Utils.checkNotNull(connectionId, "connectionId");
         Utils.checkNotNull(env, "env");
         Utils.checkNotNull(error, "error");
         Utils.checkNotNull(externalXref, "externalXref");
         Utils.checkNotNull(integrationType, "integrationType");
+        Utils.checkNotNull(isBillable, "isBillable");
         Utils.checkNotNull(limit, "limit");
         Utils.checkNotNull(offset, "offset");
         Utils.checkNotNull(order, "order");
         Utils.checkNotNull(sort, "sort");
+        Utils.checkNotNull(type, "type");
         Utils.checkNotNull(updatedGte, "updatedGte");
+        Utils.checkNotNull(webhookId, "webhookId");
         this.connectionId = connectionId;
         this.env = env;
         this.error = error;
         this.externalXref = externalXref;
         this.integrationType = integrationType;
+        this.isBillable = isBillable;
         this.limit = limit;
         this.offset = offset;
         this.order = order;
         this.sort = sort;
+        this.type = type;
         this.updatedGte = updatedGte;
+        this.webhookId = webhookId;
     }
     
     public ListUnifiedApicallsRequest() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     /**
@@ -140,6 +167,14 @@ public class ListUnifiedApicallsRequest {
         return integrationType;
     }
 
+    /**
+     * Filter the results for only billable API Calls
+     */
+    @JsonIgnore
+    public Optional<Boolean> isBillable() {
+        return isBillable;
+    }
+
     @JsonIgnore
     public Optional<Double> limit() {
         return limit;
@@ -161,11 +196,27 @@ public class ListUnifiedApicallsRequest {
     }
 
     /**
+     * Filter the results to just this type
+     */
+    @JsonIgnore
+    public Optional<String> type() {
+        return type;
+    }
+
+    /**
      * Return only results whose updated date is equal or greater to this value
      */
     @JsonIgnore
     public Optional<OffsetDateTime> updatedGte() {
         return updatedGte;
+    }
+
+    /**
+     * Filter the results to just this webhook
+     */
+    @JsonIgnore
+    public Optional<String> webhookId() {
+        return webhookId;
     }
 
     public final static Builder builder() {
@@ -256,6 +307,24 @@ public class ListUnifiedApicallsRequest {
         return this;
     }
 
+    /**
+     * Filter the results for only billable API Calls
+     */
+    public ListUnifiedApicallsRequest withIsBillable(boolean isBillable) {
+        Utils.checkNotNull(isBillable, "isBillable");
+        this.isBillable = Optional.ofNullable(isBillable);
+        return this;
+    }
+
+    /**
+     * Filter the results for only billable API Calls
+     */
+    public ListUnifiedApicallsRequest withIsBillable(Optional<Boolean> isBillable) {
+        Utils.checkNotNull(isBillable, "isBillable");
+        this.isBillable = isBillable;
+        return this;
+    }
+
     public ListUnifiedApicallsRequest withLimit(double limit) {
         Utils.checkNotNull(limit, "limit");
         this.limit = Optional.ofNullable(limit);
@@ -305,6 +374,24 @@ public class ListUnifiedApicallsRequest {
     }
 
     /**
+     * Filter the results to just this type
+     */
+    public ListUnifiedApicallsRequest withType(String type) {
+        Utils.checkNotNull(type, "type");
+        this.type = Optional.ofNullable(type);
+        return this;
+    }
+
+    /**
+     * Filter the results to just this type
+     */
+    public ListUnifiedApicallsRequest withType(Optional<String> type) {
+        Utils.checkNotNull(type, "type");
+        this.type = type;
+        return this;
+    }
+
+    /**
      * Return only results whose updated date is equal or greater to this value
      */
     public ListUnifiedApicallsRequest withUpdatedGte(OffsetDateTime updatedGte) {
@@ -319,6 +406,24 @@ public class ListUnifiedApicallsRequest {
     public ListUnifiedApicallsRequest withUpdatedGte(Optional<OffsetDateTime> updatedGte) {
         Utils.checkNotNull(updatedGte, "updatedGte");
         this.updatedGte = updatedGte;
+        return this;
+    }
+
+    /**
+     * Filter the results to just this webhook
+     */
+    public ListUnifiedApicallsRequest withWebhookId(String webhookId) {
+        Utils.checkNotNull(webhookId, "webhookId");
+        this.webhookId = Optional.ofNullable(webhookId);
+        return this;
+    }
+
+    /**
+     * Filter the results to just this webhook
+     */
+    public ListUnifiedApicallsRequest withWebhookId(Optional<String> webhookId) {
+        Utils.checkNotNull(webhookId, "webhookId");
+        this.webhookId = webhookId;
         return this;
     }
     
@@ -337,11 +442,14 @@ public class ListUnifiedApicallsRequest {
             Objects.deepEquals(this.error, other.error) &&
             Objects.deepEquals(this.externalXref, other.externalXref) &&
             Objects.deepEquals(this.integrationType, other.integrationType) &&
+            Objects.deepEquals(this.isBillable, other.isBillable) &&
             Objects.deepEquals(this.limit, other.limit) &&
             Objects.deepEquals(this.offset, other.offset) &&
             Objects.deepEquals(this.order, other.order) &&
             Objects.deepEquals(this.sort, other.sort) &&
-            Objects.deepEquals(this.updatedGte, other.updatedGte);
+            Objects.deepEquals(this.type, other.type) &&
+            Objects.deepEquals(this.updatedGte, other.updatedGte) &&
+            Objects.deepEquals(this.webhookId, other.webhookId);
     }
     
     @Override
@@ -352,11 +460,14 @@ public class ListUnifiedApicallsRequest {
             error,
             externalXref,
             integrationType,
+            isBillable,
             limit,
             offset,
             order,
             sort,
-            updatedGte);
+            type,
+            updatedGte,
+            webhookId);
     }
     
     @Override
@@ -367,11 +478,14 @@ public class ListUnifiedApicallsRequest {
                 "error", error,
                 "externalXref", externalXref,
                 "integrationType", integrationType,
+                "isBillable", isBillable,
                 "limit", limit,
                 "offset", offset,
                 "order", order,
                 "sort", sort,
-                "updatedGte", updatedGte);
+                "type", type,
+                "updatedGte", updatedGte,
+                "webhookId", webhookId);
     }
     
     public final static class Builder {
@@ -386,6 +500,8 @@ public class ListUnifiedApicallsRequest {
  
         private Optional<String> integrationType = Optional.empty();
  
+        private Optional<Boolean> isBillable = Optional.empty();
+ 
         private Optional<Double> limit = Optional.empty();
  
         private Optional<Double> offset = Optional.empty();
@@ -394,7 +510,11 @@ public class ListUnifiedApicallsRequest {
  
         private Optional<String> sort = Optional.empty();
  
-        private Optional<OffsetDateTime> updatedGte = Optional.empty();  
+        private Optional<String> type = Optional.empty();
+ 
+        private Optional<OffsetDateTime> updatedGte = Optional.empty();
+ 
+        private Optional<String> webhookId = Optional.empty();  
         
         private Builder() {
           // force use of static builder() method
@@ -484,6 +604,24 @@ public class ListUnifiedApicallsRequest {
             return this;
         }
 
+        /**
+         * Filter the results for only billable API Calls
+         */
+        public Builder isBillable(boolean isBillable) {
+            Utils.checkNotNull(isBillable, "isBillable");
+            this.isBillable = Optional.ofNullable(isBillable);
+            return this;
+        }
+
+        /**
+         * Filter the results for only billable API Calls
+         */
+        public Builder isBillable(Optional<Boolean> isBillable) {
+            Utils.checkNotNull(isBillable, "isBillable");
+            this.isBillable = isBillable;
+            return this;
+        }
+
         public Builder limit(double limit) {
             Utils.checkNotNull(limit, "limit");
             this.limit = Optional.ofNullable(limit);
@@ -533,6 +671,24 @@ public class ListUnifiedApicallsRequest {
         }
 
         /**
+         * Filter the results to just this type
+         */
+        public Builder type(String type) {
+            Utils.checkNotNull(type, "type");
+            this.type = Optional.ofNullable(type);
+            return this;
+        }
+
+        /**
+         * Filter the results to just this type
+         */
+        public Builder type(Optional<String> type) {
+            Utils.checkNotNull(type, "type");
+            this.type = type;
+            return this;
+        }
+
+        /**
          * Return only results whose updated date is equal or greater to this value
          */
         public Builder updatedGte(OffsetDateTime updatedGte) {
@@ -549,6 +705,24 @@ public class ListUnifiedApicallsRequest {
             this.updatedGte = updatedGte;
             return this;
         }
+
+        /**
+         * Filter the results to just this webhook
+         */
+        public Builder webhookId(String webhookId) {
+            Utils.checkNotNull(webhookId, "webhookId");
+            this.webhookId = Optional.ofNullable(webhookId);
+            return this;
+        }
+
+        /**
+         * Filter the results to just this webhook
+         */
+        public Builder webhookId(Optional<String> webhookId) {
+            Utils.checkNotNull(webhookId, "webhookId");
+            this.webhookId = webhookId;
+            return this;
+        }
         
         public ListUnifiedApicallsRequest build() {
             return new ListUnifiedApicallsRequest(
@@ -557,11 +731,14 @@ public class ListUnifiedApicallsRequest {
                 error,
                 externalXref,
                 integrationType,
+                isBillable,
                 limit,
                 offset,
                 order,
                 sort,
-                updatedGte);
+                type,
+                updatedGte,
+                webhookId);
         }
     }
 }
