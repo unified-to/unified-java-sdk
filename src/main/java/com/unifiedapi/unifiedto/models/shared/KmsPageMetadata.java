@@ -11,11 +11,8 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -31,13 +28,13 @@ public class KmsPageMetadata {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
-    private Optional<? extends Map<String, Object>> value;
+    private Optional<String> value;
 
     @JsonCreator
     public KmsPageMetadata(
             @JsonProperty("name") String name,
             @JsonProperty("type") Optional<String> type,
-            @JsonProperty("value") Optional<? extends Map<String, Object>> value) {
+            @JsonProperty("value") Optional<String> value) {
         Utils.checkNotNull(name, "name");
         Utils.checkNotNull(type, "type");
         Utils.checkNotNull(value, "value");
@@ -61,10 +58,9 @@ public class KmsPageMetadata {
         return type;
     }
 
-    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> value() {
-        return (Optional<Map<String, Object>>) value;
+    public Optional<String> value() {
+        return value;
     }
 
     public final static Builder builder() {
@@ -89,13 +85,13 @@ public class KmsPageMetadata {
         return this;
     }
 
-    public KmsPageMetadata withValue(Map<String, Object> value) {
+    public KmsPageMetadata withValue(String value) {
         Utils.checkNotNull(value, "value");
         this.value = Optional.ofNullable(value);
         return this;
     }
 
-    public KmsPageMetadata withValue(Optional<? extends Map<String, Object>> value) {
+    public KmsPageMetadata withValue(Optional<String> value) {
         Utils.checkNotNull(value, "value");
         this.value = value;
         return this;
@@ -138,7 +134,7 @@ public class KmsPageMetadata {
  
         private Optional<String> type = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> value = Optional.empty();  
+        private Optional<String> value = Optional.empty();  
         
         private Builder() {
           // force use of static builder() method
@@ -162,13 +158,13 @@ public class KmsPageMetadata {
             return this;
         }
 
-        public Builder value(Map<String, Object> value) {
+        public Builder value(String value) {
             Utils.checkNotNull(value, "value");
             this.value = Optional.ofNullable(value);
             return this;
         }
 
-        public Builder value(Optional<? extends Map<String, Object>> value) {
+        public Builder value(Optional<String> value) {
             Utils.checkNotNull(value, "value");
             this.value = value;
             return this;
