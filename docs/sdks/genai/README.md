@@ -34,7 +34,7 @@ public class Application {
             .build();
 
         CreateGenaiPromptRequest req = CreateGenaiPromptRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         CreateGenaiPromptResponse res = sdk.genai().createGenaiPrompt()
@@ -90,7 +90,7 @@ public class Application {
             .build();
 
         ListGenaiModelsRequest req = ListGenaiModelsRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         ListGenaiModelsResponse res = sdk.genai().listGenaiModels()

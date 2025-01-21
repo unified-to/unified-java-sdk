@@ -283,7 +283,7 @@ public class Application {
 
         GetUnifiedIntegrationAuthRequest req = GetUnifiedIntegrationAuthRequest.builder()
                 .integrationType("<value>")
-                .workspaceId("<value>")
+                .workspaceId("<id>")
                 .build();
 
         GetUnifiedIntegrationAuthResponse res = sdk.unified().getUnifiedIntegrationAuth()
@@ -505,7 +505,7 @@ public class Application {
             .build();
 
         ListUnifiedIntegrationWorkspacesRequest req = ListUnifiedIntegrationWorkspacesRequest.builder()
-                .workspaceId("<value>")
+                .workspaceId("<id>")
                 .build();
 
         ListUnifiedIntegrationWorkspacesResponse res = sdk.unified().listUnifiedIntegrationWorkspaces()

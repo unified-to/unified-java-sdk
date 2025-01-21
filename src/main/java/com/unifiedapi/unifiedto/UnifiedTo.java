@@ -112,6 +112,8 @@ public class UnifiedTo {
 
     private final Kms kms;
 
+    private final Comment comment;
+
     private final Page page;
 
     private final Space space;
@@ -171,8 +173,6 @@ public class UnifiedTo {
     private final File file;
 
     private final Task task;
-
-    private final Comment comment;
 
     private final Project project;
 
@@ -364,6 +364,10 @@ public class UnifiedTo {
         return kms;
     }
 
+    public Comment comment() {
+        return comment;
+    }
+
     public Page page() {
         return page;
     }
@@ -482,10 +486,6 @@ public class UnifiedTo {
 
     public Task task() {
         return task;
-    }
-
-    public Comment comment() {
-        return comment;
     }
 
     public Project project() {
@@ -709,6 +709,7 @@ public class UnifiedTo {
         this.payslip = new Payslip(sdkConfiguration);
         this.timeoff = new Timeoff(sdkConfiguration);
         this.kms = new Kms(sdkConfiguration);
+        this.comment = new Comment(sdkConfiguration);
         this.page = new Page(sdkConfiguration);
         this.space = new Space(sdkConfiguration);
         this.lms = new Lms(sdkConfiguration);
@@ -739,7 +740,6 @@ public class UnifiedTo {
         this.storage = new Storage(sdkConfiguration);
         this.file = new File(sdkConfiguration);
         this.task = new Task(sdkConfiguration);
-        this.comment = new Comment(sdkConfiguration);
         this.project = new Project(sdkConfiguration);
         this.ticketing = new Ticketing(sdkConfiguration);
         this.customer = new Customer(sdkConfiguration);

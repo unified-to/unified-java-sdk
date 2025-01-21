@@ -39,7 +39,7 @@ public class Application {
             .build();
 
         CreateUcContactRequest req = CreateUcContactRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         CreateUcContactResponse res = sdk.uc().createUcContact()
@@ -95,7 +95,7 @@ public class Application {
             .build();
 
         GetUcContactRequest req = GetUcContactRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -152,7 +152,7 @@ public class Application {
             .build();
 
         ListUcCallsRequest req = ListUcCallsRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         ListUcCallsResponse res = sdk.uc().listUcCalls()
@@ -208,7 +208,7 @@ public class Application {
             .build();
 
         ListUcContactsRequest req = ListUcContactsRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         ListUcContactsResponse res = sdk.uc().listUcContacts()
@@ -264,7 +264,7 @@ public class Application {
             .build();
 
         PatchUcContactRequest req = PatchUcContactRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -321,7 +321,7 @@ public class Application {
             .build();
 
         RemoveUcContactRequest req = RemoveUcContactRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -376,7 +376,7 @@ public class Application {
             .build();
 
         UpdateUcContactRequest req = UpdateUcContactRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 

@@ -38,7 +38,7 @@ public class Application {
             .build();
 
         CreateKmsPageRequest req = CreateKmsPageRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         CreateKmsPageResponse res = sdk.page().createKmsPage()
@@ -94,7 +94,7 @@ public class Application {
             .build();
 
         GetKmsPageRequest req = GetKmsPageRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -151,7 +151,7 @@ public class Application {
             .build();
 
         ListKmsPagesRequest req = ListKmsPagesRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         ListKmsPagesResponse res = sdk.page().listKmsPages()
@@ -207,7 +207,7 @@ public class Application {
             .build();
 
         PatchKmsPageRequest req = PatchKmsPageRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -264,7 +264,7 @@ public class Application {
             .build();
 
         RemoveKmsPageRequest req = RemoveKmsPageRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -319,7 +319,7 @@ public class Application {
             .build();
 
         UpdateKmsPageRequest req = UpdateKmsPageRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 

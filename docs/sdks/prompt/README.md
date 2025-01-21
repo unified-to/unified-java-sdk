@@ -33,7 +33,7 @@ public class Application {
             .build();
 
         CreateGenaiPromptRequest req = CreateGenaiPromptRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         CreateGenaiPromptResponse res = sdk.prompt().createGenaiPrompt()

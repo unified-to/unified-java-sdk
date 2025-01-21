@@ -16,6 +16,7 @@ import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
@@ -51,6 +52,13 @@ public class RepoOrganization {
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
 
+    /**
+     * id values of the users/employees associated with this organization
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("user_ids")
+    private Optional<? extends List<String>> userIds;
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
     private Optional<String> webUrl;
@@ -64,6 +72,7 @@ public class RepoOrganization {
             @JsonProperty("name") Optional<String> name,
             @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
+            @JsonProperty("user_ids") Optional<? extends List<String>> userIds,
             @JsonProperty("web_url") Optional<String> webUrl) {
         Utils.checkNotNull(avatarUrl, "avatarUrl");
         Utils.checkNotNull(createdAt, "createdAt");
@@ -72,6 +81,7 @@ public class RepoOrganization {
         Utils.checkNotNull(name, "name");
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(updatedAt, "updatedAt");
+        Utils.checkNotNull(userIds, "userIds");
         Utils.checkNotNull(webUrl, "webUrl");
         this.avatarUrl = avatarUrl;
         this.createdAt = createdAt;
@@ -80,11 +90,12 @@ public class RepoOrganization {
         this.name = name;
         this.raw = raw;
         this.updatedAt = updatedAt;
+        this.userIds = userIds;
         this.webUrl = webUrl;
     }
     
     public RepoOrganization() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -121,6 +132,15 @@ public class RepoOrganization {
     @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
         return updatedAt;
+    }
+
+    /**
+     * id values of the users/employees associated with this organization
+     */
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<String>> userIds() {
+        return (Optional<List<String>>) userIds;
     }
 
     @JsonIgnore
@@ -216,6 +236,24 @@ public class RepoOrganization {
         return this;
     }
 
+    /**
+     * id values of the users/employees associated with this organization
+     */
+    public RepoOrganization withUserIds(List<String> userIds) {
+        Utils.checkNotNull(userIds, "userIds");
+        this.userIds = Optional.ofNullable(userIds);
+        return this;
+    }
+
+    /**
+     * id values of the users/employees associated with this organization
+     */
+    public RepoOrganization withUserIds(Optional<? extends List<String>> userIds) {
+        Utils.checkNotNull(userIds, "userIds");
+        this.userIds = userIds;
+        return this;
+    }
+
     public RepoOrganization withWebUrl(String webUrl) {
         Utils.checkNotNull(webUrl, "webUrl");
         this.webUrl = Optional.ofNullable(webUrl);
@@ -245,6 +283,7 @@ public class RepoOrganization {
             Objects.deepEquals(this.name, other.name) &&
             Objects.deepEquals(this.raw, other.raw) &&
             Objects.deepEquals(this.updatedAt, other.updatedAt) &&
+            Objects.deepEquals(this.userIds, other.userIds) &&
             Objects.deepEquals(this.webUrl, other.webUrl);
     }
     
@@ -258,6 +297,7 @@ public class RepoOrganization {
             name,
             raw,
             updatedAt,
+            userIds,
             webUrl);
     }
     
@@ -271,6 +311,7 @@ public class RepoOrganization {
                 "name", name,
                 "raw", raw,
                 "updatedAt", updatedAt,
+                "userIds", userIds,
                 "webUrl", webUrl);
     }
     
@@ -289,6 +330,8 @@ public class RepoOrganization {
         private Optional<? extends Map<String, Object>> raw = Optional.empty();
  
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
+ 
+        private Optional<? extends List<String>> userIds = Optional.empty();
  
         private Optional<String> webUrl = Optional.empty();  
         
@@ -380,6 +423,24 @@ public class RepoOrganization {
             return this;
         }
 
+        /**
+         * id values of the users/employees associated with this organization
+         */
+        public Builder userIds(List<String> userIds) {
+            Utils.checkNotNull(userIds, "userIds");
+            this.userIds = Optional.ofNullable(userIds);
+            return this;
+        }
+
+        /**
+         * id values of the users/employees associated with this organization
+         */
+        public Builder userIds(Optional<? extends List<String>> userIds) {
+            Utils.checkNotNull(userIds, "userIds");
+            this.userIds = userIds;
+            return this;
+        }
+
         public Builder webUrl(String webUrl) {
             Utils.checkNotNull(webUrl, "webUrl");
             this.webUrl = Optional.ofNullable(webUrl);
@@ -401,6 +462,7 @@ public class RepoOrganization {
                 name,
                 raw,
                 updatedAt,
+                userIds,
                 webUrl);
         }
     }

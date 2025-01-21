@@ -40,7 +40,7 @@ public class Application {
             .build();
 
         CreateMessagingMessageRequest req = CreateMessagingMessageRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         CreateMessagingMessageResponse res = sdk.messaging().createMessagingMessage()
@@ -96,7 +96,7 @@ public class Application {
             .build();
 
         GetMessagingChannelRequest req = GetMessagingChannelRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -153,7 +153,7 @@ public class Application {
             .build();
 
         GetMessagingMessageRequest req = GetMessagingMessageRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -210,7 +210,7 @@ public class Application {
             .build();
 
         ListMessagingChannelsRequest req = ListMessagingChannelsRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         ListMessagingChannelsResponse res = sdk.messaging().listMessagingChannels()
@@ -266,7 +266,7 @@ public class Application {
             .build();
 
         ListMessagingMessagesRequest req = ListMessagingMessagesRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         ListMessagingMessagesResponse res = sdk.messaging().listMessagingMessages()
@@ -322,7 +322,7 @@ public class Application {
             .build();
 
         PatchMessagingMessageRequest req = PatchMessagingMessageRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -379,7 +379,7 @@ public class Application {
             .build();
 
         RemoveMessagingMessageRequest req = RemoveMessagingMessageRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -434,7 +434,7 @@ public class Application {
             .build();
 
         UpdateMessagingMessageRequest req = UpdateMessagingMessageRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 

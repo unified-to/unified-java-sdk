@@ -38,7 +38,7 @@ public class Application {
             .build();
 
         CreateCrmEventRequest req = CreateCrmEventRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         CreateCrmEventResponse res = sdk.event().createCrmEvent()
@@ -94,7 +94,7 @@ public class Application {
             .build();
 
         GetCrmEventRequest req = GetCrmEventRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -151,7 +151,7 @@ public class Application {
             .build();
 
         ListCrmEventsRequest req = ListCrmEventsRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         ListCrmEventsResponse res = sdk.event().listCrmEvents()
@@ -207,7 +207,7 @@ public class Application {
             .build();
 
         PatchCrmEventRequest req = PatchCrmEventRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -264,7 +264,7 @@ public class Application {
             .build();
 
         RemoveCrmEventRequest req = RemoveCrmEventRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -319,7 +319,7 @@ public class Application {
             .build();
 
         UpdateCrmEventRequest req = UpdateCrmEventRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 

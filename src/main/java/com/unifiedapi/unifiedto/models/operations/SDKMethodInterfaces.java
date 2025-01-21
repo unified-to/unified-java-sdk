@@ -1205,6 +1205,12 @@ public class SDKMethodInterfaces {
     }
 
 
+    public interface MethodCallCreateKmsComment {
+        CreateKmsCommentResponse createKmsComment(
+            CreateKmsCommentRequest request) throws Exception;
+    }
+
+
     public interface MethodCallCreateKmsPage {
         CreateKmsPageResponse createKmsPage(
             CreateKmsPageRequest request) throws Exception;
@@ -1214,6 +1220,12 @@ public class SDKMethodInterfaces {
     public interface MethodCallCreateKmsSpace {
         CreateKmsSpaceResponse createKmsSpace(
             CreateKmsSpaceRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallGetKmsComment {
+        GetKmsCommentResponse getKmsComment(
+            GetKmsCommentRequest request) throws Exception;
     }
 
 
@@ -1229,6 +1241,12 @@ public class SDKMethodInterfaces {
     }
 
 
+    public interface MethodCallListKmsComments {
+        ListKmsCommentsResponse listKmsComments(
+            ListKmsCommentsRequest request) throws Exception;
+    }
+
+
     public interface MethodCallListKmsPages {
         ListKmsPagesResponse listKmsPages(
             ListKmsPagesRequest request) throws Exception;
@@ -1238,6 +1256,12 @@ public class SDKMethodInterfaces {
     public interface MethodCallListKmsSpaces {
         ListKmsSpacesResponse listKmsSpaces(
             ListKmsSpacesRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallPatchKmsComment {
+        PatchKmsCommentResponse patchKmsComment(
+            PatchKmsCommentRequest request) throws Exception;
     }
 
 
@@ -1253,6 +1277,12 @@ public class SDKMethodInterfaces {
     }
 
 
+    public interface MethodCallRemoveKmsComment {
+        RemoveKmsCommentResponse removeKmsComment(
+            RemoveKmsCommentRequest request) throws Exception;
+    }
+
+
     public interface MethodCallRemoveKmsPage {
         RemoveKmsPageResponse removeKmsPage(
             RemoveKmsPageRequest request) throws Exception;
@@ -1265,6 +1295,12 @@ public class SDKMethodInterfaces {
     }
 
 
+    public interface MethodCallUpdateKmsComment {
+        UpdateKmsCommentResponse updateKmsComment(
+            UpdateKmsCommentRequest request) throws Exception;
+    }
+
+
     public interface MethodCallUpdateKmsPage {
         UpdateKmsPageResponse updateKmsPage(
             UpdateKmsPageRequest request) throws Exception;
@@ -1274,6 +1310,42 @@ public class SDKMethodInterfaces {
     public interface MethodCallUpdateKmsSpace {
         UpdateKmsSpaceResponse updateKmsSpace(
             UpdateKmsSpaceRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallCreateTaskComment {
+        CreateTaskCommentResponse createTaskComment(
+            CreateTaskCommentRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallGetTaskComment {
+        GetTaskCommentResponse getTaskComment(
+            GetTaskCommentRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallListTaskComments {
+        ListTaskCommentsResponse listTaskComments(
+            ListTaskCommentsRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallPatchTaskComment {
+        PatchTaskCommentResponse patchTaskComment(
+            PatchTaskCommentRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallRemoveTaskComment {
+        RemoveTaskCommentResponse removeTaskComment(
+            RemoveTaskCommentRequest request) throws Exception;
+    }
+
+
+    public interface MethodCallUpdateTaskComment {
+        UpdateTaskCommentResponse updateTaskComment(
+            UpdateTaskCommentRequest request) throws Exception;
     }
 
 
@@ -1973,12 +2045,6 @@ public class SDKMethodInterfaces {
     }
 
 
-    public interface MethodCallCreateTaskComment {
-        CreateTaskCommentResponse createTaskComment(
-            CreateTaskCommentRequest request) throws Exception;
-    }
-
-
     public interface MethodCallCreateTaskProject {
         CreateTaskProjectResponse createTaskProject(
             CreateTaskProjectRequest request) throws Exception;
@@ -1988,12 +2054,6 @@ public class SDKMethodInterfaces {
     public interface MethodCallCreateTaskTask {
         CreateTaskTaskResponse createTaskTask(
             CreateTaskTaskRequest request) throws Exception;
-    }
-
-
-    public interface MethodCallGetTaskComment {
-        GetTaskCommentResponse getTaskComment(
-            GetTaskCommentRequest request) throws Exception;
     }
 
 
@@ -2009,12 +2069,6 @@ public class SDKMethodInterfaces {
     }
 
 
-    public interface MethodCallListTaskComments {
-        ListTaskCommentsResponse listTaskComments(
-            ListTaskCommentsRequest request) throws Exception;
-    }
-
-
     public interface MethodCallListTaskProjects {
         ListTaskProjectsResponse listTaskProjects(
             ListTaskProjectsRequest request) throws Exception;
@@ -2024,12 +2078,6 @@ public class SDKMethodInterfaces {
     public interface MethodCallListTaskTasks {
         ListTaskTasksResponse listTaskTasks(
             ListTaskTasksRequest request) throws Exception;
-    }
-
-
-    public interface MethodCallPatchTaskComment {
-        PatchTaskCommentResponse patchTaskComment(
-            PatchTaskCommentRequest request) throws Exception;
     }
 
 
@@ -2045,12 +2093,6 @@ public class SDKMethodInterfaces {
     }
 
 
-    public interface MethodCallRemoveTaskComment {
-        RemoveTaskCommentResponse removeTaskComment(
-            RemoveTaskCommentRequest request) throws Exception;
-    }
-
-
     public interface MethodCallRemoveTaskProject {
         RemoveTaskProjectResponse removeTaskProject(
             RemoveTaskProjectRequest request) throws Exception;
@@ -2060,12 +2102,6 @@ public class SDKMethodInterfaces {
     public interface MethodCallRemoveTaskTask {
         RemoveTaskTaskResponse removeTaskTask(
             RemoveTaskTaskRequest request) throws Exception;
-    }
-
-
-    public interface MethodCallUpdateTaskComment {
-        UpdateTaskCommentResponse updateTaskComment(
-            UpdateTaskCommentRequest request) throws Exception;
     }
 
 

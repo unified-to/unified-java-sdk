@@ -5,12 +5,74 @@
 
 ### Available Operations
 
+* [createKmsComment](#createkmscomment) - Create a comment
 * [createTaskComment](#createtaskcomment) - Create a comment
+* [getKmsComment](#getkmscomment) - Retrieve a comment
 * [getTaskComment](#gettaskcomment) - Retrieve a comment
+* [listKmsComments](#listkmscomments) - List all comments
 * [listTaskComments](#listtaskcomments) - List all comments
+* [patchKmsComment](#patchkmscomment) - Update a comment
 * [patchTaskComment](#patchtaskcomment) - Update a comment
+* [removeKmsComment](#removekmscomment) - Remove a comment
 * [removeTaskComment](#removetaskcomment) - Remove a comment
+* [updateKmsComment](#updatekmscomment) - Update a comment
 * [updateTaskComment](#updatetaskcomment) - Update a comment
+
+## createKmsComment
+
+Create a comment
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.CreateKmsCommentRequest;
+import com.unifiedapi.unifiedto.models.operations.CreateKmsCommentResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        CreateKmsCommentRequest req = CreateKmsCommentRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        CreateKmsCommentResponse res = sdk.comment().createKmsComment()
+                .request(req)
+                .call();
+
+        if (res.kmsComment().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [CreateKmsCommentRequest](../../models/operations/CreateKmsCommentRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[CreateKmsCommentResponse](../../models/operations/CreateKmsCommentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createTaskComment
 
@@ -61,6 +123,63 @@ public class Application {
 ### Response
 
 **[CreateTaskCommentResponse](../../models/operations/CreateTaskCommentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getKmsComment
+
+Retrieve a comment
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.GetKmsCommentRequest;
+import com.unifiedapi.unifiedto.models.operations.GetKmsCommentResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        GetKmsCommentRequest req = GetKmsCommentRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetKmsCommentResponse res = sdk.comment().getKmsComment()
+                .request(req)
+                .call();
+
+        if (res.kmsComment().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [GetKmsCommentRequest](../../models/operations/GetKmsCommentRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+
+### Response
+
+**[GetKmsCommentResponse](../../models/operations/GetKmsCommentResponse.md)**
 
 ### Errors
 
@@ -125,6 +244,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listKmsComments
+
+List all comments
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.ListKmsCommentsRequest;
+import com.unifiedapi.unifiedto.models.operations.ListKmsCommentsResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        ListKmsCommentsRequest req = ListKmsCommentsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListKmsCommentsResponse res = sdk.comment().listKmsComments()
+                .request(req)
+                .call();
+
+        if (res.kmsComments().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [ListKmsCommentsRequest](../../models/operations/ListKmsCommentsRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[ListKmsCommentsResponse](../../models/operations/ListKmsCommentsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listTaskComments
 
 List all comments
@@ -174,6 +349,63 @@ public class Application {
 ### Response
 
 **[ListTaskCommentsResponse](../../models/operations/ListTaskCommentsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchKmsComment
+
+Update a comment
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.PatchKmsCommentRequest;
+import com.unifiedapi.unifiedto.models.operations.PatchKmsCommentResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        PatchKmsCommentRequest req = PatchKmsCommentRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchKmsCommentResponse res = sdk.comment().patchKmsComment()
+                .request(req)
+                .call();
+
+        if (res.kmsComment().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [PatchKmsCommentRequest](../../models/operations/PatchKmsCommentRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[PatchKmsCommentResponse](../../models/operations/PatchKmsCommentResponse.md)**
 
 ### Errors
 
@@ -238,6 +470,61 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removeKmsComment
+
+Remove a comment
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.RemoveKmsCommentRequest;
+import com.unifiedapi.unifiedto.models.operations.RemoveKmsCommentResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        RemoveKmsCommentRequest req = RemoveKmsCommentRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveKmsCommentResponse res = sdk.comment().removeKmsComment()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [RemoveKmsCommentRequest](../../models/operations/RemoveKmsCommentRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[RemoveKmsCommentResponse](../../models/operations/RemoveKmsCommentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeTaskComment
 
 Remove a comment
@@ -286,6 +573,63 @@ public class Application {
 ### Response
 
 **[RemoveTaskCommentResponse](../../models/operations/RemoveTaskCommentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateKmsComment
+
+Update a comment
+
+### Example Usage
+
+```java
+package hello.world;
+
+import com.unifiedapi.unifiedto.UnifiedTo;
+import com.unifiedapi.unifiedto.models.operations.UpdateKmsCommentRequest;
+import com.unifiedapi.unifiedto.models.operations.UpdateKmsCommentResponse;
+import com.unifiedapi.unifiedto.models.shared.Security;
+import java.lang.Exception;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt("<YOUR_API_KEY_HERE>")
+                    .build())
+            .build();
+
+        UpdateKmsCommentRequest req = UpdateKmsCommentRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateKmsCommentResponse res = sdk.comment().updateKmsComment()
+                .request(req)
+                .call();
+
+        if (res.kmsComment().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [UpdateKmsCommentRequest](../../models/operations/UpdateKmsCommentRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[UpdateKmsCommentResponse](../../models/operations/UpdateKmsCommentResponse.md)**
 
 ### Errors
 

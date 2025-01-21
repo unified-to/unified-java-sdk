@@ -129,6 +129,10 @@ public class IntegrationSupport {
     private Optional<? extends ListOrgId> listOrgId;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("list_page_id")
+    private Optional<? extends ListPageId> listPageId;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_parent_id")
     private Optional<? extends ListParentId> listParentId;
 
@@ -236,6 +240,10 @@ public class IntegrationSupport {
     private Optional<? extends SearchTwitter> searchTwitter;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("slow_fields")
+    private Optional<? extends List<String>> slowFields;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_channel_id")
     private Optional<? extends VirtualWebhookChannelId> virtualWebhookChannelId;
 
@@ -311,6 +319,7 @@ public class IntegrationSupport {
             @JsonProperty("list_offset") Optional<? extends ListOffset> listOffset,
             @JsonProperty("list_order") Optional<? extends ListOrder> listOrder,
             @JsonProperty("list_org_id") Optional<? extends ListOrgId> listOrgId,
+            @JsonProperty("list_page_id") Optional<? extends ListPageId> listPageId,
             @JsonProperty("list_parent_id") Optional<? extends ListParentId> listParentId,
             @JsonProperty("list_project_id") Optional<? extends ListProjectId> listProjectId,
             @JsonProperty("list_query") Optional<? extends ListQuery> listQuery,
@@ -337,6 +346,7 @@ public class IntegrationSupport {
             @JsonProperty("search_linkedinurl") Optional<? extends SearchLinkedinurl> searchLinkedinurl,
             @JsonProperty("search_name") Optional<? extends SearchName> searchName,
             @JsonProperty("search_twitter") Optional<? extends SearchTwitter> searchTwitter,
+            @JsonProperty("slow_fields") Optional<? extends List<String>> slowFields,
             @JsonProperty("virtual_webhook_channel_id") Optional<? extends VirtualWebhookChannelId> virtualWebhookChannelId,
             @JsonProperty("virtual_webhook_company_id") Optional<? extends VirtualWebhookCompanyId> virtualWebhookCompanyId,
             @JsonProperty("virtual_webhook_contact_id") Optional<? extends VirtualWebhookContactId> virtualWebhookContactId,
@@ -375,6 +385,7 @@ public class IntegrationSupport {
         Utils.checkNotNull(listOffset, "listOffset");
         Utils.checkNotNull(listOrder, "listOrder");
         Utils.checkNotNull(listOrgId, "listOrgId");
+        Utils.checkNotNull(listPageId, "listPageId");
         Utils.checkNotNull(listParentId, "listParentId");
         Utils.checkNotNull(listProjectId, "listProjectId");
         Utils.checkNotNull(listQuery, "listQuery");
@@ -401,6 +412,7 @@ public class IntegrationSupport {
         Utils.checkNotNull(searchLinkedinurl, "searchLinkedinurl");
         Utils.checkNotNull(searchName, "searchName");
         Utils.checkNotNull(searchTwitter, "searchTwitter");
+        Utils.checkNotNull(slowFields, "slowFields");
         Utils.checkNotNull(virtualWebhookChannelId, "virtualWebhookChannelId");
         Utils.checkNotNull(virtualWebhookCompanyId, "virtualWebhookCompanyId");
         Utils.checkNotNull(virtualWebhookContactId, "virtualWebhookContactId");
@@ -439,6 +451,7 @@ public class IntegrationSupport {
         this.listOffset = listOffset;
         this.listOrder = listOrder;
         this.listOrgId = listOrgId;
+        this.listPageId = listPageId;
         this.listParentId = listParentId;
         this.listProjectId = listProjectId;
         this.listQuery = listQuery;
@@ -465,6 +478,7 @@ public class IntegrationSupport {
         this.searchLinkedinurl = searchLinkedinurl;
         this.searchName = searchName;
         this.searchTwitter = searchTwitter;
+        this.slowFields = slowFields;
         this.virtualWebhookChannelId = virtualWebhookChannelId;
         this.virtualWebhookCompanyId = virtualWebhookCompanyId;
         this.virtualWebhookContactId = virtualWebhookContactId;
@@ -480,7 +494,7 @@ public class IntegrationSupport {
     }
     
     public IntegrationSupport() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -641,6 +655,12 @@ public class IntegrationSupport {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
+    public Optional<ListPageId> listPageId() {
+        return (Optional<ListPageId>) listPageId;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
     public Optional<ListParentId> listParentId() {
         return (Optional<ListParentId>) listParentId;
     }
@@ -796,6 +816,12 @@ public class IntegrationSupport {
     @JsonIgnore
     public Optional<SearchTwitter> searchTwitter() {
         return (Optional<SearchTwitter>) searchTwitter;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<String>> slowFields() {
+        return (Optional<List<String>>) slowFields;
     }
 
     @SuppressWarnings("unchecked")
@@ -1186,6 +1212,18 @@ public class IntegrationSupport {
         return this;
     }
 
+    public IntegrationSupport withListPageId(ListPageId listPageId) {
+        Utils.checkNotNull(listPageId, "listPageId");
+        this.listPageId = Optional.ofNullable(listPageId);
+        return this;
+    }
+
+    public IntegrationSupport withListPageId(Optional<? extends ListPageId> listPageId) {
+        Utils.checkNotNull(listPageId, "listPageId");
+        this.listPageId = listPageId;
+        return this;
+    }
+
     public IntegrationSupport withListParentId(ListParentId listParentId) {
         Utils.checkNotNull(listParentId, "listParentId");
         this.listParentId = Optional.ofNullable(listParentId);
@@ -1504,6 +1542,18 @@ public class IntegrationSupport {
         return this;
     }
 
+    public IntegrationSupport withSlowFields(List<String> slowFields) {
+        Utils.checkNotNull(slowFields, "slowFields");
+        this.slowFields = Optional.ofNullable(slowFields);
+        return this;
+    }
+
+    public IntegrationSupport withSlowFields(Optional<? extends List<String>> slowFields) {
+        Utils.checkNotNull(slowFields, "slowFields");
+        this.slowFields = slowFields;
+        return this;
+    }
+
     public IntegrationSupport withVirtualWebhookChannelId(VirtualWebhookChannelId virtualWebhookChannelId) {
         Utils.checkNotNull(virtualWebhookChannelId, "virtualWebhookChannelId");
         this.virtualWebhookChannelId = Optional.ofNullable(virtualWebhookChannelId);
@@ -1684,6 +1734,7 @@ public class IntegrationSupport {
             Objects.deepEquals(this.listOffset, other.listOffset) &&
             Objects.deepEquals(this.listOrder, other.listOrder) &&
             Objects.deepEquals(this.listOrgId, other.listOrgId) &&
+            Objects.deepEquals(this.listPageId, other.listPageId) &&
             Objects.deepEquals(this.listParentId, other.listParentId) &&
             Objects.deepEquals(this.listProjectId, other.listProjectId) &&
             Objects.deepEquals(this.listQuery, other.listQuery) &&
@@ -1710,6 +1761,7 @@ public class IntegrationSupport {
             Objects.deepEquals(this.searchLinkedinurl, other.searchLinkedinurl) &&
             Objects.deepEquals(this.searchName, other.searchName) &&
             Objects.deepEquals(this.searchTwitter, other.searchTwitter) &&
+            Objects.deepEquals(this.slowFields, other.slowFields) &&
             Objects.deepEquals(this.virtualWebhookChannelId, other.virtualWebhookChannelId) &&
             Objects.deepEquals(this.virtualWebhookCompanyId, other.virtualWebhookCompanyId) &&
             Objects.deepEquals(this.virtualWebhookContactId, other.virtualWebhookContactId) &&
@@ -1753,6 +1805,7 @@ public class IntegrationSupport {
             listOffset,
             listOrder,
             listOrgId,
+            listPageId,
             listParentId,
             listProjectId,
             listQuery,
@@ -1779,6 +1832,7 @@ public class IntegrationSupport {
             searchLinkedinurl,
             searchName,
             searchTwitter,
+            slowFields,
             virtualWebhookChannelId,
             virtualWebhookCompanyId,
             virtualWebhookContactId,
@@ -1822,6 +1876,7 @@ public class IntegrationSupport {
                 "listOffset", listOffset,
                 "listOrder", listOrder,
                 "listOrgId", listOrgId,
+                "listPageId", listPageId,
                 "listParentId", listParentId,
                 "listProjectId", listProjectId,
                 "listQuery", listQuery,
@@ -1848,6 +1903,7 @@ public class IntegrationSupport {
                 "searchLinkedinurl", searchLinkedinurl,
                 "searchName", searchName,
                 "searchTwitter", searchTwitter,
+                "slowFields", slowFields,
                 "virtualWebhookChannelId", virtualWebhookChannelId,
                 "virtualWebhookCompanyId", virtualWebhookCompanyId,
                 "virtualWebhookContactId", virtualWebhookContactId,
@@ -1916,6 +1972,8 @@ public class IntegrationSupport {
  
         private Optional<? extends ListOrgId> listOrgId = Optional.empty();
  
+        private Optional<? extends ListPageId> listPageId = Optional.empty();
+ 
         private Optional<? extends ListParentId> listParentId = Optional.empty();
  
         private Optional<? extends ListProjectId> listProjectId = Optional.empty();
@@ -1967,6 +2025,8 @@ public class IntegrationSupport {
         private Optional<? extends SearchName> searchName = Optional.empty();
  
         private Optional<? extends SearchTwitter> searchTwitter = Optional.empty();
+ 
+        private Optional<? extends List<String>> slowFields = Optional.empty();
  
         private Optional<? extends VirtualWebhookChannelId> virtualWebhookChannelId = Optional.empty();
  
@@ -2308,6 +2368,18 @@ public class IntegrationSupport {
             return this;
         }
 
+        public Builder listPageId(ListPageId listPageId) {
+            Utils.checkNotNull(listPageId, "listPageId");
+            this.listPageId = Optional.ofNullable(listPageId);
+            return this;
+        }
+
+        public Builder listPageId(Optional<? extends ListPageId> listPageId) {
+            Utils.checkNotNull(listPageId, "listPageId");
+            this.listPageId = listPageId;
+            return this;
+        }
+
         public Builder listParentId(ListParentId listParentId) {
             Utils.checkNotNull(listParentId, "listParentId");
             this.listParentId = Optional.ofNullable(listParentId);
@@ -2626,6 +2698,18 @@ public class IntegrationSupport {
             return this;
         }
 
+        public Builder slowFields(List<String> slowFields) {
+            Utils.checkNotNull(slowFields, "slowFields");
+            this.slowFields = Optional.ofNullable(slowFields);
+            return this;
+        }
+
+        public Builder slowFields(Optional<? extends List<String>> slowFields) {
+            Utils.checkNotNull(slowFields, "slowFields");
+            this.slowFields = slowFields;
+            return this;
+        }
+
         public Builder virtualWebhookChannelId(VirtualWebhookChannelId virtualWebhookChannelId) {
             Utils.checkNotNull(virtualWebhookChannelId, "virtualWebhookChannelId");
             this.virtualWebhookChannelId = Optional.ofNullable(virtualWebhookChannelId);
@@ -2798,6 +2882,7 @@ public class IntegrationSupport {
                 listOffset,
                 listOrder,
                 listOrgId,
+                listPageId,
                 listParentId,
                 listProjectId,
                 listQuery,
@@ -2824,6 +2909,7 @@ public class IntegrationSupport {
                 searchLinkedinurl,
                 searchName,
                 searchTwitter,
+                slowFields,
                 virtualWebhookChannelId,
                 virtualWebhookCompanyId,
                 virtualWebhookContactId,

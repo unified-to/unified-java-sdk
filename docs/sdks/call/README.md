@@ -33,7 +33,7 @@ public class Application {
             .build();
 
         ListUcCallsRequest req = ListUcCallsRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         ListUcCallsResponse res = sdk.call().listUcCalls()

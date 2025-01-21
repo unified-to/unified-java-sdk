@@ -38,7 +38,7 @@ public class Application {
             .build();
 
         CreateAccountingTaxrateRequest req = CreateAccountingTaxrateRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         CreateAccountingTaxrateResponse res = sdk.taxrate().createAccountingTaxrate()
@@ -94,7 +94,7 @@ public class Application {
             .build();
 
         GetAccountingTaxrateRequest req = GetAccountingTaxrateRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -151,7 +151,7 @@ public class Application {
             .build();
 
         ListAccountingTaxratesRequest req = ListAccountingTaxratesRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         ListAccountingTaxratesResponse res = sdk.taxrate().listAccountingTaxrates()
@@ -207,7 +207,7 @@ public class Application {
             .build();
 
         PatchAccountingTaxrateRequest req = PatchAccountingTaxrateRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -264,7 +264,7 @@ public class Application {
             .build();
 
         RemoveAccountingTaxrateRequest req = RemoveAccountingTaxrateRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -319,7 +319,7 @@ public class Application {
             .build();
 
         UpdateAccountingTaxrateRequest req = UpdateAccountingTaxrateRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 

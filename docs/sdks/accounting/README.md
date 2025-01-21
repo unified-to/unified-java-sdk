@@ -76,7 +76,7 @@ public class Application {
             .build();
 
         CreateAccountingAccountRequest req = CreateAccountingAccountRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         CreateAccountingAccountResponse res = sdk.accounting().createAccountingAccount()
@@ -132,7 +132,7 @@ public class Application {
             .build();
 
         CreateAccountingContactRequest req = CreateAccountingContactRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         CreateAccountingContactResponse res = sdk.accounting().createAccountingContact()
@@ -188,7 +188,7 @@ public class Application {
             .build();
 
         CreateAccountingInvoiceRequest req = CreateAccountingInvoiceRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         CreateAccountingInvoiceResponse res = sdk.accounting().createAccountingInvoice()
@@ -244,7 +244,7 @@ public class Application {
             .build();
 
         CreateAccountingJournalRequest req = CreateAccountingJournalRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         CreateAccountingJournalResponse res = sdk.accounting().createAccountingJournal()
@@ -356,7 +356,7 @@ public class Application {
             .build();
 
         CreateAccountingTaxrateRequest req = CreateAccountingTaxrateRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         CreateAccountingTaxrateResponse res = sdk.accounting().createAccountingTaxrate()
@@ -412,7 +412,7 @@ public class Application {
             .build();
 
         CreateAccountingTransactionRequest req = CreateAccountingTransactionRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         CreateAccountingTransactionResponse res = sdk.accounting().createAccountingTransaction()
@@ -468,7 +468,7 @@ public class Application {
             .build();
 
         GetAccountingAccountRequest req = GetAccountingAccountRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -525,7 +525,7 @@ public class Application {
             .build();
 
         GetAccountingContactRequest req = GetAccountingContactRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -582,7 +582,7 @@ public class Application {
             .build();
 
         GetAccountingInvoiceRequest req = GetAccountingInvoiceRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -639,7 +639,7 @@ public class Application {
             .build();
 
         GetAccountingJournalRequest req = GetAccountingJournalRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -753,7 +753,7 @@ public class Application {
             .build();
 
         GetAccountingOrganizationRequest req = GetAccountingOrganizationRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -810,7 +810,7 @@ public class Application {
             .build();
 
         GetAccountingTaxrateRequest req = GetAccountingTaxrateRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -867,7 +867,7 @@ public class Application {
             .build();
 
         GetAccountingTransactionRequest req = GetAccountingTransactionRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -924,7 +924,7 @@ public class Application {
             .build();
 
         ListAccountingAccountsRequest req = ListAccountingAccountsRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         ListAccountingAccountsResponse res = sdk.accounting().listAccountingAccounts()
@@ -980,7 +980,7 @@ public class Application {
             .build();
 
         ListAccountingContactsRequest req = ListAccountingContactsRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         ListAccountingContactsResponse res = sdk.accounting().listAccountingContacts()
@@ -1036,7 +1036,7 @@ public class Application {
             .build();
 
         ListAccountingInvoicesRequest req = ListAccountingInvoicesRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         ListAccountingInvoicesResponse res = sdk.accounting().listAccountingInvoices()
@@ -1092,7 +1092,7 @@ public class Application {
             .build();
 
         ListAccountingJournalsRequest req = ListAccountingJournalsRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         ListAccountingJournalsResponse res = sdk.accounting().listAccountingJournals()
@@ -1204,7 +1204,7 @@ public class Application {
             .build();
 
         ListAccountingOrganizationsRequest req = ListAccountingOrganizationsRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         ListAccountingOrganizationsResponse res = sdk.accounting().listAccountingOrganizations()
@@ -1260,7 +1260,7 @@ public class Application {
             .build();
 
         ListAccountingTaxratesRequest req = ListAccountingTaxratesRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         ListAccountingTaxratesResponse res = sdk.accounting().listAccountingTaxrates()
@@ -1316,7 +1316,7 @@ public class Application {
             .build();
 
         ListAccountingTransactionsRequest req = ListAccountingTransactionsRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         ListAccountingTransactionsResponse res = sdk.accounting().listAccountingTransactions()
@@ -1372,7 +1372,7 @@ public class Application {
             .build();
 
         PatchAccountingAccountRequest req = PatchAccountingAccountRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -1429,7 +1429,7 @@ public class Application {
             .build();
 
         PatchAccountingContactRequest req = PatchAccountingContactRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -1486,7 +1486,7 @@ public class Application {
             .build();
 
         PatchAccountingInvoiceRequest req = PatchAccountingInvoiceRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -1543,7 +1543,7 @@ public class Application {
             .build();
 
         PatchAccountingJournalRequest req = PatchAccountingJournalRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -1657,7 +1657,7 @@ public class Application {
             .build();
 
         PatchAccountingTaxrateRequest req = PatchAccountingTaxrateRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -1714,7 +1714,7 @@ public class Application {
             .build();
 
         PatchAccountingTransactionRequest req = PatchAccountingTransactionRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -1771,7 +1771,7 @@ public class Application {
             .build();
 
         RemoveAccountingAccountRequest req = RemoveAccountingAccountRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -1826,7 +1826,7 @@ public class Application {
             .build();
 
         RemoveAccountingContactRequest req = RemoveAccountingContactRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -1881,7 +1881,7 @@ public class Application {
             .build();
 
         RemoveAccountingInvoiceRequest req = RemoveAccountingInvoiceRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -1936,7 +1936,7 @@ public class Application {
             .build();
 
         RemoveAccountingJournalRequest req = RemoveAccountingJournalRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -2046,7 +2046,7 @@ public class Application {
             .build();
 
         RemoveAccountingTaxrateRequest req = RemoveAccountingTaxrateRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -2101,7 +2101,7 @@ public class Application {
             .build();
 
         RemoveAccountingTransactionRequest req = RemoveAccountingTransactionRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -2156,7 +2156,7 @@ public class Application {
             .build();
 
         UpdateAccountingAccountRequest req = UpdateAccountingAccountRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -2213,7 +2213,7 @@ public class Application {
             .build();
 
         UpdateAccountingContactRequest req = UpdateAccountingContactRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -2270,7 +2270,7 @@ public class Application {
             .build();
 
         UpdateAccountingInvoiceRequest req = UpdateAccountingInvoiceRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -2327,7 +2327,7 @@ public class Application {
             .build();
 
         UpdateAccountingJournalRequest req = UpdateAccountingJournalRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -2441,7 +2441,7 @@ public class Application {
             .build();
 
         UpdateAccountingTaxrateRequest req = UpdateAccountingTaxrateRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -2498,7 +2498,7 @@ public class Application {
             .build();
 
         UpdateAccountingTransactionRequest req = UpdateAccountingTransactionRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 

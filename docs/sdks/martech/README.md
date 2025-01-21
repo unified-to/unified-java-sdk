@@ -44,7 +44,7 @@ public class Application {
             .build();
 
         CreateMartechListRequest req = CreateMartechListRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         CreateMartechListResponse res = sdk.martech().createMartechList()
@@ -100,7 +100,7 @@ public class Application {
             .build();
 
         CreateMartechMemberRequest req = CreateMartechMemberRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         CreateMartechMemberResponse res = sdk.martech().createMartechMember()
@@ -156,7 +156,7 @@ public class Application {
             .build();
 
         GetMartechListRequest req = GetMartechListRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -213,7 +213,7 @@ public class Application {
             .build();
 
         GetMartechMemberRequest req = GetMartechMemberRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -270,7 +270,7 @@ public class Application {
             .build();
 
         ListMartechListsRequest req = ListMartechListsRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         ListMartechListsResponse res = sdk.martech().listMartechLists()
@@ -326,7 +326,7 @@ public class Application {
             .build();
 
         ListMartechMembersRequest req = ListMartechMembersRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         ListMartechMembersResponse res = sdk.martech().listMartechMembers()
@@ -382,7 +382,7 @@ public class Application {
             .build();
 
         PatchMartechListRequest req = PatchMartechListRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -439,7 +439,7 @@ public class Application {
             .build();
 
         PatchMartechMemberRequest req = PatchMartechMemberRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -496,7 +496,7 @@ public class Application {
             .build();
 
         RemoveMartechListRequest req = RemoveMartechListRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -551,7 +551,7 @@ public class Application {
             .build();
 
         RemoveMartechMemberRequest req = RemoveMartechMemberRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -606,7 +606,7 @@ public class Application {
             .build();
 
         UpdateMartechListRequest req = UpdateMartechListRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -663,7 +663,7 @@ public class Application {
             .build();
 
         UpdateMartechMemberRequest req = UpdateMartechMemberRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 

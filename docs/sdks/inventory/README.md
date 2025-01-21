@@ -38,7 +38,7 @@ public class Application {
             .build();
 
         CreateCommerceInventoryRequest req = CreateCommerceInventoryRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         CreateCommerceInventoryResponse res = sdk.inventory().createCommerceInventory()
@@ -94,7 +94,7 @@ public class Application {
             .build();
 
         GetCommerceInventoryRequest req = GetCommerceInventoryRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -151,7 +151,7 @@ public class Application {
             .build();
 
         ListCommerceInventoriesRequest req = ListCommerceInventoriesRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         ListCommerceInventoriesResponse res = sdk.inventory().listCommerceInventories()
@@ -207,7 +207,7 @@ public class Application {
             .build();
 
         PatchCommerceInventoryRequest req = PatchCommerceInventoryRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -264,7 +264,7 @@ public class Application {
             .build();
 
         RemoveCommerceInventoryRequest req = RemoveCommerceInventoryRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -319,7 +319,7 @@ public class Application {
             .build();
 
         UpdateCommerceInventoryRequest req = UpdateCommerceInventoryRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 

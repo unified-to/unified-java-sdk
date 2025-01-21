@@ -38,7 +38,7 @@ public class Application {
             .build();
 
         CreateAtsDocumentRequest req = CreateAtsDocumentRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         CreateAtsDocumentResponse res = sdk.document().createAtsDocument()
@@ -94,7 +94,7 @@ public class Application {
             .build();
 
         GetAtsDocumentRequest req = GetAtsDocumentRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -151,7 +151,7 @@ public class Application {
             .build();
 
         ListAtsDocumentsRequest req = ListAtsDocumentsRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         ListAtsDocumentsResponse res = sdk.document().listAtsDocuments()
@@ -207,7 +207,7 @@ public class Application {
             .build();
 
         PatchAtsDocumentRequest req = PatchAtsDocumentRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -264,7 +264,7 @@ public class Application {
             .build();
 
         RemoveAtsDocumentRequest req = RemoveAtsDocumentRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -319,7 +319,7 @@ public class Application {
             .build();
 
         UpdateAtsDocumentRequest req = UpdateAtsDocumentRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 

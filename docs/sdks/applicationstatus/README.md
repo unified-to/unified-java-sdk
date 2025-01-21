@@ -33,7 +33,7 @@ public class Application {
             .build();
 
         ListAtsApplicationstatusesRequest req = ListAtsApplicationstatusesRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         ListAtsApplicationstatusesResponse res = sdk.applicationstatus().listAtsApplicationstatuses()

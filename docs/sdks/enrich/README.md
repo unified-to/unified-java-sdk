@@ -34,7 +34,7 @@ public class Application {
             .build();
 
         ListEnrichCompaniesRequest req = ListEnrichCompaniesRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         ListEnrichCompaniesResponse res = sdk.enrich().listEnrichCompanies()
@@ -90,7 +90,7 @@ public class Application {
             .build();
 
         ListEnrichPeopleRequest req = ListEnrichPeopleRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         ListEnrichPeopleResponse res = sdk.enrich().listEnrichPeople()

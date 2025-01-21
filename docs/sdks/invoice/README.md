@@ -38,7 +38,7 @@ public class Application {
             .build();
 
         CreateAccountingInvoiceRequest req = CreateAccountingInvoiceRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         CreateAccountingInvoiceResponse res = sdk.invoice().createAccountingInvoice()
@@ -94,7 +94,7 @@ public class Application {
             .build();
 
         GetAccountingInvoiceRequest req = GetAccountingInvoiceRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -151,7 +151,7 @@ public class Application {
             .build();
 
         ListAccountingInvoicesRequest req = ListAccountingInvoicesRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         ListAccountingInvoicesResponse res = sdk.invoice().listAccountingInvoices()
@@ -207,7 +207,7 @@ public class Application {
             .build();
 
         PatchAccountingInvoiceRequest req = PatchAccountingInvoiceRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -264,7 +264,7 @@ public class Application {
             .build();
 
         RemoveAccountingInvoiceRequest req = RemoveAccountingInvoiceRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -319,7 +319,7 @@ public class Application {
             .build();
 
         UpdateAccountingInvoiceRequest req = UpdateAccountingInvoiceRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 

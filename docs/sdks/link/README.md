@@ -38,7 +38,7 @@ public class Application {
             .build();
 
         CreatePaymentLinkRequest req = CreatePaymentLinkRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         CreatePaymentLinkResponse res = sdk.link().createPaymentLink()
@@ -94,7 +94,7 @@ public class Application {
             .build();
 
         GetPaymentLinkRequest req = GetPaymentLinkRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -151,7 +151,7 @@ public class Application {
             .build();
 
         ListPaymentLinksRequest req = ListPaymentLinksRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .build();
 
         ListPaymentLinksResponse res = sdk.link().listPaymentLinks()
@@ -207,7 +207,7 @@ public class Application {
             .build();
 
         PatchPaymentLinkRequest req = PatchPaymentLinkRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -264,7 +264,7 @@ public class Application {
             .build();
 
         RemovePaymentLinkRequest req = RemovePaymentLinkRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
@@ -319,7 +319,7 @@ public class Application {
             .build();
 
         UpdatePaymentLinkRequest req = UpdatePaymentLinkRequest.builder()
-                .connectionId("<value>")
+                .connectionId("<id>")
                 .id("<id>")
                 .build();
 
