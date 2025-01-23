@@ -12,7 +12,8 @@ import java.util.Optional;
 public enum ContentType {
     HTML("HTML"),
     MARKDOWN("MARKDOWN"),
-    TEXT("TEXT");
+    TEXT("TEXT"),
+    OTHER("OTHER");
 
     @JsonValue
     private final String value;

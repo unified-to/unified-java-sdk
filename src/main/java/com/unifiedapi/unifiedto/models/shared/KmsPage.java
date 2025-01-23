@@ -29,8 +29,9 @@ public class KmsPage {
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("download_url")
-    private String downloadUrl;
+    private Optional<String> downloadUrl;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_children")
@@ -81,7 +82,7 @@ public class KmsPage {
     @JsonCreator
     public KmsPage(
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("download_url") String downloadUrl,
+            @JsonProperty("download_url") Optional<String> downloadUrl,
             @JsonProperty("has_children") Optional<Boolean> hasChildren,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("is_active") Optional<Boolean> isActive,
@@ -125,10 +126,9 @@ public class KmsPage {
     }
     
     public KmsPage(
-            String downloadUrl,
             String title,
             KmsPageType type) {
-        this(Optional.empty(), downloadUrl, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), title, type, Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), title, type, Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -137,7 +137,7 @@ public class KmsPage {
     }
 
     @JsonIgnore
-    public String downloadUrl() {
+    public Optional<String> downloadUrl() {
         return downloadUrl;
     }
 
@@ -220,6 +220,12 @@ public class KmsPage {
     }
 
     public KmsPage withDownloadUrl(String downloadUrl) {
+        Utils.checkNotNull(downloadUrl, "downloadUrl");
+        this.downloadUrl = Optional.ofNullable(downloadUrl);
+        return this;
+    }
+
+    public KmsPage withDownloadUrl(Optional<String> downloadUrl) {
         Utils.checkNotNull(downloadUrl, "downloadUrl");
         this.downloadUrl = downloadUrl;
         return this;
@@ -425,7 +431,7 @@ public class KmsPage {
  
         private Optional<OffsetDateTime> createdAt = Optional.empty();
  
-        private String downloadUrl;
+        private Optional<String> downloadUrl = Optional.empty();
  
         private Optional<Boolean> hasChildren = Optional.empty();
  
@@ -468,6 +474,12 @@ public class KmsPage {
         }
 
         public Builder downloadUrl(String downloadUrl) {
+            Utils.checkNotNull(downloadUrl, "downloadUrl");
+            this.downloadUrl = Optional.ofNullable(downloadUrl);
+            return this;
+        }
+
+        public Builder downloadUrl(Optional<String> downloadUrl) {
             Utils.checkNotNull(downloadUrl, "downloadUrl");
             this.downloadUrl = downloadUrl;
             return this;
