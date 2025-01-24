@@ -54,9 +54,6 @@ public class ListMessagingMessagesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     private Optional<String> query;
 
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=root_id")
-    private Optional<String> rootId;
-
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     private Optional<String> sort;
 
@@ -76,7 +73,6 @@ public class ListMessagingMessagesRequest {
             Optional<String> order,
             Optional<String> parentId,
             Optional<String> query,
-            Optional<String> rootId,
             Optional<String> sort,
             Optional<OffsetDateTime> updatedGte) {
         Utils.checkNotNull(channelId, "channelId");
@@ -87,7 +83,6 @@ public class ListMessagingMessagesRequest {
         Utils.checkNotNull(order, "order");
         Utils.checkNotNull(parentId, "parentId");
         Utils.checkNotNull(query, "query");
-        Utils.checkNotNull(rootId, "rootId");
         Utils.checkNotNull(sort, "sort");
         Utils.checkNotNull(updatedGte, "updatedGte");
         this.channelId = channelId;
@@ -98,14 +93,13 @@ public class ListMessagingMessagesRequest {
         this.order = order;
         this.parentId = parentId;
         this.query = query;
-        this.rootId = rootId;
         this.sort = sort;
         this.updatedGte = updatedGte;
     }
     
     public ListMessagingMessagesRequest(
             String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -156,11 +150,6 @@ public class ListMessagingMessagesRequest {
     @JsonIgnore
     public Optional<String> query() {
         return query;
-    }
-
-    @JsonIgnore
-    public Optional<String> rootId() {
-        return rootId;
     }
 
     @JsonIgnore
@@ -285,18 +274,6 @@ public class ListMessagingMessagesRequest {
         return this;
     }
 
-    public ListMessagingMessagesRequest withRootId(String rootId) {
-        Utils.checkNotNull(rootId, "rootId");
-        this.rootId = Optional.ofNullable(rootId);
-        return this;
-    }
-
-    public ListMessagingMessagesRequest withRootId(Optional<String> rootId) {
-        Utils.checkNotNull(rootId, "rootId");
-        this.rootId = rootId;
-        return this;
-    }
-
     public ListMessagingMessagesRequest withSort(String sort) {
         Utils.checkNotNull(sort, "sort");
         this.sort = Optional.ofNullable(sort);
@@ -345,7 +322,6 @@ public class ListMessagingMessagesRequest {
             Objects.deepEquals(this.order, other.order) &&
             Objects.deepEquals(this.parentId, other.parentId) &&
             Objects.deepEquals(this.query, other.query) &&
-            Objects.deepEquals(this.rootId, other.rootId) &&
             Objects.deepEquals(this.sort, other.sort) &&
             Objects.deepEquals(this.updatedGte, other.updatedGte);
     }
@@ -361,7 +337,6 @@ public class ListMessagingMessagesRequest {
             order,
             parentId,
             query,
-            rootId,
             sort,
             updatedGte);
     }
@@ -377,7 +352,6 @@ public class ListMessagingMessagesRequest {
                 "order", order,
                 "parentId", parentId,
                 "query", query,
-                "rootId", rootId,
                 "sort", sort,
                 "updatedGte", updatedGte);
     }
@@ -399,8 +373,6 @@ public class ListMessagingMessagesRequest {
         private Optional<String> parentId = Optional.empty();
  
         private Optional<String> query = Optional.empty();
- 
-        private Optional<String> rootId = Optional.empty();
  
         private Optional<String> sort = Optional.empty();
  
@@ -515,18 +487,6 @@ public class ListMessagingMessagesRequest {
             return this;
         }
 
-        public Builder rootId(String rootId) {
-            Utils.checkNotNull(rootId, "rootId");
-            this.rootId = Optional.ofNullable(rootId);
-            return this;
-        }
-
-        public Builder rootId(Optional<String> rootId) {
-            Utils.checkNotNull(rootId, "rootId");
-            this.rootId = rootId;
-            return this;
-        }
-
         public Builder sort(String sort) {
             Utils.checkNotNull(sort, "sort");
             this.sort = Optional.ofNullable(sort);
@@ -567,7 +527,6 @@ public class ListMessagingMessagesRequest {
                 order,
                 parentId,
                 query,
-                rootId,
                 sort,
                 updatedGte);
         }
