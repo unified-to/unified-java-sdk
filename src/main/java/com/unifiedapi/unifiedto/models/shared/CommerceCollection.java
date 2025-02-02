@@ -12,13 +12,11 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Boolean;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -77,7 +75,7 @@ public class CommerceCollection {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Optional<? extends Raw> raw;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
@@ -105,7 +103,7 @@ public class CommerceCollection {
             @JsonProperty("parent_id") Optional<String> parentId,
             @JsonProperty("public_description") Optional<String> publicDescription,
             @JsonProperty("public_name") Optional<String> publicName,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("raw") Optional<? extends Raw> raw,
             @JsonProperty("tags") Optional<? extends List<String>> tags,
             @JsonProperty("type") Optional<? extends CommerceCollectionType> type,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
@@ -212,8 +210,8 @@ public class CommerceCollection {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+    public Optional<Raw> raw() {
+        return (Optional<Raw>) raw;
     }
 
     @SuppressWarnings("unchecked")
@@ -375,13 +373,13 @@ public class CommerceCollection {
         return this;
     }
 
-    public CommerceCollection withRaw(Map<String, Object> raw) {
+    public CommerceCollection withRaw(Raw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    public CommerceCollection withRaw(Optional<? extends Map<String, Object>> raw) {
+    public CommerceCollection withRaw(Optional<? extends Raw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -519,7 +517,7 @@ public class CommerceCollection {
  
         private Optional<String> publicName = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Optional<? extends Raw> raw = Optional.empty();
  
         private Optional<? extends List<String>> tags = Optional.empty();
  
@@ -669,13 +667,13 @@ public class CommerceCollection {
             return this;
         }
 
-        public Builder raw(Map<String, Object> raw) {
+        public Builder raw(Raw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
+        public Builder raw(Optional<? extends Raw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;

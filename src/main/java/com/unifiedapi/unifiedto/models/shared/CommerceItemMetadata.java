@@ -11,11 +11,9 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -24,7 +22,7 @@ public class CommerceItemMetadata {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extra_data")
-    private Optional<? extends Map<String, Object>> extraData;
+    private Optional<? extends ExtraData> extraData;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
@@ -43,16 +41,16 @@ public class CommerceItemMetadata {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
-    private Optional<? extends Map<String, Object>> value;
+    private Optional<? extends Value> value;
 
     @JsonCreator
     public CommerceItemMetadata(
-            @JsonProperty("extra_data") Optional<? extends Map<String, Object>> extraData,
+            @JsonProperty("extra_data") Optional<? extends ExtraData> extraData,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("key") String key,
             @JsonProperty("namespace") Optional<String> namespace,
             @JsonProperty("type") Optional<String> type,
-            @JsonProperty("value") Optional<? extends Map<String, Object>> value) {
+            @JsonProperty("value") Optional<? extends Value> value) {
         Utils.checkNotNull(extraData, "extraData");
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(key, "key");
@@ -74,8 +72,8 @@ public class CommerceItemMetadata {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> extraData() {
-        return (Optional<Map<String, Object>>) extraData;
+    public Optional<ExtraData> extraData() {
+        return (Optional<ExtraData>) extraData;
     }
 
     @JsonIgnore
@@ -100,21 +98,21 @@ public class CommerceItemMetadata {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> value() {
-        return (Optional<Map<String, Object>>) value;
+    public Optional<Value> value() {
+        return (Optional<Value>) value;
     }
 
     public final static Builder builder() {
         return new Builder();
     }
 
-    public CommerceItemMetadata withExtraData(Map<String, Object> extraData) {
+    public CommerceItemMetadata withExtraData(ExtraData extraData) {
         Utils.checkNotNull(extraData, "extraData");
         this.extraData = Optional.ofNullable(extraData);
         return this;
     }
 
-    public CommerceItemMetadata withExtraData(Optional<? extends Map<String, Object>> extraData) {
+    public CommerceItemMetadata withExtraData(Optional<? extends ExtraData> extraData) {
         Utils.checkNotNull(extraData, "extraData");
         this.extraData = extraData;
         return this;
@@ -162,13 +160,13 @@ public class CommerceItemMetadata {
         return this;
     }
 
-    public CommerceItemMetadata withValue(Map<String, Object> value) {
+    public CommerceItemMetadata withValue(Value value) {
         Utils.checkNotNull(value, "value");
         this.value = Optional.ofNullable(value);
         return this;
     }
 
-    public CommerceItemMetadata withValue(Optional<? extends Map<String, Object>> value) {
+    public CommerceItemMetadata withValue(Optional<? extends Value> value) {
         Utils.checkNotNull(value, "value");
         this.value = value;
         return this;
@@ -216,7 +214,7 @@ public class CommerceItemMetadata {
     
     public final static class Builder {
  
-        private Optional<? extends Map<String, Object>> extraData = Optional.empty();
+        private Optional<? extends ExtraData> extraData = Optional.empty();
  
         private Optional<String> id = Optional.empty();
  
@@ -226,19 +224,19 @@ public class CommerceItemMetadata {
  
         private Optional<String> type = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> value = Optional.empty();  
+        private Optional<? extends Value> value = Optional.empty();  
         
         private Builder() {
           // force use of static builder() method
         }
 
-        public Builder extraData(Map<String, Object> extraData) {
+        public Builder extraData(ExtraData extraData) {
             Utils.checkNotNull(extraData, "extraData");
             this.extraData = Optional.ofNullable(extraData);
             return this;
         }
 
-        public Builder extraData(Optional<? extends Map<String, Object>> extraData) {
+        public Builder extraData(Optional<? extends ExtraData> extraData) {
             Utils.checkNotNull(extraData, "extraData");
             this.extraData = extraData;
             return this;
@@ -286,13 +284,13 @@ public class CommerceItemMetadata {
             return this;
         }
 
-        public Builder value(Map<String, Object> value) {
+        public Builder value(Value value) {
             Utils.checkNotNull(value, "value");
             this.value = Optional.ofNullable(value);
             return this;
         }
 
-        public Builder value(Optional<? extends Map<String, Object>> value) {
+        public Builder value(Optional<? extends Value> value) {
             Utils.checkNotNull(value, "value");
             this.value = value;
             return this;

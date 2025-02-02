@@ -12,12 +12,10 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Boolean;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -49,7 +47,7 @@ public class CommerceLocation {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Optional<? extends CommerceLocationRaw> raw;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -63,7 +61,7 @@ public class CommerceLocation {
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("is_active") Optional<Boolean> isActive,
             @JsonProperty("name") String name,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("raw") Optional<? extends CommerceLocationRaw> raw,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(address, "address");
         Utils.checkNotNull(createdAt, "createdAt");
@@ -121,8 +119,8 @@ public class CommerceLocation {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+    public Optional<CommerceLocationRaw> raw() {
+        return (Optional<CommerceLocationRaw>) raw;
     }
 
     @JsonIgnore
@@ -200,13 +198,13 @@ public class CommerceLocation {
         return this;
     }
 
-    public CommerceLocation withRaw(Map<String, Object> raw) {
+    public CommerceLocation withRaw(CommerceLocationRaw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    public CommerceLocation withRaw(Optional<? extends Map<String, Object>> raw) {
+    public CommerceLocation withRaw(Optional<? extends CommerceLocationRaw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -284,7 +282,7 @@ public class CommerceLocation {
  
         private String name;
  
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Optional<? extends CommerceLocationRaw> raw = Optional.empty();
  
         private Optional<OffsetDateTime> updatedAt = Optional.empty();  
         
@@ -358,13 +356,13 @@ public class CommerceLocation {
             return this;
         }
 
-        public Builder raw(Map<String, Object> raw) {
+        public Builder raw(CommerceLocationRaw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
+        public Builder raw(Optional<? extends CommerceLocationRaw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;

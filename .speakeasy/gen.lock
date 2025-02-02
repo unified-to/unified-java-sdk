@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 0348382e89126471fa3b06fe46a31486
+  docChecksum: 00e71c38f182c4bad7a19b0c7bb3e211
   docVersion: "1.0"
-  speakeasyVersion: 1.474.0
-  generationVersion: 2.495.0
-  releaseVersion: 0.26.17
-  configChecksum: 52978b4d70673a7357d0c9666673adad
+  speakeasyVersion: 1.481.1
+  generationVersion: 2.500.5
+  releaseVersion: 0.26.18
+  configChecksum: be2badd0fe886a1088b34765b09068f5
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -15,7 +15,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.1
-    core: 3.33.5
+    core: 3.33.7
     downloadStreams: 0.1.1
     globalSecurity: 2.82.7
     globalSecurityCallbacks: 0.1.0
@@ -864,14 +864,17 @@ generatedFiles:
   - docs/models/shared/CommerceCollection.md
   - docs/models/shared/CommerceCollectionType.md
   - docs/models/shared/CommerceInventory.md
+  - docs/models/shared/CommerceInventoryRaw.md
   - docs/models/shared/CommerceItem.md
   - docs/models/shared/CommerceItemMedia.md
   - docs/models/shared/CommerceItemMediaType.md
   - docs/models/shared/CommerceItemMetadata.md
   - docs/models/shared/CommerceItemOption.md
   - docs/models/shared/CommerceItemPrice.md
+  - docs/models/shared/CommerceItemRaw.md
   - docs/models/shared/CommerceItemVariant.md
   - docs/models/shared/CommerceLocation.md
+  - docs/models/shared/CommerceLocationRaw.md
   - docs/models/shared/Connection.md
   - docs/models/shared/ContentType.md
   - docs/models/shared/CrmCompany.md
@@ -900,6 +903,7 @@ generatedFiles:
   - docs/models/shared/EnrichTelephoneType.md
   - docs/models/shared/Ethnicity.md
   - docs/models/shared/Event.md
+  - docs/models/shared/ExtraData.md
   - docs/models/shared/Frequency.md
   - docs/models/shared/FromWebhook.md
   - docs/models/shared/GenaiContent.md
@@ -1068,6 +1072,7 @@ generatedFiles:
   - docs/models/shared/PropertyStoragePermissionRoles.md
   - docs/models/shared/PropertyUcCallTelephone.md
   - docs/models/shared/PropertyUcCallTelephoneType.md
+  - docs/models/shared/Raw.md
   - docs/models/shared/Recommendation.md
   - docs/models/shared/RepoBranch.md
   - docs/models/shared/RepoCommit.md
@@ -1129,6 +1134,7 @@ generatedFiles:
   - docs/models/shared/UcEmailType.md
   - docs/models/shared/UcTelephone.md
   - docs/models/shared/UcTelephoneType.md
+  - docs/models/shared/Value.md
   - docs/models/shared/VirtualWebhookChannelId.md
   - docs/models/shared/VirtualWebhookCompanyId.md
   - docs/models/shared/VirtualWebhookContactId.md
@@ -2557,14 +2563,17 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceCollection.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceCollectionType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceInventory.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceInventoryRaw.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceItem.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceItemMedia.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceItemMediaType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceItemMetadata.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceItemOption.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceItemPrice.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceItemRaw.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceItemVariant.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceLocation.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/CommerceLocationRaw.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Connection.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ContentType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmCompany.java
@@ -2593,6 +2602,7 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/EnrichTelephoneType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Ethnicity.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Event.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/ExtraData.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Frequency.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/FromWebhook.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/GenaiContent.java
@@ -2761,6 +2771,7 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyStoragePermissionRoles.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUcCallTelephone.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/PropertyUcCallTelephoneType.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/Raw.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Recommendation.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/RepoBranch.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/RepoCommit.java
@@ -2822,6 +2833,7 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/UcEmailType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/UcTelephone.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/UcTelephoneType.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/Value.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/VirtualWebhookChannelId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/VirtualWebhookCompanyId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/VirtualWebhookContactId.java
