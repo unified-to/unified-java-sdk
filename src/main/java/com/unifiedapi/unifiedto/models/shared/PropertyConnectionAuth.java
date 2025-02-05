@@ -12,13 +12,11 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Double;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -82,7 +80,7 @@ public class PropertyConnectionAuth {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
-    private Optional<? extends Map<String, Object>> meta;
+    private Optional<? extends PropertyConnectionAuthMeta> meta;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
@@ -138,7 +136,7 @@ public class PropertyConnectionAuth {
             @JsonProperty("expires_in") Optional<Double> expiresIn,
             @JsonProperty("expiry_date") Optional<OffsetDateTime> expiryDate,
             @JsonProperty("key") Optional<String> key,
-            @JsonProperty("meta") Optional<? extends Map<String, Object>> meta,
+            @JsonProperty("meta") Optional<? extends PropertyConnectionAuthMeta> meta,
             @JsonProperty("name") Optional<String> name,
             @JsonProperty("other_auth_info") Optional<? extends List<String>> otherAuthInfo,
             @JsonProperty("pem") Optional<String> pem,
@@ -268,8 +266,8 @@ public class PropertyConnectionAuth {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> meta() {
-        return (Optional<Map<String, Object>>) meta;
+    public Optional<PropertyConnectionAuthMeta> meta() {
+        return (Optional<PropertyConnectionAuthMeta>) meta;
     }
 
     @JsonIgnore
@@ -481,13 +479,13 @@ public class PropertyConnectionAuth {
         return this;
     }
 
-    public PropertyConnectionAuth withMeta(Map<String, Object> meta) {
+    public PropertyConnectionAuth withMeta(PropertyConnectionAuthMeta meta) {
         Utils.checkNotNull(meta, "meta");
         this.meta = Optional.ofNullable(meta);
         return this;
     }
 
-    public PropertyConnectionAuth withMeta(Optional<? extends Map<String, Object>> meta) {
+    public PropertyConnectionAuth withMeta(Optional<? extends PropertyConnectionAuthMeta> meta) {
         Utils.checkNotNull(meta, "meta");
         this.meta = meta;
         return this;
@@ -726,7 +724,7 @@ public class PropertyConnectionAuth {
  
         private Optional<String> key = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> meta = Optional.empty();
+        private Optional<? extends PropertyConnectionAuthMeta> meta = Optional.empty();
  
         private Optional<String> name = Optional.empty();
  
@@ -906,13 +904,13 @@ public class PropertyConnectionAuth {
             return this;
         }
 
-        public Builder meta(Map<String, Object> meta) {
+        public Builder meta(PropertyConnectionAuthMeta meta) {
             Utils.checkNotNull(meta, "meta");
             this.meta = Optional.ofNullable(meta);
             return this;
         }
 
-        public Builder meta(Optional<? extends Map<String, Object>> meta) {
+        public Builder meta(Optional<? extends PropertyConnectionAuthMeta> meta) {
             Utils.checkNotNull(meta, "meta");
             this.meta = meta;
             return this;

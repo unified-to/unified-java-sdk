@@ -21,6 +21,9 @@ import java.util.Optional;
 
 public class ListHrisTimeoffsRequest {
 
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=company_id")
+    private Optional<String> companyId;
+
     /**
      * ID of the connection
      */
@@ -62,6 +65,7 @@ public class ListHrisTimeoffsRequest {
 
     @JsonCreator
     public ListHrisTimeoffsRequest(
+            Optional<String> companyId,
             String connectionId,
             Optional<? extends List<String>> fields,
             Optional<Double> limit,
@@ -71,6 +75,7 @@ public class ListHrisTimeoffsRequest {
             Optional<String> sort,
             Optional<OffsetDateTime> updatedGte,
             Optional<String> userId) {
+        Utils.checkNotNull(companyId, "companyId");
         Utils.checkNotNull(connectionId, "connectionId");
         Utils.checkNotNull(fields, "fields");
         Utils.checkNotNull(limit, "limit");
@@ -80,6 +85,7 @@ public class ListHrisTimeoffsRequest {
         Utils.checkNotNull(sort, "sort");
         Utils.checkNotNull(updatedGte, "updatedGte");
         Utils.checkNotNull(userId, "userId");
+        this.companyId = companyId;
         this.connectionId = connectionId;
         this.fields = fields;
         this.limit = limit;
@@ -93,7 +99,12 @@ public class ListHrisTimeoffsRequest {
     
     public ListHrisTimeoffsRequest(
             String connectionId) {
-        this(connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+    }
+
+    @JsonIgnore
+    public Optional<String> companyId() {
+        return companyId;
     }
 
     /**
@@ -156,6 +167,18 @@ public class ListHrisTimeoffsRequest {
 
     public final static Builder builder() {
         return new Builder();
+    }
+
+    public ListHrisTimeoffsRequest withCompanyId(String companyId) {
+        Utils.checkNotNull(companyId, "companyId");
+        this.companyId = Optional.ofNullable(companyId);
+        return this;
+    }
+
+    public ListHrisTimeoffsRequest withCompanyId(Optional<String> companyId) {
+        Utils.checkNotNull(companyId, "companyId");
+        this.companyId = companyId;
+        return this;
     }
 
     /**
@@ -291,6 +314,7 @@ public class ListHrisTimeoffsRequest {
         }
         ListHrisTimeoffsRequest other = (ListHrisTimeoffsRequest) o;
         return 
+            Objects.deepEquals(this.companyId, other.companyId) &&
             Objects.deepEquals(this.connectionId, other.connectionId) &&
             Objects.deepEquals(this.fields, other.fields) &&
             Objects.deepEquals(this.limit, other.limit) &&
@@ -305,6 +329,7 @@ public class ListHrisTimeoffsRequest {
     @Override
     public int hashCode() {
         return Objects.hash(
+            companyId,
             connectionId,
             fields,
             limit,
@@ -319,6 +344,7 @@ public class ListHrisTimeoffsRequest {
     @Override
     public String toString() {
         return Utils.toString(ListHrisTimeoffsRequest.class,
+                "companyId", companyId,
                 "connectionId", connectionId,
                 "fields", fields,
                 "limit", limit,
@@ -331,6 +357,8 @@ public class ListHrisTimeoffsRequest {
     }
     
     public final static class Builder {
+ 
+        private Optional<String> companyId = Optional.empty();
  
         private String connectionId;
  
@@ -352,6 +380,18 @@ public class ListHrisTimeoffsRequest {
         
         private Builder() {
           // force use of static builder() method
+        }
+
+        public Builder companyId(String companyId) {
+            Utils.checkNotNull(companyId, "companyId");
+            this.companyId = Optional.ofNullable(companyId);
+            return this;
+        }
+
+        public Builder companyId(Optional<String> companyId) {
+            Utils.checkNotNull(companyId, "companyId");
+            this.companyId = companyId;
+            return this;
         }
 
         /**
@@ -479,6 +519,7 @@ public class ListHrisTimeoffsRequest {
         
         public ListHrisTimeoffsRequest build() {
             return new ListHrisTimeoffsRequest(
+                companyId,
                 connectionId,
                 fields,
                 limit,

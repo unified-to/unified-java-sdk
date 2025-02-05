@@ -14,7 +14,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 java:
-  version: 0.26.18
+  version: 0.26.19
   additionalDependencies: []
   additionalPlugins: []
   artifactID: unifiedto

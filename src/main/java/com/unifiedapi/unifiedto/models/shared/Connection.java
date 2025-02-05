@@ -61,6 +61,9 @@ public class Connection {
     @JsonProperty("id")
     private Optional<String> id;
 
+    @JsonProperty("integration_name")
+    private String integrationName;
+
     @JsonProperty("integration_type")
     private String integrationType;
 
@@ -96,6 +99,7 @@ public class Connection {
             @JsonProperty("environment") Optional<String> environment,
             @JsonProperty("external_xref") Optional<String> externalXref,
             @JsonProperty("id") Optional<String> id,
+            @JsonProperty("integration_name") String integrationName,
             @JsonProperty("integration_type") String integrationType,
             @JsonProperty("is_paused") Optional<Boolean> isPaused,
             @JsonProperty("last_healthy_at") Optional<OffsetDateTime> lastHealthyAt,
@@ -110,6 +114,7 @@ public class Connection {
         Utils.checkNotNull(environment, "environment");
         Utils.checkNotNull(externalXref, "externalXref");
         Utils.checkNotNull(id, "id");
+        Utils.checkNotNull(integrationName, "integrationName");
         Utils.checkNotNull(integrationType, "integrationType");
         Utils.checkNotNull(isPaused, "isPaused");
         Utils.checkNotNull(lastHealthyAt, "lastHealthyAt");
@@ -124,6 +129,7 @@ public class Connection {
         this.environment = environment;
         this.externalXref = externalXref;
         this.id = id;
+        this.integrationName = integrationName;
         this.integrationType = integrationType;
         this.isPaused = isPaused;
         this.lastHealthyAt = lastHealthyAt;
@@ -135,9 +141,10 @@ public class Connection {
     
     public Connection(
             List<PropertyConnectionCategories> categories,
+            String integrationName,
             String integrationType,
             List<PropertyConnectionPermissions> permissions) {
-        this(Optional.empty(), Optional.empty(), categories, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), integrationType, Optional.empty(), Optional.empty(), Optional.empty(), permissions, Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), categories, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), integrationName, integrationType, Optional.empty(), Optional.empty(), Optional.empty(), permissions, Optional.empty(), Optional.empty());
     }
 
     /**
@@ -180,6 +187,11 @@ public class Connection {
     @JsonIgnore
     public Optional<String> id() {
         return id;
+    }
+
+    @JsonIgnore
+    public String integrationName() {
+        return integrationName;
     }
 
     @JsonIgnore
@@ -308,6 +320,12 @@ public class Connection {
         return this;
     }
 
+    public Connection withIntegrationName(String integrationName) {
+        Utils.checkNotNull(integrationName, "integrationName");
+        this.integrationName = integrationName;
+        return this;
+    }
+
     public Connection withIntegrationType(String integrationType) {
         Utils.checkNotNull(integrationType, "integrationType");
         this.integrationType = integrationType;
@@ -397,6 +415,7 @@ public class Connection {
             Objects.deepEquals(this.environment, other.environment) &&
             Objects.deepEquals(this.externalXref, other.externalXref) &&
             Objects.deepEquals(this.id, other.id) &&
+            Objects.deepEquals(this.integrationName, other.integrationName) &&
             Objects.deepEquals(this.integrationType, other.integrationType) &&
             Objects.deepEquals(this.isPaused, other.isPaused) &&
             Objects.deepEquals(this.lastHealthyAt, other.lastHealthyAt) &&
@@ -416,6 +435,7 @@ public class Connection {
             environment,
             externalXref,
             id,
+            integrationName,
             integrationType,
             isPaused,
             lastHealthyAt,
@@ -435,6 +455,7 @@ public class Connection {
                 "environment", environment,
                 "externalXref", externalXref,
                 "id", id,
+                "integrationName", integrationName,
                 "integrationType", integrationType,
                 "isPaused", isPaused,
                 "lastHealthyAt", lastHealthyAt,
@@ -459,6 +480,8 @@ public class Connection {
         private Optional<String> externalXref = Optional.empty();
  
         private Optional<String> id = Optional.empty();
+ 
+        private String integrationName;
  
         private String integrationType;
  
@@ -565,6 +588,12 @@ public class Connection {
             return this;
         }
 
+        public Builder integrationName(String integrationName) {
+            Utils.checkNotNull(integrationName, "integrationName");
+            this.integrationName = integrationName;
+            return this;
+        }
+
         public Builder integrationType(String integrationType) {
             Utils.checkNotNull(integrationType, "integrationType");
             this.integrationType = integrationType;
@@ -648,6 +677,7 @@ public class Connection {
                 environment,
                 externalXref,
                 id,
+                integrationName,
                 integrationType,
                 isPaused,
                 lastHealthyAt,

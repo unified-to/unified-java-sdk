@@ -15,7 +15,6 @@ import com.unifiedapi.unifiedto.utils.LazySingletonValue;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Boolean;
 import java.lang.Double;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
@@ -78,7 +77,7 @@ public class Webhook {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
-    private Optional<? extends Map<String, Object>> meta;
+    private Optional<? extends Meta> meta;
 
     @JsonProperty("object_type")
     private ObjectType objectType;
@@ -120,7 +119,7 @@ public class Webhook {
             @JsonProperty("integration_type") Optional<String> integrationType,
             @JsonProperty("interval") Optional<Double> interval,
             @JsonProperty("is_healthy") Optional<Boolean> isHealthy,
-            @JsonProperty("meta") Optional<? extends Map<String, Object>> meta,
+            @JsonProperty("meta") Optional<? extends Meta> meta,
             @JsonProperty("object_type") ObjectType objectType,
             @JsonProperty("page_max_limit") Optional<Double> pageMaxLimit,
             @JsonProperty("runs") Optional<? extends List<String>> runs,
@@ -238,8 +237,8 @@ public class Webhook {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> meta() {
-        return (Optional<Map<String, Object>>) meta;
+    public Optional<Meta> meta() {
+        return (Optional<Meta>) meta;
     }
 
     @JsonIgnore
@@ -407,13 +406,13 @@ public class Webhook {
         return this;
     }
 
-    public Webhook withMeta(Map<String, Object> meta) {
+    public Webhook withMeta(Meta meta) {
         Utils.checkNotNull(meta, "meta");
         this.meta = Optional.ofNullable(meta);
         return this;
     }
 
-    public Webhook withMeta(Optional<? extends Map<String, Object>> meta) {
+    public Webhook withMeta(Optional<? extends Meta> meta) {
         Utils.checkNotNull(meta, "meta");
         this.meta = meta;
         return this;
@@ -596,7 +595,7 @@ public class Webhook {
  
         private Optional<Boolean> isHealthy = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> meta = Optional.empty();
+        private Optional<? extends Meta> meta = Optional.empty();
  
         private ObjectType objectType;
  
@@ -740,13 +739,13 @@ public class Webhook {
             return this;
         }
 
-        public Builder meta(Map<String, Object> meta) {
+        public Builder meta(Meta meta) {
             Utils.checkNotNull(meta, "meta");
             this.meta = Optional.ofNullable(meta);
             return this;
         }
 
-        public Builder meta(Optional<? extends Map<String, Object>> meta) {
+        public Builder meta(Optional<? extends Meta> meta) {
             Utils.checkNotNull(meta, "meta");
             this.meta = meta;
             return this;
