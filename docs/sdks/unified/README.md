@@ -57,7 +57,6 @@ public class Application {
         Connection req = Connection.builder()
                 .categories(List.of(
                     PropertyConnectionCategories.REPO))
-                .integrationName("<value>")
                 .integrationType("<value>")
                 .permissions(List.of(
                     PropertyConnectionPermissions.CRM_LEAD_READ))

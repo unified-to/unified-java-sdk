@@ -61,8 +61,9 @@ public class Connection {
     @JsonProperty("id")
     private Optional<String> id;
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integration_name")
-    private String integrationName;
+    private Optional<String> integrationName;
 
     @JsonProperty("integration_type")
     private String integrationType;
@@ -99,7 +100,7 @@ public class Connection {
             @JsonProperty("environment") Optional<String> environment,
             @JsonProperty("external_xref") Optional<String> externalXref,
             @JsonProperty("id") Optional<String> id,
-            @JsonProperty("integration_name") String integrationName,
+            @JsonProperty("integration_name") Optional<String> integrationName,
             @JsonProperty("integration_type") String integrationType,
             @JsonProperty("is_paused") Optional<Boolean> isPaused,
             @JsonProperty("last_healthy_at") Optional<OffsetDateTime> lastHealthyAt,
@@ -141,10 +142,9 @@ public class Connection {
     
     public Connection(
             List<PropertyConnectionCategories> categories,
-            String integrationName,
             String integrationType,
             List<PropertyConnectionPermissions> permissions) {
-        this(Optional.empty(), Optional.empty(), categories, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), integrationName, integrationType, Optional.empty(), Optional.empty(), Optional.empty(), permissions, Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), categories, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), integrationType, Optional.empty(), Optional.empty(), Optional.empty(), permissions, Optional.empty(), Optional.empty());
     }
 
     /**
@@ -190,7 +190,7 @@ public class Connection {
     }
 
     @JsonIgnore
-    public String integrationName() {
+    public Optional<String> integrationName() {
         return integrationName;
     }
 
@@ -321,6 +321,12 @@ public class Connection {
     }
 
     public Connection withIntegrationName(String integrationName) {
+        Utils.checkNotNull(integrationName, "integrationName");
+        this.integrationName = Optional.ofNullable(integrationName);
+        return this;
+    }
+
+    public Connection withIntegrationName(Optional<String> integrationName) {
         Utils.checkNotNull(integrationName, "integrationName");
         this.integrationName = integrationName;
         return this;
@@ -481,7 +487,7 @@ public class Connection {
  
         private Optional<String> id = Optional.empty();
  
-        private String integrationName;
+        private Optional<String> integrationName = Optional.empty();
  
         private String integrationType;
  
@@ -589,6 +595,12 @@ public class Connection {
         }
 
         public Builder integrationName(String integrationName) {
+            Utils.checkNotNull(integrationName, "integrationName");
+            this.integrationName = Optional.ofNullable(integrationName);
+            return this;
+        }
+
+        public Builder integrationName(Optional<String> integrationName) {
             Utils.checkNotNull(integrationName, "integrationName");
             this.integrationName = integrationName;
             return this;

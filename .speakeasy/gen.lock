@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 075b9cea2675db23b5f8cea829ebb57f
+  docChecksum: d11952529f2b721f734977d81996920c
   docVersion: "1.0"
   speakeasyVersion: 1.484.1
   generationVersion: 2.503.2
-  releaseVersion: 0.26.19
-  configChecksum: 81a65126415daa73f2b8acbe44a057d7
+  releaseVersion: 0.26.20
+  configChecksum: b3685fc9edd644c9c875302d890d8251
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -1002,6 +1002,8 @@ generatedFiles:
   - docs/models/shared/MessagingMessage.md
   - docs/models/shared/Meta.md
   - docs/models/shared/MetadataMetadata.md
+  - docs/models/shared/MetadataMetadataRaw.md
+  - docs/models/shared/MetadataMetadataType.md
   - docs/models/shared/NativeWebhookParentId.md
   - docs/models/shared/NativeWebhookProjectId.md
   - docs/models/shared/ObjectType.md
@@ -2704,6 +2706,8 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/MessagingMessage.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Meta.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/MetadataMetadata.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/MetadataMetadataRaw.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/MetadataMetadataType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/NativeWebhookParentId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/NativeWebhookProjectId.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ObjectType.java

@@ -11,11 +11,11 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,12 +42,16 @@ public class MetadataMetadata {
     private Optional<? extends Map<String, String>> objects;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("options")
+    private Optional<? extends List<String>> options;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Optional<? extends MetadataMetadataRaw> raw;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<String> type;
+    private Optional<? extends MetadataMetadataType> type;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -60,14 +64,16 @@ public class MetadataMetadata {
             @JsonProperty("name") String name,
             @JsonProperty("object_type") String objectType,
             @JsonProperty("objects") Optional<? extends Map<String, String>> objects,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("type") Optional<String> type,
+            @JsonProperty("options") Optional<? extends List<String>> options,
+            @JsonProperty("raw") Optional<? extends MetadataMetadataRaw> raw,
+            @JsonProperty("type") Optional<? extends MetadataMetadataType> type,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(name, "name");
         Utils.checkNotNull(objectType, "objectType");
         Utils.checkNotNull(objects, "objects");
+        Utils.checkNotNull(options, "options");
         Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(type, "type");
         Utils.checkNotNull(updatedAt, "updatedAt");
@@ -76,6 +82,7 @@ public class MetadataMetadata {
         this.name = name;
         this.objectType = objectType;
         this.objects = objects;
+        this.options = options;
         this.raw = raw;
         this.type = type;
         this.updatedAt = updatedAt;
@@ -84,7 +91,7 @@ public class MetadataMetadata {
     public MetadataMetadata(
             String name,
             String objectType) {
-        this(Optional.empty(), Optional.empty(), name, objectType, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), name, objectType, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -115,13 +122,20 @@ public class MetadataMetadata {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+    public Optional<List<String>> options() {
+        return (Optional<List<String>>) options;
     }
 
+    @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<String> type() {
-        return type;
+    public Optional<MetadataMetadataRaw> raw() {
+        return (Optional<MetadataMetadataRaw>) raw;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<MetadataMetadataType> type() {
+        return (Optional<MetadataMetadataType>) type;
     }
 
     @JsonIgnore
@@ -181,25 +195,37 @@ public class MetadataMetadata {
         return this;
     }
 
-    public MetadataMetadata withRaw(Map<String, Object> raw) {
+    public MetadataMetadata withOptions(List<String> options) {
+        Utils.checkNotNull(options, "options");
+        this.options = Optional.ofNullable(options);
+        return this;
+    }
+
+    public MetadataMetadata withOptions(Optional<? extends List<String>> options) {
+        Utils.checkNotNull(options, "options");
+        this.options = options;
+        return this;
+    }
+
+    public MetadataMetadata withRaw(MetadataMetadataRaw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    public MetadataMetadata withRaw(Optional<? extends Map<String, Object>> raw) {
+    public MetadataMetadata withRaw(Optional<? extends MetadataMetadataRaw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
     }
 
-    public MetadataMetadata withType(String type) {
+    public MetadataMetadata withType(MetadataMetadataType type) {
         Utils.checkNotNull(type, "type");
         this.type = Optional.ofNullable(type);
         return this;
     }
 
-    public MetadataMetadata withType(Optional<String> type) {
+    public MetadataMetadata withType(Optional<? extends MetadataMetadataType> type) {
         Utils.checkNotNull(type, "type");
         this.type = type;
         return this;
@@ -232,6 +258,7 @@ public class MetadataMetadata {
             Objects.deepEquals(this.name, other.name) &&
             Objects.deepEquals(this.objectType, other.objectType) &&
             Objects.deepEquals(this.objects, other.objects) &&
+            Objects.deepEquals(this.options, other.options) &&
             Objects.deepEquals(this.raw, other.raw) &&
             Objects.deepEquals(this.type, other.type) &&
             Objects.deepEquals(this.updatedAt, other.updatedAt);
@@ -245,6 +272,7 @@ public class MetadataMetadata {
             name,
             objectType,
             objects,
+            options,
             raw,
             type,
             updatedAt);
@@ -258,6 +286,7 @@ public class MetadataMetadata {
                 "name", name,
                 "objectType", objectType,
                 "objects", objects,
+                "options", options,
                 "raw", raw,
                 "type", type,
                 "updatedAt", updatedAt);
@@ -275,9 +304,11 @@ public class MetadataMetadata {
  
         private Optional<? extends Map<String, String>> objects = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Optional<? extends List<String>> options = Optional.empty();
  
-        private Optional<String> type = Optional.empty();
+        private Optional<? extends MetadataMetadataRaw> raw = Optional.empty();
+ 
+        private Optional<? extends MetadataMetadataType> type = Optional.empty();
  
         private Optional<OffsetDateTime> updatedAt = Optional.empty();  
         
@@ -333,25 +364,37 @@ public class MetadataMetadata {
             return this;
         }
 
-        public Builder raw(Map<String, Object> raw) {
+        public Builder options(List<String> options) {
+            Utils.checkNotNull(options, "options");
+            this.options = Optional.ofNullable(options);
+            return this;
+        }
+
+        public Builder options(Optional<? extends List<String>> options) {
+            Utils.checkNotNull(options, "options");
+            this.options = options;
+            return this;
+        }
+
+        public Builder raw(MetadataMetadataRaw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
+        public Builder raw(Optional<? extends MetadataMetadataRaw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;
         }
 
-        public Builder type(String type) {
+        public Builder type(MetadataMetadataType type) {
             Utils.checkNotNull(type, "type");
             this.type = Optional.ofNullable(type);
             return this;
         }
 
-        public Builder type(Optional<String> type) {
+        public Builder type(Optional<? extends MetadataMetadataType> type) {
             Utils.checkNotNull(type, "type");
             this.type = type;
             return this;
@@ -376,6 +419,7 @@ public class MetadataMetadata {
                 name,
                 objectType,
                 objects,
+                options,
                 raw,
                 type,
                 updatedAt);
