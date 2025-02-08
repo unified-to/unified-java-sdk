@@ -11,13 +11,11 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -58,7 +56,7 @@ public class AtsInterview {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Optional<? extends AtsInterviewRaw> raw;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
@@ -86,7 +84,7 @@ public class AtsInterview {
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("job_id") Optional<String> jobId,
             @JsonProperty("location") Optional<String> location,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("raw") Optional<? extends AtsInterviewRaw> raw,
             @JsonProperty("start_at") Optional<OffsetDateTime> startAt,
             @JsonProperty("status") Optional<? extends AtsInterviewStatus> status,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
@@ -165,8 +163,8 @@ public class AtsInterview {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+    public Optional<AtsInterviewRaw> raw() {
+        return (Optional<AtsInterviewRaw>) raw;
     }
 
     @JsonIgnore
@@ -291,13 +289,13 @@ public class AtsInterview {
         return this;
     }
 
-    public AtsInterview withRaw(Map<String, Object> raw) {
+    public AtsInterview withRaw(AtsInterviewRaw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    public AtsInterview withRaw(Optional<? extends Map<String, Object>> raw) {
+    public AtsInterview withRaw(Optional<? extends AtsInterviewRaw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -430,7 +428,7 @@ public class AtsInterview {
  
         private Optional<String> location = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Optional<? extends AtsInterviewRaw> raw = Optional.empty();
  
         private Optional<OffsetDateTime> startAt = Optional.empty();
  
@@ -540,13 +538,13 @@ public class AtsInterview {
             return this;
         }
 
-        public Builder raw(Map<String, Object> raw) {
+        public Builder raw(AtsInterviewRaw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
+        public Builder raw(Optional<? extends AtsInterviewRaw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;

@@ -11,12 +11,10 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -57,7 +55,7 @@ public class AtsDocument {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Optional<? extends AtsDocumentRaw> raw;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
@@ -81,7 +79,7 @@ public class AtsDocument {
             @JsonProperty("filename") Optional<String> filename,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("job_id") Optional<String> jobId,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("raw") Optional<? extends AtsDocumentRaw> raw,
             @JsonProperty("type") Optional<? extends AtsDocumentType> type,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
             @JsonProperty("user_id") Optional<String> userId) {
@@ -157,8 +155,8 @@ public class AtsDocument {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+    public Optional<AtsDocumentRaw> raw() {
+        return (Optional<AtsDocumentRaw>) raw;
     }
 
     @SuppressWarnings("unchecked")
@@ -277,13 +275,13 @@ public class AtsDocument {
         return this;
     }
 
-    public AtsDocument withRaw(Map<String, Object> raw) {
+    public AtsDocument withRaw(AtsDocumentRaw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    public AtsDocument withRaw(Optional<? extends Map<String, Object>> raw) {
+    public AtsDocument withRaw(Optional<? extends AtsDocumentRaw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -401,7 +399,7 @@ public class AtsDocument {
  
         private Optional<String> jobId = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Optional<? extends AtsDocumentRaw> raw = Optional.empty();
  
         private Optional<? extends AtsDocumentType> type = Optional.empty();
  
@@ -509,13 +507,13 @@ public class AtsDocument {
             return this;
         }
 
-        public Builder raw(Map<String, Object> raw) {
+        public Builder raw(AtsDocumentRaw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
+        public Builder raw(Optional<? extends AtsDocumentRaw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;

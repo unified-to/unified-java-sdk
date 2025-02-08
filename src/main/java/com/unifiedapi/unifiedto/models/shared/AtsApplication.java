@@ -11,13 +11,11 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -62,7 +60,7 @@ public class AtsApplication {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Optional<? extends AtsApplicationRaw> raw;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rejected_at")
@@ -95,7 +93,7 @@ public class AtsApplication {
             @JsonProperty("job_id") Optional<String> jobId,
             @JsonProperty("offers") Optional<? extends List<AtsOffer>> offers,
             @JsonProperty("original_status") Optional<String> originalStatus,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("raw") Optional<? extends AtsApplicationRaw> raw,
             @JsonProperty("rejected_at") Optional<OffsetDateTime> rejectedAt,
             @JsonProperty("rejected_reason") Optional<String> rejectedReason,
             @JsonProperty("source") Optional<String> source,
@@ -186,8 +184,8 @@ public class AtsApplication {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+    public Optional<AtsApplicationRaw> raw() {
+        return (Optional<AtsApplicationRaw>) raw;
     }
 
     @JsonIgnore
@@ -328,13 +326,13 @@ public class AtsApplication {
         return this;
     }
 
-    public AtsApplication withRaw(Map<String, Object> raw) {
+    public AtsApplication withRaw(AtsApplicationRaw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    public AtsApplication withRaw(Optional<? extends Map<String, Object>> raw) {
+    public AtsApplication withRaw(Optional<? extends AtsApplicationRaw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -487,7 +485,7 @@ public class AtsApplication {
  
         private Optional<String> originalStatus = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Optional<? extends AtsApplicationRaw> raw = Optional.empty();
  
         private Optional<OffsetDateTime> rejectedAt = Optional.empty();
  
@@ -611,13 +609,13 @@ public class AtsApplication {
             return this;
         }
 
-        public Builder raw(Map<String, Object> raw) {
+        public Builder raw(AtsApplicationRaw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
+        public Builder raw(Optional<? extends AtsApplicationRaw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;

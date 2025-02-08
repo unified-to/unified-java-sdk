@@ -75,7 +75,7 @@ public class CommerceCollection {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Raw> raw;
+    private Optional<? extends CommerceCollectionRaw> raw;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
@@ -103,7 +103,7 @@ public class CommerceCollection {
             @JsonProperty("parent_id") Optional<String> parentId,
             @JsonProperty("public_description") Optional<String> publicDescription,
             @JsonProperty("public_name") Optional<String> publicName,
-            @JsonProperty("raw") Optional<? extends Raw> raw,
+            @JsonProperty("raw") Optional<? extends CommerceCollectionRaw> raw,
             @JsonProperty("tags") Optional<? extends List<String>> tags,
             @JsonProperty("type") Optional<? extends CommerceCollectionType> type,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
@@ -210,8 +210,8 @@ public class CommerceCollection {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Raw> raw() {
-        return (Optional<Raw>) raw;
+    public Optional<CommerceCollectionRaw> raw() {
+        return (Optional<CommerceCollectionRaw>) raw;
     }
 
     @SuppressWarnings("unchecked")
@@ -373,13 +373,13 @@ public class CommerceCollection {
         return this;
     }
 
-    public CommerceCollection withRaw(Raw raw) {
+    public CommerceCollection withRaw(CommerceCollectionRaw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    public CommerceCollection withRaw(Optional<? extends Raw> raw) {
+    public CommerceCollection withRaw(Optional<? extends CommerceCollectionRaw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -517,7 +517,7 @@ public class CommerceCollection {
  
         private Optional<String> publicName = Optional.empty();
  
-        private Optional<? extends Raw> raw = Optional.empty();
+        private Optional<? extends CommerceCollectionRaw> raw = Optional.empty();
  
         private Optional<? extends List<String>> tags = Optional.empty();
  
@@ -667,13 +667,13 @@ public class CommerceCollection {
             return this;
         }
 
-        public Builder raw(Raw raw) {
+        public Builder raw(CommerceCollectionRaw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        public Builder raw(Optional<? extends Raw> raw) {
+        public Builder raw(Optional<? extends CommerceCollectionRaw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;

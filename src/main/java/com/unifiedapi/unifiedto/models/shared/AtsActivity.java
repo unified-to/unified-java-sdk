@@ -12,13 +12,11 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Boolean;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -75,7 +73,7 @@ public class AtsActivity {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Optional<? extends Raw> raw;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sub_type")
@@ -118,7 +116,7 @@ public class AtsActivity {
             @JsonProperty("interview_id") Optional<String> interviewId,
             @JsonProperty("is_private") Optional<Boolean> isPrivate,
             @JsonProperty("job_id") Optional<String> jobId,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("raw") Optional<? extends Raw> raw,
             @JsonProperty("sub_type") Optional<String> subType,
             @JsonProperty("title") Optional<String> title,
             @JsonProperty("to") Optional<? extends List<AtsEmail>> to,
@@ -234,8 +232,8 @@ public class AtsActivity {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+    public Optional<Raw> raw() {
+        return (Optional<Raw>) raw;
     }
 
     @JsonIgnore
@@ -422,13 +420,13 @@ public class AtsActivity {
         return this;
     }
 
-    public AtsActivity withRaw(Map<String, Object> raw) {
+    public AtsActivity withRaw(Raw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    public AtsActivity withRaw(Optional<? extends Map<String, Object>> raw) {
+    public AtsActivity withRaw(Optional<? extends Raw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -617,7 +615,7 @@ public class AtsActivity {
  
         private Optional<String> jobId = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Optional<? extends Raw> raw = Optional.empty();
  
         private Optional<String> subType = Optional.empty();
  
@@ -779,13 +777,13 @@ public class AtsActivity {
             return this;
         }
 
-        public Builder raw(Map<String, Object> raw) {
+        public Builder raw(Raw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
+        public Builder raw(Optional<? extends Raw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;

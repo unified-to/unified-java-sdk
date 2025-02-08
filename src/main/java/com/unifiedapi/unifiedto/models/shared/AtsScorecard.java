@@ -11,13 +11,11 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -62,7 +60,7 @@ public class AtsScorecard {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Optional<? extends AtsScorecardRaw> raw;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendation")
@@ -83,7 +81,7 @@ public class AtsScorecard {
             @JsonProperty("interviewer_id") Optional<String> interviewerId,
             @JsonProperty("job_id") Optional<String> jobId,
             @JsonProperty("questions") Optional<? extends List<AtsScorecardQuestion>> questions,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("raw") Optional<? extends AtsScorecardRaw> raw,
             @JsonProperty("recommendation") Optional<? extends Recommendation> recommendation,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(applicationId, "applicationId");
@@ -164,8 +162,8 @@ public class AtsScorecard {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+    public Optional<AtsScorecardRaw> raw() {
+        return (Optional<AtsScorecardRaw>) raw;
     }
 
     @SuppressWarnings("unchecked")
@@ -291,13 +289,13 @@ public class AtsScorecard {
         return this;
     }
 
-    public AtsScorecard withRaw(Map<String, Object> raw) {
+    public AtsScorecard withRaw(AtsScorecardRaw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    public AtsScorecard withRaw(Optional<? extends Map<String, Object>> raw) {
+    public AtsScorecard withRaw(Optional<? extends AtsScorecardRaw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -405,7 +403,7 @@ public class AtsScorecard {
  
         private Optional<? extends List<AtsScorecardQuestion>> questions = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Optional<? extends AtsScorecardRaw> raw = Optional.empty();
  
         private Optional<? extends Recommendation> recommendation = Optional.empty();
  
@@ -523,13 +521,13 @@ public class AtsScorecard {
             return this;
         }
 
-        public Builder raw(Map<String, Object> raw) {
+        public Builder raw(AtsScorecardRaw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
+        public Builder raw(Optional<? extends AtsScorecardRaw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;

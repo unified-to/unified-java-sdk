@@ -11,13 +11,11 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -77,7 +75,7 @@ public class AtsCandidate {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Optional<? extends AtsCandidateRaw> raw;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
@@ -121,7 +119,7 @@ public class AtsCandidate {
             @JsonProperty("link_urls") Optional<? extends List<String>> linkUrls,
             @JsonProperty("name") Optional<String> name,
             @JsonProperty("origin") Optional<? extends Origin> origin,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("raw") Optional<? extends AtsCandidateRaw> raw,
             @JsonProperty("sources") Optional<? extends List<String>> sources,
             @JsonProperty("tags") Optional<? extends List<String>> tags,
             @JsonProperty("telephones") Optional<? extends List<AtsTelephone>> telephones,
@@ -244,8 +242,8 @@ public class AtsCandidate {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+    public Optional<AtsCandidateRaw> raw() {
+        return (Optional<AtsCandidateRaw>) raw;
     }
 
     @SuppressWarnings("unchecked")
@@ -440,13 +438,13 @@ public class AtsCandidate {
         return this;
     }
 
-    public AtsCandidate withRaw(Map<String, Object> raw) {
+    public AtsCandidate withRaw(AtsCandidateRaw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    public AtsCandidate withRaw(Optional<? extends Map<String, Object>> raw) {
+    public AtsCandidate withRaw(Optional<? extends AtsCandidateRaw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -644,7 +642,7 @@ public class AtsCandidate {
  
         private Optional<? extends Origin> origin = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Optional<? extends AtsCandidateRaw> raw = Optional.empty();
  
         private Optional<? extends List<String>> sources = Optional.empty();
  
@@ -814,13 +812,13 @@ public class AtsCandidate {
             return this;
         }
 
-        public Builder raw(Map<String, Object> raw) {
+        public Builder raw(AtsCandidateRaw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
+        public Builder raw(Optional<? extends AtsCandidateRaw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;

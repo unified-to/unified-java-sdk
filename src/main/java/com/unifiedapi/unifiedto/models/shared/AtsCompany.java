@@ -11,13 +11,11 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -49,7 +47,7 @@ public class AtsCompany {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Optional<? extends AtsCompanyRaw> raw;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recruiter_ids")
@@ -71,7 +69,7 @@ public class AtsCompany {
             @JsonProperty("name") String name,
             @JsonProperty("parent_id") Optional<String> parentId,
             @JsonProperty("phone") Optional<String> phone,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("raw") Optional<? extends AtsCompanyRaw> raw,
             @JsonProperty("recruiter_ids") Optional<? extends List<String>> recruiterIds,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
             @JsonProperty("website_url") Optional<String> websiteUrl) {
@@ -135,8 +133,8 @@ public class AtsCompany {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+    public Optional<AtsCompanyRaw> raw() {
+        return (Optional<AtsCompanyRaw>) raw;
     }
 
     @SuppressWarnings("unchecked")
@@ -225,13 +223,13 @@ public class AtsCompany {
         return this;
     }
 
-    public AtsCompany withRaw(Map<String, Object> raw) {
+    public AtsCompany withRaw(AtsCompanyRaw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    public AtsCompany withRaw(Optional<? extends Map<String, Object>> raw) {
+    public AtsCompany withRaw(Optional<? extends AtsCompanyRaw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -339,7 +337,7 @@ public class AtsCompany {
  
         private Optional<String> phone = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Optional<? extends AtsCompanyRaw> raw = Optional.empty();
  
         private Optional<? extends List<String>> recruiterIds = Optional.empty();
  
@@ -417,13 +415,13 @@ public class AtsCompany {
             return this;
         }
 
-        public Builder raw(Map<String, Object> raw) {
+        public Builder raw(AtsCompanyRaw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
+        public Builder raw(Optional<? extends AtsCompanyRaw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;

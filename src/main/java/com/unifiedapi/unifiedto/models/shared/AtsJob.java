@@ -13,13 +13,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Boolean;
 import java.lang.Double;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -82,6 +80,13 @@ public class AtsJob {
     private Optional<Double> numberOfOpenings;
 
     /**
+     * Public job postings
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("postings")
+    private Optional<? extends List<AtsJobPosting>> postings;
+
+    /**
      * URLs for pages containing public listings for the job
      */
     @JsonInclude(Include.NON_ABSENT)
@@ -94,7 +99,7 @@ public class AtsJob {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Optional<? extends AtsJobRaw> raw;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recruiter_ids")
@@ -127,9 +132,10 @@ public class AtsJob {
             @JsonProperty("language_locale") Optional<String> languageLocale,
             @JsonProperty("name") Optional<String> name,
             @JsonProperty("number_of_openings") Optional<Double> numberOfOpenings,
+            @JsonProperty("postings") Optional<? extends List<AtsJobPosting>> postings,
             @JsonProperty("public_job_urls") Optional<? extends List<String>> publicJobUrls,
             @JsonProperty("questions") Optional<? extends List<AtsJobQuestion>> questions,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("raw") Optional<? extends AtsJobRaw> raw,
             @JsonProperty("recruiter_ids") Optional<? extends List<String>> recruiterIds,
             @JsonProperty("remote") Optional<Boolean> remote,
             @JsonProperty("status") Optional<? extends AtsJobStatus> status,
@@ -147,6 +153,7 @@ public class AtsJob {
         Utils.checkNotNull(languageLocale, "languageLocale");
         Utils.checkNotNull(name, "name");
         Utils.checkNotNull(numberOfOpenings, "numberOfOpenings");
+        Utils.checkNotNull(postings, "postings");
         Utils.checkNotNull(publicJobUrls, "publicJobUrls");
         Utils.checkNotNull(questions, "questions");
         Utils.checkNotNull(raw, "raw");
@@ -167,6 +174,7 @@ public class AtsJob {
         this.languageLocale = languageLocale;
         this.name = name;
         this.numberOfOpenings = numberOfOpenings;
+        this.postings = postings;
         this.publicJobUrls = publicJobUrls;
         this.questions = questions;
         this.raw = raw;
@@ -177,7 +185,7 @@ public class AtsJob {
     }
     
     public AtsJob() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -254,6 +262,15 @@ public class AtsJob {
     }
 
     /**
+     * Public job postings
+     */
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<AtsJobPosting>> postings() {
+        return (Optional<List<AtsJobPosting>>) postings;
+    }
+
+    /**
      * URLs for pages containing public listings for the job
      */
     @SuppressWarnings("unchecked")
@@ -270,8 +287,8 @@ public class AtsJob {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+    public Optional<AtsJobRaw> raw() {
+        return (Optional<AtsJobRaw>) raw;
     }
 
     @SuppressWarnings("unchecked")
@@ -463,6 +480,24 @@ public class AtsJob {
     }
 
     /**
+     * Public job postings
+     */
+    public AtsJob withPostings(List<AtsJobPosting> postings) {
+        Utils.checkNotNull(postings, "postings");
+        this.postings = Optional.ofNullable(postings);
+        return this;
+    }
+
+    /**
+     * Public job postings
+     */
+    public AtsJob withPostings(Optional<? extends List<AtsJobPosting>> postings) {
+        Utils.checkNotNull(postings, "postings");
+        this.postings = postings;
+        return this;
+    }
+
+    /**
      * URLs for pages containing public listings for the job
      */
     public AtsJob withPublicJobUrls(List<String> publicJobUrls) {
@@ -492,13 +527,13 @@ public class AtsJob {
         return this;
     }
 
-    public AtsJob withRaw(Map<String, Object> raw) {
+    public AtsJob withRaw(AtsJobRaw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    public AtsJob withRaw(Optional<? extends Map<String, Object>> raw) {
+    public AtsJob withRaw(Optional<? extends AtsJobRaw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -575,6 +610,7 @@ public class AtsJob {
             Objects.deepEquals(this.languageLocale, other.languageLocale) &&
             Objects.deepEquals(this.name, other.name) &&
             Objects.deepEquals(this.numberOfOpenings, other.numberOfOpenings) &&
+            Objects.deepEquals(this.postings, other.postings) &&
             Objects.deepEquals(this.publicJobUrls, other.publicJobUrls) &&
             Objects.deepEquals(this.questions, other.questions) &&
             Objects.deepEquals(this.raw, other.raw) &&
@@ -600,6 +636,7 @@ public class AtsJob {
             languageLocale,
             name,
             numberOfOpenings,
+            postings,
             publicJobUrls,
             questions,
             raw,
@@ -625,6 +662,7 @@ public class AtsJob {
                 "languageLocale", languageLocale,
                 "name", name,
                 "numberOfOpenings", numberOfOpenings,
+                "postings", postings,
                 "publicJobUrls", publicJobUrls,
                 "questions", questions,
                 "raw", raw,
@@ -662,11 +700,13 @@ public class AtsJob {
  
         private Optional<Double> numberOfOpenings = Optional.empty();
  
+        private Optional<? extends List<AtsJobPosting>> postings = Optional.empty();
+ 
         private Optional<? extends List<String>> publicJobUrls = Optional.empty();
  
         private Optional<? extends List<AtsJobQuestion>> questions = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Optional<? extends AtsJobRaw> raw = Optional.empty();
  
         private Optional<? extends List<String>> recruiterIds = Optional.empty();
  
@@ -843,6 +883,24 @@ public class AtsJob {
         }
 
         /**
+         * Public job postings
+         */
+        public Builder postings(List<AtsJobPosting> postings) {
+            Utils.checkNotNull(postings, "postings");
+            this.postings = Optional.ofNullable(postings);
+            return this;
+        }
+
+        /**
+         * Public job postings
+         */
+        public Builder postings(Optional<? extends List<AtsJobPosting>> postings) {
+            Utils.checkNotNull(postings, "postings");
+            this.postings = postings;
+            return this;
+        }
+
+        /**
          * URLs for pages containing public listings for the job
          */
         public Builder publicJobUrls(List<String> publicJobUrls) {
@@ -872,13 +930,13 @@ public class AtsJob {
             return this;
         }
 
-        public Builder raw(Map<String, Object> raw) {
+        public Builder raw(AtsJobRaw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
+        public Builder raw(Optional<? extends AtsJobRaw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;
@@ -947,6 +1005,7 @@ public class AtsJob {
                 languageLocale,
                 name,
                 numberOfOpenings,
+                postings,
                 publicJobUrls,
                 questions,
                 raw,
