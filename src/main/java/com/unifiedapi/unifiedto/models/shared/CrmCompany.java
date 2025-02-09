@@ -13,13 +13,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Boolean;
 import java.lang.Double;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -75,6 +73,9 @@ public class CrmCompany {
     @JsonProperty("is_active")
     private Optional<Boolean> isActive;
 
+    /**
+     * Additional URLs associated with the contact e.g., LinkedIn, website, etc
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link_urls")
     private Optional<? extends List<String>> linkUrls;
@@ -83,12 +84,9 @@ public class CrmCompany {
     @JsonProperty("name")
     private Optional<String> name;
 
-    /**
-     * The raw data returned by the integration for this company
-     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Optional<? extends CrmCompanyRaw> raw;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
@@ -128,7 +126,7 @@ public class CrmCompany {
             @JsonProperty("is_active") Optional<Boolean> isActive,
             @JsonProperty("link_urls") Optional<? extends List<String>> linkUrls,
             @JsonProperty("name") Optional<String> name,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("raw") Optional<? extends CrmCompanyRaw> raw,
             @JsonProperty("tags") Optional<? extends List<String>> tags,
             @JsonProperty("telephones") Optional<? extends List<CrmTelephone>> telephones,
             @JsonProperty("timezone") Optional<String> timezone,
@@ -239,6 +237,9 @@ public class CrmCompany {
         return isActive;
     }
 
+    /**
+     * Additional URLs associated with the contact e.g., LinkedIn, website, etc
+     */
     @SuppressWarnings("unchecked")
     @JsonIgnore
     public Optional<List<String>> linkUrls() {
@@ -250,13 +251,10 @@ public class CrmCompany {
         return name;
     }
 
-    /**
-     * The raw data returned by the integration for this company
-     */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+    public Optional<CrmCompanyRaw> raw() {
+        return (Optional<CrmCompanyRaw>) raw;
     }
 
     @SuppressWarnings("unchecked")
@@ -428,12 +426,18 @@ public class CrmCompany {
         return this;
     }
 
+    /**
+     * Additional URLs associated with the contact e.g., LinkedIn, website, etc
+     */
     public CrmCompany withLinkUrls(List<String> linkUrls) {
         Utils.checkNotNull(linkUrls, "linkUrls");
         this.linkUrls = Optional.ofNullable(linkUrls);
         return this;
     }
 
+    /**
+     * Additional URLs associated with the contact e.g., LinkedIn, website, etc
+     */
     public CrmCompany withLinkUrls(Optional<? extends List<String>> linkUrls) {
         Utils.checkNotNull(linkUrls, "linkUrls");
         this.linkUrls = linkUrls;
@@ -452,19 +456,13 @@ public class CrmCompany {
         return this;
     }
 
-    /**
-     * The raw data returned by the integration for this company
-     */
-    public CrmCompany withRaw(Map<String, Object> raw) {
+    public CrmCompany withRaw(CrmCompanyRaw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    /**
-     * The raw data returned by the integration for this company
-     */
-    public CrmCompany withRaw(Optional<? extends Map<String, Object>> raw) {
+    public CrmCompany withRaw(Optional<? extends CrmCompanyRaw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -647,7 +645,7 @@ public class CrmCompany {
  
         private Optional<String> name = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Optional<? extends CrmCompanyRaw> raw = Optional.empty();
  
         private Optional<? extends List<String>> tags = Optional.empty();
  
@@ -797,12 +795,18 @@ public class CrmCompany {
             return this;
         }
 
+        /**
+         * Additional URLs associated with the contact e.g., LinkedIn, website, etc
+         */
         public Builder linkUrls(List<String> linkUrls) {
             Utils.checkNotNull(linkUrls, "linkUrls");
             this.linkUrls = Optional.ofNullable(linkUrls);
             return this;
         }
 
+        /**
+         * Additional URLs associated with the contact e.g., LinkedIn, website, etc
+         */
         public Builder linkUrls(Optional<? extends List<String>> linkUrls) {
             Utils.checkNotNull(linkUrls, "linkUrls");
             this.linkUrls = linkUrls;
@@ -821,19 +825,13 @@ public class CrmCompany {
             return this;
         }
 
-        /**
-         * The raw data returned by the integration for this company
-         */
-        public Builder raw(Map<String, Object> raw) {
+        public Builder raw(CrmCompanyRaw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        /**
-         * The raw data returned by the integration for this company
-         */
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
+        public Builder raw(Optional<? extends CrmCompanyRaw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;

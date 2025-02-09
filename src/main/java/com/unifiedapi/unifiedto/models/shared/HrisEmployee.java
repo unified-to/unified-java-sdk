@@ -11,13 +11,11 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -133,7 +131,7 @@ public class HrisEmployee {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Optional<? extends HrisEmployeeRaw> raw;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salutation")
@@ -191,7 +189,7 @@ public class HrisEmployee {
             @JsonProperty("marital_status") Optional<? extends MaritalStatus> maritalStatus,
             @JsonProperty("name") Optional<String> name,
             @JsonProperty("pronouns") Optional<String> pronouns,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("raw") Optional<? extends HrisEmployeeRaw> raw,
             @JsonProperty("salutation") Optional<String> salutation,
             @JsonProperty("ssn_sin") Optional<String> ssnSin,
             @JsonProperty("telephones") Optional<? extends List<HrisTelephone>> telephones,
@@ -418,8 +416,8 @@ public class HrisEmployee {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+    public Optional<HrisEmployeeRaw> raw() {
+        return (Optional<HrisEmployeeRaw>) raw;
     }
 
     @JsonIgnore
@@ -780,13 +778,13 @@ public class HrisEmployee {
         return this;
     }
 
-    public HrisEmployee withRaw(Map<String, Object> raw) {
+    public HrisEmployee withRaw(HrisEmployeeRaw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    public HrisEmployee withRaw(Optional<? extends Map<String, Object>> raw) {
+    public HrisEmployee withRaw(Optional<? extends HrisEmployeeRaw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -1054,7 +1052,7 @@ public class HrisEmployee {
  
         private Optional<String> pronouns = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Optional<? extends HrisEmployeeRaw> raw = Optional.empty();
  
         private Optional<String> salutation = Optional.empty();
  
@@ -1392,13 +1390,13 @@ public class HrisEmployee {
             return this;
         }
 
-        public Builder raw(Map<String, Object> raw) {
+        public Builder raw(HrisEmployeeRaw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
+        public Builder raw(Optional<? extends HrisEmployeeRaw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;

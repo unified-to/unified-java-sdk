@@ -12,13 +12,11 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Double;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -35,6 +33,14 @@ public class CrmDeal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closed_at")
     private Optional<OffsetDateTime> closedAt;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("company_ids")
+    private Optional<? extends List<String>> companyIds;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("contact_ids")
+    private Optional<? extends List<String>> contactIds;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
@@ -68,12 +74,9 @@ public class CrmDeal {
     @JsonProperty("probability")
     private Optional<Double> probability;
 
-    /**
-     * The raw data returned by the integration for this deal
-     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Optional<? extends CrmDealRaw> raw;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
@@ -107,6 +110,8 @@ public class CrmDeal {
     public CrmDeal(
             @JsonProperty("amount") Optional<Double> amount,
             @JsonProperty("closed_at") Optional<OffsetDateTime> closedAt,
+            @JsonProperty("company_ids") Optional<? extends List<String>> companyIds,
+            @JsonProperty("contact_ids") Optional<? extends List<String>> contactIds,
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("currency") Optional<String> currency,
             @JsonProperty("id") Optional<String> id,
@@ -115,7 +120,7 @@ public class CrmDeal {
             @JsonProperty("pipeline") Optional<String> pipeline,
             @JsonProperty("pipeline_id") Optional<String> pipelineId,
             @JsonProperty("probability") Optional<Double> probability,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("raw") Optional<? extends CrmDealRaw> raw,
             @JsonProperty("source") Optional<String> source,
             @JsonProperty("stage") Optional<String> stage,
             @JsonProperty("stage_id") Optional<String> stageId,
@@ -125,6 +130,8 @@ public class CrmDeal {
             @JsonProperty("won_reason") Optional<String> wonReason) {
         Utils.checkNotNull(amount, "amount");
         Utils.checkNotNull(closedAt, "closedAt");
+        Utils.checkNotNull(companyIds, "companyIds");
+        Utils.checkNotNull(contactIds, "contactIds");
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(currency, "currency");
         Utils.checkNotNull(id, "id");
@@ -143,6 +150,8 @@ public class CrmDeal {
         Utils.checkNotNull(wonReason, "wonReason");
         this.amount = amount;
         this.closedAt = closedAt;
+        this.companyIds = companyIds;
+        this.contactIds = contactIds;
         this.createdAt = createdAt;
         this.currency = currency;
         this.id = id;
@@ -162,7 +171,7 @@ public class CrmDeal {
     }
     
     public CrmDeal() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -173,6 +182,18 @@ public class CrmDeal {
     @JsonIgnore
     public Optional<OffsetDateTime> closedAt() {
         return closedAt;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<String>> companyIds() {
+        return (Optional<List<String>>) companyIds;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<String>> contactIds() {
+        return (Optional<List<String>>) contactIds;
     }
 
     @JsonIgnore
@@ -215,13 +236,10 @@ public class CrmDeal {
         return probability;
     }
 
-    /**
-     * The raw data returned by the integration for this deal
-     */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+    public Optional<CrmDealRaw> raw() {
+        return (Optional<CrmDealRaw>) raw;
     }
 
     @JsonIgnore
@@ -285,6 +303,30 @@ public class CrmDeal {
     public CrmDeal withClosedAt(Optional<OffsetDateTime> closedAt) {
         Utils.checkNotNull(closedAt, "closedAt");
         this.closedAt = closedAt;
+        return this;
+    }
+
+    public CrmDeal withCompanyIds(List<String> companyIds) {
+        Utils.checkNotNull(companyIds, "companyIds");
+        this.companyIds = Optional.ofNullable(companyIds);
+        return this;
+    }
+
+    public CrmDeal withCompanyIds(Optional<? extends List<String>> companyIds) {
+        Utils.checkNotNull(companyIds, "companyIds");
+        this.companyIds = companyIds;
+        return this;
+    }
+
+    public CrmDeal withContactIds(List<String> contactIds) {
+        Utils.checkNotNull(contactIds, "contactIds");
+        this.contactIds = Optional.ofNullable(contactIds);
+        return this;
+    }
+
+    public CrmDeal withContactIds(Optional<? extends List<String>> contactIds) {
+        Utils.checkNotNull(contactIds, "contactIds");
+        this.contactIds = contactIds;
         return this;
     }
 
@@ -384,19 +426,13 @@ public class CrmDeal {
         return this;
     }
 
-    /**
-     * The raw data returned by the integration for this deal
-     */
-    public CrmDeal withRaw(Map<String, Object> raw) {
+    public CrmDeal withRaw(CrmDealRaw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    /**
-     * The raw data returned by the integration for this deal
-     */
-    public CrmDeal withRaw(Optional<? extends Map<String, Object>> raw) {
+    public CrmDeal withRaw(Optional<? extends CrmDealRaw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -498,6 +534,8 @@ public class CrmDeal {
         return 
             Objects.deepEquals(this.amount, other.amount) &&
             Objects.deepEquals(this.closedAt, other.closedAt) &&
+            Objects.deepEquals(this.companyIds, other.companyIds) &&
+            Objects.deepEquals(this.contactIds, other.contactIds) &&
             Objects.deepEquals(this.createdAt, other.createdAt) &&
             Objects.deepEquals(this.currency, other.currency) &&
             Objects.deepEquals(this.id, other.id) &&
@@ -521,6 +559,8 @@ public class CrmDeal {
         return Objects.hash(
             amount,
             closedAt,
+            companyIds,
+            contactIds,
             createdAt,
             currency,
             id,
@@ -544,6 +584,8 @@ public class CrmDeal {
         return Utils.toString(CrmDeal.class,
                 "amount", amount,
                 "closedAt", closedAt,
+                "companyIds", companyIds,
+                "contactIds", contactIds,
                 "createdAt", createdAt,
                 "currency", currency,
                 "id", id,
@@ -568,6 +610,10 @@ public class CrmDeal {
  
         private Optional<OffsetDateTime> closedAt = Optional.empty();
  
+        private Optional<? extends List<String>> companyIds = Optional.empty();
+ 
+        private Optional<? extends List<String>> contactIds = Optional.empty();
+ 
         private Optional<OffsetDateTime> createdAt = Optional.empty();
  
         private Optional<String> currency = Optional.empty();
@@ -584,7 +630,7 @@ public class CrmDeal {
  
         private Optional<Double> probability = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Optional<? extends CrmDealRaw> raw = Optional.empty();
  
         private Optional<String> source = Optional.empty();
  
@@ -625,6 +671,30 @@ public class CrmDeal {
         public Builder closedAt(Optional<OffsetDateTime> closedAt) {
             Utils.checkNotNull(closedAt, "closedAt");
             this.closedAt = closedAt;
+            return this;
+        }
+
+        public Builder companyIds(List<String> companyIds) {
+            Utils.checkNotNull(companyIds, "companyIds");
+            this.companyIds = Optional.ofNullable(companyIds);
+            return this;
+        }
+
+        public Builder companyIds(Optional<? extends List<String>> companyIds) {
+            Utils.checkNotNull(companyIds, "companyIds");
+            this.companyIds = companyIds;
+            return this;
+        }
+
+        public Builder contactIds(List<String> contactIds) {
+            Utils.checkNotNull(contactIds, "contactIds");
+            this.contactIds = Optional.ofNullable(contactIds);
+            return this;
+        }
+
+        public Builder contactIds(Optional<? extends List<String>> contactIds) {
+            Utils.checkNotNull(contactIds, "contactIds");
+            this.contactIds = contactIds;
             return this;
         }
 
@@ -724,19 +794,13 @@ public class CrmDeal {
             return this;
         }
 
-        /**
-         * The raw data returned by the integration for this deal
-         */
-        public Builder raw(Map<String, Object> raw) {
+        public Builder raw(CrmDealRaw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        /**
-         * The raw data returned by the integration for this deal
-         */
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
+        public Builder raw(Optional<? extends CrmDealRaw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;
@@ -830,6 +894,8 @@ public class CrmDeal {
             return new CrmDeal(
                 amount,
                 closedAt,
+                companyIds,
+                contactIds,
                 createdAt,
                 currency,
                 id,

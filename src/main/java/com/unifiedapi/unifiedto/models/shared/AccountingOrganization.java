@@ -12,12 +12,10 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Double;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -57,7 +55,7 @@ public class AccountingOrganization {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Optional<? extends AccountingOrganizationRaw> raw;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_number")
@@ -85,7 +83,7 @@ public class AccountingOrganization {
             @JsonProperty("legal_name") Optional<String> legalName,
             @JsonProperty("name") String name,
             @JsonProperty("organization_code") Optional<String> organizationCode,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("raw") Optional<? extends AccountingOrganizationRaw> raw,
             @JsonProperty("tax_number") Optional<String> taxNumber,
             @JsonProperty("timezone") Optional<String> timezone,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
@@ -166,8 +164,8 @@ public class AccountingOrganization {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+    public Optional<AccountingOrganizationRaw> raw() {
+        return (Optional<AccountingOrganizationRaw>) raw;
     }
 
     @JsonIgnore
@@ -284,13 +282,13 @@ public class AccountingOrganization {
         return this;
     }
 
-    public AccountingOrganization withRaw(Map<String, Object> raw) {
+    public AccountingOrganization withRaw(AccountingOrganizationRaw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    public AccountingOrganization withRaw(Optional<? extends Map<String, Object>> raw) {
+    public AccountingOrganization withRaw(Optional<? extends AccountingOrganizationRaw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -423,7 +421,7 @@ public class AccountingOrganization {
  
         private Optional<String> organizationCode = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Optional<? extends AccountingOrganizationRaw> raw = Optional.empty();
  
         private Optional<String> taxNumber = Optional.empty();
  
@@ -527,13 +525,13 @@ public class AccountingOrganization {
             return this;
         }
 
-        public Builder raw(Map<String, Object> raw) {
+        public Builder raw(AccountingOrganizationRaw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
+        public Builder raw(Optional<? extends AccountingOrganizationRaw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;

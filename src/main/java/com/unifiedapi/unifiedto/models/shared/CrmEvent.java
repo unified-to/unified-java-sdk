@@ -11,13 +11,11 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -100,12 +98,9 @@ public class CrmEvent {
     @JsonProperty("page_view")
     private Optional<? extends PropertyCrmEventPageView> pageView;
 
-    /**
-     * The raw data returned by the integration for this event.
-     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Optional<? extends CrmEventRaw> raw;
 
     /**
      * The task object, when type = task
@@ -141,7 +136,7 @@ public class CrmEvent {
             @JsonProperty("meeting") Optional<? extends PropertyCrmEventMeeting> meeting,
             @JsonProperty("note") Optional<? extends PropertyCrmEventNote> note,
             @JsonProperty("page_view") Optional<? extends PropertyCrmEventPageView> pageView,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("raw") Optional<? extends CrmEventRaw> raw,
             @JsonProperty("task") Optional<? extends PropertyCrmEventTask> task,
             @JsonProperty("type") Optional<? extends CrmEventType> type,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
@@ -285,13 +280,10 @@ public class CrmEvent {
         return (Optional<PropertyCrmEventPageView>) pageView;
     }
 
-    /**
-     * The raw data returned by the integration for this event.
-     */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+    public Optional<CrmEventRaw> raw() {
+        return (Optional<CrmEventRaw>) raw;
     }
 
     /**
@@ -521,19 +513,13 @@ public class CrmEvent {
         return this;
     }
 
-    /**
-     * The raw data returned by the integration for this event.
-     */
-    public CrmEvent withRaw(Map<String, Object> raw) {
+    public CrmEvent withRaw(CrmEventRaw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    /**
-     * The raw data returned by the integration for this event.
-     */
-    public CrmEvent withRaw(Optional<? extends Map<String, Object>> raw) {
+    public CrmEvent withRaw(Optional<? extends CrmEventRaw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -697,7 +683,7 @@ public class CrmEvent {
  
         private Optional<? extends PropertyCrmEventPageView> pageView = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Optional<? extends CrmEventRaw> raw = Optional.empty();
  
         private Optional<? extends PropertyCrmEventTask> task = Optional.empty();
  
@@ -909,19 +895,13 @@ public class CrmEvent {
             return this;
         }
 
-        /**
-         * The raw data returned by the integration for this event.
-         */
-        public Builder raw(Map<String, Object> raw) {
+        public Builder raw(CrmEventRaw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        /**
-         * The raw data returned by the integration for this event.
-         */
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
+        public Builder raw(Optional<? extends CrmEventRaw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;

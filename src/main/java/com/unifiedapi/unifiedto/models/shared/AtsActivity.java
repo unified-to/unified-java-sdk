@@ -73,7 +73,7 @@ public class AtsActivity {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Raw> raw;
+    private Optional<? extends AtsActivityRaw> raw;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sub_type")
@@ -116,7 +116,7 @@ public class AtsActivity {
             @JsonProperty("interview_id") Optional<String> interviewId,
             @JsonProperty("is_private") Optional<Boolean> isPrivate,
             @JsonProperty("job_id") Optional<String> jobId,
-            @JsonProperty("raw") Optional<? extends Raw> raw,
+            @JsonProperty("raw") Optional<? extends AtsActivityRaw> raw,
             @JsonProperty("sub_type") Optional<String> subType,
             @JsonProperty("title") Optional<String> title,
             @JsonProperty("to") Optional<? extends List<AtsEmail>> to,
@@ -232,8 +232,8 @@ public class AtsActivity {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Raw> raw() {
-        return (Optional<Raw>) raw;
+    public Optional<AtsActivityRaw> raw() {
+        return (Optional<AtsActivityRaw>) raw;
     }
 
     @JsonIgnore
@@ -420,13 +420,13 @@ public class AtsActivity {
         return this;
     }
 
-    public AtsActivity withRaw(Raw raw) {
+    public AtsActivity withRaw(AtsActivityRaw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    public AtsActivity withRaw(Optional<? extends Raw> raw) {
+    public AtsActivity withRaw(Optional<? extends AtsActivityRaw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -615,7 +615,7 @@ public class AtsActivity {
  
         private Optional<String> jobId = Optional.empty();
  
-        private Optional<? extends Raw> raw = Optional.empty();
+        private Optional<? extends AtsActivityRaw> raw = Optional.empty();
  
         private Optional<String> subType = Optional.empty();
  
@@ -777,13 +777,13 @@ public class AtsActivity {
             return this;
         }
 
-        public Builder raw(Raw raw) {
+        public Builder raw(AtsActivityRaw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        public Builder raw(Optional<? extends Raw> raw) {
+        public Builder raw(Optional<? extends AtsActivityRaw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;

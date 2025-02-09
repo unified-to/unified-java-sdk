@@ -13,13 +13,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Boolean;
 import java.lang.Double;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -52,7 +50,7 @@ public class CrmPipeline {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Optional<? extends CrmPipelineRaw> raw;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stages")
@@ -70,7 +68,7 @@ public class CrmPipeline {
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("is_active") Optional<Boolean> isActive,
             @JsonProperty("name") Optional<String> name,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("raw") Optional<? extends CrmPipelineRaw> raw,
             @JsonProperty("stages") Optional<? extends List<CrmStage>> stages,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(createdAt, "createdAt");
@@ -129,8 +127,8 @@ public class CrmPipeline {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+    public Optional<CrmPipelineRaw> raw() {
+        return (Optional<CrmPipelineRaw>) raw;
     }
 
     @SuppressWarnings("unchecked")
@@ -220,13 +218,13 @@ public class CrmPipeline {
         return this;
     }
 
-    public CrmPipeline withRaw(Map<String, Object> raw) {
+    public CrmPipeline withRaw(CrmPipelineRaw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    public CrmPipeline withRaw(Optional<? extends Map<String, Object>> raw) {
+    public CrmPipeline withRaw(Optional<? extends CrmPipelineRaw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -319,7 +317,7 @@ public class CrmPipeline {
  
         private Optional<String> name = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Optional<? extends CrmPipelineRaw> raw = Optional.empty();
  
         private Optional<? extends List<CrmStage>> stages = Optional.empty();
  
@@ -401,13 +399,13 @@ public class CrmPipeline {
             return this;
         }
 
-        public Builder raw(Map<String, Object> raw) {
+        public Builder raw(CrmPipelineRaw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
+        public Builder raw(Optional<? extends CrmPipelineRaw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;

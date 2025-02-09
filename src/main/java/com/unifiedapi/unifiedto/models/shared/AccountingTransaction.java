@@ -12,13 +12,11 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Double;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -71,7 +69,7 @@ public class AccountingTransaction {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Optional<? extends AccountingTransactionRaw> raw;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
@@ -114,7 +112,7 @@ public class AccountingTransaction {
             @JsonProperty("memo") Optional<String> memo,
             @JsonProperty("payment_method") Optional<String> paymentMethod,
             @JsonProperty("payment_terms") Optional<String> paymentTerms,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("raw") Optional<? extends AccountingTransactionRaw> raw,
             @JsonProperty("reference") Optional<String> reference,
             @JsonProperty("split_account_id") Optional<String> splitAccountId,
             @JsonProperty("sub_total_amount") Optional<Double> subTotalAmount,
@@ -225,8 +223,8 @@ public class AccountingTransaction {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+    public Optional<AccountingTransactionRaw> raw() {
+        return (Optional<AccountingTransactionRaw>) raw;
     }
 
     @JsonIgnore
@@ -400,13 +398,13 @@ public class AccountingTransaction {
         return this;
     }
 
-    public AccountingTransaction withRaw(Map<String, Object> raw) {
+    public AccountingTransaction withRaw(AccountingTransactionRaw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    public AccountingTransaction withRaw(Optional<? extends Map<String, Object>> raw) {
+    public AccountingTransaction withRaw(Optional<? extends AccountingTransactionRaw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -599,7 +597,7 @@ public class AccountingTransaction {
  
         private Optional<String> paymentTerms = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Optional<? extends AccountingTransactionRaw> raw = Optional.empty();
  
         private Optional<String> reference = Optional.empty();
  
@@ -751,13 +749,13 @@ public class AccountingTransaction {
             return this;
         }
 
-        public Builder raw(Map<String, Object> raw) {
+        public Builder raw(AccountingTransactionRaw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
+        public Builder raw(Optional<? extends AccountingTransactionRaw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;

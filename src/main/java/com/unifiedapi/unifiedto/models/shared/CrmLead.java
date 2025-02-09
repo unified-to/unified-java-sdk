@@ -12,13 +12,11 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Boolean;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -71,7 +69,7 @@ public class CrmLead {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Optional<? extends CrmLeadRaw> raw;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
@@ -106,7 +104,7 @@ public class CrmLead {
             @JsonProperty("is_active") Optional<Boolean> isActive,
             @JsonProperty("link_urls") Optional<? extends List<String>> linkUrls,
             @JsonProperty("name") Optional<String> name,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("raw") Optional<? extends CrmLeadRaw> raw,
             @JsonProperty("source") Optional<String> source,
             @JsonProperty("status") Optional<String> status,
             @JsonProperty("telephones") Optional<? extends List<CrmTelephone>> telephones,
@@ -212,8 +210,8 @@ public class CrmLead {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+    public Optional<CrmLeadRaw> raw() {
+        return (Optional<CrmLeadRaw>) raw;
     }
 
     @JsonIgnore
@@ -378,13 +376,13 @@ public class CrmLead {
         return this;
     }
 
-    public CrmLead withRaw(Map<String, Object> raw) {
+    public CrmLead withRaw(CrmLeadRaw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    public CrmLead withRaw(Optional<? extends Map<String, Object>> raw) {
+    public CrmLead withRaw(Optional<? extends CrmLeadRaw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -547,7 +545,7 @@ public class CrmLead {
  
         private Optional<String> name = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Optional<? extends CrmLeadRaw> raw = Optional.empty();
  
         private Optional<String> source = Optional.empty();
  
@@ -695,13 +693,13 @@ public class CrmLead {
             return this;
         }
 
-        public Builder raw(Map<String, Object> raw) {
+        public Builder raw(CrmLeadRaw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
+        public Builder raw(Optional<? extends CrmLeadRaw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;

@@ -14,13 +14,11 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.unifiedapi.unifiedto.utils.LazySingletonValue;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Boolean;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -81,7 +79,7 @@ public class AccountingContact {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Optional<? extends AccountingContactRaw> raw;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_address")
@@ -118,7 +116,7 @@ public class AccountingContact {
             @JsonProperty("name") Optional<String> name,
             @JsonProperty("payment_methods") Optional<? extends List<AccountingContactPaymentMethod>> paymentMethods,
             @JsonProperty("portal_url") Optional<String> portalUrl,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("raw") Optional<? extends AccountingContactRaw> raw,
             @JsonProperty("shipping_address") Optional<? extends PropertyAccountingContactShippingAddress> shippingAddress,
             @JsonProperty("tax_exemption") Optional<? extends TaxExemption> taxExemption,
             @JsonProperty("tax_number") Optional<String> taxNumber,
@@ -238,8 +236,8 @@ public class AccountingContact {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+    public Optional<AccountingContactRaw> raw() {
+        return (Optional<AccountingContactRaw>) raw;
     }
 
     @SuppressWarnings("unchecked")
@@ -430,13 +428,13 @@ public class AccountingContact {
         return this;
     }
 
-    public AccountingContact withRaw(Map<String, Object> raw) {
+    public AccountingContact withRaw(AccountingContactRaw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    public AccountingContact withRaw(Optional<? extends Map<String, Object>> raw) {
+    public AccountingContact withRaw(Optional<? extends AccountingContactRaw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -609,7 +607,7 @@ public class AccountingContact {
  
         private Optional<String> portalUrl = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Optional<? extends AccountingContactRaw> raw = Optional.empty();
  
         private Optional<? extends PropertyAccountingContactShippingAddress> shippingAddress = Optional.empty();
  
@@ -781,13 +779,13 @@ public class AccountingContact {
             return this;
         }
 
-        public Builder raw(Map<String, Object> raw) {
+        public Builder raw(AccountingContactRaw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
+        public Builder raw(Optional<? extends AccountingContactRaw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;

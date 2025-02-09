@@ -12,13 +12,11 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Boolean;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -59,7 +57,7 @@ public class HrisGroup {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Optional<? extends HrisGroupRaw> raw;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
@@ -83,7 +81,7 @@ public class HrisGroup {
             @JsonProperty("manager_ids") Optional<? extends List<String>> managerIds,
             @JsonProperty("name") Optional<String> name,
             @JsonProperty("parent_id") Optional<String> parentId,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("raw") Optional<? extends HrisGroupRaw> raw,
             @JsonProperty("type") Optional<? extends HrisGroupType> type,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
             @JsonProperty("user_ids") Optional<? extends List<String>> userIds) {
@@ -160,8 +158,8 @@ public class HrisGroup {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+    public Optional<HrisGroupRaw> raw() {
+        return (Optional<HrisGroupRaw>) raw;
     }
 
     @SuppressWarnings("unchecked")
@@ -281,13 +279,13 @@ public class HrisGroup {
         return this;
     }
 
-    public HrisGroup withRaw(Map<String, Object> raw) {
+    public HrisGroup withRaw(HrisGroupRaw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    public HrisGroup withRaw(Optional<? extends Map<String, Object>> raw) {
+    public HrisGroup withRaw(Optional<? extends HrisGroupRaw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -405,7 +403,7 @@ public class HrisGroup {
  
         private Optional<String> parentId = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Optional<? extends HrisGroupRaw> raw = Optional.empty();
  
         private Optional<? extends HrisGroupType> type = Optional.empty();
  
@@ -513,13 +511,13 @@ public class HrisGroup {
             return this;
         }
 
-        public Builder raw(Map<String, Object> raw) {
+        public Builder raw(HrisGroupRaw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
+        public Builder raw(Optional<? extends HrisGroupRaw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;

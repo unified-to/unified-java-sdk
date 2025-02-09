@@ -12,18 +12,20 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Double;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
 
 public class HrisPayslip {
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("company_id")
+    private Optional<String> companyId;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
@@ -62,7 +64,7 @@ public class HrisPayslip {
     private Optional<? extends PaymentType> paymentType;
 
     @JsonProperty("raw")
-    private Map<String, Object> raw;
+    private HrisPayslipRaw raw;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
@@ -72,11 +74,13 @@ public class HrisPayslip {
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
-    private String userId;
+    private Optional<String> userId;
 
     @JsonCreator
     public HrisPayslip(
+            @JsonProperty("company_id") Optional<String> companyId,
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("currency") Optional<String> currency,
             @JsonProperty("details") Optional<? extends List<HrisPayslipDetail>> details,
@@ -86,10 +90,11 @@ public class HrisPayslip {
             @JsonProperty("net_amount") Optional<Double> netAmount,
             @JsonProperty("paid_at") Optional<OffsetDateTime> paidAt,
             @JsonProperty("payment_type") Optional<? extends PaymentType> paymentType,
-            @JsonProperty("raw") Map<String, Object> raw,
+            @JsonProperty("raw") HrisPayslipRaw raw,
             @JsonProperty("start_at") Optional<OffsetDateTime> startAt,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("user_id") String userId) {
+            @JsonProperty("user_id") Optional<String> userId) {
+        Utils.checkNotNull(companyId, "companyId");
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(currency, "currency");
         Utils.checkNotNull(details, "details");
@@ -99,10 +104,11 @@ public class HrisPayslip {
         Utils.checkNotNull(netAmount, "netAmount");
         Utils.checkNotNull(paidAt, "paidAt");
         Utils.checkNotNull(paymentType, "paymentType");
-        raw = Utils.emptyMapIfNull(raw);
+        Utils.checkNotNull(raw, "raw");
         Utils.checkNotNull(startAt, "startAt");
         Utils.checkNotNull(updatedAt, "updatedAt");
         Utils.checkNotNull(userId, "userId");
+        this.companyId = companyId;
         this.createdAt = createdAt;
         this.currency = currency;
         this.details = details;
@@ -119,9 +125,13 @@ public class HrisPayslip {
     }
     
     public HrisPayslip(
-            Map<String, Object> raw,
-            String userId) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), raw, Optional.empty(), Optional.empty(), userId);
+            HrisPayslipRaw raw) {
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), raw, Optional.empty(), Optional.empty(), Optional.empty());
+    }
+
+    @JsonIgnore
+    public Optional<String> companyId() {
+        return companyId;
     }
 
     @JsonIgnore
@@ -172,7 +182,7 @@ public class HrisPayslip {
     }
 
     @JsonIgnore
-    public Map<String, Object> raw() {
+    public HrisPayslipRaw raw() {
         return raw;
     }
 
@@ -187,12 +197,24 @@ public class HrisPayslip {
     }
 
     @JsonIgnore
-    public String userId() {
+    public Optional<String> userId() {
         return userId;
     }
 
     public final static Builder builder() {
         return new Builder();
+    }
+
+    public HrisPayslip withCompanyId(String companyId) {
+        Utils.checkNotNull(companyId, "companyId");
+        this.companyId = Optional.ofNullable(companyId);
+        return this;
+    }
+
+    public HrisPayslip withCompanyId(Optional<String> companyId) {
+        Utils.checkNotNull(companyId, "companyId");
+        this.companyId = companyId;
+        return this;
     }
 
     public HrisPayslip withCreatedAt(OffsetDateTime createdAt) {
@@ -303,7 +325,7 @@ public class HrisPayslip {
         return this;
     }
 
-    public HrisPayslip withRaw(Map<String, Object> raw) {
+    public HrisPayslip withRaw(HrisPayslipRaw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -335,6 +357,12 @@ public class HrisPayslip {
 
     public HrisPayslip withUserId(String userId) {
         Utils.checkNotNull(userId, "userId");
+        this.userId = Optional.ofNullable(userId);
+        return this;
+    }
+
+    public HrisPayslip withUserId(Optional<String> userId) {
+        Utils.checkNotNull(userId, "userId");
         this.userId = userId;
         return this;
     }
@@ -349,6 +377,7 @@ public class HrisPayslip {
         }
         HrisPayslip other = (HrisPayslip) o;
         return 
+            Objects.deepEquals(this.companyId, other.companyId) &&
             Objects.deepEquals(this.createdAt, other.createdAt) &&
             Objects.deepEquals(this.currency, other.currency) &&
             Objects.deepEquals(this.details, other.details) &&
@@ -367,6 +396,7 @@ public class HrisPayslip {
     @Override
     public int hashCode() {
         return Objects.hash(
+            companyId,
             createdAt,
             currency,
             details,
@@ -385,6 +415,7 @@ public class HrisPayslip {
     @Override
     public String toString() {
         return Utils.toString(HrisPayslip.class,
+                "companyId", companyId,
                 "createdAt", createdAt,
                 "currency", currency,
                 "details", details,
@@ -401,6 +432,8 @@ public class HrisPayslip {
     }
     
     public final static class Builder {
+ 
+        private Optional<String> companyId = Optional.empty();
  
         private Optional<OffsetDateTime> createdAt = Optional.empty();
  
@@ -420,16 +453,28 @@ public class HrisPayslip {
  
         private Optional<? extends PaymentType> paymentType = Optional.empty();
  
-        private Map<String, Object> raw;
+        private HrisPayslipRaw raw;
  
         private Optional<OffsetDateTime> startAt = Optional.empty();
  
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
  
-        private String userId;  
+        private Optional<String> userId = Optional.empty();  
         
         private Builder() {
           // force use of static builder() method
+        }
+
+        public Builder companyId(String companyId) {
+            Utils.checkNotNull(companyId, "companyId");
+            this.companyId = Optional.ofNullable(companyId);
+            return this;
+        }
+
+        public Builder companyId(Optional<String> companyId) {
+            Utils.checkNotNull(companyId, "companyId");
+            this.companyId = companyId;
+            return this;
         }
 
         public Builder createdAt(OffsetDateTime createdAt) {
@@ -540,7 +585,7 @@ public class HrisPayslip {
             return this;
         }
 
-        public Builder raw(Map<String, Object> raw) {
+        public Builder raw(HrisPayslipRaw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;
@@ -572,12 +617,19 @@ public class HrisPayslip {
 
         public Builder userId(String userId) {
             Utils.checkNotNull(userId, "userId");
+            this.userId = Optional.ofNullable(userId);
+            return this;
+        }
+
+        public Builder userId(Optional<String> userId) {
+            Utils.checkNotNull(userId, "userId");
             this.userId = userId;
             return this;
         }
         
         public HrisPayslip build() {
             return new HrisPayslip(
+                companyId,
                 createdAt,
                 currency,
                 details,

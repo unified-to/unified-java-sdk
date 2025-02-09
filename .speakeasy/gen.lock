@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 079a662c33e65673ca2fb2b1cc54edc4
+  docChecksum: b8229482579a72269cca223071c1d36c
   docVersion: "1.0"
   speakeasyVersion: 1.487.1
   generationVersion: 2.506.0
-  releaseVersion: 0.26.21
-  configChecksum: 20c30676d57fb2801cc6379aabcaedc1
+  releaseVersion: 0.26.22
+  configChecksum: 4b0a385818d758592fcb854310d4aba1
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
@@ -814,27 +814,35 @@ generatedFiles:
   - docs/models/shared/AccountingContact.md
   - docs/models/shared/AccountingContactPaymentMethod.md
   - docs/models/shared/AccountingContactPaymentMethodType.md
+  - docs/models/shared/AccountingContactRaw.md
   - docs/models/shared/AccountingEmail.md
   - docs/models/shared/AccountingEmailType.md
   - docs/models/shared/AccountingInvoice.md
+  - docs/models/shared/AccountingInvoiceRaw.md
   - docs/models/shared/AccountingInvoiceStatus.md
   - docs/models/shared/AccountingInvoiceType.md
   - docs/models/shared/AccountingJournal.md
   - docs/models/shared/AccountingJournalLineitem.md
+  - docs/models/shared/AccountingJournalRaw.md
   - docs/models/shared/AccountingLineitem.md
   - docs/models/shared/AccountingOrder.md
+  - docs/models/shared/AccountingOrderRaw.md
   - docs/models/shared/AccountingOrderStatus.md
   - docs/models/shared/AccountingOrderType.md
   - docs/models/shared/AccountingOrganization.md
+  - docs/models/shared/AccountingOrganizationRaw.md
   - docs/models/shared/AccountingTaxrate.md
+  - docs/models/shared/AccountingTaxrateRaw.md
   - docs/models/shared/AccountingTelephone.md
   - docs/models/shared/AccountingTelephoneType.md
   - docs/models/shared/AccountingTransaction.md
   - docs/models/shared/AccountingTransactionContact.md
   - docs/models/shared/AccountingTransactionLineItem.md
+  - docs/models/shared/AccountingTransactionRaw.md
   - docs/models/shared/ApiCall.md
   - docs/models/shared/ApiCallType.md
   - docs/models/shared/AtsActivity.md
+  - docs/models/shared/AtsActivityRaw.md
   - docs/models/shared/AtsActivityType.md
   - docs/models/shared/AtsAddress.md
   - docs/models/shared/AtsApplication.md
@@ -862,6 +870,8 @@ generatedFiles:
   - docs/models/shared/AtsJobRaw.md
   - docs/models/shared/AtsJobStatus.md
   - docs/models/shared/AtsOffer.md
+  - docs/models/shared/AtsOfferRaw.md
+  - docs/models/shared/AtsOfferStatus.md
   - docs/models/shared/AtsScorecard.md
   - docs/models/shared/AtsScorecardQuestion.md
   - docs/models/shared/AtsScorecardRaw.md
@@ -888,17 +898,23 @@ generatedFiles:
   - docs/models/shared/Connection.md
   - docs/models/shared/ContentType.md
   - docs/models/shared/CrmCompany.md
+  - docs/models/shared/CrmCompanyRaw.md
   - docs/models/shared/CrmContact.md
+  - docs/models/shared/CrmContactRaw.md
   - docs/models/shared/CrmDeal.md
+  - docs/models/shared/CrmDealRaw.md
   - docs/models/shared/CrmEmail.md
   - docs/models/shared/CrmEmailType.md
   - docs/models/shared/CrmEvent.md
   - docs/models/shared/CrmEventFormField.md
   - docs/models/shared/CrmEventFormFieldType.md
   - docs/models/shared/CrmEventFormOption.md
+  - docs/models/shared/CrmEventRaw.md
   - docs/models/shared/CrmEventType.md
   - docs/models/shared/CrmLead.md
+  - docs/models/shared/CrmLeadRaw.md
   - docs/models/shared/CrmPipeline.md
+  - docs/models/shared/CrmPipelineRaw.md
   - docs/models/shared/CrmStage.md
   - docs/models/shared/CrmTelephone.md
   - docs/models/shared/CrmTelephoneType.md
@@ -921,6 +937,7 @@ generatedFiles:
   - docs/models/shared/GenaiPrompt.md
   - docs/models/shared/Gender.md
   - docs/models/shared/HrisCompany.md
+  - docs/models/shared/HrisCompanyRaw.md
   - docs/models/shared/HrisCompensation.md
   - docs/models/shared/HrisCompensationFrequency.md
   - docs/models/shared/HrisCompensationType.md
@@ -929,15 +946,20 @@ generatedFiles:
   - docs/models/shared/HrisEmployee.md
   - docs/models/shared/HrisEmployeeEmploymentType.md
   - docs/models/shared/HrisEmployeeGender.md
+  - docs/models/shared/HrisEmployeeRaw.md
   - docs/models/shared/HrisGroup.md
+  - docs/models/shared/HrisGroupRaw.md
   - docs/models/shared/HrisGroupType.md
   - docs/models/shared/HrisLocation.md
+  - docs/models/shared/HrisLocationRaw.md
   - docs/models/shared/HrisPayslip.md
   - docs/models/shared/HrisPayslipDetail.md
   - docs/models/shared/HrisPayslipDetailType.md
+  - docs/models/shared/HrisPayslipRaw.md
   - docs/models/shared/HrisTelephone.md
   - docs/models/shared/HrisTelephoneType.md
   - docs/models/shared/HrisTimeoff.md
+  - docs/models/shared/HrisTimeoffRaw.md
   - docs/models/shared/HrisTimeoffStatus.md
   - docs/models/shared/HrisTimeoffType.md
   - docs/models/shared/Integration.md
@@ -2529,27 +2551,35 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingContact.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingContactPaymentMethod.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingContactPaymentMethodType.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingContactRaw.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingEmail.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingEmailType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingInvoice.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingInvoiceRaw.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingInvoiceStatus.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingInvoiceType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingJournal.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingJournalLineitem.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingJournalRaw.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingLineitem.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingOrder.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingOrderRaw.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingOrderStatus.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingOrderType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingOrganization.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingOrganizationRaw.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTaxrate.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTaxrateRaw.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTelephone.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTelephoneType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTransaction.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTransactionContact.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTransactionLineItem.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/AccountingTransactionRaw.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ApiCall.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ApiCallType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AtsActivity.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/AtsActivityRaw.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AtsActivityType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AtsAddress.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AtsApplication.java
@@ -2577,6 +2607,8 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AtsJobRaw.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AtsJobStatus.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AtsOffer.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/AtsOfferRaw.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/AtsOfferStatus.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AtsScorecard.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AtsScorecardQuestion.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/AtsScorecardRaw.java
@@ -2603,17 +2635,23 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Connection.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/ContentType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmCompany.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmCompanyRaw.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmContact.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmContactRaw.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmDeal.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmDealRaw.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmEmail.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmEmailType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmEvent.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmEventFormField.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmEventFormFieldType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmEventFormOption.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmEventRaw.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmEventType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmLead.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmLeadRaw.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmPipeline.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmPipelineRaw.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmStage.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmTelephone.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/CrmTelephoneType.java
@@ -2636,6 +2674,7 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/GenaiPrompt.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Gender.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisCompany.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisCompanyRaw.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisCompensation.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisCompensationFrequency.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisCompensationType.java
@@ -2644,15 +2683,20 @@ generatedFiles:
   - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisEmployee.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisEmployeeEmploymentType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisEmployeeGender.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisEmployeeRaw.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisGroup.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisGroupRaw.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisGroupType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisLocation.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisLocationRaw.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisPayslip.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisPayslipDetail.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisPayslipDetailType.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisPayslipRaw.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisTelephone.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisTelephoneType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisTimeoff.java
+  - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisTimeoffRaw.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisTimeoffStatus.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/HrisTimeoffType.java
   - src/main/java/com/unifiedapi/unifiedto/models/shared/Integration.java
@@ -4601,7 +4645,7 @@ examples:
         query: {}
       responses:
         "200":
-          application/json: [{"raw": {"key": "<value>"}, "user_id": "<id>"}]
+          application/json: [{"raw": {}, "user_id": "<id>"}]
   listHrisTimeoffs:
     speakeasy-default-list-hris-timeoffs:
       parameters:

@@ -12,13 +12,11 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Boolean;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -71,7 +69,7 @@ public class HrisLocation {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Optional<? extends HrisLocationRaw> raw;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephones")
@@ -98,7 +96,7 @@ public class HrisLocation {
             @JsonProperty("language_locale") Optional<String> languageLocale,
             @JsonProperty("name") Optional<String> name,
             @JsonProperty("parent_id") Optional<String> parentId,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("raw") Optional<? extends HrisLocationRaw> raw,
             @JsonProperty("telephones") Optional<? extends List<HrisTelephone>> telephones,
             @JsonProperty("timezone") Optional<String> timezone,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
@@ -196,8 +194,8 @@ public class HrisLocation {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+    public Optional<HrisLocationRaw> raw() {
+        return (Optional<HrisLocationRaw>) raw;
     }
 
     @SuppressWarnings("unchecked")
@@ -352,13 +350,13 @@ public class HrisLocation {
         return this;
     }
 
-    public HrisLocation withRaw(Map<String, Object> raw) {
+    public HrisLocation withRaw(HrisLocationRaw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    public HrisLocation withRaw(Optional<? extends Map<String, Object>> raw) {
+    public HrisLocation withRaw(Optional<? extends HrisLocationRaw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -491,7 +489,7 @@ public class HrisLocation {
  
         private Optional<String> parentId = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Optional<? extends HrisLocationRaw> raw = Optional.empty();
  
         private Optional<? extends List<HrisTelephone>> telephones = Optional.empty();
  
@@ -635,13 +633,13 @@ public class HrisLocation {
             return this;
         }
 
-        public Builder raw(Map<String, Object> raw) {
+        public Builder raw(HrisLocationRaw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
+        public Builder raw(Optional<? extends HrisLocationRaw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;

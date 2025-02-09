@@ -11,12 +11,10 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -36,6 +34,10 @@ public class HrisTimeoff {
     private Optional<String> comments;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("company_id")
+    private Optional<String> companyId;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private Optional<OffsetDateTime> createdAt;
 
@@ -49,7 +51,7 @@ public class HrisTimeoff {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Optional<? extends HrisTimeoffRaw> raw;
 
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
@@ -66,26 +68,29 @@ public class HrisTimeoff {
     @JsonProperty("updated_at")
     private Optional<OffsetDateTime> updatedAt;
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
-    private String userId;
+    private Optional<String> userId;
 
     @JsonCreator
     public HrisTimeoff(
             @JsonProperty("approved_at") Optional<OffsetDateTime> approvedAt,
             @JsonProperty("approver_user_id") Optional<String> approverUserId,
             @JsonProperty("comments") Optional<String> comments,
+            @JsonProperty("company_id") Optional<String> companyId,
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("end_at") Optional<OffsetDateTime> endAt,
             @JsonProperty("id") Optional<String> id,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("raw") Optional<? extends HrisTimeoffRaw> raw,
             @JsonProperty("start_at") OffsetDateTime startAt,
             @JsonProperty("status") Optional<? extends HrisTimeoffStatus> status,
             @JsonProperty("type") Optional<? extends HrisTimeoffType> type,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("user_id") String userId) {
+            @JsonProperty("user_id") Optional<String> userId) {
         Utils.checkNotNull(approvedAt, "approvedAt");
         Utils.checkNotNull(approverUserId, "approverUserId");
         Utils.checkNotNull(comments, "comments");
+        Utils.checkNotNull(companyId, "companyId");
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(endAt, "endAt");
         Utils.checkNotNull(id, "id");
@@ -98,6 +103,7 @@ public class HrisTimeoff {
         this.approvedAt = approvedAt;
         this.approverUserId = approverUserId;
         this.comments = comments;
+        this.companyId = companyId;
         this.createdAt = createdAt;
         this.endAt = endAt;
         this.id = id;
@@ -110,9 +116,8 @@ public class HrisTimeoff {
     }
     
     public HrisTimeoff(
-            OffsetDateTime startAt,
-            String userId) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), startAt, Optional.empty(), Optional.empty(), Optional.empty(), userId);
+            OffsetDateTime startAt) {
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), startAt, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -128,6 +133,11 @@ public class HrisTimeoff {
     @JsonIgnore
     public Optional<String> comments() {
         return comments;
+    }
+
+    @JsonIgnore
+    public Optional<String> companyId() {
+        return companyId;
     }
 
     @JsonIgnore
@@ -147,8 +157,8 @@ public class HrisTimeoff {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+    public Optional<HrisTimeoffRaw> raw() {
+        return (Optional<HrisTimeoffRaw>) raw;
     }
 
     @JsonIgnore
@@ -174,7 +184,7 @@ public class HrisTimeoff {
     }
 
     @JsonIgnore
-    public String userId() {
+    public Optional<String> userId() {
         return userId;
     }
 
@@ -218,6 +228,18 @@ public class HrisTimeoff {
         return this;
     }
 
+    public HrisTimeoff withCompanyId(String companyId) {
+        Utils.checkNotNull(companyId, "companyId");
+        this.companyId = Optional.ofNullable(companyId);
+        return this;
+    }
+
+    public HrisTimeoff withCompanyId(Optional<String> companyId) {
+        Utils.checkNotNull(companyId, "companyId");
+        this.companyId = companyId;
+        return this;
+    }
+
     public HrisTimeoff withCreatedAt(OffsetDateTime createdAt) {
         Utils.checkNotNull(createdAt, "createdAt");
         this.createdAt = Optional.ofNullable(createdAt);
@@ -254,13 +276,13 @@ public class HrisTimeoff {
         return this;
     }
 
-    public HrisTimeoff withRaw(Map<String, Object> raw) {
+    public HrisTimeoff withRaw(HrisTimeoffRaw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    public HrisTimeoff withRaw(Optional<? extends Map<String, Object>> raw) {
+    public HrisTimeoff withRaw(Optional<? extends HrisTimeoffRaw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -310,6 +332,12 @@ public class HrisTimeoff {
 
     public HrisTimeoff withUserId(String userId) {
         Utils.checkNotNull(userId, "userId");
+        this.userId = Optional.ofNullable(userId);
+        return this;
+    }
+
+    public HrisTimeoff withUserId(Optional<String> userId) {
+        Utils.checkNotNull(userId, "userId");
         this.userId = userId;
         return this;
     }
@@ -327,6 +355,7 @@ public class HrisTimeoff {
             Objects.deepEquals(this.approvedAt, other.approvedAt) &&
             Objects.deepEquals(this.approverUserId, other.approverUserId) &&
             Objects.deepEquals(this.comments, other.comments) &&
+            Objects.deepEquals(this.companyId, other.companyId) &&
             Objects.deepEquals(this.createdAt, other.createdAt) &&
             Objects.deepEquals(this.endAt, other.endAt) &&
             Objects.deepEquals(this.id, other.id) &&
@@ -344,6 +373,7 @@ public class HrisTimeoff {
             approvedAt,
             approverUserId,
             comments,
+            companyId,
             createdAt,
             endAt,
             id,
@@ -361,6 +391,7 @@ public class HrisTimeoff {
                 "approvedAt", approvedAt,
                 "approverUserId", approverUserId,
                 "comments", comments,
+                "companyId", companyId,
                 "createdAt", createdAt,
                 "endAt", endAt,
                 "id", id,
@@ -380,13 +411,15 @@ public class HrisTimeoff {
  
         private Optional<String> comments = Optional.empty();
  
+        private Optional<String> companyId = Optional.empty();
+ 
         private Optional<OffsetDateTime> createdAt = Optional.empty();
  
         private Optional<OffsetDateTime> endAt = Optional.empty();
  
         private Optional<String> id = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Optional<? extends HrisTimeoffRaw> raw = Optional.empty();
  
         private OffsetDateTime startAt;
  
@@ -396,7 +429,7 @@ public class HrisTimeoff {
  
         private Optional<OffsetDateTime> updatedAt = Optional.empty();
  
-        private String userId;  
+        private Optional<String> userId = Optional.empty();  
         
         private Builder() {
           // force use of static builder() method
@@ -438,6 +471,18 @@ public class HrisTimeoff {
             return this;
         }
 
+        public Builder companyId(String companyId) {
+            Utils.checkNotNull(companyId, "companyId");
+            this.companyId = Optional.ofNullable(companyId);
+            return this;
+        }
+
+        public Builder companyId(Optional<String> companyId) {
+            Utils.checkNotNull(companyId, "companyId");
+            this.companyId = companyId;
+            return this;
+        }
+
         public Builder createdAt(OffsetDateTime createdAt) {
             Utils.checkNotNull(createdAt, "createdAt");
             this.createdAt = Optional.ofNullable(createdAt);
@@ -474,13 +519,13 @@ public class HrisTimeoff {
             return this;
         }
 
-        public Builder raw(Map<String, Object> raw) {
+        public Builder raw(HrisTimeoffRaw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
+        public Builder raw(Optional<? extends HrisTimeoffRaw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;
@@ -530,6 +575,12 @@ public class HrisTimeoff {
 
         public Builder userId(String userId) {
             Utils.checkNotNull(userId, "userId");
+            this.userId = Optional.ofNullable(userId);
+            return this;
+        }
+
+        public Builder userId(Optional<String> userId) {
+            Utils.checkNotNull(userId, "userId");
             this.userId = userId;
             return this;
         }
@@ -539,6 +590,7 @@ public class HrisTimeoff {
                 approvedAt,
                 approverUserId,
                 comments,
+                companyId,
                 createdAt,
                 endAt,
                 id,

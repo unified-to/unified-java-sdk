@@ -12,13 +12,11 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Double;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -50,7 +48,7 @@ public class AccountingJournal {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Optional<? extends AccountingJournalRaw> raw;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
@@ -75,7 +73,7 @@ public class AccountingJournal {
             @JsonProperty("description") Optional<String> description,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("lineitems") Optional<? extends List<AccountingJournalLineitem>> lineitems,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("raw") Optional<? extends AccountingJournalRaw> raw,
             @JsonProperty("reference") Optional<String> reference,
             @JsonProperty("tax_amount") Optional<Double> taxAmount,
             @JsonProperty("taxrate_id") Optional<String> taxrateId,
@@ -137,8 +135,8 @@ public class AccountingJournal {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+    public Optional<AccountingJournalRaw> raw() {
+        return (Optional<AccountingJournalRaw>) raw;
     }
 
     @JsonIgnore
@@ -231,13 +229,13 @@ public class AccountingJournal {
         return this;
     }
 
-    public AccountingJournal withRaw(Map<String, Object> raw) {
+    public AccountingJournal withRaw(AccountingJournalRaw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    public AccountingJournal withRaw(Optional<? extends Map<String, Object>> raw) {
+    public AccountingJournal withRaw(Optional<? extends AccountingJournalRaw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -355,7 +353,7 @@ public class AccountingJournal {
  
         private Optional<? extends List<AccountingJournalLineitem>> lineitems = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Optional<? extends AccountingJournalRaw> raw = Optional.empty();
  
         private Optional<String> reference = Optional.empty();
  
@@ -435,13 +433,13 @@ public class AccountingJournal {
             return this;
         }
 
-        public Builder raw(Map<String, Object> raw) {
+        public Builder raw(AccountingJournalRaw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
+        public Builder raw(Optional<? extends AccountingJournalRaw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;

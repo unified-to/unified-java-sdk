@@ -12,13 +12,11 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Double;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -55,7 +53,7 @@ public class AccountingOrder {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Optional<? extends AccountingOrderRaw> raw;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_address")
@@ -86,7 +84,7 @@ public class AccountingOrder {
             @JsonProperty("currency") Optional<String> currency,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("lineitems") Optional<? extends List<AccountingLineitem>> lineitems,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("raw") Optional<? extends AccountingOrderRaw> raw,
             @JsonProperty("shipping_address") Optional<? extends PropertyAccountingOrderShippingAddress> shippingAddress,
             @JsonProperty("status") Optional<? extends AccountingOrderStatus> status,
             @JsonProperty("total_amount") Optional<Double> totalAmount,
@@ -163,8 +161,8 @@ public class AccountingOrder {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+    public Optional<AccountingOrderRaw> raw() {
+        return (Optional<AccountingOrderRaw>) raw;
     }
 
     @SuppressWarnings("unchecked")
@@ -283,13 +281,13 @@ public class AccountingOrder {
         return this;
     }
 
-    public AccountingOrder withRaw(Map<String, Object> raw) {
+    public AccountingOrder withRaw(AccountingOrderRaw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    public AccountingOrder withRaw(Optional<? extends Map<String, Object>> raw) {
+    public AccountingOrder withRaw(Optional<? extends AccountingOrderRaw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -432,7 +430,7 @@ public class AccountingOrder {
  
         private Optional<? extends List<AccountingLineitem>> lineitems = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Optional<? extends AccountingOrderRaw> raw = Optional.empty();
  
         private Optional<? extends PropertyAccountingOrderShippingAddress> shippingAddress = Optional.empty();
  
@@ -532,13 +530,13 @@ public class AccountingOrder {
             return this;
         }
 
-        public Builder raw(Map<String, Object> raw) {
+        public Builder raw(AccountingOrderRaw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
+        public Builder raw(Optional<? extends AccountingOrderRaw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;

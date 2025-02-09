@@ -11,12 +11,10 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -45,7 +43,7 @@ public class HrisCompany {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Optional<? extends HrisCompanyRaw> raw;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -58,7 +56,7 @@ public class HrisCompany {
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("legal_name") Optional<String> legalName,
             @JsonProperty("name") Optional<String> name,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("raw") Optional<? extends HrisCompanyRaw> raw,
             @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
         Utils.checkNotNull(address, "address");
         Utils.checkNotNull(createdAt, "createdAt");
@@ -108,8 +106,8 @@ public class HrisCompany {
 
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+    public Optional<HrisCompanyRaw> raw() {
+        return (Optional<HrisCompanyRaw>) raw;
     }
 
     @JsonIgnore
@@ -181,13 +179,13 @@ public class HrisCompany {
         return this;
     }
 
-    public HrisCompany withRaw(Map<String, Object> raw) {
+    public HrisCompany withRaw(HrisCompanyRaw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    public HrisCompany withRaw(Optional<? extends Map<String, Object>> raw) {
+    public HrisCompany withRaw(Optional<? extends HrisCompanyRaw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -260,7 +258,7 @@ public class HrisCompany {
  
         private Optional<String> name = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Optional<? extends HrisCompanyRaw> raw = Optional.empty();
  
         private Optional<OffsetDateTime> updatedAt = Optional.empty();  
         
@@ -328,13 +326,13 @@ public class HrisCompany {
             return this;
         }
 
-        public Builder raw(Map<String, Object> raw) {
+        public Builder raw(HrisCompanyRaw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
+        public Builder raw(Optional<? extends HrisCompanyRaw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;

@@ -13,12 +13,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unifiedapi.unifiedto.utils.Utils;
 import java.lang.Boolean;
 import java.lang.Double;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -68,12 +66,9 @@ public class AccountingAccount {
     @JsonProperty("parent_account_id")
     private Optional<String> parentAccountId;
 
-    /**
-     * The original data from the integration's API
-     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Optional<? extends Raw> raw;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("section")
@@ -111,7 +106,7 @@ public class AccountingAccount {
             @JsonProperty("is_payable") Optional<Boolean> isPayable,
             @JsonProperty("name") Optional<String> name,
             @JsonProperty("parent_account_id") Optional<String> parentAccountId,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
+            @JsonProperty("raw") Optional<? extends Raw> raw,
             @JsonProperty("section") Optional<String> section,
             @JsonProperty("status") Optional<? extends Status> status,
             @JsonProperty("subgroup") Optional<String> subgroup,
@@ -208,13 +203,10 @@ public class AccountingAccount {
         return parentAccountId;
     }
 
-    /**
-     * The original data from the integration's API
-     */
     @SuppressWarnings("unchecked")
     @JsonIgnore
-    public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+    public Optional<Raw> raw() {
+        return (Optional<Raw>) raw;
     }
 
     @JsonIgnore
@@ -373,19 +365,13 @@ public class AccountingAccount {
         return this;
     }
 
-    /**
-     * The original data from the integration's API
-     */
-    public AccountingAccount withRaw(Map<String, Object> raw) {
+    public AccountingAccount withRaw(Raw raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = Optional.ofNullable(raw);
         return this;
     }
 
-    /**
-     * The original data from the integration's API
-     */
-    public AccountingAccount withRaw(Optional<? extends Map<String, Object>> raw) {
+    public AccountingAccount withRaw(Optional<? extends Raw> raw) {
         Utils.checkNotNull(raw, "raw");
         this.raw = raw;
         return this;
@@ -558,7 +544,7 @@ public class AccountingAccount {
  
         private Optional<String> parentAccountId = Optional.empty();
  
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Optional<? extends Raw> raw = Optional.empty();
  
         private Optional<String> section = Optional.empty();
  
@@ -696,19 +682,13 @@ public class AccountingAccount {
             return this;
         }
 
-        /**
-         * The original data from the integration's API
-         */
-        public Builder raw(Map<String, Object> raw) {
+        public Builder raw(Raw raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = Optional.ofNullable(raw);
             return this;
         }
 
-        /**
-         * The original data from the integration's API
-         */
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
+        public Builder raw(Optional<? extends Raw> raw) {
             Utils.checkNotNull(raw, "raw");
             this.raw = raw;
             return this;
