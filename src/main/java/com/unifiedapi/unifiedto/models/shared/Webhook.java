@@ -42,6 +42,18 @@ public class Webhook {
     private Optional<OffsetDateTime> createdAt;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("db_name_prefix")
+    private Optional<String> dbNamePrefix;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("db_type")
+    private Optional<? extends DbType> dbType;
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("db_url")
+    private Optional<String> dbUrl;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     private Optional<String> environment;
 
@@ -56,8 +68,9 @@ public class Webhook {
     @JsonProperty("filters")
     private Optional<? extends Map<String, String>> filters;
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hook_url")
-    private String hookUrl;
+    private Optional<String> hookUrl;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
@@ -110,11 +123,14 @@ public class Webhook {
             @JsonProperty("checked_at") Optional<OffsetDateTime> checkedAt,
             @JsonProperty("connection_id") String connectionId,
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
+            @JsonProperty("db_name_prefix") Optional<String> dbNamePrefix,
+            @JsonProperty("db_type") Optional<? extends DbType> dbType,
+            @JsonProperty("db_url") Optional<String> dbUrl,
             @JsonProperty("environment") Optional<String> environment,
             @JsonProperty("event") Event event,
             @JsonProperty("fields") Optional<String> fields,
             @JsonProperty("filters") Optional<? extends Map<String, String>> filters,
-            @JsonProperty("hook_url") String hookUrl,
+            @JsonProperty("hook_url") Optional<String> hookUrl,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("integration_type") Optional<String> integrationType,
             @JsonProperty("interval") Optional<Double> interval,
@@ -129,6 +145,9 @@ public class Webhook {
         Utils.checkNotNull(checkedAt, "checkedAt");
         Utils.checkNotNull(connectionId, "connectionId");
         Utils.checkNotNull(createdAt, "createdAt");
+        Utils.checkNotNull(dbNamePrefix, "dbNamePrefix");
+        Utils.checkNotNull(dbType, "dbType");
+        Utils.checkNotNull(dbUrl, "dbUrl");
         Utils.checkNotNull(environment, "environment");
         Utils.checkNotNull(event, "event");
         Utils.checkNotNull(fields, "fields");
@@ -148,6 +167,9 @@ public class Webhook {
         this.checkedAt = checkedAt;
         this.connectionId = connectionId;
         this.createdAt = createdAt;
+        this.dbNamePrefix = dbNamePrefix;
+        this.dbType = dbType;
+        this.dbUrl = dbUrl;
         this.environment = environment;
         this.event = event;
         this.fields = fields;
@@ -169,9 +191,8 @@ public class Webhook {
     public Webhook(
             String connectionId,
             Event event,
-            String hookUrl,
             ObjectType objectType) {
-        this(Optional.empty(), connectionId, Optional.empty(), Optional.empty(), event, Optional.empty(), Optional.empty(), hookUrl, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), objectType, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), event, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), objectType, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -187,6 +208,22 @@ public class Webhook {
     @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
         return createdAt;
+    }
+
+    @JsonIgnore
+    public Optional<String> dbNamePrefix() {
+        return dbNamePrefix;
+    }
+
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<DbType> dbType() {
+        return (Optional<DbType>) dbType;
+    }
+
+    @JsonIgnore
+    public Optional<String> dbUrl() {
+        return dbUrl;
     }
 
     @JsonIgnore
@@ -211,7 +248,7 @@ public class Webhook {
     }
 
     @JsonIgnore
-    public String hookUrl() {
+    public Optional<String> hookUrl() {
         return hookUrl;
     }
 
@@ -310,6 +347,42 @@ public class Webhook {
         return this;
     }
 
+    public Webhook withDbNamePrefix(String dbNamePrefix) {
+        Utils.checkNotNull(dbNamePrefix, "dbNamePrefix");
+        this.dbNamePrefix = Optional.ofNullable(dbNamePrefix);
+        return this;
+    }
+
+    public Webhook withDbNamePrefix(Optional<String> dbNamePrefix) {
+        Utils.checkNotNull(dbNamePrefix, "dbNamePrefix");
+        this.dbNamePrefix = dbNamePrefix;
+        return this;
+    }
+
+    public Webhook withDbType(DbType dbType) {
+        Utils.checkNotNull(dbType, "dbType");
+        this.dbType = Optional.ofNullable(dbType);
+        return this;
+    }
+
+    public Webhook withDbType(Optional<? extends DbType> dbType) {
+        Utils.checkNotNull(dbType, "dbType");
+        this.dbType = dbType;
+        return this;
+    }
+
+    public Webhook withDbUrl(String dbUrl) {
+        Utils.checkNotNull(dbUrl, "dbUrl");
+        this.dbUrl = Optional.ofNullable(dbUrl);
+        return this;
+    }
+
+    public Webhook withDbUrl(Optional<String> dbUrl) {
+        Utils.checkNotNull(dbUrl, "dbUrl");
+        this.dbUrl = dbUrl;
+        return this;
+    }
+
     public Webhook withEnvironment(String environment) {
         Utils.checkNotNull(environment, "environment");
         this.environment = Optional.ofNullable(environment);
@@ -353,6 +426,12 @@ public class Webhook {
     }
 
     public Webhook withHookUrl(String hookUrl) {
+        Utils.checkNotNull(hookUrl, "hookUrl");
+        this.hookUrl = Optional.ofNullable(hookUrl);
+        return this;
+    }
+
+    public Webhook withHookUrl(Optional<String> hookUrl) {
         Utils.checkNotNull(hookUrl, "hookUrl");
         this.hookUrl = hookUrl;
         return this;
@@ -503,6 +582,9 @@ public class Webhook {
             Objects.deepEquals(this.checkedAt, other.checkedAt) &&
             Objects.deepEquals(this.connectionId, other.connectionId) &&
             Objects.deepEquals(this.createdAt, other.createdAt) &&
+            Objects.deepEquals(this.dbNamePrefix, other.dbNamePrefix) &&
+            Objects.deepEquals(this.dbType, other.dbType) &&
+            Objects.deepEquals(this.dbUrl, other.dbUrl) &&
             Objects.deepEquals(this.environment, other.environment) &&
             Objects.deepEquals(this.event, other.event) &&
             Objects.deepEquals(this.fields, other.fields) &&
@@ -527,6 +609,9 @@ public class Webhook {
             checkedAt,
             connectionId,
             createdAt,
+            dbNamePrefix,
+            dbType,
+            dbUrl,
             environment,
             event,
             fields,
@@ -551,6 +636,9 @@ public class Webhook {
                 "checkedAt", checkedAt,
                 "connectionId", connectionId,
                 "createdAt", createdAt,
+                "dbNamePrefix", dbNamePrefix,
+                "dbType", dbType,
+                "dbUrl", dbUrl,
                 "environment", environment,
                 "event", event,
                 "fields", fields,
@@ -577,6 +665,12 @@ public class Webhook {
  
         private Optional<OffsetDateTime> createdAt = Optional.empty();
  
+        private Optional<String> dbNamePrefix = Optional.empty();
+ 
+        private Optional<? extends DbType> dbType = Optional.empty();
+ 
+        private Optional<String> dbUrl = Optional.empty();
+ 
         private Optional<String> environment;
  
         private Event event;
@@ -585,7 +679,7 @@ public class Webhook {
  
         private Optional<? extends Map<String, String>> filters = Optional.empty();
  
-        private String hookUrl;
+        private Optional<String> hookUrl = Optional.empty();
  
         private Optional<String> id = Optional.empty();
  
@@ -643,6 +737,42 @@ public class Webhook {
             return this;
         }
 
+        public Builder dbNamePrefix(String dbNamePrefix) {
+            Utils.checkNotNull(dbNamePrefix, "dbNamePrefix");
+            this.dbNamePrefix = Optional.ofNullable(dbNamePrefix);
+            return this;
+        }
+
+        public Builder dbNamePrefix(Optional<String> dbNamePrefix) {
+            Utils.checkNotNull(dbNamePrefix, "dbNamePrefix");
+            this.dbNamePrefix = dbNamePrefix;
+            return this;
+        }
+
+        public Builder dbType(DbType dbType) {
+            Utils.checkNotNull(dbType, "dbType");
+            this.dbType = Optional.ofNullable(dbType);
+            return this;
+        }
+
+        public Builder dbType(Optional<? extends DbType> dbType) {
+            Utils.checkNotNull(dbType, "dbType");
+            this.dbType = dbType;
+            return this;
+        }
+
+        public Builder dbUrl(String dbUrl) {
+            Utils.checkNotNull(dbUrl, "dbUrl");
+            this.dbUrl = Optional.ofNullable(dbUrl);
+            return this;
+        }
+
+        public Builder dbUrl(Optional<String> dbUrl) {
+            Utils.checkNotNull(dbUrl, "dbUrl");
+            this.dbUrl = dbUrl;
+            return this;
+        }
+
         public Builder environment(String environment) {
             Utils.checkNotNull(environment, "environment");
             this.environment = Optional.ofNullable(environment);
@@ -686,6 +816,12 @@ public class Webhook {
         }
 
         public Builder hookUrl(String hookUrl) {
+            Utils.checkNotNull(hookUrl, "hookUrl");
+            this.hookUrl = Optional.ofNullable(hookUrl);
+            return this;
+        }
+
+        public Builder hookUrl(Optional<String> hookUrl) {
             Utils.checkNotNull(hookUrl, "hookUrl");
             this.hookUrl = hookUrl;
             return this;
@@ -830,6 +966,9 @@ public class Webhook {
                 checkedAt,
                 connectionId,
                 createdAt,
+                dbNamePrefix,
+                dbType,
+                dbUrl,
                 environment,
                 event,
                 fields,
