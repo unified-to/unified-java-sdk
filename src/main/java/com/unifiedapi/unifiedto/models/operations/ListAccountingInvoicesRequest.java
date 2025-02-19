@@ -54,6 +54,9 @@ public class ListAccountingInvoicesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     private Optional<String> sort;
 
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    private Optional<String> type;
+
     /**
      * Return only results whose updated date is equal or greater to this value
      */
@@ -70,6 +73,7 @@ public class ListAccountingInvoicesRequest {
             Optional<String> order,
             Optional<String> query,
             Optional<String> sort,
+            Optional<String> type,
             Optional<OffsetDateTime> updatedGte) {
         Utils.checkNotNull(connectionId, "connectionId");
         Utils.checkNotNull(contactId, "contactId");
@@ -79,6 +83,7 @@ public class ListAccountingInvoicesRequest {
         Utils.checkNotNull(order, "order");
         Utils.checkNotNull(query, "query");
         Utils.checkNotNull(sort, "sort");
+        Utils.checkNotNull(type, "type");
         Utils.checkNotNull(updatedGte, "updatedGte");
         this.connectionId = connectionId;
         this.contactId = contactId;
@@ -88,12 +93,13 @@ public class ListAccountingInvoicesRequest {
         this.order = order;
         this.query = query;
         this.sort = sort;
+        this.type = type;
         this.updatedGte = updatedGte;
     }
     
     public ListAccountingInvoicesRequest(
             String connectionId) {
-        this(connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     /**
@@ -144,6 +150,11 @@ public class ListAccountingInvoicesRequest {
     @JsonIgnore
     public Optional<String> sort() {
         return sort;
+    }
+
+    @JsonIgnore
+    public Optional<String> type() {
+        return type;
     }
 
     /**
@@ -263,6 +274,18 @@ public class ListAccountingInvoicesRequest {
         return this;
     }
 
+    public ListAccountingInvoicesRequest withType(String type) {
+        Utils.checkNotNull(type, "type");
+        this.type = Optional.ofNullable(type);
+        return this;
+    }
+
+    public ListAccountingInvoicesRequest withType(Optional<String> type) {
+        Utils.checkNotNull(type, "type");
+        this.type = type;
+        return this;
+    }
+
     /**
      * Return only results whose updated date is equal or greater to this value
      */
@@ -299,6 +322,7 @@ public class ListAccountingInvoicesRequest {
             Objects.deepEquals(this.order, other.order) &&
             Objects.deepEquals(this.query, other.query) &&
             Objects.deepEquals(this.sort, other.sort) &&
+            Objects.deepEquals(this.type, other.type) &&
             Objects.deepEquals(this.updatedGte, other.updatedGte);
     }
     
@@ -313,6 +337,7 @@ public class ListAccountingInvoicesRequest {
             order,
             query,
             sort,
+            type,
             updatedGte);
     }
     
@@ -327,6 +352,7 @@ public class ListAccountingInvoicesRequest {
                 "order", order,
                 "query", query,
                 "sort", sort,
+                "type", type,
                 "updatedGte", updatedGte);
     }
     
@@ -347,6 +373,8 @@ public class ListAccountingInvoicesRequest {
         private Optional<String> query = Optional.empty();
  
         private Optional<String> sort = Optional.empty();
+ 
+        private Optional<String> type = Optional.empty();
  
         private Optional<OffsetDateTime> updatedGte = Optional.empty();  
         
@@ -459,6 +487,18 @@ public class ListAccountingInvoicesRequest {
             return this;
         }
 
+        public Builder type(String type) {
+            Utils.checkNotNull(type, "type");
+            this.type = Optional.ofNullable(type);
+            return this;
+        }
+
+        public Builder type(Optional<String> type) {
+            Utils.checkNotNull(type, "type");
+            this.type = type;
+            return this;
+        }
+
         /**
          * Return only results whose updated date is equal or greater to this value
          */
@@ -487,6 +527,7 @@ public class ListAccountingInvoicesRequest {
                 order,
                 query,
                 sort,
+                type,
                 updatedGte);
         }
     }

@@ -11,7 +11,8 @@ import java.util.Optional;
 
 public enum AccountingInvoiceType {
     BILL("BILL"),
-    INVOICE("INVOICE");
+    INVOICE("INVOICE"),
+    CREDITMEMO("CREDITMEMO");
 
     @JsonValue
     private final String value;
