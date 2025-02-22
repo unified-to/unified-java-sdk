@@ -89,6 +89,10 @@ public class Webhook {
     private Optional<Boolean> isHealthy;
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_paused")
+    private Optional<Boolean> isPaused;
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     private Optional<? extends Meta> meta;
 
@@ -135,6 +139,7 @@ public class Webhook {
             @JsonProperty("integration_type") Optional<String> integrationType,
             @JsonProperty("interval") Optional<Double> interval,
             @JsonProperty("is_healthy") Optional<Boolean> isHealthy,
+            @JsonProperty("is_paused") Optional<Boolean> isPaused,
             @JsonProperty("meta") Optional<? extends Meta> meta,
             @JsonProperty("object_type") ObjectType objectType,
             @JsonProperty("page_max_limit") Optional<Double> pageMaxLimit,
@@ -157,6 +162,7 @@ public class Webhook {
         Utils.checkNotNull(integrationType, "integrationType");
         Utils.checkNotNull(interval, "interval");
         Utils.checkNotNull(isHealthy, "isHealthy");
+        Utils.checkNotNull(isPaused, "isPaused");
         Utils.checkNotNull(meta, "meta");
         Utils.checkNotNull(objectType, "objectType");
         Utils.checkNotNull(pageMaxLimit, "pageMaxLimit");
@@ -179,6 +185,7 @@ public class Webhook {
         this.integrationType = integrationType;
         this.interval = interval;
         this.isHealthy = isHealthy;
+        this.isPaused = isPaused;
         this.meta = meta;
         this.objectType = objectType;
         this.pageMaxLimit = pageMaxLimit;
@@ -192,7 +199,7 @@ public class Webhook {
             String connectionId,
             Event event,
             ObjectType objectType) {
-        this(Optional.empty(), connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), event, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), objectType, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), event, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), objectType, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -270,6 +277,11 @@ public class Webhook {
     @JsonIgnore
     public Optional<Boolean> isHealthy() {
         return isHealthy;
+    }
+
+    @JsonIgnore
+    public Optional<Boolean> isPaused() {
+        return isPaused;
     }
 
     @SuppressWarnings("unchecked")
@@ -485,6 +497,18 @@ public class Webhook {
         return this;
     }
 
+    public Webhook withIsPaused(boolean isPaused) {
+        Utils.checkNotNull(isPaused, "isPaused");
+        this.isPaused = Optional.ofNullable(isPaused);
+        return this;
+    }
+
+    public Webhook withIsPaused(Optional<Boolean> isPaused) {
+        Utils.checkNotNull(isPaused, "isPaused");
+        this.isPaused = isPaused;
+        return this;
+    }
+
     public Webhook withMeta(Meta meta) {
         Utils.checkNotNull(meta, "meta");
         this.meta = Optional.ofNullable(meta);
@@ -594,6 +618,7 @@ public class Webhook {
             Objects.deepEquals(this.integrationType, other.integrationType) &&
             Objects.deepEquals(this.interval, other.interval) &&
             Objects.deepEquals(this.isHealthy, other.isHealthy) &&
+            Objects.deepEquals(this.isPaused, other.isPaused) &&
             Objects.deepEquals(this.meta, other.meta) &&
             Objects.deepEquals(this.objectType, other.objectType) &&
             Objects.deepEquals(this.pageMaxLimit, other.pageMaxLimit) &&
@@ -621,6 +646,7 @@ public class Webhook {
             integrationType,
             interval,
             isHealthy,
+            isPaused,
             meta,
             objectType,
             pageMaxLimit,
@@ -648,6 +674,7 @@ public class Webhook {
                 "integrationType", integrationType,
                 "interval", interval,
                 "isHealthy", isHealthy,
+                "isPaused", isPaused,
                 "meta", meta,
                 "objectType", objectType,
                 "pageMaxLimit", pageMaxLimit,
@@ -688,6 +715,8 @@ public class Webhook {
         private Optional<Double> interval = Optional.empty();
  
         private Optional<Boolean> isHealthy = Optional.empty();
+ 
+        private Optional<Boolean> isPaused = Optional.empty();
  
         private Optional<? extends Meta> meta = Optional.empty();
  
@@ -875,6 +904,18 @@ public class Webhook {
             return this;
         }
 
+        public Builder isPaused(boolean isPaused) {
+            Utils.checkNotNull(isPaused, "isPaused");
+            this.isPaused = Optional.ofNullable(isPaused);
+            return this;
+        }
+
+        public Builder isPaused(Optional<Boolean> isPaused) {
+            Utils.checkNotNull(isPaused, "isPaused");
+            this.isPaused = isPaused;
+            return this;
+        }
+
         public Builder meta(Meta meta) {
             Utils.checkNotNull(meta, "meta");
             this.meta = Optional.ofNullable(meta);
@@ -978,6 +1019,7 @@ public class Webhook {
                 integrationType,
                 interval,
                 isHealthy,
+                isPaused,
                 meta,
                 objectType,
                 pageMaxLimit,

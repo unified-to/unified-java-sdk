@@ -9,25 +9,19 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 
-public enum MetadataMetadataType {
-    TEXT("TEXT"),
-    NUMBER("NUMBER"),
-    DATE("DATE"),
-    BOOLEAN("BOOLEAN"),
-    FILE("FILE"),
-    TEXTAREA("TEXTAREA"),
-    SINGLE_SELECT("SINGLE_SELECT"),
-    MULTIPLE_SELECT("MULTIPLE_SELECT"),
-    MEASUREMENT("MEASUREMENT"),
-    PRICE("PRICE"),
-    YES_NO("YES_NO"),
-    CURRENCY("CURRENCY"),
-    URL("URL");
+public enum AtsGroupType {
+    TEAM("TEAM"),
+    GROUP("GROUP"),
+    DEPARTMENT("DEPARTMENT"),
+    DIVISION("DIVISION"),
+    BUSINESS_UNIT("BUSINESS_UNIT"),
+    BRANCH("BRANCH"),
+    SUB_DEPARTMENT("SUB_DEPARTMENT");
 
     @JsonValue
     private final String value;
 
-    private MetadataMetadataType(String value) {
+    private AtsGroupType(String value) {
         this.value = value;
     }
     
@@ -35,8 +29,8 @@ public enum MetadataMetadataType {
         return value;
     }
     
-    public static Optional<MetadataMetadataType> fromValue(String value) {
-        for (MetadataMetadataType o: MetadataMetadataType.values()) {
+    public static Optional<AtsGroupType> fromValue(String value) {
+        for (AtsGroupType o: AtsGroupType.values()) {
             if (Objects.deepEquals(o.value, value)) {
                 return Optional.of(o);
             }

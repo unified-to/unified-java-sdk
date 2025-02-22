@@ -39,6 +39,9 @@ public class ListAtsDocumentsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     private Optional<? extends List<String>> fields;
 
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=job_id")
+    private Optional<String> jobId;
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Optional<Double> limit;
 
@@ -69,6 +72,7 @@ public class ListAtsDocumentsRequest {
             Optional<String> candidateId,
             String connectionId,
             Optional<? extends List<String>> fields,
+            Optional<String> jobId,
             Optional<Double> limit,
             Optional<Double> offset,
             Optional<String> order,
@@ -79,6 +83,7 @@ public class ListAtsDocumentsRequest {
         Utils.checkNotNull(candidateId, "candidateId");
         Utils.checkNotNull(connectionId, "connectionId");
         Utils.checkNotNull(fields, "fields");
+        Utils.checkNotNull(jobId, "jobId");
         Utils.checkNotNull(limit, "limit");
         Utils.checkNotNull(offset, "offset");
         Utils.checkNotNull(order, "order");
@@ -89,6 +94,7 @@ public class ListAtsDocumentsRequest {
         this.candidateId = candidateId;
         this.connectionId = connectionId;
         this.fields = fields;
+        this.jobId = jobId;
         this.limit = limit;
         this.offset = offset;
         this.order = order;
@@ -99,7 +105,7 @@ public class ListAtsDocumentsRequest {
     
     public ListAtsDocumentsRequest(
             String connectionId) {
-        this(Optional.empty(), Optional.empty(), connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), connectionId, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -127,6 +133,11 @@ public class ListAtsDocumentsRequest {
     @JsonIgnore
     public Optional<List<String>> fields() {
         return (Optional<List<String>>) fields;
+    }
+
+    @JsonIgnore
+    public Optional<String> jobId() {
+        return jobId;
     }
 
     @JsonIgnore
@@ -217,6 +228,18 @@ public class ListAtsDocumentsRequest {
     public ListAtsDocumentsRequest withFields(Optional<? extends List<String>> fields) {
         Utils.checkNotNull(fields, "fields");
         this.fields = fields;
+        return this;
+    }
+
+    public ListAtsDocumentsRequest withJobId(String jobId) {
+        Utils.checkNotNull(jobId, "jobId");
+        this.jobId = Optional.ofNullable(jobId);
+        return this;
+    }
+
+    public ListAtsDocumentsRequest withJobId(Optional<String> jobId) {
+        Utils.checkNotNull(jobId, "jobId");
+        this.jobId = jobId;
         return this;
     }
 
@@ -318,6 +341,7 @@ public class ListAtsDocumentsRequest {
             Objects.deepEquals(this.candidateId, other.candidateId) &&
             Objects.deepEquals(this.connectionId, other.connectionId) &&
             Objects.deepEquals(this.fields, other.fields) &&
+            Objects.deepEquals(this.jobId, other.jobId) &&
             Objects.deepEquals(this.limit, other.limit) &&
             Objects.deepEquals(this.offset, other.offset) &&
             Objects.deepEquals(this.order, other.order) &&
@@ -333,6 +357,7 @@ public class ListAtsDocumentsRequest {
             candidateId,
             connectionId,
             fields,
+            jobId,
             limit,
             offset,
             order,
@@ -348,6 +373,7 @@ public class ListAtsDocumentsRequest {
                 "candidateId", candidateId,
                 "connectionId", connectionId,
                 "fields", fields,
+                "jobId", jobId,
                 "limit", limit,
                 "offset", offset,
                 "order", order,
@@ -365,6 +391,8 @@ public class ListAtsDocumentsRequest {
         private String connectionId;
  
         private Optional<? extends List<String>> fields = Optional.empty();
+ 
+        private Optional<String> jobId = Optional.empty();
  
         private Optional<Double> limit = Optional.empty();
  
@@ -430,6 +458,18 @@ public class ListAtsDocumentsRequest {
         public Builder fields(Optional<? extends List<String>> fields) {
             Utils.checkNotNull(fields, "fields");
             this.fields = fields;
+            return this;
+        }
+
+        public Builder jobId(String jobId) {
+            Utils.checkNotNull(jobId, "jobId");
+            this.jobId = Optional.ofNullable(jobId);
+            return this;
+        }
+
+        public Builder jobId(Optional<String> jobId) {
+            Utils.checkNotNull(jobId, "jobId");
+            this.jobId = jobId;
             return this;
         }
 
@@ -523,6 +563,7 @@ public class ListAtsDocumentsRequest {
                 candidateId,
                 connectionId,
                 fields,
+                jobId,
                 limit,
                 offset,
                 order,

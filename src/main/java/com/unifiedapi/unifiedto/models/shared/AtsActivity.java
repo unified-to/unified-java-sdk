@@ -51,6 +51,13 @@ public class AtsActivity {
     @JsonProperty("document_id")
     private Optional<String> documentId;
 
+    /**
+     * IDs for AtsDocument.get
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("document_ids")
+    private Optional<? extends List<String>> documentIds;
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     private Optional<? extends PropertyAtsActivityFrom> from;
@@ -111,6 +118,7 @@ public class AtsActivity {
             @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
             @JsonProperty("description") Optional<String> description,
             @JsonProperty("document_id") Optional<String> documentId,
+            @JsonProperty("document_ids") Optional<? extends List<String>> documentIds,
             @JsonProperty("from") Optional<? extends PropertyAtsActivityFrom> from,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("interview_id") Optional<String> interviewId,
@@ -130,6 +138,7 @@ public class AtsActivity {
         Utils.checkNotNull(createdAt, "createdAt");
         Utils.checkNotNull(description, "description");
         Utils.checkNotNull(documentId, "documentId");
+        Utils.checkNotNull(documentIds, "documentIds");
         Utils.checkNotNull(from, "from");
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(interviewId, "interviewId");
@@ -149,6 +158,7 @@ public class AtsActivity {
         this.createdAt = createdAt;
         this.description = description;
         this.documentId = documentId;
+        this.documentIds = documentIds;
         this.from = from;
         this.id = id;
         this.interviewId = interviewId;
@@ -164,7 +174,7 @@ public class AtsActivity {
     }
     
     public AtsActivity() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @JsonIgnore
@@ -202,6 +212,15 @@ public class AtsActivity {
     @JsonIgnore
     public Optional<String> documentId() {
         return documentId;
+    }
+
+    /**
+     * IDs for AtsDocument.get
+     */
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<String>> documentIds() {
+        return (Optional<List<String>>) documentIds;
     }
 
     @SuppressWarnings("unchecked")
@@ -357,6 +376,24 @@ public class AtsActivity {
     public AtsActivity withDocumentId(Optional<String> documentId) {
         Utils.checkNotNull(documentId, "documentId");
         this.documentId = documentId;
+        return this;
+    }
+
+    /**
+     * IDs for AtsDocument.get
+     */
+    public AtsActivity withDocumentIds(List<String> documentIds) {
+        Utils.checkNotNull(documentIds, "documentIds");
+        this.documentIds = Optional.ofNullable(documentIds);
+        return this;
+    }
+
+    /**
+     * IDs for AtsDocument.get
+     */
+    public AtsActivity withDocumentIds(Optional<? extends List<String>> documentIds) {
+        Utils.checkNotNull(documentIds, "documentIds");
+        this.documentIds = documentIds;
         return this;
     }
 
@@ -527,6 +564,7 @@ public class AtsActivity {
             Objects.deepEquals(this.createdAt, other.createdAt) &&
             Objects.deepEquals(this.description, other.description) &&
             Objects.deepEquals(this.documentId, other.documentId) &&
+            Objects.deepEquals(this.documentIds, other.documentIds) &&
             Objects.deepEquals(this.from, other.from) &&
             Objects.deepEquals(this.id, other.id) &&
             Objects.deepEquals(this.interviewId, other.interviewId) &&
@@ -551,6 +589,7 @@ public class AtsActivity {
             createdAt,
             description,
             documentId,
+            documentIds,
             from,
             id,
             interviewId,
@@ -575,6 +614,7 @@ public class AtsActivity {
                 "createdAt", createdAt,
                 "description", description,
                 "documentId", documentId,
+                "documentIds", documentIds,
                 "from", from,
                 "id", id,
                 "interviewId", interviewId,
@@ -604,6 +644,8 @@ public class AtsActivity {
         private Optional<String> description = Optional.empty();
  
         private Optional<String> documentId = Optional.empty();
+ 
+        private Optional<? extends List<String>> documentIds = Optional.empty();
  
         private Optional<? extends PropertyAtsActivityFrom> from = Optional.empty();
  
@@ -714,6 +756,24 @@ public class AtsActivity {
         public Builder documentId(Optional<String> documentId) {
             Utils.checkNotNull(documentId, "documentId");
             this.documentId = documentId;
+            return this;
+        }
+
+        /**
+         * IDs for AtsDocument.get
+         */
+        public Builder documentIds(List<String> documentIds) {
+            Utils.checkNotNull(documentIds, "documentIds");
+            this.documentIds = Optional.ofNullable(documentIds);
+            return this;
+        }
+
+        /**
+         * IDs for AtsDocument.get
+         */
+        public Builder documentIds(Optional<? extends List<String>> documentIds) {
+            Utils.checkNotNull(documentIds, "documentIds");
+            this.documentIds = documentIds;
             return this;
         }
 
@@ -876,6 +936,7 @@ public class AtsActivity {
                 createdAt,
                 description,
                 documentId,
+                documentIds,
                 from,
                 id,
                 interviewId,

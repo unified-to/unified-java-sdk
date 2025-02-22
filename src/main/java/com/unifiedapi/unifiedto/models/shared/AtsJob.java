@@ -45,7 +45,7 @@ public class AtsJob {
     private Optional<OffsetDateTime> createdAt;
 
     /**
-     * The names of the departments/divisions that this job belongs to
+     * &#64;deprecated Use `groups` instead
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("departments")
@@ -58,6 +58,13 @@ public class AtsJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employment_type")
     private Optional<? extends EmploymentType> employmentType;
+
+    /**
+     * The departments/divisions/teams that this job belongs to
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("groups")
+    private Optional<? extends List<AtsGroup>> groups;
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hiring_manager_ids")
@@ -127,6 +134,7 @@ public class AtsJob {
             @JsonProperty("departments") Optional<? extends List<String>> departments,
             @JsonProperty("description") Optional<String> description,
             @JsonProperty("employment_type") Optional<? extends EmploymentType> employmentType,
+            @JsonProperty("groups") Optional<? extends List<AtsGroup>> groups,
             @JsonProperty("hiring_manager_ids") Optional<? extends List<String>> hiringManagerIds,
             @JsonProperty("id") Optional<String> id,
             @JsonProperty("language_locale") Optional<String> languageLocale,
@@ -148,6 +156,7 @@ public class AtsJob {
         Utils.checkNotNull(departments, "departments");
         Utils.checkNotNull(description, "description");
         Utils.checkNotNull(employmentType, "employmentType");
+        Utils.checkNotNull(groups, "groups");
         Utils.checkNotNull(hiringManagerIds, "hiringManagerIds");
         Utils.checkNotNull(id, "id");
         Utils.checkNotNull(languageLocale, "languageLocale");
@@ -169,6 +178,7 @@ public class AtsJob {
         this.departments = departments;
         this.description = description;
         this.employmentType = employmentType;
+        this.groups = groups;
         this.hiringManagerIds = hiringManagerIds;
         this.id = id;
         this.languageLocale = languageLocale;
@@ -185,7 +195,7 @@ public class AtsJob {
     }
     
     public AtsJob() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
+        this(Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty());
     }
 
     @SuppressWarnings("unchecked")
@@ -216,7 +226,7 @@ public class AtsJob {
     }
 
     /**
-     * The names of the departments/divisions that this job belongs to
+     * &#64;deprecated Use `groups` instead
      */
     @SuppressWarnings("unchecked")
     @JsonIgnore
@@ -233,6 +243,15 @@ public class AtsJob {
     @JsonIgnore
     public Optional<EmploymentType> employmentType() {
         return (Optional<EmploymentType>) employmentType;
+    }
+
+    /**
+     * The departments/divisions/teams that this job belongs to
+     */
+    @SuppressWarnings("unchecked")
+    @JsonIgnore
+    public Optional<List<AtsGroup>> groups() {
+        return (Optional<List<AtsGroup>>) groups;
     }
 
     @SuppressWarnings("unchecked")
@@ -378,7 +397,7 @@ public class AtsJob {
     }
 
     /**
-     * The names of the departments/divisions that this job belongs to
+     * &#64;deprecated Use `groups` instead
      */
     public AtsJob withDepartments(List<String> departments) {
         Utils.checkNotNull(departments, "departments");
@@ -387,7 +406,7 @@ public class AtsJob {
     }
 
     /**
-     * The names of the departments/divisions that this job belongs to
+     * &#64;deprecated Use `groups` instead
      */
     public AtsJob withDepartments(Optional<? extends List<String>> departments) {
         Utils.checkNotNull(departments, "departments");
@@ -416,6 +435,24 @@ public class AtsJob {
     public AtsJob withEmploymentType(Optional<? extends EmploymentType> employmentType) {
         Utils.checkNotNull(employmentType, "employmentType");
         this.employmentType = employmentType;
+        return this;
+    }
+
+    /**
+     * The departments/divisions/teams that this job belongs to
+     */
+    public AtsJob withGroups(List<AtsGroup> groups) {
+        Utils.checkNotNull(groups, "groups");
+        this.groups = Optional.ofNullable(groups);
+        return this;
+    }
+
+    /**
+     * The departments/divisions/teams that this job belongs to
+     */
+    public AtsJob withGroups(Optional<? extends List<AtsGroup>> groups) {
+        Utils.checkNotNull(groups, "groups");
+        this.groups = groups;
         return this;
     }
 
@@ -605,6 +642,7 @@ public class AtsJob {
             Objects.deepEquals(this.departments, other.departments) &&
             Objects.deepEquals(this.description, other.description) &&
             Objects.deepEquals(this.employmentType, other.employmentType) &&
+            Objects.deepEquals(this.groups, other.groups) &&
             Objects.deepEquals(this.hiringManagerIds, other.hiringManagerIds) &&
             Objects.deepEquals(this.id, other.id) &&
             Objects.deepEquals(this.languageLocale, other.languageLocale) &&
@@ -631,6 +669,7 @@ public class AtsJob {
             departments,
             description,
             employmentType,
+            groups,
             hiringManagerIds,
             id,
             languageLocale,
@@ -657,6 +696,7 @@ public class AtsJob {
                 "departments", departments,
                 "description", description,
                 "employmentType", employmentType,
+                "groups", groups,
                 "hiringManagerIds", hiringManagerIds,
                 "id", id,
                 "languageLocale", languageLocale,
@@ -689,6 +729,8 @@ public class AtsJob {
         private Optional<String> description = Optional.empty();
  
         private Optional<? extends EmploymentType> employmentType = Optional.empty();
+ 
+        private Optional<? extends List<AtsGroup>> groups = Optional.empty();
  
         private Optional<? extends List<String>> hiringManagerIds = Optional.empty();
  
@@ -781,7 +823,7 @@ public class AtsJob {
         }
 
         /**
-         * The names of the departments/divisions that this job belongs to
+         * &#64;deprecated Use `groups` instead
          */
         public Builder departments(List<String> departments) {
             Utils.checkNotNull(departments, "departments");
@@ -790,7 +832,7 @@ public class AtsJob {
         }
 
         /**
-         * The names of the departments/divisions that this job belongs to
+         * &#64;deprecated Use `groups` instead
          */
         public Builder departments(Optional<? extends List<String>> departments) {
             Utils.checkNotNull(departments, "departments");
@@ -819,6 +861,24 @@ public class AtsJob {
         public Builder employmentType(Optional<? extends EmploymentType> employmentType) {
             Utils.checkNotNull(employmentType, "employmentType");
             this.employmentType = employmentType;
+            return this;
+        }
+
+        /**
+         * The departments/divisions/teams that this job belongs to
+         */
+        public Builder groups(List<AtsGroup> groups) {
+            Utils.checkNotNull(groups, "groups");
+            this.groups = Optional.ofNullable(groups);
+            return this;
+        }
+
+        /**
+         * The departments/divisions/teams that this job belongs to
+         */
+        public Builder groups(Optional<? extends List<AtsGroup>> groups) {
+            Utils.checkNotNull(groups, "groups");
+            this.groups = groups;
             return this;
         }
 
@@ -1000,6 +1060,7 @@ public class AtsJob {
                 departments,
                 description,
                 employmentType,
+                groups,
                 hiringManagerIds,
                 id,
                 languageLocale,
